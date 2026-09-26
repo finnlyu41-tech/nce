@@ -21,7 +21,8 @@
     "verify:online": "python3 scripts/verify-online.py",
     "verify:navigation": "node scripts/test-navigation.mjs",
     "package:language": "python3 scripts/package-language.py",
-    "verify:playback": "node scripts/test-playback.mjs"
+    "verify:playback": "node scripts/test-playback.mjs",
+    "verify:study-path": "node scripts/test-study-path.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
