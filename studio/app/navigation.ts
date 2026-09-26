@@ -1,0 +1,31 @@
+import {bookCounts, type NceBookId} from './model';
+
+export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;task?:string;filter?:string;query?:string;file?:string};
+const views=['nce','today','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
+const tabs:Record<string,string[]>={nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing']};
+export function parseRoute(hash:string):StudioRoute{
+ const [path,query='']=hash.replace(/^#\/?/,'').split('?'),parts=path.split('/');
+ const view=views.includes(parts[0])?parts[0]:'nce',route:StudioRoute={view},params=new URLSearchParams(query);
+ if((view==='nce'||view==='cloud')&&Object.hasOwn(bookCounts,parts[1])){
+  route.book=parts[1] as NceBookId;const lesson=Number(parts[2]);
+  if(Number.isInteger(lesson)&&lesson>0&&lesson<=bookCounts[route.book])route.lesson=lesson;
+ }
+ if(view==='lesson'){const lesson=Number(parts[1]);route.lesson=Number.isInteger(lesson)&&lesson>0&&lesson<=36?lesson:1}
+ const tab=params.get('tab');if(tab&&tabs[view]?.includes(tab))route.tab=tab;
+ const task=params.get('task');if(task&&/^(ielts-[ws][1-9]\d?|mistakes|diagnostic|text-\d{10,16})$/.test(task))route.task=task;
+ const filter=params.get('filter');if(filter&&['all','done','active'].includes(filter))route.filter=filter;
+ const search=params.get('q');if(search)route.query=search.slice(0,120);
+ const file=params.get('file');if(view==='cloud'&&file&&/^[A-Za-z0-9_-]{1,100}$/.test(file))route.file=file;
+ return route;
+}
+export function routeHash(route:StudioRoute){
+ let path='#/'+route.view;if(route.book)path+='/'+route.book;if(route.lesson)path+='/'+route.lesson;
+ const params=new URLSearchParams();for(const [key,value] of Object.entries({tab:route.tab,task:route.task,filter:route.filter,q:route.query,file:route.file}))if(value)params.set(key,value);
+ return path+(params.size?'?'+params:'');
+}
+export function navigate(route:StudioRoute,{replace=false,keepScroll=false}:{replace?:boolean;keepScroll?:boolean}={}){
+ const hash=routeHash(route);if(location.hash===hash)return;
+ history.replaceState({...history.state,studioScroll:window.scrollY},'');
+ history[replace?'replaceState':'pushState']({studioScroll:keepScroll?window.scrollY:0},'',hash);
+ window.speechSynthesis?.cancel();window.dispatchEvent(new Event('studio:navigation'));
+}

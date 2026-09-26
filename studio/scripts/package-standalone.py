@@ -24,7 +24,15 @@ if online:
     (out/'materials').mkdir(exist_ok=True)
     if not (out/'materials/manifest.json').exists():
         shutil.copyfile('public/materials/manifest.json',out/'materials/manifest.json')
+    # Local inventory is evidence, never an upload asset.
+    if (out/'materials/.inventory.json').exists():
+        evidence = Path('work/local-codex')
+        evidence.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(out/'materials/.inventory.json', evidence/'materials-inventory.json')
+        (out/'materials/.inventory.json').unlink()
+    shutil.copyfile('scripts/pages-access.js', out/'_worker.js')
+    (out/'_routes.json').write_text(json.dumps({'version':1,'include':['/*'],'exclude':[]})+'\n')
     (out/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     (out/'_headers').write_text('/*\n  Content-Security-Policy: '+csp+"; frame-ancestors 'none'\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Frame-Options: DENY\n  Cross-Origin-Opener-Policy: same-origin-allow-popups\n  Permissions-Policy: camera=(), microphone=(self), geolocation=()\n  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-cache\n")
-    (out/'version.json').write_text(json.dumps({'version':'2026-09-26-online-v1','html_sha256':hashlib.sha256(s.encode()).hexdigest(),'materials_count':len(json.loads((out/'materials/manifest.json').read_text())['files'])},indent=2)+'\n')
+    (out/'version.json').write_text(json.dumps({'version':'2026-09-26-public-v4','html_sha256':hashlib.sha256(s.encode()).hexdigest(),'manifest_sha256':hashlib.sha256((out/'materials/manifest.json').read_bytes()).hexdigest(),'materials_count':len(json.loads((out/'materials/manifest.json').read_text())['files']),'access':'public','language_sha256':hashlib.sha256((out/'language/index.json').read_bytes()).hexdigest()},indent=2)+'\n')
 print('Created '+str(out/'index.html'))

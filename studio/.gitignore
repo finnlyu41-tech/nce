@@ -48,3 +48,9 @@ next-env.d.ts
 /static-export/
 /local-launcher/index.html
 /public/English-Studio.html
+# Generated materials never belong in the source tree.
+/public/materials/*
+!/public/materials/manifest.json
+*.tsbuildinfo
+__pycache__/
+.dev.vars*
