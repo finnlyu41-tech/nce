@@ -64,6 +64,11 @@ synth.getVoices = () => [remoteVoice];
 const noVoiceCount = spoken.length;let unavailable;
 speak('Local voices only.', ok => unavailable = ok);
 assert.equal(unavailable, false);assert.equal(spoken.length, noVoiceCount);assert.equal(notices.length, 1);
+const localAmerican={lang:'en-US',localService:true};
+synth.getVoices=()=>[remoteVoice,localVoice,localAmerican];
+speak('this',undefined,'en-US');assert.equal(spoken.at(-1).voice,localAmerican,'Pronunciation coaching uses the same accent as assessment');
+synth.getVoices=()=>[localVoice];const beforeAmerican=spoken.length;
+speak('this',ok=>unavailable=ok,'en-US');assert.equal(unavailable,false);assert.equal(spoken.length,beforeAmerican,'Do not silently switch pronunciation coaching to a different accent');
 
 const realSet = window.localStorage.setItem;
 window.localStorage.setItem = () => {throw Error('Storage unavailable');};
