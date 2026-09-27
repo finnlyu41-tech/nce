@@ -34,6 +34,7 @@ python3 scripts/package-lesson-pages.py --source "$MATERIALS_SOURCE"
 python3 scripts/package-language.py "$TRANSLATION_SNAPSHOT" "$ECDICT_CSV" "$TRANSLATION_CORRECTIONS"
 corepack pnpm verify:materials
 corepack pnpm verify:guided
+corepack pnpm verify:pronunciation
 corepack pnpm package:online
 corepack pnpm verify:online
 ```
@@ -170,9 +171,15 @@ python3 scripts/package-language.py "$TRANSLATION_SNAPSHOT" "$ECDICT_CSV" "$TRAN
 
 ## 验证和本机接续
 
-2026-09-27 引导版已发布到 [正式站](https://finn-english-studio.pages.dev/) 和 [f61cb11c 独立部署](https://f61cb11c.finn-english-studio.pages.dev/)，版本 `2026-09-27-guided-expression-v1`。两个域名的版本、首页、题库、页图索引及语言清单均与本地构建一致。公开回读 1,007 项通过，包括生产站全部 696 张页图与 277 份语言文件；本轮无网络重试。源代码与 GitHub 提交以本分支历史为准。
+2026-09-27 录音整合版已发布到 [正式站](https://finn-english-studio.pages.dev/) 和 [5c701ed0 独立部署](https://5c701ed0.finn-english-studio.pages.dev/)，版本 `2026-09-27-recording-feedback-v1`。逐句录音、最近两遍对比、当前句 Reading Coach 入口已合入最新引导版；原书页图、题库与语言数据哈希保持一致。代码已推送原开发分支，具体提交以 Git / GitHub 为准。
 
-本轮 TypeScript、在线/离线构建、导航、语速、教材、学习路线和引导练习回归通过；1,544 个发布文件均通过白名单与完整性检查。独立浏览器来源实际走完五步表达、卡片保存、档案回看、口语四步及刷新/后退恢复，完整模考记录正确处理单次、连续两次和单项门槛变化。320/390 像素无整页横向溢出；正式部署抽查第 1 课正文从约 15 秒开始、0.85 倍速播放无媒体错误，第 2 课图片加载成功且未加载 PDF 框，正式口语页点词显示 IPA 与词义。没有进行手机真机、系统键盘或新的麦克风采集测试；录音自动评分尚未包含在本分支。
+本轮 TypeScript、在线/离线构建、录音接口、导航、语速、教材、学习路径及引导练习检查通过；1,544 个发布文件通过完整性与白名单检查。正式域名和独立部署共 1,007 项公开内容检查通过，无传输重试；另有 6 项接口检查确认未配置时状态为关闭、同源提交返回 503、跨源提交返回 403，响应不缓存。没有配置 Azure 凭据或调用真实评估服务。
+
+Chrome 320/390 像素视口下录音面板没有整页横向溢出，切换听写句会同步更新跟读与 Reading Coach 文本；保存到本机后的选句跟读也通过。正式站第一句为正文 `Excuse me!`，原音频从约 15 秒播放并在句末停止，无媒体错误。既有学习完成记录仍显示。没有进行手机真机、麦克风采集或真实 Azure 评分验收；自动评估仍未启用，启用要求见前述配置说明。当前证据为 `online-recording-verification.json`、`online-recording-api-verification.json` 和 `recording-feedback-production-390.png`。
+
+此前 2026-09-27 引导版发布到 [正式站](https://finn-english-studio.pages.dev/) 和 [f61cb11c 独立部署](https://f61cb11c.finn-english-studio.pages.dev/)，版本 `2026-09-27-guided-expression-v1`。两个域名的版本、首页、题库、页图索引及语言清单均与本地构建一致。公开回读 1,007 项通过，包括生产站全部 696 张页图与 277 份语言文件；本轮无网络重试。源代码与 GitHub 提交以本分支历史为准。
+
+引导版当时的 TypeScript、在线/离线构建、导航、语速、教材、学习路线和引导练习回归通过；1,544 个发布文件均通过白名单与完整性检查。独立浏览器来源实际走完五步表达、卡片保存、档案回看、口语四步及刷新/后退恢复，完整模考记录正确处理单次、连续两次和单项门槛变化。320/390 像素无整页横向溢出；正式部署抽查第 1 课正文从约 15 秒开始、0.85 倍速播放无媒体错误，第 2 课图片加载成功且未加载 PDF 框，正式口语页点词显示 IPA 与词义。没有进行手机真机、系统键盘或新的麦克风采集测试；当时未包含录音评估接口，现已由上方录音整合版取代。
 
 此前学习路径版已通过 TypeScript、构建、课程组与复习逻辑回归、旧记录兼容和完整资料包恢复检查。独立预览实际验证第一册 72 组、144 个课次入口，奇偶课共用自查、原笔记保留、刷新后复原以及下一组和浏览器前进后退；手机改进通过 320 / 390 像素布局检查：首屏能看到播放器，五项标签和底部切课可点击，无整页横向溢出。实际验证原声播放与 0.7× 调速、按课变化的填空反馈、填空草稿与笔记/自查刷新恢复、原书展开和课次选择；276 组填空均能还原对应原句，同册组间题目不同。最新部署以生产站 `version.json` 和本机验收记录为准，下面保留已有功能的验证范围。
 
