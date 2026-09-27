@@ -149,7 +149,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
     <details className="lesson-offline"><summary>保存资料供离线使用</summary><div className="cloud-use">{!embedded&&<label className="field">保存到第几课<input aria-label="保存教材的课号" type="number" min={1} max={bookCounts[primary.file.book]} value={lesson} onChange={e=>setLesson(Number(e.target.value))}/></label>}<button className="btn" disabled={!!busy||!Number.isInteger(lesson)||lesson<1||lesson>bookCounts[primary.file.book]} onClick={useLesson}>保存并进入本课练习 <BookOpen size={17}/></button><label className="cloud-replace"><input type="checkbox" checked={replace} onChange={e=>setReplace(e.target.checked)}/>替换本课已有文本和音频（保留笔记与进度）</label><p className="muted small">配对资料一起保存到当前浏览器。可继续逐句听写、整理词句、复述和语法补强；保存后断网也可用。</p></div></details>
    </>}
   </>:<div className="empty cloud-reader-empty"><BookOpen size={52}/><h2>书在这里，随时翻开。</h2><p>选择 PDF 看原书，或选择一课同步听读。</p></div>}</section></div>}
-  {!embedded&&<p className="muted small section-space">网站教材可跨设备读取；进度、笔记和生词保存在当前浏览器，可在「学习档案」导出 .espack 完整备份。</p>}
+  {!embedded&&<p className="muted small section-space">网站教材可跨设备读取；进度、笔记和生词保存在当前浏览器，暂不自动跨设备同步。</p>}
  </div>;
 }
 async function digest(blob:Blob){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await blob.arrayBuffer())),x=>x.toString(16).padStart(2,'0')).join('')}

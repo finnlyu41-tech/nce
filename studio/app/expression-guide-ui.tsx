@@ -111,7 +111,7 @@ export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:Nc
    <button className="text-btn" onClick={()=>navigate({view:'progress'})}>查看我的表达框架 <ArrowRight size={15}/></button>
   </div>}
   <div className="row spread guide-footer"><button className="btn secondary" disabled={step===0} onClick={()=>go(step-1)}><ArrowLeft size={16}/>上一步</button><span className="small muted">{step+1} / 5</span>{step<4?<button className="btn" disabled={!ready} onClick={next}>{step===2?'检查这一版':step===3?'换情境检验':'下一小步'}<ArrowRight size={16}/></button>:<button className="btn secondary" onClick={()=>navigate({view:'today'})}>回到今日学习</button>}</div>
-  <p className="small muted guide-save-note">文字自动保存在此浏览器，随学习备份导出。</p>
+  <p className="small muted guide-save-note">文字自动保存在当前浏览器。</p>
  </section>;
 }
 
