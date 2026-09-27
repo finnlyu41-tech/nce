@@ -32,21 +32,15 @@ export default {
   },
 };
 
-// The public site remains anonymous. Only this optional endpoint needs a private
-// learner token. Keys/audio are never written to an asset, log or persistent store.
+// Assessment is anonymous too. Keys/audio are never written to an asset, log or
+// persistent store; audio still requires explicit consent and a same-origin POST.
 const jsonReply = (body, status = 200) => reply(JSON.stringify(body), status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});
-const configured = env => env.STUDIO_SPEECH_ENABLED === 'F0' && /^[a-zA-Z0-9][a-zA-Z0-9-]{1,62}$/.test(env.AZURE_SPEECH_RESOURCE || '') && typeof env.AZURE_SPEECH_KEY === 'string' && env.AZURE_SPEECH_KEY.length >= 16 && /^[a-f0-9]{64}$/.test(env.STUDIO_SPEECH_TOKEN_SHA256 || '');
+const configured = env => env.STUDIO_SPEECH_ENABLED === 'F0' && /^[a-zA-Z0-9][a-zA-Z0-9-]{1,62}$/.test(env.AZURE_SPEECH_RESOURCE || '') && typeof env.AZURE_SPEECH_KEY === 'string' && env.AZURE_SPEECH_KEY.length >= 16;
 async function pronunciation(request, env) {
  if (request.method === 'GET') return jsonReply({enabled:!!configured(env),maxSeconds:30,mode:'read-aloud',prosody:false});
  if (request.method !== 'POST') return jsonReply({error:'此接口只接受 GET 或 POST。'},405);
  if (request.headers.get('Origin') !== new URL(request.url).origin) return jsonReply({error:'请从本站提交评估。'},403);
  if (!configured(env)) return jsonReply({error:'站内自动评估尚未启用，录音仍可在本页回听。'},503);
- const token=(request.headers.get('Authorization') || '').match(/^Bearer (\S{16,256})$/)?.[1];
- if (!token) return jsonReply({error:'请输入正确的个人评估口令。'},401);
- const digest=new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(token)));
- const expected=env.STUDIO_SPEECH_TOKEN_SHA256.match(/../g).map(x=>parseInt(x,16));
- let difference=0;for(let i=0;i<32;i++)difference|=digest[i]^expected[i];
- if (difference) return jsonReply({error:'个人评估口令不正确，请重新输入。'},401);
  if (!/^application\/json(?:;|$)/i.test(request.headers.get('Content-Type') || '')) return jsonReply({error:'录音提交格式不支持。'},415);
  const limit=1300000;
  if (Number(request.headers.get('Content-Length'))>limit) return jsonReply({error:'录音过大，请分句重录。'},413);

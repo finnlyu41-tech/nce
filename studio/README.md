@@ -133,18 +133,17 @@ Python 需使用项目已有的 `pypdfium2` 环境。打包复用原书页图并
 
 `app/recording-feedback.tsx` 提供录音、用户发送确认、结果与重录对比；`recording-audio.ts` 在浏览器内转换为单声道 16 kHz / 16-bit PCM WAV。反馈最多显示两个需要练习的地方，保留 Azure 返回的 IPA 音素和准确度，优先显示疑似漏读、低匹配单词或音素。对 /θ ð f v s z ʃ ʒ ɪ i ɛ æ/ 提供简短发音要点与例词，其他音素退回原声和单词示范，不猜测读成了哪个音。发音要点参考 [格罗宁根大学美音语音学](https://opentextbooks.rug.nl/americanenglishphonetics2/)，用于练习而非对实际舌位的诊断。可回听问题词附近的录音片段、播放本机美音单词/例词，再重录整句；片段可能包含相邻声音。本机缺少美音时明确提示并保留原声，不切到远程合成。前后两遍按同一词/音素比较，缺少数据或重复词对齐不明时不宣称纠正成功。准确度、连贯度与完整度数据默认折叠，不换算雅思分数。服务未配置时明确显示未启用，并保留 Microsoft Reading Coach 免费替代入口；不会自动向它发送课文或录音。
 
-服务端沿用现有 Pages Worker，只增加 `/api/pronunciation`：GET 返回启用状态；POST 要求同源、个人口令、明确发送确认，并校验文本、请求大小与 WAV 的真实长度/格式，随后调用 Azure 短音频接口。默认不启用额外计费的韵律评估。口令只放在当前页面内存，不写进学习记录；Azure 密钥只由服务端读取。失败保留本页录音，无自动重试、自动购买或升级逻辑，不保存或记录录音正文。
+服务端沿用现有 Pages Worker，只增加 `/api/pronunciation`：GET 返回启用状态；POST 要求同源、明确发送确认，并校验文本、请求大小与 WAV 的真实长度/格式，随后调用 Azure 短音频接口。用户于 2026-09-27 明确取消个人评估口令，界面与接口均无需口令；任何访问者均可在免费资源额度内提交符合要求的录音。默认不启用额外计费的韵律评估，Azure 密钥只由服务端读取。失败保留本页录音，无自动重试、自动购买或升级逻辑，不保存或记录录音正文。旧 `STUDIO_SPEECH_TOKEN_SHA256` 和本机钥匙串条目不再参与评估，未删除历史凭据。
 
-启用前必须由账户持有人在 Azure 核对实际 Speech 资源为 **F0**，确认可用区域和额度；不能把配置字符串当作已核验的资源档位。当前代码及默认部署不含任何 Azure 凭据。仅在明确授权配置后，通过 Cloudflare Pages 的加密 secrets 设置以下四项，不写入源码、构建产物或聊天：
+启用前必须由账户持有人在 Azure 核对实际 Speech 资源为 **F0**，确认可用区域和额度；不能把配置字符串当作已核验的资源档位。当前代码及默认部署不含任何 Azure 凭据。仅在明确授权配置后，通过 Cloudflare Pages 的加密 secrets 设置以下三项，不写入源码、构建产物或聊天：
 
 - `AZURE_SPEECH_RESOURCE`：Speech 资源的自定义子域名前缀，例如 `example-speech`，对应 `example-speech.cognitiveservices.azure.com`。
 - `AZURE_SPEECH_KEY`：该资源的密钥。
-- `STUDIO_SPEECH_TOKEN_SHA256`：至少 16 字符的随机个人口令的 SHA-256；明文口令由使用者保管，在站内输入。
 - `STUDIO_SPEECH_ENABLED`：实际核对资源为免费层后设置为 `F0`。缺少任何配置、或设置为付费档位时接口保持关闭。
 
 每项使用 `pnpm exec wrangler pages secret put <变量名> --project-name finn-english-studio` 交互输入。配置后必须重新部署并用本人明确同意提交的一句录音验证返回的真实反馈，才能宣布在线评估可用；模拟结果或配置成功都不代表已经验收。
 
-`pnpm verify:pronunciation` 覆盖 WAV、权限、发送确认、大小与时长、未配置/付费标记关闭、上游错误、仅转写而无评分的拒绝、结果映射及静态路由边界，并在真实 Workerd 运行时检查成功响应与 301/302/307/308 拒绝。请求使用 `redirect: manual`，任何非成功响应都直接拒绝，不会转发密钥或录音到重定向地址。它使用模拟服务响应，不调用真实 Azure。浏览器预览使用 `pnpm exec wrangler pages dev dist-online --ip 127.0.0.1 --port 4188 --compatibility-date 2026-05-22`，兼容当前锁定的本地 Worker 运行时。
+`pnpm verify:pronunciation` 覆盖 WAV、无需口令的客户端与接口联通、发送确认、同源校验、大小与时长、未配置/付费标记关闭、上游错误、仅转写而无评分的拒绝、结果映射及静态路由边界，并在真实 Workerd 运行时检查无需认证的成功响应与 301/302/307/308 拒绝。请求使用 `redirect: manual`，任何非成功响应都直接拒绝，不会转发密钥或录音到重定向地址。它使用模拟服务响应，不调用真实 Azure。浏览器预览使用 `pnpm exec wrangler pages dev dist-online --ip 127.0.0.1 --port 4188 --compatibility-date 2026-05-22`，兼容当前锁定的本地 Worker 运行时。
 
 ## 学习路径与隔天回顾
 
@@ -166,7 +165,7 @@ Python 需使用项目已有的 `pypdfium2` 环境。打包复用原书页图并
 
 `pages-access.js` 的静态路由只服务明确允许的产物，静态 GET/HEAD 请求均可匿名读取。旧浏览器发送的 Basic 头会被忽略并在读取静态资源前删除。原 `STUDIO_AUTH_SHA256` 和本机钥匙串历史条目不再参与访问控制，未擅自删除。旧邀请制部署保留其历史行为；当前目标为公开版。
 
-仍保留原文件哈希校验、静态产物白名单、CSP 和 noindex；唯一可选录音端点为 `/api/pronunciation`，默认关闭并单独要求个人口令；noindex 只控制搜索收录，网站内容实际公开。内容寻址的教材分段允许浏览器长期缓存，减少手机重复下载。不得修改 AIL、主页、其他域名或项目，不启用收费服务和定时任务。
+仍保留原文件哈希校验、静态产物白名单、CSP 和 noindex；唯一可选录音端点为 `/api/pronunciation`，默认关闭，配置免费资源后无需个人口令；noindex 只控制搜索收录，网站内容实际公开。内容寻址的教材分段允许浏览器长期缓存，减少手机重复下载。不得修改 AIL、主页、其他域名或项目，不启用收费服务和定时任务。
 
 部署步骤：
 
