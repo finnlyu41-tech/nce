@@ -13,15 +13,8 @@ export {speak} from './speech';
 import {RadioGroup,RadioGroupItem} from '@/components/ui/radio-group';
 import {toast} from 'sonner';
 import {Question,Lesson,Word,State,normal,isCorrect} from './model';
-export function Recorder(){
- const rate=usePlaybackRate(),playback=useRef<HTMLAudioElement>(null);
- useEffect(()=>{if(playback.current)playback.current.playbackRate=Number(rate)},[rate]);
- const [recording,setRecording]=useState(false),[url,setUrl]=useState('');const ref=useRef<MediaRecorder|null>(null),stream=useRef<MediaStream|null>(null),mounted=useRef(true),[busy,setBusy]=useState(false);
- useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;ref.current?.state==='recording'&&ref.current.stop();stream.current?.getTracks().forEach(t=>t.stop());};},[]);
- useEffect(()=>()=>{if(url)URL.revokeObjectURL(url)},[url]);
- async function start(){if(!navigator.mediaDevices?.getUserMedia||typeof MediaRecorder==='undefined'){toast.error('录音需要支持麦克风的安全网页环境；你仍可朗读并自行对照。');return;}setBusy(true);try{const s=await navigator.mediaDevices.getUserMedia({audio:true});if(!mounted.current){s.getTracks().forEach(t=>t.stop());return;}stream.current=s;const r=new MediaRecorder(s),chunks:BlobPart[]=[];ref.current=r;r.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};r.onstop=()=>{s.getTracks().forEach(t=>t.stop());if(mounted.current){setUrl(URL.createObjectURL(new Blob(chunks,{type:r.mimeType})));setRecording(false);}};r.start();setRecording(true);}catch{toast.error('无法使用麦克风。请在浏览器中允许录音后重试。');}finally{setBusy(false)}}
- return <div className="record-box"><div className="row"><button className={recording?'btn recording':'btn secondary'} disabled={busy} onClick={()=>recording?ref.current?.stop():start()}>{recording?<Square size={16}/>:<Mic size={16}/>} {recording?'结束录音':busy?'连接麦克风…':'录一遍，听听自己'}</button><span className="muted small">录音只在本次页面保留</span></div>{url&&<div className="record-playback"><audio ref={playback} controls src={url} aria-label="我的录音回放" onLoadedMetadata={()=>{if(playback.current)playback.current.playbackRate=Number(rate)}}/><PlaybackSpeed label="回放语速" ariaLabel="我的录音回放语速"/></div>}</div>
-}
+import {Recorder} from './recording-feedback';
+export {Recorder} from './recording-feedback';
 export function Quiz({questions,onAnswer,onFinish,title='课后练习'}:{questions:Question[],onAnswer:(q:Question,ok:boolean)=>void,onFinish:(score:number)=>void,title?:string}){
  const [index,setIndex]=useState(0),[value,setValue]=useState(''),[checked,setChecked]=useState(false),[count,setCount]=useState(0),[done,setDone]=useState(false);
  if(!questions.length)return <div className="empty">暂无错题。完成课程练习后，答错的题会自动出现在这里。</div>;
