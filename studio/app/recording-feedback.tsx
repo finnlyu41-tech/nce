@@ -10,12 +10,12 @@ import {speak} from './speech';
 import './recording-feedback.css';
 
 type Take={blob:Blob;url:string;result?:PronunciationResult};
-type Props={referenceText?:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number;hideReference?:boolean};
-export function Recorder({referenceText,onListen,onBeforeRecord,stopSignal,hideReference=false}:Props){
+type Props={referenceText?:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number;hideReference?:boolean;retentionLabel?:string};
+export function Recorder({referenceText,onListen,onBeforeRecord,stopSignal,hideReference=false,retentionLabel}:Props){
  const reference=referenceText?.trim()||'';
- return <RecordingSession key={reference} reference={reference} onListen={onListen} onBeforeRecord={onBeforeRecord} stopSignal={stopSignal} hideReference={hideReference}/>;
+ return <RecordingSession key={reference} reference={reference} onListen={onListen} onBeforeRecord={onBeforeRecord} stopSignal={stopSignal} hideReference={hideReference} retentionLabel={retentionLabel}/>;
 }
-function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideReference}:{reference:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number;hideReference:boolean}){
+function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideReference,retentionLabel='录音在离开本练习或刷新后清除'}:{reference:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number;hideReference:boolean;retentionLabel?:string}){
  const rate=usePlaybackRate(),[take,setTake]=useState<Take|null>(null),[previous,setPrevious]=useState<Take|null>(null);
  const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[submitting,setSubmitting]=useState(false),[elapsed,setElapsed]=useState(0);
  const [consent,setConsent]=useState(false),[service,setService]=useState<'loading'|'ready'|'unavailable'>('loading'),[error,setError]=useState('');
@@ -82,7 +82,7 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
  }
  return <div className="record-box recording-feedback">
   {reference&&<div className="record-reference"><div className="row spread"><strong>跟读这一句</strong>{onListen&&<button className="text-btn" disabled={recording||busy} onClick={listen}><Volume2 size={16}/>听原句</button>}</div>{hideReference?<details className="practice-reference"><summary>听后看原句，再跟读</summary><p lang="en">{reference}</p></details>:<p lang="en">{reference}</p>}<span className="muted small">每次最多 30 秒，先听原声，等播放结束再录音。</span></div>}
-  <div className="row wrap"><button className={recording?'btn recording':'btn secondary'} disabled={busy||submitting} onClick={()=>recording?stop():void start()}>{recording?<Square size={16}/>:take?<RotateCcw size={16}/>:<Mic size={16}/>} {recording?`结束录音 · ${elapsed}秒`:busy?'连接麦克风…':take?'再录一遍':'录一遍，听听自己'}</button><span className="muted small">录音在离开本练习或刷新后清除</span></div>
+  <div className="row wrap"><button className={recording?'btn recording':'btn secondary'} disabled={busy||submitting} onClick={()=>recording?stop():void start()}>{recording?<Square size={16}/>:take?<RotateCcw size={16}/>:<Mic size={16}/>} {recording?`结束录音 · ${elapsed}秒`:busy?'连接麦克风…':take?'再录一遍':'录一遍，听听自己'}</button><span className="muted small">{retentionLabel}</span></div>
   {take&&<div className="record-playback"><label>这一次<audio ref={currentAudio} controls src={take.url} aria-label="我的录音回放" onPlay={()=>{if(recording||busy){currentAudio.current?.pause();return;}previousAudio.current?.pause();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onPause={()=>{if(currentAudio.current?.paused)clipEnd.current=null}} onTimeUpdate={()=>{const audio=currentAudio.current;if(audio&&clipEnd.current!==null&&audio.currentTime>=clipEnd.current){audio.pause();clipEnd.current=null}}} onLoadedMetadata={()=>{if(currentAudio.current)currentAudio.current.playbackRate=Number(rate)}}/></label><PlaybackSpeed label="回放语速" ariaLabel="我的录音回放语速"/></div>}
   {previous&&<details className="record-previous"><summary>与上一遍对比</summary><audio ref={previousAudio} controls src={previous.url} aria-label="上一遍录音回放" onPlay={()=>{if(recording||busy){previousAudio.current?.pause();return;}currentAudio.current?.pause();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onLoadedMetadata={()=>{if(previousAudio.current)previousAudio.current.playbackRate=Number(rate)}}/>{previous.result&&take?.result&&<p className="small">发音准确度：{Math.round(previous.result.accuracy)} → {Math.round(take.result.accuracy)}；完整度：{Math.round(previous.result.completeness)} → {Math.round(take.result.completeness)}。以实际回听为准。</p>}</details>}
   {reference&&ONLINE&&<div className="record-assessment">
