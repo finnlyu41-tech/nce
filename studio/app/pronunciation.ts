@@ -66,13 +66,9 @@ export function retryFeedback(before:PronunciationResult,after:PronunciationResu
  });
 }
 
-let personalToken='';
-export const getPersonalToken=()=>personalToken;
-export const setPersonalToken=(value:string)=>{personalToken=value.trim()};
-
 export async function assessRecording(audio:string,reference:string,signal:AbortSignal):Promise<PronunciationResult>{
  const response=await fetch('/api/pronunciation',{method:'POST',signal,cache:'no-store',credentials:'omit',
-  headers:{'Content-Type':'application/json','Authorization':`Bearer ${personalToken}`},
+  headers:{'Content-Type':'application/json'},
   body:JSON.stringify({audio,reference,consent:true})});
  const data=await response.json() as {error?:unknown}&PronunciationResult;
  if(!response.ok)throw Error(typeof data.error==='string'?data.error:'评估暂时不可用，请保留录音稍后再试。');
