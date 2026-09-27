@@ -75,14 +75,19 @@ def main():
     pages=json.loads((package/'lesson-pages/index.json').read_text())
     with ThreadPoolExecutor(max_workers=6) as pool:
         checks.extend(pool.map(lambda item:verify(production,'/lesson-pages/'+item[0],item[1]['sha256']),pages['files'].items()))
+    # Grammar paths are relative to the package root and may reuse lesson pages.
+    # Those reused images have already been verified above.
+    verified_urls={c['url'] for c in checks if c['status']==200}
+    grammar_images=[item for item in grammar['files'].items() if production+'/'+item[0] not in verified_urls]
     with ThreadPoolExecutor(max_workers=6) as pool:
-        checks.extend(pool.map(lambda item:verify(production,'/grammar/'+item[0],item[1]['sha256']),grammar['files'].items()))
-    verified_images={c['url'] for c in checks if c['status']==200}
-    assert all(production+p['src'] in verified_images for p in grammar['pages'].values())
-    result={'grammarSourcePagesVerified':len(grammar['pages']),'grammarImagesVerified':len(grammar['files']),'lessonImagesVerified':len(pages['files']),'checkedAt':datetime.now(timezone.utc).isoformat(), 'access':'public', 'deployment':args.deployment, 'version':version, 'checks':checks, 'languageFilesVerified':len(index['files']), 'transportRetries':TRANSPORT_RETRIES}
+        checks.extend(pool.map(lambda item:verify(production,'/'+item[0],item[1]['sha256']),grammar_images))
+    verified_images={c['url']:c['sha256'] for c in checks if c['status']==200}
+    assert all(verified_images.get(production+p['src'])==p['sha256'] for p in grammar['pages'].values()), 'Grammar source image mismatch'
+    grammar_image_count=sum(path.startswith('grammar/') for path in grammar['files'])
+    result={'grammarSourcePagesVerified':len(grammar['pages']),'grammarImagesVerified':grammar_image_count,'lessonImagesVerified':len(pages['files']),'checkedAt':datetime.now(timezone.utc).isoformat(), 'access':'public', 'deployment':args.deployment, 'version':version, 'checks':checks, 'languageFilesVerified':len(index['files']), 'transportRetries':TRANSPORT_RETRIES}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
-    print(json.dumps({'checks':len(checks), 'languageFilesVerified':len(index['files']), 'lessonImagesVerified':len(pages['files']), 'grammarSourcePagesVerified':len(grammar['pages']), 'grammarImagesVerified':len(grammar['files']), 'deployment':args.deployment, 'access':'public'}))
+    print(json.dumps({'checks':len(checks), 'languageFilesVerified':len(index['files']), 'lessonImagesVerified':len(pages['files']), 'grammarSourcePagesVerified':len(grammar['pages']), 'grammarImagesVerified':grammar_image_count, 'deployment':args.deployment, 'access':'public'}))
 
 
 if __name__ == '__main__':
