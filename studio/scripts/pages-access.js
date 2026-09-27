@@ -71,7 +71,9 @@ async function pronunciation(request, env) {
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),25000);
  try {
   const response=await fetch(`https://${env.AZURE_SPEECH_RESOURCE}.cognitiveservices.azure.com/stt/speech/recognition/conversation/cognitiveservices/v1?language=en-US&format=detailed`,{
-   method:'POST',redirect:'error',signal:controller.signal,headers:{'Ocp-Apim-Subscription-Key':env.AZURE_SPEECH_KEY,'Content-Type':'audio/wav; codecs=audio/pcm; samplerate=16000','Accept':'application/json','Pronunciation-Assessment':encoded},body:audio});
+   // Workerd supports manual redirects; reject every non-2xx response below so
+   // an upstream redirect can never forward the key or recording elsewhere.
+   method:'POST',redirect:'manual',signal:controller.signal,headers:{'Ocp-Apim-Subscription-Key':env.AZURE_SPEECH_KEY,'Content-Type':'audio/wav; codecs=audio/pcm; samplerate=16000','Accept':'application/json','Pronunciation-Assessment':encoded},body:audio});
   if(response.status===429)return jsonReply({error:'当前额度或请求频率已达到限制，请稍后再试；不会自动升级为付费服务。'},429);
   if(!response.ok)return jsonReply({error:'评估服务暂时不可用，录音仍在本页。请稍后再试。'},502);
   const data=await response.json();

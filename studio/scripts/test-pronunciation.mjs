@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {stripTypeScriptTypes} from 'node:module';
+import {createRequire,stripTypeScriptTypes} from 'node:module';
 import worker from './pages-access.js';
 const ts=async name=>import('data:text/javascript;base64,'+Buffer.from(stripTypeScriptTypes(await readFile(new URL('../app/'+name,import.meta.url),'utf8'))).toString('base64'));
 const {pcmWav}=await ts('recording-audio.ts'),{practiceIssues}=await ts('pronunciation.ts');
@@ -19,7 +19,7 @@ const realFetch=globalThis.fetch;
 globalThis.fetch=async (endpoint,options)=>{
  calls++;assert.equal(endpoint,'https://test-resource.cognitiveservices.azure.com/stt/speech/recognition/conversation/cognitiveservices/v1?language=en-US&format=detailed');
  assert.equal(options.headers['Ocp-Apim-Subscription-Key'],env.AZURE_SPEECH_KEY);
- assert.equal(options.redirect,'error');assert.equal(options.headers['Content-Type'],'audio/wav; codecs=audio/pcm; samplerate=16000');
+ assert.equal(options.redirect,'manual');assert.equal(options.headers['Content-Type'],'audio/wav; codecs=audio/pcm; samplerate=16000');
  const config=JSON.parse(Buffer.from(options.headers['Pronunciation-Assessment'],'base64').toString());
  assert.equal(config.ReferenceText,'Excuse me.');assert.equal(config.EnableMiscue,true);assert.equal(config.EnableProsodyAssessment,false);
  return new Response(JSON.stringify(nextBody),{status:nextStatus,headers:{'Content-Type':'application/json'}});
@@ -66,3 +66,28 @@ try{
  assert.equal((await worker.fetch(new Request(url,{method:'DELETE'}),env)).status,405);
  console.log('Recording WAV format, private access, upload consent, size/duration limits, disabled/paid configuration, Azure request mapping, feedback and public static boundaries passed. No live Azure calls.');
 }finally{globalThis.fetch=realFetch}
+
+// Run the actual Worker through Workerd too: Node's Request implementation
+// accepts redirect modes that the deployed runtime can reject before fetching.
+const require=createRequire(import.meta.url),wranglerRequire=createRequire(require.resolve('wrangler/package.json'));
+const {Miniflare}=wranglerRequire('miniflare');
+let runtimeStatus=200,runtimeCalls=0;
+const runtime=new Miniflare({modules:true,compatibilityDate:'2026-05-22',bindings:env,
+ script:await readFile(new URL('./pages-access.js',import.meta.url),'utf8'),
+ outboundService:async request=>{
+  runtimeCalls++;
+  assert.equal(new URL(request.url).hostname,'test-resource.cognitiveservices.azure.com');
+  assert.equal(request.headers.get('Ocp-Apim-Subscription-Key'),env.AZURE_SPEECH_KEY);
+  return new Response(JSON.stringify(fixture),{status:runtimeStatus,headers:{'Content-Type':'application/json',Location:'https://unexpected.test/redirect'}});
+ }});
+try{
+ for(const status of [200,301,302,307,308]){
+  runtimeStatus=status;const previousCalls=runtimeCalls;
+  const response=await runtime.dispatchFetch(url,{method:'POST',headers:{Origin:'https://example.test','Content-Type':'application/json',Authorization:'Bearer '+token},body:JSON.stringify({audio,reference:'Excuse me.',consent:true})});
+  assert.equal(response.status,status===200?200:502,'The deployed runtime must assess audio and reject redirects');
+  assert.equal(runtimeCalls,previousCalls+1,'No redirect may trigger a second request');
+  const body=await response.json();if(status===200)assert.equal(body.accuracy,73);
+  assert(!JSON.stringify(body).includes(env.AZURE_SPEECH_KEY));
+ }
+ console.log('Workerd assessment and redirect isolation passed. No live Azure calls.');
+}finally{await runtime.dispose()}
