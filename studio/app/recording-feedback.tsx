@@ -9,12 +9,12 @@ import {assessRecording,getPersonalToken,setPersonalToken,practiceIssues,Pronunc
 import './recording-feedback.css';
 
 type Take={blob:Blob;url:string;result?:PronunciationResult};
-type Props={referenceText?:string;onListen?:()=>void;onBeforeRecord?:()=>void};
-export function Recorder({referenceText,onListen,onBeforeRecord}:Props){
+type Props={referenceText?:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number};
+export function Recorder({referenceText,onListen,onBeforeRecord,stopSignal}:Props){
  const reference=referenceText?.trim()||'';
- return <RecordingSession key={reference} reference={reference} onListen={onListen} onBeforeRecord={onBeforeRecord}/>;
+ return <RecordingSession key={reference} reference={reference} onListen={onListen} onBeforeRecord={onBeforeRecord} stopSignal={stopSignal}/>;
 }
-function RecordingSession({reference,onListen,onBeforeRecord}:{reference:string;onListen?:()=>void;onBeforeRecord?:()=>void}){
+function RecordingSession({reference,onListen,onBeforeRecord,stopSignal}:{reference:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number}){
  const rate=usePlaybackRate(),[take,setTake]=useState<Take|null>(null),[previous,setPrevious]=useState<Take|null>(null);
  const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[submitting,setSubmitting]=useState(false),[elapsed,setElapsed]=useState(0);
  const [consent,setConsent]=useState(false),[service,setService]=useState<'loading'|'ready'|'unavailable'>('loading'),[error,setError]=useState('');
@@ -25,6 +25,7 @@ function RecordingSession({reference,onListen,onBeforeRecord}:{reference:string;
  function stopTimer(){if(timer.current){clearInterval(timer.current);timer.current=null}}
  function stop(){stopTimer();if(recorder.current?.state==='recording')recorder.current.stop();stream.current?.getTracks().forEach(t=>t.stop())}
  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;stop();request.current?.abort();clips.current.forEach(c=>URL.revokeObjectURL(c.url))}},[]);
+ useEffect(()=>{stop()},[stopSignal]);
  useEffect(()=>{for(const audio of [currentAudio.current,previousAudio.current])if(audio)audio.playbackRate=Number(rate)},[rate,take?.url,previous?.url]);
  useEffect(()=>{
   if(!reference||!ONLINE){setService('unavailable');return;}

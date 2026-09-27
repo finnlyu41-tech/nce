@@ -55,3 +55,61 @@ const topics=JSON.parse(await readFile(new URL('dist-online/speaking/topics.json
 assert.equal(topics.topics.length,66);assert.equal(topics.topics.reduce((n,t)=>n+t.questions.length,0),238);
 for(const topic of topics.topics){for(const q of topic.questions)assert.deepEqual(Object.keys(q).sort(),['en','sourceRow','zh'],'Only bilingual prompts and source row numbers enter the public bank');assert(topic.questions.every(q=>q.en.length>10&&q.zh.length>=4));assert(new Set(topic.questions.map(q=>q.en)).size===topic.questions.length)}
 console.log(`${count} lesson boundaries, source-based guides, generated frames, draft compatibility, public question boundaries and readiness conditions passed.`);
+
+// New expression loop: real anchors, conservative feedback, transfer and old backup compatibility.
+const {transferCheck}=await import(moduleUrl(await source('expression-guide.ts')));
+const {expressionFeedback,compareExpression}=await import(moduleUrl(await source('expression-feedback.ts')));
+const {queueExpressionReview}=await import(moduleUrl((await source('study-path.ts')).replace("'./model'",JSON.stringify(moduleUrl(await source('model.ts'))))));
+for(const [bad,id,example] of [
+ ['I can to swim.','modal-to','I can swim'],
+ ['She should working today.','modal-base','She should work'],
+ ["I didn't went there.",'did-base',"didn't go"],
+ ['Did you saw it?','did-base','Did you see'],
+ ['I is a teacher.','i-be','I am'],
+ ['They is happy.','plural-be','They are'],
+ ['She are at home.','singular-be','She is'],
+ ['I very like reading.','very-like','I really like'],
+ ['There is two books on the desk.','there-number','There are two books'],
+ ['He enjoys to swim.','enjoy-ing','enjoys swimming'],
+]){
+ const issues=expressionFeedback(bad);assert.equal(issues[0].id,id);assert.equal(issues[0].example,example);assert(bad.includes(issues[0].evidence),'Evidence must be an actual substring');
+ assert(!expressionFeedback(example).some(i=>i.id===id),'The suggested phrase must remove this rule violation');
+}
+for(const valid of ['I can swim.','She should work today.',"I didn't go there.",'Did you see it?','I am a teacher.','They are happy.','She is at home.','I really like reading.','There are two books on the desk.','He enjoys swimming.','I use a can to hold pens.','Yesterday I said that I go there every week.'])assert.equal(expressionFeedback(valid).length,0,valid+' must not receive a false grammar correction');
+assert.equal(expressionFeedback('I is tired. They is tired. I can to swim.').length,2,'Only one or two actionable issues at a time');
+assert.equal(expressionFeedback('Is this your handbag?',{source:'Is this your handbag?'}).at(0).id,'copy');
+assert.equal(expressionFeedback('book').at(0).kind,'practice','A short attempt is a task prompt, not a grammar verdict');
+assert.equal(compareExpression('I can to swim.','I can swim.').resolved[0].id,'modal-to');
+assert.equal(compareExpression('I can to swim.','I can to swim.').changed,false);
+assert.equal(compareExpression('I can to swim.','I is happy.').remaining[0].id,'i-be','A repaired issue must not hide a new issue');
+assert.equal(expressionFeedback('I can swim.',{target:'ownership'})[0].id,'target','A fluent unrelated answer still needs a task prompt');
+assert.equal(expressionFeedback('This is my red coat.',{target:'ownership'}).length,0);
+assert.equal(expressionFeedback('Could you help me, please?',{target:'request'}).length,0);
+for(const f of frames){
+ const variants=new Set();
+ for(let round=0;round<3;round++){
+  const c=transferCheck(f,1,round);assert.equal(new Set(c.options).size,3);assert(c.options.includes(c.answer));assert(c.prompt.includes('____'));assert(c.translation.length>3);assert(c.explanation.length>10);
+  variants.add(c.prompt);assert(!/[{}]/.test(c.prompt));
+ }
+ assert(variants.size>1,f.id+' needs changed scenarios');
+}
+let unique=0;
+for(const [book,total,step] of [['NCE1',144,2],['NCE2',96,1],['NCE3',60,1],['NCE4',48,1]]){
+ const anchors=new Set();
+ for(let lesson=1;lesson<=total;lesson+=step){
+  const {rows}=JSON.parse(await readFile(new URL(`dist-online/language/${book}/${lesson}.json`,root),'utf8'));
+  const body=splitLesson(rows,book,true).body,g=guideFor(body,book);
+  assert(g.excerpt.en.startsWith(g.source.en));assert(body.map(r=>r.en).join(' ').includes(g.excerpt.en),'Joined sentence stays contiguous in this lesson');
+  assert(g.goal.includes(g.frame.name));assert(transferCheck(g.frame,lesson,0).answer);anchors.add(g.excerpt.en);
+ }
+ assert(anchors.size>total/step*.7,book+' must not collapse into a shared passage');unique+=anchors.size;
+}
+const old=readGuide(drafts['expression-NCE1-1']);assert.equal(old.retry,'This is my book.');assert.equal(old.saved,true);assert.equal(old.checkpointAt,0,'An old saved card is not invented checkpoint evidence');
+const damaged=readGuide('{"checkpointAt":-4,"checkRound":-9,"checkedRetry":[],"checkMarked":"yes"}');assert.equal(damaged.checkpointAt,0);assert.equal(damaged.checkRound,0);assert.equal(damaged.checkMarked,false);assert.equal(damaged.checkedRetry,'');
+const record={...old,checkedAnswer:old.answer,checkedRetry:old.retry,transfer:'This is my coat.',checkedTransfer:'This is my coat.',checkChoice:'Is',checkMarked:true,checkpointAt:Date.now(),checkRound:2,checkpointCorrect:true,form:'Is this your (item)?'};
+const expressionState={...savedState,drafts:{...savedState.drafts,'expression-NCE1-1':JSON.stringify(record)}};
+const expressionManifest=new TextEncoder().encode(JSON.stringify({version:1,state:expressionState,media:[]}));
+assert.deepEqual((await parsePack(new Blob(['ENGLISH-STUDIO-PACK-1\n',String(expressionManifest.length).padStart(12,'0')+'\n',expressionManifest]))).state.drafts,expressionState.drafts,'New feedback and checkpoint records survive full backup');
+const now=new Date(2026,8,27,16).getTime(),queued=queueExpressionReview({...initial,nce:{'NCE1-1':{title:'Keep me',text:'private text',notes:'keep notes',steps:['listen'],review:{checks:['meaning'],checkedAt:now-100,dueAt:now+100}}}},'NCE1',2,now);
+assert.deepEqual(queued.nce['NCE1-1'].steps,['listen']);assert.deepEqual(queued.nce['NCE1-1'].review.checks,['meaning']);assert.equal(queued.nce['NCE1-1'].notes,'keep notes');assert.equal(queued.nce['NCE1-1'].review.checkedAt,now-100);assert.equal(new Date(queued.nce['NCE1-1'].review.dueAt).getDate(),28);assert(!queued.nce['NCE1-2'],'Paired courses keep one review schedule');
+console.log(`Expression feedback, ${frames.length} transfer patterns, ${unique} distinct lesson anchors, retry comparison and backup/review preservation passed.`);

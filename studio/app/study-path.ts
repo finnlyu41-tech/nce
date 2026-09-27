@@ -38,6 +38,14 @@ export function saveUnitReview(state:State,book:NceBookId,lesson:number,checks:s
  return {...state,nce:{...state.nce,[unit.key]:{...entry,review:makeReview(checks,entry.review,now)}}};
 }
 
+// An expression check schedules practice, without claiming the three self-checks passed.
+export function queueExpressionReview(state:State,book:NceBookId,lesson:number,now=Date.now()):State{
+ const unit=studyUnit(book,lesson),entry=state.nce?.[unit.key]||{title:'',text:'',notes:'',steps:[]};
+ const review=makeReview(entry.review?.checks||[],undefined,now);
+ if(entry.review)review.checkedAt=entry.review.checkedAt;
+ return {...state,nce:{...state.nce,[unit.key]:{...entry,review}}};
+}
+
 export const stageChecks:Record<NceBookId,string>={
  NCE1:'阶段自查：换一段同难度的基础对话，能抓住意思；能用简单句介绍自己、描述经历和计划。',
  NCE2:'阶段自查：能理解同难度的新短文，连贯讲一段经历，并写出有开头、经过和结果的短文。中后段开始接触雅思日常话题。',

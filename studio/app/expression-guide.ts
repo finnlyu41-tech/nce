@@ -15,15 +15,43 @@ export const frames:Frame[]=[
  {id:'preference',name:'喜好与原因',match:/\b(?:like|love|enjoy|prefer|want)\b/i,form:'I enjoy {0} because {1}.',zh:'我喜欢{0}，因为{1}。',slots:[choices('喜欢的活动',['reading|阅读','swimming|游泳','cooking|做饭']),choices('一个原因',['it helps me relax|它帮助我放松','I can learn something new|我能学到新东西','it is fun|它很有趣'])],tip:'enjoy 后面的动作使用 -ing。because 后面写完整的原因。',transfer:'换一个活动，给出自己的原因，不照抄示范。'},
  {id:'habit',name:'日常与频率',match:/\b(?:usually|often|every|always|sometimes|do you)\b/i,form:'I usually {0} {1}.',zh:'我通常{1}{0}。',slots:[choices('经常做什么',['read a book|读书','go for a walk|散步','listen to music|听音乐']),choices('什么时候',['after dinner|晚饭后','in the morning|早上','before bed|睡觉前'])],tip:'usually 通常放在动作前；频率和时间让回答更具体。',transfer:'加第二句：为什么这样做？可以用 It helps me relax. 起步。'},
 ];
+// These functions are selected from evidence in the current lesson, not by book alone.
+frames.splice(2,0,
+ {id:'progressive',name:'正在进行的动作',match:/\b(?:am|is|are|'m|'re|'s)\s+\w+ing\b/i,form:'I am {0} now. Please {1}.',zh:'我现在正在{0}。请{1}。',slots:[choices('正在做什么',['reading|阅读','cooking|做饭','working|工作']),choices('希望对方做什么',['wait a moment|等一下','be quiet|安静一点','help me|帮帮我'])],tip:'正在发生的动作：am / is / are + 动词 -ing。两句话要符合你设定的情境。',transfer:'家人打电话来，告诉他你现在正在做什么，再提出一个请求。'},
+ {id:'perfect',name:'已经完成的事',match:/\b(?:have|has|'ve|'s)\s+(?:just |already |never |ever )?(?:been|seen|done|had|made|taken|\w+ed)\b/i,form:'I have {0}. Now I can {1}.',zh:'我已经{0}。现在我可以{1}。',slots:[choices('已经做完什么',['finished my work|完成了工作','cleaned my room|打扫了房间','packed my bag|收拾好了包']),choices('接下来能做什么',['take a break|休息一下','go outside|出去','leave home|出门'])],tip:'have / has + 过去分词连接已完成的事和现在的情况。',transfer:'出门前向朋友汇报一件已经准备好的事，再说接下来可以做什么。'},
+ {id:'conditional',name:'条件与结果',match:/\bif\b/i,form:'If it {0}, I will {1}.',zh:'如果天气{0}，我就会{1}。',slots:[choices('天气条件',['rains|下雨','snows|下雪','gets cold|变冷']),choices('你会做什么',['stay at home|待在家里','take a coat|带一件外套','call my friend|给朋友打电话'])],tip:'这里练真实的未来条件：if 从句用一般现在时，结果可用 will + 动词原形。',transfer:'为明天的出行准备一个备用方案，说清条件和结果。'},
+ {id:'reason',name:'原因与结果',match:/\b(?:because|therefore|so that|as a result)\b/i,form:'I {0} because {1}.',zh:'我{0}，因为{1}。',slots:[choices('你的选择',['walk to work|步行上班','study at home|在家学习','take the bus|乘公共汽车']),choices('原因',['it saves money|这样省钱','it is convenient|这样方便','it helps me concentrate|这样帮助我集中注意力'])],tip:'because 后面接完整的原因：谁或什么 + 动作或状态。检查原因是否真的支持前面的选择。',transfer:'解释今天做的一个选择，并补一个让别人能理解的原因。'},
+ {id:'contrast',name:'两面与转折',match:/\b(?:although|however|even though|nevertheless)\b/i,form:'Although {0}, I {1}.',zh:'虽然{0}，我还是{1}。',slots:[choices('一个困难',['I was tired|我很累','it was raining|正在下雨','the task was difficult|任务很难']),choices('实际做了什么',['finished my work|完成了工作','kept going|继续坚持','asked for help|寻求了帮助'])],tip:'Although 表示“虽然”。先讲困难，再讲实际发生的另一面；主句不再加 but。',transfer:'讲一次遇到困难仍然完成某件事的经历，说清两面。'},
+ {id:'comparison',name:'比较与选择',match:/\b(?:better|worse|cheaper|larger|bigger|smaller|more \w+|most \w+|\w+er than)\b/i,form:'This {0} is cheaper than that one. I prefer it because {1}.',zh:'这个{0}比那个便宜。我更喜欢它，因为{1}。',slots:[choices('比较什么',['bag|包','coat|外套','phone|手机']),choices('你的理由',['it is useful|它实用','it is lighter|它更轻','I like the colour|我喜欢它的颜色'])],tip:'比较级 + than。先明确比较哪两样东西，再说明选择理由。',transfer:'朋友在两件物品之间犹豫，比较它们，再给出你的选择和理由。'},
+ {id:'passive',name:'介绍事物的来历',match:/\b(?:is|are|was|were)\s+(?:\w+ly\s+)?(?:built|made|found|known|called|owned|taken|\w+ed)\b/i,form:'This {0} was {1}. People still use it today.',zh:'这个{0}{1}。今天人们仍在使用它。',slots:[choices('介绍什么',['bridge|桥','building|建筑','station|车站']),choices('它的来历',['built in 1990|建于1990年','repaired last year|去年修缮过','opened many years ago|多年前就启用了'])],tip:'事物是动作的接受者：was / were + 过去分词。示范中的日期是假设情境，讲真实地点时使用已知事实。',transfer:'介绍家附近一处设施：它是什么、何时修建或修缮、现在有什么用途。'},
+ {id:'relative',name:'补充说明人或物',match:/\b(?:who|which|that)\s+(?:is|are|was|were|has|have|can|\w+s)\b/i,form:'I know a person who {0}. This helps me {1}.',zh:'我认识一位{0}的人。这帮助我{1}。',slots:[choices('这个人做什么',['teaches English|教英语','works in a library|在图书馆工作','lives nearby|住在附近']),choices('带来的帮助',['learn new things|学到新东西','find useful information|找到有用的信息','feel less lonely|感到不那么孤单'])],tip:'先说人，再用 who 补充这个人的特点。例子里 a person 是单数，后面的动作注意单数形式。',transfer:'介绍一位帮助过你的人，用一句补充说明让别人知道他有什么特点。'},
+);
 export const sentenceFor=(frame:Frame,selected:number[],chinese=false)=>(chinese?frame.zh:frame.form).replace(/\{(\d+)\}/g,(_,i)=>{const options=frame.slots[Number(i)].options;return options[selected[Number(i)]||0]?.[chinese?'zh':'en']||options[0][chinese?'zh':'en']});
 export function guideFor(rows:LanguageRow[],book:NceBookId){
  const source=rows.find(r=>frames.some(f=>f.match.test(r.en))&&r.en.length>12)||rows.find(r=>r.en.length>12)||rows[0];
- const frame=frames.find(f=>f.match.test(source?.en||''))||frames[3];
- return {source,frame,level:book==='NCE1'?'sentence':book==='NCE2'?'story':'opinion'};
+ const frame=frames.find(f=>f.match.test(source?.en||''))||frames.find(f=>f.id==='identity')!;
+ const start=rows.indexOf(source),parts:LanguageRow[]=[];
+ for(let i=start;i>=0&&i<rows.length&&parts.length<5;i++){parts.push(rows[i]);if(/[.!?]["'”’]?\s*$/.test(rows[i].en))break;}
+ const excerpt={en:parts.map(r=>r.en).join(' '),zh:parts.map(r=>r.zh).join('')};
+ const level=book==='NCE1'?'sentence':book==='NCE2'?'story':'opinion';
+ const prompts=level==='sentence'?['换成人物或物品','补一个自己的细节']:level==='story'?['本课这句话里发生了什么？','前后有什么原因或结果？','你遇到过什么类似情境？']:['本课这句话在说明什么？','原文的什么细节支持它？','换到生活中，什么时候适用或不适用？'];
+ return {source,frame,level,excerpt,prompts,goal:`用“${frame.name}”${level==='sentence'?'说两句自己的话':level==='story'?'讲一件自己的事':'解释一个具体情境'}`};
 }
-export type GuideDraft={step:number;selected:number[];meaning:string;keywords:string;answer:string;repair:string;retry:string;saved:boolean;category:string};
+export type GuideDraft={step:number;selected:number[];meaning:string;keywords:string;answer:string;repair:string;retry:string;saved:boolean;category:string;checkedAnswer:string;checkedRetry:string;checkRound:number;checkChoice:string;checkMarked:boolean;transfer:string;checkedTransfer:string;checkpointAt:number;checkpointCorrect:boolean;previousTransfer:string;form:string;source:string};
 export function readGuide(raw?:string):GuideDraft{
  let d:any={};try{d=JSON.parse(raw||'{}')||{}}catch{}
  const text=(key:string)=>typeof d[key]==='string'?d[key].slice(0,5000):'';
- return {step:Number.isInteger(d.step)?Math.max(0,Math.min(4,d.step)):0,selected:Array.isArray(d.selected)?d.selected.slice(0,4).map((x:any)=>Number.isInteger(x)&&x>=0&&x<3?x:0):[],meaning:text('meaning'),keywords:text('keywords'),answer:text('answer'),repair:text('repair'),retry:text('retry'),saved:d.saved===true,category:text('category')};
+ return {step:Number.isInteger(d.step)?Math.max(0,Math.min(4,d.step)):0,selected:Array.isArray(d.selected)?d.selected.slice(0,4).map((x:any)=>Number.isInteger(x)&&x>=0&&x<3?x:0):[],meaning:text('meaning'),keywords:text('keywords'),answer:text('answer'),repair:text('repair'),retry:text('retry'),saved:d.saved===true,category:text('category'),checkedAnswer:text('checkedAnswer'),checkedRetry:text('checkedRetry'),checkRound:Number.isInteger(d.checkRound)?Math.max(0,Math.min(10000,d.checkRound)):0,checkChoice:text('checkChoice'),checkMarked:d.checkMarked===true,transfer:text('transfer'),checkedTransfer:text('checkedTransfer'),checkpointAt:Number.isFinite(d.checkpointAt)&&d.checkpointAt>0?d.checkpointAt:0,checkpointCorrect:d.checkpointCorrect===true,previousTransfer:text('previousTransfer'),form:text('form'),source:text('source')};
+}
+
+export function transferCheck(frame:Frame,lesson:number,round:number){
+ const selected=frame.slots.map((_,i)=>(lesson+round+i+1)%3),sentence=sentenceFor(frame,selected),translation=sentenceFor(frame,selected,true);
+ const patterns:Record<string,[RegExp,string[]]>={
+  ownership:[/^Is\b/,['Are','Do']],request:[/\b(?:open|help|say)\b/,['helping','to help']],place:[/\bis\b/,['are','am']],identity:[/\bam\b/,['is','are']],feeling:[/\bfeel\b/,['feels','feeling']],ability:[/\b(?:swim|cook|ride)\b/,['swimming','cooks']],future:[/\b(?:visit|go)\b/,['visiting','goes']],past:[/\b(?:visited|went|cooked)\b/,['go','visiting']],preference:[/\b(?:reading|swimming|cooking)\b/,['read','swim']],habit:[/\b(?:read|go|listen)\b/,['reads','going']],
+  progressive:[/\b(?:reading|cooking|working)\b/,['read','works']],perfect:[/\b(?:finished|cleaned|packed)\b/,['finish','cleaning']],conditional:[/\b(?:rains|snows|gets)\b/,['rain','snowing']],reason:[/\bbecause\b/,['because of','despite']],contrast:[/^Although\b/,['Because','If']],comparison:[/\bcheaper\b/,['cheap','cheapest']],passive:[/\b(?:built|repaired|opened)\b/,['build','repairing']],relative:[/\bwho\b/,['which','where']]
+ };
+ const [pattern,other]=patterns[frame.id]||patterns.identity,match=sentence.match(pattern);
+ if(!match)throw Error('Missing practice target: '+frame.id);
+ const answer=match[0],options=[answer,...other],shift=(lesson+round)%3;
+ return {id:`${frame.id}-${lesson}-${round}`,prompt:sentence.slice(0,match.index)+'____'+sentence.slice(match.index!+answer.length),translation,answer,options:options.slice(shift).concat(options.slice(0,shift)),explanation:frame.tip,transfer:frame.transfer};
 }

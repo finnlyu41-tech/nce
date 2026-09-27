@@ -4,11 +4,15 @@ import {ArrowRight,ArrowLeft,Volume2,Check} from 'lucide-react';
 import {toast} from 'sonner';
 import {type State,type NceBookId,wordCount} from './model';
 import type {LanguageRow} from './language';
-import {guideFor,readGuide,sentenceFor,type GuideDraft} from './expression-guide';
+import {guideFor,readGuide,sentenceFor,transferCheck,type GuideDraft} from './expression-guide';
+import {expressionFeedback} from './expression-feedback';
+import {ExpressionFeedback} from './expression-feedback-ui';
 import {WordText} from './word-lookup';
 import {Recorder,speak} from './learning';
 import {PlaybackSpeed} from './playback-speed';
 import {navigate} from './navigation';
+import {useRoute} from './use-route';
+import {queueExpressionReview} from './study-path';
 
 const repairs=[
  ['meaning','不知道说什么','先用中文写“谁、做什么、一个细节”，再只说第一句。'],
@@ -17,28 +21,103 @@ const repairs=[
  ['words','词语或搭配不确定','回到原句查这个词，把短语作为一个整体，再换一个内容造句。'],
  ['sound','一个词听不清或读不清','点词看音标，听原声，再录一次，只比较这个词。'],
 ];
+const names=['听懂一句','拆开搭句','自己表达','反馈与重练','换情境检验'];
 export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:NceBookId;lesson:number;rows:LanguageRow[];state:State;update:(fn:(s:State)=>State)=>void;listen:()=>void}){
- const key=`expression-${book}-${lesson}`,draft=readGuide(state.drafts[key]),{frame,source,level}=guideFor(rows,book);
+ const route=useRoute(),key=`expression-${book}-${lesson}`,draft=readGuide(state.drafts[key]);
+ const {frame,source,level,excerpt,prompts,goal}=guideFor(rows,book),step=route.step??draft.step;
  const [hint,setHint]=useState<'full'|'keywords'|'none'>('full');
- const patch=(change:Partial<GuideDraft>)=>update(s=>({...s,drafts:{...s.drafts,[key]:JSON.stringify({...readGuide(s.drafts[key]),...change})}}));
- const names=['听懂一句','拆开搭句','自己表达','找问题再练','收进框架'];
- const sentence=level==='sentence'?sentenceFor(frame,draft.selected):level==='story'?'Last Sunday, I visited a park with a friend. We walked by the lake. I felt relaxed because it was quiet.':'I think parks are useful. They give people a place to exercise. For example, families can walk together. However, they need regular care.';
- const translation=level==='sentence'?sentenceFor(frame,draft.selected,true):level==='story'?'上周日，我和一个朋友去了公园。我们沿湖散步。那里很安静，我感到很放松。':'我认为公园很有用。它们给人们提供运动的地方。例如，家人可以一起散步。不过，公园需要定期维护。';
- const category=level==='sentence'?frame.name:level==='story'?'过去的经历':'观点与论证';
- const ready=[!!draft.meaning.trim(),!!draft.keywords.trim(),wordCount(draft.answer)>=3,!!draft.repair&&wordCount(draft.retry)>=3,true][draft.step];
+ const patch=(change:Partial<GuideDraft>)=>update(s=>{
+  const changedContent=['meaning','keywords','selected','answer','retry'].some(field=>field in change);
+  return {...s,drafts:{...s.drafts,[key]:JSON.stringify({...readGuide(s.drafts[key]),...(changedContent?{checkpointAt:0,checkChoice:'',checkMarked:false,checkedTransfer:'',saved:false}:{}),...change})}};
+ });
+ function go(next:number,change:Partial<GuideDraft>={}){
+  patch({...change,step:next});
+  navigate({view:'nce',book,lesson,tab:'notes',step:next});
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+   document.getElementById('expression-stage-title')?.focus({preventScroll:true});
+   document.getElementById('expression-task')?.scrollIntoView({block:'start'});
+  }));
+ }
+ const sentence=sentenceFor(frame,draft.selected),translation=sentenceFor(frame,draft.selected,true);
+ const context={source:excerpt.en,extend:book!=='NCE1',target:frame.id},challenge=transferCheck(frame,lesson,draft.checkRound);
+ const canSave=!!draft.meaning.trim()&&!!draft.keywords.trim()&&wordCount(draft.answer)>=3&&wordCount(draft.retry)>=3&&draft.checkedRetry===draft.retry&&draft.checkMarked&&wordCount(draft.transfer)>=3&&draft.checkedTransfer===draft.transfer;
+ const sessionSaved=draft.saved&&draft.checkpointAt>0;
+ const ready=[!!draft.meaning.trim(),!!draft.keywords.trim(),wordCount(draft.answer)>=3,wordCount(draft.retry)>=3&&draft.checkedRetry===draft.retry,canSave][step];
+ const next=()=>{
+  if(step===2){go(3,{checkedAnswer:draft.answer,retry:draft.retry||draft.answer,checkedRetry:'',saved:false});return;}
+  go(step+1);
+ };
+ const startCheck=()=>patch({checkRound:draft.checkRound+1,checkChoice:'',checkMarked:false,previousTransfer:draft.transfer||draft.previousTransfer,transfer:'',checkedTransfer:'',checkpointAt:0,checkpointCorrect:false,saved:false});
+ function save(){
+  const now=Date.now(),form=frame.form.replace(/\{(\d+)\}/g,(_,i)=>`（${frame.slots[Number(i)].label}）`);
+  update(s=>queueExpressionReview({...s,drafts:{...s.drafts,[key]:JSON.stringify({...readGuide(s.drafts[key]),saved:true,category:frame.name,form,source:excerpt.en,checkpointAt:now,checkpointCorrect:draft.checkChoice===challenge.answer&&expressionFeedback(draft.transfer,context).length===0,step:4})}},book,lesson,now));
+  toast.success('已保存检验与表达卡片，明天从今日学习继续');
+ }
  if(!source)return <section className="panel"><h3>先打开本课教材</h3><p>本课原句载入后，这里会生成表达步骤。你已经写的内容会保留。</p><button className="btn" onClick={listen}>打开教材听读</button></section>;
- return <section className="panel guided-expression"><div className="section-top"><div><span className="eyebrow">从这一课，说到自己的生活</span><h2>每次只练一小步</h2></div><span className="pill">{draft.step+1} / 5</span></div><nav className="guide-steps" aria-label="表达练习步骤">{names.map((name,i)=><button key={name} className={i===draft.step?'active':''} onClick={()=>patch({step:i})} aria-current={i===draft.step?'step':undefined}>{i+1}<span>{name}</span></button>)}</nav>
- {draft.step===0&&<div className="guide-stage"><h3>先弄懂本课这一句</h3><p>先听课文里的原声，再看中文。只要说清意思，不必背整篇。</p><blockquote><WordText text={source.en}/><p className="line-translation">{source.zh}</p></blockquote><div className="row wrap"><button className="text-btn" onClick={listen}>回到课文听原声</button><button className="text-btn" onClick={()=>speak(source.en)}><Volume2 size={17}/>慢读这句</button><PlaybackSpeed ariaLabel="表达示范语速"/></div><label className="field">这句话在说谁、什么事？<textarea rows={2} maxLength={1000} value={draft.meaning} onChange={e=>patch({meaning:e.target.value,saved:false})} placeholder="可以用中文写一句，不用翻译每一个词"/></label><p className="small muted">听不懂就先点 1–2 个关键词查意思，然后再听。</p></div>}
- {draft.step===1&&<div className="guide-stage"><h3>{level==='sentence'?`练一个用途：${frame.name}`:level==='story'?'把一件事分成四块':'把一个观点分成四块'}</h3><p>{level==='sentence'?frame.tip:level==='story'?'谁和什么时候 → 去哪里 / 做什么 → 一个具体细节 → 结果或感受。先用中文或几个英文词填内容。':'我的观点 → 为什么 → 一个例子 → 有什么例外。先把每一块说清，再连接。'}</p><p className="small muted">下面是本站编写的迁移示范；用本课学到的表达讲自己的事。</p>{level==='sentence'&&<div className="guide-slots">{frame.slots.map((slot,i)=><label className="field" key={slot.label}>{slot.label}<select value={draft.selected[i]||0} onChange={e=>{const selected=[...draft.selected];selected[i]=Number(e.target.value);patch({selected,saved:false})}}>{slot.options.map((o,n)=><option key={o.en} value={n}>{o.en} · {o.zh}</option>)}</select></label>)}</div>}<blockquote><WordText text={sentence}/><p className="line-translation">{translation}</p></blockquote><div className="row wrap"><button className="text-btn" onClick={()=>speak(sentence)}><Volume2 size={17}/>听这组示范</button><PlaybackSpeed ariaLabel="搭句示范语速"/></div><label className="field">换成自己的内容，只写关键词<textarea rows={3} maxLength={1000} value={draft.keywords} onChange={e=>patch({keywords:e.target.value,saved:false})} placeholder={level==='sentence'?'例如：my bag / blue / every day':level==='story'?'人物和时间：\n地点和事情：\n一个细节：\n结果或感受：':'我的观点：\n原因：\n具体例子：\n例外或限制：'}/></label></div>}
- {draft.step===2&&<div className="guide-stage"><h3>现在用自己的内容说一遍</h3><div className="guide-hints" role="group" aria-label="表达提示程度">{(['full','keywords','none'] as const).map((value,i)=><button className={'btn '+(hint===value?'':'secondary')} key={value} onClick={()=>setHint(value)}>{['看句架','只看关键词','关掉提示'][i]}</button>)}</div>{hint==='full'&&<blockquote><WordText text={sentence}/><p className="line-translation">{translation}</p></blockquote>}{hint!=='none'&&<p className="guide-keywords">我的关键词：{draft.keywords||'回到上一步写几个关键词'}</p>}<p>{level==='sentence'?'先说 1–2 句，再补一个原因或具体细节。':level==='story'?'先把四块各说一句，再试着连成一段经历。':'用四块组织回答。例子要支持前面的原因，观点可以保留条件。'}</p><Recorder/><label className="field">记下你刚才说的内容<textarea rows={4} maxLength={5000} value={draft.answer} onChange={e=>patch({answer:e.target.value,saved:false})} placeholder="用自己的英语写下来，写不出的词先留空；这一版允许出错"/></label><p className="small muted">记录实际说过的话，下一步只修一个最明显的问题。</p></div>}
- {draft.step===3&&<div className="guide-stage"><h3>找一个问题，改完再说一次</h3><p>回想刚才的录音或重新录一遍。先关注能否听懂意思，再检查一个具体问题。</p><p className="guide-keywords">刚才的表达：{draft.answer||'先到“自己表达”写下第一遍内容'}</p><label className="field">这一次先改什么？<select value={draft.repair} onChange={e=>patch({repair:e.target.value,saved:false})}><option value="">选一个最需要改的地方</option>{repairs.map(([id,title])=><option key={id} value={id}>{title}</option>)}<option value="transfer">这一遍清楚了，换个内容再试</option></select></label><p className="note">{repairs.find(([id])=>id===draft.repair)?.[2]||(draft.repair==='transfer'?frame.transfer:'不用一次改完所有问题。')}</p><Recorder/><label className="field">改过后的版本 / 换一个内容的版本<textarea rows={4} maxLength={5000} value={draft.retry} onChange={e=>patch({retry:e.target.value,saved:false})} placeholder="再说一遍，再记下新版本。把改动应用到一个新的内容上。"/></label><p className="small muted">这里保存自查与修改记录；录音暂不自动诊断或打分。</p></div>}
- {draft.step===4&&<div className="guide-stage"><h3>把这次学会的用途收起来</h3><p>以后从“想表达什么”找到句型，再用自己的例子回忆。</p><div className="knowledge-preview"><span className="pill">{category}</span><strong>{level==='sentence'?frame.form.replace(/\{(\d+)\}/g,(_,i)=>`（${frame.slots[Number(i)].label}）`):level==='story'?'背景 → 事件 → 细节 → 感受':'观点 → 原因 → 例子 → 限制'}</strong><p>{draft.retry||draft.answer||'先写一段自己的表达'}</p><small>下次先练：{repairs.find(([id])=>id===draft.repair)?.[1]||'换一个内容再说一遍'}</small></div><button className="btn" disabled={!draft.meaning.trim()||!draft.keywords.trim()||wordCount(draft.answer)<3||!draft.repair||wordCount(draft.retry)<3} onClick={()=>{patch({saved:true,category});toast.success('已收进学习档案的表达框架；继续在下方保存自查，安排复习')}}>{draft.saved?<Check size={17}/>:<ArrowRight size={17}/>} {draft.saved?'已收进表达框架':'保存表达卡片'}</button><p className="small muted">需要保留理解、关键词、第一遍表达和修改版，才能存成完整卡片。</p><button className="text-btn" onClick={()=>navigate({view:'progress'})}>查看我的表达框架</button><button className="text-btn" onClick={()=>navigate({view:'ielts',tab:'speaking',task:book==='NCE1'?`bank-1-${({ownership:16,request:13,place:3,identity:1,feeling:5,ability:2,future:4,past:7,preference:5,habit:14} as Record<string,number>)[frame.id]||1}-0`:book==='NCE2'?'bank-2-1-0':'bank-3-1-0'})}>把同一个方法用到口语话题 <ArrowRight size={15}/></button></div>}
- <div className="row spread guide-footer"><button className="btn secondary" disabled={draft.step===0} onClick={()=>patch({step:draft.step-1})}><ArrowLeft size={16}/>上一步</button>{draft.step<4&&<button className="btn" disabled={!ready} onClick={()=>patch({step:draft.step+1})}>下一小步 <ArrowRight size={16}/></button>}</div><p className="small muted">文字自动保存在此浏览器，随学习备份导出。练习次数和卡片数量不换算成雅思分数。</p></section>;
+ return <section className="panel guided-expression" id="expression-task">
+  <div className="section-top"><div><span className="eyebrow">第 {lesson} 课 · {frame.name}</span><h2 id="expression-stage-title" tabIndex={-1}>{names[step]}</h2></div><span className="pill">{step+1} / 5</span></div>
+  <p className="guide-goal">今天练成：{goal}。</p>
+  <nav className="guide-steps" aria-label="表达练习步骤">{names.map((name,i)=><button key={name} className={i===step?'active':''} onClick={()=>go(i)} aria-current={i===step?'step':undefined}>{i+1}<span>{name}</span></button>)}</nav>
+  <label className="guide-mobile-jump">当前步骤<select aria-label="切换表达步骤" value={step} onChange={e=>go(Number(e.target.value))}>{names.map((name,i)=><option value={i} key={name}>{i+1} / 5 · {name}</option>)}</select></label>
+  {step===0&&<div className="guide-stage">
+   <p>先听这一句，再说清它的意思。今天先练这一小段。</p>
+   <blockquote><WordText text={excerpt.en}/><p className="line-translation">{excerpt.zh}</p></blockquote>
+   <div className="row wrap"><button className="text-btn" onClick={listen}>回到课文听原声</button><button className="text-btn" onClick={()=>speak(excerpt.en)}><Volume2 size={17}/>慢读这句</button><PlaybackSpeed ariaLabel="表达示范语速"/></div>
+   <label className="field">这句话在说谁、什么事？<textarea rows={2} maxLength={1000} value={draft.meaning} onChange={e=>patch({meaning:e.target.value,saved:false})} placeholder="用中文说清意思即可；卡住时先点关键词查意思"/></label>
+  </div>}
+  {step===1&&<div className="guide-stage">
+   <h3>从本课原句，借一个表达方法</h3><blockquote><WordText text={excerpt.en}/><p className="line-translation">{excerpt.zh}</p></blockquote>
+   <p className="note">{frame.tip}</p>
+   <p className="small muted">下面换成日常情境练同一种用途，示范由本站编写。先换一个选项，再试着自己说。</p>
+   <div className="guide-slots">{frame.slots.map((slot,i)=><label className="field" key={slot.label}>{slot.label}<select value={draft.selected[i]||0} onChange={e=>{const selected=[...draft.selected];selected[i]=Number(e.target.value);patch({selected,saved:false})}}>{slot.options.map((o,n)=><option key={o.en} value={n}>{o.en} · {o.zh}</option>)}</select></label>)}</div>
+   <blockquote><WordText text={sentence}/><p className="line-translation">{translation}</p></blockquote>
+   <div className="row wrap"><button className="text-btn" onClick={()=>speak(sentence)}><Volume2 size={17}/>听替换示范</button><PlaybackSpeed ariaLabel="搭句示范语速"/></div>
+   {level!=='sentence'&&<ol className="guide-prompts">{prompts.map(p=><li key={p}>{p}</li>)}</ol>}
+   <label className="field">换成自己的内容，先写关键词<textarea rows={3} maxLength={1000} value={draft.keywords} onChange={e=>patch({keywords:e.target.value,saved:false})} placeholder={frame.slots.map(s=>s.label+'：').join('\n')+'\n自己的一个细节：'}/></label>
+  </div>}
+  {step===2&&<div className="guide-stage">
+   <h3>{level==='sentence'?'先说两句，再补一个细节':'用这个方法，讲自己的一个情境'}</h3>
+   <div className="guide-hints" role="group" aria-label="表达提示程度">{(['full','keywords','none'] as const).map((value,i)=><button className={'btn '+(hint===value?'':'secondary')} key={value} onClick={()=>setHint(value)}>{['看句架','只看关键词','关掉提示'][i]}</button>)}</div>
+   {hint==='full'&&<blockquote><WordText text={sentence}/><p className="line-translation">{translation}</p></blockquote>}
+   {hint!=='none'&&<p className="guide-keywords">我的关键词：{draft.keywords||'先到上一步写几个关键词'}</p>}
+   <p>{frame.transfer}</p>
+   <label className="field">记下你刚才说的内容<textarea rows={4} maxLength={5000} value={draft.answer} onChange={e=>patch({answer:e.target.value,checkedAnswer:'',saved:false})} placeholder="尽量记录自己实际说过的话，允许出错；下一步会检查这一版"/></label>
+  </div>}
+  {step===3&&<div className="guide-stage">
+   <h3>先改一处，再用自己的话说一遍</h3>
+   {draft.answer.trim()?<><details className="previous-expression"><summary>查看第一版</summary><p lang="en">{draft.answer}</p><button className="text-btn" onClick={()=>go(2)}>回去修改第一版</button></details><ExpressionFeedback text={draft.answer} context={context}/></>:<p className="notice">先到“自己表达”写下第一版，再来检查。<button className="text-btn" onClick={()=>go(2)}>写第一版</button></p>}
+   <details className="extra-repair"><summary>回听后，我还想改停顿、发音或意思</summary><label className="field">这一轮再关注什么？<select value={draft.repair} onChange={e=>patch({repair:e.target.value,saved:false})}><option value="">暂不追加问题</option>{repairs.map(([id,title])=><option key={id} value={id}>{title}</option>)}<option value="transfer">换个内容再试</option></select></label><p>{repairs.find(([id])=>id===draft.repair)?.[2]||frame.transfer}</p></details>
+   <label className="field">改过后的版本<textarea rows={4} maxLength={5000} value={draft.retry} onChange={e=>patch({retry:e.target.value,checkedRetry:'',saved:false})} placeholder="保留要表达的意思，修正刚才的一两处；再录一次比较"/></label>
+   <button className="btn secondary" disabled={wordCount(draft.retry)<3} onClick={()=>patch({checkedRetry:draft.retry,saved:false})}>检查修改版并比较</button>
+   {draft.checkedRetry===draft.retry&&draft.retry.trim()&&<ExpressionFeedback text={draft.retry} before={draft.answer} context={context}/>}
+  </div>}
+  {/* One recorder survives first answer -> feedback -> retry, preserving the two takes. */}
+  {(step===2||step===3)&&<div className="expression-recorder" key="expression-recorder"><Recorder stopSignal={step}/><p className="small muted">在“自己表达”和“反馈与重练”之间切换会保留最近两遍，方便回听比较；离开这轮录音练习后清除。</p></div>}
+  {step===4&&<div className="guide-stage">
+   <h3>不看句架，换一个情境试试</h3>
+   {draft.checkpointAt>0?<div className="checkpoint-saved"><p>上次检验：{new Date(draft.checkpointAt).toLocaleDateString('zh-CN')}。{draft.checkpointCorrect?'选择题答对，文字检查未发现所列问题。':'还有需要回顾的地方。'}</p><p>这是一次练习记录，下一次换情境继续检查。</p><button className="btn" onClick={startCheck}>开始新一轮换情境检验</button></div>:<>
+    <p>① 按中文意思选出合适的形式，再自己说一句。</p>
+    <p className="check-translation">{challenge.translation}</p><p className="check-prompt" lang="en">{challenge.prompt}</p>
+    <fieldset className="transfer-options"><legend>选择空缺处的表达</legend>{challenge.options.map(option=><label key={option}><input type="radio" name={`transfer-${book}-${lesson}`} value={option} checked={draft.checkChoice===option} disabled={draft.checkMarked} onChange={()=>patch({checkChoice:option,saved:false})}/><span lang="en">{option}</span></label>)}</fieldset>
+    {!draft.checkMarked?<button className="btn secondary" disabled={!draft.checkChoice} onClick={()=>patch({checkMarked:true,saved:false})}>检查这个选择</button>:<div role="status" className={'feedback '+(draft.checkChoice===challenge.answer?'good':'bad')}><strong>{draft.checkChoice===challenge.answer?'这个选择正确':'这一处用 '+challenge.answer}</strong><p>{challenge.explanation}</p><button className="text-btn" onClick={startCheck}>换一道再试</button></div>}
+    <p>② {challenge.transfer}</p>
+    <label className="field">这次脱离句架的表达<textarea rows={3} maxLength={5000} value={draft.transfer} onChange={e=>patch({transfer:e.target.value,checkedTransfer:'',saved:false})} placeholder="先自己说，再写下刚才的英语；尽量换一种内容"/></label>
+    <button className="btn secondary" disabled={wordCount(draft.transfer)<3} onClick={()=>patch({checkedTransfer:draft.transfer,saved:false})}>检查这次表达</button>
+    {draft.checkedTransfer===draft.transfer&&draft.transfer.trim()&&<ExpressionFeedback text={draft.transfer} context={context}/>}
+   </>}
+   {draft.previousTransfer&&<details><summary>上一次在这个用途下的表达</summary><p lang="en">{draft.previousTransfer}</p></details>}
+   <button className="btn full checkpoint-save" disabled={!canSave||sessionSaved} onClick={save}>{sessionSaved?<Check size={17}/>:<ArrowRight size={17}/>} {sessionSaved?'已保存，明天继续检验':'保存卡片，安排明天复习'}</button>
+   {!canSave&&!sessionSaved&&<p className="small muted">保留前面的理解、关键词、第一版和已检查的修改版，并完成上面的两项检验后即可保存。有问题也会留下记录，明天针对它重练。<button className="text-btn" onClick={()=>go(3)}>回到修改版检查</button></p>}
+   <button className="text-btn" onClick={()=>navigate({view:'progress'})}>查看我的表达框架 <ArrowRight size={15}/></button>
+  </div>}
+  <div className="row spread guide-footer"><button className="btn secondary" disabled={step===0} onClick={()=>go(step-1)}><ArrowLeft size={16}/>上一步</button><span className="small muted">{step+1} / 5</span>{step<4?<button className="btn" disabled={!ready} onClick={next}>{step===2?'检查这一版':step===3?'换情境检验':'下一小步'}<ArrowRight size={16}/></button>:<button className="btn secondary" onClick={()=>navigate({view:'today'})}>回到今日学习</button>}</div>
+  <p className="small muted guide-save-note">文字自动保存在此浏览器，随学习备份导出。</p>
+ </section>;
 }
 
 export function ExpressionCollection({drafts}:{drafts:Record<string,string>}){
  const [category,setCategory]=useState('全部');
- const cards=Object.entries(drafts).filter(([key])=>/^expression-NCE[1-4]-\d+$/.test(key)).map(([key,value])=>({key,...readGuide(value)})).filter(d=>d.saved&&d.retry.trim());
+ const cards=Object.entries(drafts).filter(([key])=>/^expression-NCE[1-4]-\d+$/.test(key)).map(([key,value])=>({key,...readGuide(value)})).filter(d=>(d.saved||!!d.category)&&d.retry.trim());
  const groups=[...new Set(cards.map(c=>c.category||'其他'))];
- return <section className="panel section-space"><div className="section-top"><div><h2>我的表达框架</h2><p className="muted small">按用途积累：句型 → 自己的例子 → 一个待修正的地方。</p></div><span className="pill">{cards.length} 张卡片</span></div><label className="field">按表达用途查看<select value={category} onChange={e=>setCategory(e.target.value)}>{['全部',...groups].map(g=><option key={g}>{g}</option>)}</select></label>{cards.length===0?<p>每课的“表达”里有五个小步骤。完成后保存卡片，这里就会逐步形成你的框架。</p>:<div className="knowledge-grid">{cards.filter(c=>category==='全部'||c.category===category).map(c=>{const [,book,no]=c.key.split('-');return <article key={c.key}><span className="pill">{c.category}</span><p lang="en"><WordText text={c.retry}/></p><p className="small muted">下一次：{repairs.find(([id])=>id===c.repair)?.[1]||'换个内容独立说'}</p><button className="text-btn" onClick={()=>navigate({view:'nce',book:book as NceBookId,lesson:Number(no),tab:'notes'})}>返回第 {no} 课复习 <ArrowRight size={15}/></button></article>})}</div>}</section>;
+ return <section className="panel section-space"><div className="section-top"><div><h2>我的表达框架</h2><p className="muted small">想表达什么 → 怎样组织 → 自己的例子 → 换情境再用。</p></div><span className="pill">{cards.length} 张卡片</span></div><label className="field">按表达用途查看<select value={category} onChange={e=>setCategory(e.target.value)}>{['全部',...groups].map(g=><option key={g}>{g}</option>)}</select></label>{cards.length===0?<p>在每课“表达”中完成修改与换情境检验，这里就会积累可复用的句型和自己的例子。</p>:<div className="knowledge-grid">{cards.filter(c=>category==='全部'||c.category===category).map(c=>{const [,book,no]=c.key.split('-');return <article key={c.key}><span className="pill">{c.category}</span>{c.form&&<p className="framework-form">{c.form}</p>}<p lang="en"><WordText text={c.retry}/></p>{c.transfer&&<details><summary>换情境时，我这样用</summary><p lang="en">{c.transfer}</p></details>}<p className="small muted">{c.checkpointAt?(c.checkpointCorrect?'小检验已有记录，下次脱离提示再用一次。':'本次仍有待练的地方，下一次先回顾。'):'这轮尚未完成换情境检验，已有内容已保留。'}</p><button className="text-btn" onClick={()=>navigate({view:'nce',book:book as NceBookId,lesson:Number(no),tab:'notes',step:4})}>用这个方法，再练一个情境 <ArrowRight size={15}/></button></article>})}</div>}</section>;
 }

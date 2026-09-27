@@ -1,6 +1,6 @@
 import {bookCounts, type NceBookId} from './model';
 
-export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;task?:string;filter?:string;query?:string;file?:string};
+export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string};
 const views=['nce','today','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
 const tabs:Record<string,string[]>={nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing']};
 export function parseRoute(hash:string):StudioRoute{
@@ -12,6 +12,7 @@ export function parseRoute(hash:string):StudioRoute{
  }
  if(view==='lesson'){const lesson=Number(parts[1]);route.lesson=Number.isInteger(lesson)&&lesson>0&&lesson<=36?lesson:1}
  const tab=params.get('tab');if(tab&&tabs[view]?.includes(tab))route.tab=tab;
+ const step=params.get('step');if(view==='nce'&&route.lesson&&tab==='notes'&&step!==null&&/^[0-4]$/.test(step))route.step=Number(step);
  const task=params.get('task');if(task&&/^(ielts-[ws][1-9]\d?|bank-[123]-[1-9]\d?-[0-5]|mistakes|diagnostic|text-\d{10,16})$/.test(task))route.task=task;
  const filter=params.get('filter');if(filter&&['all','done','active'].includes(filter))route.filter=filter;
  const search=params.get('q');if(search)route.query=search.slice(0,120);
@@ -21,6 +22,7 @@ export function parseRoute(hash:string):StudioRoute{
 export function routeHash(route:StudioRoute){
  let path='#/'+route.view;if(route.book)path+='/'+route.book;if(route.lesson)path+='/'+route.lesson;
  const params=new URLSearchParams();for(const [key,value] of Object.entries({tab:route.tab,task:route.task,filter:route.filter,q:route.query,file:route.file}))if(value)params.set(key,value);
+ if(route.view==='nce'&&route.lesson&&route.tab==='notes'&&Number.isInteger(route.step)&&route.step!>=0&&route.step!<=4)params.set('step',String(route.step));
  return path+(params.size?'?'+params:'');
 }
 export function navigate(route:StudioRoute,{replace=false,keepScroll=false}:{replace?:boolean;keepScroll?:boolean}={}){
