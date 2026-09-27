@@ -33,6 +33,7 @@ def main():
     version = json.loads((package/'version.json').read_text())
     manifest = json.loads((package/'materials/manifest.json').read_text())
     index = json.loads((package/'language/index.json').read_text())
+    grammar = json.loads((package/'grammar/index.json').read_text())
     checks = []
 
     def verify(base, path, expected, status=200, method='GET', stale_auth=False):
@@ -47,15 +48,17 @@ def main():
         return hashlib.sha256((package/path).read_bytes()).hexdigest()
 
     for base in [production, args.deployment]:
-        for path in ['index.html', 'version.json', 'materials/manifest.json', 'language/index.json', 'language/dictionary.json', 'lesson-pages/index.json', 'speaking/topics.json']:
+        for path in ['index.html', 'version.json', 'materials/manifest.json', 'language/index.json', 'language/dictionary.json', 'lesson-pages/index.json', 'speaking/topics.json', 'grammar/index.json']:
             checks.append(verify(base, '/' if path=='index.html' else '/'+path, file_hash(path)))
         checks.append(verify(base, '/', version['html_sha256'], stale_auth=True))
-        for path in ['/README.md', '/.env', '/work/local-codex/SESSION.json']:
+        for path in ['/README.md', '/.env', '/work/local-codex/SESSION.json', '/grammar/ocr.json', '/grammar/source.pdf']:
             checks.append(verify(base, path, None, status=404))
         checks.append(verify(base, '/', None, status=405, method='POST'))
         for book in ['NCE1', 'NCE2', 'NCE3', 'NCE4']:
             path=f'language/{book}/1.json'
             checks.append(verify(base, '/'+path, file_hash(path)))
+            source=next(p for key,p in grammar['pages'].items() if key.startswith(book+'-'))
+            checks.append(verify(base, source['src'], source['sha256']))
         sample=next(f for f in manifest['files'] if f['book']=='NCE1' and f['lesson']==1 and f['type']=='audio/mpeg')
         audio=b''
         for part in sample['parts']:
@@ -72,10 +75,14 @@ def main():
     pages=json.loads((package/'lesson-pages/index.json').read_text())
     with ThreadPoolExecutor(max_workers=6) as pool:
         checks.extend(pool.map(lambda item:verify(production,'/lesson-pages/'+item[0],item[1]['sha256']),pages['files'].items()))
-    result={'lessonImagesVerified':len(pages['files']),'checkedAt':datetime.now(timezone.utc).isoformat(), 'access':'public', 'deployment':args.deployment, 'version':version, 'checks':checks, 'languageFilesVerified':len(index['files']), 'transportRetries':TRANSPORT_RETRIES}
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        checks.extend(pool.map(lambda item:verify(production,'/grammar/'+item[0],item[1]['sha256']),grammar['files'].items()))
+    verified_images={c['url'] for c in checks if c['status']==200}
+    assert all(production+p['src'] in verified_images for p in grammar['pages'].values())
+    result={'grammarSourcePagesVerified':len(grammar['pages']),'grammarImagesVerified':len(grammar['files']),'lessonImagesVerified':len(pages['files']),'checkedAt':datetime.now(timezone.utc).isoformat(), 'access':'public', 'deployment':args.deployment, 'version':version, 'checks':checks, 'languageFilesVerified':len(index['files']), 'transportRetries':TRANSPORT_RETRIES}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
-    print(json.dumps({'checks':len(checks), 'languageFilesVerified':len(index['files']), 'lessonImagesVerified':len(pages['files']), 'deployment':args.deployment, 'access':'public'}))
+    print(json.dumps({'checks':len(checks), 'languageFilesVerified':len(index['files']), 'lessonImagesVerified':len(pages['files']), 'grammarSourcePagesVerified':len(grammar['pages']), 'grammarImagesVerified':len(grammar['files']), 'deployment':args.deployment, 'access':'public'}))
 
 
 if __name__ == '__main__':

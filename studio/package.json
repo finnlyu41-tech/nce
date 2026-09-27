@@ -26,6 +26,9 @@
     "verify:guided": "node scripts/test-guided-learning.mjs",
     "verify:pronunciation": "node scripts/test-pronunciation.mjs",
     "verify:progress": "node scripts/test-progress-save.mjs",
+    "package:grammar": "python3 scripts/package-grammar-pages.py",
+    "verify:grammar": "node scripts/test-textbook-grammar.mjs",
+    "verify:chinese-recall": "node scripts/test-chinese-recall.mjs",
     "verify:illustrations": "node scripts/test-illustrations.mjs"
   },
   "dependencies": {

@@ -17,7 +17,7 @@ export default {
     if (url.pathname === '/api/pronunciation') return pronunciation(request, env);
     if (!env.ASSETS) return reply('Study materials temporarily unavailable.', 503);
     if (!['GET', 'HEAD'].includes(request.method)) return reply('Method not allowed', 405, {Allow: 'GET, HEAD'});
-    if (!['/', '/index.html', '/version.json', '/robots.txt', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/lesson-pages\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
+    if (!['/', '/index.html', '/version.json', '/robots.txt', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
     try {
       // Old browsers may still send cached Basic credentials. Never forward them.
       const assetRequest = new Request(request);

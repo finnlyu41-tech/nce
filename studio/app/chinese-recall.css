@@ -1,0 +1,30 @@
+.chinese-recall{min-width:0}
+.chinese-recall>h3{margin-bottom:8px}
+.recall-prompt{background:#eef3ff;border:1px solid #dce5fa;border-radius:12px;padding:20px;margin:16px 0}
+.recall-prompt p{font-size:22px;line-height:1.7;color:#203b69;margin-top:8px;overflow-wrap:anywhere}
+.chinese-recall .record-box{margin-top:14px;padding-top:14px}
+.recall-reveal{width:100%;margin-top:18px;white-space:normal;min-height:48px}
+.recall-reference{margin-top:16px;padding:18px;border:1px solid #dce3ef;border-radius:10px}
+.recall-reference>p[lang=en]{font-size:21px;line-height:1.7;margin:12px 0;overflow-wrap:anywhere}
+.recall-reference>.muted{margin-top:12px}
+.recall-navigation{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:20px}
+.recall-navigation .btn{min-height:44px;padding:10px 12px}
+.recall-navigation>span{flex-shrink:0}
+.chinese-recall .row{flex-wrap:wrap}
+.chinese-recall .record-line-select select{max-width:100%}
+.recall-active .cloud-player,.lesson-grid.recall-active>.study-aside{display:none}
+.lesson-grid.recall-active{grid-template-columns:minmax(0,1fr)}
+.sentence-practice .practice-mode{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+.sentence-practice .practice-mode button{min-width:0;white-space:normal;padding:10px 8px;min-height:44px}
+.imported-practice-modes .practice-mode{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:600px){
+ .recall-prompt{padding:16px}
+ .recall-prompt p{font-size:20px}
+ .recall-reference{padding:14px}
+ .recall-reference>p[lang=en]{font-size:19px}
+ .sentence-practice .practice-mode button{font-size:13px}
+ .sentence-practice .practice-mode svg{display:none}
+ .recall-navigation .btn{font-size:13px}
+ .recall-reference .row{align-items:stretch}
+ .recall-reference .row>.btn{width:100%}
+}
