@@ -35,7 +35,7 @@ export function TextbookVocabulary({book,lesson,text}:{book:NceBookId;lesson:num
  const [index,setIndex]=useState<PageIndex|null>(null),[error,setError]=useState(false),[attempt,setAttempt]=useState(0);
  useEffect(()=>{let alive=true;setIndex(null);setError(false);if(ONLINE)loadPages().then(data=>{if(alive)setIndex(data)}).catch(()=>{if(alive)setError(true)});return()=>{alive=false}},[book,lesson,attempt]);
  const entry=index?.lessons[`${book}-${lesson}`],vocabulary=entry?.vocabulary,rows=parseLessonText(text);
- if(!ONLINE)return <p className="muted small">本地版未包含原书词表，可在课文里点词查释义，或按原书手动添加。</p>;
+ if(!ONLINE)return <p className="muted small">本地版未包含原书词表，可在课文里点词查释义。</p>;
  if(error)return <p role="alert">原书词表暂时未能加载。<button className="text-btn" onClick={()=>setAttempt(attempt+1)}>重新加载词表</button></p>;
  if(!index)return <p role="status">正在读取本课原书词表…</p>;
  if(!vocabulary)return <p className="muted small">本课原书词表暂未提供，可从教材听读中查看原书。</p>;
