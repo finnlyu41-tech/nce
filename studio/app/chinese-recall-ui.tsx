@@ -36,7 +36,7 @@ function RecallSentence({prompt,onListen,onStop,canListen,audioLabel}:{prompt:Re
   <Recorder onBeforeRecord={onStop} stopSignal={stopSignal} retentionLabel="每句保留最近两遍；换句、离开或刷新后清除"/>
   <button className="btn recall-reveal" aria-expanded={revealed} onClick={()=>{stop();setRevealed(!revealed)}}>{revealed?'收起英文，再说一次':'说好了 / 需要提示，展开英文'}</button>
   {revealed&&<div className="recall-reference" aria-label="本句英文参考">
-   <strong>课文中的说法</strong><p lang="en"><WordText text={prompt.en}/></p>
+   <strong>课文中的说法</strong><p lang="en"><WordText text={prompt.en} exampleTranslation={prompt.zh}/></p>
    <div className="row wrap"><button className="btn secondary" disabled={!canListen} onClick={()=>{stop();onListen()}}><Volume2 size={17}/>{audioLabel}</button><PlaybackSpeed label="参考语速" ariaLabel="看中文说英文参考语速"/></div>
    {!canListen&&<p className="muted small">这句没有可定位的原声音频。</p>}
    <p className="muted small">对照意思和表达，再回听自己的录音。不同于原句的说法也可能正确。</p>

@@ -5,7 +5,7 @@ import {ONLINE} from './runtime-mode';
 
 export type LanguageRow={en:string;zh:string;time?:number};
 export type LessonLanguage={version:1;book:NceBookId;lesson:number;sourceSha256:string;rows:LanguageRow[]};
-export type DictionaryEntry={word:string;ipa:string;meaning:string};
+export type DictionaryEntry={word:string;ipa:string;meaning:string;source?:'textbook'};
 const lessons=new Map<string,Promise<LessonLanguage|null>>();
 export const normalizeEnglish=(text:string)=>text.toLowerCase().replace(/[^a-z0-9]/g,'');
 export async function loadLessonLanguage(book:NceBookId,lesson:number){
