@@ -1,14 +1,13 @@
 import type {LanguageRow} from './language';
+import type {NceBookId} from './model';
+import {splitLesson} from './lesson-structure';
 
 export type RecallItem={id:string;prompt:string;answer:string;original:string;translation:string;rowIndex:number};
 export const recallAnswer=(value:string)=>value.trim().toLowerCase().replace(/[’‘]/g,"'").replace(/[.!?,;:]+$/,'');
 
 // Use the supplied lesson sentences, never a shared bank disguised as lesson work.
 export function lessonRecall(rows:LanguageRow[],key:string):RecallItem[]{
- let start=/^lesson\s+\d+/i.test(rows[0]?.en||'')?2:0;
- const instruction=rows.findIndex(r=>/^(?:first\s+)?listen to (?:the )?(?:tape|recording)/i.test(r.en));
- if(instruction>=0)start=instruction+1;
- if(/\?\s*$/.test(rows[start]?.en||''))start++;
+ const start=splitLesson(rows,key.split('-')[0] as NceBookId,/^NCE[1-4]-/.test(key)).bodyStart;
  const seen=new Set<string>();
  const candidates=rows.flatMap((row,rowIndex)=>{
   const tokens=[...row.en.matchAll(/[A-Za-z]+(?:['’][A-Za-z]+)*/g)];

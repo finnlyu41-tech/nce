@@ -12,7 +12,7 @@ export function parseRoute(hash:string):StudioRoute{
  }
  if(view==='lesson'){const lesson=Number(parts[1]);route.lesson=Number.isInteger(lesson)&&lesson>0&&lesson<=36?lesson:1}
  const tab=params.get('tab');if(tab&&tabs[view]?.includes(tab))route.tab=tab;
- const task=params.get('task');if(task&&/^(ielts-[ws][1-9]\d?|mistakes|diagnostic|text-\d{10,16})$/.test(task))route.task=task;
+ const task=params.get('task');if(task&&/^(ielts-[ws][1-9]\d?|bank-[123]-[1-9]\d?-[0-5]|mistakes|diagnostic|text-\d{10,16})$/.test(task))route.task=task;
  const filter=params.get('filter');if(filter&&['all','done','active'].includes(filter))route.filter=filter;
  const search=params.get('q');if(search)route.query=search.slice(0,120);
  const file=params.get('file');if(view==='cloud'&&file&&/^[A-Za-z0-9_-]{1,100}$/.test(file))route.file=file;

@@ -8,7 +8,7 @@ const {parseRoute,routeHash,navigate}=await import(moduleUrl(stripTypeScriptType
 for(const route of [
  {view:'nce'}, {view:'nce',book:'NCE1'}, {view:'nce',book:'NCE1',lesson:144,tab:'practice'},
  {view:'nce',book:'NCE3',filter:'active',query:'自己的笔记'}, {view:'lesson',lesson:36,tab:'grammar'},
- {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
+ {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'ielts',tab:'speaking',task:'bank-3-25-5'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
 ])assert.deepEqual(parseRoute(routeHash(route)),route);
 assert.deepEqual(parseRoute('#/nce/__proto__/1'),{view:'nce'});
 assert.deepEqual(parseRoute('#/nce/NCE1/145?tab=invalid'),{view:'nce',book:'NCE1'});

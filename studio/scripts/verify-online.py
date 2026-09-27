@@ -60,6 +60,34 @@ def verify(root):
     assert version['materials_count'] == len(ids), 'Material count mismatch'
     assert version['access'] == 'public', 'Public-access requirement missing'
     assert version['language_sha256'] == hashlib.sha256((root/'language/index.json').read_bytes()).hexdigest(), 'Language index mismatch'
+    pages = json.loads((root/'lesson-pages/index.json').read_text())
+    mapping = json.loads((ROOT/'app/data/nce-pages.json').read_text())
+    assert pages['version'] == 1 and len(pages['lessons']) == 348
+    allowed.add('lesson-pages/index.json')
+    assert len(pages['files']) == 696
+    for book, info in mapping.items():
+        original = next(f for f in manifest['files'] if f['book']==book and f['type']=='application/pdf')
+        assert pages['sources'][book] == info['sourceSha256'] == original['sha256']
+        for lesson, start in info['starts'].items():
+            lesson_pages = pages['lessons'][book+'-'+lesson]['pages']
+            assert [p['page'] for p in lesson_pages] == [start,start+1]
+            for p in lesson_pages:
+                assert p['src'] == '/lesson-pages/'+p['sha256']+'.jpg'
+                assert p['sha256']+'.jpg' in pages['files']
+    for name, info in pages['files'].items():
+        assert re.fullmatch(r'[a-f0-9]{64}\.jpg',name)
+        raw=(root/'lesson-pages'/name).read_bytes()
+        assert raw[:2] == b'\xff\xd8' and len(raw)==info['bytes'] and hashlib.sha256(raw).hexdigest()==info['sha256']
+        allowed.add('lesson-pages/'+name)
+    speaking=json.loads((root/'speaking/topics.json').read_text())
+    assert speaking['version']==1 and len(speaking['topics'])==66
+    assert sum(len(t['questions']) for t in speaking['topics'])==238
+    assert all(q['en'] and q['zh'] for t in speaking['topics'] for q in t['questions'])
+    assert all(set(t)<= {'id','part','title','topic','questions'} for t in speaking['topics'])
+    assert all(set(q)=={'en','zh','sourceRow'} for t in speaking['topics'] for q in t['questions'])
+    allowed.add('speaking/topics.json')
+    assert version['pages_sha256']==hashlib.sha256((root/'lesson-pages/index.json').read_bytes()).hexdigest()
+    assert version['speaking_sha256']==hashlib.sha256((root/'speaking/topics.json').read_bytes()).hexdigest()
     actual = set()
     for file in root.rglob('*'):
         assert not file.is_symlink(), 'Symlink rejected'
@@ -69,7 +97,7 @@ def verify(root):
             assert file.stat().st_size <= 25*1024**2, 'Cloudflare per-file limit exceeded'
             actual.add(relative)
     assert actual == allowed and len(actual) <= 20000, 'Upload whitelist incomplete or oversized'
-    print(json.dumps({'verifiedFiles': len(actual), 'materials': len(ids), 'bytes': total, 'books': counts, 'translatedLines': lines, 'dictionaryWords': language['words']}, indent=2))
+    print(json.dumps({'verifiedFiles': len(actual), 'materials': len(ids), 'bytes': total, 'books': counts, 'translatedLines': lines, 'dictionaryWords': language['words'], 'lessonImages':len(pages['files']), 'speakingPrompts':238}, indent=2))
 
 
 if __name__ == '__main__':

@@ -47,7 +47,7 @@ def main():
         return hashlib.sha256((package/path).read_bytes()).hexdigest()
 
     for base in [production, args.deployment]:
-        for path in ['index.html', 'version.json', 'materials/manifest.json', 'language/index.json', 'language/dictionary.json']:
+        for path in ['index.html', 'version.json', 'materials/manifest.json', 'language/index.json', 'language/dictionary.json', 'lesson-pages/index.json', 'speaking/topics.json']:
             checks.append(verify(base, '/' if path=='index.html' else '/'+path, file_hash(path)))
         checks.append(verify(base, '/', version['html_sha256'], stale_auth=True))
         for path in ['/README.md', '/.env', '/work/local-codex/SESSION.json']:
@@ -69,10 +69,13 @@ def main():
         return verify(production, '/language/'+path, info['sha256'])
     with ThreadPoolExecutor(max_workers=6) as pool:
         checks.extend(pool.map(language_file, index['files'].items()))
-    result={'checkedAt':datetime.now(timezone.utc).isoformat(), 'access':'public', 'deployment':args.deployment, 'version':version, 'checks':checks, 'languageFilesVerified':len(index['files']), 'transportRetries':TRANSPORT_RETRIES}
+    pages=json.loads((package/'lesson-pages/index.json').read_text())
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        checks.extend(pool.map(lambda item:verify(production,'/lesson-pages/'+item[0],item[1]['sha256']),pages['files'].items()))
+    result={'lessonImagesVerified':len(pages['files']),'checkedAt':datetime.now(timezone.utc).isoformat(), 'access':'public', 'deployment':args.deployment, 'version':version, 'checks':checks, 'languageFilesVerified':len(index['files']), 'transportRetries':TRANSPORT_RETRIES}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
-    print(json.dumps({'checks':len(checks), 'languageFilesVerified':len(index['files']), 'deployment':args.deployment, 'access':'public'}))
+    print(json.dumps({'checks':len(checks), 'languageFilesVerified':len(index['files']), 'lessonImagesVerified':len(pages['files']), 'deployment':args.deployment, 'access':'public'}))
 
 
 if __name__ == '__main__':

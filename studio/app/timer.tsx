@@ -1,0 +1,5 @@
+'use client';
+import {useState,useEffect,useRef} from 'react';
+import {Clock3,Play,Pause,RotateCcw} from 'lucide-react';
+import {toast} from 'sonner';
+export function Timer({seconds,label='练习计时'}:{seconds:number,label?:string}){const [remaining,setRemaining]=useState(seconds),[running,setRunning]=useState(false);const end=useRef(0);useEffect(()=>{if(!running)return;const t=setInterval(()=>{const v=Math.max(0,Math.ceil((end.current-Date.now())/1000));setRemaining(v);if(v===0){setRunning(false);toast.info('练习时间到，内容已保留。')}},250);return()=>clearInterval(t)},[running]);return <div className="timer"><Clock3 size={18}/><span>{label}</span><strong aria-live={remaining===0?'polite':'off'}>{Math.floor(remaining/60).toString().padStart(2,'0')}:{(remaining%60).toString().padStart(2,'0')}</strong><button className="icon-btn" aria-label={running?'暂停计时':'开始计时'} disabled={!remaining} onClick={()=>{if(!running)end.current=Date.now()+remaining*1000;setRunning(!running)}}>{running?<Pause size={17}/>:<Play size={17}/>}</button><button className="icon-btn" aria-label="重置计时" onClick={()=>{setRunning(false);setRemaining(seconds)}}><RotateCcw size={16}/></button></div>}

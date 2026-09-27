@@ -22,7 +22,8 @@
     "verify:navigation": "node scripts/test-navigation.mjs",
     "package:language": "python3 scripts/package-language.py",
     "verify:playback": "node scripts/test-playback.mjs",
-    "verify:study-path": "node scripts/test-study-path.mjs"
+    "verify:study-path": "node scripts/test-study-path.mjs",
+    "verify:guided": "node scripts/test-guided-learning.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

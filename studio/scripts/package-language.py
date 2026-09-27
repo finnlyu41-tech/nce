@@ -67,6 +67,12 @@ def main():
         write(f'{item["book"]}/{item["lesson"]}.json', {'version': 1, 'book': item['book'], 'lesson': item['lesson'], 'sourceSha256': item['sha256'], 'rows': aligned})
     for name in ['lessons', 'book-companion', 'ielts']:
         collect((ROOT/f'app/data/{name}.json').read_text())
+    if (ROOT/'dist-online/speaking/topics.json').exists():
+        for topic in json.loads((ROOT/'dist-online/speaking/topics.json').read_text())['topics']:
+            for question in topic['questions']:
+                collect(question['en'])
+    for name in ['expression-guide.ts','speaking-bank.tsx']:
+        collect((ROOT/'app'/name).read_text())
     dictionary = {}
     with args.dictionary.open(newline='') as source:
         for row in csv.DictReader(source):

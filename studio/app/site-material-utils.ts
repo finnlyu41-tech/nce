@@ -1,3 +1,4 @@
+import pageMapping from './data/nce-pages.json';
 import {type NceBookId, bookCounts} from './model';
 export type SiteMaterial = {
   id:string; name:string; book:NceBookId; lesson:number;
@@ -41,12 +42,11 @@ export function validateMaterials(v:unknown):v is MaterialManifest {
 export function pairedMaterials(files:SiteMaterial[],selected:SiteMaterial){
   return selected.pairId?files.filter(f=>f.pairId===selected.pairId&&f.book===selected.book&&f.lesson===selected.lesson&&f.accent===selected.accent):[selected];
 }
-// Page mapping checked against all four contents pages of this exact PDF.
-// Four test pages follow Lesson 72; a replacement edition must be checked anew.
+// Mappings are tied to exact PDFs and verified against their lesson headings.
 export function materialLessonPage(file:SiteMaterial,lesson:number):number|undefined {
-  if(file.book!=='NCE1'||file.type!=='application/pdf'||file.sha256!=='df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3'||
-    !Number.isInteger(lesson)||lesson<1||lesson>144)return undefined;
-  return lesson*2+(lesson<=72?3:7);
+  const map=pageMapping[file.book];
+  if(file.type!=='application/pdf'||file.sha256!==map.sourceSha256||!Number.isInteger(lesson))return undefined;
+  return (map.starts as Record<string,number>)[String(lesson)];
 }
 export async function readMaterialManifest(signal?:AbortSignal):Promise<MaterialManifest>{
   const response=await fetch('/materials/manifest.json',{signal,cache:'no-store',credentials:'same-origin',redirect:'error'});
