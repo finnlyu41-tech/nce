@@ -5,7 +5,7 @@ const root=new URL('../',import.meta.url);
 const moduleUrl=source=>'data:text/javascript;base64,'+Buffer.from(source).toString('base64');
 const source=async file=>stripTypeScriptTypes(await readFile(new URL('app/'+file,root),'utf8'));
 const {splitLesson}=await import(moduleUrl(await source('lesson-structure.ts')));
-const {frames,sentenceFor,guideFor,readGuide}=await import(moduleUrl(await source('expression-guide.ts')));
+const {frames,sentenceFor,guideFor,readGuide,completeGuideStep,guideResume}=await import(moduleUrl(await source('expression-guide.ts')));
 const {initial,validateState}=await import(moduleUrl(await source('model.ts')));
 const {overallBand,readMocks,meetsTarget,readiness}=await import(moduleUrl(await source('readiness.ts')));
 let count=0;
@@ -19,6 +19,11 @@ for(const [book,total,step] of [['NCE1',144,2],['NCE2',96,1],['NCE3',60,1],['NCE
   assert.deepEqual([...parsed.intro,...parsed.body],rows,'No original rows or timestamps are removed or rewritten');
   assert(parsed.body[0].time>parsed.question.at(-1).time);
   const guide=guideFor(parsed.body,book);assert(parsed.body.includes(guide.source),'Every lesson anchors its guide to a real body sentence');
+  assert.equal(guide.excerpt.startTime,guide.source.time,'Original playback starts at the actual source row');
+  if(guide.excerpt.endTime!==undefined){
+   const selected=parsed.body.filter(r=>r.time>=guide.excerpt.startTime&&r.time<guide.excerpt.endTime);
+   assert.equal(selected.map(r=>r.en).join(' '),guide.excerpt.en,'Playback stops after exactly the joined excerpt, not after the whole track');
+  }
   count++;
  }
 }
@@ -107,3 +112,32 @@ assert(validateState(expressionState),'New feedback and checkpoint records remai
 const now=new Date(2026,8,27,16).getTime(),queued=queueExpressionReview({...initial,nce:{'NCE1-1':{title:'Keep me',text:'private text',notes:'keep notes',steps:['listen'],review:{checks:['meaning'],checkedAt:now-100,dueAt:now+100}}}},'NCE1',2,now);
 assert.deepEqual(queued.nce['NCE1-1'].steps,['listen']);assert.deepEqual(queued.nce['NCE1-1'].review.checks,['meaning']);assert.equal(queued.nce['NCE1-1'].notes,'keep notes');assert.equal(queued.nce['NCE1-1'].review.checkedAt,now-100);assert.equal(new Date(queued.nce['NCE1-1'].review.dueAt).getDate(),28);assert(!queued.nce['NCE1-2'],'Paired courses keep one review schedule');
 console.log(`Expression feedback, ${frames.length} transfer patterns, ${unique} distinct lesson anchors, retry comparison and record/review preservation passed.`);
+
+// Oral practice can advance without inventing a written answer or mastery evidence.
+let oral=readGuide();
+for(let step=0;step<5;step++){
+ oral=completeGuideStep(oral,step,now+step);
+ assert.equal(oral.step,Math.min(4,step+1));
+ assert(oral.practicedSteps.includes(step));
+ assert.equal(oral.answer,'');assert.equal(oral.retry,'');assert.equal(oral.transfer,'');
+ assert.equal(oral.checkpointAt,0);assert.equal(oral.checkpointCorrect,false);assert.equal(oral.saved,false);
+}
+assert.deepEqual(readGuide(JSON.stringify(oral)),oral,'Practice and resume survive reload without new storage');
+assert(validateState({...initial,drafts:{'expression-NCE1-1':JSON.stringify(oral)}}));
+assert.deepEqual(completeGuideStep(oral,2,now).practicedSteps,[0,1,3,4,2],'Repeating a step records the latest practice without inflating progress');
+assert.equal(completeGuideStep(oral,-1,now),oral);assert.equal(completeGuideStep(oral,5,now),oral);
+const resumed=completeGuideStep(record,2,now);
+assert.equal(resumed.retry,record.retry,'An existing revision is never replaced by the first draft');
+assert.equal(resumed.checkpointAt,record.checkpointAt,'Practice does not erase earlier written-check evidence');
+assert.equal(resumed.checkpointCorrect,record.checkpointCorrect);
+const firstRetry=completeGuideStep({...readGuide(),answer:'I is a teacher.'},2,now);
+assert.equal(firstRetry.retry,'I is a teacher.');assert.equal(firstRetry.checkedRetry,'','Copying a draft is not checking it');
+assert.deepEqual(readGuide('{"practicedSteps":[-1,2,2,5,"3",null],"practicedAt":-1}').practicedSteps,[2]);
+assert.equal(readGuide().practicedAt,0);
+assert.equal(guideFor([{en:'I am here.',zh:''}],'NCE1').excerpt.startTime,undefined,'Untimed custom text cannot be passed off as a matched recording');
+assert.deepEqual(guideResume(completeGuideStep(readGuide(),2,now),true),{step:3,extra:false},'Next-day oral review continues the promised next step rather than skipping the retry');
+assert.deepEqual(guideResume(oral,false),{step:4,extra:true});
+assert.deepEqual(guideResume(oral,true),{step:4,extra:false},'A finished round returns to transfer practice when due');
+assert.deepEqual(guideResume(completeGuideStep(oral,0,now),false),{step:1,extra:false},'Practicing an earlier step resumes from there');
+assert.equal(guideResume(old,true).step,4,'Legacy saved cards retain their review entry');
+console.log('Oral-only practice, precise excerpt timing, next-step resume and existing draft/checkpoint preservation passed.');

@@ -7,7 +7,7 @@ import {type State,type NceBookId} from './model';
 import {navigate} from './navigation';
 import {ONLINE} from './runtime-mode';
 import {bookNames,studyUnit,recommendedStudy,reviewChecks,reviewInterval,saveUnitReview} from './study-path';
-import {guideFor,readGuide} from './expression-guide';
+import {guideFor,guideResume,readGuide} from './expression-guide';
 import {loadLessonLanguage,type LessonLanguage} from './language';
 import {splitLesson} from './lesson-structure';
 
@@ -26,11 +26,11 @@ export function TodayStudy({state}:{state:State}){
  const [language,setLanguage]=useState<LessonLanguage|null>(null);
  useEffect(()=>{let active=true;setLanguage(null);void loadLessonLanguage(next.book,next.first).then(data=>{if(active)setLanguage(data)});return()=>{active=false}},[next.book,next.first]);
  const goal=language?guideFor(splitLesson(language.rows,next.book,true).body,next.book).goal:'听懂本课一句，再换成自己的内容';
- const step=(next.review&&draft.retry.trim())||(draft.saved&&!draft.checkpointAt)?4:draft.step;
- const extra=draft.saved&&draft.checkpointAt>0&&!next.review;
- const tasks=['听懂一句，写下它的意思','替换句型，准备自己的关键词','说两句，留下第一版','检查修改版，再录一次比较','不看句架，完成换情境检验'];
+ const {step,extra}=guideResume(draft,next.review);
+ const practicedToday=draft.practicedAt>0&&new Date(draft.practicedAt).toDateString()===new Date().toDateString();
+ const tasks=['听懂一句，说说它的意思','换个内容，把句子说出来','说两句自己的话','只改一处，再说一遍','不看句架，换个情境说一句'];
  const task=extra?'做 3 道本课回顾，再打开配套练习':tasks[step];
- return <section className="panel today-course"><div><span className="eyebrow">{next.review?'今天先复习这一小步':'今天先做这一小步'} · 约 {extra?5:step===3?5:3} 分钟</span><h3>{task}</h3><p className="small">{bookNames[next.book]} · {next.label} · {goal}</p><p className="muted small">{next.review?`有 ${next.dueCount} 组到期。保留上次记录，换一个情境重新试。`:extra?'表达记录已保存，接着巩固课文里的词和句型。':'完成这一小步就可以暂停，文字会自动保存。'}</p></div><button className="btn" onClick={()=>navigate({view:'nce',book:next.book,lesson:next.first,tab:extra?'practice':'notes',step:extra?undefined:step})}>{next.review?<RotateCcw size={16}/>:<ArrowRight size={16}/>} {next.review?'开始这次回顾':extra?'进入本课回顾':'开始这一小步'}</button></section>
+ return <section className="panel today-course"><div><span className="eyebrow">{practicedToday?'今天已留下练习记录':`${next.review?'今天先复习这一小步':'今天先做这一小步'} · 约 ${extra?5:3} 分钟`}</span><h3>{practicedToday?'今天的一小步，完成了':task}</h3><p className="small">{bookNames[next.book]} · {next.label} · {goal}</p><p className="muted small">{practicedToday?'可以安心休息。想继续时，下一步已经准备好了。':next.review?`有 ${next.dueCount} 组到期，可以先做这一小步。`:extra?'这一轮表达练过了。有余力时，再巩固课文里的词和句型。':'开口练就可以，做完这一小步就能休息。'}</p></div><button className={'btn'+(practicedToday?' secondary':'')} onClick={()=>navigate({view:'nce',book:next.book,lesson:next.first,tab:extra?'practice':'notes',step:extra?undefined:step})}>{next.review?<RotateCcw size={16}/>:<ArrowRight size={16}/>} {practicedToday?'有余力，再练一小步':next.review?'开始这次回顾':extra?'进入本课回顾':'开始这一小步'}</button></section>;
 }
 
 export function UnitReview({book,lesson,state,update,open}:{book:NceBookId,lesson:number,state:State,update:(fn:(state:State)=>State)=>void,open:(lesson:number,tab?:string)=>void}){

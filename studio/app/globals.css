@@ -234,6 +234,10 @@
 .transfer-options label:has(input:checked){border-color:#315de3;background:#edf3ff}.transfer-options input{width:18px;height:18px;flex-shrink:0;accent-color:#315de3}
 .checkpoint-save{margin:20px 0 12px}.checkpoint-saved{border:1px solid #ccdfd8;border-radius:10px;padding:16px;background:#f3f8f6;line-height:1.8}
 .framework-form{font-weight:600;color:#355572;white-space:pre-wrap}.review-evidence{border:1px solid #dce5f1;border-radius:10px;padding:14px;margin:16px 0}.guide-save-note{margin-top:14px}
+.guide-outline>summary,.guide-optional>summary,.lesson-extra-review>summary,.lesson-change>summary{cursor:pointer;min-height:44px;padding:10px 0;color:#425975;line-height:1.7}
+.guide-outline{margin:8px 0 18px}.guide-optional{margin-top:16px;border-top:1px solid #e4eaf3}.guide-optional[open]{padding-bottom:10px}.guide-optional>summary{font-size:14px}.expression-audio{margin:18px 0}.expression-audio .playback-speed select{width:auto;min-height:44px}.expression-audio audio{display:none}
+.guide-complete{margin-top:20px;line-height:1.8}.guide-complete>svg{color:#28795e}.guide-complete .row{margin-top:22px}.guide-complete .btn{min-height:46px}.lesson-extra-review,.lesson-change{margin-top:16px}.lesson-extra-review>.unit-review{margin-top:8px}.lesson-change .nce-lesson-footer{position:static}
+.is-expression [data-slot=tabs-content]:has(.guide-complete){min-height:0}
 @media(max-width:640px){
  .is-expression .nce-lesson-footer{position:static;margin-top:20px;box-shadow:none;border:1px solid #dce4ef;border-radius:10px;padding:10px}.is-expression .nce-lesson-footer>.btn{min-height:44px}
  .guided-expression{margin-top:12px;padding:16px;scroll-margin-top:105px}.guided-expression h2{font-size:21px;margin:3px 0}.guided-expression .guide-steps{display:none}

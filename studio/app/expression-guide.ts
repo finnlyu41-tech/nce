@@ -32,16 +32,32 @@ export function guideFor(rows:LanguageRow[],book:NceBookId){
  const frame=frames.find(f=>f.match.test(source?.en||''))||frames.find(f=>f.id==='identity')!;
  const start=rows.indexOf(source),parts:LanguageRow[]=[];
  for(let i=start;i>=0&&i<rows.length&&parts.length<5;i++){parts.push(rows[i]);if(/[.!?]["'”’]?\s*$/.test(rows[i].en))break;}
- const excerpt={en:parts.map(r=>r.en).join(' '),zh:parts.map(r=>r.zh).join('')};
+ const startTime=parts[0]?.time;
+ const endTime=rows.slice(start+parts.length).find(r=>r.time!==undefined&&r.time>(parts.at(-1)?.time??startTime??0))?.time;
+ const excerpt={en:parts.map(r=>r.en).join(' '),zh:parts.map(r=>r.zh).join(''),startTime,endTime};
  const level=book==='NCE1'?'sentence':book==='NCE2'?'story':'opinion';
  const prompts=level==='sentence'?['换成人物或物品','补一个自己的细节']:level==='story'?['本课这句话里发生了什么？','前后有什么原因或结果？','你遇到过什么类似情境？']:['本课这句话在说明什么？','原文的什么细节支持它？','换到生活中，什么时候适用或不适用？'];
  return {source,frame,level,excerpt,prompts,goal:`用“${frame.name}”${level==='sentence'?'说两句自己的话':level==='story'?'讲一件自己的事':'解释一个具体情境'}`};
 }
-export type GuideDraft={step:number;selected:number[];meaning:string;keywords:string;answer:string;repair:string;retry:string;saved:boolean;category:string;checkedAnswer:string;checkedRetry:string;checkRound:number;checkChoice:string;checkMarked:boolean;transfer:string;checkedTransfer:string;checkpointAt:number;checkpointCorrect:boolean;previousTransfer:string;form:string;source:string};
+export type GuideDraft={step:number;selected:number[];meaning:string;keywords:string;answer:string;repair:string;retry:string;saved:boolean;category:string;checkedAnswer:string;checkedRetry:string;checkRound:number;checkChoice:string;checkMarked:boolean;transfer:string;checkedTransfer:string;checkpointAt:number;checkpointCorrect:boolean;previousTransfer:string;form:string;source:string;practicedSteps:number[];practicedAt:number};
 export function readGuide(raw?:string):GuideDraft{
  let d:any={};try{d=JSON.parse(raw||'{}')||{}}catch{}
  const text=(key:string)=>typeof d[key]==='string'?d[key].slice(0,5000):'';
- return {step:Number.isInteger(d.step)?Math.max(0,Math.min(4,d.step)):0,selected:Array.isArray(d.selected)?d.selected.slice(0,4).map((x:any)=>Number.isInteger(x)&&x>=0&&x<3?x:0):[],meaning:text('meaning'),keywords:text('keywords'),answer:text('answer'),repair:text('repair'),retry:text('retry'),saved:d.saved===true,category:text('category'),checkedAnswer:text('checkedAnswer'),checkedRetry:text('checkedRetry'),checkRound:Number.isInteger(d.checkRound)?Math.max(0,Math.min(10000,d.checkRound)):0,checkChoice:text('checkChoice'),checkMarked:d.checkMarked===true,transfer:text('transfer'),checkedTransfer:text('checkedTransfer'),checkpointAt:Number.isFinite(d.checkpointAt)&&d.checkpointAt>0?d.checkpointAt:0,checkpointCorrect:d.checkpointCorrect===true,previousTransfer:text('previousTransfer'),form:text('form'),source:text('source')};
+ return {step:Number.isInteger(d.step)?Math.max(0,Math.min(4,d.step)):0,selected:Array.isArray(d.selected)?d.selected.slice(0,4).map((x:any)=>Number.isInteger(x)&&x>=0&&x<3?x:0):[],meaning:text('meaning'),keywords:text('keywords'),answer:text('answer'),repair:text('repair'),retry:text('retry'),saved:d.saved===true,category:text('category'),checkedAnswer:text('checkedAnswer'),checkedRetry:text('checkedRetry'),checkRound:Number.isInteger(d.checkRound)?Math.max(0,Math.min(10000,d.checkRound)):0,checkChoice:text('checkChoice'),checkMarked:d.checkMarked===true,transfer:text('transfer'),checkedTransfer:text('checkedTransfer'),checkpointAt:Number.isFinite(d.checkpointAt)&&d.checkpointAt>0?d.checkpointAt:0,checkpointCorrect:d.checkpointCorrect===true,previousTransfer:text('previousTransfer'),form:text('form'),source:text('source'),practicedSteps:Array.isArray(d.practicedSteps)?[...new Set<number>(d.practicedSteps.filter((x:unknown)=>Number.isInteger(x)&&Number(x)>=0&&Number(x)<=4))]:[],practicedAt:Number.isFinite(d.practicedAt)&&d.practicedAt>0?d.practicedAt:0};
+}
+
+// A learner's practice acknowledgement is separate from text checks or mastery.
+export function completeGuideStep(draft:GuideDraft,step:number,now=Date.now()):GuideDraft{
+ if(!Number.isInteger(step)||step<0||step>4)return draft;
+ return {...draft,step:Math.min(4,step+1),practicedSteps:[...draft.practicedSteps.filter(previous=>previous!==step),step],practicedAt:now,
+  ...(step===2?{checkedAnswer:draft.answer,retry:draft.retry||draft.answer}:{}),
+ };
+}
+
+export function guideResume(draft:GuideDraft,review:boolean){
+ const step=(review&&!draft.practicedAt&&draft.retry.trim())||(draft.saved&&!draft.checkpointAt&&!draft.practicedAt)?4:draft.step;
+ const extra=(draft.practicedAt?draft.practicedSteps.at(-1)===4:draft.saved&&draft.checkpointAt>0)&&!review;
+ return {step,extra};
 }
 
 export function transferCheck(frame:Frame,lesson:number,round:number){
