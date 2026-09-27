@@ -1,0 +1,23 @@
+.progress-save-actions{display:flex;align-items:center;flex-shrink:0;gap:2px}
+.topbar .progress-save-actions .progress-save-button{min-height:40px;white-space:nowrap}
+.topbar .progress-save-actions .progress-save-more{min-width:36px;min-height:40px}
+.progress-save-dialog{width:calc(100vw - 28px)!important;max-width:480px!important;max-height:calc(100dvh - 32px);overflow-y:auto;overflow-wrap:anywhere}
+.progress-save-dialog>.btn{width:100%;min-height:44px;white-space:normal}
+.progress-save-dialog p{line-height:1.8}
+.progress-cloud-help,.progress-file-summary{background:#f2f6fc;border:1px solid #dbe5f3;padding:16px;border-radius:12px}
+.progress-cloud-help h3{display:flex;align-items:center;gap:8px;font-size:15px;margin:0 0 8px}
+.progress-cloud-help p,.progress-file-summary p{font-size:13px;margin:8px 0}
+.progress-cloud-help .btn{width:100%;min-height:44px;margin:6px 0;white-space:normal}
+.progress-restore-confirm{flex-wrap:wrap;gap:8px}
+.progress-restore-confirm>.btn{flex:1;min-height:44px;white-space:normal}
+.progress-save-receipt{font-size:12px;color:#425c7a}
+@media(max-width:767px){
+  .topbar>.row:first-child{min-width:0;flex:1}
+  .topbar .breadcrumb{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;min-width:0}
+  .topbar .breadcrumb>svg{display:none}
+  .topbar>.row:last-child{gap:2px;flex-shrink:0}
+  .topbar .local-status{display:none}
+  .topbar .progress-save-actions .progress-save-button{min-height:44px;padding:8px 9px;font-size:12px}
+  .topbar .progress-save-actions .progress-save-more{min-width:44px;min-height:44px}
+  .progress-save-dialog{padding:20px}
+}

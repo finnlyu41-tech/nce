@@ -17,7 +17,7 @@ export default {
     if (url.pathname === '/api/pronunciation') return pronunciation(request, env);
     if (!env.ASSETS) return reply('Study materials temporarily unavailable.', 503);
     if (!['GET', 'HEAD'].includes(request.method)) return reply('Method not allowed', 405, {Allow: 'GET, HEAD'});
-    if (!['/', '/index.html', '/version.json', '/robots.txt', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/lesson-pages\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
+    if (!['/', '/index.html', '/version.json', '/robots.txt', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
     try {
       // Old browsers may still send cached Basic credentials. Never forward them.
       const assetRequest = new Request(request);
@@ -66,7 +66,7 @@ async function pronunciation(request, env) {
   const tag=(offset,text)=>[...text].every((c,i)=>wav.getUint8(offset+i)===c.charCodeAt(0));
   if(audio.length<8044||audio.length>960044||!tag(0,'RIFF')||wav.getUint32(4,true)!==audio.length-8||!tag(8,'WAVE')||!tag(12,'fmt ')||wav.getUint32(16,true)!==16||wav.getUint16(20,true)!==1||wav.getUint16(22,true)!==1||wav.getUint32(24,true)!==16000||wav.getUint32(28,true)!==32000||wav.getUint16(32,true)!==2||wav.getUint16(34,true)!==16||!tag(36,'data')||wav.getUint32(40,true)!==audio.length-44||(audio.length-44)%2)throw Error();
  }catch{return jsonReply({error:'请提交 0.25–30 秒的有效录音。'},400)}
- const config={ReferenceText:payload.reference.trim(),GradingSystem:'HundredMark',Granularity:'Phoneme',Dimension:'Comprehensive',EnableMiscue:true,EnableProsodyAssessment:false};
+ const config={ReferenceText:payload.reference.trim(),GradingSystem:'HundredMark',Granularity:'Phoneme',PhonemeAlphabet:'IPA',Dimension:'Comprehensive',EnableMiscue:true,EnableProsodyAssessment:false};
  const encoded=btoa(String.fromCharCode(...new TextEncoder().encode(JSON.stringify(config))));
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),25000);
  try {
@@ -82,7 +82,14 @@ async function pronunciation(request, env) {
   const score=value=>typeof value==='number'&&Number.isFinite(value)&&value>=0&&value<=100?value:null;
   const accuracy=score(scores?.AccuracyScore),fluency=score(scores?.FluencyScore),completeness=score(scores?.CompletenessScore);
   if(accuracy===null||fluency===null||completeness===null||!Array.isArray(best?.Words)||!best.Words.length)throw Error('Missing assessment');
-  const words=best.Words.slice(0,160).map(w=>{const p=w.PronunciationAssessment||w;return {word:String(w.Word||'').slice(0,100),accuracy:score(p.AccuracyScore),error:['None','Omission','Insertion','Mispronunciation'].includes(p.ErrorType)?p.ErrorType:'None',start:Math.max(0,Math.min(30,Number(w.Offset)/1e7||0)),duration:Math.max(0,Math.min(30,Number(w.Duration)/1e7||0))}});
+  const words=best.Words.slice(0,160).filter(w=>w&&typeof w==='object').map(w=>{
+   const p=w.PronunciationAssessment||w;
+   const phonemes=(Array.isArray(w.Phonemes)?w.Phonemes:[]).slice(0,40)
+    .filter(p=>p&&typeof p.Phoneme==='string'&&/^[a-z\u0250-\u02ff\u0300-\u036fθðʃʒŋæɛɪɑɔəʌʊɹɚɝ]{1,12}$/u.test(p.Phoneme))
+    .map(p=>({phoneme:p.Phoneme,accuracy:score((p.PronunciationAssessment||p).AccuracyScore)}));
+   return {word:String(w.Word||'').slice(0,100),accuracy:score(p.AccuracyScore),error:['None','Omission','Insertion','Mispronunciation'].includes(p.ErrorType)?p.ErrorType:'None',start:Math.max(0,Math.min(30,Number(w.Offset)/1e7||0)),duration:Math.max(0,Math.min(30,Number(w.Duration)/1e7||0)),phonemes};
+  });
+  if(!words.length)throw Error('Missing words');
   return jsonReply({text:String(best.Display||data.DisplayText||'').slice(0,1200),accuracy,fluency,completeness,words});
  }catch{return jsonReply({error:controller.signal.aborted?'评估超时，录音仍在本页，请稍后再试。':'评估没有返回完整结果，请稍后再试。'},502)}
  finally{clearTimeout(timer)}

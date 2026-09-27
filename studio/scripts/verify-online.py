@@ -88,6 +88,26 @@ def verify(root):
     allowed.add('speaking/topics.json')
     assert version['pages_sha256']==hashlib.sha256((root/'lesson-pages/index.json').read_bytes()).hexdigest()
     assert version['speaking_sha256']==hashlib.sha256((root/'speaking/topics.json').read_bytes()).hexdigest()
+    grammar_raw = (root/'grammar/index.json').read_bytes()
+    grammar = json.loads(grammar_raw)
+    catalog_raw = (ROOT/'app/data/textbook-grammar.json').read_bytes()
+    catalog = json.loads(catalog_raw)
+    assert grammar['version'] == 1 and len(catalog['entries']) == 276
+    assert grammar['catalogSha256'] == hashlib.sha256(catalog_raw).hexdigest(), 'Grammar index is stale'
+    assert version['grammar_sha256'] == hashlib.sha256(grammar_raw).hexdigest(), 'Grammar build hash mismatch'
+    assert grammar['sources'] == pages['sources'], 'Grammar PDF edition mismatch'
+    required_pages = {f'{e["book"]}-{p}' for e in catalog['entries'] for p in e['pages']}
+    assert set(grammar['pages']) == required_pages, 'Missing or extra grammar source page'
+    allowed.add('grammar/index.json')
+    for reference in grammar['pages'].values():
+        assert reference['src'].lstrip('/') in grammar['files']
+        assert reference['sha256'] == grammar['files'][reference['src'].lstrip('/')]['sha256']
+    for path, info in grammar['files'].items():
+        assert re.fullmatch(r'(?:grammar|lesson-pages)/[a-f0-9]{64}\.jpg', path)
+        raw = (root/path).read_bytes()
+        assert raw[:2] == b'\xff\xd8' and len(raw) == info['bytes'] and hashlib.sha256(raw).hexdigest() == info['sha256'], 'Grammar image mismatch'
+        assert path.endswith(info['sha256']+'.jpg')
+        allowed.add(path)
     actual = set()
     for file in root.rglob('*'):
         assert not file.is_symlink(), 'Symlink rejected'
@@ -97,7 +117,7 @@ def verify(root):
             assert file.stat().st_size <= 25*1024**2, 'Cloudflare per-file limit exceeded'
             actual.add(relative)
     assert actual == allowed and len(actual) <= 20000, 'Upload whitelist incomplete or oversized'
-    print(json.dumps({'verifiedFiles': len(actual), 'materials': len(ids), 'bytes': total, 'books': counts, 'translatedLines': lines, 'dictionaryWords': language['words'], 'lessonImages':len(pages['files']), 'speakingPrompts':238}, indent=2))
+    print(json.dumps({'verifiedFiles': len(actual), 'materials': len(ids), 'bytes': total, 'books': counts, 'translatedLines': lines, 'dictionaryWords': language['words'], 'lessonImages':len(pages['files']), 'speakingPrompts':238, 'grammarGroups':len(catalog['entries']), 'grammarSourcePages':len(grammar['pages'])}, indent=2))
 
 
 if __name__ == '__main__':

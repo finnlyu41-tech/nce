@@ -24,7 +24,10 @@
     "verify:playback": "node scripts/test-playback.mjs",
     "verify:study-path": "node scripts/test-study-path.mjs",
     "verify:guided": "node scripts/test-guided-learning.mjs",
-    "verify:pronunciation": "node scripts/test-pronunciation.mjs"
+    "verify:pronunciation": "node scripts/test-pronunciation.mjs",
+    "verify:progress": "node scripts/test-progress-save.mjs",
+    "package:grammar": "python3 scripts/package-grammar-pages.py",
+    "verify:grammar": "node scripts/test-textbook-grammar.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

@@ -7,11 +7,10 @@ const structure=asModule(stripTypeScriptTypes(await readFile(new URL('../app/les
 const importApp=async file=>import(asModule(stripTypeScriptTypes((await readFile(new URL('../app/'+file,import.meta.url),'utf8')).replace('{State,validateState','{type State,validateState').replace("'./model'",JSON.stringify(model)).replace("'./lesson-structure'",JSON.stringify(structure)))));
 const {initial,validateState}=await import(model);
 const {studyUnit,unitTrained,trainedUnits,dueUnits,recommendedStudy,makeReview,saveUnitReview}=await importApp('study-path.ts');
-const {parsePack}=await importApp('offline-store.ts');
 const now=new Date(2026,8,26,14,30).getTime();
 const blank={title:'旧标题',text:'Existing lesson.',notes:'原有笔记',steps:[]};
 const old={...initial,nce:{'NCE1-1':{...blank,steps:['listen','words','retell']},'NCE1-2':{...blank,steps:['practice']}},nceLast:{book:'NCE1',lesson:2}};
-assert(validateState(old),'Old backups remain valid without review fields');
+assert(validateState(old),'Old records remain valid without review fields');
 assert.equal(studyUnit('NCE1',2).key,'NCE1-1');
 assert.deepEqual([studyUnit('NCE1',143).last,studyUnit('NCE1',144).next],[144,null]);
 assert.equal(studyUnit('NCE2',2).first,2);
@@ -34,10 +33,7 @@ assert.equal(next.nce['NCE1-1'].review.dueAt,new Date(2026,8,30).getTime(),'Succ
 assert.equal(makeReview(['meaning'],state.nce['NCE1-1'].review,tomorrow).dueAt,new Date(2026,8,28).getTime(),'Incomplete recall stays on next-day practice');
 assert.equal(trainedUnits(saveUnitReview(initial,'NCE1',1,['meaning','listening','expression'],now)),0,'Self-check never marks training complete');
 assert.equal(recommendedStudy({...state,nceLast:{book:'NCE1',lesson:144}},now).first,143,'End of book stays in valid pair');
-for(const review of [{checks:['unknown'],checkedAt:now,dueAt:tomorrow},{checks:['meaning','meaning'],checkedAt:now,dueAt:tomorrow},{checks:[],checkedAt:now,dueAt:now-1},{checks:[],checkedAt:now,dueAt:Infinity}])assert(!validateState({...initial,nce:{'NCE1-1':{...blank,review}}}),'Invalid imported review is rejected');
-const manifest=JSON.stringify({version:1,state,media:[]}),bytes=new TextEncoder().encode(manifest);
-const pack=new Blob(['ENGLISH-STUDIO-PACK-1\n',String(bytes.length).padStart(12,'0')+'\n',bytes]);
-assert.deepEqual((await parsePack(pack)).state,state,'Full backup preserves self-check, review dates, notes and original progress');
+for(const review of [{checks:['unknown'],checkedAt:now,dueAt:tomorrow},{checks:['meaning','meaning'],checkedAt:now,dueAt:tomorrow},{checks:[],checkedAt:now,dueAt:now-1},{checks:[],checkedAt:now,dueAt:Infinity}])assert(!validateState({...initial,nce:{'NCE1-1':{...blank,review}}}),'Invalid stored review is rejected');
 const {lessonRecall,recallAnswer}=await importApp('lesson-practice.ts');
 const sample=[{en:'Lesson 1',zh:''},{en:'A new bag',zh:''},{en:'Listen to the tape then answer this question.',zh:''},{en:'Whose bag is it?',zh:''},{en:'This is my bag.',zh:'这是我的包。'},{en:'My bag is blue.',zh:'我的包是蓝色的。'},{en:'That is your coat.',zh:'那是你的外套。'}];
 assert.deepEqual(lessonRecall(sample,'sample').map(x=>x.rowIndex),[4,5,6]);
@@ -58,4 +54,4 @@ assert.equal(recallAnswer('  Isn’t. '),"isn't");
 assert.equal(lessonRecall([], 'empty').length,0);
 console.log('All 276 lesson recall sets are distinct within each book and match supplied source sentences.');
 }
-console.log('Pair boundaries, legacy progress, next-step selection, review dates, validation and full-backup round trip passed.');
+console.log('Pair boundaries, legacy progress, next-step selection, review dates, validation and saved-progress compatibility passed.');

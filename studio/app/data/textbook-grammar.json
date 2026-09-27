@@ -1,0 +1,7533 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "sentence",
+      "title": "句子结构与语序"
+    },
+    {
+      "id": "question",
+      "title": "疑问、否定与祈使"
+    },
+    {
+      "id": "tense",
+      "title": "时态与动作"
+    },
+    {
+      "id": "modal",
+      "title": "情态与语气"
+    },
+    {
+      "id": "passive",
+      "title": "被动语态"
+    },
+    {
+      "id": "noun",
+      "title": "名词、代词与限定词"
+    },
+    {
+      "id": "modifier",
+      "title": "修饰、比较与介词"
+    },
+    {
+      "id": "clause",
+      "title": "从句与连接"
+    },
+    {
+      "id": "nonfinite",
+      "title": "非谓语动词"
+    },
+    {
+      "id": "review",
+      "title": "综合复习"
+    }
+  ],
+  "entries": [
+    {
+      "id": "NCE1-1",
+      "book": "NCE1",
+      "lesson": 1,
+      "lastLesson": 2,
+      "unit": null,
+      "title": "一般疑问句：Is this your…?",
+      "category": "question",
+      "terms": "is this your",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 8
+        },
+        {
+          "section": "句型练习",
+          "page": 7
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 6
+        }
+      ],
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-3",
+      "book": "NCE1",
+      "lesson": 3,
+      "lastLesson": 4,
+      "unit": null,
+      "title": "一般疑问句的肯定与否定回答",
+      "category": "question",
+      "terms": "yes it is no it isn't",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 12
+        },
+        {
+          "section": "句型练习",
+          "page": 11
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 10
+        }
+      ],
+      "pages": [
+        10,
+        11,
+        12
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-5",
+      "book": "NCE1",
+      "lesson": 5,
+      "lastLesson": 6,
+      "unit": null,
+      "title": "人称代词、冠词与物品问答",
+      "category": "noun",
+      "terms": "he she it a an what make",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 16
+        },
+        {
+          "section": "句型练习",
+          "page": 15
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 14
+        }
+      ],
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-7",
+      "book": "NCE1",
+      "lesson": 7,
+      "lastLesson": 8,
+      "unit": null,
+      "title": "职业与 be 动词",
+      "category": "sentence",
+      "terms": "am is are job",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 20
+        },
+        {
+          "section": "句型练习",
+          "page": 19
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 18
+        }
+      ],
+      "pages": [
+        18,
+        19,
+        20
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-9",
+      "book": "NCE1",
+      "lesson": 9,
+      "lastLesson": 10,
+      "unit": null,
+      "title": "人称代词与形容词描述",
+      "category": "noun",
+      "terms": "he she it look at",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 24
+        },
+        {
+          "section": "句型练习",
+          "page": 23
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 22
+        }
+      ],
+      "pages": [
+        22,
+        23,
+        24
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-11",
+      "book": "NCE1",
+      "lesson": 11,
+      "lastLesson": 12,
+      "unit": null,
+      "title": "所属关系：whose 与物主限定词",
+      "category": "noun",
+      "terms": "whose my your his her",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 28
+        },
+        {
+          "section": "句型练习",
+          "page": 27
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 26
+        }
+      ],
+      "pages": [
+        26,
+        27,
+        28
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-13",
+      "book": "NCE1",
+      "lesson": 13,
+      "lastLesson": 14,
+      "unit": null,
+      "title": "颜色问答与所属关系",
+      "category": "noun",
+      "terms": "what colour his her",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 32
+        },
+        {
+          "section": "句型练习",
+          "page": 31
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 30
+        }
+      ],
+      "pages": [
+        30,
+        31,
+        32
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-15",
+      "book": "NCE1",
+      "lesson": 15,
+      "lastLesson": 16,
+      "unit": null,
+      "title": "a / an 与 be 动词疑问句",
+      "category": "noun",
+      "terms": "a an our are you",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 36
+        },
+        {
+          "section": "句型练习",
+          "page": 35
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 34
+        }
+      ],
+      "pages": [
+        34,
+        35,
+        36
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-17",
+      "book": "NCE1",
+      "lesson": 17,
+      "lastLesson": 18,
+      "unit": null,
+      "title": "复数主语与职业",
+      "category": "noun",
+      "terms": "they jobs are",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 40
+        },
+        {
+          "section": "句型练习",
+          "page": 39
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 38
+        }
+      ],
+      "pages": [
+        38,
+        39,
+        40
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-19",
+      "book": "NCE1",
+      "lesson": 19,
+      "lastLesson": 20,
+      "unit": null,
+      "title": "be 动词与人称代词宾格",
+      "category": "noun",
+      "terms": "am is are them him her us",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 44
+        },
+        {
+          "section": "句型练习",
+          "page": 43
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 42
+        }
+      ],
+      "pages": [
+        42,
+        43,
+        44
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-21",
+      "book": "NCE1",
+      "lesson": 21,
+      "lastLesson": 22,
+      "unit": null,
+      "title": "物主限定词、双宾语与 which one",
+      "category": "noun",
+      "terms": "his her our their give me which one",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 48
+        },
+        {
+          "section": "句型练习",
+          "page": 47
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 46
+        }
+      ],
+      "pages": [
+        46,
+        47,
+        48
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-23",
+      "book": "NCE1",
+      "lesson": 23,
+      "lastLesson": 24,
+      "unit": null,
+      "title": "宾格代词、名词复数与 which ones",
+      "category": "noun",
+      "terms": "me him her us them some which ones",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 52
+        },
+        {
+          "section": "句型练习",
+          "page": 51
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 50
+        }
+      ],
+      "pages": [
+        50,
+        51,
+        52
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-25",
+      "book": "NCE1",
+      "lesson": 25,
+      "lastLesson": 26,
+      "unit": null,
+      "title": "冠词 a / the 与位置表达",
+      "category": "noun",
+      "terms": "a the where in on",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 56
+        },
+        {
+          "section": "句型练习",
+          "page": 55
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 54
+        }
+      ],
+      "pages": [
+        54,
+        55,
+        56
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-27",
+      "book": "NCE1",
+      "lesson": 27,
+      "lastLesson": 28,
+      "unit": null,
+      "title": "复数物品的位置",
+      "category": "modifier",
+      "terms": "where are they",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 60
+        },
+        {
+          "section": "句型练习",
+          "page": 59
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 58
+        }
+      ],
+      "pages": [
+        58,
+        59,
+        60
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-29",
+      "book": "NCE1",
+      "lesson": 29,
+      "lastLesson": 30,
+      "unit": null,
+      "title": "must 与祈使句",
+      "category": "modal",
+      "terms": "what must I do",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 64
+        },
+        {
+          "section": "句型练习",
+          "page": 63
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 62
+        }
+      ],
+      "pages": [
+        62,
+        63,
+        64
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-31",
+      "book": "NCE1",
+      "lesson": 31,
+      "lastLesson": 32,
+      "unit": null,
+      "title": "现在进行时：单数主语",
+      "category": "tense",
+      "terms": "what is doing present continuous",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 68
+        },
+        {
+          "section": "句型练习",
+          "page": 67
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 66
+        }
+      ],
+      "pages": [
+        66,
+        67,
+        68
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-33",
+      "book": "NCE1",
+      "lesson": 33,
+      "lastLesson": 34,
+      "unit": null,
+      "title": "现在进行时：复数主语",
+      "category": "tense",
+      "terms": "what are they doing",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 72
+        },
+        {
+          "section": "句型练习",
+          "page": 71
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 70
+        }
+      ],
+      "pages": [
+        70,
+        71,
+        72
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-35",
+      "book": "NCE1",
+      "lesson": 35,
+      "lastLesson": 36,
+      "unit": null,
+      "title": "地点疑问句：Where…?",
+      "category": "question",
+      "terms": "where",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 76
+        },
+        {
+          "section": "句型练习",
+          "page": 75
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 74
+        }
+      ],
+      "pages": [
+        74,
+        75,
+        76
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-37",
+      "book": "NCE1",
+      "lesson": 37,
+      "lastLesson": 38,
+      "unit": null,
+      "title": "现在进行与 be going to",
+      "category": "tense",
+      "terms": "doing going to",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 80
+        },
+        {
+          "section": "句型练习",
+          "page": 79
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 78
+        }
+      ],
+      "pages": [
+        78,
+        79,
+        80
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-39",
+      "book": "NCE1",
+      "lesson": 39,
+      "lastLesson": 40,
+      "unit": null,
+      "title": "be going to 表示打算",
+      "category": "tense",
+      "terms": "going to future",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 84
+        },
+        {
+          "section": "句型练习",
+          "page": 83
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 82
+        }
+      ],
+      "pages": [
+        82,
+        83,
+        84
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-41",
+      "book": "NCE1",
+      "lesson": 41,
+      "lastLesson": 42,
+      "unit": null,
+      "title": "there be：单数与不可数名词",
+      "category": "sentence",
+      "terms": "is there a any",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 88
+        },
+        {
+          "section": "句型练习",
+          "page": 87
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 86
+        }
+      ],
+      "pages": [
+        86,
+        87,
+        88
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-43",
+      "book": "NCE1",
+      "lesson": 43,
+      "lastLesson": 44,
+      "unit": null,
+      "title": "there be：some 与 any",
+      "category": "sentence",
+      "terms": "are there any is there",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 92
+        },
+        {
+          "section": "句型练习",
+          "page": 91
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 90
+        }
+      ],
+      "pages": [
+        90,
+        91,
+        92
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-45",
+      "book": "NCE1",
+      "lesson": 45,
+      "lastLesson": 46,
+      "unit": null,
+      "title": "can 表示能力",
+      "category": "modal",
+      "terms": "can you",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 96
+        },
+        {
+          "section": "句型练习",
+          "page": 95
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 94
+        }
+      ],
+      "pages": [
+        94,
+        95,
+        96
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-47",
+      "book": "NCE1",
+      "lesson": 47,
+      "lastLesson": 48,
+      "unit": null,
+      "title": "一般现在时：Do you like / want…?",
+      "category": "tense",
+      "terms": "do like want",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 100
+        },
+        {
+          "section": "句型练习",
+          "page": 99
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 98
+        }
+      ],
+      "pages": [
+        98,
+        99,
+        100
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-49",
+      "book": "NCE1",
+      "lesson": 49,
+      "lastLesson": 50,
+      "unit": null,
+      "title": "一般现在时：第三人称单数",
+      "category": "tense",
+      "terms": "likes doesn't like",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 104
+        },
+        {
+          "section": "句型练习",
+          "page": 103
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 102
+        }
+      ],
+      "pages": [
+        102,
+        103,
+        104
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-51",
+      "book": "NCE1",
+      "lesson": 51,
+      "lastLesson": 52,
+      "unit": null,
+      "title": "国籍与来源：come from",
+      "category": "question",
+      "terms": "nationality come from",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 108
+        },
+        {
+          "section": "句型练习",
+          "page": 107
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 106
+        }
+      ],
+      "pages": [
+        106,
+        107,
+        108
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-53",
+      "book": "NCE1",
+      "lesson": 53,
+      "lastLesson": 54,
+      "unit": null,
+      "title": "国籍与来源的问答",
+      "category": "question",
+      "terms": "nationality come from",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 112
+        },
+        {
+          "section": "句型练习",
+          "page": 111
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 110
+        }
+      ],
+      "pages": [
+        110,
+        111,
+        112
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-55",
+      "book": "NCE1",
+      "lesson": 55,
+      "lastLesson": 56,
+      "unit": null,
+      "title": "一般现在时与日常习惯",
+      "category": "tense",
+      "terms": "usually do",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 116
+        },
+        {
+          "section": "句型练习",
+          "page": 115
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 114
+        }
+      ],
+      "pages": [
+        114,
+        115,
+        116
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-57",
+      "book": "NCE1",
+      "lesson": 57,
+      "lastLesson": 58,
+      "unit": null,
+      "title": "一般现在时与现在进行时对比",
+      "category": "tense",
+      "terms": "usually doing time",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 120
+        },
+        {
+          "section": "句型练习",
+          "page": 119
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 118
+        }
+      ],
+      "pages": [
+        118,
+        119,
+        120
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-59",
+      "book": "NCE1",
+      "lesson": 59,
+      "lastLesson": 60,
+      "unit": null,
+      "title": "名词复数、some 与 any",
+      "category": "noun",
+      "terms": "plural some any time",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 124
+        },
+        {
+          "section": "句型练习",
+          "page": 123
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 122
+        }
+      ],
+      "pages": [
+        122,
+        123,
+        124
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-61",
+      "book": "NCE1",
+      "lesson": 61,
+      "lastLesson": 62,
+      "unit": null,
+      "title": "身体状况与 must",
+      "category": "modal",
+      "terms": "matter must",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 128
+        },
+        {
+          "section": "句型练习",
+          "page": 127
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 126
+        }
+      ],
+      "pages": [
+        126,
+        127,
+        128
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-63",
+      "book": "NCE1",
+      "lesson": 63,
+      "lastLesson": 64,
+      "unit": null,
+      "title": "否定祈使句与 mustn't",
+      "category": "modal",
+      "terms": "don't mustn't",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 132
+        },
+        {
+          "section": "句型练习",
+          "page": 131
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 130
+        }
+      ],
+      "pages": [
+        130,
+        131,
+        132
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-65",
+      "book": "NCE1",
+      "lesson": 65,
+      "lastLesson": 66,
+      "unit": null,
+      "title": "时间表达与 in / at / from",
+      "category": "modifier",
+      "terms": "time clock in at from",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 136
+        },
+        {
+          "section": "句型练习",
+          "page": 135
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 134
+        }
+      ],
+      "pages": [
+        134,
+        135,
+        136
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-67",
+      "book": "NCE1",
+      "lesson": 67,
+      "lastLesson": 68,
+      "unit": null,
+      "title": "过去时间、冠词与地点表达",
+      "category": "tense",
+      "terms": "time was were the at on",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 140
+        },
+        {
+          "section": "句型练习",
+          "page": 139
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 138
+        }
+      ],
+      "pages": [
+        138,
+        139,
+        140
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-69",
+      "book": "NCE1",
+      "lesson": 69,
+      "lastLesson": 70,
+      "unit": null,
+      "title": "一般过去时：was / were",
+      "category": "tense",
+      "terms": "when were",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 144
+        },
+        {
+          "section": "句型练习",
+          "page": 143
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 142
+        }
+      ],
+      "pages": [
+        142,
+        143,
+        144
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-71",
+      "book": "NCE1",
+      "lesson": 71,
+      "lastLesson": 72,
+      "unit": null,
+      "title": "一般过去时：did 疑问句",
+      "category": "tense",
+      "terms": "when did",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 148
+        },
+        {
+          "section": "句型练习",
+          "page": 147
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 146
+        }
+      ],
+      "pages": [
+        146,
+        147,
+        148
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-73",
+      "book": "NCE1",
+      "lesson": 73,
+      "lastLesson": 74,
+      "unit": null,
+      "title": "一般过去时：What did…?",
+      "category": "tense",
+      "terms": "what did do",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 156
+        },
+        {
+          "section": "句型练习",
+          "page": 155
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 154
+        }
+      ],
+      "pages": [
+        154,
+        155,
+        156
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-75",
+      "book": "NCE1",
+      "lesson": 75,
+      "lastLesson": 76,
+      "unit": null,
+      "title": "一般过去时的时间问答",
+      "category": "tense",
+      "terms": "when did",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 160
+        },
+        {
+          "section": "句型练习",
+          "page": 159
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 158
+        }
+      ],
+      "pages": [
+        158,
+        159,
+        160
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-77",
+      "book": "NCE1",
+      "lesson": 77,
+      "lastLesson": 78,
+      "unit": null,
+      "title": "一般过去时：过去动作的问答",
+      "category": "tense",
+      "terms": "when did",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 164
+        },
+        {
+          "section": "句型练习",
+          "page": 163
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 162
+        }
+      ],
+      "pages": [
+        162,
+        163,
+        164
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-79",
+      "book": "NCE1",
+      "lesson": 79,
+      "lastLesson": 80,
+      "unit": null,
+      "title": "must go to 表示必须去某处",
+      "category": "modal",
+      "terms": "must go to",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 168
+        },
+        {
+          "section": "句型练习",
+          "page": 167
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 166
+        }
+      ],
+      "pages": [
+        166,
+        167,
+        168
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-81",
+      "book": "NCE1",
+      "lesson": 81,
+      "lastLesson": 82,
+      "unit": null,
+      "title": "have 的一般过去式",
+      "category": "tense",
+      "terms": "had",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 172
+        },
+        {
+          "section": "句型练习",
+          "page": 171
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 170
+        }
+      ],
+      "pages": [
+        170,
+        171,
+        172
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-83",
+      "book": "NCE1",
+      "lesson": 83,
+      "lastLesson": 84,
+      "unit": null,
+      "title": "现在完成时：Have you had…?",
+      "category": "tense",
+      "terms": "have had",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 176
+        },
+        {
+          "section": "句型练习",
+          "page": 175
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 174
+        }
+      ],
+      "pages": [
+        174,
+        175,
+        176
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-85",
+      "book": "NCE1",
+      "lesson": 85,
+      "lastLesson": 86,
+      "unit": null,
+      "title": "现在完成时：What have you done?",
+      "category": "tense",
+      "terms": "have done",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 180
+        },
+        {
+          "section": "句型练习",
+          "page": 179
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 178
+        }
+      ],
+      "pages": [
+        178,
+        179,
+        180
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-87",
+      "book": "NCE1",
+      "lesson": 87,
+      "lastLesson": 88,
+      "unit": null,
+      "title": "现在完成时与 yet",
+      "category": "tense",
+      "terms": "have yet",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 184
+        },
+        {
+          "section": "句型练习",
+          "page": 183
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 182
+        }
+      ],
+      "pages": [
+        182,
+        183,
+        184
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-89",
+      "book": "NCE1",
+      "lesson": 89,
+      "lastLesson": 90,
+      "unit": null,
+      "title": "现在完成时的问答",
+      "category": "tense",
+      "terms": "have yet",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 188
+        },
+        {
+          "section": "句型练习",
+          "page": 187
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 186
+        }
+      ],
+      "pages": [
+        186,
+        187,
+        188
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-91",
+      "book": "NCE1",
+      "lesson": 91,
+      "lastLesson": 92,
+      "unit": null,
+      "title": "一般将来时：When will…?",
+      "category": "tense",
+      "terms": "when will future",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 192
+        },
+        {
+          "section": "句型练习",
+          "page": 191
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 190
+        }
+      ],
+      "pages": [
+        190,
+        191,
+        192
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-93",
+      "book": "NCE1",
+      "lesson": 93,
+      "lastLesson": 94,
+      "unit": null,
+      "title": "过去与将来的时间问答",
+      "category": "tense",
+      "terms": "did will",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 196
+        },
+        {
+          "section": "句型练习",
+          "page": 195
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 194
+        }
+      ],
+      "pages": [
+        194,
+        195,
+        196
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-95",
+      "book": "NCE1",
+      "lesson": 95,
+      "lastLesson": 96,
+      "unit": null,
+      "title": "had better 与将来时间表达",
+      "category": "modal",
+      "terms": "had better will exact time",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 200
+        },
+        {
+          "section": "句型练习",
+          "page": 199
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 198
+        }
+      ],
+      "pages": [
+        198,
+        199,
+        200
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-97",
+      "book": "NCE1",
+      "lesson": 97,
+      "lastLesson": 98,
+      "unit": null,
+      "title": "名词性物主代词与 whose",
+      "category": "noun",
+      "terms": "whose mine yours",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 204
+        },
+        {
+          "section": "句型练习",
+          "page": 203
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 202
+        }
+      ],
+      "pages": [
+        202,
+        203,
+        204
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-99",
+      "book": "NCE1",
+      "lesson": 99,
+      "lastLesson": 100,
+      "unit": null,
+      "title": "宾语从句：He says that…",
+      "category": "clause",
+      "terms": "says that",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 208
+        },
+        {
+          "section": "句型练习",
+          "page": 207
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 206
+        }
+      ],
+      "pages": [
+        206,
+        207,
+        208
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-101",
+      "book": "NCE1",
+      "lesson": 101,
+      "lastLesson": 102,
+      "unit": null,
+      "title": "宾语从句：省略 that",
+      "category": "clause",
+      "terms": "says she they",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 212
+        },
+        {
+          "section": "句型练习",
+          "page": 211
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 210
+        }
+      ],
+      "pages": [
+        210,
+        211,
+        212
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-103",
+      "book": "NCE1",
+      "lesson": 103,
+      "lastLesson": 104,
+      "unit": null,
+      "title": "程度表达：too / very / enough",
+      "category": "modifier",
+      "terms": "too very enough",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 216
+        },
+        {
+          "section": "句型练习",
+          "page": 215
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 214
+        }
+      ],
+      "pages": [
+        214,
+        215,
+        216
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-105",
+      "book": "NCE1",
+      "lesson": 105,
+      "lastLesson": 106,
+      "unit": null,
+      "title": "want / tell + 宾语 + to do",
+      "category": "nonfinite",
+      "terms": "want tell to",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 220
+        },
+        {
+          "section": "句型练习",
+          "page": 219
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 218
+        }
+      ],
+      "pages": [
+        218,
+        219,
+        220
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-107",
+      "book": "NCE1",
+      "lesson": 107,
+      "lastLesson": 108,
+      "unit": null,
+      "title": "比较级",
+      "category": "modifier",
+      "terms": "compare comparative",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 224
+        },
+        {
+          "section": "句型练习",
+          "page": 223
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 222
+        }
+      ],
+      "pages": [
+        222,
+        223,
+        224
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-109",
+      "book": "NCE1",
+      "lesson": 109,
+      "lastLesson": 110,
+      "unit": null,
+      "title": "数量比较：much / many / less / fewer",
+      "category": "modifier",
+      "terms": "compare much many less fewer",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 228
+        },
+        {
+          "section": "句型练习",
+          "page": 227
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 226
+        }
+      ],
+      "pages": [
+        226,
+        227,
+        228
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-111",
+      "book": "NCE1",
+      "lesson": 111,
+      "lastLesson": 112,
+      "unit": null,
+      "title": "形容词比较形式",
+      "category": "modifier",
+      "terms": "compare",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 232
+        },
+        {
+          "section": "句型练习",
+          "page": 231
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 230
+        }
+      ],
+      "pages": [
+        230,
+        231,
+        232
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-113",
+      "book": "NCE1",
+      "lesson": 113,
+      "lastLesson": 114,
+      "unit": null,
+      "title": "不定代词：none",
+      "category": "noun",
+      "terms": "none got",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 236
+        },
+        {
+          "section": "句型练习",
+          "page": 235
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 234
+        }
+      ],
+      "pages": [
+        234,
+        235,
+        236
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-115",
+      "book": "NCE1",
+      "lesson": 115,
+      "lastLesson": 116,
+      "unit": null,
+      "title": "every / no / any / some",
+      "category": "noun",
+      "terms": "every no any some",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 240
+        },
+        {
+          "section": "句型练习",
+          "page": 239
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 238
+        }
+      ],
+      "pages": [
+        238,
+        239,
+        240
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-117",
+      "book": "NCE1",
+      "lesson": 117,
+      "lastLesson": 118,
+      "unit": null,
+      "title": "过去进行时",
+      "category": "tense",
+      "terms": "were doing past continuous",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 244
+        },
+        {
+          "section": "句型练习",
+          "page": 243
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 242
+        }
+      ],
+      "pages": [
+        242,
+        243,
+        244
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-119",
+      "book": "NCE1",
+      "lesson": 119,
+      "lastLesson": 120,
+      "unit": null,
+      "title": "过去完成时",
+      "category": "tense",
+      "terms": "had already happened",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 248
+        },
+        {
+          "section": "句型练习",
+          "page": 247
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 246
+        }
+      ],
+      "pages": [
+        246,
+        247,
+        248
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-121",
+      "book": "NCE1",
+      "lesson": 121,
+      "lastLesson": 122,
+      "unit": null,
+      "title": "关系代词 who / whom / which / that",
+      "category": "clause",
+      "terms": "relative who whom which that",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 252
+        },
+        {
+          "section": "句型练习",
+          "page": 251
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 250
+        }
+      ],
+      "pages": [
+        250,
+        251,
+        252
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-123",
+      "book": "NCE1",
+      "lesson": 123,
+      "lastLesson": 124,
+      "unit": null,
+      "title": "关系代词的省略",
+      "category": "clause",
+      "terms": "relative omission",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 256
+        },
+        {
+          "section": "句型练习",
+          "page": 255
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 254
+        }
+      ],
+      "pages": [
+        254,
+        255,
+        256
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-125",
+      "book": "NCE1",
+      "lesson": 125,
+      "lastLesson": 126,
+      "unit": null,
+      "title": "have to 与不必",
+      "category": "modal",
+      "terms": "have to do not need to",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 260
+        },
+        {
+          "section": "句型练习",
+          "page": 259
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 258
+        }
+      ],
+      "pages": [
+        258,
+        259,
+        260
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-127",
+      "book": "NCE1",
+      "lesson": 127,
+      "lastLesson": 128,
+      "unit": null,
+      "title": "对现在的推测：can't / must be",
+      "category": "modal",
+      "terms": "can't must be",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 264
+        },
+        {
+          "section": "句型练习",
+          "page": 263
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 262
+        }
+      ],
+      "pages": [
+        262,
+        263,
+        264
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-129",
+      "book": "NCE1",
+      "lesson": 129,
+      "lastLesson": 130,
+      "unit": null,
+      "title": "对过去的推测：can't / must have been",
+      "category": "modal",
+      "terms": "can't must have been",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 268
+        },
+        {
+          "section": "句型练习",
+          "page": 267
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 266
+        }
+      ],
+      "pages": [
+        266,
+        267,
+        268
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-131",
+      "book": "NCE1",
+      "lesson": 131,
+      "lastLesson": 132,
+      "unit": null,
+      "title": "may be / may have been",
+      "category": "modal",
+      "terms": "may have been not sure",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 272
+        },
+        {
+          "section": "句型练习",
+          "page": 271
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 270
+        }
+      ],
+      "pages": [
+        270,
+        271,
+        272
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-133",
+      "book": "NCE1",
+      "lesson": 133,
+      "lastLesson": 134,
+      "unit": null,
+      "title": "间接引语：said / told",
+      "category": "clause",
+      "terms": "said told that reported speech",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 276
+        },
+        {
+          "section": "句型练习",
+          "page": 275
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 274
+        }
+      ],
+      "pages": [
+        274,
+        275,
+        276
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-135",
+      "book": "NCE1",
+      "lesson": 135,
+      "lastLesson": 136,
+      "unit": null,
+      "title": "间接引语中的时态变化",
+      "category": "clause",
+      "terms": "said told reported speech",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 280
+        },
+        {
+          "section": "句型练习",
+          "page": 279
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 278
+        }
+      ],
+      "pages": [
+        278,
+        279,
+        280
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-137",
+      "book": "NCE1",
+      "lesson": 137,
+      "lastLesson": 138,
+      "unit": null,
+      "title": "if 条件句",
+      "category": "clause",
+      "terms": "if conditional",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 284
+        },
+        {
+          "section": "句型练习",
+          "page": 283
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 282
+        }
+      ],
+      "pages": [
+        282,
+        283,
+        284
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-139",
+      "book": "NCE1",
+      "lesson": 139,
+      "lastLesson": 140,
+      "unit": null,
+      "title": "间接疑问句",
+      "category": "clause",
+      "terms": "wants know if why what when",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 288
+        },
+        {
+          "section": "句型练习",
+          "page": 287
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 286
+        }
+      ],
+      "pages": [
+        286,
+        287,
+        288
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-141",
+      "book": "NCE1",
+      "lesson": 141,
+      "lastLesson": 142,
+      "unit": null,
+      "title": "一般过去时的被动语态",
+      "category": "passive",
+      "terms": "was invited passive",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 292
+        },
+        {
+          "section": "句型练习",
+          "page": 291
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 290
+        }
+      ],
+      "pages": [
+        290,
+        291,
+        292
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE1-143",
+      "book": "NCE1",
+      "lesson": 143,
+      "lastLesson": 144,
+      "unit": null,
+      "title": "完成时与将来时的被动语态",
+      "category": "passive",
+      "terms": "hasn't been served will be",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 296
+        },
+        {
+          "section": "句型练习",
+          "page": 295
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 294
+        }
+      ],
+      "pages": [
+        294,
+        295,
+        296
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-1",
+      "book": "NCE2",
+      "lesson": 1,
+      "lastLesson": 1,
+      "unit": 1,
+      "title": "简单陈述句的语序",
+      "category": "sentence",
+      "terms": "word order simple statements",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 53
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 55
+        }
+      ],
+      "pages": [
+        53,
+        54,
+        55
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-2",
+      "book": "NCE2",
+      "lesson": 2,
+      "lastLesson": 2,
+      "unit": 1,
+      "title": "一般现在时与现在进行时",
+      "category": "tense",
+      "terms": "now often always",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 57
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 58
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 59
+        }
+      ],
+      "pages": [
+        57,
+        58,
+        59
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-3",
+      "book": "NCE2",
+      "lesson": 3,
+      "lastLesson": 3,
+      "unit": 1,
+      "title": "一般过去时",
+      "category": "tense",
+      "terms": "what happened simple past",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 61
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 62
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 63
+        }
+      ],
+      "pages": [
+        61,
+        62,
+        63
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-4",
+      "book": "NCE2",
+      "lesson": 4,
+      "lastLesson": 4,
+      "unit": 1,
+      "title": "现在完成时",
+      "category": "tense",
+      "terms": "what has happened present perfect",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 65
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 66
+        }
+      ],
+      "pages": [
+        65,
+        66,
+        67
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-5",
+      "book": "NCE2",
+      "lesson": 5,
+      "lastLesson": 5,
+      "unit": 1,
+      "title": "一般过去时与现在完成时",
+      "category": "tense",
+      "terms": "happened has happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 69
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 70
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 71
+        }
+      ],
+      "pages": [
+        69,
+        70,
+        71
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-6",
+      "book": "NCE2",
+      "lesson": 6,
+      "lastLesson": 6,
+      "unit": 1,
+      "title": "冠词与 some",
+      "category": "noun",
+      "terms": "a the some",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 73
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 74
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 75
+        }
+      ],
+      "pages": [
+        73,
+        74,
+        75
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-7",
+      "book": "NCE2",
+      "lesson": 7,
+      "lastLesson": 7,
+      "unit": 1,
+      "title": "过去进行时",
+      "category": "tense",
+      "terms": "were doing when",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 77
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 78
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 79
+        }
+      ],
+      "pages": [
+        77,
+        78,
+        79
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-8",
+      "book": "NCE2",
+      "lesson": 8,
+      "lastLesson": 8,
+      "unit": 1,
+      "title": "比较级与最高级",
+      "category": "modifier",
+      "terms": "best worst comparative",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 81
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 82
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 83
+        }
+      ],
+      "pages": [
+        81,
+        82,
+        83
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-9",
+      "book": "NCE2",
+      "lesson": 9,
+      "lastLesson": 9,
+      "unit": 1,
+      "title": "时间介词",
+      "category": "modifier",
+      "terms": "at in on when arrive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 85
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 86
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 87
+        }
+      ],
+      "pages": [
+        85,
+        86,
+        87
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-10",
+      "book": "NCE2",
+      "lesson": 10,
+      "lastLesson": 10,
+      "unit": 1,
+      "title": "一般过去时的被动语态",
+      "category": "passive",
+      "terms": "was made passive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 89
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 90
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 91
+        }
+      ],
+      "pages": [
+        89,
+        90,
+        91
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-11",
+      "book": "NCE2",
+      "lesson": 11,
+      "lastLesson": 11,
+      "unit": 1,
+      "title": "复习第 2–10 课关键句型",
+      "category": "review",
+      "terms": "review KS2-10",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 93
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 95
+        }
+      ],
+      "pages": [
+        93,
+        94,
+        95
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-12",
+      "book": "NCE2",
+      "lesson": 12,
+      "lastLesson": 12,
+      "unit": 1,
+      "title": "一般将来时",
+      "category": "tense",
+      "terms": "will shall tomorrow",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 97
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 97
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 99
+        }
+      ],
+      "pages": [
+        97,
+        98,
+        99
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-13",
+      "book": "NCE2",
+      "lesson": 13,
+      "lastLesson": 13,
+      "unit": 1,
+      "title": "将来进行时",
+      "category": "tense",
+      "terms": "will be doing",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 101
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 102
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 103
+        }
+      ],
+      "pages": [
+        101,
+        102,
+        103
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-14",
+      "book": "NCE2",
+      "lesson": 14,
+      "lastLesson": 14,
+      "unit": 1,
+      "title": "过去完成时",
+      "category": "tense",
+      "terms": "had finished",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 105
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 106
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 107
+        }
+      ],
+      "pages": [
+        105,
+        106,
+        107
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-15",
+      "book": "NCE2",
+      "lesson": 15,
+      "lastLesson": 15,
+      "unit": 1,
+      "title": "直接引语与间接引语",
+      "category": "clause",
+      "terms": "said told reported speech",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 109
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 110
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 111
+        }
+      ],
+      "pages": [
+        109,
+        110,
+        111
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-16",
+      "book": "NCE2",
+      "lesson": 16,
+      "lastLesson": 16,
+      "unit": 1,
+      "title": "真实条件句",
+      "category": "clause",
+      "terms": "if conditional",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 113
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 114
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 115
+        }
+      ],
+      "pages": [
+        113,
+        114,
+        115
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-17",
+      "book": "NCE2",
+      "lesson": 17,
+      "lastLesson": 17,
+      "unit": 1,
+      "title": "must 与 have to",
+      "category": "modal",
+      "terms": "must have to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 117
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 118
+        }
+      ],
+      "pages": [
+        117,
+        118,
+        119
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-18",
+      "book": "NCE2",
+      "lesson": 18,
+      "lastLesson": 18,
+      "unit": 1,
+      "title": "have 的用法",
+      "category": "sentence",
+      "terms": "have",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 121
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 122
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 123
+        }
+      ],
+      "pages": [
+        121,
+        122,
+        123
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-19",
+      "book": "NCE2",
+      "lesson": 19,
+      "lastLesson": 19,
+      "unit": 1,
+      "title": "can 与 may",
+      "category": "modal",
+      "terms": "can may",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 125
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 126
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 127
+        }
+      ],
+      "pages": [
+        125,
+        126,
+        127
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-20",
+      "book": "NCE2",
+      "lesson": 20,
+      "lastLesson": 20,
+      "unit": 1,
+      "title": "动名词",
+      "category": "nonfinite",
+      "terms": "give up fishing gerund",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 129
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 130
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 131
+        }
+      ],
+      "pages": [
+        129,
+        130,
+        131
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-21",
+      "book": "NCE2",
+      "lesson": 21,
+      "lastLesson": 21,
+      "unit": 1,
+      "title": "被动语态与情态动词",
+      "category": "passive",
+      "terms": "can be heard",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 133
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 134
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 135
+        }
+      ],
+      "pages": [
+        133,
+        134,
+        135
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-22",
+      "book": "NCE2",
+      "lesson": 22,
+      "lastLesson": 22,
+      "unit": 1,
+      "title": "动词与介词：of / from / in / on",
+      "category": "modifier",
+      "terms": "verbs of from in on",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 137
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 139
+        }
+      ],
+      "pages": [
+        137,
+        138,
+        139
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-23",
+      "book": "NCE2",
+      "lesson": 23,
+      "lastLesson": 23,
+      "unit": 1,
+      "title": "复习第 12–21 课关键句型",
+      "category": "review",
+      "terms": "review KS12-21",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 141
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 142
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 143
+        }
+      ],
+      "pages": [
+        141,
+        142,
+        143
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-24",
+      "book": "NCE2",
+      "lesson": 24,
+      "lastLesson": 24,
+      "unit": 1,
+      "title": "复习第 2–23 课难点",
+      "category": "review",
+      "terms": "review SD2-23",
+      "sections": [
+        {
+          "section": "Special difficulties · 难点",
+          "page": 145
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 147
+        }
+      ],
+      "pages": [
+        145,
+        146,
+        147
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-25",
+      "book": "NCE2",
+      "lesson": 25,
+      "lastLesson": 25,
+      "unit": 2,
+      "title": "并列句的语序",
+      "category": "sentence",
+      "terms": "word order compound statements",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 163
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 165
+        }
+      ],
+      "pages": [
+        163,
+        164,
+        165
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-26",
+      "book": "NCE2",
+      "lesson": 26,
+      "lastLesson": 26,
+      "unit": 2,
+      "title": "一般现在时与习惯性动作",
+      "category": "tense",
+      "terms": "always happen",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 167
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 168
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 169
+        }
+      ],
+      "pages": [
+        167,
+        168,
+        169
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-27",
+      "book": "NCE2",
+      "lesson": 27,
+      "lastLesson": 27,
+      "unit": 2,
+      "title": "一般过去时复习",
+      "category": "tense",
+      "terms": "what happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 171
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 172
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 173
+        }
+      ],
+      "pages": [
+        171,
+        172,
+        173
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-28",
+      "book": "NCE2",
+      "lesson": 28,
+      "lastLesson": 28,
+      "unit": 2,
+      "title": "现在完成时复习",
+      "category": "tense",
+      "terms": "what has happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 175
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 176
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 177
+        }
+      ],
+      "pages": [
+        175,
+        176,
+        177
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-29",
+      "book": "NCE2",
+      "lesson": 29,
+      "lastLesson": 29,
+      "unit": 2,
+      "title": "过去时与完成时的时间线",
+      "category": "tense",
+      "terms": "happened has happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 179
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 180
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 181
+        }
+      ],
+      "pages": [
+        179,
+        180,
+        181
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-30",
+      "book": "NCE2",
+      "lesson": 30,
+      "lastLesson": 30,
+      "unit": 2,
+      "title": "冠词、some 与 any",
+      "category": "noun",
+      "terms": "a the some any",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 183
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 185
+        }
+      ],
+      "pages": [
+        183,
+        184,
+        185
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-31",
+      "book": "NCE2",
+      "lesson": 31,
+      "lastLesson": 31,
+      "unit": 2,
+      "title": "used to 与过去进行时",
+      "category": "tense",
+      "terms": "used to was doing",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 187
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 188
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 189
+        }
+      ],
+      "pages": [
+        187,
+        188,
+        189
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-32",
+      "book": "NCE2",
+      "lesson": 32,
+      "lastLesson": 32,
+      "unit": 2,
+      "title": "同级比较与比较级",
+      "category": "modifier",
+      "terms": "as as than",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 191
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 192
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 193
+        }
+      ],
+      "pages": [
+        191,
+        192,
+        193
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-33",
+      "book": "NCE2",
+      "lesson": 33,
+      "lastLesson": 33,
+      "unit": 2,
+      "title": "地点与方向介词",
+      "category": "modifier",
+      "terms": "where to at in",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 195
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 196
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 197
+        }
+      ],
+      "pages": [
+        195,
+        196,
+        197
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-34",
+      "book": "NCE2",
+      "lesson": 34,
+      "lastLesson": 34,
+      "unit": 2,
+      "title": "被动语态复习",
+      "category": "passive",
+      "terms": "was asked passive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 199
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 200
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 201
+        }
+      ],
+      "pages": [
+        199,
+        200,
+        201
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-35",
+      "book": "NCE2",
+      "lesson": 35,
+      "lastLesson": 35,
+      "unit": 2,
+      "title": "复习第 26–34 课关键句型",
+      "category": "review",
+      "terms": "review KS26-34",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 203
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 204
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 205
+        }
+      ],
+      "pages": [
+        203,
+        204,
+        205
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-36",
+      "book": "NCE2",
+      "lesson": 36,
+      "lastLesson": 36,
+      "unit": 2,
+      "title": "be going to 与将来表达",
+      "category": "tense",
+      "terms": "going to future",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 207
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 208
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 209
+        }
+      ],
+      "pages": [
+        207,
+        208,
+        209
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-37",
+      "book": "NCE2",
+      "lesson": 37,
+      "lastLesson": 37,
+      "unit": 2,
+      "title": "将来完成时",
+      "category": "tense",
+      "terms": "will have completed future perfect",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 211
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 212
+        }
+      ],
+      "pages": [
+        211,
+        212,
+        213
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-38",
+      "book": "NCE2",
+      "lesson": 38,
+      "lastLesson": 38,
+      "unit": 2,
+      "title": "过去完成时与 as if",
+      "category": "tense",
+      "terms": "had as if",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 215
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 216
+        }
+      ],
+      "pages": [
+        215,
+        216,
+        217
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-39",
+      "book": "NCE2",
+      "lesson": 39,
+      "lastLesson": 39,
+      "unit": 2,
+      "title": "间接陈述与间接疑问句",
+      "category": "clause",
+      "terms": "said told asked",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 219
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 220
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 221
+        }
+      ],
+      "pages": [
+        219,
+        220,
+        221
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-40",
+      "book": "NCE2",
+      "lesson": 40,
+      "lastLesson": 40,
+      "unit": 2,
+      "title": "非真实条件句",
+      "category": "clause",
+      "terms": "if would conditional",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 223
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 224
+        }
+      ],
+      "pages": [
+        223,
+        224,
+        225
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-41",
+      "book": "NCE2",
+      "lesson": 41,
+      "lastLesson": 41,
+      "unit": 2,
+      "title": "must / have to / need",
+      "category": "modal",
+      "terms": "must have to need",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 227
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 228
+        }
+      ],
+      "pages": [
+        227,
+        228,
+        229
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-42",
+      "book": "NCE2",
+      "lesson": 42,
+      "lastLesson": 42,
+      "unit": 2,
+      "title": "have 与 have got",
+      "category": "sentence",
+      "terms": "have got",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 231
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 233
+        }
+      ],
+      "pages": [
+        231,
+        232,
+        233
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-43",
+      "book": "NCE2",
+      "lesson": 43,
+      "lastLesson": 43,
+      "unit": 2,
+      "title": "can 与 be able to",
+      "category": "modal",
+      "terms": "can able",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 235
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 236
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 237
+        }
+      ],
+      "pages": [
+        235,
+        236,
+        237
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-44",
+      "book": "NCE2",
+      "lesson": 44,
+      "lastLesson": 44,
+      "unit": 2,
+      "title": "动名词与不定式",
+      "category": "nonfinite",
+      "terms": "started running to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 239
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 241
+        }
+      ],
+      "pages": [
+        239,
+        240,
+        241
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-45",
+      "book": "NCE2",
+      "lesson": 45,
+      "lastLesson": 45,
+      "unit": 2,
+      "title": "被动语态综合复习",
+      "category": "passive",
+      "terms": "review passive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 243
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 244
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 245
+        }
+      ],
+      "pages": [
+        243,
+        244,
+        245
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-46",
+      "book": "NCE2",
+      "lesson": 46,
+      "lastLesson": 46,
+      "unit": 2,
+      "title": "动词与介词：to / at / for / with",
+      "category": "modifier",
+      "terms": "verbs to at for with",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 247
+        }
+      ],
+      "pages": [
+        247,
+        248,
+        249
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-47",
+      "book": "NCE2",
+      "lesson": 47,
+      "lastLesson": 47,
+      "unit": 2,
+      "title": "复习第 36–45 课关键句型",
+      "category": "review",
+      "terms": "review KS36-45",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 251
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 253
+        }
+      ],
+      "pages": [
+        251,
+        252,
+        253
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-48",
+      "book": "NCE2",
+      "lesson": 48,
+      "lastLesson": 48,
+      "unit": 2,
+      "title": "复习第 26–45 课难点",
+      "category": "review",
+      "terms": "review SD26-45",
+      "sections": [
+        {
+          "section": "Special difficulties · 难点",
+          "page": 255
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 257
+        }
+      ],
+      "pages": [
+        255,
+        256,
+        257
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-49",
+      "book": "NCE2",
+      "lesson": 49,
+      "lastLesson": 49,
+      "unit": 3,
+      "title": "复合句与连接词",
+      "category": "clause",
+      "terms": "word order complex statements",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 273
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 275
+        }
+      ],
+      "pages": [
+        273,
+        274,
+        275
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-50",
+      "book": "NCE2",
+      "lesson": 50,
+      "lastLesson": 50,
+      "unit": 3,
+      "title": "一般现在时与状态动词",
+      "category": "tense",
+      "terms": "always happen state verbs",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 277
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 278
+        }
+      ],
+      "pages": [
+        277,
+        278,
+        279
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-51",
+      "book": "NCE2",
+      "lesson": 51,
+      "lastLesson": 51,
+      "unit": 3,
+      "title": "一般过去时复习",
+      "category": "tense",
+      "terms": "what happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 281
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 282
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 283
+        }
+      ],
+      "pages": [
+        281,
+        282,
+        283
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-52",
+      "book": "NCE2",
+      "lesson": 52,
+      "lastLesson": 52,
+      "unit": 3,
+      "title": "现在完成时与完成进行时",
+      "category": "tense",
+      "terms": "has happened has been happening",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 285
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 286
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 287
+        }
+      ],
+      "pages": [
+        285,
+        286,
+        287
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-53",
+      "book": "NCE2",
+      "lesson": 53,
+      "lastLesson": 53,
+      "unit": 3,
+      "title": "过去时、完成时与完成进行时",
+      "category": "tense",
+      "terms": "happened has happened has been happening",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 289
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 290
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 291
+        }
+      ],
+      "pages": [
+        289,
+        290,
+        291
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-54",
+      "book": "NCE2",
+      "lesson": 54,
+      "lastLesson": 54,
+      "unit": 3,
+      "title": "冠词与不定数量",
+      "category": "noun",
+      "terms": "a the some any",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 293
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 295
+        }
+      ],
+      "pages": [
+        293,
+        294,
+        295
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-55",
+      "book": "NCE2",
+      "lesson": 55,
+      "lastLesson": 55,
+      "unit": 3,
+      "title": "过去习惯：would 与 used to",
+      "category": "tense",
+      "terms": "would used to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 297
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 298
+        }
+      ],
+      "pages": [
+        297,
+        298,
+        299
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-56",
+      "book": "NCE2",
+      "lesson": 56,
+      "lastLesson": 56,
+      "unit": 3,
+      "title": "形容词与副词的比较",
+      "category": "modifier",
+      "terms": "comparative superlative",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 301
+        }
+      ],
+      "pages": [
+        301,
+        302,
+        303
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-57",
+      "book": "NCE2",
+      "lesson": 57,
+      "lastLesson": 57,
+      "unit": 3,
+      "title": "介词：at / in / off / with",
+      "category": "modifier",
+      "terms": "at in off with",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 305
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 306
+        }
+      ],
+      "pages": [
+        305,
+        306,
+        307
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-58",
+      "book": "NCE2",
+      "lesson": 58,
+      "lastLesson": 58,
+      "unit": 3,
+      "title": "被动语态：It is said / be said to",
+      "category": "passive",
+      "terms": "is said to passive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 309
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 310
+        }
+      ],
+      "pages": [
+        309,
+        310,
+        311
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-59",
+      "book": "NCE2",
+      "lesson": 59,
+      "lastLesson": 59,
+      "unit": 3,
+      "title": "复习第 50–58 课关键句型",
+      "category": "review",
+      "terms": "review KS50-58",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 313
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 314
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 315
+        }
+      ],
+      "pages": [
+        313,
+        314,
+        315
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-60",
+      "book": "NCE2",
+      "lesson": 60,
+      "lastLesson": 60,
+      "unit": 3,
+      "title": "将来时间与时间状语从句",
+      "category": "clause",
+      "terms": "moment when future",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 317
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 318
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 319
+        }
+      ],
+      "pages": [
+        317,
+        318,
+        319
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-61",
+      "book": "NCE2",
+      "lesson": 61,
+      "lastLesson": 61,
+      "unit": 3,
+      "title": "将来完成与完成进行时",
+      "category": "tense",
+      "terms": "will have been future perfect",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 321
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 322
+        }
+      ],
+      "pages": [
+        321,
+        322,
+        323
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-62",
+      "book": "NCE2",
+      "lesson": 62,
+      "lastLesson": 62,
+      "unit": 3,
+      "title": "过去完成进行时",
+      "category": "tense",
+      "terms": "had been planting",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 325
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 326
+        }
+      ],
+      "pages": [
+        325,
+        326,
+        327
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-63",
+      "book": "NCE2",
+      "lesson": 63,
+      "lastLesson": 63,
+      "unit": 3,
+      "title": "转述命令与请求",
+      "category": "clause",
+      "terms": "said told asked reported",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 329
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 331
+        }
+      ],
+      "pages": [
+        329,
+        330,
+        331
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-64",
+      "book": "NCE2",
+      "lesson": 64,
+      "lastLesson": 64,
+      "unit": 3,
+      "title": "与过去事实相反的条件句",
+      "category": "clause",
+      "terms": "if had would have",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 333
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 334
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 335
+        }
+      ],
+      "pages": [
+        333,
+        334,
+        335
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-65",
+      "book": "NCE2",
+      "lesson": 65,
+      "lastLesson": 65,
+      "unit": 3,
+      "title": "must / have to / should / ought to",
+      "category": "modal",
+      "terms": "must have to should ought",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 337
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 338
+        }
+      ],
+      "pages": [
+        337,
+        338,
+        339
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-66",
+      "book": "NCE2",
+      "lesson": 66,
+      "lastLesson": 66,
+      "unit": 3,
+      "title": "have + 宾语 + 过去分词",
+      "category": "sentence",
+      "terms": "have something done causative",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 341
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 343
+        }
+      ],
+      "pages": [
+        341,
+        342,
+        343
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-67",
+      "book": "NCE2",
+      "lesson": 67,
+      "lastLesson": 67,
+      "unit": 3,
+      "title": "can / be able to / manage to",
+      "category": "modal",
+      "terms": "can able manage",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 345
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 346
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 347
+        }
+      ],
+      "pages": [
+        345,
+        346,
+        347
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-68",
+      "book": "NCE2",
+      "lesson": 68,
+      "lastLesson": 68,
+      "unit": 3,
+      "title": "动名词与不定式的选择",
+      "category": "nonfinite",
+      "terms": "avoid meeting to gerund",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 349
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 351
+        }
+      ],
+      "pages": [
+        349,
+        350,
+        351
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-69",
+      "book": "NCE2",
+      "lesson": 69,
+      "lastLesson": 69,
+      "unit": 3,
+      "title": "被动语态与非谓语形式",
+      "category": "passive",
+      "terms": "having been instructed",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 353
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 354
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 355
+        }
+      ],
+      "pages": [
+        353,
+        354,
+        355
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-70",
+      "book": "NCE2",
+      "lesson": 70,
+      "lastLesson": 70,
+      "unit": 3,
+      "title": "动词、形容词与介词搭配",
+      "category": "modifier",
+      "terms": "for with of to at from in on about",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 357
+        }
+      ],
+      "pages": [
+        357,
+        358,
+        359
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-71",
+      "book": "NCE2",
+      "lesson": 71,
+      "lastLesson": 71,
+      "unit": 3,
+      "title": "复习第 60–69 课关键句型",
+      "category": "review",
+      "terms": "review KS60-69",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 361
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 362
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 363
+        }
+      ],
+      "pages": [
+        361,
+        362,
+        363
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-72",
+      "book": "NCE2",
+      "lesson": 72,
+      "lastLesson": 72,
+      "unit": 3,
+      "title": "复习第 50–71 课难点",
+      "category": "review",
+      "terms": "review SD50-71",
+      "sections": [
+        {
+          "section": "Special difficulties · 难点",
+          "page": 365
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 367
+        }
+      ],
+      "pages": [
+        365,
+        366,
+        367
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-73",
+      "book": "NCE2",
+      "lesson": 73,
+      "lastLesson": 73,
+      "unit": 4,
+      "title": "简单句、并列句与复合句",
+      "category": "sentence",
+      "terms": "simple compound complex statements",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 384
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 385
+        }
+      ],
+      "pages": [
+        384,
+        385
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-74",
+      "book": "NCE2",
+      "lesson": 74,
+      "lastLesson": 74,
+      "unit": 4,
+      "title": "现在时态综合运用",
+      "category": "tense",
+      "terms": "is happening always happens",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 387
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 388
+        }
+      ],
+      "pages": [
+        387,
+        388,
+        389
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-75",
+      "book": "NCE2",
+      "lesson": 75,
+      "lastLesson": 75,
+      "unit": 4,
+      "title": "一般过去时综合运用",
+      "category": "tense",
+      "terms": "what happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 391
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 392
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 393
+        }
+      ],
+      "pages": [
+        391,
+        392,
+        393
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-76",
+      "book": "NCE2",
+      "lesson": 76,
+      "lastLesson": 76,
+      "unit": 4,
+      "title": "现在完成与完成进行时",
+      "category": "tense",
+      "terms": "has happened has been happening",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 395
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 396
+        }
+      ],
+      "pages": [
+        395,
+        396,
+        397
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-77",
+      "book": "NCE2",
+      "lesson": 77,
+      "lastLesson": 77,
+      "unit": 4,
+      "title": "过去时与完成时综合运用",
+      "category": "tense",
+      "terms": "happened has happened has been happening",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 399
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 400
+        }
+      ],
+      "pages": [
+        399,
+        400,
+        401
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-78",
+      "book": "NCE2",
+      "lesson": 78,
+      "lastLesson": 78,
+      "unit": 4,
+      "title": "冠词 a 与 the",
+      "category": "noun",
+      "terms": "a the articles",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 403
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 404
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 405
+        }
+      ],
+      "pages": [
+        403,
+        404,
+        405
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-79",
+      "book": "NCE2",
+      "lesson": 79,
+      "lastLesson": 79,
+      "unit": 4,
+      "title": "过去时、进行时与过去习惯",
+      "category": "tense",
+      "terms": "was happening used to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 407
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 408
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 409
+        }
+      ],
+      "pages": [
+        407,
+        408,
+        409
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-80",
+      "book": "NCE2",
+      "lesson": 80,
+      "lastLesson": 80,
+      "unit": 4,
+      "title": "形容词和副词的比较形式",
+      "category": "modifier",
+      "terms": "best worst",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 411
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 412
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 413
+        }
+      ],
+      "pages": [
+        411,
+        412,
+        413
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-81",
+      "book": "NCE2",
+      "lesson": 81,
+      "lastLesson": 81,
+      "unit": 4,
+      "title": "介词综合运用",
+      "category": "modifier",
+      "terms": "at in to with",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 416
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 416
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 417
+        }
+      ],
+      "pages": [
+        416,
+        417
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-82",
+      "book": "NCE2",
+      "lesson": 82,
+      "lastLesson": 82,
+      "unit": 4,
+      "title": "被动语态综合运用",
+      "category": "passive",
+      "terms": "was caught passive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 420
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 420
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 421
+        }
+      ],
+      "pages": [
+        420,
+        421
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-83",
+      "book": "NCE2",
+      "lesson": 83,
+      "lastLesson": 83,
+      "unit": 4,
+      "title": "复习第 74–82 课关键句型",
+      "category": "review",
+      "terms": "review KS74-82",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 423
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 424
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 425
+        }
+      ],
+      "pages": [
+        423,
+        424,
+        425
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-84",
+      "book": "NCE2",
+      "lesson": 84,
+      "lastLesson": 84,
+      "unit": 4,
+      "title": "一般将来时综合运用",
+      "category": "tense",
+      "terms": "will happen",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 427
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 428
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 429
+        }
+      ],
+      "pages": [
+        427,
+        428,
+        429
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-85",
+      "book": "NCE2",
+      "lesson": 85,
+      "lastLesson": 85,
+      "unit": 4,
+      "title": "将来、将来进行与完成进行时",
+      "category": "tense",
+      "terms": "will happen will be happening will have been",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 432
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 432
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 433
+        }
+      ],
+      "pages": [
+        432,
+        433
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-86",
+      "book": "NCE2",
+      "lesson": 86,
+      "lastLesson": 86,
+      "unit": 4,
+      "title": "过去完成与完成进行时",
+      "category": "tense",
+      "terms": "had happened had been happening",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 435
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 436
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 437
+        }
+      ],
+      "pages": [
+        435,
+        436,
+        437
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-87",
+      "book": "NCE2",
+      "lesson": 87,
+      "lastLesson": 87,
+      "unit": 4,
+      "title": "间接引语综合运用",
+      "category": "clause",
+      "terms": "said told asked reported",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 440
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 441
+        }
+      ],
+      "pages": [
+        440,
+        441
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-88",
+      "book": "NCE2",
+      "lesson": 88,
+      "lastLesson": 88,
+      "unit": 4,
+      "title": "if 条件句综合运用",
+      "category": "clause",
+      "terms": "if conditional",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 444
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 444
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 445
+        }
+      ],
+      "pages": [
+        444,
+        445
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-89",
+      "book": "NCE2",
+      "lesson": 89,
+      "lastLesson": 89,
+      "unit": 4,
+      "title": "情态与义务表达",
+      "category": "modal",
+      "terms": "must have to need should",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 447
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 448
+        }
+      ],
+      "pages": [
+        447,
+        448,
+        449
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-90",
+      "book": "NCE2",
+      "lesson": 90,
+      "lastLesson": 90,
+      "unit": 4,
+      "title": "have 的用法复习",
+      "category": "sentence",
+      "terms": "have",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 451
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 452
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 453
+        }
+      ],
+      "pages": [
+        451,
+        452,
+        453
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-91",
+      "book": "NCE2",
+      "lesson": 91,
+      "lastLesson": 91,
+      "unit": 4,
+      "title": "能力与成功做成某事",
+      "category": "modal",
+      "terms": "can able manage",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 455
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 456
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 457
+        }
+      ],
+      "pages": [
+        455,
+        456,
+        457
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-92",
+      "book": "NCE2",
+      "lesson": 92,
+      "lastLesson": 92,
+      "unit": 4,
+      "title": "need doing 与动名词",
+      "category": "nonfinite",
+      "terms": "need cleaning gerund",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 459
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 460
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 461
+        }
+      ],
+      "pages": [
+        459,
+        460,
+        461
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-93",
+      "book": "NCE2",
+      "lesson": 93,
+      "lastLesson": 93,
+      "unit": 4,
+      "title": "被动语态及其相关形式",
+      "category": "passive",
+      "terms": "was presented passive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 463
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 464
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 465
+        }
+      ],
+      "pages": [
+        463,
+        464,
+        465
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-94",
+      "book": "NCE2",
+      "lesson": 94,
+      "lastLesson": 94,
+      "unit": 4,
+      "title": "复习介词搭配",
+      "category": "modifier",
+      "terms": "review KS22 KS46 KS70",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 467
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 469
+        }
+      ],
+      "pages": [
+        467,
+        468,
+        469
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-95",
+      "book": "NCE2",
+      "lesson": 95,
+      "lastLesson": 95,
+      "unit": 4,
+      "title": "动词形式综合复习",
+      "category": "review",
+      "terms": "review verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 472
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 473
+        }
+      ],
+      "pages": [
+        472,
+        473
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE2-96",
+      "book": "NCE2",
+      "lesson": 96,
+      "lastLesson": 96,
+      "unit": 4,
+      "title": "复习第 74–91 课难点",
+      "category": "review",
+      "terms": "review SD74-91",
+      "sections": [
+        {
+          "section": "Special difficulties · 难点",
+          "page": 475
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 477
+        }
+      ],
+      "pages": [
+        475,
+        476,
+        477
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-1",
+      "book": "NCE3",
+      "lesson": 1,
+      "lastLesson": 1,
+      "unit": 1,
+      "title": "简单句、并列句与复合句",
+      "category": "sentence",
+      "terms": "simple compound complex statements",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 42
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 42
+        }
+      ],
+      "pages": [
+        42,
+        43
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 73
+        }
+      ]
+    },
+    {
+      "id": "NCE3-2",
+      "book": "NCE3",
+      "lesson": 2,
+      "lastLesson": 2,
+      "unit": 1,
+      "title": "一般现在时与现在进行时",
+      "category": "tense",
+      "terms": "always raising present continuous",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 46
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 46
+        }
+      ],
+      "pages": [
+        46,
+        47
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 74
+        }
+      ]
+    },
+    {
+      "id": "NCE3-3",
+      "book": "NCE3",
+      "lesson": 3,
+      "lastLesson": 3,
+      "unit": 1,
+      "title": "一般过去时与动词过去式",
+      "category": "tense",
+      "terms": "what happened past",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 50
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 50
+        }
+      ],
+      "pages": [
+        50
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 75
+        }
+      ]
+    },
+    {
+      "id": "NCE3-4",
+      "book": "NCE3",
+      "lesson": 4,
+      "lastLesson": 4,
+      "unit": 1,
+      "title": "现在完成与完成进行时",
+      "category": "tense",
+      "terms": "has happened has been happening",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 54
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 54
+        }
+      ],
+      "pages": [
+        54
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 68
+        }
+      ]
+    },
+    {
+      "id": "NCE3-5",
+      "book": "NCE3",
+      "lesson": 5,
+      "lastLesson": 5,
+      "unit": 1,
+      "title": "冠词 a / the 与 some",
+      "category": "noun",
+      "terms": "a the some",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 58
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 58
+        }
+      ],
+      "pages": [
+        58
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 78
+        }
+      ]
+    },
+    {
+      "id": "NCE3-6",
+      "book": "NCE3",
+      "lesson": 6,
+      "lastLesson": 6,
+      "unit": 1,
+      "title": "一般过去时与过去进行时",
+      "category": "tense",
+      "terms": "what happened was happening",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 62
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 62
+        }
+      ],
+      "pages": [
+        62
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 79
+        }
+      ]
+    },
+    {
+      "id": "NCE3-7",
+      "book": "NCE3",
+      "lesson": 7,
+      "lastLesson": 7,
+      "unit": 1,
+      "title": "过去式的运用",
+      "category": "tense",
+      "terms": "what happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 66
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 66
+        }
+      ],
+      "pages": [
+        66
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 75
+        }
+      ]
+    },
+    {
+      "id": "NCE3-8",
+      "book": "NCE3",
+      "lesson": 8,
+      "lastLesson": 8,
+      "unit": 1,
+      "title": "动词形式复习",
+      "category": "review",
+      "terms": "verb forms review",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 70
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 70
+        }
+      ],
+      "pages": [
+        70
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 83
+        }
+      ]
+    },
+    {
+      "id": "NCE3-9",
+      "book": "NCE3",
+      "lesson": 9,
+      "lastLesson": 9,
+      "unit": 1,
+      "title": "一般现在时与普遍事实",
+      "category": "tense",
+      "terms": "always happens general truths",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 74
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 74
+        }
+      ],
+      "pages": [
+        74,
+        75
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 74
+        }
+      ]
+    },
+    {
+      "id": "NCE3-10",
+      "book": "NCE3",
+      "lesson": 10,
+      "lastLesson": 10,
+      "unit": 1,
+      "title": "过去完成时",
+      "category": "tense",
+      "terms": "had happened",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 78
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 78
+        }
+      ],
+      "pages": [
+        78,
+        79
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 86
+        }
+      ]
+    },
+    {
+      "id": "NCE3-11",
+      "book": "NCE3",
+      "lesson": 11,
+      "lastLesson": 11,
+      "unit": 1,
+      "title": "间接引语",
+      "category": "clause",
+      "terms": "said told asked",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 82
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 82
+        }
+      ],
+      "pages": [
+        82,
+        83
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 87
+        }
+      ]
+    },
+    {
+      "id": "NCE3-12",
+      "book": "NCE3",
+      "lesson": 12,
+      "lastLesson": 12,
+      "unit": 1,
+      "title": "if 条件句",
+      "category": "clause",
+      "terms": "if conditional",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 86
+        }
+      ],
+      "pages": [
+        86,
+        87
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 88
+        }
+      ]
+    },
+    {
+      "id": "NCE3-13",
+      "book": "NCE3",
+      "lesson": 13,
+      "lastLesson": 13,
+      "unit": 1,
+      "title": "must / need / have to",
+      "category": "modal",
+      "terms": "must need have to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 90
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 90
+        }
+      ],
+      "pages": [
+        90
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-14",
+      "book": "NCE3",
+      "lesson": 14,
+      "lastLesson": 14,
+      "unit": 1,
+      "title": "have 的用法",
+      "category": "sentence",
+      "terms": "have",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 94
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 94
+        }
+      ],
+      "pages": [
+        94,
+        95
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-15",
+      "book": "NCE3",
+      "lesson": 15,
+      "lastLesson": 15,
+      "unit": 1,
+      "title": "can / could 与 manage to",
+      "category": "modal",
+      "terms": "can could manage",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 98
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 98
+        }
+      ],
+      "pages": [
+        98
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 91
+        }
+      ]
+    },
+    {
+      "id": "NCE3-16",
+      "book": "NCE3",
+      "lesson": 16,
+      "lastLesson": 16,
+      "unit": 1,
+      "title": "动名词与完成形式",
+      "category": "nonfinite",
+      "terms": "stealing having acted having accused",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 102
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 102
+        }
+      ],
+      "pages": [
+        102
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 92
+        }
+      ]
+    },
+    {
+      "id": "NCE3-17",
+      "book": "NCE3",
+      "lesson": 17,
+      "lastLesson": 17,
+      "unit": 1,
+      "title": "被动语态",
+      "category": "passive",
+      "terms": "was designed",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 106
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 106
+        }
+      ],
+      "pages": [
+        106
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 93
+        }
+      ]
+    },
+    {
+      "id": "NCE3-18",
+      "book": "NCE3",
+      "lesson": 18,
+      "lastLesson": 18,
+      "unit": 1,
+      "title": "介词与搭配",
+      "category": "modifier",
+      "terms": "prepositions KS94",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 110
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 110
+        }
+      ],
+      "pages": [
+        110,
+        111
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 94
+        }
+      ]
+    },
+    {
+      "id": "NCE3-19",
+      "book": "NCE3",
+      "lesson": 19,
+      "lastLesson": 19,
+      "unit": 1,
+      "title": "动词形式综合复习",
+      "category": "review",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 114
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 114
+        }
+      ],
+      "pages": [
+        114
+      ],
+      "references": [
+        {
+          "book": "NCE2",
+          "lesson": 95
+        }
+      ]
+    },
+    {
+      "id": "NCE3-20",
+      "book": "NCE3",
+      "lesson": 20,
+      "lastLesson": 20,
+      "unit": 1,
+      "title": "复习第 1–17 课难点",
+      "category": "review",
+      "terms": "review SD1-17",
+      "sections": [
+        {
+          "section": "Special difficulties · 难点",
+          "page": 118
+        }
+      ],
+      "pages": [
+        118
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-21",
+      "book": "NCE3",
+      "lesson": 21,
+      "lastLesson": 21,
+      "unit": 2,
+      "title": "ago / before 与能力表达",
+      "category": "modifier",
+      "terms": "ago before could able",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 134
+        }
+      ],
+      "pages": [
+        134,
+        135
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-22",
+      "book": "NCE3",
+      "lesson": 22,
+      "lastLesson": 22,
+      "unit": 2,
+      "title": "so / such…that 与 used to",
+      "category": "clause",
+      "terms": "so such that used to",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 138
+        }
+      ],
+      "pages": [
+        138
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-23",
+      "book": "NCE3",
+      "lesson": 23,
+      "lastLesson": 23,
+      "unit": 2,
+      "title": "非真实条件句与词义辨析",
+      "category": "clause",
+      "terms": "if would quite quiet",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 142
+        }
+      ],
+      "pages": [
+        142
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-24",
+      "book": "NCE3",
+      "lesson": 24,
+      "lastLesson": 24,
+      "unit": 2,
+      "title": "频率副词与宾语补足语",
+      "category": "modifier",
+      "terms": "often frequently rarely want to",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 146
+        }
+      ],
+      "pages": [
+        146
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-25",
+      "book": "NCE3",
+      "lesson": 25,
+      "lastLesson": 25,
+      "unit": 2,
+      "title": "used to / be used to 与比较形式",
+      "category": "tense",
+      "terms": "used to fast faster",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 150
+        }
+      ],
+      "pages": [
+        150
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-26",
+      "book": "NCE3",
+      "lesson": 26,
+      "lastLesson": 26,
+      "unit": 2,
+      "title": "动名词与 avoid doing",
+      "category": "nonfinite",
+      "terms": "avoid being influenced",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 154
+        }
+      ],
+      "pages": [
+        154
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-27",
+      "book": "NCE3",
+      "lesson": 27,
+      "lastLesson": 27,
+      "unit": 2,
+      "title": "被动转述与不可数名词",
+      "category": "passive",
+      "terms": "is said information news luggage",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 158
+        }
+      ],
+      "pages": [
+        158
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-28",
+      "book": "NCE3",
+      "lesson": 28,
+      "lastLesson": 28,
+      "unit": 2,
+      "title": "no sooner…than 与时间关系",
+      "category": "clause",
+      "terms": "no sooner than",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 162
+        }
+      ],
+      "pages": [
+        162
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-29",
+      "book": "NCE3",
+      "lesson": 29,
+      "lastLesson": 29,
+      "unit": 2,
+      "title": "介词搭配与 it 作形式宾语",
+      "category": "modifier",
+      "terms": "depend on find it hard",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 166
+        }
+      ],
+      "pages": [
+        166
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-30",
+      "book": "NCE3",
+      "lesson": 30,
+      "lastLesson": 30,
+      "unit": 2,
+      "title": "动词搭配与说话转述",
+      "category": "clause",
+      "terms": "give up say tell",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 170
+        }
+      ],
+      "pages": [
+        170
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-31",
+      "book": "NCE3",
+      "lesson": 31,
+      "lastLesson": 31,
+      "unit": 2,
+      "title": "介词后的动名词与合句",
+      "category": "nonfinite",
+      "terms": "without being instead of",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 174
+        }
+      ],
+      "pages": [
+        174
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-32",
+      "book": "NCE3",
+      "lesson": 32,
+      "lastLesson": 32,
+      "unit": 2,
+      "title": "过去完成进行时",
+      "category": "tense",
+      "terms": "had been searching",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 178
+        }
+      ],
+      "pages": [
+        178
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-33",
+      "book": "NCE3",
+      "lesson": 33,
+      "lastLesson": 33,
+      "unit": 2,
+      "title": "enough 的位置与词义辨析",
+      "category": "modifier",
+      "terms": "enough fairly experience",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 182
+        }
+      ],
+      "pages": [
+        182
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-34",
+      "book": "NCE3",
+      "lesson": 34,
+      "lastLesson": 34,
+      "unit": 2,
+      "title": "时间从句与 must 推测",
+      "category": "clause",
+      "terms": "moment until before must",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 186
+        }
+      ],
+      "pages": [
+        186
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-35",
+      "book": "NCE3",
+      "lesson": 35,
+      "lastLesson": 35,
+      "unit": 2,
+      "title": "宾语从句与转述",
+      "category": "clause",
+      "terms": "say that",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 190
+        }
+      ],
+      "pages": [
+        190
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-36",
+      "book": "NCE3",
+      "lesson": 36,
+      "lastLesson": 36,
+      "unit": 2,
+      "title": "过去习惯：used to / would",
+      "category": "tense",
+      "terms": "used to would",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 194
+        }
+      ],
+      "pages": [
+        194
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-37",
+      "book": "NCE3",
+      "lesson": 37,
+      "lastLesson": 37,
+      "unit": 2,
+      "title": "too…to 与句型转换",
+      "category": "nonfinite",
+      "terms": "too easy blame too to",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 198
+        }
+      ],
+      "pages": [
+        198
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-38",
+      "book": "NCE3",
+      "lesson": 38,
+      "lastLesson": 38,
+      "unit": 2,
+      "title": "动词形式与语境",
+      "category": "tense",
+      "terms": "assume have assumed",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 202
+        }
+      ],
+      "pages": [
+        202
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-39",
+      "book": "NCE3",
+      "lesson": 39,
+      "lastLesson": 39,
+      "unit": 2,
+      "title": "使役结构：get / make",
+      "category": "sentence",
+      "terms": "get made to",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 206
+        }
+      ],
+      "pages": [
+        206
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-40",
+      "book": "NCE3",
+      "lesson": 40,
+      "lastLesson": 40,
+      "unit": 2,
+      "title": "短语动词与 except",
+      "category": "modifier",
+      "terms": "put out put up except",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 210
+        }
+      ],
+      "pages": [
+        210
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-41",
+      "book": "NCE3",
+      "lesson": 41,
+      "lastLesson": 41,
+      "unit": 3,
+      "title": "主语从句的改写",
+      "category": "clause",
+      "terms": "why subject clause",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 220
+        }
+      ],
+      "pages": [
+        220
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-42",
+      "book": "NCE3",
+      "lesson": 42,
+      "lastLesson": 42,
+      "unit": 3,
+      "title": "被动句与定语从句的改写",
+      "category": "clause",
+      "terms": "was found which",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 224
+        }
+      ],
+      "pages": [
+        224,
+        225
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-43",
+      "book": "NCE3",
+      "lesson": 43,
+      "lastLesson": 43,
+      "unit": 3,
+      "title": "主被动转换与目的表达",
+      "category": "passive",
+      "terms": "were fixed so that",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 228
+        }
+      ],
+      "pages": [
+        228
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-44",
+      "book": "NCE3",
+      "lesson": 44,
+      "lastLesson": 44,
+      "unit": 3,
+      "title": "结果句与句式改写",
+      "category": "clause",
+      "terms": "so that journey",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 232
+        }
+      ],
+      "pages": [
+        232
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-45",
+      "book": "NCE3",
+      "lesson": 45,
+      "lastLesson": 45,
+      "unit": 3,
+      "title": "双宾语句的主被动转换",
+      "category": "passive",
+      "terms": "were offered",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 236
+        }
+      ],
+      "pages": [
+        236
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-46",
+      "book": "NCE3",
+      "lesson": 46,
+      "lastLesson": 46,
+      "unit": 3,
+      "title": "直接引语改为间接引语",
+      "category": "clause",
+      "terms": "said that reported",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 240
+        }
+      ],
+      "pages": [
+        240
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-47",
+      "book": "NCE3",
+      "lesson": 47,
+      "lastLesson": 47,
+      "unit": 3,
+      "title": "there be 与关系从句的改写",
+      "category": "sentence",
+      "terms": "there is which",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 244
+        }
+      ],
+      "pages": [
+        244,
+        245
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-48",
+      "book": "NCE3",
+      "lesson": 48,
+      "lastLesson": 48,
+      "unit": 3,
+      "title": "让步从句的改写",
+      "category": "clause",
+      "terms": "though",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 248
+        }
+      ],
+      "pages": [
+        248
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-49",
+      "book": "NCE3",
+      "lesson": 49,
+      "lastLesson": 49,
+      "unit": 3,
+      "title": "过去完成时与 after",
+      "category": "tense",
+      "terms": "had after",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 252
+        }
+      ],
+      "pages": [
+        252
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-50",
+      "book": "NCE3",
+      "lesson": 50,
+      "lastLesson": 50,
+      "unit": 3,
+      "title": "may 与 perhaps 的改写",
+      "category": "modal",
+      "terms": "may perhaps",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 256
+        }
+      ],
+      "pages": [
+        256,
+        257
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-51",
+      "book": "NCE3",
+      "lesson": 51,
+      "lastLesson": 51,
+      "unit": 3,
+      "title": "倒装语序还原",
+      "category": "sentence",
+      "terms": "very large were inversion",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 260
+        }
+      ],
+      "pages": [
+        260
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-52",
+      "book": "NCE3",
+      "lesson": 52,
+      "lastLesson": 52,
+      "unit": 3,
+      "title": "转述与关系从句的合并",
+      "category": "clause",
+      "terms": "explain that which",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 264
+        }
+      ],
+      "pages": [
+        264
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-53",
+      "book": "NCE3",
+      "lesson": 53,
+      "lastLesson": 53,
+      "unit": 3,
+      "title": "that 从句与句型转换",
+      "category": "clause",
+      "terms": "fact that",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 268
+        }
+      ],
+      "pages": [
+        268
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-54",
+      "book": "NCE3",
+      "lesson": 54,
+      "lastLesson": 54,
+      "unit": 3,
+      "title": "so…that 结果句",
+      "category": "clause",
+      "terms": "so that",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 272
+        }
+      ],
+      "pages": [
+        272
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-55",
+      "book": "NCE3",
+      "lesson": 55,
+      "lastLesson": 55,
+      "unit": 3,
+      "title": "距离表达与句式改写",
+      "category": "modifier",
+      "terms": "far as",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 276
+        }
+      ],
+      "pages": [
+        276
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-56",
+      "book": "NCE3",
+      "lesson": 56,
+      "lastLesson": 56,
+      "unit": 3,
+      "title": "原因从句与句式改写",
+      "category": "clause",
+      "terms": "as for",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 280
+        }
+      ],
+      "pages": [
+        280
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-57",
+      "book": "NCE3",
+      "lesson": 57,
+      "lastLesson": 57,
+      "unit": 3,
+      "title": "否定范围与句式改写",
+      "category": "question",
+      "terms": "not any no",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 284
+        }
+      ],
+      "pages": [
+        284
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-58",
+      "book": "NCE3",
+      "lesson": 58,
+      "lastLesson": 58,
+      "unit": 3,
+      "title": "转述请求和建议",
+      "category": "clause",
+      "terms": "asked advised",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 288
+        }
+      ],
+      "pages": [
+        288
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-59",
+      "book": "NCE3",
+      "lesson": 59,
+      "lastLesson": 59,
+      "unit": 3,
+      "title": "it is likely 与 be likely to",
+      "category": "nonfinite",
+      "terms": "likely to",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 292
+        }
+      ],
+      "pages": [
+        292,
+        293
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE3-60",
+      "book": "NCE3",
+      "lesson": 60,
+      "lastLesson": 60,
+      "unit": 3,
+      "title": "间接疑问句",
+      "category": "clause",
+      "terms": "asked if reported",
+      "sections": [
+        {
+          "section": "Key structures and Special difficulties · 关键句型与难点",
+          "page": 296
+        }
+      ],
+      "pages": [
+        296
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-1",
+      "book": "NCE4",
+      "lesson": 1,
+      "lastLesson": 1,
+      "unit": 1,
+      "title": "过去分词后置修饰、say / tell",
+      "category": "nonfinite",
+      "terms": "handed down participle say tell",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 36
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 36
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 37
+        }
+      ],
+      "pages": [
+        36,
+        37,
+        38
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-2",
+      "book": "NCE4",
+      "lesson": 2,
+      "lastLesson": 2,
+      "unit": 1,
+      "title": "疑问句、should 与动词结构",
+      "category": "question",
+      "terms": "why should",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 42
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 41
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 43
+        }
+      ],
+      "pages": [
+        41,
+        42,
+        43,
+        44
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-3",
+      "book": "NCE4",
+      "lesson": 3,
+      "lastLesson": 3,
+      "unit": 1,
+      "title": "the more…the more 比较结构",
+      "category": "modifier",
+      "terms": "the more the more",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 48
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 48
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 49
+        }
+      ],
+      "pages": [
+        48,
+        49,
+        50
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-4",
+      "book": "NCE4",
+      "lesson": 4,
+      "lastLesson": 4,
+      "unit": 1,
+      "title": "动词时态与语态",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 54
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 54
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 55
+        }
+      ],
+      "pages": [
+        54,
+        55,
+        56
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-5",
+      "book": "NCE4",
+      "lesson": 5,
+      "lastLesson": 5,
+      "unit": 1,
+      "title": "现在进行时与 always",
+      "category": "tense",
+      "terms": "always talking talks",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 60
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 60
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 61
+        }
+      ],
+      "pages": [
+        60,
+        61,
+        62
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-6",
+      "book": "NCE4",
+      "lesson": 6,
+      "lastLesson": 6,
+      "unit": 1,
+      "title": "if 虚拟条件句",
+      "category": "clause",
+      "terms": "if would conditional",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 66
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 66
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 67
+        }
+      ],
+      "pages": [
+        66,
+        67,
+        68
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-7",
+      "book": "NCE4",
+      "lesson": 7,
+      "lastLesson": 7,
+      "unit": 1,
+      "title": "条件与目的表达",
+      "category": "clause",
+      "terms": "if to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 72
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 72
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 73
+        }
+      ],
+      "pages": [
+        72,
+        73,
+        74
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-8",
+      "book": "NCE4",
+      "lesson": 8,
+      "lastLesson": 8,
+      "unit": 1,
+      "title": "词语和短语的位置",
+      "category": "sentence",
+      "terms": "word order position",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 78
+        },
+        {
+          "section": "Sentence structure · 句子结构",
+          "page": 78
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 79
+        }
+      ],
+      "pages": [
+        78,
+        79
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-9",
+      "book": "NCE4",
+      "lesson": 9,
+      "lastLesson": 9,
+      "unit": 2,
+      "title": "many / much / a lot of",
+      "category": "noun",
+      "terms": "many much lot",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 84
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 85
+        }
+      ],
+      "pages": [
+        84,
+        85,
+        86
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-10",
+      "book": "NCE4",
+      "lesson": 10,
+      "lastLesson": 10,
+      "unit": 2,
+      "title": "冠词、动名词与时间从句",
+      "category": "noun",
+      "terms": "a an the without ing before",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 91
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 91
+        }
+      ],
+      "pages": [
+        91,
+        92
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-11",
+      "book": "NCE4",
+      "lesson": 11,
+      "lastLesson": 11,
+      "unit": 2,
+      "title": "动词形式与语境",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 96
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 97
+        }
+      ],
+      "pages": [
+        96,
+        97
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-12",
+      "book": "NCE4",
+      "lesson": 12,
+      "lastLesson": 12,
+      "unit": 2,
+      "title": "非限制性定语从句",
+      "category": "clause",
+      "terms": "which whose relative",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 101
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 102
+        }
+      ],
+      "pages": [
+        101,
+        102,
+        103
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-13",
+      "book": "NCE4",
+      "lesson": 13,
+      "lastLesson": 13,
+      "unit": 2,
+      "title": "must / need / have to",
+      "category": "modal",
+      "terms": "must need have to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 107
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 108
+        }
+      ],
+      "pages": [
+        107,
+        108,
+        109
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-14",
+      "book": "NCE4",
+      "lesson": 14,
+      "lastLesson": 14,
+      "unit": 2,
+      "title": "分词结构与合句",
+      "category": "nonfinite",
+      "terms": "cascading participle",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 113
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 114
+        }
+      ],
+      "pages": [
+        113,
+        114
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-15",
+      "book": "NCE4",
+      "lesson": 15,
+      "lastLesson": 15,
+      "unit": 2,
+      "title": "主被动转换",
+      "category": "passive",
+      "terms": "active passive",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 118
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 119
+        }
+      ],
+      "pages": [
+        118,
+        119
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-16",
+      "book": "NCE4",
+      "lesson": 16,
+      "lastLesson": 16,
+      "unit": 2,
+      "title": "动词形式的选择",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 123
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 124
+        }
+      ],
+      "pages": [
+        123,
+        124,
+        125
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-17",
+      "book": "NCE4",
+      "lesson": 17,
+      "lastLesson": 17,
+      "unit": 3,
+      "title": "副词和短语的位置",
+      "category": "modifier",
+      "terms": "position adverb",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 129
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 130
+        }
+      ],
+      "pages": [
+        129,
+        130,
+        131
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-18",
+      "book": "NCE4",
+      "lesson": 18,
+      "lastLesson": 18,
+      "unit": 3,
+      "title": "动词形式综合运用",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 135
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 136
+        }
+      ],
+      "pages": [
+        135,
+        136,
+        137
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-19",
+      "book": "NCE4",
+      "lesson": 19,
+      "lastLesson": 19,
+      "unit": 3,
+      "title": "介词与搭配",
+      "category": "modifier",
+      "terms": "prepositions",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 141
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 142
+        }
+      ],
+      "pages": [
+        141,
+        142
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-20",
+      "book": "NCE4",
+      "lesson": 20,
+      "lastLesson": 20,
+      "unit": 3,
+      "title": "could have 与完成式情态表达",
+      "category": "modal",
+      "terms": "could have",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 147
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 147
+        }
+      ],
+      "pages": [
+        147,
+        148
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-21",
+      "book": "NCE4",
+      "lesson": 21,
+      "lastLesson": 21,
+      "unit": 3,
+      "title": "关系词省略与关系从句",
+      "category": "clause",
+      "terms": "whom relative omission",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 152
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 153
+        }
+      ],
+      "pages": [
+        152,
+        153,
+        154
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-22",
+      "book": "NCE4",
+      "lesson": 22,
+      "lastLesson": 22,
+      "unit": 3,
+      "title": "动词时态与语态",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 158
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 159
+        }
+      ],
+      "pages": [
+        158,
+        159
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-23",
+      "book": "NCE4",
+      "lesson": 23,
+      "lastLesson": 23,
+      "unit": 3,
+      "title": "冠词的使用与省略",
+      "category": "noun",
+      "terms": "a an the",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 163
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 164
+        }
+      ],
+      "pages": [
+        163,
+        164,
+        165
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-24",
+      "book": "NCE4",
+      "lesson": 24,
+      "lastLesson": 24,
+      "unit": 3,
+      "title": "must 表示推测与义务",
+      "category": "modal",
+      "terms": "must",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 169
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 170
+        }
+      ],
+      "pages": [
+        169,
+        170,
+        171
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-25",
+      "book": "NCE4",
+      "lesson": 25,
+      "lastLesson": 25,
+      "unit": 4,
+      "title": "非限制性定语从句的扩展",
+      "category": "clause",
+      "terms": "who which",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 180
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 181
+        }
+      ],
+      "pages": [
+        180,
+        181,
+        182
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-26",
+      "book": "NCE4",
+      "lesson": 26,
+      "lastLesson": 26,
+      "unit": 4,
+      "title": "时间从句中的动词形式",
+      "category": "clause",
+      "terms": "before until after when",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 186
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 187
+        }
+      ],
+      "pages": [
+        186,
+        187,
+        188
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-27",
+      "book": "NCE4",
+      "lesson": 27,
+      "lastLesson": 27,
+      "unit": 4,
+      "title": "动词形式综合运用",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 192
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 193
+        }
+      ],
+      "pages": [
+        192,
+        193
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-28",
+      "book": "NCE4",
+      "lesson": 28,
+      "lastLesson": 28,
+      "unit": 4,
+      "title": "the same as 与 different from",
+      "category": "modifier",
+      "terms": "same as different from",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 198
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 198
+        }
+      ],
+      "pages": [
+        198,
+        199
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-29",
+      "book": "NCE4",
+      "lesson": 29,
+      "lastLesson": 29,
+      "unit": 4,
+      "title": "独立主格与 being",
+      "category": "nonfinite",
+      "terms": "being absolute construction",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 203
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 204
+        }
+      ],
+      "pages": [
+        203,
+        204,
+        205
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-30",
+      "book": "NCE4",
+      "lesson": 30,
+      "lastLesson": 30,
+      "unit": 4,
+      "title": "动词时态与语态",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 208
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 209
+        }
+      ],
+      "pages": [
+        208,
+        209,
+        210
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-31",
+      "book": "NCE4",
+      "lesson": 31,
+      "lastLesson": 31,
+      "unit": 4,
+      "title": "比较、程度与介词表达",
+      "category": "modifier",
+      "terms": "difficult comparison prepositions",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 214
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 215
+        }
+      ],
+      "pages": [
+        214,
+        215,
+        216
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-32",
+      "book": "NCE4",
+      "lesson": 32,
+      "lastLesson": 32,
+      "unit": 4,
+      "title": "介词与短语搭配",
+      "category": "modifier",
+      "terms": "turn to prepositions",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 220
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 220
+        }
+      ],
+      "pages": [
+        220,
+        221
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-33",
+      "book": "NCE4",
+      "lesson": 33,
+      "lastLesson": 33,
+      "unit": 5,
+      "title": "介词搭配与语境",
+      "category": "modifier",
+      "terms": "of among prepositions",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 226
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 227
+        }
+      ],
+      "pages": [
+        226,
+        227,
+        228
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-34",
+      "book": "NCE4",
+      "lesson": 34,
+      "lastLesson": 34,
+      "unit": 5,
+      "title": "副词和短语位置",
+      "category": "modifier",
+      "terms": "often position adverbs",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 232
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 233
+        }
+      ],
+      "pages": [
+        232,
+        233,
+        234
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-35",
+      "book": "NCE4",
+      "lesson": 35,
+      "lastLesson": 35,
+      "unit": 5,
+      "title": "介词与短语搭配",
+      "category": "modifier",
+      "terms": "prepositions",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 238
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 239
+        }
+      ],
+      "pages": [
+        238,
+        239,
+        240
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-36",
+      "book": "NCE4",
+      "lesson": 36,
+      "lastLesson": 36,
+      "unit": 5,
+      "title": "非谓语动词形式",
+      "category": "nonfinite",
+      "terms": "developing verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 244
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 245
+        }
+      ],
+      "pages": [
+        244,
+        245,
+        246
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-37",
+      "book": "NCE4",
+      "lesson": 37,
+      "lastLesson": 37,
+      "unit": 5,
+      "title": "定冠词的使用与省略",
+      "category": "noun",
+      "terms": "the article",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 249
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 250
+        }
+      ],
+      "pages": [
+        249,
+        250,
+        251
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-38",
+      "book": "NCE4",
+      "lesson": 38,
+      "lastLesson": 38,
+      "unit": 5,
+      "title": "should 与被动语态",
+      "category": "passive",
+      "terms": "should be regarded",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 254
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 255
+        }
+      ],
+      "pages": [
+        254,
+        255
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-39",
+      "book": "NCE4",
+      "lesson": 39,
+      "lastLesson": 39,
+      "unit": 5,
+      "title": "关系代词与省略",
+      "category": "clause",
+      "terms": "who whom which",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 259
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 260
+        }
+      ],
+      "pages": [
+        259,
+        260,
+        261
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-40",
+      "book": "NCE4",
+      "lesson": 40,
+      "lastLesson": 40,
+      "unit": 5,
+      "title": "动词形式综合运用",
+      "category": "tense",
+      "terms": "verb forms",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 265
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 266
+        }
+      ],
+      "pages": [
+        265,
+        266
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-41",
+      "book": "NCE4",
+      "lesson": 41,
+      "lastLesson": 41,
+      "unit": 6,
+      "title": "指代动物的 who 与关系从句",
+      "category": "clause",
+      "terms": "who which relative",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 272
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 272
+        }
+      ],
+      "pages": [
+        272,
+        273
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-42",
+      "book": "NCE4",
+      "lesson": 42,
+      "lastLesson": 42,
+      "unit": 6,
+      "title": "if 条件句与句式补全",
+      "category": "clause",
+      "terms": "if conditional",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 277
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 277
+        }
+      ],
+      "pages": [
+        277,
+        278
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-43",
+      "book": "NCE4",
+      "lesson": 43,
+      "lastLesson": 43,
+      "unit": 6,
+      "title": "be bound / sure / about / due to",
+      "category": "nonfinite",
+      "terms": "bound sure about due to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 283
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 283
+        }
+      ],
+      "pages": [
+        283,
+        284
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-44",
+      "book": "NCE4",
+      "lesson": 44,
+      "lastLesson": 44,
+      "unit": 6,
+      "title": "保留原意的句型转换",
+      "category": "sentence",
+      "terms": "rewrite",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 289
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 290
+        }
+      ],
+      "pages": [
+        289,
+        290
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-45",
+      "book": "NCE4",
+      "lesson": 45,
+      "lastLesson": 45,
+      "unit": 6,
+      "title": "must have been 与 had to be",
+      "category": "modal",
+      "terms": "must have been had to be",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 295
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 295
+        }
+      ],
+      "pages": [
+        295
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-46",
+      "book": "NCE4",
+      "lesson": 46,
+      "lastLesson": 46,
+      "unit": 6,
+      "title": "it is…to 与句式补全",
+      "category": "nonfinite",
+      "terms": "it is useless to",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 300
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 300
+        }
+      ],
+      "pages": [
+        300,
+        301
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-47",
+      "book": "NCE4",
+      "lesson": 47,
+      "lastLesson": 47,
+      "unit": 6,
+      "title": "让步关系与句型转换",
+      "category": "clause",
+      "terms": "though rewrite",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 306
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 307
+        }
+      ],
+      "pages": [
+        306,
+        307
+      ],
+      "references": []
+    },
+    {
+      "id": "NCE4-48",
+      "book": "NCE4",
+      "lesson": 48,
+      "lastLesson": 48,
+      "unit": 6,
+      "title": "冠词与 if 条件句",
+      "category": "clause",
+      "terms": "a the if conditional",
+      "sections": [
+        {
+          "section": "Key structures · 关键句型",
+          "page": 311
+        },
+        {
+          "section": "Special difficulties · 难点",
+          "page": 312
+        }
+      ],
+      "pages": [
+        311,
+        312
+      ],
+      "references": []
+    }
+  ]
+}
