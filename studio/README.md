@@ -113,7 +113,7 @@ corepack pnpm package:static
 
 每项使用 `pnpm exec wrangler pages secret put <变量名> --project-name finn-english-studio` 交互输入。配置后必须重新部署并用本人明确同意提交的一句录音验证返回的真实反馈，才能宣布在线评估可用；模拟结果或配置成功都不代表已经验收。
 
-`pnpm verify:pronunciation` 覆盖 WAV、权限、发送确认、大小与时长、未配置/付费标记关闭、上游错误、仅转写而无评分的拒绝、结果映射及静态路由边界。它使用模拟服务响应，不调用真实 Azure。浏览器预览使用 `pnpm exec wrangler pages dev dist-online --ip 127.0.0.1 --port 4188 --compatibility-date 2026-05-22`，兼容当前锁定的本地 Worker 运行时。
+`pnpm verify:pronunciation` 覆盖 WAV、权限、发送确认、大小与时长、未配置/付费标记关闭、上游错误、仅转写而无评分的拒绝、结果映射及静态路由边界，并在真实 Workerd 运行时检查成功响应与 301/302/307/308 拒绝。请求使用 `redirect: manual`，任何非成功响应都直接拒绝，不会转发密钥或录音到重定向地址。它使用模拟服务响应，不调用真实 Azure。浏览器预览使用 `pnpm exec wrangler pages dev dist-online --ip 127.0.0.1 --port 4188 --compatibility-date 2026-05-22`，兼容当前锁定的本地 Worker 运行时。
 
 ## 学习路径与隔天回顾
 
@@ -177,17 +177,21 @@ python3 scripts/package-language.py "$TRANSLATION_SNAPSHOT" "$ECDICT_CSV" "$TRAN
 
 ## 验证和本机接续
 
+2026-09-27 已按授权配置并启用 Azure Speech F0，实际资源在 East Asia，四项配置保存在 Cloudflare production 加密 secrets。现行服务部署为 [9a1174e1](https://9a1174e1.finn-english-studio.pages.dev/)，正式网址保持不变；前端仍为 `2026-09-27-recording-feedback-v1`，只更新评估配置与 Worker。1,544 个文件通过完整性检查，生产及独立域名的 18 项内容和接口回读通过：评估状态启用，无口令 401，跨源 403。使用本机生成的 2.30 秒合成英语，经正式站代理取得真实 Azure 评分和六个单词的结果。此为接口联通验证；本人麦克风录音、实际反馈显示和手机真机验收仍待使用者明确同意后完成。
+
+真实联调修复了 Workerd 不支持 `redirect: error` 导致请求提前失败的问题，并加入运行时回归测试。未打开付费韵律评分、自动重试或自动升级。个人口令另存于本机钥匙串，不在仓库、备份或前端构建中；浏览器仅在当前页面记住。回读证据更新于忽略的 `work/local-codex/online-recording-api-verification.json`，其中保留此前未启用时的验证记录。表达改进版仍单独等待发布授权；发布它之前须重新打包，使新包包含本次 Worker 修复，不能直接上传此前留下的构建。
+
 2026-09-27 表达改进版已完成本地验证，构建版本为 `2026-09-27-expression-practice-v2`，尚未发布。它增加按本课原句选择的 18 种表达用途、有限文字反馈和修改比较、换情境检验与次日回顾、知识卡片再练、今日小任务及手机聚焦布局。生产站仍为下方录音整合版，不能把本地构建或代码提交当成上线。
 
 类型检查、在线及离线构建、引导练习、导航、学习路径、语速及录音接口回归通过；1,544 个发布文件的完整性及白名单检查通过。独立本地来源走完第一课的理解、替换、故意错误、修改比较、错题解释、换题、保存、框架回看及新一轮复习；刷新和前进后退保留记录。另抽查第二册第一课的剧院原句、口语题库的 I is → I am 反馈。320/390 像素无整页横向溢出，步骤切换聚焦标题；不是手机真机或系统键盘验收。最终跨册检查发现旧表达面板残留，已通过整课标签容器按课重建、只使用册号与课号匹配的异步译文修复；第二册与第一册之间切换及历史前后退均只保留一个当前面板，草稿和反馈仍在。旧草稿和新增检验记录通过完整资料包往返检查，自查勾选没有被自动改为完成。
 
-录音器在表达与重练步骤间复用，并在切步时结束当前录制；尚未采集真实麦克风验证这条新切步链路。Azure 自动评估保持未启用，没有新外部服务、收费调用或录音上传。执行截图和本地检查记录保存在忽略的 `work/local-codex/expression-practice-v2/`。上线仍需按用户提供的项目授权规则单独确认，然后在生产和独立部署回读版本与哈希，并检查实际页面和播放。
+录音器在表达与重练步骤间复用，并在切步时结束当前录制；尚未采集真实麦克风验证这条新切步链路。表达改进验证时 Azure 自动评估尚未启用，该状态现已由上方 F0 联调记录取代；本轮表达改进本身没有上传录音。执行截图和本地检查记录保存在忽略的 `work/local-codex/expression-practice-v2/`。上线仍需按用户提供的项目授权规则单独确认，然后在生产和独立部署回读版本与哈希，并检查实际页面和播放。
 
-2026-09-27 录音整合版已发布到 [正式站](https://finn-english-studio.pages.dev/) 和 [5c701ed0 独立部署](https://5c701ed0.finn-english-studio.pages.dev/)，版本 `2026-09-27-recording-feedback-v1`。逐句录音、最近两遍对比、当前句 Reading Coach 入口已合入最新引导版；原书页图、题库与语言数据哈希保持一致。代码已推送原开发分支，具体提交以 Git / GitHub 为准。
+此前 2026-09-27 录音整合版首次发布到 [正式站](https://finn-english-studio.pages.dev/) 和 [5c701ed0 独立部署](https://5c701ed0.finn-english-studio.pages.dev/)，版本 `2026-09-27-recording-feedback-v1`。逐句录音、最近两遍对比、当前句 Reading Coach 入口已合入最新引导版；原书页图、题库与语言数据哈希保持一致。代码已推送原开发分支，具体提交以 Git / GitHub 为准。
 
-本轮 TypeScript、在线/离线构建、录音接口、导航、语速、教材、学习路径及引导练习检查通过；1,544 个发布文件通过完整性与白名单检查。正式域名和独立部署共 1,007 项公开内容检查通过，无传输重试；另有 6 项接口检查确认未配置时状态为关闭、同源提交返回 503、跨源提交返回 403，响应不缓存。没有配置 Azure 凭据或调用真实评估服务。
+本轮 TypeScript、在线/离线构建、录音接口、导航、语速、教材、学习路径及引导练习检查通过；1,544 个发布文件通过完整性与白名单检查。正式域名和独立部署共 1,007 项公开内容检查通过，无传输重试；另有 6 项接口检查确认未配置时状态为关闭、同源提交返回 503、跨源提交返回 403，响应不缓存。首次发布时未配置 Azure 凭据或调用真实评估服务，现已由上方配置验证取代。
 
-Chrome 320/390 像素视口下录音面板没有整页横向溢出，切换听写句会同步更新跟读与 Reading Coach 文本；保存到本机后的选句跟读也通过。正式站第一句为正文 `Excuse me!`，原音频从约 15 秒播放并在句末停止，无媒体错误。既有学习完成记录仍显示。没有进行手机真机、麦克风采集或真实 Azure 评分验收；自动评估仍未启用，启用要求见前述配置说明。当前证据为 `online-recording-verification.json`、`online-recording-api-verification.json` 和 `recording-feedback-production-390.png`。
+Chrome 320/390 像素视口下录音面板没有整页横向溢出，切换听写句会同步更新跟读与 Reading Coach 文本；保存到本机后的选句跟读也通过。正式站第一句为正文 `Excuse me!`，原音频从约 15 秒播放并在句末停止，无媒体错误。既有学习完成记录仍显示。首次发布时未进行手机真机、麦克风采集或真实 Azure 评分验收；当前配置及验收边界以上方记录为准。当前证据为 `online-recording-verification.json`、`online-recording-api-verification.json` 和 `recording-feedback-production-390.png`。
 
 此前 2026-09-27 引导版发布到 [正式站](https://finn-english-studio.pages.dev/) 和 [f61cb11c 独立部署](https://f61cb11c.finn-english-studio.pages.dev/)，版本 `2026-09-27-guided-expression-v1`。两个域名的版本、首页、题库、页图索引及语言清单均与本地构建一致。公开回读 1,007 项通过，包括生产站全部 696 张页图与 277 份语言文件；本轮无网络重试。源代码与 GitHub 提交以本分支历史为准。
 
