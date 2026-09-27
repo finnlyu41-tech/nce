@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useState} from 'react';
+import {useMovingSelection} from '@/lib/use-moving-selection';
 import {ArrowRight,ArrowLeft,Volume2,Check} from 'lucide-react';
 import {toast} from 'sonner';
 import {type State,type NceBookId,wordCount} from './model';
@@ -23,6 +24,7 @@ const repairs=[
 ];
 const names=['听懂一句','拆开搭句','自己表达','反馈与重练','换情境检验'];
 export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:NceBookId;lesson:number;rows:LanguageRow[];state:State;update:(fn:(s:State)=>State)=>void;listen:()=>void}){
+ const stepsRef=useMovingSelection<HTMLElement>('[aria-current="step"]');
  const route=useRoute(),key=`expression-${book}-${lesson}`,draft=readGuide(state.drafts[key]);
  const {frame,source,level,excerpt,prompts,goal}=guideFor(rows,book),step=route.step??draft.step;
  const [hint,setHint]=useState<'full'|'keywords'|'none'>('none');
@@ -32,11 +34,13 @@ export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:Nc
   return {...s,drafts:{...s.drafts,[key]:JSON.stringify({...readGuide(s.drafts[key]),...(changedContent?{checkpointAt:0,checkChoice:'',checkMarked:false,checkedTransfer:'',saved:false}:{}),...change})}};
  });
  function go(next:number,change:Partial<GuideDraft>={}){
+  if(next===step)return;
+  // Give the previous history entry its own step before changing the draft.
+  if(route.step===undefined)navigate({...route,step},{replace:true,keepScroll:true});
   patch({...change,step:next});
-  navigate({view:'nce',book,lesson,tab:'notes',step:next});
+  navigate({view:'nce',book,lesson,tab:'notes',step:next},{keepScroll:true,scrollTarget:'expression-task'});
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
    document.getElementById('expression-stage-title')?.focus({preventScroll:true});
-   document.getElementById('expression-task')?.scrollIntoView({block:'start'});
   }));
  }
  const sentence=sentenceFor(frame,draft.selected),translation=sentenceFor(frame,draft.selected,true);
@@ -58,7 +62,7 @@ export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:Nc
  return <section className="panel guided-expression" id="expression-task">
   <div className="section-top"><div><span className="eyebrow">第 {lesson} 课 · {frame.name}</span><h2 id="expression-stage-title" tabIndex={-1}>{names[step]}</h2></div><span className="pill">{step+1} / 5</span></div>
   <p className="guide-goal">今天练成：{goal}。</p>
-  <nav className="guide-steps" aria-label="表达练习步骤">{names.map((name,i)=><button key={name} className={i===step?'active':''} onClick={()=>go(i)} aria-current={i===step?'step':undefined}>{i+1}<span>{name}</span></button>)}</nav>
+  <nav ref={stepsRef} className="guide-steps" aria-label="表达练习步骤">{names.map((name,i)=><button key={name} className={i===step?'active':''} onClick={()=>go(i)} aria-current={i===step?'step':undefined}>{i+1}<span>{name}</span></button>)}</nav>
   <label className="guide-mobile-jump">当前步骤<select aria-label="切换表达步骤" value={step} onChange={e=>go(Number(e.target.value))}>{names.map((name,i)=><option value={i} key={name}>{i+1} / 5 · {name}</option>)}</select></label>
   {step===0&&<div className="guide-stage">
    <p>先听这一句，写下你理解的意思；卡住时再打开参考。</p>

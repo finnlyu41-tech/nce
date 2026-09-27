@@ -5,6 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { Tabs as TabsPrimitive } from "radix-ui"
 
 import { cn } from "@/lib/utils"
+import { useMovingSelection } from "@/lib/use-moving-selection"
 
 function Tabs({
   className,
@@ -43,14 +44,22 @@ const tabsListVariants = cva(
 function TabsList({
   className,
   variant = "default",
+  ref: forwardedRef,
   ...props
 }: React.ComponentProps<typeof TabsPrimitive.List> &
   VariantProps<typeof tabsListVariants>) {
+  const selectionRef = useMovingSelection<HTMLDivElement>('[data-slot="tabs-trigger"][data-state="active"]')
+  const ref = React.useCallback((node: HTMLDivElement | null) => {
+    selectionRef(node)
+    if (typeof forwardedRef === "function") return forwardedRef(node)
+    if (forwardedRef) forwardedRef.current = node
+  }, [selectionRef, forwardedRef])
   return (
     <TabsPrimitive.List
+      ref={ref}
       data-slot="tabs-list"
       data-variant={variant}
-      className={cn(tabsListVariants({ variant }), className)}
+      className={cn(tabsListVariants({ variant }), "moving-tabs", className)}
       {...props}
     />
   )

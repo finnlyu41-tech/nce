@@ -140,6 +140,8 @@
 .site-transcript{max-height:none;overflow:visible}.lesson-dictation{margin:22px 0;padding:20px;background:#f5f8ff;border-radius:12px;border:1px solid #dce6fa}.lesson-dictation>.row{margin-top:16px}.cloud-player{position:sticky;top:0;background:#fff;box-shadow:0 4px 8px -8px #234;z-index:8}.cloud-reader .section-top{flex-wrap:wrap}.cloud-reader .section-top h2{overflow-wrap:anywhere}
 @media(max-width:767px){
  .topbar{position:sticky;top:0;z-index:20;height:56px;padding:0 14px}.workspace{padding:18px 14px 20px}.mobile-menu{min-width:44px;min-height:44px}.icon-btn{min-width:44px;min-height:44px}
+[data-slot=dialog-close],[data-slot=sheet-close]{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+[data-slot=dialog-header],[data-slot=sheet-header]{padding-right:44px}
  input,textarea,select{font-size:16px!important}.nce-book-heading{gap:12px;margin-bottom:12px}.nce-book-heading h1{font-size:24px}.nce-book-heading .eyebrow{font-size:10px;letter-spacing:1px}.nce-book-heading>.row{display:none}.nce-source-line{display:none}.nce-back{min-height:44px;padding:0}
  .nce-checks{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 18px}.step-start{padding:12px;min-height:78px;gap:6px}.step-start small{display:none}.step-start strong{font-size:13px}.step-start .step-action{margin-top:5px}.nce-checks .step-complete{padding:9px 12px;font-size:11px}
  .nce-studio .lesson-tabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;height:auto!important;gap:0!important;overflow:visible;border-bottom:0!important;padding:4px!important;background:#eaf0fa;border-radius:10px;margin-bottom:14px}.nce-studio .lesson-tabs [data-slot=tabs-trigger]{min-width:0;min-height:42px;padding:8px 3px!important;font-size:12px;white-space:nowrap;border-radius:7px!important;border:0!important}.nce-studio .lesson-tabs [data-slot=tabs-trigger][data-state=active]{background:#fff;box-shadow:0 1px 4px #263e651a;color:#2455df}.nce-studio .lesson-tabs [data-slot=tabs-trigger]:after{display:none}
@@ -193,9 +195,7 @@
 
 /* Keep one current action visible during the expression loop. */
 .practice-reference>summary{cursor:pointer;min-height:44px;padding:9px 0;color:#425975;font-weight:600;line-height:1.7}
-.expression-course-options{margin:0 0 14px;border:1px solid #dce4ef;border-radius:10px;background:#fff;padding:10px 14px}
-.expression-course-options>summary,.expression-free-notes>summary{cursor:pointer;min-height:32px;display:list-item;font-weight:600;color:#41556f}
-.expression-course-options .paired-lesson-bar{margin-top:12px}.expression-course-options .lesson-plan{margin-bottom:0}
+.expression-free-notes>summary{cursor:pointer;min-height:32px;display:list-item;font-weight:600;color:#41556f}
 .guided-expression{scroll-margin-top:115px}.guide-goal{color:#465c75;line-height:1.7;margin:10px 0}.guide-mobile-jump{display:none}
 .expression-feedback{border:1px solid #c8d8ea;background:#f6f9ff;border-radius:12px;padding:16px;margin:16px 0;overflow-wrap:anywhere}
 .expression-feedback h4{margin:0 0 10px;font-size:17px}.expression-feedback article+article{border-top:1px solid #d8e2ef;margin-top:14px;padding-top:14px}
@@ -208,8 +208,6 @@
 .checkpoint-save{margin:20px 0 12px}.checkpoint-saved{border:1px solid #ccdfd8;border-radius:10px;padding:16px;background:#f3f8f6;line-height:1.8}
 .framework-form{font-weight:600;color:#355572;white-space:pre-wrap}.review-evidence{border:1px solid #dce5f1;border-radius:10px;padding:14px;margin:16px 0}.guide-save-note{margin-top:14px}
 @media(max-width:640px){
- .is-expression .nce-back{margin:0 0 8px}.is-expression .nce-book-heading{margin:0 0 10px;gap:0}.is-expression .nce-book-heading h1{font-size:20px}.is-expression .nce-book-heading p{display:none}
- .is-expression .expression-course-options{padding:7px 12px;margin-bottom:10px}.is-expression .expression-course-options>summary{font-size:13px;min-height:32px;line-height:32px}
  .is-expression .nce-lesson-footer{position:static;margin-top:20px;box-shadow:none;border:1px solid #dce4ef;border-radius:10px;padding:10px}.is-expression .nce-lesson-footer>.btn{min-height:44px}
  .guided-expression{margin-top:12px;padding:16px;scroll-margin-top:105px}.guided-expression h2{font-size:21px;margin:3px 0}.guided-expression .guide-steps{display:none}
  .guide-mobile-jump{display:flex;align-items:center;gap:10px;font-size:13px;color:#465c75;margin:14px 0}.guide-mobile-jump select{flex:1;width:auto;min-height:44px;font-size:15px}
@@ -220,3 +218,52 @@
 }
 
 .textbook-vocabulary-source{margin-top:12px}.source-word-picker .pill{max-width:100%}.source-word-picker .lookup-word{overflow-wrap:anywhere;text-align:left}
+
+/* Keep navigation anchored and show the path of the selected choice. */
+html{scrollbar-gutter:stable}
+#lesson-content{scroll-margin-top:72px;overflow-anchor:none}
+.lesson-tabs~[data-slot=tabs-content],.ielts-tabs~[data-slot=tabs-content]{min-height:calc(100svh - 150px)}
+.moving-tabs,.guide-steps[data-selection-ready]{position:relative;isolation:isolate}
+.moving-tabs[data-selection-ready]::before,.guide-steps[data-selection-ready]::before{
+ content:"";position:absolute;left:0;top:0;pointer-events:none;z-index:0;
+ width:var(--selection-width);height:var(--selection-height);
+ transform:translate(var(--selection-x),var(--selection-y));
+ border-radius:7px;background:#fff;box-shadow:0 1px 4px #263e651a;
+}
+.moving-tabs[data-selection-ready="true"]::before,.guide-steps[data-selection-ready="true"]::before{
+ transition:transform 280ms cubic-bezier(.22,1,.36,1),width 280ms cubic-bezier(.22,1,.36,1),height 280ms cubic-bezier(.22,1,.36,1);
+}
+.moving-tabs[data-selection-ready] [data-slot=tabs-trigger]{z-index:1;transition:color 160ms ease}
+.moving-tabs[data-selection-ready] [data-slot=tabs-trigger][data-state=active]{background:transparent!important;box-shadow:none!important}
+.moving-tabs[data-selection-ready] [data-slot=tabs-trigger]::after{display:none}
+.lesson-tabs[data-selection-ready] [data-slot=tabs-trigger],.ielts-tabs[data-selection-ready] [data-slot=tabs-trigger]{border-bottom:3px solid transparent}
+.lesson-tabs[data-selection-ready]::before,.ielts-tabs[data-selection-ready]::before,.moving-tabs[data-variant=line][data-selection-ready]::before{
+ top:calc(var(--selection-height) - 3px);height:3px;border-radius:3px;background:#2455df;box-shadow:none;
+}
+.guide-steps[data-selection-ready]::before{background:#245de8;border-radius:10px;box-shadow:none}
+.guide-steps[data-selection-ready] button{position:relative;z-index:1;background:transparent;transition:color 160ms ease,border-color 160ms ease}
+[data-slot=tabs-content][data-state=active],.guide-stage{animation:study-content-arrive 180ms ease-out}
+@keyframes study-content-arrive{from{opacity:.35}to{opacity:1}}
+@media(max-width:767px){
+ .nce-studio .lesson-tabs[data-selection-ready]::before{top:0;height:var(--selection-height);background:#fff;border-radius:7px;box-shadow:0 1px 4px #263e651a}
+ .nce-studio .lesson-tabs[data-selection-ready] [data-slot=tabs-trigger][data-state=active]{background:transparent!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .moving-tabs[data-selection-ready]::before,.guide-steps[data-selection-ready]::before{transition:none}
+ [data-slot=tabs-content][data-state=active],.guide-stage{animation:none}
+}
+
+/* The whole visible control is tappable, including vocabulary-chip padding. */
+.text-btn{min-height:44px;padding:8px}
+.icon-btn{min-width:44px;min-height:44px}
+[data-slot=dialog-close],[data-slot=sheet-close]{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px}
+[data-slot=dialog-header],[data-slot=sheet-header]{padding-right:44px}
+.lesson-tabs [data-slot=tabs-trigger],.ielts-tabs [data-slot=tabs-trigger]{min-height:44px;min-width:64px}
+.source-word-picker .lookup-word.vocabulary-word{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;padding:9px 12px;background:#eaf0ff;border-radius:8px;font-size:14px;font-weight:600;line-height:1.5;letter-spacing:normal;text-align:center}
+.source-word-picker .vocabulary-word:hover{background:#dce7ff}
+.btn:not(:disabled):active,.text-btn:not(:disabled):active,.icon-btn:not(:disabled):active,.vocabulary-word:active{filter:brightness(.9)}
+summary,select{touch-action:manipulation}
+@media(max-width:767px){
+ .cloud-player .text-btn,.nce-studio .cloud-reader .text-btn,.sentence-practice .text-btn{min-height:44px}
+ .nce-studio .lesson-tabs [data-slot=tabs-trigger]{min-width:0}
+}

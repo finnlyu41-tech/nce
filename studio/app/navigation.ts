@@ -30,9 +30,13 @@ export function routeHash(route:StudioRoute){
  if(route.view==='nce'&&route.lesson&&route.tab==='listen'&&route.mode==='recall')params.set('mode','recall');
  return path+(params.size?'?'+params:'');
 }
-export function navigate(route:StudioRoute,{replace=false,keepScroll=false}:{replace?:boolean;keepScroll?:boolean}={}){
- const hash=routeHash(route);if(location.hash===hash)return;
+export function navigate(route:StudioRoute,{replace=false,keepScroll=false,scrollTarget}:{replace?:boolean;keepScroll?:boolean;scrollTarget?:string}={}){
+ const hash=routeHash(route);
+ if(location.hash===hash){
+  if(scrollTarget)window.dispatchEvent(new CustomEvent('studio:navigation',{detail:{keepScroll:true,scrollTarget}}));
+  return;
+ }
  history.replaceState({...history.state,studioScroll:window.scrollY},'');
  history[replace?'replaceState':'pushState']({studioScroll:keepScroll?window.scrollY:0},'',hash);
- window.speechSynthesis?.cancel();window.dispatchEvent(new Event('studio:navigation'));
+ window.speechSynthesis?.cancel();window.dispatchEvent(new CustomEvent('studio:navigation',{detail:{keepScroll,scrollTarget}}));
 }

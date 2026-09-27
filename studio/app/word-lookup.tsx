@@ -29,7 +29,7 @@ export function WordText({text,example=text,exampleTranslation}:{text:string;exa
  return <span className="word-text" lang="en">{text.split(/([A-Za-z]+(?:['’][A-Za-z]+)*)/g).map((part,i)=>/^[A-Za-z]/.test(part)?<button key={i} type="button" className="lookup-word" aria-label={`查词 ${part}`} onClick={()=>open({word:part,example,exampleTranslation})}>{part}</button>:part)}</span>;
 }
 
-export function WordLookupButton({word,example='',exampleTranslation}:{word:string;example?:string;exampleTranslation?:string}){
+export function WordLookupButton({word,example='',exampleTranslation,className=''}:{word:string;example?:string;exampleTranslation?:string;className?:string}){
  const open=useContext(Context);
- return <button type="button" className="lookup-word" lang="en" aria-label={`查词 ${word}`} onClick={()=>open({word,example,exampleTranslation})}>{word}</button>;
+ return <button type="button" className={'lookup-word '+className} lang="en" aria-label={`查词 ${word}`} onClick={()=>open({word,example,exampleTranslation})}>{word}</button>;
 }
