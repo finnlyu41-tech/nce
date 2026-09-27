@@ -6,7 +6,7 @@ const model=moduleUrl(stripTypeScriptTypes(await readFile(new URL('../app/model.
 const source=(await readFile(new URL('../app/navigation.ts',import.meta.url),'utf8')).replace("'./model'",JSON.stringify(model));
 const {parseRoute,routeHash,navigate}=await import(moduleUrl(stripTypeScriptTypes(source)));
 for(const route of [
- {view:'nce'}, {view:'nce',book:'NCE1'}, {view:'nce',book:'NCE1',lesson:1,tab:'listen',mode:'recall'}, {view:'nce',book:'NCE1',lesson:1,tab:'notes',step:0}, {view:'nce',book:'NCE2',lesson:11,tab:'notes',step:4}, {view:'nce',book:'NCE1',lesson:144,tab:'practice'},
+ {view:'today'}, {view:'words'}, {view:'nce'}, {view:'nce',book:'NCE1'}, {view:'nce',book:'NCE1',lesson:1,tab:'listen',mode:'recall'}, {view:'nce',book:'NCE1',lesson:1,tab:'notes',step:0}, {view:'nce',book:'NCE2',lesson:11,tab:'notes',step:4}, {view:'nce',book:'NCE1',lesson:144,tab:'practice'},
  {view:'nce',book:'NCE3',filter:'active',query:'自己的笔记'}, {view:'lesson',lesson:36,tab:'grammar'},
  {view:'grammar',book:'NCE1',lesson:59,tab:'topic',query:'some any',category:'noun',page:124}, {view:'grammar',book:'NCE3',lesson:47,tab:'book'},
  {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'ielts',tab:'speaking',task:'bank-3-25-5'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
@@ -14,7 +14,8 @@ for(const route of [
 assert.deepEqual(parseRoute('#/nce/__proto__/1'),{view:'nce'});
 assert.deepEqual(parseRoute('#/nce/NCE1/145?tab=invalid'),{view:'nce',book:'NCE1'});
 assert.deepEqual(parseRoute('#/lesson/-10'),{view:'lesson',lesson:1});
-assert.deepEqual(parseRoute('#/unknown'),{view:'nce'});
+for(const hash of ['', '#', '#/', '#/unknown'])assert.deepEqual(parseRoute(hash),{view:'today'});
+assert.deepEqual(parseRoute('#nce'),{view:'nce'},'Existing course bookmarks keep their destination');
 assert.equal(parseRoute('#/nce/NCE1/1?tab=notes&step=9').step,undefined);
 assert.equal(parseRoute('#/nce/NCE1/1?tab=words&step=3').step,undefined);
 assert.equal(parseRoute('#/grammar/NCE4/49?category=%3Cscript%3E').lesson,undefined);

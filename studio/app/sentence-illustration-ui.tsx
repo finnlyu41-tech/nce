@@ -2,14 +2,13 @@
 import {useState} from 'react';
 import type {NceBookId} from './model';
 import {ONLINE} from './runtime-mode';
-import {LessonPages} from './lesson-context';
 import {illustrationPanel,lessonIllustration,type Illustration} from './sentence-illustration';
 import './sentence-illustration.css';
 
 export function SentenceIllustration({book,lesson,line,rowCount,sourceSha256}:{book:NceBookId;lesson:number;line:number;rowCount:number;sourceSha256?:string}){
  if(!ONLINE)return null;
  const entry=lessonIllustration(book,lesson,sourceSha256,rowCount);
- if(!entry)return <LessonPages key={`${book}-${lesson}`} book={book} lesson={lesson}/>;
+ if(!entry)return null;
  return <IllustrationView key={entry.pageSha256} entry={entry} lesson={lesson} line={line}/>;
 }
 

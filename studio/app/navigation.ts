@@ -5,7 +5,7 @@ const views=['nce','today','courses','words','grammar','ielts','progress','lesso
 const tabs:Record<string,string[]>={nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing'],grammar:['book','topic']};
 export function parseRoute(hash:string):StudioRoute{
  const [path,query='']=hash.replace(/^#\/?/,'').split('?'),parts=path.split('/');
- const view=views.includes(parts[0])?parts[0]:'nce',route:StudioRoute={view},params=new URLSearchParams(query);
+ const view=views.includes(parts[0])?parts[0]:'today',route:StudioRoute={view},params=new URLSearchParams(query);
  if((view==='nce'||view==='cloud'||view==='grammar')&&Object.hasOwn(bookCounts,parts[1])){
   route.book=parts[1] as NceBookId;const lesson=Number(parts[2]);
   if(Number.isInteger(lesson)&&lesson>0&&lesson<=bookCounts[route.book])route.lesson=lesson;

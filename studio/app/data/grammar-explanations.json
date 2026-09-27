@@ -1,0 +1,3810 @@
+{
+  "version": 1,
+  "authorship": "本站编写的讲解、例句与参考表达；按教材主题组织，原书单独作为参考。",
+  "sources": {
+    "none": {
+      "label": "Cambridge · No, none and none of",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/no-none-"
+    },
+    "quantity": {
+      "label": "Cambridge · Little, a little, few, a few",
+      "url": "https://dictionary.cambridge.org/uk/grammar/british-grammar/little-a-little-few-a-few."
+    },
+    "relative": {
+      "label": "Cambridge · Relative pronouns",
+      "url": "https://dictionary.cambridge.org/grammar/british-grammar/relative-pronouns"
+    },
+    "ability": {
+      "label": "Cambridge · Could",
+      "url": "https://dictionary.cambridge.org/tr/dilbilgisi/ingiliz-dilbilgisi/could"
+    },
+    "participle": {
+      "label": "British Council · Participle clauses",
+      "url": "https://learnenglish.britishcouncil.org/grammar/c1-grammar/participle-clauses"
+    },
+    "need": {
+      "label": "Cambridge · Need",
+      "url": "https://dictionary.cambridge.org/us/dictionary/essential-british-english/need?q=need_1"
+    },
+    "future": {
+      "label": "British Council · Future continuous and future perfect",
+      "url": "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/future-continuous-future-perfect"
+    },
+    "absolute": {
+      "label": "Cambridge · Permitting",
+      "url": "https://dictionary.cambridge.org/dictionary/english/permitting"
+    }
+  },
+  "guides": {
+    "be": {
+      "title": "am / is / are：先说清楚谁是什么",
+      "idea": "英语中说身份、状态或位置，通常需要 be 把主语和后面的信息连起来。",
+      "pattern": "I am… / he, she, it is… / you, we, they are…",
+      "explain": [
+        "先找主语，再选 be：I 配 am，单数的 he / she / it 配 is，you 和复数主语配 are。",
+        "表示职业时，单数职业名词前通常要有 a / an；描述状态时直接接形容词，不加冠词。"
+      ],
+      "examples": [
+        {
+          "en": "I am a designer.",
+          "zh": "我是设计师。",
+          "note": "a designer 说明身份。"
+        },
+        {
+          "en": "The windows are open.",
+          "zh": "窗户开着。",
+          "note": "open 是状态；windows 是复数，所以用 are。"
+        }
+      ],
+      "pitfall": "不要照中文省略 be：She happy 缺少谓语，应说 She is happy。",
+      "practice": {
+        "prompt": "说：我哥哥是一名司机。",
+        "answer": "My brother is a driver.",
+        "explanation": "my brother 是单数主语，职业前用 a。"
+      },
+      "sources": []
+    },
+    "be-question": {
+      "title": "把 be 移到前面，就能问是不是",
+      "idea": "be 疑问句是在原来的陈述句上换一个顺序，不需要再加 do。",
+      "pattern": "Be + 主语 + 其他？ / Yes, 主语 + be. / No, 主语 + be not.",
+      "explain": [
+        "This is your key. 变成问题时，把 is 放到 this 前：Is this your key?",
+        "回答时用代词代替重复的名词。Is this…? 常用 it 回答；Are these…? 用 they。肯定简短回答的结尾不把主语和 be 缩写。"
+      ],
+      "examples": [
+        {
+          "en": "Is this your seat? — Yes, it is.",
+          "zh": "这是你的座位吗？——是的。",
+          "note": "确认某件事，短答不说 Yes, it's。"
+        },
+        {
+          "en": "Are they ready? — No, they aren't.",
+          "zh": "他们准备好了吗？——还没有。",
+          "note": "问题和回答中的 be 都跟着 they 用 are。"
+        }
+      ],
+      "pitfall": "Do you are…? 多加了 do。用 Are you…?；只有普通实义动词才通常借助 do 提问。",
+      "practice": {
+        "prompt": "问：这些是你的鞋吗？并作否定回答。",
+        "answer": "Are these your shoes? — No, they aren't.",
+        "explanation": "these 是复数，回答用 they。"
+      },
+      "sources": []
+    },
+    "pronouns": {
+      "title": "he / him：看代词在句子里做什么",
+      "idea": "同一个人，作动作发出者和作动作接受者时，代词形式可能不同。",
+      "pattern": "主语：I / he / she / we / they；宾语：me / him / her / us / them",
+      "explain": [
+        "主语放在谓语前，说明谁做动作；宾语跟在动词或介词后，说明动作涉及谁。",
+        "it 和 you 的主格、宾格相同。选择代词时，先确定它指代的人或物，再看它在句中的位置。"
+      ],
+      "examples": [
+        {
+          "en": "She knows me.",
+          "zh": "她认识我。",
+          "note": "she 发出动作，me 接受动作。"
+        },
+        {
+          "en": "These bags are for them.",
+          "zh": "这些包是给他们的。",
+          "note": "介词 for 后用宾格 them。"
+        }
+      ],
+      "pitfall": "不要因为中文都说“他”就都用 he：with he 应改为 with him。",
+      "practice": {
+        "prompt": "说：他们在等我们。",
+        "answer": "They are waiting for us.",
+        "explanation": "they 作主语，for 后的 us 作宾语。"
+      },
+      "sources": []
+    },
+    "articles": {
+      "title": "a / an / the：让别人知道你指哪一个",
+      "idea": "a / an 引入一个尚未明确的事物，the 指向双方能够确定的事物。",
+      "pattern": "a / an + 单数可数名词；the + 可确定的名词",
+      "explain": [
+        "先检查可数性：单数可数名词通常不能光着出现，需要 a、the、my 等限定词。泛指复数和不可数名词常不加冠词。",
+        "a / an 看后面词语的起始发音，不看字母：an hour 中 h 不发音；a university 以 /j/ 音开头。"
+      ],
+      "examples": [
+        {
+          "en": "I bought a lamp. The lamp is blue.",
+          "zh": "我买了一盏灯。那盏灯是蓝色的。",
+          "note": "首次介绍用 a，再提到已知的灯用 the。"
+        },
+        {
+          "en": "Music helps me relax.",
+          "zh": "音乐帮助我放松。",
+          "note": "泛指音乐，不用 a，也不必用 the。"
+        }
+      ],
+      "pitfall": "不要把“独一无二”当成唯一使用 the 的条件；the door 也可以是语境中双方都知道的那扇门。",
+      "practice": {
+        "prompt": "说：她是工程师。",
+        "answer": "She is an engineer.",
+        "explanation": "engineer 是单数职业名词，以元音音素开头，用 an。"
+      },
+      "sources": []
+    },
+    "possession": {
+      "title": "my / mine / whose：区分“我的…”和“是我的”",
+      "idea": "后面有没有名词，决定用 my 还是 mine；whose 用来问所属关系。",
+      "pattern": "my book = mine；your → yours；her → hers；our → ours；their → theirs",
+      "explain": [
+        "my / your / his / her / our / their 是名词前的限定词，不能单独代替整件物品。mine / yours / his / hers / ours / theirs 可以独立使用。",
+        "Whose bag is this? 和 Whose is this bag? 都问包属于谁。人的名字也可加 's 表示所属。"
+      ],
+      "examples": [
+        {
+          "en": "This is her phone. That one is mine.",
+          "zh": "这是她的手机。那个是我的。",
+          "note": "her 后有 phone；mine 已包含“我的手机”的意思。"
+        },
+        {
+          "en": "Whose keys are these? — They are Leo's.",
+          "zh": "这些是谁的钥匙？——是利奥的。",
+          "note": "keys 是复数，be 用 are。"
+        }
+      ],
+      "pitfall": "mine 后不再加名词：mine bag 应改成 my bag；不要给 yours 写多余的撇号。",
+      "practice": {
+        "prompt": "说：这把伞是我们的。",
+        "answer": "This umbrella is ours.",
+        "explanation": "ours 已经代替 our umbrella。"
+      },
+      "sources": []
+    },
+    "adjectives": {
+      "title": "形容词：放在名词前，也能跟在 be 后",
+      "idea": "描述人或物时，先分清你是在给名词加说明，还是在陈述它的状态。",
+      "pattern": "a + 形容词 + 单数名词 / 主语 + be + 形容词",
+      "explain": [
+        "a red bag 中 red 修饰 bag；The bag is red. 中 red 位于 be 后，构成完整陈述。形容词不随名词复数加 -s。",
+        "问颜色用 What colour…?；问状态可以用 How…?。look 在“看起来”的意思下，也可以接形容词。"
+      ],
+      "examples": [
+        {
+          "en": "They are tired.",
+          "zh": "他们累了。",
+          "note": "tired 不因 they 是复数而变形。"
+        },
+        {
+          "en": "What colour is your bike? — It's green.",
+          "zh": "你的自行车是什么颜色？——绿色。",
+          "note": "问颜色时保留主语和 be。"
+        }
+      ],
+      "pitfall": "不要把 very 当动词。She very busy 应说 She is very busy。",
+      "practice": {
+        "prompt": "说：这些是新椅子。",
+        "answer": "These are new chairs.",
+        "explanation": "复数变化在 chairs 上，不在 new 上。"
+      },
+      "sources": []
+    },
+    "countable": {
+      "title": "可数与不可数：先决定能不能直接数",
+      "idea": "英语会把一些东西当作独立个体，也会把一些东西当作材料或整体。",
+      "pattern": "one book / two books；some water；a piece of information",
+      "explain": [
+        "可数名词有单复数。一般加 -s，但 child → children 等是不规则变化，需要连同单数一起记。",
+        "water、advice、information 等通常不可数，不能直接加 a 或 -s。要计量时加单位：a glass of water、two pieces of advice。"
+      ],
+      "examples": [
+        {
+          "en": "There are three boxes.",
+          "zh": "有三个盒子。",
+          "note": "box 的复数是 boxes。"
+        },
+        {
+          "en": "I need some information.",
+          "zh": "我需要一些信息。",
+          "note": "information 通常不可数，不说 informations。"
+        }
+      ],
+      "pitfall": "中文能说“一条建议”，不代表英语可以说 an advice。应说 a piece of advice。",
+      "practice": {
+        "prompt": "说：我有两条消息。",
+        "answer": "I have two pieces of news.",
+        "explanation": "news 虽以 s 结尾，通常仍按不可数名词处理。"
+      },
+      "sources": []
+    },
+    "double-object": {
+      "title": "give me…：把东西给谁",
+      "idea": "give / send / show 等动词可以同时交代接受者和东西。",
+      "pattern": "give + 人 + 物 / give + 物 + to + 人",
+      "explain": [
+        "把人放在东西前，句子紧凑；把东西放前面时，give、send、show 常用 to 引出接受者。buy、make 等常用 for。",
+        "which 用于从已知范围中选择。单数物品可以用 which one，复数用 which ones，避免重复名词。"
+      ],
+      "examples": [
+        {
+          "en": "Please show me the photo.",
+          "zh": "请给我看看那张照片。",
+          "note": "me 是接受者，the photo 是被展示的东西。"
+        },
+        {
+          "en": "Which one do you want? — The small one.",
+          "zh": "你想要哪一个？——小的那个。",
+          "note": "one 代替前面已知的单数可数名词。"
+        }
+      ],
+      "pitfall": "不是所有动词都能放“人 + 物”。explain 常用 explain something to someone。",
+      "practice": {
+        "prompt": "用两种方式说：请把地图给她。",
+        "answer": "Please give her the map. / Please give the map to her.",
+        "explanation": "两种语序表达相同的给予关系。"
+      },
+      "sources": []
+    },
+    "place": {
+      "title": "位置与方向：在某处，还是去某处",
+      "idea": "in / on / at 常说位置，to 常说移动的目的地。",
+      "pattern": "Where is / are…?；in / on / at + 地点；go to + 地点",
+      "explain": [
+        "in 强调空间或区域内部，on 强调表面，at 常把地点看成一个活动点。不要把介词和中文一一固定对应。",
+        "问位置时用 Where is the…? 或 Where are the…?；there 回答“在那里”。home 等词在 go home 里不用 to。"
+      ],
+      "examples": [
+        {
+          "en": "The cups are on the shelf.",
+          "zh": "杯子在架子上。",
+          "note": "复数 cups 用 are，表面位置用 on。"
+        },
+        {
+          "en": "We are going to the station.",
+          "zh": "我们正去车站。",
+          "note": "to 表示移动的终点。"
+        }
+      ],
+      "pitfall": "go to home 不是通常说法；用 go home。但可以说 go to my home，因为 my home 是名词短语。",
+      "practice": {
+        "prompt": "问：你的钥匙在哪里？",
+        "answer": "Where are your keys?",
+        "explanation": "keys 是复数；Where 后用 are。"
+      },
+      "sources": []
+    },
+    "imperative": {
+      "title": "祈使句：直接说要做什么",
+      "idea": "指令、提醒和建议常省略 you，用动词原形开头。",
+      "pattern": "动词原形… / Don't + 动词原形… / Please…",
+      "explain": [
+        "Open the door. 是请对方做事，主语 you 通常不说出来。please 可让语气更客气，但场合和语调也重要。",
+        "否定指令用 Don't，be 动词也一样：Don't be late.。mustn't 则强调禁止或不允许。"
+      ],
+      "examples": [
+        {
+          "en": "Please sit here.",
+          "zh": "请坐这里。",
+          "note": "sit 用原形。"
+        },
+        {
+          "en": "Don't touch the screen.",
+          "zh": "不要碰屏幕。",
+          "note": "don't 后仍是动词原形 touch。"
+        }
+      ],
+      "pitfall": "Don't to open… 多了 to。祈使句否定应为 Don't open…。",
+      "practice": {
+        "prompt": "提醒对方：不要迟到。",
+        "answer": "Don't be late.",
+        "explanation": "be 的否定祈使句同样使用 don't。"
+      },
+      "sources": []
+    },
+    "obligation": {
+      "title": "must / have to：必须；mustn't：不准",
+      "idea": "最重要的区别在否定：不准做，与没有必要做，是两回事。",
+      "pattern": "must / have to + 原形；mustn't + 原形；don't have to / needn't + 原形",
+      "explain": [
+        "must 常表达说话者的要求或强烈必要性，have to 常说明规则或情境的需要；两者在不少场合可以互换。",
+        "过去的义务通常说 had to，将来可说 will have to。mustn't 是禁止；don't have to / needn't 表示不必，允许你选择。"
+      ],
+      "examples": [
+        {
+          "en": "You mustn't park here.",
+          "zh": "你不准在这里停车。",
+          "note": "这里是禁令。"
+        },
+        {
+          "en": "You don't have to bring lunch.",
+          "zh": "你不必带午饭。",
+          "note": "不是不准带，而是没有必要。"
+        }
+      ],
+      "pitfall": "must 不加第三人称 -s，也不在后面接 to。She must goes 应改成 She must go。",
+      "practice": {
+        "prompt": "说：我们昨天必须工作。",
+        "answer": "We had to work yesterday.",
+        "explanation": "过去已经发生的义务用 had to。"
+      },
+      "sources": []
+    },
+    "present-continuous": {
+      "title": "现在进行时：把镜头放在正在展开的动作上",
+      "idea": "关注眼下或当前阶段的活动，用 be + -ing，不只记一个 now。",
+      "pattern": "am / is / are + 动词 -ing",
+      "explain": [
+        "be 体现人称和时间，-ing 体现活动正在展开。否定在 be 后加 not；疑问把 be 放到主语前。",
+        "它也可以描述临时的一段情况，如“这个月住在朋友家”，不要求说话那一秒正在做。"
+      ],
+      "examples": [
+        {
+          "en": "She is making tea.",
+          "zh": "她正在泡茶。",
+          "note": "is 与 she 对应，making 是动作。"
+        },
+        {
+          "en": "They aren't working today.",
+          "zh": "他们今天不工作。",
+          "note": "描述今天这段临时安排。"
+        }
+      ],
+      "pitfall": "不要漏掉 be：They playing 应改为 They are playing。单有 -ing 不能充当完整的现在进行时谓语。",
+      "practice": {
+        "prompt": "问：他正在做什么？",
+        "answer": "What is he doing?",
+        "explanation": "疑问词 + is + 主语 + doing。"
+      },
+      "sources": []
+    },
+    "going-to": {
+      "title": "be going to：已有打算，或看见迹象",
+      "idea": "说已经考虑好的计划，或者依据当前迹象作预测，常用 be going to。",
+      "pattern": "am / is / are going to + 动词原形",
+      "explain": [
+        "计划用法重点在“事先已有这个打算”，不等于任何带将来时间的句子都必须用 going to。",
+        "预测用法依据眼前的证据。going to 后是动词原形；be 仍随主语变化。"
+      ],
+      "examples": [
+        {
+          "en": "I'm going to call her tonight.",
+          "zh": "我打算今晚给她打电话。",
+          "note": "电话是已有的计划。"
+        },
+        {
+          "en": "Look at those clouds. It's going to rain.",
+          "zh": "看那些云，要下雨了。",
+          "note": "预测有眼前迹象作为依据。"
+        }
+      ],
+      "pitfall": "He going to… 缺少 is。going to 中的 to 后不接 -ing：going to studying 应改为 going to study。",
+      "practice": {
+        "prompt": "说：他们打算买一台电脑。",
+        "answer": "They are going to buy a computer.",
+        "explanation": "they 配 are；buy 用原形。"
+      },
+      "sources": []
+    },
+    "there-be": {
+      "title": "there be：先介绍“有”，再说是什么",
+      "idea": "there be 把一个人或物引入场景；它不同于某个人拥有某物。",
+      "pattern": "There is + 单数 / 不可数名词；There are + 复数名词",
+      "explain": [
+        "先看后面的名词决定 is / are。疑问句把 be 放前：Is there…? / Are there…?。",
+        "there be 里的 there 不只是“那里”。表达“我有”通常用 I have，而不是 I there is。"
+      ],
+      "examples": [
+        {
+          "en": "There is some milk in the fridge.",
+          "zh": "冰箱里有一些牛奶。",
+          "note": "milk 不可数，用 is。"
+        },
+        {
+          "en": "Are there any chairs outside?",
+          "zh": "外面有椅子吗？",
+          "note": "chairs 是复数，用 are。"
+        }
+      ],
+      "pitfall": "There has a shop 不能作为通常的“有一家商店”表达；应说 There is a shop。",
+      "practice": {
+        "prompt": "说：桌子上有两封信。",
+        "answer": "There are two letters on the desk.",
+        "explanation": "two letters 是复数。"
+      },
+      "sources": []
+    },
+    "some-any": {
+      "title": "some / any：数量不确定，语气有区别",
+      "idea": "some 常用于肯定陈述，any 常用于否定或一般询问；先看说话意图。",
+      "pattern": "some / any + 复数可数名词或不可数名词",
+      "explain": [
+        "some 表示有一些，但不说明精确数量；any 在否定句中常表示一个也没有，在疑问句中询问有没有。",
+        "主动提供东西或希望得到肯定回应的请求，问句也常用 some。any 在肯定句里还可表示“任何一个”。"
+      ],
+      "examples": [
+        {
+          "en": "We haven't got any bread.",
+          "zh": "我们一点面包也没有。",
+          "note": "否定句用 any。"
+        },
+        {
+          "en": "Would you like some juice?",
+          "zh": "你想喝点果汁吗？",
+          "note": "这是主动提供，因此用 some 很自然。"
+        }
+      ],
+      "pitfall": "不要把“疑问句一律用 any”当成死规则；先判断是在普通询问，还是邀请、提供和请求。",
+      "practice": {
+        "prompt": "问：你有邮票吗？",
+        "answer": "Have you got any stamps? / Do you have any stamps?",
+        "explanation": "一般询问有没有，any 合适。"
+      },
+      "sources": []
+    },
+    "can": {
+      "title": "can：能做，也能询问许可",
+      "idea": "can 后直接跟动词原形，不受主语人称变化影响。",
+      "pattern": "can / can't + 动词原形；Can + 主语 + 原形…?",
+      "explain": [
+        "表示能力时，它回答“会不会、能不能”。否定可以是 cannot 或 can't。",
+        "can 也常用于询问和给予许可；may 用于许可时更正式。具体是哪种意思，要从场景判断。"
+      ],
+      "examples": [
+        {
+          "en": "My sister can drive.",
+          "zh": "我姐姐会开车。",
+          "note": "can 后不加 -s，也不加 to。"
+        },
+        {
+          "en": "Can I open the window?",
+          "zh": "我可以打开窗户吗？",
+          "note": "是在征求许可。"
+        }
+      ],
+      "pitfall": "can 不与 do 一起构成普通疑问句。Do you can swim? 应改为 Can you swim?。",
+      "practice": {
+        "prompt": "说：他不会游泳。",
+        "answer": "He can't swim.",
+        "explanation": "can 后的 swim 保持原形。"
+      },
+      "sources": []
+    },
+    "present-simple": {
+      "title": "一般现在时：习惯、事实与状态",
+      "idea": "它不等于“此刻正在做”，而是把事情当作常态来说。",
+      "pattern": "I / you / we / they work；he / she / it works；do / does + 原形",
+      "explain": [
+        "肯定句的第三人称单数通常加 -s / -es。用了 does 或 doesn't，后面的实义动词就回到原形。",
+        "习惯可配 usually、often 等频率词；事实和较稳定的状态也常用一般现在时。be 的变化另用 am / is / are。"
+      ],
+      "examples": [
+        {
+          "en": "She takes the bus every day.",
+          "zh": "她每天坐公共汽车。",
+          "note": "习惯动作，she 后用 takes。"
+        },
+        {
+          "en": "Does he like coffee?",
+          "zh": "他喜欢咖啡吗？",
+          "note": "does 已承担人称变化，like 不加 -s。"
+        }
+      ],
+      "pitfall": "She doesn't likes… 把第三人称变化做了两次；应为 She doesn't like…。",
+      "practice": {
+        "prompt": "问：她住在这里吗？",
+        "answer": "Does she live here?",
+        "explanation": "用 does 提问，live 回原形。"
+      },
+      "sources": []
+    },
+    "origin": {
+      "title": "be from / come from：两种来源表达",
+      "idea": "问来自哪里，要先选定使用 be 还是 come，不要把两套结构混在一起。",
+      "pattern": "Where are you from? / Where do you come from?",
+      "explain": [
+        "be from 的疑问只把 be 提前。come 是实义动词，一般现在时疑问用 do / does。",
+        "国籍常用形容词：She is Canadian.；国家放在 from 后：She is from Canada.。单数身份名词则可能要加冠词。"
+      ],
+      "examples": [
+        {
+          "en": "He comes from Brazil.",
+          "zh": "他来自巴西。",
+          "note": "he 后的 come 加 -s。"
+        },
+        {
+          "en": "Where is she from?",
+          "zh": "她来自哪里？",
+          "note": "这里用 be from，所以用 is 提问。"
+        }
+      ],
+      "pitfall": "Where are you come from? 混用了两套结构；删去 come，或把 are 换成 do。",
+      "practice": {
+        "prompt": "用 come from 问：他来自哪里？",
+        "answer": "Where does he come from?",
+        "explanation": "主语 he 用 does，come 不再加 -s。"
+      },
+      "sources": []
+    },
+    "present-contrast": {
+      "title": "一般现在与现在进行：常态和眼前情况",
+      "idea": "判断的重点是你想表达常态，还是正在展开的临时活动。",
+      "pattern": "usually + 一般现在时；now / this week + 现在进行时（视语境）",
+      "explain": [
+        "先说平常的安排用一般现在时，再说今天的不同情况用现在进行时，就能形成清楚的对比。",
+        "know、believe、want 等表达状态时通常不用进行时；有些动词换了意思则可以，如 think 表示“考虑”。"
+      ],
+      "examples": [
+        {
+          "en": "I usually walk, but today I'm taking a taxi.",
+          "zh": "我通常步行，但今天我坐出租车。",
+          "note": "前半是常态，后半是临时选择。"
+        },
+        {
+          "en": "I think it's useful. I'm thinking about buying it.",
+          "zh": "我觉得它有用。我正在考虑买它。",
+          "note": "前一个 think 是看法，后一个是思考活动。"
+        }
+      ],
+      "pitfall": "不能只看到 today 就机械选进行时。I am tired today. 仍是 be 的普通现在时状态表达。",
+      "practice": {
+        "prompt": "说：她通常在家工作，但这周在办公室工作。",
+        "answer": "She usually works at home, but this week she's working in the office.",
+        "explanation": "用两种时态区分习惯和临时情况。"
+      },
+      "sources": []
+    },
+    "none": {
+      "title": "none：已知的一组里，一个也没有",
+      "idea": "none 代替前面已知的数量或事物；no 放在名词前；not any 用在否定结构中。",
+      "pattern": "no + 名词；none；none of + 限定词 / 代词；not…any",
+      "explain": [
+        "问 How many tickets have you got? 可以答 None.，因为双方知道省略的是 tickets。问是否有人在场则通常答 No one / Nobody，而不是无上下文的 none。",
+        "要说明“哪一组里的零个”，用 none of the… 或 none of them。none of 后可数复数的主谓一致随语体有变化，正式表达可用单数；指不可数内容时用单数。"
+      ],
+      "examples": [
+        {
+          "en": "We need chairs, but we have none.",
+          "zh": "我们需要椅子，可是一把也没有。",
+          "note": "none 代替 chairs；不能说 none chairs。"
+        },
+        {
+          "en": "There is no coffee left. There isn't any coffee left.",
+          "zh": "咖啡一点也不剩了。",
+          "note": "no coffee 和 not any coffee 在这里表达相同的否定。"
+        }
+      ],
+      "pitfall": "别把否定叠加：I don't have none 在标准英语里应改为 I don't have any 或 I have none。只谈两者都不，通常用 neither。",
+      "practice": {
+        "prompt": "别人问你还有多少张票。回答：一张也没有。",
+        "answer": "None. / I haven't got any tickets left.",
+        "explanation": "前文已明确 tickets，none 可以独立作数量回答。"
+      },
+      "sources": [
+        "none"
+      ]
+    },
+    "time-prepositions": {
+      "title": "at / on / in：时间的不同层级",
+      "idea": "钟点、具体日期和较长时段，通常使用不同介词。",
+      "pattern": "at 8 o'clock；on Monday / 3 May；in July / 2027 / the morning",
+      "explain": [
+        "at 常配钟点；on 配日期、星期以及特定一天的早晚；in 配月份、年份、季节或泛指的早中晚。",
+        "next、last、this、every 等限定的时间短语通常不加这些介词，如 next week。from…to… 表示起止范围。"
+      ],
+      "examples": [
+        {
+          "en": "The class starts at nine on Monday.",
+          "zh": "课在星期一九点开始。",
+          "note": "钟点用 at，星期用 on。"
+        },
+        {
+          "en": "We met on a cold morning in January.",
+          "zh": "我们在一月一个寒冷的早晨见了面。",
+          "note": "特定的一天早晨用 on；月份用 in。"
+        }
+      ],
+      "pitfall": "in next week 多了介词；通常直接说 next week。at night 是常见固定说法，需要单独记。",
+      "practice": {
+        "prompt": "说：会议从两点开到四点。",
+        "answer": "The meeting runs from two to four.",
+        "explanation": "from…to… 把开始和结束连起来。"
+      },
+      "sources": []
+    },
+    "past-be": {
+      "title": "was / were：把身份、状态和位置放到过去",
+      "idea": "be 的过去时仍然是 be，只是从 am / is / are 换成 was / were。",
+      "pattern": "I / he / she / it was；you / we / they were",
+      "explain": [
+        "过去的状态、身份、位置可以直接用 was / were。否定加 not，提问把 was / were 提前。",
+        "它和 did 的问法不要混用。Were you at home? 是 be 句；Did you stay at home? 才是实义动词 stay 的问句。"
+      ],
+      "examples": [
+        {
+          "en": "I was busy yesterday.",
+          "zh": "我昨天很忙。",
+          "note": "说明过去的状态。"
+        },
+        {
+          "en": "Where were they last night?",
+          "zh": "他们昨晚在哪里？",
+          "note": "they 配 were，疑问仍用 be 提前。"
+        }
+      ],
+      "pitfall": "Did you were…? 把两套疑问结构混在一起；应为 Were you…?。",
+      "practice": {
+        "prompt": "说：我们当时不在办公室。",
+        "answer": "We weren't in the office then.",
+        "explanation": "we 的过去 be 用 were；否定为 weren't。"
+      },
+      "sources": []
+    },
+    "past-simple": {
+      "title": "一般过去时：在过去的时间线上交代事件",
+      "idea": "把事情放在已经结束的过去时段，或按顺序讲过去发生了什么。",
+      "pattern": "肯定：动词过去式；否定：didn't + 原形；疑问：Did… + 原形？",
+      "explain": [
+        "规则动词常加 -ed；不规则动词如 go → went，需要记忆。问“做了什么”时，用 What did…do?。",
+        "有明确过去时间，如 yesterday、last week，通常用过去时。讲故事时也可以依靠前文建立的过去背景，不必句句重复时间。"
+      ],
+      "examples": [
+        {
+          "en": "She opened the window and sat down.",
+          "zh": "她打开窗户，坐了下来。",
+          "note": "两个过去动作按顺序展开。"
+        },
+        {
+          "en": "When did you see him?",
+          "zh": "你什么时候见到他的？",
+          "note": "did 后用 see，不用 saw。"
+        }
+      ],
+      "pitfall": "didn't went 把过去标记写了两次；正确形式是 didn't go。",
+      "practice": {
+        "prompt": "问：你昨天买了什么？",
+        "answer": "What did you buy yesterday?",
+        "explanation": "过去疑问用 did，buy 保持原形。"
+      },
+      "sources": []
+    },
+    "have": {
+      "title": "have 不只表示拥有",
+      "idea": "have 可以是实义动词，也可以帮助构成完成时；先看后面接什么。",
+      "pattern": "have / has / had + 名词；have / has / had + 过去分词",
+      "explain": [
+        "have lunch、have a shower 等表示活动；have a car 表示拥有。作为普通实义动词时，疑问和否定通常借助 do / does / did。",
+        "have got 常表示现在拥有：Have you got…? / I haven't got…。表达过去拥有，通常用 had。完成时里的 have 则是助动词。"
+      ],
+      "examples": [
+        {
+          "en": "We had lunch at one.",
+          "zh": "我们一点吃了午饭。",
+          "note": "had 是表示“吃”的 have 的过去式。"
+        },
+        {
+          "en": "Have you had lunch?",
+          "zh": "你吃过午饭了吗？",
+          "note": "第一个 have 是完成时助动词，had 是实义动词的过去分词。"
+        }
+      ],
+      "pitfall": "不要因为见到 have 就都用同一种问法。Did you have…? 与 Have you had…? 的时态和结构不同。",
+      "practice": {
+        "prompt": "说：她昨天有很多工作要做。",
+        "answer": "She had a lot of work to do yesterday.",
+        "explanation": "过去拥有或承担的工作用 had。"
+      },
+      "sources": []
+    },
+    "present-perfect": {
+      "title": "现在完成时：从现在回看此前的事",
+      "idea": "动作虽发生在之前，谈话重心却在现在的结果、经历或持续情况。",
+      "pattern": "have / has + 过去分词",
+      "explain": [
+        "结果用法：事情已经做完，现在的状况因此改变。经历用法：在截至现在的人生或时间范围内做过某事。",
+        "持续用法常和 for / since 配合；for 是一段时长，since 是起点。并不是出现 for 就一定用完成时，仍要看是否持续到现在。"
+      ],
+      "examples": [
+        {
+          "en": "I've lost my key, so I can't get in.",
+          "zh": "我把钥匙弄丢了，现在进不去。",
+          "note": "过去的遗失造成眼下的结果。"
+        },
+        {
+          "en": "She has lived here since 2020.",
+          "zh": "她从 2020 年起一直住在这里。",
+          "note": "起点在过去，状态延续至现在。"
+        }
+      ],
+      "pitfall": "have 后用过去分词，不是随便一个过去式：has went 应为 has gone。",
+      "practice": {
+        "prompt": "说：我已经完成报告了。",
+        "answer": "I've finished the report.",
+        "explanation": "把已完成的结果带到现在。"
+      },
+      "sources": []
+    },
+    "past-or-perfect": {
+      "title": "过去时还是完成时：你站在哪条时间线上？",
+      "idea": "过去时定位一个结束的过去时段；现在完成时把此前的事情和现在连起来。",
+      "pattern": "I did it yesterday. / I've done it already.",
+      "explain": [
+        "要回答“什么时候发生”，并给出明确结束的时间，通常用一般过去时。要问截至现在的经历或结果，常用现在完成时。",
+        "可以先用完成时引出经历，再用过去时补充细节。today、this week 等时段是否仍被当作开放范围，要结合说话时的视角。"
+      ],
+      "examples": [
+        {
+          "en": "Have you been to Rome? — Yes, I went there in May.",
+          "zh": "你去过罗马吗？——去过，我五月去了那里。",
+          "note": "先问经历，再落到过去的具体时间。"
+        },
+        {
+          "en": "I lost my key yesterday, but I found it later.",
+          "zh": "我昨天丢了钥匙，但后来找到了。",
+          "note": "叙述已结束的过去事件，不表示现在仍丢着。"
+        }
+      ],
+      "pitfall": "标准用法不把明确结束的 yesterday 直接配现在完成时：I've seen her yesterday 应改为 I saw her yesterday。",
+      "practice": {
+        "prompt": "说：我去年读了那本书。",
+        "answer": "I read that book last year.",
+        "explanation": "last year 是结束的过去时段；read 的过去式拼写相同、读音不同。"
+      },
+      "sources": []
+    },
+    "already-yet": {
+      "title": "already / yet / just：补充事情进展",
+      "idea": "already 常说已经做了，yet 常询问或否定截至现在是否完成。",
+      "pattern": "have already done；haven't done…yet；Have…done…yet?",
+      "explain": [
+        "already 通常放在 have / has 与过去分词之间；yet 常放在疑问句和否定句末尾。just 常表示刚刚。",
+        "这些词帮助表达预期和进度，但不是某个时态的唯一标志。这里先掌握它们与现在完成时搭配的基本用法。"
+      ],
+      "examples": [
+        {
+          "en": "I've already sent the email.",
+          "zh": "我已经发了邮件。",
+          "note": "already 在 have 与 sent 之间。"
+        },
+        {
+          "en": "Has the bus arrived yet? — Not yet.",
+          "zh": "公交车到了吗？——还没有。",
+          "note": "yet 对应截至现在的期待。"
+        }
+      ],
+      "pitfall": "He hasn't arrived already 不适合作为普通的“他还没到”；通常说 He hasn't arrived yet。",
+      "practice": {
+        "prompt": "说：我还没做完。",
+        "answer": "I haven't finished yet.",
+        "explanation": "否定完成时配句末 yet。"
+      },
+      "sources": []
+    },
+    "will": {
+      "title": "will：预测、承诺与临时决定",
+      "idea": "说对未来的判断，或当场决定要做什么，常用 will。",
+      "pattern": "will / won't + 动词原形；Will… + 原形？",
+      "explain": [
+        "will 后的动词不随人称变化。否定缩写是 won't，不是 willn't。",
+        "will 可以表达承诺、愿意帮助或即时决定；shall 在现代英语中常见于 Shall I / we…? 的提议。"
+      ],
+      "examples": [
+        {
+          "en": "Don't worry. I'll help you.",
+          "zh": "别担心，我会帮你。",
+          "note": "说话时作出的承诺或帮助意愿。"
+        },
+        {
+          "en": "I think it will be cold tomorrow.",
+          "zh": "我想明天会冷。",
+          "note": "对未来的判断。"
+        }
+      ],
+      "pitfall": "will 后不再加 to，也不改过去式：will to go 应为 will go。",
+      "practice": {
+        "prompt": "问：你什么时候回来？",
+        "answer": "When will you come back?",
+        "explanation": "疑问词后是 will + 主语 + 原形。"
+      },
+      "sources": []
+    },
+    "future-choice": {
+      "title": "说将来：先分清计划、安排与预测",
+      "idea": "未来的事情不只一种表达。不同结构突出不同信息。",
+      "pattern": "will do / be going to do / be doing / 一般现在时",
+      "explain": [
+        "临时决定常用 will；已有打算常用 going to；已经安排好的个人活动常用现在进行时；时刻表常用一般现在时。",
+        "这些表达有重叠，不能只凭“明天”自动选一种。先想你要强调决定、安排，还是时间表。"
+      ],
+      "examples": [
+        {
+          "en": "I'm meeting the tutor at three tomorrow.",
+          "zh": "我明天三点要见导师。",
+          "note": "听起来已有具体安排。"
+        },
+        {
+          "en": "The train leaves at six.",
+          "zh": "火车六点发车。",
+          "note": "时刻表上的安排常用一般现在时。"
+        }
+      ],
+      "pitfall": "不要把现在进行时一律译成“正在”。有将来时间和已安排的语境时，它可以表达未来。",
+      "practice": {
+        "prompt": "看到电话响，当场说：我来接。",
+        "answer": "I'll answer it.",
+        "explanation": "即时决定通常用 will。"
+      },
+      "sources": []
+    },
+    "had-better": {
+      "title": "had better：针对眼前情况的劝告",
+      "idea": "它通常暗示：这样做更妥当，否则可能有不好的后果。",
+      "pattern": "had better + 原形；had better not + 原形",
+      "explain": [
+        "虽然有 had，这里通常谈现在或将来，不是过去时。口语中常缩写为 'd better。",
+        "语气比一般的 should 更有紧迫感，不适合把所有日常建议都说得像警告。"
+      ],
+      "examples": [
+        {
+          "en": "You'd better take a coat; it's getting cold.",
+          "zh": "你最好带件外套，天气变冷了。",
+          "note": "建议与当前情况有关。"
+        },
+        {
+          "en": "We'd better not be late.",
+          "zh": "我们最好别迟到。",
+          "note": "not 放在 better 后、动词前。"
+        }
+      ],
+      "pitfall": "had better to go 多了 to；应为 had better go。",
+      "practice": {
+        "prompt": "提醒对方：你最好现在出发。",
+        "answer": "You'd better leave now.",
+        "explanation": "用原形 leave，不加 to。"
+      },
+      "sources": []
+    },
+    "object-clause": {
+      "title": "宾语从句：把一句话放进另一句话里",
+      "idea": "say、think、know 等动词后，可以用完整的小句说明所说、所想、所知的内容。",
+      "pattern": "主句 + (that) + 主语 + 谓语",
+      "explain": [
+        "She says that… 后面的内容仍需要自己的主语和谓语。that 在不少日常宾语从句中可以省略，意思不变。",
+        "如果主句是过去时，可能涉及转述时态变化；若主句是现在时，不要机械地把从句也改成过去时。"
+      ],
+      "examples": [
+        {
+          "en": "I think that this plan will work.",
+          "zh": "我认为这个计划行得通。",
+          "note": "that 引出所想的完整内容。"
+        },
+        {
+          "en": "She says she is busy.",
+          "zh": "她说她很忙。",
+          "note": "that 被省略，但 she is busy 的内部结构完整。"
+        }
+      ],
+      "pitfall": "that 不是从句里的主语。He says that is tired 若要说“他说他累了”，应为 He says that he is tired。",
+      "practice": {
+        "prompt": "说：我知道他住在哪里。（用 lives）",
+        "answer": "I know where he lives.",
+        "explanation": "疑问词也能引出宾语从句，其内部用陈述语序。"
+      },
+      "sources": []
+    },
+    "degree": {
+      "title": "too / very / enough：程度是否够用",
+      "idea": "very 加强程度；too 表示超过合适范围；enough 表示达到需要的程度。",
+      "pattern": "too + 形容词 + to do；形容词 + enough + to do；enough + 名词",
+      "explain": [
+        "very tired 只是很累；too tired to work 表示累到没法工作。不要把 too 当成任何语境下的“非常”。",
+        "enough 修饰形容词或副词时放在后面，修饰名词时放在前面。"
+      ],
+      "examples": [
+        {
+          "en": "The box is too heavy for me to lift.",
+          "zh": "箱子太重，我搬不动。",
+          "note": "too…to… 表示程度导致做不到。"
+        },
+        {
+          "en": "We have enough time, but the room isn't warm enough.",
+          "zh": "我们有足够时间，但房间不够暖。",
+          "note": "名词前 enough time；形容词后 warm enough。"
+        }
+      ],
+      "pitfall": "enough tall 的顺序不对；说 tall enough。句型转换也要保留原句是谁做动作。",
+      "practice": {
+        "prompt": "说：他够大了，可以独自旅行。",
+        "answer": "He is old enough to travel alone.",
+        "explanation": "enough 放在 old 后，再接 to do。"
+      },
+      "sources": []
+    },
+    "object-to": {
+      "title": "want / tell + 人 + to do：让谁做什么",
+      "idea": "把希望、要求或指示的对象明确放在 to do 之前。",
+      "pattern": "want / ask / tell + 宾语 + to do；… + 宾语 + not to do",
+      "explain": [
+        "I want to leave. 是我想离开；I want you to leave. 是我想让你离开。宾语决定后面动作由谁做。",
+        "否定的不定式把 not 放在 to 前。不同动词有自己的搭配，不能把所有“让”都翻成同一结构。"
+      ],
+      "examples": [
+        {
+          "en": "The teacher asked us to wait.",
+          "zh": "老师请我们等一等。",
+          "note": "us 是 wait 的实际执行者。"
+        },
+        {
+          "en": "I told him not to worry.",
+          "zh": "我告诉他不要担心。",
+          "note": "not to worry 是否定动作内容。"
+        }
+      ],
+      "pitfall": "tell to do 缺少要告诉的人；通常需要 tell someone to do。",
+      "practice": {
+        "prompt": "说：我想让她给我打电话。",
+        "answer": "I want her to call me.",
+        "explanation": "her 作 want 的宾语，也是 call 的执行者。"
+      },
+      "sources": []
+    },
+    "comparison": {
+      "title": "比较级与最高级：比谁，在哪个范围",
+      "idea": "比较级建立两者或两个状态的比较；最高级在某个范围中挑出最突出的一项。",
+      "pattern": "形容词 -er / more… + than；the + -est / most…；as…as",
+      "explain": [
+        "短词常加 -er / -est，较长的词常用 more / most；good → better → best 等要单独记。",
+        "as…as 中间用原级。比较的两边要可比：自己的车与对方的车比较，可以用 mine / yours 代替重复名词。"
+      ],
+      "examples": [
+        {
+          "en": "This route is shorter than the other one.",
+          "zh": "这条路线比另一条短。",
+          "note": "than 引出比较对象。"
+        },
+        {
+          "en": "It's the most useful tool in the box.",
+          "zh": "它是盒子里最有用的工具。",
+          "note": "最高级说明比较范围 in the box。"
+        }
+      ],
+      "pitfall": "more easier 重复标记比较级；用 easier。as better as 应改为 as good as。",
+      "practice": {
+        "prompt": "说：这台电脑和我的一样快。",
+        "answer": "This computer is as fast as mine.",
+        "explanation": "同级比较用 as + 原级 + as。"
+      },
+      "sources": []
+    },
+    "quantity": {
+      "title": "much / many / less / fewer：比较数量",
+      "idea": "先辨认名词能否计数，再选择数量词。",
+      "pattern": "many / fewer + 复数可数名词；much / less + 不可数名词；more + 两类皆可",
+      "explain": [
+        "可数的 books 配 many / fewer；不可数的 time 配 much / less。a lot of 两类都可用，在肯定陈述中很常见。",
+        "a few / a little 表示还有一些；few / little 更强调少到不足。正式表达中比较可数个体的数量通常用 fewer；固定数量、距离等表达还需结合惯用法。"
+      ],
+      "examples": [
+        {
+          "en": "We need fewer boxes and less tape.",
+          "zh": "我们需要更少的盒子和更少的胶带。",
+          "note": "盒子可数，胶带按材料看待。"
+        },
+        {
+          "en": "I have a little time and a few questions.",
+          "zh": "我有一点时间和几个问题。",
+          "note": "time 不可数，questions 可数。"
+        }
+      ],
+      "pitfall": "much people 搭配不对；people 是复数可数用法，通常用 many people。",
+      "practice": {
+        "prompt": "说：我们需要更多时间。",
+        "answer": "We need more time.",
+        "explanation": "more 可以修饰不可数名词 time。"
+      },
+      "sources": [
+        "quantity"
+      ]
+    },
+    "indefinite": {
+      "title": "someone / anything / nobody：不指定具体对象",
+      "idea": "复合不定代词把范围和对象类型合在一起：人用 -one / -body，事物用 -thing。",
+      "pattern": "some- / any- / no- / every- + one, body, thing",
+      "explain": [
+        "someone 指某个人，everyone 指每个人，nobody 表示没有人。作主语时，通常按单数处理。",
+        "something interesting 中，形容词放在不定代词后。含 no- 的词已带否定，不再加一个普通否定来表达同一意思。"
+      ],
+      "examples": [
+        {
+          "en": "Everybody is ready.",
+          "zh": "每个人都准备好了。",
+          "note": "语法上按单数用 is。"
+        },
+        {
+          "en": "I haven't found anything useful.",
+          "zh": "我还没找到有用的东西。",
+          "note": "否定句用 anything，useful 放后面。"
+        }
+      ],
+      "pitfall": "Nobody doesn't know 若想表达“没有人知道”，应说 Nobody knows；原句的否定范围不同。",
+      "practice": {
+        "prompt": "说：我想吃点热的东西。",
+        "answer": "I'd like something hot to eat.",
+        "explanation": "hot 放在 something 后，to eat 补充用途。"
+      },
+      "sources": []
+    },
+    "past-continuous": {
+      "title": "过去进行时：给过去的事件铺背景",
+      "idea": "把镜头放到过去某一刻，说明当时正在进行什么。",
+      "pattern": "was / were + 动词 -ing",
+      "explain": [
+        "过去进行时常作为背景，一般过去时交代发生的事件。不是“长动作永远用进行、短动作永远用过去”，而是看叙述视角。",
+        "when 可引出事件时间，while 常强调同时持续的活动；具体时态仍取决于意思。"
+      ],
+      "examples": [
+        {
+          "en": "I was cooking when the lights went out.",
+          "zh": "停电时我正在做饭。",
+          "note": "做饭是背景，停电是发生的事件。"
+        },
+        {
+          "en": "At eight, they were still waiting.",
+          "zh": "八点时，他们还在等。",
+          "note": "把八点作为观察过去活动的时间点。"
+        }
+      ],
+      "pitfall": "was cook 缺少 -ing；过去进行时需要 was cooking。",
+      "practice": {
+        "prompt": "说：她打来电话时，我正在看书。",
+        "answer": "I was reading when she called.",
+        "explanation": "进行时铺背景，过去时交代来电。"
+      },
+      "sources": []
+    },
+    "past-perfect": {
+      "title": "过去完成时：回到过去，再往前一步",
+      "idea": "先建立一个过去的参照点，再表达在那之前已完成的事情。",
+      "pattern": "had + 过去分词",
+      "explain": [
+        "过去完成时强调“过去的过去”。常用来说明原因、先后或某件事在另一件过去事件发生前已结束。",
+        "先后已经由 after / before 等词清楚表达时，不总是必须使用过去完成时；需要强调先完成的关系时再用它。"
+      ],
+      "examples": [
+        {
+          "en": "The train had left when we arrived.",
+          "zh": "我们到达时，火车已经开走了。",
+          "note": "先开走，后到达。"
+        },
+        {
+          "en": "I couldn't pay because I'd forgotten my wallet.",
+          "zh": "我付不了钱，因为忘带钱包了。",
+          "note": "忘带发生在付钱失败之前。"
+        }
+      ],
+      "pitfall": "不要看到两件过去的事就全部换成 had done。保留过去参照点，再标记更早的动作。",
+      "practice": {
+        "prompt": "说：我回到家时，她已经走了。",
+        "answer": "She had already left when I got home.",
+        "explanation": "left 是 leave 的过去分词。"
+      },
+      "sources": []
+    },
+    "relative": {
+      "title": "定语从句：在名词后说明“哪一个”",
+      "idea": "把描述放在名词后，用关系词把名词和描述连接起来。",
+      "pattern": "人 + who / that…；物 + which / that…；所属 + whose + 名词…",
+      "explain": [
+        "先找到被修饰的名词，再看它在后面小句里充当主语还是宾语。关系词不是装饰，它承担这个位置的作用。",
+        "who 通常指人，有时也指被人格化或关系亲近的宠物；which 常指物和动物。whose 后跟名词，表示所属。"
+      ],
+      "examples": [
+        {
+          "en": "The woman who lives upstairs is a nurse.",
+          "zh": "住在楼上的女士是一名护士。",
+          "note": "who 是 lives 的主语，指 the woman。"
+        },
+        {
+          "en": "I met a writer whose books I love.",
+          "zh": "我遇见了一位作家，我很喜欢他的书。",
+          "note": "whose books 表示那位作家的书。"
+        }
+      ],
+      "pitfall": "The man who he called me 中，若想说“给我打电话的那个人”，who 已作主语，不再加 he。",
+      "practice": {
+        "prompt": "说：我喜欢有大窗户的房间。",
+        "answer": "I like rooms that have large windows.",
+        "explanation": "that 代替 rooms，作从句主语。"
+      },
+      "sources": [
+        "relative"
+      ]
+    },
+    "relative-omission": {
+      "title": "关系词什么时候可以省略？",
+      "idea": "在限定性定语从句中，关系词作宾语时常可省；作主语时不能这样省。",
+      "pattern": "the book (that) I bought；the person who called",
+      "explain": [
+        "The book that I bought 中，I 是主语，that 是 bought 的宾语，所以可以省略 that。",
+        "The book that explains this rule 中，that 是 explains 的主语，不能直接删掉。带逗号的非限定性从句也不能这样省关系词。"
+      ],
+      "examples": [
+        {
+          "en": "The film I watched was funny.",
+          "zh": "我看的那部电影很有趣。",
+          "note": "省略的是 watched 的宾语。"
+        },
+        {
+          "en": "The train that stops here is late.",
+          "zh": "在这里停靠的那班火车晚点了。",
+          "note": "that 是 stops 的主语，必须保留。"
+        }
+      ],
+      "pitfall": "如果介词直接放在关系词前，不能随便省略：the person to whom I spoke；口语可说 the person I spoke to。",
+      "practice": {
+        "prompt": "把这句可省的词去掉：The bag that she bought is red.",
+        "answer": "The bag she bought is red.",
+        "explanation": "she 是从句主语，that 作 bought 的宾语。"
+      },
+      "sources": [
+        "relative"
+      ]
+    },
+    "deduction-now": {
+      "title": "must / can't：有根据地判断现在的情况",
+      "idea": "这里不是命令或能力，而是根据线索作很有把握的推测。",
+      "pattern": "must be / do；can't be / do；must be doing",
+      "explain": [
+        "must 表示根据证据很确信某事为真，can't 表示很确信不可能。语气强，但不等于事实已经被核实。",
+        "推测正在发生的动作，可以用 must be doing。若把握较低，改用 may / might / could。"
+      ],
+      "examples": [
+        {
+          "en": "The lights are on. Someone must be home.",
+          "zh": "灯亮着，一定有人在家。",
+          "note": "灯是推测的线索，并非直接证明。"
+        },
+        {
+          "en": "That can't be Mia; she's abroad.",
+          "zh": "那不可能是米娅，她在国外。",
+          "note": "根据已知信息排除一种可能。"
+        }
+      ],
+      "pitfall": "推测“不可能”通常用 can't，不用表示禁止的 mustn't。",
+      "practice": {
+        "prompt": "根据声音推测：他们一定正在练琴。",
+        "answer": "They must be practising the piano.",
+        "explanation": "must be + -ing 表示对正在发生的动作作推测。"
+      },
+      "sources": []
+    },
+    "deduction-past": {
+      "title": "must have done：推测过去发生过什么",
+      "idea": "have + 过去分词把情态推测放到过去；不是现在完成时的普通陈述。",
+      "pattern": "must / can't / may / might + have + 过去分词",
+      "explain": [
+        "must have done 表示强烈推测某事发生过；can't have done 表示强烈推测不可能发生过。",
+        "过去的义务用 had to do；must have done 主要是在说“想必已经做了”，不要把两者混为一谈。"
+      ],
+      "examples": [
+        {
+          "en": "He must have missed the bus.",
+          "zh": "他一定是错过公交车了。",
+          "note": "解释眼下的迟到，是对过去作推测。"
+        },
+        {
+          "en": "She can't have written this yesterday; she was away.",
+          "zh": "她不可能昨天写了这个，她当时不在。",
+          "note": "根据线索否定过去的可能。"
+        }
+      ],
+      "pitfall": "must have went 用错动词形式；have 后要用过去分词 gone。",
+      "practice": {
+        "prompt": "说：他可能已经忘了。",
+        "answer": "He may have forgotten.",
+        "explanation": "may 表示可能，have forgotten 指向过去。"
+      },
+      "sources": []
+    },
+    "may": {
+      "title": "may / might：承认还有其他可能",
+      "idea": "你不确定时，不必把猜测说成事实。用情态词表达不确定程度。",
+      "pattern": "may / might + 原形；may / might have + 过去分词",
+      "explain": [
+        "may be 是情态动词加 be，意思是“可能是”；maybe 是副词，常放在句首，相当于 perhaps。",
+        "谈过去的可能性时，用 may / might have done。不同语境下语气有差别，不要机械地给 may 和 might 分配固定概率。"
+      ],
+      "examples": [
+        {
+          "en": "She may be at the library.",
+          "zh": "她可能在图书馆。",
+          "note": "may 后接 be。"
+        },
+        {
+          "en": "Maybe she left early.",
+          "zh": "也许她早走了。",
+          "note": "maybe 修饰整句话，left 用过去时。"
+        }
+      ],
+      "pitfall": "She maybe busy 缺少谓语；改为 She may be busy 或 Maybe she is busy。",
+      "practice": {
+        "prompt": "用两种方式说：他可能知道答案。",
+        "answer": "He may know the answer. / Perhaps he knows the answer.",
+        "explanation": "第一句 may 后用 know；第二句 he 后的 knows 有 -s。"
+      },
+      "sources": []
+    },
+    "reported": {
+      "title": "间接引语：换一个人的视角转述",
+      "idea": "转述要重新安排人称、时间和地点；时态变化是这套视角变化的一部分。",
+      "pattern": "said (that)…；told + 人 + (that)…",
+      "explain": [
+        "过去视角转述时，常把现在时改为过去时、will 改为 would、现在完成时改为过去完成时。",
+        "如果事情仍然成立或转述仍在同一时间地点，不一定机械地全部后移。先判断谁在什么时候转述给谁听。"
+      ],
+      "examples": [
+        {
+          "en": "Mia said, 'I am tired.' → Mia said she was tired.",
+          "zh": "米娅说：“我累了。”→ 米娅说她累了。",
+          "note": "I 变成 she，转述视角的 am 常改为 was。"
+        },
+        {
+          "en": "He told me that he would call later.",
+          "zh": "他告诉我，他晚些时候会打电话。",
+          "note": "tell 要交代告诉谁，will 在过去转述里变为 would。"
+        }
+      ],
+      "pitfall": "He said me… 应为 He told me… 或 He said to me…。不要把 say 和 tell 的宾语结构混用。",
+      "practice": {
+        "prompt": "转述：Tom said, 'I have finished.'",
+        "answer": "Tom said that he had finished.",
+        "explanation": "完成时随过去转述视角常变成过去完成时。"
+      },
+      "sources": []
+    },
+    "indirect-question": {
+      "title": "间接疑问句：外面在问，里面仍用陈述语序",
+      "idea": "把问题嵌入 know、ask、wonder 等结构后，内部不再照搬直接问句的倒装。",
+      "pattern": "疑问词 / if / whether + 主语 + 谓语",
+      "explain": [
+        "特殊疑问保留 what、where、why 等词；一般疑问用 if / whether 引出“是否”。",
+        "内部 do / does / did 的助动词问法要还原，时态回到实义动词上。整句是否用问号，看最外层是不是问题。"
+      ],
+      "examples": [
+        {
+          "en": "Do you know where she lives?",
+          "zh": "你知道她住在哪里吗？",
+          "note": "外层是问题；里面是 she lives，不是 does she live。"
+        },
+        {
+          "en": "He asked if I was ready.",
+          "zh": "他问我是否准备好了。",
+          "note": "一般疑问变为 if 引导的小句。"
+        }
+      ],
+      "pitfall": "I wonder where is he 错在保留了直接问句语序；应为 I wonder where he is。",
+      "practice": {
+        "prompt": "礼貌地问：你能告诉我车站在哪里吗？",
+        "answer": "Could you tell me where the station is?",
+        "explanation": "内部把主语 the station 放在 is 前。"
+      },
+      "sources": []
+    },
+    "condition-real": {
+      "title": "真实条件句：条件成立，结果就会怎样",
+      "idea": "讨论真实可能发生的条件时，先说明条件，再说明结果。",
+      "pattern": "If + 一般现在时，主句 + will / can / 情态表达",
+      "explain": [
+        "常见的将来真实条件句在 if 小句里用一般现在时，即使说的是将来；结果部分可用 will、can 或祈使句。",
+        "说普遍规律时，两边常用一般现在时。if 条件不只一种形式，本课先抓真实可能这一类。"
+      ],
+      "examples": [
+        {
+          "en": "If it rains tomorrow, we'll stay inside.",
+          "zh": "如果明天下雨，我们就待在室内。",
+          "note": "if 里用 rains，主句用 will stay。"
+        },
+        {
+          "en": "If you need help, call me.",
+          "zh": "如果你需要帮助，就给我打电话。",
+          "note": "结果部分可以是祈使句。"
+        }
+      ],
+      "pitfall": "普通将来条件不机械地写 If it will rain…。不过 will 表意愿等特殊意思时另当别论。",
+      "practice": {
+        "prompt": "说：如果我找到你的笔，就给你打电话。",
+        "answer": "If I find your pen, I'll call you.",
+        "explanation": "条件里的 find 用现在时表示未来可能。"
+      },
+      "sources": []
+    },
+    "passive": {
+      "title": "被动语态：把受到动作影响的人或物放到前面",
+      "idea": "动作的执行者不是重点时，被动语态能让读者先看到你真正要谈的对象。",
+      "pattern": "主语 + be + 过去分词（+ by + 执行者）",
+      "explain": [
+        "主动句 She repaired the bike. 把人放前面；被动句 The bike was repaired. 把自行车作为话题。",
+        "时态变化主要落在 be 上，过去分词负责表示被动。只有能带合适宾语的动词，才通常能这样转成被动。"
+      ],
+      "examples": [
+        {
+          "en": "The bridge was built in 1998.",
+          "zh": "这座桥建于 1998 年。",
+          "note": "was 表过去，built 是 build 的过去分词。"
+        },
+        {
+          "en": "These rooms are cleaned every day.",
+          "zh": "这些房间每天打扫。",
+          "note": "一般现在时的被动：are cleaned。"
+        }
+      ],
+      "pitfall": "The accident was happened 不成立，因为 happen 不以这种方式带宾语；说 The accident happened。",
+      "practice": {
+        "prompt": "改成以 the window 开头：Someone broke the window.",
+        "answer": "The window was broken.",
+        "explanation": "不知道或不强调执行者时，可不写 by someone。"
+      },
+      "sources": []
+    },
+    "passive-forms": {
+      "title": "完成时、将来时与情态动词的被动",
+      "idea": "先决定时间或情态，再把被动的 be + 过去分词接上。",
+      "pattern": "has / have been done；will be done；can / should be done；is being done",
+      "explain": [
+        "现在完成被动由 have / has + been + 过去分词组成；将来或情态被动在 will / can / should 后用 be 原形。",
+        "is being done 表示现在正在被做；has been done 表示已经完成并与现在有关。being 与 been 的任务不同。"
+      ],
+      "examples": [
+        {
+          "en": "The results will be announced tomorrow.",
+          "zh": "结果将在明天公布。",
+          "note": "will 后用 be，announce 变 announced。"
+        },
+        {
+          "en": "The road is being repaired.",
+          "zh": "这条路正在维修。",
+          "note": "being repaired 表示正在进行的被动动作。"
+        }
+      ],
+      "pitfall": "has been repair 少了过去分词形式；应为 has been repaired。",
+      "practice": {
+        "prompt": "说：这项工作必须今天完成。",
+        "answer": "This work must be finished today.",
+        "explanation": "must 后接 be + 过去分词。"
+      },
+      "sources": []
+    },
+    "word-order": {
+      "title": "先搭主干：谁做了什么",
+      "idea": "英语陈述句通常先把主语和动词关系说清，再加入对象、地点和时间。",
+      "pattern": "主语 + 谓语 +（宾语 / 表语）+ 其他信息",
+      "explain": [
+        "先从长句里找主语和带时态的谓语，再找它作用于谁或什么。形容词、介词短语和从句都可能在旁边补充说明。",
+        "常见的中性语序是方式、地点、时间，但不是不可改变的公式。前置时间或地点通常是为了组织信息。"
+      ],
+      "examples": [
+        {
+          "en": "My brother reads the news on the train every morning.",
+          "zh": "我哥哥每天早晨在火车上看新闻。",
+          "note": "先找主干 My brother reads the news。"
+        },
+        {
+          "en": "The room looks bright.",
+          "zh": "这个房间看起来很明亮。",
+          "note": "looks 是系动词，bright 说明主语状态，不是宾语。"
+        }
+      ],
+      "pitfall": "不要因为句子长就把第一个名词后的所有词都当主干。先找真正的谓语动词。",
+      "practice": {
+        "prompt": "把这些词排成中性陈述句：every day / English / she / studies",
+        "answer": "She studies English every day.",
+        "explanation": "先主语 she，再谓语 studies，最后补时间。"
+      },
+      "sources": []
+    },
+    "future-continuous": {
+      "title": "将来进行时：想象未来某刻正在发生的画面",
+      "idea": "把观察点放在将来某个时刻，描绘届时正在展开的活动。",
+      "pattern": "will be + 动词 -ing",
+      "explain": [
+        "将来进行时关注那时的过程，而不只是预测动作会不会发生。可用 this time tomorrow 等建立观察点。",
+        "也可用于询问对方预期的安排，语气有时比直接追问意愿更委婉。"
+      ],
+      "examples": [
+        {
+          "en": "This time tomorrow, we'll be flying to Seoul.",
+          "zh": "明天这个时候，我们正在飞往首尔的途中。",
+          "note": "观察点在未来的飞行过程内。"
+        },
+        {
+          "en": "Will you be using the car this evening?",
+          "zh": "你今晚会用车吗？",
+          "note": "询问预期安排，便于自己作打算。"
+        }
+      ],
+      "pitfall": "will be fly 少了 -ing；will flying 又少了 be。需要整套 will be flying。",
+      "practice": {
+        "prompt": "说：今晚八点我会正在工作。",
+        "answer": "I'll be working at eight tonight.",
+        "explanation": "未来八点是观察活动的时间点。"
+      },
+      "sources": []
+    },
+    "gerund": {
+      "title": "动名词：把动作当作一件事来谈",
+      "idea": "-ing 不一定表示正在进行，也可以把动作放到名词的位置。",
+      "pattern": "doing 作主语 / 宾语；介词 + doing",
+      "explain": [
+        "Swimming is useful. 把“游泳这件事”当主语。enjoy、avoid、finish 等动词后常接 -ing 作宾语。",
+        "介词后若跟动作，通常使用 -ing。to 不一定是不定式标记；look forward to 中的 to 是介词，所以接 meeting 等 -ing 形式。"
+      ],
+      "examples": [
+        {
+          "en": "She enjoys reading on the train.",
+          "zh": "她喜欢在火车上阅读。",
+          "note": "enjoy 后接 reading。"
+        },
+        {
+          "en": "He left without saying goodbye.",
+          "zh": "他没说再见就走了。",
+          "note": "介词 without 后接 saying。"
+        }
+      ],
+      "pitfall": "avoid to do 不符合这个动词的常用搭配；用 avoid doing。",
+      "practice": {
+        "prompt": "说：谢谢你帮助我。",
+        "answer": "Thank you for helping me.",
+        "explanation": "介词 for 后用 helping。"
+      },
+      "sources": []
+    },
+    "verb-prepositions": {
+      "title": "介词搭配：连着整个词组记",
+      "idea": "同一个介词可以承担很多关系，不能只靠一个中文译法推出来。",
+      "pattern": "depend on；belong to；listen to；wait for；be interested in",
+      "explain": [
+        "先确认中心词是动词还是形容词，再把它和介词一起学：listen to music、interested in art。",
+        "搭配后的内容可以是名词、代词或 -ing。遇到新搭配，用一个完整短句记忆，比只背零散介词更容易使用。"
+      ],
+      "examples": [
+        {
+          "en": "It depends on the weather.",
+          "zh": "这取决于天气。",
+          "note": "depend 常与 on 搭配。"
+        },
+        {
+          "en": "She is interested in learning French.",
+          "zh": "她有兴趣学习法语。",
+          "note": "in 后的动作写成 learning。"
+        }
+      ],
+      "pitfall": "不要凭中文给所有动词都加介词：discuss the problem 通常不需要 about。",
+      "practice": {
+        "prompt": "说：我们在等公交车。",
+        "answer": "We're waiting for the bus.",
+        "explanation": "wait for 把等待对象引出来。"
+      },
+      "sources": []
+    },
+    "future-perfect": {
+      "title": "将来完成时：到未来某点之前已经完成",
+      "idea": "从未来的一个截止点回头看，强调届时完成的结果。",
+      "pattern": "will have + 过去分词；by + 将来时间",
+      "explain": [
+        "未来截止点常由 by Friday、by then 等引出。重点不是动作会发生，而是到那时已经做完。",
+        "与将来进行时区分：will be doing 看过程，will have done 看截至未来的完成。"
+      ],
+      "examples": [
+        {
+          "en": "By Friday, I'll have finished the draft.",
+          "zh": "到星期五我就会写完初稿。",
+          "note": "从星期五回看已完成的结果。"
+        },
+        {
+          "en": "At six I'll be working; by eight I'll have finished.",
+          "zh": "六点我会正在工作，八点前会做完。",
+          "note": "一个看过程，一个看截止点。"
+        }
+      ],
+      "pitfall": "will have finish 少了过去分词；应为 will have finished。",
+      "practice": {
+        "prompt": "说：到明天，他们就会完成这项工作。",
+        "answer": "By tomorrow, they will have completed the work.",
+        "explanation": "will have + completed 表示未来截止点前完成。"
+      },
+      "sources": []
+    },
+    "as-if": {
+      "title": "as if / as though：像是，仿佛",
+      "idea": "后面的形式可以体现你把这种情况看成可能事实，还是与事实有距离。",
+      "pattern": "as if + 普通时态；as if + 过去式 / had done（非真实）",
+      "explain": [
+        "如果你认为情况可能属实，可以用普通时态，如 It looks as if it's going to rain.。",
+        "表达与现在事实有距离的假想，常用过去式；表达对更早情形的非真实假想，可用过去完成。先读懂态度，再选形式。"
+      ],
+      "examples": [
+        {
+          "en": "He talks as if he knew everything.",
+          "zh": "他说起话来好像无所不知。",
+          "note": "knew 在这里表达距离感，不是普通的过去时间。"
+        },
+        {
+          "en": "She looked as if she had seen a ghost.",
+          "zh": "她看起来像见了鬼一样。",
+          "note": "had seen 指向那副表情之前的假想经历。"
+        }
+      ],
+      "pitfall": "as if 后不是一律过去时；判断说话者是否把事情当作可能事实。",
+      "practice": {
+        "prompt": "说：听起来好像有人在敲门。",
+        "answer": "It sounds as if someone is knocking.",
+        "explanation": "认为敲门可能正在发生，用普通现在进行时。"
+      },
+      "sources": []
+    },
+    "condition-unreal": {
+      "title": "非真实条件：用过去形式拉开现实距离",
+      "idea": "谈现在或将来较不现实的假设，过去式常表示假设距离，而不是过去时间。",
+      "pattern": "If + 过去式，would / could + 动词原形",
+      "explain": [
+        "If I had more time… 可以是在说现在没有那么多时间。主句用 would 说明假设中的结果。",
+        "假设的 be 在较正式表达中常用 were，尤其 If I were you。不是所有 if 后的过去式都非真实，过去故事中的真实条件要另看语境。"
+      ],
+      "examples": [
+        {
+          "en": "If I lived closer, I would walk to work.",
+          "zh": "如果我住得近些，就会步行上班。",
+          "note": "说的是现在的假设，非过去的居住事实。"
+        },
+        {
+          "en": "If I were you, I would ask again.",
+          "zh": "如果我是你，我会再问一次。",
+          "note": "常见的建议结构。"
+        }
+      ],
+      "pitfall": "普通非真实条件句不要把 would 放进 if 小句当作模板；通常用 If I had…，I would…。",
+      "practice": {
+        "prompt": "说：如果我有车，就能送你回家。",
+        "answer": "If I had a car, I could take you home.",
+        "explanation": "had 表假设，could 表假设中的能力。"
+      },
+      "sources": []
+    },
+    "past-ability": {
+      "title": "could / was able to / managed to：会做与做成",
+      "idea": "过去的一般能力，与某次克服困难后成功完成，是不同的信息。",
+      "pattern": "could + 原形；was / were able to + 原形；managed to + 原形",
+      "explain": [
+        "过去长期具备的能力常用 could；肯定句强调某次实际成功时，通常用 was / were able to 或 managed to。",
+        "couldn't 可以说明某次没有做到。感知、理解等动词如 see、hear、understand 与 could 的用法较灵活，不必把规则理解成没有例外。"
+      ],
+      "examples": [
+        {
+          "en": "At ten, I could swim.",
+          "zh": "十岁时我就会游泳。",
+          "note": "说过去的一般能力。"
+        },
+        {
+          "en": "After three attempts, we managed to open the door.",
+          "zh": "试了三次后，我们终于打开了门。",
+          "note": "突出努力后真的做成。"
+        }
+      ],
+      "pitfall": "将来能力不说 will can，而说 will be able to。",
+      "practice": {
+        "prompt": "说：虽然很难，她最后还是找到了地址。",
+        "answer": "Although it was difficult, she managed to find the address.",
+        "explanation": "managed to 表示最终成功找到。"
+      },
+      "sources": [
+        "ability"
+      ]
+    },
+    "verb-patterns": {
+      "title": "doing 还是 to do：先看前面的动词",
+      "idea": "有些动词固定接 -ing，有些接 to do；有些两者都可以，但意思会改变。",
+      "pattern": "enjoy / avoid doing；want / decide to do；stop / remember doing 或 to do",
+      "explain": [
+        "先记高频搭配，不要用一个中文规则覆盖所有动词。start / begin 等在许多语境中两者都可用。",
+        "stop doing 是停止正在做的事；stop to do 是停下原来的活动，去做另一件事。remember doing 是记得做过；remember to do 是记得去做。"
+      ],
+      "examples": [
+        {
+          "en": "We stopped talking.",
+          "zh": "我们停止了交谈。",
+          "note": "交谈本身停止。"
+        },
+        {
+          "en": "We stopped to buy water.",
+          "zh": "我们停下来买水。",
+          "note": "停下原来的行程，目的是买水。"
+        }
+      ],
+      "pitfall": "两个形式都“看起来像动作”不代表可以随意互换；先确定实际想表达的事件顺序。",
+      "practice": {
+        "prompt": "提醒：记得锁门。",
+        "answer": "Remember to lock the door.",
+        "explanation": "要做的事还未完成，所以用 to lock。"
+      },
+      "sources": []
+    },
+    "complex-sentences": {
+      "title": "简单句、并列句、复合句：先看关系",
+      "idea": "把两个意思放在一起时，要明确它们是并列，还是一个依附于另一个。",
+      "pattern": "完整句 + and / but / so + 完整句；because / although / when + 从句",
+      "explain": [
+        "并列句的两部分地位相当，用 and、but、so 等说明递进、转折或结果。",
+        "复合句中，一部分表达主信息，另一部分给原因、条件或时间。从句本身可能结构完整，但在这个连接方式下依附于主句。"
+      ],
+      "examples": [
+        {
+          "en": "I was tired, but I finished the job.",
+          "zh": "我很累，但还是完成了工作。",
+          "note": "but 连接两个完整陈述。"
+        },
+        {
+          "en": "Because it was late, we took a taxi.",
+          "zh": "因为时间晚了，我们坐了出租车。",
+          "note": "because 引出原因，后面接主信息。"
+        }
+      ],
+      "pitfall": "普通英语不要照搬“因为…所以…”同时使用 because 和 so 来连接同一对分句。",
+      "practice": {
+        "prompt": "用 although 合并：It was raining. We went out.",
+        "answer": "Although it was raining, we went out.",
+        "explanation": "although 已表示让步，主句不再加 but。"
+      },
+      "sources": []
+    },
+    "perfect-continuous": {
+      "title": "完成进行时：此前一直在做，对现在仍有关联",
+      "idea": "与只看完成结果相比，它更突出过程、持续时间或留下的迹象。",
+      "pattern": "have / has been + 动词 -ing",
+      "explain": [
+        "可以表示从过去开始仍在持续，也可以表示刚停止、但现在仍能看见影响的活动。",
+        "完成式常回答做了多少，完成进行式常回答做了多久。know 等状态动词通常仍用普通完成式。"
+      ],
+      "examples": [
+        {
+          "en": "I've been studying for two hours.",
+          "zh": "我已经学了两个小时。",
+          "note": "突出持续的学习过程。"
+        },
+        {
+          "en": "She's written three pages. She's been writing all morning.",
+          "zh": "她写了三页。她写了一整个上午。",
+          "note": "前句数结果，后句说过程与时长。"
+        }
+      ],
+      "pitfall": "I've been knowing him for years 通常应说 I've known him for years；know 是状态。",
+      "practice": {
+        "prompt": "说：他从九点起一直在等。",
+        "answer": "He has been waiting since nine.",
+        "explanation": "since 给起点，完成进行时突出持续等待。"
+      },
+      "sources": []
+    },
+    "used-to": {
+      "title": "used to / would：过去经常，如今未必",
+      "idea": "谈已经改变的过去习惯时，used to 很方便；would 更常用于已建立过去背景的重复动作。",
+      "pattern": "used to + 原形；would + 原形（过去反复动作）",
+      "explain": [
+        "used to 可表达过去习惯，也可表达过去状态，如 used to live。它通常暗示现在已经不同。",
+        "would 描写过去反复发生的动作时需要清楚的过去背景，通常不直接替代 used to 表达单纯状态。"
+      ],
+      "examples": [
+        {
+          "en": "I used to live near the sea.",
+          "zh": "我以前住在海边。",
+          "note": "过去的状态，现在通常已不同。"
+        },
+        {
+          "en": "Every summer, we would walk along the beach.",
+          "zh": "每年夏天，我们都会沿海滩散步。",
+          "note": "背景明确，would 描写重复活动。"
+        }
+      ],
+      "pitfall": "否定和疑问借助 did 时通常用 use to：I didn't use to… / Did you use to…?。",
+      "practice": {
+        "prompt": "说：我以前不喜欢茶。",
+        "answer": "I didn't use to like tea.",
+        "explanation": "didn't 已表示过去，use 不加 -d。"
+      },
+      "sources": []
+    },
+    "adverbs": {
+      "title": "副词的位置与比较：修饰谁，就靠近谁",
+      "idea": "先确定是修饰动作、形容词，还是整句话，再安排副词的位置。",
+      "pattern": "often / usually + 实义动词；be + often / usually；比较：more carefully / faster",
+      "explain": [
+        "频率副词通常在普通实义动词前、be 后，在多词谓语中常放第一个助动词后。only 的位置不同，还可能改变强调范围。",
+        "方式副词常放在动词和宾语之后。形容词描述名词，副词常说明动作方式；fast、hard 等也可以直接作副词。"
+      ],
+      "examples": [
+        {
+          "en": "She often works late. She is usually busy.",
+          "zh": "她经常工作到很晚。她通常很忙。",
+          "note": "频率词在 works 前，在 is 后。"
+        },
+        {
+          "en": "He checked the figures more carefully this time.",
+          "zh": "他这次更仔细地检查了数字。",
+          "note": "比较做事方式，用 more carefully。"
+        }
+      ],
+      "pitfall": "good 常作形容词，well 常作“做得好”的副词；She sings good 通常应改为 She sings well。",
+      "practice": {
+        "prompt": "说：他跑得比我快。",
+        "answer": "He runs faster than I do.",
+        "explanation": "fast 作副词，比较级是 faster。"
+      },
+      "sources": []
+    },
+    "reporting-passive": {
+      "title": "据说：It is said… 与 be said to…",
+      "idea": "消息来源不是重点时，可以用被动转述，并保持“这是传言或报道”的距离。",
+      "pattern": "It is said that… / 主语 + is said to do / have done",
+      "explain": [
+        "It is said that… 把整个消息作为内容。另一种写法把消息中的主语提出来，再接 is said to…。",
+        "若被转述的动作早于转述时间，用 to have done；与转述时间同时或一般情况，常用 to do / be。"
+      ],
+      "examples": [
+        {
+          "en": "It is said that the house is empty.",
+          "zh": "据说那房子空着。",
+          "note": "it 是形式主语，真正的信息在 that 从句里。"
+        },
+        {
+          "en": "The scientist is said to have left the country.",
+          "zh": "据说那位科学家已经离开了这个国家。",
+          "note": "to have left 表示离开发生得更早。"
+        }
+      ],
+      "pitfall": "is said to left 既不是不定式原形，也不是完成式；根据意思用 to leave 或 to have left。",
+      "practice": {
+        "prompt": "改写：It is said that she is very wealthy.",
+        "answer": "She is said to be very wealthy.",
+        "explanation": "把 she 提到主句，that she is 改为 to be。"
+      },
+      "sources": []
+    },
+    "time-clause": {
+      "title": "when / until / before：让时间关系清楚",
+      "idea": "连接两个事件时，时间从句说明先后、同时或持续到哪一刻。",
+      "pattern": "when / before / after / until / as soon as + 主语 + 谓语",
+      "explain": [
+        "谈将来时，普通时间状语从句常用现在时，主句再用 will：I'll call when I arrive.。",
+        "until 侧重持续到某点；not…until 表示到那时才发生。before / after 交代先后，不自动决定所有句子都用完成时。"
+      ],
+      "examples": [
+        {
+          "en": "I'll wait until you finish.",
+          "zh": "我会等到你做完。",
+          "note": "等待持续到完成，until 后用现在时表示将来。"
+        },
+        {
+          "en": "She didn't leave until ten.",
+          "zh": "她到十点才走。",
+          "note": "否定范围是十点前都没离开。"
+        }
+      ],
+      "pitfall": "when 是宾语从句中的“什么时候”时可以接 will，如 I don't know when he will arrive；要区分它是不是时间状语从句。",
+      "practice": {
+        "prompt": "说：我一到家就给你发消息。",
+        "answer": "I'll message you as soon as I get home.",
+        "explanation": "as soon as 表示一…就…；从句用现在时。"
+      },
+      "sources": []
+    },
+    "past-perfect-continuous": {
+      "title": "过去完成进行时：过去某刻之前一直在做",
+      "idea": "把观察点放在过去，再回看此前持续的过程。",
+      "pattern": "had been + 动词 -ing",
+      "explain": [
+        "它常说明过去某一状态的原因，或交代在另一过去事件发生前已持续多久。",
+        "与 had done 区分：had done 常看结果，had been doing 常看持续活动。活动在参照点时可能刚停，也可能仍继续。"
+      ],
+      "examples": [
+        {
+          "en": "She was tired because she had been working all night.",
+          "zh": "她很累，因为工作了一整夜。",
+          "note": "从过去的疲惫回看此前的活动。"
+        },
+        {
+          "en": "We had been waiting for an hour when the bus came.",
+          "zh": "车来时，我们已经等了一个小时。",
+          "note": "公交车到达是过去参照点。"
+        }
+      ],
+      "pitfall": "不要漏掉 been：had waiting 不完整，应为 had been waiting。",
+      "practice": {
+        "prompt": "说：停电时，我已经学习了两个小时。",
+        "answer": "I had been studying for two hours when the power went out.",
+        "explanation": "先持续学习，再发生停电。"
+      },
+      "sources": []
+    },
+    "reported-commands": {
+      "title": "转述要求、请求与建议",
+      "idea": "这类转述不必保留原来的祈使语气，可以用“告诉谁去做什么”。",
+      "pattern": "told / asked / advised + 人 + (not) to do",
+      "explain": [
+        "tell 较直接，ask 表请求，advise 表建议。转述时把实际接受者放在动词后，之后用不定式交代动作。",
+        "suggest 的结构不同：可用 suggest doing 或 suggest that…；不要直接套用 suggest someone to do。"
+      ],
+      "examples": [
+        {
+          "en": "'Please wait,' she said. → She asked me to wait.",
+          "zh": "她说：“请等一下。”→ 她请我等一下。",
+          "note": "祈使句转成 asked + 人 + to do。"
+        },
+        {
+          "en": "The doctor advised him not to smoke.",
+          "zh": "医生建议他不要吸烟。",
+          "note": "否定内容用 not to smoke。"
+        }
+      ],
+      "pitfall": "asked me don't go 不符合这个转述结构；用 asked me not to go。",
+      "practice": {
+        "prompt": "转述：The teacher said to us, 'Be quiet.'",
+        "answer": "The teacher told us to be quiet.",
+        "explanation": "us 是指令接受者；be quiet 放进 to do 结构。"
+      },
+      "sources": []
+    },
+    "condition-past": {
+      "title": "与过去事实相反：如果当时…就会…",
+      "idea": "事情已经发生，条件句让你讨论另一种过去的可能结果。",
+      "pattern": "If + had + 过去分词，would / could have + 过去分词",
+      "explain": [
+        "if 部分构造没有发生的过去条件；主句构造本来可能发生、实际上没有发生的结果。",
+        "两边的完成形式把假设放到过去。和现在的非真实条件句对比：If I had time… 是现在假设；If I had had time… 是过去假设。"
+      ],
+      "examples": [
+        {
+          "en": "If we'd left earlier, we would have caught the train.",
+          "zh": "如果我们早点出发，就能赶上那班火车了。",
+          "note": "实际出发晚，结果没赶上。"
+        },
+        {
+          "en": "If she had known, she could have helped.",
+          "zh": "如果她当时知道，就可能帮上忙。",
+          "note": "could have 更强调当时可能具备的能力或机会。"
+        }
+      ],
+      "pitfall": "常见基本结构不是 If I would have known；应先用 If I had known。",
+      "practice": {
+        "prompt": "说：如果我当时看见你，就会停下来。",
+        "answer": "If I had seen you, I would have stopped.",
+        "explanation": "过去条件用 had seen，过去假设结果用 would have stopped。"
+      },
+      "sources": []
+    },
+    "should": {
+      "title": "should / ought to：建议、责任与预期",
+      "idea": "比 must 的要求通常更缓和，适合说明怎样做较好或按理应当怎样。",
+      "pattern": "should + 原形；ought to + 原形；should have + 过去分词",
+      "explain": [
+        "说建议或责任可用 should / ought to；说合理预期也可用 should，如 The parcel should arrive today.。",
+        "should have done 常表示过去本应做却没做，或从某个角度预期已经完成。含义仍要结合上下文。"
+      ],
+      "examples": [
+        {
+          "en": "You should check the address first.",
+          "zh": "你应该先核对地址。",
+          "note": "是建议，不是严格禁令。"
+        },
+        {
+          "en": "I should have called you yesterday.",
+          "zh": "我昨天本该给你打电话。",
+          "note": "通常暗示没打，带有遗憾。"
+        }
+      ],
+      "pitfall": "should to do 多了 to；只有 ought to 保留 to。",
+      "practice": {
+        "prompt": "说：我们不应该浪费水。",
+        "answer": "We shouldn't waste water.",
+        "explanation": "shouldn't 后直接接 waste。"
+      },
+      "sources": []
+    },
+    "causative": {
+      "title": "have / get something done：安排别人来做",
+      "idea": "主语通常是安排者或经历者，不一定亲手完成动作。",
+      "pattern": "have / get + 物 + 过去分词；make + 人 + 原形；get + 人 + to do",
+      "explain": [
+        "I had my phone repaired. 表示我安排修手机。have / get + 物 + done 也可表示遭遇，如 had his bag stolen，要看语境。",
+        "make someone do 表示让或迫使；get someone to do 常表示设法让人做。make 变被动时要恢复 to：be made to do。"
+      ],
+      "examples": [
+        {
+          "en": "We're having the kitchen painted.",
+          "zh": "我们正在请人粉刷厨房。",
+          "note": "不是在说我们亲自刷。"
+        },
+        {
+          "en": "She got him to check the report.",
+          "zh": "她让他检查了报告。",
+          "note": "get + 人 + to do。"
+        }
+      ],
+      "pitfall": "He was made work late 少了 to；被动结构应为 He was made to work late。",
+      "practice": {
+        "prompt": "说：我昨天请人修了自行车。",
+        "answer": "I had my bicycle repaired yesterday.",
+        "explanation": "bicycle 是被修理的对象，repair 用过去分词。"
+      },
+      "sources": []
+    },
+    "nonfinite-passive": {
+      "title": "being / having been：非谓语中的被动与先后",
+      "idea": "-ing 结构也能表达“被做”及“在主句之前已被做”。",
+      "pattern": "being done；having done；having been done；to be done",
+      "explain": [
+        "being done 表示被动的 -ing 形式，可跟在介词或某些动词后。having done 强调动作先于主句，having been done 再加上被动。",
+        "形式再长也先拆两步：谁受到动作影响？这个动作发生在主句之前还是同时？然后选主动、被动与完成形式。"
+      ],
+      "examples": [
+        {
+          "en": "He dislikes being interrupted.",
+          "zh": "他不喜欢被打断。",
+          "note": "他是被打断者，用 being interrupted。"
+        },
+        {
+          "en": "Having been warned, we were careful.",
+          "zh": "得到提醒后，我们很小心。",
+          "note": "先被提醒，后表现得小心。"
+        }
+      ],
+      "pitfall": "分词状语省略主语时，要检查其逻辑主语通常与主句主语一致，否则会造成动作归属不清。",
+      "practice": {
+        "prompt": "说：她担心被误解。",
+        "answer": "She is worried about being misunderstood.",
+        "explanation": "about 是介词，她是被误解者。"
+      },
+      "sources": [
+        "participle"
+      ]
+    },
+    "verb-review": {
+      "title": "选动词形式：用四个问题逐步判断",
+      "idea": "别先猜答案。先确定句子的时间、先后、主被动和这个位置是否需要谓语。",
+      "pattern": "时间 → 过程 / 完成 → 主动 / 被动 → 谓语 / 非谓语",
+      "explain": [
+        "第一步找句子的主干和时间参照点；再判断关注过程还是完成结果。词形要同时服务于时间和表达重点。",
+        "第三步检查主语是做动作还是承受动作；最后看空格是否由已有动词、介词等支配，需要 to do 或 -ing，而不是再放一个独立谓语。"
+      ],
+      "examples": [
+        {
+          "en": "By the time I arrived, the door had been locked.",
+          "zh": "我到达时，门已经锁上了。",
+          "note": "更早完成 + 门承受动作 → had been locked。"
+        },
+        {
+          "en": "She avoided opening the window.",
+          "zh": "她避免打开窗户。",
+          "note": "avoided 已是谓语，后面按搭配用 opening。"
+        }
+      ],
+      "pitfall": "不要只找一个“关键词”就作答。by 可以标截止时间，也可以在被动句中引出执行者。",
+      "practice": {
+        "prompt": "说明为何使用 had been：The room had been cleaned before we arrived.",
+        "answer": "Cleaning happened before our arrival, and the room received the action.",
+        "explanation": "解释应同时包含“更早完成”和“被动”两层意思；不要求逐字一致。"
+      },
+      "sources": []
+    },
+    "ago-before": {
+      "title": "ago / before：从现在算，还是从当时算",
+      "idea": "两者都能说“以前”，但计算的参照点不同。",
+      "pattern": "一段时间 + ago；一段时间 + before；before + 参照事件",
+      "explain": [
+        "ago 通常从现在往回算，常与一般过去时一起用。before 可以从过去已建立的时刻再往前算。",
+        "在间接引语里，原来的 two days ago 常随转述视角变成 two days before / earlier；不要把变化只当作背单词替换。"
+      ],
+      "examples": [
+        {
+          "en": "I met her two days ago.",
+          "zh": "我两天前见过她。",
+          "note": "以现在为参照点。"
+        },
+        {
+          "en": "He said he had met her two days before.",
+          "zh": "他说他在那之前两天见过她。",
+          "note": "以他说话的那个过去时刻为参照点。"
+        }
+      ],
+      "pitfall": "ago 一般不直接搭配现在完成时来定位已经结束的具体过去时间。",
+      "practice": {
+        "prompt": "说：我三年前搬到了这里。",
+        "answer": "I moved here three years ago.",
+        "explanation": "从现在往回算，用 ago 和过去时。"
+      },
+      "sources": []
+    },
+    "so-such": {
+      "title": "so / such…that：把程度与结果连起来",
+      "idea": "so 主要修饰形容词或副词，such 主要带出名词短语。",
+      "pattern": "so + 形容词 / 副词 + that…；such + (a / an) + 形容词 + 名词 + that…",
+      "explain": [
+        "先看程度词后面的核心是什么：so cold 以形容词为中心；such a cold day 是一个名词短语。",
+        "结果从句需要完整主语和谓语。so many / much / few / little 表示数量程度时，也常接 that。"
+      ],
+      "examples": [
+        {
+          "en": "It was so cold that we stayed inside.",
+          "zh": "天气冷得我们待在了室内。",
+          "note": "so 修饰 cold，that 引出结果。"
+        },
+        {
+          "en": "It was such a useful book that I read it twice.",
+          "zh": "这本书很有用，我读了两遍。",
+          "note": "such 后接 a useful book。"
+        }
+      ],
+      "pitfall": "such useful book 缺少冠词；单数可数名词通常要写 such a useful book。",
+      "practice": {
+        "prompt": "说：她说得太快，我没听懂。",
+        "answer": "She spoke so quickly that I didn't understand.",
+        "explanation": "so 修饰方式副词 quickly。"
+      },
+      "sources": []
+    },
+    "be-used-to": {
+      "title": "used to do / be used to doing：以前做与习惯做",
+      "idea": "多了一个 be，意思和后面的形式都改变了。",
+      "pattern": "used to + 原形；be / get used to + 名词或 -ing",
+      "explain": [
+        "used to do 表示过去的习惯或状态；be used to doing 表示现在已经习惯，to 是介词。",
+        "get used to doing 表示逐渐适应的过程。be 可以变化时态，如 was used to、will be used to。"
+      ],
+      "examples": [
+        {
+          "en": "I used to get up late.",
+          "zh": "我以前常起得晚。",
+          "note": "过去习惯，如今可能已改变。"
+        },
+        {
+          "en": "I'm used to getting up early.",
+          "zh": "我已经习惯早起了。",
+          "note": "现在习惯，to 后用 getting。"
+        }
+      ],
+      "pitfall": "be used to get up 如果想表达“习惯起床”就用了错误形式；应为 be used to getting up。",
+      "practice": {
+        "prompt": "说：我正在适应在家工作。",
+        "answer": "I'm getting used to working at home.",
+        "explanation": "getting 表过程，介词 to 后用 working。"
+      },
+      "sources": []
+    },
+    "formal-it": {
+      "title": "形式主语与形式宾语：让重内容放后面",
+      "idea": "英语常先用 it 占住结构位置，把较长的不定式或从句放到后面。",
+      "pattern": "It is + 形容词 + to do / that…；find / think + it + 形容词 + to do",
+      "explain": [
+        "It is useful to take notes. 先给评价，真正被评价的是 to take notes。这种 it 不指某个具体物品。",
+        "find it difficult to… 中，it 先占宾语位置；后面的不定式交代究竟什么困难。也可用 that 从句说明事实或判断。"
+      ],
+      "examples": [
+        {
+          "en": "It's important to check the date.",
+          "zh": "核对日期很重要。",
+          "note": "it 先占主语位置。"
+        },
+        {
+          "en": "I find it hard to work in a noisy room.",
+          "zh": "我觉得在吵闹的房间里工作很难。",
+          "note": "it 作形式宾语，to work… 是实际被评价的内容。"
+        }
+      ],
+      "pitfall": "I find difficult to… 在这个结构中缺少 it；不要因中文没有对应词就漏掉它。",
+      "practice": {
+        "prompt": "说：熬夜是没有用的。（用 It is…）",
+        "answer": "It is useless to stay up late.",
+        "explanation": "to stay up late 是被评价的实际内容。"
+      },
+      "sources": []
+    },
+    "phrasal-verbs": {
+      "title": "短语动词：先把动词和小词当整体理解",
+      "idea": "give up、put off 等整体意思不一定等于各个词简单相加。",
+      "pattern": "give up doing；put off + 事情；turn + 物 + off / turn off + 物",
+      "explain": [
+        "学习时同时记意思、是否带宾语和宾语放哪里。可分的短语动词在宾语为代词时，通常把代词放中间。",
+        "有些多词动词不可分，如 look after。遇到不熟悉的组合，查的是整个短语，而不是只查中心动词。"
+      ],
+      "examples": [
+        {
+          "en": "We put off the meeting.",
+          "zh": "我们推迟了会议。",
+          "note": "put off 作为整体表示推迟。"
+        },
+        {
+          "en": "Please turn it off.",
+          "zh": "请把它关掉。",
+          "note": "it 放在 turn 和 off 之间。"
+        }
+      ],
+      "pitfall": "turn off it 的顺序不对；这一可分结构的代词宾语要放中间。",
+      "practice": {
+        "prompt": "说：她放弃了吸烟。",
+        "answer": "She gave up smoking.",
+        "explanation": "give up 后的动作使用 -ing。"
+      },
+      "sources": []
+    },
+    "except": {
+      "title": "except：从已知范围中排除一个",
+      "idea": "先确定你正在谈论的整体，再说明哪一部分不包括在内。",
+      "pattern": "all / everyone…except…；except for + 局部例外",
+      "explain": [
+        "except 常从同类集合中排除成员。except for 常先作总体评价，再补充一个局部缺点或例外。",
+        "besides 表示此外还有，通常是增加，不是排除。but 在 all but、nothing but 等结构里也可有例外或限定含义。"
+      ],
+      "examples": [
+        {
+          "en": "Everyone came except Leo.",
+          "zh": "除了利奥，其他人都来了。",
+          "note": "Leo 被排除在到场的人之外。"
+        },
+        {
+          "en": "The room was tidy except for a few books on the floor.",
+          "zh": "房间总体很整洁，只是地上有几本书。",
+          "note": "对总体评价补充局部例外。"
+        }
+      ],
+      "pitfall": "except 和 besides 不要都机械翻成“除了”；先看是减去一项还是增加一项。",
+      "practice": {
+        "prompt": "说：这家店每天都开门，星期日除外。",
+        "answer": "The shop opens every day except Sunday.",
+        "explanation": "从每天中排除 Sunday。"
+      },
+      "sources": []
+    },
+    "purpose": {
+      "title": "to / so that：说明做这件事的目的",
+      "idea": "目的回答“为了什么”，和事情实际产生的结果要分开。",
+      "pattern": "to / in order to + 原形；so that + 主语 + can / could…",
+      "explain": [
+        "主句动作和目的动作由同一主体完成时，to do 很简洁；需要另外交代目的动作的主语或能力时，so that 更清楚。",
+        "so that 常表达目的；so + 形容词 + that 则常表示程度造成的结果。注意中间有没有形容词或副词。"
+      ],
+      "examples": [
+        {
+          "en": "I moved closer to hear better.",
+          "zh": "我走近些，以便听得更清楚。",
+          "note": "两个动作都是 I 做，用 to hear。"
+        },
+        {
+          "en": "She wrote it down so that I could remember it.",
+          "zh": "她把它写下来，好让我记住。",
+          "note": "目的动作的主语换成 I。"
+        }
+      ],
+      "pitfall": "不要用 to do 隐藏本来不同的动作主语，否则读者可能误以为还是主句主语在做。",
+      "practice": {
+        "prompt": "说：我们早点出发，是为了避开交通拥堵。",
+        "answer": "We left early to avoid the traffic.",
+        "explanation": "to avoid 表目的，不说明目的最终是否达到。"
+      },
+      "sources": []
+    },
+    "concession": {
+      "title": "although / though：承认前提，仍出现另一结果",
+      "idea": "让步句说的是：即使前面情况成立，后面的事情仍然发生。",
+      "pattern": "although / though + 从句；despite / in spite of + 名词或 -ing",
+      "explain": [
+        "although 后面是完整小句；despite 后面通常是名词或 -ing。两类结构改写时，要一起调整后面的形式。",
+        "although 和 but 不要同时作为同一对分句的基本连接词；一个明确的让步连接已经足够。"
+      ],
+      "examples": [
+        {
+          "en": "Although she was tired, she kept working.",
+          "zh": "虽然她累了，还是继续工作。",
+          "note": "让步从句有主语和谓语。"
+        },
+        {
+          "en": "Despite the rain, we went out.",
+          "zh": "尽管下雨，我们还是出门了。",
+          "note": "despite 后跟名词 the rain。"
+        }
+      ],
+      "pitfall": "despite of 多加了 of；用 despite，或使用完整的 in spite of。",
+      "practice": {
+        "prompt": "用 despite 改写：Although he was ill, he attended the meeting.",
+        "answer": "Despite being ill, he attended the meeting.",
+        "explanation": "从句变成 -ing 结构，主语仍然是 he。"
+      },
+      "sources": []
+    },
+    "inversion": {
+      "title": "倒装：先还原普通语序，再看强调点",
+      "idea": "阅读倒装句时，不要被前面的状语或形容词带走，先找真正的主语和谓语。",
+      "pattern": "否定成分前置 + 助动词 + 主语；地点前置 + 谓语 + 名词主语（部分结构）",
+      "explain": [
+        "Never / Rarely / Not until 等否定或限制成分放句首时，常引起助动词倒装。no sooner…than 前置也常如此。",
+        "另一类倒装把地点或表语放前面，再放动词与名词主语。读长句时，先还原成“主语 + 动词”检查关系。"
+      ],
+      "examples": [
+        {
+          "en": "Rarely have I seen such patience.",
+          "zh": "我很少见到这样的耐心。",
+          "note": "还原为 I have rarely seen…；倒装突出 rarely。"
+        },
+        {
+          "en": "On the wall hung a large map.",
+          "zh": "墙上挂着一幅大地图。",
+          "note": "真正的主语是 a large map。"
+        }
+      ],
+      "pitfall": "不是所有放在句首的副词都会引发倒装。Yesterday I went… 仍是普通语序。",
+      "practice": {
+        "prompt": "还原：No sooner had we arrived than it began to rain.",
+        "answer": "We had no sooner arrived than it began to rain.",
+        "explanation": "先还原主语与助动词，再理解为刚到就下雨。"
+      },
+      "sources": []
+    },
+    "that-clauses": {
+      "title": "that 从句：说明一个内容，还是修饰一个名词？",
+      "idea": "同样看到 that，要先判断它后面的从句在句中承担什么角色。",
+      "pattern": "The fact that…；What / Why… + 谓语；It is…that…",
+      "explain": [
+        "The fact that he left… 中，从句解释 fact 的具体内容，本身通常不缺成分；定语从句则往往有一个由关系词承担的位置。",
+        "一个内容小句也可以作主语，如 Why he left is unclear.。长主语常用 it 放前面，让阅读更顺畅。"
+      ],
+      "examples": [
+        {
+          "en": "The fact that she agreed surprised me.",
+          "zh": "她同意这件事令我惊讶。",
+          "note": "that 后是完整内容，说明 fact。"
+        },
+        {
+          "en": "Why he left is still unclear.",
+          "zh": "他为何离开仍不清楚。",
+          "note": "整个 Why he left 作主语，内部用陈述语序。"
+        }
+      ],
+      "pitfall": "不要见到名词后的 that 就一律叫定语从句；检查从句是否缺少由 that 代替的位置。",
+      "practice": {
+        "prompt": "用 it 改写：That he passed the exam is surprising.",
+        "answer": "It is surprising that he passed the exam.",
+        "explanation": "it 先占主语位置，that 从句后置。"
+      },
+      "sources": []
+    },
+    "distance": {
+      "title": "距离表达：实际多远，还是范围到哪里",
+      "idea": "同样是 far，不同搭配可能表达距离、范围或程度。",
+      "pattern": "How far…?；数字 + away / from…；as far as…",
+      "explain": [
+        "具体距离可用 It's five kilometres from here. 或 The station is five kilometres away.。不要在 every 距离表达里都硬加 far。",
+        "as far as 可表示一直到某个地点，也可在 as far as I know 中限定知识范围；按语境辨认。"
+      ],
+      "examples": [
+        {
+          "en": "The lake is two kilometres from the village.",
+          "zh": "湖离村庄两公里。",
+          "note": "数字明确距离，from 交代参照地点。"
+        },
+        {
+          "en": "We walked as far as the bridge.",
+          "zh": "我们一直走到了桥那里。",
+          "note": "as far as 表示到达的范围终点。"
+        }
+      ],
+      "pitfall": "How long 问持续多久或长度，How far 问距离，不能因为中文都问“多长”就混用。",
+      "practice": {
+        "prompt": "问：车站离这里有多远？",
+        "answer": "How far is the station from here?",
+        "explanation": "用 How far 确认空间距离。"
+      },
+      "sources": []
+    },
+    "reason": {
+      "title": "because / as / for：把原因与判断连起来",
+      "idea": "原因句不仅说明先后，还回答为什么这样做或为什么作出这个判断。",
+      "pattern": "because / as / since + 从句；because of + 名词短语",
+      "explain": [
+        "because 常直接突出原因；as / since 可把原因当作较已知的背景。since 也可能表示时间，要根据上下文识别。",
+        "because 后是从句，because of 后是名词短语。for 作为原因连接词较书面，常接在主句后补充解释。"
+      ],
+      "examples": [
+        {
+          "en": "We stayed home because the road was closed.",
+          "zh": "我们待在家，因为道路封闭了。",
+          "note": "because 后有完整主谓结构。"
+        },
+        {
+          "en": "The game stopped because of the rain.",
+          "zh": "比赛因下雨而停止。",
+          "note": "because of 后跟名词。"
+        }
+      ],
+      "pitfall": "because of it rained 把两种结构混了；用 because it rained 或 because of the rain。",
+      "practice": {
+        "prompt": "用 because of 改写：We were late because the traffic was heavy.",
+        "answer": "We were late because of the heavy traffic.",
+        "explanation": "把完整原因从句改为名词短语。"
+      },
+      "sources": []
+    },
+    "negative-scope": {
+      "title": "否定范围：不是所有，与一个也没有不同",
+      "idea": "not 的位置和搭配决定被否定的是整个集合，还是某个部分。",
+      "pattern": "not all / not every…；no / none / not any…",
+      "explain": [
+        "Not all students agreed. 表示至少有人不同意，但仍可能有人同意；No students agreed. 则表示一个同意的也没有。",
+        "改写否定句时必须保留这个范围。never、nothing、nobody 等本身也带否定，不能不加判断地重复加 not。"
+      ],
+      "examples": [
+        {
+          "en": "Not everyone was ready.",
+          "zh": "并不是每个人都准备好了。",
+          "note": "部分否定，不表示所有人都没准备好。"
+        },
+        {
+          "en": "None of the answers was correct.",
+          "zh": "这些答案没有一个是对的。",
+          "note": "全部否定；此处使用较正式的单数一致。"
+        }
+      ],
+      "pitfall": "把 not all 改写为 none 会改变原意，而不是只改变句型。",
+      "practice": {
+        "prompt": "说：并不是所有书都很贵。",
+        "answer": "Not all books are expensive.",
+        "explanation": "否定的是“所有书都贵”这个整体判断。"
+      },
+      "sources": []
+    },
+    "likely": {
+      "title": "likely：从可能性评价到人物主语",
+      "idea": "likely 可评价整个事件，也可把事件中的人或物放到主语位置。",
+      "pattern": "It is likely that… / 主语 + be likely to do",
+      "explain": [
+        "两种结构常可互换：It is likely that she will win. 与 She is likely to win.。",
+        "改写时保留主语、时间和否定。unlikely 表示不大可能；这些词表达判断，不是结果保证。"
+      ],
+      "examples": [
+        {
+          "en": "It's likely that the shop will close early.",
+          "zh": "这家店很可能提前关门。",
+          "note": "从句保留完整主谓关系。"
+        },
+        {
+          "en": "The shop is likely to close early.",
+          "zh": "这家店很可能提前关门。",
+          "note": "把 shop 提为主语，后接不定式。"
+        }
+      ],
+      "pitfall": "likely 后不能直接省掉 to 去接动词原形：is likely close 应为 is likely to close。",
+      "practice": {
+        "prompt": "改写：It is likely that they will agree.",
+        "answer": "They are likely to agree.",
+        "explanation": "主语 they 用 are，will agree 改为 to agree。"
+      },
+      "sources": []
+    },
+    "participle": {
+      "title": "分词：缩短修饰语，也能连接背景信息",
+      "idea": "-ing 常体现主动关系，过去分词常体现被动关系；它们本身不负责完整交代句子时态。",
+      "pattern": "名词 + doing / done…；Doing / Done…, 主句",
+      "explain": [
+        "the people waiting outside 相当于说明正在外面等的人；the letters written yesterday 说明昨天被写下的信。先看被修饰名词和动作的关系。",
+        "分词作状语时通常与主句共享逻辑主语。having done 可强调分词动作先完成，再发生主句动作。"
+      ],
+      "examples": [
+        {
+          "en": "The woman standing by the door is our teacher.",
+          "zh": "站在门旁的女士是我们的老师。",
+          "note": "woman 主动站立，用 standing。"
+        },
+        {
+          "en": "Written in simple English, the guide is easy to read.",
+          "zh": "这份指南用简明英语写成，容易阅读。",
+          "note": "guide 是被写的对象，用 written。"
+        }
+      ],
+      "pitfall": "Walking home, the rain started. 容易让“雨”成了走路者。应改成 While I was walking home, it started to rain.。",
+      "practice": {
+        "prompt": "缩短：The books that were published last year are on this shelf.",
+        "answer": "The books published last year are on this shelf.",
+        "explanation": "books 是被出版的对象，用过去分词修饰。"
+      },
+      "sources": [
+        "participle"
+      ]
+    },
+    "always-continuous": {
+      "title": "always + 进行时：重复行为中的态度",
+      "idea": "always 配进行时，常让人听出抱怨、惊讶或欣赏，而不只是中性频率。",
+      "pattern": "am / is / are always + 动词 -ing",
+      "explain": [
+        "She always helps me. 中性说明她总帮助我；She's always helping me. 更容易带出说话者对这种重复行为的感受。",
+        "它不必总是负面，也能表达赞赏。仍要有 be，不能只在一般现在时中随意加 -ing。"
+      ],
+      "examples": [
+        {
+          "en": "He's always losing his keys.",
+          "zh": "他老是丢钥匙。",
+          "note": "常带一点抱怨。"
+        },
+        {
+          "en": "She's always finding ways to help.",
+          "zh": "她总能想办法帮忙。",
+          "note": "这里可以传达欣赏。"
+        }
+      ],
+      "pitfall": "不要把这个结构限定成“只有抱怨”；语境和语调共同决定态度。",
+      "practice": {
+        "prompt": "带一点抱怨说：他们老是在讲话。",
+        "answer": "They're always talking.",
+        "explanation": "always + 进行时突出说话者的态度。"
+      },
+      "sources": []
+    },
+    "double-comparison": {
+      "title": "the more…the more：两种变化一起走",
+      "idea": "一个程度发生变化，另一个程度也随之变化时，可用成对比较结构。",
+      "pattern": "the + 比较级 + 小句，the + 比较级 + 小句",
+      "explain": [
+        "两边的 the 属于这个固定比较结构，不是普通名词前的定冠词。比较级可以是 more、less 或 -er 形式。",
+        "不必两边都增加：The more…，the less… 表示一个上升、另一个下降。比较关系本身不证明现实中的因果。"
+      ],
+      "examples": [
+        {
+          "en": "The more you practise, the easier it gets.",
+          "zh": "你练得越多，就越容易。",
+          "note": "more 与 easier 把两个变化连接起来。"
+        },
+        {
+          "en": "The earlier we leave, the less traffic we'll face.",
+          "zh": "我们出发越早，遇到的交通拥堵就越少。",
+          "note": "一边时间更早，另一边数量更少。"
+        }
+      ],
+      "pitfall": "more easier 是重复比较形式。写 the easier，而不是 the more easier。",
+      "practice": {
+        "prompt": "说：你读得越多，理解得越多。",
+        "answer": "The more you read, the more you understand.",
+        "explanation": "两边都按 the + 比较级组织。"
+      },
+      "sources": []
+    },
+    "non-defining": {
+      "title": "非限定性定语从句：额外补充，而不是挑出哪一个",
+      "idea": "逗号里的从句给已明确的人或物补充信息，删掉后仍知道说的是谁或什么。",
+      "pattern": "名词，who / which / whose + 从句，主句其余部分",
+      "explain": [
+        "先判断名词是否已明确。限定性从句帮助识别对象；非限定性从句补充对象的信息，书面上用逗号分开。",
+        "这类从句不使用 that 代替关系词，也不能像宾语型限定性从句那样直接省略关系词。which 还可指前面整件事。"
+      ],
+      "examples": [
+        {
+          "en": "My bike, which I bought last year, needs a repair.",
+          "zh": "我的自行车需要修理，它是我去年买的。",
+          "note": "自行车已明确，从句补充购买时间。"
+        },
+        {
+          "en": "He missed the bus, which made him late.",
+          "zh": "他错过公交车，这使他迟到了。",
+          "note": "which 指前面错过车的整件事。"
+        }
+      ],
+      "pitfall": "逗号不是随意装饰；加上或去掉它，可能改变从句是在限定范围还是补充信息。",
+      "practice": {
+        "prompt": "合并补充信息：Mia lives nearby. Her brother is a doctor.",
+        "answer": "Mia, whose brother is a doctor, lives nearby.",
+        "explanation": "whose 表所属，逗号标出额外信息。"
+      },
+      "sources": [
+        "relative"
+      ]
+    },
+    "absolute": {
+      "title": "独立主格：分词短语带上自己的主语",
+      "idea": "当背景动作与主句不是同一个主语时，正式书面语可把自己的名词主语留在分词结构中。",
+      "pattern": "名词 / 代词 + doing / done / being…，主句",
+      "explain": [
+        "普通分词状语常与主句共用主语；独立主格结构则把背景部分的主语也写出来。阅读时先把两组主语分清。",
+        "它可表达时间、原因、条件或伴随，具体关系依靠语境。日常表达不必追求复杂，完整的 because / if 从句常更清楚。"
+      ],
+      "examples": [
+        {
+          "en": "The meeting being over, everyone went home.",
+          "zh": "会议结束了，大家便回家了。",
+          "note": "背景主语是 the meeting，主句主语是 everyone。"
+        },
+        {
+          "en": "Weather permitting, we'll walk to the lake.",
+          "zh": "天气允许的话，我们会步行去湖边。",
+          "note": "weather 是 permitting 的逻辑主语，表达条件。"
+        }
+      ],
+      "pitfall": "不要把普通分词状语的“共享主语”规则硬套到独立主格上；先检查分词前是否已经写了自己的主语。",
+      "practice": {
+        "prompt": "改写得更日常：The meeting being over, everyone went home.",
+        "answer": "Because the meeting was over, everyone went home.",
+        "explanation": "把背景恢复为明确的原因从句。"
+      },
+      "sources": [
+        "absolute"
+      ]
+    },
+    "same-different": {
+      "title": "the same as / different from：相同与不同",
+      "idea": "把比较对象明确放在正确的介词结构后面。",
+      "pattern": "the same as…；different from…；similar to…",
+      "explain": [
+        "same 前通常有 the，后接 as；different 常接 from。英美用法中也有 different to / than 等形式，本课先掌握常用的 different from。",
+        "比较时保持两边同类：my answer 与 yours 比，而不是与 you 本人比。similar 表示相似，不等于完全相同。"
+      ],
+      "examples": [
+        {
+          "en": "My answer is the same as yours.",
+          "zh": "我的答案和你的一样。",
+          "note": "yours 代替 your answer。"
+        },
+        {
+          "en": "This model is different from the old one.",
+          "zh": "这个型号与旧型号不同。",
+          "note": "one 代替 model。"
+        }
+      ],
+      "pitfall": "the same with 不是普通“与…相同”的默认搭配；这里用 the same as。",
+      "practice": {
+        "prompt": "说：我们的计划和他们的相似。",
+        "answer": "Our plan is similar to theirs.",
+        "explanation": "similar 后接 to；theirs 代替 their plan。"
+      },
+      "sources": []
+    },
+    "nonfinite": {
+      "title": "非谓语形式：一个句子里不止一个动作时怎么安排",
+      "idea": "已有主句谓语后，其他动作常要放进不定式、-ing 或分词结构中。",
+      "pattern": "to do；doing；done；to have done；having done",
+      "explain": [
+        "先找承担人称、时间的主要谓语，再看第二个动作是目的、动词宾语、名词修饰语，还是背景。不同位置需要不同形式。",
+        "to do 本身不是一律表示将来，doing 也不是一律表示现在。非谓语动作的时间关系常依靠主句和语境，完成形式可突出先发生。"
+      ],
+      "examples": [
+        {
+          "en": "She opened the window to let in air.",
+          "zh": "她开窗让空气进来。",
+          "note": "opened 是谓语，to let 表目的。"
+        },
+        {
+          "en": "The man carrying the boxes is my neighbour.",
+          "zh": "搬着箱子的那个人是我的邻居。",
+          "note": "carrying 修饰 man，is 才是主句谓语。"
+        }
+      ],
+      "pitfall": "不要看到每个动作都给它加一个独立时态，却不加连接词或从句结构。先搭主干，再安排附加动作。",
+      "practice": {
+        "prompt": "指出主句谓语：The letter written in French arrived today.",
+        "answer": "arrived",
+        "explanation": "written in French 修饰 letter，不是主句谓语。"
+      },
+      "sources": []
+    },
+    "could-have": {
+      "title": "could have done：过去可能，或本来有机会",
+      "idea": "形式相同，可能是在猜过去发生过什么，也可能在谈错过的机会。",
+      "pattern": "could have + 过去分词；couldn't have + 过去分词",
+      "explain": [
+        "说不确定的过去可能时，could have 与 may / might have 有重叠；仅凭这个形式，不能断定事情没发生。",
+        "如果语境明确“本来能做却没做”，could have 表示未实现的能力或机会。couldn't have 也可表达过去不可能。"
+      ],
+      "examples": [
+        {
+          "en": "She could have taken the earlier train; I'm not sure.",
+          "zh": "她可能坐了更早一班火车，我不确定。",
+          "note": "是在猜测，并未确认她没坐。"
+        },
+        {
+          "en": "I could have called, but I forgot.",
+          "zh": "我本来可以打电话，但忘了。",
+          "note": "but I forgot 明确说明机会未实现。"
+        }
+      ],
+      "pitfall": "不要把所有 could have 都译为“本来可以但没做”；先读后文是否给出了真实结果。",
+      "practice": {
+        "prompt": "说：你本来可以告诉我，可你没说。",
+        "answer": "You could have told me, but you didn't.",
+        "explanation": "told 是 tell 的过去分词，后半明确否定实际发生。"
+      },
+      "sources": [
+        "ability"
+      ]
+    },
+    "future-be": {
+      "title": "be about to / due to / bound to：不同的将来意味",
+      "idea": "这些结构分别强调即将发生、按安排到期，或说话者很有把握的判断。",
+      "pattern": "be about to do；be due to do；be bound / sure to do",
+      "explain": [
+        "about to 表示就在眼前，通常不再加 in two weeks 这类较远的具体将来时距；due to do 常用于预计时间或安排。",
+        "bound / sure to do 表达很有把握，但仍是判断。be sure to do 还可用于叮嘱对方一定要做。"
+      ],
+      "examples": [
+        {
+          "en": "The train is due to arrive at six.",
+          "zh": "这班火车预计六点到达。",
+          "note": "due to 后接动作，说明预计安排。"
+        },
+        {
+          "en": "We were about to leave when the phone rang.",
+          "zh": "我们正要离开，电话响了。",
+          "note": "about to 表示动作尚未开始、即将开始。"
+        }
+      ],
+      "pitfall": "due to + 名词还可表示“由于”，例如 due to the rain；不要与 be due to arrive 的安排用法混淆。",
+      "practice": {
+        "prompt": "说：你肯定会喜欢这本书。",
+        "answer": "You're bound to enjoy this book.",
+        "explanation": "bound to 表达说话者很有把握的判断。"
+      },
+      "sources": []
+    },
+    "rewrite": {
+      "title": "句型改写：先守住原意，再换结构",
+      "idea": "正确改写不仅要语法通顺，还要保留谁做、何时做、肯否和程度。",
+      "pattern": "核对：主语与指代 → 时间与语态 → 条件 / 原因 → 否定与程度",
+      "explain": [
+        "先把原句改写成最简单的中文意思，确认核心关系，再选择被动、从句或非谓语形式。",
+        "完成后反向读一遍：是否把可能改成肯定，把部分否定改成全部否定，或无意改变动作的执行者？这些比表面词形更重要。"
+      ],
+      "examples": [
+        {
+          "en": "The bag was so heavy that I couldn't lift it. → The bag was too heavy for me to lift.",
+          "zh": "包重得我搬不动。→ 包对我来说太重，搬不动。",
+          "note": "保留 for me，才保留原来搬包的人。"
+        },
+        {
+          "en": "Although it was cold, we stayed. → Despite the cold, we stayed.",
+          "zh": "虽然冷，我们仍留下。→ 尽管寒冷，我们仍留下。",
+          "note": "从句变名词短语，但让步关系不变。"
+        }
+      ],
+      "pitfall": "改写不是换同义词越多越好。若时态、否定范围或指代变了，即使句子通顺也不再等义。",
+      "practice": {
+        "prompt": "用被动改写：They sent the letter yesterday.",
+        "answer": "The letter was sent yesterday.",
+        "explanation": "保留过去时间 yesterday 和 send 的被动形式。"
+      },
+      "sources": []
+    },
+    "need-doing": {
+      "title": "need doing：形式是 -ing，意思却是需要被做",
+      "idea": "物作主语时，need doing 常表达修理、清洗等需要，也可换成 need to be done。",
+      "pattern": "物 + need(s) doing = 物 + need(s) to be done",
+      "explain": [
+        "The floor needs cleaning. 不是地板自己打扫，而是地板需要被打扫。这是 need 的特定搭配。",
+        "人作主语说自己需要做事时，通常用 need to do。needn't have done 则表达事情做了，但其实没必要，是另一层意思。"
+      ],
+      "examples": [
+        {
+          "en": "The windows need cleaning.",
+          "zh": "窗户需要清洗。",
+          "note": "等同于 need to be cleaned。"
+        },
+        {
+          "en": "I need to clean the windows.",
+          "zh": "我需要清洗窗户。",
+          "note": "这里的 I 是动作执行者，接 to clean。"
+        }
+      ],
+      "pitfall": "The car needs to repair 若想表达“车需要修”，应为 needs repairing 或 needs to be repaired。",
+      "practice": {
+        "prompt": "用两种方式说：这张桌子需要修理。",
+        "answer": "This table needs repairing. / This table needs to be repaired.",
+        "explanation": "两种结构都有被动意思；needs 与单数 table 一致。"
+      },
+      "sources": [
+        "need"
+      ]
+    },
+    "future-perfect-continuous": {
+      "title": "将来完成进行时：到未来某刻已经持续多久",
+      "idea": "从未来的参照点回看一段持续活动，突出持续时间。",
+      "pattern": "will have been + 动词 -ing",
+      "explain": [
+        "和 will have done 的结果视角区分：will have been doing 主要说明到那时活动已经持续多久。",
+        "完成进行形式不适用于所有状态动词。对于持续居住、知道等表达，也要依据动词意义选择普通完成式或进行式。"
+      ],
+      "examples": [
+        {
+          "en": "By June, I'll have been working here for a year.",
+          "zh": "到六月，我就在这里工作满一年了。",
+          "note": "从六月回看工作的持续时长。"
+        },
+        {
+          "en": "By ten, they will have been travelling for six hours.",
+          "zh": "到十点，他们就已经赶了六小时的路。",
+          "note": "强调到未来时刻累积的过程。"
+        }
+      ],
+      "pitfall": "这个长结构的 been 不能漏掉；will have working 不完整。",
+      "practice": {
+        "prompt": "说：到下个月，我学英语就满两年了。",
+        "answer": "By next month, I will have been learning English for two years.",
+        "explanation": "未来参照点 + 持续活动 + 时长。"
+      },
+      "sources": [
+        "future"
+      ]
+    },
+    "passive-double": {
+      "title": "双宾语的被动：把人或东西放到话题位置",
+      "idea": "give、offer、send 等动词既可谈给出的东西，也可谈接受的人。",
+      "pattern": "人 + be given / offered + 物；物 + be given / offered + to + 人",
+      "explain": [
+        "主动句 They offered her a job. 可把接受者 her 提成主语，变成 She was offered a job.。",
+        "也可把 a job 提为主语，并用 to 交代接受者。不是所有带两个成分的动词都能套同一结构，要保留原动词搭配。"
+      ],
+      "examples": [
+        {
+          "en": "He was given a map.",
+          "zh": "有人给了他一张地图。",
+          "note": "him 提成主语后变成 he。"
+        },
+        {
+          "en": "A map was given to him.",
+          "zh": "一张地图被给了他。",
+          "note": "东西作主语时保留 to him。"
+        }
+      ],
+      "pitfall": "She was explained the rule 在多数标准用法中不自然；explain 通常写成 The rule was explained to her。",
+      "practice": {
+        "prompt": "以 I 开头改写：They offered me a seat.",
+        "answer": "I was offered a seat.",
+        "explanation": "me 提为主语改成 I，被动用 was offered。"
+      },
+      "sources": []
+    }
+  },
+  "lessons": {
+    "NCE1-1": [
+      "be-question",
+      "be"
+    ],
+    "NCE1-3": [
+      "be-question"
+    ],
+    "NCE1-5": [
+      "pronouns",
+      "articles",
+      "be-question"
+    ],
+    "NCE1-7": [
+      "be",
+      "articles"
+    ],
+    "NCE1-9": [
+      "pronouns",
+      "adjectives"
+    ],
+    "NCE1-11": [
+      "possession"
+    ],
+    "NCE1-13": [
+      "adjectives",
+      "possession"
+    ],
+    "NCE1-15": [
+      "articles",
+      "be-question"
+    ],
+    "NCE1-17": [
+      "be",
+      "countable"
+    ],
+    "NCE1-19": [
+      "be",
+      "pronouns"
+    ],
+    "NCE1-21": [
+      "double-object",
+      "possession"
+    ],
+    "NCE1-23": [
+      "pronouns",
+      "countable",
+      "double-object"
+    ],
+    "NCE1-25": [
+      "articles",
+      "place"
+    ],
+    "NCE1-27": [
+      "place",
+      "be"
+    ],
+    "NCE1-29": [
+      "obligation",
+      "imperative"
+    ],
+    "NCE1-31": [
+      "present-continuous"
+    ],
+    "NCE1-33": [
+      "present-continuous",
+      "pronouns"
+    ],
+    "NCE1-35": [
+      "place",
+      "present-continuous"
+    ],
+    "NCE1-37": [
+      "present-continuous",
+      "going-to"
+    ],
+    "NCE1-39": [
+      "going-to"
+    ],
+    "NCE1-41": [
+      "there-be",
+      "countable"
+    ],
+    "NCE1-43": [
+      "there-be",
+      "some-any"
+    ],
+    "NCE1-45": [
+      "can"
+    ],
+    "NCE1-47": [
+      "present-simple"
+    ],
+    "NCE1-49": [
+      "present-simple"
+    ],
+    "NCE1-51": [
+      "origin"
+    ],
+    "NCE1-53": [
+      "origin"
+    ],
+    "NCE1-55": [
+      "present-simple",
+      "adverbs"
+    ],
+    "NCE1-57": [
+      "present-contrast"
+    ],
+    "NCE1-59": [
+      "countable",
+      "some-any"
+    ],
+    "NCE1-61": [
+      "obligation",
+      "be"
+    ],
+    "NCE1-63": [
+      "imperative",
+      "obligation"
+    ],
+    "NCE1-65": [
+      "time-prepositions"
+    ],
+    "NCE1-67": [
+      "past-be",
+      "articles",
+      "place"
+    ],
+    "NCE1-69": [
+      "past-be"
+    ],
+    "NCE1-71": [
+      "past-simple"
+    ],
+    "NCE1-73": [
+      "past-simple"
+    ],
+    "NCE1-75": [
+      "past-simple",
+      "time-prepositions"
+    ],
+    "NCE1-77": [
+      "past-simple"
+    ],
+    "NCE1-79": [
+      "obligation",
+      "place"
+    ],
+    "NCE1-81": [
+      "have",
+      "past-simple"
+    ],
+    "NCE1-83": [
+      "present-perfect",
+      "have"
+    ],
+    "NCE1-85": [
+      "present-perfect"
+    ],
+    "NCE1-87": [
+      "already-yet",
+      "present-perfect"
+    ],
+    "NCE1-89": [
+      "already-yet",
+      "present-perfect"
+    ],
+    "NCE1-91": [
+      "will"
+    ],
+    "NCE1-93": [
+      "past-simple",
+      "will"
+    ],
+    "NCE1-95": [
+      "had-better",
+      "future-choice",
+      "time-prepositions"
+    ],
+    "NCE1-97": [
+      "possession"
+    ],
+    "NCE1-99": [
+      "object-clause"
+    ],
+    "NCE1-101": [
+      "object-clause"
+    ],
+    "NCE1-103": [
+      "degree"
+    ],
+    "NCE1-105": [
+      "object-to"
+    ],
+    "NCE1-107": [
+      "comparison"
+    ],
+    "NCE1-109": [
+      "quantity",
+      "comparison"
+    ],
+    "NCE1-111": [
+      "comparison"
+    ],
+    "NCE1-113": [
+      "none"
+    ],
+    "NCE1-115": [
+      "indefinite",
+      "some-any"
+    ],
+    "NCE1-117": [
+      "past-continuous"
+    ],
+    "NCE1-119": [
+      "past-perfect"
+    ],
+    "NCE1-121": [
+      "relative"
+    ],
+    "NCE1-123": [
+      "relative-omission"
+    ],
+    "NCE1-125": [
+      "obligation"
+    ],
+    "NCE1-127": [
+      "deduction-now"
+    ],
+    "NCE1-129": [
+      "deduction-past"
+    ],
+    "NCE1-131": [
+      "may",
+      "deduction-past"
+    ],
+    "NCE1-133": [
+      "reported"
+    ],
+    "NCE1-135": [
+      "reported"
+    ],
+    "NCE1-137": [
+      "condition-real"
+    ],
+    "NCE1-139": [
+      "indirect-question"
+    ],
+    "NCE1-141": [
+      "passive"
+    ],
+    "NCE1-143": [
+      "passive-forms"
+    ],
+    "NCE2-1": [
+      "word-order"
+    ],
+    "NCE2-2": [
+      "present-contrast"
+    ],
+    "NCE2-3": [
+      "past-simple"
+    ],
+    "NCE2-4": [
+      "present-perfect"
+    ],
+    "NCE2-5": [
+      "past-or-perfect"
+    ],
+    "NCE2-6": [
+      "articles",
+      "some-any"
+    ],
+    "NCE2-7": [
+      "past-continuous"
+    ],
+    "NCE2-8": [
+      "comparison"
+    ],
+    "NCE2-9": [
+      "time-prepositions"
+    ],
+    "NCE2-10": [
+      "passive"
+    ],
+    "NCE2-11": [
+      "present-contrast",
+      "past-or-perfect",
+      "comparison",
+      "passive"
+    ],
+    "NCE2-12": [
+      "will"
+    ],
+    "NCE2-13": [
+      "future-continuous"
+    ],
+    "NCE2-14": [
+      "past-perfect"
+    ],
+    "NCE2-15": [
+      "reported"
+    ],
+    "NCE2-16": [
+      "condition-real"
+    ],
+    "NCE2-17": [
+      "obligation"
+    ],
+    "NCE2-18": [
+      "have"
+    ],
+    "NCE2-19": [
+      "can",
+      "may"
+    ],
+    "NCE2-20": [
+      "gerund"
+    ],
+    "NCE2-21": [
+      "passive-forms"
+    ],
+    "NCE2-22": [
+      "verb-prepositions"
+    ],
+    "NCE2-23": [
+      "will",
+      "past-perfect",
+      "condition-real",
+      "gerund"
+    ],
+    "NCE2-24": [
+      "articles",
+      "time-prepositions",
+      "verb-prepositions"
+    ],
+    "NCE2-25": [
+      "complex-sentences",
+      "word-order"
+    ],
+    "NCE2-26": [
+      "present-simple",
+      "adverbs"
+    ],
+    "NCE2-27": [
+      "past-simple"
+    ],
+    "NCE2-28": [
+      "present-perfect",
+      "already-yet"
+    ],
+    "NCE2-29": [
+      "past-or-perfect"
+    ],
+    "NCE2-30": [
+      "articles",
+      "some-any"
+    ],
+    "NCE2-31": [
+      "used-to",
+      "past-continuous"
+    ],
+    "NCE2-32": [
+      "comparison"
+    ],
+    "NCE2-33": [
+      "place"
+    ],
+    "NCE2-34": [
+      "passive"
+    ],
+    "NCE2-35": [
+      "present-contrast",
+      "past-or-perfect",
+      "used-to",
+      "passive"
+    ],
+    "NCE2-36": [
+      "going-to",
+      "future-choice"
+    ],
+    "NCE2-37": [
+      "future-perfect"
+    ],
+    "NCE2-38": [
+      "past-perfect",
+      "as-if"
+    ],
+    "NCE2-39": [
+      "reported",
+      "indirect-question"
+    ],
+    "NCE2-40": [
+      "condition-unreal"
+    ],
+    "NCE2-41": [
+      "obligation",
+      "need-doing"
+    ],
+    "NCE2-42": [
+      "have"
+    ],
+    "NCE2-43": [
+      "past-ability"
+    ],
+    "NCE2-44": [
+      "verb-patterns",
+      "gerund"
+    ],
+    "NCE2-45": [
+      "passive",
+      "passive-forms"
+    ],
+    "NCE2-46": [
+      "verb-prepositions"
+    ],
+    "NCE2-47": [
+      "future-perfect",
+      "condition-unreal",
+      "past-ability",
+      "verb-patterns"
+    ],
+    "NCE2-48": [
+      "verb-patterns",
+      "verb-prepositions",
+      "degree"
+    ],
+    "NCE2-49": [
+      "complex-sentences"
+    ],
+    "NCE2-50": [
+      "present-contrast",
+      "present-simple"
+    ],
+    "NCE2-51": [
+      "past-simple"
+    ],
+    "NCE2-52": [
+      "perfect-continuous",
+      "present-perfect"
+    ],
+    "NCE2-53": [
+      "past-or-perfect",
+      "perfect-continuous"
+    ],
+    "NCE2-54": [
+      "articles",
+      "quantity",
+      "some-any"
+    ],
+    "NCE2-55": [
+      "used-to"
+    ],
+    "NCE2-56": [
+      "comparison",
+      "adverbs"
+    ],
+    "NCE2-57": [
+      "verb-prepositions",
+      "place"
+    ],
+    "NCE2-58": [
+      "reporting-passive"
+    ],
+    "NCE2-59": [
+      "present-contrast",
+      "perfect-continuous",
+      "used-to",
+      "reporting-passive"
+    ],
+    "NCE2-60": [
+      "time-clause",
+      "future-choice"
+    ],
+    "NCE2-61": [
+      "future-perfect",
+      "future-perfect-continuous"
+    ],
+    "NCE2-62": [
+      "past-perfect-continuous"
+    ],
+    "NCE2-63": [
+      "reported-commands"
+    ],
+    "NCE2-64": [
+      "condition-past"
+    ],
+    "NCE2-65": [
+      "obligation",
+      "should"
+    ],
+    "NCE2-66": [
+      "causative"
+    ],
+    "NCE2-67": [
+      "past-ability"
+    ],
+    "NCE2-68": [
+      "verb-patterns",
+      "gerund"
+    ],
+    "NCE2-69": [
+      "nonfinite-passive"
+    ],
+    "NCE2-70": [
+      "verb-prepositions"
+    ],
+    "NCE2-71": [
+      "condition-past",
+      "causative",
+      "past-perfect-continuous",
+      "nonfinite-passive"
+    ],
+    "NCE2-72": [
+      "verb-patterns",
+      "verb-prepositions",
+      "negative-scope"
+    ],
+    "NCE2-73": [
+      "word-order",
+      "complex-sentences"
+    ],
+    "NCE2-74": [
+      "present-contrast",
+      "always-continuous"
+    ],
+    "NCE2-75": [
+      "past-simple"
+    ],
+    "NCE2-76": [
+      "perfect-continuous",
+      "present-perfect"
+    ],
+    "NCE2-77": [
+      "past-or-perfect",
+      "perfect-continuous"
+    ],
+    "NCE2-78": [
+      "articles"
+    ],
+    "NCE2-79": [
+      "past-continuous",
+      "used-to"
+    ],
+    "NCE2-80": [
+      "comparison",
+      "adverbs"
+    ],
+    "NCE2-81": [
+      "verb-prepositions",
+      "place"
+    ],
+    "NCE2-82": [
+      "passive",
+      "passive-forms"
+    ],
+    "NCE2-83": [
+      "present-contrast",
+      "past-or-perfect",
+      "comparison",
+      "passive-forms"
+    ],
+    "NCE2-84": [
+      "will",
+      "future-choice"
+    ],
+    "NCE2-85": [
+      "future-continuous",
+      "future-perfect-continuous",
+      "will"
+    ],
+    "NCE2-86": [
+      "past-perfect",
+      "past-perfect-continuous"
+    ],
+    "NCE2-87": [
+      "reported",
+      "indirect-question",
+      "reported-commands"
+    ],
+    "NCE2-88": [
+      "condition-real",
+      "condition-unreal",
+      "condition-past"
+    ],
+    "NCE2-89": [
+      "obligation",
+      "should",
+      "need-doing"
+    ],
+    "NCE2-90": [
+      "have",
+      "causative"
+    ],
+    "NCE2-91": [
+      "past-ability"
+    ],
+    "NCE2-92": [
+      "need-doing",
+      "gerund"
+    ],
+    "NCE2-93": [
+      "passive",
+      "passive-double",
+      "passive-forms"
+    ],
+    "NCE2-94": [
+      "verb-prepositions",
+      "phrasal-verbs"
+    ],
+    "NCE2-95": [
+      "verb-review",
+      "nonfinite"
+    ],
+    "NCE2-96": [
+      "verb-patterns",
+      "articles",
+      "negative-scope"
+    ],
+    "NCE3-1": [
+      "word-order",
+      "complex-sentences"
+    ],
+    "NCE3-2": [
+      "present-contrast",
+      "always-continuous"
+    ],
+    "NCE3-3": [
+      "past-simple"
+    ],
+    "NCE3-4": [
+      "perfect-continuous",
+      "present-perfect"
+    ],
+    "NCE3-5": [
+      "articles",
+      "some-any"
+    ],
+    "NCE3-6": [
+      "past-continuous",
+      "past-simple"
+    ],
+    "NCE3-7": [
+      "past-simple",
+      "verb-review"
+    ],
+    "NCE3-8": [
+      "verb-review",
+      "nonfinite"
+    ],
+    "NCE3-9": [
+      "present-simple",
+      "present-contrast"
+    ],
+    "NCE3-10": [
+      "past-perfect"
+    ],
+    "NCE3-11": [
+      "reported",
+      "indirect-question"
+    ],
+    "NCE3-12": [
+      "condition-real",
+      "condition-unreal",
+      "condition-past"
+    ],
+    "NCE3-13": [
+      "obligation",
+      "need-doing"
+    ],
+    "NCE3-14": [
+      "have",
+      "causative"
+    ],
+    "NCE3-15": [
+      "past-ability",
+      "could-have"
+    ],
+    "NCE3-16": [
+      "gerund",
+      "nonfinite-passive"
+    ],
+    "NCE3-17": [
+      "passive",
+      "passive-forms"
+    ],
+    "NCE3-18": [
+      "verb-prepositions"
+    ],
+    "NCE3-19": [
+      "verb-review",
+      "verb-patterns"
+    ],
+    "NCE3-20": [
+      "articles",
+      "verb-prepositions",
+      "degree"
+    ],
+    "NCE3-21": [
+      "ago-before",
+      "past-ability"
+    ],
+    "NCE3-22": [
+      "so-such",
+      "used-to"
+    ],
+    "NCE3-23": [
+      "condition-unreal"
+    ],
+    "NCE3-24": [
+      "adverbs",
+      "object-to"
+    ],
+    "NCE3-25": [
+      "be-used-to",
+      "comparison"
+    ],
+    "NCE3-26": [
+      "gerund",
+      "nonfinite-passive"
+    ],
+    "NCE3-27": [
+      "reporting-passive",
+      "countable"
+    ],
+    "NCE3-28": [
+      "inversion",
+      "past-perfect"
+    ],
+    "NCE3-29": [
+      "verb-prepositions",
+      "formal-it"
+    ],
+    "NCE3-30": [
+      "phrasal-verbs",
+      "reported"
+    ],
+    "NCE3-31": [
+      "gerund",
+      "complex-sentences"
+    ],
+    "NCE3-32": [
+      "past-perfect-continuous"
+    ],
+    "NCE3-33": [
+      "degree"
+    ],
+    "NCE3-34": [
+      "time-clause",
+      "deduction-now"
+    ],
+    "NCE3-35": [
+      "object-clause",
+      "reported"
+    ],
+    "NCE3-36": [
+      "used-to"
+    ],
+    "NCE3-37": [
+      "degree",
+      "rewrite"
+    ],
+    "NCE3-38": [
+      "verb-review",
+      "past-or-perfect"
+    ],
+    "NCE3-39": [
+      "causative"
+    ],
+    "NCE3-40": [
+      "phrasal-verbs",
+      "except"
+    ],
+    "NCE3-41": [
+      "that-clauses",
+      "formal-it"
+    ],
+    "NCE3-42": [
+      "passive",
+      "relative",
+      "rewrite"
+    ],
+    "NCE3-43": [
+      "passive",
+      "purpose"
+    ],
+    "NCE3-44": [
+      "so-such",
+      "rewrite"
+    ],
+    "NCE3-45": [
+      "passive-double"
+    ],
+    "NCE3-46": [
+      "reported"
+    ],
+    "NCE3-47": [
+      "there-be",
+      "relative"
+    ],
+    "NCE3-48": [
+      "concession"
+    ],
+    "NCE3-49": [
+      "past-perfect",
+      "time-clause"
+    ],
+    "NCE3-50": [
+      "may"
+    ],
+    "NCE3-51": [
+      "inversion"
+    ],
+    "NCE3-52": [
+      "object-clause",
+      "relative",
+      "rewrite"
+    ],
+    "NCE3-53": [
+      "that-clauses",
+      "rewrite"
+    ],
+    "NCE3-54": [
+      "so-such"
+    ],
+    "NCE3-55": [
+      "distance",
+      "rewrite"
+    ],
+    "NCE3-56": [
+      "reason"
+    ],
+    "NCE3-57": [
+      "negative-scope"
+    ],
+    "NCE3-58": [
+      "reported-commands"
+    ],
+    "NCE3-59": [
+      "likely"
+    ],
+    "NCE3-60": [
+      "indirect-question"
+    ],
+    "NCE4-1": [
+      "participle",
+      "reported"
+    ],
+    "NCE4-2": [
+      "be-question",
+      "should",
+      "verb-patterns"
+    ],
+    "NCE4-3": [
+      "double-comparison"
+    ],
+    "NCE4-4": [
+      "verb-review",
+      "passive-forms"
+    ],
+    "NCE4-5": [
+      "always-continuous",
+      "present-contrast"
+    ],
+    "NCE4-6": [
+      "condition-unreal",
+      "condition-past"
+    ],
+    "NCE4-7": [
+      "condition-real",
+      "purpose"
+    ],
+    "NCE4-8": [
+      "word-order",
+      "adverbs"
+    ],
+    "NCE4-9": [
+      "quantity"
+    ],
+    "NCE4-10": [
+      "articles",
+      "gerund",
+      "time-clause"
+    ],
+    "NCE4-11": [
+      "verb-review",
+      "perfect-continuous"
+    ],
+    "NCE4-12": [
+      "non-defining",
+      "relative"
+    ],
+    "NCE4-13": [
+      "obligation",
+      "need-doing"
+    ],
+    "NCE4-14": [
+      "participle",
+      "complex-sentences"
+    ],
+    "NCE4-15": [
+      "passive",
+      "rewrite"
+    ],
+    "NCE4-16": [
+      "verb-review",
+      "verb-patterns"
+    ],
+    "NCE4-17": [
+      "adverbs",
+      "word-order"
+    ],
+    "NCE4-18": [
+      "verb-review",
+      "nonfinite"
+    ],
+    "NCE4-19": [
+      "verb-prepositions"
+    ],
+    "NCE4-20": [
+      "could-have",
+      "deduction-past"
+    ],
+    "NCE4-21": [
+      "relative-omission",
+      "relative"
+    ],
+    "NCE4-22": [
+      "verb-review",
+      "passive-forms"
+    ],
+    "NCE4-23": [
+      "articles"
+    ],
+    "NCE4-24": [
+      "deduction-now",
+      "obligation"
+    ],
+    "NCE4-25": [
+      "non-defining"
+    ],
+    "NCE4-26": [
+      "time-clause",
+      "past-perfect"
+    ],
+    "NCE4-27": [
+      "verb-review",
+      "nonfinite-passive"
+    ],
+    "NCE4-28": [
+      "same-different"
+    ],
+    "NCE4-29": [
+      "absolute",
+      "participle"
+    ],
+    "NCE4-30": [
+      "verb-review",
+      "passive"
+    ],
+    "NCE4-31": [
+      "comparison",
+      "degree",
+      "verb-prepositions"
+    ],
+    "NCE4-32": [
+      "verb-prepositions",
+      "phrasal-verbs"
+    ],
+    "NCE4-33": [
+      "verb-prepositions"
+    ],
+    "NCE4-34": [
+      "adverbs"
+    ],
+    "NCE4-35": [
+      "verb-prepositions",
+      "phrasal-verbs"
+    ],
+    "NCE4-36": [
+      "nonfinite",
+      "participle"
+    ],
+    "NCE4-37": [
+      "articles"
+    ],
+    "NCE4-38": [
+      "should",
+      "passive-forms"
+    ],
+    "NCE4-39": [
+      "relative-omission",
+      "relative"
+    ],
+    "NCE4-40": [
+      "verb-review",
+      "nonfinite"
+    ],
+    "NCE4-41": [
+      "relative"
+    ],
+    "NCE4-42": [
+      "condition-real",
+      "condition-unreal",
+      "condition-past"
+    ],
+    "NCE4-43": [
+      "future-be"
+    ],
+    "NCE4-44": [
+      "rewrite"
+    ],
+    "NCE4-45": [
+      "deduction-past",
+      "obligation"
+    ],
+    "NCE4-46": [
+      "formal-it"
+    ],
+    "NCE4-47": [
+      "concession",
+      "rewrite"
+    ],
+    "NCE4-48": [
+      "articles",
+      "condition-real",
+      "condition-unreal"
+    ]
+  }
+}

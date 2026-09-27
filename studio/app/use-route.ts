@@ -16,7 +16,7 @@ export function useRoute(){
 export function useRouteScroll(){
  useEffect(()=>{
   const previous=history.scrollRestoration;history.scrollRestoration='manual';
-  if(!location.hash)history.replaceState({studioScroll:0},'',routeHash({view:'nce'}));
+  if(!location.hash)history.replaceState({studioScroll:0},'',routeHash({view:'today'}));
   let restoring=false,frame=0,timer=0,observer:ResizeObserver|undefined,heldHeight:string|undefined;
   const stop=()=>{
    restoring=false;clearTimeout(timer);cancelAnimationFrame(frame);observer?.disconnect();window.removeEventListener('scrollend',settle);
