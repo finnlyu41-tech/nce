@@ -17,6 +17,7 @@ import {PlaybackSpeed,usePlaybackRate} from './playback-speed';
 import {useRoute} from './use-route';
 import {splitLesson} from './lesson-structure';
 import {LessonQuestion,LessonPages} from './lesson-context';
+import {ChineseRecall} from './chinese-recall-ui';
 const books=Object.keys(bookCounts) as NceBookId[];
 const accentLabel=(file:SiteMaterial)=>file.accent==='us'?'美音':file.accent==='uk'?'英音':'版本未标注';
 type Loaded={file:SiteMaterial;blob:Blob;url:string;text?:string};
@@ -28,13 +29,20 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  const rate=usePlaybackRate();
  const [busy,setBusy]=useState(''),[error,setError]=useState(''),[progress,setProgress]=useState(0),[loaded,setLoaded]=useState<Loaded[]>([]),[selected,setSelected]=useState(''),[lesson,setLesson]=useState(1),[replace,setReplace]=useState(false),[active,setActive]=useState(-1),[hideText,setHideText]=useState(practiceMode),[targetNote,setTargetNote]=useState('');
  const [showTranslation,setShowTranslation]=useState(false),[dictationLine,setDictationLine]=useState(0),[dictationAnswer,setDictationAnswer]=useState(''),[dictationChecked,setDictationChecked]=useState(false);
- const [practice,setPractice]=useState<'read'|'dictation'>('read');
+ const [localPractice,setLocalPractice]=useState<'read'|'dictation'>('read');
+ const practice=practiceMode&&route.mode==='recall'?'recall':localPractice;
+ function setPractice(value:'read'|'dictation'|'recall'){
+  audio.current?.pause();endAt.current=null;setActive(-1);setHideText(true);setShowTranslation(false);
+  if(value!=='recall')setLocalPractice(value);
+  navigate({...route,mode:value==='recall'?'recall':undefined},{keepScroll:true});
+ }
  const practicePanel=useRef<HTMLElement>(null);
  const [pageOnly,setPageOnly]=useState<Target|null>(null);
  const [pdfLesson,setPdfLesson]=useState<number|undefined>();
  const controller=useRef<AbortController|null>(null),indexController=useRef<AbortController|null>(null),stateRef=useRef(state),audio=useRef<HTMLAudioElement>(null),readerPanel=useRef<HTMLElement>(null),endAt=useRef<number|null>(null),pendingTarget=useRef<Target|null>(null);
  stateRef.current=state;
  const files=manifest?.files||[],primary=loaded.find(x=>x.file.id===selected)||loaded[0],recording=loaded.find(x=>x.file.type.startsWith('audio/')),transcript=loaded.find(x=>x.text!==undefined),allRows=parseLessonText(transcript?.text||''),structure=splitLesson(allRows,primary?.file.book,true),rows=structure.body;
+ useEffect(()=>{audio.current?.pause();endAt.current=null;setActive(-1);if(practice==='recall'){setHideText(true);setShowTranslation(false)}},[practice]);
  useEffect(()=>{if(!visible){audio.current?.pause();controller.current?.abort()}},[visible]);
  useEffect(()=>()=>{controller.current?.abort();indexController.current?.abort()},[]);
  useEffect(()=>()=>{loaded.forEach(x=>URL.revokeObjectURL(x.url))},[loaded]);
@@ -65,7 +73,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  async function open(file:SiteMaterial,forLesson?:number){
   controller.current?.abort();audio.current?.pause();endAt.current=null;
   const abort=new AbortController();controller.current=abort;
-  setPageOnly(null);setPractice('read');setDictationLine(0);setDictationAnswer('');setDictationChecked(false);
+  setPageOnly(null);setLocalPractice('read');setDictationLine(0);setDictationAnswer('');setDictationChecked(false);
   setBusy('正在读取 '+(file.title||file.name));setError('');setProgress(0);setReplace(false);setActive(-1);
   const results:Loaded[]=[];
   try{
@@ -88,9 +96,9 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
   if(endAt.current!==null&&p.currentTime>=endAt.current){p.pause();endAt.current=null;setActive(-1);return}
   let index=-1;rows.forEach((r,i)=>{if(r.time!==undefined&&r.time<=p.currentTime)index=i});setActive(index);
  }
- function playLine(index:number){
+ function playLine(index:number,last=index){
   const p=audio.current,time=rows[index].time;if(!p||time===undefined)return;
-  endAt.current=rows.slice(index+1).find(r=>r.time!==undefined&&r.time>time)?.time??null;
+  endAt.current=rows.slice(last+1).find(r=>r.time!==undefined&&r.time>time)?.time??null;
   p.currentTime=time;p.playbackRate=Number(rate);setActive(index);void p.play().catch(()=>setError('浏览器未能播放音频，请再次点击播放'));
  }
  async function useLesson(){
@@ -136,27 +144,31 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
    {shown.map(f=><button className={'cloud-file '+(loaded.some(x=>x.file.id===f.id)?'selected':'')} key={f.id} disabled={!!busy} onClick={()=>{setTargetNote('');choose(f)}}>{f.type.startsWith('audio/')?<Headphones size={20}/>:<FileText size={20}/>}<span><strong>{f.title?`${f.lesson?`第 ${f.lesson} 课 · `:''}${f.title}`:f.name}</strong><small>{f.type==='application/pdf'?`${f.pages||'—'} 页 · ${f.textStatus==='scan'?'扫描本':'PDF'}`:`${accentLabel(f)} · ${f.pairId&&pairedMaterials(files,f).length===2?'音频 + LRC':'单份资料'}`} · {(f.size/1024**2).toFixed(1)} MiB</small></span></button>)}
    {!shown.length&&<div className="empty"><BookOpen size={36}/><h3>没有符合条件的教材</h3><p>试试其他课号或录音版本。</p></div>}
   </section>}
-  <section ref={readerPanel} className="panel cloud-reader">{primary?<>
-   <div className="section-top"><div><h2>{practiceMode&&hideText?`第 ${primary.file.lesson} 课 · 听写与跟读`:structure.title?.en||primary.file.title||primary.file.name}</h2>{!hideText&&showTranslation&&structure.title?.zh&&<p className="line-translation">{structure.title.zh}</p>}</div><a href={primary.url} download={primary.file.name} className="text-btn"><Download size={17}/>下载原文件</a></div>
+  <section ref={readerPanel} className={'panel cloud-reader'+(practice==='recall'?' recall-active':'')}>{primary?<>
+   <div className="section-top"><div><h2>{practiceMode&&(hideText||practice==='recall')?`第 ${primary.file.lesson} 课 · 句子练习`:structure.title?.en||primary.file.title||primary.file.name}</h2>{practice!=='recall'&&!hideText&&showTranslation&&structure.title?.zh&&<p className="line-translation">{structure.title.zh}</p>}</div><a href={primary.url} download={primary.file.name} className="text-btn"><Download size={17}/>下载原文件</a></div>
    {primary.file.type==='application/pdf'?<>{pdfPage&&<p className="notice">第 {pdfLesson} 课 · 已定位到 PDF 第 {pdfPage} 页。可对照原书完成本课句型与练习。</p>}<p className="muted small">{primary.file.pages} 页 · {embedded?'可翻页、放大和下载；如阅读器未显示，请在新窗口打开。':primary.file.textStatus==='scan'?'扫描本，没有可提取正文；逐句听读采用配套 LRC。':'原书 PDF，未自动按课抽取。'}</p><a className="text-btn" href={readerUrl} target="_blank" rel="noreferrer">在新窗口阅读 PDF</a><iframe title="教材 PDF 阅读器" className="cloud-pdf" src={readerUrl}/></>:<>
     <p className="muted small">{accentLabel(primary.file)} · 第 {primary.file.lesson||'未核定'} 课 · 配套音频与字幕</p>
     {!embedded&&primary.file.lessonNote&&<p className="notice">{primary.file.lessonNote}</p>}
-    <LessonQuestion lesson={structure} answer={state.drafts[`listen-answer-${primary.file.book}-${primary.file.lesson}`]||''} onChange={value=>{const current=stateRef.current;restore({...current,drafts:{...current.drafts,[`listen-answer-${primary.file.book}-${primary.file.lesson}`]:value}})}}/>
+    {practice!=='recall'&&<LessonQuestion lesson={structure} answer={state.drafts[`listen-answer-${primary.file.book}-${primary.file.lesson}`]||''} onChange={value=>{const current=stateRef.current;restore({...current,drafts:{...current.drafts,[`listen-answer-${primary.file.book}-${primary.file.lesson}`]:value}})}}/>}
     {recording&&<div className="cloud-player"><audio ref={audio} controls preload="metadata" src={recording.url} aria-label="网站课文音频" onTimeUpdate={timeUpdate} onSeeked={()=>setActive(-1)} onEnded={()=>setActive(-1)} onError={()=>setError('音频不能解码，请下载原文件核对')} onLoadedMetadata={()=>{if(audio.current)audio.current.playbackRate=Number(rate)}}/><div className="row wrap"><PlaybackSpeed ariaLabel="网站音频播放速度"/><button className="text-btn" onClick={()=>{endAt.current=null;if(audio.current){audio.current.currentTime=rows[0]?.time||0;void audio.current.play().catch(()=>setError('请再次点击播放'))}}}>从正文开始播放</button>{transcript&&<button className="text-btn" aria-expanded={!hideText} onClick={()=>{setHideText(!hideText);setShowTranslation(false)}}>{hideText?'需要时看原文与原书图片':'收起原文与原书图片'}</button>}</div></div>}
     {practiceMode&&rows.length>0&&<section ref={practicePanel} className="lesson-dictation sentence-practice" aria-label="课文逐句练习">
-     <div className="practice-mode" aria-label="选择练习方式"><button className="btn secondary" aria-pressed={practice==='read'} onClick={()=>{audio.current?.pause();setPractice('read')}}><Mic size={16}/>跟读纠音</button><button className="btn secondary" aria-pressed={practice==='dictation'} onClick={()=>{audio.current?.pause();setPractice('dictation');setDictationChecked(false);setHideText(true);setShowTranslation(false)}}><Headphones size={16}/>逐句听写</button></div>
+     <div className="practice-mode" aria-label="选择练习方式"><button className="btn secondary" aria-pressed={practice==='read'} onClick={()=>{audio.current?.pause();setPractice('read')}}><Mic size={16}/>跟读纠音</button><button className="btn secondary" aria-pressed={practice==='dictation'} onClick={()=>{audio.current?.pause();setPractice('dictation');setDictationChecked(false);setHideText(true);setShowTranslation(false)}}><Headphones size={16}/>逐句听写</button><button className="btn secondary" aria-pressed={practice==='recall'} onClick={()=>setPractice('recall')}><BookOpen size={16}/>看中文说英文</button></div>
+     {practice==='recall'?<ChineseRecall rows={rows} canListen={!!recording&&rows.every(r=>r.time!==undefined)} onListen={playLine} onStop={()=>{audio.current?.pause();endAt.current=null;setActive(-1)}}/>:<>
      <h3>{practice==='read'?'跟着课文，逐句练发音':'逐句听写'}</h3>
      <p className="muted small">{practice==='read'?'选一句 → 听原声 → 录音评估 → 练一两处，再录一次。':'先听一句，写下听到的内容，再核对答案。'}</p>
      <label className="field record-line-select">{practice==='read'?'选择跟读句':'选择听写句'}<select aria-label="选择练习句" value={dictationLine} onChange={e=>{audio.current?.pause();setDictationLine(Number(e.target.value));setDictationAnswer('');setDictationChecked(false);if(practice==='dictation'){setHideText(true);setShowTranslation(false)}}}>{rows.map((row,i)=><option key={i} value={i}>{practice==='read'?`${i+1}. ${row.en.slice(0,80)}`:`第 ${i+1} 句`}</option>)}</select></label>
      {practice==='dictation'&&<><div className="row spread"><span>第 {dictationLine+1} / {rows.length} 句</span><button className="btn secondary" onClick={()=>playLine(dictationLine)}><Volume2 size={17}/>听这一句</button></div><PlaybackSpeed label="听写语速" ariaLabel="在线听写语速"/><label className="field">听写答案<textarea value={dictationAnswer} onChange={e=>{setDictationAnswer(e.target.value);setDictationChecked(false);if(practice==='dictation'){setHideText(true);setShowTranslation(false)}}}/></label><button className="btn" disabled={!dictationAnswer.trim()} onClick={()=>setDictationChecked(true)}>核对答案</button>{dictationChecked&&<div className="feedback"><strong>{normal(dictationAnswer)===normal(rows[dictationLine].en)?'完全正确':'对照原句，再听一次'}</strong><p>{rows[dictationLine].en}</p><p>{rows[dictationLine].zh}</p></div>}</>}
      {practice==='read'&&<Recorder key={`${primary.file.id}-${dictationLine}`} referenceText={rows[dictationLine].en} onListen={()=>playLine(dictationLine)} onBeforeRecord={()=>{audio.current?.pause();endAt.current=null;setActive(-1)}}/>}
      <div className="row spread"><button className="text-btn" disabled={dictationLine===0} onClick={()=>{audio.current?.pause();setDictationLine(i=>i-1);setDictationAnswer('');setDictationChecked(false);if(practice==='dictation'){setHideText(true);setShowTranslation(false)}}}>上一句</button><span className="muted small">{dictationLine+1} / {rows.length}</span><button className="text-btn" disabled={dictationLine===rows.length-1} onClick={()=>{audio.current?.pause();setDictationLine(i=>i+1);setDictationAnswer('');setDictationChecked(false);if(practice==='dictation'){setHideText(true);setShowTranslation(false)}}}>下一句</button></div>
+     </>}
     </section>}
+    {practice!=='recall'&&<>
     {!hideText&&<LessonPages book={primary.file.book} lesson={primary.file.lesson}/>}
     {transcript&&<><h3 className="lesson-body-title">{hideText?'按句听原声':'课文正文'}</h3><div className="transcript-tools"><span className="muted small">{hideText?'原文、中文和原书图片已收起，点喇叭听整句。':'点单词查音标和词义 · 点喇叭听整句'}</span>{!hideText&&<button className="text-btn" aria-expanded={showTranslation} onClick={()=>setShowTranslation(!showTranslation)}>{showTranslation?'隐藏中文':'需要时看中文'}</button>}</div><div className="site-transcript">{rows.map((row,i)=><div key={i} className={'site-line '+(active===i?'active':'')}><span className="site-time">{row.time===undefined?'—':`${Math.floor(row.time/60)}:${String(Math.floor(row.time%60)).padStart(2,'0')}`}</span><div>{hideText?`第 ${i+1} 句（点击听音）`: <WordText text={row.en}/>} {!hideText&&showTranslation&&row.zh&&<p className="line-translation">{row.zh}</p>}</div><div className="line-actions"><button className="icon-btn line-play" disabled={!recording||row.time===undefined} onClick={()=>playLine(i)} aria-label={`播放第 ${i+1} 句`}><Volume2 size={18}/></button>{practiceMode&&<button className="icon-btn" aria-label={`跟读第 ${i+1} 句`} onClick={()=>{audio.current?.pause();setPractice('read');setDictationLine(i);setDictationAnswer('');setDictationChecked(false);requestAnimationFrame(()=>practicePanel.current?.scrollIntoView({behavior:'smooth',block:'start'}))}}><Mic size={18}/></button>}</div></div>)}</div></>}
     <p className="muted small">中文为学习参考，来自原项目中英字幕；已核对分句对应，仍可对照原书确认。</p>
     <div className="row wrap">{!embedded&&<><button className="btn secondary" disabled={!!busy||position<=0} onClick={()=>choose(lessonFiles[position-1])}><ChevronLeft size={16}/>上一篇</button><button className="btn secondary" disabled={!!busy||position<0||position>=lessonFiles.length-1} onClick={()=>choose(lessonFiles[position+1])}>下一篇<ChevronRight size={16}/></button></>}{pdf&&<button className="text-btn" disabled={!!busy} onClick={()=>viewPdf?viewPdf():embedded?void open(pdf,primary.file.lesson):choose(pdf)}>查看本课原书与练习</button>}</div>
     <details className="lesson-offline"><summary>保存资料供离线使用</summary><div className="cloud-use">{!embedded&&<label className="field">保存到第几课<input aria-label="保存教材的课号" type="number" min={1} max={bookCounts[primary.file.book]} value={lesson} onChange={e=>setLesson(Number(e.target.value))}/></label>}<button className="btn" disabled={!!busy||!Number.isInteger(lesson)||lesson<1||lesson>bookCounts[primary.file.book]} onClick={useLesson}>保存并进入本课练习 <BookOpen size={17}/></button><label className="cloud-replace"><input type="checkbox" checked={replace} onChange={e=>setReplace(e.target.checked)}/>替换本课已有文本和音频（保留笔记与进度）</label><p className="muted small">配对资料一起保存到当前浏览器。可继续逐句听写、整理词句、复述和语法补强；保存后断网也可用。</p></div></details>
+    </>}
    </>}
   </>:<div className="empty cloud-reader-empty"><BookOpen size={52}/><h2>书在这里，随时翻开。</h2><p>选择 PDF 看原书，或选择一课同步听读。</p></div>}</section></div>}
   {!embedded&&<p className="muted small section-space">网站教材可跨设备读取；进度、笔记和生词保存在当前浏览器，可在「学习档案」导出 .espack 完整备份。</p>}

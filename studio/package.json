@@ -24,6 +24,7 @@
     "verify:playback": "node scripts/test-playback.mjs",
     "verify:study-path": "node scripts/test-study-path.mjs",
     "verify:guided": "node scripts/test-guided-learning.mjs",
+    "verify:chinese-recall": "node scripts/test-chinese-recall.mjs",
     "verify:pronunciation": "node scripts/test-pronunciation.mjs"
   },
   "dependencies": {
