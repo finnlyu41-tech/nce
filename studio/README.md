@@ -197,7 +197,11 @@ python3 scripts/package-language.py "$TRANSLATION_SNAPSHOT" "$ECDICT_CSV" "$TRAN
 
 ## 验证和本机接续
 
-2026-09-27 原书词表与查词例句中译已在独立工作区完成本地验证，已获提交、推送和上线授权，正在整合最新开发分支。类型检查、在线/离线构建、教材词表与例句匹配、导航、引导练习、语速及录音接口回归通过；1,544 个发布文件校验覆盖全部 348 课、3,615 个教材词条及对应词典条目。Chrome 实测第一册第 1、2 课、第二册第 1 课、无独立词表练习课和跨页词表；390 像素下查词弹窗显示对应原句和中文，长篇阅读示例无整页横向溢出。未修改生产学习记录，未调用收费服务。核对后的打包输入保存在忽略的 `work/local-codex/textbook-vocabulary/reviewed.json`，截图和核对证据在同目录；换机重建还需另行提供该输入，不能仅凭 Git 重建教材数据。正式站尚未包含本轮改动；发布前重新核对在途改动。
+2026-09-27 原书词表与查词例句中译已发布到[正式站](https://finn-english-studio.pages.dev/)和 [7e37f243 独立部署](https://7e37f243.finn-english-studio.pages.dev/)，本次版本为 `2026-09-27-textbook-vocabulary-v1`，发布基线 `ad4af2c`，词表功能提交 `8eaa20c`。保留进度保存和免口令跟读评估；“我的词句”按原书词表显示，弹窗例句显示配对中文。没有独立词表的练习课明确提示，短语作为完整词条查词。
+
+类型检查、在线/离线构建、教材词表与例句匹配、导航、引导练习、语速、进度文件及录音接口回归通过；1,544 个发布文件校验覆盖全部 348 课、3,615 个教材词条及对应词典条目。两个公开域名的 1,007 项内容检查通过，覆盖全部 277 份语言文件和 696 张页图，无传输重试；另有 6 项接口检查确认评估启用、同源无效请求返回 400、跨源返回 403，未上传录音或调用 Azure。正式站实际点词已显示中文；独立部署完整短语收藏后刷新仍保留，第一句教材原声以 0.85 倍速从约 15.15 秒播放并在约 16.83 秒停止，无媒体错误。未向正式来源写入测试答案。390 像素词表与长例句布局已在本地验证，不作为手机真机验收。
+
+核对后的打包输入保存在忽略的 `work/local-codex/textbook-vocabulary/reviewed.json`，发布验收为同目录的 `public-verification.json`、`api-verification.json`、`published-ui-verification.json` 和 `production-popup.png`。`dist-online/lesson-pages/index.json`、`language/index.json`、`language/dictionary.json` 已冻结并校验；换机重建还需另行提供教材输入，不能仅凭 Git 重建。后续由教材语法任务统一发布，当前工作区不再部署或推进共享开发分支；下一版须保留这三份更新后的数据，防止只有前端代码而丢失词表。
 
 2026-09-27 免口令录音评估已发布到[正式站](https://finn-english-studio.pages.dev/)及 [3b8a2efb 独立部署](https://3b8a2efb.finn-english-studio.pages.dev/)，版本 `2026-09-27-pronunciation-open-v1`，首页 SHA-256 为 `f9c3a4bf181299429f399bfaed63e5c94da227e0d847f53eb642b4ac51a8228e`。按用户要求删除口令输入、页面内存及接口校验；录音后确认发送即可提交。保留进度保存等现有功能、F0 配置检查、发送确认、30 秒限制、同源校验和服务端 Azure 密钥，未变更 Azure 资源或账户设置。下方旧部署的“无口令 401”仅为历史验收结果，已由本次免口令行为替代。
 
