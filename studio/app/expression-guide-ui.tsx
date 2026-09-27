@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
 import {ArrowRight,ArrowLeft,Volume2,Check} from 'lucide-react';
 import {toast} from 'sonner';
 import {type State,type NceBookId,wordCount} from './model';
@@ -25,7 +25,8 @@ const names=['听懂一句','拆开搭句','自己表达','反馈与重练','换
 export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:NceBookId;lesson:number;rows:LanguageRow[];state:State;update:(fn:(s:State)=>State)=>void;listen:()=>void}){
  const route=useRoute(),key=`expression-${book}-${lesson}`,draft=readGuide(state.drafts[key]);
  const {frame,source,level,excerpt,prompts,goal}=guideFor(rows,book),step=route.step??draft.step;
- const [hint,setHint]=useState<'full'|'keywords'|'none'>('full');
+ const [hint,setHint]=useState<'full'|'keywords'|'none'>('none');
+ useEffect(()=>setHint('none'),[step]);
  const patch=(change:Partial<GuideDraft>)=>update(s=>{
   const changedContent=['meaning','keywords','selected','answer','retry'].some(field=>field in change);
   return {...s,drafts:{...s.drafts,[key]:JSON.stringify({...readGuide(s.drafts[key]),...(changedContent?{checkpointAt:0,checkChoice:'',checkMarked:false,checkedTransfer:'',saved:false}:{}),...change})}};
@@ -60,10 +61,10 @@ export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:Nc
   <nav className="guide-steps" aria-label="表达练习步骤">{names.map((name,i)=><button key={name} className={i===step?'active':''} onClick={()=>go(i)} aria-current={i===step?'step':undefined}>{i+1}<span>{name}</span></button>)}</nav>
   <label className="guide-mobile-jump">当前步骤<select aria-label="切换表达步骤" value={step} onChange={e=>go(Number(e.target.value))}>{names.map((name,i)=><option value={i} key={name}>{i+1} / 5 · {name}</option>)}</select></label>
   {step===0&&<div className="guide-stage">
-   <p>先听这一句，再说清它的意思。今天先练这一小段。</p>
-   <blockquote><WordText text={excerpt.en}/><p className="line-translation">{excerpt.zh}</p></blockquote>
+   <p>先听这一句，写下你理解的意思；卡住时再打开参考。</p>
+   <details className="practice-reference"><summary>听后看原句与中文参考</summary><blockquote><WordText text={excerpt.en}/><p className="line-translation">{excerpt.zh}</p></blockquote></details>
    <div className="row wrap"><button className="text-btn" onClick={listen}>回到课文听原声</button><button className="text-btn" onClick={()=>speak(excerpt.en)}><Volume2 size={17}/>慢读这句</button><PlaybackSpeed ariaLabel="表达示范语速"/></div>
-   <label className="field">这句话在说谁、什么事？<textarea rows={2} maxLength={1000} value={draft.meaning} onChange={e=>patch({meaning:e.target.value,saved:false})} placeholder="用中文说清意思即可；卡住时先点关键词查意思"/></label>
+   <label className="field">这句话在说谁、什么事？<textarea rows={2} maxLength={1000} value={draft.meaning} onChange={e=>patch({meaning:e.target.value,saved:false})} placeholder="先用中文说清自己听懂的意思；需要时展开参考、点词查意思"/></label>
   </div>}
   {step===1&&<div className="guide-stage">
    <h3>从本课原句，借一个表达方法</h3><blockquote><WordText text={excerpt.en}/><p className="line-translation">{excerpt.zh}</p></blockquote>
@@ -78,7 +79,7 @@ export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:Nc
   {step===2&&<div className="guide-stage">
    <h3>{level==='sentence'?'先说两句，再补一个细节':'用这个方法，讲自己的一个情境'}</h3>
    <div className="guide-hints" role="group" aria-label="表达提示程度">{(['full','keywords','none'] as const).map((value,i)=><button className={'btn '+(hint===value?'':'secondary')} key={value} onClick={()=>setHint(value)}>{['看句架','只看关键词','关掉提示'][i]}</button>)}</div>
-   {hint==='full'&&<blockquote><WordText text={sentence}/><p className="line-translation">{translation}</p></blockquote>}
+   {hint==='full'&&<blockquote><WordText text={sentence}/><details><summary>看句架的中文意思</summary><p className="line-translation">{translation}</p></details></blockquote>}
    {hint!=='none'&&<p className="guide-keywords">我的关键词：{draft.keywords||'先到上一步写几个关键词'}</p>}
    <p>{frame.transfer}</p>
    <label className="field">记下你刚才说的内容<textarea rows={4} maxLength={5000} value={draft.answer} onChange={e=>patch({answer:e.target.value,checkedAnswer:'',saved:false})} placeholder="尽量记录自己实际说过的话，允许出错；下一步会检查这一版"/></label>

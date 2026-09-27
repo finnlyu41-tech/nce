@@ -192,6 +192,7 @@
 @media(max-width:640px){.lesson-question{padding:.9rem}.lesson-page-picture{padding:.75rem}.lesson-page-picture img{height:235px}.guide-steps{gap:.2rem}.guide-steps span{font-size:.72rem}.guide-steps button{padding:.55rem .1rem;min-height:60px}.guide-slots,.knowledge-grid,.speaking-plan-fields,.readiness-skills,.bank-selectors{grid-template-columns:1fr}.guide-slots{gap:0}.mock-scores{grid-template-columns:repeat(2,minmax(0,1fr))}.guide-stage blockquote,.speaking-coach blockquote{padding:.85rem;font-size:1rem}.guide-footer .btn{padding:.65rem .8rem}.speaking-coach .timer{flex-wrap:wrap}.guided-expression .section-top{gap:.5rem;flex-wrap:wrap}.speaking-bank .section-top{flex-wrap:wrap}.guide-stage>.row{flex-wrap:wrap}.readiness .section-top{align-items:flex-start;flex-wrap:wrap}.lesson-question .row{gap:.5rem}.bank-selectors .field{margin:.2rem 0}}
 
 /* Keep one current action visible during the expression loop. */
+.practice-reference>summary{cursor:pointer;min-height:44px;padding:9px 0;color:#425975;font-weight:600;line-height:1.7}
 .expression-course-options{margin:0 0 14px;border:1px solid #dce4ef;border-radius:10px;background:#fff;padding:10px 14px}
 .expression-course-options>summary,.expression-free-notes>summary{cursor:pointer;min-height:32px;display:list-item;font-weight:600;color:#41556f}
 .expression-course-options .paired-lesson-bar{margin-top:12px}.expression-course-options .lesson-plan{margin-bottom:0}
