@@ -62,16 +62,16 @@ export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:Nc
   <label className="guide-mobile-jump">当前步骤<select aria-label="切换表达步骤" value={step} onChange={e=>go(Number(e.target.value))}>{names.map((name,i)=><option value={i} key={name}>{i+1} / 5 · {name}</option>)}</select></label>
   {step===0&&<div className="guide-stage">
    <p>先听这一句，写下你理解的意思；卡住时再打开参考。</p>
-   <details className="practice-reference"><summary>听后看原句与中文参考</summary><blockquote><WordText text={excerpt.en}/><p className="line-translation">{excerpt.zh}</p></blockquote></details>
+   <details className="practice-reference"><summary>听后看原句与中文参考</summary><blockquote><WordText text={excerpt.en} exampleTranslation={excerpt.zh}/><p className="line-translation">{excerpt.zh}</p></blockquote></details>
    <div className="row wrap"><button className="text-btn" onClick={listen}>回到课文听原声</button><button className="text-btn" onClick={()=>speak(excerpt.en)}><Volume2 size={17}/>慢读这句</button><PlaybackSpeed ariaLabel="表达示范语速"/></div>
    <label className="field">这句话在说谁、什么事？<textarea rows={2} maxLength={1000} value={draft.meaning} onChange={e=>patch({meaning:e.target.value,saved:false})} placeholder="先用中文说清自己听懂的意思；需要时展开参考、点词查意思"/></label>
   </div>}
   {step===1&&<div className="guide-stage">
-   <h3>从本课原句，借一个表达方法</h3><blockquote><WordText text={excerpt.en}/><p className="line-translation">{excerpt.zh}</p></blockquote>
+   <h3>从本课原句，借一个表达方法</h3><blockquote><WordText text={excerpt.en} exampleTranslation={excerpt.zh}/><p className="line-translation">{excerpt.zh}</p></blockquote>
    <p className="note">{frame.tip}</p>
    <p className="small muted">下面换成日常情境练同一种用途，示范由本站编写。先换一个选项，再试着自己说。</p>
    <div className="guide-slots">{frame.slots.map((slot,i)=><label className="field" key={slot.label}>{slot.label}<select value={draft.selected[i]||0} onChange={e=>{const selected=[...draft.selected];selected[i]=Number(e.target.value);patch({selected,saved:false})}}>{slot.options.map((o,n)=><option key={o.en} value={n}>{o.en} · {o.zh}</option>)}</select></label>)}</div>
-   <blockquote><WordText text={sentence}/><p className="line-translation">{translation}</p></blockquote>
+   <blockquote><WordText text={sentence} exampleTranslation={translation}/><p className="line-translation">{translation}</p></blockquote>
    <div className="row wrap"><button className="text-btn" onClick={()=>speak(sentence)}><Volume2 size={17}/>听替换示范</button><PlaybackSpeed ariaLabel="搭句示范语速"/></div>
    {level!=='sentence'&&<ol className="guide-prompts">{prompts.map(p=><li key={p}>{p}</li>)}</ol>}
    <label className="field">换成自己的内容，先写关键词<textarea rows={3} maxLength={1000} value={draft.keywords} onChange={e=>patch({keywords:e.target.value,saved:false})} placeholder={frame.slots.map(s=>s.label+'：').join('\n')+'\n自己的一个细节：'}/></label>
@@ -79,7 +79,7 @@ export function GuidedExpression({book,lesson,rows,state,update,listen}:{book:Nc
   {step===2&&<div className="guide-stage">
    <h3>{level==='sentence'?'先说两句，再补一个细节':'用这个方法，讲自己的一个情境'}</h3>
    <div className="guide-hints" role="group" aria-label="表达提示程度">{(['full','keywords','none'] as const).map((value,i)=><button className={'btn '+(hint===value?'':'secondary')} key={value} onClick={()=>setHint(value)}>{['看句架','只看关键词','关掉提示'][i]}</button>)}</div>
-   {hint==='full'&&<blockquote><WordText text={sentence}/><details><summary>看句架的中文意思</summary><p className="line-translation">{translation}</p></details></blockquote>}
+   {hint==='full'&&<blockquote><WordText text={sentence} exampleTranslation={translation}/><details><summary>看句架的中文意思</summary><p className="line-translation">{translation}</p></details></blockquote>}
    {hint!=='none'&&<p className="guide-keywords">我的关键词：{draft.keywords||'先到上一步写几个关键词'}</p>}
    <p>{frame.transfer}</p>
    <label className="field">记下你刚才说的内容<textarea rows={4} maxLength={5000} value={draft.answer} onChange={e=>patch({answer:e.target.value,checkedAnswer:'',saved:false})} placeholder="尽量记录自己实际说过的话，允许出错；下一步会检查这一版"/></label>

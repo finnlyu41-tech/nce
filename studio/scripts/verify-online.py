@@ -65,15 +65,28 @@ def verify(root):
     assert pages['version'] == 1 and len(pages['lessons']) == 348
     allowed.add('lesson-pages/index.json')
     assert len(pages['files']) == 696
+    assert pages.get('vocabulary',{}).get('version') == 1
+    assert pages['vocabulary']['lessons'] == 348
+    vocabulary_count = 0
+    vocabulary_words = json.loads((root/'language/dictionary.json').read_text())['words']
     for book, info in mapping.items():
         original = next(f for f in manifest['files'] if f['book']==book and f['type']=='application/pdf')
         assert pages['sources'][book] == info['sourceSha256'] == original['sha256']
         for lesson, start in info['starts'].items():
             lesson_pages = pages['lessons'][book+'-'+lesson]['pages']
+            vocabulary = pages['lessons'][book+'-'+lesson]['vocabulary']
+            assert vocabulary['pages'] and set(vocabulary['pages']) <= {p['page'] for p in lesson_pages}
+            words = vocabulary['words']
+            assert isinstance(words,list) and len(words) <= 100
+            assert len({w['word'].lower() for w in words}) == len(words)
+            assert words or (book=='NCE1' and int(lesson)%2==0), 'Unexpected missing textbook word list'
+            assert all(w['word'].lower() in vocabulary_words and isinstance(w['forms'],list) and all(isinstance(f,str) for f in w['forms']) for w in words)
+            vocabulary_count += len(words)
             assert [p['page'] for p in lesson_pages] == [start,start+1]
             for p in lesson_pages:
                 assert p['src'] == '/lesson-pages/'+p['sha256']+'.jpg'
                 assert p['sha256']+'.jpg' in pages['files']
+    assert vocabulary_count == pages['vocabulary']['entries']
     for name, info in pages['files'].items():
         assert re.fullmatch(r'[a-f0-9]{64}\.jpg',name)
         raw=(root/'lesson-pages'/name).read_bytes()
@@ -117,7 +130,7 @@ def verify(root):
             assert file.stat().st_size <= 25*1024**2, 'Cloudflare per-file limit exceeded'
             actual.add(relative)
     assert actual == allowed and len(actual) <= 20000, 'Upload whitelist incomplete or oversized'
-    print(json.dumps({'verifiedFiles': len(actual), 'materials': len(ids), 'bytes': total, 'books': counts, 'translatedLines': lines, 'dictionaryWords': language['words'], 'lessonImages':len(pages['files']), 'speakingPrompts':238, 'grammarGroups':len(catalog['entries']), 'grammarSourcePages':len(grammar['pages'])}, indent=2))
+    print(json.dumps({'verifiedFiles': len(actual), 'materials': len(ids), 'bytes': total, 'books': counts, 'translatedLines': lines, 'dictionaryWords': language['words'], 'lessonImages':len(pages['files']), 'speakingPrompts':238, 'textbookVocabularyEntries':vocabulary_count, 'grammarGroups':len(catalog['entries']), 'grammarSourcePages':len(grammar['pages'])}, indent=2))
 
 
 if __name__ == '__main__':
