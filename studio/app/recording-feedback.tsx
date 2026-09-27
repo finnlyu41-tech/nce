@@ -5,7 +5,7 @@ import {toast} from 'sonner';
 import {PlaybackSpeed,usePlaybackRate} from './playback-speed';
 import {ONLINE} from './runtime-mode';
 import {assessmentAudio,ASSESSMENT_SECONDS} from './recording-audio';
-import {assessRecording,getPersonalToken,setPersonalToken,practiceIssues,retryFeedback,PronunciationResult,PracticeIssue} from './pronunciation';
+import {assessRecording,practiceIssues,retryFeedback,PronunciationResult,PracticeIssue} from './pronunciation';
 import {speak} from './speech';
 import './recording-feedback.css';
 
@@ -19,7 +19,6 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
  const rate=usePlaybackRate(),[take,setTake]=useState<Take|null>(null),[previous,setPrevious]=useState<Take|null>(null);
  const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[submitting,setSubmitting]=useState(false),[elapsed,setElapsed]=useState(0);
  const [consent,setConsent]=useState(false),[service,setService]=useState<'loading'|'ready'|'unavailable'>('loading'),[error,setError]=useState('');
- const [token,setToken]=useState(getPersonalToken);
  const recorder=useRef<MediaRecorder|null>(null),stream=useRef<MediaStream|null>(null),mounted=useRef(false),pending=useRef(false);
  const clips=useRef<Take[]>([]),timer=useRef<ReturnType<typeof setInterval>|null>(null),request=useRef<AbortController|null>(null);
  const currentAudio=useRef<HTMLAudioElement>(null),previousAudio=useRef<HTMLAudioElement>(null);
@@ -71,8 +70,8 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
   finally{pending.current=false;if(mounted.current)setBusy(false)}
  }
  async function submit(){
-  if(!take||!consent||!token.trim()||submitting)return;
-  setPersonalToken(token);setSubmitting(true);setError('');const abort=new AbortController();request.current=abort;
+  if(!take||!consent||submitting)return;
+  setSubmitting(true);setError('');const abort=new AbortController();request.current=abort;
   const deadline=setTimeout(()=>abort.abort(),45000);
   try{
    const audio=await assessmentAudio(take.blob);if(abort.signal.aborted)throw Error('Aborted');
@@ -88,9 +87,8 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
   {previous&&<details className="record-previous"><summary>与上一遍对比</summary><audio ref={previousAudio} controls src={previous.url} aria-label="上一遍录音回放" onPlay={()=>{if(recording||busy){previousAudio.current?.pause();return;}currentAudio.current?.pause();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onLoadedMetadata={()=>{if(previousAudio.current)previousAudio.current.playbackRate=Number(rate)}}/>{previous.result&&take?.result&&<p className="small">发音准确度：{Math.round(previous.result.accuracy)} → {Math.round(take.result.accuracy)}；完整度：{Math.round(previous.result.completeness)} → {Math.round(take.result.completeness)}。以实际回听为准。</p>}</details>}
   {reference&&ONLINE&&<div className="record-assessment">
    {service==='loading'?<p className="small muted" role="status">正在检查评估服务…</p>:service==='ready'?<>
-    <details className="record-access" open={!token}><summary>个人评估口令</summary><label className="field">仅用于使用这台站点的评估服务<input type="password" autoComplete="off" value={token} onChange={e=>{setToken(e.target.value);setPersonalToken(e.target.value)}} placeholder="输入个人口令"/></label><p className="small muted">只在本次页面记住，刷新后需要重新输入。</p></details>
     <label className="record-consent"><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)}/><span>点击提交时，将本句英文和这段录音发送到微软 Azure 进行基础发音评估。</span></label>
-    <button className="btn full" disabled={!take||recording||busy||submitting||!consent||!token.trim()||!!take.result} onClick={()=>void submit()}>{submitting?'正在评估…':take?.result?'已评估，试着重录一次':'提交评估'}</button>
+    <button className="btn full" disabled={!take||recording||busy||submitting||!consent||!!take.result} onClick={()=>void submit()}>{submitting?'正在评估…':take?.result?'已评估，试着重录一次':'提交评估'}</button>
    </>:<p className="notice">站内自动评估尚未启用。你仍可回听、对照原声，或使用下面的免费朗读练习。</p>}
    <details className="record-coach"><summary>用免费的 Reading Coach 练这句话</summary><p className="small muted">复制下面的英文，在微软页面选择添加自己的文章并粘贴，再重新朗读。本站录音不会自动传过去。</p><textarea aria-label="用于 Reading Coach 的英文" readOnly value={reference} onFocus={e=>e.currentTarget.select()}/><div className="row wrap"><button className="btn secondary" onClick={()=>{if(!navigator.clipboard){toast.error('请长按选中上方英文进行复制。');return;}void navigator.clipboard.writeText(reference).then(()=>toast.success('已复制英文')).catch(()=>toast.error('复制不可用，请长按选中上方英文。'))}}>复制英文</button><a className="btn secondary" href="https://coach.microsoft.com/" target="_blank" rel="noreferrer noopener">打开 Reading Coach<ExternalLink size={15}/></a></div></details>
   </div>}

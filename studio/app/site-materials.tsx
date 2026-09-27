@@ -171,7 +171,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
     </>}
    </>}
   </>:<div className="empty cloud-reader-empty"><BookOpen size={52}/><h2>书在这里，随时翻开。</h2><p>选择 PDF 看原书，或选择一课同步听读。</p></div>}</section></div>}
-  {!embedded&&<p className="muted small section-space">网站教材可跨设备读取；进度、笔记和生词保存在当前浏览器，可在「学习档案」导出 .espack 完整备份。</p>}
+  {!embedded&&<p className="muted small section-space">网站教材可跨设备读取；进度、笔记和生词保存在当前浏览器，暂不自动跨设备同步。</p>}
  </div>;
 }
 async function digest(blob:Blob){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await blob.arrayBuffer())),x=>x.toString(16).padStart(2,'0')).join('')}

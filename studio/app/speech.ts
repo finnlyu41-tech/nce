@@ -6,14 +6,14 @@ let cancelActive: (() => void) | undefined;
 export function speak(text: string, onend?: (ok?: boolean) => void, accent: 'en-GB'|'en-US' = 'en-GB') {
   cancelActive?.();
   if (!('speechSynthesis' in window)) {
-    toast.error('此浏览器没有本地朗读功能，请导入自己的音频。');onend?.(false);return;
+    toast.error('此浏览器没有本地朗读功能，请使用教材原声。');onend?.(false);return;
   }
   const synth = window.speechSynthesis;
   synth.cancel();
   const voices = synth.getVoices().filter(voice => voice.localService && voice.lang.toLowerCase().startsWith('en'));
   const voice = voices.find(voice => voice.lang === accent) || (accent==='en-US'?undefined:voices[0]);
   if (!voice) {
-    toast.error(accent==='en-US'?'未找到本机美式英语语音，请先听课文原声，或安装美式英语语音包。':'未找到离线英文语音。请在系统中安装英文语音包，或使用已导入的音频；若刚打开页面，可稍后重试。');onend?.(false);return;
+    toast.error(accent==='en-US'?'未找到本机美式英语语音，请先听课文原声，或安装美式英语语音包。':'未找到离线英文语音。请在系统中安装英文语音包，或使用已保存的教材音频；若刚打开页面，可稍后重试。');onend?.(false);return;
   }
   let utterance: SpeechSynthesisUtterance, finished = false;
   let unsubscribe = () => {};
