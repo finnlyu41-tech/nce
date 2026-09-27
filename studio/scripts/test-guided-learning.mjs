@@ -42,21 +42,16 @@ assert(!readiness([mock,{...mock,id:'2',paper:'Practice B',kind:'general'}],6),'
 assert(readiness([mock,{...mock,id:'2',paper:'Practice B',date:'2026-09-26'}],6));
 assert(!readiness([mock,{...mock,id:'2',paper:'Practice B',date:'2026-09-26'},{...mock,id:'3',paper:'Practice C',date:'2026-09-27',scores:['5','5','5','5']}],6),'Latest setback is not hidden by older results');
 const drafts={'expression-NCE1-1':JSON.stringify({...readGuide(),meaning:'归属',keywords:'pen',answer:'This is my pen.',repair:'transfer',retry:'This is my book.',saved:true,category:'物品与归属'}),'speaking-plan-bank-1-1-0':JSON.stringify({answer:'I teach English.',points:['teacher']}),'ielts-readiness':JSON.stringify({minimum:'6',results:[mock]})};
-assert(validateState({...initial,drafts}),'Existing backups accept new text records without migration');
+assert(validateState({...initial,drafts}),'Existing state accepts new text records without migration');
 assert.deepEqual(readMocks(drafts['ielts-readiness']).results,[mock]);
-const store=(await source('offline-store.ts')).replace('{State,validateState','{validateState');
-const {parsePack}=await import(moduleUrl(store.replace("'./model'",JSON.stringify(moduleUrl(await source('model.ts'))))));
 const savedState={...initial,drafts};
-const manifest=new TextEncoder().encode(JSON.stringify({version:1,state:savedState,media:[]}));
-const pack=new Blob(['ENGLISH-STUDIO-PACK-1\n',String(manifest.length).padStart(12,'0')+'\n',manifest]);
-assert.deepEqual((await parsePack(pack)).state.drafts,drafts,'Full backup round trip preserves expression, speaking and mock records');
 
 const topics=JSON.parse(await readFile(new URL('dist-online/speaking/topics.json',root),'utf8'));
 assert.equal(topics.topics.length,66);assert.equal(topics.topics.reduce((n,t)=>n+t.questions.length,0),238);
 for(const topic of topics.topics){for(const q of topic.questions)assert.deepEqual(Object.keys(q).sort(),['en','sourceRow','zh'],'Only bilingual prompts and source row numbers enter the public bank');assert(topic.questions.every(q=>q.en.length>10&&q.zh.length>=4));assert(new Set(topic.questions.map(q=>q.en)).size===topic.questions.length)}
 console.log(`${count} lesson boundaries, source-based guides, generated frames, draft compatibility, public question boundaries and readiness conditions passed.`);
 
-// New expression loop: real anchors, conservative feedback, transfer and old backup compatibility.
+// New expression loop: real anchors, conservative feedback, transfer and old record compatibility.
 const {transferCheck}=await import(moduleUrl(await source('expression-guide.ts')));
 const {expressionFeedback,compareExpression}=await import(moduleUrl(await source('expression-feedback.ts')));
 const {queueExpressionReview}=await import(moduleUrl((await source('study-path.ts')).replace("'./model'",JSON.stringify(moduleUrl(await source('model.ts'))))));
@@ -108,8 +103,7 @@ const old=readGuide(drafts['expression-NCE1-1']);assert.equal(old.retry,'This is
 const damaged=readGuide('{"checkpointAt":-4,"checkRound":-9,"checkedRetry":[],"checkMarked":"yes"}');assert.equal(damaged.checkpointAt,0);assert.equal(damaged.checkRound,0);assert.equal(damaged.checkMarked,false);assert.equal(damaged.checkedRetry,'');
 const record={...old,checkedAnswer:old.answer,checkedRetry:old.retry,transfer:'This is my coat.',checkedTransfer:'This is my coat.',checkChoice:'Is',checkMarked:true,checkpointAt:Date.now(),checkRound:2,checkpointCorrect:true,form:'Is this your (item)?'};
 const expressionState={...savedState,drafts:{...savedState.drafts,'expression-NCE1-1':JSON.stringify(record)}};
-const expressionManifest=new TextEncoder().encode(JSON.stringify({version:1,state:expressionState,media:[]}));
-assert.deepEqual((await parsePack(new Blob(['ENGLISH-STUDIO-PACK-1\n',String(expressionManifest.length).padStart(12,'0')+'\n',expressionManifest]))).state.drafts,expressionState.drafts,'New feedback and checkpoint records survive full backup');
+assert(validateState(expressionState),'New feedback and checkpoint records remain valid for local storage');
 const now=new Date(2026,8,27,16).getTime(),queued=queueExpressionReview({...initial,nce:{'NCE1-1':{title:'Keep me',text:'private text',notes:'keep notes',steps:['listen'],review:{checks:['meaning'],checkedAt:now-100,dueAt:now+100}}}},'NCE1',2,now);
 assert.deepEqual(queued.nce['NCE1-1'].steps,['listen']);assert.deepEqual(queued.nce['NCE1-1'].review.checks,['meaning']);assert.equal(queued.nce['NCE1-1'].notes,'keep notes');assert.equal(queued.nce['NCE1-1'].review.checkedAt,now-100);assert.equal(new Date(queued.nce['NCE1-1'].review.dueAt).getDate(),28);assert(!queued.nce['NCE1-2'],'Paired courses keep one review schedule');
-console.log(`Expression feedback, ${frames.length} transfer patterns, ${unique} distinct lesson anchors, retry comparison and backup/review preservation passed.`);
+console.log(`Expression feedback, ${frames.length} transfer patterns, ${unique} distinct lesson anchors, retry comparison and record/review preservation passed.`);

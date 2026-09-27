@@ -25,6 +25,7 @@
     "verify:study-path": "node scripts/test-study-path.mjs",
     "verify:guided": "node scripts/test-guided-learning.mjs",
     "verify:pronunciation": "node scripts/test-pronunciation.mjs",
+    "verify:progress": "node scripts/test-progress-save.mjs",
     "verify:illustrations": "node scripts/test-illustrations.mjs"
   },
   "dependencies": {
