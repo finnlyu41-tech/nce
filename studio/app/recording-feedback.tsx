@@ -19,7 +19,7 @@ export function Recorder({referenceText,onListen,onBeforeRecord,stopSignal,hideR
 function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideReference,retentionLabel='录音在离开本练习或刷新后清除'}:{reference:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number;hideReference:boolean;retentionLabel?:string}){
  const rate=usePlaybackRate(),[take,setTake]=useState<Take|null>(null),[previous,setPrevious]=useState<Take|null>(null);
  const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[finishing,setFinishing]=useState(false),[submitting,setSubmitting]=useState(false),[elapsed,setElapsed]=useState(0);
- const [consent,setConsent]=useState(false),[service,setService]=useState<'loading'|'ready'|'unavailable'>('loading'),[error,setError]=useState('');
+ const [consent,setConsent]=useState(false),[service,setService]=useState<'loading'|'ready'|'unavailable'|'failed'>('loading'),[serviceAttempt,setServiceAttempt]=useState(0),[error,setError]=useState('');
  const capture=useRef<RecordingCapture|null>(null),attempt=useRef(0),mounted=useRef(false),pending=useRef(false);
  const clips=useRef<Take[]>([]),timer=useRef<ReturnType<typeof setInterval>|null>(null),request=useRef<AbortController|null>(null);
  const currentAudio=useRef<HTMLAudioElement>(null),previousAudio=useRef<HTMLAudioElement>(null);
@@ -45,12 +45,13 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
  useEffect(()=>{for(const audio of [currentAudio.current,previousAudio.current])if(audio)audio.playbackRate=Number(rate)},[rate,take?.url,previous?.url]);
  useEffect(()=>{
   if(!reference||!ONLINE){setService('unavailable');return;}
-  const abort=new AbortController(),timeout=setTimeout(()=>{setService('unavailable');abort.abort()},6000);
+  setService('loading');
+  const abort=new AbortController(),timeout=setTimeout(()=>{setService('failed');abort.abort()},6000);
   fetch('/api/pronunciation',{signal:abort.signal,cache:'no-store',credentials:'omit'}).then(async r=>r.ok?await r.json() as {enabled?:boolean}:null)
-   .then(data=>{if(!abort.signal.aborted)setService(data?.enabled===true?'ready':'unavailable')})
-   .catch(()=>{if(!abort.signal.aborted)setService('unavailable')}).finally(()=>clearTimeout(timeout));
+   .then(data=>{if(!abort.signal.aborted)setService(data?.enabled===true?'ready':data?.enabled===false?'unavailable':'failed')})
+   .catch(()=>{if(!abort.signal.aborted)setService('failed')}).finally(()=>clearTimeout(timeout));
   return()=>{clearTimeout(timeout);abort.abort()};
- },[reference]);
+ },[reference,serviceAttempt]);
  async function start(){
   if(pending.current||capture.current||submitting)return;
   if(!navigator.mediaDevices?.getUserMedia||typeof MediaRecorder==='undefined'){toast.error('请在支持麦克风的安全网页环境中录音。');return;}
@@ -93,7 +94,7 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
    {service==='loading'?<p className="small muted" role="status">正在检查评估服务…</p>:service==='ready'?<>
     <label className="record-consent"><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)}/><span>点击提交时，将本句英文和这段录音发送到微软 Azure 进行基础发音评估。</span></label>
     <button className="btn full" disabled={!take||recording||busy||submitting||!consent||!!take.result} onClick={()=>void submit()}>{submitting?'正在评估…':take?.result?'已评估，试着重录一次':'提交评估'}</button>
-   </>:<p className="notice">站内自动评估尚未启用。你仍可回听、对照原声，或使用下面的免费朗读练习。</p>}
+   </>:service==='failed'?<><p className="notice" role="status">暂时无法连接评估服务，录音和回听仍可使用。</p><button className="text-btn" onClick={()=>setServiceAttempt(value=>value+1)}>重新检查评估服务</button></>:<p className="notice">站内自动评估尚未启用。你仍可回听、对照原声，或使用下面的免费朗读练习。</p>}
    <details className="record-coach"><summary>用免费的 Reading Coach 练这句话</summary><p className="small muted">复制下面的英文，在微软页面选择添加自己的文章并粘贴，再重新朗读。本站录音不会自动传过去。</p><textarea aria-label="用于 Reading Coach 的英文" readOnly value={reference} onFocus={e=>e.currentTarget.select()}/><div className="row wrap"><button className="btn secondary" onClick={()=>{if(!navigator.clipboard){toast.error('请长按选中上方英文进行复制。');return;}void navigator.clipboard.writeText(reference).then(()=>toast.success('已复制英文')).catch(()=>toast.error('复制不可用，请长按选中上方英文。'))}}>复制英文</button><a className="btn secondary" href="https://coach.microsoft.com/" target="_blank" rel="noreferrer noopener">打开 Reading Coach<ExternalLink size={15}/></a></div></details>
   </div>}
   {error&&<p className="record-error" role="alert">{error}</p>}
