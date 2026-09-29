@@ -193,11 +193,21 @@
 
 /* Keep the phone lesson focused on one activity; details stay available on demand. */
 .tab-short,.phone-nav{display:none}
-.lesson-plan{margin:14px 0 18px;border:1px solid #dfe6ef;border-radius:10px;background:#fff;padding:0 14px}
-.lesson-plan>summary,.lesson-original>summary,.reserve-materials>summary{display:flex;align-items:center;gap:12px;min-height:48px;cursor:pointer;font-weight:600;list-style:none}
-.lesson-plan>summary::-webkit-details-marker,.lesson-original>summary::-webkit-details-marker,.reserve-materials>summary::-webkit-details-marker{display:none}
-.lesson-plan>summary>span{margin-left:auto;font-size:13px;color:#60748f}.lesson-plan[open]>summary>svg,.lesson-original[open]>summary>svg:last-child,.reserve-materials[open]>summary>svg{transform:rotate(90deg)}
-.lesson-plan .nce-checks{margin:0 0 14px}.lesson-plan .step-start small{display:block;font-size:12px;line-height:1.75;color:#65758c;margin-top:6px}.lesson-plan .step-start{min-height:140px}
+.is-lesson .nce-book-heading .eyebrow,.is-lesson .nce-book-heading p,.is-lesson .nce-source-line{display:none}
+.is-lesson .nce-book-heading{margin-bottom:14px}
+.is-lesson .nce-book-heading h1{margin-bottom:0}
+.lesson-completion{margin:24px 0 8px;border-top:1px solid #dfe6ef;padding-top:8px;color:#60748f;font-size:14px}
+.lesson-completion>summary{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;list-style:none}
+.lesson-completion>summary::-webkit-details-marker{display:none}
+.lesson-completion>summary>span{margin-left:auto;font-size:13px}
+.lesson-completion[open]>summary>svg{transform:rotate(90deg)}
+.lesson-completion-checks{display:flex;flex-wrap:wrap;gap:8px 24px;padding:6px 0}
+.lesson-completion-checks>label{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer}
+.lesson-pair-link{margin:12px 0}
+.lesson-original>summary,.reserve-materials>summary{display:flex;align-items:center;gap:12px;min-height:48px;cursor:pointer;font-weight:600;list-style:none}
+.lesson-original>summary::-webkit-details-marker,.reserve-materials>summary::-webkit-details-marker{display:none}
+.lesson-original[open]>summary>svg:last-child,.reserve-materials[open]>summary>svg{transform:rotate(90deg)}
+
 .lesson-switch{display:flex;align-items:center;gap:8px;font-size:12px;color:#61718b}.lesson-switch select{min-height:44px;max-width:120px}
 .lesson-recall{margin-top:18px}.lesson-recall h2{font-size:21px;margin:6px 0}.lesson-recall>.muted{margin-top:10px;line-height:1.8}
 .recall-list{margin:20px 0}.recall-question{padding:18px 0;border-bottom:1px solid #e3e9f2}.recall-question:first-child{padding-top:0}.recall-question>label{display:flex;align-items:flex-start;gap:12px;line-height:1.9;font-size:19px}.recall-question .number-tag{flex-shrink:0}.recall-question>.muted{margin:8px 0 12px}.recall-question>input{width:100%;max-width:360px;min-height:46px;padding:10px 12px;border:1px solid #ccd8e9;border-radius:8px;background:#fff;font-size:16px}.recall-question input:focus{outline:2px solid #2455df;outline-offset:2px}
@@ -208,7 +218,7 @@
  .workspace{padding:16px 14px calc(90px + env(safe-area-inset-bottom))}.main-shell{min-width:0}.topbar .breadcrumb{font-size:12px}.topbar>.row:last-child>.btn{display:none}
  .page-heading{margin-bottom:22px}.page-heading h1{font-size:25px;line-height:1.5}.page-heading .eyebrow{font-size:10px}.nce-studio>.nce-hero{display:none}.nce-studio>.section-space:has(>.today-course){margin-top:0}.today-course{padding:20px;margin-bottom:16px;gap:14px}.today-course>.btn{width:100%;min-height:48px}.nce-book-grid{gap:10px}.nce-book-body{padding:14px 12px}.home-grid .daily-plan{display:block}.daily-plan>button{min-height:70px}
  .phone-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;inset:auto 0 0;z-index:25;background:#fff;border-top:1px solid #dce4ef;padding:6px 8px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 20px #1d355008}.phone-nav.in-lesson{display:none}.phone-nav>button{min-height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:9px;font-size:11px;color:#6a7890}.phone-nav>button.active{color:#2455df;background:#eef3ff}
- .nce-back{min-height:36px;font-size:13px}.nce-book-heading h1{font-size:23px;margin-bottom:5px}.nce-book-heading p{font-size:12px;line-height:1.7}.paired-lesson-bar{padding:10px 12px;gap:8px;margin-bottom:10px}.paired-lesson-bar>div:first-child{display:none}.paired-lesson-bar .btn{min-height:44px;font-size:13px;background:#fff}.lesson-plan{margin:10px 0;padding:0 10px}.lesson-plan>summary{font-size:13px;gap:8px}.lesson-plan .nce-checks{grid-template-columns:1fr;gap:8px}.lesson-plan .step-start{min-height:0;padding:12px;gap:12px}.lesson-plan .step-start small{font-size:12px;line-height:1.8}.lesson-plan .step-start .step-action{display:none}.lesson-plan .step-complete{min-height:44px}
+ .nce-back{min-height:36px;font-size:13px}.nce-book-heading h1{font-size:23px;margin-bottom:5px}.nce-book-heading p{font-size:12px;line-height:1.7}.paired-lesson-bar{padding:10px 12px;gap:8px;margin-bottom:10px}.paired-lesson-bar>div:first-child{display:none}.paired-lesson-bar .btn{min-height:44px;font-size:13px;background:#fff}
  .nce-studio .lesson-tabs{position:sticky;top:56px;z-index:10;grid-template-columns:repeat(5,minmax(0,1fr));padding:4px!important;margin:0 0 12px!important;border:1px solid #dde5f2!important;box-shadow:0 5px 10px #20395908}.nce-studio .lesson-tabs [data-slot=tabs-trigger]{min-height:44px;font-size:14px!important;padding:8px 2px!important}.nce-studio .lesson-tabs [aria-label="表达练习"]{font-size:12px!important}.tab-long{display:none}.tab-short{display:inline}.nce-studio .lesson-tabs:has([data-slot=tabs-trigger]:first-child:nth-last-child(4)){grid-template-columns:repeat(4,minmax(0,1fr))}
  .embedded-materials .cloud-player{top:110px;padding:9px 0}.cloud-player .row{display:flex;gap:4px 12px}.cloud-player .text-btn{font-size:12px;min-height:40px}.cloud-reader .section-top>.text-btn{font-size:12px}.cloud-reader h2{font-size:21px}.site-line{grid-template-columns:minmax(0,1fr) 44px;gap:8px;font-size:19px;line-height:1.9;padding:16px 0}.site-line .site-time{display:none}.site-line .line-play{width:44px;min-width:44px;min-height:48px;background:#f1f5fc;border-radius:10px}.line-translation{font-size:14px;line-height:1.8}.transcript-tools{gap:8px}.transcript-tools .small{max-width:180px;line-height:1.7}
  .nce-lesson-footer{position:fixed;bottom:0;left:0;right:0;margin:0;padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:8px;z-index:25}.nce-lesson-footer>.btn{min-height:46px;font-size:13px;padding:10px 8px;white-space:nowrap;gap:4px;flex:1;min-width:0}.nce-lesson-footer>.btn svg{width:16px;flex-shrink:0}.lesson-switch>span{display:none}.lesson-switch select{min-height:46px;width:104px;max-width:104px;padding:8px}.footer{margin-top:24px;padding-bottom:0}
