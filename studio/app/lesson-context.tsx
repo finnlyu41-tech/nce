@@ -9,6 +9,7 @@ import {navigate} from './navigation';
 import {speak} from './speech';
 import {PlaybackSpeed} from './playback-speed';
 import {ONLINE} from './runtime-mode';
+import {readJsonResource} from './network';
 
 export function LessonQuestion({lesson,answer,onChange}:{lesson:ReturnType<typeof splitLesson>;answer:string;onChange:(s:string)=>void}){
  if(!lesson.question.length)return null;
@@ -20,7 +21,7 @@ type Vocabulary={pages:number[];words:{word:string;forms:string[]}[]};
 type PageIndex={version:number;lessons:Record<string,{title:string;pages:Page[];vocabulary?:Vocabulary}>};
 let cached:Promise<PageIndex>|undefined;
 function loadPages(){
- if(!cached)cached=fetch('/lesson-pages/index.json').then(async r=>{if(!r.ok)throw Error();const d=await r.json() as PageIndex;if(d.version!==1||!d.lessons)throw Error();return d as PageIndex}).catch(e=>{cached=undefined;throw e});
+ if(!cached)cached=readJsonResource<PageIndex>('/lesson-pages/index.json').then(d=>{if(d.version!==1||!d.lessons)throw Error();return d}).catch(e=>{cached=undefined;throw e});
  return cached;
 }
 export function LessonPages({book,lesson}:{book:NceBookId;lesson:number}){

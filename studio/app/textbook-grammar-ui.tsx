@@ -5,6 +5,7 @@ import {useRoute} from './use-route';
 import {navigate} from './navigation';
 import type {NceBookId} from './model';
 import {ONLINE} from './runtime-mode';
+import {readJsonResource} from './network';
 import {loadSiteMaterial,readMaterialManifest} from './site-material-utils';
 import {grammarBooks,grammarCategories,grammarEntries,grammarEntryFor,grammarLessonLabel,grammarPrintedPage,grammarSourceHash,grammarUnitLabel,searchGrammar,type GrammarEntry} from './textbook-grammar';
 import {GrammarExplanation} from './grammar-explanation-ui';
@@ -13,9 +14,7 @@ import './textbook-grammar.css';
 type PageIndex={version:number;sources:Record<NceBookId,string>;pages:Record<string,{src:string;sha256:string}>};
 let pageRequest:Promise<PageIndex>|undefined;
 function loadIndex(){
- if(!pageRequest)pageRequest=fetch('/grammar/index.json').then(async r=>{
-  if(!r.ok)throw Error('原书页暂时无法加载');
-  const data=await r.json() as PageIndex;
+ if(!pageRequest)pageRequest=readJsonResource<PageIndex>('/grammar/index.json').then(data=>{
   if(data.version!==1||!data.sources||!data.pages||!grammarBooks.every(b=>data.sources[b.id]===grammarSourceHash(b.id))||!Object.values(data.pages).every(p=>/^[a-f0-9]{64}$/.test(p.sha256)&&[`/grammar/${p.sha256}.jpg`,`/lesson-pages/${p.sha256}.jpg`].includes(p.src)))throw Error('原书版本与索引不一致');
   return data;
  }).catch(e=>{pageRequest=undefined;throw e});

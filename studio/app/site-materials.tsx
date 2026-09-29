@@ -1,8 +1,9 @@
 'use client';
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {BookOpen,Download,FileText,Headphones,RefreshCw,Search,Volume2,Mic,ChevronLeft,ChevronRight} from 'lucide-react';
 import {Tabs,TabsList,TabsTrigger} from '@/components/ui/tabs';
-import {Progress} from '@/components/ui/progress';
+import {LoadingStatus} from './loading-status';
+import {withNetworkTimeout} from './network';
 import {toast} from 'sonner';
 import {State,NceBookId,bookCounts} from './model';
 import {SiteMaterial,MaterialManifest,loadSiteMaterial,pairedMaterials,readMaterialManifest,materialLessonPage} from './site-material-utils';
@@ -30,7 +31,10 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  const route=useRoute();
  const [manifest,setManifest]=useState<MaterialManifest|null>(null),[book,setBook]=useState<NceBookId>('NCE1'),[filter,setFilter]=useState('all'),[accent,setAccent]=useState('all'),[query,setQuery]=useState('');
  const rate=usePlaybackRate();
- const [busy,setBusy]=useState(''),[error,setError]=useState(''),[progress,setProgress]=useState(0),[loaded,setLoaded]=useState<Loaded[]>([]),[selected,setSelected]=useState(''),[lesson,setLesson]=useState(1),[replace,setReplace]=useState(false),[active,setActive]=useState(-1),[hideText,setHideText]=useState(false),[targetNote,setTargetNote]=useState('');
+ const [busy,setBusy]=useState(''),[error,setError]=useState(''),[progress,setProgress]=useState<number|null>(null),[loaded,setLoaded]=useState<Loaded[]>([]),[selected,setSelected]=useState(''),[lesson,setLesson]=useState(1),[replace,setReplace]=useState(false),[active,setActive]=useState(-1),[hideText,setHideText]=useState(false),[targetNote,setTargetNote]=useState('');
+ const lastRequest=useRef<{file:SiteMaterial;forLesson?:number}|null>(null);
+ const [playback,setPlayback]=useState<'idle'|'waiting'|'playing'>('idle');
+ const playbackRequest=useRef(0);
  const [showTranslation,setShowTranslation]=useState(false),[dictationLine,setDictationLine]=useState(0),[dictationAnswer,setDictationAnswer]=useState(''),[dictationChecked,setDictationChecked]=useState(false);
  const [localPracticeKind,setPracticeKind]=useState<'shadow'|'dictation'>('shadow'),[sceneLine,setSceneLine]=useState(0);
  const practiceKind=practiceMode&&route.mode==='recall'?'recall':localPracticeKind;
@@ -41,22 +45,25 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  const [pdfLesson,setPdfLesson]=useState<number|undefined>();
  const controller=useRef<AbortController|null>(null),indexController=useRef<AbortController|null>(null),stateRef=useRef(state),audio=useRef<HTMLAudioElement>(null),readerPanel=useRef<HTMLElement>(null),endAt=useRef<number|null>(null),pendingTarget=useRef<Target|null>(null);
  stateRef.current=state;
- const files=manifest?.files||[],primary=loaded.find(x=>x.file.id===selected)||loaded[0],recording=loaded.find(x=>x.file.type.startsWith('audio/')),transcript=loaded.find(x=>x.text!==undefined),allRows=parseLessonText(transcript?.text||''),structure=splitLesson(allRows,primary?.file.book,true),rows=structure.body;
- useEffect(()=>{if(!visible){audio.current?.pause();controller.current?.abort()}},[visible]);
+ const files=manifest?.files||[],primary=loaded.find(x=>x.file.id===selected)||loaded[0],recording=loaded.find(x=>x.file.type.startsWith('audio/')),transcript=loaded.find(x=>x.text!==undefined);
+ const structure=useMemo(()=>splitLesson(parseLessonText(transcript?.text||''),primary?.file.book,true),[transcript?.text,primary?.file.book]),rows=structure.body;
+ useEffect(()=>{if(!visible){audio.current?.pause();controller.current?.abort();indexController.current?.abort()}},[visible]);
  useEffect(()=>()=>{controller.current?.abort();indexController.current?.abort()},[]);
  useEffect(()=>()=>{loaded.forEach(x=>URL.revokeObjectURL(x.url))},[loaded]);
  useEffect(()=>{if(audio.current)audio.current.playbackRate=Number(rate)},[rate,recording?.url]);
- async function readIndex(){
+ useEffect(()=>{playbackRequest.current++;setPlayback('idle')},[recording?.url]);
+ useEffect(()=>{if(playback!=='waiting')return;const timer=setTimeout(()=>{playbackRequest.current++;audio.current?.pause();setPlayback('idle');setError('音频准备时间过长，请重新点击播放。')},15000);return()=>clearTimeout(timer)},[playback]);
+ async function readIndex(refresh=false){
   indexController.current?.abort();const abort=new AbortController();indexController.current=abort;
-  setError('');setBusy('正在读取教材目录…');
-  try{const data=await readMaterialManifest(abort.signal);if(!abort.signal.aborted)setManifest(data)}
+  setError('');setProgress(null);setBusy('正在读取教材目录…');
+  try{const data=await readMaterialManifest(abort.signal,refresh);if(!abort.signal.aborted)setManifest(data)}
   catch(e){if(!abort.signal.aborted)setError(e instanceof Error?e.message:'教材目录读取失败')}
   finally{if(indexController.current===abort)setBusy('')}
  }
  useEffect(()=>{if(visible&&!manifest&&!error&&!busy)void readIndex()},[visible,manifest,error,busy]);
- useEffect(()=>{if(visible&&startAt&&(embedded||!route.file)){pendingTarget.current=startAt;setBook(startAt.book);setQuery('');setFilter('all');setAccent('all')}},[visible,startAt,embedded,route.file]);
+ useEffect(()=>{if(visible&&startAt&&(embedded||!route.file)){controller.current?.abort();pendingTarget.current=startAt;lastRequest.current=null;setLoaded([]);setSelected('');setBook(startAt.book);setQuery('');setFilter('all');setAccent('all')}},[visible,startAt?.book,startAt?.lesson,embedded,route.file]);
  useEffect(()=>{if(visible&&!embedded&&route.book)setBook(route.book)},[visible,embedded,route.book]);
- useEffect(()=>{if(visible&&!embedded&&route.file&&manifest&&!busy&&selected!==route.file){const file=files.find(f=>f.id===route.file);if(file)void open(file)}},[visible,embedded,route.file,manifest,busy,selected]);
+ useEffect(()=>{if(visible&&!embedded&&route.file&&manifest&&selected!==route.file){const file=files.find(f=>f.id===route.file);if(file)void open(file)}},[visible,embedded,route.file,manifest]);
  const choose=(file:SiteMaterial)=>embedded?void open(file):navigate({view:'cloud',book:file.book,lesson:file.lesson||undefined,file:file.id},{keepScroll:true});
  useEffect(()=>{
   if(!visible||!manifest||busy)return;
@@ -68,26 +75,32 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
    setTargetNote(target.book==='NCE1'&&target.lesson%2===0?`第 ${target.lesson} 课是句型与练习课。用配套课文练习，再换成本课词表中的内容；回听原声可进入第 ${target.lesson-1} 课。`:`第 ${target.lesson} 课没有独立配对的字幕与录音，请查看本册原书中的本课内容。`);
    if(embedded){setLoaded([]);setPageOnly(target)}else{const pdf=files.find(f=>f.book===target.book&&f.type==='application/pdf');if(pdf)void open(pdf,target.lesson);}
   }
- },[visible,manifest,busy,book]);
+ },[visible,manifest,busy,book,startAt?.book,startAt?.lesson]);
+ function cancelLoading(){pendingTarget.current=null;controller.current?.abort();indexController.current?.abort();setBusy('');setError('已取消加载，可以重新读取教材。')}
+ function retry(){const previous=lastRequest.current;if(previous){void open(previous.file,previous.forLesson)}else{if(startAt)pendingTarget.current=startAt;void readIndex(true)}}
  async function open(file:SiteMaterial,forLesson?:number){
   controller.current?.abort();audio.current?.pause();endAt.current=null;
-  const abort=new AbortController();controller.current=abort;
+  const abort=new AbortController();controller.current=abort;lastRequest.current={file,forLesson};
+  setLoaded([]);setSelected('');
   setPageOnly(null);setSceneLine(0);currentLine.current=0;seekTarget.current=null;stoppedLine.current=null;setDictationLine(0);setDictationAnswer('');setDictationChecked(false);
   setBusy('正在读取 '+(file.title||file.name));setError('');setProgress(0);setReplace(false);setActive(-1);
   const results:Loaded[]=[];
   try{
-   const group=pairedMaterials(files,file),total=group.reduce((n,f)=>n+f.size,0);let done=0;
-   for(const member of group){
-    const blob=await loadSiteMaterial(member,abort.signal,value=>setProgress((done+member.size*value/100)/total*100));done+=member.size;
+   const group=pairedMaterials(files,file),total=group.reduce((n,f)=>n+f.size,0),downloaded=new Map<string,number>();
+   // Fetch the small translation alongside the pair, not between the two files.
+   const languageRequest=group.some(f=>f.type==='text/plain')?loadLessonLanguage(file.book,file.lesson):Promise.resolve(null);
+   await Promise.all(group.map(async member=>{
+    const blob=await loadSiteMaterial(member,abort.signal,value=>{if(abort.signal.aborted)return;downloaded.set(member.id,member.size*value/100);setProgress(Math.floor([...downloaded.values()].reduce((a,b)=>a+b,0)/total*99))});
     let text=member.type==='text/plain'?await blob.text():undefined;
-    if(text!==undefined){const language=await loadLessonLanguage(member.book,member.lesson);if(language?.sourceSha256===member.sha256)text=rowsToText(translatedRows(text,language))}
+    if(text!==undefined){const language=await withNetworkTimeout(()=>languageRequest,abort.signal);if(language?.sourceSha256===member.sha256)text=rowsToText(translatedRows(text,language))}
     if(text!==undefined&&text.length>50000)throw Error('课文超过工作区大小限制');
+    if(abort.signal.aborted)throw new DOMException('Aborted','AbortError');
     results.push({file:member,blob,url:URL.createObjectURL(blob),text});
-   }
+   }));
    if(abort.signal.aborted)throw new DOMException('Aborted','AbortError');
    setLoaded(results);setSelected(file.id);setBook(file.book);setLesson(file.lesson||forLesson||1);setPdfLesson(file.type==='application/pdf'?forLesson:undefined);setHideText(practiceMode&&practiceKind==='dictation');setShowTranslation(false);
    if(!embedded)requestAnimationFrame(()=>readerPanel.current?.scrollIntoView({behavior:'smooth',block:'start'}));
-  }catch(e){results.forEach(x=>URL.revokeObjectURL(x.url));if(!abort.signal.aborted)setError(e instanceof Error?e.message:'教材读取失败')}
+  }catch(e){const cancelled=abort.signal.aborted;abort.abort();results.forEach(x=>URL.revokeObjectURL(x.url));if(!cancelled)setError(e instanceof Error?e.message:'教材读取失败')}
   finally{if(controller.current===abort)setBusy('')}
  }
  function followLine(index:number){
@@ -115,7 +128,11 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  function playLine(index:number,last=index){
   const p=audio.current,time=rows[index]?.time;if(!p||time===undefined)return;
   endAt.current=sentenceEnd(rows,last);seek(time);p.playbackRate=Number(rate);followLine(index);
-  void p.play().catch(()=>setError('浏览器未能播放音频，请再次点击播放'));
+  startPlayback(p);
+ }
+ function startPlayback(player:HTMLAudioElement){
+  const request=++playbackRequest.current;setError('');setPlayback('waiting');
+  void player.play().then(()=>{if(playbackRequest.current===request)setPlayback(player.paused?'idle':'playing')}).catch(e=>{if(playbackRequest.current===request){setPlayback('idle');if(e?.name!=='AbortError')setError('浏览器未能播放音频，请再次点击播放')}});
  }
  function selectLine(index:number){
   audio.current?.pause();endAt.current=null;if(rows[index]?.time!==undefined)seek(rows[index].time!);followLine(index);
@@ -125,7 +142,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  }
  async function useLesson(){
   if(!primary||primary.file.type==='application/pdf'||!Number.isInteger(lesson)||lesson<1||lesson>bookCounts[primary.file.book])return;
-  setBusy('正在保存本课文本与音频…');
+  setProgress(null);setError('');setBusy('正在保存本课文本与音频…');
   try{
    const key=`${primary.file.book}-${lesson}`,existing=await readAudio(key),current=stateRef.current;
    const old=current.nce?.[key]||{title:'',text:'',notes:'',steps:[]};
@@ -150,14 +167,14 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  const readerUrl=primary?primary.url+(pdfPage?`#page=${pdfPage}`:''):'';
  return <div hidden={!visible} className={'cloud-library'+(embedded?' embedded-materials':'')}>
   {!embedded&&<>
-  <div className="page-heading"><div><div className="eyebrow">BOOKS & AUDIO</div><h1>整册资料与下载</h1><p>这里按原文件列出 PDF、音轨和字幕。逐课学习请从「新概念 · 四册」课程目录进入。</p></div><button className="btn secondary" disabled={!!busy} onClick={readIndex}><RefreshCw size={17}/>刷新教材</button></div>
+  <div className="page-heading"><div><div className="eyebrow">BOOKS & AUDIO</div><h1>整册资料与下载</h1><p>这里按原文件列出 PDF、音轨和字幕。逐课学习请从「新概念 · 四册」课程目录进入。</p></div><button className="btn secondary" disabled={!!busy} onClick={()=>void readIndex(true)}><RefreshCw size={17}/>刷新教材</button></div>
   {manifest?.files.length===0&&<div className="cloud-pending"><strong>四册教材正在等待接入</strong><p>当前网站教材目录为空；原创课程、语法和练习仍可直接使用。</p></div>}
   {manifest?.notices?.map(n=><p className="notice" key={n}>{n}</p>)}
   {book==='NCE1'&&texts.length>0&&<p className="notice">第一册有 72 组美音听读资料。文件名含奇偶课号，字幕仅标注奇数课；偶数课在课内整理词汇、换词练句；原书作为核对资料。</p>}
   </>}
   {targetNote&&<p className="notice">{targetNote}</p>}
-  {error&&<div className="notice" role="alert"><p>{error}</p><button className="text-btn" disabled={!!busy} onClick={()=>{if(startAt)pendingTarget.current=startAt;void readIndex()}}>重新读取教材</button></div>}
-  {busy&&<div className="cloud-working" role="status"><span>{busy}</span><Progress value={progress}/></div>}
+  {error&&<div className="notice" role="alert"><p>{error}</p><button className="text-btn" disabled={!!busy} onClick={retry}>重新读取教材</button></div>}
+  {busy&&<LoadingStatus message={busy} progress={progress} onCancel={busy.startsWith('正在保存')?undefined:cancelLoading}/>}
   {!embedded&&<div className="filter-bar section-space"><Tabs value={book} onValueChange={v=>{controller.current?.abort();audio.current?.pause();setBook(v as NceBookId);setLoaded([]);setSelected('');setQuery('');setTargetNote('');navigate({view:'cloud',book:v as NceBookId},{keepScroll:true})}}><TabsList>{books.map((b,i)=><TabsTrigger key={b} value={b}>第 {i+1} 册</TabsTrigger>)}</TabsList></Tabs><span className="muted small">本册 {own.filter(f=>f.type==='application/pdf').length} 份 PDF · {own.filter(f=>f.type.startsWith('audio/')).length} 音轨 · {texts.length} 字幕</span></div>}
   {pageOnly?<section className="panel">{!pdfOnly&&pageOnly.book==='NCE1'&&pageOnly.lesson%2===0?<PairedLesson book={pageOnly.book} lesson={pageOnly.lesson} state={state} update={fn=>restore(fn(stateRef.current))}/>:<><LessonPages book={pageOnly.book} lesson={pageOnly.lesson}/><button className="text-btn" onClick={()=>{const pdf=files.find(f=>f.book===pageOnly.book&&f.type==='application/pdf');if(pdf)void open(pdf,pageOnly.lesson)}}>需要更多上下文时查阅完整原书</button></>}</section>:<div className={embedded?'site-lesson-reader':'cloud-grid'}>{!embedded&&<section className="panel cloud-files"><div className="section-top"><h2>本册教材</h2><span className="muted small">{shown.length} 项</span></div>
    <Tabs value={filter} onValueChange={setFilter}><TabsList><TabsTrigger value="all">听读配对</TabsTrigger><TabsTrigger value="pdf">PDF 原书</TabsTrigger><TabsTrigger value="audio">音频</TabsTrigger><TabsTrigger value="text">课文</TabsTrigger></TabsList></Tabs>
@@ -172,7 +189,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
     <p className="muted small">{accentLabel(primary.file)} · 第 {primary.file.lesson||'未核定'} 课 · 配套音频与字幕</p>
     {!embedded&&primary.file.lessonNote&&<p className="notice">{primary.file.lessonNote}</p>}
     {!practiceMode&&<LessonQuestion lesson={structure} answer={state.drafts[`listen-answer-${primary.file.book}-${primary.file.lesson}`]||''} onChange={value=>{const current=stateRef.current;restore({...current,drafts:{...current.drafts,[`listen-answer-${primary.file.book}-${primary.file.lesson}`]:value}})}}/>}
-    {recording&&<div className="cloud-player"><audio ref={audio} controls preload="metadata" src={recording.url} aria-label="网站课文音频" onTimeUpdate={timeUpdate} onPlay={()=>{stoppedLine.current=null}} onSeeking={seeking} onSeeked={timeUpdate} onEnded={()=>{endAt.current=null;setActive(-1)}} onError={()=>setError('音频不能解码，请下载原文件核对')} onLoadedMetadata={()=>{if(audio.current)audio.current.playbackRate=Number(rate)}}/><div className="row wrap"><PlaybackSpeed ariaLabel="网站音频播放速度"/><button className="text-btn" onClick={()=>{endAt.current=null;if(audio.current){seek(rows[0]?.time||0);followLine(0);void audio.current.play().catch(()=>setError('请再次点击播放'))}}}>从正文开始播放</button>{transcript&&<button className="text-btn" aria-expanded={!hideText} onClick={()=>{setHideText(!hideText);setShowTranslation(false)}}>{hideText?'需要时看原文与原书图片':'收起原文与原书图片'}</button>}</div></div>}
+    {recording&&<div className="cloud-player"><audio ref={audio} controls preload="metadata" src={recording.url} aria-label="网站课文音频" onTimeUpdate={timeUpdate} onPlay={()=>{stoppedLine.current=null}} onPlaying={()=>setPlayback('playing')} onWaiting={()=>setPlayback('waiting')} onPause={()=>setPlayback('idle')} onSeeking={seeking} onSeeked={timeUpdate} onEnded={()=>{endAt.current=null;setActive(-1)}} onError={()=>{setPlayback('idle');setError('音频不能解码，请重新读取教材')}} onLoadedMetadata={()=>{if(audio.current)audio.current.playbackRate=Number(rate)}}/><div className="row wrap"><PlaybackSpeed ariaLabel="网站音频播放速度"/><button className="text-btn" onClick={()=>{endAt.current=null;if(audio.current){seek(rows[0]?.time||0);followLine(0);startPlayback(audio.current)}}}>从正文开始播放</button>{transcript&&<button className="text-btn" aria-expanded={!hideText} onClick={()=>{setHideText(!hideText);setShowTranslation(false)}}>{hideText?'需要时看原文与原书图片':'收起原文与原书图片'}</button>}</div>{playback!=='idle'&&<p className="small muted" role="status">{playback==='waiting'?'正在准备音频…':'正在播放'}</p>}</div>}
     {practiceMode&&<div className="practice-kind" aria-label="选择练习方式"><button aria-pressed={practiceKind==='shadow'} onClick={()=>changePractice('shadow')}>看图跟读</button><button aria-pressed={practiceKind==='dictation'} onClick={()=>changePractice('dictation')}>听写</button><button aria-pressed={practiceKind==='recall'} onClick={()=>changePractice('recall')}>看中文说英文</button></div>}
     {practiceKind==='recall'?<ChineseRecall rows={rows} canListen={!!recording&&rows.every(r=>r.time!==undefined)} onListen={playLine} onStop={()=>{audio.current?.pause();endAt.current=null;setActive(-1)}}/>:<>
     {practiceMode&&rows.length>0&&<label className="field record-line-select">{practiceKind==='shadow'?'选择跟读句':'选择听写句'}<select aria-label="选择练习句" value={dictationLine} onChange={e=>selectLine(Number(e.target.value))}>{rows.map((row,i)=><option key={i} value={i}>{practiceKind==='shadow'?`${i+1}. ${row.en.slice(0,80)}`:`第 ${i+1} 句`}</option>)}</select></label>}

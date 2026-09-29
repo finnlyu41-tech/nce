@@ -2,6 +2,7 @@ import {bookCounts,type NceBookId} from './model';
 import {parseLessonText} from './nce-utils';
 import originalLessons from './data/lessons.json';
 import {ONLINE} from './runtime-mode';
+import {readJsonResource} from './network';
 
 export type LanguageRow={en:string;zh:string;time?:number};
 export type LessonLanguage={version:1;book:NceBookId;lesson:number;sourceSha256:string;rows:LanguageRow[]};
@@ -12,7 +13,7 @@ export async function loadLessonLanguage(book:NceBookId,lesson:number){
  if(!ONLINE||!Object.hasOwn(bookCounts,book)||!Number.isInteger(lesson)||lesson<1||lesson>bookCounts[book]||(book==='NCE1'&&lesson%2===0))return null;
  const key=`${book}/${lesson}`;
  if(!lessons.has(key))lessons.set(key,(async()=>{
-  try{const response=await fetch(`/language/${key}.json`);if(!response.ok)throw Error();const data=await response.json() as LessonLanguage;
+  try{const data=await readJsonResource<LessonLanguage>(`/language/${key}.json`);
    if(data.version!==1||data.book!==book||data.lesson!==lesson||!/^[a-f0-9]{64}$/.test(data.sourceSha256)||!Array.isArray(data.rows)||data.rows.length>1000||!data.rows.every((r:LanguageRow)=>typeof r.en==='string'&&r.en.length<=3000&&typeof r.zh==='string'&&r.zh.length<=3000&&Number.isFinite(r.time)))throw Error();
    return data as LessonLanguage;
   }catch{lessons.delete(key);return null}
@@ -29,7 +30,7 @@ let dictionary:Promise<Record<string,DictionaryEntry>>|undefined;
 export async function loadDictionary(){
  if(!ONLINE)return Object.fromEntries(originalLessons.flatMap(l=>l.vocab).map(w=>[w.word.toLowerCase(),{word:w.word,ipa:w.ipa||'',meaning:w.meaning}]));
  if(!dictionary)dictionary=(async()=>{
-  try{const response=await fetch('/language/dictionary.json');if(!response.ok)throw Error();const data=await response.json() as {version:number;words:Record<string,DictionaryEntry>};if(data.version!==1||!data.words||typeof data.words!=='object'||Object.keys(data.words).length>20000||!Object.values(data.words).every(w=>typeof w.word==='string'&&typeof w.meaning==='string'&&typeof w.ipa==='string'))throw Error();return data.words as Record<string,DictionaryEntry>}
+  try{const data=await readJsonResource<{version:number;words:Record<string,DictionaryEntry>}>('/language/dictionary.json');if(data.version!==1||!data.words||typeof data.words!=='object'||Object.keys(data.words).length>20000||!Object.values(data.words).every(w=>typeof w.word==='string'&&typeof w.meaning==='string'&&typeof w.ipa==='string'))throw Error();return data.words as Record<string,DictionaryEntry>}
   catch{dictionary=undefined;throw Error('词典暂时未加载成功，请重试。')}
  })();
  return dictionary;

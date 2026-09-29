@@ -8,8 +8,9 @@ import worker from './pages-access.js';
 const root=new URL('../',import.meta.url);
 const asModule=source=>'data:text/javascript;base64,'+Buffer.from(source).toString('base64');
 const model=asModule(stripTypeScriptTypes(await readFile(new URL('app/model.ts',root),'utf8')));
+const network=asModule(stripTypeScriptTypes(await readFile(new URL('app/network.ts',root),'utf8')));
 const pageMapping=JSON.parse(await readFile(new URL('app/data/nce-pages.json',root),'utf8'));
-const utils=await import(asModule(stripTypeScriptTypes((await readFile(new URL('app/site-material-utils.ts',root),'utf8')).replace("'./model'",JSON.stringify(model)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${JSON.stringify(pageMapping)};`))));
+const utils=await import(asModule(stripTypeScriptTypes((await readFile(new URL('app/site-material-utils.ts',root),'utf8')).replace("'./model'",JSON.stringify(model)).replace("'./network'",JSON.stringify(network)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${JSON.stringify(pageMapping)};`))));
 const {parseLessonText,vocabularyExample}=await import(asModule(stripTypeScriptTypes(await readFile(new URL('app/nce-utils.ts',root),'utf8'))));
 const exampleRows=[{en:'This is my handbag.',zh:'这是我的手提包。'},{en:'The experts felt obliged to investigate.',zh:'专家们觉得有必要调查。'},{en:'Thank you very much.',zh:'非常感谢你。'},{en:'Her fiancé is here.',zh:'她的未婚夫在这里。'}];
 assert.equal(vocabularyExample(exampleRows,'handbag'),exampleRows[0]);
@@ -86,6 +87,7 @@ for(const file of manifest.files){
   }
   checked++;
 }
+utils.clearMaterialCache();
 globalThis.fetch=async()=>new Response(new Uint8Array(probe.size));
 await assert.rejects(()=>utils.loadSiteMaterial(probe),/校验不通过/);
 globalThis.fetch=async()=>new Response(new Uint8Array(probe.size-1));

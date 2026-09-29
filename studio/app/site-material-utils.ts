@@ -1,5 +1,6 @@
 import pageMapping from './data/nce-pages.json';
 import {type NceBookId, bookCounts} from './model';
+import {withNetworkTimeout} from './network';
 export type SiteMaterial = {
   id:string; name:string; book:NceBookId; lesson:number;
   type:'application/pdf'|'text/plain'|`audio/${string}`;
@@ -48,34 +49,59 @@ export function materialLessonPage(file:SiteMaterial,lesson:number):number|undef
   if(file.type!=='application/pdf'||file.sha256!==map.sourceSha256||!Number.isInteger(lesson))return undefined;
   return (map.starts as Record<string,number>)[String(lesson)];
 }
-export async function readMaterialManifest(signal?:AbortSignal):Promise<MaterialManifest>{
-  const response=await fetch('/materials/manifest.json',{signal,cache:'no-store',credentials:'same-origin',redirect:'error'});
+let manifestCache:{data:MaterialManifest;expires:number}|undefined;
+const materialCache=new Map<string,Blob>();
+const cacheLimit=24*1024**2;
+let cacheBytes=0;
+export function clearMaterialCache(){manifestCache=undefined;materialCache.clear();cacheBytes=0}
+export async function readMaterialManifest(signal?:AbortSignal,refresh=false):Promise<MaterialManifest>{
+ if(signal?.aborted)throw new DOMException('Aborted','AbortError');
+ if(!refresh&&manifestCache&&manifestCache.expires>Date.now())return manifestCache.data;
+ return withNetworkTimeout(async requestSignal=>{
+  const response=await fetch('/materials/manifest.json',{signal:requestSignal,cache:'no-store',credentials:'same-origin',redirect:'error'});
   if(!response.ok)throw Error(`暂时无法读取教材目录（${response.status}）`);
   const text=await response.text();
   if(text.length>4*1024**2)throw Error('教材目录超过大小限制');
   let data:unknown;
   try{data=JSON.parse(text)}catch{throw Error('教材目录暂时无法读取，请刷新重试')}
   if(!validateMaterials(data))throw Error('教材目录格式需要检查');
+  if(requestSignal.aborted)throw requestSignal.reason;
+  manifestCache={data,expires:Date.now()+5*60*1000};
   return data;
+ },signal);
 }
 export async function loadSiteMaterial(file:SiteMaterial,signal?:AbortSignal,progress?:(value:number)=>void){
   if(!validateMaterials({version:1,files:[file]}))throw Error('教材目录格式需要检查');
+  if(signal?.aborted)throw new DOMException('Aborted','AbortError');
+  const cached=materialCache.get(file.sha256);
+  if(cached&&cached.size===file.size&&cached.type===file.type){materialCache.delete(file.sha256);materialCache.set(file.sha256,cached);progress?.(100);return cached}
+  return withNetworkTimeout(async (requestSignal,activity)=>{
   const parts:BlobPart[]=[];let downloaded=0;
   for(const part of file.parts){
-    const r=await fetch(part.path,{signal,credentials:'same-origin',redirect:'error'});
+    const r=await fetch(part.path,{signal:requestSignal,credentials:'same-origin',redirect:'error'});
+    activity();
     if(!r.ok)throw Error(`教材文件暂时无法读取（${r.status}）`);
     const length=r.headers.get('Content-Length');
     if(length!==null&&Number(length)!==part.size)throw Error('教材下载不完整，请重试');
     const reader=r.body?.getReader();if(!reader)throw Error('教材下载没有内容');
     let received=0;const chunks:Uint8Array<ArrayBuffer>[]=[];
-    try{for(;;){const {done,value}=await reader.read();if(done)break;received+=value.byteLength;if(received>part.size)throw Error('教材分段超过目录标注大小');chunks.push(new Uint8Array(value))}}
+    try{for(;;){const {done,value}=await reader.read();if(done)break;if(requestSignal.aborted)throw requestSignal.reason;activity();received+=value.byteLength;if(received>part.size)throw Error('教材分段超过目录标注大小');chunks.push(new Uint8Array(value));progress?.(Math.min(99,(downloaded+received)/file.size*100))}}
     finally{await reader.cancel().catch(()=>{})}
     if(received!==part.size)throw Error('教材下载不完整，请重试');
-    parts.push(...chunks);downloaded+=received;progress?.(downloaded/file.size*100);
+    parts.push(...chunks);downloaded+=received;
   }
-  if(signal?.aborted)throw new DOMException('Aborted','AbortError');
+  if(requestSignal.aborted)throw requestSignal.reason;
   const blob=new Blob(parts,{type:file.type});
   const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await blob.arrayBuffer())),x=>x.toString(16).padStart(2,'0')).join('');
   if(hash!==file.sha256)throw Error('教材内容校验不通过，请重新加载');
+  if(requestSignal.aborted)throw requestSignal.reason;
+  if(blob.size<=cacheLimit){
+   // Cache only verified files, with a bounded least-recently-used footprint.
+   const existing=materialCache.get(file.sha256);if(existing){cacheBytes-=existing.size;materialCache.delete(file.sha256)}
+   while(cacheBytes+blob.size>cacheLimit){const key=materialCache.keys().next().value!;cacheBytes-=materialCache.get(key)!.size;materialCache.delete(key)}
+   materialCache.set(file.sha256,blob);cacheBytes+=blob.size;
+  }
+  progress?.(100);
   return blob;
+  },signal);
 }
