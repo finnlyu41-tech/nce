@@ -1,11 +1,12 @@
 'use client';
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {ChevronDown, Cloud, Download, FolderOpen} from 'lucide-react';
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {toast} from 'sonner';
 import {State} from './model';
 import {downloadProgress, makeProgressFile, readProgressFile, saveProgressToFiles, ProgressSnapshot} from './progress-file';
 import './progress-save.css';
+import {ONLINE} from './runtime-mode';
 
 type Props = {state: State; ready: boolean; status: string; restore: (state: State) => Promise<void>};
 const message = (error: unknown) => error instanceof Error ? error.message : '操作未完成，请重试。';
@@ -16,8 +17,13 @@ export function ProgressSave({state, ready, status, restore}: Props) {
   const [pending, setPending] = useState<ProgressSnapshot | null>(null);
   const [previous, setPrevious] = useState<State | null>(null);
   const [receipt, setReceipt] = useState('');
+  const [standalone, setStandalone] = useState(false);
   const input = useRef<HTMLInputElement>(null);
   const working = useRef(false);
+  useEffect(() => {
+    setStandalone(window.matchMedia('(display-mode: standalone)').matches ||
+      (navigator as Navigator & {standalone?: boolean}).standalone === true);
+  }, []);
 
   async function save(toFiles = false) {
     if (!ready || working.current) return;
@@ -26,11 +32,11 @@ export function ProgressSave({state, ready, status, restore}: Props) {
     setReceipt('');
     try {
       const file = makeProgressFile(state);
-      const result = toFiles ? await saveProgressToFiles(file) : downloadProgress(file);
+      const result = toFiles || standalone ? await saveProgressToFiles(file) : downloadProgress(file);
       if (result === 'cancelled') return;
       const text = result === 'written' ? '进度文件已写入所选位置。iCloud 上传状态请在「文件」或 Finder 中确认。'
         : result === 'shared' ? '系统面板已关闭，请在「文件」中确认进度文件已保存。'
-        : toFiles ? '已发起下载；下载后可将文件移到 iCloud Drive。' : '已发起进度文件下载，请在浏览器下载列表确认。';
+        : toFiles || standalone ? '已发起文件下载，请确认文件已保存；可将它移到 iCloud Drive。' : '已发起进度文件下载，请在浏览器下载列表确认。';
       setReceipt(text);
       toast(text);
     } catch (error) { toast.error(`保存未完成。${message(error)}`); }
@@ -91,6 +97,17 @@ export function ProgressSave({state, ready, status, restore}: Props) {
             <button className="btn" disabled={busy} onClick={apply}>{busy ? '正在恢复…' : '确认替换并恢复'}</button>
           </div>
         </> : <>
+          {ONLINE && (standalone ? <p className="home-screen-status">正在以主屏幕 App 使用。进度保存在这个 App 内，和 Safari 分开；可在下方从文件恢复。</p> :
+            <details className="home-screen-help">
+              <summary>添加到 iPhone 主屏幕</summary>
+              <ol>
+                <li>用 iPhone 的 Safari 打开本站。</li>
+                <li>点「分享」→「添加到主屏幕」。部分版本先点页面菜单，再点「分享」。</li>
+                <li>如果出现「作为 Web App 打开」，保持开启，再点「添加」。</li>
+              </ol>
+              <p>以后点主屏幕的「句句有进步」图标即可打开。学习时需要联网。</p>
+              <p>已有学习记录不会自动带过去。安装前用下方「选择文件保存位置」保留进度；从主屏幕打开后，点顶部保存按钮旁的箭头，再选「从文件恢复进度」。</p>
+            </details>)}
           <p className="muted small">浏览器状态：{status}。进度文件包含学习记录、笔记、生词、练习草稿和自备文字，不含教材音频或练习录音。</p>
           <button className="btn" disabled={busy} onClick={() => save()}><Download size={17}/>保存进度到本地</button>
           <section className="progress-cloud-help" aria-label="iCloud Drive 文件备份">

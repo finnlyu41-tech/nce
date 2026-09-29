@@ -1,0 +1,20 @@
+/* The same learning UI fills the safe viewport when opened from Home Screen. */
+:root{--app-safe-top:env(safe-area-inset-top,0px);--app-safe-left:env(safe-area-inset-left,0px);--app-safe-right:env(safe-area-inset-right,0px)}
+@media(display-mode:standalone){
+  body{padding-left:var(--app-safe-left);padding-right:var(--app-safe-right)}
+  .topbar{height:calc(80px + var(--app-safe-top));padding-top:var(--app-safe-top)}
+  [data-slot=sidebar-header]{padding-top:calc(32px + var(--app-safe-top))!important}
+  [data-slot=sidebar-footer]{padding-bottom:calc(22px + env(safe-area-inset-bottom,0px))!important}
+  .studio-sidebar [data-slot=sidebar-container]{left:var(--app-safe-left)}
+  .phone-nav,.nce-lesson-footer,.guided-expression .guide-footer{left:var(--app-safe-left);right:var(--app-safe-right)}
+  .progress-save-dialog{max-height:calc(100dvh - 32px - var(--app-safe-top) - env(safe-area-inset-bottom,0px))}
+}
+@media(display-mode:standalone) and (max-width:767px){
+  .topbar{height:calc(56px + var(--app-safe-top))}
+  .nce-studio .lesson-tabs{top:calc(56px + var(--app-safe-top))}
+}
+.home-screen-help{border:1px solid #dbe5f3;border-radius:12px;padding:0 14px;background:#f7f9fc}
+.home-screen-help summary{min-height:48px;cursor:pointer;padding:12px 0;font-size:14px;font-weight:600;color:#2455df}
+.home-screen-help ol{padding-left:22px;margin:0 0 12px;font-size:14px;line-height:1.9}
+.home-screen-help p{font-size:13px;margin:10px 0 14px;color:#536079}
+.home-screen-status{font-size:13px;color:#425c7a}

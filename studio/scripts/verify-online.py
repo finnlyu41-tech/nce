@@ -11,6 +11,21 @@ def verify(root):
     manifest = json.loads((root / 'materials/manifest.json').read_text())
     assert manifest['version'] == 1 and 0 < len(manifest['files']) <= 2000, 'Empty or invalid manifest'
     allowed = {'index.html', 'version.json', 'robots.txt', '_headers', '_worker.js', '_routes.json', 'materials/manifest.json'}
+    app_manifest = json.loads((root/'manifest.webmanifest').read_text())
+    assert app_manifest['display'] == 'standalone' and app_manifest['id'] == '/' and app_manifest['scope'] == '/'
+    assert app_manifest['start_url'] == '/#/today'
+    html = (root/'index.html').read_text()
+    assert 'rel="manifest" href="/manifest.webmanifest"' in html
+    assert 'rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"' in html
+    assert "manifest-src 'self'" in html and "manifest-src 'self'" in (root/'_headers').read_text()
+    allowed.add('manifest.webmanifest')
+    icons = {'icons/apple-touch-icon.png': 180, 'icons/icon-192.png': 192, 'icons/icon-512.png': 512}
+    assert {icon['src'] for icon in app_manifest['icons']} == {'/icons/icon-192.png', '/icons/icon-512.png'}
+    for path, dimension in icons.items():
+        png = (root/path).read_bytes()
+        assert png[:8] == b'\x89PNG\r\n\x1a\n' and png[12:16] == b'IHDR', 'Invalid app icon'
+        assert int.from_bytes(png[16:20], 'big') == int.from_bytes(png[20:24], 'big') == dimension, 'Wrong app icon size'
+        allowed.add(path)
     ids = set()
     total = 0
     counts = {f'NCE{i}': {'application/pdf': 0, 'text/plain': 0, 'audio/mpeg': 0} for i in range(1, 5)}

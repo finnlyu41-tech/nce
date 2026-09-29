@@ -48,7 +48,7 @@ def main():
         return hashlib.sha256((package/path).read_bytes()).hexdigest()
 
     for base in [production, args.deployment]:
-        for path in ['index.html', 'version.json', 'materials/manifest.json', 'language/index.json', 'language/dictionary.json', 'lesson-pages/index.json', 'speaking/topics.json', 'grammar/index.json']:
+        for path in ['index.html', 'version.json', 'manifest.webmanifest', 'icons/apple-touch-icon.png', 'icons/icon-192.png', 'icons/icon-512.png', 'materials/manifest.json', 'language/index.json', 'language/dictionary.json', 'lesson-pages/index.json', 'speaking/topics.json', 'grammar/index.json']:
             checks.append(verify(base, '/' if path=='index.html' else '/'+path, file_hash(path)))
         checks.append(verify(base, '/', version['html_sha256'], stale_auth=True))
         for path in ['/README.md', '/.env', '/work/local-codex/SESSION.json', '/grammar/ocr.json', '/grammar/source.pdf']:
