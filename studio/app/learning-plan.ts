@@ -63,7 +63,7 @@ export function recordCheck(goal:GoalRecord,attempt:LearningAttempt){
 }
 export function nextReviewRound(goal:GoalRecord){return {...goal,round:goal.round+1,answer:'',checked:'',hinted:false};}
 export function answerMatches(answer:string,reference:string){
- const expand=(value:string)=>normal(value).replace(/\b(can't)\b/g,'cannot').replace(/\b(won't)\b/g,'will not').replace(/\b(\w+)n't\b/g,'$1 not').replace(/\bi'm\b/g,'i am').replace(/\b(\w+)'re\b/g,'$1 are').replace(/\b(\w+)'ve\b/g,'$1 have').replace(/\b(\w+)'ll\b/g,'$1 will');
+ const expand=(value:string)=>normal(value.replace(/[—–-]/g,' ')).replace(/\b(can't)\b/g,'cannot').replace(/\b(won't)\b/g,'will not').replace(/\b(\w+)n't\b/g,'$1 not').replace(/\bi'm\b/g,'i am').replace(/\b(\w+)'re\b/g,'$1 are').replace(/\b(\w+)'ve\b/g,'$1 have').replace(/\b(\w+)'ll\b/g,'$1 will');
  return reference.split(/\s+\/\s+/).some(r=>expand(answer)===expand(r));
 }
 export function goalQuestion(guide:ReturnType<typeof lessonGoals>[number],variant:number){

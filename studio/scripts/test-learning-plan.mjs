@@ -46,7 +46,7 @@ assert(!p.stableEvidence(p.recordCheck(repeated,attempt(2,tomorrow+100,false))),
 assert.equal(p.recordCheck(p.emptyGoal(),attempt(0,now,false)).dueAt,new Date(2026,8,30).getTime());
 assert.equal(p.nextReviewRound({...goal,checked:'saved',answer:'saved',hinted:true}).hinted,false);
 assert.equal(p.nextReviewRound({...goal,checked:'saved',answer:'saved'}).answer,'');
-assert(p.answerMatches("  I CAN’T swim! ",'I cannot swim.'));assert(p.answerMatches('I will go.','I will go. / I shall go.'));assert(!p.answerMatches('I can swim.','I cannot swim.'));
+assert(p.answerMatches("  I CAN’T swim! ",'I cannot swim.'));assert(p.answerMatches('I will go.','I will go. / I shall go.'));assert(!p.answerMatches('I can swim.','I cannot swim.'));assert(p.answerMatches('Are they ready? No, they are not.', 'Are they ready? — No, they are not.'));
 const legacy={...model.initial,drafts:{'expression-NCE1-99':'legacy expression','ielts-writing':'essay'},nce:{'NCE1-99':{title:'My title',text:'Saved text',notes:'Keep notes',steps:['listen']},'NCE1-100':{title:'Exercise',text:'',notes:'Keep exercise notes',steps:['practice']}}};
 let state=p.updateGoal(legacy,'NCE1',100,'object-clause',()=>({...goal,worked:true,answer:'One draft',transfer:'Another draft',checkedTransfer:'Another draft'}));
 assert.equal(state.drafts['expression-NCE1-99'],'legacy expression');assert.deepEqual(state.nce,legacy.nce);assert.equal(legacy.drafts[p.learningKey('NCE1',99)],undefined,'Updates do not mutate the previous state');assert(model.validateState(state),'Existing backups accept the new optional draft without migration');
