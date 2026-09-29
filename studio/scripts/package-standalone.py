@@ -13,7 +13,7 @@ s = s[:m.start()] + '<style>' + css + '</style>' + s[m.end():]
 s = s.replace('href="/favicon.svg"', 'href="data:image/svg+xml,' + urllib.parse.quote(Path('public/favicon.svg').read_text()) + '"')
 csp = "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; media-src blob: data:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
 if online:
-    csp = "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: data:; font-src data:; connect-src 'self'; manifest-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    csp = "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: data:; font-src data:; connect-src 'self'; manifest-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
     s = s.replace('<meta name="theme-color" content="#2455df">', '<meta name="theme-color" content="#ffffff">')
     s = s.replace('</head>', '<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="句句有进步"><meta name="apple-mobile-web-app-status-bar-style" content="default"></head>')
 s = s.replace('<head>', '<head><meta http-equiv="Content-Security-Policy" content="'+csp+'">')
