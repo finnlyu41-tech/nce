@@ -64,7 +64,14 @@ for(const path of ['/','/materials/manifest.json',probe.parts[0].path,'/version.
   assert.equal((await worker.fetch(new Request('https://site.pages.dev'+path),{})).status,503);
 }
 assert.equal(assetCalls,12,'Public requests did not reach static assets');
-for(const path of ['/scripts/pages-access.js','/materials/.inventory.json','/materials/%2e%2e/.env']){
+for(const path of ['/manifest.webmanifest','/icons/apple-touch-icon.png','/icons/icon-192.png','/icons/icon-512.png']){
+  const response=await worker.fetch(new Request('https://site.pages.dev'+path),env);
+  assert.equal(response.status,200,'Home Screen assets must pass the public whitelist');
+  assert.match(response.headers.get('Content-Security-Policy'),/manifest-src 'self'/);
+  if(path==='/manifest.webmanifest')assert.match(response.headers.get('Content-Type'),/^application\/manifest\+json/);
+  assert.equal((await worker.fetch(new Request('https://site.pages.dev'+path,{method:'POST'}),env)).status,405);
+}
+for(const path of ['/scripts/pages-access.js','/materials/.inventory.json','/materials/%2e%2e/.env','/icons/private.png','/icons/../.env']){
   assert.equal((await worker.fetch(new Request('https://site.pages.dev'+path),env)).status,404);
 }
 assert.equal((await worker.fetch(new Request('https://site.pages.dev/',{method:'POST'}),env)).status,405);

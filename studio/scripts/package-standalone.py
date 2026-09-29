@@ -13,13 +13,19 @@ s = s[:m.start()] + '<style>' + css + '</style>' + s[m.end():]
 s = s.replace('href="/favicon.svg"', 'href="data:image/svg+xml,' + urllib.parse.quote(Path('public/favicon.svg').read_text()) + '"')
 csp = "default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; media-src blob: data:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
 if online:
-    csp = "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: data:; font-src data:; connect-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    csp = "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: data:; font-src data:; connect-src 'self'; manifest-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'"
+    s = s.replace('<meta name="theme-color" content="#2455df">', '<meta name="theme-color" content="#ffffff">')
+    s = s.replace('</head>', '<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="句句有进步"><meta name="apple-mobile-web-app-status-bar-style" content="default"></head>')
 s = s.replace('<head>', '<head><meta http-equiv="Content-Security-Policy" content="'+csp+'">')
 s = s.replace('</body>', '<script type="module">' + js + '</script></body>')
 out = Path('dist-online' if online else 'dist')
 out.mkdir(exist_ok=True)
 (out/'index.html').write_text(s)
 if online:
+    shutil.copyfile('public/manifest.webmanifest', out/'manifest.webmanifest')
+    (out/'icons').mkdir(exist_ok=True)
+    for icon in ['apple-touch-icon.png', 'icon-192.png', 'icon-512.png']:
+        shutil.copyfile(Path('public/icons')/icon, out/'icons'/icon)
     (out/'drive-config.json').unlink(missing_ok=True)
     (out/'materials').mkdir(exist_ok=True)
     if not (out/'materials/manifest.json').exists():
@@ -34,5 +40,5 @@ if online:
     (out/'_routes.json').write_text(json.dumps({'version':1,'include':['/*'],'exclude':[]})+'\n')
     (out/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     (out/'_headers').write_text('/*\n  Content-Security-Policy: '+csp+"; frame-ancestors 'none'\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Frame-Options: DENY\n  Cross-Origin-Opener-Policy: same-origin-allow-popups\n  Permissions-Policy: camera=(), microphone=(self), geolocation=()\n  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-cache\n")
-    (out/'version.json').write_text(json.dumps({'version':'2026-09-29-textbook-vocabulary-v1','html_sha256':hashlib.sha256(s.encode()).hexdigest(),'manifest_sha256':hashlib.sha256((out/'materials/manifest.json').read_bytes()).hexdigest(),'materials_count':len(json.loads((out/'materials/manifest.json').read_text())['files']),'access':'public','grammar_sha256':hashlib.sha256((out/'grammar/index.json').read_bytes()).hexdigest(),'pages_sha256':hashlib.sha256((out/'lesson-pages/index.json').read_bytes()).hexdigest(),'speaking_sha256':hashlib.sha256((out/'speaking/topics.json').read_bytes()).hexdigest(),'language_sha256':hashlib.sha256((out/'language/index.json').read_bytes()).hexdigest()},indent=2)+'\n')
+    (out/'version.json').write_text(json.dumps({'version':'2026-09-29-reading-comic-v1','html_sha256':hashlib.sha256(s.encode()).hexdigest(),'manifest_sha256':hashlib.sha256((out/'materials/manifest.json').read_bytes()).hexdigest(),'materials_count':len(json.loads((out/'materials/manifest.json').read_text())['files']),'access':'public','grammar_sha256':hashlib.sha256((out/'grammar/index.json').read_bytes()).hexdigest(),'pages_sha256':hashlib.sha256((out/'lesson-pages/index.json').read_bytes()).hexdigest(),'speaking_sha256':hashlib.sha256((out/'speaking/topics.json').read_bytes()).hexdigest(),'language_sha256':hashlib.sha256((out/'language/index.json').read_bytes()).hexdigest()},indent=2)+'\n')
 print('Created '+str(out/'index.html'))

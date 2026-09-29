@@ -4,7 +4,7 @@ const headers = {
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'no-referrer',
   'X-Robots-Tag': 'noindex, nofollow',
-  'Content-Security-Policy': "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: data:; font-src data:; connect-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+  'Content-Security-Policy': "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: data:; font-src data:; connect-src 'self'; manifest-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
   'X-Frame-Options': 'DENY',
   'Permissions-Policy': 'camera=(), microphone=(self), geolocation=()',
   'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
@@ -17,7 +17,7 @@ export default {
     if (url.pathname === '/api/pronunciation') return pronunciation(request, env);
     if (!env.ASSETS) return reply('Study materials temporarily unavailable.', 503);
     if (!['GET', 'HEAD'].includes(request.method)) return reply('Method not allowed', 405, {Allow: 'GET, HEAD'});
-    if (!['/', '/index.html', '/version.json', '/robots.txt', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
+    if (!['/', '/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
     try {
       // Old browsers may still send cached Basic credentials. Never forward them.
       const assetRequest = new Request(request);
@@ -25,6 +25,7 @@ export default {
       const response = await env.ASSETS.fetch(assetRequest);
       const result = new Response(response.body, response);
       for (const [key, value] of Object.entries(headers)) result.headers.set(key, value);
+      if (url.pathname === '/manifest.webmanifest' && response.ok) result.headers.set('Content-Type', 'application/manifest+json; charset=utf-8');
       if (/^\/(?:materials\/[a-f0-9]{64}\/|lesson-pages\/[a-f0-9]{64}\.jpg$)/.test(url.pathname) && response.ok) result.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
       result.headers.delete('WWW-Authenticate');result.headers.delete('Vary');
       return result;
