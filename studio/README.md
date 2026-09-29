@@ -164,6 +164,8 @@ Python 需使用项目已有的 `pypdfium2` 环境。打包复用原书页图并
 
 `app/recording-feedback.tsx` 提供录音、用户发送确认、结果与重录对比；`recording-audio.ts` 在浏览器内转换为单声道 16 kHz / 16-bit PCM WAV。反馈最多显示两个需要练习的地方，保留 Azure 返回的 IPA 音素和准确度，优先显示疑似漏读、低匹配单词或音素。对 /θ ð f v s z ʃ ʒ ɪ i ɛ æ/ 提供简短发音要点与例词，其他音素退回原声和单词示范，不猜测读成了哪个音。发音要点参考 [格罗宁根大学美音语音学](https://opentextbooks.rug.nl/americanenglishphonetics2/)，用于练习而非对实际舌位的诊断。可回听问题词附近的录音片段、播放本机美音单词/例词，再重录整句；片段可能包含相邻声音。本机缺少美音时明确提示并保留原声，不切到远程合成。前后两遍按同一词/音素比较，缺少数据或重复词对齐不明时不宣称纠正成功。准确度、连贯度与完整度数据默认折叠，不换算雅思分数。服务未配置时明确显示未启用，并保留 Microsoft Reading Coach 免费替代入口；不会自动向它发送课文或录音。
 
+结束录音后先等待最后一段音频写完，再释放该次麦克风；每次采集独立清理，保存期间禁止启动另一遍。回放前实际解码并转换为有明确时长的单声道 WAV，过短、损坏或无可检测声音的片段会提示重录，保留上一遍有效录音。换源时重新创建播放器；取消或离开练习后，迟到的麦克风授权不会启动录音。`pnpm verify:recording` 覆盖连续重录、尾段数据、旧会话隔离、取消、录音错误与超时，以及空音频、静音和 WAV 校验；测试使用模拟输入，不访问真实麦克风或服务。
+
 服务端沿用现有 Pages Worker，只增加 `/api/pronunciation`：GET 返回启用状态；POST 要求同源、明确发送确认，并校验文本、请求大小与 WAV 的真实长度/格式，随后调用 Azure 短音频接口。用户于 2026-09-27 明确取消个人评估口令，界面与接口均无需口令；任何访问者均可在免费资源额度内提交符合要求的录音。默认不启用额外计费的韵律评估，Azure 密钥只由服务端读取。失败保留本页录音，无自动重试、自动购买或升级逻辑，不保存或记录录音正文。旧 `STUDIO_SPEECH_TOKEN_SHA256` 和本机钥匙串条目不再参与评估，未删除历史凭据。
 
 启用前必须由账户持有人在 Azure 核对实际 Speech 资源为 **F0**，确认可用区域和额度；不能把配置字符串当作已核验的资源档位。当前代码及默认部署不含任何 Azure 凭据。仅在明确授权配置后，通过 Cloudflare Pages 的加密 secrets 设置以下三项，不写入源码、构建产物或聊天：
@@ -208,6 +210,7 @@ pnpm check
 pnpm package:online
 pnpm verify:navigation
 pnpm verify:playback
+pnpm verify:recording
 pnpm verify:materials
 pnpm verify:guided
 pnpm verify:grammar

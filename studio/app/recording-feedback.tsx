@@ -4,7 +4,8 @@ import {Mic,Square,Volume2,RotateCcw,ExternalLink} from 'lucide-react';
 import {toast} from 'sonner';
 import {PlaybackSpeed,usePlaybackRate} from './playback-speed';
 import {ONLINE} from './runtime-mode';
-import {assessmentAudio,ASSESSMENT_SECONDS} from './recording-audio';
+import {assessmentAudio,playableRecording,ASSESSMENT_SECONDS} from './recording-audio';
+import {captureRecording,type RecordingCapture} from './recording-session';
 import {assessRecording,practiceIssues,retryFeedback,PronunciationResult,PracticeIssue} from './pronunciation';
 import {speak} from './speech';
 import './recording-feedback.css';
@@ -17,9 +18,9 @@ export function Recorder({referenceText,onListen,onBeforeRecord,stopSignal,hideR
 }
 function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideReference,retentionLabel='录音在离开本练习或刷新后清除'}:{reference:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number;hideReference:boolean;retentionLabel?:string}){
  const rate=usePlaybackRate(),[take,setTake]=useState<Take|null>(null),[previous,setPrevious]=useState<Take|null>(null);
- const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[submitting,setSubmitting]=useState(false),[elapsed,setElapsed]=useState(0);
+ const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[finishing,setFinishing]=useState(false),[submitting,setSubmitting]=useState(false),[elapsed,setElapsed]=useState(0);
  const [consent,setConsent]=useState(false),[service,setService]=useState<'loading'|'ready'|'unavailable'>('loading'),[error,setError]=useState('');
- const recorder=useRef<MediaRecorder|null>(null),stream=useRef<MediaStream|null>(null),mounted=useRef(false),pending=useRef(false);
+ const capture=useRef<RecordingCapture|null>(null),attempt=useRef(0),mounted=useRef(false),pending=useRef(false);
  const clips=useRef<Take[]>([]),timer=useRef<ReturnType<typeof setInterval>|null>(null),request=useRef<AbortController|null>(null);
  const currentAudio=useRef<HTMLAudioElement>(null),previousAudio=useRef<HTMLAudioElement>(null);
  const clipEnd=useRef<number|null>(null);
@@ -34,8 +35,12 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
   catch{clipEnd.current=null;setError('片段尚未就绪，请稍后重试或完整回听。')}
  }
  function stopTimer(){if(timer.current){clearInterval(timer.current);timer.current=null}}
- function stop(){stopTimer();if(recorder.current?.state==='recording')recorder.current.stop();stream.current?.getTracks().forEach(t=>t.stop())}
- useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;stop();currentAudio.current?.pause();previousAudio.current?.pause();window.speechSynthesis?.cancel();request.current?.abort();clips.current.forEach(c=>URL.revokeObjectURL(c.url))}},[]);
+ function stop(){
+  stopTimer();
+  if(capture.current){capture.current.stop();if(mounted.current){setRecording(false);setFinishing(true);setBusy(true)}}
+  else if(pending.current){attempt.current++;pending.current=false;if(mounted.current)setBusy(false)}
+ }
+ useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;attempt.current++;stopTimer();capture.current?.dispose();capture.current=null;pending.current=false;currentAudio.current?.pause();previousAudio.current?.pause();window.speechSynthesis?.cancel();request.current?.abort();clips.current.forEach(c=>URL.revokeObjectURL(c.url))}},[]);
  useEffect(()=>{stop()},[stopSignal]);
  useEffect(()=>{for(const audio of [currentAudio.current,previousAudio.current])if(audio)audio.playbackRate=Number(rate)},[rate,take?.url,previous?.url]);
  useEffect(()=>{
@@ -47,27 +52,26 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
   return()=>{clearTimeout(timeout);abort.abort()};
  },[reference]);
  async function start(){
-  if(pending.current||recording||submitting)return;
+  if(pending.current||capture.current||submitting)return;
   if(!navigator.mediaDevices?.getUserMedia||typeof MediaRecorder==='undefined'){toast.error('请在支持麦克风的安全网页环境中录音。');return;}
+  const id=++attempt.current;
   pending.current=true;setBusy(true);setError('');pausePlayback();
   try{
    const s=await navigator.mediaDevices.getUserMedia({audio:true});
-   if(!mounted.current){s.getTracks().forEach(t=>t.stop());return;}stream.current=s;
-   const r=new MediaRecorder(s),chunks:BlobPart[]=[];recorder.current=r;
-   r.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
-   r.onerror=()=>{stop();if(mounted.current){setRecording(false);setError('录音中断，请检查麦克风后重试。')}};
-   r.onstop=()=>{
-    stopTimer();s.getTracks().forEach(t=>t.stop());
-    if(!mounted.current)return;setRecording(false);
-    const blob=new Blob(chunks,{type:r.mimeType});if(!blob.size){setError('没有录到声音，请重试。');return;}
-    const next={blob,url:URL.createObjectURL(blob)},old=clips.current[0]||null;
-    clips.current.slice(1).forEach(c=>URL.revokeObjectURL(c.url));clips.current=[next,...(old?[old]:[])];
-    setPrevious(old);setTake(next);
-   };
-   r.start();setRecording(true);setElapsed(0);const started=Date.now();
+   if(!mounted.current||attempt.current!==id){s.getTracks().forEach(t=>t.stop());return;}
+   const session=captureRecording(s);capture.current=session;pending.current=false;
+   setBusy(false);setRecording(true);setElapsed(0);const started=Date.now();
    timer.current=setInterval(()=>{const seconds=Math.floor((Date.now()-started)/1000);setElapsed(seconds);if(reference&&seconds>=ASSESSMENT_SECONDS)stop()},200);
-  }catch{stream.current?.getTracks().forEach(t=>t.stop());if(mounted.current)setError('无法使用麦克风。请允许录音后重试。');}
-  finally{pending.current=false;if(mounted.current)setBusy(false)}
+   const raw=await session.result;
+   if(!mounted.current||attempt.current!==id)return;
+   stopTimer();setRecording(false);setBusy(true);setFinishing(true);
+   const blob=await playableRecording(raw);
+   if(!mounted.current||attempt.current!==id)return;
+   const next={blob,url:URL.createObjectURL(blob)},old=clips.current[0]||null;
+   clips.current.slice(1).forEach(c=>URL.revokeObjectURL(c.url));clips.current=[next,...(old?[old]:[])];
+   setPrevious(old);setTake(next);
+  }catch(error){if(mounted.current&&attempt.current===id)setError(error instanceof Error&&error.name==='Error'?error.message:'无法使用麦克风。请允许录音后重试。');}
+  finally{if(attempt.current===id){stopTimer();capture.current=null;pending.current=false;if(mounted.current){setRecording(false);setBusy(false);setFinishing(false)}}}
  }
  async function submit(){
   if(!take||!consent||submitting)return;
@@ -82,9 +86,9 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
  }
  return <div className="record-box recording-feedback">
   {reference&&<div className="record-reference"><div className="row spread"><strong>跟读这一句</strong>{onListen&&<button className="text-btn" disabled={recording||busy} onClick={listen}><Volume2 size={16}/>听原句</button>}</div>{hideReference?<details className="practice-reference"><summary>听后看原句，再跟读</summary><p lang="en">{reference}</p></details>:<p lang="en">{reference}</p>}<span className="muted small">每次最多 30 秒，先听原声，等播放结束再录音。</span></div>}
-  <div className="row wrap"><button className={recording?'btn recording':'btn secondary'} disabled={busy||submitting} onClick={()=>recording?stop():void start()}>{recording?<Square size={16}/>:take?<RotateCcw size={16}/>:<Mic size={16}/>} {recording?`结束录音 · ${elapsed}秒`:busy?'连接麦克风…':take?'再录一遍':'录一遍，听听自己'}</button><span className="muted small">{retentionLabel}</span></div>
-  {take&&<div className="record-playback"><label>这一次<audio ref={currentAudio} controls src={take.url} aria-label="我的录音回放" onPlay={()=>{if(recording||busy){currentAudio.current?.pause();return;}previousAudio.current?.pause();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onPause={()=>{if(currentAudio.current?.paused)clipEnd.current=null}} onTimeUpdate={()=>{const audio=currentAudio.current;if(audio&&clipEnd.current!==null&&audio.currentTime>=clipEnd.current){audio.pause();clipEnd.current=null}}} onLoadedMetadata={()=>{if(currentAudio.current)currentAudio.current.playbackRate=Number(rate)}}/></label><PlaybackSpeed label="回放语速" ariaLabel="我的录音回放语速"/></div>}
-  {previous&&<details className="record-previous"><summary>与上一遍对比</summary><audio ref={previousAudio} controls src={previous.url} aria-label="上一遍录音回放" onPlay={()=>{if(recording||busy){previousAudio.current?.pause();return;}currentAudio.current?.pause();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onLoadedMetadata={()=>{if(previousAudio.current)previousAudio.current.playbackRate=Number(rate)}}/>{previous.result&&take?.result&&<p className="small">发音准确度：{Math.round(previous.result.accuracy)} → {Math.round(take.result.accuracy)}；完整度：{Math.round(previous.result.completeness)} → {Math.round(take.result.completeness)}。以实际回听为准。</p>}</details>}
+  <div className="row wrap"><button className={recording?'btn recording':'btn secondary'} disabled={busy||submitting} onClick={()=>recording?stop():void start()}>{recording?<Square size={16}/>:take?<RotateCcw size={16}/>:<Mic size={16}/>} {recording?`结束录音 · ${elapsed}秒`:finishing?'正在保存录音…':busy?'连接麦克风…':take?'再录一遍':'录一遍，听听自己'}</button><span className="muted small">{retentionLabel}</span></div>
+  {take&&<div className="record-playback"><label>这一次<audio key={take.url} ref={currentAudio} controls src={take.url} aria-label="我的录音回放" onPlay={()=>{if(recording||busy){currentAudio.current?.pause();return;}previousAudio.current?.pause();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onPause={()=>{if(currentAudio.current?.paused)clipEnd.current=null}} onTimeUpdate={()=>{const audio=currentAudio.current;if(audio&&clipEnd.current!==null&&audio.currentTime>=clipEnd.current){audio.pause();clipEnd.current=null}}} onLoadedMetadata={()=>{if(currentAudio.current)currentAudio.current.playbackRate=Number(rate)}}/></label><PlaybackSpeed label="回放语速" ariaLabel="我的录音回放语速"/></div>}
+  {previous&&<details className="record-previous"><summary>与上一遍对比</summary><audio key={previous.url} ref={previousAudio} controls src={previous.url} aria-label="上一遍录音回放" onPlay={()=>{if(recording||busy){previousAudio.current?.pause();return;}currentAudio.current?.pause();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onLoadedMetadata={()=>{if(previousAudio.current)previousAudio.current.playbackRate=Number(rate)}}/>{previous.result&&take?.result&&<p className="small">发音准确度：{Math.round(previous.result.accuracy)} → {Math.round(take.result.accuracy)}；完整度：{Math.round(previous.result.completeness)} → {Math.round(take.result.completeness)}。以实际回听为准。</p>}</details>}
   {reference&&ONLINE&&<div className="record-assessment">
    {service==='loading'?<p className="small muted" role="status">正在检查评估服务…</p>:service==='ready'?<>
     <label className="record-consent"><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)}/><span>点击提交时，将本句英文和这段录音发送到微软 Azure 进行基础发音评估。</span></label>
