@@ -8,6 +8,7 @@ const {parseRoute,routeHash,navigate}=await import(moduleUrl(stripTypeScriptType
 for(const route of [
  {view:'today'}, {view:'words'}, {view:'nce'}, {view:'nce',book:'NCE1'}, {view:'nce',book:'NCE1',lesson:1,tab:'listen',mode:'recall'}, {view:'nce',book:'NCE1',lesson:1,tab:'notes',step:0}, {view:'nce',book:'NCE2',lesson:11,tab:'notes',step:4}, {view:'nce',book:'NCE1',lesson:144,tab:'practice'},
  {view:'nce',book:'NCE3',filter:'active',query:'自己的笔记'}, {view:'lesson',lesson:36,tab:'grammar'},
+ {view:'nce',book:'NCE2',lesson:11,tab:'listen',mode:'dictation'}, {view:'nce',book:'NCE1',lesson:99,tab:'materials'},
  {view:'grammar',book:'NCE1',lesson:59,tab:'topic',query:'some any',category:'noun',page:124}, {view:'grammar',book:'NCE3',lesson:47,tab:'book'},
  {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'ielts',tab:'speaking',task:'bank-3-25-5'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
 ])assert.deepEqual(parseRoute(routeHash(route)),route);
@@ -23,6 +24,8 @@ assert.equal(parseRoute('#/grammar/NCE4/1?category=%3Cscript%3E').category,undef
 assert.equal(parseRoute('#/nce/NCE1/1?tab=listen&mode=unknown').mode,undefined);
 assert.equal(parseRoute('#/nce/NCE1/1?tab=words&mode=recall').mode,undefined);
 assert.equal(parseRoute('#/nce/NCE1?tab=listen&mode=recall').mode,undefined);
+assert.equal(parseRoute('#/nce/NCE1/1?tab=words&mode=dictation').mode,undefined);
+assert.equal(routeHash({view:'nce',book:'NCE1',lesson:1,tab:'practice',mode:'dictation'}),'#/nce/NCE1/1?tab=practice');
 let entries=[{hash:'#/nce',state:{}}],cursor=0,events=0,lastNavigation;
 globalThis.location={get hash(){return entries[cursor].hash}};
 globalThis.history={get state(){return entries[cursor].state},replaceState(state,_unused,hash){entries[cursor]={state,hash:hash||entries[cursor].hash}},pushState(state,_unused,hash){entries=entries.slice(0,cursor+1);entries.push({state,hash});cursor++}};

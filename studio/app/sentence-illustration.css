@@ -8,17 +8,16 @@
 .reading-current{font-size:1.25rem;line-height:1.8;margin:12px 0}
 .reading-current .line-translation{font-size:.95rem}
 .reading-scene .row{flex-wrap:wrap;gap:8px}
-.practice-kind{display:flex;gap:6px;background:#f0f4fa;padding:4px;border-radius:10px;margin:16px 0}
-.practice-kind button{flex:1;border:0;border-radius:7px;padding:10px;background:transparent;color:#52657d;min-height:44px}
-.practice-kind button[aria-pressed=true]{background:#245de8;color:white}
+.reading-mode{display:flex;align-items:center;gap:8px;font-size:13px;color:#607089}
+.reading-mode select{width:auto;max-width:100%;min-height:44px;padding:8px 30px 8px 10px;font-size:14px;background:#f7f9fc}
+.reading-line select{width:auto;min-height:44px;padding:8px 26px 8px 10px;font-size:13px;color:#607089}
 .reading-scene .record-box{margin-top:16px}
 .reading-transcript{margin:16px 0}
 .reading-transcript>summary{cursor:pointer;padding:12px 0;font-weight:600}
 @media(min-width:1000px){.reading-scene .sentence-illustration{max-width:720px;margin-left:auto;margin-right:auto}}
 @media(max-width:640px){.sentence-illustration{padding:10px;margin:12px 0}.reading-current{font-size:1.1rem}.sentence-illustration figcaption{font-size:12px}.reading-scene .btn{min-height:44px}}
 
-.lesson-dictation.picture-shadow{margin:0;padding:0;background:none;border:0}
-.picture-shadow .record-reference>p{display:none}
-.picture-shadow .record-box{padding:12px}
+.reading-recorder .record-reference{display:none}
+.reading-scene .record-box{padding:12px}
 
 .illustrated-reader .cloud-player{position:static}
