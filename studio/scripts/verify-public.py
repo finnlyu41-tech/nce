@@ -9,7 +9,8 @@ TRANSPORT_RETRIES = []
 
 
 def request(url, method='GET', stale_auth=False):
-    command = ['curl', '--http1.1', '--max-time', '40', '-sS', '-X', method, '-w', '\n%{http_code}']
+    # Hash decoded bytes while avoiding slow uncompressed transfers of the app.
+    command = ['curl', '--compressed', '--max-time', '40', '-sS', '-X', method, '-w', '\n%{http_code}']
     if stale_auth:
         command += ['-H', 'Authorization: Basic bGVhcm5lcjp3cm9uZw==']  # Test-only wrong credentials.
     result = subprocess.run(command+[url], capture_output=True)
