@@ -27,6 +27,7 @@
     "verify:study-path": "node scripts/test-study-path.mjs",
     "verify:guided": "node scripts/test-guided-learning.mjs",
     "verify:pronunciation": "node scripts/test-pronunciation.mjs",
+    "verify:demos": "node scripts/test-demo-audio.mjs",
     "verify:recording": "node scripts/test-recording-session.mjs",
     "verify:progress": "node scripts/test-progress-save.mjs",
     "package:grammar": "python3 scripts/package-grammar-pages.py",

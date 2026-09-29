@@ -4,7 +4,7 @@ const headers = {
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'no-referrer',
   'X-Robots-Tag': 'noindex, nofollow',
-  'Content-Security-Policy': "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src blob: data:; font-src data:; connect-src 'self'; manifest-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+  'Content-Security-Policy': "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: data:; font-src data:; connect-src 'self'; manifest-src 'self'; frame-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
   'X-Frame-Options': 'DENY',
   'Permissions-Policy': 'camera=(), microphone=(self), geolocation=()',
   'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
@@ -15,6 +15,7 @@ export default {
     const url = new URL(request.url);
     if (url.protocol !== 'https:' && !['localhost', '127.0.0.1', '[::1]'].includes(url.hostname)) return reply('HTTPS required', 426);
     if (url.pathname === '/api/pronunciation') return pronunciation(request, env);
+    if (url.pathname === '/api/demo-audio') return demoAudio(request, env);
     if (!env.ASSETS) return reply('Study materials temporarily unavailable.', 503);
     if (!['GET', 'HEAD'].includes(request.method)) return reply('Method not allowed', 405, {Allow: 'GET, HEAD'});
     if (!['/', '/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
@@ -37,6 +38,55 @@ export default {
 // persistent store; audio still requires explicit consent and a same-origin POST.
 const jsonReply = (body, status = 200) => reply(JSON.stringify(body), status, {'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});
 const configured = env => env.STUDIO_SPEECH_ENABLED === 'F0' && /^[a-zA-Z0-9][a-zA-Z0-9-]{1,62}$/.test(env.AZURE_SPEECH_RESOURCE || '') && typeof env.AZURE_SPEECH_KEY === 'string' && env.AZURE_SPEECH_KEY.length >= 16;
+
+// Short US-English word demos share the existing F0 Speech resource. The key
+// stays here; there is no browser TTS dependency or paid-service fallback.
+async function demoAudio(request, env) {
+ if (!['GET','HEAD'].includes(request.method)) return jsonReply({error:'此接口只接受音频读取。'},405);
+ const url=new URL(request.url),origin=request.headers.get('Origin'),site=request.headers.get('Sec-Fetch-Site');
+ if ((origin&&origin!==url.origin)||(site&&!['same-origin','none'].includes(site))) return jsonReply({error:'请从本站播放示范。'},403);
+ if (!configured(env)) return jsonReply({error:'美音示范暂不可用，请听课文原句。'},503);
+ const raw=url.searchParams.get('word')||'';
+ if (raw.length>60||url.searchParams.getAll('word').length!==1) return jsonReply({error:'请选择一个单词或短语。'},400);
+ const word=raw.trim().replace(/\s+/g,' ').replace(/’/g,"'").toLowerCase();
+ if (!/^[a-z]+(?:['-][a-z]+)*(?: [a-z]+(?:['-][a-z]+)*){0,3}$/.test(word)) return jsonReply({error:'请选择一个英文单词或短语。'},400);
+ const range=request.headers.get('Range');
+ if (range&&!/^bytes=(?:\d+-\d*|-\d+)$/.test(range)) return reply('',416);
+ const cache=typeof caches==='undefined'?undefined:caches.default;
+ const key=new Request(url.origin+'/api/demo-audio?voice=en-US-JennyNeural-v1&word='+encodeURIComponent(word));
+ let complete;
+ try { complete=await cache?.match(key); } catch { /* A cache miss can use Azure. */ }
+ if (!complete) {
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+  try {
+   const response=await fetch(`https://${env.AZURE_SPEECH_RESOURCE}.cognitiveservices.azure.com/tts/cognitiveservices/v1`,{
+    method:'POST',redirect:'manual',signal:controller.signal,
+    headers:{'Ocp-Apim-Subscription-Key':env.AZURE_SPEECH_KEY,'Content-Type':'application/ssml+xml','X-Microsoft-OutputFormat':'audio-24khz-48kbitrate-mono-mp3','User-Agent':'English-Studio'},
+    body:`<speak version="1.0" xml:lang="en-US"><voice name="en-US-JennyNeural">${word}</voice></speak>`,
+   });
+   if(response.status===429)return jsonReply({error:'示范服务已达到免费额度或频率限制，请稍后再试。'},429);
+   if(!response.ok||!/^audio\/(?:mpeg|mp3)(?:;|$)/i.test(response.headers.get('Content-Type')||'')||!response.body)return jsonReply({error:'美音示范暂不可用，请稍后重试。'},502);
+   const reader=response.body.getReader(),chunks=[];let length=0;
+   while(true){const {done,value}=await reader.read();if(done)break;length+=value.length;if(length>512000){await reader.cancel();throw Error('Audio too large')}chunks.push(value)}
+   const bytes=new Uint8Array(length);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length}
+   if(length<32||!((bytes[0]===0x49&&bytes[1]===0x44&&bytes[2]===0x33)||(bytes[0]===0xff&&(bytes[1]&0xe0)===0xe0)))throw Error('Invalid MP3');
+   complete=reply(bytes,200,{'Content-Type':'audio/mpeg','Content-Length':String(length),'Accept-Ranges':'bytes','Cache-Control':'public, max-age=604800','Cross-Origin-Resource-Policy':'same-origin'});
+   try { await cache?.put(key,complete.clone()); } catch { /* Still return playable audio. */ }
+  } catch { return jsonReply({error:'示范加载失败或超时，请稍后重试。'},502); }
+  finally { clearTimeout(timer); }
+ }
+ // Safari commonly probes bytes=0-1 before asking for the complete MP3.
+ const bytes=await complete.arrayBuffer(),size=bytes.byteLength;
+ const audioHeaders=new Headers(complete.headers);
+ if(range){
+  const [first,last]=range.slice(6).split('-');
+  const start=first?Number(first):Math.max(0,size-Number(last)),end=first?(last?Math.min(Number(last),size-1):size-1):size-1;
+  if(start>=size||end<start||!Number.isSafeInteger(start)||!Number.isSafeInteger(end))return reply('',416,{'Content-Range':`bytes */${size}`});
+  audioHeaders.set('Content-Range',`bytes ${start}-${end}/${size}`);audioHeaders.set('Content-Length',String(end-start+1));
+  return new Response(request.method==='HEAD'?null:bytes.slice(start,end+1),{status:206,headers:audioHeaders});
+ }
+ return new Response(request.method==='HEAD'?null:bytes,{status:200,headers:audioHeaders});
+}
 async function pronunciation(request, env) {
  if (request.method === 'GET') return jsonReply({enabled:!!configured(env),maxSeconds:30,mode:'read-aloud',prosody:false});
  if (request.method !== 'POST') return jsonReply({error:'此接口只接受 GET 或 POST。'},405);
