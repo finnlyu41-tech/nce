@@ -16,11 +16,12 @@ export function LessonQuestion({lesson,answer,onChange}:{lesson:ReturnType<typeo
  return <section className="lesson-question"><span className="eyebrow">听前只带一个问题</span><h3>先找答案，再逐句读</h3>{lesson.question.map((r,i)=><p lang="en" key={i}><WordText text={r.en} exampleTranslation={r.zh}/></p>)}<details className="practice-reference" key={lesson.question.map(r=>r.en).join()}><summary>需要时看问题中文</summary>{lesson.question.map((r,i)=><p className="line-translation" key={i}>{r.zh}</p>)}</details><div className="row wrap"><button className="text-btn" onClick={()=>speak(lesson.question.map(r=>r.en).join(' '))}><Volume2 size={16}/>听问题</button><PlaybackSpeed ariaLabel="听前问题语速"/></div><label className="field">我听到的答案（先写中文也可以）<input maxLength={1000} value={answer} onChange={e=>onChange(e.target.value)} placeholder="先听正文，写几个关键词；读完再修正"/></label>{!!lesson.instruction.length&&<details><summary>录音中的开场指令</summary>{lesson.instruction.map((r,i)=><p key={i}>{r.en}<br/><span className="muted">{r.zh}</span></p>)}</details>}</section>;
 }
 
-type Page={page:number;src:string;sha256:string};
+export type Page={page:number;src:string;sha256:string};
 type Vocabulary={pages:number[];words:{word:string;forms:string[]}[]};
-type PageIndex={version:number;lessons:Record<string,{title:string;pages:Page[];vocabulary?:Vocabulary}>};
+export type PageIndex={version:number;sources:Record<NceBookId,string>;lessons:Record<string,{title:string;pages:Page[];vocabulary?:Vocabulary}>};
 let cached:Promise<PageIndex>|undefined;
-function loadPages(){
+export function loadPages(refresh=false){
+ if(refresh)cached=undefined;
  if(!cached)cached=readJsonResource<PageIndex>('/lesson-pages/index.json').then(d=>{if(d.version!==1||!d.lessons)throw Error();return d}).catch(e=>{cached=undefined;throw e});
  return cached;
 }
@@ -40,5 +41,5 @@ export function TextbookVocabulary({book,lesson,text}:{book:NceBookId;lesson:num
  if(error)return <p role="alert">原书词表暂时未能加载。<button className="text-btn" onClick={()=>setAttempt(attempt+1)}>重新加载词表</button></p>;
  if(!index)return <p role="status">正在读取本课原书词表…</p>;
  if(!vocabulary)return <p className="muted small">本课原书词表暂未提供，可从教材听读中查看原书。</p>;
- return <section className="source-word-picker" aria-label="本课教材词表"><div className="section-top"><strong>原书生词与短语</strong><span className="muted small">{vocabulary.words.length} 个词条</span></div>{vocabulary.words.length?<><p className="muted small">按本课 New words and expressions 列出。点词看释义、原句和中文，选需要的加入生词本。</p><div className="row wrap">{vocabulary.words.map(({word,forms})=>{const example=vocabularyExample(rows,word,forms);return <WordLookupButton key={word} className="pill vocabulary-word" word={word} example={example?.en} exampleTranslation={example?.zh}/>})}</div></>:<p className="muted small">本课原书没有单列新词。{book==='NCE1'&&lesson%2===0&&<button className="text-btn" onClick={()=>navigate({view:'nce',book,lesson:lesson-1,tab:'words'})}>复习第 {lesson-1} 课词表</button>}</p>}<div className="row wrap textbook-vocabulary-source">{entry?.pages.filter(page=>vocabulary.pages.includes(page.page)).map(page=><a className="text-btn small" href={page.src} target="_blank" rel="noreferrer" key={page.page}>查看原书词表 · PDF 第 {page.page} 页</a>)}</div></section>;
+ return <section className="source-word-picker" aria-label="本课教材词表"><div className="section-top"><strong>原书生词与短语</strong><span className="muted small">{vocabulary.words.length} 个词条</span></div>{vocabulary.words.length?<><p className="muted small">按本课 New words and expressions 列出。点词看释义、原句和中文，选需要的加入生词本。</p><div className="row wrap">{vocabulary.words.map(({word,forms})=>{const example=vocabularyExample(rows,word,forms);return <WordLookupButton key={word} className="pill vocabulary-word" word={word} example={example?.en} exampleTranslation={example?.zh}/>})}</div></>:<p className="muted small">本课原书没有单列新词。{book==='NCE1'&&lesson%2===0&&<button className="text-btn" onClick={()=>navigate({view:'nce',book,lesson:lesson-1,tab:'words'})}>复习第 {lesson-1} 课词表</button>}</p>}<div className="row wrap textbook-vocabulary-source">{entry?.pages.filter(page=>vocabulary.pages.includes(page.page)).map(page=><a className="text-btn small" href={page.src} target="_blank" rel="noreferrer" key={page.page}>查看原书词表 · PDF 第 {page.page} 页</a>)}<button className="text-btn small" onClick={()=>navigate({view:'words',book,lesson,tab:'book'})}>查看全册词汇与索引</button></div></section>;
 }

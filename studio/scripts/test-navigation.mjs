@@ -6,6 +6,7 @@ const model=moduleUrl(stripTypeScriptTypes(await readFile(new URL('../app/model.
 const source=(await readFile(new URL('../app/navigation.ts',import.meta.url),'utf8')).replace("'./model'",JSON.stringify(model));
 const {parseRoute,routeHash,navigate}=await import(moduleUrl(stripTypeScriptTypes(source)));
 for(const route of [
+ {view:'words',book:'NCE1',lesson:99,tab:'book'}, {view:'words',tab:'review'}, {view:'words',tab:'index',letter:'H',query:'手提包',page:2}, {view:'words',book:'NCE4',tab:'index',page:4},
  {view:'today'}, {view:'words'}, {view:'nce'}, {view:'nce',book:'NCE1'}, {view:'nce',book:'NCE1',lesson:1,tab:'listen',mode:'recall'}, {view:'nce',book:'NCE1',lesson:1,tab:'notes',step:0}, {view:'nce',book:'NCE2',lesson:11,tab:'notes',step:4}, {view:'nce',book:'NCE1',lesson:144,tab:'practice'},
  {view:'nce',book:'NCE3',filter:'active',query:'自己的笔记'}, {view:'lesson',lesson:36,tab:'grammar'},
  {view:'nce',book:'NCE2',lesson:11,tab:'listen',mode:'dictation'}, {view:'nce',book:'NCE1',lesson:99,tab:'materials'},
@@ -13,6 +14,11 @@ for(const route of [
  {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'ielts',tab:'speaking',task:'bank-3-25-5'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
 ])assert.deepEqual(parseRoute(routeHash(route)),route);
 assert.deepEqual(parseRoute('#/nce/__proto__/1'),{view:'nce'});
+assert.deepEqual(parseRoute('#/words/NCE1/145?tab=book'),{view:'words',book:'NCE1',tab:'book'});
+assert.equal(parseRoute('#/words?tab=index&letter=%3Cscript%3E&page=-1').letter,undefined);
+assert.equal(parseRoute('#/words?tab=index&letter=H&page=-1').page,undefined);
+assert.equal(parseRoute('#/words?tab=review&letter=H&page=2').letter,undefined);
+assert.equal(parseRoute('#/words?tab=review&letter=H&page=2').page,undefined);
 assert.deepEqual(parseRoute('#/nce/NCE1/145?tab=invalid'),{view:'nce',book:'NCE1'});
 assert.deepEqual(parseRoute('#/lesson/-10'),{view:'lesson',lesson:1});
 for(const hash of ['', '#', '#/', '#/unknown'])assert.deepEqual(parseRoute(hash),{view:'today'});
