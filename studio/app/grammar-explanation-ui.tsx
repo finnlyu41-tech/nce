@@ -30,8 +30,8 @@ function GrammarConcept({guide}:{guide:GrammarGuide}){
  </div>;
 }
 
-export function GrammarExplanation({entry}:{entry:GrammarEntry}){
+export function GrammarExplanation({entry,onPractice}:{entry:GrammarEntry;onPractice?:(id:string)=>void}){
  const guides=grammarGuidesFor(entry),[active,setActive]=useState(guides[0]?.id);
  const current=guides.find(g=>g.id===active)||guides[0];
- return <section className="grammar-explanation" aria-label="本课讲解"><div className="grammar-explanation-heading"><span>本站讲解</span><span>{guides.length===1?'一个要点，讲明白再用':`本课 ${guides.length} 个要点`}</span></div>{guides.length>1&&<nav className="grammar-concept-tabs" aria-label="选择本课讲解要点">{guides.map((g,i)=><button key={g.id} aria-pressed={current?.id===g.id} className={current?.id===g.id?'active':''} onClick={()=>setActive(g.id)}><span>{i+1}</span>{g.title}</button>)}</nav>}{current&&<GrammarConcept key={current.id} guide={current}/>}</section>;
+ return <section className="grammar-explanation" aria-label="本课讲解"><div className="grammar-explanation-heading"><span>本站讲解</span><span>{guides.length===1?'一个要点，讲明白再用':`本课 ${guides.length} 个要点`}</span></div>{guides.length>1&&<nav className="grammar-concept-tabs" aria-label="选择本课讲解要点">{guides.map((g,i)=><button key={g.id} aria-pressed={current?.id===g.id} className={current?.id===g.id?'active':''} onClick={()=>setActive(g.id)}><span>{i+1}</span>{g.title}</button>)}</nav>}{current&&<GrammarConcept key={current.id} guide={current}/>}{current&&onPractice&&<button className="btn section-space" onClick={()=>onPractice(current.id)}>带着这个用法练一遍</button>}</section>;
 }

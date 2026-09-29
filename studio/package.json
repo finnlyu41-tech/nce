@@ -32,7 +32,8 @@
     "package:grammar": "python3 scripts/package-grammar-pages.py",
     "verify:grammar": "node scripts/test-textbook-grammar.mjs",
     "verify:chinese-recall": "node scripts/test-chinese-recall.mjs",
-    "verify:illustrations": "node scripts/test-illustrations.mjs"
+    "verify:illustrations": "node scripts/test-illustrations.mjs",
+    "verify:learning": "node scripts/test-learning-plan.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

@@ -1,7 +1,7 @@
 import {bookCounts, type NceBookId} from './model';
 
-export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;mode?:'recall'|'dictation'};
-const views=['nce','today','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
+export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
+const views=['nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
 const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing'],grammar:['book','topic']};
 export function parseRoute(hash:string):StudioRoute{
  const [path,query='']=hash.replace(/^#\/?/,'').split('?'),parts=path.split('/');
@@ -12,6 +12,11 @@ export function parseRoute(hash:string):StudioRoute{
  }
  if(view==='lesson'){const lesson=Number(parts[1]);route.lesson=Number.isInteger(lesson)&&lesson>0&&lesson<=36?lesson:1}
  const tab=params.get('tab');if(tab&&tabs[view]?.includes(tab))route.tab=tab;
+ const goal=params.get('goal'),practice=params.get('practice');
+ if(view==='nce'&&route.lesson&&tab==='practice'){
+  if(goal&&/^[a-z-]{1,60}$/.test(goal)&&!['constructor','prototype'].includes(goal))route.goal=goal;
+  if(practice&&['model','independent','transfer','review'].includes(practice))route.practice=practice as StudioRoute['practice'];
+ }
  const mode=params.get('mode');if(view==='nce'&&route.lesson&&tab==='listen'&&(mode==='recall'||mode==='dictation'))route.mode=mode;
  const step=params.get('step');if(view==='nce'&&route.lesson&&tab==='notes'&&step!==null&&/^[0-4]$/.test(step))route.step=Number(step);
  const task=params.get('task');if(task&&/^(ielts-[ws][1-9]\d?|bank-[123]-[1-9]\d?-[0-5]|mistakes|diagnostic|text-\d{10,16})$/.test(task))route.task=task;
@@ -29,6 +34,10 @@ export function routeHash(route:StudioRoute){
  if(route.view==='nce'&&route.lesson&&route.tab==='notes'&&Number.isInteger(route.step)&&route.step!>=0&&route.step!<=4)params.set('step',String(route.step));
  if((route.view==='grammar'||route.view==='words'&&route.tab==='index')&&Number.isInteger(route.page)&&route.page!>0&&route.page!<=9999)params.set('page',String(route.page));
  if(route.view==='nce'&&route.lesson&&route.tab==='listen'&&(route.mode==='recall'||route.mode==='dictation'))params.set('mode',route.mode);
+ if(route.view==='nce'&&route.lesson&&route.tab==='practice'){
+  if(route.goal&&/^[a-z-]{1,60}$/.test(route.goal)&&!['constructor','prototype'].includes(route.goal))params.set('goal',route.goal);
+  if(route.practice&&['model','independent','transfer','review'].includes(route.practice))params.set('practice',route.practice);
+ }
  return path+(params.size?'?'+params:'');
 }
 export function navigate(route:StudioRoute,{replace=false,keepScroll=false,scrollTarget}:{replace?:boolean;keepScroll?:boolean;scrollTarget?:string}={}){
