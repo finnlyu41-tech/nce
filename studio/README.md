@@ -304,7 +304,7 @@ python3 scripts/package-language.py "$TRANSLATION_SNAPSHOT" "$ECDICT_CSV" "$TRAN
 
 ## 验证和本机接续
 
-2026-09-29 单词示范修复按本轮完整上线授权发布至[正式站跟读](https://finn-english-studio.pages.dev/#/nce/NCE2/2?tab=listen)及 [b77e84c5 独立部署](https://b77e84c5.finn-english-studio.pages.dev/)，发布源码 `c58e5a0`，版本 `2026-09-29-demo-audio-v1`，首页 SHA-256 为 `1ac1a69d986def60a988012a057b7bdb7ce5448a8c01e30c0394b13d8a7c310a`。原问题来自示范调用本机语音，手机缺少美音语音包时无法播放；在线版现改为同源 Azure MP3。源码沿 `codex/demo-audio-20260929` 与既有共享整合线同步。验收期间学习流程版接续发布；已核对 `daa4f27` 包含本次全部修复，正式站版本为 `2026-09-29-learning-mastery-v1`，首页 SHA-256 与重建产物一致：`d584ff10ba6f19eb306f5f5d592162de3af9f85dae52b5c0dd8a315cb498fae3`。后续以实时 Git 与 `version.json` 为准，不回退覆盖同期功能。
+2026-09-29 单词示范修复按本轮完整上线授权发布至[正式站跟读](https://finn-english-studio.pages.dev/#/nce/NCE2/2?tab=listen)及 [b77e84c5 独立部署](https://b77e84c5.finn-english-studio.pages.dev/)，发布源码 `c58e5a0`，版本 `2026-09-29-demo-audio-v1`，首页 SHA-256 为 `1ac1a69d986def60a988012a057b7bdb7ce5448a8c01e30c0394b13d8a7c310a`。原问题来自示范调用本机语音，手机缺少美音语音包时无法播放；在线版现改为同源 Azure MP3。源码沿 `codex/demo-audio-20260929` 与既有共享整合线同步。验收期间学习流程版接续发布；已核对 `daa4f27` 包含本次全部修复，当时正式站版本为 `2026-09-29-learning-mastery-v1`，首页 SHA-256 与重建产物一致：`d584ff10ba6f19eb306f5f5d592162de3af9f85dae52b5c0dd8a315cb498fae3`。随后 `c05d4ed` 仅调整独立回忆的题目显示与版本号，示范代码未变；最后回读为 `2026-09-29-learning-mastery-v2`，首页哈希 `bc5131afa6d941b78963aac2b1c41a45a1c67e467a53d70cc52bde72912158e8` 与版本文件一致，页面保留示范端点，was 音频与已解码文件一致。后续以实时 Git 与 `version.json` 为准，不回退覆盖同期功能。
 
 类型检查、在线/离线构建、示范与录音接口（含 Workerd）、重录、语速、教材、导航、进度及相关学习功能回归通过；1,936 个在线文件完整性通过。两个域名共 38 项回读及解码检查通过，覆盖各自版本和首页哈希、资料索引、访问边界、评估状态，以及 Sunday、was、zoo 的真实 Azure MP3、非静音解码和 Safari 字节分段请求。在线示范复用已重新核实的免费资源，没有提交用户录音。额外复验未变的第二册第 2 课原声文件时，整文件及分段下载均遇网络超时，未计为通过；该文件本地完整性通过，正式页面原声已实测从约 16.02 秒播放至 18.07 秒停止，无媒体错误。
 
