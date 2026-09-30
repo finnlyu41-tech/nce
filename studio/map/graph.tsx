@@ -1,7 +1,7 @@
 import React, { useRef, useState, useLayoutEffect, forwardRef, useImperativeHandle } from 'react';
 import { ArrowUpRight, Check, Lock, Flag, Headphones, BookOpen, PenLine, Mic, LocateFixed, Minus, Plus, Maximize2, RotateCcw, Milestone } from 'lucide-react';
 import { nodes, stages, lanes, type MapNode, type Stage } from './content';
-import { statusMap, due, type Progress } from './model';
+import { chapterProgress, statusMap, due, type Progress } from './model';
 export type GraphHandle = {
     focus: (id: string) => void;
     stage: (id: Stage) => void;
@@ -104,7 +104,7 @@ export const LearningGraph = forwardRef<GraphHandle, {
             const s = status[n.id], review = due(n, state);
             return <button key={n.id} data-node={n.id} aria-label={`${n.title}，${s === 'locked' ? '待解锁' : s === 'passed' ? '已通过' : '可学习'}`} aria-pressed={selected === n.id} className={`map-node ${s} ${n.kind} ${selected === n.id ? 'selected' : ''} ${current === n.id ? 'current' : ''}`} style={{ left: pos.x, top: pos.y, width: cardW, height: cardH }} onClick={() => select(n.id)}>
      <span className="node-top"><span className="node-symbol">{s === 'passed' ? <Check size={16}/> : s === 'locked' ? <Lock size={14}/> : <Icon size={16}/>}</span><span className="node-number">{n.kind === 'finish' ? 'THE GOAL' : String(index + 1).padStart(2, '0')}</span>{review && <RotateCcw size={13} className="due-dot"/>}</span>
-     <strong>{n.title}</strong><span className="node-footer">{n.kind === 'finish' ? 'ACADEMIC' : s === 'passed' ? review ? '待巩固 · 可复习' : '已通过' : s === 'locked' ? '完成前置节点后解锁' : current === n.id ? '从这里继续' : `${n.minutes} 分钟 · ${n.kind === 'task' ? '实践' : '练习'}`}{s !== 'locked' && <ArrowUpRight size={13}/>}</span>
+     <strong>{n.title}</strong><span className="node-footer">{n.kind === 'finish' ? 'ACADEMIC' : s === 'passed' ? review ? '待巩固 · 可复习' : '已通过' : s === 'locked' ? '完成前置节点后解锁' : n.kind==='course'?`${chapterProgress(n,state).learned} / 12 已学 · 打开本章`:current === n.id ? '从这里继续' : `${n.minutes} 分钟 · ${n.kind === 'task' ? '实践' : '练习'}`}{s !== 'locked' && <ArrowUpRight size={13}/>}</span>
     </button>;
         })}
    </div></div>

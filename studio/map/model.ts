@@ -1,11 +1,14 @@
-import { nodes, nodeById, questionsFor, type MapNode } from './content';
+import { nodes, chapters, nodeById, questionsFor, type MapNode } from './content';
 import { overallBand } from '../app/readiness';
-export const storageKey = 'wayfinder-ielts-map:v1';
+export const legacyStorageKey = 'wayfinder-ielts-map:v1';
+export const storageKey = 'wayfinder-ielts-map:v2';
+export const reviewDelay = 24 * 60 * 60 * 1000;
 export type QuizProof = {
     at: number;
     round: number;
     answers: string[];
     assisted: boolean;
+    heard?: number[];
 };
 export type Evidence = {
     date: string;
@@ -18,25 +21,30 @@ export type Evidence = {
     timed: boolean;
     correct: string;
     total: string;
+    dimensions?: string[];
+    revision?: string;
 };
 export type Mock = Evidence & {
     scores: string[];
     kind: 'academic';
     reference: string;
 };
+export type Project = {text:string; recording:string; reviewer:string; feedback:string; criteria:boolean[]; at:number};
 export type NodeRecord = {
+    project?: Project;
     round: number;
     answers: string[];
     assisted: boolean;
+    heard?: number[];
     phase: 'learn' | 'challenge';
     attempts: QuizProof[];
     evidence?: Evidence;
     mock?: Mock;
-    draft?: Record<string, string | boolean | boolean[] | string[]>;
+    draft?: Record<string, string | number | boolean | boolean[] | string[]>;
 };
 export type Progress = {
     format: 'wayfinder-ielts-map';
-    version: 1;
+    version: 2;
     updatedAt: number;
     records: Record<string, NodeRecord>;
     minimum: string;
@@ -46,13 +54,35 @@ export type Progress = {
         scores: string[];
     };
 };
-export const emptyProgress = (): Progress => ({ format: 'wayfinder-ielts-map', version: 1, updatedAt: 0, records: {}, minimum: 'unconfirmed' });
+export const emptyProgress = (): Progress => ({ format: 'wayfinder-ielts-map', version: 2, updatedAt: 0, records: {}, minimum: 'unconfirmed' });
 export const emptyRecord = (): NodeRecord => ({ round: 0, answers: [], assisted: false, phase: 'learn', attempts: [] });
+// Late recording callbacks merge into the latest text, including edits made while recording.
+export function updateDraft(state:Progress,id:string,changes:NonNullable<NodeRecord['draft']>,defaults:NonNullable<NodeRecord['draft']>={}):Progress {
+    const record=state.records[id]||emptyRecord();
+    return {...state,records:{...state.records,[id]:{...record,draft:{...defaults,...record.evidence,...record.mock,...record.project,...record.draft,...changes}}}};
+}
 export const today = (at = Date.now()) => { const d = new Date(at); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 export function validDate(date: string, at = Date.now()) { return /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0, 10) === date && date <= today(at); }
-export const normalize = (s: string) => s.toLowerCase().trim().replace(/[’‘]/g, "'").replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ');
-export function grade(node: MapNode, answers: string[], round: number) { const qs = questionsFor(node, round); return qs.map((q, i) => [q.answer, ...q.accepted || []].some(a => normalize(a) === normalize(answers[i] || ''))); }
-export const passedQuiz = (n: MapNode, p: QuizProof) => p.at > 0 && p.at <= Date.now() && !p.assisted && questionsFor(n, p.round).length > 0 && grade(n, p.answers, p.round).every(Boolean);
+export const normalize = (s: string) => s.toLowerCase().trim().replace(/[’‘]/g, "'").replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ').replace(/\bcan't\b/g,'cannot').replace(/\bwon't\b/g,'will not').replace(/\b(\w+)n't\b/g,'$1 not').replace(/\bi'm\b/g,'i am').replace(/\b(\w+)'re\b/g,'$1 are').replace(/\b(\w+)'ve\b/g,'$1 have').replace(/\b(\w+)'ll\b/g,'$1 will');
+export function grade(node: MapNode, answers: string[], round: number) { const qs = questionsFor(node, round); return qs.map((q, i) => [q.answer, ...q.accepted || []].flatMap(a=>a.split(/\s+\/\s+/)).some(a => normalize(a) === normalize(answers[i] || ''))); }
+export const passedQuiz = (n: MapNode, p: QuizProof, at=Date.now()) => p.at > 0 && p.at <= at && !p.assisted && questionsFor(n, p.round).length > 0 && questionsFor(n,p.round).every((q,i)=>!q.clip || p.heard?.includes(i)) && grade(n, p.answers, p.round).every(Boolean);
+export function stable(n:MapNode,state:Progress,at=Date.now()) {
+    const attempts=state.records[n.id]?.attempts||[], last=attempts.at(-1);
+    return !!last && passedQuiz(n,last,at) && attempts.some(p=>passedQuiz(n,p,at) && last.at-p.at>=reviewDelay && JSON.stringify(questionsFor(n,last.round).map(q=>[q.prompt,q.answer,q.clip?.start]))!==JSON.stringify(questionsFor(n,p.round).map(q=>[q.prompt,q.answer,q.clip?.start])));
+}
+export function projectErrors(n:MapNode,p:Project,at=Date.now()) {
+    const errors:string[]=[];
+    const words=p.text.trim().match(/[a-z]+(?:['’-][a-z]+)*/gi)||[];
+    const minimum=n.chapter!<6?Number(chapters[n.chapter!][3])*3:Number(chapters[n.chapter!][3]);
+    if(words.length<minimum)errors.push(`先写出自己的表达（本章至少 ${minimum} 个英文单词，任务要求见上方）。`);
+    if(p.recording.trim().length<3)errors.push('保留录音，填写录音文件名或保存位置。');
+    if(!p.reviewer.trim() || /^(自评|自己|self)$/i.test(p.reviewer.trim()))errors.push('请一位能判断本章表达的老师或伙伴听读作品，填写评阅者。');
+    if(p.feedback.trim().length<20)errors.push('填写具体反馈和订正，至少 20 字。');
+    if(p.criteria.length!==4||!p.criteria.every(x=>x===true))errors.push('完成四项作品检查。');
+    if(!Number.isFinite(p.at)||p.at<=0||p.at>at)errors.push('作品记录时间无效。');
+    return errors;
+}
+export const chapterProgress=(n:MapNode,s:Progress,at=Date.now())=>({learned:(n.members||[]).filter(id=>achieved(nodeById(id)!,s,at)).length,stable:(n.members||[]).filter(id=>stable(nodeById(id)!,s,at)).length,total:n.members?.length||0});
 export function criteriaFor(n: MapNode): string[] {
     const lane = n.lane;
     if (lane === 'writing')
@@ -75,7 +105,7 @@ export function evidenceErrors(n: MapNode, e: Evidence, at = Date.now()): string
         errors.push('先完成四项达标条件。');
     if (!e.unseen)
         errors.push('请用未做过的新材料完成检验。');
-    if (['writing', 'speaking'].includes(n.lane || '') && !e.reviewer.trim())
+    if (['writing', 'speaking'].includes(n.lane || '') && (!e.reviewer.trim() || /^(自评|自己|self)$/i.test(e.reviewer.trim())))
         errors.push('口语和写作需要填写评阅者或机构，不能用自查代替。');
     if (['listening', 'reading'].includes(n.lane || '')) {
         const a = Number(e.correct), b = Number(e.total), full = n.id.endsWith('-full');
@@ -86,6 +116,9 @@ export function evidenceErrors(n: MapNode, e: Evidence, at = Date.now()): string
         if (full && (b !== 40 || !e.timed))
             errors.push('完整听读节点需要 40 题且按正式要求限时完成。');
     }
+    if (['writing','speaking'].includes(n.lane||'') && (!e.dimensions || e.dimensions.length!==4 || e.dimensions.some(d=>d.trim().length<10))) errors.push('请保留四项评分维度各自的具体反馈（每项至少 10 字）。');
+    if (!e.revision || e.revision.trim().length<10) errors.push('写明修订后的新题编号、复验结果和仍需修补的地方。');
+    if(n.lane==='writing') {const words=e.work.match(/[a-z]+(?:['’-][a-z]+)*/gi)||[];const minimum=n.id==='writing-task-two'?250:n.id==='writing-task-one'?150:400;if(words.length<minimum)errors.push(`请在作答区保留实际英文原稿，本节点至少 ${minimum} 词；字数只检查任务完整性，不代表得分。`);}
     if (n.id === 'writing-feedback' && !e.timed)
         errors.push('两篇写作需在 60 分钟内完成。');
     return errors;
@@ -118,8 +151,9 @@ export function achieved(n: MapNode, state: Progress, at = Date.now()): boolean 
         return isReady(state, at);
     if (!r)
         return false;
-    if (n.kind === 'lesson' || n.kind === 'checkpoint')
-        return r.attempts.some(p => passedQuiz(n, p));
+    if (n.kind === 'course') return !!r.project && !projectErrors(n,r.project,at).length && (n.members||[]).every(id=>stable(nodeById(id)!,state,at));
+    if (['lesson','checkpoint','starter','unit'].includes(n.kind))
+        return r.attempts.some(p => passedQuiz(n, p,at));
     if (n.kind === 'task')
         return !!r.evidence && !evidenceErrors(n, r.evidence, at).length;
     if (!r.mock || mockErrors(r.mock, state.minimum, at).length)
@@ -136,6 +170,7 @@ export function statusMap(state: Progress, at = Date.now()) {
     for (const n of nodes) {
         const open = n.requires.every(id => result[id] === 'passed');
         result[n.id] = !open ? 'locked' : achieved(n, state, at) ? 'passed' : 'available';
+        if(n.kind==='course') for(const id of n.members||[]) { const u=nodeById(id)!; result[id]=!open || !u.requires.every(p=>result[p]==='passed')?'locked':achieved(u,state,at)?'passed':'available'; }
     }
     return result;
 }
@@ -147,43 +182,54 @@ export function officialReached(state: Progress, at = Date.now()) {
     const o = state.official;
     return !!o && validDate(o.date, at) && !!o.reference.trim() && o.scores.length === 4 && o.scores.every(s => s.trim() !== '' && Number.isFinite(Number(s)) && Number(s) >= 0 && Number(s) <= 9 && Number(s) * 2 % 1 === 0) && ['0', '5.5', '6', '6.5', '7'].includes(state.minimum) && o.scores.every(s => Number(s) >= Number(state.minimum)) && (overallBand(o.scores.map(Number)) || 0) >= 6.5;
 }
-export function due(n: MapNode, state: Progress, at = Date.now()) {
-    const attempts = state.records[n.id]?.attempts || [];
-    const last = attempts.at(-1);
-    return !!last && attempts.some(a => passedQuiz(n, a)) && (!passedQuiz(n, last) || today(last.at) < today(at));
+export function due(n: MapNode, state: Progress, at = Date.now()): boolean {
+    if(n.kind==='course') return (n.members||[]).some(id=>due(nodeById(id)!,state,at));
+    const attempts = state.records[n.id]?.attempts || [], last=attempts.at(-1);
+    const first=attempts.find(p=>passedQuiz(n,p,at));
+    if(!first || !last) return false;
+    if(!passedQuiz(n,last,at)) return true;
+    if(!stable(n,state,at)) return at-first.at>=reviewDelay;
+    const passes=attempts.filter(p=>passedQuiz(n,p,at));
+    return at-last.at>= (passes.length>=4?21:7)*reviewDelay;
+}
+export function nextReviewAt(n:MapNode,state:Progress) {
+    const first=state.records[n.id]?.attempts.find(p=>passedQuiz(n,p));
+    return first ? first.at+reviewDelay : undefined;
 }
 export function submitQuiz(state: Progress, id: string, at = Date.now()): Progress {
     const n = nodeById(id);
-    if (!n || statusMap(state, at)[id] === 'locked' || !['lesson', 'checkpoint'].includes(n.kind))
+    if (!n || statusMap(state, at)[id] === 'locked' || !['lesson', 'checkpoint', 'starter', 'unit'].includes(n.kind))
         return state;
     const r = state.records[id] || emptyRecord();
-    const attempt = { at, round: r.round, answers: r.answers, assisted: r.assisted };
-    let attempts = [...r.attempts, attempt].slice(-60);
-    const proof = r.attempts.findLast(p => passedQuiz(n, p));
-    if (proof && !attempts.some(p => passedQuiz(n, p)))
-        attempts = [proof, ...attempts.slice(-59)];
+    const attempt = { at, round: r.round, answers: [...r.answers], assisted: r.assisted, heard: [...(r.heard||[])] };
+    let attempts = [...r.attempts, attempt].slice(-12);
+    const proof = r.attempts.find(p => passedQuiz(n, p, at));
+    if (proof && !attempts.includes(proof))
+        attempts = [proof, ...attempts.slice(-11)];
     return { ...state, updatedAt: at, records: { ...state.records, [id]: { ...r, attempts } } };
 }
 const recordLike = (x: unknown): x is Record<string, unknown> => !!x && typeof x === 'object' && !Array.isArray(x);
 const text = (x: unknown, max = 10000) => typeof x === 'string' && x.length <= max;
 function validEvidence(e: unknown): e is Evidence {
-    return recordLike(e) && ['date', 'material', 'work', 'reviewer', 'feedback', 'correct', 'total'].every(k => text(e[k])) && Array.isArray(e.criteria) && e.criteria.length <= 4 && e.criteria.every(x => typeof x === 'boolean') && typeof e.unseen === 'boolean' && typeof e.timed === 'boolean';
+    return recordLike(e) && ['date', 'material', 'work', 'reviewer', 'feedback', 'correct', 'total'].every(k => text(e[k])) && Array.isArray(e.criteria) && e.criteria.length <= 4 && e.criteria.every(x => typeof x === 'boolean') && typeof e.unseen === 'boolean' && typeof e.timed === 'boolean' && (e.dimensions===undefined||Array.isArray(e.dimensions)&&e.dimensions.length===4&&e.dimensions.every(d=>text(d))) && (e.revision===undefined||text(e.revision));
 }
 export function parseProgress(raw: string): Progress {
-    if (raw.length > 2000000)
+    if (raw.length > 6000000)
         throw new Error('进度文件过大。');
     const x = JSON.parse(raw);
-    if (!recordLike(x) || x.format !== 'wayfinder-ielts-map' || x.version !== 1 || !recordLike(x.records) || !Number.isFinite(x.updatedAt) || !['unconfirmed', '0', '5.5', '6', '6.5', '7'].includes(String(x.minimum)))
-        throw new Error('这不是有效的学习地图进度文件。');
+    if (!recordLike(x) || x.format !== 'wayfinder-ielts-map' || x.version !== 2 || !recordLike(x.records) || !Number.isFinite(x.updatedAt) || !['unconfirmed', '0', '5.5', '6', '6.5', '7'].includes(String(x.minimum)))
+        throw new Error(x?.version===1?'这是旧版地图备份。请保留原文件；旧的小测记录不能换算成新版课程掌握。':'这不是有效的学习地图进度文件。');
     const result = emptyProgress();
     result.minimum = String(x.minimum);
     result.updatedAt = Number(x.updatedAt);
     for (const [id, v] of Object.entries(x.records)) {
-        if (!nodeById(id) || !recordLike(v) || !Number.isInteger(v.round) || Number(v.round) < 0 || Number(v.round) > 100000 || !['learn', 'challenge'].includes(String(v.phase)) || typeof v.assisted !== 'boolean' || !Array.isArray(v.answers) || v.answers.length > 20 || v.answers.some(a => !text(a, 1000)) || !Array.isArray(v.attempts) || v.attempts.length > 60)
+        if (!nodeById(id) || !recordLike(v) || !Number.isInteger(v.round) || Number(v.round) < 0 || Number(v.round) > 100000 || !['learn', 'challenge'].includes(String(v.phase)) || typeof v.assisted !== 'boolean' || !Array.isArray(v.answers) || v.answers.length > 20 || v.answers.some(a => !text(a, 1000)) || !Array.isArray(v.attempts) || v.attempts.length > 12)
             throw new Error('学习记录的结构不正确。');
         for (const p of v.attempts)
-            if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
+            if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || Number(p.round)>100000 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
                 throw new Error('检验记录无效。');
+        for(const p of [v, ...v.attempts] as Record<string,unknown>[]) if(p.heard!==undefined && (!Array.isArray(p.heard)||p.heard.length>20||p.heard.some(i=>!Number.isInteger(i)||Number(i)<0||Number(i)>19))) throw new Error('听力记录无效。');
+        if(v.project!==undefined) {const p=v.project;if(!recordLike(p)||!['text','recording','reviewer','feedback'].every(k=>text(p[k]))||!Array.isArray(p.criteria)||p.criteria.length!==4||p.criteria.some(x=>typeof x!=='boolean')||!Number.isFinite(p.at)||Number(p.at)<=0||Number(p.at)>Date.now())throw new Error('作品记录无效。');}
         if (v.evidence !== undefined && !validEvidence(v.evidence))
             throw new Error('评阅记录无效。');
         if (v.mock !== undefined) {
@@ -191,8 +237,15 @@ export function parseProgress(raw: string): Progress {
             if (!recordLike(m) || m.kind !== 'academic' || !text(m.reference) || !Array.isArray(m.scores) || m.scores.length !== 4 || m.scores.some(s => !text(s, 10)) || !validEvidence(m))
                 throw new Error('模考记录无效。');
         }
-        if (v.draft !== undefined && (!recordLike(v.draft) || Object.keys(v.draft).length > 20 || Object.values(v.draft).some(a => !(text(a) || typeof a === 'boolean' || Array.isArray(a) && a.length <= 4 && a.every(b => typeof b === 'boolean' || text(b, 1000))))))
-            throw new Error('草稿无效。');
+        if(v.draft!==undefined){
+            if(!recordLike(v.draft)||Object.keys(v.draft).length>20)throw new Error('草稿无效。');
+            const kind=nodeById(id)!.kind;
+            const strings=kind==='unit'?['note']:kind==='course'?['text','recording','reviewer','feedback']:['date','material','work','reviewer','feedback','correct','total','kind','reference','revision'];
+            for(const [key,value] of Object.entries(v.draft)){
+                const valid=strings.includes(key)?text(value):key==='criteria'&&kind!=='unit'?Array.isArray(value)&&value.length===4&&value.every(x=>typeof x==='boolean'):['scores','dimensions'].includes(key)&&['task','mock'].includes(kind)?Array.isArray(value)&&value.length===4&&value.every(x=>text(x,key==='scores'?10:2000)):['unseen','timed'].includes(key)&&['task','mock'].includes(kind)?typeof value==='boolean':key==='at'&&kind==='course'?typeof value==='number'&&Number.isFinite(value)&&value>0:false;
+                if(!valid)throw new Error('草稿字段不正确。');
+            }
+        }
         result.records[id] = v as unknown as NodeRecord;
     }
     if (x.official !== undefined) {

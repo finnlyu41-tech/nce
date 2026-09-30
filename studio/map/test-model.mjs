@@ -7,7 +7,8 @@ const root = path.dirname(fileURLToPath(import.meta.url)), cache = new Map();
 async function moduleURL(file) {
     if (cache.has(file))
         return cache.get(file);
-    let source = stripTypeScriptTypes(await fs.readFile(file, 'utf8'));
+    let source = file.endsWith('.json') ? `export default ${await fs.readFile(file, 'utf8')}` : stripTypeScriptTypes(await fs.readFile(file, 'utf8'));
+    if(file.endsWith('.json')){const url=`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;cache.set(file,url);return url;}
     for (const match of [...source.matchAll(/from\s+['"]([^'"]+)['"]/g)]) {
         const child = path.resolve(path.dirname(file), match[1] + (path.extname(match[1]) ? '' : '.ts'));
         const resolved = await moduleURL(child);
@@ -19,121 +20,115 @@ async function moduleURL(file) {
 }
 const m = await import(await moduleURL(path.join(root, 'model.ts')));
 const c = await import(await moduleURL(path.join(root, 'content.ts')));
-let count = 0;
-const check = (condition, message) => { assert.ok(condition, message); count++; };
-const now = Date.now(), date = m.today(now), past = m.today(now - 86400000), earlier = m.today(now - 2 * 86400000);
-check(c.nodes.length === 43, 'All 43 map nodes exist');
-check(new Set(c.nodes.map(n => n.id)).size === 43, 'Node IDs unique');
-for (const node of c.nodes) {
-    const url = new URL(c.courseUrl(node), 'https://same-site.example/map/');
-    check(url.origin === 'https://same-site.example' && url.pathname === '/' && url.hash.startsWith('#/'), 'Course links stay in the current site classic mode');
+if(process.argv.includes('--validate')){const file=process.argv[process.argv.indexOf('--validate')+1];const state=m.parseProgress(await fs.readFile(file,'utf8'));console.log(JSON.stringify({version:state.version,records:Object.keys(state.records),chapter1:m.chapterProgress(c.nodeById('chapter-1'),state),firstUnit:m.statusMap(state)['nce1-1']}));process.exit(0)}
+let count=0;
+const check=(value,message)=>{assert.ok(value,message);count++};
+const now=Date.now(),yesterday=now-2*m.reviewDelay;
+const proof=(node,round,at)=>({round,at,answers:c.questionsFor(node,round).map(q=>q.answer.split(/\s+\/\s+/)[0]),assisted:false,heard:c.questionsFor(node,round).flatMap((q,i)=>q.clip?[i]:[])});
+check(c.nodes.length===32,'32 navigable overview stations');
+check(c.unitNodes.length===168,'All 72 paired first-book and 96 second-book units');
+check(new Set([...c.nodes,...c.unitNodes].map(n=>n.id)).size===200,'All IDs unique');
+const seen=new Set();
+for(const node of c.nodes){check(node.requires.every(id=>seen.has(id)),'Topological overview');seen.add(node.id)}
+for(const unit of c.units){
+ const node=c.nodeById(unit.id);
+ check(unit.book!=='NCE1'||unit.lastLesson===unit.lesson+1&&unit.lesson%2===1,'Book 1 paired odd audio/even exercises');
+ const raw=JSON.parse(await fs.readFile(path.join(root,`../dist-online/language/${unit.book}/${unit.lesson}.json`),'utf8'));
+ check(raw.sourceSha256===unit.sourceSha256,'Exact packaged transcript hash');
+ for(const row of unit.rows){check(raw.rows.some(r=>r.en===row.en&&r.zh===row.zh&&r.time===row.start),'Assessment excerpts preserve source/timing');check(row.end>row.start,'Positive audio interval');check(!/^lesson \d+|listen to the/i.test(row.en),'Instructions excluded from assessed speech')}
+ for(let round=0;round<3;round++){
+  const qs=c.questionsFor(node,round),p=proof(node,round,now);
+  check(qs.length>=6,'At least six multimodal items');
+  check(qs.filter(q=>q.clip).length===2,'Actual audio comprehension required');
+  check(m.passedQuiz(node,p,now),'Reference response passes');
+  check(!m.passedQuiz(node,{...p,heard:[]},now),'Cannot pass listening without playing source');
+  check(!m.passedQuiz(node,{...p,assisted:true},now),'Help cannot count as independence');
+  check(!m.passedQuiz(node,{...p,at:now+1},now),'Future proof rejected');
+  check(!m.grade(node,qs.map(()=>''),round).some(Boolean),'No blank answers pass');
+  for(const q of qs.filter(q=>q.type==='choice'))check(q.options.includes(q.answer)&&new Set(q.options).size===q.options.length&&q.options.length>=2,'Choice has unique options and correct answer');
+ }
+ check(JSON.stringify(c.questionsFor(node,0))!==JSON.stringify(c.questionsFor(node,1)),'Different review bank');
 }
-const seen = new Set();
-for (const n of c.nodes) {
-    check(n.requires.every(id => seen.has(id)), `${n.id} has topologically ordered prerequisites`);
-    seen.add(n.id);
-    if (['lesson', 'checkpoint'].includes(n.kind)) {
-        for (let round = 0; round < 2; round++) {
-            const qs = c.questionsFor(n, round);
-            check(qs.length >= 3, `${n.id} has a real assessment`);
-            check(m.grade(n, qs.map(q => q.answer), round).every(Boolean), 'Reference answers pass');
-            check(!m.grade(n, qs.map(() => ''), round).some(Boolean), 'Empty answers cannot pass');
-        }
-        check(JSON.stringify(c.questionsFor(n, 0)) !== JSON.stringify(c.questionsFor(n, 1)), `${n.id} offers another question set`);
-    }
+let state=m.emptyProgress();
+check(Object.values(m.statusMap(state,now)).filter(s=>s==='available').length===1,'One actionable beginner entry');
+check(m.submitQuiz(state,'nce2-96',now)===state,'Direct hash/import cannot bypass course dependencies');
+for(const n of c.nodes.filter(n=>n.kind==='starter')){
+ state.records[n.id]={...m.emptyRecord(),...proof(n,0,now),attempts:[]};
+ const saved=m.submitQuiz(state,n.id,now);check(saved!==state,'Starter reachable');state=saved;
 }
-let state = m.emptyProgress();
-check(Object.values(m.statusMap(state)).filter(x => x === 'available').length === 1, 'Only first unlocked on fresh start');
-check(m.statusMap(state).finish === 'locked', 'Finish never pre-unlocked');
-check(m.submitQuiz(state, 'question') === state, 'Direct submission cannot bypass locked prerequisite');
-const first = c.nodeById('first');
-state.records.first = { ...m.emptyRecord(), answers: ['wrong', 'book', 'pen'] };
-state = m.submitQuiz(state, 'first', now);
-check(m.statusMap(state).question === 'locked', 'A wrong answer does not unlock');
-state.records.first = { ...state.records.first, answers: c.questionsFor(first).map(q => q.answer), assisted: true };
-state = m.submitQuiz(state, 'first', now);
-check(m.statusMap(state).question === 'locked', 'Hints cannot unlock');
-state.records.first = { ...state.records.first, assisted: false };
-state = m.submitQuiz(state, 'first', now);
-check(m.statusMap(state).question === 'available', 'An independent complete round unlocks next');
-check(!m.due(first, state, now), 'No immediate review');
-check(m.due(first, state, now + 86400000), 'Next day review appears');
-const unchanged = JSON.stringify(state);
-m.statusMap(state);
-check(JSON.stringify(state) === unchanged, 'Browsing does not mutate records');
-const repeated = structuredClone(state);
-repeated.records.first.answers = ['wrong', 'wrong', 'wrong'];
-let reviews = repeated;
-for (let i = 0; i < 65; i++)
-    reviews = m.submitQuiz(reviews, 'first', now);
-check(m.statusMap(reviews).question === 'available', 'Bounded review history preserves earned unlocks');
-check(reviews.records.first.attempts.length === 60, 'Review history stays bounded');
-const evidence = (n) => ({ date, material: `New material ${n.id}`, work: '答案与原稿位于个人学习练习记录，本次独立作答并订正。', reviewer: 'Test reviewer', feedback: '检查了任务回应与组织，修正了原因与例子不相符的问题。', criteria: [true, true, true, true], unseen: true, timed: true, correct: '30', total: '40' });
-for (const n of c.nodes.filter(n => ['lesson', 'checkpoint'].includes(n.kind) && n.stage !== 'skills')) {
-    check(m.statusMap(state)[n.id] !== 'locked', `Foundation ${n.id} follows reachable path`);
-    state.records[n.id] = { ...m.emptyRecord(), attempts: [{ at: now, round: 0, answers: c.questionsFor(n).map(q => q.answer), assisted: false }] };
+check(m.statusMap(state,now)['chapter-1']==='available','First chapter opens after beginner preparation');
+check(m.statusMap(state,now)['nce1-1']==='available'&&m.statusMap(state,now)['nce1-3']==='locked','Hierarchical unit dependency');
+const first=c.nodeById('nce1-1');
+state.records[first.id]={...m.emptyRecord(),attempts:[proof(first,0,yesterday)]};
+check(m.statusMap(state,now)['nce1-3']==='available','First pass opens next unit same day');
+check(!m.stable(first,state,now),'First pass is not stable');
+check(m.due(first,state,now),'First pass becomes due after 24 hours');
+state.records[first.id].attempts.push(proof(first,1,yesterday+1));
+check(!m.stable(first,state,now),'Immediate retry does not prove retention');
+state.records[first.id].attempts=[proof(first,0,yesterday),proof(first,0,now)];
+check(!m.stable(first,state,now),'Same bank across days is insufficient');
+state.records[first.id].attempts=[proof(first,0,yesterday),proof(first,2,now)];
+check(!m.stable(first,state,now),'Reordered options around identical source items are not new review evidence');
+state.records[first.id].attempts=[proof(first,0,yesterday),proof(first,1,now)];
+check(m.stable(first,state,now),'Different-bank independent delayed response is stable');
+check(!m.due(first,state,now),'No immediate due after valid spaced review');
+check(m.due(first,state,now+8*m.reviewDelay),'Continued review after a week');
+state.records[first.id].attempts.push({...proof(first,2,now),answers:['wrong']});
+check(!m.stable(first,state,now)&&m.due(first,state,now),'Failed review surfaces repair instead of hiding latest evidence');
+check(m.statusMap(state,now)['nce1-3']==='available','Review failure preserves first-pass progression inside chapter');
+const project={text:'I am a student. This is my book. It is a good book. I read every day. '.repeat(20),recording:'my-original-recording.wav',reviewer:'Synthetic test reviewer',feedback:'The reviewer heard the full recording, identified tense errors and checked the corrected version.',criteria:[true,true,true,true],at:now};
+for(const n of c.nodes.filter(n=>n.kind==='course')){
+ check(m.statusMap(state,now)[n.id]==='available',`${n.id} reachable`);
+ for(const id of n.members){const u=c.nodeById(id);state.records[id]={...m.emptyRecord(),attempts:[proof(u,0,yesterday),proof(u,1,now)]}}
+ check(!m.achieved(n,state,now),'Quizzes alone do not close a chapter');
+ state.records[n.id]={...m.emptyRecord(),project};
+ check(m.achieved(n,state,now),'Chapter requires all spaced units and reviewed work');
+ check(m.projectErrors(n,{...project,reviewer:'自评'},now).length>0,'Self tick cannot substitute reviewer');
+ check(m.projectErrors(n,{...project,text:'Yes.'},now).length>0,'Brief placeholder cannot satisfy project');
 }
-for (const lane of c.lanes)
-    check(m.statusMap(state)[c.nodes.find(n => n.lane === lane.id).id] === 'available', `Branch ${lane.id} opens independently`);
-for (const n of c.nodes.filter(n => n.stage === 'skills')) {
-    check(m.statusMap(state)[n.id] === 'available', `${n.id} becomes available`);
-    if (n.kind === 'lesson')
-        state.records[n.id] = { ...m.emptyRecord(), attempts: [{ at: now, round: 0, answers: c.questionsFor(n).map(q => q.answer), assisted: false }] };
-    else {
-        const e = evidence(n);
-        check(m.evidenceErrors(n, e).length === 0, 'Complete skill evidence passes');
-        check(m.evidenceErrors(n, { ...e, criteria: [true, false, true, true] }).length > 0, 'Missing criteria blocks');
-        check(m.evidenceErrors(n, { ...e, unseen: false }).length > 0, 'Familiar materials cannot qualify');
-        if (['writing', 'speaking'].includes(n.lane))
-            check(m.evidenceErrors(n, { ...e, reviewer: '' }).length > 0, 'No reviewer blocks oral/written branch');
-        else
-            check(m.evidenceErrors(n, { ...e, correct: '20' }).length > 0, 'Below local threshold blocks');
-        state.records[n.id] = { ...m.emptyRecord(), evidence: e };
-    }
+const evidence={date:m.today(now),material:'Synthetic new paper A',work:'This is my own complete answer with concrete supporting details. '.repeat(40),reviewer:'Synthetic IELTS reviewer',feedback:'The original was revised with specific evidence and corrected tense use.',criteria:[true,true,true,true],unseen:true,timed:true,correct:'30',total:'40',dimensions:Array(4).fill('Specific performance evidence and an actionable correction from the reviewer.'),revision:'Synthetic new paper B retest: fixed the same error, remaining weakness recorded.'};
+for(const n of c.nodes.filter(n=>n.kind==='task')){
+ check(m.statusMap(state,now)[n.id]==='available',`${n.id} reachable in branch`);
+ check(!m.evidenceErrors(n,evidence,now).length,'Complete task evidence accepted');
+ check(m.evidenceErrors(n,{...evidence,revision:''},now).length,'Retest record required');
+ check(m.evidenceErrors(n,{...evidence,unseen:false},now).length,'Repeated familiar sample insufficient');
+ if(['writing','speaking'].includes(n.lane))check(m.evidenceErrors(n,{...evidence,dimensions:[]},now).length,'Four rubric notes required');
+ if(n.lane==='writing')check(m.evidenceErrors(n,{...evidence,work:'See my file'},now).length,'Writing requires actual work, not only a reference');
+ if(['listening','reading'].includes(n.lane))check(m.evidenceErrors(n,{...evidence,correct:'20'},now).length,'Low raw performance blocks local training gate');
+ state.records[n.id]={...m.emptyRecord(),evidence};
 }
-check(m.statusMap(state)['mock-one'] === 'available', 'All four branches converge');
-const mock = (material, date) => ({ ...evidence({ id: 'mock' }), kind: 'academic', scores: ['6.5', '6.5', '6.5', '6.5'], reference: 'Corresponding paper score table', material, date });
-const a = mock('Paper A', past), b = mock('Paper B', date);
-check(m.mockErrors(a, 'unconfirmed').length > 0, 'Unconfirmed section targets block finish');
-state.minimum = '6';
-state.records['mock-one'] = { ...m.emptyRecord(), mock: a };
-check(m.statusMap(state)['mock-two'] === 'available', 'First valid mock opens second');
-state.records['mock-two'] = { ...m.emptyRecord(), mock: { ...b, material: 'Paper A' } };
-check(m.statusMap(state).finish === 'locked', 'Repeated paper blocks');
-state.records['mock-two'].mock = { ...b, date: past };
-check(m.statusMap(state).finish === 'locked', 'Same day blocks separate verification');
-state.records['mock-two'].mock = { ...b, scores: ['6.5', '6.5', '5.5', '6.5'] };
-check(m.statusMap(state).finish === 'locked', 'Low section score blocks');
-state.records['mock-two'].mock = b;
-check(m.statusMap(state).finish === 'passed', 'Two qualified mocks confirm preparation');
-check(!m.officialReached(state), 'Mocks never become official results');
-state.official = { date, reference: 'Test official score reference', scores: ['6.5', '6.5', '6', '6.5'] };
-check(m.officialReached(state), 'Qualifying official result can be recorded');
-for (const change of [{ date: '2099-01-01' }, { date: '2026-02-30' }, { reviewer: '' }, { feedback: '' }, { timed: false }, { unseen: false }, { kind: 'general' }, { scores: ['6.2', '7', '7', '7'] }, { scores: ['9', '9', '9', ''] }, { scores: ['9', '9', '9', 'NaN'] }])
-    check(m.mockErrors({ ...b, ...change }, '6').length > 0, 'Invalid mock rejected');
-check(m.overallBand([6.5, 6.5, 5, 7]) === 6.5, 'Official rounding example');
-check(m.overallBand([6.5, 6.5, 5.5, 6]) === 6, 'Round below threshold');
-const roundtrip = m.parseProgress(m.exportProgress(state));
-check(JSON.stringify(roundtrip.records) === JSON.stringify(state.records), 'All evidence and drafts roundtrip');
-state.records['writing-feedback'].evidence.reviewer = '';
-check(m.statusMap(state).finish === 'locked', 'Revised invalid source evidence relocks downstream');
-state.records['writing-feedback'].evidence.reviewer = 'Test reviewer';
-state.minimum = '7';
-check(m.statusMap(state).finish === 'locked', 'Tightening minimum re-evaluates results');
-state.minimum = '6';
-const poisoned = { ...state, records: { ...state.records, constructor: m.emptyRecord() } };
-assert.throws(() => m.parseProgress(JSON.stringify(poisoned)));
-count++;
-for (const invalid of ['{}', 'null', '[]', '{broken', JSON.stringify({ ...state, version: 2 }), JSON.stringify({ ...state, records: { first: { ...m.emptyRecord(), answers: [{}] } } }), JSON.stringify({ ...state, records: { first: { ...m.emptyRecord(), attempts: [{ at: now + 100000, round: 0, answers: ['bag', 'book', 'pen'], assisted: false }] } } })]) {
-    assert.throws(() => m.parseProgress(invalid));
-    count++;
-}
-check(m.parseProgress(m.exportProgress(m.emptyProgress())).minimum === 'unconfirmed', 'No implicit institution requirement');
-console.log(`${count} checks passed: 43 nodes, dependency graph, independent/hinted checks, four branches, evidence gates, two-mock summit, revision invalidation and safe progress roundtrip.`);
-if (process.argv.includes('--fixtures')) {
-    const dir = path.join(root, '..', 'work', 'map-verification');
-    await fs.mkdir(dir, { recursive: true });
-    await fs.writeFile(path.join(dir, 'ready-for-mock.json'), m.exportProgress({ ...state, official: undefined, records: Object.fromEntries(Object.entries(state.records).filter(([id]) => !id.startsWith('mock-'))) }));
-    await fs.writeFile(path.join(dir, 'full-test-progress.json'), m.exportProgress(state));
-    console.log('Synthetic test fixtures saved only in ignored work/map-verification.');
+check(m.statusMap(state,now)['mock-one']==='available','All four skill branches merge');
+const mock=(name,date)=>({...evidence,material:name,date,scores:['6.5','6.5','6.5','6.5'],kind:'academic',reference:'Corresponding full paper answer and band table'});
+check(m.mockErrors(mock('A',m.today()),'unconfirmed').length,'Institution target must be confirmed');
+state.minimum='6';state.records['mock-one']={...m.emptyRecord(),mock:mock('Paper A',m.today(yesterday))};
+check(m.statusMap(state,now)['mock-two']==='available','Second full paper available');
+state.records['mock-two']={...m.emptyRecord(),mock:mock('Paper A',m.today())};
+check(m.statusMap(state,now).finish==='locked','Repeated paper blocked');
+state.records['mock-two'].mock=mock('Paper B',m.today(yesterday));
+check(m.statusMap(state,now).finish==='locked','Same-day mocks insufficient');
+state.records['mock-two'].mock=mock('Paper B',m.today());
+check(m.statusMap(state,now).finish==='passed','Two valid full mocks reach preparation goal');
+check(!m.officialReached(state),'Preparation never becomes official score');
+check(m.mockErrors({...state.records['mock-two'].mock,scores:['6.5','6.5','5.5','6.5']},'6').length,'Single-section institution gate');
+check(m.mockErrors({...state.records['mock-two'].mock,scores:['7','7','7','6.2']},'6').length,'No invented decimal bands');
+const roundtrip=m.parseProgress(m.exportProgress(state));
+check(JSON.stringify(roundtrip.records)===JSON.stringify(state.records),'Entire course, work and evidence export/import roundtrip');
+for(const invalid of ['{}','null','[]',JSON.stringify({...state,version:1}),JSON.stringify({...state,records:{constructor:m.emptyRecord()}}),JSON.stringify({...state,records:{first:{...m.emptyRecord(),heard:['oops']}}}),JSON.stringify({...state,records:{first:{...m.emptyRecord(),attempts:[proof(first,0,now+999999)]}}})]){assert.throws(()=>m.parseProgress(invalid));count++}
+for(const draft of [{text:false},{criteria:'yes'},{at:'yesterday'},{text:'ok',other:'unexpected'}]){assert.throws(()=>m.parseProgress(JSON.stringify({...m.emptyProgress(),records:{'chapter-1':{...m.emptyRecord(),draft}}})));count++}
+let draftState={...m.emptyProgress(),records:{'chapter-1':{...m.emptyRecord(),draft:{text:'new writing entered while recording'}}}};
+draftState=m.updateDraft(draftState,'chapter-1',{recording:'finished.wav'},{text:'old text at recording start'});
+check(draftState.records['chapter-1'].draft.text==='new writing entered while recording','Late recording callback preserves newly typed writing');
+check(draftState.records['chapter-1'].draft.recording==='finished.wav','Late callback also saves recording reference');
+const history={...m.emptyProgress(),records:{first:{...m.emptyRecord(),...proof(c.nodeById('first'),0,yesterday),attempts:[proof(c.nodeById('first'),0,yesterday)]}}};
+let repeat=history;for(let i=0;i<15;i++)repeat=m.submitQuiz(repeat,'first',now);
+check(repeat.records.first.attempts.length===12&&repeat.records.first.attempts[0].at===yesterday,'Bounded history preserves earliest independent proof');
+check(m.storageKey!==m.legacyStorageKey,'Old map records never silently repurposed');
+console.log(`${count} checks passed: 168 source-bound units, audio evidence, source pairing, gates, spaced review, projects, four skills, mocks and progress safety.`);
+if(process.argv.includes('--fixtures')){
+ const dir=path.join(root,'../work/map-verification');await fs.mkdir(dir,{recursive:true});
+ const courseFixture=m.emptyProgress();for(const n of c.nodes.filter(n=>n.kind==='starter'))courseFixture.records[n.id]={...m.emptyRecord(),attempts:[proof(n,0,now)]};
+ await fs.writeFile(path.join(dir,'v2-first-course.json'),m.exportProgress(courseFixture));
+ await fs.writeFile(path.join(dir,'v2-all-progress.json'),m.exportProgress(state));
+ await fs.writeFile(path.join(dir,'v2-blank.json'),m.exportProgress(m.emptyProgress()));
+ console.log('Synthetic fixtures saved only under ignored work/map-verification.');
 }
