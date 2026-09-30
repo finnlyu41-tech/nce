@@ -1,7 +1,7 @@
 import React, { useRef, useState, useLayoutEffect, forwardRef, useImperativeHandle } from 'react';
 import { ArrowUpRight, Check, Lock, Flag, Headphones, BookOpen, PenLine, Mic, LocateFixed, Minus, Plus, Maximize2, RotateCcw, Milestone } from 'lucide-react';
-import { nodes, stages, lanes, type MapNode, type Stage } from './content';
-import { chapterProgress, statusMap, due, type Progress } from './model';
+import { nodes, stages, lanes, nodeById, type MapNode, type Stage } from './content';
+import { learningLabel, manuallyUnlocked, achieved, chapterProgress, statusMap, due, type Progress } from './model';
 export type GraphHandle = {
     focus: (id: string) => void;
     stage: (id: Stage) => void;
@@ -17,8 +17,8 @@ export const LearningGraph = forwardRef<GraphHandle, {
     const board = useRef<HTMLDivElement>(null);
     const [zoom, setZoom] = useState(1);
     const status = statusMap(state);
-    const width = mobile ? 360 : 1020;
-    const cardW = mobile ? 146 : 210, cardH = mobile ? 100 : 98;
+    const width = mobile ? 344 : 900;
+    const cardW = mobile ? 146 : 250, cardH = 118;
     const layout = new Map<string, {
         x: number;
         y: number;
@@ -39,11 +39,11 @@ export const LearningGraph = forwardRef<GraphHandle, {
         const list = nodes.filter(n => n.stage === s.id);
         y += mobile ? 96 : 94;
         if (s.id === 'skills') {
-            const rows = mobile ? 2 : 1;
+            const rows = 2;
             for (let row = 0; row < rows; row++) {
                 let max = 0;
-                for (const [col, lane] of lanes.slice(row * (mobile ? 2 : 4), (row + 1) * (mobile ? 2 : 4)).entries()) {
-                    const x = mobile ? 22 + col * 170 : 45 + col * 240;
+                for (const [col, lane] of lanes.slice(row * 2, (row + 1) * 2).entries()) {
+                    const x = mobile ? 12 + col * 170 : 150 + col * 350;
                     laneTitles.push({ id: lane.id, x, y });
                     const inLane = list.filter(n => n.lane === lane.id);
                     max = Math.max(max, inLane.length);
@@ -53,8 +53,8 @@ export const LearningGraph = forwardRef<GraphHandle, {
             }
         }
         else {
-            const cols = mobile ? 2 : 4;
-            list.forEach((n, i) => { const row = Math.floor(i / cols), col = row % 2 ? cols - 1 - i % cols : i % cols; layout.set(n.id, { x: mobile ? 22 + col * 170 : 45 + col * 240, y: y + row * (mobile ? 153 : 155) }); });
+            const cols = mobile ? 2 : 3;
+            list.forEach((n, i) => { const row = Math.floor(i / cols), col = row % 2 ? cols - 1 - i % cols : i % cols; layout.set(n.id, { x: mobile ? 12 + col * 170 : 30 + col * 290, y: y + row * (mobile ? 153 : 155) }); });
             y += Math.ceil(list.length / cols) * (mobile ? 153 : 155) + 25;
         }
         bands.push({ id: s.id, y: start, height: y - start });
@@ -70,13 +70,13 @@ export const LearningGraph = forwardRef<GraphHandle, {
         });
         return () => cancelAnimationFrame(frame);
     }, [width]);
-    const scrollTo = (id: string, scale = zoom) => { const p = layout.get(id); if (!p || !board.current)
+    const scrollTo = (id: string, scale = zoom) => { const p = layout.get(id) || layout.get(nodeById(id)?.parent || ''); if (!p || !board.current)
         return; board.current.scrollTo({ left: (p.x + cardW / 2) * scale - board.current.clientWidth / 2, top: p.y * scale - 50, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' }); };
     useImperativeHandle(ref, () => ({ focus: (id) => { const z = Math.min(1, ((board.current?.clientWidth || width) - 20) / width); setZoom(z); requestAnimationFrame(() => scrollTo(id, z)); }, stage: (id) => { const z = Math.min(1, ((board.current?.clientWidth || width) - 20) / width); setZoom(z); requestAnimationFrame(() => board.current?.scrollTo({ top: (bands.find(b => b.id === id)?.y || 0) * z, left: 0, behavior: 'smooth' })); } }));
     const rescale = (z: number) => { const b = board.current; if (!b)
         return; const ratio = z / zoom; const x = (b.scrollLeft + b.clientWidth / 2) * ratio - b.clientWidth / 2, y = (b.scrollTop + b.clientHeight / 2) * ratio - b.clientHeight / 2; setZoom(z); requestAnimationFrame(() => b.scrollTo({ left: x, top: y })); };
     return <section className="map-shell" aria-label="互动学习地图">
-  <div className="map-toolbar"><span><span className="live-dot"/> 你的学习地图</span><div className="map-legend"><span><i className="legend-dot done"/>已通过</span><span><i className="legend-dot ready"/>可学习</span><span><Lock size={11}/>待解锁</span></div></div>
+  <div className="map-toolbar"><span><span className="live-dot"/> 你的学习地图</span><div className="map-legend"><span><i className="legend-dot done"/>已完成</span><span><i className="legend-dot ready"/>可学习</span><span><Lock size={11}/>待解锁</span></div></div>
   <div className="map-scroll" ref={board} tabIndex={0} aria-label="地图画布，可滚动浏览，节点支持键盘 Tab 选择">
    <div style={{ width: width * zoom, height: height * zoom, position: 'relative', margin: '0 auto' }}><div className="map-world" style={{ width, height, transform: `scale(${zoom})`, transformOrigin: 'top left' }}>
     <svg className="map-edges" width={width} height={height} aria-hidden="true"><defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#dfe4dc"/></pattern></defs><rect width="100%" height="100%" fill="url(#dots)"/>
@@ -96,15 +96,15 @@ export const LearningGraph = forwardRef<GraphHandle, {
             return <path key={`${id}-${n.id}`} d={path} fill="none" stroke={status[id] === 'passed' ? '#349584' : '#d4dcd1'} strokeWidth={status[id] === 'passed' ? 3 : 2} strokeDasharray={status[id] === 'passed' ? undefined : '5 7'}/>;
         }))}
     </svg>
-    {bands.map(b => { const s = stages.find(s => s.id === b.id)!; return <div className={`stage-label stage-${s.id}`} key={s.id} style={{ top: b.y + 14, left: mobile ? 23 : 45 }}><div className="eyebrow">{s.eyebrow}</div><h2>{s.title}</h2><p>{s.description}</p></div>; })}
+    {bands.map(b => { const s = stages.find(s => s.id === b.id)!; return <div className={`stage-label stage-${s.id}`} key={s.id} style={{ top: b.y + 14, left: mobile ? 13 : 30 }}><div className="eyebrow">{s.eyebrow}</div><h2>{s.title}</h2><p>{s.description}</p></div>; })}
     {laneTitles.map(l => { const lane = lanes.find(x => x.id === l.id)!; const Icon = skillIcon(l.id); return <div className="lane-title" key={l.id} style={{ left: l.x, top: l.y, color: lane.color }}><Icon size={18}/><span>{lane.title}<small>{lane.en}</small></span></div>; })}
     {nodes.map((n, index) => {
             const pos = layout.get(n.id)!;
             const Icon = n.kind === 'finish' ? Flag : n.kind === 'checkpoint' ? Milestone : skillIcon(n.lane);
-            const s = status[n.id], review = due(n, state);
-            return <button key={n.id} data-node={n.id} aria-label={`${n.title}，${s === 'locked' ? '待解锁' : s === 'passed' ? '已通过' : '可学习'}`} aria-pressed={selected === n.id} className={`map-node ${s} ${n.kind} ${selected === n.id ? 'selected' : ''} ${current === n.id ? 'current' : ''}`} style={{ left: pos.x, top: pos.y, width: cardW, height: cardH }} onClick={() => select(n.id)}>
+            const s = status[n.id], review = due(n, state),manual=manuallyUnlocked(n,state)&&!achieved(n,state);
+            return <button key={n.id} data-node={n.id} aria-label={`${n.title}，${s === 'locked' ? '待解锁' : s === 'passed' ? '已通过' : '可学习'}，${manual?'手动解锁，':''}${learningLabel(n,state)}`} aria-pressed={selected === n.id} className={`map-node ${s} ${manual?'manual':''} ${n.kind} ${selected === n.id ? 'selected' : ''} ${current === n.id ? 'current' : ''}`} style={{ left: pos.x, top: pos.y, width: cardW, height: cardH }} onClick={() => select(n.id)}>
      <span className="node-top"><span className="node-symbol">{s === 'passed' ? <Check size={16}/> : s === 'locked' ? <Lock size={14}/> : <Icon size={16}/>}</span><span className="node-number">{n.kind === 'finish' ? 'THE GOAL' : String(index + 1).padStart(2, '0')}</span>{review && <RotateCcw size={13} className="due-dot"/>}</span>
-     <strong>{n.title}</strong><span className="node-footer">{n.kind === 'finish' ? 'ACADEMIC' : s === 'passed' ? review ? '待巩固 · 可复习' : '已通过' : s === 'locked' ? '完成前置节点后解锁' : n.kind==='course'?`${chapterProgress(n,state).learned} / 12 已学 · 打开本章`:current === n.id ? '从这里继续' : `${n.minutes} 分钟 · ${n.kind === 'task' ? '实践' : '练习'}`}{s !== 'locked' && <ArrowUpRight size={13}/>}</span>
+     <strong>{n.title}</strong><span className="node-footer">{manual ? '手动解锁 · '+(learningLabel(n,state)==='尚未学习'?'未学':'学习中') : n.kind === 'finish' ? learningLabel(n,state) : s === 'passed' ? review ? '待巩固 · 可复习' : '已通过' : s === 'locked' ? '完成前置节点后解锁' : n.kind==='course'?`${chapterProgress(n,state).learned} / 12 已学 · 打开本章`:current === n.id ? '从这里继续' : `${n.minutes} 分钟 · ${n.kind === 'task' ? '实践' : '练习'}`}{s !== 'locked' && <ArrowUpRight size={13}/>}</span>
     </button>;
         })}
    </div></div>

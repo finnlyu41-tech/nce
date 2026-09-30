@@ -1,35 +1,11 @@
-.study-mode {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 3px;
-  padding: 3px;
-  border: 1px solid #dce5dc;
-  border-radius: 12px;
-  background: #f4f6f1;
-}
-.study-mode a {
-  padding: 8px 12px;
-  border-radius: 9px;
-  color: #536552;
-  font: 600 12px/1.5 system-ui, sans-serif;
-  text-decoration: none;
-  white-space: nowrap;
-}
-.study-mode a[aria-current="page"] { background: #234b36; color: #fff; }
-.study-mode a:hover { box-shadow: inset 0 0 0 1px #91a58d; }
-.study-mode a:focus-visible { outline: 2px solid #426a43; outline-offset: 3px; }
-.classic-mode-bar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 10px 40px;
-  background: #fff;
-  border-bottom: 1px solid #e2e7ef;
-}
-.classic-mode-bar > span { color: #68746b; font-size: 12px; }
-@media (max-width: 760px) {
-  .study-mode a { padding: 7px 9px; }
-  .classic-mode-bar { padding: 8px 14px; }
-  .classic-mode-bar > span { display: none; }
-}
+.studio-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 40px;background:#fbfcf8;border-bottom:1px solid #dfe5dc;color:#263c34;min-height:80px;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}
+.studio-brand{display:flex;align-items:center;gap:11px;text-decoration:none!important;color:#263c34!important;white-space:nowrap;font-size:18px;font-weight:750;line-height:1.4}.studio-brand small{display:block;font-size:9px;letter-spacing:1.6px;color:#647469;margin-top:3px}.studio-brand-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:#285b46;color:white;font-size:24px;font-weight:800}
+.studio-navigation{display:flex;gap:6px;align-items:center}.studio-navigation a{display:flex;align-items:center;gap:8px;color:#617064;text-decoration:none;padding:12px 16px;border-radius:10px;font-size:14px;font-weight:600;white-space:nowrap;min-height:44px}.studio-navigation a:hover{background:#edf2e9}.studio-navigation a[aria-current=page]{background:#e4ede1;color:#234f3a}.studio-navigation a:focus-visible,.studio-brand:focus-visible{outline:3px solid #438564;outline-offset:3px}
+.studio-header-actions{display:flex;align-items:center;gap:8px}.studio-local{font-size:12px;color:#66776b}.studio-classic{width:100%;background:#f7f8f3;color:#263c34}.studio-classic>.workspace{max-width:1480px;margin:auto;padding:28px 40px 40px}.studio-classic .topbar{background:#fbfcf8}.studio-classic .btn:not(.secondary){background:#285b46;border-color:#285b46}.studio-classic .text-btn{color:#2f694d}.studio-classic .panel,.studio-classic .nce-course-resume{background:#fffefa;border-color:#e0e6dc}.studio-classic .course-resources{margin-bottom:22px}.studio-context{color:#68766a;font-size:12px;margin-bottom:20px}.studio-context>span{margin-right:8px}
+.map-connection{padding:22px 24px;background:#edf3e8;border:1px solid #dce6d5;border-radius:14px;margin:0 0 22px;color:#2a513c}.map-connection h2{font-size:20px;margin:5px 0 8px}.map-connection p{margin:6px 0;font-size:13px;line-height:1.7}.map-connection small{color:#5f7462}.map-connection a{display:inline-flex;align-items:center;gap:7px;min-height:40px;font-size:13px;font-weight:650;color:#285b46}.map-connection-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.map-connection-actions{display:flex;gap:18px;flex-wrap:wrap}.map-record-list{display:grid;gap:8px;margin:16px 0;max-height:400px;overflow:auto}.map-record-list a{display:flex;justify-content:space-between;gap:16px;padding:12px 14px;background:#fffefa;border-radius:8px}.map-record-list span{font-size:12px;text-align:right}.map-course-badge{color:#356443!important;font-size:11px!important}.studio-classic .course-resources button{min-height:40px;border-color:#dae4d5;color:#376348}.studio-classic .course-resources button:hover{background:#eaf1e5}
+@media(max-width:900px){.studio-header{padding:14px 24px;gap:12px}.studio-navigation a{padding:11px 12px}.studio-header-actions>.studio-local{display:none}}
+@media(max-width:759px){.studio-header{padding:12px 16px 0;display:grid;grid-template-columns:1fr auto;gap:12px 8px;position:relative}.studio-brand{font-size:16px}.studio-brand-icon{width:34px;height:34px;font-size:22px}.studio-header-actions{grid-column:2;grid-row:1}.studio-navigation{grid-column:1/-1;grid-row:2;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;padding-bottom:10px}.studio-navigation a{justify-content:center;gap:5px;padding:10px 3px;font-size:12px}.studio-navigation a svg{width:16px}.studio-header-actions .btn{padding:8px;font-size:12px;min-height:40px}.studio-classic>.workspace{padding:20px 16px 32px}.studio-classic .phone-nav{display:none}.studio-classic .footer{margin-top:25px}.map-connection{padding:17px}.map-connection h2{font-size:18px}.map-record-list a{align-items:flex-start;flex-direction:column;gap:5px}.map-record-list span{text-align:left}.studio-local{font-size:10px}}
+.course-more{position:relative;font-size:13px;color:#376348}.course-more>summary{cursor:pointer;min-height:40px;display:flex;align-items:center;padding:8px 12px}.course-more[open]{border:1px solid #dce5d5;border-radius:9px;background:#fffefa}.course-more[open]>button{display:block;margin:4px;width:calc(100% - 8px)}
+
+.map-connection-course{padding:12px 18px;margin-bottom:18px}.map-connection-course small{display:none}.map-connection-course h2{font-size:15px;display:inline;margin-right:12px}.map-connection-course .map-connection-head>div>p{display:inline;font-size:12px}.map-connection-course>p{font-size:11px;color:#687b67;margin:0}.lesson-context-details{font-size:12px;color:#61745f;margin:10px 0 12px}.lesson-context-details>summary{cursor:pointer;padding:8px 0;min-height:36px}
+@media(max-width:359px){.studio-brand{font-size:14px;gap:8px}.studio-brand-icon{width:30px;height:30px;font-size:20px}.studio-brand small{font-size:8px;letter-spacing:1.2px}.studio-header-actions .progress-save-button{gap:5px;padding:8px 7px}}

@@ -123,6 +123,37 @@ const history={...m.emptyProgress(),records:{first:{...m.emptyRecord(),...proof(
 let repeat=history;for(let i=0;i<15;i++)repeat=m.submitQuiz(repeat,'first',now);
 check(repeat.records.first.attempts.length===12&&repeat.records.first.attempts[0].at===yesterday,'Bounded history preserves earliest independent proof');
 check(m.storageKey!==m.legacyStorageKey,'Old map records never silently repurposed');
+// Manual access never creates assessment evidence or completes prerequisite nodes.
+const blank=m.emptyProgress(),late=c.nodeById('nce2-96'),chapter=c.nodeById('chapter-14');
+let opened=m.unlockNode(blank,late.id);
+check(m.statusMap(opened,now)[late.id]==='available','Individual late unit can be opened without prerequisites');
+check(m.statusMap(opened,now)['nce2-95']==='locked','Individual unlock does not mark prior units complete');
+check(c.nodes.every(n=>!m.achieved(n,opened,now))&&c.unitNodes.every(n=>!m.achieved(n,opened,now)),'Manual unlock leaves every completion false');
+check(m.learningLabel(late,opened)==='尚未学习','Unlocked is distinct from started');
+opened=m.startNode(opened,late.id,now);
+check(m.learningLabel(late,opened)==='学习中 · 尚未完成','Opening learning creates only a started marker');
+check(m.continueNode(opened).id===late.id,'Return resumes manually chosen lesson');
+check(m.startNode(blank,late.id,now)===blank,'Starting locked content cannot bypass access');
+check(m.unlockNode(blank,'constructor')===blank,'Invalid manual target rejected');
+const chapterOpen=m.unlockNode(blank,chapter.id);
+check(chapter.members.every(id=>m.statusMap(chapterOpen,now)[id]==='available'),'Chapter unlock opens its full member list');
+check(m.statusMap(chapterOpen,now)['chapter-13']==='locked','Other chapters remain gated');
+const allOpen={...opened,access:{all:true,nodes:[]}};
+check(Object.values(m.statusMap(allOpen,now)).every(x=>x==='available'),'All content opens without false pass flags');
+check(!m.isReady(allOpen,now)&&!m.officialReached(allOpen,now),'Open finish does not imply mock or official target reached');
+check(m.parseProgress(m.exportProgress(allOpen)).records[late.id].startedAt===now,'Access and started records round trip');
+check(m.parseProgress(m.exportProgress(allOpen)).access.all&&m.parseProgress(m.exportProgress(opened)).lastNode===late.id,'Access and resume choice survive backup');
+opened.records[late.id]={...opened.records[late.id],round:0,...proof(late,0,now),attempts:[]};
+opened=m.submitQuiz(opened,late.id,now);
+check(m.achieved(late,opened,now)&&!m.achieved(chapter,opened,now),'Real independent completion is separate from chapter completion');
+const gated={...opened,access:{all:false,nodes:[]}};
+check(m.achieved(late,gated,now)&&m.statusMap(gated,now)[late.id]==='passed','Restoring gates preserves completion and review access');
+const completedLetter={...m.unlockNode(blank,'letters'),lastNode:'letters',records:{letters:{...m.emptyRecord(),attempts:[proof(c.nodeById('letters'),0,now)]}}};
+check(m.continueNode(completedLetter).id==='small-exchange','After a skipped-ahead lesson passes, continue follows its next node');
+for(const access of [{all:'yes',nodes:[]},{all:false,nodes:['unknown']},{all:false,nodes:['first','first']},{all:true,nodes:['__proto__']}]){
+ let rejected=false;try{m.parseProgress(JSON.stringify({...blank,access}))}catch{rejected=true}check(rejected,'Malformed access settings rejected');
+}
+let futureRejected=false;try{m.parseProgress(JSON.stringify({...blank,records:{first:{...m.emptyRecord(),startedAt:now+100000}}}))}catch{futureRejected=true}check(futureRejected,'Future start timestamp rejected');
 console.log(`${count} checks passed: 168 source-bound units, audio evidence, source pairing, gates, spaced review, projects, four skills, mocks and progress safety.`);
 if(process.argv.includes('--fixtures')){
  const dir=path.join(root,'../work/map-verification');await fs.mkdir(dir,{recursive:true});

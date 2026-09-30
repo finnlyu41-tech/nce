@@ -75,7 +75,7 @@ def verify(root):
     allowed.add('map/index.html')
     map_refs = {'map/'+path.removeprefix('./') for path in re.findall(r'(?:src|href)="(\./assets/[^"?]+)"', map_html.decode())}
     assert map_refs == set(version['map_assets']) and len(map_refs) >= 2, 'Map bundle references incomplete'
-    assert '地图模式' in html and '/map/' in html, 'Classic mode has no map entry'
+    assert all(label in html for label in ['学习空间导航','学习地图','课程','复习','记录']) and '/map/' in html, 'Shared learning navigation is incomplete'
     for path, digest in version['map_assets'].items():
         assert re.fullmatch(r'map/assets/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)', path), 'Unexpected map asset'
         assert hashlib.sha256((root/path).read_bytes()).hexdigest() == digest, 'Map asset hash mismatch'

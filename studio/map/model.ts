@@ -1,4 +1,4 @@
-import { nodes, chapters, nodeById, questionsFor, type MapNode } from './content';
+import { nodes, unitNodes, chapters, nodeById, questionsFor, type MapNode } from './content';
 import { overallBand } from '../app/readiness';
 export const legacyStorageKey = 'wayfinder-ielts-map:v1';
 export const storageKey = 'wayfinder-ielts-map:v2';
@@ -31,6 +31,7 @@ export type Mock = Evidence & {
 };
 export type Project = {text:string; recording:string; reviewer:string; feedback:string; criteria:boolean[]; at:number};
 export type NodeRecord = {
+    startedAt?: number;
     project?: Project;
     round: number;
     answers: string[];
@@ -48,6 +49,8 @@ export type Progress = {
     updatedAt: number;
     records: Record<string, NodeRecord>;
     minimum: string;
+    access?: { all: boolean; nodes: string[] };
+    lastNode?: string;
     official?: {
         date: string;
         reference: string;
@@ -164,13 +167,37 @@ export function achieved(n: MapNode, state: Progress, at = Date.now()): boolean 
     }
     return true;
 }
-// Always re-derive prerequisites: a hash URL or imported completion flag grants nothing.
+// Access is a learner choice; only actual assessment evidence grants completion.
+export function manuallyUnlocked(n:MapNode,state:Progress) {
+    return !!state.access?.all || !!state.access?.nodes.includes(n.id) || !!n.parent && !!state.access?.nodes.includes(n.parent);
+}
+export function unlockNode(state:Progress,id:string):Progress {
+    if(!nodeById(id)) return state;
+    return {...state,access:{all:state.access?.all||false,nodes:[...new Set([...(state.access?.nodes||[]),id])]}};
+}
+export function startNode(state:Progress,id:string,at=Date.now()):Progress {
+    if(!nodeById(id)||statusMap(state,at)[id]==='locked')return state;
+    const record=state.records[id]||emptyRecord();
+    return {...state,lastNode:id,records:{...state.records,[id]:{...record,startedAt:record.startedAt||at}}};
+}
+export function learningLabel(n:MapNode,state:Progress) {
+    if(achieved(n,state))return n.kind==='unit' ? stable(n,state)?'已完成 · 已巩固':'已学 · 待巩固' : n.kind==='finish'?'模考准备度已达标':'已完成学习';
+    const r=state.records[n.id];
+    return r && (r.startedAt||r.attempts.length||r.draft||r.evidence||r.mock||r.project||r.answers.length) ? '学习中 · 尚未完成':'尚未学习';
+}
+export function continueNode(state:Progress) {
+    const status=statusMap(state),last=state.lastNode?nodeById(state.lastNode):undefined;
+    if(last&&status[last.id]!=='locked'&&!achieved(last,state))return last;
+    if(last){const next=[...nodes,...unitNodes].find(n=>n.requires.includes(last.id)&&status[n.id]==='available');if(next)return next;}
+    if(last?.parent){const siblings=(nodeById(last.parent)?.members||[]).map(id=>nodeById(id)!);const next=siblings.find(n=>due(n,state))||siblings.find(n=>status[n.id]==='available');if(next)return next;}
+    return nodes.find(n=>due(n,state)&&status[n.id]!=='locked')||nodes.find(n=>status[n.id]==='available')||nodeById('finish')!;
+}
 export function statusMap(state: Progress, at = Date.now()) {
     const result: Record<string, 'locked' | 'available' | 'passed'> = {};
     for (const n of nodes) {
-        const open = n.requires.every(id => result[id] === 'passed');
-        result[n.id] = !open ? 'locked' : achieved(n, state, at) ? 'passed' : 'available';
-        if(n.kind==='course') for(const id of n.members||[]) { const u=nodeById(id)!; result[id]=!open || !u.requires.every(p=>result[p]==='passed')?'locked':achieved(u,state,at)?'passed':'available'; }
+        const open = manuallyUnlocked(n,state) || n.requires.every(id => result[id] === 'passed');
+        result[n.id] = achieved(n, state, at) ? 'passed' : open ? 'available' : 'locked';
+        if(n.kind==='course') for(const id of n.members||[]) { const u=nodeById(id)!; const unitOpen=manuallyUnlocked(u,state)||(open&&u.requires.every(p=>result[p]==='passed')); result[id]=achieved(u,state,at)?'passed':unitOpen?'available':'locked'; }
     }
     return result;
 }
@@ -222,9 +249,16 @@ export function parseProgress(raw: string): Progress {
     const result = emptyProgress();
     result.minimum = String(x.minimum);
     result.updatedAt = Number(x.updatedAt);
+    if(x.access!==undefined){
+        const a=x.access;
+        if(!recordLike(a)||typeof a.all!=='boolean'||!Array.isArray(a.nodes)||a.nodes.length>200||a.nodes.some(id=>typeof id!=='string'||!nodeById(id))||new Set(a.nodes).size!==a.nodes.length)throw new Error('解锁设置无效。');
+        result.access={all:a.all,nodes:[...a.nodes] as string[]};
+    }
+    if(x.lastNode!==undefined){if(typeof x.lastNode!=='string'||!nodeById(x.lastNode))throw new Error('学习位置无效。');result.lastNode=x.lastNode;}
     for (const [id, v] of Object.entries(x.records)) {
         if (!nodeById(id) || !recordLike(v) || !Number.isInteger(v.round) || Number(v.round) < 0 || Number(v.round) > 100000 || !['learn', 'challenge'].includes(String(v.phase)) || typeof v.assisted !== 'boolean' || !Array.isArray(v.answers) || v.answers.length > 20 || v.answers.some(a => !text(a, 1000)) || !Array.isArray(v.attempts) || v.attempts.length > 12)
             throw new Error('学习记录的结构不正确。');
+        if(v.startedAt!==undefined&&(!Number.isFinite(v.startedAt)||Number(v.startedAt)<=0||Number(v.startedAt)>Date.now()))throw new Error('学习开始时间无效。');
         for (const p of v.attempts)
             if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || Number(p.round)>100000 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
                 throw new Error('检验记录无效。');
