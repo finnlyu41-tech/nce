@@ -70,6 +70,16 @@ def verify(root):
         allowed.add('language/'+path)
     assert lines == language['lines'], 'Translation count mismatch'
     version = json.loads((root/'version.json').read_text())
+    map_html = (root/'map/index.html').read_bytes()
+    assert version['map_html_sha256'] == hashlib.sha256(map_html).hexdigest(), 'Map HTML hash mismatch'
+    allowed.add('map/index.html')
+    map_refs = {'map/'+path.removeprefix('./') for path in re.findall(r'(?:src|href)="(\./assets/[^"?]+)"', map_html.decode())}
+    assert map_refs == set(version['map_assets']) and len(map_refs) >= 2, 'Map bundle references incomplete'
+    assert '地图模式' in html and '/map/' in html, 'Classic mode has no map entry'
+    for path, digest in version['map_assets'].items():
+        assert re.fullmatch(r'map/assets/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)', path), 'Unexpected map asset'
+        assert hashlib.sha256((root/path).read_bytes()).hexdigest() == digest, 'Map asset hash mismatch'
+        allowed.add(path)
     assert version['html_sha256'] == hashlib.sha256((root/'index.html').read_bytes()).hexdigest(), 'HTML hash mismatch'
     assert version['manifest_sha256'] == hashlib.sha256((root/'materials/manifest.json').read_bytes()).hexdigest(), 'Manifest hash mismatch'
     assert version['materials_count'] == len(ids), 'Material count mismatch'

@@ -15,7 +15,7 @@
     "build:static": "vite build --config vite.static.config.ts",
     "check": "tsc --noEmit",
     "package:static": "pnpm build:static && python3 scripts/package-standalone.py",
-    "package:online": "vite build --config vite.static.config.ts --mode online && python3 scripts/package-standalone.py --online",
+    "package:online": "vite build --config vite.static.config.ts --mode online && pnpm build:map && python3 scripts/package-standalone.py --online",
     "package:materials": "python3 scripts/package-materials.py",
     "verify:materials": "python3 scripts/test-package-materials.py && node scripts/test-materials.mjs",
     "verify:online": "python3 scripts/verify-online.py",
@@ -34,7 +34,9 @@
     "verify:grammar": "node scripts/test-textbook-grammar.mjs",
     "verify:chinese-recall": "node scripts/test-chinese-recall.mjs",
     "verify:illustrations": "node scripts/test-illustrations.mjs",
-    "verify:learning": "node scripts/test-learning-plan.mjs"
+    "verify:learning": "node scripts/test-learning-plan.mjs",
+    "build:map": "vite build --config map/vite.config.ts --mode online",
+    "verify:map": "node map/test-model.mjs && node scripts/test-map-mode.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

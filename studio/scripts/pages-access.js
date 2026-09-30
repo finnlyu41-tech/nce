@@ -18,7 +18,8 @@ export default {
     if (url.pathname === '/api/demo-audio') return demoAudio(request, env);
     if (!env.ASSETS) return reply('Study materials temporarily unavailable.', 503);
     if (!['GET', 'HEAD'].includes(request.method)) return reply('Method not allowed', 405, {Allow: 'GET, HEAD'});
-    if (!['/', '/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
+    if (url.pathname === '/map') return reply(null, 308, {Location: '/map/' + url.search});
+    if (!['/', '/index.html', '/map/', '/map/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/map\/assets\/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)$/.test(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
     try {
       // Old browsers may still send cached Basic credentials. Never forward them.
       const assetRequest = new Request(request);
@@ -27,7 +28,7 @@ export default {
       const result = new Response(response.body, response);
       for (const [key, value] of Object.entries(headers)) result.headers.set(key, value);
       if (url.pathname === '/manifest.webmanifest' && response.ok) result.headers.set('Content-Type', 'application/manifest+json; charset=utf-8');
-      if (/^\/(?:materials\/[a-f0-9]{64}\/|lesson-pages\/[a-f0-9]{64}\.jpg$)/.test(url.pathname) && response.ok) result.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+      if (/^\/(?:map\/assets\/|materials\/[a-f0-9]{64}\/|lesson-pages\/[a-f0-9]{64}\.jpg$)/.test(url.pathname) && response.ok) result.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
       result.headers.delete('WWW-Authenticate');result.headers.delete('Vary');
       return result;
     } catch { return reply('Materials temporarily unavailable.', 503); }

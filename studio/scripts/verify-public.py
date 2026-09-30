@@ -27,6 +27,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('deployment')
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--sample-unchanged', action='store_true', help='Sample unchanged textbook assets after local full integrity verification')
     args = parser.parse_args()
     assert re.fullmatch(r'https://[a-f0-9]{8}\.finn-english-studio\.pages\.dev', args.deployment)
     production = 'https://finn-english-studio.pages.dev'
@@ -52,6 +53,15 @@ def main():
         for path in ['index.html', 'version.json', 'manifest.webmanifest', 'icons/apple-touch-icon.png', 'icons/icon-192.png', 'icons/icon-512.png', 'materials/manifest.json', 'language/index.json', 'language/dictionary.json', 'lesson-pages/index.json', 'speaking/topics.json', 'grammar/index.json']:
             checks.append(verify(base, '/' if path=='index.html' else '/'+path, file_hash(path)))
         checks.append(verify(base, '/', version['html_sha256'], stale_auth=True))
+        checks.append(verify(base, '/map/', version['map_html_sha256']))
+        checks.append(verify(base, '/map/', version['map_html_sha256'], stale_auth=True))
+        checks.append(verify(base, '/map', None, status=308))
+        checks.append(verify(base, '/map/', None, method='HEAD'))
+        checks.append(verify(base, '/map/', None, status=405, method='POST'))
+        for path, digest in version['map_assets'].items():
+            checks.append(verify(base, '/'+path, digest))
+        for path in ['/map/main.tsx', '/map/model.ts', '/map/test-model.mjs', '/map/assets/unknown.js', '/map/unknown']:
+            checks.append(verify(base, path, None, status=404))
         for path in ['/README.md', '/.env', '/work/local-codex/SESSION.json', '/grammar/ocr.json', '/grammar/source.pdf']:
             checks.append(verify(base, path, None, status=404))
         checks.append(verify(base, '/', None, status=405, method='POST'))
@@ -66,6 +76,12 @@ def main():
             status, body=request(base+part['path']);assert status==200;audio+=body
         assert hashlib.sha256(audio).hexdigest()==sample['sha256']
         checks.append({'url':base, 'material':sample['id'], 'status':200, 'sha256':sample['sha256']})
+    if args.sample_unchanged:
+        result={'checkedAt':datetime.now(timezone.utc).isoformat(), 'access':'public', 'deployment':args.deployment, 'version':version, 'checks':checks, 'unchangedMaterials':'local full integrity and public representative samples', 'transportRetries':TRANSPORT_RETRIES}
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
+        print(json.dumps({'checks':len(checks),'deployment':args.deployment,'access':'public','unchangedMaterials':'sampled'}))
+        return
     # Small text assets are checked in full; unchanged 707 MB of textbook media
     # is checked locally, with online audio/PDF sampling rather than re-downloaded.
     def language_file(item):
