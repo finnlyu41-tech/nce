@@ -185,3 +185,73 @@ assert.equal(bp.blueprintSnapshot(beginner,now).next,'foundation');
 assert(!bp.blueprintSnapshot(beginner,now).ready,'Encouraging starter feedback never implies an IELTS score');
 assert.equal(bp.blueprintSnapshot(bp.updateBlueprint(model.initial,r=>({...r,entry:'exam'})),now).next,'listening','Experienced users can start with a small IELTS task');
 console.log('Beginner path: no exam prerequisite, three tiny scaffolded lessons, independent checkpoints, next-stage progression and no score inflation passed.');
+
+const journey=await import(await moduleURL('ielts-journey.ts'));
+const curriculum=await import(await moduleURL('ielts-journey-content.ts'));
+assert.equal(new Set(curriculum.journeyMissions.map(m=>m.id)).size,curriculum.journeyMissions.length);
+assert.equal(journey.journeySnapshot(model.initial,now).next.id,'first');
+assert.equal(JSON.stringify(model.initial),pristine,'Reading the new journey is read-only');
+for(const mission of curriculum.journeyMissions){
+ assert(curriculum.journeyStages.some(s=>s.id===mission.stage));
+ assert(mission.title&&mission.outcome&&mission.minutes>0);
+ assert.deepEqual(nav.parseRoute(nav.routeHash(journey.missionRoute(mission))),journey.missionRoute(mission),'Every mini-step has a stable deep link');
+ if(mission.course)assert(p.lessonGoals(mission.course.book,mission.course.lesson).some(g=>g.id===mission.course.goal));
+ if(mission.mini){
+  assert(mission.mini.options.includes(mission.mini.answer));
+  assert.equal(mission.mini.checks.length,3);
+  assert.equal(new Set(mission.mini.checks.map(q=>q.prompt)).size,3,'Reviews use a different prompt');
+  for(const question of mission.mini.checks)assert(model.isCorrect(question,question.answer));
+ }
+}
+let j=journey.startMission(legacy,'first','check',now);
+assert.equal(journey.journeySnapshot(j,now).next.id,'first');
+assert.equal(journey.readJourney(j.drafts[journey.journeyKey]).missions.first.phase,'recall');
+j=journey.updateMission(j,'first',r=>({...r,answer:'book'}));
+j=journey.submitMission(j,'first',now);
+assert(!journey.missionEvidence(j,curriculum.missionById('first'),now).done);
+assert.equal(j.attempts,legacy.attempts+1);assert.equal(j.correct,legacy.correct);
+assert.equal(journey.submitMission(j,'first',now),j,'Submitting the checked answer twice cannot inflate activity');
+assert(journey.readJourney(j.drafts[journey.journeyKey]).missions.first.hinted,'Feedback reveals the answer, so a retry is marked assisted');
+j=journey.updateMission(j,'first',r=>({...r,answer:'bag'}));
+j=journey.submitMission(j,'first',now+1);
+assert(journey.missionEvidence(j,curriculum.missionById('first'),now+2).done);
+assert(!journey.missionEvidence(j,curriculum.missionById('first'),now+2).independent);
+assert.equal(journey.journeySnapshot(j,now+2).next.id,'question');
+assert.equal(journey.journeySnapshot(j,tomorrow).due[0].id,'first');
+assert.equal(j.drafts['expression-NCE1-99'],legacy.drafts['expression-NCE1-99']);assert.deepEqual(j.nce,legacy.nce);assert(model.validateState(j));
+assert.deepEqual(journey.readJourney(JSON.parse(JSON.stringify(j)).drafts[journey.journeyKey]),journey.readJourney(j.drafts[journey.journeyKey]));
+j=journey.startMission(j,'first','review',tomorrow);
+assert.equal(journey.journeySnapshot(j,tomorrow).next.id,'first','An active review cannot be hidden by an older success');
+assert.equal(journey.journeySnapshot(j,tomorrow).completed,1,'Starting a review preserves earlier practice achievements');
+assert.equal(journey.missionQuestion(curriculum.missionById('first'),journey.readJourney(j.drafts[journey.journeyKey]).missions.first).answer,'book');
+j=journey.updateMission(j,'first',r=>({...r,answer:'book'}));j=journey.submitMission(j,'first',tomorrow);
+assert(journey.missionEvidence(j,curriculum.missionById('first'),tomorrow).independent);
+let course=p.updateGoal(model.initial,'NCE1',49,'present-simple',()=>({...p.recordCheck(p.emptyGoal(),attempt(0)),answer:'I work.',checked:'I work.'}));
+assert(journey.missionEvidence(course,curriculum.missionById('daily'),now).done,'Relevant course evidence is consumed without a manual checklist');
+assert(!journey.missionEvidence(course,curriculum.missionById('daily-question'),now).done,'One grammar attempt cannot pass every related checkpoint');
+course=journey.startMission(course,'daily','check',now+1);
+assert(!journey.missionEvidence(course,curriculum.missionById('daily'),now+2).done,'A new check temporarily supersedes old course proof');
+course=journey.updateMission(course,'daily',r=>({...r,answer:'wrong'}));course=journey.submitMission(course,'daily',now+3);
+assert(!journey.missionEvidence(course,curriculum.missionById('daily'),now+4).done,'A failed current check supersedes old course proof');
+assert(journey.missionEvidence(course,curriculum.missionById('daily'),now+4).recorded,'A new error does not erase earlier practice history');
+let oldStarter=bp.saveBlueprintEvidence(model.initial,'starter.first','Two choices and a speaking attempt.','passed',now);
+assert(journey.missionEvidence(oldStarter,curriculum.missionById('first'),now).done,'Old starter records remain visible');
+assert(!journey.missionEvidence(oldStarter,curriculum.missionById('first'),now).independent,'Old practice is not relabeled independent evidence');
+oldStarter=journey.startMission(oldStarter,'first','review',now+1);
+assert(!journey.missionEvidence(oldStarter,curriculum.missionById('first'),now+2).done);
+const quiz={...model.initial,scores:{'ielts-reading':50}};
+assert(journey.missionEvidence(quiz,curriculum.missionById('reading-evidence'),now).done);
+assert(!journey.journeySnapshot(quiz,now).blueprint.ready,'Short quiz evidence never creates an IELTS result');
+let assignment=journey.updateMission(model.initial,'writing-feedback',r=>({...r,artifact:'Paper A',reflection:''}));
+assert.equal(journey.saveAssignment(assignment,'writing-feedback',now),assignment);
+assignment=journey.updateMission(assignment,'writing-feedback',r=>({...r,reflection:'Rewrite the overview based on teacher feedback.'}));
+assignment=journey.saveAssignment(assignment,'writing-feedback',now);
+assert(journey.missionEvidence(assignment,curriculum.missionById('writing-feedback'),now).done);
+assert(!journey.journeySnapshot(assignment,now).blueprint.ready);
+for(const raw of ['null','{bad',JSON.stringify({version:2,focus:'constructor',missions:{constructor:{},first:{round:Infinity,attempts:[{at:-1}],answer:32}}})]){
+ const record=journey.readJourney(raw);assert(!record.focus);assert(!record.missions.first?.attempts.length);
+}
+assert.equal(journey.updateMission(model.initial,'unknown',r=>r),model.initial);
+assert.equal(nav.parseRoute('#/ielts?mission=first').mission,undefined);
+assert.equal(nav.parseRoute('#/roadmap?mission=constructor').mission,undefined);
+console.log(`Journey v2: ${curriculum.journeyMissions.length} concrete steps, course-proof reuse, hint-aware retries, spaced review, legacy/backup continuity, mutation-free browsing and deep links passed.`);

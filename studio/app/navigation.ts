@@ -1,7 +1,7 @@
 import {bookCounts, type NceBookId} from './model';
 
-export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
-const roadmapNodes=['baseline','starter','foundation','listening','reading','writing','speaking','mock','finish'];
+export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
+const roadmapNodes=['baseline','starter','foundation','bridge','listening','reading','writing','speaking','mock','finish'];
 const views=['roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
 const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing'],grammar:['book','topic']};
 export function parseRoute(hash:string):StudioRoute{
@@ -14,6 +14,7 @@ export function parseRoute(hash:string):StudioRoute{
  if(view==='lesson'){const lesson=Number(parts[1]);route.lesson=Number.isInteger(lesson)&&lesson>0&&lesson<=36?lesson:1}
  const tab=params.get('tab');if(tab&&tabs[view]?.includes(tab))route.tab=tab;
  const node=params.get('node');if(view==='roadmap'&&node&&roadmapNodes.includes(node))route.node=node;
+ const mission=params.get('mission');if(view==='roadmap'&&mission&&/^[a-z][a-z0-9-]{1,60}$/.test(mission)&&!['constructor','prototype'].includes(mission))route.mission=mission;
  const goal=params.get('goal'),practice=params.get('practice');
  if((view==='nce'&&route.lesson&&(tab==='practice'||tab==='grammar'))||view==='roadmap'){
   if(goal&&/^[a-z-]{1,60}$/.test(goal)&&!['constructor','prototype'].includes(goal))route.goal=goal;
@@ -33,6 +34,7 @@ export function parseRoute(hash:string):StudioRoute{
 export function routeHash(route:StudioRoute){
  let path='#/'+route.view;if(route.book)path+='/'+route.book;if(route.lesson)path+='/'+route.lesson;
  const params=new URLSearchParams();for(const [key,value] of Object.entries({tab:route.tab,task:route.task,filter:route.filter,q:route.query,file:route.file,category:route.category,letter:route.view==='words'&&route.tab==='index'?route.letter:undefined}))if(value)params.set(key,value);
+ if(route.view==='roadmap'&&route.mission&&/^[a-z][a-z0-9-]{1,60}$/.test(route.mission)&&!['constructor','prototype'].includes(route.mission))params.set('mission',route.mission);
  if(route.view==='roadmap'&&route.node&&roadmapNodes.includes(route.node))params.set('node',route.node);
  if(route.view==='nce'&&route.lesson&&route.tab==='notes'&&Number.isInteger(route.step)&&route.step!>=0&&route.step!<=4)params.set('step',String(route.step));
  if((route.view==='grammar'||route.view==='words'&&route.tab==='index')&&Number.isInteger(route.page)&&route.page!>0&&route.page!<=9999)params.set('page',String(route.page));
