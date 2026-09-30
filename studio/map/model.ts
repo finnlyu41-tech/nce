@@ -32,6 +32,9 @@ export type Mock = Evidence & {
 export type Project = {text:string; recording:string; reviewer:string; feedback:string; criteria:boolean[]; at:number};
 export type NodeRecord = {
     startedAt?: number;
+    studyStep?: number;
+    questionIndex?: number;
+    exampleIndex?: number;
     project?: Project;
     round: number;
     answers: string[];
@@ -185,6 +188,17 @@ export function learningLabel(n:MapNode,state:Progress) {
     const r=state.records[n.id];
     return r && (r.startedAt||r.attempts.length||r.draft||r.evidence||r.mock||r.project||r.answers.length) ? '学习中 · 尚未完成':'尚未学习';
 }
+export function changeStudyStep(state:Progress,id:string,step:number):Progress {
+    if(!Number.isInteger(step)||step<0||step>3||!nodeById(id)||statusMap(state)[id]==='locked')return state;
+    const record=state.records[id]||emptyRecord();
+    const checked=record.attempts.at(-1)?.round===record.round;
+    return {...state,records:{...state.records,[id]:{...record,phase:step===3?'challenge':'learn',studyStep:step===3?record.studyStep:step,assisted:record.assisted||(record.phase==='challenge'&&step!==3&&!checked)}}};
+}
+export function restartQuiz(state:Progress,id:string):Progress {
+    if(!nodeById(id)||statusMap(state)[id]==='locked')return state;
+    const record=state.records[id]||emptyRecord();
+    return {...state,records:{...state.records,[id]:{...record,phase:'challenge',round:record.round+1,answers:[],heard:[],assisted:false,questionIndex:0}}};
+}
 export function continueNode(state:Progress) {
     const status=statusMap(state),last=state.lastNode?nodeById(state.lastNode):undefined;
     if(last&&status[last.id]!=='locked'&&!achieved(last,state))return last;
@@ -259,6 +273,9 @@ export function parseProgress(raw: string): Progress {
         if (!nodeById(id) || !recordLike(v) || !Number.isInteger(v.round) || Number(v.round) < 0 || Number(v.round) > 100000 || !['learn', 'challenge'].includes(String(v.phase)) || typeof v.assisted !== 'boolean' || !Array.isArray(v.answers) || v.answers.length > 20 || v.answers.some(a => !text(a, 1000)) || !Array.isArray(v.attempts) || v.attempts.length > 12)
             throw new Error('学习记录的结构不正确。');
         if(v.startedAt!==undefined&&(!Number.isFinite(v.startedAt)||Number(v.startedAt)<=0||Number(v.startedAt)>Date.now()))throw new Error('学习开始时间无效。');
+        if(v.studyStep!==undefined&&(!Number.isInteger(v.studyStep)||Number(v.studyStep)<0||Number(v.studyStep)>2))throw new Error('学习步骤无效。');
+        if(v.exampleIndex!==undefined&&(!Number.isInteger(v.exampleIndex)||Number(v.exampleIndex)<0||Number(v.exampleIndex)>10))throw new Error('示范位置无效。');
+        if(v.questionIndex!==undefined&&(!Number.isInteger(v.questionIndex)||Number(v.questionIndex)<0||Number(v.questionIndex)>19))throw new Error('答题位置无效。');
         for (const p of v.attempts)
             if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || Number(p.round)>100000 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
                 throw new Error('检验记录无效。');

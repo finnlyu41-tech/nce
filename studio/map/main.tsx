@@ -98,6 +98,7 @@ function App() {
         if (importInput.current)
             importInput.current.value = '';
     } }
+    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-unsaved-progress.json')}>导出当前进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} node={selected} state={state} save={save} close={()=>navigate(selected.id)} select={id=>navigate(id,true)}/></>;
     return <><StudioHeader active="map" classicRoot={originalSite} mapUrl={`#/map/${route.id}`} actions={<details className="map-settings"><summary><Settings2 size={17}/><span>学习设置</span></summary><div><strong>解锁方式</strong><p>解锁允许直接进入，完成状态仍由实际学习记录决定。</p>{state.access?.all?<p className="manual-note">全部节点已手动解锁</p>:<button onClick={()=>save(s=>({...s,access:{all:true,nodes:s.access?.nodes||[]}}))}><Unlock size={16}/>直接解锁全部节点</button>}{(state.access?.all||!!state.access?.nodes.length)&&<button onClick={()=>save(s=>({...s,access:{all:false,nodes:[]}}))}>恢复按路线解锁</button>}<small>恢复路线规则会保留所有学习记录。</small><hr/><strong>地图进度备份</strong><button onClick={()=>download(exportProgress(state),`wayfinder-progress-${new Date().toISOString().slice(0,10)}.json`)}><Download size={16}/>导出地图进度</button><button onClick={()=>importInput.current?.click()}><Upload size={16}/>恢复地图进度</button><small>教材笔记、生词的备份在「记录」页。录音需单独下载。</small></div></details>}/>
 
   <main className="app-main"><section className="page-heading"><div><h1>学习地图</h1><p>从零基础走向 IELTS 6.5。按路线学习，也能直接解锁想学的内容。</p></div><div className="heading-next"><span>{passed} / {nodes.length} 站完成学习</span><button className="primary" onClick={()=>navigate(current,true)}>继续学习<ArrowRight size={17}/></button><small>{nodeById(current)!.title}</small></div></section>
@@ -108,7 +109,7 @@ function App() {
    <footer className="site-footer"><span>一张地图，一步一个目标。</span><span>Academic 6.5 <i /> 学习解锁规则为本站练习安排</span></footer>
   </main>
   {message && <div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={() => setMessage('')}><X size={16}/></button></div>}
-  {route.learn && <LearningRoom key={selected.id} node={selected} state={state} save={save} close={() => navigate(selected.id)} select={id => navigate(id, true)}/>}
+
   {restore && <dialog className="restore-dialog" ref={restoreDialog} onCancel={() => setRestore(null)} aria-labelledby="restore-title"><h2 id="restore-title">恢复地图进度</h2><p>备份中有 {Object.keys(restore.records).length} 个节点记录。确认后替换本地图进度；教材笔记、生词等原有记录会保留。</p><p>当前进度会先下载为一份回退备份。</p><div><button className="secondary" onClick={() => setRestore(null)}>取消</button><button className="primary" onClick={() => { download(raw.current || exportProgress(state), 'wayfinder-before-restore.json'); try {
         const encoded = JSON.stringify(restore);
         localStorage.setItem(storageKey, encoded);

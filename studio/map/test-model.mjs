@@ -154,6 +154,25 @@ for(const access of [{all:'yes',nodes:[]},{all:false,nodes:['unknown']},{all:fal
  let rejected=false;try{m.parseProgress(JSON.stringify({...blank,access}))}catch{rejected=true}check(rejected,'Malformed access settings rejected');
 }
 let futureRejected=false;try{m.parseProgress(JSON.stringify({...blank,records:{first:{...m.emptyRecord(),startedAt:now+100000}}}))}catch{futureRejected=true}check(futureRejected,'Future start timestamp rejected');
+
+let focused=m.unlockNode(m.emptyProgress(),'nce1-1');
+focused=m.changeStudyStep(focused,'nce1-1',2);
+check(focused.records['nce1-1'].studyStep===2&&focused.records['nce1-1'].phase==='learn','Only current learning position changes');
+check(!m.achieved(first,focused),'Moving through teaching never grants completion');
+focused=m.changeStudyStep(focused,'nce1-1',3);
+focused.records['nce1-1'].answers=['saved answer'];
+focused.records['nce1-1'].questionIndex=1;
+focused=m.changeStudyStep(focused,'nce1-1',1);
+check(focused.records['nce1-1'].assisted,'Returning to teaching during a quiz marks assistance');
+focused=m.changeStudyStep(focused,'nce1-1',3);
+check(focused.records['nce1-1'].answers[0]==='saved answer'&&focused.records['nce1-1'].questionIndex===1,'Step changes preserve in-progress answers and position');
+let restored=m.parseProgress(m.exportProgress(focused));
+check(restored.records['nce1-1'].questionIndex===1&&restored.records['nce1-1'].studyStep===1,'Focused progress survives backup restoration');
+focused=m.restartQuiz(restored,'nce1-1');
+check(focused.records['nce1-1'].round===1&&!focused.records['nce1-1'].assisted&&focused.records['nce1-1'].answers.length===0&&focused.records['nce1-1'].questionIndex===0,'Explicit retry resets only current quiz');
+check(m.changeStudyStep(focused,'nce1-1',4)===focused,'Invalid teaching step cannot be saved');
+check(m.changeStudyStep(focused,'nce1-3',1)===focused,'Locked nodes cannot create learning evidence');
+for(const field of ['studyStep','questionIndex','exampleIndex']){const malformed=structuredClone(focused);malformed.records['nce1-1'][field]=100;assert.throws(()=>m.parseProgress(JSON.stringify(malformed)));count++;}
 console.log(`${count} checks passed: 168 source-bound units, audio evidence, source pairing, gates, spaced review, projects, four skills, mocks and progress safety.`);
 if(process.argv.includes('--fixtures')){
  const dir=path.join(root,'../work/map-verification');await fs.mkdir(dir,{recursive:true});

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ArrowUpRight, Check, CheckCircle2, ChevronLeft, Lightbulb, Lock, RotateCcw, X, Flag, BookOpen, ExternalLink } from 'lucide-react';
-import { nodes, unitNodes, unitById, nodeById, questionsFor, courseUrl, resources, type MapNode } from './content';
-import {stable, nextReviewAt, unlockNode, startNode, learningLabel, manuallyUnlocked, isReady} from './model';
+import { nodes, unitNodes, unitById, originalSite, nodeById, questionsFor, courseUrl, resources, type MapNode } from './content';
+import {stable, nextReviewAt, unlockNode, startNode, learningLabel, manuallyUnlocked, isReady, changeStudyStep, restartQuiz} from './model';
 import {AudioSpace, StopAudio, Recorder} from './media';
 import {StarterTeaching, UnitTeaching, CourseRoom, QuestionAnswer} from './course';
 import { updateDraft, emptyRecord, statusMap, grade, passedQuiz, submitQuiz, criteriaFor, evidenceErrors, mockErrors, overallBand, officialReached, today, type Progress, type NodeRecord, type Evidence, type Mock } from './model';
@@ -14,55 +14,32 @@ function Link({ href, children }: {
 function Errors({ errors }: {
     errors: string[];
 }) { return errors.length ? <div className="form-errors" role="alert"><strong>还需要完成</strong><ul>{errors.map(e => <li key={e}>{e}</li>)}</ul></div> : null; }
-export function LearningRoom({ node, state, save, close, select }: {
-    node: MapNode;
-    state: Progress;
-    save: Save;
-    close: () => void;
-    select: (id: string) => void;
-}) {
-    const dialog = useRef<HTMLDialogElement>(null);
-    const [choice, setChoice] = useState('');
-    const record = state.records[node.id] || emptyRecord();
-    const statuses = statusMap(state);
-    const locked = statuses[node.id] === 'locked';
-    useEffect(()=>{if(!locked)save(s=>startNode(s,node.id));},[node.id,locked]);
-    useEffect(() => { const el = dialog.current; el?.showModal(); return () => el?.close(); }, []);
-    const patch = (change: Partial<NodeRecord>) => save(s => ({ ...s, records: { ...s.records, [node.id]: { ...(s.records[node.id] || emptyRecord()), ...change } } }));
-    const questions = questionsFor(node, record.round);
-    const last = record.attempts.at(-1);
-    const checked = !!last && last.round === record.round;
-    const pass = checked && passedQuiz(node, last!);
-    const result = checked ? grade(node, last!.answers, last!.round) : [];
-    const mini = node.mission?.mini;
-    const next = [...nodes,...unitNodes].filter(n => n.requires.includes(node.id) && statuses[n.id] === 'available');
-    function start() { requestAnimationFrame(()=>dialog.current?.scrollTo({top:0})); patch({ phase: 'challenge', ...(checked ? { round: record.round + 1, answers: [], heard: [], assisted: false } : {}) }); }
-    return <dialog ref={dialog} className="learning-dialog" onCancel={e => { e.preventDefault(); close(); }} aria-labelledby="lesson-title"><AudioSpace controls={!locked&&['starter','unit','lesson'].includes(node.kind)}>
-  <header className="room-header"><button onClick={close} className="back-button"><ChevronLeft size={16}/>回到地图</button><span>句句有进步 · 学习空间</span><button className="icon-button" aria-label="关闭学习内容" onClick={close}><X size={20}/></button></header>
-  <div className="room-content"><div className="eyebrow">{node.kind === 'checkpoint' ? 'CHECKPOINT' : node.kind === 'mock' ? 'FULL PRACTICE' : node.kind === 'finish' ? 'THE SUMMIT' : 'ONE STEP AT A TIME'}</div><h1 id="lesson-title">{node.title}</h1><p className="room-goal">{node.subtitle}</p><div className="room-status">{manuallyUnlocked(node,state)?<span className="manual-note">手动解锁</span>:null}<span>{learningLabel(node,state)}</span>{node.parent&&<button className="text-button" onClick={()=>select(node.parent!)}>返回本章目录</button>}{(node.kind==='unit'||node.kind==='course')&&<a className="text-button" href={courseUrl(node)}>本课教材与练习<ArrowRight size={14}/></a>}</div>
-   {locked ? <div className="locked-room"><Lock size={28}/><h2>这一站尚未解锁</h2><button className="primary full" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button><p>解锁不会增加已完成数量。也可以先按推荐路线学习：</p>{(node.parent && statuses[node.parent]==='locked' ? [node.parent] : node.requires).filter(id => statuses[id] !== 'passed').map(id => <button key={id} className="secondary" onClick={() => select(id)}>{nodeById(id)!.title}<ArrowRight size={16}/></button>)}</div> :
-            node.kind === 'course' ? <CourseRoom node={node} state={state} save={save} select={select}/> : ['lesson','checkpoint','starter','unit'].includes(node.kind) ? <>
-    <div className="lesson-tabs"><button className={record.phase === 'learn' ? 'active' : ''} onClick={() => patch({ phase: 'learn', ...(record.phase === 'challenge' && !checked ? { assisted: true } : {}) })}>01 理解与跟练</button><button className={record.phase === 'challenge' ? 'active' : ''} onClick={() => patch({ phase: 'challenge' })}>02 独立检验</button></div>
-    {record.phase === 'learn' ? <><StopAudio key={record.phase}/>
-     {node.kind==='starter' ? <StarterTeaching node={node}/> : node.kind==='unit' ? <UnitTeaching unit={unitById(node.id)!} state={state} save={save}/> : mini ? <><div className="example-card"><span className="mini-label">看一个例子</span><p lang="en">{mini.en}</p><p className="translation">{mini.zh}</p></div><div className="teaching-note"><Lightbulb size={21}/><p>{mini.tip}</p></div>
-      <div className="practice-block"><span className="mini-label">先试一下 · 可以看示范</span><h3>{mini.prompt}</h3><div className="choices">{mini.options.map(o => <button key={o} onClick={() => setChoice(o)} className={choice === o ? 'picked' : ''}>{o}{choice === o && o === mini.answer && <Check size={16}/>}</button>)}</div>{choice && <div className={`practice-feedback ${choice === mini.answer ? 'correct' : ''}`} role="status">{choice === mini.answer ? '这次选对了。' : '看看句子中的变化。'} {mini.why}</div>}</div>
-      <div className="support-links"><a href={courseUrl(node)}><BookOpen size={16}/>打开课文、原声与讲解<ArrowRight size={14}/></a></div>
-     </> : <div className="checkpoint-intro"><Flag size={30}/><h2>把这段路连接起来</h2><p>完成 {questions.length} 道混合题，检查能否独立提取刚学过的用法。全部答对后，下一段路线自动点亮。</p><div className="topic-tags">{node.members?.map(id => <span key={id}>{nodeById(id)!.title}</span>)}</div><p className="muted">需要补漏时，可从地图回到任意已解锁节点复习。</p></div>}
-     <button className="primary full" onClick={start}>收起示范，开始独立检验<ArrowRight size={17}/></button><p className="footnote">本节点只验证题目对应的知识点；完整听说读写能力在后续实践中检验。</p>
-    </> : <><StopAudio key={record.phase}/>
-     <div className="quiz-intro"><span>{questions.length} 道题 · 本轮全部答对即可过关</span><span>检验 {record.round + 1}</span></div>
-     <form onSubmit={e => { e.preventDefault(); if (!checked)
-                    save(s => submitQuiz(s, node.id)); }}><div className="question-list">{questions.map((q, i) => <div className={`question ${checked ? (result[i] ? 'correct-answer' : 'wrong-answer') : ''}`} key={`${record.round}-${i}`}><label htmlFor={`answer-${i}`}><span>{String(i + 1).padStart(2, '0')}</span>{q.prompt}</label><QuestionAnswer q={q} index={i} round={record.round} value={record.answers[i]||''} disabled={checked} set={value=>{const answers=[...record.answers];answers[i]=value;patch({answers})}} heard={()=>{if(!checked)patch({heard:[...new Set([...(record.heard||[]),i])]})}}/>{q.clip&&!checked&&<small>{record.heard?.includes(i)?'✓ 原声已完整播放，可重听':'请先完整听完这一句，再作答。'}</small>}{checked && <p className="answer-feedback">{result[i] ? '✓ 已匹配' : '再看一下'} · {q.explanation}</p>}{record.assisted && !checked && <p className="hint">{q.explanation}</p>}</div>)}</div>
-      {!checked && <><button className="primary full" type="submit" disabled={questions.some((q,i)=>!record.answers[i]?.trim() || q.clip&&!record.heard?.includes(i))}>核验本轮答案<Check size={17}/></button><button className="hint-button" type="button" onClick={() => patch({ assisted: true })}><Lightbulb size={15}/>{record.assisted ? '本轮有提示：仅记为跟练' : '需要提示？这一轮会记为跟练'}</button></>}
-     </form>
-     {checked && <div className={`quiz-receipt ${pass ? 'success' : ''}`} role="status">{pass ? <><CheckCircle2 size={29}/><h2>{node.kind==='unit' ? stable(node,state)?'这一组，隔日巩固通过。':'这一组，初次通过。':'这一站，通过了。'}</h2><p>独立完成 {questions.length} 道题。{next.length ? `${next.length === 1 ? '下一站已解锁' : '听说读写分支已解锁'}。` : '这次巩固已记录。'} {node.kind==='unit'&&!stable(node,state)?`隔日检验最早从 ${new Date(nextReviewAt(node,state)!).toLocaleString('zh-CN')} 开始。`: '隔天再回来回想一次。'}</p>{node.parent&&<button className="secondary full" onClick={()=>select(node.parent!)}>返回本章 · 查看复习和作品</button>}{next.map(n => <button key={n.id} className="primary full" onClick={() => select(n.id)}>继续：{n.title}<ArrowRight size={16}/></button>)}<button className="secondary full" onClick={close}>回到地图，看刚点亮的路线</button></> : <><Lightbulb size={28}/><h2>{last!.assisted ? '跟练完成，再独立试一次' : '把这一处补好，再出发'}</h2><p>本轮 {result.filter(Boolean).length} / {questions.length} 题匹配。{last!.assisted ? '使用提示的练习不解锁节点。' : '看看题目下的解释，再换一组题。'}</p></>}
-      <button className="text-button" onClick={start}><RotateCcw size={15}/>{pass ? '换题巩固' : '换一组题，重新检验'}</button>
-     </div>}
-    </>}
-   </> : node.kind === 'task' || node.kind === 'mock' ? <EvidenceForm key={node.id} node={node} state={state} save={save} close={close}/> : <FinishForm state={state} save={save}/>}
-  </div>
- </AudioSpace></dialog>;
+export function LearningRoom({node,state,save,close,select}:{node:MapNode;state:Progress;save:Save;close:()=>void;select:(id:string)=>void}) {
+    const title=useRef<HTMLHeadingElement>(null);
+    const record=state.records[node.id]||emptyRecord(),statuses=statusMap(state),locked=statuses[node.id]==='locked';
+    const unit=node.kind==='unit',quiz=['unit','starter','lesson','checkpoint'].includes(node.kind);
+    const step=record.phase==='challenge'?3:record.studyStep||0;
+    const questions=questionsFor(node,record.round),index=Math.min(record.questionIndex||0,Math.max(0,questions.length-1));
+    useEffect(()=>{if(!locked)save(s=>startNode(s,node.id))},[node.id,locked]);
+    useEffect(()=>{window.scrollTo({top:0});(document.getElementById(`question-${index}`)||title.current)?.focus({preventScroll:true})},[node.id,step,index]);
+    const changeStep=(next:number)=>save(s=>changeStudyStep(s,node.id,next));
+    return <main className="focus-page"><header className="focus-header"><button className="back-button" onClick={close}><ChevronLeft size={17}/>学习地图</button><a className="focus-brand" href={originalSite+'#/library'}>句句有进步<span>课程</span></a><span className="focus-saved">进度自动保留</span></header><AudioSpace controls={false}><div className="focus-content"><div className="focus-course-heading"><p>{node.subtitle}</p><h1 ref={title} tabIndex={-1}>{node.title}</h1><span>{manuallyUnlocked(node,state)?'手动解锁 · ':''}{learningLabel(node,state)}</span></div>
+    {locked?<section className="locked-room"><Lock size={28}/><h2>这一课还没有开放</h2><p>可以直接开始，也可以按地图顺序学习。解锁不会标记已完成。</p><button className="primary" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button></section>:quiz?<>
+      <nav className="focus-steps" aria-label="本课学习步骤">{(unit?[[0,'听懂'],[1,'看懂'],[2,'自己用'],[3,'检验']]:[[0,'听与跟练'],[3,'自己试']]).map(([value,label],i)=><button key={value} aria-current={step===value?'step':undefined} onClick={()=>changeStep(Number(value))}><span>{i+1}</span>{label}</button>)}</nav><StopAudio key={`${step}-${index}`}/>
+      {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}
+    </>:node.kind==='course'?<CourseRoom node={node} state={state} save={save} select={select}/>:node.kind==='task'||node.kind==='mock'?<EvidenceForm key={node.id} node={node} state={state} save={save} close={close}/>:<FinishForm state={state} save={save}/>}
+    {node.parent&&<div className="focus-chapter-link"><button className="text-button" onClick={()=>select(node.parent!)}>查看本章课次</button></div>}
+    </div></AudioSpace></main>;
 }
+function FocusedQuiz({node,state,save,select,close}:{node:MapNode;state:Progress;save:Save;select:(id:string)=>void;close:()=>void}){
+  const record=state.records[node.id]||emptyRecord(),questions=questionsFor(node,record.round),last=record.attempts.at(-1),checked=!!last&&last.round===record.round;
+  const index=Math.min(record.questionIndex||0,questions.length-1),q=questions[index];
+  const patch=(change:Partial<NodeRecord>)=>save(s=>({...s,records:{...s.records,[node.id]:{...(s.records[node.id]||emptyRecord()),...change}}}));
+  const complete=(i:number)=>!!record.answers[i]?.trim()&&(!questions[i].clip||!!record.heard?.includes(i));
+  if(checked){const pass=passedQuiz(node,last),result=grade(node,last.answers,last.round),statuses=statusMap(state),next=[...nodes,...unitNodes].find(n=>n.requires.includes(node.id)&&statuses[n.id]==='available');return <section className={`quiz-receipt focus-receipt ${pass?'success':''}`} role="status">{pass?<CheckCircle2 size={32}/>:<Lightbulb size={32}/>}<h2>{pass?node.kind==='unit'?(stable(node,state)?'隔日巩固通过':'这一组，初次通过'):'这一站，通过了':last.assisted?'跟练完成，再独立试一次':'先补好这一处'}</h2><p>{result.filter(Boolean).length} / {questions.length} 题匹配。{pass&&node.kind==='unit'&&!stable(node,state)?`隔日检验最早从 ${new Date(nextReviewAt(node,state)!).toLocaleString('zh-CN')} 开始。`:last.assisted?'本轮看过提示，只记录为跟练。':pass?'这次独立练习已经保存。':'回看错题，再换一组题试试。'}</p><details className="answer-review"><summary>查看本轮答案与解释</summary>{questions.map((item,i)=><article key={i}><strong>{i+1}. {item.prompt}</strong><p>{last.answers[i]||'未作答'}</p><p>{result[i]?'✓ 已匹配':'需要修补'} · {item.explanation}</p></article>)}</details>{pass&&next?<button className="primary full" onClick={()=>select(next.id)}>继续：{next.title}<ArrowRight size={17}/></button>:<button className="primary full" onClick={()=>save(s=>restartQuiz(s,node.id))}>{pass?'换题巩固':'换一组题，再试一次'}<ArrowRight size={17}/></button>}{pass&&next&&<button className="text-button" onClick={()=>save(s=>restartQuiz(s,node.id))}>再练本课</button>}<button className="text-button" onClick={close}>回到学习地图</button></section>}
+  return <section className="focus-quiz" aria-label="独立检验"><div className="quiz-position"><span>第 {index+1} / {questions.length} 题</span><span>{record.assisted?'本轮跟练':'独立检验'}</span></div><div className="quiz-meter"><span style={{width:`${(index+1)/questions.length*100}%`}}/></div><form onSubmit={e=>{e.preventDefault();if(index<questions.length-1){if(complete(index))patch({questionIndex:index+1});return}const missing=questions.findIndex((_,i)=>!complete(i));if(missing>=0){patch({questionIndex:missing});return}save(s=>submitQuiz(s,node.id))}}><div className="question" key={`${record.round}-${index}`}><h2 tabIndex={-1} id={`question-${index}`}>{q.prompt}</h2><QuestionAnswer q={q} index={index} round={record.round} value={record.answers[index]||''} disabled={false} set={value=>{const answers=[...record.answers];answers[index]=value;patch({answers})}} heard={()=>patch({heard:[...new Set([...(record.heard||[]),index])]})}/>{q.clip&&<p className="footnote">{record.heard?.includes(index)?'原声已播放完成，可以重听。':'先完整听完原声，再作答。'}</p>}{record.assisted&&<p className="hint">{q.explanation}</p>}</div><div className="quiz-actions"><button type="button" className="text-button" disabled={index===0} onClick={()=>patch({questionIndex:index-1})}>上一题</button><button type="submit" className="primary" disabled={!complete(index)}>{index===questions.length-1?'提交本轮检验':'下一题'}<ArrowRight size={17}/></button></div><button type="button" className="hint-button" onClick={()=>patch({assisted:true})}>{record.assisted?'已看提示，本轮记为跟练':'需要提示'}</button></form></section>;
+}
+
 function EvidenceForm({ node, state, save, close }: {
     node: MapNode;
     state: Progress;
@@ -70,6 +47,7 @@ function EvidenceForm({ node, state, save, close }: {
     close: () => void;
 }) {
     const record = state.records[node.id] || emptyRecord();
+    const [editing,setEditing]=useState(!!record.draft||!!record.evidence||!!record.mock);
     const isMock = node.kind === 'mock';
     const base = { ...blankEvidence(), scores: ['', '', '', ''], kind: 'academic' as const, reference: '', ...(isMock ? record.mock : record.evidence), ...record.draft } as Mock;
     const [errors, setErrors] = useState<string[]>([]);
@@ -90,8 +68,8 @@ function EvidenceForm({ node, state, save, close }: {
         setSaved(!problems.length);
     }
     const field = (key: keyof Evidence | 'reference', label: string, placeholder: string, large = false) => <label className="form-field">{label}{large ? <textarea rows={3} required maxLength={10000} value={String(base[key])} placeholder={placeholder} onChange={e => change(key, e.target.value)}/> : <input required maxLength={500} value={String(base[key])} placeholder={placeholder} onChange={e => change(key, e.target.value)}/>}</label>;
-    return <><div className="assignment-brief"><span className="mini-label">这一站怎么练</span><p>{isMock ? '选择合法取得、没做过的一套完整 Academic 试卷，独立限时完成听、读、写、说。听读按该卷答案和换分说明核对；口写交给熟悉 IELTS 标准的评阅者。' : task?.work}</p><p className="goal-line"><Flag size={16}/>{isMock ? '本站终点门槛：两套不同的新卷，在不同日期完成，总分都至少 6.5，并满足确认后的单项要求。' : task?.check}</p><div className="resource-links">{links.map(id => resources[id] && <Link key={id} href={resources[id].url}>{resources[id].title}</Link>)}{task?.course && <a href={courseUrl(node)}>打开对应练习<ArrowRight size={14}/></a>}</div></div>
-  <h2 className="form-heading">{isMock ? '留下完整结果' : '记录实践与评阅'}</h2><p className="muted">材料与评阅由你填写；本站检查记录是否满足门槛，不独立核验评阅真伪。</p>
+    return <>{!editing?<><div className="assignment-brief"><span className="mini-label">这一站怎么练</span><p>{isMock ? '选择合法取得、没做过的一套完整 Academic 试卷，独立限时完成听、读、写、说。听读按该卷答案和换分说明核对；口写交给熟悉 IELTS 标准的评阅者。' : task?.work}</p><p className="goal-line"><Flag size={16}/>{isMock ? '本站终点门槛：两套不同的新卷，在不同日期完成，总分都至少 6.5，并满足确认后的单项要求。' : task?.check}</p><div className="resource-links">{links.map(id => resources[id] && <Link key={id} href={resources[id].url}>{resources[id].title}</Link>)}{task?.course && <a href={courseUrl(node)}>打开对应练习<ArrowRight size={14}/></a>}</div></div>
+  <button className="primary full" onClick={()=>setEditing(true)}>记录本次练习结果<ArrowRight size={17}/></button></>:<><button className="text-button" onClick={()=>setEditing(false)}>← 查看练习要求</button><h2 className="form-heading">{isMock ? '留下完整结果' : '记录实践与评阅'}</h2><p className="muted">材料与评阅由你填写；本站检查记录是否满足门槛，不独立核验评阅真伪。</p>
   <form onSubmit={submit} className="evidence-form"><label className="form-field">完成日期<input type="date" required max={today()} value={base.date} onChange={e => change('date', e.target.value)}/></label>
    {field('material', isMock ? '试卷名称与编号' : '材料与题目编号', isMock ? '例如：所用 Academic 试卷及 Test 编号' : '写明来源、篇目或题号')}
    {field('work', node.lane==='writing'?'保留实际英文原稿':'你的作答与作品', node.lane==='writing'?'粘贴独立限时完成的原稿；两篇任务注明 Task 1 和 Task 2。':'写下答案，或录音文件名和具体内容摘要。', true)}
@@ -106,7 +84,7 @@ function EvidenceForm({ node, state, save, close }: {
    {!isMock&&field('revision','换题复验','写明另一组新题编号、完成结果、同类错误是否改善。',true)}
    <Errors errors={errors}/>{saved && <div className="saved-message" role="status"><CheckCircle2 size={22}/><span>记录符合这一站的门槛，后续节点已点亮。</span><button type="button" onClick={close}>返回地图<ArrowRight size={14}/></button></div>}
    <button className="primary full" type="submit">保存结果，核验解锁条件<ArrowRight size={16}/></button><p className="footnote">未达标的结果也会保留，方便修补后重新检验。已有记录修改后会重新判断后续解锁状态。</p>
-  </form>
+  </form></>}
  </>;
 }
 function ScoreFields({ scores, set }: {
