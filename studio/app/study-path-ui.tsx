@@ -5,21 +5,14 @@ import {Checkbox} from '@/components/ui/checkbox';
 import {toast} from 'sonner';
 import {type State,type NceBookId} from './model';
 import {navigate} from './navigation';
+import {RoadmapPlan} from './learning-roadmap-ui';
 import {ONLINE} from './runtime-mode';
 import {bookNames,studyUnit,recommendedStudy,reviewChecks,reviewInterval,saveUnitReview} from './study-path';
 import {guideFor,guideResume,readGuide} from './expression-guide';
 import {loadLessonLanguage,type LessonLanguage} from './language';
 import {splitLesson} from './lesson-structure';
 
-export function StudyRoute(){
- const stages=[
-  {title:'一册 · 两课一起学',body:'72 组课文与句型练习。先理解、听清，再用几个简单句说自己的事。',check:'能听懂同难度的新对话，并完成基础表达。',action:'从第一册开始',go:()=>navigate({view:'nce',book:'NCE1'})},
-  {title:'二册 · 把语言用起来',body:'练短文听力、复述和段落写作；中后段逐步加入雅思日常话题。',check:'能讲清一段经历，也能写成连贯短文。',action:'进入第二册',go:()=>navigate({view:'nce',book:'NCE2'})},
-  {title:'三册选学 · 雅思衔接',body:'按弱项选学三册，更多时间用于雅思听说读写。四册可留到以后。',check:'熟悉题型，知道自己卡在理解、表达还是时间。',action:'开始雅思衔接',go:()=>navigate({view:'ielts',tab:'listening'})},
-  {title:'专项训练 · 完整模考',body:'使用未做过的官方材料，按考试时间完成；口语和写作接受专业反馈。',check:'多次完整模考达到自己的总分及单项要求。',action:'查看官方练习',go:null}
- ];
- return <div className="study-route"><p className="muted small">以雅思 6.5 为方向，按实际能力调整进度；下面是学习建议，教材册数和自查勾选不换算成考试分数。</p><div className="ielts-roadmap">{stages.map((stage,i)=><section key={stage.title}><span>0{i+1}</span><h3>{stage.title}</h3><p>{stage.body}</p><p className="stage-check">{stage.check}</p>{stage.go?<button className="text-btn" onClick={stage.go}>{stage.action}<ArrowRight size={15}/></button>:<a className="text-btn" href="https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test" target="_blank" rel="noreferrer">{stage.action}<ArrowRight size={15}/></a>}</section>)}</div></div>
-}
+export function StudyRoute(){return <RoadmapPlan/>;}
 
 export function TodayStudy({state}:{state:State}){
  const next=recommendedStudy(state),draft=readGuide(state.drafts[`expression-${next.book}-${next.first}`]);

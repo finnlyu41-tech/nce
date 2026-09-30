@@ -24,9 +24,9 @@ export function ListeningNext({book,lesson,state,update}:Props){
  return <section className="learning-next"><div><strong>合上课文，试着说清大意</strong><p className="muted small">谁在做什么？关键变化是什么？说不清的句子再听一遍。</p></div><button className="btn" onClick={()=>{update(s=>updateLearning({...s,days:[...new Set([...s.days,day()])]},book,lesson,r=>({...r,listened:true})));navigate({view:'nce',book,lesson,tab:'grammar'})}}>{record.listened?'继续学本课用法':'我已试着概括，学本课用法'}<ArrowRight size={16}/></button></section>;
 }
 export function LearningTeaching({book,lesson}:Pick<Props,'book'|'lesson'>){
- const entry=grammarEntryFor(book,lesson);
+ const entry=grammarEntryFor(book,lesson),route=useRoute();
  if(!entry)return null;
- return <section className="panel learning-teaching"><GrammarExplanation key={entry.id} entry={entry} onPractice={goal=>navigate({view:'nce',book,lesson,tab:'practice',goal,practice:'model'})}/><div className="learning-next"><p className="small muted">本站讲解对应{studyUnit(book,lesson).label} · 原书第 {grammarPrintedPage(book,entry.sections[0].page)} 页</p></div><button className="text-btn" onClick={()=>navigate({view:'grammar',book,lesson:entry.lesson})}><BookOpen size={16}/>查原书与本册目录</button></section>;
+ return <section className="panel learning-teaching"><GrammarExplanation key={`${entry.id}-${route.goal||''}`} entry={entry} initialGoal={route.goal} onPractice={goal=>navigate({view:'nce',book,lesson,tab:'practice',goal,practice:'model'})}/><div className="learning-next"><p className="small muted">本站讲解对应{studyUnit(book,lesson).label} · 原书第 {grammarPrintedPage(book,entry.sections[0].page)} 页</p></div><button className="text-btn" onClick={()=>navigate({view:'grammar',book,lesson:entry.lesson})}><BookOpen size={16}/>查原书与本册目录</button></section>;
 }
 export function LearningPractice({book,lesson,state,update}:Props){
  const route=useRoute(),unit=studyUnit(book,lesson),goals=lessonGoals(book,lesson),record=learningFor(state,book,lesson);
@@ -36,13 +36,12 @@ export function LearningPractice({book,lesson,state,update}:Props){
  const checked=!!goal.answer.trim()&&goal.checked===goal.answer,matched=checked&&answerMatches(goal.answer,question.answer),due=goal.dueAt>0&&goal.dueAt<=Date.now();
  const summary=learningSummary(state,book,lesson),index=goals.indexOf(guide);
  function patch(fn:(goal:GoalRecord)=>GoalRecord){update(s=>updateGoal(s,book,lesson,guide.id,fn))}
- function move(next:LearningPhase,id=guide.id){if(id===guide.id&&next==='model'&&(!goal.checked||goal.checked!==goal.answer)&&(phase==='independent'||phase==='review'))patch(g=>({...g,hinted:true}));update(s=>updateLearning(s,book,lesson,r=>({...r,goal:id,phase:next})));navigate({view:'nce',book,lesson,tab:'practice',goal:id,practice:next},{scrollTarget:'learning-practice'})}
+ function move(next:LearningPhase,id=guide.id){if(id===guide.id&&next==='model'&&(!goal.checked||goal.checked!==goal.answer)&&(phase==='independent'||phase==='review'))patch(g=>({...g,hinted:true}));update(s=>updateLearning(s,book,lesson,r=>({...r,goal:id,phase:next})));navigate({view:'nce',book,lesson,tab:'practice',goal:id,practice:next},{scrollTarget:'lesson-content'})}
  function check(){if(!goal.answer.trim()||checked)return;const at=Date.now();patch(g=>({...recordCheck(g,{at,variant,matched:answerMatches(g.answer,question.answer),hinted:g.hinted}),checked:g.answer}));update(s=>({...s,days:[...new Set([...s.days,day()])]}))}
- const phases=[['model','跟着做'],['independent','独立试'],['transfer','自己用']] as const;
  return <section className="panel learning-practice" id="learning-practice" aria-label="本课目标练习">
   <div className="section-top"><div><span className="eyebrow">本课要点 {index+1} / {goals.length}</span><h2>{guide.title}</h2></div><span className="pill">{goalStatus(goal)}</span></div>
   {goals.length>1&&<nav className="learning-goal-tabs" aria-label="选择要练的用法">{goals.map((g,i)=><button key={g.id} aria-pressed={g.id===guide.id} onClick={()=>move(record.goals[g.id]?.worked?'independent':'model',g.id)}>{i+1}. {g.title}</button>)}</nav>}
-  <nav className="learning-phases" aria-label="练习步骤">{phases.map(([id,label],i)=><button key={id} aria-current={phase===id?'step':undefined} onClick={()=>move(id)}><span>{i+1}</span>{label}</button>)}{phase==='review'&&<span className="learning-review-phase">隔天检验</span>}</nav>
+
   {phase==='model'&&<div className="learning-stage"><h3>先理解为什么这样说</h3><p>{guide.idea}</p><div className="learning-pattern">{guide.pattern}</div><div className="learning-example"><WordText text={guide.examples[0].en} exampleTranslation={guide.examples[0].zh}/><p>{guide.examples[0].zh}</p><p className="muted">{guide.examples[0].note}</p><button className="text-btn" onClick={()=>speak(guide.examples[0].en)}><Volume2 size={17}/>听示范 · 设备朗读</button></div><p className="learning-tip">{guide.pitfall}</p><p>读一遍例句，指出哪一部分用了本课句型，再合上提示试一句。</p><button className="btn" onClick={()=>{patch(g=>({...g,worked:true}));move('independent')}}>合上示范，自己试<ArrowRight size={16}/></button></div>}
   {(phase==='independent'||phase==='review')&&<div className="learning-stage">
    {phase==='review'&&due&&goal.checked?<><h3>隔一段时间，换一句试试</h3><p>上次的答案已经保存。这次先不看句型和参考，看看还能不能自己说出来。</p><button className="btn" onClick={()=>patch(nextReviewRound)}>开始新的检验<ArrowRight size={16}/></button></>:<>
