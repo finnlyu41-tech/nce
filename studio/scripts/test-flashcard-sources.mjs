@@ -67,6 +67,28 @@ for(const tab of ['index','book']){
  assert.deepEqual(state,before,'Source components do not alter a legacy schedule themselves');
 }
 
+// The compact word row must bind originals to its visible meaning line. The
+// full dictionary definition is still retained by the enrollment callback.
+const bookEntry={word:'book',ipa:'bʊk',meaning:'n. 书, 书籍\nv. 登记, 预订',source:'ecdict'};
+const bookCatalog={lessons:[{...first,key:'NCE1-1',words:[{word:'book',forms:[]}]}],terms:[{key:'book',word:'book',sources:[first]}],entries:1};
+for(const [query,sense] of [['','书；书籍'],['预订','预订；预约']]){
+ reset([bookCatalog,'',0,{book:bookEntry},false,false,0,null],{view:'words',tab:'index',query});
+ let saved;
+ const tree=TextbookVocabularyBrowser({state,onAdd:word=>{saved=word}});
+ const row=find(tree,node=>typeof node.type==='function'&&node.type.name==='VocabularyRow');
+ const rendered=row.type(row.props);
+ const usage=find(rendered,node=>typeof node.type==='function'&&node.type.name==='VocabularyExamples');
+ assert.deepEqual(usage.props.examples.map(example=>example.sense),[sense],'Only the displayed dictionary sense receives an original example');
+ find(rendered,node=>node.type==='button'&&node.props.className?.includes('vocabulary-enroll')).props.onClick();
+ assert.equal(saved.meaning,bookEntry.meaning,'A display filter must not rewrite the saved definition');
+ assert.equal(saved.example,usage.props.examples[0].en);
+ assert.equal(saved.exampleTranslation,usage.props.examples[0].zh);
+}
+reset([{word:'book',example:''},bookEntry,false,'',false],{});let savedFallback;
+const lookupFallback=WordLookupProvider({children:null,onAdd:word=>{savedFallback=word}});
+find(lookupFallback,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+assert(savedFallback.example.includes('borrowed a book')&&savedFallback.exampleTranslation.includes('借了一本'),'Lookup fallback enrollment retains a matched original and translation');
+
 const selection={word:'network',example:example.en,exampleTranslation:example.zh};
 for(const {sources,route,expected} of [
  {sources:expectedSources,route:{book:'NCE3',lesson:51},expected:expectedSources},

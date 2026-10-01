@@ -1,0 +1,19 @@
+{
+  "basis": "Existing indexed lesson sentences: lexical candidates, not a manual audit of all dictionary senses",
+  "textbookTerms": 3347,
+  "textbookOccurrences": 3615,
+  "occurrencesWithBilingualCandidate": 3267,
+  "termsWithBilingualCandidate": 3047,
+  "candidatesByBook": {
+    "NCE1": 611,
+    "NCE3": 1046,
+    "NCE4": 783,
+    "NCE2": 827
+  },
+  "originalHeadwords": 32,
+  "originalSenseExamples": 39,
+  "originalsMatchingIndexedDefinitions": 32,
+  "termsWithCandidateOrReviewedOriginal": 3065,
+  "termsWithoutEither": 282,
+  "ieltsSeedExamples": 12
+}
