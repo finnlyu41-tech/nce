@@ -23,6 +23,7 @@
     "verify:vocabulary": "node scripts/test-vocabulary.mjs",
     "verify:flashcards": "node scripts/test-flashcards.mjs && node scripts/test-flashcard-sources.mjs",
     "verify:vocabulary-examples": "node scripts/test-vocabulary-examples.mjs",
+    "plan:vocabulary-review": "node scripts/plan-vocabulary-source-review.mjs",
     "package:language": "python3 scripts/package-language.py",
     "verify:playback": "node scripts/test-playback.mjs",
     "verify:loading": "node scripts/test-loading.mjs",

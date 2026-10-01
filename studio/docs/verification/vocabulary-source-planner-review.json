@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-for-reviewed-code-and-method",
+  "reviewer": "Codex /root/review_batch5c",
+  "humanCertification": false,
+  "independentReport": {
+    "path": "work/gaps94/independent-review/root-source-planner-review.json",
+    "sha256": "2f9c4f9e838e3bb32d42d3153771629450ee74e9e7fec1466c8cc91e687d67c1"
+  },
+  "reviewedFiles": {
+    "app/data/vocabulary-source-corrections.ts": "98ee52d38772af5e50c2190619911c365eebfd833de398915865e82490824131",
+    "app/textbook-vocabulary.ts": "287ce7ee308ef4c5b732d4f0cec169db1838b0881bc4006dbb00692afa0f16f5",
+    "app/reviewed-word-forms.ts": "69b5aae0030ede9190963d862d0538e7ab75f4edcd3b59e5cd9d085558dff845",
+    "scripts/test-vocabulary.mjs": "95949ca7d01dd958810d07ba941b931edfc76e764892d2c81f8b8ae5f7d8cf1b",
+    "scripts/test-flashcard-sources.mjs": "ae67b805dd539dc0ae61766f0e2dbcad62344fe0f2e3a805948d118e33afd793",
+    "scripts/audit-vocabulary-coverage.mjs": "ab1f060edd7ae24ec71aa19df87d77f0aead1af12326993b9dc0da752818347c",
+    "scripts/plan-vocabulary-source-review.mjs": "7a47337ae39777e5716a45d2cd43009037ec65d3973b0db0d2222bd1b98503a0",
+    "docs/vocabulary-source-review-queue.md": "e5586c38b653af7eb0bca7cbec7c602ee4d8d03ab919941f4321291f0094c8e6"
+  },
+  "resolvedFindings": [
+    {
+      "id": "review-finding-01",
+      "status": "fixed-and-independently-verified",
+      "severity": "reproducibility",
+      "files": [
+        "scripts/audit-vocabulary-coverage.mjs",
+        "scripts/plan-vocabulary-source-review.mjs"
+      ],
+      "originalProblem": "Audit inputHashes/compiled TS hashes omitted the review index, review/inventory documents, 276 lesson language JSON files and source mapping JSON. The planner could combine old audited content status with subsequently changed source metadata.",
+      "rootFix": "Audit read() records every actual read hash, checks repeated reads and rechecks all hashes at the end. Compiled graph captures TS and JSON. Independent review proof documents and their file bindings are read and frozen. Planner requires the new auditReadHashes schema and verifies the combined freeze map.",
+      "verification": {
+        "frozenReadCount": 319,
+        "languageResourceFiles": 276,
+        "reviewDocuments": 19,
+        "allReviewDocumentsFrozen": true,
+        "compiledMappingJsonFrozen": true,
+        "oldSnapshotRefused": true,
+        "plannerChangedInputProbes": 7,
+        "plannerMidRunMutationRefused": true,
+        "auditChangedInputProbes": 6,
+        "auditIndependentProofBindingProbes": 3
+      }
+    },
+    {
+      "id": "review-finding-02",
+      "status": "fixed-and-independently-verified",
+      "severity": "source-guard",
+      "file": "app/textbook-vocabulary.ts",
+      "originalProblem": "The canonical withdraw headword and PDF112/hash gates ran only while filtering a still-present withdrawn alias. An already-corrected index could omit withdraw or carry a wrong PDF112 hash and still build successfully.",
+      "originalReproductions": [
+        {
+          "mode": "missing-canonical-after-correction",
+          "rejected": false,
+          "entries": 3613
+        },
+        {
+          "mode": "wrong-pinned-hash-after-correction",
+          "rejected": false,
+          "entries": 3614
+        }
+      ],
+      "rootFix": "After all raw items are validated, source corrections are selected by exact book and lesson, and every canonical/page/hash anchor is checked before filtering. The alias may already be absent.",
+      "verifiedCurrentFileSha256": "287ce7ee308ef4c5b732d4f0cec169db1838b0881bc4006dbb00692afa0f16f5",
+      "postFixTests": [
+        {
+          "name": "valid-already-corrected-index-idempotent",
+          "status": "passed"
+        },
+        {
+          "name": "missing-canonical-after-correction",
+          "status": "rejected-as-required",
+          "error": "原书词头修订与当前词表不一致，请重新加载教材词表。"
+        },
+        {
+          "name": "wrong-pinned-hash-after-correction",
+          "status": "rejected-as-required",
+          "error": "原书词头修订与当前词表不一致，请重新加载教材词表。"
+        }
+      ]
+    }
+  ],
+  "sourceBoundary": {
+    "lessons": 348,
+    "sourceWordUnits": 3614,
+    "distinctCanonicalTerms": 3346,
+    "pages": 386,
+    "recordedEmptyLessons": 27
+  },
+  "methodConclusions": [
+    "All source units remain in the finite queue; normalized book/lesson/headword IDs are unique and exactly match the corrected catalog.",
+    "Every lexical candidate has senseReviewComplete=false, including complete source units; a lexical match alone never certifies the source target.",
+    "Source enumeration pending units have confirmedPrintedTargetCount=null; completion requires explicit source inventory evidence.",
+    "Printed gloss and POS evidence are kept separate from inferred POS and editorial definitions. Every transcription still carries whole-entry reconciliation obligations.",
+    "Strict printed targets, textbook-target-editorial-normalized and textbook-target-grammar-normalized evidence are separately counted. Normalized targets do not close a printed inventory.",
+    "The full printed target denominator remains null; globalTargetCompletion=false and percentageClaim=null. 3614 is a finite source-word work denominator, not an all-sense count or completion claim.",
+    "All planner outputs are under ignored work/vocabulary-coverage paths; simple subdirectory name checks reject traversal."
+  ],
+  "historicalReviewSnapshot": {
+    "name": "gaps94-batch6c-frozen",
+    "contentCommit": "fe2a338",
+    "counts": {
+      "lessonBoundary": 348,
+      "sourceWordReviewUnits": 3614,
+      "sourceWordsWithCompleteTargetInventory": 20,
+      "sourceWordEnumerationPending": 3594,
+      "sourceWordsWithRegisteredTargets": 201,
+      "candidateOnlySourceWords": 3267,
+      "sourcePagesToReconcile": 386,
+      "recordedEmptyLessonsToConfirm": 27,
+      "knownReviewedPrintedTargets": 203,
+      "knownEditoriallyNormalizedTargets": 1,
+      "knownGrammarNormalizedTargets": 3,
+      "confirmedWholeTextbookPrintedTargetDenominator": null
+    },
+    "note": "This historical 6c fixture is code/method review evidence. Final integrated counts require a fresh root audit and queue."
+  },
+  "protectedModelChecks": {
+    "unchangedDuringAudit": true,
+    "matchesFrozenBaseline": true
+  },
+  "remainingCodeBlockers": [],
+  "limits": {
+    "humanCertification": false,
+    "languageContentReReviewedByThisCodeTask": false,
+    "completeWholeTextbookPrintedInventory": false,
+    "browserVerified": false,
+    "realAudioVerified": false,
+    "deploymentVerified": false,
+    "actualLearningRecordMigrationExecuted": false,
+    "note": "This is a code/method review with synthetic record-preservation fixtures and one actual source-image inspection. It is not a browser, human pronunciation or whole-textbook semantic acceptance claim."
+  }
+}

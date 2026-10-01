@@ -10,15 +10,20 @@ const outputSubdir=process.argv.find(arg=>arg.startsWith('--output-subdir='))?.s
 assert(/^[A-Za-z0-9_-]*$/.test(outputSubdir),'Output subdirectory must be a simple name under work/vocabulary-coverage/');
 const outputRelative='work/vocabulary-coverage/'+(outputSubdir?outputSubdir+'/':'');
 const output=new URL(outputRelative,root);
-const read=path=>readFile(new URL(path,root),'utf8');
 const hash=text=>createHash('sha256').update(text).digest('hex');
+const auditReadHashes={};
+const read=async path=>{
+ const text=await readFile(new URL(path,root),'utf8'),actual=hash(text);
+ if(Object.hasOwn(auditReadHashes,path))assert.equal(actual,auditReadHashes[path],'Input changed during audit: '+path);
+ auditReadHashes[path]=actual;return text;
+};
 const canonical=value=>JSON.stringify(value,Object.keys(value).sort());
 const contentIdentity=example=>hash(JSON.stringify({id:example.id,word:example.word,sense:example.sense,matches:example.matches,en:example.en,zh:example.zh,collocation:example.collocation,origin:example.origin,partOfSpeech:example.partOfSpeech,teachingDefinition:example.teachingDefinition,teachingSources:example.teachingSources,teachingIpa:example.teachingIpa}));
 const hasDeclaredContentReview=record=>Array.isArray(record?.reviewed)&&[/target sense/i,/natural sentence|English sentence/i,/Chinese translation/i,/collocation/i].every(pattern=>record.reviewed.some(field=>typeof field==='string'&&pattern.test(field)));
 const snapshotLabel=process.argv.find(arg=>arg.startsWith('--snapshot='))?.slice('--snapshot='.length)||'working-tree';
 const sourcePath=process.argv.find(arg=>arg.startsWith('--source='))?.slice('--source='.length)||'app/vocabulary-examples.ts';
 const protectedFiles=['app/model.ts','app/flashcards.ts','app/flashcard-types.ts','app/progress-save.tsx','pnpm-lock.yaml'];
-const inputFiles=[sourcePath,'app/textbook-vocabulary.ts','app/nce-utils.ts','app/ielts-flashcard-examples.ts','dist-online/lesson-pages/index.json','dist-online/language/dictionary.json'];
+const inputFiles=[sourcePath,'app/textbook-vocabulary.ts','app/nce-utils.ts','app/ielts-flashcard-examples.ts','app/data/nce-pages.json','dist-online/lesson-pages/index.json','dist-online/language/dictionary.json'];
 const hashesBefore=Object.fromEntries(await Promise.all([...inputFiles,...protectedFiles].map(async path=>[path,hash(await read(path))])));
 const packages=new URL('node_modules/.pnpm/',root);
 const builder=(await readdir(packages)).find(name=>/^esbuild@\d+\.\d+\.\d+$/.test(name));
@@ -27,7 +32,7 @@ const {build}=await import(new URL(builder+'/node_modules/esbuild/lib/main.js',p
 await mkdir(output,{recursive:true});
 const bundle=new URL('inventory-bundle.mjs',output);
 const compiledInputHashes={},rootPath=fileURLToPath(root);
-await build({stdin:{contents:`export * from ${JSON.stringify('./'+sourcePath)};export {buildVocabularyCatalog,vocabularyKey} from './app/textbook-vocabulary';export {vocabularyExample} from './app/nce-utils';export {ieltsFlashcardExamples} from './app/ielts-flashcard-examples';`,resolveDir:rootPath,sourcefile:'vocabulary-inventory.ts',loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',packages:'external',logLevel:'silent',outfile:fileURLToPath(bundle),plugins:[{name:'snapshot-content-inputs',setup(builder){builder.onLoad({filter:/\.ts$/},async args=>{const text=await readFile(args.path,'utf8'),path=args.path.startsWith(rootPath)?args.path.slice(rootPath.length):args.path;compiledInputHashes[path]=hash(text);return {contents:text,loader:'ts'}})}}]});
+await build({stdin:{contents:`export * from ${JSON.stringify('./'+sourcePath)};export {buildVocabularyCatalog,vocabularyKey} from './app/textbook-vocabulary';export {vocabularyExample} from './app/nce-utils';export {ieltsFlashcardExamples} from './app/ielts-flashcard-examples';`,resolveDir:rootPath,sourcefile:'vocabulary-inventory.ts',loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',packages:'external',logLevel:'silent',outfile:fileURLToPath(bundle),plugins:[{name:'snapshot-content-inputs',setup(builder){builder.onLoad({filter:/\.(?:ts|json)$/},async args=>{const text=await readFile(args.path,'utf8'),path=args.path.startsWith(rootPath)?args.path.slice(rootPath.length):args.path;compiledInputHashes[path]=hash(text);return {contents:text,loader:args.path.endsWith('.json')?'json':'ts'}})}}]});
 const m=await import(bundle.href+'?snapshot='+Date.now());
 const pageIndex=JSON.parse(await read('dist-online/lesson-pages/index.json'));
 const dictionary=JSON.parse(await read('dist-online/language/dictionary.json')).words;
@@ -54,6 +59,15 @@ for(const path of ledgerPaths){
  }
 }
 const originalByWord=new Map();
+for(const path of reviewIndex?.independentContentReviews||[]){
+ const proof=JSON.parse(await read(path));reviewDocuments.push(path);
+ assert.equal(proof.status,'passed','Independent content proof must be complete: '+path);
+ for(const file of [proof.contentFile,proof.ledger])assert.equal(hash(await read(file.path)),file.sha256,'Independent review file binding changed: '+file.path);
+ const proofLedger=JSON.parse(await read(proof.ledger.path));
+ assert.deepEqual(new Set(proof.reviewedExamples.map(record=>record.id)),new Set(proofLedger.entries.map(record=>record.id)),'Independent proof must cover every unique ledger content ID: '+path);
+ assert.equal(proof.contentExamples,new Set(proof.reviewedExamples.map(record=>record.id)).size,'Independent proof content count must use unique IDs: '+path);
+ for(const record of proof.reviewedExamples)assert(originals.some(example=>example.id===record.id&&contentIdentity(example)===record.contentSha256),'Independent content proof must bind a current original: '+record.id);
+}
 for(const example of originals){
  const key=m.vocabularyKey(example.word),items=originalByWord.get(key)||[];
  items.push(example);originalByWord.set(key,items);
@@ -66,6 +80,7 @@ const originalInventory=originals.map(example=>{
  return {id:example.id,word:example.word,sense:example.sense,origin:example.origin,contentSha256,reviewStatus,reviewEvidence:record?.reviewEvidence||record?.evidence||null,teachingSources:example.teachingSources||[],partOfSpeech:example.partOfSpeech||null,teachingDefinition:example.teachingDefinition||null,scope:record?.scope||null,reviewedSource:record?.source||record?.recordedSource||null,reviewedSourcePDFPage:record?.sourcePDFPage||null,reviewedSourcePageSha256:record?.sourcePageSha256||record?.sourceSHA||null,matchingContentReviews:matchingRecords.map(record=>({scope:record.scope,source:record.source||record.recordedSource||null,sourcePDFPage:record.sourcePDFPage||null,sourcePageSha256:record.sourcePageSha256||record.sourceSHA||null,evidence:record.reviewEvidence||record.evidence||null}))};
 });
 const reviewById=new Map(originalInventory.map(item=>[item.id,item]));
+const normalizedSourceTargets=new Map();
 const contexts=new Map(),languageHashes={},occurrences=[],terms=[],priorities=[],identifiedTargetSenses=new Map();
 const bookStats=Object.fromEntries(bookOrder.map(book=>[book,{occurrences:0,terms:0,bilingualCandidateOccurrences:0,termsWithBilingualCandidate:0,originalHeadwords:0,termsWithoutCandidateOrIndexedOriginal:0,termsWithoutCandidateOrDisplayedOriginal:0,firstSourceAssignedGapTerms:0,occurrencesWithExactTeachingSourceMetadata:0,confirmedSourceTargetSenses:0,confirmedSourceTargetSenseDenominator:null}]));
 for(const lesson of [...catalog.lessons].sort(compareSource)){
@@ -89,6 +104,15 @@ for(const lesson of [...catalog.lessons].sort(compareSource)){
    const record=reviewById.get(example.id);
    return record.matchingContentReviews.some(review=>review.scope==='textbook-target'&&review.source?.book===lesson.book&&review.source?.lesson===lesson.lesson&&lesson.pages.some(page=>page.page===review.sourcePDFPage&&page.sha256===review.sourcePageSha256))&&example.teachingDefinition?.trim()&&example.partOfSpeech?.trim();
   });
+  const editoriallyNormalizedTargets=reviewedAttached.filter(example=>{
+   const record=reviewById.get(example.id);
+   return record.matchingContentReviews.some(review=>review.scope==='textbook-target-editorial-normalized'&&review.source?.book===lesson.book&&review.source?.lesson===lesson.lesson&&lesson.pages.some(page=>page.page===review.sourcePDFPage&&page.sha256===review.sourcePageSha256))&&example.teachingDefinition?.trim()&&example.partOfSpeech?.trim();
+  });
+  for(const example of editoriallyNormalizedTargets){
+   const id=`${lesson.book}-${lesson.lesson}:${key}:${example.partOfSpeech}:${example.teachingDefinition}`;
+   const existing=normalizedSourceTargets.get(id);
+   if(existing)existing.originalExampleIds.push(example.id);else normalizedSourceTargets.set(id,{id,book:lesson.book,lesson:lesson.lesson,word:item.word,partOfSpeech:example.partOfSpeech,teachingDefinition:example.teachingDefinition,originalExampleIds:[example.id],scope:'textbook-target-editorial-normalized',reviewStatus:'recorded-editorial-review',printedTargetCompleteness:false});
+  }
   for(const example of reviewedTeachingTargets){
    const senseKey=`${lesson.book}-${lesson.lesson}:${key}:${example.partOfSpeech}:${example.teachingDefinition}`;
    const existing=identifiedTargetSenses.get(senseKey);
@@ -96,6 +120,7 @@ for(const lesson of [...catalog.lessons].sort(compareSource)){
   }
   const status=attached.length?'explicit-scope-review-incomplete':bilingual?'candidate-only':'not-reviewed';
   const entry={occurrenceId:`${lesson.book}-${lesson.lesson}:${key}`,book:lesson.book,lesson:lesson.lesson,wordIndex,word:item.word,key,forms:item.forms,pages:lesson.pages.map(page=>page.page),dictionaryMeaning:meaning,compactDictionaryMeaning:compactMeaning,sourceTeachingMeaning,effectiveSourceMeaning:effectiveMeaning,compactDisplayedMeaning:effectiveCompact,targetSenseDenominator:null,targetSenseStatus:reviewedTeachingTargets.length?'reviewed-target-present-completeness-unknown':'not-confirmed',reviewStatus:status,bilingualCandidate:bilingual,candidateSource:bilingual?{book:lesson.book,lesson:contextLesson}:null,candidateSentenceSha256:bilingual?hash(JSON.stringify({en:candidate.en,zh:candidate.zh})):null,originalExampleIds:matched.map(example=>example.id),sourceDisplayedOriginalIds:m.examplesForMeaning(item.word,effectiveMeaning).map(example=>example.id),compactDisplayedOriginalIds:displayed.map(example=>example.id),exactTeachingSourceExampleIds:attached.map(example=>example.id),recordedReviewedTeachingSourceIds:reviewedAttached.map(example=>example.id),recordedReviewedTeachingTargetIds:reviewedTeachingTargets.map(example=>example.id)};
+  entry.recordedEditoriallyNormalizedTargetIds=editoriallyNormalizedTargets.map(example=>example.id);
   occurrences.push(entry);
   const stats=bookStats[lesson.book];stats.occurrences++;
   if(bilingual)stats.bilingualCandidateOccurrences++;
@@ -162,16 +187,21 @@ for(const sense of identifiedTargetSenses.values())bookStats[sense.book].confirm
 const hashesAfter=Object.fromEntries(await Promise.all([...inputFiles,...protectedFiles].map(async path=>[path,hash(await read(path))])));
 assert.deepEqual(hashesAfter,hashesBefore,'Inputs changed during this audit; rerun rather than publishing a mixed snapshot');
 for(const [path,expected] of Object.entries(compiledInputHashes))assert.equal(hash(await read(path)),expected,'A compiled content input changed during audit: '+path);
+for(const [path,expected] of Object.entries(auditReadHashes))assert.equal(hash(await readFile(new URL(path,root),'utf8')),expected,'A document or language resource changed during audit: '+path);
 const summary={schemaVersion:1,snapshot:snapshotLabel,generatedAt:new Date().toISOString(),scope:'Existing local textbook word index, existing original usage examples and existing IELTS seed aid; no user learning data, network request or scheduler mutation.',sourceCommitClaim:null,inputHashes:hashesBefore,languageResourceCount:contexts.size,languageResourcesSha256:hash(canonical(languageHashes)),counts:{textbookLessons:catalog.lessons.length,textbookTerms:catalog.terms.length,textbookOccurrences:catalog.entries,bilingualCandidateTerms:terms.filter(term=>term.hasBilingualCandidate).length,bilingualCandidateOccurrences:occurrences.filter(item=>item.bilingualCandidate).length,originalHeadwords:originalByWord.size,originalSenseExamples:originals.length,recordedReviewedOriginalHeadwords:new Set(reviewedOriginals.map(item=>m.vocabularyKey(item.word))).size,recordedReviewedOriginalSenseExamples:reviewedOriginals.length,originalsNeedingReview:originalInventory.length-reviewedOriginals.length,textbookTermsWithoutOriginalTableEntry:noOriginal.length,textbookTermsWithAnyAuthoredEntryIncludingIELTS:terms.filter(term=>authoredKeys.has(term.key)).length,textbookTermsWithoutAnyAuthoredEntryIncludingIELTS:terms.filter(term=>!authoredKeys.has(term.key)).length,textbookTermsWithCandidateOrIndexedMeaningMatchedOriginal:displayUnion.length,textbookTermsWithoutCandidateOrIndexedMeaningMatchedOriginal:noEither.length,candidateOnlyWithoutRecordedReviewedOriginal:candidateOnly.length,ieltsSeedEntries:ielts.length,ieltsSeedDistinctHeadwords:seedKeys.size,ieltsTextbookHeadwordOverlap:overlap.length,ieltsOriginalTableOverlap:ielts.filter(item=>item.overlapsOriginalTable).length,authoredHeadwordUnionIncludingIELTS:authoredKeys.size,unionOfTextbookAndIELTSHeadwords:new Set([...byKey.keys(),...seedKeys]).size,sourceOccurrencesWithExactTeachingSourceMetadata:occurrences.filter(item=>item.exactTeachingSourceExampleIds.length).length,recordedReviewedIdentifiedSourceTargetSenses:identifiedTargetSenses.size,confirmedSourceTargetSenseDenominator:null,fullyReviewedSourceOccurrenceDenominator:null,fullyReviewedSourceOccurrences:0},byBook:bookStats,ieltsTextbookOverlap:overlap.map(item=>({word:item.word,sources:item.textbookSources})),denominators:{headwords:{known:catalog.terms.length,unit:'normalized textbook headword; presence is not all-sense coverage'},sourceWords:{known:catalog.entries,unit:'book / lesson / normalized headword'},targetSenses:{known:null,status:'not-confirmed',unit:'book / lesson / headword / confirmed target sense',rule:'An editor must enumerate the source target senses and retain evidence; splitting the global dictionary or finding a lexical form does not establish this denominator.'},dictionarySenses:{known:null,status:'not-enumerated',rule:'The current dictionary contains coarse and separator-based labels; dictionary text is retained as evidence, not converted automatically into individual teaching targets.'}},reviewMeaning:{recordedEditorialReview:'Frozen content hashes and referenced prior editorial records; not a named human teacher certification.',candidateOnly:'A matching surface form has a nonempty bilingual sentence. Sense, part of speech, translation and collocation have not been certified for that source.',notReviewed:'Neither lexical candidate nor recorded review resolves the source target sense.',explicitScopeReviewIncomplete:'An original carries teachingSources, but no claim that the source target sense denominator is complete.'},hundredPercentClaims:{perContent:true,scope:'Only each specifically recorded, unchanged example ID and its reviewed sentence / Chinese translation / collocation. This does not certify every sense of its headword, every repeated lesson source, every dictionary label or every candidate sentence.',allTextbookHeadwords:false,allSourceTargetSenses:false,allDictionarySenses:false},reviewDocuments,protectedModelUnchangedDuringAudit:true,protectedModelMatchesFrozenBaseline:baseline?.inputHashes?protectedFiles.every(path=>baseline.inputHashes[path]===hashesBefore[path]):null,filesWrittenOnlyUnder:'work/vocabulary-coverage/'};
 Object.assign(summary.counts,{textbookTermsWithCandidateOrSourceDisplayedOriginal:sourceDisplayUnion.length,textbookTermsWithoutCandidateOrSourceDisplayedOriginal:sourceDisplayMissing.length});
 summary.counts.fullyReviewedSourceOccurrenceDenominator=catalog.entries;
 summary.counts.fullyReviewedSourceOccurrences=occurrences.filter(item=>item.reviewStatus==='recorded-editorial-source-review').length;
 summary.confirmedPartialSourceInventories=completeSourceInventories;
 summary.compiledContentInputHashes=compiledInputHashes;
+summary.auditReadHashes={...auditReadHashes};
+summary.counts.editoriallyNormalizedIdentifiedSourceTargetSenses=normalizedSourceTargets.size;
+summary.editorialNormalizationMetric='Explicit source-scoped teaching clarifications are counted separately; they do not close the printed target inventory or establish its denominator.';
 summary.coverageMetrics={rawDictionary:'Candidate OR original matching the unchanged global dictionary. This historical metric can miss corrected brand / proper noun target definitions.',sourceDisplayed:'Candidate OR original matching the explicitly source-scoped teaching definition, falling back to the unchanged dictionary. Content presence still does not certify all senses.'};
 await writeFile(new URL('summary.json',output),JSON.stringify(summary,null,2)+'\n');
 await writeFile(new URL('original-content-inventory.json',output),JSON.stringify(originalInventory,null,2)+'\n');
 await writeFile(new URL('identified-source-target-senses.json',output),JSON.stringify({schemaVersion:1,completeDenominator:null,identifiedTargetSenses:[...identifiedTargetSenses.values()]},null,2)+'\n');
+await writeFile(new URL('editorially-normalized-source-targets.json',output),JSON.stringify({schemaVersion:1,printedTargetCompleteness:false,targets:[...normalizedSourceTargets.values()]},null,2)+'\n');
 await writeFile(new URL('source-word-ledger.json',output),JSON.stringify({schemaVersion:1,counts:summary.counts,occurrences},null,2)+'\n');
 await writeFile(new URL('source-review-priority.json',output),JSON.stringify({schemaVersion:1,completeSourceTargetSenseDenominator:null,sourceWordUnits:occurrences.length,basis:'All source word units remain in this audit queue until an editor explicitly completes the source target-sense inventory. A global reviewed original or lexical candidate is not a complete per-source audit.',entries:occurrences.map(item=>({occurrenceId:item.occurrenceId,book:item.book,lesson:item.lesson,wordIndex:item.wordIndex,word:item.word,pages:item.pages,priority:item.reviewStatus==='recorded-editorial-source-review'?'source-inventory-editorially-complete':item.recordedReviewedTeachingTargetIds.length?'reviewed-target-present-completeness-unknown':item.sourceDisplayedOriginalIds.length?'original-present-source-audit-pending':item.bilingualCandidate?'candidate-only':'no-bilingual-candidate-or-original',dictionaryMeaning:item.dictionaryMeaning,targetSenseDenominator:item.targetSenseDenominator,originalExampleIds:item.originalExampleIds,recordedReviewedTeachingTargetIds:item.recordedReviewedTeachingTargetIds}))},null,2)+'\n');
 await writeFile(new URL('textbook-order-priority.json',output),JSON.stringify({schemaVersion:1,remainingWithoutRecordedOriginal:priorities.length,entries:priorities},null,2)+'\n');
