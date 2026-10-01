@@ -1,6 +1,6 @@
 # 学习地图状态与保存修复交接
 
-原四项与后续独立换题兼容修复已合入主发布线，随 v18（源码 `5f8591b`，独立部署 `fe99ffde`）上线；1,950 文件及两域名 114 项 HTTP／哈希／MIME 通过，正式浏览器仍待独立验收。来源分支 `codex/map-reliability-recovered-20261001`，实际 origin 为 `finnlyu41-tech/nce`；来源分支未独立部署。
+原四项与后续独立换题兼容修复已合入主发布线，随 v18（源码 `5f8591b`，独立部署 `fe99ffde`）上线；1,950 文件及两域名 114 项 HTTP／哈希／MIME 通过，后续 v18 独立云端浏览器局部复验已通过，具体范围与剩余项见下方。来源分支 `codex/map-reliability-recovered-20261001`，实际 origin 为 `finnlyu41-tech/nce`；来源分支未独立部署。
 
 审计基线 `97c85c5eb8ce785f7e837c85b6a064a437bd732a` 与 `076906e` 之间仅 README 改动。补丁固定合并远端 v17 主线 `0bec6cf`（合并提交 `5be5973`），保留主发布者的 Today、samplePracticeTasks、自动复习、语法与最小 demo。后续最小修复提交 `5cf9a61` 在原检查点 `12a045c` 之后；它修改六个生产文件与两份测试。整个分支生产范围为 `map/model.ts`、`main.tsx`、`learning.tsx`、`course.tsx`、`content.ts`、`curriculum.ts`、`review-route.ts`；仅给两个起步节点追加独立材料，不扩课程体系或重构导航。
 
@@ -29,6 +29,10 @@
 - `nextReviewAt`、`continueNode`、`changeStudyStep`、`restartQuiz` 新增可选测试时间参数，原调用保持兼容；`noteQuizHelp` 为新增公共方法。`Save` 仍同步返回 boolean。
 
 ## 验收证据
+
+2026-10-01 上海时间 22:37–22:49，既有独立云端 QA 在 `fe99ffde` 使用隔离合成记录实测：初始 starter 的未听完限制和提示状态、刷新／Today 续学保留；字母 3/4 失败后的修补优先、新题有提示 4/4 仍为跟练且尚未完成；全角 Self rating、本人（自评）、ChatGPT 三种外评来源不授资格，刷新保留无效表单供修正。没有提交伪造正面外评。所测路径未发现新确认缺陷。发布者读回报告、抽看相关截图并核验 ZIP CRC、SHA-256 `160b7a7f92036979954a8a44ebec793be006fa5469d2498b951dff149a50f78e` 和全部 18 个清单文件；私有证据仅保存在忽略的 `work/map-verification/v18-cloud-qa/`。
+
+这次没有真正播放／听音频，不证明 starter-v2 新题组完成；旧 bank／同轮不同 bank、至少 24 小时稳定与旧 stable 失败重置、实际到期日、320/390 和真实音频／真机仍未做浏览器验收。以下模型及来源 DOM 证据保持各自范围，不能补算成这些未测项。备份不在本次复验范围，不据此判定 v19 备份通过。
 
 [原四项分项验收与七个生产文件 SHA-256](verification/map-reliability/test-results.json)，[模型基线复现](verification/map-reliability/model-before.json)，[修复后 41 场景](verification/map-reliability/model-after.json)，[252 项外评／导航](verification/map-reliability/reviewer-navigation-after.json)，[真实 React 浏览器 96 项](verification/map-reliability/browser-after.json)。
 
@@ -92,6 +96,6 @@ node map/test-save-browser.mjs
 
 Codex app 的通知／附件连接一度返回 `Transport closed`；连接恢复后已实际告知发布 owner `5cf9a61` 范围与全部兼容边界。owner 回执确认等待证据后串行接入，并报告独立只读复核：36 组旧题／备份、112 个 marker 限制、240 轮换题与真实 due 流通过。
 
-**主线集成结果：** `271112b` 已补齐 `app/today-practice.ts` 的 resume 同时比较 round 与 bank，保留 `samplePracticeTasks` 接线。新增真实同轮不同题组、半途答案导出／恢复及提交后的回归；主线 49 项今日推荐、18 项自动复习接线、12,881 项地图模型、41 个可靠性场景、252 项外评／导航和 102 项真实 TSX 检查通过。发布版本的浏览器交互仍须单独验收，不能以来源截图替代。
+**主线集成结果：** `271112b` 已补齐 `app/today-practice.ts` 的 resume 同时比较 round 与 bank，保留 `samplePracticeTasks` 接线。新增真实同轮不同题组、半途答案导出／恢复及提交后的回归；主线 49 项今日推荐、18 项自动复习接线、12,881 项地图模型、41 个可靠性场景、252 项外评／导航和 102 项真实 TSX 检查通过。发布版本已有上述局部浏览器验收；未覆盖的 starter-v2、旧 bank、延迟与设备边界仍保留，不以来源截图替代。
 
 现有 Obsidian 路径及指定 Dropbox 根 AGENTS.md 不可读，未创建替代 vault 或重复状态库。本文件保留本批集成、兼容与验收决定。主发布者集成时仅接收本分支相对在线主线的补丁，当前批次完成后串行上线。
