@@ -30,21 +30,20 @@
 - TypeScript、本包 ESLint、Vite 独立预览构建均通过；构建只出现既有大包尺寸警告。
 - 原 curriculum、depth、learning-plan、progress-save、textbook-grammar 回归通过，276 教材入口、348 课次关联、97 guide 保留。
 - `node scripts/test-grammar-clauses.mjs`：旧 13 单元与台账语义指纹、精确新增 19 项/5 组、原来源位置、先修 DAG、答案/提示、33 次真实 TSX 事件（30 正确与 3 错误）、8 个 NCE2 精确 guide/迁移任务回调、严格逗号/句号、重做/读档、9128-byte 保存再导入与旧笔记/表达草稿兼容均通过。
-- `node scripts/test-grammar-clauses.mjs --integrated` 当前按预期失败 `13 != 18`：此开关不追加注册、不做内存适配，专门阻止把独立预览通过误报成主线接入成功。
+- 原独立包注册前运行 `node scripts/test-grammar-clauses.mjs --integrated`，按预期失败 `13 != 18`：此开关不追加注册、不做内存适配，专门阻止把独立预览通过误报成主线接入成功。
 - 真实 Chrome 154.0.8037.59 / Node 22.23.2，任务独立空白 profile、localhost-only：30 道题逐题提交，两变体、先修、语义检索、AND 空结果/清除、两级提示/重载、重做、无提前参考、删去必要逗号失败且重载保持失败、自由表达待核对与旧样例保留全部通过；无未捕获运行时错误。
 - 实测 NCE2 跳转为 `#/grammar/NCE2/7?tab=practice&goal=past-continuous&practice=transfer&unit=past-background`，实际 guide 标题/迁移任务与重载一致。关系从句没有本包 NCE2 来源，不伪造关联。
 - 已查看 320 / 390 像素截图，检索/练习/提示/结果/迁移内容无横向溢出；截图与机器报告在 `work/clauses-browser-check/`（忽略构建目录，另做恢复备份）。
 
-复跑（`studio/` 内）：
+当前主线复跑（`studio/` 内；未加 `--integrated` 的旧命令只适用于原未注册包）：
 
 ```sh
-node scripts/test-grammar-clauses.mjs
 node scripts/test-grammar-clauses.mjs --integrated
 node node_modules/vite/bin/vite.js build --config previews/vite.clauses.config.ts --configLoader runner
 node node_modules/vite/bin/vite.js --config previews/vite.clauses.config.ts --configLoader runner --port 4201 --strictPort
 ```
 
-真实浏览器脚本 `scripts/test-grammar-clauses-browser.mjs` 要求独立 Chrome debugging 127.0.0.1:4202，不连接个人浏览器；启动后执行 `node scripts/test-grammar-clauses-browser.mjs`。本预览进度键为 `english-studio-grammar-clauses-review-v1`，原站用户保存不受影响。
+真实浏览器脚本 `scripts/test-grammar-clauses-browser.mjs` 要求独立 Chrome debugging 127.0.0.1:4202，不连接个人浏览器；启动后执行 `node scripts/test-grammar-clauses-browser.mjs --integrated`。本预览进度键为 `english-studio-grammar-clauses-review-v1`，原站用户保存不受影响。
 
 ## 教学校准与来源边界
 
@@ -58,7 +57,7 @@ node node_modules/vite/bin/vite.js --config previews/vite.clauses.config.ts --co
 
 ## 后续范围与恢复
 
-本轮剩余 33 项由同一 grammar-depth 实施线负责，已经并行编写为独立 `depth-remaining/` 的 10 单元（19–28），不要求逐批确认，不编辑本包或共享入口。详单在本包 manifest 的 `remainingOwnership`。继续补完所有当前 guide 的有限教学覆盖，仍保留逐子范围待训练说明。
+本批当时剩余的 33 项已由 `9883720` 交付为 `depth-remaining/` 的 10 单元，并在 v20 之后随 v21 串行接入发布，详见[剩余批次交接](GRAMMAR-REMAINING-INTEGRATION.md)。本包 manifest 的 `remainingOwnership` 保留原交付快照；当前覆盖以真实注册与主线台账为准，每项继续保留未独立训练的子范围。
 
 B1 与本包原始恢复资料、补丁及浏览器证据保存在来源工作区的本地忽略目录，不作为公共发布资产。发生整合冲突时以各独立数据模块与明确接口为准，不覆盖用户进度或其他实施线工作树。
 
@@ -82,7 +81,7 @@ B1 与本包原始恢复资料、补丁及浏览器证据保存在来源工作�
 - TypeScript、本批及两接口 ESLint、独立预览、在线 classic、离线 classic、在线 map 构建通过。构建保留既有大包尺寸警告。地图资料从 v19 已打包的静态教材重建，与发布树的 `map/curriculum.json` 逐字节一致；未执行发布打包、上传或部署。
 - 使用新的任务空白 Chrome profile、localhost `43411/43412`，真实 30 道题逐题作答，两变体、提示保存/重载、重做、必要逗号遗漏失败、旧样例保留、自由表达待核对、精确教材跳转/重载全部通过。320/390 无横向溢出，已查看截图；未捕获运行时错误为 0。该报告明确 `localSourceRegistered=true`、`productionRegistered=false`、`productionPublished=false`。
 
-主线已在 `76dc98e` 之后串行合入本分支完整提交链，保留 v19 验收记录，复验实际注册、语法证据链、旧进度、备份、Today、地图模型、类型和变更代码 lint 均通过。已以 `2026-10-01-grammar-clauses-v20` 发布，运行源码 `9e721b2b3d502b3bfc1b2e20bb2590ddf4ba062f`，独立部署 [f5b34d85](https://f5b34d85.finn-english-studio.pages.dev/)；两条共享分支已同步。主线在线／离线构建、1,950 文件检查及正式／独立域名 114 项 HTTP、哈希与 MIME 回读通过，无传输重试。教材索引与演示资源保持 v19，三个生产包均包含这 30 道新题 ID。正式新版浏览器与真实音频仍未验收；来源的本地 320/390 浏览器证据已读回并抽看两张截图，副本只留在忽略的 `work/map-verification/v20-source-browser/`。其余主线证据在 `work/map-verification/v20-*`。回退可使用 [v19](https://4813d8d1.finn-english-studio.pages.dev/)，应保留完整进度；旧版不展示这 5 个单元及其草稿，不能清除记录。其他设备/独立树的未推送状态未知，不由该基线的干净状态推断。剩余 33 guide 的后续原子任务保持原归属。
+主线已在 `76dc98e` 之后串行合入本分支完整提交链，保留 v19 验收记录，复验实际注册、语法证据链、旧进度、备份、Today、地图模型、类型和变更代码 lint 均通过。已以 `2026-10-01-grammar-clauses-v20` 发布，运行源码 `9e721b2b3d502b3bfc1b2e20bb2590ddf4ba062f`，独立部署 [f5b34d85](https://f5b34d85.finn-english-studio.pages.dev/)；两条共享分支已同步。主线在线／离线构建、1,950 文件检查及正式／独立域名 114 项 HTTP、哈希与 MIME 回读通过，无传输重试。教材索引与演示资源保持 v19，三个生产包均包含这 30 道新题 ID。正式新版浏览器与真实音频仍未验收；来源的本地 320/390 浏览器证据已读回并抽看两张截图，副本只留在忽略的 `work/map-verification/v20-source-browser/`。其余主线证据在 `work/map-verification/v20-*`。回退可使用 [v19](https://4813d8d1.finn-english-studio.pages.dev/)，应保留完整进度；旧版不展示这 5 个单元及其草稿，不能清除记录。其他设备/独立树的未推送状态未知，不由该基线的干净状态推断。其后 33 guide 已随 v21 发布；当前全量注册为 28/97/168，范围见上述剩余批次交接。
 
 接线后复跑使用 `--integrated`；无此开关的命令用于原始未注册包，会严格要求原台账未变。真实 Chrome 复跑可覆盖端口：
 

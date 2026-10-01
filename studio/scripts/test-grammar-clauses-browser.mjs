@@ -103,7 +103,7 @@ try{
  await input('select[aria-label="筛选学习阶段"]','foundation');
  await until(()=>!!document.querySelector('.empty'),null,'AND filter empty');
  await click('.empty button','清除筛选');
- await until(()=>document.querySelector('.grammar-curriculum-count')?.textContent.includes('找到 18 个'),null,'cleared filters');
+ await until(()=>document.querySelector('.grammar-curriculum-count')?.textContent.includes('找到 28 个'),null,'cleared filters');
  summary.checks.push('semantic search / AND empty / clear');
  for(const unit of units){
   await choose(unit);

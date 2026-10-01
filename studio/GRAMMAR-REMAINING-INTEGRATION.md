@@ -2,7 +2,7 @@
 
 原独立交付快照：本包基线为从句/条件批次 `fc8c4ba4f8368705037907ec396e2a1bc4b72418`。新增 10 单元 / 33 个此前未深化 guide / 60 题 / 120 级提示 / 95 形式 / 80 同情境对比 / 91 错例。原 18 单元及既有课程、进度、路由和台账文件保持不变。仅本地实现并验证，没有 push、merge 或 deploy。
 
-当前主线已在 v20 回执 `69bbe33` 之后取入精确来源提交 `9883720b0d55f26ab37cedf3ebcbbfd3ab8f1e64`，注册 10 个单元，唯一答案入口委托新助手并保留原关系从句规则；只更新原 33 行覆盖台账的 status/scope/remaining。实际 `--integrated` 门禁与旧版回归已通过，当前正准备 v21 发布，尚未部署。下文原作者的未注册结果和本地浏览器证据保留为来源快照，不能代替本次主线验收。
+当前主线已在 v20 回执 `69bbe33` 之后取入精确来源提交 `9883720b0d55f26ab37cedf3ebcbbfd3ab8f1e64`，注册 10 个单元，唯一答案入口委托新助手并保留原关系从句规则；只更新原 33 行覆盖台账的 status/scope/remaining。已以 `2026-10-01-grammar-coverage-v21` 发布：运行源码 `a39bf70625dec4262889b9bfc25e6f0db53de4f4`，独立部署 [f488402d](https://f488402d.finn-english-studio.pages.dev/)，两条共享分支同步；上海时间 2026-10-02 00:02 完成正式／独立域名 114 项 HTTP、哈希与 MIME 回读，零传输重试。下文原作者的未注册结果和本地浏览器证据保留为来源快照，不能代替本次主线验收。
 
 ## 真实覆盖矩阵
 
@@ -43,7 +43,7 @@
 
 State/GrammarProgress、原保存键和version 1保持兼容，无进度版本迁移或闪卡schema改动。新增单元通过新的稳定unit/practice IDs保存，不修改旧记录。合并两个manifest的concept覆盖overlay至**主线**coverage-plan，保留原来源位置、group关系、scope/remaining；旧shared台账本包未写。更新原硬编码13/45/78及52planned的断言，用真实28/97/168与零个未深化既有guide验证。两个manifest为作者交付快照，registration仍为pending-mainline-integration，实际注册状态由主线台账/代码与门禁确认。
 
-`node scripts/test-grammar-remaining.mjs --integrated` 当前按预期真实失败 **13 != 28**，不做内存追加或答案适配。主线接入后的真实 gate 必须通过才可称已整合；独立预览通过不代表已发布。本脚本还要求合并后的planned为0、旧18数据保持原语义、全部来源/答案/进度有效。
+原独立包注册前运行 `node scripts/test-grammar-remaining.mjs --integrated`，按预期真实失败 **13 != 28**，不做内存追加或答案适配。主线接入后的真实 gate 必须通过才可称已整合；独立预览通过不代表已发布。本脚本还要求合并后的planned为0、旧18数据保持原语义、全部来源/答案/进度有效。
 
 ## 已完成验证
 
@@ -75,10 +75,9 @@ State/GrammarProgress、原保存键和version 1保持兼容，无进度版本�
 
 ## 复跑与恢复
 
-在 `studio/` 用Node22以上运行：
+当前主线在 `studio/` 用 Node 22 以上运行；不带 `--integrated` 的旧命令只适用于原未注册包：
 
 ```sh
-node scripts/test-grammar-remaining.mjs
 node scripts/test-grammar-remaining.mjs --integrated
 node node_modules/typescript/bin/tsc --noEmit --incremental false
 node node_modules/vite/bin/vite.js build --config previews/vite.remaining.config.ts --configLoader runner
@@ -91,3 +90,7 @@ node scripts/test-grammar-remaining-browser.mjs
 本包完整源码、Git补丁、计数、退出日志及浏览器证据保留在来源工作区的本地恢复资料中，不公开上传；中断检查点属于本地历史，公共接手以本文件为准。当前本线无内容或验证阻塞；主线注册、全站整合验证和发布由唯一负责人串行完成。
 
 主线接入保留上述 23 个应用数据与模块文件的原始字节，未接入重复的临时恢复检查点。既有 B1、clauses 和全课程断言同步到真实 28/97/168 注册，仍保留前 18 个单元的语义指纹、原教材定位和逐批覆盖证据。两套独立预览识别已经接入的答案助手，不在主线替换它。主线验证日志保存在忽略的 `work/map-verification/v21-*`；旧进度格式、保存键、双区备份、地图与闪卡数据结构均未修改。
+
+主线实测：实际注册门禁 28/97/168、原 18 内容指纹、新批 60 次正确及 18 次标点失败、54 个精确 guide/教材迁移回调、15,159 字节新批备份往返通过；全课程 672 项证据链、87 项实际 TSX 状态/交互、30,820 字节备份往返通过。v19 双区备份 20、恢复界面/宿主 14、Today 49、自动复习 consumer 19、FSRS 15、地图模型 12,881、类型、导航和变更代码 lint 均通过。在线、离线与两套独立预览构建通过，1,950 文件检查通过，全部 168 个题目 ID 进入在线、离线与地图包；教材索引及演示资源哈希保持 v20。既有大包告警仍保留。
+
+发布者读回来源浏览器报告并抽看 320 目录、390 句号失败两张截图，副本只存于忽略的 `work/map-verification/v21-source-browser/`；这仍是来源旧基线上的本地浏览器证据。主线正式 v21 浏览器、实际文件导出到恢复、真实到期、真机和真实音频未验收。后补 clauses 浏览器脚本的目录计数由 18 对齐 28，语法检查通过，未重新运行该浏览器脚本；运行包未变。回退候选为 [v20](https://f5b34d85.finn-english-studio.pages.dev/)：保留完整进度，新 10 单元的草稿在旧版不展示，不可清除；不存在数据格式降级迁移。
