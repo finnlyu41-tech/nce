@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 1,
+  "batch": "6b",
+  "status": "passed",
+  "reviewer": "Codex /root/review_batch5f",
+  "humanCertification": false,
+  "authorRecordsRetainedAtReviewedHash": true,
+  "contentFile": {
+    "path": "app/data/vocabulary-gap-batch6b.ts",
+    "sha256": "b8112890092dd11e891b53fffa5748d12de7ad3df213b9dae0e3bf54113536fd"
+  },
+  "ledger": {
+    "path": "docs/vocabulary-gap-batch6b.json",
+    "sha256": "b6dc43237915c0bb5c940b41ad32cac09f06933fe6a5d48f3288c5b5a03e8684"
+  },
+  "contentExamples": 24,
+  "sourceTargetReviewRows": 24,
+  "independentMechanicalCounts": {
+    "actualExamples": 24,
+    "orderedContentHashes": 24,
+    "ownSense": 24,
+    "meaningForCheck": 24,
+    "teachingDefinition": 24,
+    "positiveCues": 33,
+    "excludedLabels": 59,
+    "additionalWrongPOS": 240,
+    "sourceAssociations": 24,
+    "sourceIsolation": 24,
+    "canonicalHeadwordNormalization": 24,
+    "printedTargetsIndependentlyVerified": 24,
+    "originalImagesViewedAndByteHashed": 8
+  },
+  "independentReport": {
+    "path": "work/gaps94/independent-review/batch6b-stage-b-final.json",
+    "sha256": "d2aac80ba2fde2be67b7d26598f1fe37ebc7f3b246e12c274c7de8602f8f5915"
+  },
+  "reviewedExamples": [
+    {
+      "id": "gap6b-scotch-whisky-beverage",
+      "contentSha256": "ee9dd0583d8d83e37040799203b9ea6a51efede58261ec72f56ae01167ec6557",
+      "independentEditorialNote": {
+        "targetSenseReview": "整个 Scotch whisky 词组为酒名；原图未印 POS，n. 是单列编辑推断，未扩大到 Scotch 的民族或形容词义。",
+        "naturalEnglishReview": "held an unopened bottle beside two empty glasses 自然描述柜内陈列，地点和名词短语关系清晰。",
+        "chineseTranslationReview": "未开封、两个、空杯子及 beside 的方位都准确保留，柜子里放着与 held 对应。",
+        "collocationReview": "an unopened bottle of Scotch whisky 的容器与饮品搭配自然；一瓶未开封的苏格兰威士忌准确。",
+        "posReview": "Actual source page has no printed POS; n. is separately identified as editorial inference."
+      }
+    },
+    {
+      "id": "gap6b-choice-quality-adjective",
+      "contentSha256": "38a34038d8fcd07e9adf8257573aaf2e1246a4358b9db333307406c76db5cd3f",
+      "independentEditorialNote": {
+        "targetSenseReview": "原表 choice adj. 上等的，精选的；新句直接修饰 ingredients，只证明食材品质目标。",
+        "naturalEnglishReview": "The chef uses choice ingredients, even for the simplest soup. 自然；even for 所表达的出乎意料关系合理。",
+        "chineseTranslationReview": "即使最简单的汤也用上等食材，准确保留品质和 even 的侧重点。",
+        "collocationReview": "choice ingredients 是自然品质形容词搭配，精选的食材对应；未混入 make a choice。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: adj."
+      }
+    },
+    {
+      "id": "gap6b-apple-fruit",
+      "contentSha256": "713837fdfd1770cc074203d6bbb5f270f439c9b00ba8f888edb89285fea43073",
+      "independentEditorialNote": {
+        "targetSenseReview": "an apple 是本课可食水果，不涉及人物俗语或公司名称。",
+        "naturalEnglishReview": "packed an apple in my lunchbox 和 so I would have a snack for the train journey 构成自然动作与目的。",
+        "chineseTranslationReview": "一个、装入午餐盒和火车途中当点心的目的都保留。",
+        "collocationReview": "pack an apple in a lunchbox 是自然容器搭配；把一个苹果装进午餐盒准确。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-wine-beverage",
+      "contentSha256": "7e9401c4d801d38d906c7d63ec81cae92d3ecfe9296aba5ecde1b39f0e2f20ca",
+      "independentEditorialNote": {
+        "targetSenseReview": "印刷 n. 酒，果酒与本课瓶装 wine 语境相符；新句限定葡萄酒饮品，没有认证所有酒种。",
+        "naturalEnglishReview": "moved the bottles of wine to a cool cupboard before clearing the dining table 自然，先移酒再收拾桌子。",
+        "chineseTranslationReview": "搬进凉爽橱柜和收拾餐桌前的时序准确；bottles 译成几瓶符合不定复数。",
+        "collocationReview": "bottles of wine 是饮品容器搭配；几瓶葡萄酒准确，无暗红色或喝酒动词义。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-beer-beverage",
+      "contentSha256": "b9f38611eb899919d6c81e419c6bb6969f6e5293b1ec1737d9f3d3509e147ace",
+      "independentEditorialNote": {
+        "targetSenseReview": "can of beer 明确啤酒饮品，保持本课名词目标。",
+        "naturalEnglishReview": "rolled out of the shopping bag and stopped under the table 的移动和停止自然、连贯。",
+        "chineseTranslationReview": "一罐、从购物袋滚出来及停在桌下准确，没有另添饮用动作。",
+        "collocationReview": "a can of beer / 一罐啤酒是自然容器搭配。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-blackboard-classroom",
+      "contentSha256": "17aabcbb0e9def90d9ffa9ffc1cb7c369d05f90d64a0a87c934beacd5820bc7d",
+      "independentEditorialNote": {
+        "targetSenseReview": "on the blackboard 指课堂书写黑板，符合原表名词，不涉及白板或软件名。",
+        "naturalEnglishReview": "kept the diagram on the blackboard for the next lesson 自然表达保留示意图供后课使用。",
+        "chineseTranslationReview": "把图留在黑板上、下一节课及用途都准确。",
+        "collocationReview": "a diagram on the blackboard / 黑板上的示意图是自然地点搭配。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-tomato-food",
+      "contentSha256": "a118a4295274486d9c9f42982b104fd09d7298c676c3e0f3b1922ddc021791b5",
+      "independentEditorialNote": {
+        "targetSenseReview": "one tomato 被切成片用于三明治，明确原印西红柿可食果实目标。",
+        "naturalEnglishReview": "Slice one tomato and layer the slices in the sandwich. 自然；the slices 清楚回指切片。",
+        "chineseTranslationReview": "一个、切片及一层层夹入三明治的动作准确，西红柿与番茄为此目标同义译法。",
+        "collocationReview": "slice a tomato / 把西红柿切片是自然厨房搭配，没有植物整体义。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-potato-food",
+      "contentSha256": "5276c584b79d25b5b1da8de037da19db5eba29868d70931377ed270f882ab5d2",
+      "independentEditorialNote": {
+        "targetSenseReview": "baked potato 指烤土豆食物，限定源目标，不扩大到整株植物。",
+        "naturalEnglishReview": "cut open the baked potato and added a little butter 是自然连续厨房动作。",
+        "chineseTranslationReview": "烤土豆、切开、加一点黄油逐项对应；Sam 音译没有附加人物身份。",
+        "collocationReview": "a baked potato / 一个烤土豆准确自然。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-cabbage-food",
+      "contentSha256": "641530b9d6381ff8e176e8b5b21766a0d10f8978041f5218f4c33a6920bba1e6",
+      "independentEditorialNote": {
+        "targetSenseReview": "shredded cabbage 限定卷心菜蔬菜名词，无俚语或动词扩展。",
+        "naturalEnglishReview": "mixed the shredded cabbage with carrots in a large bowl 自然，with 明确混合物。",
+        "chineseTranslationReview": "卷心菜丝、胡萝卜、大碗及拌在一起的动作准确。",
+        "collocationReview": "shredded cabbage / 卷心菜丝是自然食物搭配。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-lettuce-food",
+      "contentSha256": "330372588b92d9e5016009ccb20e6ddafd138aef4d3966c7e117e923f1716e2e",
+      "independentEditorialNote": {
+        "targetSenseReview": "lettuce leaves 指叶菜食物；生菜中译在有限莴苣食物目标内，没有纸币义。",
+        "naturalEnglishReview": "was still dripping ... when I put them in the colander 自然；them 回指叶片，时间关系清楚。",
+        "chineseTranslationReview": "放进沥水篮时还滴着水准确保留同时关系；colander 译沥水篮合理。",
+        "collocationReview": "lettuce leaves / 生菜叶是自然食物搭配。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-pea-food",
+      "contentSha256": "735ee39e2c7cb5a41199cf7df113a3abbb9aa4548621ff5006c5e223ae2efbc9",
+      "independentEditorialNote": {
+        "targetSenseReview": "frozen peas 是食用豌豆的正常复数；规范词头 pea 与本课名词一致。",
+        "naturalEnglishReview": "a few frozen peas left in the corner of the bag 自然描述少量剩余食物。",
+        "chineseTranslationReview": "几粒、冷冻、袋角和还剩准确对应，未扩大到似豌豆物。",
+        "collocationReview": "frozen peas / 冷冻豌豆自然准确。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-bean-green-pod",
+      "contentSha256": "277094a07cd6dc93c0c9028bbb5c4473437f9e0b334694808a6e3c01810ca942",
+      "independentEditorialNote": {
+        "targetSenseReview": "原图明确印 n. 豆角；green beans 加去两端动作锁定嫩豆荚蔬菜，没有以广义豆子代替目标。",
+        "naturalEnglishReview": "trimmed the ends off ... before adding them to the soup 是自然厨房表达，them 回指豆角。",
+        "chineseTranslationReview": "先去掉两头、再放汤里准确；father 译爸爸，不添加额外关系。",
+        "collocationReview": "green beans / 豆角自然；不把干豆、咖啡豆或油嘴算入覆盖。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-pear-fruit",
+      "contentSha256": "682fbe5c192810e0060d3625817a3971e0a07b610c73fe6854ba988600575d33",
+      "independentEditorialNote": {
+        "targetSenseReview": "a pear 是可食梨果实，没有梨树或梨木扩展。",
+        "naturalEnglishReview": "cut a pear into small pieces for the children to share 自然表达切块供分享。",
+        "chineseTranslationReview": "小块和孩子们分着吃的目的准确；吃是本食物语境的自然表达。",
+        "collocationReview": "cut a pear into pieces / 把梨切成块自然准确。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-grape-fruit",
+      "contentSha256": "92d96feac627a71ae3ebae843d566d83cb46bac79c38e4571c8dee94f44bf899",
+      "independentEditorialNote": {
+        "targetSenseReview": "grapes 是可食果实的正常复数，规范词头 grape 保持；没有葡萄树义。",
+        "naturalEnglishReview": "pulled the grapes off the stems before washing them 自然表达先摘梗后洗果实。",
+        "chineseTranslationReview": "从梗摘下、再洗净准确保留动作顺序，them 回指葡萄。",
+        "collocationReview": "pull grapes off the stems / 把葡萄从梗上摘下准确自然。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-peach-fruit",
+      "contentSha256": "c8d5dad53ffc7e5f8aca32fc132c46152426cd3802884258a4f0a28a81b8e982",
+      "independentEditorialNote": {
+        "targetSenseReview": "juicy peach 明确桃果实目标，没有桃色、人物俗语或告密义。",
+        "naturalEnglishReview": "so juicy that I needed a paper napkin after the first bite 自然表达汁水引起擦拭需要。",
+        "chineseTranslationReview": "汁水很足、第一口后和餐巾纸都准确；paper napkin 与餐巾纸严格对应。",
+        "collocationReview": "a juicy peach / 汁水充足的桃子是自然品质搭配。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-attendant-reception-worker",
+      "contentSha256": "bbe035124fb785c49980cc074610102e0f6396925e3947aa8d6ef98b42478976",
+      "independentEditorialNote": {
+        "targetSenseReview": "原图 n. 接待员及 L87 车库修车对话支持 garage attendant；新句为核收据交钥匙服务，无随从或出席者义。",
+        "naturalEnglishReview": "checked my receipt before handing me the car keys 自然表达车库服务动作，主语从头到尾一致。",
+        "chineseTranslationReview": "先核对收据、然后交车钥匙准确；車库接待员保留本课场景。",
+        "collocationReview": "a garage attendant / 车库接待员自然准确，POS 为名词。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-pound-currency",
+      "contentSha256": "149d15a24bceffcd2b1f387809771f256dd53ce1ed5ec05300b786223a0384e6",
+      "independentEditorialNote": {
+        "targetSenseReview": "原表 n. 英镑（£）；paid twelve pounds for a lamp 明确货币，不是重量磅。",
+        "naturalEnglishReview": "paid ... for the second-hand lamp and carried it home 自然描述购买及携带，it 回指灯。",
+        "chineseTranslationReview": "十二、英镑、二手灯及带回家准确，虚构价格没有当前价格事实断言。",
+        "collocationReview": "pay twelve pounds / 付十二英镑自然准确；pounds 是规范词头 pound 的复数。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-athens-city",
+      "contentSha256": "7f52d1e2ad9c3ee2560089255601a15ecda7ac87425f9e22dc02fdc53cda4366",
+      "independentEditorialNote": {
+        "targetSenseReview": "Athens 是源列表城市专名，句内只作地点，没有附加首都或旅行政策事实。",
+        "naturalEnglishReview": "Our luggage arrived ... a day after we did. 自然；did 回指我们到达，比较顺序清楚。",
+        "chineseTranslationReview": "行李比我们晚一天到达雅典准确保留省略和一天差距。",
+        "collocationReview": "arrive in Athens / 到达雅典自然，地点介词 in 正确。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-berlin-city",
+      "contentSha256": "9871a7c9c56992869f56ffae0b02782b493bc22c6c7fc50374f0ac7804ead015",
+      "independentEditorialNote": {
+        "targetSenseReview": "Berlin 为城市目的地，限定源专名，不涉及毛线。",
+        "naturalEnglishReview": "The train ... was delayed, so we had time for breakfast at the station. 自然虚构叙事，因果合理。",
+        "chineseTranslationReview": "去柏林、火车晚点及因此有时间在车站吃早餐逐项对应。",
+        "collocationReview": "a train to Berlin / 去柏林的火车自然准确；没有当前班次声明。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-bombay-city-historical",
+      "contentSha256": "8aebc50a43693cb2f3dc650f5494342406503e87396d43492b0d33641a68a3b8",
+      "independentEditorialNote": {
+        "targetSenseReview": "原书 Bombay 与孟买原译保留；faded map 和 old travel diary 明确旧资料语境，不把旧称当当前地名声明。",
+        "naturalEnglishReview": "lay folded inside an old travel diary 自然描写折叠地图的位置，faded 修饰地图合理。",
+        "chineseTranslationReview": "褪色地图、折好及旧旅行日记中的位置准确。",
+        "collocationReview": "a map of Bombay / 一张孟买地图准确，独立阅读时保留整句历史语境。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-geneva-city",
+      "contentSha256": "3a9db14b697b23d4c7c665d69cc60c2b71231ab9f5920d3475aa1e6ed31deeb4",
+      "independentEditorialNote": {
+        "targetSenseReview": "Geneva 为城市地点，仅日内瓦专名，没有杜松子酒扩展。",
+        "naturalEnglishReview": "met ... to finish the report before the Monday deadline 自然；不定式是会面的目的，没有断言报告已经完成。",
+        "chineseTranslationReview": "以便在周一截止前完成报告准确保留目的，碰面地点对应。",
+        "collocationReview": "meet in Geneva / 在日内瓦碰面自然准确。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-moscow-city",
+      "contentSha256": "6e015181c9f492beddf5851cf420c3cad77ca01b56c9d90df1f7c82046794314",
+      "independentEditorialNote": {
+        "targetSenseReview": "Moscow 只表包裹城市来处，没有语言或当下政治、运输事实。",
+        "naturalEnglishReview": "The parcel from Moscow contained a scarf and a handwritten note. 自然完整叙述。",
+        "chineseTranslationReview": "一条围巾、一张手写便条及来自莫斯科对应，无额外人物推断。",
+        "collocationReview": "a parcel from Moscow / 来自莫斯科的包裹自然准确。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-rome-city",
+      "contentSha256": "b2561ed13a69066de306ea44b1bd2e7ff79cad8fdd2a6abe2e4b9fcd4722820c",
+      "independentEditorialNote": {
+        "targetSenseReview": "Rome 是迷路地点城市名，不涉及罗马帝国等扩展。",
+        "naturalEnglishReview": "got lost ... and asked a shopkeeper to mark our hotel on the map 自然连续动作；asked 不保证对方已标注。",
+        "chineseTranslationReview": "迷路、请店主在地图上标出我们的酒店准确，没有多译完成结果。",
+        "collocationReview": "get lost in Rome / 在罗马迷路自然准确。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    },
+    {
+      "id": "gap6b-seoul-city-source-name",
+      "contentSha256": "da78609e27a86864ec21d86684a1a545fc0d28dbd6d32fc3053d3ea86e7664e7",
+      "independentEditorialNote": {
+        "targetSenseReview": "保留源词头 Seoul 和汉城原译；1968 travel journal 明确年代资料，caption 明示原书译名，没有声称为当前中文名。",
+        "naturalEnglishReview": "The 1968 travel journal describes a rainy afternoon in Seoul. 自然；现在时描述历史文献的内容合理。",
+        "chineseTranslationReview": "1968 年旅行日志、记述和下雨的下午准确；汉城在该历史语境中可追溯。",
+        "collocationReview": "a rainy afternoon in Seoul / 汉城一个下雨的下午准确；全例保留年代，不认证当前旅行事实。",
+        "posReview": "Actual printed POS matches finite target and sentence usage: n."
+      }
+    }
+  ],
+  "mandatoryCorrections": [],
+  "globalSourceCompleteness": false,
+  "limits": [
+    "59 explicit meaning exclusions and 240 additional POS controls are finite controls; overlapping checks are not an exhaustive dictionary audit.",
+    "This content PASS does not certify textbook inventory completeness for unrelated words.",
+    "Book SHA fields are manifest identities, not newly reconstructed full-PDF byte hashes."
+  ],
+  "rootRegistrationChecks": {
+    "contentExamples": 420,
+    "nativeCallbackSourceHeadwordPairs": 275,
+    "completeSourceWordInventories": 38,
+    "logs": [
+      {
+        "path": "work/gaps94/batch6b/registered-examples.log",
+        "sha256": "f95ba0c9474a6a621b1c9b8305b0040e37d83293031bfbbcb72f5b5625b46dfb"
+      },
+      {
+        "path": "work/gaps94/batch6b/registered-native-callbacks.log",
+        "sha256": "7b448d24fee9f564ea8f205578ecc76d9b1d3792ef6c6f09222055b443b10918"
+      },
+      {
+        "path": "work/gaps94/batch6b/registered-lint.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "work/gaps94/batch6b/registered-audit.log",
+        "sha256": "29e5d0ce18b47ecef68636ae42e86498e4de5de48d46aa445760ee823920f0af"
+      }
+    ]
+  }
+}

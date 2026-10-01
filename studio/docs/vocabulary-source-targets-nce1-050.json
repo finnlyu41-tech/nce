@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "scope": "Every printed word-list headword and its finite source target meanings. No all-dictionary or unrelated-source certification.",
+  "source": {
+    "book": "NCE1",
+    "lesson": 50
+  },
+  "sourcePDFPage": 104,
+  "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+  "completeWordList": true,
+  "review": "Author source reading plus independent original-detail full-page enumeration, followed by independent EN/Chinese/collocation/POS review at frozen content hashes.",
+  "independentWholePageProofSha256": "90a531c9aa6adc4e27d10f5d660cf09206e5c9e59633160b29c6eb9788873cdf",
+  "independentContentReview": "docs/verification/vocabulary-gap-batch6b.json",
+  "humanCertification": false,
+  "entries": [
+    {
+      "word": "tomato",
+      "targetExampleIds": [
+        "gap6b-tomato-food"
+      ],
+      "checkedMeaning": "n. 西红柿",
+      "sourcePrintedMeaning": "西红柿",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "potato",
+      "targetExampleIds": [
+        "gap6b-potato-food"
+      ],
+      "checkedMeaning": "n. 土豆",
+      "sourcePrintedMeaning": "土豆",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "cabbage",
+      "targetExampleIds": [
+        "gap6b-cabbage-food"
+      ],
+      "checkedMeaning": "n. 卷心菜",
+      "sourcePrintedMeaning": "卷心菜",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "lettuce",
+      "targetExampleIds": [
+        "gap6b-lettuce-food"
+      ],
+      "checkedMeaning": "n. 莴苣",
+      "sourcePrintedMeaning": "莴苣",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "pea",
+      "targetExampleIds": [
+        "gap6b-pea-food"
+      ],
+      "checkedMeaning": "n. 豌豆",
+      "sourcePrintedMeaning": "豌豆",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "bean",
+      "targetExampleIds": [
+        "gap6b-bean-green-pod"
+      ],
+      "checkedMeaning": "n. 豆角",
+      "sourcePrintedMeaning": "豆角",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "pear",
+      "targetExampleIds": [
+        "gap6b-pear-fruit"
+      ],
+      "checkedMeaning": "n. 梨",
+      "sourcePrintedMeaning": "梨",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "grape",
+      "targetExampleIds": [
+        "gap6b-grape-fruit"
+      ],
+      "checkedMeaning": "n. 葡萄",
+      "sourcePrintedMeaning": "葡萄",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "peach",
+      "targetExampleIds": [
+        "gap6b-peach-fruit"
+      ],
+      "checkedMeaning": "n. 桃",
+      "sourcePrintedMeaning": "桃",
+      "sourcePrintedPartOfSpeech": "n."
+    }
+  ]
+}

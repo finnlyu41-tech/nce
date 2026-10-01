@@ -1,0 +1,1768 @@
+{
+  "schemaVersion": 1,
+  "batch": "vocabulary-gap-batch6b",
+  "baseCommit": "acfaffc6a8fe7033fca26c5c5b1dcb7c9bc0dce2",
+  "headwords": 24,
+  "senseExamples": 24,
+  "textbookTargetExamples": 24,
+  "dictionaryExtensionExamples": 0,
+  "finiteSourceTargets": 24,
+  "origin": "original",
+  "authorship": "24 newly authored original bilingual sentences with concrete collocations; no saved draft provenance",
+  "humanCertification": false,
+  "reviewBasis": "Stage A used actual view_image inspection of five local word-list pages and three context pages. Stage B author manually checked all 24 new English/Chinese pairs, POS, collocations and finite source target boundaries. Independent content review and runtime registration are pending.",
+  "sourceScope": "Only the approved 24 finite textbook target senses and source associations. No sentence is a textbook quotation; no whole dictionary completeness is claimed.",
+  "approvedTargetPlan": {
+    "path": "work/gaps94/batch6b/target-plan.json",
+    "sha256": "e3d80097fa62947a2e3bc8de41bd951d8f172bcf79d68456c9a5b13430a074df"
+  },
+  "combinedFinitePlan": {
+    "path": "work/gaps94/finite-target-plan.json",
+    "sha256": "e5b0ca6a74ed5d4db0abc992af080b0993a870769f8a83dfe28fd8339f15f764"
+  },
+  "sourceEvidence": [
+    {
+      "book": "NCE1",
+      "lesson": 48,
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 50,
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 87,
+      "sourcePDFPage": 182,
+      "sourcePrintedPage": 178,
+      "src": "/lesson-pages/fbd06022e14dc40c5be6cb5d2671cb560819e3c71defcf2a0c59d2bb5cfbc96d.jpg",
+      "sourcePageSha256": "fbd06022e14dc40c5be6cb5d2671cb560819e3c71defcf2a0c59d2bb5cfbc96d",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 89,
+      "sourcePDFPage": 186,
+      "sourcePrintedPage": 182,
+      "src": "/lesson-pages/975f4b612fdfb5fe78005f032d3e43ed74d490543708b8836481af2dbaecb257.jpg",
+      "sourcePageSha256": "975f4b612fdfb5fe78005f032d3e43ed74d490543708b8836481af2dbaecb257",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 94,
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "word-list"
+    }
+  ],
+  "contextEvidence": [
+    {
+      "book": "NCE1",
+      "lesson": 48,
+      "sourcePDFPage": 99,
+      "sourcePrintedPage": 95,
+      "src": "/lesson-pages/95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1.jpg",
+      "sourcePageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "context"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 87,
+      "sourcePDFPage": 181,
+      "sourcePrintedPage": 177,
+      "src": "/lesson-pages/6b9d43b3b48efb42309f85077a72be59b26108f8c64296557e970b4d2550b172.jpg",
+      "sourcePageSha256": "6b9d43b3b48efb42309f85077a72be59b26108f8c64296557e970b4d2550b172",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "context"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 89,
+      "sourcePDFPage": 185,
+      "sourcePrintedPage": 181,
+      "src": "/lesson-pages/fb2c4607ba171d2fa321004d11c4c3b383f59d069bde5378ad4d9d7bc3e531a9.jpg",
+      "sourcePageSha256": "fb2c4607ba171d2fa321004d11c4c3b383f59d069bde5378ad4d9d7bc3e531a9",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true,
+      "evidenceRole": "context"
+    }
+  ],
+  "entries": [
+    {
+      "id": "gap6b-scotch-whisky-beverage",
+      "word": "Scotch whisky",
+      "canonicalHeadword": "Scotch whisky",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 苏格兰威士忌",
+      "excludedMeaningLabels": [
+        "adj. 苏格兰的",
+        "n. 苏格兰人",
+        "n. 威士忌酒",
+        "n. 啤酒"
+      ],
+      "teachingDefinition": "n. 苏格兰威士忌（酒名）",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePrintedHeadword": "Scotch whisky",
+      "sourcePrintedPartOfSpeech": null,
+      "sourcePrintedMeaning": "苏格兰威士忌",
+      "editoriallyInferredPartOfSpeech": {
+        "label": "n.",
+        "basis": "A noun phrase naming the bottled beverage shown on PDF page 99; the word-list line itself has no printed POS.",
+        "notPrintedOnSourcePage": true
+      },
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 48,
+          "sourcePDFPage": 100,
+          "sourcePrintedPage": 96,
+          "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+          "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 10,
+          "sourcePrintedHeadword": "Scotch whisky",
+          "sourcePrintedPartOfSpeech": null,
+          "sourcePrintedMeaning": "苏格兰威士忌",
+          "editoriallyInferredPartOfSpeech": {
+            "label": "n.",
+            "basis": "A noun phrase naming the bottled beverage shown on PDF page 99; the word-list line itself has no printed POS.",
+            "notPrintedOnSourcePage": true
+          },
+          "contextEvidence": [
+            {
+              "book": "NCE1",
+              "lesson": 48,
+              "sourcePDFPage": 99,
+              "sourcePrintedPage": 95,
+              "src": "/lesson-pages/95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1.jpg",
+              "sourcePageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+              "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+              "actualImageOpenedByReviewer": true,
+              "evidenceRole": "context"
+            }
+          ],
+          "targetSenseIds": [
+            "gap6b-scotch-whisky-beverage"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "ee9dd0583d8d83e37040799203b9ea6a51efede58261ec72f56ae01167ec6557",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "整个 Scotch whisky 词组命名瓶装酒；unopened 和 two empty glasses 在中译逐项保留。bottle of 搭配自然。POS为名词短语推断，原表未打印，未认证 Scotch 单词民族或形容词义。",
+        "sourceTargetBoundary": "原表为整个 Scotch whisky 词组，未印词性；按酒名名词短语明确推断。只写标签、陈列或容器等普通识物情境，不把 Scotch 单词的民族、形容词或泛威士忌义计入。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-choice-quality-adjective",
+      "word": "choice",
+      "canonicalHeadword": "choice",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 上等的，精选的",
+      "excludedMeaningLabels": [
+        "n. 选择",
+        "n. 选择权",
+        "n. 精选品",
+        "adj. 挑三拣四的"
+      ],
+      "teachingDefinition": "adj. 上等的，精选的",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePrintedHeadword": "choice",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedMeaning": "上等的，精选的",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 48,
+          "sourcePDFPage": 100,
+          "sourcePrintedPage": 96,
+          "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+          "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 11,
+          "sourcePrintedHeadword": "choice",
+          "sourcePrintedPartOfSpeech": "adj.",
+          "sourcePrintedMeaning": "上等的，精选的",
+          "contextEvidence": [
+            {
+              "book": "NCE1",
+              "lesson": 48,
+              "sourcePDFPage": 99,
+              "sourcePrintedPage": 95,
+              "src": "/lesson-pages/95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1.jpg",
+              "sourcePageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+              "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+              "actualImageOpenedByReviewer": true,
+              "evidenceRole": "context"
+            }
+          ],
+          "targetSenseIds": [
+            "gap6b-choice-quality-adjective"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "38a34038d8fcd07e9adf8257573aaf2e1246a4358b9db333307406c76db5cd3f",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "choice 直接修饰 ingredients，明确精选／上等品质形容词；even for the simplest soup 与即使最简单的汤也用上等食材吻合，没有名词选择或选择权。",
+        "sourceTargetBoundary": "两项打印译法在本课均指品质好、精选的，同 POS 合为一个有限形容词目标。第99页物品标签修饰 apples，不能用 have a choice 或 make a choice 认证该目标。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-apple-fruit",
+      "word": "apple",
+      "canonicalHeadword": "apple",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 苹果",
+      "excludedMeaningLabels": [
+        "n. 家伙",
+        "n. 苹果公司"
+      ],
+      "teachingDefinition": "n. 苹果",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePrintedHeadword": "apple",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "苹果",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 48,
+          "sourcePDFPage": 100,
+          "sourcePrintedPage": 96,
+          "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+          "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 12,
+          "sourcePrintedHeadword": "apple",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "苹果",
+          "contextEvidence": [
+            {
+              "book": "NCE1",
+              "lesson": 48,
+              "sourcePDFPage": 99,
+              "sourcePrintedPage": 95,
+              "src": "/lesson-pages/95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1.jpg",
+              "sourcePageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+              "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+              "actualImageOpenedByReviewer": true,
+              "evidenceRole": "context"
+            }
+          ],
+          "targetSenseIds": [
+            "gap6b-apple-fruit"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "713837fdfd1770cc074203d6bbb5f270f439c9b00ba8f888edb89285fea43073",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "an apple 为可数水果，packed in a lunchbox 和目的 so I would have a snack 对应装入午餐盒、途中当点心。无公司或人物俗语义。",
+        "sourceTargetBoundary": "仅可食水果，可数单数 apple 或复数 apples；不把人物俗语或公司名称计入。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-wine-beverage",
+      "word": "wine",
+      "canonicalHeadword": "wine",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 酒，果酒",
+      "excludedMeaningLabels": [
+        "n. 暗红色",
+        "v. 喝酒",
+        "v. 请喝酒",
+        "n. 啤酒",
+        "n. 白酒"
+      ],
+      "teachingDefinition": "n. 酒，果酒",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePrintedHeadword": "wine",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "酒，果酒",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 48,
+          "sourcePDFPage": 100,
+          "sourcePrintedPage": 96,
+          "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+          "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 13,
+          "sourcePrintedHeadword": "wine",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "酒，果酒",
+          "contextEvidence": [
+            {
+              "book": "NCE1",
+              "lesson": 48,
+              "sourcePDFPage": 99,
+              "sourcePrintedPage": 95,
+              "src": "/lesson-pages/95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1.jpg",
+              "sourcePageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+              "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+              "actualImageOpenedByReviewer": true,
+              "evidenceRole": "context"
+            }
+          ],
+          "targetSenseIds": [
+            "gap6b-wine-beverage"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "7e9401c4d801d38d906c7d63ec81cae92d3ecfe9296aba5ecde1b39f0e2f20ca",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "bottles of wine 指装在瓶中的葡萄酒／果酒饮品；先移到凉爽橱柜再收拾餐桌，时序及地点中译一致。这里只证明 wine 饮品，不包含暗红色名词或请喝酒动词。",
+        "sourceTargetBoundary": "打印酒、果酒及第99页瓶装酒／第100页可数不可数练习共同限定 wine 类饮品；葡萄酒和果酒按同类名词目标合组，不将所有含酒精饮品或请喝酒动词视为已审。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-beer-beverage",
+      "word": "beer",
+      "canonicalHeadword": "beer",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 啤酒",
+      "excludedMeaningLabels": [
+        "n. 葡萄酒",
+        "n. 果酒"
+      ],
+      "teachingDefinition": "n. 啤酒",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePrintedHeadword": "beer",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "啤酒",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 48,
+          "sourcePDFPage": 100,
+          "sourcePrintedPage": 96,
+          "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+          "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 14,
+          "sourcePrintedHeadword": "beer",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "啤酒",
+          "contextEvidence": [
+            {
+              "book": "NCE1",
+              "lesson": 48,
+              "sourcePDFPage": 99,
+              "sourcePrintedPage": 95,
+              "src": "/lesson-pages/95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1.jpg",
+              "sourcePageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+              "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+              "actualImageOpenedByReviewer": true,
+              "evidenceRole": "context"
+            }
+          ],
+          "targetSenseIds": [
+            "gap6b-beer-beverage"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "b9f38611eb899919d6c81e419c6bb6969f6e5293b1ec1737d9f3d3509e147ace",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "a can of beer 指一罐啤酒；rolled out of 和 stopped under 分别译成从袋里滚出和停在桌下，可数容器+不可数饮品搭配自然，没有饮用建议。",
+        "sourceTargetBoundary": "仅啤酒名词饮品；可用罐装／瓶装的识物情境，不提出饮酒建议，也不展开其他酒种。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-blackboard-classroom",
+      "word": "blackboard",
+      "canonicalHeadword": "blackboard",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 黑板",
+      "excludedMeaningLabels": [
+        "n. 白板",
+        "n. 告示牌"
+      ],
+      "teachingDefinition": "n. 黑板",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePrintedHeadword": "blackboard",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "黑板",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 48,
+          "sourcePDFPage": 100,
+          "sourcePrintedPage": 96,
+          "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+          "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 15,
+          "sourcePrintedHeadword": "blackboard",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "黑板",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-blackboard-classroom"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "17aabcbb0e9def90d9ffa9ffc1cb7c369d05f90d64a0a87c934beacd5820bc7d",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "diagram on the blackboard 明确课堂实物黑板；kept for the next lesson 译成把图留在黑板上供下一节课使用，非软件或白板名称。",
+        "sourceTargetBoundary": "第100页教师与黑板的位置练习是实物课堂黑板；仅粉笔书写或擦除情境，不认证软件名或泛告示牌。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-tomato-food",
+      "word": "tomato",
+      "canonicalHeadword": "tomato",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 西红柿",
+      "excludedMeaningLabels": [
+        "n. 番茄植株"
+      ],
+      "teachingDefinition": "n. 西红柿",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "tomato",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "西红柿",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 0,
+          "sourcePrintedHeadword": "tomato",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "西红柿",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-tomato-food"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "a118a4295274486d9c9f42982b104fd09d7298c676c3e0f3b1922ddc021791b5",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "one tomato 是一个可食西红柿；slice 后用 the slices 回指切片，layer in the sandwich 对应一层层夹进三明治。番茄和西红柿是本食物目标的同义中译。",
+        "sourceTargetBoundary": "同义中文译法合为一个可食果实目标；用 tomato／tomatoes，不把植物整体或栽培知识作为已审目标。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-potato-food",
+      "word": "potato",
+      "canonicalHeadword": "potato",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 土豆",
+      "excludedMeaningLabels": [
+        "n. 马铃薯植株"
+      ],
+      "teachingDefinition": "n. 土豆",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "potato",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "土豆",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 1,
+          "sourcePrintedHeadword": "potato",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "土豆",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-potato-food"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "5276c584b79d25b5b1da8de037da19db5eba29868d70931377ed270f882ab5d2",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "baked potato 是烤土豆；cut open 与 added a little butter 分别是切开和加一点黄油。萨姆只作人名音译，未推断年龄或职业。",
+        "sourceTargetBoundary": "打印土豆和同义马铃薯合一个可食块茎目标；复数 potatoes，限定厨房或食物情境。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-cabbage-food",
+      "word": "cabbage",
+      "canonicalHeadword": "cabbage",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 卷心菜",
+      "excludedMeaningLabels": [
+        "n. 钞票",
+        "vt. 偷窃"
+      ],
+      "teachingDefinition": "n. 卷心菜",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "cabbage",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "卷心菜",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 2,
+          "sourcePrintedHeadword": "cabbage",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "卷心菜",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-cabbage-food"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "641530b9d6381ff8e176e8b5b21766a0d10f8978041f5218f4c33a6920bba1e6",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "shredded cabbage 为卷心菜丝，mixed with carrots in a large bowl 的混合动作与地点都在中译中，限定菜肴食物名词。",
+        "sourceTargetBoundary": "本课吃菜练习限定蔬菜，整棵或切碎的卷心菜是同一食物名词目标；不展开俚语或动词义。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-lettuce-food",
+      "word": "lettuce",
+      "canonicalHeadword": "lettuce",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 莴苣",
+      "excludedMeaningLabels": [
+        "n. 纸币",
+        "n. 钞票"
+      ],
+      "teachingDefinition": "n. 莴苣",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "lettuce",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "莴苣",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 3,
+          "sourcePrintedHeadword": "lettuce",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "莴苣",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-lettuce-food"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "330372588b92d9e5016009ccb20e6ddafd138aef4d3966c7e117e923f1716e2e",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "lettuce leaves 是本有限叶菜目标，water was still dripping 与when I put them in the colander 同时关系明确，them 回指叶片。colander 译沥水篮；生菜中译与源莴苣目标同组，不认证纸币或植物分类。",
+        "sourceTargetBoundary": "原表莴苣、课内吃菜情境；中文生菜作为本例叶菜的同义译法合组，选叶片或沙拉等明确食物情境，不认证纸币俗义或植物分类。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-pea-food",
+      "word": "pea",
+      "canonicalHeadword": "pea",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 豌豆",
+      "excludedMeaningLabels": [
+        "n. 似豌豆的东西"
+      ],
+      "teachingDefinition": "n. 豌豆",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "pea",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "豌豆",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 4,
+          "sourcePrintedHeadword": "pea",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "豌豆",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-pea-food"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "735ee39e2c7cb5a41199cf7df113a3abbb9aa4548621ff5006c5e223ae2efbc9",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "a few frozen peas 为几粒冷冻豌豆，left in the corner of the bag 与袋角还剩一致；句内 peas 为正常复数，规范词头保持 pea。",
+        "sourceTargetBoundary": "限定食用豌豆；常见复数 peas，但规范词头保持 pea，不展开相似物品义。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-bean-green-pod",
+      "word": "bean",
+      "canonicalHeadword": "bean",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 豆角",
+      "excludedMeaningLabels": [
+        "n. 豆子",
+        "n. 咖啡豆",
+        "n. 可可豆",
+        "n. 油嘴"
+      ],
+      "teachingDefinition": "n. 豆角",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "bean",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "豆角",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 5,
+          "sourcePrintedHeadword": "bean",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "豆角",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-bean-green-pod"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "277094a07cd6dc93c0c9028bbb5c4473437f9e0b334694808a6e3c01810ca942",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "green beans 加 trimmed the ends off 明确嫩豆荚蔬菜／豆角，before adding them to soup 的先后关系中译一致；不以豆子或咖啡豆替代原表豆角。",
+        "sourceTargetBoundary": "原表明确打印豆角，选嫩豆荚、去两端等菜肴情境；不要用干豆、咖啡豆或粗词典泛豆子来代替源目标。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-pear-fruit",
+      "word": "pear",
+      "canonicalHeadword": "pear",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 梨",
+      "excludedMeaningLabels": [
+        "n. 梨树",
+        "n. 梨木"
+      ],
+      "teachingDefinition": "n. 梨",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "pear",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "梨",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 6,
+          "sourcePrintedHeadword": "pear",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "梨",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-pear-fruit"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "682fbe5c192810e0060d3625817a3971e0a07b610c73fe6854ba988600575d33",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "a pear 可数果实，cut into small pieces 与让孩子们分着吃的目的结构准确；不推断人物的亲缘年龄，不扩梨树或梨木。",
+        "sourceTargetBoundary": "打印梨及吃水果练习限定可食果实；梨子是同义译法，不扩展树或木材义。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-grape-fruit",
+      "word": "grape",
+      "canonicalHeadword": "grape",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 葡萄",
+      "excludedMeaningLabels": [
+        "n. 葡萄树"
+      ],
+      "teachingDefinition": "n. 葡萄",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "grape",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "葡萄",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 7,
+          "sourcePrintedHeadword": "grape",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "葡萄",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-grape-fruit"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "92d96feac627a71ae3ebae843d566d83cb46bac79c38e4571c8dee94f44bf899",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "grapes 为可食果实，pulled off the stems 与摘下果梗对应；before washing them 的先摘后洗在中译保留，规范词头为 grape。",
+        "sourceTargetBoundary": "只可食葡萄果实，可用复数 grapes，规范词头保持 grape；不认证葡萄树。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-peach-fruit",
+      "word": "peach",
+      "canonicalHeadword": "peach",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 桃",
+      "excludedMeaningLabels": [
+        "n. 桃树",
+        "n. 桃色",
+        "n. 美人儿",
+        "n. 极好的事物",
+        "vt. 告发",
+        "vi. 告密"
+      ],
+      "teachingDefinition": "n. 桃",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 104,
+      "sourcePrintedPage": 100,
+      "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePrintedHeadword": "peach",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "桃",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 50,
+          "sourcePDFPage": 104,
+          "sourcePrintedPage": 100,
+          "src": "/lesson-pages/3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29.jpg",
+          "sourcePageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 8,
+          "sourcePrintedHeadword": "peach",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "桃",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-peach-fruit"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "c8d5dad53ffc7e5f8aca32fc132c46152426cd3802884258a4f0a28a81b8e982",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "juicy peach 明确汁水足的桃子；so ... that 和 after the first bite 的因果、时序一致。明确写 paper napkin 以与餐巾纸对应，不扩桃色、美人儿或告密动词。",
+        "sourceTargetBoundary": "打印桃、课内吃水果情境仅指果实；同义桃子合组，不扩色彩、人物俗语、树木或告密动词。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-attendant-reception-worker",
+      "word": "attendant",
+      "canonicalHeadword": "attendant",
+      "source": {
+        "book": "NCE1",
+        "lesson": 87
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 接待员",
+      "excludedMeaningLabels": [
+        "n. 随从",
+        "n. 出席者",
+        "n. 侍者",
+        "adj. 伴随的",
+        "adj. 在场的"
+      ],
+      "teachingDefinition": "n. 接待员（车库服务）",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 182,
+      "sourcePrintedPage": 178,
+      "sourcePageSha256": "fbd06022e14dc40c5be6cb5d2671cb560819e3c71defcf2a0c59d2bb5cfbc96d",
+      "sourcePrintedHeadword": "attendant",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "接待员",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 87,
+          "sourcePDFPage": 182,
+          "sourcePrintedPage": 178,
+          "src": "/lesson-pages/fbd06022e14dc40c5be6cb5d2671cb560819e3c71defcf2a0c59d2bb5cfbc96d.jpg",
+          "sourcePageSha256": "fbd06022e14dc40c5be6cb5d2671cb560819e3c71defcf2a0c59d2bb5cfbc96d",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 0,
+          "sourcePrintedHeadword": "attendant",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "接待员",
+          "contextEvidence": [
+            {
+              "book": "NCE1",
+              "lesson": 87,
+              "sourcePDFPage": 181,
+              "sourcePrintedPage": 177,
+              "src": "/lesson-pages/6b9d43b3b48efb42309f85077a72be59b26108f8c64296557e970b4d2550b172.jpg",
+              "sourcePageSha256": "6b9d43b3b48efb42309f85077a72be59b26108f8c64296557e970b4d2550b172",
+              "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+              "actualImageOpenedByReviewer": true,
+              "evidenceRole": "context"
+            }
+          ],
+          "targetSenseIds": [
+            "gap6b-attendant-reception-worker"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "bbe035124fb785c49980cc074610102e0f6396925e3947aa8d6ef98b42478976",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "garage attendant 与收据、交还车钥匙明确车库接待工作，与已查看原课修车服务场景一致；before handing 的先核对后交钥匙中译准确，不认证随从、出席者或伴随形容词。",
+        "sourceTargetBoundary": "第181页车库／修车业务对话和第182页打印接待员共同定界；原例应显示接待客户的工作，不用出席者、随从或形容词义充数。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-pound-currency",
+      "word": "pound",
+      "canonicalHeadword": "pound",
+      "source": {
+        "book": "NCE1",
+        "lesson": 89
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 英镑",
+      "excludedMeaningLabels": [
+        "n. 磅",
+        "n. 重击",
+        "n. 拘留所",
+        "n. 兽栏",
+        "vt. 捣烂",
+        "vi. 连续重击"
+      ],
+      "teachingDefinition": "n. 英镑（£）",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 186,
+      "sourcePrintedPage": 182,
+      "sourcePageSha256": "975f4b612fdfb5fe78005f032d3e43ed74d490543708b8836481af2dbaecb257",
+      "sourcePrintedHeadword": "pound",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "英镑（£）",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 89,
+          "sourcePDFPage": 186,
+          "sourcePrintedPage": 182,
+          "src": "/lesson-pages/975f4b612fdfb5fe78005f032d3e43ed74d490543708b8836481af2dbaecb257.jpg",
+          "sourcePageSha256": "975f4b612fdfb5fe78005f032d3e43ed74d490543708b8836481af2dbaecb257",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 9,
+          "sourcePrintedHeadword": "pound",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "英镑（£）",
+          "contextEvidence": [
+            {
+              "book": "NCE1",
+              "lesson": 89,
+              "sourcePDFPage": 185,
+              "sourcePrintedPage": 181,
+              "src": "/lesson-pages/fb2c4607ba171d2fa321004d11c4c3b383f59d069bde5378ad4d9d7bc3e531a9.jpg",
+              "sourcePageSha256": "fb2c4607ba171d2fa321004d11c4c3b383f59d069bde5378ad4d9d7bc3e531a9",
+              "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+              "actualImageOpenedByReviewer": true,
+              "evidenceRole": "context"
+            }
+          ],
+          "targetSenseIds": [
+            "gap6b-pound-currency"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "149d15a24bceffcd2b1f387809771f256dd53ce1ed5ec05300b786223a0384e6",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "paid twelve pounds for a second-hand lamp 指明确虚构付款金额，英镑不是重量单位；twelve 和带回家的后续动作都在中译，pounds 规范词头保持 pound。",
+        "sourceTargetBoundary": "原表英镑并印£，第185页房价与第186页译文确认货币单位；只能用明确价格或货币情境，不认证重量磅、重击或动词义。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-athens-city",
+      "word": "Athens",
+      "canonicalHeadword": "Athens",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 雅典",
+      "excludedMeaningLabels": [
+        "n. 希腊语"
+      ],
+      "teachingDefinition": "n. 雅典",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourcePrintedHeadword": "Athens",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "雅典",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 94,
+          "sourcePDFPage": 196,
+          "sourcePrintedPage": 192,
+          "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+          "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 0,
+          "sourcePrintedHeadword": "Athens",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "雅典",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-athens-city"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "7f52d1e2ad9c3ee2560089255601a15ecda7ac87425f9e22dc02fdc53cda4366",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "arrived in Athens 是城市地点，a day after we did 的省略 did 回指人先到达；中译行李晚一天到准确，不附城市政治或当下出行事实。",
+        "sourceTargetBoundary": "第196页地名列表和去往城市的练习；仅城市专名，不增加首都、现实旅行条件或时事断言。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-berlin-city",
+      "word": "Berlin",
+      "canonicalHeadword": "Berlin",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 柏林",
+      "excludedMeaningLabels": [
+        "n. 柏林毛线",
+        "n. 毛线"
+      ],
+      "teachingDefinition": "n. 柏林",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourcePrintedHeadword": "Berlin",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "柏林",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 94,
+          "sourcePDFPage": 196,
+          "sourcePrintedPage": 192,
+          "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+          "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 1,
+          "sourcePrintedHeadword": "Berlin",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "柏林",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-berlin-city"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "9871a7c9c56992869f56ffae0b02782b493bc22c6c7fc50374f0ac7804ead015",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "train to Berlin 是去城市的火车，delayed 导致有时间在站内早餐的因果关系中译完整；虚构个人叙述不是当前班次信息，也不是毛线义。",
+        "sourceTargetBoundary": "与同页城市列表一致，只城市专名；排除粗词典软质毛线义，不附现实线路或政治信息。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-bombay-city-historical",
+      "word": "Bombay",
+      "canonicalHeadword": "Bombay",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 孟买",
+      "excludedMeaningLabels": [
+        "n. 印度"
+      ],
+      "teachingDefinition": "n. 孟买（原书地名 Bombay）",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourcePrintedHeadword": "Bombay",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "孟买",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 94,
+          "sourcePDFPage": 196,
+          "sourcePrintedPage": 192,
+          "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+          "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 2,
+          "sourcePrintedHeadword": "Bombay",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "孟买",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-bombay-city-historical"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "8aebc50a43693cb2f3dc650f5494342406503e87396d43492b0d33641a68a3b8",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "旧旅行日记中的褪色地图限定原书地名的旧资料情境；lay folded 自然描述地图折好放在本中，faded 和 an old travel diary 均保留。caption 明示原书地名，不当作当前地名政策声明。",
+        "sourceTargetBoundary": "第196页城市列表和作为旅行目的地的替换项仅证明原书地名。保留 Bombay 词头及孟买原译，原创例句限定旧地图、旧信件或有年代的记录；不把旧名称当作当前出行推荐，也不改原词库。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-geneva-city",
+      "word": "Geneva",
+      "canonicalHeadword": "Geneva",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 日内瓦",
+      "excludedMeaningLabels": [
+        "n. 杜松子酒",
+        "n. 荷兰杜松子酒"
+      ],
+      "teachingDefinition": "n. 日内瓦",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourcePrintedHeadword": "Geneva",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "日内瓦",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 94,
+          "sourcePDFPage": 196,
+          "sourcePrintedPage": 192,
+          "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+          "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 3,
+          "sourcePrintedHeadword": "Geneva",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "日内瓦",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-geneva-city"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "3a9db14b697b23d4c7c665d69cc60c2b71231ab9f5920d3475aa1e6ed31deeb4",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "met in Geneva 为在城市碰面，to finish before the Monday deadline 是目的而非声称已完成；中译以便和截止时间完整，非杜松子酒义。",
+        "sourceTargetBoundary": "原表及同页去往、返回城市的练习仅认证日内瓦专名；排除 gin 类饮品义，不增加组织所在地等事实。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-moscow-city",
+      "word": "Moscow",
+      "canonicalHeadword": "Moscow",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 莫斯科",
+      "excludedMeaningLabels": [
+        "n. 俄语"
+      ],
+      "teachingDefinition": "n. 莫斯科",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourcePrintedHeadword": "Moscow",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "莫斯科",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 94,
+          "sourcePDFPage": 196,
+          "sourcePrintedPage": 192,
+          "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+          "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 4,
+          "sourcePrintedHeadword": "Moscow",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "莫斯科",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-moscow-city"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "6e015181c9f492beddf5851cf420c3cad77ca01b56c9d90df1f7c82046794314",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "parcel from Moscow 表城市来处，a scarf 与 a handwritten note 译成一条围巾和一张手写便条，未添人物、邮路或时事事实。",
+        "sourceTargetBoundary": "原表与同页 from／stay in 城市情境，仅专名；不加入现实交通、政治或时事事实。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-rome-city",
+      "word": "Rome",
+      "canonicalHeadword": "Rome",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 罗马",
+      "excludedMeaningLabels": [
+        "n. 罗马帝国"
+      ],
+      "teachingDefinition": "n. 罗马",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourcePrintedHeadword": "Rome",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "罗马",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 94,
+          "sourcePDFPage": 196,
+          "sourcePrintedPage": 192,
+          "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+          "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 5,
+          "sourcePrintedHeadword": "Rome",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "罗马",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-rome-city"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "b2561ed13a69066de306ea44b1bd2e7ff79cad8fdd2a6abe2e4b9fcd4722820c",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "got lost in Rome 是在城市迷路，asked a shopkeeper to mark our hotel 译成请求店主标出酒店，并未宣称标注已完成；没有罗马帝国历史义。",
+        "sourceTargetBoundary": "仅城市专名与普通人日常叙述，不展开帝国历史或旅游知识。"
+      },
+      "humanCertification": false
+    },
+    {
+      "id": "gap6b-seoul-city-source-name",
+      "word": "Seoul",
+      "canonicalHeadword": "Seoul",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 汉城",
+      "excludedMeaningLabels": [
+        "n. 韩语"
+      ],
+      "teachingDefinition": "n. 汉城（原书城市译名）",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourcePrintedHeadword": "Seoul",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "汉城",
+      "sourceAssociations": [
+        {
+          "book": "NCE1",
+          "lesson": 94,
+          "sourcePDFPage": 196,
+          "sourcePrintedPage": 192,
+          "src": "/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+          "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+          "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+          "actualImageOpenedByReviewer": true,
+          "evidenceRole": "word-list",
+          "sourceWordIndex": 6,
+          "sourcePrintedHeadword": "Seoul",
+          "sourcePrintedPartOfSpeech": "n.",
+          "sourcePrintedMeaning": "汉城",
+          "contextEvidence": [],
+          "targetSenseIds": [
+            "gap6b-seoul-city-source-name"
+          ],
+          "sourceReviewStatus": "actual-image-and-scope-reviewed"
+        }
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6b.ts",
+      "contentSha256": "da78609e27a86864ec21d86684a1a545fc0d28dbd6d32fc3053d3ea86e7664e7",
+      "author": "Codex /root/review_batch5c",
+      "authorship": "newly-authored-original; no saved draft claimed",
+      "selfReview": {
+        "status": "author-self-review-completed; independent-content-review-pending",
+        "editorialReview": "1968 travel journal 明确有年代的资料，describes a rainy afternoon 与记述下雨下午一致。Seoul 词头和源汉城中译保持，caption 指原书译名，不称这是现行通用中文名称。",
+        "sourceTargetBoundary": "原表 n. 汉城；保持 Seoul 规范词头及原译可追溯。原创句限定旧明信片或旧日记等年代资料，不声称汉城是当前通用中文译名，不静默改源词库。"
+      },
+      "humanCertification": false
+    }
+  ],
+  "pending": [
+    "Separate independent content review",
+    "Root runtime registration",
+    "Source-bound UI callback checks after registration",
+    "Integrated checkpoint tests and build",
+    "Browser, phone and true audio review",
+    "Teacher or human editorial review"
+  ],
+  "runtimeRegistered": false,
+  "remoteWrites": false
+}
