@@ -10,6 +10,7 @@ import { StudioHeader } from '../app/study-mode';
 import {CurrentRoute} from './current-route';
 import {CourseCatalogue} from './catalogue';
 import {parseLearningRoute, catalogueHash, type CatalogueGroup} from './navigation';
+import '../app/mobile-layout.css';
 function App() {
     const raw = useRef<string | null>(null);
     const [message, setMessage] = useState('');
