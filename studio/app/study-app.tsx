@@ -29,6 +29,7 @@ import {enrollFlashcard,flashcardSummary,isFlashcardEnrolled,migrateFlashcards,p
 import {loadLessonLanguage,rowsToText,type LessonLanguage} from './language';
 import {readState,writeState} from './offline-store';
 import {ProgressSave} from './progress-save';
+import type {ProgressRestoreOptions} from './progress-file';
 import {ONLINE} from './runtime-mode';
 import {StudioHeader} from './study-mode';
 import {studioSection,learningRedirect} from './studio-navigation';
@@ -61,7 +62,7 @@ function StudyWorkspace(){
  useEffect(()=>{let alive=true;(async()=>{try{let parsed:unknown;try{parsed=await readState()}catch{if(alive)setStorageMode('legacy')}if(parsed===undefined){const raw=localStorage.getItem(KEY);if(raw)parsed=JSON.parse(raw)}if(alive&&parsed!==undefined){if(validateState(parsed))setState(migrateFlashcards(parsed,courseWords));else{setStorageError(true);setStorageBlocked(true)}}}catch{if(alive){setStorageError(true);setStorageBlocked(true)}}finally{if(alive)setReady(true)}})();return()=>{alive=false}},[]);
  useEffect(()=>{if(!ready||storageBlocked)return;let alive=true;(async()=>{try{if(storageMode==='db')await writeState(state);else localStorage.setItem(KEY,JSON.stringify(state));if(alive){setStorageError(false);setPersisted(state)}}catch{if(alive)setStorageError(true)}})();return()=>{alive=false}},[state,ready,storageBlocked,storageMode]);
  useEffect(()=>{const tick=setInterval(()=>setReviewClock(Date.now()),30000);return()=>clearInterval(tick)},[]);
- async function restoreProgress(incoming:State){const next=prepareFlashcardRestore(stateRef.current,incoming,courseWords);if(storageMode==='db')await writeState(next);else localStorage.setItem(KEY,JSON.stringify(next));setState(next);setPersisted(next);setStorageError(false);setStorageBlocked(false)}
+ async function restoreProgress(incoming:State,options:ProgressRestoreOptions={}){if(options.expected&&stateRef.current!==options.expected)throw Error('学习记录已更新，请重新核对后恢复。');if(!validateState(incoming))throw Error('恢复内容无效，当前记录未改变。');const next=options.exact?incoming:prepareFlashcardRestore(stateRef.current,incoming,courseWords);if(storageMode==='db')await writeState(next);else localStorage.setItem(KEY,JSON.stringify(next));stateRef.current=next;setState(next);setPersisted(next);setStorageError(false);setStorageBlocked(false);return next}
  const saveStatus=!ready?'读取中':storageError||storageBlocked?'尚未自动保存':persisted===state?'本机已保存':'正在保存';
  function go(v:string){if(ONLINE&&v==='roadmap'){location.href=mapHref(mapState,route.book,route.lesson);return}navigate({view:v});setSearch('');setStage('all')}
  function openLesson(id:number){setState(s=>({...s,lastLesson:id}));navigate({view:'lesson',lesson:id})}

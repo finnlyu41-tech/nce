@@ -6,7 +6,7 @@
 
 此前五步演示已随 v12 发布到 [正式入口](https://finn-english-studio.pages.dev/demos/yesterday/)，发布源码 `c602d8af34ad93c7720645857808a3bbdcb55c60`，独立部署 `20b1f624`。当时两域名 102 项资源回读及入口浏览器检查通过；该历史验收不涵盖本轮自动复习。
 
-本轮已由主线随 v17 发布：源码 `9292efc378716d9a207d1ddefa1cc8a105644152`，独立部署 [06758b8c](https://06758b8c.finn-english-studio.pages.dev/)。两域名 114 项资源/哈希回读通过，11 个演示资源完整，模块返回 application/javascript。主线整合后的真实浏览器交互仍待复验。
+本轮已由主线随 v17 发布：源码 `9292efc378716d9a207d1ddefa1cc8a105644152`，独立部署 [06758b8c](https://06758b8c.finn-english-studio.pages.dev/)。两域名 114 项资源/哈希回读通过，11 个演示资源完整，模块返回 application/javascript。后续既有独立云端 QA 已回报 v17 原稿、纠正和提示可回看，未开放内容不泄露；自动复习在刷新与演示／Today 往返后保留日期和草稿，未到期不误列为到期。发布者已读回补充报告、抽看 3 张对应截图，并核对 ZIP SHA-256、CRC 及全部 16 个清单文件哈希。数字／直弯撇号缩写、缺订正说明时全文保留并刷新恢复也有同一 v17 实测；320/390、真实到期与音频仍未测。证据只保存在忽略的 `work/map-verification/v17-cloud-qa/`，不公开上传。
 
 ## 给统一主发布线
 
@@ -17,7 +17,7 @@
 1. 取完整 `public/demos/yesterday/` 的 **11 个文件**，保留 `scripts/package-yesterday-demo.mjs`。新增入口为 `bootstrap.mjs`，不要漏掉模块依赖。
 2. 主线 `pnpm package:online` 统一复制 11 个演示文件并登记版本哈希，Worker 与上传校验同步精确白名单。`package-yesterday-demo.mjs` 仅供独立预览，无需额外覆盖正常发布产物。
 3. 主线今日练习只读同一适配器，通过 `getDueTasks` 和 `openPractice` 展示到期事项；不写入计划、不复制排程。返回、focus、pageshow、跨标签 storage 与 30 秒时钟刷新。异常保留原记录并明确显示；离线版不读取或链接此在线体验。演示的记录页和复习过程只保留一个主要复习操作。
-4. 主线备份若需要收录该能力，应纳入两个独立 namespace。计划按适配器 `exportBackup/restoreBackup` 合并；练习首答、曝光和草稿在原 demo key。主站既有备份登记尚未接入，不能称已被主站备份保护。
+4. 主线 `ProgressSave` 现已接入两个原有 namespace，待 v19 发布验收。文件 v2 在 `capability` 内保存体验原答、提示、曝光、草稿及同一适配器的计划备份；不改全局 State，也不另建排程。同步读取与校验后再打开原生保存面板；旧 v1／纯 State 文件保持可读，并且不触碰两区。恢复预览只读，确认时取得两把既有锁、新鲜比较原文、按既有计划规则合并；较新结果保留，冲突停止。失败会回退并回读，无法确认时提供恢复资料而不报成功。同页恢复会触发 Today 重新只读查询。地图进度和音频仍按原有独立范围保存。
 5. 发布后回读实际 HTTPS 地址的 11 个资源、`.mjs` MIME、Web Locks 可用性、刷新恢复与真实手机行为。仅在回读确认后称已上线；本机测试地址不作为交付 URL。
 
 ## 自动保存与练习行为
@@ -69,4 +69,4 @@ node scripts/package-yesterday-demo.mjs --out-root work/yesterday-preview
 
 证据：[测试 JSON](verification/yesterday-review-browser.json)、[自动保存](verification/yesterday-review-saved.png)、[到期入口](verification/yesterday-review-due.png)、[320 复习通过](verification/yesterday-review-passed-320.png)、[320 需要再练](verification/yesterday-review-needs-practice-320.png)、[同题复做](verification/yesterday-review-repeat-320.png)、[保存失败保留输入](verification/yesterday-review-save-failure.png)。JSON 内本机端口仅是已关闭的测试服务；不是线上地址。
 
-当前主线接入已包括今日入口和完整打包；正式发布和 HTTPS 回读已完成，证据见上方 v17 回执。独立体验的两个存储区尚未并入主站备份，界面在「其他操作」明确这一范围，不声称已受整站备份保护。真实长期学习效果、听力、自由口语和开放表达评分仍未验证。
+当前主线已接入今日入口、完整打包和既有进度文件的两区备份；备份接线待 v19 正式发布回读。界面在「其他操作」链接到学习记录页的保存与恢复入口，明确换设备仍需手动保存和恢复，不声明自动同步。真实长期学习效果、听力、自由口语和开放表达评分仍未验证。

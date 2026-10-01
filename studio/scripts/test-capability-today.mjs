@@ -185,6 +185,14 @@ try{
    requests[0](await read(rawPlan));await view.settle();assert.notEqual(primary(view.tree)?.props.href,taskHref);assert.equal(view.lateUpdates,0);view.unmount();noWrites(port);
   });
  });
+ test('a successful same-page progress restore rereads the canonical plan immediately without writing it',async()=>{
+  const port=memory();await environment(port,DUE,async env=>{
+   const view=renderer(dependencies);view.mount(props());await view.settle();assert.notEqual(primary(view.tree)?.props.href,taskHref);
+   port.external(rawPlan);env.event('english-studio-progress-restored');await view.settle();assert.equal(primary(view.tree)?.props.href,taskHref);assert.equal(port.stats.gets,2);
+   port.external(JSON.stringify(nextPlan));env.event('english-studio-progress-restored');await view.settle();assert.notEqual(primary(view.tree)?.props.href,taskHref);assert.equal(port.stats.gets,3);noWrites(port);
+   view.unmount();assert.equal(env.count('english-studio-progress-restored'),0);env.event('english-studio-progress-restored');await view.settle();assert.equal(port.stats.gets,3);
+  });
+ });
  test('unmount cancels an in-flight read and removes listeners and timers',async()=>{
   let resolve;const port=memory(rawPlan);await environment(port,DUE,async env=>{const view=renderer({...dependencies,readCapabilityPractice:()=>new Promise(done=>{resolve=done})});view.mount(props());view.unmount();resolve(await read(rawPlan));await view.settle();assert.equal(view.lateUpdates,0);for(const event of ['focus','pageshow','storage'])assert.equal(env.count(event),0);assert.deepEqual(env.intervals,[]);noWrites(port)});
  });

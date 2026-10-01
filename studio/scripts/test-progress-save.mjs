@@ -32,6 +32,21 @@ assert.equal((await readProgressFile(file)).state.nce['NCE1-1'].notes, '先听�
 assert.equal((await readProgressFile(makeProgressFile(state))).state.nce['NCE1-1'].notes, '保存后新写的笔记');
 assert.deepEqual(await readProgressFile(new Blob([JSON.stringify(state)])), {state, savedAt: null}, 'Legacy JSON stays readable');
 
+// This layer transports an opaque payload; the owning adapter validates its
+// content before the UI previews or restores it. No schedule is derived here.
+const capability = {kind: 'transport-fixture', version: 1, demo: {raw: 'original draft'}, plan: {receipts: [{id: 'kept'}]}};
+const complete = makeProgressFile(state, now, capability);
+assert.equal(JSON.parse(await complete.text()).version, 2);
+assert.deepEqual((await readProgressFile(complete)).capability, capability);
+capability.demo.raw = 'edited after export';
+assert.equal((await readProgressFile(complete)).capability.demo.raw, 'original draft');
+assert.equal(Object.hasOwn(await readProgressFile(file), 'capability'), false, 'Old backups have no instruction to clear new namespaces');
+assert.throws(() => makeProgressFile(state, now, null), /小练习/);
+assert.throws(() => makeProgressFile(state, now, []), /小练习/);
+assert.throws(() => makeProgressFile(state, now, {raw: 'x'.repeat(MAX_PROGRESS_BYTES)}), /25 MB/);
+await assert.rejects(readProgressFile(new Blob([JSON.stringify({...envelope, capability})])), /版本不匹配/);
+await assert.rejects(readProgressFile(new Blob([JSON.stringify({...envelope, version: 2, capability: []})])), /载荷缺失/);
+
 for (const bad of [null, [], {}, {...state, format: 'another-app'}, {...envelope, version: 2}, {...envelope, savedAt: 'bad-date'},
   {...envelope, state: {...state, nceLast: {book: 'NCE1', lesson: 145}}},
   {...envelope, state: {...state, cards: {bad: null}}},

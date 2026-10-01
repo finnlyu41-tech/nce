@@ -31,10 +31,10 @@
 
 ## 验证和发布边界
 
+本批已随 v18（源码 `5f8591b`，独立部署 `fe99ffde`）发布，PR #4 已合并。主线定向例句、词卡、进度、类型及在线／离线构建通过，1,950 文件和两域名 114 项 HTTP／哈希／MIME 回读通过；该批正式浏览器、真机与真实音频仍未验收。
+
 类型、例句/义项清单、15 个 FSRS 场景与真实来源组件检查通过；读取补充例句仍保留已有中译、卡片排程、旧 due/box、备份与来源。测试覆盖未翻面隐藏、揭晓显示、文本转义和词条去重。本批不修改任何用户学习记录。
 
 在 v17 基线运行 `pnpm check`、定向 ESLint、`verify:vocabulary-examples`、`verify:flashcards`、`verify:progress`、`verify:vocabulary` 均通过。`package:online`、`verify:online`、`package:static` 也通过；在线资源验证为 1,950 文件、556 份材料。覆盖 JSON 与缺口 CSV 和本轮重新生成的结果一致。构建仍有主线既有大块体积提示，本批没有增加依赖或音视频资源。
 
-可保留的执行摘要见 [验证 JSON](verification/vocabulary-examples-batch2.json)，完整日志在忽略的 `work/vocabulary-examples/*v17-batch2*`。正式站的主线交互复验仍属于待办；静态资源检查、SSR 与本地构建不能当作正式浏览器、手机真机或实际音频验收。本批交唯一发布负责人串行整合，不自行部署。
-
-本批已随 v18（源码 `5f8591b`，独立部署 `fe99ffde`）发布，PR #4 已合并。主线定向例句、词卡、进度、类型及在线／离线构建通过，1,950 文件和两域名 114 项 HTTP／哈希／MIME 回读通过；该批正式浏览器、真机与真实音频仍未验收。
+可保留的执行摘要见 [验证 JSON](verification/vocabulary-examples-batch2.json)，完整日志在忽略的 `work/vocabulary-examples/*v17-batch2*`。正式站的主线交互复验仍属于待办；静态资源检查、SSR 与本地构建不能当作正式浏览器、手机真机或实际音频验收。来源分支未自行部署；已由唯一发布负责人串行整合上线。
