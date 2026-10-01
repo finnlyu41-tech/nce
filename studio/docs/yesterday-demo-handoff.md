@@ -13,8 +13,8 @@
 本轮文件仅限 `public/demos/yesterday/`、演示复制／验证脚本与交接／验证文档。未修改主 `map/model`、评分、进度门槛、全局导航、FSRS、grammar drafts、教材或主站打包输出。未 push、merge 或 deploy；发布仍由主英语线程 `01a0f10c-ff5c-7aa1-8a42-8ee650bbb2f5` 串行处理。
 
 1. 取完整 `public/demos/yesterday/` 的 **11 个文件**，保留 `scripts/package-yesterday-demo.mjs`。新增入口为 `bootstrap.mjs`，不要漏掉模块依赖。
-2. 主线正常 online 打包后，在 `studio/` 执行 `node scripts/package-yesterday-demo.mjs`。现有 `package-standalone.py` 不自动复制全部 public，这一步不能省略。它只复制演示文件，不移除主站其他资产。
-3. 主线今天学习入口若要显示到期事项，读取下面的独立适配接口并使用 `openPractice(task)`；打开练习不等于完成。全局入口接线由主线统一做，本分支仅在演示页头接了到期提醒。
+2. 主线 `pnpm package:online` 统一复制 11 个演示文件并登记版本哈希，Worker 与上传校验同步精确白名单。`package-yesterday-demo.mjs` 仅供独立预览，无需额外覆盖正常发布产物。
+3. 主线今日练习只读同一适配器，通过 `getDueTasks` 和 `openPractice` 展示到期事项；不写入计划、不复制排程。返回、focus、pageshow、跨标签 storage 与 30 秒时钟刷新。异常保留原记录并明确显示；离线版不读取或链接此在线体验。演示的记录页和复习过程只保留一个主要复习操作。
 4. 主线备份若需要收录该能力，应纳入两个独立 namespace。计划按适配器 `exportBackup/restoreBackup` 合并；练习首答、曝光和草稿在原 demo key。主站既有备份登记尚未接入，不能称已被主站备份保护。
 5. 发布后回读实际 HTTPS 地址的 11 个资源、`.mjs` MIME、Web Locks 可用性、刷新恢复与真实手机行为。仅在回读确认后称已上线；本机测试地址不作为交付 URL。
 
@@ -67,4 +67,4 @@ node scripts/package-yesterday-demo.mjs --out-root work/yesterday-preview
 
 证据：[测试 JSON](verification/yesterday-review-browser.json)、[自动保存](verification/yesterday-review-saved.png)、[到期入口](verification/yesterday-review-due.png)、[320 复习通过](verification/yesterday-review-passed-320.png)、[320 需要再练](verification/yesterday-review-needs-practice-320.png)、[同题复做](verification/yesterday-review-repeat-320.png)、[保存失败保留输入](verification/yesterday-review-save-failure.png)。JSON 内本机端口仅是已关闭的测试服务；不是线上地址。
 
-剩余主线工作是今天学习／全局到期入口、既有备份登记、正式发布与 HTTPS 回读。真实长期学习效果、听力、自由口语和开放表达评分仍未验证。
+当前主线接入已包括今日入口和完整打包；正式发布与 HTTPS 回读以下一次发布回执为准。独立体验的两个存储区尚未并入主站备份，界面在「其他操作」明确这一范围，不声称已受整站备份保护。真实长期学习效果、听力、自由口语和开放表达评分仍未验证。

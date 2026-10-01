@@ -6,7 +6,7 @@ const $=id=>document.getElementById(id);
 const esc=value=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
 const date=at=>new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',timeZoneName:'short'}).format(new Date(at));
 const primary=(label,action,disabled=false)=>`<button class="primary" data-action="${action}" ${disabled?'disabled':''}>${label}</button>`;
-const mapLink='<a class="primary primary-link" href="/map/">返回学习地图</a>';
+const mapLink='<a class="primary primary-link" href="/map/">返回学习首页</a>';
 const messages={
   'locks-unavailable':'当前浏览器无法可靠地跨标签保存。输入仍在本页；请使用支持安全保存的浏览器。',
   'storage-error':'保存未能确认，当前输入仍在本页。请重试，成功前不要关闭页面。',
@@ -35,7 +35,7 @@ export function createReviewController(host,{storage,locks,now=Date.now}={}) {
     const target=$('review-reminder');
     if(!target) return;
     let tasks=[];try {tasks=due();} catch {problem={status:'invalid-clock'};}
-    target.innerHTML=tasks.length ? `<div class="due-notice"><span><strong>有一项到期复习</strong><br>讲述昨天的经历 · 约 2 分钟</span><button data-action="review-open">继续练习 →</button></div>` : '';
+    target.innerHTML=tasks.length&&!mode&&host.getState().step!==4 ? `<div class="due-notice"><span><strong>有一项到期复习</strong><br>讲述昨天的经历 · 约 2 分钟</span><button data-action="review-open">继续练习 →</button></div>` : '';
   }
   async function refresh() {
     refreshRequested=true;
@@ -63,6 +63,7 @@ export function createReviewController(host,{storage,locks,now=Date.now}={}) {
   function evidenceNote(){return snapshot.plan?.receipts.length?`已完成 ${snapshot.plan.receipts.length} 次到期选择题复习；听力、真实口语、开放表达和长期迁移仍待核验。`:'听力、真实口语、次日和一周后的练习：尚未检验。';}
   function finalActions() {if(!host.isSaved() || (problem&&!snapshot.plan))return primary('重试保存记录和复习安排','review-retry-plan',host.isSaving?.());return snapshot.plan?.dueAt<=now()?primary('开始到期的 2 分钟复习 →','review-open'):mapLink;}
   function render() {
+    reminder();
     if(!mode) return null;
     const s=session();
     if(!s) {mode=false;return null;}

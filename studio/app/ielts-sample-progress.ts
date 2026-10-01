@@ -1,7 +1,7 @@
 import type {State} from './model';
 import {learningStages,variants,type Variant} from '../ielts-blueprint/types';
 import {sampleLessonById,sampleLessonsFor,sampleMaterials,sampleSequence,type SampleMaterial} from '../ielts-blueprint/sample-sequence';
-import {emptySampleState,sampleWordCount,type SampleState,type SampleSession,type SampleDraft,type SampleAttempt} from '../ielts-blueprint/sample-sequence-model';
+import {emptySampleState,isStoredSampleResponse,type SampleState,type SampleSession,type SampleDraft,type SampleAttempt} from '../ielts-blueprint/sample-sequence-model';
 
 export const sampleProgressKey='ielts-sample-sequence-v1';
 const MAX_RAW=2_000_000,MAX_ATTEMPTS=200,MAX_PLAYBACKS=100;
@@ -54,7 +54,7 @@ function attempt(value:unknown,material:SampleMaterial,variant:Variant,lessonId:
   requireThat(material.questions.every(q=>String((value.answers as Record<string,string>)[q.id]||'').trim()),'原始答案缺失。');
   const correct=material.questions.filter(q=>q.accepted.some(a=>normal(a)===normal((value.answers as Record<string,string>)[q.id]||''))).length;
   requireThat(value.correct===correct&&value.total===material.questions.length&&value.matched===(correct===material.questions.length)&&value.feedback==='answer-key','原始答案与客观核对结果不一致。');
- }else requireThat(sampleWordCount(String(value.response))>=(material.minimumWords||1)&&value.correct===null&&value.total===null&&value.matched===null&&value.feedback==='self-review-awaiting-human','开放作答必须保留为待人工核对。');
+ }else requireThat(isStoredSampleResponse(String(value.response),material.minimumWords||1)&&value.correct===null&&value.total===null&&value.matched===null&&value.feedback==='self-review-awaiting-human','开放作答必须保留为待人工核对。');
  if(value.stage==='timed'){
   requireThat(value.startedAt===source.startedAt&&Number(value.startedAt)>=source.openedAt&&Number(value.startedAt)>0&&Number(value.at)>=Number(value.startedAt)&&value.elapsedMs===Number(value.at)-Number(value.startedAt)&&value.withinTrainingTime===(Number(value.elapsedMs)<=material.seconds*1000),'训练计时记录不一致。');
  }else requireThat(value.startedAt===0&&value.elapsedMs===null&&value.withinTrainingTime===null,'非限时题不能带有计时通过结果。');
@@ -102,7 +102,7 @@ function validate(value:unknown,now:number):asserts value is SampleState{
   if(session.correctedAt){
    const timed=session.attempts.filter(a=>a.stage==='timed').at(-1);
    requireThat(session.stage==='review'&&timed&&session.correctedAt>=timed.at&&session.correctionNote.trim().length>=8,'订正顺序不正确。');
-   requireThat(lesson.timed.questions?lesson.timed.questions.every(q=>q.accepted.some(a=>normal(a)===normal(session.correctionAnswers[q.id]||''))):sampleWordCount(session.correctionResponse)>=(lesson.timed.minimumWords||1),'保存的订正作品不完整。');
+   requireThat(lesson.timed.questions?lesson.timed.questions.every(q=>q.accepted.some(a=>normal(a)===normal(session.correctionAnswers[q.id]||''))):isStoredSampleResponse(session.correctionResponse,lesson.timed.minimumWords||1),'保存的订正作品不完整。');
   }else requireThat(session.stage!=='review','复验缺少订正时间。');
  }
  // Checking all variants together keeps shared listening/reading/speaking material seen.

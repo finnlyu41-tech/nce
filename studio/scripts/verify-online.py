@@ -70,7 +70,7 @@ def verify(root):
         allowed.add('language/'+path)
     assert lines == language['lines'], 'Translation count mismatch'
     version = json.loads((root/'version.json').read_text())
-    demo_files = {'demos/yesterday/'+name for name in ['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'content.mjs']}
+    demo_files = {'demos/yesterday/'+name for name in ['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'content.mjs', 'bootstrap.mjs', 'demo-store.mjs', 'review-adapter.mjs', 'review-content.mjs', 'review-controller.mjs', 'review-model.mjs']}
     assert set(version['demo_assets']) == demo_files, 'Demo bundle incomplete'
     for path, digest in version['demo_assets'].items():
         assert (root/path).read_bytes() == (ROOT/'public'/path).read_bytes(), 'Demo differs from verified source'
