@@ -30,11 +30,14 @@ export type Mock = Evidence & {
     reference: string;
 };
 export type Project = {text:string; recording:string; reviewer:string; feedback:string; criteria:boolean[]; at:number};
+export type ExpressionPractice = {step:number;guided:string;recall:string;hinted:boolean;checked:boolean};
+export const emptyPractice = ():ExpressionPractice => ({step:0,guided:'',recall:'',hinted:false,checked:false});
 export type NodeRecord = {
     startedAt?: number;
     studyStep?: number;
     questionIndex?: number;
     exampleIndex?: number;
+    practice?: ExpressionPractice;
     project?: Project;
     round: number;
     answers: string[];
@@ -276,6 +279,7 @@ export function parseProgress(raw: string): Progress {
         if(v.studyStep!==undefined&&(!Number.isInteger(v.studyStep)||Number(v.studyStep)<0||Number(v.studyStep)>2))throw new Error('学习步骤无效。');
         if(v.exampleIndex!==undefined&&(!Number.isInteger(v.exampleIndex)||Number(v.exampleIndex)<0||Number(v.exampleIndex)>10))throw new Error('示范位置无效。');
         if(v.questionIndex!==undefined&&(!Number.isInteger(v.questionIndex)||Number(v.questionIndex)<0||Number(v.questionIndex)>19))throw new Error('答题位置无效。');
+        if(v.practice!==undefined){const p=v.practice;if(nodeById(id)!.kind!=='unit'||!recordLike(p)||!Number.isInteger(p.step)||Number(p.step)<0||Number(p.step)>2||!text(p.guided,1000)||!text(p.recall,1000)||typeof p.hinted!=='boolean'||typeof p.checked!=='boolean')throw new Error('表达跟练记录无效。');}
         for (const p of v.attempts)
             if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || Number(p.round)>100000 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
                 throw new Error('检验记录无效。');

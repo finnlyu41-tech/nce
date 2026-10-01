@@ -173,6 +173,29 @@ check(focused.records['nce1-1'].round===1&&!focused.records['nce1-1'].assisted&&
 check(m.changeStudyStep(focused,'nce1-1',4)===focused,'Invalid teaching step cannot be saved');
 check(m.changeStudyStep(focused,'nce1-3',1)===focused,'Locked nodes cannot create learning evidence');
 for(const field of ['studyStep','questionIndex','exampleIndex']){const malformed=structuredClone(focused);malformed.records['nce1-1'][field]=100;assert.throws(()=>m.parseProgress(JSON.stringify(malformed)));count++;}
+const plans=await import(await moduleURL(path.join(root,'lesson-plan.ts')));
+for(const unit of c.units){
+ const plan=plans.lessonPlan(unit);
+ check(!!plan.goal&&!!plan.own&&!!plan.recall.answer,'Every unit has a concrete expression goal and task');
+ check(plan.guided.options.join(' ')===plan.guided.answer,'Guided word tiles reconstruct their reference without dropping repeated words');
+ check(plan.goal.length<=30&&plan.goal!=='undefined','Goal is readable and derived from a mapped teaching task');
+ if(unit.book==='NCE1'&&unit.lesson<=23)check(plan.guided.answer!==plan.recall.answer||unit.lesson===9,'Beginner recall changes the example rather than copying it');
+}
+const expressionState=m.unlockNode(m.emptyProgress(),'nce1-1');
+expressionState.records['nce1-1']={...m.emptyRecord(),practice:{step:2,guided:'Is this your book?',recall:'Is this your pen?',hinted:true,checked:true},draft:{note:'Is this your bag?'}};
+const expressionCopy=m.parseProgress(m.exportProgress(expressionState));
+check(JSON.stringify(expressionCopy.records)===JSON.stringify(expressionState.records),'Expression steps, hint use, recall and own draft survive export/restore');
+check(!m.achieved(first,expressionCopy)&&!m.stable(first,expressionCopy),'Completing assisted expression practice never counts as quiz mastery');
+check(m.restartQuiz(expressionCopy,first.id).records[first.id].practice.recall==='Is this your pen?','A fresh quiz preserves expression work');
+for(const change of [{step:3},{step:-1},{step:0.5},{guided:'x'.repeat(1001)},{recall:4},{hinted:'yes'},{checked:1}]){
+ const invalid=structuredClone(expressionState);Object.assign(invalid.records[first.id].practice,change);assert.throws(()=>m.parseProgress(JSON.stringify(invalid)));count++;
+}
+const wrongKind=structuredClone(expressionState);wrongKind.records.first=wrongKind.records[first.id];delete wrongKind.records[first.id];assert.throws(()=>m.parseProgress(JSON.stringify(wrongKind)));count++;
+const modality=plans.questionSkills(c.questionsFor(first,0),[false,true,true,true,true,true]);
+check(modality.length===3&&modality[0].correct===1&&modality[0].total===2&&modality[0].step===0,'Listening-only errors recommend source listening, not unrelated writing');
+check(modality.slice(1).every(x=>x.correct===2),'Correct reading and word order remain visible in the receipt');
+const mixed=plans.questionSkills(c.questionsFor(c.nodeById('nce2-1'),0),[true,true,true,true,true,true,false]);
+check(mixed.at(-1).id==='grammar'&&mixed.at(-1).correct===0&&mixed.at(-1).step===1,'Grammar application gets a separate repair target');
 console.log(`${count} checks passed: 168 source-bound units, audio evidence, source pairing, gates, spaced review, projects, four skills, mocks and progress safety.`);
 if(process.argv.includes('--fixtures')){
  const dir=path.join(root,'../work/map-verification');await fs.mkdir(dir,{recursive:true});
