@@ -4,7 +4,11 @@
 
 ## 学习、单词与句型语法
 
-当前已发布版本为 `2026-10-01-vocabulary-examples-v14`：[按课单词与例句](https://finn-english-studio.pages.dev/#/words/NCE1/2?tab=book)，独立部署 [24aea99f](https://24aea99f.finn-english-studio.pages.dev/)，发布源码 `c383a5d8cab9bd61786b422beed12d78fb7c9549`。PR #3 已合并，源码同步两条共享分支。类型、例句与义项、FSRS、词库、在线及离线构建、1,944 个发布文件检查通过；正式及独立域名 102 项 HTTP、资源与哈希回读通过。首批含 32 词、39 条已审读原创双语例句及搭配；3,065 词仅表示有教材上下文候选或原创例句，仍有 282 词缺口，不表示全部义项已审读。详见[例句范围](docs/vocabulary-examples.md)。
+当前已发布版本为 `2026-10-01-guided-ielts-sample-v15`：[四课小循环](https://finn-english-studio.pages.dev/#/ielts?tab=course)，独立部署 [20744965](https://20744965.finn-english-studio.pages.dev/)，发布源码 `b89b6bd841ee3032a3bf7305ee9c3f6deac96f74` 已同步两条共享分支。四课从同一学习目录进入，一次一个步骤，原教材与资料保留。文字、位置、提示和原始作答使用既有进度及整站备份；半途、订正与有新材料的到期复验进入今日推荐。新增保存与推荐不会改变地图解锁、FSRS 或正式成绩。
+
+类型、导航、117 项蓝图、125 项样例、35 项保存/推荐/定位边界、801 次真实状态往返、47 项今日推荐、进度备份及在线/离线构建通过，1,944 个发布文件完整；两域名 102 项公开资源回读通过。正式浏览器交互、手机布局和真实音频仍待复验，浏览器控制工具当前不可用；程序与资源检查不能代替这些验收。证据位于忽略的 `work/map-verification/v15-*`。可回退至 [v14](https://24aea99f.finn-english-studio.pages.dev/)；先保存完整进度，旧版保留新草稿但不展示四课入口。范围见[接线记录](docs/ielts-blueprint-integration.md#主线接入状态)，四课样例不代表雅思全部题型已完成。
+
+此前已发布版本为 `2026-10-01-vocabulary-examples-v14`：[按课单词与例句](https://finn-english-studio.pages.dev/#/words/NCE1/2?tab=book)，独立部署 [24aea99f](https://24aea99f.finn-english-studio.pages.dev/)，发布源码 `c383a5d8cab9bd61786b422beed12d78fb7c9549`。PR #3 已合并，源码同步两条共享分支。类型、例句与义项、FSRS、词库、在线及离线构建、1,944 个发布文件检查通过；正式及独立域名 102 项 HTTP、资源与哈希回读通过。首批含 32 词、39 条已审读原创双语例句及搭配；3,065 词仅表示有教材上下文候选或原创例句，仍有 282 词缺口，不表示全部义项已审读。详见[例句范围](docs/vocabulary-examples.md)。
 
 来源支线已实际验证词表、查词、翻面、刷新及 320/390 视口；本次主线整合后的正式浏览器交互复验尚未完成，当前浏览器控制工具不可用，不能把公开资源检查当成交互验收。证据保存在忽略的 `work/map-verification/v14-*`。可回退到下方已验收的 v13.1，原进度与 FSRS 格式没有变化。
 
