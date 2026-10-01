@@ -1,0 +1,1810 @@
+{
+  "schemaVersion": 1,
+  "batch": "nce-gap-batch6a",
+  "baseCommit": "acfaffc6a8fe7033fca26c5c5b1dcb7c9bc0dce2",
+  "sourceTargetPlan": "work/gaps94/batch6a/target-plan.json",
+  "sourceTargetPlanSha256": "b6fed899cda00716aa6245ad6e1c4d91db7a01a806495bd7a7752db6ed8664ea",
+  "rootFiniteTargetPlan": "work/gaps94/finite-target-plan.json",
+  "headwords": 24,
+  "senseExamples": 25,
+  "uniqueTargetSenses": 25,
+  "textbookTargetExamples": 25,
+  "dictionaryExtensionExamples": 0,
+  "sourceUnits": 25,
+  "sourceReviewAssociations": 26,
+  "sourceReviewEntryCount": 26,
+  "countingPolicy": "senseExamples and target counts use 25 unique example IDs. Source review entries use 26 source-target associations: cry has two targets at one source; sweet has one target reviewed separately at two sources. No extra sweet card is authored.",
+  "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+  "contentFileSha256": "c7964226e04f5a2fb96b3970e1862dbb7747ef63223b451057b546a72253d9c0",
+  "exportName": "vocabularyGapBatch6AExamples",
+  "origin": "original",
+  "authorship": "New original English Studio usage aids; no prior draft is claimed and no textbook sentence is copied.",
+  "scope": "textbook-target",
+  "humanCertification": false,
+  "independentContentReviewStatus": "pending",
+  "reviewBasis": "Author self-review against the approved finite source-target plan, actual original local word-list/context pages, English naturalness, Chinese translation, collocation, grammatical function, canonical headword and existing exact matcher. An independent final content reviewer must review this output before registration.",
+  "sourceScope": "Source pages prove printed word/sense association, not the origin of these sentences. This finite batch covers only its 24 headwords and 25 planned targets, not every textbook or dictionary sense.",
+  "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+  "sourceBookHashBasis": "Existing local lesson-page manifest; entire book PDF not independently rehashed in this stage.",
+  "sourceEvidence": [
+    {
+      "book": "NCE1",
+      "lesson": 34,
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "src": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 36,
+      "sourcePDFPage": 76,
+      "sourcePrintedPage": 72,
+      "src": "/lesson-pages/721625c6d108b1aff0d6afef337f450bacfed784ee87abc1ebb759481cf3dbc2.jpg",
+      "sourcePageSha256": "721625c6d108b1aff0d6afef337f450bacfed784ee87abc1ebb759481cf3dbc2",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 38,
+      "sourcePDFPage": 80,
+      "sourcePrintedPage": 76,
+      "src": "/lesson-pages/dcdf3109d8bc6468cf7a9404087f8b00e5363d681b1d6854766630d9497332ad.jpg",
+      "sourcePageSha256": "dcdf3109d8bc6468cf7a9404087f8b00e5363d681b1d6854766630d9497332ad",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 40,
+      "sourcePDFPage": 84,
+      "sourcePrintedPage": 80,
+      "src": "/lesson-pages/146f3f8126bea8b9111fbdef7469607d4b41adbd19c85ffd7526fa3049555bc5.jpg",
+      "sourcePageSha256": "146f3f8126bea8b9111fbdef7469607d4b41adbd19c85ffd7526fa3049555bc5",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 42,
+      "sourcePDFPage": 88,
+      "sourcePrintedPage": 84,
+      "src": "/lesson-pages/1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f.jpg",
+      "sourcePageSha256": "1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 46,
+      "sourcePDFPage": 96,
+      "sourcePrintedPage": 92,
+      "src": "/lesson-pages/8aa5ef198c51a0636c9e833853ecf73efc1162f0cf8e9fbeaa124f05c88ddb84.jpg",
+      "sourcePageSha256": "8aa5ef198c51a0636c9e833853ecf73efc1162f0cf8e9fbeaa124f05c88ddb84",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 48,
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "src": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 104,
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "src": "/lesson-pages/a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac.jpg",
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "actualImageOpenedByReviewer": true
+    }
+  ],
+  "contextEvidence": [
+    {
+      "book": "NCE1",
+      "lesson": 46,
+      "sourcePDFPage": 95,
+      "sourcePrintedPage": 91,
+      "src": "/lesson-pages/95c1fc3c07b831e4819e1bd410b0fa1fea822616a59e6824c97c4abd8bc1fc7a.jpg",
+      "sourcePageSha256": "95c1fc3c07b831e4819e1bd410b0fa1fea822616a59e6824c97c4abd8bc1fc7a",
+      "actualImageOpenedByReviewer": true,
+      "relevantWords": [
+        "cake",
+        "biscuit"
+      ],
+      "observation": "Baked cakes and biscuits contrasted in the pictured cooking activity; no textbook sentence copied."
+    },
+    {
+      "book": "NCE1",
+      "lesson": 48,
+      "sourcePDFPage": 99,
+      "sourcePrintedPage": 95,
+      "src": "/lesson-pages/95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1.jpg",
+      "sourcePageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+      "actualImageOpenedByReviewer": true,
+      "relevantWords": [
+        "egg",
+        "butter",
+        "pure",
+        "honey",
+        "ripe",
+        "banana",
+        "jam",
+        "sweet"
+      ],
+      "observation": "Food pictures/labels establish chicken eggs, butter, unadulterated honey, mature bananas, fruit jam and sweet fruit; no textbook sentence copied."
+    }
+  ],
+  "protectedInputHashes": {
+    "app/vocabulary-examples.ts": "e866ae5fd34c123a31012dd6d7bb2142715aaa505fb15fd0241c4dc73e979a13",
+    "docs/vocabulary-examples-review-index.json": "12a75572d22e7415cee66f142b48085456e43e2cb4a0844417f541f6bf0f3ef9",
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/flashcards.ts": "b7327bae677085b3321bc54e9e7540deb64c60a0c79f780bd7800d9df8e44333",
+    "app/word-lookup.tsx": "035f3faf51daa9c6d571a45435f0ef697dfeaf691fc30bc99d50d7e5cc2aa7e4",
+    "app/textbook-vocabulary-ui.tsx": "bf85c23f2f5a07b72c3a3222da1e2381f816b12c04ee838df53808d1ae29fb6e"
+  },
+  "verification": {
+    "ownSenseChecks": 25,
+    "meaningForCheckChecks": 25,
+    "teachingDefinitionChecks": 25,
+    "sourceScopedDefinitionChecks": 26,
+    "sourcePrintedFullDefinitionChecks": 26,
+    "excludedMeaningChecks": 134,
+    "explicitWrongPartOfSpeechChecks": 26,
+    "uniqueContentHashes": 25,
+    "sourceReviewHashChecks": 26,
+    "wordlistPageHashChecks": 8,
+    "cryActionIsolation": true,
+    "sweetOneExampleTwoSourceRecords": true,
+    "actualOutputModuleSyntaxExportHashChecks": true,
+    "esbuildWrite": false,
+    "matcherChanged": false,
+    "registryChanged": false,
+    "protectedInputsUnchanged": true,
+    "actualUiAddCallbacksTested": false,
+    "fullBuildRun": false,
+    "browserTested": false,
+    "audioTested": false,
+    "humanReviewed": false,
+    "userLearningProgressRead": false,
+    "newDependencies": false,
+    "remoteWrites": false,
+    "lint": {
+      "command": "./node_modules/.bin/eslint app/data/vocabulary-gap-batch6a.ts",
+      "exitCode": 0,
+      "log": "work/gaps94/batch6a/lint.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "entries": [
+    {
+      "id": "gap6a-sleep-sleep-verb",
+      "word": "sleep",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "sourceUnitId": "NCE1-34:sleep",
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "sourcePageSrc": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePrintedHeadword": "sleep",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "睡觉",
+      "sourceWordlistDefinition": "v. 睡觉",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses v. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "人物实际睡觉的日常场景；用 sleep 作动词，不能用 get some sleep 的名词结构替代。"
+      },
+      "teachingDefinition": "v. 睡觉",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 34
+        }
+      ],
+      "meaningForCheck": "v. 睡觉",
+      "wrongPartOfSpeechMeaning": "n. 睡觉",
+      "excludedMeaningLabels": [
+        "n. 睡眠",
+        "v. 静止",
+        "n. 昏迷",
+        "v. 冬眠",
+        "n. 睡觉"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "32485683b3e0609d0258eeb151ddef9f98fb03c16f392294fc28959abe51bd34",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "slept 是 sleep 的动词过去式；一整天旅行后睡八小时，时长与时序中译完整。没有用名词睡眠填动词目标。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-shave-face-verb",
+      "word": "shave",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "sourceUnitId": "NCE1-34:shave",
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "sourcePageSrc": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePrintedHeadword": "shave",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "刮脸",
+      "sourceWordlistDefinition": "v. 刮脸",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses v. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "面部胡须清理，明确刮脸动作用法；不扩到剃头、刨削物料或勉强通过。"
+      },
+      "teachingDefinition": "v. 刮脸",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 34
+        }
+      ],
+      "meaningForCheck": "v. 刮脸",
+      "wrongPartOfSpeechMeaning": "n. 刮脸",
+      "excludedMeaningLabels": [
+        "n. 修面",
+        "v. 修剪",
+        "v. 掠过",
+        "v. 勉强通过",
+        "n. 剃刀",
+        "n. 刮脸"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "3c804ad6443f45c10c8517eb7091c63e8e87f821fd339d79b7d8309c307f7187",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "shaves his face 明确面部刮胡子动作；上班前、随后冲洗剃须刀的中译准确，刮脸/刮胡子/修面为同一面部动作的译法。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-cry-tears-verb",
+      "word": "cry",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "sourceUnitId": "NCE1-34:cry",
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "sourcePageSrc": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePrintedHeadword": "cry",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "哭，喊",
+      "sourceWordlistDefinition": "v. 哭，喊",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The page prints v. 哭，喊. The two different actions are separate finite printed targets with the same canonical headword.",
+        "senseGrouping": "Separate crying with tears and shouting/calling; both are printed verb meanings.",
+        "scopeBoundary": "哭泣或流泪情境，句子明确情绪/眼泪；与大声喊话分开。"
+      },
+      "teachingDefinition": "v. 哭",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 34
+        }
+      ],
+      "meaningForCheck": "v. 哭",
+      "wrongPartOfSpeechMeaning": "n. 哭",
+      "excludedMeaningLabels": [
+        "v. 喊",
+        "v. 叫喊",
+        "n. 哭声",
+        "n. 大叫",
+        "n. 哭"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "cbbdc1ba7c648daefd8dbe426c6882172c6e1608378e8c60b04dd9e08ebcde00",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "started to cry 加 tears 明确流泪哭泣；气球飞走、眼泪沿脸颊流下均有准确中译，不以喊话替代哭义。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-cry-shout-verb",
+      "word": "cry",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "sourceUnitId": "NCE1-34:cry",
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "sourcePageSrc": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePrintedHeadword": "cry",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "哭，喊",
+      "sourceWordlistDefinition": "v. 哭，喊",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The page prints v. 哭，喊. The two different actions are separate finite printed targets with the same canonical headword.",
+        "senseGrouping": "Separate crying with tears and shouting/calling; both are printed verb meanings.",
+        "scopeBoundary": "明确呼叫/喊话信息或呼救情境，不能只靠流泪的人物替代喊义。保持 cry 为动词。"
+      },
+      "teachingDefinition": "v. 喊",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 34
+        }
+      ],
+      "meaningForCheck": "v. 喊",
+      "wrongPartOfSpeechMeaning": "n. 喊",
+      "excludedMeaningLabels": [
+        "v. 哭",
+        "n. 叫声",
+        "n. 大叫",
+        "v. 哭出",
+        "n. 喊"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "3b7e333479e56aecd38f54f55e5bf64a1c69545426eec47e89c25e0f4eeb2ddc",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "cried 后的喊话引语和来车情境明确为喊，不是流泪；引语为本例原创中的普通短呼喊，未引用教材句子。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-wash-clean-verb",
+      "word": "wash",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "sourceUnitId": "NCE1-34:wash",
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "sourcePageSrc": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePrintedHeadword": "wash",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "洗",
+      "sourceWordlistDefinition": "v. 洗",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses v. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "用水清洗可见物件的实际动作；不演示名词洗涤、粉刷、镀层或水流冲蚀。"
+      },
+      "teachingDefinition": "v. 洗",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 34
+        }
+      ],
+      "meaningForCheck": "v. 洗",
+      "wrongPartOfSpeechMeaning": "n. 洗",
+      "excludedMeaningLabels": [
+        "n. 洗",
+        "v. 粉刷",
+        "v. 镀金属薄层于",
+        "v. 流过",
+        "v. 被冲蚀"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "40edbcc6750cb56b44040977915ae9fcfb4244eebb5f4f3d841fcfa691d7a230",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "wash + 花盆为清洗实物动作；before filling it 对应先洗后装新土，不代表名词洗涤、粉刷或流水冲蚀。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-wait-wait-verb",
+      "word": "wait",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "sourceUnitId": "NCE1-34:wait",
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "sourcePageSrc": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePrintedHeadword": "wait",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "等",
+      "sourceWordlistDefinition": "v. 等",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses v. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "等某人或某事发生，用 wait for + 宾语；与延期、伺候用餐和名词等待分开。"
+      },
+      "teachingDefinition": "v. 等",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 34
+        }
+      ],
+      "meaningForCheck": "v. 等",
+      "wrongPartOfSpeechMeaning": "n. 等",
+      "excludedMeaningLabels": [
+        "n. 等待",
+        "v. 延缓",
+        "v. 期待",
+        "v. 伺候用餐",
+        "n. 等"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "fa22f23a16e7bc51fcd7464d200ff8f9ef6331d576f38f6bef6adcba08b7db20",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "waited for Mia 是等候某人；图书馆外的位置和阅览室已满的原因中译完整，不把期待或延期当此目标。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-jump-physical-verb",
+      "word": "jump",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "sourceUnitId": "NCE1-34:jump",
+      "sourcePDFPage": 72,
+      "sourcePrintedPage": 68,
+      "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+      "sourcePageSrc": "/lesson-pages/59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced.jpg",
+      "sourcePrintedHeadword": "jump",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "跳",
+      "sourceWordlistDefinition": "v. 跳",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses v. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "身体离地的物理跳跃；不扩到暴涨、电脑跳转或使某物突升。"
+      },
+      "teachingDefinition": "v. 跳",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 34
+        }
+      ],
+      "meaningForCheck": "v. 跳",
+      "wrongPartOfSpeechMeaning": "n. 跳",
+      "excludedMeaningLabels": [
+        "n. 跳跃",
+        "v. 暴涨",
+        "v. 突升",
+        "[计] 跳转",
+        "n. 跳"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "e5ead2d9d4a21f17c1de029c71274df79f647a069b95425fb8dd720e4a722fb0",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "jumped over 水洼为实际物理跳跃；keep shoes dry 的目的中译准确，金融暴涨和计算机跳转未审。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-off-separation-preposition",
+      "word": "off",
+      "scope": "textbook-target",
+      "partOfSpeech": "prep.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 36
+      },
+      "sourceUnitId": "NCE1-36:off",
+      "sourcePDFPage": 76,
+      "sourcePrintedPage": 72,
+      "sourcePageSha256": "721625c6d108b1aff0d6afef337f450bacfed784ee87abc1ebb759481cf3dbc2",
+      "sourcePageSrc": "/lesson-pages/721625c6d108b1aff0d6afef337f450bacfed784ee87abc1ebb759481cf3dbc2.jpg",
+      "sourcePrintedHeadword": "off",
+      "sourcePrintedPartOfSpeech": "prep.",
+      "sourcePrintedMeaning": "离开",
+      "sourceWordlistDefinition": "prep. 离开",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses prep. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "off + 明确表面/位置名词作介词补语，体现从其上离开；不用 turn off 的粒子或设备关着的。"
+      },
+      "teachingDefinition": "prep. 离开",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 36
+        }
+      ],
+      "meaningForCheck": "prep. 离开",
+      "wrongPartOfSpeechMeaning": "n. 离开",
+      "excludedMeaningLabels": [
+        "adj. 关着的",
+        "adv. 走开",
+        "v. 离开",
+        "prep. 不在从事",
+        "prep. 在……之外",
+        "n. 离开"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "872f3136f910e76eae62f620e00a79ebdb923e97404fc1505eed9966df749a62",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "off 后明确跟 the shelf，为从表面分离的介词；滚落架子并落在地毯上的中译自然，不用设备关掉的粒子或休假形容词替代。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-homework-schoolwork-noun",
+      "word": "homework",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 38
+      },
+      "sourceUnitId": "NCE1-38:homework",
+      "sourcePDFPage": 80,
+      "sourcePrintedPage": 76,
+      "sourcePageSha256": "dcdf3109d8bc6468cf7a9404087f8b00e5363d681b1d6854766630d9497332ad",
+      "sourcePageSrc": "/lesson-pages/dcdf3109d8bc6468cf7a9404087f8b00e5363d681b1d6854766630d9497332ad.jpg",
+      "sourcePrintedHeadword": "homework",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "作业",
+      "sourceWordlistDefinition": "n. 作业",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "明确学生课后学习任务，使用不可数 homework；不写 a homework/homeworks，也不替居家办公工作义填数。"
+      },
+      "teachingDefinition": "n. 作业",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 38
+        }
+      ],
+      "meaningForCheck": "n. 作业",
+      "wrongPartOfSpeechMeaning": "adj. 作业",
+      "excludedMeaningLabels": [
+        "n. 家里做的工作",
+        "v. 做家务",
+        "n. 家务",
+        "adj. 作业"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "1f3442d364ebd8ea15b2b12816a40cd55f872a078e18b2aff7cba008e11c5f2c",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "maths homework 明确学校作业，homework 不可数；时间、厨房桌边与家人归来的中译对应。没有家务或居家办公义。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-dish-container-noun",
+      "word": "dish",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 38
+      },
+      "sourceUnitId": "NCE1-38:dish",
+      "sourcePDFPage": 80,
+      "sourcePrintedPage": 76,
+      "sourcePageSha256": "dcdf3109d8bc6468cf7a9404087f8b00e5363d681b1d6854766630d9497332ad",
+      "sourcePageSrc": "/lesson-pages/dcdf3109d8bc6468cf7a9404087f8b00e5363d681b1d6854766630d9497332ad.jpg",
+      "sourcePrintedHeadword": "dish",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "盘子，碟子",
+      "sourceWordlistDefinition": "n. 盘子，碟子",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "Plate/dish container translations are one target; food/course sense excluded.",
+        "scopeBoundary": "可见可数盛食物容器；盘子/碟子为同类译法合1义，不把 dish 当菜肴。"
+      },
+      "teachingDefinition": "n. 盘子，碟子",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 38
+        }
+      ],
+      "meaningForCheck": "n. 盘子，碟子",
+      "wrongPartOfSpeechMeaning": "adj. 盘子",
+      "excludedMeaningLabels": [
+        "n. 菜肴",
+        "n. 菜",
+        "v. 盛食物",
+        "[医] 皿",
+        "adj. 盘子"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "b26b10d30ce2e672e92db5f805acc90ccdf20ac4f6aa35e43c8ab7bf5c272929",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "a shallow dish 为可数盘碟容器，it 回指盘子；切成片的梨与端到餐桌的中译完整。盘子/碟子不拆成两个意义，菜肴义排除。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-show-to-view-verb",
+      "word": "show",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 40
+      },
+      "sourceUnitId": "NCE1-40:show",
+      "sourcePDFPage": 84,
+      "sourcePrintedPage": 80,
+      "sourcePageSha256": "146f3f8126bea8b9111fbdef7469607d4b41adbd19c85ffd7526fa3049555bc5",
+      "sourcePageSrc": "/lesson-pages/146f3f8126bea8b9111fbdef7469607d4b41adbd19c85ffd7526fa3049555bc5.jpg",
+      "sourcePrintedHeadword": "show",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "给……看",
+      "sourceWordlistDefinition": "v. 给……看",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses v. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "人物把明确实物/图像展示给另一个人看，体现双宾语或 show something to someone；不扩到带路、演出或证据表明。"
+      },
+      "teachingDefinition": "v. 给……看",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 40
+        }
+      ],
+      "meaningForCheck": "v. 给……看",
+      "wrongPartOfSpeechMeaning": "n. 给……看",
+      "excludedMeaningLabels": [
+        "n. 演出",
+        "v. 表明",
+        "v. 带领",
+        "v. 演出",
+        "v. 露面",
+        "n. 给……看"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "04075089b21adbd08ba93fcb6040e87dc136ff45de124f6f301a687f8dd8a86b",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "showed + 祖母 + 画是给某人看实物的双宾语用法；随后固定在留言板的中译与 before pinning 时序一致。未代表带路、演出或表明。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-take-carry-to-recipient-verb",
+      "word": "take",
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 40
+      },
+      "sourceUnitId": "NCE1-40:take",
+      "sourcePDFPage": 84,
+      "sourcePrintedPage": 80,
+      "sourcePageSha256": "146f3f8126bea8b9111fbdef7469607d4b41adbd19c85ffd7526fa3049555bc5",
+      "sourcePageSrc": "/lesson-pages/146f3f8126bea8b9111fbdef7469607d4b41adbd19c85ffd7526fa3049555bc5.jpg",
+      "sourcePrintedHeadword": "take",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedMeaning": "带给",
+      "sourceWordlistDefinition": "v. 带给",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses v. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "携带东西去交给明确接收人，取第40课带给义；原打印不是带去，不能泛化到拿、取、乘车、花费或吃。"
+      },
+      "teachingDefinition": "v. 带给",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 40
+        }
+      ],
+      "meaningForCheck": "v. 带给",
+      "wrongPartOfSpeechMeaning": "n. 带给",
+      "excludedMeaningLabels": [
+        "v. 拿",
+        "v. 取",
+        "v. 乘",
+        "v. 花费",
+        "v. 吃",
+        "n. 拿",
+        "n. 带给"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "884cfa0e7f00835ceb3ec0779bfb0cdac94fa56846743140112db12a41490536",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "took + 三明治 + to Nora 明确带给接收人；店里与午休的中译完整。保留原印带给，不把泛词典拿、乘或花费认证为本课目标。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-bird-animal-noun",
+      "word": "bird",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 42
+      },
+      "sourceUnitId": "NCE1-42:bird",
+      "sourcePDFPage": 88,
+      "sourcePrintedPage": 84,
+      "sourcePageSha256": "1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f",
+      "sourcePageSrc": "/lesson-pages/1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f.jpg",
+      "sourcePrintedHeadword": "bird",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "鸟",
+      "sourceWordlistDefinition": "n. 鸟",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "明确动物鸟及其日常观察场景；不填羽毛球用品或打鸟动词。"
+      },
+      "teachingDefinition": "n. 鸟",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 42
+        }
+      ],
+      "meaningForCheck": "n. 鸟",
+      "wrongPartOfSpeechMeaning": "adj. 鸟",
+      "excludedMeaningLabels": [
+        "n. 羽毛球",
+        "v. 打鸟",
+        "adj. 鸟类的",
+        "adj. 鸟"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "a8dbb6b7010c1aa9cee662591f4fa76a841eacc60fbf67a9a1abdbb117c1648a",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "嘴、飞行与鸟巢共同指明鸟类动物；twig/beak 和后门上方位置中译完整，没有羽毛球或打鸟动作义。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-any-indefinite-determiner",
+      "word": "any",
+      "scope": "textbook-target",
+      "partOfSpeech": "det.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 42
+      },
+      "sourceUnitId": "NCE1-42:any",
+      "sourcePDFPage": 88,
+      "sourcePrintedPage": 84,
+      "sourcePageSha256": "1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f",
+      "sourcePageSrc": "/lesson-pages/1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f.jpg",
+      "sourcePrintedHeadword": "any",
+      "sourcePrintedPartOfSpeech": "det.",
+      "sourcePrintedMeaning": "一些",
+      "sourceWordlistDefinition": "det. 一些",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The original page prints det. 一些. The example uses a determiner before nouns; coarse dictionary adjective/pronoun labels are not substituted.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "按原页说明在不确定答案的疑问句或 not/n’t 否定句，any 紧接可数复数或不可数名词；计划例句在同一场景展示疑问和否定，仍是1量词目标。自由选择任何一个不计入。"
+      },
+      "teachingDefinition": "det. 一些",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 42
+        }
+      ],
+      "meaningForCheck": "det. 一些",
+      "wrongPartOfSpeechMeaning": "pron. 一些",
+      "excludedMeaningLabels": [
+        "pron. 任何",
+        "adj. 任何的",
+        "det. 任何一个",
+        "adv. 一些",
+        "pron. 一些"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "b5693f69f95f0fd6a9723d66566a32f9ac8ab3105da448af7e060b9ac13656bf",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "两处 any 均在复数名词 chairs 前作限定词；同一找椅子场景展示未知回答疑问与 haven’t 否定，仍为一个不定数量目标。原页打印一些，不把自由选择任何一个计入。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-some-indefinite-determiner",
+      "word": "some",
+      "scope": "textbook-target",
+      "partOfSpeech": "det.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 42
+      },
+      "sourceUnitId": "NCE1-42:some",
+      "sourcePDFPage": 88,
+      "sourcePrintedPage": 84,
+      "sourcePageSha256": "1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f",
+      "sourcePageSrc": "/lesson-pages/1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f.jpg",
+      "sourcePrintedHeadword": "some",
+      "sourcePrintedPartOfSpeech": "det.",
+      "sourcePrintedMeaning": "一些",
+      "sourceWordlistDefinition": "det. 一些",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The original page prints det. 一些. The example uses a determiner before nouns; coarse dictionary adjective/pronoun labels are not substituted.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "some 在名词前限定不确定数量，主例取肯定句；不得用后面没有名词的 some 代词用法或 some 副词大约替代。"
+      },
+      "teachingDefinition": "det. 一些",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 42
+        }
+      ],
+      "meaningForCheck": "det. 一些",
+      "wrongPartOfSpeechMeaning": "pron. 一些",
+      "excludedMeaningLabels": [
+        "pron. 一些",
+        "adv. 大约",
+        "adj. 某一的",
+        "det. 某一的"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "fb2768ac6ea182241dbe10435d52e649089f6be30bc7198e1619db9dab3911a4",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "some 分别在可数复数 towels 和不可数 soap 前作肯定句限定词；位置与客人用途中译完整。不以 standalone some 代词或副词大约替代。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-cake-baked-food-noun",
+      "word": "cake",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 46
+      },
+      "sourceUnitId": "NCE1-46:cake",
+      "sourcePDFPage": 96,
+      "sourcePrintedPage": 92,
+      "sourcePageSha256": "8aa5ef198c51a0636c9e833853ecf73efc1162f0cf8e9fbeaa124f05c88ddb84",
+      "sourcePageSrc": "/lesson-pages/8aa5ef198c51a0636c9e833853ecf73efc1162f0cf8e9fbeaa124f05c88ddb84.jpg",
+      "sourcePrintedHeadword": "cake",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "饼，蛋糕",
+      "sourceWordlistDefinition": "n. 饼，蛋糕",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One baked-cake food target; old broad 饼 label does not certify all flatbreads or blocks.",
+        "scopeBoundary": "第46课烘焙蛋糕类食品；原列饼、蛋糕按这一个食品义处理，不机械拆出所有饼类。matches 不用单独饼或块，不扩到结块动词。",
+        "coarseQueryExclusion": "The textbook prints n. 饼，蛋糕. Both printed labels are preserved as the bounded baked-food target. Excluding standalone 饼 queries prevents certification of every generic pancake/flatbread/cake type; it does not mark the printed 饼 translation as semantically wrong."
+      },
+      "teachingDefinition": "n. 饼，蛋糕",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 46
+        }
+      ],
+      "meaningForCheck": "n. 蛋糕",
+      "wrongPartOfSpeechMeaning": "adj. 蛋糕",
+      "excludedMeaningLabels": [
+        "n. 块",
+        "n. 饼",
+        "n. 饼干",
+        "v. 结块",
+        "adj. 蛋糕"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "80571dba8c08e7dd0b9f05c1eb45b0b59d768324fab9d54324bf309324729ec2",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "a lemon cake 为本课烘焙蛋糕类食品，替帮助搬家的邻居制作的中译准确。原印饼、蛋糕属于这里保留的食品目标；排除单独饼是避免泛化查询，不把原书饼判为语义错误。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-biscuit-food-noun",
+      "word": "biscuit",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 46
+      },
+      "sourceUnitId": "NCE1-46:biscuit",
+      "sourcePDFPage": 96,
+      "sourcePrintedPage": 92,
+      "sourcePageSha256": "8aa5ef198c51a0636c9e833853ecf73efc1162f0cf8e9fbeaa124f05c88ddb84",
+      "sourcePageSrc": "/lesson-pages/8aa5ef198c51a0636c9e833853ecf73efc1162f0cf8e9fbeaa124f05c88ddb84.jpg",
+      "sourcePrintedHeadword": "biscuit",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "饼干",
+      "sourceWordlistDefinition": "n. 饼干",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "本课英式饼干食品，使用可数 biscuit/biscuits；不替陶瓷素坯或美式松饼专义填数。"
+      },
+      "teachingDefinition": "n. 饼干",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 46
+        }
+      ],
+      "meaningForCheck": "n. 饼干",
+      "wrongPartOfSpeechMeaning": "adj. 饼干",
+      "excludedMeaningLabels": [
+        "[化] 素坯",
+        "n. 松饼",
+        "v. 制坯",
+        "adj. 饼干"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "c1caf2e5f2007a844c98aac29cc5f1e6976413a415ca86fb658a648076482483",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "biscuits 为英式饼干食物复数；包装敞开一夜后变软的动作结果中译自然，未把素坯或美式松饼专类计入。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-egg-chicken-food-noun",
+      "word": "egg",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:egg",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "egg",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "鸡蛋",
+      "sourceWordlistDefinition": "n. 鸡蛋",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "明确鸡蛋食物场景；原打印鸡蛋，不用泛类蛋/卵直接认证鱼卵、生物卵或 egg on 挑唆动词。",
+        "coarseQueryExclusion": "The textbook prints n. 鸡蛋. The hens in this original food example make the source target explicit. Excluding standalone 蛋/卵 queries prevents certification of all animal eggs; it does not deny that chicken eggs are eggs."
+      },
+      "teachingDefinition": "n. 鸡蛋",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        }
+      ],
+      "meaningForCheck": "n. 鸡蛋",
+      "wrongPartOfSpeechMeaning": "adj. 鸡蛋",
+      "excludedMeaningLabels": [
+        "n. 蛋",
+        "n. 卵",
+        "n. 鱼卵",
+        "v. 挑唆",
+        "v. 煽动",
+        "adj. 鸡蛋"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "d72f24c42a5e2b2a40ab1fd876b8d6d4473a26abfae11ca7a0ddbd85cfd4d6bb",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "from our hens 明确本例为鸡蛋，two eggs 与煮好打包野餐的中译对应；源打印鸡蛋。拒绝粗标签蛋/卵只防泛类查询，不否认鸡蛋属于蛋类。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-butter-food-noun",
+      "word": "butter",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:butter",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "butter",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "黄油",
+      "sourceWordlistDefinition": "n. 黄油",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "黄油为物质不可数名词，用量词表示份量；不把奶油/cream 自动当同物，也不用涂黄油动词替代。"
+      },
+      "teachingDefinition": "n. 黄油",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        }
+      ],
+      "meaningForCheck": "n. 黄油",
+      "wrongPartOfSpeechMeaning": "adj. 黄油",
+      "excludedMeaningLabels": [
+        "n. 奶油",
+        "v. 涂黄油于",
+        "adj. 奉承的",
+        "adj. 黄油"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "8bbb86289d7c4413fd77953aa4a58d535dfd46a164bbd4d73381294d9f70c665",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "butter 为物质名词，用 piece 表份量；温热土豆与叉子压成泥的中译准确。黄油不泛化成奶油，也未展示 butter 动词。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-pure-unadulterated-adjective",
+      "word": "pure",
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:pure",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "pure",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedMeaning": "纯净的",
+      "sourceWordlistDefinition": "adj. 纯净的",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses adj. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "第48课纯蜂蜜标签提供物质未掺杂语境；原创须有配料/未添加物提示，不跨到人格清白、纯洁、抽象学科或完美。"
+      },
+      "teachingDefinition": "adj. 纯净的",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        }
+      ],
+      "meaningForCheck": "adj. 纯净的",
+      "wrongPartOfSpeechMeaning": "n. 纯净的",
+      "excludedMeaningLabels": [
+        "adj. 纯洁的",
+        "adj. 清白的",
+        "adj. 完美的",
+        "adj. 抽象的",
+        "n. 纯净",
+        "n. 纯净的"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "4e50f7923aeca9c22bdab9fe051d4829189bb1595c39370c7d8bb0b4cc34305c",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "未添加糖浆/调味剂的蜂蜜明确物质未掺杂的纯净属性，与第48课纯蜂蜜图示对应；不代表人格清白、纯洁或抽象学科。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-honey-food-noun",
+      "word": "honey",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:honey",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "honey",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "蜂蜜",
+      "sourceWordlistDefinition": "n. 蜂蜜",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "蜂蜜物质名词和实际饮食用量；不扩亲昵称呼爱人、情感甜蜜或加蜜动词。"
+      },
+      "teachingDefinition": "n. 蜂蜜",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        }
+      ],
+      "meaningForCheck": "n. 蜂蜜",
+      "wrongPartOfSpeechMeaning": "adj. 蜂蜜",
+      "excludedMeaningLabels": [
+        "n. 爱人",
+        "n. 甜蜜",
+        "adj. 甘美的",
+        "v. 加蜜使甜",
+        "adj. 蜂蜜"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "56c6f8a9c9d09139ab69d97f4c0772c4f971ea00ff6a47ccfdcdc951c30f44c1",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "honey 为食物物质名词，spoonful 表份量；酸奶里拌入蜂蜜后加浆果的中译准确。不借此覆盖亲昵称呼爱人或加蜜动词。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-ripe-fruit-adjective",
+      "word": "ripe",
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:ripe",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "ripe",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedMeaning": "成熟的",
+      "sourceWordlistDefinition": "adj. 成熟的",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses adj. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "第48课成熟香蕉图示证明水果成熟目标；原创用可见果皮/成熟果实语境，不跨成年、技巧熟练、时机成熟。"
+      },
+      "teachingDefinition": "adj. 成熟的",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        }
+      ],
+      "meaningForCheck": "adj. 成熟的",
+      "wrongPartOfSpeechMeaning": "n. 成熟的",
+      "excludedMeaningLabels": [
+        "adj. 熟练的",
+        "adj. 成年的",
+        "adj. 准备就绪的",
+        "n. 成熟",
+        "n. 成熟的"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "d5976c7270549fb0d41851713675955d9ff9dfa3119b7ec451a5a583db4a6806",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "ripe peaches 明确水果成熟，不是成年或技巧熟练；下雨前摘下并用篮子带进屋的中译与动作次序一致。相同成熟字面不能证明其它领域义项。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-banana-fruit-noun",
+      "word": "banana",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:banana",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "banana",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "香蕉",
+      "sourceWordlistDefinition": "n. 香蕉",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "明确香蕉水果名词，可数单/复数；不扩植物学株体或任何习语。"
+      },
+      "teachingDefinition": "n. 香蕉",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        }
+      ],
+      "meaningForCheck": "n. 香蕉",
+      "wrongPartOfSpeechMeaning": "adj. 香蕉",
+      "excludedMeaningLabels": [
+        "v. 剥香蕉",
+        "adj. 香蕉味的",
+        "n. 香蕉树",
+        "adj. 香蕉"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "11458f54cdb5934385c1c0667f72790688db59704b1ec6238dc992406938bcfa",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "a banana 为可数水果名词；剥皮后切厚片、作为粥配料的目的中译准确。不扩香蕉树或蕉味形容词。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-jam-preserve-noun",
+      "word": "jam",
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:jam",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "jam",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "果酱",
+      "sourceWordlistDefinition": "n. 果酱",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses n. exactly as printed.",
+        "senseGrouping": "One finite printed lesson target; no unbounded dictionary expansion.",
+        "scopeBoundary": "明确果酱食物及容器/食用情境，用物质名词；不扩道路拥堵、卡住或即兴演奏。"
+      },
+      "teachingDefinition": "n. 果酱",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        }
+      ],
+      "meaningForCheck": "n. 果酱",
+      "wrongPartOfSpeechMeaning": "adj. 果酱",
+      "excludedMeaningLabels": [
+        "n. 堵塞",
+        "n. 困境",
+        "v. 使堵塞",
+        "v. 压碎",
+        "v. 即兴演奏",
+        "adj. 果酱"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "1f230d4773f47b4fdc156749793fc3519a1e6f389bc22f7346523ed79eb2a907",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "jar of strawberry jam 和涂烤面包片明确果酱食物物质；温热和少量中译对应。不混入堵塞、困境、卡住或即兴演奏。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-sweet-taste-adjective",
+      "word": "sweet",
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 48
+      },
+      "sourceUnitId": "NCE1-48:sweet",
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 96,
+      "sourcePageSha256": "f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9",
+      "sourcePageSrc": "/lesson-pages/f10a1c1237f57a2bc63b11964e1ecdc8cd90fd2c67e2100777300520143a34b9.jpg",
+      "sourcePrintedHeadword": "sweet",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedMeaning": "甜的",
+      "sourceWordlistDefinition": "adj. 甜的",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses adj. exactly as printed.",
+        "senseGrouping": "Same taste target on both source pages; do not duplicate the headword review record.",
+        "scopeBoundary": "食物味觉甜与酸/糖味有关；48甜橙与104甜/酸橙为同1味觉义，保留双来源，不重复排队。不得用糖果名词或悦耳/和蔼等扩展替代。",
+        "sharedSourceTarget": "Both NCE1-48 and NCE1-104 print adj. 甜的 in food-taste contexts; one example/card has both labels, with a separate source review record per page."
+      },
+      "teachingDefinition": "adj. 甜的",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        },
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "meaningForCheck": "adj. 甜的",
+      "wrongPartOfSpeechMeaning": "n. 甜的",
+      "excludedMeaningLabels": [
+        "n. 糖果",
+        "n. 情人",
+        "adj. 悦耳的",
+        "adj. 芳香的",
+        "adj. 和蔼的",
+        "n. 甜的"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "a4fbc1da4357b692a42578583460297562973d637d4d017ce801a57f7821b6b4",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "梨的味道甜与不加糖的食用语境明确味觉；与48甜橙/104甜酸水果同一目标。单例双来源，糖果名词、悦耳和和蔼等扩展未计入。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    },
+    {
+      "id": "gap6a-sweet-taste-adjective",
+      "word": "sweet",
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sourceUnitId": "NCE1-104:sweet",
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourcePageSrc": "/lesson-pages/a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac.jpg",
+      "sourcePrintedHeadword": "sweet",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedMeaning": "甜的",
+      "sourceWordlistDefinition": "adj. 甜的",
+      "editoriallyInferredPartOfSpeech": null,
+      "editorialProcessing": {
+        "printedTargetRetained": true,
+        "grammaticalFunction": "The example uses adj. exactly as printed.",
+        "senseGrouping": "Same taste target on both source pages; do not duplicate the headword review record.",
+        "scopeBoundary": "食物味觉甜与酸/糖味有关；48甜橙与104甜/酸橙为同1味觉义，保留双来源，不重复排队。不得用糖果名词或悦耳/和蔼等扩展替代。",
+        "sharedSourceTarget": "Both NCE1-48 and NCE1-104 print adj. 甜的 in food-taste contexts; one example/card has both labels, with a separate source review record per page."
+      },
+      "teachingDefinition": "adj. 甜的",
+      "teachingSources": [
+        {
+          "book": "NCE1",
+          "lesson": 48
+        },
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "meaningForCheck": "adj. 甜的",
+      "wrongPartOfSpeechMeaning": "n. 甜的",
+      "excludedMeaningLabels": [
+        "n. 糖果",
+        "n. 情人",
+        "adj. 悦耳的",
+        "adj. 芳香的",
+        "adj. 和蔼的",
+        "n. 甜的"
+      ],
+      "contentFile": "app/data/vocabulary-gap-batch6a.ts",
+      "contentSha256": "a4fbc1da4357b692a42578583460297562973d637d4d017ce801a57f7821b6b4",
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "word-list source",
+        "POS",
+        "part of speech",
+        "canonical headword"
+      ],
+      "editorialReview": "梨的味道甜与不加糖的食用语境明确味觉；与48甜橙/104甜酸水果同一目标。单例双来源，糖果名词、悦耳和和蔼等扩展未计入。",
+      "actualSourceImageOpened": true,
+      "reviewer": "Codex /root/review_batch5b author self-review; independent final content review pending",
+      "selfReviewStatus": "pass",
+      "independentContentReviewStatus": "pending",
+      "humanCertification": false
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "batch": "6a",
+  "status": "passed",
+  "reviewer": "Codex /root/nce1_people_adjectives",
+  "humanCertification": false,
+  "authorRecordsRetainedAtReviewedHash": true,
+  "contentFile": {
+    "path": "app/data/vocabulary-gap-batch6a.ts",
+    "sha256": "c7964226e04f5a2fb96b3970e1862dbb7747ef63223b451057b546a72253d9c0"
+  },
+  "ledger": {
+    "path": "docs/vocabulary-gap-batch6a.json",
+    "sha256": "132fcf11acaa5266ed9474c0e5b69632c00d80d87783b90fa0dd44a654bf9e0c"
+  },
+  "contentExamples": 25,
+  "sourceTargetReviewRows": 26,
+  "independentMechanicalCounts": {
+    "runtimeRecords": 25,
+    "ledgerRecords": 26,
+    "contentHashes": 26,
+    "ownSensePositive": 26,
+    "meaningForCheckPositive": 26,
+    "teachingDefinitionPositive": 26,
+    "ownSensePOSUnique": 26,
+    "excludedMeaningAndPOS": 134,
+    "sourceAssociations": 26,
+    "sourcePageBytes": 26,
+    "unrelatedSourceRejections": 26,
+    "positiveMatcherCues": 38
+  },
+  "independentReport": {
+    "path": "work/gaps94/independent-review/batch6a-stage-b-final.json",
+    "sha256": "db439dfef87ab6bc9f7b803364a45dabf73133bb8077e60e656bf966b686cb9e"
+  },
+  "reviewedExamples": [
+    {
+      "id": "gap6a-sleep-sleep-verb",
+      "contentSha256": "32485683b3e0609d0258eeb151ddef9f98fb03c16f392294fc28959abe51bd34",
+      "independentEditorialNote": "slept is verbal past of canonical sleep; sleep for eight hours after long travelling day is natural. Chinese preserves duration and order. No get some sleep noun substituted for printed v.睡觉."
+    },
+    {
+      "id": "gap6a-shave-face-verb",
+      "contentSha256": "3c804ad6443f45c10c8517eb7091c63e8e87f821fd339d79b7d8309c307f7187",
+      "independentEditorialNote": "shaves his face explicitly depicts facial-hair action; razor rinse afterward natural. Chinese face/work-before/tap-rinse details agree. shave your face is a correct collocation, no shave noun/plane/skim branch."
+    },
+    {
+      "id": "gap6a-cry-tears-verb",
+      "contentSha256": "cbbdc1ba7c648daefd8dbe426c6882172c6e1608378e8c60b04dd9e08ebcde00",
+      "independentEditorialNote": "started to cry with tears down cheeks clearly depicts crying from balloon loss. Chinese includes both emotional action and tears, not a shouted call. Full target/POS matches哭 and excludes喊."
+    },
+    {
+      "id": "gap6a-cry-shout-verb",
+      "contentSha256": "3b7e333479e56aecd38f54f55e5bf64a1c69545426eec47e89c25e0f4eeb2ddc",
+      "independentEditorialNote": "Quoted 'Watch out!' with cried at approaching cyclist clearly depicts vocal shouted warning. Chinese大喊、小心、拐角 cyclist details agree. cry 'Watch out!' naturally illustrates喊; no crying/tear substitute."
+    },
+    {
+      "id": "gap6a-wash-clean-verb",
+      "contentSha256": "40edbcc6750cb56b44040977915ae9fcfb4244eebb5f4f3d841fcfa691d7a230",
+      "independentEditorialNote": "wash old plant pot before fresh soil is concrete cleaning imperative. Chinese first-wash/then-fill sequence accurate, wash a plant pot natural. No nounwashing, painting or water-erosion sense."
+    },
+    {
+      "id": "gap6a-wait-wait-verb",
+      "contentSha256": "fa22f23a16e7bc51fcd7464d200ff8f9ef6331d576f38f6bef6adcba08b7db20",
+      "independentEditorialNote": "waited outside library for named person, because reading room full. Chinese preserves place, person and cause; wait for someone outside is natural. Not deferring an action, expectation or waiting-table service."
+    },
+    {
+      "id": "gap6a-jump-physical-verb",
+      "contentSha256": "e5ead2d9d4a21f17c1de029c71274df79f647a069b95425fb8dd720e4a722fb0",
+      "independentEditorialNote": "jumped over a puddle to keep shoes dry is bodily jump, with accurate Chinese目的 and新鞋. No finance jump or program jump target."
+    },
+    {
+      "id": "gap6a-off-separation-preposition",
+      "contentSha256": "872f3136f910e76eae62f620e00a79ebdb923e97404fc1505eed9966df749a62",
+      "independentEditorialNote": "rolled off the shelf followed by landing on carpet: explicit NP complement to off verifies printed prep.離开/离开 as surface separation. Chinese滚落/掉到 preserves action; not turn off particle or off adjective."
+    },
+    {
+      "id": "gap6a-homework-schoolwork-noun",
+      "contentSha256": "1f3442d364ebd8ea15b2b12816a40cd55f872a078e18b2aff7cba008e11c5f2c",
+      "independentEditorialNote": "maths homework uncountable school exercise, completed before family home at kitchen table. Chinese corresponds; no a homework/homeworks or housework/home-working."
+    },
+    {
+      "id": "gap6a-dish-container-noun",
+      "contentSha256": "b26b10d30ce2e672e92db5f805acc90ccdf20ac4f6aa35e43c8ab7bf5c272929",
+      "independentEditorialNote": "shallow dish is countable food container; it refers to dish moved to table. Chinese浅盘/切片梨 accurate. 盘子/碟子 grouped as one container target; not dish meal or medical vessel claim."
+    },
+    {
+      "id": "gap6a-show-to-view-verb",
+      "contentSha256": "04075089b21adbd08ba93fcb6040e87dc136ff45de124f6f301a687f8dd8a86b",
+      "independentEditorialNote": "showed grandmother a drawing is double-object display-to-person action, before pinning drawing. Chinese给祖母看/然后钉留言板 preserve roles/order. Not show evidence, performance or guiding."
+    },
+    {
+      "id": "gap6a-take-carry-to-recipient-verb",
+      "contentSha256": "884cfa0e7f00835ceb3ec0779bfb0cdac94fa56846743140112db12a41490536",
+      "independentEditorialNote": "took sandwiches to Nora at shop during lunch break explicitly carries item to recipient. Chinese带给/午休/店里 accurate. Matches actual printed带给, not broad拿/取/乘/花费."
+    },
+    {
+      "id": "gap6a-bird-animal-noun",
+      "contentSha256": "a8dbb6b7010c1aa9cee662591f4fa76a841eacc60fbf67a9a1abdbb117c1648a",
+      "independentEditorialNote": "bird with beak carrying twig toward nest, literal animal noun. Chinese后门上方/嘴衔细枝/nest correspond; a small bird natural, no shuttlecock/birding verb."
+    },
+    {
+      "id": "gap6a-any-indefinite-determiner",
+      "contentSha256": "b5693f69f95f0fd6a9723d66566a32f9ac8ab3105da448af7e060b9ac13656bf",
+      "independentEditorialNote": "Both any tokens directly precede plural spare chairs. Unknown-answer question and haven’t got negative in same chair-finding situation satisfy printeddet.一些. Chinese natural question/negative render, one quantity target and one ID, not free-choice-any/pronoun."
+    },
+    {
+      "id": "gap6a-some-indefinite-determiner",
+      "contentSha256": "fb2768ac6ea182241dbe10435d52e649089f6be30bc7198e1619db9dab3911a4",
+      "independentEditorialNote": "some clean towels and some soap in affirmative scene show plural count and mass-noun determiners. Chinese locations, guest purpose and quantities agree. No standalone pronoun or approximate-number adverb."
+    },
+    {
+      "id": "gap6a-cake-baked-food-noun",
+      "contentSha256": "80571dba8c08e7dd0b9f05c1eb45b0b59d768324fab9d54324bf309324729ec2",
+      "independentEditorialNote": "lemon cake baked for neighbours who helped move is natural count food. Chinese full recipient/purpose accurate. Actual n.饼，蛋糕 evidence retained as one local baked-food target; exclusion of isolated饼 is deliberate broad-query restriction, not a false assertion that source lacks饼 or cakes are unrelated."
+    },
+    {
+      "id": "gap6a-biscuit-food-noun",
+      "contentSha256": "c1caf2e5f2007a844c98aac29cc5f1e6976413a415ca86fb658a648076482483",
+      "independentEditorialNote": "British biscuit plural in open packet overnight becoming soft is natural concrete food narrative. Chinese cause/action-result corresponds. a packet of biscuits correct; no ceramic biscuit or American soft-roll branch."
+    },
+    {
+      "id": "gap6a-egg-chicken-food-noun",
+      "contentSha256": "d72f24c42a5e2b2a40ab1fd876b8d6d4473a26abfae11ca7a0ddbd85cfd4d6bb",
+      "independentEditorialNote": "two eggs from our hens explicitly confirms chicken eggs. Chinese自家母鸡/两个/煮熟/野餐 agrees. boil an egg natural; coarse蛋 exclusion is a narrow queried-card label, not a claim chicken eggs are outside egg category."
+    },
+    {
+      "id": "gap6a-butter-food-noun",
+      "contentSha256": "8bbb86289d7c4413fd77953aa4a58d535dfd46a164bbd4d73381294d9f70c665",
+      "independentEditorialNote": "a small piece of butter portion of mass noun, added to potatoes then mashed with fork. Chinese温热/一小块/压泥 accurate. No cream synonym asserted or butter verb."
+    },
+    {
+      "id": "gap6a-pure-unadulterated-adjective",
+      "contentSha256": "4e50f7923aeca9c22bdab9fe051d4829189bb1595c39370c7d8bb0b4cc34305c",
+      "independentEditorialNote": "pure honey explained by no sugar syrup/flavourings, directly illustrates unadulterated substance attribute. Chinese纯蜂蜜/添加 details accurate, no moral innocence, perfection or pure science expansion."
+    },
+    {
+      "id": "gap6a-honey-food-noun",
+      "contentSha256": "56c6f8a9c9d09139ab69d97f4c0772c4f971ea00ff6a47ccfdcdc951c30f44c1",
+      "independentEditorialNote": "spoonful of honey stirred into plain yoghurt then berries, food mass noun portion. Chinese一匙/原味酸奶/再浆果 agrees. Not honey endearment or adding-honey verb."
+    },
+    {
+      "id": "gap6a-ripe-fruit-adjective",
+      "contentSha256": "d5976c7270549fb0d41851713675955d9ff9dfa3119b7ec451a5a583db4a6806",
+      "independentEditorialNote": "ripe peaches picked before rain, taken indoors in basket clearly fruit maturity adjective. Chinese actions/order agree. Same sourcefruit target need not copy source banana image; no adult/skill/opportune branch."
+    },
+    {
+      "id": "gap6a-banana-fruit-noun",
+      "contentSha256": "11458f54cdb5934385c1c0667f72790688db59704b1ec6238dc992406938bcfa",
+      "independentEditorialNote": "a banana peeled then cut in thick slices for porridge, canonical count fruit noun. Chinese根香蕉/厚片/粥 purpose accurate. peel a banana natural, no tree/banana-flavoured target."
+    },
+    {
+      "id": "gap6a-jam-preserve-noun",
+      "contentSha256": "1f230d4773f47b4fdc156749793fc3519a1e6f389bc22f7346523ed79eb2a907",
+      "independentEditorialNote": "jar of strawberry jam spread on warm toast, clear preserve food mass noun. Chineseopening/少量/温热面包片 agrees, strawberry jam natural. No traffic jam, stuck mechanism or music jam."
+    },
+    {
+      "id": "gap6a-sweet-taste-adjective",
+      "contentSha256": "a4fbc1da4357b692a42578583460297562973d637d4d017ce801a57f7821b6b4",
+      "independentEditorialNote": "sweet pear with no extra sugar is clear taste adjective. Chinese甜/不再加糖 accurate. Single runtime ID and content hash with NCE1-48 and104 tags; both source ledger rows match the same original, no duplicated sweet example."
+    }
+  ],
+  "mandatoryCorrections": [],
+  "globalSourceCompleteness": false,
+  "limits": [
+    "NCE1-46 cake raw饼/蛋糕 contextual grouping is not coverage of every kind of饼. Coarse isolated饼 rejection deliberately narrows queries.",
+    "NCE1-48 egg raw鸡蛋 bounded to hen eggs; coarse蛋 rejection does not deny a biological parent category.",
+    "No actual enrollment or FSRS dedup behavior acceptance performed by this reviewer; root owns those callbacks."
+  ],
+  "rootRegistrationChecks": {
+    "contentExamples": 373,
+    "nativeCallbackSourceHeadwordPairs": 228,
+    "completeSourceWordInventories": 29,
+    "logs": [
+      {
+        "path": "work/gaps94/batch6a/registered-examples.log",
+        "sha256": "ea1d6e624c97ce4aaa764da7859c687da0381ba2dad61aa1b8796ac6af0e0a6b"
+      },
+      {
+        "path": "work/gaps94/batch6a/registered-native-callbacks.log",
+        "sha256": "0c2a8a17e2ea211adecbcec972240765dd6283ab8e0432b326aebd9383715927"
+      },
+      {
+        "path": "work/gaps94/batch6a/registered-lint.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "work/gaps94/batch6a/registered-audit.log",
+        "sha256": "6a9d0e228d7e33e95bd49b08035aed15ee2f503533f0b22570d121695791167c"
+      }
+    ]
+  }
+}

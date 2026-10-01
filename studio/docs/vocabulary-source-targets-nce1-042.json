@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "scope": "Every printed word-list headword and its finite source target meanings. No all-dictionary or unrelated-source certification.",
+  "source": {
+    "book": "NCE1",
+    "lesson": 42
+  },
+  "sourcePDFPage": 88,
+  "sourcePageSha256": "1075ee324b036787db31b12fb58e2793c34623a03a8acff8b25f7d6c4d0cd52f",
+  "completeWordList": true,
+  "review": "Author source reading plus independent original-detail full-page enumeration, followed by independent EN/Chinese/collocation/POS review at frozen content hashes.",
+  "independentWholePageProofSha256": "90a531c9aa6adc4e27d10f5d660cf09206e5c9e59633160b29c6eb9788873cdf",
+  "independentContentReview": "docs/verification/vocabulary-gap-batch6a.json",
+  "humanCertification": false,
+  "entries": [
+    {
+      "word": "bird",
+      "targetExampleIds": [
+        "gap6a-bird-animal-noun"
+      ],
+      "checkedMeaning": "n. 鸟",
+      "sourcePrintedMeaning": "鸟",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "any",
+      "targetExampleIds": [
+        "gap6a-any-indefinite-determiner"
+      ],
+      "checkedMeaning": "det. 一些",
+      "sourcePrintedMeaning": "一些",
+      "sourcePrintedPartOfSpeech": "det."
+    },
+    {
+      "word": "some",
+      "targetExampleIds": [
+        "gap6a-some-indefinite-determiner"
+      ],
+      "checkedMeaning": "det. 一些",
+      "sourcePrintedMeaning": "一些",
+      "sourcePrintedPartOfSpeech": "det."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "scope": "Every printed word-list headword and its finite source target meanings. No all-dictionary or unrelated-source certification.",
+  "source": {
+    "book": "NCE1",
+    "lesson": 34
+  },
+  "sourcePDFPage": 72,
+  "sourcePageSha256": "59146529c0749fe76e8ce075e4a35c7a91774b63c9ca5fc8db7ea4f912667ced",
+  "completeWordList": true,
+  "review": "Author source reading plus independent original-detail full-page enumeration, followed by independent EN/Chinese/collocation/POS review at frozen content hashes.",
+  "independentWholePageProofSha256": "90a531c9aa6adc4e27d10f5d660cf09206e5c9e59633160b29c6eb9788873cdf",
+  "independentContentReview": "docs/verification/vocabulary-gap-batch6a.json",
+  "humanCertification": false,
+  "entries": [
+    {
+      "word": "sleep",
+      "targetExampleIds": [
+        "gap6a-sleep-sleep-verb"
+      ],
+      "checkedMeaning": "v. 睡觉",
+      "sourcePrintedMeaning": "睡觉",
+      "sourcePrintedPartOfSpeech": "v."
+    },
+    {
+      "word": "shave",
+      "targetExampleIds": [
+        "gap6a-shave-face-verb"
+      ],
+      "checkedMeaning": "v. 刮脸",
+      "sourcePrintedMeaning": "刮脸",
+      "sourcePrintedPartOfSpeech": "v."
+    },
+    {
+      "word": "cry",
+      "targetExampleIds": [
+        "gap6a-cry-tears-verb",
+        "gap6a-cry-shout-verb"
+      ],
+      "checkedMeaning": "v. 哭\nv. 喊",
+      "sourcePrintedMeaning": "哭，喊",
+      "sourcePrintedPartOfSpeech": "v."
+    },
+    {
+      "word": "wash",
+      "targetExampleIds": [
+        "gap6a-wash-clean-verb"
+      ],
+      "checkedMeaning": "v. 洗",
+      "sourcePrintedMeaning": "洗",
+      "sourcePrintedPartOfSpeech": "v."
+    },
+    {
+      "word": "wait",
+      "targetExampleIds": [
+        "gap6a-wait-wait-verb"
+      ],
+      "checkedMeaning": "v. 等",
+      "sourcePrintedMeaning": "等",
+      "sourcePrintedPartOfSpeech": "v."
+    },
+    {
+      "word": "jump",
+      "targetExampleIds": [
+        "gap6a-jump-physical-verb"
+      ],
+      "checkedMeaning": "v. 跳",
+      "sourcePrintedMeaning": "跳",
+      "sourcePrintedPartOfSpeech": "v."
+    }
+  ]
+}
