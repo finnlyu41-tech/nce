@@ -6,6 +6,8 @@
 
 此前五步演示已随 v12 发布到 [正式入口](https://finn-english-studio.pages.dev/demos/yesterday/)，发布源码 `c602d8af34ad93c7720645857808a3bbdcb55c60`，独立部署 `20b1f624`。当时两域名 102 项资源回读及入口浏览器检查通过；该历史验收不涵盖本轮自动复习。
 
+本轮已由主线随 v17 发布：源码 `9292efc378716d9a207d1ddefa1cc8a105644152`，独立部署 [06758b8c](https://06758b8c.finn-english-studio.pages.dev/)。两域名 114 项资源/哈希回读通过，11 个演示资源完整，模块返回 application/javascript。主线整合后的真实浏览器交互仍待复验。
+
 ## 给统一主发布线
 
 来源分支 `codex/yesterday-review-20261001`。只取本轮自动复习提交即可，不需要接入 `ielts-blueprint/`。独立分支基于 `a1741e0a385495d22b98b1fc89afa4170f0128b9`；复查主工作树 HEAD `191f7ecab82e46033660c93326891703041d3f90` 时，演示目录和复制脚本仍与本轮修改前的版本一致。
@@ -67,4 +69,4 @@ node scripts/package-yesterday-demo.mjs --out-root work/yesterday-preview
 
 证据：[测试 JSON](verification/yesterday-review-browser.json)、[自动保存](verification/yesterday-review-saved.png)、[到期入口](verification/yesterday-review-due.png)、[320 复习通过](verification/yesterday-review-passed-320.png)、[320 需要再练](verification/yesterday-review-needs-practice-320.png)、[同题复做](verification/yesterday-review-repeat-320.png)、[保存失败保留输入](verification/yesterday-review-save-failure.png)。JSON 内本机端口仅是已关闭的测试服务；不是线上地址。
 
-当前主线接入已包括今日入口和完整打包；正式发布与 HTTPS 回读以下一次发布回执为准。独立体验的两个存储区尚未并入主站备份，界面在「其他操作」明确这一范围，不声称已受整站备份保护。真实长期学习效果、听力、自由口语和开放表达评分仍未验证。
+当前主线接入已包括今日入口和完整打包；正式发布和 HTTPS 回读已完成，证据见上方 v17 回执。独立体验的两个存储区尚未并入主站备份，界面在「其他操作」明确这一范围，不声称已受整站备份保护。真实长期学习效果、听力、自由口语和开放表达评分仍未验证。
