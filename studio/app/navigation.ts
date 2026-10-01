@@ -3,7 +3,7 @@ import {bookCounts, type NceBookId} from './model';
 export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;unit?:string;check?:true;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
 const roadmapNodes=['baseline','starter','foundation','bridge','listening','reading','writing','speaking','mock','finish'];
 const views=['roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
-const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing'],grammar:['path','book','topic','practice']};
+const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','course','listening','reading','speaking','writing'],grammar:['path','book','topic','practice']};
 export function parseRoute(hash:string):StudioRoute{
  const [path,query='']=hash.replace(/^#\/?/,'').split('?'),parts=path.split('/');
  const view=views.includes(parts[0])?parts[0]:'today',route:StudioRoute={view},params=new URLSearchParams(query);
@@ -25,6 +25,7 @@ export function parseRoute(hash:string):StudioRoute{
  const mode=params.get('mode');if(view==='nce'&&route.lesson&&tab==='listen'&&(mode==='recall'||mode==='dictation'))route.mode=mode;
  const step=params.get('step');if(view==='nce'&&route.lesson&&tab==='notes'&&step!==null&&/^[0-4]$/.test(step))route.step=Number(step);
  const task=params.get('task');if(task&&/^(ielts-[ws][1-9]\d?|bank-[123]-[1-9]\d?-[0-5]|mistakes|diagnostic|text-\d{10,16})$/.test(task))route.task=task;
+ if(view==='ielts'&&tab==='course'&&task&&/^sample-(academic|general-training)-(listening|reading|speaking|writing)$/.test(task))route.task=task;
  const filter=params.get('filter');if(filter&&['all','done','active'].includes(filter))route.filter=filter;
  const search=params.get('q');if(search)route.query=search.slice(0,120);
  const file=params.get('file');if(view==='cloud'&&file&&/^[A-Za-z0-9_-]{1,100}$/.test(file))route.file=file;

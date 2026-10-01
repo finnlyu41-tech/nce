@@ -1,0 +1,338 @@
+{
+  "id": "reported-perspective",
+  "title": "转述视角：谁说的，何时说，问还是要求",
+  "stageId": "extension",
+  "order": 11,
+  "prerequisites": [
+    "questions-negation",
+    "past-present-perfect"
+  ],
+  "guideIds": [
+    "object-clause",
+    "reported",
+    "indirect-question",
+    "reported-commands"
+  ],
+  "purposeIds": [
+    "ask",
+    "story",
+    "reason"
+  ],
+  "goal": "用完整内容从句转述陈述、问题和要求，保持说话者、听者与时间关系，不机械后移仍成立的信息。",
+  "explanation": [
+    "转述先核对三个事实：原话是谁说的，对谁说，何时何地说。引语中的 I、you、my 指向原场景的人，不能都按当前叙述者理解；tomorrow、here 也要根据新的时间地点决定是否变化。表达结构正确还不等于忠实转述。",
+    "say、think、know 等后面可放一个完整内容从句。Daria says that she works in a clinic 中，that 只起连接作用，不能替代 she 作主语。that 在不少日常陈述中可省略，但从句的主语和谓语仍需完整；主句是现在时，不要因此机械改成过去内容。",
+    "说谁讲了什么可用 said (that)…；要把接受者作为 tell 的对象，则用 told me / her / us (that)…。say 可以另用 said to me，但不能直接拼 said me。本单元输入题会指定用哪个起首结构，有限答案只核对该目标，不把所有其他转述方式说成错误。",
+    "过去视角转述常把 am/is 变 was、work 变 worked、have done 变 had done、will 变 would。若信息现在仍成立或相关，时态也可以不后移。这里的部分练习明确指定过去视角以检验变换，不据此断言 said 后只能用过去时。",
+    "要把问题放进 know、ask、wonder 等后面，内部使用陈述语序。特殊疑问保留 what、where 等；普通是否问题用 if / whether 引出。do / does / did 的直接疑问形式要还原，时态回到主要动词；不是在从句里再问一次。",
+    "整句的问号看外层：Do you know…? 是问题，I wonder… 是陈述。if 在 asked if… 里表示“是否”，不是条件，所以不能把普通条件句的时态规则直接搬过来。涉及主语本身的 who 问句、选择疑问等更细情况留待后续。",
+    "要求或请求常转成 told / asked + 实际接受者 + (not) to do，建议可用 advised + 人 + to do。not to do 是常见否定顺序，to not do 也可出现。suggest 的搭配不同，可说 suggest doing 或 suggest that…，不直接套 suggest 人 to do；语气和原话是否真是命令、请求或建议仍需结合背景。"
+  ],
+  "forms": [
+    {
+      "form": "主句 + (that) + 主语 + 谓语",
+      "meaning": "把所说、所想或所知的完整内容放入另一句。",
+      "useWhen": "陈述内容有自己的主语与谓语；日常表达常可省 that，不能随之省从句主语。"
+    },
+    {
+      "form": "said (that)…；told + 接受者 + (that)…；said to + 接受者…",
+      "meaning": "交代说话内容，或明确告诉了谁。",
+      "useWhen": "tell 在此结构中带人作为对象；say 不直接接 me，使用 to me。"
+    },
+    {
+      "form": "过去转述视角：现在时 → 过去时；have done → had done；will → would",
+      "meaning": "把原说话时的状态、此前完成或其后计划放在过去叙述中。",
+      "useWhen": "确实采用过去视角；仍成立或相关的事实可以不后移，不只看主句含 said。"
+    },
+    {
+      "form": "I / you / my / tomorrow / here → 根据说话者、听者、转述时间地点重新定位",
+      "meaning": "把原场景指代和参照点忠实带入新叙述。",
+      "useWhen": "人物、日期或地点改变时先核对谁、何时、何处；同场景转述未必需要改变。"
+    },
+    {
+      "form": "疑问词 + 主语 + 谓语",
+      "meaning": "转述或嵌入一个特殊疑问的内容。",
+      "useWhen": "如 know what time the delivery arrives；内部不照搬 does the delivery arrive 的倒装。"
+    },
+    {
+      "form": "if / whether + 主语 + 谓语",
+      "meaning": "嵌入一个“是否”问题。",
+      "useWhen": "一般疑问转述；不用 that 代替是否，内部使用陈述语序。"
+    },
+    {
+      "form": "told / asked + 人 + (not) to + 动词原形",
+      "meaning": "转述指令或请求，说明实际接受者和要做的事。",
+      "useWhen": "原话确是要求或请求；否定常用 not to，实际对象不能遗漏或猜错。"
+    },
+    {
+      "form": "advised + 人 + (not) to + 动词原形",
+      "meaning": "转述给某人的建议。",
+      "useWhen": "原话是建议，力度应与背景相符；不是把一项陈述自动改为命令。"
+    },
+    {
+      "form": "suggest + -ing；suggest that + 完整从句",
+      "meaning": "提出建议内容，不直接套用 advise 人 to do。",
+      "useWhen": "比如 suggested checking the tide times；本单元介绍搭配差异，尚未独立检验 suggest 的全部形式。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "that 可省，完整内容不能省",
+      "a": {
+        "en": "Daria says that she works in a clinic.",
+        "zh": "达里娅说她在一家诊所工作。"
+      },
+      "b": {
+        "en": "Daria says she works in a clinic.",
+        "zh": "达里娅说她在一家诊所工作。"
+      },
+      "why": "两句内容相同；b 省了 that，但 she works 仍完整。that 不承担从句主语的工作。"
+    },
+    {
+      "label": "从原说话时回看，到过去转述视角",
+      "a": {
+        "en": "Yesterday, Arun said, 'I have sent the photos.'",
+        "zh": "昨天，阿伦说：“我已经把照片发出去了。”"
+      },
+      "b": {
+        "en": "Today, I explained that Arun had sent the photos.",
+        "zh": "今天，我说明阿伦此前已经把照片发出去了。"
+      },
+      "why": "在这个过去叙述视角中，原话的现在完成时变为 had sent，指阿伦昨天说话之前已经发送。I 的人物指向也要从原说话者重新定位。"
+    },
+    {
+      "label": "say 与 tell 的接受者结构",
+      "a": {
+        "en": "Lena said that she needed a spare key.",
+        "zh": "莱娜说她需要一把备用钥匙。"
+      },
+      "b": {
+        "en": "Lena told me that she needed a spare key.",
+        "zh": "莱娜告诉我她需要一把备用钥匙。"
+      },
+      "why": "b 明确把 me 作为 tell 的对象；a 没有直接在 said 后放接受者。若用 say 交代听者，可以用 said to me。"
+    },
+    {
+      "label": "过去状态与仍成立的信息",
+      "a": {
+        "en": "The caretaker said the lift was out of service that morning.",
+        "zh": "管理员说那天上午电梯停用了。"
+      },
+      "b": {
+        "en": "The caretaker said the lift is out of service. It still is.",
+        "zh": "管理员说电梯停用了。现在它仍然停用。"
+      },
+      "why": "a 从过去时段叙述，不单独保证现在状态；b 明说当前仍成立，可保留 is。后移并非仅由 said 决定。"
+    },
+    {
+      "label": "直接问题与嵌入的问题内容",
+      "a": {
+        "en": "What time does the delivery arrive?",
+        "zh": "送货几点到？"
+      },
+      "b": {
+        "en": "Do you know what time the delivery arrives?",
+        "zh": "你知道送货几点到吗？"
+      },
+      "why": "外层 Do you know 仍是问句；内部还原为 the delivery arrives，而不是再保留 does the delivery arrive。"
+    },
+    {
+      "label": "是否问题与过去转述",
+      "a": {
+        "en": "Are the spare keys available?",
+        "zh": "备用钥匙能借到吗？"
+      },
+      "b": {
+        "en": "I asked whether the spare keys were available.",
+        "zh": "我问过备用钥匙能否借到。"
+      },
+      "why": "一般疑问用 whether 引出是否内容，内部按陈述语序排列。在这里的过去视角下，are 转为 were。"
+    },
+    {
+      "label": "请求中的不要与转述的否定不定式",
+      "a": {
+        "en": "The guide said to us, 'Please don't touch the samples.'",
+        "zh": "导览员对我们说：“请不要触碰样本。”"
+      },
+      "b": {
+        "en": "The guide asked us not to touch the samples.",
+        "zh": "导览员请我们不要触碰样本。"
+      },
+      "why": "接受者是 us；请求转为 asked us not to touch，不把原祈使形式 don't touch 直接放在 us 后。"
+    },
+    {
+      "label": "给谁的建议与建议做什么",
+      "a": {
+        "en": "Lena advised us to check the tide times.",
+        "zh": "莱娜建议我们查看潮汐时间。"
+      },
+      "b": {
+        "en": "Lena suggested checking the tide times.",
+        "zh": "莱娜建议查看潮汐时间。"
+      },
+      "why": "advise 可接接受建议的人和 to do；suggest 在这个表达中接 checking，不套用 suggested us to check。两句不自动具有命令的力度。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "Theo says that is busy.",
+      "correct": "Theo says that he is busy.",
+      "why": "若转述的是“西奥说他自己忙”，从句还需要 he 作主语；that 不能替代他。"
+    },
+    {
+      "wrong": "Nori said me that she was ready.",
+      "correct": "Nori told me that she was ready.",
+      "why": "用 tell 时可直接接接受者 me；若使用 say，则应为 said to me，而非 said me。"
+    },
+    {
+      "wrong": "Nori told I that she was ready.",
+      "correct": "Nori told me that she was ready.",
+      "why": "tell 后的接受者用宾格 me，不是主格 I。"
+    },
+    {
+      "wrong": "Arun said that he had send the photos.",
+      "correct": "Arun said that he had sent the photos.",
+      "why": "过去完成时 had 后需要过去分词 sent，保留原说话之前已发生的发送事件。"
+    },
+    {
+      "wrong": "Do you know what time does the delivery arrive?",
+      "correct": "Do you know what time the delivery arrives?",
+      "why": "外层负责提问，内部还原陈述语序并把时态和单数一致放回 arrives。"
+    },
+    {
+      "wrong": "I asked whether did they need spare keys.",
+      "correct": "I asked whether they needed spare keys.",
+      "why": "转述过去的是否问题时，内部不保留 did 的问句倒装；这个过去视角用 they needed。"
+    },
+    {
+      "wrong": "The guide asked us don't touch the samples.",
+      "correct": "The guide asked us not to touch the samples.",
+      "why": "转述请求用 asked 加接受者和否定不定式，不直接拼原祈使否定。"
+    },
+    {
+      "wrong": "The guide advised us leave together.",
+      "correct": "The guide advised us to leave together.",
+      "why": "advised 加人之后，行动使用 to leave，不照搬 make 的原形结构。"
+    },
+    {
+      "wrong": "Lena suggested us to check the tide times.",
+      "correct": "Lena suggested checking the tide times.",
+      "why": "suggest 不直接使用 suggest 人 to do 的搭配；这里可改 suggested checking，也可另写适合的 that 从句。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "reported-perspective-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "Ava 正在说她目前的日常工作：'I work at the pool.' 你现在转述这项陈述，选择完整句子和内容解释都正确的一项。",
+      "options": [
+        "Ava says that she works at the pool. —— 当前转述她的日常工作，that 后仍是完整陈述。",
+        "Ava says that works at the pool. —— 当前转述她的日常工作，that 后仍是完整陈述。",
+        "Ava says that she works at the pool. —— 转述的是询问她是否在那里工作的问句。",
+        "Ava says that she worked at the pool. —— 转述她以前在那工作、目前已离开。"
+      ],
+      "answer": "Ava says that she works at the pool. —— 当前转述她的日常工作，that 后仍是完整陈述。",
+      "explanation": "正确项用 she 对应原说话者 Ava，保留当前日常工作与完整陈述。第二项漏主语，第三项把陈述解释成是否问题，第四项新增了已离职的过去背景。主句 says 并不要求把现在内容机械后移。",
+      "hints": [
+        "先核对原话是陈述还是问题、说的是现在还是以前；再检查 that 后有没有自己的主语和谓语。",
+        "Ava 对应 she；现在的日常工作用 she works，that 只连接内容。"
+      ]
+    },
+    {
+      "id": "reported-perspective-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "只修正 say / tell 的接受者搭配：Nori said me that she would bring her laptop the next day. 本题保留 me 和完整内容，用 Nori told me 起首，不调整已给出的时间或人称。",
+      "answer": "Nori told me that she would bring her laptop the next day.",
+      "accepted": [
+        "Nori told me that she would bring her laptop the next day.",
+        "Nori told me she would bring her laptop the next day.",
+        "Nori told me that she'd bring her laptop the next day.",
+        "Nori told me she'd bring her laptop the next day."
+      ],
+      "explanation": "只把 said me 改成 told me；would、her 和 the next day 已给定，不需要再次变换。that 可省，she would 可缩写成 she'd。said to me 也是合理英语，但本题明确练 told me 起首的结构。",
+      "hints": [
+        "内容已经定位在过去视角；本题只检查哪个说话动词能直接带接受者 me。",
+        "把 said 换成 told，保留 me 和后面内容；不再改变时间词。"
+      ]
+    },
+    {
+      "id": "reported-perspective-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "在机场礼貌询问接驳车几点离开。用 Could you tell me / what time / the shuttle / leaves 写一个问句，保留 what time，不改成直接问句或添加班次信息。",
+      "answer": "Could you tell me what time the shuttle leaves?",
+      "accepted": [
+        "Could you tell me what time the shuttle leaves?",
+        "Could you tell me at what time the shuttle leaves?"
+      ],
+      "explanation": "外层 Could you tell me 负责询问；内部是 what time the shuttle leaves 的陈述语序，不加 does。at what time 的较正式展开也保留同一询问。",
+      "hints": [
+        "先区分外层请求与内部时间问题；内部不要再次倒装或加入 do 助动词。",
+        "what time 后接 the shuttle leaves，外层使用 Could you tell me…?。"
+      ]
+    },
+    {
+      "id": "reported-perspective-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "上周 Milo 问我：'Do you need a copy?' 今天采用过去视角转述那次询问，保留原来的提问者与接受者。选择英文和人称／问题解释都正确的一项。",
+      "options": [
+        "Milo asked me whether I needed a copy. —— 转述是否问题；I 指原问题的接受者，也就是我。",
+        "Milo asked me whether did I need a copy. —— 转述是否问题；I 指原问题的接受者，也就是我。",
+        "Milo asked me that I needed a copy. —— that 在这里表示“是否需要”。",
+        "Milo asked me whether he needed a copy. —— 原话的 you 指提问者 Milo。"
+      ],
+      "answer": "Milo asked me whether I needed a copy. —— 转述是否问题；I 指原问题的接受者，也就是我。",
+      "explanation": "是否问题由 whether 引出，内部用 I needed 的陈述语序，you 按真实接受者变为 I。第二项保留了直接问句倒装，第三项误用 that，第四项把接受者改成提问者。这里明确练过去视角，不对仍成立的信息作强制后移。",
+      "hints": [
+        "原话的 you 在问谁？再看是否问题的连接词与内部语序，而不是照抄直接问句。",
+        "这里接受者是我，用 whether I needed；内部不再保留 did I need。"
+      ]
+    },
+    {
+      "id": "reported-perspective-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "只修正否定请求的结构：The guide asked us don't touch the samples. 保留 The guide asked us 和 touch the samples，不改成命令或建议，也不换接受者。",
+      "answer": "The guide asked us not to touch the samples.",
+      "accepted": [
+        "The guide asked us not to touch the samples.",
+        "The guide asked us to not touch the samples."
+      ],
+      "explanation": "asked us 后用否定不定式，常见顺序是 not to touch；to not touch 也可出现，含义不变。不要把 don't touch 的独立祈使结构直接拼在 us 后。",
+      "hints": [
+        "asked us 已给出请求者与接受者；后面的动作应放进不定式，而非独立祈使句。",
+        "把 don't touch 改为 not to touch；相同否定含义的 to not touch 也接受。"
+      ]
+    },
+    {
+      "id": "reported-perspective-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "周二 Zoe（女性）告诉我：'I have checked the expense form.' 她还建议我留一份副本。周三采用过去视角转述。按顺序写两句：第一句用 Zoe said (that) / she / check the expense form，把原话的现在完成时转为过去完成时；第二句用 She advised me / keep a copy，补合适的不定式。不要增加其他内容。",
+      "answer": "Zoe said that she had checked the expense form. She advised me to keep a copy.",
+      "accepted": [
+        "Zoe said that she had checked the expense form. She advised me to keep a copy.",
+        "Zoe said she had checked the expense form. She advised me to keep a copy.",
+        "Zoe said that she'd checked the expense form. She advised me to keep a copy.",
+        "Zoe said she'd checked the expense form. She advised me to keep a copy."
+      ],
+      "explanation": "原话的 I 对应 Zoe，转述使用 she；这个明确的过去视角用 had checked 表示她说话前已核对。建议由 advised me to keep 表达，me 是接受者，不能省 to。两句分别检验内容转述和建议结构。",
+      "hints": [
+        "两句各有自己的目标：先忠实转述之前的完成，再交代给我的建议；不要把建议变成命令。",
+        "第一句使用 Zoe said (that) she had checked…；第二句用 advised me to keep a copy。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "选你愿意分享的一次真实对话，或明确标为假设的练习对话。记录一项陈述、一项问题和一项请求或建议，再换一个叙述视角转述。注明是谁对谁、何时何地说的，并解释哪些信息仍成立；开放转述的忠实度与自然性仍需核对。",
+    "criteria": [
+      "内容从句有自己的主语与谓语，say 与 tell 的接受者搭配准确，省 that 不省必要成分。",
+      "人称、所属、时间地点与原场景一致；后移由实际视角决定，不把仍成立的事实机械改成过去。",
+      "问题内容使用合适疑问词或 if / whether 和陈述语序，外层是否提问决定整句标点。",
+      "命令、请求、建议保留原意与真实接受者；told / asked / advised 的不定式和 suggest 的不同搭配不混用。"
+    ]
+  }
+}

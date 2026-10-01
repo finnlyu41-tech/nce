@@ -1,0 +1,81 @@
+[
+  {
+    "guideId": "none",
+    "unitId": "negative-precision",
+    "formIndices": [
+      0,
+      1,
+      2
+    ],
+    "contrastIndices": [
+      0,
+      1
+    ],
+    "mistakeIndices": [
+      0,
+      1,
+      2
+    ],
+    "practiceIds": [
+      "negative-precision-v0-repair",
+      "negative-precision-v1-recognise",
+      "negative-precision-v1-produce"
+    ],
+    "scope": "名词前 no、可独立或指定集合的 none、明确两者都不的 neither；用真实座位订正、理由辨析和六张照片情境分别检验角色与数量范围。none of 可数复数的 is / are 均有说明并被题目接受。",
+    "remaining": "no 与 not…any 的同义改写、不可数 none 的主谓与更多数量问答、neither…nor 的主谓一致，以及复杂双重否定未形成完整独立检验。"
+  },
+  {
+    "guideId": "indefinite",
+    "unitId": "negative-precision",
+    "formIndices": [
+      4,
+      5,
+      6
+    ],
+    "contrastIndices": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "mistakeIndices": [
+      3,
+      4,
+      5
+    ],
+    "practiceIds": [
+      "negative-precision-v0-produce",
+      "negative-precision-v1-repair"
+    ],
+    "scope": "区分复合不定代词指人或指事物、单数谓语与后置形容词；实做未指定事物的描述及按意图删除重复否定。补充主动提供、自由选择、some- 位于否定谓语前等边界，避免绝对肯定否定口诀。",
+    "remaining": "some- / any- 意图辨析当前有讲解和对比，尚无专门独立选择题；every- 复合词的范围与一致、else、所有格、后续以 they 回指不定代词和 any 的更复杂用法须后续补练。"
+  },
+  {
+    "guideId": "negative-scope",
+    "unitId": "negative-precision",
+    "formIndices": [
+      0,
+      1,
+      2,
+      3,
+      6
+    ],
+    "contrastIndices": [
+      1,
+      2,
+      6
+    ],
+    "mistakeIndices": [
+      2,
+      5,
+      6
+    ],
+    "practiceIds": [
+      "negative-precision-v0-recognise",
+      "negative-precision-v1-recognise",
+      "negative-precision-v1-produce"
+    ],
+    "scope": "not all / not every 否定全体判断，none 明确零个，两者不作同义替换；实际题目包含三完两未完的事实、两入口的语义与理由、六照片零张清楚的全体否定。说明 not all 本身既不报数，也不必然断言已有一部分符合。",
+    "remaining": "all…not、not both 等歧义、否定提升、否定副词以及双重否定的特殊语用没有完整覆盖；本轮证据不代表所有否定范围已掌握。"
+  }
+]

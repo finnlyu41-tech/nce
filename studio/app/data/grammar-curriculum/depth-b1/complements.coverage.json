@@ -1,0 +1,95 @@
+[
+  {
+    "guideId": "gerund",
+    "unitId": "verb-complements",
+    "formIndices": [
+      0,
+      1,
+      5
+    ],
+    "contrastIndices": [
+      0,
+      4
+    ],
+    "mistakeIndices": [
+      0,
+      1,
+      2
+    ],
+    "practiceIds": [
+      "verb-complements-v0-repair",
+      "verb-complements-v0-produce"
+    ],
+    "scope": "把活动放在主语位置、用单数谓语；辨认介词后的 -ing，并与真正的 be + -ing 谓语对比。enjoy / avoid / finish 的常见后接形式有讲解和错例，正式题目聚焦活动主语与介词后活动。",
+    "remaining": "尚未逐一检验更多接 -ing 的动词、动名词自身的主体、否定与完成形式；不能由这两题推断整个非谓语体系已掌握。"
+  },
+  {
+    "guideId": "verb-patterns",
+    "unitId": "verb-complements",
+    "formIndices": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "contrastIndices": [
+      1,
+      2,
+      4
+    ],
+    "mistakeIndices": [
+      1,
+      4,
+      6
+    ],
+    "practiceIds": [
+      "verb-complements-v0-recognise",
+      "verb-complements-v1-recognise"
+    ],
+    "scope": "stop doing / stop to do 与 remember doing / remember to do 的事件意义差别；认知题同时核对场景、表达和理由，不仅选择一个词形。补充固定搭配及两形式可共存的边界。",
+    "remaining": "try / regret / go on 等更多双结构的意义变化，以及 want somebody to do 等带宾语结构未在本单元形成完整独立检验。"
+  },
+  {
+    "guideId": "verb-prepositions",
+    "unitId": "verb-complements",
+    "formIndices": [
+      5,
+      6
+    ],
+    "contrastIndices": [
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      2,
+      3
+    ],
+    "practiceIds": [
+      "verb-complements-v0-repair",
+      "verb-complements-v1-repair"
+    ],
+    "scope": "look forward to 的介词身份和 -ing 补足；比较 talk about 与直接接宾语的 discuss，并实做介词误加修正。只覆盖列出的常用搭配，不把介词的一个中文译法推广为统一规则。",
+    "remaining": "depend on / wait for 等补足有形式说明，但没有逐项独立题；更多动词、形容词与介词搭配，以及可分短语动词须另行补练。"
+  },
+  {
+    "guideId": "purpose",
+    "unitId": "verb-complements",
+    "formIndices": [
+      7,
+      8
+    ],
+    "contrastIndices": [
+      1,
+      5
+    ],
+    "mistakeIndices": [
+      5
+    ],
+    "practiceIds": [
+      "verb-complements-v0-recognise",
+      "verb-complements-v1-produce"
+    ],
+    "scope": "同一可还原主体的 to do 与明确写出另一主体的 so that 从句；在停下做另一件事及团队看地图两种情境中检验目的与主体，区分目的和已经实现的结果。",
+    "remaining": "for somebody to do、in order not to 等形式，so that 表达结果的语境，以及目的与 so + 形容词 / 副词 + that 程度结果结构的区别未形成完整覆盖；本单元也不检验所有 can / could 选择。"
+  }
+]

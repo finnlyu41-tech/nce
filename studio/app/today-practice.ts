@@ -11,6 +11,7 @@ import {nodes,unitNodes,unitById,nodeById,type MapNode} from '../map/content';
 import {achieved,statusMap,due,passedQuiz,type Progress} from '../map/model';
 import {speakingDue,speakingReviewAt} from '../map/speaking-model';
 import {lessonPlan} from '../map/lesson-plan';
+import {samplePracticeTasks} from './ielts-sample-next';
 
 export type PracticeTask={id:string;title:string;reason:string;method:string;evidence:string;href:string;returnHref:string;priority:number;at:number;kind:'repair'|'review'|'resume'|'new'|'course'};
 const DAY=86_400_000;
@@ -48,7 +49,7 @@ function currentCourse(map:Progress,now:number,status:ReturnType<typeof statusMa
  * The classic State and map Progress must have passed their existing validators.
  */
 export function todayPractice(state:State,map:Progress,now=Date.now(),online=true):PracticeTask[]{
- const tasks:PracticeTask[]=[];
+ const tasks:PracticeTask[]=samplePracticeTasks(state,now,online);
  const to=(route:Parameters<typeof routeHash>[0])=>(online?'/':'')+routeHash(route);
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};

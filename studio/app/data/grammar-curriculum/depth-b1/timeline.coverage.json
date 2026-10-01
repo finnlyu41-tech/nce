@@ -1,0 +1,88 @@
+[
+  {
+    "guideId": "going-to",
+    "unitId": "plan-timeline",
+    "formIndices": [
+      0,
+      1
+    ],
+    "contrastIndices": [
+      0,
+      1
+    ],
+    "mistakeIndices": [
+      0
+    ],
+    "practiceIds": [
+      "plan-timeline-v0-recognise",
+      "plan-timeline-v1-produce"
+    ],
+    "scope": "形式、事前打算与当前迹象均有讲解和对比；题目实际训练打算的形式、语境理由与时间从句组合。",
+    "remaining": "当前迹象预测尚无独立输入题；going to 与 will 在不同语境的重叠不作唯一答案概括，口语 gonna 未作为目标。"
+  },
+  {
+    "guideId": "will",
+    "unitId": "plan-timeline",
+    "formIndices": [
+      2
+    ],
+    "contrastIndices": [
+      0,
+      1
+    ],
+    "mistakeIndices": [
+      1
+    ],
+    "practiceIds": [
+      "plan-timeline-v0-repair"
+    ],
+    "scope": "当场决定、承诺或帮助意愿、预测有形式和意义对比；题目限定帮助承诺，实际核对 will 后原形。",
+    "remaining": "won't 的拒绝、will 的习惯用法、Shall I / we 的提议未独立训练；不把 will 描述为只适用某一将来情境。"
+  },
+  {
+    "guideId": "future-choice",
+    "unitId": "plan-timeline",
+    "formIndices": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "contrastIndices": [
+      0,
+      2
+    ],
+    "mistakeIndices": [
+      2,
+      3
+    ],
+    "practiceIds": [
+      "plan-timeline-v0-produce",
+      "plan-timeline-v1-recognise"
+    ],
+    "scope": "比较已有打算、即时承担、约定会面与公布时间表；新情境造句训练取件安排的进行时，认知题同时核对形式和时间表／安排背景。",
+    "remaining": "未来进行时、未来完成时、未来完成进行时及更细的语用重叠未在本单元检验；有限目标答案不代表其他自然表达一律错误。"
+  },
+  {
+    "guideId": "time-clause",
+    "unitId": "plan-timeline",
+    "formIndices": [
+      5,
+      6
+    ],
+    "contrastIndices": [
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      4,
+      5
+    ],
+    "practiceIds": [
+      "plan-timeline-v1-repair",
+      "plan-timeline-v1-produce"
+    ],
+    "scope": "普通将来时间从句、until／not…until、when 状语与内容从句有可定位对比；题目实际训练 until 的时态和新情境 before 的先后。",
+    "remaining": "after、as soon as 只在形式与解释中介绍，尚无独立作答；时间从句中的完成时、过去叙事时态及意愿 will 等特殊用法未穷尽。"
+  }
+]

@@ -1,0 +1,275 @@
+{
+  "id": "plan-timeline",
+  "title": "计划的时间线：打算、安排与等待",
+  "stageId": "time",
+  "order": 9,
+  "prerequisites": [
+    "present-time",
+    "linking-ideas"
+  ],
+  "guideIds": [
+    "going-to",
+    "will",
+    "future-choice",
+    "time-clause"
+  ],
+  "purposeIds": [
+    "plan",
+    "progress"
+  ],
+  "goal": "说明计划是事前打算、当场决定、已约定安排还是时间表，并用时间从句交代何时开始、等待到何时。",
+  "explanation": [
+    "谈未来先交代依据，而不是只找 tomorrow。be going to 常突出事前已有打算，也能根据眼前迹象预测；will 常用于当场决定、承诺、愿意帮忙或对未来的判断。两者有重叠，其他语境可能两种都自然；本单元的选择题同时检查句子和理由，不把一种表达说成所有场景唯一正确。",
+    "be going to 中 be 随主语变化，to 后的动作保持原形：We are going to repaint…；will 后也直接用原形，否定是 will not / won't。不能漏掉 be，也不能写 will to carry。",
+    "已有具体约定的个人活动常用现在进行时表示未来，如 I'm meeting the caretaker at four on Friday；公布的时刻表常用一般现在时，如 The tour starts at ten。未来语境中的现在进行时不等于事情此刻正在发生。这些形式突出不同信息，并非互相排斥的标签。",
+    "普通将来时间状语从句说明一件事何时发生，when / before / after / as soon as 后通常用现在时，主句可用 will。We'll test the alarm before the museum opens 是先测试、后开放；before / after 本身不要求把每句话都改成完成时。",
+    "until 表示一个动作或状态持续到某点；not…until 则常说某件事到那时才发生。We'll wait until the lights come on 是一直等，We won't begin until the lights come on 是灯亮前不开始。选词时要先看动作是持续，还是一个开始点。",
+    "when 也可以在 know、ask 等后面表示“什么时候”，这时是一个问题的内容，不是给主句事件设时间。I don't know when the parcel will arrive 可以有 will。不要把时间状语从句的现在时规则套到所有带 when 的句子；will 表意愿等特殊用法、完成时与将来进行时留待后续。"
+  ],
+  "forms": [
+    {
+      "form": "主语 + am / is / are going to + 动词原形",
+      "meaning": "突出在说话前已经考虑好的打算。",
+      "useWhen": "已有决定但未必把所有细节安排好；be 随主语变化，动作不加 -ing。"
+    },
+    {
+      "form": "主语 + be going to + 动词原形",
+      "meaning": "根据眼前可观察的迹象作预测。",
+      "useWhen": "比如架子已经倾斜而判断它快倒了；不是仅因事情在未来就必须使用。"
+    },
+    {
+      "form": "will / won't + 动词原形",
+      "meaning": "当场决定、帮助意愿、承诺或未来判断。",
+      "useWhen": "听到请求后立即决定，或主动承诺；will 后不加 to，否定可用 will not。"
+    },
+    {
+      "form": "am / is / are + 动词 -ing + 明确的未来时间",
+      "meaning": "突出已经约定的个人安排。",
+      "useWhen": "双方已经确认会面或活动；结合未来时间读，不把它一律理解成正在做。"
+    },
+    {
+      "form": "一般现在时 + 未来时间表",
+      "meaning": "说明公布或固定的班次、开场与开放安排。",
+      "useWhen": "有时间表依据；单数第三人称保留 -s，如 The tour starts…。"
+    },
+    {
+      "form": "when / before / after / as soon as + 主语 + 现在时；主句可用 will",
+      "meaning": "把下一次事件的时间或先后与主句动作连接。",
+      "useWhen": "普通的将来时间状语从句；不适用于 know when… 这样的“什么时候”内容从句。"
+    },
+    {
+      "form": "持续动作 + until + 时间点 / 从句；not + 开始性动作 + until…",
+      "meaning": "一直到某点，或到某点才发生。",
+      "useWhen": "wait、stay 等表达持续；won't begin until 表示此前不开始。若指未来，从句通常用现在时。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "事前打算与当场决定",
+      "a": {
+        "en": "We've chosen the colour. We're going to repaint the noticeboard next week.",
+        "zh": "我们已经选好颜色，打算下周重新给公告板刷漆。"
+      },
+      "b": {
+        "en": "The noticeboard needs a new coat of paint. I'll repaint it next week.",
+        "zh": "公告板需要重新刷漆。那我下周来刷吧。"
+      },
+      "why": "a 明说已有决定，going to 突出事前打算；b 可读作听到需要后当场承担任务。两种形式有重叠，区别在这里被明确的背景与重心。"
+    },
+    {
+      "label": "眼前迹象与个人判断",
+      "a": {
+        "en": "That shelf is leaning forward. It's going to fall.",
+        "zh": "那个架子向前倾斜了，快要倒了。"
+      },
+      "b": {
+        "en": "I think the new shelf will last for years.",
+        "zh": "我觉得新架子会用很多年。"
+      },
+      "why": "a 的预测有眼前迹象；b 是对未来使用寿命的判断。will 与 going to 都可预测，不能说 will 从来不依据证据。"
+    },
+    {
+      "label": "约定见面与公布时间表",
+      "a": {
+        "en": "I'm meeting the caretaker at four on Friday.",
+        "zh": "我周五四点要与管理员见面。"
+      },
+      "b": {
+        "en": "The last tour starts at four on Friday.",
+        "zh": "周五最后一场参观四点开始。"
+      },
+      "why": "a 在双方已确认的语境中，用现在进行时突出个人安排；b 陈述公布的场次，用一般现在时。不是因为两句都有 Friday 就选同一种形式。"
+    },
+    {
+      "label": "持续等待与到那时才开始",
+      "a": {
+        "en": "We'll wait until the lights come on.",
+        "zh": "我们会一直等到灯亮。"
+      },
+      "b": {
+        "en": "We won't begin until the lights come on.",
+        "zh": "我们到灯亮时才开始。"
+      },
+      "why": "a 的等待持续到灯亮；b 否定的是灯亮之前的开始。两句意思相关，但 wait until 与 not begin until 不能机械交换动词。"
+    },
+    {
+      "label": "when 引出事件时间或问题内容",
+      "a": {
+        "en": "I'll unpack the parcel when it arrives.",
+        "zh": "包裹到达时，我会拆开它。"
+      },
+      "b": {
+        "en": "I don't know when the parcel will arrive.",
+        "zh": "我不知道包裹什么时候会到。"
+      },
+      "why": "a 的 when 从句给拆包裹设定时间，普通未来语境用 arrives；b 是“不知道什么”的内容，when 意为“什么时候”，可用 will arrive。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "We going to repaint the noticeboard.",
+      "correct": "We are going to repaint the noticeboard.",
+      "why": "going to 计划结构需要 be；复数 we 配 are。"
+    },
+    {
+      "wrong": "I will to carry the display boards.",
+      "correct": "I will carry the display boards.",
+      "why": "will 后直接接原形 carry，不加 to。"
+    },
+    {
+      "wrong": "I'm meet the caretaker at four on Friday.",
+      "correct": "I'm meeting the caretaker at four on Friday.",
+      "why": "这里用现在进行时突出已经约定的未来会面；am 后的动作需要 -ing，不是原形 meet。"
+    },
+    {
+      "wrong": "The last tour start at four on Friday.",
+      "correct": "The last tour starts at four on Friday.",
+      "why": "公布时间表可用一般现在时，但单数 the last tour 的主谓一致仍要保留 starts。"
+    },
+    {
+      "wrong": "We'll test the alarm before the museum will open.",
+      "correct": "We'll test the alarm before the museum opens.",
+      "why": "本句 before 说明测试与开放的先后，是普通的未来时间状语从句，通常用现在时 opens。不是讨论“何时开放”的间接问题。"
+    },
+    {
+      "wrong": "We will begin until the electrician arrives.",
+      "correct": "We won't begin until the electrician arrives.",
+      "why": "若要表达“电工来之前不开始，到时才开始”，用 won't begin until。begin 表一个开始点，不能靠 will begin until 表示持续等待。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "plan-timeline-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "我们昨天已决定下周给公告板刷漆，但尚未约定施工人员。要突出“事前打算”，选择英文形式与理由都正确的一项。其他语境可能使用别的将来表达。",
+      "options": [
+        "We're going to repaint the noticeboard next week. —— 强调昨天已定下的打算。",
+        "We'll repaint the noticeboard next week. —— 因为刚听到请求，才在此刻决定承担任务。",
+        "We're repainting the noticeboard next week. —— 因为已经与施工人员约好了具体时间。",
+        "We going to repaint the noticeboard next week. —— 强调昨天已定下的打算。"
+      ],
+      "answer": "We're going to repaint the noticeboard next week. —— 强调昨天已定下的打算。",
+      "explanation": "正确项使用完整的 are going to 加原形，并把表达联系到昨天的决定。第二、三项的理由分别虚构了当场决定和已约定施工人员的背景；第四项缺 be。will 与现在进行时本身也能谈未来，本题否定的是这些理由或形式与限定情境不符。",
+      "hints": [
+        "决定发生在说话前，人员约定还没有完成；检查理由是否新增了背景，以及英文是否缺少必要成分。",
+        "事前打算可用 we are going to 加 repaint；不能漏 be，也不能把昨天的决定解释为刚刚决定。"
+      ]
+    },
+    {
+      "id": "plan-timeline-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "对方刚说展板太重，你立即承诺帮忙。只修正多余的词：I will to carry the display boards. 保留 I、will、carry 和 the display boards，可缩写 will。",
+      "answer": "I will carry the display boards.",
+      "accepted": [
+        "I will carry the display boards.",
+        "I'll carry the display boards."
+      ],
+      "explanation": "当场承担任务可用 will；形式上去掉 to，carry 保持原形。I will 与 I'll 在这里表达同一承诺。",
+      "hints": [
+        "帮助意愿已经用 will 表达；检查情态词后动作的形式。",
+        "will 后直接接 carry，删除 to；I will 可缩写成 I'll。"
+      ]
+    },
+    {
+      "id": "plan-timeline-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "你已与印刷店确认周三两点去取海报。用 I / collect the posters / at two on Wednesday 写一句，限定使用现在进行时来突出约定；不添加地点或改换时间。",
+      "answer": "I'm collecting the posters at two on Wednesday.",
+      "accepted": [
+        "I'm collecting the posters at two on Wednesday.",
+        "I am collecting the posters at two on Wednesday.",
+        "At two on Wednesday, I'm collecting the posters.",
+        "At two on Wednesday, I am collecting the posters."
+      ],
+      "explanation": "I am collecting 在这个明确的未来安排中表示已经确认的取件计划，不是此刻正在取。其他将来形式未必是不合理的英语，但不满足本题指定的结构练习。",
+      "hints": [
+        "任务要求突出已约定安排，使用你学过的进行时结构，但时间参照在未来。",
+        "I 配 am，collect 变 collecting；保留 at two on Wednesday。"
+      ]
+    },
+    {
+      "id": "plan-timeline-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "今天周四，下周日参观场次已公布为十点开场，你和导览员也约好九点四十五见面。选择句子与“时间表／个人安排”的解释都正确的一项。",
+      "options": [
+        "The tour starts at ten on Sunday, and we're meeting the guide at 9:45. —— 十点是公布的场次，九点四十五是已确认的私人会面。",
+        "The tour starts at ten on Sunday, and we're meeting the guide at 9:45. —— 十点是你与工作人员的私人预约，九点四十五是公布的会面班次。",
+        "The tour is starting at ten on Sunday, and we meet the guide at 9:45. —— 你刚决定十点开场，尚未与导览员确认会面。",
+        "The tour start at ten on Sunday, and we're meeting the guide at 9:45. —— 十点是公布的场次，九点四十五是已确认的私人会面。"
+      ],
+      "answer": "The tour starts at ten on Sunday, and we're meeting the guide at 9:45. —— 十点是公布的场次，九点四十五是已确认的私人会面。",
+      "explanation": "正确项保留单数 starts 与进行时 are meeting，并解释实际的时间表和约定。第二项把两种信息来源对调，第三项把已公布和已确认说成刚决定与未确认，第四项漏单数 -s。未来表达有重叠，不能仅因第三项换了形式就宣称英文在所有场景都不成立。",
+      "hints": [
+        "分别找两件事的信息来源，再核对单数主语的动词形式；同一英文句子也可能配上错误的解释。",
+        "时间表可用 starts；约定会面可用 are meeting。正确理由不能把这两种背景对调。"
+      ]
+    },
+    {
+      "id": "plan-timeline-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "意思是“电工到来之前，我们不会开始”。改正普通未来时间从句中的时态：We won't begin until the electrician will arrive. 保留 won't begin、until 与 electrician，可将 won't 展开。",
+      "answer": "We won't begin until the electrician arrives.",
+      "accepted": [
+        "We won't begin until the electrician arrives.",
+        "We will not begin until the electrician arrives."
+      ],
+      "explanation": "not begin until 表示到那时才开始。until 小句设定未来事件的时间，使用一般现在时；单数 electrician 配 arrives。",
+      "hints": [
+        "until 小句给开始设时间，并非转述“他什么时候会来”的问题；检查这个小句的未来形式。",
+        "保留主句 won't begin，从句用 the electrician arrives，去掉从句中的 will。"
+      ]
+    },
+    {
+      "id": "plan-timeline-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "这是已经决定的活动准备：“我们打算在客人到来之前检查话筒”。用 We / check the microphones / before / the guests arrive 写一句；主句限定 be going to，从句表示普通未来时间关系。",
+      "answer": "We're going to check the microphones before the guests arrive.",
+      "accepted": [
+        "We're going to check the microphones before the guests arrive.",
+        "We are going to check the microphones before the guests arrive.",
+        "Before the guests arrive, we're going to check the microphones.",
+        "Before the guests arrive, we are going to check the microphones."
+      ],
+      "explanation": "主句用 are going to check 说明已有打算。before 引出普通未来时间从句，arrive 保留现在时；前后位置可交换，但检查仍先于客人到来。",
+      "hints": [
+        "同时检查两件事：主句要突出已有打算，before 要保留检查先发生的时间关系。",
+        "主句是 we are going to check the microphones；before 后用 the guests arrive，不加 will。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "为一次你真实准备的学习活动或出行写一个简短时间线。区分一件已决定的事、一件已约定或来自时间表的事，再写一句等待、开始或先后关系。说明选择这些未来形式的理由；开放表达的自然性和准确性仍需你或老师核对。",
+    "criteria": [
+      "将来形式有具体背景支持，能说明是打算、当场决定、约定还是时间表，而不靠 tomorrow 自动选择。",
+      "be going to 不缺 be，will 后用原形；安排中的现在进行时保留 be 与 -ing。",
+      "普通未来时间从句使用合适的现在时，能与 when 表“什么时候”的内容从句区分。",
+      "until 与 not…until 体现持续或到那时才发生，before / after 保留真实先后关系。"
+    ]
+  }
+}
