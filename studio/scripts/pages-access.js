@@ -10,6 +10,7 @@ const headers = {
   'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
 };
 const reply = (body, status, extra = {}) => new Response(body, {status, headers: {...headers, ...extra}});
+const demoPaths = new Set(['/demos/yesterday/', ...['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'content.mjs'].map(name => '/demos/yesterday/'+name)]);
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -19,7 +20,8 @@ export default {
     if (!env.ASSETS) return reply('Study materials temporarily unavailable.', 503);
     if (!['GET', 'HEAD'].includes(request.method)) return reply('Method not allowed', 405, {Allow: 'GET, HEAD'});
     if (url.pathname === '/map') return reply(null, 308, {Location: '/map/' + url.search});
-    if (!['/', '/index.html', '/map/', '/map/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/map\/assets\/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)$/.test(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
+    if (['/demos/yesterday', '/demos/yesterday/index.html'].includes(url.pathname)) return reply(null, 308, {Location: '/demos/yesterday/' + url.search});
+    if (!demoPaths.has(url.pathname) && !['/', '/index.html', '/map/', '/map/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/map\/assets\/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)$/.test(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
     try {
       // Old browsers may still send cached Basic credentials. Never forward them.
       const assetRequest = new Request(request);

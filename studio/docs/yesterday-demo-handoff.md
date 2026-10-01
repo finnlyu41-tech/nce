@@ -9,7 +9,7 @@
 主线可只取演示的独立提交；不需要等待或接入 `ielts-blueprint/`。
 
 1. 获取 `public/demos/yesterday/` 的五个文件，以及 `scripts/package-yesterday-demo.mjs`、`scripts/test-yesterday-demo.mjs`。
-2. 完成主线正常 online 打包后，在 `studio/` 执行 `node scripts/package-yesterday-demo.mjs`。现有 `package-standalone.py` 不自动复制全部 `public/`，因此这一步不可省略。它只复制五个演示文件到 `dist-online/demos/yesterday/`，不删除或覆盖主站其他文件。主线可在自己的打包流程里统一接入这一步。
+2. 主线 `pnpm package:online` 已统一复制五个演示文件到 `dist-online/demos/yesterday/`，并将哈希加入 `version.json`。无需额外复制；`scripts/package-yesterday-demo.mjs` 仅供独立预览打包。Worker 仅开放这五个文件与规范入口，其余路径仍受现有白名单限制。
 3. 按主线已有发布流程发布；检查 `/demos/yesterday/` 与其四个相对资源返回成功，并在手机打开入口。既有站点访问控制保持由主线管理。
 4. 回报实际线上 URL／发布版本／手机运行结果；没有回执前不可称已上线。
 
