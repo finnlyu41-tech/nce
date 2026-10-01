@@ -13,7 +13,8 @@
     "docs/vocabulary-reviewed-batch5e.json",
     "docs/vocabulary-reviewed-batch5f.json",
     "docs/vocabulary-gap-batch6c.json",
-    "docs/vocabulary-gap-batch6a.json"
+    "docs/vocabulary-gap-batch6a.json",
+    "docs/vocabulary-gap-batch6d.json"
   ],
   "scope": "Each unchanged content hash has a recorded Codex editorial review. Counts do not establish all textbook or dictionary senses or human certification.",
   "sourceTargetInventories": [
@@ -28,6 +29,7 @@
   ],
   "independentContentReviews": [
     "docs/verification/vocabulary-gap-batch6c.json",
-    "docs/verification/vocabulary-gap-batch6a.json"
+    "docs/verification/vocabulary-gap-batch6a.json",
+    "docs/verification/vocabulary-gap-batch6d.json"
   ]
 }

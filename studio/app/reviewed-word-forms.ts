@@ -6,12 +6,13 @@ import {reviewedTeachingDefinition,reviewedTeachingIpa} from './vocabulary-examp
 type TeachingSource={book:NceBookId;lesson:number};
 export type ReviewedLookupEntry=DictionaryEntry&{reviewedHeadword?:string;headwordIpa?:string};
 const key=(word:string)=>vocabularyKey(word.normalize('NFKC'));
-// Reviewed noun forms only. Generated source hints can also contain unrelated
+// Explicitly reviewed source forms. Generated hints can contain unrelated
 // homographs (for example Polish/polishing); they cannot approve new bindings.
 export const reviewedSourceWordForms=[
  {book:'NCE1' as const,lesson:14,word:'carpet',forms:['carpets',"carpet's"]},
  {book:'NCE1' as const,lesson:14,word:'case',forms:['cases',"case's"]},
  {book:'NCE1' as const,lesson:14,word:'dog',forms:['dogs',"dog's"]},
+ {book:'NCE3' as const,lesson:19,word:'withdraw',forms:['withdrew','withdrawn']},
 ];
 
 // The existing source index supplies lexical forms, not a new target-sense

@@ -1,0 +1,2649 @@
+{
+  "schemaVersion": 1,
+  "batch": "6d",
+  "baseCommit": "acfaffc6a8fe7033fca26c5c5b1dcb7c9bc0dce2",
+  "headwords": 23,
+  "senseExamples": 23,
+  "assignedRawItems": 23,
+  "trueMissingCanonicalHeadwords": 22,
+  "existingCanonicalSourceCorrectionItems": 1,
+  "textbookTargetSenseExamples": 23,
+  "printedTextbookTargetExamples": 22,
+  "editoriallyNormalizedTextbookTargetExamples": 1,
+  "dictionaryExtensionSenseExamples": 0,
+  "origin": "original",
+  "newOriginalContent": true,
+  "reviewBasis": "Independent Codex editorial review of every new sentence, Chinese translation, intended sense, canonical headword, POS and collocation; actual source images were visually read in stage A and verified by byte hashes. This is not human, browser or audio acceptance.",
+  "sourceScope": "This batch has 23 approved source-scoped target examples across 20 lessons. Five unprinted POS labels remain null with explicit editorial inference. Raw withdrawn is an index mislisting, not a missing independent adjective headword. No global all-sense claim.",
+  "globalCompletenessClaim": false,
+  "humanReview": false,
+  "browserReview": false,
+  "trueAudioReview": false,
+  "contentProvenance": {
+    "kind": "newly-authored-original",
+    "savedDraftReuse": false,
+    "textbookSentenceCopy": false,
+    "assignmentFile": "work/gaps94/assignments/batch6d.json",
+    "assignmentSha256": "82b310c4cb2de831b9c1380e60c16f504dd5c5d9a1801fe8b6d8bcec2f49db21",
+    "targetPlanFile": "work/gaps94/batch6d/target-plan.json",
+    "targetPlanSha256": "65a307db5277b4c9613788a8daad55376b8a7652b1e082ee69753239daef1190",
+    "consolidatedPlanFile": "work/gaps94/finite-target-plan.json",
+    "consolidatedPlanSha256": "e5b0ca6a74ed5d4db0abc992af080b0993a870769f8a83dfe28fd8339f15f764",
+    "approvedBy": "Parent /root delegated stage B after consolidating all finite targets; no remote authorization"
+  },
+  "sourceEvidence": [
+    {
+      "source": {
+        "book": "NCE1",
+        "lesson": 143
+      },
+      "sourcePDFPage": 294,
+      "sourcePrintedPage": 290,
+      "sourcePageSha256": "6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85",
+      "sourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "localImage": "dist-online/lesson-pages/6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE1",
+        "lesson": 143
+      },
+      "sourcePDFPage": 293,
+      "sourcePrintedPage": 289,
+      "sourcePageSha256": "11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886",
+      "sourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "localImage": "dist-online/lesson-pages/11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 7
+      },
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 38,
+      "sourcePageSha256": "462a8fc35d590047a8fe03bf2260635db9f8bbd4fb4e62b0d82a1de194acd7bb",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/462a8fc35d590047a8fe03bf2260635db9f8bbd4fb4e62b0d82a1de194acd7bb.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 8
+      },
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 42,
+      "sourcePageSha256": "3ecc460ca8b2ea390167113d97cf2d5bda0ae226de7a996a06aca962ac2ed619",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/3ecc460ca8b2ea390167113d97cf2d5bda0ae226de7a996a06aca962ac2ed619.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 10
+      },
+      "sourcePDFPage": 76,
+      "sourcePrintedPage": 50,
+      "sourcePageSha256": "352079f97cfa0cd2b434170eef04cd8463d09b9fee7fdc79a06918dbcf8f0b31",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/352079f97cfa0cd2b434170eef04cd8463d09b9fee7fdc79a06918dbcf8f0b31.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 19
+      },
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 86,
+      "sourcePageSha256": "f3461056bf7372dea0eb22243794696ca887a9f41a1a6e1ea43686365013cd53",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/f3461056bf7372dea0eb22243794696ca887a9f41a1a6e1ea43686365013cd53.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 27
+      },
+      "sourcePDFPage": 156,
+      "sourcePrintedPage": 130,
+      "sourcePageSha256": "13900c4058ccee859ec091bb3461d0e56d8c2aa5321dc2e853822b2a17848913",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/13900c4058ccee859ec091bb3461d0e56d8c2aa5321dc2e853822b2a17848913.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 35
+      },
+      "sourcePDFPage": 188,
+      "sourcePrintedPage": 162,
+      "sourcePageSha256": "98b64d83725e7aec8654489dfc037c550b141096b9ba874dc652b6230f70f9b3",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/98b64d83725e7aec8654489dfc037c550b141096b9ba874dc652b6230f70f9b3.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 40
+      },
+      "sourcePDFPage": 208,
+      "sourcePrintedPage": 182,
+      "sourcePageSha256": "0190f7edfa6c19953926a95f8bfc93e8c1f72526cd29a572174c8b053f5f06f0",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/0190f7edfa6c19953926a95f8bfc93e8c1f72526cd29a572174c8b053f5f06f0.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 47
+      },
+      "sourcePDFPage": 243,
+      "sourcePrintedPage": 217,
+      "sourcePageSha256": "f58425e488c515d63bd6405d03a9fdfb3e9dc55f2daf753c63eea54ec289ba4a",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/f58425e488c515d63bd6405d03a9fdfb3e9dc55f2daf753c63eea54ec289ba4a.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 47
+      },
+      "sourcePDFPage": 242,
+      "sourcePrintedPage": 216,
+      "sourcePageSha256": "34ef30bcc8d9150cd7eabd9ffa48202761f50670b7e1b1396caa1f5db73947a9",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/34ef30bcc8d9150cd7eabd9ffa48202761f50670b7e1b1396caa1f5db73947a9.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 50
+      },
+      "sourcePDFPage": 255,
+      "sourcePrintedPage": 229,
+      "sourcePageSha256": "0c268aa00ec5952c5402f394e74d9d00bfb4c00f8eadf97d9e5b230b8478f459",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/0c268aa00ec5952c5402f394e74d9d00bfb4c00f8eadf97d9e5b230b8478f459.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 50
+      },
+      "sourcePDFPage": 254,
+      "sourcePrintedPage": 228,
+      "sourcePageSha256": "26e5b3634e6990a8f848e4e5ffcb63b5c302f7aeb8507469e06c043a295ab60d",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/26e5b3634e6990a8f848e4e5ffcb63b5c302f7aeb8507469e06c043a295ab60d.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 51
+      },
+      "sourcePDFPage": 258,
+      "sourcePrintedPage": 232,
+      "sourcePageSha256": "1dee8d204e7a2c6be9dd0ee438aacd19236399b37ed4f14e3c4694761225d9cd",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/1dee8d204e7a2c6be9dd0ee438aacd19236399b37ed4f14e3c4694761225d9cd.jpg",
+      "role": "word-list-start-and-target-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 51
+      },
+      "sourcePDFPage": 259,
+      "sourcePrintedPage": 233,
+      "sourcePageSha256": "2232a71de2b36b41e219de958cd03f367869e2338cbd466e24e5fcbb2ca8c0b4",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/2232a71de2b36b41e219de958cd03f367869e2338cbd466e24e5fcbb2ca8c0b4.jpg",
+      "role": "word-list-target",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 54
+      },
+      "sourcePDFPage": 271,
+      "sourcePrintedPage": 245,
+      "sourcePageSha256": "da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 54
+      },
+      "sourcePDFPage": 270,
+      "sourcePrintedPage": 244,
+      "sourcePageSha256": "835caa5d2c631eba1d46150dd9206cfe469d0de7ef0291ce4fd9187e4743d88a",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/835caa5d2c631eba1d46150dd9206cfe469d0de7ef0291ce4fd9187e4743d88a.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 59
+      },
+      "sourcePDFPage": 291,
+      "sourcePrintedPage": 265,
+      "sourcePageSha256": "8cd2b93d2c725cfc777c5ea0bcb0fc45a7d7995e583f0f888352f8026d7dc42e",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/8cd2b93d2c725cfc777c5ea0bcb0fc45a7d7995e583f0f888352f8026d7dc42e.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE3",
+        "lesson": 59
+      },
+      "sourcePDFPage": 290,
+      "sourcePrintedPage": 264,
+      "sourcePageSha256": "ce5437f3acaf2de4484e97d6fcf887dd66d082843d929ced195a0a982a3408e3",
+      "sourceSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "localImage": "dist-online/lesson-pages/ce5437f3acaf2de4484e97d6fcf887dd66d082843d929ced195a0a982a3408e3.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 5
+      },
+      "sourcePDFPage": 59,
+      "sourcePrintedPage": 30,
+      "sourcePageSha256": "794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 5
+      },
+      "sourcePDFPage": 58,
+      "sourcePrintedPage": 29,
+      "sourcePageSha256": "dc815160b8370f2cd3fb03577deaa9839ff993faef733072a97f744fc70df368",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/dc815160b8370f2cd3fb03577deaa9839ff993faef733072a97f744fc70df368.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 14
+      },
+      "sourcePDFPage": 111,
+      "sourcePrintedPage": 82,
+      "sourcePageSha256": "f2555c39deefab3cb6ec1eebb1401dc557c19343d66ec06cb1069f902e098952",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/f2555c39deefab3cb6ec1eebb1401dc557c19343d66ec06cb1069f902e098952.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 26
+      },
+      "sourcePDFPage": 184,
+      "sourcePrintedPage": 155,
+      "sourcePageSha256": "641f4fb71101a1ef55e38462c2dfef95a921eea432c37e41b36ebf948986fc17",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/641f4fb71101a1ef55e38462c2dfef95a921eea432c37e41b36ebf948986fc17.jpg",
+      "role": "word-list-and-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 41
+      },
+      "sourcePDFPage": 270,
+      "sourcePrintedPage": 241,
+      "sourcePageSha256": "b14f7de998fbc739e63070603f6f44283373b88d21d69603cea2b3efd9fddb58",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/b14f7de998fbc739e63070603f6f44283373b88d21d69603cea2b3efd9fddb58.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 41
+      },
+      "sourcePDFPage": 269,
+      "sourcePrintedPage": 240,
+      "sourcePageSha256": "382fa048a1543e41f338eefb7e40144a3ae95b15a65641af4b7073df8017fd2d",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/382fa048a1543e41f338eefb7e40144a3ae95b15a65641af4b7073df8017fd2d.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 42
+      },
+      "sourcePDFPage": 275,
+      "sourcePrintedPage": 246,
+      "sourcePageSha256": "42d3a43114f5aa14497983dcc405c53f01ca1088a2886edc574572e19e5a53bd",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/42d3a43114f5aa14497983dcc405c53f01ca1088a2886edc574572e19e5a53bd.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 42
+      },
+      "sourcePDFPage": 274,
+      "sourcePrintedPage": 245,
+      "sourcePageSha256": "51c20b21eac37b5fd9b20a37ace92c826a4367ad88f5ba0f1944d53c26438642",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/51c20b21eac37b5fd9b20a37ace92c826a4367ad88f5ba0f1944d53c26438642.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 43
+      },
+      "sourcePDFPage": 281,
+      "sourcePrintedPage": 252,
+      "sourcePageSha256": "e1e0c38c55c454eefe020a03a1958af0eac4828eab6aa9909fa35daa00f90bd9",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/e1e0c38c55c454eefe020a03a1958af0eac4828eab6aa9909fa35daa00f90bd9.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 43
+      },
+      "sourcePDFPage": 280,
+      "sourcePrintedPage": 251,
+      "sourcePageSha256": "da324c50f9872876995d09fd661c89f1edfa05757bbb310f382f5f06c901f005",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/da324c50f9872876995d09fd661c89f1edfa05757bbb310f382f5f06c901f005.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 47
+      },
+      "sourcePDFPage": 304,
+      "sourcePrintedPage": 275,
+      "sourcePageSha256": "afe79ca6cba8d052453d33cca83a35ac0e5431ab31d69a4c2503fb19cfbe0fde",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/afe79ca6cba8d052453d33cca83a35ac0e5431ab31d69a4c2503fb19cfbe0fde.jpg",
+      "role": "word-list",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    },
+    {
+      "source": {
+        "book": "NCE4",
+        "lesson": 47
+      },
+      "sourcePDFPage": 303,
+      "sourcePrintedPage": 274,
+      "sourcePageSha256": "e54f439c669813736a7ed3fbfc5d8a6bff8cbfa8a9b9a0df5aab048e9806a421",
+      "sourceSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "localImage": "dist-online/lesson-pages/e54f439c669813736a7ed3fbfc5d8a6bff8cbfa8a9b9a0df5aab048e9806a421.jpg",
+      "role": "lesson-context",
+      "inspection": "Actual full-page original-resolution view_image in this independent Codex stage A audit",
+      "inspected": true,
+      "byteSha256Verified": true
+    }
+  ],
+  "externalReferences": [
+    {
+      "id": "mw-megacycle",
+      "url": "https://www.merriam-webster.com/dictionary/megacycle",
+      "provider": "Merriam-Webster",
+      "observedWith": "web open, 2026-10-01",
+      "purpose": "Definition is one million cycles; frequency shorthand cross-reference exists. No example sentence copied."
+    },
+    {
+      "id": "mw-megahertz",
+      "url": "https://www.merriam-webster.com/dictionary/megahertz",
+      "provider": "Merriam-Webster",
+      "observedWith": "web open, 2026-10-01",
+      "purpose": "MHz denotes one million hertz; distinguishes the complete per-second structure."
+    },
+    {
+      "id": "nist-si-prefixes",
+      "url": "https://www.nist.gov/pml/owm/metric-si-prefixes",
+      "provider": "NIST",
+      "observedWith": "web open, 2026-10-01",
+      "purpose": "mega / M means 10^6. Does not establish megacycle as a named SI unit."
+    },
+    {
+      "id": "nws-dust-devil",
+      "url": "https://www.weather.gov/fgz/DustDevil",
+      "provider": "National Weather Service",
+      "observedWith": "web open, 2026-10-01",
+      "purpose": "Dust-filled rotating vortex arising from strong surface heating; no tornado equivalence or harmlessness claim."
+    },
+    {
+      "id": "usgs-seismometer",
+      "url": "https://www.usgs.gov/faqs/seismometers-seismographs-seismograms-whats-difference-how-do-they-work",
+      "provider": "USGS",
+      "observedWith": "web open, 2026-10-01",
+      "purpose": "Ground-motion sensing/recording and instrument-versus-record distinction; common synonym use is acknowledged."
+    },
+    {
+      "id": "mw-maitre-dhotel",
+      "url": "https://www.merriam-webster.com/dictionary/ma%C3%AEtre%20d'h%C3%B4tel",
+      "provider": "Merriam-Webster",
+      "observedWith": "web open, 2026-10-01",
+      "purpose": "Headwaiter is a supported human role; unrelated sauce and historical household meanings are not planned."
+    }
+  ],
+  "missingPrintedPOSHeadwords": [
+    "litter basket",
+    "St. Bernard",
+    "mete out",
+    "social climber",
+    "dust devil"
+  ],
+  "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+  "contentFileSha256": "d0716150c03bcfba963c064e66f1382a6a934c00a0801ee1156803eb18577bea",
+  "entries": [
+    {
+      "id": "gap6d-hundred-hundreds",
+      "word": "hundred",
+      "assignmentWord": "hundred",
+      "rawGapKey": "hundred",
+      "source": {
+        "book": "NCE1",
+        "lesson": 143
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 百",
+      "excludedMeaningLabels": [
+        "n. 百分之一",
+        "n. 一千",
+        "adj. 许多的",
+        "v. 百",
+        "adj. 百",
+        "adv. 百",
+        "prep. 百",
+        "pron. 百",
+        "det. 百",
+        "num. 百",
+        "conj. 百",
+        "int. 百",
+        "aux. 百"
+      ],
+      "teachingDefinition": "n. 百（本课 hundreds of：数百）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 294,
+      "sourcePrintedPage": 290,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSha256": "6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85",
+      "sourcePrintedWord": "hundred",
+      "canonicalSourceHeadword": "hundred",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "百",
+      "wordlistDefinition": "n. 百",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 百, 百个东西\nnum. 百, 百个\na. 一百的, 许多的",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85.jpg",
+      "assignedPages": [
+        294
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 294,
+          "sourcePrintedPage": 290,
+          "sourcePageSha256": "6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 293,
+        "sourcePrintedPage": 289,
+        "sourcePageSha256": "11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886",
+        "localImage": "dist-online/lesson-pages/11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886.jpg",
+        "locator": "课文 hundreds of people",
+        "interpretation": "本课用复数 hundreds of 表示数百；原词表印 n.，不由通用词典扩成所有 num./adj. 分支。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "以数量组 hundreds of + 复数名词创作；具体数目后为 two hundred，不写 two hundreds。保留词表 n. 与现代数词分析的区别。",
+      "outsideReviewedScope": [
+        "形容词许多的",
+        "数词和其他特殊数量构式的独立练习"
+      ],
+      "reviewNotes": "hundreds of 采用数百的复数数量结构；visitors 是复数。中文保留开门前、排队及数百的非精确数量。词表 n. 百与其他现代数词分析分列，不借此扩展所有 num./adj. 分支。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "783ff22756d250bae91d0e2a41beb2cc902edcdce2e2bff8996328f732724ad4",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-litter-basket-bin",
+      "word": "litter basket",
+      "assignmentWord": "litter basket",
+      "rawGapKey": "litter basket",
+      "source": {
+        "book": "NCE1",
+        "lesson": 143
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 废物筐",
+      "excludedMeaningLabels": [
+        "n. 幼崽",
+        "n. 担架",
+        "n. 杂物篮",
+        "v. 废物筐",
+        "adj. 废物筐",
+        "adv. 废物筐",
+        "prep. 废物筐",
+        "pron. 废物筐",
+        "det. 废物筐",
+        "num. 废物筐",
+        "conj. 废物筐",
+        "int. 废物筐",
+        "aux. 废物筐"
+      ],
+      "teachingDefinition": "n. 废物筐",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 294,
+      "sourcePrintedPage": 290,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSha256": "6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85",
+      "sourcePrintedWord": "litter basket",
+      "canonicalSourceHeadword": "litter basket",
+      "sourcePrintedPartOfSpeech": null,
+      "sourcePrintedGloss": "废物筐",
+      "wordlistDefinition": "废物筐",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": "n.",
+      "editorialPOSBasis": "课文复数 litter baskets 作为容器名词及句子主语。",
+      "rawGapDictionaryDefinition": "n. 废纸篓\n[网络] 废物筐；废物箱；杂物篮",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85.jpg",
+      "assignedPages": [
+        294
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 294,
+          "sourcePrintedPage": 290,
+          "sourcePageSha256": "6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 293,
+        "sourcePrintedPage": 289,
+        "sourcePageSha256": "11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886",
+        "localImage": "dist-online/lesson-pages/11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886.jpg",
+        "locator": "课文 Litter baskets / the litter baskets",
+        "interpretation": "丢弃垃圾的容器；不是 litter 散乱物或 basket 任意篮子两词的拆分卡。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "保留完整两词词头；用户外公共容器场景和 in / empty / nearby 等自然结构。n. 是编辑推断，原图未印 POS。",
+      "outsideReviewedScope": [
+        "litter 其他义项",
+        "普通 basket 容器及动词用法"
+      ],
+      "reviewNotes": "litter basket 保留完整双词容器名词；in 表放入容器，beside 修饰所在位置。that wrapper 对应那张包装纸，无额外材料或地点细节。原图未印 POS，n. 是明确编辑推断。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "a5985cd880fe90065f41b0d73a0e3daef7d5679be69e9d4e2049e72f5b657866",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-fiance-engaged-man",
+      "word": "fiancé",
+      "assignmentWord": "fiancé",
+      "rawGapKey": "fiancé",
+      "source": {
+        "book": "NCE3",
+        "lesson": 7
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 未婚夫",
+      "excludedMeaningLabels": [
+        "n. 未婚妻",
+        "n. 丈夫",
+        "n. 男朋友",
+        "adj. 未婚夫",
+        "v. 未婚夫",
+        "adv. 未婚夫",
+        "prep. 未婚夫",
+        "pron. 未婚夫",
+        "det. 未婚夫",
+        "num. 未婚夫",
+        "conj. 未婚夫",
+        "int. 未婚夫",
+        "aux. 未婚夫"
+      ],
+      "teachingDefinition": "n. 未婚夫",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 38,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "462a8fc35d590047a8fe03bf2260635db9f8bbd4fb4e62b0d82a1de194acd7bb",
+      "sourcePrintedWord": "fiancé",
+      "canonicalSourceHeadword": "fiancé",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "未婚夫",
+      "wordlistDefinition": "n. 未婚夫",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 未婚夫",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/462a8fc35d590047a8fe03bf2260635db9f8bbd4fb4e62b0d82a1de194acd7bb.jpg",
+      "assignedPages": [
+        64
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 64,
+          "sourcePrintedPage": 38,
+          "sourcePageSha256": "462a8fc35d590047a8fe03bf2260635db9f8bbd4fb4e62b0d82a1de194acd7bb",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 64,
+        "sourcePrintedPage": 38,
+        "sourcePageSha256": "462a8fc35d590047a8fe03bf2260635db9f8bbd4fb4e62b0d82a1de194acd7bb",
+        "localImage": "dist-online/lesson-pages/462a8fc35d590047a8fe03bf2260635db9f8bbd4fb4e62b0d82a1de194acd7bb.jpg",
+        "locator": "词表 l.9；课文 fiancé, John / fiancé’s wallet",
+        "interpretation": "订婚的男性伴侣，重音 é 是词头一部分。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "原创订婚生活场景；不沿用教材钱包、微波炉事件。保留 fiancé，未婚妻 fiancée 是另一个词头。",
+      "outsideReviewedScope": [
+        "fiancée 的独立练习",
+        "泛指情侣"
+      ],
+      "reviewNotes": "fiancé 指订婚男性伴侣，保留 é；不用 fiancée。原创婚期场景与原书钱包事件无重用。正在挑选对应 are choosing；our wedding 不变成别人的婚礼。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "3390ff20d5d0e8aaf2377e6c5478230828645606df3d66591b9cf6af8796b82e",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-st-bernard-name",
+      "word": "St. Bernard",
+      "assignmentWord": "St. Bernard",
+      "rawGapKey": "st. bernard",
+      "source": {
+        "book": "NCE3",
+        "lesson": 8
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 圣伯纳德",
+      "excludedMeaningLabels": [
+        "n. 圣伯纳德犬",
+        "n. 看门狗",
+        "adj. 圣伯纳德",
+        "v. 圣伯纳德",
+        "adv. 圣伯纳德",
+        "prep. 圣伯纳德",
+        "pron. 圣伯纳德",
+        "det. 圣伯纳德",
+        "num. 圣伯纳德",
+        "conj. 圣伯纳德",
+        "int. 圣伯纳德",
+        "aux. 圣伯纳德"
+      ],
+      "teachingDefinition": "n. 圣伯纳德（本课专名，用于山口和修道院名称）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 42,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "3ecc460ca8b2ea390167113d97cf2d5bda0ae226de7a996a06aca962ac2ed619",
+      "sourcePrintedWord": "St. Bernard",
+      "canonicalSourceHeadword": "St. Bernard",
+      "sourcePrintedPartOfSpeech": null,
+      "sourcePrintedGloss": "圣伯纳德",
+      "wordlistDefinition": "圣伯纳德",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": "n.",
+      "editorialPOSBasis": "词表定位 l.1 的专名，课文用于 Great St. Bernard Pass 和 monastery of St. Bernard。",
+      "rawGapDictionaryDefinition": "圣伯纳德",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/3ecc460ca8b2ea390167113d97cf2d5bda0ae226de7a996a06aca962ac2ed619.jpg",
+      "assignedPages": [
+        68
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 68,
+          "sourcePrintedPage": 42,
+          "sourcePageSha256": "3ecc460ca8b2ea390167113d97cf2d5bda0ae226de7a996a06aca962ac2ed619",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 68,
+        "sourcePrintedPage": 42,
+        "sourcePageSha256": "3ecc460ca8b2ea390167113d97cf2d5bda0ae226de7a996a06aca962ac2ed619",
+        "localImage": "dist-online/lesson-pages/3ecc460ca8b2ea390167113d97cf2d5bda0ae226de7a996a06aca962ac2ed619.jpg",
+        "locator": "词表 l.1；课文 Great St. Bernard Pass / monastery of St. Bernard",
+        "interpretation": "本批取词表对应的专名。课文 St. Bernard dogs 也确实出现，但词表没有单列犬种释义；该用法明确留在本批目标外。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "大小写和 St. 后空格保留；用山口名称作旅行语境，不把专名例句当作犬种、历史人物介绍。原图未印 POS。",
+      "outsideReviewedScope": [
+        "课文也出现的 St. Bernard dogs 犬种用法，未另列目标",
+        "圣人传记/个人名称背景"
+      ],
+      "reviewNotes": "St. Bernard 为词表 l.1 的专名成分，处于真实课内山口名称；near 仅指附近，不替成穿越山口。不引述海拔、开放路况、救援或犬种。n. 是专名语法编辑推断，原图未印 POS。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "d5605e1f4ba72693ea441f9836ab41a8ee0852ae1fea418adfb085f28aafb3ce",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-lifeboat-rescue-vessel",
+      "word": "lifeboat",
+      "assignmentWord": "lifeboat",
+      "rawGapKey": "lifeboat",
+      "source": {
+        "book": "NCE3",
+        "lesson": 10
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 救生船",
+      "excludedMeaningLabels": [
+        "n. 班船",
+        "n. 救生衣",
+        "n. 救生圈",
+        "v. 救生船",
+        "adj. 救生船",
+        "adv. 救生船",
+        "prep. 救生船",
+        "pron. 救生船",
+        "det. 救生船",
+        "num. 救生船",
+        "conj. 救生船",
+        "int. 救生船",
+        "aux. 救生船"
+      ],
+      "teachingDefinition": "n. 救生船",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 76,
+      "sourcePrintedPage": 50,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "352079f97cfa0cd2b434170eef04cd8463d09b9fee7fdc79a06918dbcf8f0b31",
+      "sourcePrintedWord": "lifeboat",
+      "canonicalSourceHeadword": "lifeboat",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "救生船",
+      "wordlistDefinition": "n. 救生船",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 救生艇",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/352079f97cfa0cd2b434170eef04cd8463d09b9fee7fdc79a06918dbcf8f0b31.jpg",
+      "assignedPages": [
+        76
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 76,
+          "sourcePrintedPage": 50,
+          "sourcePageSha256": "352079f97cfa0cd2b434170eef04cd8463d09b9fee7fdc79a06918dbcf8f0b31",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 76,
+        "sourcePrintedPage": 50,
+        "sourcePageSha256": "352079f97cfa0cd2b434170eef04cd8463d09b9fee7fdc79a06918dbcf8f0b31",
+        "localImage": "dist-online/lesson-pages/352079f97cfa0cd2b434170eef04cd8463d09b9fee7fdc79a06918dbcf8f0b31.jpg",
+        "locator": "词表 l.16；课文 not enough lifeboats",
+        "interpretation": "遇险救生用的船艇；打印救生船与目录救生艇是同一目标的中文近义。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "创造船上救生演练或撤离语境，不抄 Titanic 伤亡或课文数据。",
+      "outsideReviewedScope": [
+        "普通船舶各类别",
+        "比喻救命办法"
+      ],
+      "reviewNotes": "可数名词 lifeboat 指救生船艇；lower 表下放，into 表进入水中。drill 明确为演练，未添加海难结果。源印救生船，译文救生艇是同义表达，未替成救生衣或班船。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "ca7d5cd147433c60ff575fe16c6a73ff235fed337a87bb9c8d9dbc77037dd407",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-withdraw-bank-money",
+      "word": "withdraw",
+      "assignmentWord": "withdrawn",
+      "rawGapKey": "withdrawn",
+      "source": {
+        "book": "NCE3",
+        "lesson": 19
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v.（从银行）取钱",
+      "excludedMeaningLabels": [
+        "adj. 孤僻的",
+        "adj. 内向的",
+        "v. 撤退",
+        "v. 退出",
+        "v. 撤回",
+        "n. 取钱",
+        "adj. 取钱",
+        "adv. 取钱",
+        "prep. 取钱",
+        "pron. 取钱",
+        "det. 取钱",
+        "num. 取钱",
+        "conj. 取钱",
+        "int. 取钱",
+        "aux. 取钱"
+      ],
+      "teachingDefinition": "v.（从银行）取钱",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 86,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "f3461056bf7372dea0eb22243794696ca887a9f41a1a6e1ea43686365013cd53",
+      "sourcePrintedWord": "withdraw",
+      "canonicalSourceHeadword": "withdraw",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedGloss": "（从银行）取钱",
+      "wordlistDefinition": "v. （从银行）取钱",
+      "sourcePrintedInflectionNote": "withdrew; withdrawn",
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "withdraw的过去分词",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/f3461056bf7372dea0eb22243794696ca887a9f41a1a6e1ea43686365013cd53.jpg",
+      "assignedPages": [
+        112
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 112,
+          "sourcePrintedPage": 86,
+          "sourcePageSha256": "f3461056bf7372dea0eb22243794696ca887a9f41a1a6e1ea43686365013cd53",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 112,
+        "sourcePrintedPage": 86,
+        "sourcePageSha256": "f3461056bf7372dea0eb22243794696ca887a9f41a1a6e1ea43686365013cd53",
+        "localImage": "dist-online/lesson-pages/f3461056bf7372dea0eb22243794696ca887a9f41a1a6e1ea43686365013cd53.jpg",
+        "locator": "词表 l.13；课文 She withdrew £1,000 from her bank",
+        "interpretation": "withdrawn 在词表括号里是过去分词。原始索引同时列 withdraw 和误列的 withdrawn；root 已独立复核并授权本批 data.word 使用 withdraw。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "原创银行取款语境，可用 withdraw/withdrew/withdrawn 的真实变形；绝不按孤僻的形容词 withdrawn 创作。",
+      "outsideReviewedScope": [
+        "withdraw 撤退/撤回/退出等动词分支",
+        "withdrawn 的性格形容词"
+      ],
+      "catalogCorrection": {
+        "kind": "duplicate-inflection-entry",
+        "rawGapKey": "withdrawn",
+        "canonicalKey": "withdraw",
+        "rawForms": [
+          "withdraw",
+          "d"
+        ],
+        "approvedInflections": [
+          "withdrew",
+          "withdrawn"
+        ],
+        "status": "root separately confirmed source page and authorized canonical withdraw; root owns source/page-bound catalog correction; raw resources and old personal records remain untouched",
+        "genuineMissingHeadword": false,
+        "newCanonicalExamplePlanned": true
+      },
+      "reviewNotes": "withdraw + cash + from an account 明确为银行取款动词；some/before/I 分别在译文保留。data.word=withdraw，经 root 独立核准。assignmentWord/rawGapKey=withdrawn 仅留审计来源，绝无孤僻的形容词例句。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "acef3cad8262ecee6489892ff5432239964445df9cebac42cf7591b3e483bbca",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-passer-by-person",
+      "word": "passer-by",
+      "assignmentWord": "passer-by",
+      "rawGapKey": "passer-by",
+      "source": {
+        "book": "NCE3",
+        "lesson": 27
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 过路人",
+      "excludedMeaningLabels": [
+        "n. 乘客",
+        "n. 旅客",
+        "v. 经过",
+        "adj. 过路人",
+        "v. 过路人",
+        "adv. 过路人",
+        "prep. 过路人",
+        "pron. 过路人",
+        "det. 过路人",
+        "num. 过路人",
+        "conj. 过路人",
+        "int. 过路人",
+        "aux. 过路人"
+      ],
+      "teachingDefinition": "n. 过路人",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 156,
+      "sourcePrintedPage": 130,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "13900c4058ccee859ec091bb3461d0e56d8c2aa5321dc2e853822b2a17848913",
+      "sourcePrintedWord": "passer-by",
+      "canonicalSourceHeadword": "passer-by",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "过路人",
+      "wordlistDefinition": "n. 过路人",
+      "sourcePrintedInflectionNote": "复数 passers-by",
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 过路人; 经过者",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/13900c4058ccee859ec091bb3461d0e56d8c2aa5321dc2e853822b2a17848913.jpg",
+      "assignedPages": [
+        156
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 156,
+          "sourcePrintedPage": 130,
+          "sourcePageSha256": "13900c4058ccee859ec091bb3461d0e56d8c2aa5321dc2e853822b2a17848913",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 156,
+        "sourcePrintedPage": 130,
+        "sourcePageSha256": "13900c4058ccee859ec091bb3461d0e56d8c2aa5321dc2e853822b2a17848913",
+        "localImage": "dist-online/lesson-pages/13900c4058ccee859ec091bb3461d0e56d8c2aa5321dc2e853822b2a17848913.jpg",
+        "locator": "词表 l.12；课文 passers-by",
+        "interpretation": "经过某处的人；复数加在 passer，不写 passer-bys。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "保留连字符，实际创作可练 passers-by；不沿用教材乞讨事件。",
+      "outsideReviewedScope": [
+        "pass by 动词短语",
+        "旅客和乘客类别"
+      ],
+      "reviewNotes": "passer-by 是经过者的可数人称名词，保留连字符。间接问句 where ... was 采用陈述语序；nearest、we、a 均准确中译。打印的 passers-by 复数规则保留在来源说明，本例使用单数词头。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "34cbc702513f3daa750a343ec0639462bcf86754b788ab22e57c6ed5ee9e8e26",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-mete-out-award-or-sanction",
+      "word": "mete out",
+      "assignmentWord": "mete out",
+      "rawGapKey": "mete out",
+      "source": {
+        "book": "NCE3",
+        "lesson": 35
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 给予；处置",
+      "excludedMeaningLabels": [
+        "v. 度量",
+        "v. 相遇",
+        "v. 处理事务",
+        "v. 使受苦",
+        "n. 给予",
+        "adj. 给予",
+        "adv. 给予",
+        "prep. 给予",
+        "pron. 给予",
+        "det. 给予",
+        "num. 给予",
+        "conj. 给予",
+        "int. 给予",
+        "aux. 给予"
+      ],
+      "teachingDefinition": "v. 给予，处置（本课为施予奖惩）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 188,
+      "sourcePrintedPage": 162,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "98b64d83725e7aec8654489dfc037c550b141096b9ba874dc652b6230f70f9b3",
+      "sourcePrintedWord": "mete out",
+      "canonicalSourceHeadword": "mete out",
+      "sourcePrintedPartOfSpeech": null,
+      "sourcePrintedGloss": "给予，处置",
+      "wordlistDefinition": "给予，处置",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": "v.",
+      "editorialPOSBasis": "课文被动 are meted out，主语 reward or punishment，属于及物短语动词。",
+      "rawGapDictionaryDefinition": " 给予; 给予惩罚;  责罚;  使受苦",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/98b64d83725e7aec8654489dfc037c550b141096b9ba874dc652b6230f70f9b3.jpg",
+      "assignedPages": [
+        188
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 188,
+          "sourcePrintedPage": 162,
+          "sourcePageSha256": "98b64d83725e7aec8654489dfc037c550b141096b9ba874dc652b6230f70f9b3",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 188,
+        "sourcePrintedPage": 162,
+        "sourcePageSha256": "98b64d83725e7aec8654489dfc037c550b141096b9ba874dc652b6230f70f9b3",
+        "localImage": "dist-online/lesson-pages/98b64d83725e7aec8654489dfc037c550b141096b9ba874dc652b6230f70f9b3.jpg",
+        "locator": "词表 l.8；课文 Reward or punishment are meted out",
+        "interpretation": "给予、施加奖惩；课内包含 reward 与 punishment，不能只把短语释为折磨。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "动词加 out 的完整短语，奖惩是被给予的对象，可加 to + 人；不扩为任意赠予或处理事务。原图未印 POS。",
+      "outsideReviewedScope": [
+        "mete 单独动词历史义",
+        "普通 give/处理 的全部义项"
+      ],
+      "reviewNotes": "meted out 是 mete out 的过去式，punishment 是给予对象，to 引出受处罚者。中文保留 every/same 及违反规定的条件。本课也含 reward，记录为同一奖惩施予目标；本例不把短语等同于使受苦。未印 POS，v. 为句法推断。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "351681a095a80c9ded630ebf4f279304ab0f0b4f21642a003f459d826b2be5bf",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-indulge-in-activity",
+      "word": "indulge",
+      "assignmentWord": "indulge",
+      "rawGapKey": "indulge",
+      "source": {
+        "book": "NCE3",
+        "lesson": 40
+      },
+      "scope": "textbook-target-editorial-normalized",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 沉溺于；纵情于",
+      "excludedMeaningLabels": [
+        "v. 纵容",
+        "v. 迁就",
+        "v. 使高兴",
+        "v. 使沉迷",
+        "n. 沉溺于",
+        "adj. 沉溺于",
+        "adv. 沉溺于",
+        "prep. 沉溺于",
+        "pron. 沉溺于",
+        "det. 沉溺于",
+        "num. 沉溺于",
+        "conj. 沉溺于",
+        "int. 沉溺于",
+        "aux. 沉溺于"
+      ],
+      "teachingDefinition": "v. 沉溺于；纵情于（本课 indulge in + 活动；原词表印使沉迷）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 208,
+      "sourcePrintedPage": 182,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "0190f7edfa6c19953926a95f8bfc93e8c1f72526cd29a572174c8b053f5f06f0",
+      "sourcePrintedWord": "indulge",
+      "canonicalSourceHeadword": "indulge",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedGloss": "使沉迷",
+      "wordlistDefinition": "v. 使沉迷",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "semanticNormalization": {
+        "printedLabel": "v. 使沉迷",
+        "normalizedCourseTarget": "v. 沉溺于；纵情于",
+        "basis": "Actual lesson uses would ever indulge in + activity. The subject participates in the activity; it does not cause another person to become absorbed. Original printed text stays unchanged in source evidence.",
+        "algorithmLimit": "The existing matcher folds vt./vi. to v., so syntactic review supplies this distinction; no matcher change."
+      },
+      "rawGapDictionaryDefinition": "vt. 纵情于, 使高兴, 放任, 迁就\nvi. 沉溺",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/0190f7edfa6c19953926a95f8bfc93e8c1f72526cd29a572174c8b053f5f06f0.jpg",
+      "assignedPages": [
+        208
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 208,
+          "sourcePrintedPage": 182,
+          "sourcePageSha256": "0190f7edfa6c19953926a95f8bfc93e8c1f72526cd29a572174c8b053f5f06f0",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 208,
+        "sourcePrintedPage": 182,
+        "sourcePageSha256": "0190f7edfa6c19953926a95f8bfc93e8c1f72526cd29a572174c8b053f5f06f0",
+        "localImage": "dist-online/lesson-pages/0190f7edfa6c19953926a95f8bfc93e8c1f72526cd29a572174c8b053f5f06f0.jpg",
+        "locator": "词表 l.5；课文 would ever indulge in",
+        "interpretation": "词表粗释印使沉迷，实际课文是 indulge in + 活动：纵情于/参与某种自我取悦的活动。语法澄清单列，不能由打印粗释扩展到纵容某人。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "选明确 indulge in + 名词或动名词活动的句子，中文保留参与/纵情于的主动结构；不错误译成使别人沉迷。matcher 将 vt./vi. 都归 v.，不能把通过匹配当作及物性证明。",
+      "outsideReviewedScope": [
+        "indulge someone 纵容/迁就",
+        "indulge oneself 的独立结构"
+      ],
+      "reviewNotes": "indulge in + gossip 是主体参与活动的结构；about her colleagues 对应拿同事的事情说长道短，refused 对应不肯。中译采用自然说法，不造使别人沉迷的因果。打印 v.使沉迷原样留 source，显示义项按课内句法编辑规范；不扩大到纵容/迁就某人。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "26ddce08b4b33757e563f9f732cca6a7c0707e5ba482788908f737ef45b26bc4",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-over-industrialized-adjective",
+      "word": "over-industrialized",
+      "assignmentWord": "over-industrialized",
+      "rawGapKey": "over-industrialized",
+      "source": {
+        "book": "NCE3",
+        "lesson": 47
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 过度工业化的",
+      "excludedMeaningLabels": [
+        "adj. 人口过多的",
+        "adj. 工业化的",
+        "n. 过度工业化",
+        "v. 过度工业化的",
+        "n. 过度工业化的",
+        "adv. 过度工业化的",
+        "prep. 过度工业化的",
+        "pron. 过度工业化的",
+        "det. 过度工业化的",
+        "num. 过度工业化的",
+        "conj. 过度工业化的",
+        "int. 过度工业化的",
+        "aux. 过度工业化的"
+      ],
+      "teachingDefinition": "adj. 过度工业化的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 243,
+      "sourcePrintedPage": 217,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "f58425e488c515d63bd6405d03a9fdfb3e9dc55f2daf753c63eea54ec289ba4a",
+      "sourcePrintedWord": "over-industrialized",
+      "canonicalSourceHeadword": "over-industrialized",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedGloss": "过度工业化的",
+      "wordlistDefinition": "adj. 过度工业化的",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "adj. 过度工业化的",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/f58425e488c515d63bd6405d03a9fdfb3e9dc55f2daf753c63eea54ec289ba4a.jpg",
+      "assignedPages": [
+        243
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 243,
+          "sourcePrintedPage": 217,
+          "sourcePageSha256": "f58425e488c515d63bd6405d03a9fdfb3e9dc55f2daf753c63eea54ec289ba4a",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 242,
+        "sourcePrintedPage": 216,
+        "sourcePageSha256": "34ef30bcc8d9150cd7eabd9ffa48202761f50670b7e1b1396caa1f5db73947a9",
+        "localImage": "dist-online/lesson-pages/34ef30bcc8d9150cd7eabd9ffa48202761f50670b7e1b1396caa1f5db73947a9.jpg",
+        "locator": "词表 ll.1–2；课文 over-industrialized planet（正文跨行）",
+        "interpretation": "工业化程度过度的形容词；保留 over- 与 industrialized 构成的完整词头。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "原创地区环境语境，描述形容词特征；不把课文历史统计、健康判断搬进新例句。",
+      "outsideReviewedScope": [
+        "工业化一般义",
+        "过度人口与污染本身的独立词条"
+      ],
+      "reviewNotes": "over-industrialized 为修饰 town 的形容词，保留构词连字符；little open land left 表剩余空地少，并保留 for parks 的用途。原创具体城镇叙述，不搬原书全星球、疾病或历史统计。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "5aaf71063769514ffef00391df80ba65dd514c4f6d155addd5a1080907e49d00",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-self-improvement-personal-development",
+      "word": "self-improvement",
+      "assignmentWord": "self-improvement",
+      "rawGapKey": "self-improvement",
+      "source": {
+        "book": "NCE3",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 自我完善",
+      "excludedMeaningLabels": [
+        "n. 家居装修",
+        "n. 自我约束",
+        "v. 自我完善",
+        "adj. 自我完善",
+        "adv. 自我完善",
+        "prep. 自我完善",
+        "pron. 自我完善",
+        "det. 自我完善",
+        "num. 自我完善",
+        "conj. 自我完善",
+        "int. 自我完善",
+        "aux. 自我完善"
+      ],
+      "teachingDefinition": "n. 自我完善",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 255,
+      "sourcePrintedPage": 229,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "0c268aa00ec5952c5402f394e74d9d00bfb4c00f8eadf97d9e5b230b8478f459",
+      "sourcePrintedWord": "self-improvement",
+      "canonicalSourceHeadword": "self-improvement",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "自我完善",
+      "wordlistDefinition": "n. 自我完善",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 自我改善, 自我修养",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/0c268aa00ec5952c5402f394e74d9d00bfb4c00f8eadf97d9e5b230b8478f459.jpg",
+      "assignedPages": [
+        255
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 255,
+          "sourcePrintedPage": 229,
+          "sourcePageSha256": "0c268aa00ec5952c5402f394e74d9d00bfb4c00f8eadf97d9e5b230b8478f459",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 254,
+        "sourcePrintedPage": 228,
+        "sourcePageSha256": "26e5b3634e6990a8f848e4e5ffcb63b5c302f7aeb8507469e06c043a295ab60d",
+        "localImage": "dist-online/lesson-pages/26e5b3634e6990a8f848e4e5ffcb63b5c302f7aeb8507469e06c043a295ab60d.jpg",
+        "locator": "词表 l.9；课文 efforts at self-improvement",
+        "interpretation": "个人能力、习惯的改善；此本课抽象名词通常不可数，不照目录自动生成的 self-improvements 强行写复数。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "以具体的个人反思、技能或习惯场景说明抽象名词；不改成家居装修，不抄教材新年运动/读书情节。",
+      "outsideReviewedScope": [
+        "家居改善",
+        "其他 self- 复合词"
+      ],
+      "reviewNotes": "self-improvement 是个人自我完善的抽象不可数名词；明确绘画学习使概念具体。half an hour/each evening/starting with 均完整保留。未按原索引自动复数写 self-improvements，不重用教材新年锻炼或阅读情节。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "881f4d9f4c4e4e89589607949e8f6f739134bf7d37f98448396214b0af53d37b",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-alternative-route",
+      "word": "alternative",
+      "assignmentWord": "alternative",
+      "rawGapKey": "alternative",
+      "source": {
+        "book": "NCE3",
+        "lesson": 51
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 选择的",
+      "excludedMeaningLabels": [
+        "n. 供替代的选择",
+        "n. 两者择一",
+        "n. 选择对象",
+        "adj. 非传统的",
+        "adj. 交替的",
+        "v. 选择",
+        "n. 选择的",
+        "v. 选择的",
+        "adv. 选择的",
+        "prep. 选择的",
+        "pron. 选择的",
+        "det. 选择的",
+        "num. 选择的",
+        "conj. 选择的",
+        "int. 选择的",
+        "aux. 选择的"
+      ],
+      "teachingDefinition": "adj. 选择的（本课为其他可选路线）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 259,
+      "sourcePrintedPage": 233,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "2232a71de2b36b41e219de958cd03f367869e2338cbd466e24e5fcbb2ca8c0b4",
+      "sourcePrintedWord": "alternative",
+      "canonicalSourceHeadword": "alternative",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedGloss": "选择的",
+      "wordlistDefinition": "adj. 选择的",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 两者择一, 供替代的选择\na. 两者择一的, 供选择的\n[计] 选择对象",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/2232a71de2b36b41e219de958cd03f367869e2338cbd466e24e5fcbb2ca8c0b4.jpg",
+      "assignedPages": [
+        258,
+        259
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 258,
+          "sourcePrintedPage": 232,
+          "sourcePageSha256": "1dee8d204e7a2c6be9dd0ee438aacd19236399b37ed4f14e3c4694761225d9cd",
+          "targetHeadwordPrintedHere": false
+        },
+        {
+          "sourcePDFPage": 259,
+          "sourcePrintedPage": 233,
+          "sourcePageSha256": "2232a71de2b36b41e219de958cd03f367869e2338cbd466e24e5fcbb2ca8c0b4",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 258,
+        "sourcePrintedPage": 232,
+        "sourcePageSha256": "1dee8d204e7a2c6be9dd0ee438aacd19236399b37ed4f14e3c4694761225d9cd",
+        "localImage": "dist-online/lesson-pages/1dee8d204e7a2c6be9dd0ee438aacd19236399b37ed4f14e3c4694761225d9cd.jpg",
+        "locator": "词表 l.21 在下一页；正文 alternative routes",
+        "interpretation": "可供选择的另一条路线；PDF258有正文和词表起头，本词词表行实际只在PDF259。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "以路线或替代安排的形容词结构创作，后接名词；不将目录 alternatives 复数名词扩为本课目标。",
+      "outsideReviewedScope": [
+        "alternative 名词选择项",
+        "非主流/非传统形容词义",
+        "alternate 的交替义"
+      ],
+      "reviewNotes": "alternative 修饰 route，是可选的另一条路线之形容词。to avoid 目的、道路施工和司机均准确对应。关联原图本词头在 PDF259/打印233，PDF258是课内 context；不扩名词 alternatives 或非传统义。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "3bb5b2deb8fff88d9fe12ad9351800b6f7b67807bbc3880ba99ee4323ff1d358",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-wasp-insect",
+      "word": "wasp",
+      "assignmentWord": "wasp",
+      "rawGapKey": "wasp",
+      "source": {
+        "book": "NCE3",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 黄蜂",
+      "excludedMeaningLabels": [
+        "n. 易怒的人",
+        "n. 刻毒的人",
+        "n. 盎格鲁撒克逊白人新教徒",
+        "v. 黄蜂",
+        "adj. 黄蜂",
+        "adv. 黄蜂",
+        "prep. 黄蜂",
+        "pron. 黄蜂",
+        "det. 黄蜂",
+        "num. 黄蜂",
+        "conj. 黄蜂",
+        "int. 黄蜂",
+        "aux. 黄蜂"
+      ],
+      "teachingDefinition": "n. 黄蜂",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 271,
+      "sourcePrintedPage": 245,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8",
+      "sourcePrintedWord": "wasp",
+      "canonicalSourceHeadword": "wasp",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "黄蜂",
+      "wordlistDefinition": "n. 黄蜂",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 黄蜂, 胡蜂, 易怒的人, 刻毒的人\n[医] 胡蜂, 黄蜂",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8.jpg",
+      "assignedPages": [
+        271
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 271,
+          "sourcePrintedPage": 245,
+          "sourcePageSha256": "da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 270,
+        "sourcePrintedPage": 244,
+        "sourcePageSha256": "835caa5d2c631eba1d46150dd9206cfe469d0de7ef0291ce4fd9187e4743d88a",
+        "localImage": "dist-online/lesson-pages/835caa5d2c631eba1d46150dd9206cfe469d0de7ef0291ce4fd9187e4743d88a.jpg",
+        "locator": "词表 l.7；课文 insects like spiders or wasps",
+        "interpretation": "昆虫黄蜂，非人的比喻或大写 WASP 群体缩略语。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "具体昆虫观察场景；不发布处理蜂窝的安全操作建议或医学建议。",
+      "outsideReviewedScope": [
+        "人的比喻义",
+        "WASP 缩略语"
+      ],
+      "reviewNotes": "wasp 为黄蜂昆虫，stung 与 reach for 在同一 when 时间关系下，未添加严重后果或医疗建议。him 译他，fallen apple 译掉落的苹果。原书虫义与人的刻毒/易怒比喻及 WASP 群体缩略语明确分开。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "54c6b1d99c91b3692ecdb9d7604590bc67e51a3b11649e1c3fe1f5603c1f404a",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-aphid-insect",
+      "word": "aphid",
+      "assignmentWord": "aphid",
+      "rawGapKey": "aphid",
+      "source": {
+        "book": "NCE3",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 蚜虫",
+      "excludedMeaningLabels": [
+        "n. 蚂蚁",
+        "n. 蜂蜜",
+        "n. 甲虫",
+        "v. 蚜虫",
+        "adj. 蚜虫",
+        "adv. 蚜虫",
+        "prep. 蚜虫",
+        "pron. 蚜虫",
+        "det. 蚜虫",
+        "num. 蚜虫",
+        "conj. 蚜虫",
+        "int. 蚜虫",
+        "aux. 蚜虫"
+      ],
+      "teachingDefinition": "n. 蚜虫",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 271,
+      "sourcePrintedPage": 245,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8",
+      "sourcePrintedWord": "aphid",
+      "canonicalSourceHeadword": "aphid",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "蚜虫",
+      "wordlistDefinition": "n. 蚜虫",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 蚜虫",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8.jpg",
+      "assignedPages": [
+        271
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 271,
+          "sourcePrintedPage": 245,
+          "sourcePageSha256": "da6fb816af53c5f490f2ec1935e8906c4c0f5f1c71b2ee73f9cf472f8a73add8",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 270,
+        "sourcePrintedPage": 244,
+        "sourcePageSha256": "835caa5d2c631eba1d46150dd9206cfe469d0de7ef0291ce4fd9187e4743d88a",
+        "localImage": "dist-online/lesson-pages/835caa5d2c631eba1d46150dd9206cfe469d0de7ef0291ce4fd9187e4743d88a.jpg",
+        "locator": "词表 l.21；课文 tiny insects called aphids / underside of the leaves",
+        "interpretation": "植物叶片上的蚜虫。原书是 aphids；本地逐句JSON写成 aphides，不能用它替代原图打印证据。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "可用真实复数 aphids；原创花园观察，不抄桃树/蚂蚁/胶带实验，不给农药处理建议。",
+      "outsideReviewedScope": [
+        "蚁群与桃树实验",
+        "未核的转写变形 aphides"
+      ],
+      "reviewNotes": "aphids 是原书清晰可见的正确复数，非逐句JSON里的 aphides。green/new/I/on 均中译，无杀虫处理建议或桃树胶带实验复用。名词为蚜虫，未混成蚂蚁或蜂蜜。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "f9faaccf5f19ba16c152ef5b15534cb6eda6acb0913948cbbf651c0061b8f94d",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-strong-minded-resolute",
+      "word": "strong-minded",
+      "assignmentWord": "strong-minded",
+      "rawGapKey": "strong-minded",
+      "source": {
+        "book": "NCE3",
+        "lesson": 59
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 意志坚强的",
+      "excludedMeaningLabels": [
+        "adj. 聪明的",
+        "adj. 身体强壮的",
+        "adj. 固执的",
+        "n. 意志坚强",
+        "n. 意志坚强的",
+        "v. 意志坚强的",
+        "adv. 意志坚强的",
+        "prep. 意志坚强的",
+        "pron. 意志坚强的",
+        "det. 意志坚强的",
+        "num. 意志坚强的",
+        "conj. 意志坚强的",
+        "int. 意志坚强的",
+        "aux. 意志坚强的"
+      ],
+      "teachingDefinition": "adj. 意志坚强的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 291,
+      "sourcePrintedPage": 265,
+      "sourceSHA256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePageSha256": "8cd2b93d2c725cfc777c5ea0bcb0fc45a7d7995e583f0f888352f8026d7dc42e",
+      "sourcePrintedWord": "strong-minded",
+      "canonicalSourceHeadword": "strong-minded",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedGloss": "意志坚强的",
+      "wordlistDefinition": "adj. 意志坚强的",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "a. 意志坚强的",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/8cd2b93d2c725cfc777c5ea0bcb0fc45a7d7995e583f0f888352f8026d7dc42e.jpg",
+      "assignedPages": [
+        291
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 291,
+          "sourcePrintedPage": 265,
+          "sourcePageSha256": "8cd2b93d2c725cfc777c5ea0bcb0fc45a7d7995e583f0f888352f8026d7dc42e",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 290,
+        "sourcePrintedPage": 264,
+        "sourcePageSha256": "ce5437f3acaf2de4484e97d6fcf887dd66d082843d929ced195a0a982a3408e3",
+        "localImage": "dist-online/lesson-pages/ce5437f3acaf2de4484e97d6fcf887dd66d082843d929ced195a0a982a3408e3.jpg",
+        "locator": "词表 ll.15–16；课文 strong-minded enough to stop the practice",
+        "interpretation": "意志坚定、自制决心强，非智力聪明或身体强壮。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "用人物坚持有理由的决定展示坚定；不把固执、冒险或拒绝建议自动当作赞义。保留复合词连字符。",
+      "outsideReviewedScope": [
+        "倔强的引申",
+        "强壮身体与聪明头脑"
+      ],
+      "reviewNotes": "strong-minded 修饰人，凭明确核实理由体现坚持决定，而非聪明、身体强壮或无理由固执。even、refused、could not verify 的让步与否定均保留；she 的女性指代不丢失。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "8e007ca5c569194b479e79ac877fa220b3e7be2f83955dcc1c305024cc0d17e5",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-social-climber-status",
+      "word": "social climber",
+      "assignmentWord": "social climber",
+      "rawGapKey": "social climber",
+      "source": {
+        "book": "NCE4",
+        "lesson": 5
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 追求更高社会地位的人；向上爬的人",
+      "excludedMeaningLabels": [
+        "n. 登山者",
+        "n. 普通求职者",
+        "v. 向上爬",
+        "adj. 追求更高社会地位的人",
+        "v. 追求更高社会地位的人",
+        "adv. 追求更高社会地位的人",
+        "prep. 追求更高社会地位的人",
+        "pron. 追求更高社会地位的人",
+        "det. 追求更高社会地位的人",
+        "num. 追求更高社会地位的人",
+        "conj. 追求更高社会地位的人",
+        "int. 追求更高社会地位的人",
+        "aux. 追求更高社会地位的人"
+      ],
+      "teachingDefinition": "n. 追求更高社会地位的人，向上爬的人",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 59,
+      "sourcePrintedPage": 30,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164",
+      "sourcePrintedWord": "social climber",
+      "canonicalSourceHeadword": "social climber",
+      "sourcePrintedPartOfSpeech": null,
+      "sourcePrintedGloss": "追求更高社会地位的人，向上爬的人",
+      "wordlistDefinition": "追求更高社会地位的人，向上爬的人",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": "n.",
+      "editorialPOSBasis": "课文 social climbers 为人称复数名词。",
+      "rawGapDictionaryDefinition": "n. <美>想法挤入上流社会者, 攀高枝者, 巴结权贵向上爬的人",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164.jpg",
+      "assignedPages": [
+        59
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 59,
+          "sourcePrintedPage": 30,
+          "sourcePageSha256": "794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 58,
+        "sourcePrintedPage": 29,
+        "sourcePageSha256": "dc815160b8370f2cd3fb03577deaa9839ff993faef733072a97f744fc70df368",
+        "localImage": "dist-online/lesson-pages/dc815160b8370f2cd3fb03577deaa9839ff993faef733072a97f744fc70df368.jpg",
+        "locator": "词表 l.11；课文 anxious social climbers",
+        "interpretation": "通过结交高地位人士谋求社会地位的人，带批评意味；与运动爬山无关。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "以社交关系求地位的具体行为表现，不泛称每个想职业进步的人；POS n.为编辑推断。",
+      "outsideReviewedScope": [
+        "体育攀登",
+        "普通职场成长"
+      ],
+      "reviewNotes": "复合人称名词体现社交关系求地位的贬义；connections 指人脉，more than 比较准确，没有加仅仅/全部排除。未泛指普通职业成长或登山运动。n. 是编辑推断，原词表打印长释义保留。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "94ccddc412bf0c6b501595f8648f9aea2f96ab1a07016720fd2c29f92ef4a55e",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-cliche-overused-phrase",
+      "word": "cliché",
+      "assignmentWord": "cliché",
+      "rawGapKey": "cliché",
+      "source": {
+        "book": "NCE4",
+        "lesson": 5
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 陈词滥调",
+      "excludedMeaningLabels": [
+        "n. 印刷铅版",
+        "n. 错别字",
+        "adj. 陈词滥调",
+        "v. 陈词滥调",
+        "adv. 陈词滥调",
+        "prep. 陈词滥调",
+        "pron. 陈词滥调",
+        "det. 陈词滥调",
+        "num. 陈词滥调",
+        "conj. 陈词滥调",
+        "int. 陈词滥调",
+        "aux. 陈词滥调"
+      ],
+      "teachingDefinition": "n. 陈词滥调",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 59,
+      "sourcePrintedPage": 30,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164",
+      "sourcePrintedWord": "cliché",
+      "canonicalSourceHeadword": "cliché",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "陈词滥调",
+      "wordlistDefinition": "n. 陈词滥调",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 陈词滥调",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164.jpg",
+      "assignedPages": [
+        59
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 59,
+          "sourcePrintedPage": 30,
+          "sourcePageSha256": "794870142d3df3a72e7bd302a5ae2767aa431c303dc20e84bca85dafc4b54164",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 58,
+        "sourcePrintedPage": 29,
+        "sourcePageSha256": "dc815160b8370f2cd3fb03577deaa9839ff993faef733072a97f744fc70df368",
+        "localImage": "dist-online/lesson-pages/dc815160b8370f2cd3fb03577deaa9839ff993faef733072a97f744fc70df368.jpg",
+        "locator": "词表 l.15；课文 dreary clichés about respect for elders",
+        "interpretation": "过度使用、缺乏新意的说法；保留 é，复数 clichés。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "原创写作修改或听到套话的语境，指话语/思想的陈腐；不抄课文年龄与尊敬论述。",
+      "outsideReviewedScope": [
+        "历史印刷版义",
+        "形容词 clichéd"
+      ],
+      "reviewNotes": "clichés 为带 é 的名词复数，指套话/过度使用的说法。her/about success/no practical advice 均保留；不把任何普通话语都当作 cliché，不重用教材尊敬长辈论述或历史印刷义。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "ae32854435457ddb571c0554524f3ddbf04d03fa7518ae9672c05dc2a27743e2",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-dust-devil-whirlwind",
+      "word": "dust devil",
+      "assignmentWord": "dust devil",
+      "rawGapKey": "dust devil",
+      "source": {
+        "book": "NCE4",
+        "lesson": 14
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 小尘暴；尘旋风",
+      "excludedMeaningLabels": [
+        "n. 沙尘暴",
+        "n. 龙卷风",
+        "n. 魔鬼",
+        "v. 尘旋风",
+        "v. 小尘暴",
+        "adj. 小尘暴",
+        "adv. 小尘暴",
+        "prep. 小尘暴",
+        "pron. 小尘暴",
+        "det. 小尘暴",
+        "num. 小尘暴",
+        "conj. 小尘暴",
+        "int. 小尘暴",
+        "aux. 小尘暴"
+      ],
+      "teachingDefinition": "n. 小尘暴，尘旋风",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 111,
+      "sourcePrintedPage": 82,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "f2555c39deefab3cb6ec1eebb1401dc557c19343d66ec06cb1069f902e098952",
+      "sourcePrintedWord": "dust devil",
+      "canonicalSourceHeadword": "dust devil",
+      "sourcePrintedPartOfSpeech": null,
+      "sourcePrintedGloss": "小尘暴，尘旋风",
+      "wordlistDefinition": "小尘暴，尘旋风",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": "n.",
+      "editorialPOSBasis": "课文 from dust devils 为可数天气现象的复数名词。",
+      "rawGapDictionaryDefinition": " 尘卷, 尘暴, 旋风沙柱",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/f2555c39deefab3cb6ec1eebb1401dc557c19343d66ec06cb1069f902e098952.jpg",
+      "assignedPages": [
+        111
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 111,
+          "sourcePrintedPage": 82,
+          "sourcePageSha256": "f2555c39deefab3cb6ec1eebb1401dc557c19343d66ec06cb1069f902e098952",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 111,
+        "sourcePrintedPage": 82,
+        "sourcePageSha256": "f2555c39deefab3cb6ec1eebb1401dc557c19343d66ec06cb1069f902e098952",
+        "localImage": "dist-online/lesson-pages/f2555c39deefab3cb6ec1eebb1401dc557c19343d66ec06cb1069f902e098952.jpg",
+        "locator": "词表 l.5；课文 from dust devils and squalls",
+        "interpretation": "带起尘土的旋风柱。NWS 补核支持明确旋转涡柱；不将原书小尘暴放大成泛指沙尘暴或龙卷风。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "完整两词名词、描写扬尘旋转的目击；不写成风暴云下的 tornado，不承诺无危险。POS n.为编辑推断。",
+      "outsideReviewedScope": [
+        "沙尘暴",
+        "龙卷风",
+        "devil 人物比喻"
+      ],
+      "reviewNotes": "完整双词可数名词，watch + 宾语 + whirl 明确旋转的扬尘涡柱现象。dry field/across/we 准确对应，没有泛化为沙尘暴、风暴云龙卷风或承诺无危险。n. 为编辑推断，source 原印小尘暴，尘旋风。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "818bcf8d9673a2f12f891d9e03a95454a3934fa43e8d634442c796d0ea36f3fd",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-st-petersburg-city",
+      "word": "St. Petersburg",
+      "assignmentWord": "St. Petersburg",
+      "rawGapKey": "st. petersburg",
+      "source": {
+        "book": "NCE4",
+        "lesson": 26
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 圣彼得堡",
+      "excludedMeaningLabels": [
+        "n. 圣彼得",
+        "n. 莫斯科",
+        "adj. 圣彼得堡",
+        "v. 圣彼得堡",
+        "adv. 圣彼得堡",
+        "prep. 圣彼得堡",
+        "pron. 圣彼得堡",
+        "det. 圣彼得堡",
+        "num. 圣彼得堡",
+        "conj. 圣彼得堡",
+        "int. 圣彼得堡",
+        "aux. 圣彼得堡"
+      ],
+      "teachingDefinition": "n. 圣彼得堡（本课城市名）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 184,
+      "sourcePrintedPage": 155,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "641f4fb71101a1ef55e38462c2dfef95a921eea432c37e41b36ebf948986fc17",
+      "sourcePrintedWord": "St. Petersburg",
+      "canonicalSourceHeadword": "St. Petersburg",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "圣彼得堡",
+      "wordlistDefinition": "n. 圣彼得堡",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "[网络] 圣彼得堡",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/641f4fb71101a1ef55e38462c2dfef95a921eea432c37e41b36ebf948986fc17.jpg",
+      "assignedPages": [
+        184
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 184,
+          "sourcePrintedPage": 155,
+          "sourcePageSha256": "641f4fb71101a1ef55e38462c2dfef95a921eea432c37e41b36ebf948986fc17",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 184,
+        "sourcePrintedPage": 155,
+        "sourcePageSha256": "641f4fb71101a1ef55e38462c2dfef95a921eea432c37e41b36ebf948986fc17",
+        "localImage": "dist-online/lesson-pages/641f4fb71101a1ef55e38462c2dfef95a921eea432c37e41b36ebf948986fc17.jpg",
+        "locator": "词表 l.18；课文 Museum in St. Petersburg",
+        "interpretation": "本课城市专名，圣彼得堡；不把 St. 当作 street 或地名直接解析成个人圣彼得。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "保持规范大小写及 St. 后空格，原创城市旅行/来信语境，不断言教材所述博物馆展品的当前归属。",
+      "outsideReviewedScope": [
+        "圣彼得人物名",
+        "其他国家同名城市背景"
+      ],
+      "reviewNotes": "St. Petersburg 保留大小写及 St. 后空格；from 为来源城市。原创人物 Maya 防止 aunt 等亲属关系在中文被擅自具体化，me、a postcard 均对应；不替当前博物馆展品归属背书。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "c82e68a328bddbd72405ffcfcd278f2d57b8ae6dce00b47d59f67aea0a6b3909",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-blandishment-flattery",
+      "word": "blandishment",
+      "assignmentWord": "blandishment",
+      "rawGapKey": "blandishment",
+      "source": {
+        "book": "NCE4",
+        "lesson": 41
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 奉承",
+      "excludedMeaningLabels": [
+        "n. 真诚赞美",
+        "n. 镇定",
+        "v. 奉承",
+        "adj. 奉承",
+        "adv. 奉承",
+        "prep. 奉承",
+        "pron. 奉承",
+        "det. 奉承",
+        "num. 奉承",
+        "conj. 奉承",
+        "int. 奉承",
+        "aux. 奉承"
+      ],
+      "teachingDefinition": "n. 奉承",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 270,
+      "sourcePrintedPage": 241,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "b14f7de998fbc739e63070603f6f44283373b88d21d69603cea2b3efd9fddb58",
+      "sourcePrintedWord": "blandishment",
+      "canonicalSourceHeadword": "blandishment",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "奉承",
+      "wordlistDefinition": "n. 奉承",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 甜言蜜语, 谄媚, 奉承",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/b14f7de998fbc739e63070603f6f44283373b88d21d69603cea2b3efd9fddb58.jpg",
+      "assignedPages": [
+        270
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 270,
+          "sourcePrintedPage": 241,
+          "sourcePageSha256": "b14f7de998fbc739e63070603f6f44283373b88d21d69603cea2b3efd9fddb58",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 269,
+        "sourcePrintedPage": 240,
+        "sourcePageSha256": "382fa048a1543e41f338eefb7e40144a3ae95b15a65641af4b7073df8017fd2d",
+        "localImage": "dist-online/lesson-pages/382fa048a1543e41f338eefb7e40144a3ae95b15a65641af4b7073df8017fd2d.jpg",
+        "locator": "词表 l.30；课文 susceptible to such blandishments",
+        "interpretation": "通过温言或奉承使对方接受要求的言语，课文用复数；不是单纯真诚赞美。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "本批用更自然的复数 blandishments，体现劝诱目的；不搬教材驯象、动物伤害情节。",
+      "outsideReviewedScope": [
+        "bland 乏味的",
+        "soothe 镇定动词"
+      ],
+      "reviewNotes": "blandishments 采用自然复数，possessive 明确言语来源；抵抗劝诱和 only what needed 在中译完整保留。不是中性真诚赞美，不抄课文驯象情节。canonical 单数 blandishment 仍保持。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "42ed99e6726f111abfa2e0b12ced9e53585a8fe9ae4de71cd6c1650d011b486e",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-seismometer-ground-motion",
+      "word": "seismometer",
+      "assignmentWord": "seismometer",
+      "rawGapKey": "seismometer",
+      "source": {
+        "book": "NCE4",
+        "lesson": 42
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 地震仪",
+      "excludedMeaningLabels": [
+        "n. 地震图",
+        "n. 地震记录",
+        "n. 地震预测器",
+        "n. 温度计",
+        "v. 地震仪",
+        "adj. 地震仪",
+        "adv. 地震仪",
+        "prep. 地震仪",
+        "pron. 地震仪",
+        "det. 地震仪",
+        "num. 地震仪",
+        "conj. 地震仪",
+        "int. 地震仪",
+        "aux. 地震仪"
+      ],
+      "teachingDefinition": "n. 地震仪",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 275,
+      "sourcePrintedPage": 246,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "42d3a43114f5aa14497983dcc405c53f01ca1088a2886edc574572e19e5a53bd",
+      "sourcePrintedWord": "seismometer",
+      "canonicalSourceHeadword": "seismometer",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "地震仪",
+      "wordlistDefinition": "n. 地震仪",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 地震检波器",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/42d3a43114f5aa14497983dcc405c53f01ca1088a2886edc574572e19e5a53bd.jpg",
+      "assignedPages": [
+        275
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 275,
+          "sourcePrintedPage": 246,
+          "sourcePageSha256": "42d3a43114f5aa14497983dcc405c53f01ca1088a2886edc574572e19e5a53bd",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 274,
+        "sourcePrintedPage": 245,
+        "sourcePageSha256": "51c20b21eac37b5fd9b20a37ace92c826a4367ad88f5ba0f1944d53c26438642",
+        "localImage": "dist-online/lesson-pages/51c20b21eac37b5fd9b20a37ace92c826a4367ad88f5ba0f1944d53c26438642.jpg",
+        "locator": "词表 ll.12–13；课文 early instruments (seismometers) for recording earthquake waves",
+        "interpretation": "测量地面运动的仪器；USGS 同时说明严格的检测部件与常用 seismograph 同义用法。本批只训练 instrument，不扩到图表 seismogram 或地震预测。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "具体仪器安装、测量微小地面震动语境，不把仪器当图表，不宣称预测时间地点。课文 seismo- / meters 是跨行，不是词头连字符。",
+      "outsideReviewedScope": [
+        "seismogram 图表",
+        "地震预测"
+      ],
+      "reviewNotes": "seismometer 是测量地面运动的仪器，to measure 表安装目的；不将仪器当作 seismogram 图表或地震预测器。tiny motion 在此为地面震动，中译用微小震动。source 印地震仪，与 USGS 仪器用法边界相符。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "142a662f235f0ce4552dcd9a25b72d27a3c92feef2c5e41ba0d2bdded9a16b22",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-megacycle-old-unit",
+      "word": "megacycle",
+      "assignmentWord": "megacycle",
+      "rawGapKey": "megacycle",
+      "source": {
+        "book": "NCE4",
+        "lesson": 43
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 兆周",
+      "excludedMeaningLabels": [
+        "n. 兆字节",
+        "n. 自行车",
+        "n. 大循环轮班",
+        "v. 兆周",
+        "adj. 兆周",
+        "adv. 兆周",
+        "prep. 兆周",
+        "pron. 兆周",
+        "det. 兆周",
+        "num. 兆周",
+        "conj. 兆周",
+        "int. 兆周",
+        "aux. 兆周"
+      ],
+      "teachingDefinition": "n. 兆周（本课 megacycles per second：兆周/秒，现用 MHz）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 281,
+      "sourcePrintedPage": 252,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "e1e0c38c55c454eefe020a03a1958af0eac4828eab6aa9909fa35daa00f90bd9",
+      "sourcePrintedWord": "megacycle",
+      "canonicalSourceHeadword": "megacycle",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "兆周",
+      "wordlistDefinition": "n. 兆周",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. 兆周\n[医] 兆周",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/e1e0c38c55c454eefe020a03a1958af0eac4828eab6aa9909fa35daa00f90bd9.jpg",
+      "assignedPages": [
+        281
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 281,
+          "sourcePrintedPage": 252,
+          "sourcePageSha256": "e1e0c38c55c454eefe020a03a1958af0eac4828eab6aa9909fa35daa00f90bd9",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 280,
+        "sourcePrintedPage": 251,
+        "sourcePageSha256": "da324c50f9872876995d09fd661c89f1edfa05757bbb310f382f5f06c901f005",
+        "localImage": "dist-online/lesson-pages/da324c50f9872876995d09fd661c89f1edfa05757bbb310f382f5f06c901f005.jpg",
+        "locator": "词表 l.31；课文 1420 megacycles per second",
+        "interpretation": "megacycle 是一百万周期。课文完整表达 megacycles per second 才是频率，1 megacycle/s = 1 MHz；也存在频率简写的词典用法，但本批保留 per second，不将兆周直接称 SI 单位。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "原创旧收音机说明书/刻度语境，数字 + megacycles per second；不能写频率是百万字节或删除 per second 后仍按维度精确定义。旧教材天文学判断和数值不搬入例句。",
+      "outsideReviewedScope": [
+        "现代超长轮班 megacycle 引申",
+        "数据容量",
+        "天文学真实性证明"
+      ],
+      "reviewNotes": "保留完整 megacycles per second 频率结构和数量 ten，明确旧手册语境；megacycle 的周期单位与频率 /s 区别分列，未称为现代命名 SI 单位、百万字节或轮班。原创 ten 不抄教材1420天文数值。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "0653cff48acd57ea98c3d721e9522591f7eceb80a19a4288e17d8fcf24c6c0b3",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "gap6d-maitre-dhotel-headwaiter",
+      "word": "maître d'hôtel",
+      "assignmentWord": "maître d'hôtel",
+      "rawGapKey": "maître d'hôtel",
+      "source": {
+        "book": "NCE4",
+        "lesson": 47
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. [法语]总管",
+      "excludedMeaningLabels": [
+        "n. 酱汁",
+        "n. 黄油酱",
+        "n. 厨师",
+        "n. 旅馆老板",
+        "v. 总管",
+        "adj. 总管",
+        "adv. 总管",
+        "prep. 总管",
+        "pron. 总管",
+        "det. 总管",
+        "num. 总管",
+        "conj. 总管",
+        "int. 总管",
+        "aux. 总管"
+      ],
+      "teachingDefinition": "n. [法语]总管（本课旅馆、餐厅服务语境）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "POS",
+        "canonical headword",
+        "word-list source",
+        "source"
+      ],
+      "sourcePDFPage": 304,
+      "sourcePrintedPage": 275,
+      "sourceSHA256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+      "sourcePageSha256": "afe79ca6cba8d052453d33cca83a35ac0e5431ab31d69a4c2503fb19cfbe0fde",
+      "sourcePrintedWord": "maître d’hôtel",
+      "canonicalSourceHeadword": "maître d'hôtel",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedGloss": "[法语]总管",
+      "wordlistDefinition": "n. [法语]总管",
+      "sourcePrintedInflectionNote": null,
+      "editorialPartOfSpeech": null,
+      "editorialPOSBasis": null,
+      "rawGapDictionaryDefinition": "n. ［法语］总管",
+      "sourceEvidencePart": "word-list-and-course-context",
+      "localSourceImage": "dist-online/lesson-pages/afe79ca6cba8d052453d33cca83a35ac0e5431ab31d69a4c2503fb19cfbe0fde.jpg",
+      "assignedPages": [
+        304
+      ],
+      "assignedPageEvidence": [
+        {
+          "sourcePDFPage": 304,
+          "sourcePrintedPage": 275,
+          "sourcePageSha256": "afe79ca6cba8d052453d33cca83a35ac0e5431ab31d69a4c2503fb19cfbe0fde",
+          "targetHeadwordPrintedHere": true
+        }
+      ],
+      "contextEvidence": {
+        "sourcePDFPage": 303,
+        "sourcePrintedPage": 274,
+        "sourcePageSha256": "e54f439c669813736a7ed3fbfc5d8a6bff8cbfa8a9b9a0df5aab048e9806a421",
+        "localImage": "dist-online/lesson-pages/e54f439c669813736a7ed3fbfc5d8a6bff8cbfa8a9b9a0df5aab048e9806a421.jpg",
+        "locator": "词表 l.12；课文 a maître d’hôtel 与 hotel 服务等级语境",
+        "interpretation": "本课酒店/餐厅服务语境的总管。MW 补核支持 headwaiter，用餐厅领班语境澄清；不据一般词典扩成酱汁或家庭管家分支。",
+        "actualImageReviewed": true
+      },
+      "usageBoundary": "保留 maître 的 î、hôtel 的 ô；打印弯引号 ’ 与 catalog 直引号 ASCII 分别保存。完整词头做餐厅接待/桌位/服务人员语境，不用简称 maître d’ 替代本例词头。",
+      "outsideReviewedScope": [
+        "maître d’hôtel butter 烹饪义",
+        "家庭总管历史义",
+        "maître d’ 简称"
+      ],
+      "reviewNotes": "maître d’hôtel 为餐厅服务总管/领班角色，ask ... for a table 清楚描述就座请求；away from kitchen 不译成另一家餐厅。î/ô 保留，data.word及英文用规范ASCII引号，原图弯引号另存；不缩成 maître d’、酱汁或旅馆老板。",
+      "reviewer": "Independent Codex content review /root/review_batch5f (batch6d)",
+      "contentFile": "app/data/vocabulary-gap-batch6d.ts",
+      "contentSha256": "2942c179e50ec641ac551c921b9420e2184cf03571a6ead90a19eafab2405305",
+      "newOriginalContent": true,
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    }
+  ],
+  "integrationStatus": "Standalone authored content and ledger; parent owns independent second reading, registration and combined validation. Not registered or deployed by this batch.",
+  "programmaticValidationEvidence": "work/gaps94/batch6d/check-results.json",
+  "remainingAcceptance": [
+    "Independent second editorial reading and parent registration/combined gate pending",
+    "No human, browser, true audio, physical-device or learning-outcome acceptance",
+    "No commit, push, merge or deployment performed"
+  ]
+}

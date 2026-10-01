@@ -249,14 +249,14 @@ async function openRealLookup(selected,onAdd,route={}){
  await renderLookup(onAdd).props.value(selected);
  return renderLookup(onAdd);
 }
-// Every registered source target, including explicitly recorded grammar
-// normalizations, must work through both real component add callbacks. Source
+// Every registered source target, including explicitly recorded grammar and
+// editorial normalizations, must work through both real component add callbacks. Source
 // normalization does not imply the printed source's other noun senses are done.
 const reviewIndex=JSON.parse(await readFile(new URL('docs/vocabulary-examples-review-index.json',root),'utf8'));
 const registeredLedgers=await Promise.all(reviewIndex.registeredLedgers.map(async relative=>JSON.parse(await readFile(new URL(relative,root),'utf8'))));
 const targets=new Map();
 for(const ledger of registeredLedgers)for(const record of ledger.entries){
- if(!['textbook-target','textbook-target-grammar-normalized'].includes(record.scope))continue;
+ if(!['textbook-target','textbook-target-grammar-normalized','textbook-target-editorial-normalized'].includes(record.scope))continue;
  const example=originalVocabularyExamples.find(example=>example.id===record.id);assert(example);
  for(const source of example.teachingSources||[]){
   const key=JSON.stringify([example.word.toLowerCase(),source.book,source.lesson]);
@@ -282,6 +282,7 @@ for(const {word,source} of targets.values()){
  assert.equal(reviewedTeachingDefinition(word,[{book:source.book,lesson:source.lesson===1?2:1}]),'','No unrelated lesson target certification');
 }
 console.log('PASS registered canonical target callbacks: '+targets.size+' source-headword pairs through both vocabulary row and asynchronous lookup.');
+if(process.argv.includes('--registered-targets-only'))process.exit(0);
 let enrolledCarpet;
 for(const [surface,headword,meaning,target] of [
  ['carpets','carpet','n. 地毯','carpet-floor'],
@@ -384,4 +385,41 @@ for(const loadCatalog of [async()=>{throw Error('Source index temporarily unavai
  for(const [id,note] of Object.entries(prior.flashcards.notes))assert.deepEqual(next.flashcards.notes[id],note,'Existing alias content is retained');
 }
 console.log('PASS reviewed word forms: six source-scoped noun plurals/possessives, real dictionary fallback, index failure/retry, stale async lookup, canonical enrollment and preservation of old aliases.');
+// The source prints these two verb forms under one withdraw headword. A
+// previously stored withdrawn entry retains its own content and legacy due.
+{
+ const source={book:'NCE3',lesson:19},meaning=reviewedTeachingDefinition('withdraw',[source]);
+ assert.equal(meaning,'v.（从银行）取钱');
+ const target=examplesForMeaning('withdraw',meaning).find(example=>example.id==='gap6d-withdraw-bank-money');assert(target);
+ const lesson=realCatalog.lessons.find(lesson=>lesson.key==='NCE3-19');
+ assert.equal(lesson.words.filter(item=>item.word==='withdraw').length,1);
+ assert(!lesson.words.some(item=>item.word==='withdrawn'));
+ let enrolled;
+ for(const surface of ['withdrew','withdrawn']){
+  const selected={word:surface,example:'The selected context stays visible.',sources:[{kind:'nce',...source}]};
+  let saved;const lookup=await openRealLookup(selected,word=>{saved=word});
+  assert.equal(h.states[1].reviewedHeadword,'withdraw');
+  const raw=actualFindWord(realDictionary,surface)||realDictionary.withdraw;
+  assert(elements(lookup).some(node=>node.props?.className==='lookup-meaning'&&node.props.children===raw.meaning),'Inflection dictionary evidence remains visible');
+  find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+  assert.equal(saved.word,'withdraw');assert.equal(saved.meaning,meaning);
+  assert.equal(saved.example,target.en);assert.equal(saved.exampleTranslation,target.zh);
+  assert.deepEqual(saved.sources,[{kind:'nce',...source}]);assert.equal(h.states[0].word,surface);
+  const wrongSource={book:'NCE3',lesson:18};
+  assert.equal(reviewedHeadwordForForm(surface,[wrongSource],realCatalog),undefined);
+  assert.deepEqual(await resolveReviewedLookupEntry(surface,[wrongSource],realDictionary,async()=>realCatalog),actualFindWord(realDictionary,surface),'An unrelated lesson preserves its dictionary fallback');
+  assert.deepEqual(await resolveReviewedLookupEntry(surface,[source],realDictionary,async()=>{throw Error('Unavailable source')}),actualFindWord(realDictionary,surface),'Failure cannot approve a source target');
+  enrolled=saved;
+ }
+ const at=Date.UTC(2026,9,1,12),legacy={...structuredClone(initial),personalWords:[{word:'withdrawn',meaning:'我的旧释义',example:'My saved sentence.'}],cards:{withdrawn:{box:4,due:at+3600000}}};
+ const prior=actualEnrollFlashcard(legacy,legacy.personalWords[0],[],at),next=actualEnrollFlashcard(prior,enrolled,[],at+1000);
+ assert.deepEqual(next.personalWords,prior.personalWords);assert.deepEqual(next.cards,prior.cards);
+ for(const [id,note] of Object.entries(prior.flashcards.notes))assert.deepEqual(next.flashcards.notes[id],note);
+ for(const [id,card] of Object.entries(prior.flashcards.cards))assert.deepEqual(next.flashcards.cards[id],card);
+ const again=actualEnrollFlashcard(next,enrolled,[],at+2000);
+ assert.equal(Object.keys(again.flashcards.notes).length,2,'Explicit canonical target is separate from the preserved old meaning; repeated add is deduplicated');
+ assert.deepEqual(again.flashcards.cards,next.flashcards.cards);assert.deepEqual(again.flashcards.reviews,next.flashcards.reviews);
+ assert.deepEqual(JSON.parse(JSON.stringify(again)),again,'Offline JSON refresh retains the old and canonical entries');
+}
+console.log('PASS withdraw source correction: printed verb forms, source/failure isolation, canonical bank target, repeat enrollment and preserved old withdrawn content/schedules.');
 console.log('PASS source component callbacks: cross-book sources under filters, enrolled-source updates, translations, valid route fallback, rejected-add feedback and original examples.');

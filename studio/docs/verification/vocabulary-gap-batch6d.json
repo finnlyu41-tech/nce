@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "batch": "6d",
+  "status": "passed",
+  "reviewer": "Codex /root/review_batch5e",
+  "humanCertification": false,
+  "authorRecordsRetainedAtReviewedHash": true,
+  "contentFile": {
+    "path": "app/data/vocabulary-gap-batch6d.ts",
+    "sha256": "d0716150c03bcfba963c064e66f1382a6a934c00a0801ee1156803eb18577bea"
+  },
+  "ledger": {
+    "path": "docs/vocabulary-gap-batch6d.json",
+    "sha256": "b8372216f416e39a206c71ca8275ba455eed8bac8b559aac1f383d0b5483fbb6"
+  },
+  "contentExamples": 23,
+  "sourceTargetReviewRows": 23,
+  "independentMechanicalCounts": {
+    "runtimeRecords": 23,
+    "ledgerRecords": 23,
+    "independentlyReadSentenceGroups": 23,
+    "orderedContentHashes": 23,
+    "ownSensePositive": 23,
+    "ownSenseWithPOSUnique": 23,
+    "meaningForCheckPositive": 23,
+    "teachingDefinitionPositive": 23,
+    "explicitCuePositives": 50,
+    "excludedMeaningAndPOS": 305,
+    "sourceScopedTargets": 23,
+    "sourceTagChecks": 23,
+    "unrelatedSourceRejections": 23,
+    "canonicalAndSurfaceForms": 23,
+    "sourceRecordsAgainstAcceptedPlan": 23,
+    "sourcePageByteChecks": 23,
+    "uniqueSourcePageByteChecks": 20,
+    "sourceManifestBookIdentityChecks": 23,
+    "sourcePOSChecks": 23,
+    "printedPOSNull": 5,
+    "allStageASourcePageByteAndManifestChecks": 31,
+    "sourceImagesViewedByThisReviewer": 13
+  },
+  "independentReport": {
+    "path": "work/gaps94/independent-review/batch6d-stage-b-editorial.json",
+    "sha256": "0592b74f6fe18dd1df516d0b51f8b81e865877ae3f30a9e1568cef980857376e"
+  },
+  "reviewedExamples": [
+    {
+      "id": "gap6d-hundred-hundreds",
+      "contentSha256": "783ff22756d250bae91d0e2a41beb2cc902edcdce2e2bff8996328f732724ad4",
+      "independentEditorialNote": {
+        "targetSense": "本课有限目标是百及 hundreds of 的不确指数量，按原表 n. 保存；本句不将 hundred 当形容词许多的。",
+        "naturalEnglishSentence": "Hundreds of visitors 作复数主语，lined up 的排队义及 before it opened 的先后关系清楚，museum 是 it 的指代对象。",
+        "ChineseTranslation": "数百名对应 hundreds，不误写几百个百；博物馆开门前、外面排队完整对应。",
+        "collocation": "hundreds of visitors 为正确的不确指数量搭配；没有 two hundreds 的错误。",
+        "sourceAndPOS": "NCE1-143 PDF294/print290; printed hundred n. 百"
+      }
+    },
+    {
+      "id": "gap6d-litter-basket-bin",
+      "contentSha256": "a5985cd880fe90065f41b0d73a0e3daef7d5679be69e9d4e2049e72f5b657866",
+      "independentEditorialNote": {
+        "targetSense": "保留词表完整名词短语，训练废物筐；不是 litter 的幼仔义或 basket 的购物行为。",
+        "naturalEnglishSentence": "put that wrapper in 明确容器目的地，beside the bench 修饰筐的位置；祈使句自然。",
+        "ChineseTranslation": "那张包装纸、放进筐里、长椅旁均与场景对应，未译为垃圾本身。",
+        "collocation": "put a wrapper in a litter basket 是具体扔弃包装物的容器用法；此旧教材称呼可用，不认证它比 litter bin 更常用。",
+        "sourceAndPOS": "NCE1-143 PDF294/print290; printed litter basket POS null 废物筐; separate inference n. from 课文复数 litter baskets 作为容器名词及句子主语。"
+      }
+    },
+    {
+      "id": "gap6d-fiance-engaged-man",
+      "contentSha256": "3390ff20d5d0e8aaf2377e6c5478230828645606df3d66591b9cf6af8796b82e",
+      "independentEditorialNote": {
+        "targetSense": "名词表示订婚男性，即未婚夫；不与 fiancée 未婚妻混用。",
+        "naturalEnglishSentence": "My fiancé and I 配 are choosing 正确；a date for our wedding 是明确的婚礼日期选择。",
+        "ChineseTranslation": "我和未婚夫、正在挑选、婚礼日期分别对应，不添加婚礼地点或财务安排。",
+        "collocation": "my fiancé 的所属表达自然，词头和句中 é 保留。",
+        "sourceAndPOS": "NCE3-7 PDF64/print38; printed fiancé n. 未婚夫"
+      }
+    },
+    {
+      "id": "gap6d-st-bernard-name",
+      "contentSha256": "d5605e1f4ba72693ea441f9836ab41a8ee0852ae1fea418adfb085f28aafb3ce",
+      "independentEditorialNote": {
+        "targetSense": "实际教材用该专名命名山口和修道院；本例明确 Great St. Bernard Pass，不把此目标当圣伯纳犬义。",
+        "naturalEnglishSentence": "stopped for a picnic near 后接完整地名，冠词 the 和 Pass 的专名大写正确；虚构旅行句自然。",
+        "ChineseTranslation": "在大圣伯纳德山口附近停下来野餐保留 near 和活动；没有加入山口高度、地理排名或现状事实。",
+        "collocation": "the Great St. Bernard Pass 是具体地名搭配，St. 后空格及 Bernard 大写保留。",
+        "sourceAndPOS": "NCE3-8 PDF68/print42; printed St. Bernard POS null 圣伯纳德; separate inference n. from 词表定位 l.1 的专名，课文用于 Great St. Bernard Pass 和 monastery of St. Bernard。"
+      }
+    },
+    {
+      "id": "gap6d-lifeboat-rescue-vessel",
+      "contentSha256": "ca7d5cd147433c60ff575fe16c6a73ff235fed337a87bb9c8d9dbc77037dd407",
+      "independentEditorialNote": {
+        "targetSense": "可数名词救生船/艇，有限目标为船上的救生载具，不是防撞救生衣。",
+        "naturalEnglishSentence": "During the drill 交代演练，crew lowered a lifeboat into the water 描述下放动作；British-style crew 作集合主语自然。",
+        "ChineseTranslation": "演练、船员、一艘救生艇、放入水中完整对应，没有增加真实救援或保证安全的判断。",
+        "collocation": "lower a lifeboat 是恰当动作搭配，不与 launch a lifeboat 或 lifebuoy 混成错误对象。",
+        "sourceAndPOS": "NCE3-10 PDF76/print50; printed lifeboat n. 救生船"
+      }
+    },
+    {
+      "id": "gap6d-withdraw-bank-money",
+      "contentSha256": "acef3cad8262ecee6489892ff5432239964445df9cebac42cf7591b3e483bbca",
+      "independentEditorialNote": {
+        "targetSense": "原词头 withdraw v.（从银行）取钱，withdrawn 只在变形括号内；此条是既有规范头的来源纠正及新例，不算另一个缺失形容词头。",
+        "naturalEnglishSentence": "need to withdraw some cash from my account before the weekend 是自然取款动词结构；主语自己取款。",
+        "ChineseTranslation": "周末前、需要、从账户里、一些现金完整对应；没有撤回请求或性格孤僻义。",
+        "collocation": "withdraw cash from an account 是银行目标的具体搭配，未利用原索引的 d 噪声造变形。",
+        "sourceAndPOS": "NCE3-19 PDF112/print86; printed withdraw v. （从银行）取钱"
+      }
+    },
+    {
+      "id": "gap6d-passer-by-person",
+      "contentSha256": "34cbc702513f3daa750a343ec0639462bcf86754b788ab22e57c6ed5ee9e8e26",
+      "independentEditorialNote": {
+        "targetSense": "可数人称名词过路人，连字符保留；本句只用单数，不误写 passer-bys。",
+        "naturalEnglishSentence": "asked a passer-by where the nearest bus stop was 用正确间接问句语序和过去时；不是 where was 的直接疑问倒装。",
+        "ChineseTranslation": "询问一位路人最近公交站的位置完整对应，并未擅自说路人带我们前往。",
+        "collocation": "ask a passer-by 是自然问路搭配，单数词头与源复数说明分别保存。",
+        "sourceAndPOS": "NCE3-27 PDF156/print130; printed passer-by n. 过路人"
+      }
+    },
+    {
+      "id": "gap6d-mete-out-award-or-sanction",
+      "contentSha256": "351681a095a80c9ded630ebf4f279304ab0f0b4f21642a003f459d826b2be5bf",
+      "independentEditorialNote": {
+        "targetSense": "课文奖惩的施予用法，具体以 punishment 表示施加惩罚，不认证任意测量或普通赠礼。",
+        "naturalEnglishSentence": "meted out 是正确过去式；the same punishment to every player who had broken the rule 清楚表示同样处罚和先前违规。",
+        "ChineseTranslation": "教练、每个违规队员、同样的处罚均保留；没有将每个误成只有一个，或将处罚译成奖励。",
+        "collocation": "mete out punishment 是标准具体搭配，mete 的过去式是 meted，不用 met。",
+        "sourceAndPOS": "NCE3-35 PDF188/print162; printed mete out POS null 给予，处置; separate inference v. from 课文被动 are meted out，主语 reward or punishment，属于及物短语动词。"
+      }
+    },
+    {
+      "id": "gap6d-indulge-in-activity",
+      "contentSha256": "26ddce08b4b33757e563f9f732cca6a7c0707e5ba482788908f737ef45b26bc4",
+      "independentEditorialNote": {
+        "targetSense": "只审 indulge in + 活动的主体参与义。原印 v.使沉迷完整另列，semanticNormalization 明示澄清，不认证使他人沉迷、纵容或迁就。",
+        "naturalEnglishSentence": "refused to indulge in gossip about her colleagues 完整采用 in + 不可数活动名词；不是 indulge her colleagues 的及物结构。",
+        "ChineseTranslation": "不肯拿同事的事情说长道短是自然中文表达拒绝参与闲话，没有使别人沉迷的使动误译。",
+        "collocation": "indulge in gossip 与热衷于说闲话相符；只能认证此句法，原 matcher 折叠 vt./vi. 不能证明及物性。",
+        "sourceAndPOS": "NCE3-40 PDF208/print182; printed indulge v. 使沉迷"
+      }
+    },
+    {
+      "id": "gap6d-over-industrialized-adjective",
+      "contentSha256": "5aaf71063769514ffef00391df80ba65dd514c4f6d155addd5a1080907e49d00",
+      "independentEditorialNote": {
+        "targetSense": "源 adj.过度工业化的，over- 表超过合理程度而非一般工业化，原连字符与 -ized 保存。",
+        "naturalEnglishSentence": "the over-industrialized town had little open land left for parks 是自然定语形容词和剩余空间表达，little 为几乎没有。",
+        "ChineseTranslation": "过度、城镇、几乎没有空地留作公园均保留，未将 little 理解为地块个头小。",
+        "collocation": "an over-industrialized town 是具体形容词加地点搭配，不泛称所有工业城镇都如此。",
+        "sourceAndPOS": "NCE3-47 PDF243/print217; printed over-industrialized adj. 过度工业化的"
+      }
+    },
+    {
+      "id": "gap6d-self-improvement-personal-development",
+      "contentSha256": "881f4d9f4c4e4e89589607949e8f6f739134bf7d37f98448396214b0af53d37b",
+      "independentEditorialNote": {
+        "targetSense": "抽象不可数名词自我完善，具体学画画为自我提升的一种活动，未扩成人际互助义。",
+        "naturalEnglishSentence": "set aside half an hour each evening for self-improvement 是自然时间安排；starting with learning to draw 的活动开始点清晰。",
+        "ChineseTranslation": "每天晚上、半小时、提升自己、先学画画均完整对应，不译成已学会画画的结果。",
+        "collocation": "time for self-improvement 自然，for 明确用于自我提升，连字符保留。",
+        "sourceAndPOS": "NCE3-50 PDF255/print229; printed self-improvement n. 自我完善"
+      }
+    },
+    {
+      "id": "gap6d-alternative-route",
+      "contentSha256": "3bb5b2deb8fff88d9fe12ad9351800b6f7b67807bbc3880ba99ee4323ff1d358",
+      "independentEditorialNote": {
+        "targetSense": "仅本课 adj.供选择的，an alternative route 中修饰 route；不是名词选择项的独立用法。",
+        "naturalEnglishSentence": "took an alternative route to avoid the roadworks 是自然改走另一可选路线的表述，to avoid 给出目的。",
+        "ChineseTranslation": "司机、避开道路施工、改走另一条路线对应；没有把 roadworks 误译为道路工作职位。",
+        "collocation": "an alternative route 精确反映形容词用法，与课文 other routes 的边界相同。",
+        "sourceAndPOS": "NCE3-51 PDF259/print233; printed alternative adj. 选择的"
+      }
+    },
+    {
+      "id": "gap6d-wasp-insect",
+      "contentSha256": "54c6b1d99c91b3692ecdb9d7604590bc67e51a3b11649e1c3fe1f5603c1f404a",
+      "independentEditorialNote": {
+        "targetSense": "仅昆虫黄蜂/胡蜂；无人的刻毒引申或大写 WASP 身份缩略语。",
+        "naturalEnglishSentence": "A wasp stung him when he reached for the fallen apple 是自然过去时叙事；stung 是 sting 的正确过去式。",
+        "ChineseTranslation": "伸手捡掉落苹果时被一只黄蜂蜇，与主动英语的施受关系一致，不添加医疗处置或风险断言。",
+        "collocation": "be stung by a wasp 将句中的主动结构转为合法被动搭配，不把 bite 当 sting。",
+        "sourceAndPOS": "NCE3-54 PDF271/print245; printed wasp n. 黄蜂"
+      }
+    },
+    {
+      "id": "gap6d-aphid-insect",
+      "contentSha256": "f9faaccf5f19ba16c152ef5b15534cb6eda6acb0913948cbbf651c0061b8f94d",
+      "independentEditorialNote": {
+        "targetSense": "词表蚜虫的昆虫目标，句中规范复数 aphids；不依赖本地上下文转录里的 aphides。",
+        "naturalEnglishSentence": "found green aphids on the rose bush's new leaves 自然，所有格限定叶片所属植物，on 指所在位置。",
+        "ChineseTranslation": "玫瑰的新叶上、绿色蚜虫对应，没有将虫子译成蚂蚁或把新叶译成新种的玫瑰。",
+        "collocation": "aphids on rose leaves 是明确位置和宿主植物的语言搭配；不提供园艺防治或必然侵害的建议。",
+        "sourceAndPOS": "NCE3-54 PDF271/print245; printed aphid n. 蚜虫"
+      }
+    },
+    {
+      "id": "gap6d-strong-minded-resolute",
+      "contentSha256": "8e007ca5c569194b479e79ac877fa220b3e7be2f83955dcc1c305024cc0d17e5",
+      "independentEditorialNote": {
+        "targetSense": "源 adj.意志坚强的，场景通过压力下拒刊未经核实说法表现坚定；不等同智力聪明或身体强壮。",
+        "naturalEnglishSentence": "Even under pressure, ... refused to print a claim she could not verify 自然；关系从句省略 that 合法，could not 对应无法核实。",
+        "ChineseTranslation": "即使受到压力、意志坚定、拒绝刊登、无法核实均保留，没有说该说法已证伪。",
+        "collocation": "a strong-minded editor 为具体职业角色搭配，连字符将复合形容词接到人称名词。",
+        "sourceAndPOS": "NCE3-59 PDF291/print265; printed strong-minded adj. 意志坚强的"
+      }
+    },
+    {
+      "id": "gap6d-social-climber-status",
+      "contentSha256": "94ccddc412bf0c6b501595f8648f9aea2f96ab1a07016720fd2c29f92ef4a55e",
+      "independentEditorialNote": {
+        "targetSense": "源短语指谋求更高社会地位的人，带贬义。本句重视人脉胜于友谊支撑攀高枝含义，非登山或普通职业发展。",
+        "naturalEnglishSentence": "valued his friends' connections more than their friendship 使用清晰比较，friends' 是多个朋友的所有格；his 和 their 关系一致。",
+        "ChineseTranslation": "一心攀高枝、人脉胜过友谊自然表达批评含义，未夸大为已获得更高社会地位。",
+        "collocation": "a social climber 是可数人称名词搭配；源无打印 POS，n. 是明确的编辑推断。",
+        "sourceAndPOS": "NCE4-5 PDF59/print30; printed social climber POS null 追求更高社会地位的人，向上爬的人; separate inference n. from 课文 social climbers 为人称复数名词。"
+      }
+    },
+    {
+      "id": "gap6d-cliche-overused-phrase",
+      "contentSha256": "ae32854435457ddb571c0554524f3ddbf04d03fa7518ae9672c05dc2a27743e2",
+      "independentEditorialNote": {
+        "targetSense": "只训练陈词滥调义，句中关于成功的套话并无建议佐证；不扩印刷铅版义。",
+        "naturalEnglishSentence": "was full of clichés ... but it offered no practical advice 用正确复数和转折，it 指 speech。",
+        "ChineseTranslation": "演讲、关于成功、充满陈词滥调、没有实用建议逐一对应，未凭套话断言演讲者无能力。",
+        "collocation": "be full of clichés 是自然表达，词头 é 与复数 clichés 的 é 保留。",
+        "sourceAndPOS": "NCE4-5 PDF59/print30; printed cliché n. 陈词滥调"
+      }
+    },
+    {
+      "id": "gap6d-dust-devil-whirlwind",
+      "contentSha256": "818bcf8d9673a2f12f891d9e03a95454a3934fa43e8d634442c796d0ea36f3fd",
+      "independentEditorialNote": {
+        "targetSense": "原印小尘暴、尘旋风，有限目标以旋转尘柱的尘卷风呈现；不是泛指大范围沙尘暴或龙卷风。",
+        "naturalEnglishSentence": "watched a dust devil whirl across the dry field 用感知动词+宾语+原形动词，whirl 明确旋转，across 后有完整场所宾语。",
+        "ChineseTranslation": "看着、一股尘卷风、旋转着掠过、干燥田野完整对应，未将 whirlwind 的旋转动作丢掉。",
+        "collocation": "a dust devil whirls across 展示主语和移动搭配，场所由同条完整例句的 the dry field 给出；作为此例的搭配片段可接受。",
+        "sourceAndPOS": "NCE4-14 PDF111/print82; printed dust devil POS null 小尘暴，尘旋风; separate inference n. from 课文 from dust devils 为可数天气现象的复数名词。"
+      }
+    },
+    {
+      "id": "gap6d-st-petersburg-city",
+      "contentSha256": "c82e68a328bddbd72405ffcfcd278f2d57b8ae6dce00b47d59f67aea0a6b3909",
+      "independentEditorialNote": {
+        "targetSense": "本课城市专名圣彼得堡，未将 St. 拆成 street 或人物圣彼得；只训练地名，无当前展品归属断言。",
+        "naturalEnglishSentence": "Maya sent me a postcard from St. Petersburg 是完整自然的寄信动作，from 修饰来源地。",
+        "ChineseTranslation": "玛雅、给我寄来、一张明信片、从圣彼得堡均对应，未捏造亲属关系或实际旅行事实。",
+        "collocation": "from St. Petersburg 是具体城市来源表达，规范大小写与缩写后空格保留。",
+        "sourceAndPOS": "NCE4-26 PDF184/print155; printed St. Petersburg n. 圣彼得堡"
+      }
+    },
+    {
+      "id": "gap6d-blandishment-flattery",
+      "contentSha256": "42ed99e6726f111abfa2e0b12ced9e53585a8fe9ae4de71cd6c1650d011b486e",
+      "independentEditorialNote": {
+        "targetSense": "奉承/甜言蜜语的劝诱意味，语境中对推销员的劝说不为所动；不等同真诚赞美。",
+        "naturalEnglishSentence": "resisted the salesperson's blandishments and bought only what she needed 自然，惯常复数 blandishments 及 only 限制范围正确。",
+        "ChineseTranslation": "没有被甜言蜜语打动、只买需要的东西对应两个并列动作；未添加实际欺诈或消费建议。",
+        "collocation": "resist someone's blandishments 是自然书面搭配，词头单数与表面复数保持区分。",
+        "sourceAndPOS": "NCE4-41 PDF270/print241; printed blandishment n. 奉承"
+      }
+    },
+    {
+      "id": "gap6d-seismometer-ground-motion",
+      "contentSha256": "142a662f235f0ce4552dcd9a25b72d27a3c92feef2c5e41ba0d2bdded9a16b22",
+      "independentEditorialNote": {
+        "targetSense": "地震仪的具体仪器义，测量地面运动；不扩到记录图、预报地震或温度计。",
+        "naturalEnglishSentence": "installed a seismometer to measure tiny movements of the ground 是自然的安装加目的不定式，tiny movements 指微小地面运动。",
+        "ChineseTranslation": "团队、安装一台、测量地面微小震动均对应；没有称仪器预测未来地震时间或地点。",
+        "collocation": "install a seismometer 是恰当的仪器动作搭配。USGS 补核支持仪器检测地面运动的常用语义。",
+        "sourceAndPOS": "NCE4-42 PDF275/print246; printed seismometer n. 地震仪"
+      }
+    },
+    {
+      "id": "gap6d-megacycle-old-unit",
+      "contentSha256": "0653cff48acd57ea98c3d721e9522591f7eceb80a19a4288e17d8fcf24c6c0b3",
+      "independentEditorialNote": {
+        "targetSense": "原印兆周，有限目标保留完整 megacycles per second 的旧频率表达；一百万周期与每秒频率区分，不称百万字节。",
+        "naturalEnglishSentence": "The old radio manual gives the frequency as ten megacycles per second 合乎旧无线电文档语境；ten 后为 megacycles，per second 不丢失。",
+        "ChineseTranslation": "旧手册、把频率写成、每秒十兆周对应，十没有被误写百万或教材原数值。",
+        "collocation": "megacycles per second 是完整频率表达，与 MHz 对应的现代说法有依据；不是单独 megacycle 的循环班次扩展。",
+        "sourceAndPOS": "NCE4-43 PDF281/print252; printed megacycle n. 兆周"
+      }
+    },
+    {
+      "id": "gap6d-maitre-dhotel-headwaiter",
+      "contentSha256": "2942c179e50ec641ac551c921b9420e2184cf03571a6ead90a19eafab2405305",
+      "independentEditorialNote": {
+        "targetSense": "旅馆/餐厅服务总管的有限目标，原创句选餐厅领班职责；不是旅馆业主、厨师或黄油酱。",
+        "naturalEnglishSentence": "asked the maître d'hôtel for a table away from the kitchen 是自然桌位请求，away from the kitchen 修饰 table。",
+        "ChineseTranslation": "请餐厅领班安排一张远离厨房的餐桌保留请求和桌位位置；未译成去另一家餐厅或买家具。",
+        "collocation": "ask the maître d'hôtel for a table 是具体餐厅请求；î、ô 完整保留，原印弯引号与规范 ASCII 引号另列，不以简称代替词头。",
+        "sourceAndPOS": "NCE4-47 PDF304/print275; printed maître d’hôtel n. [法语]总管"
+      }
+    }
+  ],
+  "mandatoryCorrections": [],
+  "globalSourceCompleteness": false,
+  "limits": "Root owns registration and combined production gate. Content and author ledger are unchanged; no mandatory content corrections found.",
+  "rootRegistrationChecks": {
+    "contentExamples": 396,
+    "nativeCallbackSourceHeadwordPairs": 251,
+    "withdrawFormsAndOldAliasesPassed": true,
+    "completeSourceWordInventories": 29,
+    "logs": [
+      {
+        "path": "work/gaps94/batch6d/registered-examples.log",
+        "sha256": "cb8786a782400100d190e4fc0263c79667c17b6ca2680ead29f11168b9b1ae89"
+      },
+      {
+        "path": "work/gaps94/batch6d/registered-native-callbacks.log",
+        "sha256": "8afcef0a40f7fcce5a4e6e65cb7d3042cfd44ddf78f5b0a08b22e1549cd15884"
+      },
+      {
+        "path": "work/gaps94/batch6d/registered-lint.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "work/gaps94/batch6d/registered-audit.log",
+        "sha256": "0e25993d96bb3db0cc93b35d2f13b5c73b0d7a7374a2ac8b84d758715e076b91"
+      }
+    ]
+  }
+}
