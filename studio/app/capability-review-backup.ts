@@ -4,7 +4,25 @@ import {byId} from '../public/demos/yesterday/content.mjs';
 import {reviewById} from '../public/demos/yesterday/review-content.mjs';
 import {STORAGE_KEY as REVIEW_KEY, emptySnapshot, validateSnapshot, buildReviewBackup, validateReviewBackup, mergeReviewBackup} from '../public/demos/yesterday/review-adapter.mjs';
 
-/** No scheduling or global State schema lives here. File v2 transports this optional payload. */
+/** Optional `capability` payload for a host's progress-file v2; no global State schema or scheduling lives here.
+ *
+ * captureCapabilityReviewBackup({storage?, now?}) is synchronous for native picker/share user gestures.
+ * validateCapabilityReviewBackup(payload, now?) is pure; it rejects unsupported fields and evidence changes.
+ * prepareCapabilityReviewRestore(payload, {storage?, now?}) only reads, validates and creates an opaque preview.
+ * executeCapabilityReviewRestore(prepared, {storage?, locks?, now?, apply?, rollback?}) coordinates writes.
+ * Ports use a clock function; the pure validator takes a timestamp. Default ports are localStorage/Web Locks.
+ *
+ * An omitted payload (`undefined`) is a legacy import and never reads, locks, writes or clears either zone.
+ * A bundle's null store means no incoming data, preserving that live zone. Newer live receipts are retained;
+ * conflicting completion roots, first answers, drafts or receipts are refused before the host apply callback.
+ * Preview tokens stay in this module instance and are consumed once execution starts; retry by preparing again.
+ *
+ * The host provides BOTH apply/rollback callbacks when coordinating IndexedDB and confirms their exact effects.
+ * Both existing namespace locks stay held through callbacks, fresh raw comparisons, writes and readbacks;
+ * callbacks must not reacquire them. Rollback only replaces bytes still equal to this operation's own write.
+ * `rolled-back` confirms the original values. `partial-failure` MUST NOT be shown as success: keep `recovery`
+ * (original/attempted/readable current raw values and main rollback status) available for local recovery.
+ */
 export type CapabilityReviewBackup = {
   kind: 'nce-capability-review-bundle'; version: 1; exportedAt: number;
   stores: {'nce-demo-yesterday-v1': Record<string, unknown> | null; 'nce-capability-review:v1': Record<string, unknown> | null};
