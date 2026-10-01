@@ -1,0 +1,260 @@
+{
+  "batch": "nce1-examples-2",
+  "baseCommit": "0bec6cf3cc510191c075eaf62f5b38527eaa335b",
+  "headwords": 12,
+  "senseExamples": 13,
+  "origin": "original",
+  "reviewBasis": "Codex editorial check of target meaning, natural English, Chinese translation and collocation; not a teacher certification or full dictionary-sense audit",
+  "entries": [
+    {
+      "id": "air-hostess-profession",
+      "word": "air hostess",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "空中小姐",
+      "excludedMeaningLabels": [
+        "男乘务员"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "hairdresser-profession",
+      "word": "hairdresser",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "理发师",
+      "excludedMeaningLabels": [
+        "理发店"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "housewife-home",
+      "word": "housewife",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "家庭妇女",
+      "excludedMeaningLabels": [
+        "家庭作业"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "mechanic-repair",
+      "word": "mechanic",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "机械工",
+      "excludedMeaningLabels": [
+        "手工的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "milkman-delivery",
+      "word": "milkman",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "送奶工",
+      "excludedMeaningLabels": [
+        "挤奶的男人"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "policeman-traffic",
+      "word": "policeman",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "警察",
+      "excludedMeaningLabels": [
+        "淀帚"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "policewoman-help",
+      "word": "policewoman",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "女警察",
+      "excludedMeaningLabels": [
+        "警察"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "postman-delivery",
+      "word": "postman",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "邮递员",
+      "excludedMeaningLabels": [
+        "高级律师"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "clean-hygiene",
+      "word": "clean",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "干净的",
+      "excludedMeaningLabels": [
+        "清白的",
+        "简洁的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "dirty-unclean",
+      "word": "dirty",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "肮脏的",
+      "excludedMeaningLabels": [
+        "卑鄙的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "hot-temperature",
+      "word": "hot",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "热的",
+      "excludedMeaningLabels": [
+        "热心的",
+        "辣的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "hot-spicy",
+      "word": "hot",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "辣的",
+      "excludedMeaningLabels": [
+        "热的",
+        "热情的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    },
+    {
+      "id": "lazy-effort",
+      "word": "lazy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "懒惰的",
+      "excludedMeaningLabels": [
+        "缓慢的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "contentFile": "app/vocabulary-examples.ts"
+    }
+  ]
+}

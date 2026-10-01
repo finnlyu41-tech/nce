@@ -1,0 +1,92 @@
+{
+  "batch": "nce1-examples-2",
+  "baseCommit": "0bec6cf3cc510191c075eaf62f5b38527eaa335b",
+  "verifiedAt": "2026-10-01T14:17:11.818868+00:00",
+  "contentSHA256": "b7b9a2025d1162dc4f4af339168e0c685871e8362ca558171072021d3ac29f17",
+  "automatedChecks": [
+    {
+      "command": "corepack pnpm check",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/types-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm exec eslint app/vocabulary-examples.ts scripts/test-vocabulary-examples.mjs",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/lint-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm verify:vocabulary-examples",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/check-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm verify:flashcards",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/flashcards-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm verify:progress",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/progress-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm verify:vocabulary",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/vocabulary-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm package:online",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/build-online-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm verify:online",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/verify-online-v17-batch2.log"
+    },
+    {
+      "command": "corepack pnpm package:static",
+      "exitCode": 0,
+      "log": "work/vocabulary-examples/build-offline-v17-batch2.log"
+    }
+  ],
+  "flashcardBehaviorScenarios": 15,
+  "onlineResourceChecks": {
+    "verifiedFiles": 1950,
+    "materials": 556
+  },
+  "coverage": {
+    "basis": "Existing indexed lesson sentences: lexical candidates, not a manual audit of all dictionary senses",
+    "textbookTerms": 3347,
+    "textbookOccurrences": 3615,
+    "occurrencesWithBilingualCandidate": 3267,
+    "termsWithBilingualCandidate": 3047,
+    "candidatesByBook": {
+      "NCE1": 611,
+      "NCE3": 1046,
+      "NCE4": 783,
+      "NCE2": 827
+    },
+    "originalHeadwords": 44,
+    "originalSenseExamples": 52,
+    "originalsMatchingIndexedDefinitions": 44,
+    "termsWithCandidateOrReviewedOriginal": 3077,
+    "termsWithoutEither": 270,
+    "ieltsSeedExamples": 12
+  },
+  "generatedLedgerMatchesTrackedFiles": true,
+  "scope": {
+    "newHeadwords": 12,
+    "newSenseExamples": 13,
+    "schedulerOrProgressModelChanges": false,
+    "dependencyChanges": false,
+    "userLearningDataWritten": false
+  },
+  "browserAcceptance": {
+    "performed": false,
+    "production": false,
+    "physicalMobile": false,
+    "actualAudio": false,
+    "note": "SSR and resource checks do not establish browser interaction acceptance."
+  }
+}

@@ -13,13 +13,26 @@ const m=await import(output.href),now=Date.now(),base=()=>structuredClone(m.init
 const render=(component,props)=>m.renderToStaticMarkup(m.createElement(component,props));
 
 assert.equal(new Set(m.originalVocabularyExamples.map(example=>example.id)).size,m.originalVocabularyExamples.length,'Every sense has its own stable content ID');
-assert.equal(new Set(m.originalVocabularyExamples.map(example=>example.word)).size,32,'The documented first batch has 32 headwords');
+assert.equal(new Set(m.originalVocabularyExamples.map(example=>example.word)).size,44,'The documented two batches have 44 headwords');
+assert.equal(m.originalVocabularyExamples.length,52,'39 first-batch senses and 13 second-batch senses are retained');
 for(const example of m.originalVocabularyExamples){
  assert(example.en.trim()&&example.zh.trim()&&example.sense.trim()&&example.matches.length);
  assert(example.collocation.en.trim()&&example.collocation.zh.trim());
  assert.equal(example.origin,'original');
  assert(m.examplesForMeaning(example.word,example.sense).some(item=>item.id===example.id),'Each example supports its labelled sense');
 }
+const ledger=JSON.parse(await readFile(new URL('docs/vocabulary-examples-batch2.json',root),'utf8'));
+assert.equal(new Set(ledger.entries.map(item=>item.word)).size,ledger.headwords);
+assert.equal(ledger.entries.length,ledger.senseExamples);
+for(const item of ledger.entries){
+ const example=m.originalVocabularyExamples.find(example=>example.id===item.id);
+ assert(example&&example.word===item.word,'Each reviewed batch entry resolves to its actual content');
+ assert(m.examplesForMeaning(item.word,item.meaningForCheck).some(example=>example.id===item.id),'The stated sense selects this reviewed example');
+ for(const meaning of item.excludedMeaningLabels)assert(!m.examplesForMeaning(item.word,meaning).some(example=>example.id===item.id),'An excluded meaning label must not select this example');
+}
+assert.deepEqual(m.examplesForMeaning('hot','热的').map(item=>item.id),['hot-temperature']);
+assert.deepEqual(m.examplesForMeaning('hot','辣的').map(item=>item.id),['hot-spicy']);
+assert.deepEqual(m.examplesForMeaning('hot','热心的'),[]);
 for(const [word,meaning,id] of [['BANK','银行','bank-finance'],['bank','河岸','bank-riverside'],['book','预订','book-reserve'],['watch','观看','watch-observe'],['light','轻','light-weight'],['match','火柴','match-fire'],['park','停车','park-vehicle']]){
  assert.deepEqual(m.examplesForMeaning(word,meaning).map(item=>item.id),[id],'A meaning selects the corresponding sense and no unrelated sense');
 }
@@ -78,6 +91,12 @@ try{
 const pageIndex=JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.json',root),'utf8'));
 const dictionary=JSON.parse(await readFile(new URL('dist-online/language/dictionary.json',root),'utf8')).words;
 const catalog=m.buildVocabularyCatalog(pageIndex),contexts=new Map(),missing=[],byBook={};
+for(const item of ledger.entries){
+ const term=catalog.terms.find(term=>term.key===m.vocabularyKey(item.word));
+ assert(term?.sources.some(source=>source.book===item.source.book&&source.lesson===item.source.lesson),'The reviewed word belongs to the claimed actual lesson');
+ const displayed=dictionary[term.key]?.meaning.split('\n')[0]||'';
+ assert(m.examplesForMeaning(item.word,displayed).some(example=>example.id===item.id),'The current compact dictionary meaning can display the reviewed sense');
+}
 let occurrenceCandidates=0,termCandidates=0,originalTerms=0,totalCovered=0;
 for(const term of catalog.terms){
  let found=false;
@@ -93,7 +112,7 @@ for(const term of catalog.terms){
  if(authored.length)originalTerms++;
  if(found||authored.length)totalCovered++;else missing.push({word:term.word,sources:term.sources.map(source=>source.book+'-'+source.lesson)});
 }
-const coverage={basis:'Existing indexed lesson sentences: lexical candidates, not a manual audit of all dictionary senses',textbookTerms:catalog.terms.length,textbookOccurrences:catalog.entries,occurrencesWithBilingualCandidate:occurrenceCandidates,termsWithBilingualCandidate:termCandidates,candidatesByBook:byBook,originalHeadwords:32,originalSenseExamples:m.originalVocabularyExamples.length,originalsMatchingIndexedDefinitions:originalTerms,termsWithCandidateOrReviewedOriginal:totalCovered,termsWithoutEither:missing.length,ieltsSeedExamples:12};
+const coverage={basis:'Existing indexed lesson sentences: lexical candidates, not a manual audit of all dictionary senses',textbookTerms:catalog.terms.length,textbookOccurrences:catalog.entries,occurrencesWithBilingualCandidate:occurrenceCandidates,termsWithBilingualCandidate:termCandidates,candidatesByBook:byBook,originalHeadwords:new Set(m.originalVocabularyExamples.map(example=>m.vocabularyKey(example.word))).size,originalSenseExamples:m.originalVocabularyExamples.length,originalsMatchingIndexedDefinitions:originalTerms,termsWithCandidateOrReviewedOriginal:totalCovered,termsWithoutEither:missing.length,ieltsSeedExamples:12};
 await writeFile(new URL('work/vocabulary-examples/coverage.json',root),JSON.stringify(coverage,null,2));
 await writeFile(new URL('work/vocabulary-examples/missing-examples.csv',root),'word,sources\n'+missing.map(item=>'"'+item.word.replaceAll('"','""')+'","'+item.sources.join(' | ')+'"').join('\n')+'\n');
 console.log(JSON.stringify(coverage,null,2));
