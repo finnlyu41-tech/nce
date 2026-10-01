@@ -5,13 +5,14 @@ import {captureRecording, type RecordingCapture} from '../app/recording-session'
 import {playableRecording} from '../app/recording-audio';
 import {unitById, type Clip} from './curriculum';
 
-type Player = {play:(clip:Clip,done?:()=>void)=>void; stop:()=>void; label:string; active:string};
+type Player = {play:(clip:Clip,done?:()=>void)=>void; stop:()=>void; label:string; active:string; position?:{clip:Clip;time:number}};
 export const PlayerContext=createContext<Player>({play:()=>{},stop:()=>{},label:'',active:''});
 const clipKey=(c:Clip)=>`${c.book}-${c.lesson}-${c.start}-${c.end}`;
 export function AudioSpace({children,controls=true}:{children:React.ReactNode;controls?:boolean}) {
   const element=useRef<HTMLAudioElement>(null),urls=useRef(new Map<string,string>()),request=useRef<AbortController|null>(null);
   const segment=useRef<{clip:Clip;done?:()=>void}|null>(null),alive=useRef(true),sequence=useRef(0);
   const [label,setLabel]=useState(''),[active,setActive]=useState(''),[speed,setSpeed]=useState('0.85');
+  const [position,setPosition]=useState<Player['position']>();
   function stop(){sequence.current++;request.current?.abort();element.current?.pause();segment.current=null;setActive('');setLabel('已停止');}
   useEffect(()=>{alive.current=true;return()=>{alive.current=false;sequence.current++;request.current?.abort();element.current?.pause();for(const url of urls.current.values())URL.revokeObjectURL(url)}},[]);
   function finish(){const item=segment.current;if(!item)return;element.current?.pause();segment.current=null;setActive('');setLabel('这一句播放完成');item.done?.();}
@@ -34,11 +35,11 @@ export function AudioSpace({children,controls=true}:{children:React.ReactNode;co
       if(!alive.current||token!==sequence.current)return;
       const audio=element.current!;
       if(audio.src!==url){audio.src=url;audio.load();}
-      const launch=()=>{if(token!==sequence.current)return;audio.currentTime=clip.start;audio.playbackRate=Number(speed);segment.current={clip,done};setLabel('正在播放原声');audio.play().catch(()=>{if(token===sequence.current){setLabel('浏览器暂停了播放，请再点一次喇叭。');setActive('');segment.current=null;}})};
+      const launch=()=>{if(token!==sequence.current)return;audio.currentTime=clip.start;audio.playbackRate=Number(speed);segment.current={clip,done};setPosition({clip,time:clip.start});setLabel('正在播放原声');audio.play().catch(()=>{if(token===sequence.current){setLabel('浏览器暂停了播放，请再点一次喇叭。');setActive('');segment.current=null;}})};
       if(audio.readyState>=1)launch();else audio.onloadedmetadata=()=>{audio.onloadedmetadata=null;launch()};
     }catch(error){if(alive.current&&token===sequence.current){setActive('');setLabel(error instanceof Error?error.message:'原声加载失败，请重试。')}}
   }
-  return <PlayerContext.Provider value={{play,stop,label,active}}>{children}{(controls||active||label&&!['已停止','这一句播放完成'].includes(label))&&<div className="audio-dock"><Volume2 size={16}/><span role="status">{label||'点喇叭播放教材原声'}</span><label>语速<select aria-label="原声播放速度" value={speed} onChange={e=>{setSpeed(e.target.value);if(element.current)element.current.playbackRate=Number(e.target.value)}}><option value="0.7">0.7×</option><option value="0.85">0.85×</option><option value="1">1×</option></select></label><button type="button" onClick={stop} aria-label="停止或取消原声"><Square size={15}/></button></div>}<audio ref={element} preload="none" onTimeUpdate={()=>{const s=segment.current;if(s&&element.current!.currentTime>=s.clip.end-.08)finish()}} onEnded={finish} onError={()=>{segment.current=null;setActive('');setLabel('原声暂时无法播放，请重新点击加载。')}}/></PlayerContext.Provider>;
+  return <PlayerContext.Provider value={{play,stop,label,active,position}}>{children}{(controls||active||label&&!['已停止','这一句播放完成'].includes(label))&&<div className="audio-dock"><Volume2 size={16}/><span role="status">{label||'点喇叭播放教材原声'}</span><label>语速<select aria-label="原声播放速度" value={speed} onChange={e=>{setSpeed(e.target.value);if(element.current)element.current.playbackRate=Number(e.target.value)}}><option value="0.7">0.7×</option><option value="0.85">0.85×</option><option value="1">1×</option></select></label><button type="button" onClick={stop} aria-label="停止或取消原声"><Square size={15}/></button></div>}<audio ref={element} preload="none" onTimeUpdate={()=>{const s=segment.current;if(!s)return;const time=element.current!.currentTime;if(time>=s.clip.end-.08)finish();else setPosition({clip:s.clip,time})}} onEnded={finish} onError={()=>{segment.current=null;setActive('');setLabel('原声暂时无法播放，请重新点击加载。')}}/></PlayerContext.Provider>;
 }
 export function ClipButton({clip,done,label='听原声'}:{clip:Clip;done?:()=>void;label?:string}){
   const audio=useContext(PlayerContext);
