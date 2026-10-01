@@ -7,14 +7,15 @@ const read=path=>readFile(new URL(path,root),'utf8');
 const moduleUrl=source=>'data:text/javascript;base64,'+Buffer.from(source).toString('base64');
 const model=moduleUrl(stripTypeScriptTypes(await read('app/model.ts')));
 const mapping=await read('app/data/nce-pages.json');
-const source=(await read('app/textbook-vocabulary.ts')).replace("'./model'",JSON.stringify(model)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
+const corrections=moduleUrl(stripTypeScriptTypes(await read('app/data/vocabulary-source-corrections.ts')));
+const source=(await read('app/textbook-vocabulary.ts')).replace("'./model'",JSON.stringify(model)).replace("'./data/vocabulary-source-corrections'",JSON.stringify(corrections)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
 const {buildVocabularyCatalog,searchVocabulary,vocabularyPage,vocabularyLetter}=await import(moduleUrl(stripTypeScriptTypes(source)));
 const index=JSON.parse(await read('dist-online/lesson-pages/index.json'));
 const dictionary=JSON.parse(await read('dist-online/language/dictionary.json')).words;
 const catalog=buildVocabularyCatalog(index);
 assert.equal(catalog.lessons.length,348);
-assert.equal(catalog.entries,3615);
-assert.equal(catalog.terms.length,3347);
+assert.equal(catalog.entries,3614);
+assert.equal(catalog.terms.length,3346);
 assert.equal(catalog.lessons.filter(l=>l.words.length).length,321);
 assert.equal(catalog.lessons.filter(l=>!l.words.length).length,27);
 assert.equal(catalog.lessons.find(l=>l.key==='NCE1-2').words.length,10,'Even lessons keep their own word lists');
@@ -28,9 +29,20 @@ for(const term of catalog.terms){
   assert(source.pages.every(p=>index.lessons[`${source.book}-${source.lesson}`].vocabulary.pages.includes(p.page)));
  }
 }
-for(const [key,lesson] of Object.entries(index.lessons))for(const word of lesson.vocabulary.words)expected.push(`${key}:${word.word.toLowerCase()}`);
-assert.deepEqual(actual.sort(),expected.sort(),'Every textbook occurrence appears exactly once, including repeated headwords');
-for(const [book,lessonCount,entryCount] of [['NCE1',144,904],['NCE2',96,861],['NCE3',60,1059],['NCE4',48,791]]){
+for(const [key,lesson] of Object.entries(index.lessons))for(const word of lesson.vocabulary.words){
+ if(key==='NCE3-19'&&word.word==='withdrawn')continue;
+ expected.push(`${key}:${word.word.toLowerCase()}`);
+}
+assert.deepEqual(actual.sort(),expected.sort(),'Every source headword appears exactly once, excluding the reviewed printed inflection');
+const withdrawalLesson=catalog.lessons.find(lesson=>lesson.key==='NCE3-19');
+assert.equal(withdrawalLesson.words.filter(word=>word.word==='withdraw').length,1);
+assert(!withdrawalLesson.words.some(word=>word.word==='withdrawn'));
+assert(withdrawalLesson.words.find(word=>word.word==='withdraw').forms.includes('withdrawn'));
+assert(index.lessons['NCE3-19'].vocabulary.words.some(word=>word.word==='withdrawn'),'Raw material metadata is retained unchanged');
+const alreadyCorrected=structuredClone(index);
+alreadyCorrected.lessons['NCE3-19'].vocabulary.words=alreadyCorrected.lessons['NCE3-19'].vocabulary.words.filter(word=>word.word!=='withdrawn');
+assert.deepEqual(buildVocabularyCatalog(alreadyCorrected),catalog,'An already corrected source remains idempotent');
+for(const [book,lessonCount,entryCount] of [['NCE1',144,904],['NCE2',96,861],['NCE3',60,1058],['NCE4',48,791]]){
  assert.equal(catalog.lessons.filter(l=>l.book===book).length,lessonCount);
  assert.equal(searchVocabulary(catalog.terms,{book}).reduce((n,w)=>n+w.sources.length,0),entryCount);
  assert(searchVocabulary(catalog.terms,{book}).every(w=>w.sources.every(s=>s.book===book)));
@@ -61,7 +73,9 @@ for(const mutate of [
  d=>{d.lessons['NCE3-51'].vocabulary.pages=[999]},
  d=>{d.lessons['NCE1-1'].pages[1].src='https://example.com/unknown.jpg'},
  d=>{d.lessons['NCE1-1'].vocabulary.words.push(d.lessons['NCE1-1'].vocabulary.words[0])},
+ d=>{d.lessons['NCE3-19'].vocabulary.words=d.lessons['NCE3-19'].vocabulary.words.filter(word=>word.word!=='withdraw')},
+ d=>{const page=d.lessons['NCE3-19'].pages.find(page=>page.page===112);page.sha256='0'.repeat(64);page.src='/lesson-pages/'+page.sha256+'.jpg'},
 ]){
  const changed=structuredClone(index);mutate(changed);assert.throws(()=>buildVocabularyCatalog(changed));
 }
-console.log('Validated 348 lessons, 3,615 textbook occurrences, 3,347 indexed terms, A–Z/Chinese filters, source links, pagination, and malformed data handling.');
+console.log('Validated 348 lessons, 3,614 corrected source headwords, 3,346 indexed terms; raw 3,615 entries retained, one printed inflection removed; A–Z/Chinese filters, links, pagination and malformed data handling.');
