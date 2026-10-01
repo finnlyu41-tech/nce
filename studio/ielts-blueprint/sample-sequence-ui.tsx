@@ -2,13 +2,14 @@
 import {useEffect, useRef, useState} from 'react';
 import {Recorder} from '../app/recording-feedback';
 import type {LearningStage, Variant} from './types';
-import {sampleLessonsFor, sampleSequence, type SampleMaterial} from './sample-sequence';
+import {sampleLessonsFor, sampleMaterials, sampleSequence, type SampleMaterial} from './sample-sequence';
 import {activeSampleDraft, activeSampleMaterial, emptySampleState, sampleLessonReceipt, sampleSession, sampleWordCount, selectedSampleLesson, transitionSample, type SampleAction, type SampleState} from './sample-sequence-model';
 
 export type SampleSequenceProps = {value?: SampleState; initialValue?: SampleState; onChange?: (state: SampleState) => void; guidedFlow?: boolean; persistenceNote?: string};
 const stageNames: Record<LearningStage, string> = {explain: '理解方法', model: '看一个示范', guided: '跟着试', independent: '撤提示 · 新题', timed: '训练用限时', feedback: '反馈与订正', review: '延迟 · 新题复验'};
 const stages = Object.keys(stageNames) as LearningStage[];
 const delayedNames = {'not-scheduled': '订正后安排复验', 'not-due': '尚未到 24 小时', 'awaiting-new-task': '可以用新题复验', 'needs-repair': '新题仍有错误，先修这一处', assisted: '这次有提示、重播或材料已见过，保留为练习', 'awaiting-human-review': '新题作品已保留，等待人工／音频核验', 'local-target-observed': '观察到这两道局部目标的隔日独立表现'};
+const recordTime = (at: number) => <time dateTime={new Date(at).toISOString()}>{new Date(at).toLocaleString('zh-CN', {year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false})}</time>;
 
 /** Standalone teaching sample. Host owns persistence; no localStorage or app progress writes. */
 export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow = false, persistenceNote}: SampleSequenceProps) {
@@ -82,14 +83,18 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
       {guidedFlow ? <><p className="sample-note">第 {stages.indexOf(session.stage) + 1} / {stages.length} 步 · {stageNames[session.stage]}</p><details><summary>查看本课过程</summary><ol className="sample-steps" aria-label="本课教学步骤">{stages.map((stage, index) => <li key={stage} aria-current={session.stage === stage ? 'step' : undefined}>{index + 1}. {stageNames[stage]}</li>)}</ol></details></> : <ol className="sample-steps" aria-label="本课教学步骤">{stages.map((stage, index) => <li key={stage} aria-current={session.stage === stage ? 'step' : undefined}>{index + 1}. {stageNames[stage]}</li>)}</ol>}
       {lesson && <article className="sample-stage"><h3>{lesson.title}</h3><p>{lesson.goal}</p><p className="sample-note">{lesson.boundary}</p>
         {session.stage === 'explain' && <><h4>先理解这一件事</h4>{lesson.explanation.map(text => <p key={text}>{text}</p>)}<button onClick={() => navigate({type: 'next'})}>看一个完整小示范</button></>}
-        {session.stage === 'model' && material && <><h4>{material.title}</h4><p>{material.instruction}</p>{context(material, true)}{audio}<blockquote className="sample-context" lang="en">{material.model}</blockquote>{material.modelNotes?.map(note => <p key={note}>{note}</p>)}<button onClick={() => navigate({type: 'next'})}>带着方法试一次</button></>}
+        {session.stage === 'model' && material && <><h4>{material.title}</h4><p>{material.instruction}</p>
+          {material.questions && <ol aria-label="示范题目">{material.questions.map(q => <li key={q.id} id={`${material.id}-${q.id}`}>{q.prompt}</li>)}</ol>}
+          {context(material, true)}{audio}
+          {material.questions ? <><h5>答案与依据</h5><ol aria-label="示范答案与依据">{material.questions.map(q => <li key={q.id} aria-describedby={`${material.id}-${q.id}`}><strong lang="en">{q.accepted[0]}</strong>：{q.why}</li>)}</ol></> : <><blockquote className="sample-context" lang="en">{material.model}</blockquote>{material.modelNotes?.map(note => <p key={note}>{note}</p>)}</>}
+          <button onClick={() => navigate({type: 'next'})}>带着方法试一次</button></>}
         {['guided', 'independent', 'timed', 'review'].includes(session.stage) && material && <>
           <h4>{material.title}</h4>
           {waitingForClock ? <><p>开始后再显示这份新材料。建议 {material.seconds} 秒，是本站小任务训练时长。</p><button onClick={() => dispatch({type: 'start-timed'})}>开始训练计时</button></> : <>
             {session.stage === 'timed' && <p role="timer">{Math.max(0, Math.ceil((material.seconds * 1000 - (now - (draft?.startedAt || now))) / 1000))} 秒剩余 · 超时仍保留作品，并标明超时。</p>}
             <p>{material.instruction}</p>{context(material)}{audio}
             {session.stage === 'guided' ? <p className="sample-feedback">{material.hint}</p> : <><button type="button" onClick={() => dispatch({type: 'hint'})}>需要一个提示（本次记为借助提示）</button>{draft?.hinted && <div className="sample-feedback"><p>{material.hint}</p>{material.script && context(material, true)}</div>}<label className="sample-field"><input type="checkbox" style={{display: 'inline', width: 'auto', marginRight: 8}} checked={draft?.unseenConfirmed || false} onChange={event => dispatch({type: 'confirm-unseen', value: event.target.checked})}/>我此前没有接触过这份小材料</label></>}
-            {material.questions ? answers(material) : <><label className="sample-field">留下你实际表达的文本／短段落<textarea rows={5} maxLength={4000} value={draft?.response || ''} onChange={event => dispatch({type: 'response', value: event.target.value})}/></label><p className="sample-note">{sampleWordCount(draft?.response || '')} 个英文词。仅检查有作品，不判断语言水平。{lesson.skill === 'speaking' && '若文本与录音不同，以真实录音交给评阅者核验。'}</p></>}
+            {material.questions ? answers(material) : <><label className="sample-field">留下你实际表达的文本／短段落<textarea rows={5} maxLength={4000} value={draft?.response || ''} onChange={event => dispatch({type: 'response', value: event.target.value})}/></label><p className="sample-note">{sampleWordCount(draft?.response || '')} 个词或数字（常见缩写算 1 项），计数仅作参考。原稿待人工核对，不评定质量或 Band。{lesson.skill === 'speaking' && '若文本与录音不同，以真实录音交给评阅者核验。'}</p></>}
             <button disabled={!canSubmit} onClick={() => {stopAudio(); dispatch({type: 'submit'});}}>记录原始作答</button>
             {!!draft?.submittedAt && <div className="sample-feedback" role="status"><p>这次作答已记录。{material.questions ? '原始答案保留，用于与反馈比较。' : '文本作品尚未人工评阅。'}</p>
               {session.stage === 'guided' && material.questions?.map(q => <p key={q.id}>{q.prompt} → {q.accepted[0]}。{q.why}</p>)}
@@ -105,7 +110,7 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
             {source.script && context(source, true)}
           </section>;
         })}<ul>{lesson.timed.checklist.map(check => <li key={check}>{check}</li>)}</ul>
-          {lesson.timed.questions ? answers(lesson.timed, true) : <label className="sample-field">修改后的短段落<textarea rows={5} maxLength={4000} value={session.correctionResponse} onChange={event => dispatch({type: 'correction-response', value: event.target.value})}/></label>}
+          {lesson.timed.questions ? answers(lesson.timed, true) : <><p className="sample-note">{lesson.timed.instruction}</p><label className="sample-field">修改后的短段落<textarea rows={5} maxLength={4000} value={session.correctionResponse} onChange={event => dispatch({type: 'correction-response', value: event.target.value})}/></label><p className="sample-note">{sampleWordCount(session.correctionResponse)} 个词或数字（常见缩写算 1 项），计数仅作参考。订正原稿待人工核对，不评定质量或 Band。</p></>}
           <label className="sample-field">具体修了什么，或仍需要谁核验？<textarea rows={2} maxLength={4000} value={session.correctionNote} onChange={event => dispatch({type: 'correction-note', value: event.target.value})} placeholder="例如：把到达时间误写为开始时间；下次继续听 starts 后的信息。"/></label><button onClick={() => dispatch({type: 'save-correction'})}>保留订正，安排隔天新题</button>
         </>}
         {guidedFlow && nextLesson && session.stage === 'review' && (!material || !!draft?.submittedAt) && (now < receipt.reviewDueAt || !receipt.freshReviewAvailable) && <p><button onClick={() => navigate({type: 'open-lesson', lessonId: nextLesson.id})}>继续下一课 · {nextLesson.title}</button></p>}
@@ -114,7 +119,23 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
         {session.stage === 'review' && !receipt.freshReviewAvailable && <p className="sample-note">本课两份复验新题已接触过；继续复验需提供不同材料。原题重复可以学习，但不能增加新题保持证据。</p>}
         {lesson.skill === 'speaking' && !['explain', 'model'].includes(session.stage) && <section key={`${state.variant}-${lesson.id}`}><Recorder hideReference stopSignal={stages.indexOf(session.stage)} retentionLabel="录音在本课步骤间保留；切换课程、类别或刷新后清除"/><p className="sample-note">可在本课各步骤回听最近两遍。本样例不传入评分参考、不调用评分服务；发音、流利度及互动仍待音频与人工评价。录音不写入本组件的文本状态。</p></section>}
       </article>}
-      <details><summary>查看本课记录 · {receipt.practiceCount} 次作答</summary><p className="sample-note">{delayedNames[receipt.delayed]}。短练习不换算雅思分数；四课结束后仍需完成新的整套模考和口写评阅。</p></details>
+      <details aria-label="作答与订正记录"><summary>回看自己的作答与订正 · {receipt.practiceCount} 次作答</summary>
+        <p className="sample-note">{delayedNames[receipt.delayed]}。这里只回看已保存的内容，复验时间保持不变；开放作品仍待人工核对，不换算雅思分数。</p>
+        {!session.attempts.length && <p>还没有已保存的作答。</p>}
+        {session.attempts.map((attempt, index) => {
+          const source = lesson && sampleMaterials(lesson).find(item => item.id === attempt.promptId);
+          return <section className="sample-feedback" key={`${attempt.promptId}-${attempt.at}-${index}`} aria-label={`第 ${index + 1} 次作答记录`}>
+            <h4>{index + 1}. {stageNames[attempt.stage]} · {source?.title || '历史题目'}</h4>
+            <p className="sample-note">作答时间：{recordTime(attempt.at)} · {attempt.hinted ? '曾用提示' : '未用提示'} · {attempt.fresh ? '当时确认为未见过的材料' : '没有新材料证据'}{lesson?.skill === 'listening' && ` · ${attempt.playbackCount} 次播放请求，${attempt.playbackFailures} 次失败`}{attempt.elapsedMs !== null && ` · 训练用时 ${Math.ceil(attempt.elapsedMs / 1000)} 秒`}</p>
+            {source?.questions ? <ol aria-label="原题与自己的作答">{source.questions.map(q => <li key={q.id}><p>{q.prompt}</p><p>我的原答：<span lang="en">{attempt.answers[q.id] || '未填写'}</span></p></li>)}</ol> : <>{source && <p>原题要求：{source.instruction}</p>}<p>我的原稿：</p><blockquote className="sample-context" lang="en">{attempt.response || '未填写'}</blockquote></>}
+          </section>;
+        })}
+        {lesson && (session.correctedAt || Object.keys(session.correctionAnswers).length || session.correctionResponse || session.correctionNote) ? <section className="sample-feedback" aria-label="自己的订正">
+          <h4>我的订正 · {lesson.timed.title}</h4><p className="sample-note">{session.correctedAt ? <>保存时间：{recordTime(session.correctedAt)}</> : '订正草稿 · 尚未保存'}</p>
+          {lesson.timed.questions ? <ol aria-label="原题与自己的订正">{lesson.timed.questions.map(q => <li key={q.id}><p>{q.prompt}</p><p>我的订正：<span lang="en">{session.correctionAnswers[q.id] || '未填写'}</span></p></li>)}</ol> : <><p>原题要求：{lesson.timed.instruction}</p><blockquote className="sample-context" lang="en">{session.correctionResponse || '尚未留下订正文稿'}</blockquote></>}
+          {session.correctionNote && <p>我的修正说明：{session.correctionNote}</p>}
+        </section> : null}
+      </details>
     </>}
     {issue && <p className="sample-error" role="alert">{issue}</p>}
     <details><summary>保存方式与练习说明</summary><p className="sample-note">这是本站原创的小练习，教学效果尚未经过专家与学习者实测。{persistenceNote || '这个独立预览仅临时保留文字记录，关闭或刷新后可能丢失。'}</p></details>

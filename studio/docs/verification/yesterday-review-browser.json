@@ -1,0 +1,58 @@
+{
+  "checks": 12,
+  "start": 1790899140000,
+  "origin": "http://127.0.0.1:65361",
+  "browserVersion": "154.0.8037.59",
+  "errors": [],
+  "screenshots": [
+    {
+      "name": "saved",
+      "file": "docs/verification/yesterday-review-saved.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "due",
+      "file": "docs/verification/yesterday-review-due.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "passed-320",
+      "file": "docs/verification/yesterday-review-passed-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 700
+      }
+    },
+    {
+      "name": "needs-practice-320",
+      "file": "docs/verification/yesterday-review-needs-practice-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 700
+      }
+    },
+    {
+      "name": "repeat-320",
+      "file": "docs/verification/yesterday-review-repeat-320.png",
+      "viewport": {
+        "width": 320,
+        "height": 700
+      }
+    },
+    {
+      "name": "save-failure",
+      "file": "docs/verification/yesterday-review-save-failure.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "scope": "Dedicated headless browser; injected clock/storage failure, no production state or publication"
+}

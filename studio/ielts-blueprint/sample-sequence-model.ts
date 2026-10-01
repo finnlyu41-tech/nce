@@ -17,7 +17,24 @@ export const emptySampleState = (): SampleState => ({version: 1, variant: null, 
 const emptySession = (): SampleSession => ({stage: 'explain', exposures: [], drafts: {}, attempts: [], correctionAnswers: {}, correctionResponse: '', correctionNote: '', correctedAt: 0});
 const key = (variant: Variant, lessonId: string) => `${variant}:${lessonId}`;
 const normal = (s: string) => s.trim().replace(/\s+/g, ' ').toLowerCase();
-export const sampleWordCount = (s: string) => (s.match(/[a-z]+(?:['’-][a-z]+)*/gi) || []).length;
+const sampleTextTokens = (s: string) => s.match(/\b[a-z](?:\.[a-z])+\b\.?|\b[a-z]+(?:['’-][a-z]+)*|\b\d+(?:[.,:/]\d+)*(?:%|[a-z]+)?/gi) || [];
+/** Display reference only: numbers and common dotted abbreviations each count once. */
+export const sampleWordCount = (s: string) => sampleTextTokens(s).length;
+/** A finite original-text check, not sentence, relevance, language quality or Band grading. */
+export function sampleResponseIssue(response: string): string | undefined {
+  if (!response.trim()) return '目前只有空白。请留下自己的英文原稿；原稿保留，可修改后直接再提交。';
+  const tokens = sampleTextTokens(response).map(token => token.toLowerCase().replace(/\.$/, '').replace(/’/g, "'"));
+  if (!tokens.some(token => /^[a-z]/.test(token))) return '目前没有英文文字。请按题目留下英文原稿；只有数字或标点不能作为作品，原稿保留。';
+  for (let length = 1; length <= tokens.length / 2; length++) {
+    if (tokens.length % length === 0 && tokens.every((token, index) => token === tokens[index % length])) return '整篇内容只是在重复同一个词或片段。请留下自己的英文回答，无需重复凑词；原稿保留，可修改后直接再提交。';
+  }
+  return undefined;
+}
+/** Preserve previously accepted records even when the display count or checks change. */
+export function isStoredSampleResponse(response: string, legacyMinimum = 1): boolean {
+  const legacyCount = (response.match(/[a-z]+(?:['’-][a-z]+)*/gi) || []).length;
+  return !sampleResponseIssue(response) || legacyCount >= legacyMinimum;
+}
 export const sampleSession = (state: SampleState) => state.variant ? state.sessions[key(state.variant, state.lessonId)] || emptySession() : emptySession();
 export const selectedSampleLesson = (state: SampleState) => state.variant ? sampleLessonById(state.variant, state.lessonId) : undefined;
 export function activeSampleMaterial(state: SampleState): SampleMaterial | undefined {
@@ -119,7 +136,11 @@ export function transitionSample(state: SampleState, action: SampleAction, at = 
       session[action.type === 'correction-response' ? 'correctionResponse' : 'correctionNote'] = action.value.slice(0, 4000); session.correctedAt = 0; return result();
     }
     if (session.correctionNote.trim().length < 8) return reject('留下具体的一处修正或待核验问题（至少 8 字）。');
-    if (lesson.timed.questions ? !answersMatch(lesson.timed, session.correctionAnswers) : sampleWordCount(session.correctionResponse) < (lesson.timed.minimumWords || 1)) return reject('先留下订正答案或修改后的短段落。长度只用于确认有作品，不用于评分。');
+    if (lesson.timed.questions) {
+      if (!answersMatch(lesson.timed, session.correctionAnswers)) return reject('先留下订正答案或修改后的短段落。长度只用于确认有作品，不用于评分。');
+    } else {
+      const issue = sampleResponseIssue(session.correctionResponse); if (issue) return reject(issue);
+    }
     const latest = session.attempts.at(-1); if (latest && at < latest.at) return reject('订正时间不能早于作答。');
     session.correctedAt = at; session.stage = 'review'; session.reviewPromptId = undefined; return result();
   }
@@ -156,7 +177,11 @@ export function transitionSample(state: SampleState, action: SampleAction, at = 
   }
   if (action.type === 'submit') {
     if (draft.submittedAt) return reject('本版作答已记录；修改答案会保留原始记录并另记一次。');
-    if (material.questions ? material.questions.some(q => !draft.answers[q.id]?.trim()) : sampleWordCount(draft.response) < (material.minimumWords || 1)) return reject('先完成两个答案或留下短段落；这是作品存在检查，不是评分。');
+    if (material.questions) {
+      if (material.questions.some(q => !draft.answers[q.id]?.trim())) return reject('先完成两个答案或留下短段落；这是作品存在检查，不是评分。');
+    } else {
+      const issue = sampleResponseIssue(draft.response); if (issue) return reject(issue);
+    }
     const audioUsable = usableSampleAudio(draft);
     if (lesson.skill === 'listening' && !audioUsable) return reject('先完整播放并确认实际听到声音。播放失败或无声音不能算听过。');
     if (session.attempts.some(a => a.at > at)) return reject('作答时间不能早于已有记录。');

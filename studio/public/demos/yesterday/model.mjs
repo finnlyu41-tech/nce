@@ -1,11 +1,19 @@
 import {byId, questions, independentIds} from './content.mjs';
+import {restoreReviewSession,knownReviewIds} from './review-model.mjs';
 export const storageKey = 'nce-demo-yesterday-v1';
 export function initialState(now = Date.now()) {
-  return {version: 1, step: 0, createdAt: now, attempts: [], hints: [], seenQuestionIds: [], previousSeenQuestionIds: [], independentCursor: 0, correction: {phase: 'intro', target: null, currentId: null}, draft: '', planSaved: false};
+  return {version: 1, step: 0, createdAt: now, attempts: [], hints: [], seenQuestionIds: [], previousSeenQuestionIds: [], independentCursor: 0, correction: {phase: 'intro', target: null, currentId: null}, draft: '', planSaved: false,finishedAt:null,reviewSession:null,reviewSeenIds:[]};
 }
 export function restart(state, now = Date.now()) {
-  return {...initialState(now), previousSeenQuestionIds:[...new Set([...state.previousSeenQuestionIds,...state.seenQuestionIds,...state.attempts.map(a=>a.id)])]};
+  return {...initialState(now), previousSeenQuestionIds:[...new Set([...state.previousSeenQuestionIds,...state.seenQuestionIds,...state.attempts.map(a=>a.id)])],reviewSession:state.reviewSession,reviewSeenIds:state.reviewSeenIds};
 }
+export function completedDemo(state,now=Date.now()) {
+  if(state.step!==4||!independentIds.every(id=>state.attempts.some(a=>a.id===id&&Number.isSafeInteger(a.at)&&a.at>0&&a.at<=now)))return null;
+  const lastAt=Math.max(...state.attempts.map(a=>a.at));
+  const completedAt=Number.isSafeInteger(state.finishedAt)&&state.finishedAt>=lastAt&&state.finishedAt<=now?state.finishedAt:lastAt;
+  return {capabilityId:'yesterday-past',completionId:`yesterday-demo:${state.createdAt}:${lastAt}`,completedAt};
+}
+export function finishDemo(state,draft,now=Date.now()){const next=goTo(saveDraft(state,draft),4);return {...next,finishedAt:completedDemo(next,now)?now:null};}
 export function goTo(state, step) {
   return Number.isInteger(step) && step >= 0 && step < 5 ? {...state, step} : state;
 }
@@ -79,5 +87,7 @@ export function restoreState(value, now = Date.now()) {
     createdAt: Number.isFinite(value.createdAt) && value.createdAt > 0 && value.createdAt <= now ? value.createdAt : now,
     independentCursor: value.independentCursor === 1 && restored.attempts.some(a => a.id === independentIds[0]) ? 1 : 0,
     correction: validPhase ? {phase: saved.phase, target, currentId: validCurrent ? saved.currentId : null} : base.correction,
-    draft: typeof value.draft === 'string' ? value.draft.slice(0,1200) : '', planSaved: value.planSaved === true};
+    draft: typeof value.draft === 'string' ? value.draft.slice(0,1200) : '', planSaved: value.planSaved === true,
+    finishedAt:Number.isSafeInteger(value.finishedAt)&&value.finishedAt>0&&value.finishedAt<=now?value.finishedAt:null,
+    reviewSession:restoreReviewSession(value.reviewSession,now),reviewSeenIds:knownReviewIds([...(Array.isArray(value.reviewSeenIds)?value.reviewSeenIds:[]),...(Array.isArray(value.reviewSession?.seenIds)?value.reviewSession.seenIds:[]),...(Array.isArray(value.reviewSession?.attempts)?value.reviewSession.attempts.map(a=>a?.id):[])])};
 }

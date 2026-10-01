@@ -273,6 +273,275 @@ try {
     assert.equal(JSON.stringify(state), before);
   });
   console.log(`${checks - adapterChecks} recommendation/target checks and ${roundTrips - adapterRoundTrips} additional real-transition round trips passed`);
+
+  const teachingChecks = checks, teachingRoundTrips = roundTrips;
+  const escapeHTML = text => text.replace(/[&<>"']/g, character => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#x27;'}[character]));
+  function modelStage(variant, lessonId) {
+    let value = act(m.emptySampleState(), {type: 'select-variant', variant});
+    value = act(value, {type: 'open-lesson', lessonId});
+    return act(value, {type: 'next'});
+  }
+  function renderReadOnly(value) {
+    const state = freeze(stored(value)), before = JSON.stringify(state);
+    const html = renderAt(React.createElement(Workspace, {
+      ready: true, state,
+      update() {throw Error('Reading teaching content must not save or change learning state');},
+    }), clock);
+    assert.equal(JSON.stringify(state), before);
+    return html;
+  }
+  await test('Academic and GT listening/reading models show numbered prompts before their matching answer and evidence', () => {
+    for (const variant of ['academic', 'general-training']) for (const skill of ['listening', 'reading']) {
+      const value = modelStage(variant, 'hub-' + skill), material = m.activeSampleMaterial(value);
+      const html = renderReadOnly(value);
+      const questions = html.match(/<ol aria-label="示范题目">([\s\S]*?)<\/ol>/);
+      const solutions = html.match(/<ol aria-label="示范答案与依据">([\s\S]*?)<\/ol>/);
+      assert.ok(questions, `${variant} ${skill}: show the original model questions`);
+      assert.ok(solutions, `${variant} ${skill}: show each answer with its evidence`);
+      assert.ok(questions.index < solutions.index, 'All numbered questions precede the numbered answers');
+      const prompts = [...questions[1].matchAll(/<li\b([^>]*)>([\s\S]*?)<\/li>/g)];
+      const answers = [...solutions[1].matchAll(/<li\b([^>]*)>([\s\S]*?)<\/li>/g)];
+      assert.equal(prompts.length, material.questions.length);
+      assert.equal(answers.length, material.questions.length);
+      material.questions.forEach((question, index) => {
+        const id = `${material.id}-${question.id}`;
+        assert.ok(prompts[index][1].includes(`id="${id}"`), 'Keep the original material and question identity');
+        assert.equal(prompts[index][2], escapeHTML(question.prompt));
+        assert.ok(answers[index][1].includes(`aria-describedby="${id}"`), 'Each answer refers to its own question');
+        assert.ok(answers[index][2].includes(`<strong lang="en">${escapeHTML(question.accepted[0])}</strong>`));
+        assert.ok(answers[index][2].includes(escapeHTML(question.why)));
+        assert.equal(html.split(escapeHTML(question.prompt)).length - 1, 1, 'Do not repeat the full question beside an answer');
+      });
+      assert.ok(!html.includes(escapeHTML(material.model)), 'Do not repeat the unlabelled answer summary');
+      for (const note of material.modelNotes) assert.ok(!html.includes(escapeHTML(note)), 'The per-question evidence replaces duplicate model notes');
+    }
+  });
+  await test('speaking and writing models keep their existing text and teaching notes in both categories', () => {
+    for (const variant of ['academic', 'general-training']) for (const skill of ['speaking', 'writing']) {
+      const value = modelStage(variant, 'hub-' + skill), material = m.activeSampleMaterial(value);
+      assert.equal(material.questions, undefined);
+      const html = renderReadOnly(value);
+      assert.ok(html.includes(escapeHTML(material.model)));
+      for (const note of material.modelNotes) assert.ok(html.includes(escapeHTML(note)));
+      assert.ok(!html.includes('aria-label="示范题目"'));
+      assert.ok(!html.includes('aria-label="示范答案与依据"'));
+    }
+  });
+  await test('unsubmitted independent listening/reading tasks keep solutions hidden while read-only rendering preserves records', () => {
+    for (const variant of ['academic', 'general-training']) for (const skill of ['listening', 'reading']) {
+      let value = start(variant, 'hub-' + skill);
+      if (skill === 'listening') value = heard(value);
+      value = act(act(answer(value), {type: 'submit'}), {type: 'next'});
+      const material = m.activeSampleMaterial(value), draft = m.activeSampleDraft(value);
+      assert.equal(m.sampleSession(value).stage, 'independent');
+      assert.equal(draft.submittedAt, 0);
+      assert.deepEqual(draft.answers, {});
+      const html = renderReadOnly(value);
+      assert.ok(!html.includes('aria-label="示范答案与依据"'));
+      assert.ok(!html.includes('这次作答已记录'));
+      for (const question of material.questions) {
+        assert.ok(html.includes(escapeHTML(question.prompt)), 'The learner still gets the complete question');
+        assert.ok(!html.includes(escapeHTML(question.why)), 'Do not expose the answer explanation before submission');
+        if (!question.options) assert.ok(!html.includes(escapeHTML(question.accepted[0])), 'Listening answers remain hidden');
+      }
+      if (material.script) assert.ok(!html.includes(escapeHTML(material.script)), 'Independent listening keeps its transcript hidden');
+      if (skill === 'reading') {
+        const selects = [...html.matchAll(/<select\b[^>]*>([\s\S]*?)<\/select>/g)];
+        assert.equal(selects.length, material.questions.length);
+        for (const select of selects) {
+          const selected = [...select[1].matchAll(/<option\b[^>]*\bselected=""[^>]*>([\s\S]*?)<\/option>/g)];
+          assert.deepEqual(selected.map(option => option[1]), ['请选择'], 'The correct choice must not be preselected');
+        }
+      }
+    }
+  });
+  console.log(`${checks - teachingChecks} teaching UI groups and ${roundTrips - teachingRoundTrips} additional real-transition round trips passed`);
+
+  const textChecks = checks, textRoundTrips = roundTrips;
+  const fullAcademic = 'Cooking recorded the highest attendance at 75 visits, compared with 30 for painting. Photography attracted 45 visits.';
+  const shortAcademic = 'Cooking was highest: 75 visits. Painting had 30.';
+  function independentOpen(variant = 'academic', skill = 'writing') {
+    const value = start(variant, 'hub-' + skill);
+    return act(act(answer(value), {type: 'submit'}), {type: 'next'});
+  }
+  function feedbackOpen(variant = 'academic', skill = 'writing') {
+    let value = independentOpen(variant, skill);
+    for (const stage of ['independent', 'timed']) {
+      if (stage === 'timed') value = act(value, {type: 'start-timed'});
+      value = act(act(answer(value), {type: 'submit'}), {type: 'next'});
+    }
+    return act(value, {type: 'correction-note', value: '按题目补充相关信息，内容与语言仍需人工核对。'});
+  }
+  const invalidResponses = [
+    [' \n\t ', /空白/],
+    ['...!? —', /没有英文/],
+    ['75 30 45 2.5%', /没有英文/],
+    ['这里只有中文内容。', /没有英文/],
+    ['hello '.repeat(20), /重复同一个词或片段/],
+    ['Cooking was popular. Cooking was popular.', /重复同一个词或片段/],
+    ['Visit at 10:30. Visit at 10:30.', /重复同一个词或片段/],
+  ];
+  await test('text reference counting includes numeric values and common abbreviations consistently', () => {
+    for (const [text, expected] of [[fullAcademic, 17], [shortAcademic, 8], ['75 30 1,200 2.5% 10:30', 5], ['U.S.A. U.K. e.g. Dr. p.m.', 5], ["I don't re-write words.", 4], ['... ！？', 0]]) {
+      assert.equal(m.sampleWordCount(text), expected, text);
+    }
+  });
+  await test('both reported Academic responses and short GT/speaking originals save for human review without a word floor', () => {
+    for (const [variant, skill, response] of [['academic', 'writing', fullAcademic], ['academic', 'writing', shortAcademic], ['general-training', 'writing', 'Could I borrow a brush?'], ['academic', 'speaking', 'I can join.']]) {
+      let value = act(independentOpen(variant, skill), {type: 'response', value: response});
+      const html = renderReadOnly(value);
+      assert.ok(html.includes(`${m.sampleWordCount(response)} 个词或数字`));
+      assert.ok(html.includes('计数仅作参考'));
+      assert.ok(html.includes('原稿待人工核对'));
+      assert.ok(!html.includes('至少 15 个'));
+      value = act(value, {type: 'submit'});
+      const attempt = m.sampleSession(value).attempts.at(-1);
+      assert.equal(attempt.response, response);
+      assert.equal(attempt.correct, null);
+      assert.equal(attempt.matched, null);
+      assert.equal(attempt.feedback, 'self-review-awaiting-human');
+      assert.equal(m.sampleLessonReceipt(value, clock).band, null);
+      assert.equal(m.sampleLessonReceipt(value, clock).mastery, 'not-assessed');
+      const read = p.readSampleProgress(roundTrip(value), clock);
+      assert.equal(read.status, 'ready');
+      assert.equal(m.activeSampleDraft(read.value).response, response);
+    }
+  });
+  await test('limited text refusals identify the missing item, retain the original, and allow a direct corrected resubmission', () => {
+    const initial = independentOpen();
+    for (const [response, message] of invalidResponses) {
+      const value = act(initial, {type: 'response', value: response}), before = JSON.stringify(value);
+      const rejected = m.transitionSample(value, {type: 'submit'}, (clock += 10));
+      assert.match(rejected.issue, message);
+      assert.match(rejected.issue, /原稿保留/);
+      assert.equal(rejected.state, value);
+      assert.equal(JSON.stringify(value), before);
+      const restored = p.readSampleProgress(roundTrip(value), clock);
+      assert.equal(restored.status, 'ready');
+      assert.equal(m.activeSampleDraft(restored.value).response, response);
+      const fixed = act(act(restored.value, {type: 'response', value: shortAcademic}), {type: 'submit'});
+      assert.equal(m.sampleSession(fixed).attempts.length, m.sampleSession(initial).attempts.length + 1);
+      assert.equal(m.sampleSession(fixed).attempts.at(-1).response, shortAcademic);
+    }
+  });
+  await test('correction uses the same limited text rules and keeps rejected drafts editable', () => {
+    const initial = feedbackOpen();
+    for (const [response, message] of invalidResponses) {
+      const value = act(initial, {type: 'correction-response', value: response}), before = JSON.stringify(value);
+      const rejected = m.transitionSample(value, {type: 'save-correction'}, (clock += 10));
+      assert.match(rejected.issue, message);
+      assert.equal(rejected.issue, m.sampleResponseIssue(response));
+      assert.equal(rejected.state, value);
+      assert.equal(JSON.stringify(value), before);
+      assert.equal(m.sampleSession(p.readSampleProgress(roundTrip(value), clock).value).correctionResponse, response);
+    }
+    for (const response of [fullAcademic, shortAcademic]) {
+      let value = act(initial, {type: 'correction-response', value: response});
+      const html = renderReadOnly(value);
+      assert.ok(html.includes(escapeHTML(m.selectedSampleLesson(value).timed.instruction)));
+      assert.ok(html.includes(`${m.sampleWordCount(response)} 个词或数字`));
+      assert.ok(html.includes('订正原稿待人工核对'));
+      value = act(value, {type: 'save-correction'});
+      assert.equal(m.sampleSession(value).correctionResponse, response);
+      assert.equal(m.sampleSession(value).stage, 'review');
+      assert.equal(m.sampleReviewDueAt(m.sampleSession(value)), m.sampleSession(value).correctedAt + DAY);
+      assert.equal(p.readSampleProgress(roundTrip(value), clock).status, 'ready');
+    }
+  });
+  await test('new text checks and abbreviation counts do not invalidate historically accepted originals or corrections', () => {
+    const value = closed('academic', 'hub-writing');
+    const originals = ['I am in the U.S.A. and U.K. with Dr. A.B. and friends.', 'hello '.repeat(15).trim()];
+    for (const response of originals) {
+      assert.ok((response.match(/[a-z]+(?:['’-][a-z]+)*/gi) || []).length >= 15, 'This text met the original saved-record rule');
+      const raw = mutate(value, envelope => {
+        const session = envelope.value.sessions['academic:hub-writing'];
+        for (const attempt of session.attempts) attempt.response = response;
+        for (const draft of Object.values(session.drafts)) if (draft.submittedAt) draft.response = response;
+        session.correctionResponse = response;
+      });
+      const read = p.readSampleProgress(raw, clock);
+      assert.equal(read.status, 'ready', read.reason);
+      assert.deepEqual(JSON.parse(p.serializeSampleProgress(read.value, clock)).value, JSON.parse(raw).value);
+      assert.equal(m.sampleSession(read.value).correctionResponse, response);
+    }
+  });
+  console.log(`${checks - textChecks} original-text groups and ${roundTrips - textRoundTrips} additional real-transition round trips passed`);
+
+  const historyChecks = checks, historyRoundTrips = roundTrips;
+  function historySection(html) {
+    const match = html.match(/<details aria-label="作答与订正记录">([\s\S]*?)<\/details>/);
+    assert.ok(match, 'Saved history is a native, initially closed disclosure');
+    assert.ok(match[1].startsWith('<summary>回看自己的作答与订正'));
+    assert.ok(!/<(?:button|input|select|textarea)\b/.test(match[1]), 'History has no mutation controls');
+    return match[1];
+  }
+  function noReferencesInHistory(history, lesson) {
+    for (const material of c.sampleMaterials(lesson)) {
+      for (const text of [material.context, material.script, material.model, ...(material.modelNotes || []), ...(material.questions || []).map(question => question.why)]) {
+        if (text) assert.ok(!history.includes(escapeHTML(text)), 'Only saved personal work appears in the history');
+      }
+    }
+    for (const material of lesson.reviews) {
+      assert.ok(!history.includes(escapeHTML(material.title)), 'Unopened review materials remain hidden');
+      for (const question of material.questions || []) assert.ok(!history.includes(escapeHTML(question.prompt)));
+    }
+    assert.ok(!history.includes('参考：'));
+  }
+  await test('the 24-hour wait exposes actual saved answers, hints, correction and dates without revealing reference content', () => {
+    let value = start('academic', 'hub-reading');
+    value = act(act(answer(value), {type: 'submit'}), {type: 'next'});
+    value = act(value, {type: 'hint'});
+    for (const stage of ['independent', 'timed']) {
+      if (stage === 'timed') value = act(value, {type: 'start-timed'});
+      for (const question of m.activeSampleMaterial(value).questions) value = act(value, {type: 'answer', questionId: question.id, value: 'FALSE'});
+      value = act(act(value, {type: 'submit'}), {type: 'next'});
+    }
+    const lesson = m.selectedSampleLesson(value);
+    for (const question of lesson.timed.questions) value = act(value, {type: 'correction-answer', questionId: question.id, value: question.accepted[0]});
+    value = act(value, {type: 'correction-note', value: '我把费用关系看反了，下次逐项核对具体数字。'});
+    value = act(value, {type: 'save-correction'});
+    const session = m.sampleSession(value), due = m.sampleReviewDueAt(session), before = JSON.stringify(value);
+    assert.ok(clock < due);
+    const history = historySection(renderReadOnly(value));
+    assert.match(history, /3 次作答/);
+    assert.match(history, /曾用提示/);
+    assert.match(history, /尚未到 24 小时/);
+    assert.match(history, /\d{4}\/\d{2}\/\d{2}/);
+    for (const attempt of session.attempts) {
+      const source = c.sampleMaterials(lesson).find(material => material.id === attempt.promptId);
+      assert.ok(history.includes(escapeHTML(source.title)));
+      assert.ok(history.includes(`dateTime="${new Date(attempt.at).toISOString()}"`));
+      for (const question of source.questions) {
+        assert.ok(history.includes(escapeHTML(question.prompt)));
+        assert.ok(history.includes(`我的原答：<span lang="en">${escapeHTML(attempt.answers[question.id])}</span>`));
+      }
+    }
+    assert.ok(history.includes('我的订正'));
+    assert.ok(history.includes(escapeHTML(session.correctionNote)));
+    assert.ok(history.includes(`dateTime="${new Date(session.correctedAt).toISOString()}"`));
+    for (const question of lesson.timed.questions) assert.ok(history.includes(`我的订正：<span lang="en">${escapeHTML(session.correctionAnswers[question.id])}</span>`));
+    noReferencesInHistory(history, lesson);
+    assert.equal(JSON.stringify(value), before);
+    assert.equal(m.sampleReviewDueAt(m.sampleSession(value)), due);
+  });
+  await test('personal text history and correction survive the real whole-site backup and refresh path in both categories', async () => {
+    for (const variant of ['academic', 'general-training']) for (const skill of ['speaking', 'writing']) {
+      const value = closed(variant, 'hub-' + skill), state = stored(value), session = m.sampleSession(value);
+      const before = historySection(renderReadOnly(value)), due = m.sampleReviewDueAt(session);
+      for (const attempt of session.attempts) assert.ok(before.includes(escapeHTML(attempt.response)));
+      assert.ok(before.includes(escapeHTML(session.correctionResponse)));
+      assert.ok(before.includes(escapeHTML(session.correctionNote)));
+      noReferencesInHistory(before, m.selectedSampleLesson(value));
+      const restored = await backup.readProgressFile(backup.makeProgressFile(state));
+      assert.equal(restored.state.drafts[p.sampleProgressKey], state.drafts[p.sampleProgressKey]);
+      const read = p.readSampleProgress(restored.state.drafts[p.sampleProgressKey], clock);
+      assert.equal(read.status, 'ready');
+      assert.deepEqual(m.sampleSession(read.value), JSON.parse(JSON.stringify(session)));
+      assert.equal(m.sampleReviewDueAt(m.sampleSession(read.value)), due);
+      assert.equal(historySection(renderReadOnly(read.value)), before);
+    }
+  });
+  console.log(`${checks - historyChecks} read-only history groups and ${roundTrips - historyRoundTrips} additional real-transition round trips passed`);
 } finally {
   await rm(temp, {recursive: true, force: true});
 }

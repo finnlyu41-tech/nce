@@ -10,7 +10,7 @@ const headers = {
   'Cross-Origin-Opener-Policy': 'same-origin-allow-popups',
 };
 const reply = (body, status, extra = {}) => new Response(body, {status, headers: {...headers, ...extra}});
-const demoPaths = new Set(['/demos/yesterday/', ...['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'content.mjs'].map(name => '/demos/yesterday/'+name)]);
+const demoPaths = new Set(['/demos/yesterday/', ...['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'content.mjs', 'bootstrap.mjs', 'demo-store.mjs', 'review-adapter.mjs', 'review-content.mjs', 'review-controller.mjs', 'review-model.mjs'].map(name => '/demos/yesterday/'+name)]);
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);

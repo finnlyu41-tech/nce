@@ -8,9 +8,9 @@ ROOT = Path(__file__).resolve().parents[1]
 TRANSPORT_RETRIES = []
 
 
-def request(url, method='GET', stale_auth=False):
+def request(url, method='GET', stale_auth=False, with_type=False):
     # Hash decoded bytes while avoiding slow uncompressed transfers of the app.
-    command = ['curl', '--compressed', '--max-time', '40', '-sS', '-X', method, '-w', '\n%{http_code}']
+    command = ['curl', '--compressed', '--max-time', '40', '-sS', '-X', method, '-w', '\n%{http_code}\n%{content_type}']
     if stale_auth:
         command += ['-H', 'Authorization: Basic bGVhcm5lcjp3cm9uZw==']  # Test-only wrong credentials.
     result = subprocess.run(command+[url], capture_output=True)
@@ -19,8 +19,8 @@ def request(url, method='GET', stale_auth=False):
         TRANSPORT_RETRIES.append({'url': url, 'curlCode': 52})
         result = subprocess.run(command+[url], capture_output=True)
     result.check_returncode()
-    body, status = result.stdout.rsplit(b'\n', 1)
-    return int(status), body
+    body, status, content_type = result.stdout.rsplit(b'\n', 2)
+    return (int(status), body, content_type.decode()) if with_type else (int(status), body)
 
 
 def main():
@@ -39,12 +39,14 @@ def main():
     checks = []
 
     def verify(base, path, expected, status=200, method='GET', stale_auth=False):
-        observed, body = request(base+path, method, stale_auth)
+        observed, body, content_type = request(base+path, method, stale_auth, with_type=True)
         assert observed == status, f'{base}{path}: {observed}, expected {status}'
         digest = hashlib.sha256(body).hexdigest()
         if expected is not None:
             assert digest == expected, 'Hash mismatch: '+base+path
-        return {'url': base+path, 'method': method, 'staleAuth': stale_auth, 'status': observed, 'sha256': digest}
+        if observed == 200 and path.endswith(('.mjs', '.js')):
+            assert content_type.split(';')[0].lower() in ['text/javascript', 'application/javascript'], 'Wrong module MIME: '+base+path
+        return {'url': base+path, 'method': method, 'staleAuth': stale_auth, 'status': observed, 'contentType': content_type, 'sha256': digest}
 
     def file_hash(path):
         return hashlib.sha256((package/path).read_bytes()).hexdigest()
