@@ -66,7 +66,7 @@ export const nce1NationalitiesExamples:UsageExample[]=[
   teachingSources:[{book:'NCE1',lesson:6}]},
  {id:'italian-country-adjective',word:'Italian',partOfSpeech:'adj.',
   sense:'意大利的；意大利人的（形容词）',matches:['意大利的','意大利人的'],
-  en:'My sister bought an Italian coffee maker for her new flat.',
+  en:'My elder sister bought an Italian coffee maker for her new flat.',
   zh:'我姐姐为她的新公寓买了一台意大利产的咖啡机。',
   collocation:{en:'an Italian coffee maker',zh:'一台意大利产的咖啡机'},origin:'original',
   teachingSources:[{book:'NCE1',lesson:6}],teachingDefinition:'adj. 意大利的'},

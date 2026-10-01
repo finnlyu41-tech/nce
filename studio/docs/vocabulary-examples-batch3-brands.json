@@ -6,7 +6,7 @@
   "textbookTargetExamples": 9,
   "dictionaryExtensionExamples": 0,
   "origin": "original",
-  "reviewBasis": "Root Codex editorial review against the word-list image, natural English, Chinese translation and collocation; not a human or teacher certification. Independent Codex review requested.",
+  "reviewBasis": "Root Codex editorial review and completed independent Codex follow-up against the original word-list image, natural English, Chinese translation and collocation; not a human or teacher certification.",
   "sourceEvidence": {
     "book": "NCE1",
     "lesson": 6,
@@ -73,7 +73,16 @@
       ],
       "editorialReview": "Volvo 作品牌及车辆专名，park 与停车情境一致。",
       "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
-      "contentSha256": "0ba6d2c4cd0e95b4ddd63547347c2a05b8d30db0f0bae0bc275dac4be9f354af"
+      "contentSha256": "59b174d83bb58fab27e665246bad273a0c66cc5da6409c9f2cfceed7d1634757",
+      "reviewFollowup": "Independent Codex review identified this item; root corrected and rechecked sentence/translation or source IPA. Human certification remains false.",
+      "ipaReview": {
+        "source": "Original NCE1 Lesson 6 word-list image, PDF16/printed12",
+        "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+        "normalizedIpa": "ˈvɒlvəʊ",
+        "normalization": "Printed stress apostrophe and vowel-length colon normalized to IPA stress and length symbols",
+        "externalBrandPronunciationCertification": false,
+        "realAudioVerified": false
+      }
     },
     {
       "id": "peugeot-car-brand",
@@ -244,7 +253,8 @@
       ],
       "editorialReview": "a Ford 指车辆，浅滩义保留独立。",
       "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
-      "contentSha256": "544d43c0f51f25e2d2be05c709bfa750ea4063f6716dc869d61209b260f0d164"
+      "contentSha256": "0f68320ba25b3609287f76dead4881d7237e5e480389b985dafb8e5dd2f52c32",
+      "reviewFollowup": "Independent Codex review identified this item; root corrected and rechecked sentence/translation or source IPA. Human certification remains false."
     },
     {
       "id": "fiat-car-brand",
@@ -274,7 +284,16 @@
       ],
       "editorialReview": "Fiat 品牌须显示菲亚特释义，不使用 fiat 命令义。",
       "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
-      "contentSha256": "135a14dd16c2acb5c21b0aaf416f994cc896b7067ba670ec9e0b4cc87e8c9f67"
+      "contentSha256": "45b5bd63b947f802ec49197b737f491ba502c168f7b4ca121baa330d3c41356f",
+      "reviewFollowup": "Independent Codex review identified this item; root corrected and rechecked sentence/translation or source IPA. Human certification remains false.",
+      "ipaReview": {
+        "source": "Original NCE1 Lesson 6 word-list image, PDF16/printed12",
+        "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+        "normalizedIpa": "ˈfiːæt",
+        "normalization": "Printed stress apostrophe and vowel-length colon normalized to IPA stress and length symbols",
+        "externalBrandPronunciationCertification": false,
+        "realAudioVerified": false
+      }
     }
   ],
   "remainingScope": [
@@ -286,6 +305,12 @@
     "reviewer": "independent Codex content agent",
     "scope": "all 9 English sentences, Chinese translations, noun usage, collocations, source association and exclusions",
     "changes": "Toyota cousin relationship removed from both languages; no present company facts asserted",
+    "humanCertification": false
+  },
+  "independentReview": {
+    "reviewer": "Independent Codex /root/saved_batch_content_audit",
+    "status": "passed-after-followup-fixes",
+    "report": "docs/verification/vocabulary-independent-review.json",
     "humanCertification": false
   }
 }

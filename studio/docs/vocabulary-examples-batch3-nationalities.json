@@ -425,7 +425,8 @@
       ],
       "editorialReview": "Italian 修饰 coffee maker；译文意大利产的对应产地属性，未宣称某一现实品牌产地。",
       "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
-      "contentSha256": "4a2d077b49e70cbf3f4a1276f55399a17c76bd17e8eea80ee8e474db4d3e079f"
+      "contentSha256": "3fb8821b9c566737170aad718682baff8a76ca62f3c3f419554408c66b402301",
+      "reviewFollowup": "Independent Codex review identified this item; root corrected and rechecked sentence/translation or source IPA. Human certification remains false."
     },
     {
       "id": "italian-language-adjective",
@@ -529,6 +530,12 @@
     "reviewer": "root Codex",
     "scope": "all 14 sentences, Chinese, POS, countability, collocations, source and exclusion labels",
     "changes": "English teaching definition now specifies England while retaining the source wording as an annotation",
+    "humanCertification": false
+  },
+  "independentReview": {
+    "reviewer": "Independent Codex /root/saved_batch_content_audit",
+    "status": "passed-after-followup-fixes",
+    "report": "docs/verification/vocabulary-independent-review.json",
     "humanCertification": false
   }
 }

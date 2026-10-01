@@ -8,7 +8,7 @@ const root=new URL('../',import.meta.url),pnpmRoot=new URL('node_modules/.pnpm/'
 const builder=(await readdir(pnpmRoot)).find(name=>/^esbuild@\d+\.\d+\.\d+$/.test(name));
 assert(builder,'Install the locked project dependencies before running source checks');
 const {build}=await import(new URL(`${builder}/node_modules/esbuild/lib/main.js`,pnpmRoot));
-const harnessSource=`export const harness={states:[],cursor:0,writes:[],route:{},enrolled:false,enrolledChecks:[],open:()=>{}};`;
+const harnessSource=`export const harness={states:[],cursor:0,writes:[],route:{},enrolled:false,enrolledChecks:[],speechCalls:[],open:()=>{}};`;
 const mocks={
  'test:harness':harnessSource,
  'react':`import {harness as h} from 'test:harness';export const useEffect=()=>{},useMemo=f=>f(),useRef=v=>({current:v}),createContext=()=>({Provider:'ContextProvider'}),useContext=()=>h.open;export function useState(initial){const index=h.cursor++;if(!(index in h.states))h.states[index]=initial;return [h.states[index],value=>{h.states[index]=typeof value==='function'?value(h.states[index]):value;h.writes.push({index,value:h.states[index]})}]}`,
@@ -21,7 +21,7 @@ const mocks={
  './study-path':`export const bookNames={NCE1:'第一册',NCE2:'第二册',NCE3:'第三册',NCE4:'第四册'};`,
  './lesson-context':`export const loadPages=()=>{throw Error('Source checks must not fetch textbook material')};`,
  './language':`export const loadDictionary=()=>{throw Error('Source checks must not fetch dictionary material')},loadLessonLanguage=()=>{throw Error('Source checks must not fetch lesson material')},findWord=()=>undefined;`,
- './speech':`export const speak=()=>{};`,
+ './speech':`import {harness} from 'test:harness';export const speak=word=>harness.speechCalls.push(word);`,
  './playback-speed':`export const PlaybackSpeed='PlaybackSpeed';`,
  './navigation':`export const navigate=()=>{};`,
  './map-connection':`export const mapUnitId=()=>undefined;`,
@@ -39,7 +39,7 @@ await build({
  }}],
 });
 const {TextbookVocabularyBrowser,WordLookupProvider,WordLookupButton,WordText,initial,ieltsFlashcardExamples,ieltsFlashcardDescription,harness:h}=await import(output.href);
-const reset=(states,route)=>Object.assign(h,{states,cursor:0,writes:[],route,enrolledChecks:[],open:()=>{}});
+const reset=(states,route)=>Object.assign(h,{states,cursor:0,writes:[],route,enrolledChecks:[],speechCalls:[],open:()=>{}});
 function elements(node){if(!node||typeof node!=='object')return [];if(Array.isArray(node))return node.flatMap(elements);return [node,...elements(node.props?.children)]}
 const find=(tree,predicate)=>{const item=elements(tree).find(predicate);assert(item,'Expected component element missing');return item};
 
@@ -117,6 +117,40 @@ for(const [word,raw,expected,id] of [['Fiat','n. 命令, 严命, 许可','n. 菲
  assert.deepEqual(state,before,'Reading or explicitly passing a new teaching word never edits legacy state by itself');
 }
 const fiatEntry={word:'fiat',ipa:'test',meaning:'n. 命令'};
+for(const [word,lesson,raw,selected,target] of [
+ ['his',12,'pron. 他的',{en:'This bag is mine, and the one beside it is his.',zh:'这个包是我的，旁边那个是他的。'},'his-possessive-determiner'],
+ ['old',10,'n. 以前\\na. 年老的, 旧的',{en:'This old coat has a torn pocket, but it is still warm.',zh:'这件旧大衣的一个口袋破了，但穿着仍然暖和。'},'old-age'],
+ ['make',6,'vt. 制造, 安排',{en:'Making a bookcase',zh:'制作一个书架',source:{book:'NCE1',lesson:37}},'make-product-brand'],
+]){
+ const selection={word,example:selected.en,exampleTranslation:selected.zh,exampleSource:selected.source,sources:[{kind:'nce',book:'NCE1',lesson}]};
+ reset([selection,{word,meaning:raw},false,'',false],{});let saved;
+ const lookup=WordLookupProvider({children:null,onAdd:word=>{saved=word}});
+ const usage=find(lookup,node=>typeof node.type==='function'&&node.type.name==='VocabularyExamples');
+ assert(usage.props.examples.some(example=>example.en===selected.en),'The selected original or textbook context stays available for reading');
+ const targetExample=usage.props.examples.find(example=>example.id===target);assert(targetExample);
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+ assert.equal(saved.example,targetExample.en,'Source-target enrollment cannot save a selected sentence from another sense');
+ assert.equal(saved.exampleTranslation,targetExample.zh);
+ assert.equal(h.states[0].example,selected.en,'Explicit target enrollment does not rewrite the selected or existing context');
+}
+
+// The genuine make source list can fall back from Lesson 6 to the Lesson 37
+// manufacturing title. Exercise the loaded-context state in the actual row:
+// it stays labelled as Lesson 37, while add and lookup select the brand target.
+{
+ const other={book:'NCE1',lesson:37,title:'',pages:[]},catalog={lessons:[{...lesson6,key:'NCE1-6',words:[{word:'make',forms:[]}]},{...other,key:'NCE1-37',words:[{word:'make',forms:['making']}]}],terms:[{key:'make',word:'make',sources:[lesson6,other]}],entries:2};
+ reset([catalog,'',0,{make:{word:'make',meaning:'vt. 制造'}},false,false,0,null],{view:'words',book:'NCE1',lesson:6,tab:'book'});let saved;
+ const tree=TextbookVocabularyBrowser({state,onAdd:word=>{saved=word}}),row=find(tree,node=>typeof node.type==='function'&&node.type.name==='VocabularyRow');
+ const context={en:'Making a bookcase',zh:'制作一个书架',source:{book:'NCE1',lesson:37}};
+ h.states[h.cursor]={key:'make:'+JSON.stringify(row.props.hints),busy:false,context};
+ const rendered=row.type(row.props),usage=find(rendered,node=>typeof node.type==='function'&&node.type.name==='VocabularyExamples');
+ assert(usage.props.examples.some(example=>example.en===context.en&&example.origin==='textbook'&&example.source.lesson===37),'Cross-course context keeps its actual provenance');
+ const target=usage.props.examples.find(example=>example.id==='make-product-brand');assert(target);
+ find(rendered,node=>node.type==='button'&&node.props.className?.includes('vocabulary-enroll')).props.onClick();
+ assert.equal(saved.meaning,'n. （产品的）牌子');assert.equal(saved.example,target.en);assert.equal(saved.exampleTranslation,target.zh);
+ const wordLookup=find(rendered,node=>node.type===WordLookupButton);assert.equal(wordLookup.props.example,target.en);assert.equal(wordLookup.props.exampleSource,undefined,'An original target cannot acquire the other textbook sentence\'s provenance');
+ assert.deepEqual(saved.sources,[{kind:'nce',book:'NCE1',lesson:6}]);assert.deepEqual(state,before);
+}
 for(const [word,lesson,raw,expected,id] of [
  ['old',10,'n. 以前, 往昔\\na. 年老的, 古老的','adj. 老的','old-age'],
  ['her',12,'pron. 她的, 她','possessive adjective 她的','her-possessive-determiner'],
@@ -142,6 +176,20 @@ find(unrelatedLookup,node=>node.type==='button'&&node.props.className==='btn').p
 assert.equal(unrelatedFiat.meaning,fiatEntry.meaning,'An unrelated lesson cannot apply a brand definition');
 assert.equal(unrelatedFiat.example,'','An unrelated dictionary meaning cannot enroll a brand example merely because the lookup can display other reviewed uses');
 assert.equal(unrelatedFiat.exampleTranslation,undefined);
+
+for(const [word,rawIpa,expected] of [['Fiat','ˈfaɪæt','ˈfiːæt'],['Volvo','ˈvɔlvəj','ˈvɒlvəʊ']]){
+ const key=word.toLowerCase(),entry={word:key,meaning:word==='Fiat'?'n. 命令':'n. 沃尔沃',ipa:rawIpa};
+ const catalog={lessons:[{...lesson6,key:'NCE1-6',words:[{word,forms:[]}]}],terms:[{key,word,sources:[lesson6]}],entries:1};
+ reset([catalog,'',0,{[key]:entry},false,false,0,null],{view:'words',book:'NCE1',lesson:6,tab:'book'});let saved;
+ const tree=TextbookVocabularyBrowser({state,onAdd:word=>{saved=word}}),row=find(tree,node=>typeof node.type==='function'&&node.type.name==='VocabularyRow'),rendered=row.type(row.props);
+ const ipa=find(rendered,node=>node.props?.className==='vocabulary-ipa');assert.equal([ipa.props.children].flat().join(''),'/'+expected+'/');assert.equal(ipa.props.title,'原书词表音标');
+ find(rendered,node=>node.type==='button'&&node.props.className?.includes('vocabulary-enroll')).props.onClick();assert.equal(saved.ipa,expected);
+ reset([{word,example:'',sources:saved.sources},entry,false,'',false],{});let lookupWord;
+ const lookup=WordLookupProvider({children:null,onAdd:word=>{lookupWord=word}});
+ assert.equal(find(lookup,node=>node.props?.className==='lookup-ipa').props.children,'/'+expected+'/');
+ find(lookup,node=>node.type==='button'&&node.props.className==='text-btn').props.onClick();assert.deepEqual(h.speechCalls,[word],'Pronunciation receives the displayed proper name; this checks input, not real audio');
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();assert.equal(lookupWord.ipa,expected);
+}
 
 // Reviewed extensions remain visible in the full lookup even when the coarse
 // dictionary omits a collective noun. The default add still uses the lesson's

@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-01T20:18:12.099Z",
+  "reviewer": "Independent Codex /root/saved_batch_content_audit",
+  "result": "passed-after-followup-fixes",
+  "savedContentCommits": [
+    "de4ab4f88b6b3ef00e47f6bf4191a5bc8e5cc230",
+    "84a8040a78d95627ec24f72dc7750c9feca34535"
+  ],
+  "requireFollowupCommit": true,
+  "scope": "All 47 newly registered examples from the two saved batches; source-scoped display and add callbacks. Earlier 52 examples are retained, not newly teacher-reviewed.",
+  "files": [
+    {
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentFileSha256": "035c58a9352c9cf18d8fb957d8896412a72f8dbfb7e3520f3114a907eb516330",
+      "ledger": "docs/vocabulary-examples-batch3-nationalities.json",
+      "ledgerSha256": "66e6c10702f1632ffea668d1bdb2f13c4c538fcc9b9072ac9cea3e1271d6a2e2",
+      "headwords": 4,
+      "examples": 14,
+      "targetExamples": 4,
+      "extensionExamples": 10,
+      "entries": [
+        {
+          "id": "swedish-country-adjective",
+          "contentSha256": "6a8ecb959ba481c0ad550698b9cf5b8d388c3fe58a82d9ef1e741a5332acab47"
+        },
+        {
+          "id": "swedish-language-adjective",
+          "contentSha256": "d7ccaf42d5af4b25a0e34a16513594f685b3bd6b9156450299e9c65b4555ec41"
+        },
+        {
+          "id": "swedish-language-noun",
+          "contentSha256": "669275b7714c085adfea214f88e887abf4138e268262fe2c87f20ed16c25e437"
+        },
+        {
+          "id": "swedish-people-collective",
+          "contentSha256": "a5b0515f956a8c3f8c9993d50bccd4a6775e60df2f179a343a0510941864f292"
+        },
+        {
+          "id": "english-country-adjective",
+          "contentSha256": "fe07f90404b2fafb9ed28398e9807c02432332f3561d44e3f4aecf30a2bc7aec"
+        },
+        {
+          "id": "english-language-adjective",
+          "contentSha256": "655b5123ab50bd9c4acec4d1c0ba9f77fcd3cdced70a85e84e91a98506596ba3"
+        },
+        {
+          "id": "english-language-noun",
+          "contentSha256": "0512feda0e0ba101ecf25d982fa0e16c12109cde9a8a1b87e758386a3e02c86c"
+        },
+        {
+          "id": "english-people-collective",
+          "contentSha256": "c80d3e45038eb264f41ca091ec2316df522b648734792777013aeebf8a6fc194"
+        },
+        {
+          "id": "american-country-adjective",
+          "contentSha256": "de19ced7c6b7674d29576cc8bdeb5b9e9b70eb383f994fe5342bf42732a299a7"
+        },
+        {
+          "id": "american-person-noun",
+          "contentSha256": "d41d1cad26b864e192dd3a290ce05991fecbf4aa89f5f18cd393106dabf4730a"
+        },
+        {
+          "id": "italian-country-adjective",
+          "contentSha256": "3fb8821b9c566737170aad718682baff8a76ca62f3c3f419554408c66b402301"
+        },
+        {
+          "id": "italian-language-adjective",
+          "contentSha256": "b1d7b5fc236af5ad87c4112e5687410c08abf22cb79302ee8bb1d497f18835ab"
+        },
+        {
+          "id": "italian-person-noun",
+          "contentSha256": "b1c1ea9fc0867b14f1d7efd4865188313fcd460dd66595a06e3349ac74bdc97a"
+        },
+        {
+          "id": "italian-language-noun",
+          "contentSha256": "634f8defa9bc94dbd1f80b7e8003b4e6026929c792fdc74899ed357a53c17466"
+        }
+      ]
+    },
+    {
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentFileSha256": "c97ed9eb0be130fc31b6fe92ca7dd73770e816a8009640f1ba1390ef2ae2f8c6",
+      "ledger": "docs/vocabulary-examples-batch3-brands.json",
+      "ledgerSha256": "e48ccfeffac629daa4fe79ff4cd299b08efbd5c0c3da85d8eb1fd05d56eae18b",
+      "headwords": 9,
+      "examples": 9,
+      "targetExamples": 9,
+      "extensionExamples": 0,
+      "entries": [
+        {
+          "id": "make-product-brand",
+          "contentSha256": "25bc538c30f9fc44db6875ce6f77f04b9a845fc223ce3e5ce18ce49c776e5b9a"
+        },
+        {
+          "id": "volvo-car-brand",
+          "contentSha256": "59b174d83bb58fab27e665246bad273a0c66cc5da6409c9f2cfceed7d1634757"
+        },
+        {
+          "id": "peugeot-car-brand",
+          "contentSha256": "33656cb21d5e9ccdadc80d6ff20cb4c00a66f6beb3cd248b70d1374fb66a51b4"
+        },
+        {
+          "id": "mercedes-car-brand",
+          "contentSha256": "2810ab9d5e2e2f57bc73453c15626d031327bf69fd6e39338f7337bb6ab584f9"
+        },
+        {
+          "id": "toyota-car-brand",
+          "contentSha256": "04d37701d879174e69d5984fb09efdeeac1d9319034256893778408a6c47eee8"
+        },
+        {
+          "id": "daewoo-car-brand",
+          "contentSha256": "3e11c77bf566a608fbc6591d85160b8fc20d9cbd7e58af991dcddc033a64187c"
+        },
+        {
+          "id": "mini-car-brand",
+          "contentSha256": "e37ffc9f7457aa8a361ece625c107e0201b48056177696dbdcbeff76f97332b8"
+        },
+        {
+          "id": "ford-car-brand",
+          "contentSha256": "0f68320ba25b3609287f76dead4881d7237e5e480389b985dafb8e5dd2f52c32"
+        },
+        {
+          "id": "fiat-car-brand",
+          "contentSha256": "45b5bd63b947f802ec49197b737f491ba502c168f7b4ca121baa330d3c41356f"
+        }
+      ]
+    },
+    {
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentFileSha256": "422ab6c2e94defd56048423c189ebe5d27a2dcdac36abef87d351ce80b26c2f8",
+      "ledger": "docs/vocabulary-examples-batch4-people-adjectives.json",
+      "ledgerSha256": "ff1e1f02aab5e27f4cda45515074276a7690dd6e438a2c2ff89e3e0bdc119d0a",
+      "headwords": 14,
+      "examples": 24,
+      "targetExamples": 14,
+      "extensionExamples": 10,
+      "entries": [
+        {
+          "id": "taxi-driver-profession",
+          "contentSha256": "87e2435f95400df8928c86fabf1976375c97ec4bef41ecb17a99198f2fc000df"
+        },
+        {
+          "id": "old-age",
+          "contentSha256": "22ebf905b5b7284183b9ce0f5514303d6694c058f88ecc6a749c3724a9f86802"
+        },
+        {
+          "id": "old-used",
+          "contentSha256": "caeb9fc0ef6b243eb11e98ef1d98d808bddac1b0aeef4a304b27aff2cb382b1f"
+        },
+        {
+          "id": "old-ancient",
+          "contentSha256": "b241adf8baa6aa73adf76a4fcc65dc51e95721e1cb44e0fb953c7e25145c2872"
+        },
+        {
+          "id": "short-height",
+          "contentSha256": "bd1cfdc60554fa417131eb48a9beb86d380dba5aa4a68799eb8e508f1bbe5f8e"
+        },
+        {
+          "id": "short-length",
+          "contentSha256": "4e17bc354b8ec70ba9180bcef539bcf7009c20fec4e6ebf76c4cd12f6090348e"
+        },
+        {
+          "id": "short-duration",
+          "contentSha256": "5236e1d7c772946b3de3ec9e4fca96cd16bf6a3ffc741f4afd762e695fd4d21e"
+        },
+        {
+          "id": "short-supply",
+          "contentSha256": "3ad6728a72437e7b60d2e81f30c124037ccdf6ca126d22037e0adfa1a9b898e6"
+        },
+        {
+          "id": "tall-height",
+          "contentSha256": "f2be919e1901fa9725e77274fb6d550dfae44613f61542899bb88f2b178bd469"
+        },
+        {
+          "id": "thin-body",
+          "contentSha256": "3c1909a13e83cf63011d7184451bdc94614ea4c0bba189a7ee7b7bf1c815e908"
+        },
+        {
+          "id": "thin-layer",
+          "contentSha256": "6567f553acdbdf88943ff815d0ed85ac36911121ee4365d87a8e69d2023bd242"
+        },
+        {
+          "id": "thin-wire",
+          "contentSha256": "9cd0c446dc3f2fcf07f4dabcf0890304eccf3231503d01a88fe01125b2ca716e"
+        },
+        {
+          "id": "woman-adult",
+          "contentSha256": "c96f4507c680415fe4364d3d27828eedf659a5f6cd8298894e1be696d5142dc0"
+        },
+        {
+          "id": "young-age",
+          "contentSha256": "ac7cbb744daf545647edfdd5e1904e1addcb434d8f54ac33d34c2853e425aa1c"
+        },
+        {
+          "id": "young-offspring",
+          "contentSha256": "250b0656d34241341e71443b8d70d211c5931c6d64968b70c541b5584525557f"
+        },
+        {
+          "id": "blouse-clothing",
+          "contentSha256": "94c6c88be5846415baad4489d217379abe068255a0f75d5f222eb672e0c585ee"
+        },
+        {
+          "id": "brother-family",
+          "contentSha256": "2d3760743f7ba4472ec11050b742c2e2319c9aca36d2c5f67637a3f15b957875"
+        },
+        {
+          "id": "father-parent",
+          "contentSha256": "9fe33f45fa8ddb68310ced494b59e359e0df42bda713329c4e273ee81a951800"
+        },
+        {
+          "id": "her-possessive-determiner",
+          "contentSha256": "90626b2489f3b8592b599686b9a997c1b13e6e87203cefa059bba3c945852edb"
+        },
+        {
+          "id": "her-object",
+          "contentSha256": "d60972d98e6a45b25fc0b5ddc2d2612f30009c4253c632c411773e614971fbb9"
+        },
+        {
+          "id": "his-possessive-determiner",
+          "contentSha256": "f3c2627071b92a7cf25996fb6ee9bb9025c24057761a3271bb34824a9763b292"
+        },
+        {
+          "id": "his-possessive-pronoun",
+          "contentSha256": "2217b29850a72cc0d47a4402687c74c9b0479a4db75fd46825c621419ae1e76a"
+        },
+        {
+          "id": "mother-parent",
+          "contentSha256": "54a23cf7859f93da456d2dcbda9ff39a04d7abd1ffaf7ade4ee81e3eb882adc6"
+        },
+        {
+          "id": "sister-family",
+          "contentSha256": "83eea387d3e031feefa2a4f7f46d7a99747e66213b051ecb053ac9970f09d9b4"
+        }
+      ]
+    }
+  ],
+  "editorialChecks": [
+    "natural English",
+    "Chinese translation",
+    "part of speech",
+    "collocation",
+    "source association and exclusions"
+  ],
+  "sourceEvidence": [
+    {
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "pdfPage": 16,
+      "printedPage": 12,
+      "sha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9"
+    },
+    {
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "pdfPage": 20,
+      "printedPage": 16,
+      "sha256": "5e6d7336213340a1032950299a363358d03f5713162e7af0eddc3dd690fba75a"
+    },
+    {
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "pdfPage": 24,
+      "printedPage": 20,
+      "sha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "pdfPage": 28,
+      "printedPage": 24,
+      "sha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    }
+  ],
+  "followupFixes": [
+    {
+      "id": "italian-country-adjective",
+      "result": "My elder sister now corresponds exactly to 我姐姐."
+    },
+    {
+      "id": "ford-car-brand",
+      "result": "日出前 now corresponds to before sunrise."
+    },
+    {
+      "id": "fiat-car-brand",
+      "result": "Source-list IPA normalized to ˈfiːæt; content hash re-reviewed."
+    },
+    {
+      "id": "volvo-car-brand",
+      "result": "Source-list IPA normalized to ˈvɒlvəʊ; content hash re-reviewed."
+    },
+    {
+      "id": "taxi-driver-profession",
+      "result": "Printed POS recorded as null; editorially inferred POS recorded separately."
+    },
+    {
+      "callback": "his-possessive-pronoun selected with source Lesson 12 determiner target",
+      "result": "Reading context remains visible; enrollment saves the corresponding determiner target original."
+    },
+    {
+      "callback": "old-object selected with source Lesson 10 age target",
+      "result": "Reading context remains visible; enrollment saves the corresponding age target original."
+    },
+    {
+      "callback": "make manufacturing context from actual Lesson 37 with source Lesson 6 brand target",
+      "result": "Actual Lesson 37 context and label remain visible; enrollment saves brand target original and Lesson 6 scope."
+    }
+  ],
+  "independentChecks": {
+    "method": "Read-only inspection and in-memory esbuild write:false execution of the real TSX callbacks with hook stubs; no browser or user progress reads.",
+    "contentHashesPassed": 47,
+    "positiveLabelsPassed": 47,
+    "excludedLabelsPassed": 174,
+    "crossSenseEnrollmentCallbacksPassed": 3,
+    "sourceIpaDisplayAndEnrollmentCallbacksPassed": 4,
+    "speechRequestKeepsBrandCase": true,
+    "speechRequestIsActualAudioAcceptance": false,
+    "retainedLegacyCueWords": [
+      "excuse",
+      "pardon",
+      "busy",
+      "housewife",
+      "clean",
+      "lazy"
+    ],
+    "retainedLegacyFieldsByteIdenticalExceptMatchingCues": true
+  },
+  "humanCertification": false,
+  "browserVerified": false,
+  "actualAudioVerified": false,
+  "allTextbookSenseCoverageCertified": false,
+  "unregisteredDraftsReviewed": false,
+  "unregisteredDraftsCounted": false,
+  "personalProgressRead": false,
+  "reviewerWroteFiles": false
+}

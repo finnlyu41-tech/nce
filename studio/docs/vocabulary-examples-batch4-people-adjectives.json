@@ -146,7 +146,7 @@
       "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
       "sourcePageImageSha256": "5e6d7336213340a1032950299a363358d03f5713162e7af0eddc3dd690fba75a",
       "textbookWordListMeaning": "出租汽车司机",
-      "textbookWordListPartOfSpeech": "noun phrase",
+      "textbookWordListPartOfSpeech": null,
       "meaningForCheck": "出租汽车司机",
       "excludedMeaningLabels": [
         "出租汽车",
@@ -165,7 +165,8 @@
       "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
       "teachingDefinition": "n. 出租汽车司机",
       "contentSha256": "87e2435f95400df8928c86fabf1976375c97ec4bef41ecb17a99198f2fc000df",
-      "sourcePageSha256": "5e6d7336213340a1032950299a363358d03f5713162e7af0eddc3dd690fba75a"
+      "sourcePageSha256": "5e6d7336213340a1032950299a363358d03f5713162e7af0eddc3dd690fba75a",
+      "editoriallyInferredPartOfSpeech": "noun phrase: occupation name; no part-of-speech label printed for this entry"
     },
     {
       "id": "old-age",
@@ -1009,6 +1010,12 @@
       "Her keys translation keeps leave without inventing an accidental loss",
       "Possessive determiner and independent pronoun select separate displays under their declared grammar labels"
     ],
+    "humanCertification": false
+  },
+  "independentReview": {
+    "reviewer": "Independent Codex /root/saved_batch_content_audit",
+    "status": "passed-after-followup-fixes",
+    "report": "docs/verification/vocabulary-independent-review.json",
     "humanCertification": false
   }
 }

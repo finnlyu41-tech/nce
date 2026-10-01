@@ -130,6 +130,13 @@ try{
  assert.equal(reads.length,1,'Repeated sources read the lesson once');
  assert.equal(await m.loadVocabularyContext('definitely-missing-word',[{book:'NCE1',lesson:1}]),undefined,'Missing words never receive unrelated context');
  assert.equal(reads.length,1,'The existing lesson cache is reused');
+ const sourceCatalog=m.buildVocabularyCatalog(JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.json',root),'utf8')));
+ const make=sourceCatalog.terms.find(term=>term.key==='make');assert(make);
+ const hints=make.sources.map(source=>({book:source.book,lesson:source.lesson,forms:sourceCatalog.lessons.find(lesson=>lesson.book===source.book&&lesson.lesson===source.lesson).words.find(word=>m.vocabularyKey(word.word)==='make').forms}));
+ const makeContext=await m.loadVocabularyContext('make',hints);
+ assert.equal(makeContext.en,'Making a bookcase');assert.equal(makeContext.zh,'制作一个书架');
+ assert.deepEqual(makeContext.source,{book:'NCE1',lesson:37},'The real cross-course lexical fallback has a manufacturing sense, rather than the Lesson 6 brand target');
+ assert.equal(m.reviewedTeachingDefinition('make',[{book:'NCE1',lesson:6}]),'n. （产品的）牌子');
 }finally{globalThis.fetch=fetchBefore}
 
 const pageIndex=JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.json',root),'utf8'));

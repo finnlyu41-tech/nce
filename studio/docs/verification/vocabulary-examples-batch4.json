@@ -60,7 +60,6 @@
     "git diff --check"
   ],
   "notRunForThisBatch": [
-    "full online/offline build after the new determiner/POS helper change",
     "browser, narrow screens, audio or real-day checks",
     "named human teacher review"
   ],
@@ -86,5 +85,56 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     }
   ],
-  "checkpoint": "User requested stopping new content and returning the saved boundary. Other unregistered fragments stay outside this commit."
+  "checkpoint": "New content remains stopped. Unregistered fragments stay outside the saved commits. Exact snapshot builds are now complete; merge the separately saved independent-review follow-up as well.",
+  "snapshotCommit": "84a8040a78d95627ec24f72dc7750c9feca34535",
+  "exactSnapshotFollowup": {
+    "recordedAt": "2026-10-01T20:18:12.099Z",
+    "commit": "84a8040a78d95627ec24f72dc7750c9feca34535",
+    "tree": "809e47b55ca656d97376de938d0213d6fec55bd2",
+    "worktree": "validation-vocabulary-batch4",
+    "trackedFilesCleanBeforeAndAfter": true,
+    "unregisteredDraftsPresent": false,
+    "commandsPassed": [
+      "corepack pnpm package:online",
+      "corepack pnpm verify:online",
+      "corepack pnpm package:static",
+      "corepack pnpm check",
+      "corepack pnpm verify:vocabulary-examples",
+      "corepack pnpm verify:flashcards"
+    ],
+    "onlineFiles": 1950,
+    "materials": 556,
+    "logHashes": [
+      {
+        "path": "validation-vocabulary-batch4/studio/work/vocabulary-coverage/build-online-84a8040-clean.log",
+        "sha256": "20015de5ef9f22ff532e11e5666109fbb1b7d6ddd8d9253427bb202705a2cb2e"
+      },
+      {
+        "path": "validation-vocabulary-batch4/studio/work/vocabulary-coverage/online-84a8040-clean.log",
+        "sha256": "5ffe70db14d5c7ba163a5e6c50187ca393d90406462ee5b6bc6b054626e14f64"
+      },
+      {
+        "path": "validation-vocabulary-batch4/studio/work/vocabulary-coverage/build-offline-84a8040-clean.log",
+        "sha256": "8bd372c4ef13f90c51c08da230dc659f7b7db6de8b0bd0c7b4af3bf14b6c079c"
+      },
+      {
+        "path": "validation-vocabulary-batch4/studio/work/vocabulary-coverage/types-84a8040-clean.log",
+        "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+      },
+      {
+        "path": "validation-vocabulary-batch4/studio/work/vocabulary-coverage/examples-84a8040-clean.log",
+        "sha256": "3d2c4e3cdc9f29736f96deb031da2340bd520847f2167ea4321a0136b7dc1344"
+      },
+      {
+        "path": "validation-vocabulary-batch4/studio/work/vocabulary-coverage/flashcards-84a8040-clean.log",
+        "sha256": "52d2cd7b113f79c4ff7500d39f482307d00bf87e145869f220b0cbd50a204db7"
+      }
+    ],
+    "compatibility": {
+      "mainCommit": "b46812edff731dabe9c302d2147698c34f132621",
+      "mergeTree": "809e47b55ca656d97376de938d0213d6fec55bd2",
+      "conflicts": false
+    },
+    "scopeLimit": "This validates the exact saved 84a8040 snapshot. The subsequently reviewed translation, IPA and cross-sense enrollment fixes are a required separate follow-up, documented in vocabulary-review-followup.json."
+  }
 }

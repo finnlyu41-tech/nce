@@ -32,14 +32,15 @@ function VocabularyRow({word,number,entry,enrolled,example,exampleSource,hints=[
  const contextKey=word+':'+JSON.stringify(hints),loaded=lookup.key===contextKey?lookup:undefined;
  const context=example?{...example,source:exampleSource}:loaded?.context;
  const reviewed=reviewedTeachingDefinition(word,teachingSources),recordMeaning=reviewed||entry?.meaning||'';
- const ipa=reviewedTeachingIpa(word,teachingSources)||entry?.ipa;
+ const reviewedIpa=reviewedTeachingIpa(word,teachingSources),ipa=reviewedIpa||entry?.ipa;
  const enrollmentSources:Word['sources']=reviewed?reviewedTeachingSources(word,teachingSources).map(source=>({kind:'nce',...source})):sources;
  const meanings=recordMeaning.split('\n').filter(Boolean),matched=meanings.find(line=>query.trim()&&line.toLowerCase().includes(query.trim().toLowerCase())),meaning=matched||meanings[0]||'';
- const examples=usageExamples(word,meaning,context?[context]:[],context?.source,query),chosen=context||examples[0];
+ const examples=usageExamples(word,meaning,context?[context]:[],context?.source,query);
+ const chosen=reviewed?usageExamples(word,reviewed).find(example=>example.origin==='original'):context||examples[0];
  async function readContext(){setLookup({key:contextKey,busy:true});try{const found=await loadVocabularyContext(word,hints);setLookup({key:contextKey,busy:false,context:found,missing:!found})}catch{setLookup({key:contextKey,busy:false,missing:true})}}
  return <article className="textbook-vocabulary-row">
-  <div className="vocabulary-word-main"><div className="vocabulary-word-heading">{number!==undefined&&<span className="vocabulary-word-number">{String(number).padStart(2,'0')}</span>}<WordLookupButton className="vocabulary-headword" word={word} example={chosen?.en} exampleTranslation={chosen?.zh} exampleSource={context?.source} sources={enrollmentSources}/><button className="icon-btn" aria-label={'朗读 '+word} onClick={()=>speak(word)}><Volume2 size={18}/></button></div>
-   {ipa&&<p className="vocabulary-ipa" lang="en">/{ipa.replace(/^\/+|\/+$/g,'')}/</p>}
+  <div className="vocabulary-word-main"><div className="vocabulary-word-heading">{number!==undefined&&<span className="vocabulary-word-number">{String(number).padStart(2,'0')}</span>}<WordLookupButton className="vocabulary-headword" word={word} example={chosen?.en} exampleTranslation={chosen?.zh} exampleSource={chosen===context?context?.source:undefined} sources={enrollmentSources}/><button className="icon-btn" aria-label={'朗读 '+word} onClick={()=>speak(word)}><Volume2 size={18}/></button></div>
+   {ipa&&<p className="vocabulary-ipa" lang="en" title={reviewedIpa?'原书词表音标':undefined}>/{ipa.replace(/^\/+|\/+$/g,'')}/</p>}
    <p className="vocabulary-meaning">{reviewed&&<span>已核对本课义项 · </span>}{meaning?meaning.slice(0,80)+(meaning.length>80?'…':''):'点词查义，或查看原书词表。'}</p>
    <VocabularyExamples examples={examples}/>
    {!context&&hints.length>0&&<button className="text-btn vocabulary-context-action" disabled={loaded?.busy} onClick={readContext}>{loaded?.busy?'正在读取双语原句…':loaded?.missing?'重查教材语境':'查看教材中的双语例句'}</button>}
