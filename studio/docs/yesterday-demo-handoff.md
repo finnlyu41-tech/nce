@@ -2,7 +2,7 @@
 
 独立入口：`public/demos/yesterday/index.html`。线上目标路径 `/demos/yesterday/`。零框架依赖、零远程请求、零音频／评分服务；这是一条过去时阅读与表达小闭环，不是雅思模拟或完整课程。
 
-文件已可运行，本机预览 `http://127.0.0.1:4317/demos/yesterday/`。发布须由统一主英语线程 `01a0f10c-ff5c-7aa1-8a42-8ee650bbb2f5` 串行处理；本补丁未自行发布。
+已由主线串行发布：[正式体验](https://finn-english-studio.pages.dev/demos/yesterday/)，版本 `2026-10-01-yesterday-demo-v12`，发布源码 `c602d8af34ad93c7720645857808a3bbdcb55c60`，独立部署 `20b1f624`。两域名 102 项公开回读通过；正式入口实际打开，脚本 MIME 正确，控制台无错误或警告。
 
 ## 接入与发布
 
@@ -39,4 +39,4 @@
 
 截图：[390 首屏](verification/yesterday-390-start.jpg)、[320 讲解](verification/yesterday-320-learn.jpg)、[320 换题](verification/yesterday-320-fresh.jpg)、[390 证据页](verification/yesterday-390-evidence-full.jpg)。
 
-尚待主线核实实际线上路径、既有响应头下 `.mjs` 的 MIME 类型、真手机浏览器运行及发布回执；未验证真实长期学习效果，未接音频。最小演示已完成，蓝图与四课样例另存，不是这次发布的前置。
+线上路径、既有响应头下 `.mjs` 的 MIME 类型与发布回执已由主线核实。真手机浏览器、真实长期学习效果尚未验证，未接音频。最小演示已完成，蓝图与四课样例另存，不是这次发布的前置。
