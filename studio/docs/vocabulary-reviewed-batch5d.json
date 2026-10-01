@@ -1,0 +1,2234 @@
+{
+  "schemaVersion": 1,
+  "batch": "nce1-reviewed-batch5d-countries-languages",
+  "baseCommit": "f23a75d00c00745449e62335051ace3d9b080564",
+  "savedDraft": {
+    "contentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+    "contentFileSha256": "2eef7aab2e8a6a9b17e534f6f40a670dbbe86f85a45cf8ab1e036702df6a88a8",
+    "ledger": "docs/vocabulary-examples-batch8-countries-languages.json",
+    "ledgerSha256": "5b7f0e40938012491b1ce418dfed795ebbb83cb631de11505a4fa94625672c04",
+    "originalHeadwords": 30,
+    "originalExamples": 40,
+    "originalDraftFilesChanged": false
+  },
+  "headwords": 30,
+  "senseExamples": 40,
+  "textbookTargetExamples": 27,
+  "textbookGrammarNormalizedExamples": 3,
+  "dictionaryExtensionExamples": 10,
+  "origin": "original",
+  "humanCertification": false,
+  "teacherCertification": false,
+  "realAudioChecked": false,
+  "browserChecked": false,
+  "reviewBasis": "Independent Codex saved-draft review: every ID inspected for its exact target sense, English naturalness, Chinese relation/quantity/time, POS, collocation and canonical source headword; actual two source images were opened. Matching checks use the existing helper without widening it.",
+  "sourceScope": "Associated word lists prove only the stated word/POS/printed gloss. Checked adjective/language extensions are original aids; source noun labels do not certify all homograph, person or language senses. Lesson 54 Indian/Thai entries and all other batches are outside this assignment. No sentence is a textbook quotation.",
+  "sourceEvidence": [
+    {
+      "book": "NCE1",
+      "lesson": 52,
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "src": "/lesson-pages/cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e.jpg",
+      "sha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "bytes": 263122,
+      "actualImageOpenedByIndependentReviewer": true,
+      "pdfPageBasis": "Existing image index uses one-based PDF page positions; matching image was actually opened and its printed page number read."
+    },
+    {
+      "book": "NCE1",
+      "lesson": 54,
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "src": "/lesson-pages/90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3.jpg",
+      "sha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "bytes": 228594,
+      "actualImageOpenedByIndependentReviewer": true,
+      "pdfPageBasis": "Existing image index uses one-based PDF page positions; matching image was actually opened and its printed page number read."
+    }
+  ],
+  "inputHashes": {
+    "assignment": "4a5649afdf87933e1ac1a9e8227e6b795ecbd242a3a9f3c3f5a4657dc67f963f",
+    "matchingHelper": "ca199f9b82b569988a5deb654ca9e3e86581a4c11175bfff5bcdb8f89484be14",
+    "lessonPageIndex": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596",
+    "dictionary": "41d983d5f8017035719842fad2275f949d39e348cdc6f50bf00ae0a9a9cee209"
+  },
+  "matchingCheckSummary": {
+    "contentHashes": 40,
+    "ownSensePositives": 40,
+    "meaningForCheckPositives": 40,
+    "excludedLabels": 233,
+    "canonicalHeadwordChecks": 40,
+    "sourceScopedDefinitionChecks": 30,
+    "exactPrintedTargetExamples": 27,
+    "grammarNormalizedExamples": 3,
+    "sourceIsolationChecks": 30,
+    "theUsSpellingBoundaries": 4,
+    "polishSourceIpa": true,
+    "helperChanged": false,
+    "writeFalse": true,
+    "registryChanged": false
+  },
+  "corrections": [
+    {
+      "id": "us-country",
+      "fields": [
+        "en"
+      ],
+      "beforeContentSha256": "eb37d6c08792623716ec059937db8706a4cec4b624ec0327857a0301ab9d9d70",
+      "afterContentSha256": "8f1528effdd6083dbd7eacffcb5a83f60dbd5bf7af0bcade18a89eafd55f026b",
+      "reason": "原书保留 the U.S. 的冠词、两个点号及大写；in the U.S. 为国家地点，不是代词 us。英文补 elder 对齐姐姐；studying、每周日打电话与中译一致。原页没有打印词性，n. 为编辑推断。"
+    },
+    {
+      "id": "australia-country",
+      "fields": [
+        "en"
+      ],
+      "beforeContentSha256": "e088a4bde0aaa7aa751e75b4be4e1b14d570cf2d571408628223022a0160f630",
+      "afterContentSha256": "632b9ed729f54eca9da11e39c099d8268d162cdabbc24209b6b6f02d481c15af",
+      "reason": "原表 n. 澳大利亚；new flat 的地点及 photo 的数量一致。英文补 elder 对齐哥哥，保留 his/my/us 的所属与收件关系。本例国家澳大利亚，不算整个大洋洲。"
+    },
+    {
+      "id": "canada-country",
+      "fields": [
+        "en",
+        "zh"
+      ],
+      "beforeContentSha256": "a3cdc988fa1eb82346f258dd233237e5c82b49dabb72ddae71ccc9f55d3af5c2",
+      "afterContentSha256": "6d8666d2d9e9eccbfde9bd5e58842824e8837a84d0f44d0822919741a8000746",
+      "reason": "原表 n. 加拿大；将未限定父母侧/长幼的 uncle 情境改为 former teacher，避免中译擅自指定叔叔。住在、每年、一张生日贺卡和收件对象与英文一致。"
+    },
+    {
+      "id": "polish-language-adjective",
+      "fields": [
+        "en",
+        "zh"
+      ],
+      "beforeContentSha256": "61a4106364394886c72046d01c536aba479609ead7882e8eff29af7e9c4c680f",
+      "afterContentSha256": "09d99050b0e8342b114c84b5bc510d95e3bb04e46bf142eb7bc84c2ce7191123",
+      "reason": "本例 Polish instructions 为语言形容词扩展，不计入打印人物目标。原 grandmother 与祖母存在父母侧关系推断，改为 neighbour/邻居；easier to follow 的比较语义中译准确。"
+    }
+  ],
+  "remainingVerification": [
+    "Root must register the assigned copy and verify canonical headword UI enrollment callbacks and extension display in the combined checkpoint.",
+    "No complete build, browser, real audio or human/teacher certification was run by this independent content reviewer."
+  ],
+  "entries": [
+    {
+      "id": "us-country",
+      "word": "the U.S.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "美国",
+      "textbookWordListPartOfSpeech": null,
+      "sourcePrintedMeaning": "美国",
+      "sourcePrintedPartOfSpeech": null,
+      "sourceCanonicalHeadword": "the U.S.",
+      "canonicalHeadwordKey": "the u.s.",
+      "meaningForCheck": "n. 美国",
+      "excludedMeaningLabels": [
+        "美国的",
+        "美国人",
+        "我们",
+        "adj. 美国",
+        "v. 美国"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原书保留 the U.S. 的冠词、两个点号及大写；in the U.S. 为国家地点，不是代词 us。英文补 elder 对齐姐姐；studying、每周日打电话与中译一致。原页没有打印词性，n. 为编辑推断。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "8f1528effdd6083dbd7eacffcb5a83f60dbd5bf7af0bcade18a89eafd55f026b",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "eb37d6c08792623716ec059937db8706a4cec4b624ec0327857a0301ab9d9d70",
+      "savedDraftChangedFields": [
+        "en"
+      ],
+      "dictionarySnapshot": {
+        "word": "the U.S.",
+        "ipa": "",
+        "meaning": "美国",
+        "source": "textbook"
+      },
+      "teachingDefinition": "n. 美国（the U.S.）",
+      "editoriallyInferredPartOfSpeech": {
+        "label": "n.",
+        "basis": "Proper country-name abbreviation in this sentence; no POS is printed on the source page."
+      }
+    },
+    {
+      "id": "brazil-country",
+      "word": "Brazil",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "巴西",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "巴西",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Brazil",
+      "canonicalHeadwordKey": "brazil",
+      "meaningForCheck": "n. 巴西",
+      "excludedMeaningLabels": [
+        "巴西的",
+        "巴西人",
+        "巴西坚果",
+        "adj. 巴西",
+        "v. 巴西"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 巴西；from Brazil 修饰一袋咖啡豆的产地，brought back 对应带回来，a bag 的数量一致。不是巴西人、国籍形容词或 Brazil nut。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "bf355eecb28cfa8d912a81536654b2cf9a4153c289278386c95fd5c16602e2af",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "bf355eecb28cfa8d912a81536654b2cf9a4153c289278386c95fd5c16602e2af",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Brazil",
+        "ipa": "brəˈzɪl",
+        "meaning": "n. 巴西"
+      },
+      "teachingDefinition": "n. 巴西"
+    },
+    {
+      "id": "holland-region",
+      "word": "Holland",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "荷兰",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "荷兰",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Holland",
+      "canonicalHeadwordKey": "holland",
+      "meaningForCheck": "n. 荷兰地区",
+      "excludedMeaningLabels": [
+        "荷兰的",
+        "荷兰人",
+        "荷兰语",
+        "荷兰全境",
+        "adj. 荷兰",
+        "v. 荷兰",
+        "adj. 荷兰地区",
+        "v. 荷兰地区"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 荷兰保留作证据；本例 Haarlem 地点落在北荷兰，地区教学释义有官方旅游与市政府支持。weekend 和 staying 的时间/住宿中译准确，不将该地域例算作荷兰全境或荷兰语的覆盖。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "51c1bde0ee7b894568003bcc5b55ec70ab1697eda0ee28296dbf0495968c7b0f",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "51c1bde0ee7b894568003bcc5b55ec70ab1697eda0ee28296dbf0495968c7b0f",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Holland",
+        "ipa": "ˈhɒlənd",
+        "meaning": "n. 荷兰"
+      },
+      "teachingDefinition": "n. 荷兰地区（原书简释：荷兰；现代国名为 the Netherlands）",
+      "sourceLabelCorrection": "Holland refers to North/South Holland in precise geography; old textbooks also use it for the Netherlands. The sentence is located in Haarlem in North Holland and does not generalise the name to all twelve provinces.",
+      "referenceUrls": [
+        "https://www.holland.com/global/tourism/getting-around/information/netherlands-vs-holland",
+        "https://haarlem.nl/werkenbij/over-de-organisatie"
+      ]
+    },
+    {
+      "id": "england-country",
+      "word": "England",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "英国",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "英国",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "England",
+      "canonicalHeadwordKey": "england",
+      "meaningForCheck": "n. 英格兰",
+      "excludedMeaningLabels": [
+        "英国",
+        "英国的",
+        "英格兰人",
+        "英语",
+        "adj. 英格兰",
+        "v. 英格兰"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原页 n. 英国简释不作为整个 UK 的等价词；教学释义限英格兰，ONS 将 England 列为 UK 组成部分。Bristol 的新办公室与 small flat 地点关系、中译一致；不是英语或英国人。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "b0e5584ae894f08a896a23b3ada4a9f174f58c84f6f339187b236fe15c76729a",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "b0e5584ae894f08a896a23b3ada4a9f174f58c84f6f339187b236fe15c76729a",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "England",
+        "ipa": "ˈɪŋɡlənd",
+        "meaning": "n. 英格兰\n[法] 英格兰, 英国"
+      },
+      "teachingDefinition": "n. 英格兰（原书简释：英国）",
+      "sourceLabelCorrection": "England means 英格兰, a constituent country within the UK. 原书英国简释 retained as evidence, not adopted as exact geography.",
+      "referenceUrls": [
+        "https://service-manual.ons.gov.uk/content/language/countries-and-regions"
+      ]
+    },
+    {
+      "id": "france-country",
+      "word": "France",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "法国",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "法国",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "France",
+      "canonicalHeadwordKey": "france",
+      "meaningForCheck": "n. 法国",
+      "excludedMeaningLabels": [
+        "法国的",
+        "法国人",
+        "法语",
+        "adj. 法国",
+        "v. 法国"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 法国；send this parcel to our customer in France 地点与收件人关系明确，please 指令与中译吻合。搭配 send a parcel to France 为自然目的地表达，不教 French 的人/语言义。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "f1fa9572e5ff34387fe063bb1fc10183017ad5304816c8d05270a0c7adb22647",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "f1fa9572e5ff34387fe063bb1fc10183017ad5304816c8d05270a0c7adb22647",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "France",
+        "ipa": "frɑːns",
+        "meaning": "n. 法国"
+      },
+      "teachingDefinition": "n. 法国"
+    },
+    {
+      "id": "germany-country",
+      "word": "Germany",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "德国",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "德国",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Germany",
+      "canonicalHeadwordKey": "germany",
+      "meaningForCheck": "n. 德国",
+      "excludedMeaningLabels": [
+        "德国的",
+        "德国人",
+        "德语",
+        "adj. 德国",
+        "v. 德国"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 德国；spent a year 的持续时间、learning to repair bicycles 的行为与中译一一对应。国家地点使用 in Germany，不替代 German。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "017610c149991965310926a8563ef9dccfeee70d0644e90680a9a70b0040eea4",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "017610c149991965310926a8563ef9dccfeee70d0644e90680a9a70b0040eea4",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Germany",
+        "ipa": "ˈdʒəːmənɪ",
+        "meaning": "n. 德国"
+      },
+      "teachingDefinition": "n. 德国"
+    },
+    {
+      "id": "italy-country",
+      "word": "Italy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "意大利",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "意大利",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Italy",
+      "canonicalHeadwordKey": "italy",
+      "meaningForCheck": "n. 意大利",
+      "excludedMeaningLabels": [
+        "意大利的",
+        "意大利人",
+        "意大利语",
+        "adj. 意大利",
+        "v. 意大利"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 意大利；made in Italy 修饰这些鞋的制造地，标签 says 的内容中译准确。复数 shoes 不改变国家词性，搭配自然。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "ea7e5fb38646804905ac49724eae8aeb33b9c5172e006c86f08f9400e506258a",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "ea7e5fb38646804905ac49724eae8aeb33b9c5172e006c86f08f9400e506258a",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Italy",
+        "ipa": "ˈɪtəlɪ",
+        "meaning": "n. 意大利"
+      },
+      "teachingDefinition": "n. 意大利"
+    },
+    {
+      "id": "norway-country",
+      "word": "Norway",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "挪威",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "挪威",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Norway",
+      "canonicalHeadwordKey": "norway",
+      "meaningForCheck": "n. 挪威",
+      "excludedMeaningLabels": [
+        "挪威的",
+        "挪威人",
+        "挪威语",
+        "adj. 挪威",
+        "v. 挪威"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 挪威；our friends in Norway 邀请 stay with them 是住宿邀请，July 为七月份；去他们家住的中译自然且保留月份。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "3d4d3dbfabbfdbb337600de4c6878da9548dddca96db4510731f9f5ee94e2f2a",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "3d4d3dbfabbfdbb337600de4c6878da9548dddca96db4510731f9f5ee94e2f2a",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Norway",
+        "ipa": "ˈnɒːweɪ",
+        "meaning": "n. 挪威"
+      },
+      "teachingDefinition": "n. 挪威"
+    },
+    {
+      "id": "russia-country",
+      "word": "Russia",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "俄罗斯",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "俄罗斯",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Russia",
+      "canonicalHeadwordKey": "russia",
+      "meaningForCheck": "n. 俄罗斯",
+      "excludedMeaningLabels": [
+        "苏联",
+        "俄罗斯的",
+        "俄罗斯人",
+        "俄语",
+        "adj. 俄罗斯",
+        "v. 俄罗斯",
+        "adj. 俄国",
+        "v. 俄国"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 俄罗斯；明信片来源、雪覆盖街道图片均与中译一致。Russia/俄国在本例不指苏联，不能借此覆盖 Russian 的语言或人物义。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "58127011d84e710abd38f36cf5d47383cb750ee1cbe75a101493a03890a8b2d4",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "58127011d84e710abd38f36cf5d47383cb750ee1cbe75a101493a03890a8b2d4",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Russia",
+        "ipa": "ˈrʌʃə",
+        "meaning": "n. 俄国, 俄罗斯\n[法] 俄罗斯, 苏联"
+      },
+      "teachingDefinition": "n. 俄罗斯"
+    },
+    {
+      "id": "spain-country",
+      "word": "Spain",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "西班牙",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "西班牙",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Spain",
+      "canonicalHeadwordKey": "spain",
+      "meaningForCheck": "n. 西班牙",
+      "excludedMeaningLabels": [
+        "西班牙的",
+        "西班牙人",
+        "西班牙语",
+        "adj. 西班牙",
+        "v. 西班牙"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 西班牙；比较三个航班以后买票，three 与 after 时序中译一致。tickets for Spain 和 flight to Spain 均自然，不泛算西班牙语或西班牙人的目标。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "b0afa8060e830badcf8e7563cd6ae08cb08718724d7b55e49810d448bfc77bbf",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "b0afa8060e830badcf8e7563cd6ae08cb08718724d7b55e49810d448bfc77bbf",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Spain",
+        "ipa": "speɪn",
+        "meaning": "n. 西班牙"
+      },
+      "teachingDefinition": "n. 西班牙"
+    },
+    {
+      "id": "sweden-country",
+      "word": "Sweden",
+      "source": {
+        "book": "NCE1",
+        "lesson": 52
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 108,
+      "sourcePrintedPage": 104,
+      "sourcePageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "textbookWordListMeaning": "瑞典",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "瑞典",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Sweden",
+      "canonicalHeadwordKey": "sweden",
+      "meaningForCheck": "n. 瑞典",
+      "excludedMeaningLabels": [
+        "瑞典的",
+        "瑞典人",
+        "瑞典语",
+        "adj. 瑞典",
+        "v. 瑞典"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 瑞典；moved to Sweden 后 joined a local choir 的两个动作中译一致，local 不推断语言。国名首字母大写。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "da190b1a348ada85e8827ec10eb079a24a225ebc89362855b2f0f1acf9b21964",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "da190b1a348ada85e8827ec10eb079a24a225ebc89362855b2f0f1acf9b21964",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Sweden",
+        "ipa": "ˈswiːdn",
+        "meaning": "n. 瑞典"
+      },
+      "teachingDefinition": "n. 瑞典"
+    },
+    {
+      "id": "australia-country",
+      "word": "Australia",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "澳大利亚",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "澳大利亚",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Australia",
+      "canonicalHeadwordKey": "australia",
+      "meaningForCheck": "n. 澳大利亚",
+      "excludedMeaningLabels": [
+        "澳大利亚人",
+        "澳大利亚的",
+        "大洋洲",
+        "adj. 澳大利亚",
+        "v. 澳大利亚",
+        "adj. 澳洲",
+        "v. 澳洲"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 澳大利亚；new flat 的地点及 photo 的数量一致。英文补 elder 对齐哥哥，保留 his/my/us 的所属与收件关系。本例国家澳大利亚，不算整个大洋洲。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "632b9ed729f54eca9da11e39c099d8268d162cdabbc24209b6b6f02d481c15af",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "e088a4bde0aaa7aa751e75b4be4e1b14d570cf2d571408628223022a0160f630",
+      "savedDraftChangedFields": [
+        "en"
+      ],
+      "dictionarySnapshot": {
+        "word": "Australia",
+        "ipa": "ɒˈstreɪljə",
+        "meaning": "n. 澳洲, 澳大利亚"
+      },
+      "teachingDefinition": "n. 澳大利亚"
+    },
+    {
+      "id": "australian-person",
+      "word": "Australian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "澳大利亚人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "澳大利亚人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Australian",
+      "canonicalHeadwordKey": "australian",
+      "meaningForCheck": "n. 澳大利亚人",
+      "excludedMeaningLabels": [
+        "a. 澳大利亚的",
+        "a. 澳大利亚人的",
+        "n. 澳大利亚",
+        "adj. 澳大利亚人",
+        "v. 澳大利亚人"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 澳大利亚人；an Australian 为可数人物名词，徒步小组中一位成员帮助读懂地图，中译与 trail map 对应。不是国家 Australia 或形容词用法。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "ac79ab428e1700b0c58b9ce94438af18ce60a0e6fd7e217bdbef06a6b9cf9c94",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "ac79ab428e1700b0c58b9ce94438af18ce60a0e6fd7e217bdbef06a6b9cf9c94",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Australian",
+        "ipa": "ɒˈstreɪljən",
+        "meaning": "n. 澳大利亚人\na. 澳大利亚的, 澳洲的, 澳洲人的"
+      },
+      "teachingDefinition": "n. 澳大利亚人"
+    },
+    {
+      "id": "australian-adjective",
+      "word": "Australian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "澳大利亚人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "澳大利亚人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Australian",
+      "canonicalHeadwordKey": "australian",
+      "meaningForCheck": "adj. 澳大利亚的",
+      "excludedMeaningLabels": [
+        "n. 澳大利亚人",
+        "n. 澳大利亚",
+        "n. 澳大利亚的",
+        "v. 澳大利亚的",
+        "n. 澳洲的",
+        "v. 澳洲的",
+        "n. 澳大利亚人的",
+        "v. 澳大利亚人的",
+        "n. 澳洲人的",
+        "v. 澳洲人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原页只打印人物名词，Australian visitor 为本批另审的形容词扩展；一本 small photo album 和 hometown 中译一致，不据此添加未审语言义。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "9def3ac99d5b1fde252a256a87ff189c2e6cb4778326d5f44db114da4d1e3f99",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "9def3ac99d5b1fde252a256a87ff189c2e6cb4778326d5f44db114da4d1e3f99",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Australian",
+        "ipa": "ɒˈstreɪljən",
+        "meaning": "n. 澳大利亚人\na. 澳大利亚的, 澳洲的, 澳洲人的"
+      }
+    },
+    {
+      "id": "austria-country",
+      "word": "Austria",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "奥地利",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "奥地利",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Austria",
+      "canonicalHeadwordKey": "austria",
+      "meaningForCheck": "n. 奥地利",
+      "excludedMeaningLabels": [
+        "奥地利人",
+        "奥地利的",
+        "澳大利亚",
+        "adj. 奥地利",
+        "v. 奥地利"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 奥地利；by train 进入国家、in Vienna 换乘的顺序自然且中译准确。Austria 不与 Australia 混淆。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "550281852db8937da741c7448b9fbe4fd4e2a686994ab8a0b7967ea130df98d7",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "550281852db8937da741c7448b9fbe4fd4e2a686994ab8a0b7967ea130df98d7",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Austria",
+        "ipa": "ˈɒstrɪə",
+        "meaning": "n. 奥地利"
+      },
+      "teachingDefinition": "n. 奥地利"
+    },
+    {
+      "id": "austrian-person",
+      "word": "Austrian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "奥地利人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "奥地利人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Austrian",
+      "canonicalHeadwordKey": "austrian",
+      "meaningForCheck": "n. 奥地利人",
+      "excludedMeaningLabels": [
+        "adj. 奥地利的",
+        "adj. 奥地利人的",
+        "n. 奥地利",
+        "adj. 奥地利人",
+        "v. 奥地利人"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 奥地利人；two Austrians 用规则复数，two 与中译两位一致；joined our table 为与我们同桌，asked about 不翻成提出服务申请。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "9da6f5109f494a533dbccf300f94398bc261fb4d7d5b982d64fb502a775e1aa1",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "9da6f5109f494a533dbccf300f94398bc261fb4d7d5b982d64fb502a775e1aa1",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Austrian",
+        "ipa": "ˈɒstrɪən",
+        "meaning": "n. 奥地利人\na. 奥地利的, 奥地利人的"
+      },
+      "teachingDefinition": "n. 奥地利人"
+    },
+    {
+      "id": "austrian-adjective",
+      "word": "Austrian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "奥地利人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "奥地利人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Austrian",
+      "canonicalHeadwordKey": "austrian",
+      "meaningForCheck": "adj. 奥地利的",
+      "excludedMeaningLabels": [
+        "n. 奥地利人",
+        "n. 奥地利",
+        "n. 奥地利的",
+        "v. 奥地利的",
+        "n. 奥地利人的",
+        "v. 奥地利人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原页人物名词与本例 Austrian cake 的形容词扩展分别记账；a cake 泛指供应的一种蛋糕，thick layer of chocolate 的中译准确。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "d2c2b70c66fef451231ed707ccc44ed46c647ea7d1978a2f526e4a65228f336f",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "d2c2b70c66fef451231ed707ccc44ed46c647ea7d1978a2f526e4a65228f336f",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Austrian",
+        "ipa": "ˈɒstrɪən",
+        "meaning": "n. 奥地利人\na. 奥地利的, 奥地利人的"
+      }
+    },
+    {
+      "id": "canada-country",
+      "word": "Canada",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "加拿大",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "加拿大",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Canada",
+      "canonicalHeadwordKey": "canada",
+      "meaningForCheck": "n. 加拿大",
+      "excludedMeaningLabels": [
+        "加拿大的",
+        "加拿大人",
+        "adj. 加拿大",
+        "v. 加拿大"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 加拿大；将未限定父母侧/长幼的 uncle 情境改为 former teacher，避免中译擅自指定叔叔。住在、每年、一张生日贺卡和收件对象与英文一致。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "6d8666d2d9e9eccbfde9bd5e58842824e8837a84d0f44d0822919741a8000746",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "a3cdc988fa1eb82346f258dd233237e5c82b49dabb72ddae71ccc9f55d3af5c2",
+      "savedDraftChangedFields": [
+        "en",
+        "zh"
+      ],
+      "dictionarySnapshot": {
+        "word": "Canada",
+        "ipa": "ˈkænədə",
+        "meaning": "n. 加拿大"
+      },
+      "teachingDefinition": "n. 加拿大"
+    },
+    {
+      "id": "canadian-person",
+      "word": "Canadian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "加拿大人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "加拿大人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Canadian",
+      "canonicalHeadwordKey": "canadian",
+      "meaningForCheck": "n. 加拿大人",
+      "excludedMeaningLabels": [
+        "adj. 加拿大的",
+        "adj. 加拿大人的",
+        "n. 加拿大",
+        "adj. 加拿大人",
+        "v. 加拿大人"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 加拿大人；A Canadian 为一个人物，I met at the book club 限定认识地点，recommended this novel 的动作中译一致。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "6d2c892a27badeda699399c869f7704dd509fa941b12fff5dcbe1043b81a8266",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "6d2c892a27badeda699399c869f7704dd509fa941b12fff5dcbe1043b81a8266",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Canadian",
+        "ipa": "kəˈneɪdɪən",
+        "meaning": "a. 加拿大的"
+      },
+      "teachingDefinition": "n. 加拿大人"
+    },
+    {
+      "id": "canadian-adjective",
+      "word": "Canadian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "加拿大人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "加拿大人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Canadian",
+      "canonicalHeadwordKey": "canadian",
+      "meaningForCheck": "adj. 加拿大的",
+      "excludedMeaningLabels": [
+        "n. 加拿大人",
+        "n. 加拿大",
+        "n. 加拿大的",
+        "v. 加拿大的",
+        "n. 加拿大人的",
+        "v. 加拿大人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原页人物名词不证明本例形容词；Canadian research team、by email 是自然组合，a team/一个研究小组及发送结果中译一致。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "8c54f7a87d0ff7940abdf75b392004beba9077feea9a503ab30a054b094a1f45",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "8c54f7a87d0ff7940abdf75b392004beba9077feea9a503ab30a054b094a1f45",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Canadian",
+        "ipa": "kəˈneɪdɪən",
+        "meaning": "a. 加拿大的"
+      }
+    },
+    {
+      "id": "china-country",
+      "word": "China",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "中国",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "中国",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "China",
+      "canonicalHeadwordKey": "china",
+      "meaningForCheck": "n. 中国",
+      "excludedMeaningLabels": [
+        "瓷器",
+        "中国的",
+        "中国人",
+        "adj. 中国",
+        "v. 中国"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 中国；returned to China after finishing a course abroad 的国家目的地与时序准确，capital C 与瓷器 china 分开，不修改全局词典或学习记录。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "b9155b54c0f2e5485949da258c6ad333af89c2b43286fa5c04f3433e66b9bd60",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "b9155b54c0f2e5485949da258c6ad333af89c2b43286fa5c04f3433e66b9bd60",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "China",
+        "ipa": "ˈtʃaɪnə",
+        "meaning": "n. 中国, 瓷器\na. 中国的"
+      },
+      "teachingDefinition": "n. 中国"
+    },
+    {
+      "id": "finland-country",
+      "word": "Finland",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "芬兰",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "芬兰",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Finland",
+      "canonicalHeadwordKey": "finland",
+      "meaningForCheck": "n. 芬兰",
+      "excludedMeaningLabels": [
+        "芬兰人",
+        "芬兰的",
+        "芬兰语",
+        "adj. 芬兰",
+        "v. 芬兰"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 芬兰；left my scarf on a train 为遗落围巾，in Finland 限定火车所在国家，中译没有将 on a train 误作列车顶部。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "348fb9b3b5d82d28e636691dc54416a3fbb6443e196700ccdf4caa576a5a276b",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "348fb9b3b5d82d28e636691dc54416a3fbb6443e196700ccdf4caa576a5a276b",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Finland",
+        "ipa": "ˈfɪnlənd",
+        "meaning": "n. 芬兰"
+      },
+      "teachingDefinition": "n. 芬兰"
+    },
+    {
+      "id": "finnish-nationality-adjective",
+      "word": "Finnish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target-grammar-normalized",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "芬兰人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "芬兰人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Finnish",
+      "canonicalHeadwordKey": "finnish",
+      "meaningForCheck": "adj. 芬兰人的",
+      "excludedMeaningLabels": [
+        "n. 芬兰人",
+        "n. 芬兰语",
+        "adj. 芬兰语的",
+        "n. 芬兰",
+        "n. 芬兰的",
+        "v. 芬兰的",
+        "n. 芬兰人的",
+        "v. 芬兰人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表写 n. 芬兰人，但 is Finnish 实际使用表语国籍形容词；教学释义明确修正而保留打印证据，不生成 a Finnish。ten years 的居住时间及 but 对应中译。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "4d8a028663efb59929cb2a61c2ec49bde4fddc33afbad2757c78c0e28685c367",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "4d8a028663efb59929cb2a61c2ec49bde4fddc33afbad2757c78c0e28685c367",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Finnish",
+        "ipa": "ˈfɪnɪʃ",
+        "meaning": "n. 芬兰语\na. 芬兰的, 芬兰人的, 芬兰语的"
+      },
+      "teachingDefinition": "adj. 芬兰的；芬兰人的（表国籍；原书标 n. 芬兰人）",
+      "sourceLabelCorrection": "The source n.芬兰人 label does not justify a Finnish as a singular countable person noun. The checked nationality example is adjectival; Finn is the ordinary singular person noun. Language uses are separately labelled.",
+      "recordedPrintedTarget": {
+        "word": "Finnish",
+        "partOfSpeech": "n.",
+        "meaning": "芬兰人",
+        "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3"
+      },
+      "normalizedGrammar": {
+        "partOfSpeech": "adj.",
+        "use": "Predicate nationality adjective after be in this specific original sentence.",
+        "definition": "adj. 芬兰的；芬兰人的（表国籍；原书标 n. 芬兰人）",
+        "basis": "Editorial grammar normalization of a person-nationality teaching context. The actual Lesson 54 exercise uses a nationality question pattern and country substitutions, but it does not print completed answers for Finnish/Turkish/Polish. Dictionary publisher separately lists the adjective and language noun.",
+        "reference": "https://www.merriam-webster.com/dictionary/Finnish"
+      },
+      "uncoveredSenseBoundary": "The original printed n. person label is not certified as a singular countable, plural or collective person noun by this adjective sentence. Person-noun teaching remains unreviewed; the language noun and language adjective have separately recorded extension examples. This entry is excluded from exact printed source-target completion counts.",
+      "referenceUrls": [
+        "https://www.merriam-webster.com/dictionary/Finnish"
+      ]
+    },
+    {
+      "id": "finnish-language",
+      "word": "Finnish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "芬兰人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "芬兰人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Finnish",
+      "canonicalHeadwordKey": "finnish",
+      "meaningForCheck": "n. 芬兰语",
+      "excludedMeaningLabels": [
+        "adj. 芬兰语的",
+        "adj. 芬兰的",
+        "n. 芬兰人",
+        "adj. 芬兰语",
+        "v. 芬兰语"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "本例另审不可数语言名词扩展；in Finnish 无冠词，读儿童故事以练发音的目的与中译一致。原页芬兰人标签不被当作芬兰语目标证据。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "f133cc26943cc6a2a0ccd58e84c578c9098b10c18dcd2fa7877ac525c14e7bdd",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "f133cc26943cc6a2a0ccd58e84c578c9098b10c18dcd2fa7877ac525c14e7bdd",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Finnish",
+        "ipa": "ˈfɪnɪʃ",
+        "meaning": "n. 芬兰语\na. 芬兰的, 芬兰人的, 芬兰语的"
+      },
+      "sourceLabelCorrection": "The source n.芬兰人 label does not justify a Finnish as a singular countable person noun. The checked nationality example is adjectival; Finn is the ordinary singular person noun. Language uses are separately labelled."
+    },
+    {
+      "id": "finnish-language-adjective",
+      "word": "Finnish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "芬兰人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "芬兰人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Finnish",
+      "canonicalHeadwordKey": "finnish",
+      "meaningForCheck": "adj. 芬兰语的",
+      "excludedMeaningLabels": [
+        "n. 芬兰语",
+        "adj. 芬兰的",
+        "n. 芬兰人",
+        "n. 芬兰语的",
+        "v. 芬兰语的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "本例 Finnish translation 为语言形容词扩展；compare with 对比一份译本与原说明，中译对应，不同于国籍的人物语境。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "ccbb1669cf9a0b15dafed7428056f8296ef80fec9ce7fbecd459cd428e8a6e27",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "ccbb1669cf9a0b15dafed7428056f8296ef80fec9ce7fbecd459cd428e8a6e27",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Finnish",
+        "ipa": "ˈfɪnɪʃ",
+        "meaning": "n. 芬兰语\na. 芬兰的, 芬兰人的, 芬兰语的"
+      },
+      "sourceLabelCorrection": "The source n.芬兰人 label does not justify a Finnish as a singular countable person noun. The checked nationality example is adjectival; Finn is the ordinary singular person noun. Language uses are separately labelled."
+    },
+    {
+      "id": "india-country",
+      "word": "India",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "印度",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "印度",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "India",
+      "canonicalHeadwordKey": "india",
+      "meaningForCheck": "n. 印度",
+      "excludedMeaningLabels": [
+        "印度的",
+        "印度人",
+        "印第安人",
+        "adj. 印度",
+        "v. 印度"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 印度；a parcel from India 的来源、arrival 时已见箱角破损和一角数量中译准确。并非 Indian 的人物、语言或印第安人义。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "d48754ed599c025e14073e96d6e0dcf047edab9aa6f7e3c63d3b3088bda2dbb5",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "d48754ed599c025e14073e96d6e0dcf047edab9aa6f7e3c63d3b3088bda2dbb5",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "India",
+        "ipa": "ˈɪndjə",
+        "meaning": "n. 印度"
+      },
+      "teachingDefinition": "n. 印度"
+    },
+    {
+      "id": "japan-country",
+      "word": "Japan",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "日本",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "日本",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Japan",
+      "canonicalHeadwordKey": "japan",
+      "meaningForCheck": "n. 日本",
+      "excludedMeaningLabels": [
+        "天然漆",
+        "大漆",
+        "漆器",
+        "日本的",
+        "日语",
+        "adj. 日本",
+        "v. 日本"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 日本；in Japan 购买一本 small notebook、now 用作 recipes 的时序与中译一致。大写 Japan 地理义不支持小写漆器义或 japanning 自动词形。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "521f1bb715348498c00601ffd892508579a0e3be5ca0946fafe17036f49d5c1b",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "521f1bb715348498c00601ffd892508579a0e3be5ca0946fafe17036f49d5c1b",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Japan",
+        "ipa": "dʒəˈpæn",
+        "meaning": "n. 日本\n[化] 天然漆; 大漆; 漆器"
+      },
+      "teachingDefinition": "n. 日本"
+    },
+    {
+      "id": "nigeria-country",
+      "word": "Nigeria",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "尼日利亚",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "尼日利亚",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Nigeria",
+      "canonicalHeadwordKey": "nigeria",
+      "meaningForCheck": "n. 尼日利亚",
+      "excludedMeaningLabels": [
+        "尼日利亚人",
+        "尼日利亚的",
+        "尼日尔",
+        "adj. 尼日利亚",
+        "v. 尼日利亚"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 尼日利亚；flew to 与参加朋友婚礼目的相符，中译不混成尼日尔。a flight to Nigeria 搭配自然。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "4c10fab8efcc225d1a0f5573ae51a7e03e8d3a4be4d42c265e1d62b88f90e727",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "4c10fab8efcc225d1a0f5573ae51a7e03e8d3a4be4d42c265e1d62b88f90e727",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Nigeria",
+        "ipa": "naɪˈdʒɪrɪə",
+        "meaning": "n. 尼日利亚"
+      },
+      "teachingDefinition": "n. 尼日利亚"
+    },
+    {
+      "id": "nigerian-person",
+      "word": "Nigerian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "尼日利亚人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "尼日利亚人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Nigerian",
+      "canonicalHeadwordKey": "nigerian",
+      "meaningForCheck": "n. 尼日利亚人",
+      "excludedMeaningLabels": [
+        "adj. 尼日利亚的",
+        "adj. 尼日利亚人的",
+        "n. 尼日利亚",
+        "adj. 尼日利亚人",
+        "v. 尼日利亚人"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 尼日利亚人；Two Nigerians 为可数复数，两位和 my course 关系与中译一致，正在组织一场周末足球赛。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "2f474f4419fb2d2426072a522bc9f9580d9ccc9b85630650f67364c1d7567860",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "2f474f4419fb2d2426072a522bc9f9580d9ccc9b85630650f67364c1d7567860",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Nigerian",
+        "ipa": "naɪˈdʒɪrɪən",
+        "meaning": "n. 尼日利亚人"
+      },
+      "teachingDefinition": "n. 尼日利亚人"
+    },
+    {
+      "id": "nigerian-adjective",
+      "word": "Nigerian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "尼日利亚人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "尼日利亚人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Nigerian",
+      "canonicalHeadwordKey": "nigerian",
+      "meaningForCheck": "adj. 尼日利亚的",
+      "excludedMeaningLabels": [
+        "n. 尼日利亚人",
+        "n. 尼日利亚",
+        "n. 尼日利亚的",
+        "v. 尼日利亚的",
+        "n. 尼日利亚人的",
+        "v. 尼日利亚人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "本例 Nigerian writer 为另审形容词扩展，不能由原页人物名词标签推算已教到；novel by a writer 指作品作者，从图书馆借阅的中译准确。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "0f7d00248c79705589c650591e20ff3140c44bf0725380cc44f516bfc048ce13",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "0f7d00248c79705589c650591e20ff3140c44bf0725380cc44f516bfc048ce13",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Nigerian",
+        "ipa": "naɪˈdʒɪrɪən",
+        "meaning": "n. 尼日利亚人"
+      }
+    },
+    {
+      "id": "turkey-country",
+      "word": "Turkey",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "土耳其",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "土耳其",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Turkey",
+      "canonicalHeadwordKey": "turkey",
+      "meaningForCheck": "n. 土耳其",
+      "excludedMeaningLabels": [
+        "n. 火鸡",
+        "n. 无用的家伙",
+        "adj. 土耳其的",
+        "n. 土耳其语",
+        "adj. 土耳其",
+        "v. 土耳其"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 土耳其；in Turkey 是度假地点，a small rug 的中译为一块小地毯，数量一致。大写国名不支持火鸡或无用人物义。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "f0caf0809b05f700fd86b7531c7138b5e72a1016acb349f962927afc42234cee",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "f0caf0809b05f700fd86b7531c7138b5e72a1016acb349f962927afc42234cee",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "turkey",
+        "ipa": "ˈtəːkɪ",
+        "meaning": "n. 火鸡, 无用的家伙, 土耳其"
+      },
+      "teachingDefinition": "n. 土耳其（Turkey，国名）"
+    },
+    {
+      "id": "turkish-nationality-adjective",
+      "word": "Turkish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target-grammar-normalized",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "土耳其人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "土耳其人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Turkish",
+      "canonicalHeadwordKey": "turkish",
+      "meaningForCheck": "adj. 土耳其人的",
+      "excludedMeaningLabels": [
+        "n. 土耳其人",
+        "n. 土耳其语",
+        "adj. 土耳其语的",
+        "n. 土耳其",
+        "n. 土耳其的",
+        "v. 土耳其的",
+        "n. 土耳其人的",
+        "v. 土耳其人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原页 n. 土耳其人保留作证据，但 is Turkish 为表语国籍形容词，不生成 a Turkish。grew up near Ankara 的地点与时态中译准确。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "c2195de85760520af5a121ef919be2144d24de4de52d251338cb7c6b8f1ff779",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "c2195de85760520af5a121ef919be2144d24de4de52d251338cb7c6b8f1ff779",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Turkish",
+        "ipa": "ˈtəːkɪʃ",
+        "meaning": "n. 土耳其语\na. 土耳其的, 土耳其人的, 土耳其语的"
+      },
+      "teachingDefinition": "adj. 土耳其的；土耳其人的（表国籍；原书标 n. 土耳其人）",
+      "sourceLabelCorrection": "The source n.土耳其人 label does not justify a Turkish as a singular countable person noun. The checked nationality example is adjectival; Turk is a singular person noun. The language noun has a separate example.",
+      "recordedPrintedTarget": {
+        "word": "Turkish",
+        "partOfSpeech": "n.",
+        "meaning": "土耳其人",
+        "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3"
+      },
+      "normalizedGrammar": {
+        "partOfSpeech": "adj.",
+        "use": "Predicate nationality adjective after be in this specific original sentence.",
+        "definition": "adj. 土耳其的；土耳其人的（表国籍；原书标 n. 土耳其人）",
+        "basis": "Editorial grammar normalization of a person-nationality teaching context. The actual Lesson 54 exercise uses a nationality question pattern and country substitutions, but it does not print completed answers for Finnish/Turkish/Polish. Dictionary publisher separately lists the adjective and language noun.",
+        "reference": "https://www.merriam-webster.com/dictionary/Turkish"
+      },
+      "uncoveredSenseBoundary": "The original printed n. person label is not certified as a singular countable, plural or collective person noun by this adjective sentence. Person-noun teaching remains unreviewed; the language noun and language adjective have separately recorded extension examples. This entry is excluded from exact printed source-target completion counts.",
+      "referenceUrls": [
+        "https://www.merriam-webster.com/dictionary/Turkish"
+      ]
+    },
+    {
+      "id": "turkish-language",
+      "word": "Turkish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "土耳其人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "土耳其人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Turkish",
+      "canonicalHeadwordKey": "turkish",
+      "meaningForCheck": "n. 土耳其语",
+      "excludedMeaningLabels": [
+        "adj. 土耳其语的",
+        "adj. 土耳其的",
+        "n. 土耳其人",
+        "adj. 土耳其语",
+        "v. 土耳其语"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "本例独立语言名词扩展；a few words of Turkish 与几个土耳其语单词一致，before visiting 的先后顺序准确。原页人物标签不证明语言目标。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "aeae1210b9971f26288c431b7d713fe55c3b6c01c2c911728deb84cddf45bed4",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "aeae1210b9971f26288c431b7d713fe55c3b6c01c2c911728deb84cddf45bed4",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Turkish",
+        "ipa": "ˈtəːkɪʃ",
+        "meaning": "n. 土耳其语\na. 土耳其的, 土耳其人的, 土耳其语的"
+      },
+      "sourceLabelCorrection": "The source n.土耳其人 label does not justify a Turkish as a singular countable person noun. The checked nationality example is adjectival; Turk is a singular person noun. The language noun has a separate example."
+    },
+    {
+      "id": "turkish-language-adjective",
+      "word": "Turkish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "土耳其人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "土耳其人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Turkish",
+      "canonicalHeadwordKey": "turkish",
+      "meaningForCheck": "adj. 土耳其语的",
+      "excludedMeaningLabels": [
+        "n. 土耳其语",
+        "adj. 土耳其的",
+        "n. 土耳其人",
+        "n. 土耳其语的",
+        "v. 土耳其语的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "本例 Turkish subtitles 为语言形容词扩展；helped me follow the film 在字幕语境指帮助看懂电影，中译自然，不归入国籍形容词目标。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "847726b09865ceb5d815c35680b6ca12bc899b0c8d3cb8ad9333a5264d966480",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "847726b09865ceb5d815c35680b6ca12bc899b0c8d3cb8ad9333a5264d966480",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Turkish",
+        "ipa": "ˈtəːkɪʃ",
+        "meaning": "n. 土耳其语\na. 土耳其的, 土耳其人的, 土耳其语的"
+      },
+      "sourceLabelCorrection": "The source n.土耳其人 label does not justify a Turkish as a singular countable person noun. The checked nationality example is adjectival; Turk is a singular person noun. The language noun has a separate example."
+    },
+    {
+      "id": "korea-country",
+      "word": "Korea",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "韩国",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "韩国",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Korea",
+      "canonicalHeadwordKey": "korea",
+      "meaningForCheck": "n. 韩国",
+      "excludedMeaningLabels": [
+        "朝鲜",
+        "朝鲜半岛",
+        "韩国人",
+        "韩语",
+        "adj. 韩国",
+        "v. 韩国"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表明确 n. 韩国；after visiting Seoul 限定本例韩国语境，postcard 来源/寄件动作中译一致。此例不概括整个朝鲜半岛或朝鲜，也不新增 Korean 的人/语言义。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "f7878f8490fb4a9ae2112314f526414b5bbbbe9d194796ab6abc05a61512d9cc",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "f7878f8490fb4a9ae2112314f526414b5bbbbe9d194796ab6abc05a61512d9cc",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Korea",
+        "ipa": "kəˈrɪə",
+        "meaning": "n. 朝鲜, 韩国"
+      },
+      "teachingDefinition": "n. 韩国（本课语境）"
+    },
+    {
+      "id": "polish-nationality-adjective",
+      "word": "Polish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target-grammar-normalized",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "波兰人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "波兰人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Polish",
+      "canonicalHeadwordKey": "polish",
+      "meaningForCheck": "adj. 波兰人的",
+      "excludedMeaningLabels": [
+        "n. 波兰人",
+        "n. 波兰语",
+        "adj. 波兰语的",
+        "vt. 擦亮",
+        "n. 上光剂",
+        "n. 波兰的",
+        "v. 波兰的",
+        "n. 波兰人的",
+        "v. 波兰人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原页 n. 波兰人、双元音 IPA 保留作证据；is Polish 是国籍表语形容词，不能写 a Polish。since September 的持续任职中译一致；使用原页英国读音 ˈpəʊlɪʃ，区别小写 polish 擦亮。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "511b0b8c4c532a202c02d864178de5cef4bbefae3f8528d14ca3b238492a08d3",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "511b0b8c4c532a202c02d864178de5cef4bbefae3f8528d14ca3b238492a08d3",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Polish",
+        "ipa": "ˈpɒlɪʃ",
+        "meaning": "a. 波兰的\nn. 波兰人, 上光剂, 光泽, 优雅\nvt. 擦亮, 擦去, 使完美\nvi. 擦亮, 变得光亮"
+      },
+      "teachingDefinition": "adj. 波兰的；波兰人的（表国籍；原书标 n. 波兰人）",
+      "teachingIpa": "ˈpəʊlɪʃ",
+      "sourceLabelCorrection": "The source n.波兰人 label does not justify a Polish as a singular countable person noun. The checked nationality example is adjectival; Pole is a singular person noun. Capitalised Polish has the long first vowel; lowercase polish is a different homograph.",
+      "recordedPrintedTarget": {
+        "word": "Polish",
+        "partOfSpeech": "n.",
+        "meaning": "波兰人",
+        "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3"
+      },
+      "normalizedGrammar": {
+        "partOfSpeech": "adj.",
+        "use": "Predicate nationality adjective after be in this specific original sentence.",
+        "definition": "adj. 波兰的；波兰人的（表国籍；原书标 n. 波兰人）",
+        "basis": "Editorial grammar normalization of a person-nationality teaching context. The actual Lesson 54 exercise uses a nationality question pattern and country substitutions, but it does not print completed answers for Finnish/Turkish/Polish. Dictionary publisher separately lists the adjective and language noun.",
+        "reference": "https://www.merriam-webster.com/dictionary/Polish"
+      },
+      "uncoveredSenseBoundary": "The original printed n. person label is not certified as a singular countable, plural or collective person noun by this adjective sentence. Person-noun teaching remains unreviewed; the language noun and language adjective have separately recorded extension examples. This entry is excluded from exact printed source-target completion counts.",
+      "referenceUrls": [
+        "https://www.merriam-webster.com/dictionary/Polish"
+      ],
+      "pronunciationReview": {
+        "originalBookIpa": "/'pəuliʃ/ (printed source transcription)",
+        "checkedTeachingIpa": "ˈpəʊlɪʃ",
+        "oldDictionaryIpa": "ˈpɒlɪʃ",
+        "basis": "Independent visual reading of Lesson 54 word-list diphthong and stress; notation normalised to current British IPA. Merriam-Webster separately labels the capitalised adjective and lowercase homograph; American respelling is not used as British IPA.",
+        "reference": "https://www.merriam-webster.com/dictionary/Polish",
+        "realAudioChecked": false
+      }
+    },
+    {
+      "id": "polish-language",
+      "word": "Polish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "波兰人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "波兰人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Polish",
+      "canonicalHeadwordKey": "polish",
+      "meaningForCheck": "n. 波兰语",
+      "excludedMeaningLabels": [
+        "adj. 波兰语的",
+        "adj. 波兰的",
+        "n. 波兰人",
+        "vt. 擦亮",
+        "n. 上光剂",
+        "adj. 波兰语",
+        "v. 波兰语"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "本例另审不可数语言名词扩展；in Polish 写地址让司机读懂的目的和中译一致，无冠词。旧词典没有语言行，不能声称已自然覆盖此义；普通显示接线由 root 验证。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "4bbd830c5fcd4ea30cb827a19c39434d2ffd46a272e9ae91d458250fb71dfbf6",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "4bbd830c5fcd4ea30cb827a19c39434d2ffd46a272e9ae91d458250fb71dfbf6",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Polish",
+        "ipa": "ˈpɒlɪʃ",
+        "meaning": "a. 波兰的\nn. 波兰人, 上光剂, 光泽, 优雅\nvt. 擦亮, 擦去, 使完美\nvi. 擦亮, 变得光亮"
+      },
+      "sourceLabelCorrection": "The source n.波兰人 label does not justify a Polish as a singular countable person noun. The checked nationality example is adjectival; Pole is a singular person noun. Capitalised Polish has the long first vowel; lowercase polish is a different homograph."
+    },
+    {
+      "id": "polish-language-adjective",
+      "word": "Polish",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "波兰人",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "波兰人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Polish",
+      "canonicalHeadwordKey": "polish",
+      "meaningForCheck": "adj. 波兰语的",
+      "excludedMeaningLabels": [
+        "n. 波兰语",
+        "adj. 波兰的",
+        "n. 波兰人",
+        "vt. 擦亮",
+        "n. 波兰语的",
+        "v. 波兰语的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "本例 Polish instructions 为语言形容词扩展，不计入打印人物目标。原 grandmother 与祖母存在父母侧关系推断，改为 neighbour/邻居；easier to follow 的比较语义中译准确。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "09d99050b0e8342b114c84b5bc510d95e3bb04e46bf142eb7bc84c2ce7191123",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "61a4106364394886c72046d01c536aba479609ead7882e8eff29af7e9c4c680f",
+      "savedDraftChangedFields": [
+        "en",
+        "zh"
+      ],
+      "dictionarySnapshot": {
+        "word": "Polish",
+        "ipa": "ˈpɒlɪʃ",
+        "meaning": "a. 波兰的\nn. 波兰人, 上光剂, 光泽, 优雅\nvt. 擦亮, 擦去, 使完美\nvi. 擦亮, 变得光亮"
+      },
+      "sourceLabelCorrection": "The source n.波兰人 label does not justify a Polish as a singular countable person noun. The checked nationality example is adjectival; Pole is a singular person noun. Capitalised Polish has the long first vowel; lowercase polish is a different homograph."
+    },
+    {
+      "id": "poland-country",
+      "word": "Poland",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "波兰",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "波兰",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Poland",
+      "canonicalHeadwordKey": "poland",
+      "meaningForCheck": "n. 波兰",
+      "excludedMeaningLabels": [
+        "波兰的",
+        "波兰人",
+        "波兰语",
+        "adj. 波兰",
+        "v. 波兰"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 波兰；go back to Poland 的国家目的地、for the summer 的暑假停留与中译一致。不能与 Polish 的国籍/语言义互算覆盖。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "cdc55458bac6f49c7cecfb64b3a7341f11582b75830dd94cab50dc818e80ee35",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "cdc55458bac6f49c7cecfb64b3a7341f11582b75830dd94cab50dc818e80ee35",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Poland",
+        "ipa": "ˈpəʊlənd",
+        "meaning": "n. 波兰"
+      },
+      "teachingDefinition": "n. 波兰"
+    },
+    {
+      "id": "thailand-country",
+      "word": "Thailand",
+      "source": {
+        "book": "NCE1",
+        "lesson": 54
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 112,
+      "sourcePrintedPage": 108,
+      "sourcePageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "textbookWordListMeaning": "泰国",
+      "textbookWordListPartOfSpeech": "n.",
+      "sourcePrintedMeaning": "泰国",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourceCanonicalHeadword": "Thailand",
+      "canonicalHeadwordKey": "thailand",
+      "meaningForCheck": "n. 泰国",
+      "excludedMeaningLabels": [
+        "泰国人",
+        "泰国的",
+        "泰语",
+        "adj. 泰国",
+        "v. 泰国"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword",
+        "capitalisation and country/person/language boundary"
+      ],
+      "reviewer": "Independent Codex /root/review_batch5d; no human or teacher certification",
+      "editorialReview": "原表 n. 泰国；booked a room in Thailand close to the railway station 的预订、房间数量、靠近车站与中译一致。Thai 的人物/语言义另有词头，不在本批证据内。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5d.ts",
+      "contentSha256": "d92a89134070ede180db229661255fd5c0a17ee33eec1a379d342d59284eaf13",
+      "savedDraftContentFile": "app/data/vocabulary-examples-nce1-52-54.ts",
+      "savedDraftContentSha256": "d92a89134070ede180db229661255fd5c0a17ee33eec1a379d342d59284eaf13",
+      "savedDraftChangedFields": [],
+      "dictionarySnapshot": {
+        "word": "Thailand",
+        "ipa": "ˈtaɪlənd",
+        "meaning": "n. 泰国"
+      },
+      "teachingDefinition": "n. 泰国"
+    }
+  ]
+}
