@@ -6,6 +6,7 @@ import {nce1Lesson14ReviewedExamples} from './data/vocabulary-examples-nce1-14-r
 import {vocabularyReviewedBatch5BExamples} from './data/vocabulary-reviewed-batch5b';
 import {vocabularyReviewedBatch5CExamples} from './data/vocabulary-reviewed-batch5c';
 import {vocabularyReviewedBatch5DExamples} from './data/vocabulary-reviewed-batch5d';
+import {vocabularyReviewedBatch5EExamples} from './data/vocabulary-reviewed-batch5e';
 
 export type UsageExample={
  id:string;
@@ -184,7 +185,7 @@ const initialVocabularyExamples:UsageExample[]=[
   collocation:{en:'too lazy to cook',zh:'懒得做饭'},origin:'original'},
 ];
 
-export const originalVocabularyExamples:UsageExample[]=[...initialVocabularyExamples,...nce1NationalitiesExamples,...nce1BrandExamples,...nce1PeopleAdjectiveExamples,...nce1Lesson14ReviewedExamples,...vocabularyReviewedBatch5BExamples,...vocabularyReviewedBatch5CExamples,...vocabularyReviewedBatch5DExamples];
+export const originalVocabularyExamples:UsageExample[]=[...initialVocabularyExamples,...nce1NationalitiesExamples,...nce1BrandExamples,...nce1PeopleAdjectiveExamples,...nce1Lesson14ReviewedExamples,...vocabularyReviewedBatch5BExamples,...vocabularyReviewedBatch5CExamples,...vocabularyReviewedBatch5DExamples,...vocabularyReviewedBatch5EExamples];
 
 const normalizeWord=(word:string)=>word.normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
 const normalizeText=(text:string)=>text.normalize('NFKC').trim();

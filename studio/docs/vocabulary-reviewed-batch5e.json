@@ -1,0 +1,3587 @@
+{
+  "schemaVersion": 1,
+  "batch": "5e",
+  "baseCommit": "f23a75d00c00745449e62335051ace3d9b080564",
+  "headwords": 28,
+  "senseExamples": 58,
+  "sourceTargetExamples": 29,
+  "extensionExamples": 29,
+  "scope": "Independent Codex language/content review only. Existing local pages read visually; original fictional examples. No human/teacher, browser, audio or clinical review, no source-global completeness claim. Enrollment callbacks and registry are root responsibilities.",
+  "savedDraft": {
+    "contentFile": "/Users/finnlyu/Documents/Codex/2026-10-01/task-3/english-flashcards/studio/app/data/vocabulary-examples-nce1-59-82.ts",
+    "contentFileSha256": "955e0d769a27c467180ee2fa1a4fbb54086f70aa901fc3df6e166b1f71c7715d",
+    "ledger": "/Users/finnlyu/Documents/Codex/2026-10-01/task-3/english-flashcards/studio/docs/vocabulary-examples-batch9-59-82.json",
+    "ledgerSha256": "42e809992c2078e482392c8a28d1cbd9bd7ea2e5221076ece6abafb834cf8272",
+    "originalDraftFilesChanged": false,
+    "unselectedDraftEntriesRegistered": false
+  },
+  "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+  "sourcePages": [
+    {
+      "book": "NCE1",
+      "lesson": 62,
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "image": "dist-online/lesson-pages/90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381.jpg",
+      "visualReview": "Actual full-page view_image inspection; printed footer, word-list meaning and POS read from the image",
+      "words": [
+        {
+          "word": "headache",
+          "printedDefinition": "头痛",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "measles",
+          "printedDefinition": "麻疹",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "stomach ache",
+          "printedDefinition": "胃痛",
+          "printedPartOfSpeech": null
+        },
+        {
+          "word": "temperature",
+          "printedDefinition": "温度",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "toothache",
+          "printedDefinition": "牙痛",
+          "printedPartOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "book": "NCE1",
+      "lesson": 64,
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "image": "dist-online/lesson-pages/07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059.jpg",
+      "visualReview": "Actual full-page view_image inspection; printed footer, word-list meaning and POS read from the image",
+      "words": [
+        {
+          "word": "break",
+          "printedDefinition": "打破",
+          "printedPartOfSpeech": "v."
+        },
+        {
+          "word": "drive",
+          "printedDefinition": "开车",
+          "printedPartOfSpeech": "v."
+        },
+        {
+          "word": "lean out of",
+          "printedDefinition": "身体探出",
+          "printedPartOfSpeech": null
+        },
+        {
+          "word": "library",
+          "printedDefinition": "图书馆",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "noise",
+          "printedDefinition": "喧闹声",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "quickly",
+          "printedDefinition": "快地",
+          "printedPartOfSpeech": "adv."
+        },
+        {
+          "word": "so",
+          "printedDefinition": "如此地",
+          "printedPartOfSpeech": "adv."
+        },
+        {
+          "word": "talk",
+          "printedDefinition": "谈话",
+          "printedPartOfSpeech": "v."
+        }
+      ]
+    },
+    {
+      "book": "NCE1",
+      "lesson": 66,
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "image": "dist-online/lesson-pages/10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86.jpg",
+      "visualReview": "Actual full-page view_image inspection; printed footer, word-list meaning and POS read from the image",
+      "words": [
+        {
+          "word": "herself",
+          "printedDefinition": "她自己",
+          "printedPartOfSpeech": "pron."
+        },
+        {
+          "word": "himself",
+          "printedDefinition": "他自己",
+          "printedPartOfSpeech": "pron."
+        },
+        {
+          "word": "myself",
+          "printedDefinition": "我自己",
+          "printedPartOfSpeech": "pron."
+        },
+        {
+          "word": "themselves",
+          "printedDefinition": "他们自己",
+          "printedPartOfSpeech": "pron."
+        }
+      ]
+    },
+    {
+      "book": "NCE1",
+      "lesson": 68,
+      "sourcePDFPage": 140,
+      "sourcePrintedPage": 136,
+      "sourcePageSha256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "sourcePageSHA256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "image": "dist-online/lesson-pages/3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717.jpg",
+      "visualReview": "Actual full-page view_image inspection; printed footer, word-list meaning and POS read from the image",
+      "words": [
+        {
+          "word": "baker",
+          "printedDefinition": "面包师傅",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "dairy",
+          "printedDefinition": "乳品店",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "grocer",
+          "printedDefinition": "食品杂货商",
+          "printedPartOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "book": "NCE1",
+      "lesson": 70,
+      "sourcePDFPage": 144,
+      "sourcePrintedPage": 140,
+      "sourcePageSha256": "c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2",
+      "sourcePageSHA256": "c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2",
+      "image": "dist-online/lesson-pages/c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2.jpg",
+      "visualReview": "Actual full-page view_image inspection; printed footer, word-list meaning and POS read from the image",
+      "words": [
+        {
+          "word": "Denmark",
+          "printedDefinition": "丹麦",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "stationer",
+          "printedDefinition": "文具商",
+          "printedPartOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "book": "NCE1",
+      "lesson": 74,
+      "sourcePDFPage": 156,
+      "sourcePrintedPage": 152,
+      "sourcePageSha256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "sourcePageSHA256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "image": "dist-online/lesson-pages/38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3.jpg",
+      "visualReview": "Actual full-page view_image inspection; printed footer, word-list meaning and POS read from the image",
+      "words": [
+        {
+          "word": "greet",
+          "printedDefinition": "问候，打招呼",
+          "printedPartOfSpeech": "v."
+        },
+        {
+          "word": "thirstily",
+          "printedDefinition": "口渴地",
+          "printedPartOfSpeech": "adv."
+        }
+      ]
+    },
+    {
+      "book": "NCE1",
+      "lesson": 80,
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "image": "dist-online/lesson-pages/5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63.jpg",
+      "visualReview": "Actual full-page view_image inspection; printed footer, word-list meaning and POS read from the image",
+      "words": [
+        {
+          "word": "chemist",
+          "printedDefinition": "药剂师，化学家",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "fruit",
+          "printedDefinition": "水果",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "newsagent",
+          "printedDefinition": "报刊零售人",
+          "printedPartOfSpeech": "n."
+        },
+        {
+          "word": "stationery",
+          "printedDefinition": "文具",
+          "printedPartOfSpeech": "n."
+        }
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "id": "library-building",
+      "fields": [
+        "en",
+        "zh"
+      ],
+      "notes": "归还图书至图书馆；将含糊的服务台关闭改为图书馆闭馆，英中指代更直接。"
+    },
+    {
+      "id": "library-software",
+      "fields": [
+        "matches"
+      ],
+      "notes": "更新并重新构建应用清楚指程序库；删除无法单独区分领域的泛中文cue 库，用程序库/软件库作正向。"
+    },
+    {
+      "id": "noise-unwanted-sound",
+      "fields": [
+        "sense",
+        "matches",
+        "teachingDefinition",
+        "en",
+        "zh"
+      ],
+      "notes": "实际原页打印喧闹声，纠正原草稿吵闹声目标；施工声阻碍听清会议发言人，保持名词声音义。"
+    },
+    {
+      "id": "noise-recording-interference",
+      "fields": [
+        "matches"
+      ],
+      "notes": "background noise in an old recording 指录音杂音，删除无录音限定的泛cue 噪声，与施工声音分列。"
+    },
+    {
+      "id": "so-degree",
+      "fields": [
+        "matches"
+      ],
+      "notes": "so heavy that 为程度结构；删除与代指前述情况共享的泛cue 如此，程度例仅匹配如此地/这么/那么。"
+    },
+    {
+      "id": "so-stated-situation",
+      "fields": [
+        "sense"
+      ],
+      "notes": "I hope so 中 so 代指前述情况；义项标题改为如是/这样，避免泛如此误选程度例。"
+    },
+    {
+      "id": "herself-reflexive",
+      "fields": [
+        "collocation"
+      ],
+      "notes": "looked at herself 指主语与介词宾语同人；搭配中译明确女性主语看自己，与亲自强调例分列。"
+    },
+    {
+      "id": "myself-reflexive",
+      "fields": [
+        "collocation"
+      ],
+      "notes": "reminded myself 为第一人称反身宾语，提醒自己检查车票；搭配中译自然化，不映射强调或独自。"
+    },
+    {
+      "id": "themselves-reflexive",
+      "fields": [
+        "zh",
+        "collocation"
+      ],
+      "notes": "dried themselves 为反身宾语；中译明确擦干自己的身体，避免仅写动作而省略自身关系。"
+    },
+    {
+      "id": "grocer-profession",
+      "fields": [
+        "collocation"
+      ],
+      "notes": "grocer 称米装袋是食品杂货商人物义；搭配改为人物，不用 grocer’s 店铺义混入。"
+    },
+    {
+      "id": "stationer-profession",
+      "fields": [
+        "collocation"
+      ],
+      "notes": "stationer 帮忙选纸是文具商人物义；搭配改为人物，不用 stationer’s 店铺义混入。"
+    },
+    {
+      "id": "chemist-pharmacist",
+      "fields": [
+        "zh",
+        "collocation"
+      ],
+      "notes": "药房里的 chemist 人物义；核对处方姓名仅是虚构叙事，不给用药建议，中译 package 改为包裹避免擅加药包。"
+    },
+    {
+      "id": "newsagent-profession",
+      "fields": [
+        "collocation"
+      ],
+      "notes": "newsagent 留报纸是报刊零售人的人物义；搭配改为人物，不用所有格店铺义混入。"
+    }
+  ],
+  "checks": {
+    "build": "in-memory esbuild write:false; production matcher unchanged; only this batch replaces original array",
+    "headwordCount": 28,
+    "exampleCount": 58,
+    "contentHashes": 58,
+    "canonicalHeadwordsInIndexedSource": 58,
+    "exampleSurfaceForms": 58,
+    "indexedPDFPageAndSha256": 58,
+    "ownSensePositive": 58,
+    "meaningForCheckPositive": 58,
+    "ownSenseWithPOSUnambiguous": 58,
+    "sourceScopedTargetsAndUnrelatedSourceRejection": 29,
+    "excludedMeaningAndPOS": 192,
+    "pageImagesSha256": 7,
+    "sourceDraftUnchanged": true,
+    "sourceLedgerUnchanged": true,
+    "helperUnchanged": true,
+    "notRun": [
+      "production registry",
+      "actual TSX enrollment callbacks",
+      "browser",
+      "true audio",
+      "human/teacher review",
+      "full builds"
+    ]
+  },
+  "entries": [
+    {
+      "id": "headache-pain",
+      "word": "headache",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 头痛",
+      "excludedMeaningLabels": [
+        "n. 令人头痛之事",
+        "v. 头痛"
+      ],
+      "teachingDefinition": "n. 头痛",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "dictionaryDefinition": "n. 头痛, 令人头痛之事\n[医] 头痛",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "8c12724e64de294da21c806f1a71e13290d68d463609fd502589b847b584750c",
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "头痛",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "头痛",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "headache",
+        "exampleSurfaceForm": "headache",
+        "relation": "printed headword",
+        "savedWord": "headache",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "have a headache 是头痛名词用法；坐飞机时无法专心看书与中译一致，未推定病因。",
+        "changedFields": [],
+        "savedContentSha256": "8c12724e64de294da21c806f1a71e13290d68d463609fd502589b847b584750c"
+      },
+      "reviewNotes": "have a headache 是头痛名词用法；坐飞机时无法专心看书与中译一致，未推定病因。"
+    },
+    {
+      "id": "headache-problem",
+      "word": "headache",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 令人头痛之事",
+      "excludedMeaningLabels": [
+        "n. 头痛",
+        "v. 令人头痛之事"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "dictionaryDefinition": "n. 头痛, 令人头痛之事\n[医] 头痛",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "2e77b53938f651319e8b5555d52f662c2653e4d2963fb3717969488d31b6de7f",
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "头痛",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "头痛",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "headache",
+        "exampleSurfaceForm": "headache",
+        "relation": "printed headword",
+        "savedWord": "headache",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "停车困难比喻为 a real headache；与身体头痛分列，令人头疼的事与中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "2e77b53938f651319e8b5555d52f662c2653e4d2963fb3717969488d31b6de7f"
+      },
+      "reviewNotes": "停车困难比喻为 a real headache；与身体头痛分列，令人头疼的事与中译一致。"
+    },
+    {
+      "id": "measles-illness-name",
+      "word": "measles",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 麻疹",
+      "excludedMeaningLabels": [
+        "n. 风疹",
+        "n. 家畜囊尾蚴病",
+        "n. 米珠",
+        "v. 麻疹"
+      ],
+      "teachingDefinition": "n. 麻疹",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "dictionaryDefinition": "n. 麻疹, 风疹, 家畜囊尾蚴病, 米珠\n[医] 麻疹, 囊尾蚴病(家畜)",
+      "reviewNotes": "只审读原书麻疹；旧词典风疹、家畜疾病不能作为同义词。本例是虚构语言情境，不包含诊断、防治建议。 杂志文章描述一段虚构过去疫情，只训练疾病名称；不认旧词典的风疹、家畜疾病为同义词，不给防治建议。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "b0658d00d62dba0c085c2a2843f3ce503308e5fe9e3224743e06c396ccfbf6e6",
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "麻疹",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "麻疹",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "measles",
+        "exampleSurfaceForm": "measles",
+        "relation": "printed headword",
+        "savedWord": "measles",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "杂志文章描述一段虚构过去疫情，只训练疾病名称；不认旧词典的风疹、家畜疾病为同义词，不给防治建议。",
+        "changedFields": [],
+        "savedContentSha256": "b0658d00d62dba0c085c2a2843f3ce503308e5fe9e3224743e06c396ccfbf6e6"
+      }
+    },
+    {
+      "id": "stomach-ache-pain",
+      "word": "stomach ache",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 胃痛",
+      "excludedMeaningLabels": [
+        "n. 头痛",
+        "v. 胃痛"
+      ],
+      "teachingDefinition": "n. 胃痛",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "dictionaryDefinition": "n. 胃痛；肚子痛",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "a080a553cf0436fc67b7cd445306afc090889409096458fc212cb4d7244d9557",
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "胃痛",
+      "sourcePrintedPartOfSpeech": null,
+      "textbookWordListDefinition": "胃痛",
+      "textbookWordListPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": "n. (noun phrase)",
+      "canonicalHeadwordEvidence": {
+        "headword": "stomach ache",
+        "exampleSurfaceForm": "stomach ache",
+        "relation": "printed headword",
+        "savedWord": "stomach ache",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "have a stomach ache 是胃痛名词短语，提前离开聚会的中译一致；原词表未打印POS，名词词性另记编辑推断。",
+        "changedFields": [],
+        "savedContentSha256": "a080a553cf0436fc67b7cd445306afc090889409096458fc212cb4d7244d9557"
+      },
+      "reviewNotes": "have a stomach ache 是胃痛名词短语，提前离开聚会的中译一致；原词表未打印POS，名词词性另记编辑推断。"
+    },
+    {
+      "id": "temperature-measure",
+      "word": "temperature",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 温度",
+      "excludedMeaningLabels": [
+        "n. 发烧",
+        "v. 温度"
+      ],
+      "teachingDefinition": "n. 温度",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "dictionaryDefinition": "n. 温度, 发烧, 热度\n[化] 温度",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "eae36d4fbfd9344c219dcc5b2ff6d7abb8e71926458bb0d277eaf725557ebcc3",
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "温度",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "温度",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "temperature",
+        "exampleSurfaceForm": "temperature",
+        "relation": "printed headword",
+        "savedWord": "temperature",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "测室温是温度名词义；与 have a temperature 发烧另列，不推定人体健康状况。",
+        "changedFields": [],
+        "savedContentSha256": "eae36d4fbfd9344c219dcc5b2ff6d7abb8e71926458bb0d277eaf725557ebcc3"
+      },
+      "reviewNotes": "测室温是温度名词义；与 have a temperature 发烧另列，不推定人体健康状况。"
+    },
+    {
+      "id": "temperature-fever",
+      "word": "temperature",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 发烧",
+      "excludedMeaningLabels": [
+        "n. 温度",
+        "v. 发烧"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "dictionaryDefinition": "n. 温度, 发烧, 热度\n[化] 温度",
+      "reviewNotes": "源页 notes 明示 have a temperature=发烧；本条仍单列扩展，不替代 word-list 的温度目标。 原页 notes 第2条明示 have a temperature=发烧；仍列词表目标之外的扩展，虚构缺席演出不包含建议。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "94ba0947de5ca4d496d63cfe075b4ac2dd8643df3981962b4723f37ddcad8e2d",
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "温度",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "温度",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "temperature",
+        "exampleSurfaceForm": "temperature",
+        "relation": "printed headword",
+        "savedWord": "temperature",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "原页 notes 第2条明示 have a temperature=发烧；仍列词表目标之外的扩展，虚构缺席演出不包含建议。",
+        "changedFields": [],
+        "savedContentSha256": "94ba0947de5ca4d496d63cfe075b4ac2dd8643df3981962b4723f37ddcad8e2d"
+      }
+    },
+    {
+      "id": "toothache-pain",
+      "word": "toothache",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 牙痛",
+      "excludedMeaningLabels": [
+        "n. 胃痛",
+        "v. 牙痛"
+      ],
+      "teachingDefinition": "n. 牙痛",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "dictionaryDefinition": "n. 牙痛\n[医] 牙痛",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "6ff01cb12a2901b1d0a3cf22c245ac10b8d6e048e22cec54b2abee2fcbb24059",
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "牙痛",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "牙痛",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "toothache",
+        "exampleSurfaceForm": "toothache",
+        "relation": "printed headword",
+        "savedWord": "toothache",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "His toothache 指特定牙痛，阻碍旅途中睡眠的中译一致；have toothache 是自然英式搭配。",
+        "changedFields": [],
+        "savedContentSha256": "6ff01cb12a2901b1d0a3cf22c245ac10b8d6e048e22cec54b2abee2fcbb24059"
+      },
+      "reviewNotes": "His toothache 指特定牙痛，阻碍旅途中睡眠的中译一致；have toothache 是自然英式搭配。"
+    },
+    {
+      "id": "break-object",
+      "word": "break",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 打破",
+      "excludedMeaningLabels": [
+        "v. 弄坏",
+        "n. 休息",
+        "n. 中断",
+        "v. 违反",
+        "n. 打破"
+      ],
+      "teachingDefinition": "v. 打破",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 休息, 中断, 破裂处, 绝交, 破晓, 突变\nvt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃\nvi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停\nn. 分隔符",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "d7e0f1c6f1aa57d46d266cc581d50cd955c6362853a69ef8647a1423a40e4689",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "打破",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "打破",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "break",
+        "exampleSurfaceForm": "break",
+        "relation": "printed headword",
+        "savedWord": "break",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "break the glass 指打破玻璃杯，与原页打破目标、洗杯子的中译和动词搭配一致。",
+        "changedFields": [],
+        "savedContentSha256": "d7e0f1c6f1aa57d46d266cc581d50cd955c6362853a69ef8647a1423a40e4689"
+      },
+      "reviewNotes": "break the glass 指打破玻璃杯，与原页打破目标、洗杯子的中译和动词搭配一致。"
+    },
+    {
+      "id": "break-device",
+      "word": "break",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 弄坏",
+      "excludedMeaningLabels": [
+        "v. 打破",
+        "n. 休息",
+        "n. 中断",
+        "v. 违反",
+        "n. 弄坏"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 休息, 中断, 破裂处, 绝交, 破晓, 突变\nvt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃\nvi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停\nn. 分隔符",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "d3bdf394029622dac5ec485919b8711d6117d67f4df8a108b89177bef1df0292",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "打破",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "打破",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "break",
+        "exampleSurfaceForm": "broke",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "break",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "fall broke the camera 是弄坏设备，引出开不了机；独立于玻璃碎裂、休息与违反规则。",
+        "changedFields": [],
+        "savedContentSha256": "d3bdf394029622dac5ec485919b8711d6117d67f4df8a108b89177bef1df0292"
+      },
+      "reviewNotes": "fall broke the camera 是弄坏设备，引出开不了机；独立于玻璃碎裂、休息与违反规则。"
+    },
+    {
+      "id": "break-rest",
+      "word": "break",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 休息",
+      "excludedMeaningLabels": [
+        "v. 打破",
+        "v. 弄坏",
+        "n. 中断",
+        "v. 违反",
+        "v. 休息"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 休息, 中断, 破裂处, 绝交, 破晓, 突变\nvt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃\nvi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停\nn. 分隔符",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "cc5a1c97bf3729830d9a6a7e277369507c28d8cc73f7c1c9a7a3ddfbe047611e",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "打破",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "打破",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "break",
+        "exampleSurfaceForm": "break",
+        "relation": "printed headword",
+        "savedWord": "break",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "take a short break 是名词休息，用祈使提议的中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "cc5a1c97bf3729830d9a6a7e277369507c28d8cc73f7c1c9a7a3ddfbe047611e"
+      },
+      "reviewNotes": "take a short break 是名词休息，用祈使提议的中译一致。"
+    },
+    {
+      "id": "break-interruption",
+      "word": "break",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 中断",
+      "excludedMeaningLabels": [
+        "v. 打破",
+        "v. 弄坏",
+        "n. 休息",
+        "v. 违反",
+        "v. 中断"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 休息, 中断, 破裂处, 绝交, 破晓, 突变\nvt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃\nvi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停\nn. 分隔符",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "3fe05bba9870888fcadc4f8a1c291c0f7f30db6b86b59e51942d57c04c92e71e",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "打破",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "打破",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "break",
+        "exampleSurfaceForm": "break",
+        "relation": "printed headword",
+        "savedWord": "break",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "a break in the internet connection 是连接中断；没有把名词中断当成打破动作。",
+        "changedFields": [],
+        "savedContentSha256": "3fe05bba9870888fcadc4f8a1c291c0f7f30db6b86b59e51942d57c04c92e71e"
+      },
+      "reviewNotes": "a break in the internet connection 是连接中断；没有把名词中断当成打破动作。"
+    },
+    {
+      "id": "break-rule",
+      "word": "break",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 违反",
+      "excludedMeaningLabels": [
+        "v. 打破",
+        "v. 弄坏",
+        "n. 休息",
+        "n. 中断",
+        "n. 违反"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 休息, 中断, 破裂处, 绝交, 破晓, 突变\nvt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃\nvi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停\nn. 分隔符",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "be461a4c8571c3554e9ad6492c73233e9f3ec83a4723747155f7f47d57505d7e",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "打破",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "打破",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "break",
+        "exampleSurfaceForm": "broken",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "break",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "broken a rule 为 break 的过去分词，违反规则动词义；裁判转述的中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "be461a4c8571c3554e9ad6492c73233e9f3ec83a4723747155f7f47d57505d7e"
+      },
+      "reviewNotes": "broken a rule 为 break 的过去分词，违反规则动词义；裁判转述的中译一致。"
+    },
+    {
+      "id": "drive-vehicle",
+      "word": "drive",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 开车",
+      "excludedMeaningLabels": [
+        "n. 驾车",
+        "n. 驱动器",
+        "v. 推动",
+        "n. 动力",
+        "n. 开车"
+      ],
+      "teachingDefinition": "v. 开车",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器\nvt. 开车, 驱使, 推动, 驾驶\nvi. 开车, 猛击, 飞跑\n[计] 驱动器",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "37b17e5cb315abcf150a64ecde30ef8b903933e5bc5fe9f5a188ba2f0c9d1890",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "开车",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "开车",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "drive",
+        "exampleSurfaceForm": "drive",
+        "relation": "printed headword",
+        "savedWord": "drive",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "drive someone to the station 指开车送人，与开车目标一致；正在修车解释当天无法送人的情境。",
+        "changedFields": [],
+        "savedContentSha256": "37b17e5cb315abcf150a64ecde30ef8b903933e5bc5fe9f5a188ba2f0c9d1890"
+      },
+      "reviewNotes": "drive someone to the station 指开车送人，与开车目标一致；正在修车解释当天无法送人的情境。"
+    },
+    {
+      "id": "drive-car-trip",
+      "word": "drive",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 驾车",
+      "excludedMeaningLabels": [
+        "v. 开车",
+        "n. 驱动器",
+        "v. 推动",
+        "n. 动力",
+        "v. 驾车"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器\nvt. 开车, 驱使, 推动, 驾驶\nvi. 开车, 猛击, 飞跑\n[计] 驱动器",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "751ad61c13cac542a01d8fc400fd8ce08f92f89d990b0a9adc2ac84a51c6f6e9",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "开车",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "开车",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "drive",
+        "exampleSurfaceForm": "drive",
+        "relation": "printed headword",
+        "savedWord": "drive",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "go for a drive 指名词驾车出游，沿海岸兜风的中译与搭配一致。",
+        "changedFields": [],
+        "savedContentSha256": "751ad61c13cac542a01d8fc400fd8ce08f92f89d990b0a9adc2ac84a51c6f6e9"
+      },
+      "reviewNotes": "go for a drive 指名词驾车出游，沿海岸兜风的中译与搭配一致。"
+    },
+    {
+      "id": "drive-computer-storage",
+      "word": "drive",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 驱动器",
+      "excludedMeaningLabels": [
+        "v. 开车",
+        "n. 驾车",
+        "v. 推动",
+        "n. 动力",
+        "v. 驱动器"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器\nvt. 开车, 驱使, 推动, 驾驶\nvi. 开车, 猛击, 飞跑\n[计] 驱动器",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "b353efcdaf12bb36761508c0e080963fdfab431065ce1176f91fda1eacc640fa",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "开车",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "开车",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "drive",
+        "exampleSurfaceForm": "drive",
+        "relation": "printed headword",
+        "savedWord": "drive",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "external drive 指存储驱动器，照片副本保存到外置存储盘；不等同于开车或个人动力。",
+        "changedFields": [],
+        "savedContentSha256": "b353efcdaf12bb36761508c0e080963fdfab431065ce1176f91fda1eacc640fa"
+      },
+      "reviewNotes": "external drive 指存储驱动器，照片副本保存到外置存储盘；不等同于开车或个人动力。"
+    },
+    {
+      "id": "drive-cause-action",
+      "word": "drive",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 推动",
+      "excludedMeaningLabels": [
+        "v. 开车",
+        "n. 驾车",
+        "n. 驱动器",
+        "n. 动力",
+        "n. 推动"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器\nvt. 开车, 驱使, 推动, 驾驶\nvi. 开车, 猛击, 飞跑\n[计] 驱动器",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "441fa67ed51d4ea25b8ec5a404eba8e7d6ddd475e1f0f4cb5c2086e464ed537e",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "开车",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "开车",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "drive",
+        "exampleSurfaceForm": "drove",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "drive",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "drove the team to redesign 表驱使、推动行动，与减废需要的中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "441fa67ed51d4ea25b8ec5a404eba8e7d6ddd475e1f0f4cb5c2086e464ed537e"
+      },
+      "reviewNotes": "drove the team to redesign 表驱使、推动行动，与减废需要的中译一致。"
+    },
+    {
+      "id": "drive-motivation",
+      "word": "drive",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 动力",
+      "excludedMeaningLabels": [
+        "v. 开车",
+        "n. 驾车",
+        "n. 驱动器",
+        "v. 推动",
+        "v. 动力"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器\nvt. 开车, 驱使, 推动, 驾驶\nvi. 开车, 猛击, 飞跑\n[计] 驱动器",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "1399e8500bddde996aea851aef0cb62ba8312aaabc659fea9c2832628ceca474",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "开车",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "开车",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "drive",
+        "exampleSurfaceForm": "drive",
+        "relation": "printed headword",
+        "savedWord": "drive",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "Her drive 为个人干劲名词，支持在工作同时完成课程；不是车辆驱动器。",
+        "changedFields": [],
+        "savedContentSha256": "1399e8500bddde996aea851aef0cb62ba8312aaabc659fea9c2832628ceca474"
+      },
+      "reviewNotes": "Her drive 为个人干劲名词，支持在工作同时完成课程；不是车辆驱动器。"
+    },
+    {
+      "id": "lean-out-of-body",
+      "word": "lean out of",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 身体探出",
+      "excludedMeaningLabels": [
+        "adj. 瘦的",
+        "v. 依靠",
+        "n. 身体探出"
+      ],
+      "teachingDefinition": "v. 身体探出",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "身体探出",
+      "reviewNotes": "原书 word-list 写 lean out，练习出现 lean out of the window；当前项目词表保留完整短语 lean out of。 leaned out of the doorway 表身体探出，与原页短语一致；原词表未打印POS，动词短语词性另记推断。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "19765b13f5233c3c2d1e3783120005d10a8610a6bb5cd49f5eae7a1fd7c4ffe8",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "身体探出",
+      "sourcePrintedPartOfSpeech": null,
+      "textbookWordListDefinition": "身体探出",
+      "textbookWordListPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": "v. (verb phrase)",
+      "canonicalHeadwordEvidence": {
+        "headword": "lean out of",
+        "exampleSurfaceForm": "leaned out of",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "lean out of",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "leaned out of the doorway 表身体探出，与原页短语一致；原词表未打印POS，动词短语词性另记推断。",
+        "changedFields": [],
+        "savedContentSha256": "19765b13f5233c3c2d1e3783120005d10a8610a6bb5cd49f5eae7a1fd7c4ffe8"
+      }
+    },
+    {
+      "id": "library-building",
+      "word": "library",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 图书馆",
+      "excludedMeaningLabels": [
+        "n. 藏书",
+        "n. 库",
+        "v. 图书馆",
+        "n. 程序库"
+      ],
+      "teachingDefinition": "n. 图书馆",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 图书馆, 藏书, 库\n[计] 库",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "4468fc6bb1c8f51a8c5a4fc82836b00931805d5f37c656973254034071406f6e",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "图书馆",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "图书馆",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "library",
+        "exampleSurfaceForm": "library",
+        "relation": "printed headword",
+        "savedWord": "library",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "归还图书至图书馆；将含糊的服务台关闭改为图书馆闭馆，英中指代更直接。",
+        "changedFields": [
+          "en",
+          "zh"
+        ],
+        "savedContentSha256": "83c95c8e46c8ddb213ac2ad50a4c1e7eeb420d05f309e409777e39d104a5775d"
+      },
+      "reviewNotes": "归还图书至图书馆；将含糊的服务台关闭改为图书馆闭馆，英中指代更直接。"
+    },
+    {
+      "id": "library-book-collection",
+      "word": "library",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 藏书",
+      "excludedMeaningLabels": [
+        "n. 图书馆",
+        "n. 库",
+        "v. 藏书",
+        "n. 程序库"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 图书馆, 藏书, 库\n[计] 库",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "0d609d5c6ddfda2c10759f2467cbe476a2b179f933d12b52227df38632c77ead",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "图书馆",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "图书馆",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "library",
+        "exampleSurfaceForm": "library",
+        "relation": "printed headword",
+        "savedWord": "library",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "Her private library 的 books 清楚指个人藏书集合，非建筑物或程序库。",
+        "changedFields": [],
+        "savedContentSha256": "0d609d5c6ddfda2c10759f2467cbe476a2b179f933d12b52227df38632c77ead"
+      },
+      "reviewNotes": "Her private library 的 books 清楚指个人藏书集合，非建筑物或程序库。"
+    },
+    {
+      "id": "library-software",
+      "word": "library",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 程序库",
+      "excludedMeaningLabels": [
+        "n. 图书馆",
+        "n. 藏书",
+        "n. 库",
+        "n. 库房",
+        "v. 程序库"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 图书馆, 藏书, 库\n[计] 库",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "084f52113e23ae01411ed5339a2c476b594eca70439c357bc8d106b4b488f0c4",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "图书馆",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "图书馆",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "library",
+        "exampleSurfaceForm": "library",
+        "relation": "printed headword",
+        "savedWord": "library",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "更新并重新构建应用清楚指程序库；删除无法单独区分领域的泛中文cue 库，用程序库/软件库作正向。",
+        "changedFields": [
+          "matches"
+        ],
+        "savedContentSha256": "c617a6a2be79a965f00d34de7505bb0c197ba102f8897657f4fa80a721bf270c"
+      },
+      "reviewNotes": "更新并重新构建应用清楚指程序库；删除无法单独区分领域的泛中文cue 库，用程序库/软件库作正向。"
+    },
+    {
+      "id": "noise-unwanted-sound",
+      "word": "noise",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 喧闹声",
+      "excludedMeaningLabels": [
+        "n. 杂音",
+        "n. 录音杂音",
+        "n. 背景杂音",
+        "n. 噪声",
+        "v. 喧闹声"
+      ],
+      "teachingDefinition": "n. 喧闹声",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 噪音, 杂音, 响声, 喧闹\nvt. 谣传\nvi. 喧闹\n[计] 噪声",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "7c402ff336260602f2cdab3609b92d3cf3bcf897fd3212454d8ac6f8557a131d",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "喧闹声",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "喧闹声",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "noise",
+        "exampleSurfaceForm": "noise",
+        "relation": "printed headword",
+        "savedWord": "noise",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "实际原页打印喧闹声，纠正原草稿吵闹声目标；施工声阻碍听清会议发言人，保持名词声音义。",
+        "changedFields": [
+          "sense",
+          "matches",
+          "teachingDefinition",
+          "en",
+          "zh"
+        ],
+        "savedContentSha256": "b0ed07fd35be6f98223badfec80c1b6555f439b60adeadb2902eecff6fd2c1f4"
+      },
+      "reviewNotes": "实际原页打印喧闹声，纠正原草稿吵闹声目标；施工声阻碍听清会议发言人，保持名词声音义。"
+    },
+    {
+      "id": "noise-recording-interference",
+      "word": "noise",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 杂音",
+      "excludedMeaningLabels": [
+        "n. 吵闹声",
+        "n. 喧闹声",
+        "n. 噪音",
+        "n. 噪声",
+        "v. 杂音"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 噪音, 杂音, 响声, 喧闹\nvt. 谣传\nvi. 喧闹\n[计] 噪声",
+      "reviewNotes": "仅普通录音杂音语境，不声称完成信号处理/计算机术语审读。 background noise in an old recording 指录音杂音，删除无录音限定的泛cue 噪声，与施工声音分列。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "7ed67625a83c73c2b4d303e7918627f266838756f82349405d9219c05bf65c61",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "喧闹声",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "喧闹声",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "noise",
+        "exampleSurfaceForm": "noise",
+        "relation": "printed headword",
+        "savedWord": "noise",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "background noise in an old recording 指录音杂音，删除无录音限定的泛cue 噪声，与施工声音分列。",
+        "changedFields": [
+          "matches"
+        ],
+        "savedContentSha256": "702d95a5dc60808f36db7305592de3d99398d90bc4d8930457436d4600c57f32"
+      }
+    },
+    {
+      "id": "quickly-speed",
+      "word": "quickly",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adv.",
+      "meaningForCheck": "adv. 快地",
+      "excludedMeaningLabels": [
+        "adv. 小心地",
+        "adj. 快地"
+      ],
+      "teachingDefinition": "adv. 快地",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "adv. 很快地",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "acb98d95073f84307629f296dbc1e053f5922ad23e9093d4e1a947a94e36bca9",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "快地",
+      "sourcePrintedPartOfSpeech": "adv.",
+      "textbookWordListDefinition": "快地",
+      "textbookWordListPartOfSpeech": "adv.",
+      "canonicalHeadwordEvidence": {
+        "headword": "quickly",
+        "exampleSurfaceForm": "quickly",
+        "relation": "printed headword",
+        "savedWord": "quickly",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "quickly 修饰核对地址，快速核对与中译一致；保留原书快地打印释义。",
+        "changedFields": [],
+        "savedContentSha256": "acb98d95073f84307629f296dbc1e053f5922ad23e9093d4e1a947a94e36bca9"
+      },
+      "reviewNotes": "quickly 修饰核对地址，快速核对与中译一致；保留原书快地打印释义。"
+    },
+    {
+      "id": "so-degree",
+      "word": "so",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adv.",
+      "meaningForCheck": "adv. 如此地",
+      "excludedMeaningLabels": [
+        "conj. 所以",
+        "adv. 如是",
+        "adv. 这样",
+        "adv. 如此",
+        "adj. 如此地"
+      ],
+      "teachingDefinition": "adv. 如此地",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "adv. 如此, 如是, 如...那样\nconj. 所以, 因此\npron. 这样",
+      "reviewNotes": "只程度副词；所以是 conjunction，hope so 代替前述情况另列。 so heavy that 为程度结构；删除与代指前述情况共享的泛cue 如此，程度例仅匹配如此地/这么/那么。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "1ad194b4e9237651849d20b3a9ba066c9e8521c2d12e86de69c7769502be87de",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "如此地",
+      "sourcePrintedPartOfSpeech": "adv.",
+      "textbookWordListDefinition": "如此地",
+      "textbookWordListPartOfSpeech": "adv.",
+      "canonicalHeadwordEvidence": {
+        "headword": "so",
+        "exampleSurfaceForm": "so",
+        "relation": "printed headword",
+        "savedWord": "so",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "so heavy that 为程度结构；删除与代指前述情况共享的泛cue 如此，程度例仅匹配如此地/这么/那么。",
+        "changedFields": [
+          "matches"
+        ],
+        "savedContentSha256": "4678d834340a6b3d8481611fd67c2a6d2dc860d485cac83ca96755f76d0389b4"
+      }
+    },
+    {
+      "id": "so-consequence",
+      "word": "so",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "conj.",
+      "meaningForCheck": "conj. 所以",
+      "excludedMeaningLabels": [
+        "adv. 如此地",
+        "adv. 如是",
+        "adv. 这样",
+        "adv. 所以"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "adv. 如此, 如是, 如...那样\nconj. 所以, 因此\npron. 这样",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "965b3cdc1e9433de70b31726dc761dd2ca85167210e9284fc8d0e4f407c472b5",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "如此地",
+      "sourcePrintedPartOfSpeech": "adv.",
+      "textbookWordListDefinition": "如此地",
+      "textbookWordListPartOfSpeech": "adv.",
+      "canonicalHeadwordEvidence": {
+        "headword": "so",
+        "exampleSurfaceForm": "so",
+        "relation": "printed headword",
+        "savedWord": "so",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "逗号后的 so 表末班车开走引出的结果连词义，与所以中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "965b3cdc1e9433de70b31726dc761dd2ca85167210e9284fc8d0e4f407c472b5"
+      },
+      "reviewNotes": "逗号后的 so 表末班车开走引出的结果连词义，与所以中译一致。"
+    },
+    {
+      "id": "so-stated-situation",
+      "word": "so",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adv.",
+      "meaningForCheck": "adv. 如是",
+      "excludedMeaningLabels": [
+        "adv. 如此地",
+        "conj. 所以",
+        "adv. 这么",
+        "adv. 那么",
+        "adj. 如是"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "adv. 如此, 如是, 如...那样\nconj. 所以, 因此\npron. 这样",
+      "reviewNotes": "I hope so 中的 so 为副词性前述情况替代，不将词典 pron.这样 自动视作已核。 I hope so 中 so 代指前述情况；义项标题改为如是/这样，避免泛如此误选程度例。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "25b573a5eb9be189d8c9014ee001a4cf2110e94baed3062d4e48daeecf94f4bb",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "如此地",
+      "sourcePrintedPartOfSpeech": "adv.",
+      "textbookWordListDefinition": "如此地",
+      "textbookWordListPartOfSpeech": "adv.",
+      "canonicalHeadwordEvidence": {
+        "headword": "so",
+        "exampleSurfaceForm": "so",
+        "relation": "printed headword",
+        "savedWord": "so",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "I hope so 中 so 代指前述情况；义项标题改为如是/这样，避免泛如此误选程度例。",
+        "changedFields": [
+          "sense"
+        ],
+        "savedContentSha256": "9aa9225c2ae96d5e8bc341342113809496ef64c6a0adcccf963ed84ec7e995c5"
+      }
+    },
+    {
+      "id": "talk-converse",
+      "word": "talk",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 谈话",
+      "excludedMeaningLabels": [
+        "n. 谈话",
+        "n. 演讲"
+      ],
+      "teachingDefinition": "v. 谈话",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 谈话, 交谈, 会谈, 讲话, 演讲, 空谈, 谣言, 方言, 语言\nvi. 讲话, 演讲, 说话, 谈话, 交流, 闲聊, 说闲话\nvt. 讲, 说, 讨论, 谈论\n[计] 对话类, 聊天",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "16bacb2a5280bb240da7c3bbf36436cd7caf64fd2e4f9a5b456a0975ed441e00",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "谈话",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "谈话",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "talk",
+        "exampleSurfaceForm": "talked",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "talk",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "talked about 表动词交谈某话题，与原表 v. 谈话一致；与同中文的名词谈话依POS区分。",
+        "changedFields": [],
+        "savedContentSha256": "16bacb2a5280bb240da7c3bbf36436cd7caf64fd2e4f9a5b456a0975ed441e00"
+      },
+      "reviewNotes": "talked about 表动词交谈某话题，与原表 v. 谈话一致；与同中文的名词谈话依POS区分。"
+    },
+    {
+      "id": "talk-conversation-noun",
+      "word": "talk",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 谈话",
+      "excludedMeaningLabels": [
+        "v. 谈话",
+        "n. 演讲"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 谈话, 交谈, 会谈, 讲话, 演讲, 空谈, 谣言, 方言, 语言\nvi. 讲话, 演讲, 说话, 谈话, 交流, 闲聊, 说闲话\nvt. 讲, 说, 讨论, 谈论\n[计] 对话类, 聊天",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "7c9b2766c642c8ad7d43f97a618d359223b6a1f2c427c9e4841619bc424bb2f0",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "谈话",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "谈话",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "talk",
+        "exampleSurfaceForm": "talk",
+        "relation": "printed headword",
+        "savedWord": "talk",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "have a quiet talk 指一次名词交谈，客人离开后的场景与中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "7c9b2766c642c8ad7d43f97a618d359223b6a1f2c427c9e4841619bc424bb2f0"
+      },
+      "reviewNotes": "have a quiet talk 指一次名词交谈，客人离开后的场景与中译一致。"
+    },
+    {
+      "id": "talk-presentation",
+      "word": "talk",
+      "source": {
+        "book": "NCE1",
+        "lesson": 64
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 演讲",
+      "excludedMeaningLabels": [
+        "v. 谈话",
+        "n. 谈话",
+        "v. 演讲"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 132,
+      "sourcePrintedPage": 128,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "dictionaryDefinition": "n. 谈话, 交谈, 会谈, 讲话, 演讲, 空谈, 谣言, 方言, 语言\nvi. 讲话, 演讲, 说话, 谈话, 交流, 闲聊, 说闲话\nvt. 讲, 说, 讨论, 谈论\n[计] 对话类, 聊天",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "8181ac0ea55f023f9710f3899299903d6e845c4b30885c42cf27db999c064b08",
+      "sourcePageSha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059",
+      "sourcePrintedMeaning": "谈话",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "谈话",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "talk",
+        "exampleSurfaceForm": "talk",
+        "relation": "printed headword",
+        "savedWord": "talk",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "host a talk about wildlife 指博物馆讲座，与给出讲座/演讲的名词搭配一致。",
+        "changedFields": [],
+        "savedContentSha256": "8181ac0ea55f023f9710f3899299903d6e845c4b30885c42cf27db999c064b08"
+      },
+      "reviewNotes": "host a talk about wildlife 指博物馆讲座，与给出讲座/演讲的名词搭配一致。"
+    },
+    {
+      "id": "herself-reflexive",
+      "word": "herself",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 她自己",
+      "excludedMeaningLabels": [
+        "pron. 她亲自",
+        "pron. 她本人",
+        "n. 她自己"
+      ],
+      "teachingDefinition": "pron. 她自己",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 她自己, 她亲自",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "351b47827873ec80e24a9342b5706bfa6b013a2da467d18ab55d0d5bc6367371",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "她自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "她自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "herself",
+        "exampleSurfaceForm": "herself",
+        "relation": "printed headword",
+        "savedWord": "herself",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "looked at herself 指主语与介词宾语同人；搭配中译明确女性主语看自己，与亲自强调例分列。",
+        "changedFields": [
+          "collocation"
+        ],
+        "savedContentSha256": "954d35b6711ab1084e5dff9dfb4585e56308f62aadcc2b86fafb147e263b339f"
+      },
+      "reviewNotes": "looked at herself 指主语与介词宾语同人；搭配中译明确女性主语看自己，与亲自强调例分列。"
+    },
+    {
+      "id": "herself-emphasis",
+      "word": "herself",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 她亲自",
+      "excludedMeaningLabels": [
+        "pron. 她自己",
+        "n. 她亲自"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 她自己, 她亲自",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "8119932b9d906830fca3aa6b21b266c49b5f2607a82dd47ce04a0d4f296307ab",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "她自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "她自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "herself",
+        "exampleSurfaceForm": "herself",
+        "relation": "printed headword",
+        "savedWord": "herself",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "the director herself 为同位强调，主管亲自回复投诉；不是反身宾语。",
+        "changedFields": [],
+        "savedContentSha256": "8119932b9d906830fca3aa6b21b266c49b5f2607a82dd47ce04a0d4f296307ab"
+      },
+      "reviewNotes": "the director herself 为同位强调，主管亲自回复投诉；不是反身宾语。"
+    },
+    {
+      "id": "himself-reflexive",
+      "word": "himself",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 他自己",
+      "excludedMeaningLabels": [
+        "pron. 他亲自",
+        "pron. 他本人",
+        "n. 他自己"
+      ],
+      "teachingDefinition": "pron. 他自己",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 他自己, 他亲自",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "8988ff5fa2ec623059c023b2610f63ac2cec4efed3a6c53905f1290acaf50662",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "他自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "他自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "himself",
+        "exampleSurfaceForm": "himself",
+        "relation": "printed headword",
+        "savedWord": "himself",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "blamed himself 为主语反身宾语，因忘钥匙责备自己，非亲自强调。",
+        "changedFields": [],
+        "savedContentSha256": "8988ff5fa2ec623059c023b2610f63ac2cec4efed3a6c53905f1290acaf50662"
+      },
+      "reviewNotes": "blamed himself 为主语反身宾语，因忘钥匙责备自己，非亲自强调。"
+    },
+    {
+      "id": "himself-emphasis",
+      "word": "himself",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 他亲自",
+      "excludedMeaningLabels": [
+        "pron. 他自己",
+        "n. 他亲自"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 他自己, 他亲自",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "1f49b88e3676d11c74d8dd4c371876387b560954f3297d405c42b3b43171ed18",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "他自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "他自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "himself",
+        "exampleSurfaceForm": "himself",
+        "relation": "printed headword",
+        "savedWord": "himself",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "the owner himself 为同位强调，店主亲自刷漆，非反身宾语。",
+        "changedFields": [],
+        "savedContentSha256": "1f49b88e3676d11c74d8dd4c371876387b560954f3297d405c42b3b43171ed18"
+      },
+      "reviewNotes": "the owner himself 为同位强调，店主亲自刷漆，非反身宾语。"
+    },
+    {
+      "id": "myself-reflexive",
+      "word": "myself",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 我自己",
+      "excludedMeaningLabels": [
+        "pron. 我亲自",
+        "pron. 我独自",
+        "n. 我自己"
+      ],
+      "teachingDefinition": "pron. 我自己",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 我自己, 我亲自, 我独自",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "3e0d9d6eb75709a527ca52d318a8f8ced7520d4e73b46a14ac4b2628e6b1e6e6",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "我自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "我自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "myself",
+        "exampleSurfaceForm": "myself",
+        "relation": "printed headword",
+        "savedWord": "myself",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "reminded myself 为第一人称反身宾语，提醒自己检查车票；搭配中译自然化，不映射强调或独自。",
+        "changedFields": [
+          "collocation"
+        ],
+        "savedContentSha256": "8cf3eb2fcec128920f71a710be5ba7ef0a142ae25e5e1f8f12003a1efde8bec0"
+      },
+      "reviewNotes": "reminded myself 为第一人称反身宾语，提醒自己检查车票；搭配中译自然化，不映射强调或独自。"
+    },
+    {
+      "id": "myself-emphasis",
+      "word": "myself",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 我亲自",
+      "excludedMeaningLabels": [
+        "pron. 我自己",
+        "pron. 我独自",
+        "n. 我亲自"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 我自己, 我亲自, 我独自",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "35099e618240a217bfb3a36b01e4bc6d2aa2cf4237aa04ad003d2e8d77ef297e",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "我自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "我自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "myself",
+        "exampleSurfaceForm": "myself",
+        "relation": "printed headword",
+        "savedWord": "myself",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "made the shelf myself 为动作由本人完成的强调，亲手制作而非购买；不当成独自一人。",
+        "changedFields": [],
+        "savedContentSha256": "35099e618240a217bfb3a36b01e4bc6d2aa2cf4237aa04ad003d2e8d77ef297e"
+      },
+      "reviewNotes": "made the shelf myself 为动作由本人完成的强调，亲手制作而非购买；不当成独自一人。"
+    },
+    {
+      "id": "myself-alone",
+      "word": "myself",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 我独自",
+      "excludedMeaningLabels": [
+        "pron. 我自己",
+        "pron. 我亲自",
+        "n. 我独自"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 我自己, 我亲自, 我独自",
+      "reviewNotes": "独自义由 by myself 整体短语提供，不声称裸 myself 总表示独自。 by myself 表独自回家，必须连 by 使用，非反身宾语或本人亲自强调。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "51392f64fd4dacc881fde417a2a5c069b983fd0b273ff1471e34c973cf3b9542",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "我自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "我自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "myself",
+        "exampleSurfaceForm": "myself",
+        "relation": "printed headword",
+        "savedWord": "myself",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "by myself 表独自回家，必须连 by 使用，非反身宾语或本人亲自强调。",
+        "changedFields": [],
+        "savedContentSha256": "51392f64fd4dacc881fde417a2a5c069b983fd0b273ff1471e34c973cf3b9542"
+      }
+    },
+    {
+      "id": "themselves-reflexive",
+      "word": "themselves",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 他们自己",
+      "excludedMeaningLabels": [
+        "pron. 他们本人",
+        "pron. 他们亲自",
+        "pron. 她们本人",
+        "pron. 她们亲自",
+        "n. 他们自己"
+      ],
+      "teachingDefinition": "pron. 他们自己",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 他们自己, 她们自己, 它们自己",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "8e4e0206f0f5bba898018867bc8bfb73e171959a5a0c75c0bb609ec2d59c0237",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "他们自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "他们自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "themselves",
+        "exampleSurfaceForm": "themselves",
+        "relation": "printed headword",
+        "savedWord": "themselves",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "dried themselves 为反身宾语；中译明确擦干自己的身体，避免仅写动作而省略自身关系。",
+        "changedFields": [
+          "zh",
+          "collocation"
+        ],
+        "savedContentSha256": "7e674020b07d03515ac6a3b3562b30cda192957728adaf8a4ba6d41080c83c7a"
+      },
+      "reviewNotes": "dried themselves 为反身宾语；中译明确擦干自己的身体，避免仅写动作而省略自身关系。"
+    },
+    {
+      "id": "themselves-emphasis",
+      "word": "themselves",
+      "source": {
+        "book": "NCE1",
+        "lesson": 66
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "pron.",
+      "meaningForCheck": "pron. 他们本人",
+      "excludedMeaningLabels": [
+        "pron. 他们自己",
+        "pron. 她们自己",
+        "pron. 它们自己",
+        "n. 他们本人"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 136,
+      "sourcePrintedPage": 132,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "dictionaryDefinition": "pron. 他们自己, 她们自己, 它们自己",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "38257fc995bcdef0323a09ce734586a337e0eb9840829f4122b037f98bd5320d",
+      "sourcePageSha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86",
+      "sourcePrintedMeaning": "他们自己",
+      "sourcePrintedPartOfSpeech": "pron.",
+      "textbookWordListDefinition": "他们自己",
+      "textbookWordListPartOfSpeech": "pron.",
+      "canonicalHeadwordEvidence": {
+        "headword": "themselves",
+        "exampleSurfaceForm": "themselves",
+        "relation": "printed headword",
+        "savedWord": "themselves",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "the students themselves 为同位强调，学生自己选主题；与反身宾语分列。",
+        "changedFields": [],
+        "savedContentSha256": "38257fc995bcdef0323a09ce734586a337e0eb9840829f4122b037f98bd5320d"
+      },
+      "reviewNotes": "the students themselves 为同位强调，学生自己选主题；与反身宾语分列。"
+    },
+    {
+      "id": "baker-profession",
+      "word": "baker",
+      "source": {
+        "book": "NCE1",
+        "lesson": 68
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 面包师傅",
+      "excludedMeaningLabels": [
+        "n. 烤箱",
+        "v. 面包师傅"
+      ],
+      "teachingDefinition": "n. 面包师傅",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 140,
+      "sourcePrintedPage": 136,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "dictionaryDefinition": "n. 面包师\n[医] 烤箱(骨科用)",
+      "reviewNotes": "原书面包师傅；骨科烤箱为现词典专业同形义，未审读。 baker 是面包师人物义，提前开工备面包的英中场景一致；不是烤箱。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "fed7e1f90c54aeaa1e5f4cbcbe1e8ea69e9460670e1e9a79bc0af89f1f311056",
+      "sourcePageSha256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "sourcePrintedMeaning": "面包师傅",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "面包师傅",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "baker",
+        "exampleSurfaceForm": "baker",
+        "relation": "printed headword",
+        "savedWord": "baker",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "baker 是面包师人物义，提前开工备面包的英中场景一致；不是烤箱。",
+        "changedFields": [],
+        "savedContentSha256": "fed7e1f90c54aeaa1e5f4cbcbe1e8ea69e9460670e1e9a79bc0af89f1f311056"
+      }
+    },
+    {
+      "id": "dairy-shop",
+      "word": "dairy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 68
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 乳品店",
+      "excludedMeaningLabels": [
+        "n. 乳牛场",
+        "n. 牛奶公司",
+        "v. 乳品店"
+      ],
+      "teachingDefinition": "n. 乳品店",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 140,
+      "sourcePrintedPage": 136,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "dictionaryDefinition": "n. 牛奶公司, 乳品店, 乳牛场",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "35710f98144a57d293b9d78edf80bdb64fdf628c656ad116b4042c8ac042e762",
+      "sourcePageSha256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "sourcePrintedMeaning": "乳品店",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "乳品店",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "dairy",
+        "exampleSurfaceForm": "dairy",
+        "relation": "printed headword",
+        "savedWord": "dairy",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "at the dairy 买牛奶和酸奶是乳品店处所义，与原词表乳品店目标一致。",
+        "changedFields": [],
+        "savedContentSha256": "35710f98144a57d293b9d78edf80bdb64fdf628c656ad116b4042c8ac042e762"
+      },
+      "reviewNotes": "at the dairy 买牛奶和酸奶是乳品店处所义，与原词表乳品店目标一致。"
+    },
+    {
+      "id": "dairy-farm",
+      "word": "dairy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 68
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 乳牛场",
+      "excludedMeaningLabels": [
+        "n. 乳品店",
+        "n. 牛奶公司",
+        "v. 乳牛场"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 140,
+      "sourcePrintedPage": 136,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "dictionaryDefinition": "n. 牛奶公司, 乳品店, 乳牛场",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "64675a5000b5c122f9e65405629230e0eee5bd6c6836e0d34fa40237e9a0b9fd",
+      "sourcePageSha256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "sourcePrintedMeaning": "乳品店",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "乳品店",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "dairy",
+        "exampleSurfaceForm": "dairy",
+        "relation": "printed headword",
+        "savedWord": "dairy",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "cows 与 farmhouse 将 dairy 限定为奶牛场，与中译和 dairy farm 搭配一致。",
+        "changedFields": [],
+        "savedContentSha256": "64675a5000b5c122f9e65405629230e0eee5bd6c6836e0d34fa40237e9a0b9fd"
+      },
+      "reviewNotes": "cows 与 farmhouse 将 dairy 限定为奶牛场，与中译和 dairy farm 搭配一致。"
+    },
+    {
+      "id": "dairy-company",
+      "word": "dairy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 68
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 牛奶公司",
+      "excludedMeaningLabels": [
+        "n. 乳品店",
+        "n. 乳牛场",
+        "v. 牛奶公司"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 140,
+      "sourcePrintedPage": 136,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "dictionaryDefinition": "n. 牛奶公司, 乳品店, 乳牛场",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "2c5f5657adc3a40d33e37bef3b0d06a6ee5036c8e28670072f0ac0892c18a5f7",
+      "sourcePageSha256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "sourcePrintedMeaning": "乳品店",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "乳品店",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "dairy",
+        "exampleSurfaceForm": "dairy",
+        "relation": "printed headword",
+        "savedWord": "dairy",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "delivers milk to cafés 将 dairy 限定为乳品企业，与中译一致，不偷换乳品店目标。",
+        "changedFields": [],
+        "savedContentSha256": "2c5f5657adc3a40d33e37bef3b0d06a6ee5036c8e28670072f0ac0892c18a5f7"
+      },
+      "reviewNotes": "delivers milk to cafés 将 dairy 限定为乳品企业，与中译一致，不偷换乳品店目标。"
+    },
+    {
+      "id": "grocer-profession",
+      "word": "grocer",
+      "source": {
+        "book": "NCE1",
+        "lesson": 68
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 食品杂货商",
+      "excludedMeaningLabels": [
+        "n. 食品杂货店",
+        "v. 食品杂货商"
+      ],
+      "teachingDefinition": "n. 食品杂货商",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 140,
+      "sourcePrintedPage": 136,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "dictionaryDefinition": "n. 食品商",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "082f15568b2ba1723f50ad6b6c871d65c6baaf21d20c6f19898b1ff1bc50fdf0",
+      "sourcePageSha256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717",
+      "sourcePrintedMeaning": "食品杂货商",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "食品杂货商",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "grocer",
+        "exampleSurfaceForm": "grocer",
+        "relation": "printed headword",
+        "savedWord": "grocer",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "grocer 称米装袋是食品杂货商人物义；搭配改为人物，不用 grocer’s 店铺义混入。",
+        "changedFields": [
+          "collocation"
+        ],
+        "savedContentSha256": "230f7c3d8f2ce7162f3ccf8a546f8376a805fc820fd0700304c9951b88809b52"
+      },
+      "reviewNotes": "grocer 称米装袋是食品杂货商人物义；搭配改为人物，不用 grocer’s 店铺义混入。"
+    },
+    {
+      "id": "denmark-country",
+      "word": "Denmark",
+      "source": {
+        "book": "NCE1",
+        "lesson": 70
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 丹麦",
+      "excludedMeaningLabels": [
+        "adj. 丹麦的",
+        "v. 丹麦"
+      ],
+      "teachingDefinition": "n. 丹麦",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 144,
+      "sourcePrintedPage": 140,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2",
+      "dictionaryDefinition": "n. 丹麦",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "0c9f084a91458f4d031c33dce25b39efb73b3a99975c5a7cb28a01e094a62e40",
+      "sourcePageSha256": "c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2",
+      "sourcePrintedMeaning": "丹麦",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "丹麦",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "Denmark",
+        "exampleSurfaceForm": "Denmark",
+        "relation": "printed headword",
+        "savedWord": "Denmark",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "through Denmark 指穿越丹麦旅行，国名保留大写，非丹麦的形容词。",
+        "changedFields": [],
+        "savedContentSha256": "0c9f084a91458f4d031c33dce25b39efb73b3a99975c5a7cb28a01e094a62e40"
+      },
+      "reviewNotes": "through Denmark 指穿越丹麦旅行，国名保留大写，非丹麦的形容词。"
+    },
+    {
+      "id": "stationer-profession",
+      "word": "stationer",
+      "source": {
+        "book": "NCE1",
+        "lesson": 70
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 文具商",
+      "excludedMeaningLabels": [
+        "n. 书商",
+        "v. 文具商"
+      ],
+      "teachingDefinition": "n. 文具商",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 144,
+      "sourcePrintedPage": 140,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2",
+      "dictionaryDefinition": "n. 文具商, 书商",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "1f8551013b1d8857663d7dd216f6d2628f85b4446c4d362aa7d4b4ff358287ad",
+      "sourcePageSha256": "c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2",
+      "sourcePrintedMeaning": "文具商",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "文具商",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "stationer",
+        "exampleSurfaceForm": "stationer",
+        "relation": "printed headword",
+        "savedWord": "stationer",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "stationer 帮忙选纸是文具商人物义；搭配改为人物，不用 stationer’s 店铺义混入。",
+        "changedFields": [
+          "collocation"
+        ],
+        "savedContentSha256": "037cbab1a1f5e54243d80e1cb3e5e1c9c0fa270afe0a0578b37884cbd3889785"
+      },
+      "reviewNotes": "stationer 帮忙选纸是文具商人物义；搭配改为人物，不用 stationer’s 店铺义混入。"
+    },
+    {
+      "id": "greet-person",
+      "word": "greet",
+      "source": {
+        "book": "NCE1",
+        "lesson": 74
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 问候",
+      "excludedMeaningLabels": [
+        "v. 映入眼帘",
+        "n. 问候"
+      ],
+      "teachingDefinition": "v. 问候；打招呼",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 156,
+      "sourcePrintedPage": 152,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "dictionaryDefinition": "vt. 问候, 致敬, 欢迎, 映入眼帘",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "de9562c5e2d5ec954cd25bc41ba2ea2562693b3517b5b4993d7b6d6a7fc5813f",
+      "sourcePageSha256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "sourcePrintedMeaning": "问候，打招呼",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "问候，打招呼",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "greet",
+        "exampleSurfaceForm": "greeted",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "greet",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "greeted us with a smile 是问候、打招呼，与原词表两个同组释义和中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "de9562c5e2d5ec954cd25bc41ba2ea2562693b3517b5b4993d7b6d6a7fc5813f"
+      },
+      "reviewNotes": "greeted us with a smile 是问候、打招呼，与原词表两个同组释义和中译一致。"
+    },
+    {
+      "id": "greet-sight",
+      "word": "greet",
+      "source": {
+        "book": "NCE1",
+        "lesson": 74
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 映入眼帘",
+      "excludedMeaningLabels": [
+        "v. 问候",
+        "n. 映入眼帘"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 156,
+      "sourcePrintedPage": 152,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "dictionaryDefinition": "vt. 问候, 致敬, 欢迎, 映入眼帘",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "46cc4b8b9725448d59a676f19396af9f23c675a235551831b9b44ce67fb9ddcc",
+      "sourcePageSha256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "sourcePrintedMeaning": "问候，打招呼",
+      "sourcePrintedPartOfSpeech": "v.",
+      "textbookWordListDefinition": "问候，打招呼",
+      "textbookWordListPartOfSpeech": "v.",
+      "canonicalHeadwordEvidence": {
+        "headword": "greet",
+        "exampleSurfaceForm": "greeted",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "greet",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "houses greeted us 的拟人结构描述景象映入眼帘，不等同于人主动打招呼。",
+        "changedFields": [],
+        "savedContentSha256": "46cc4b8b9725448d59a676f19396af9f23c675a235551831b9b44ce67fb9ddcc"
+      },
+      "reviewNotes": "houses greeted us 的拟人结构描述景象映入眼帘，不等同于人主动打招呼。"
+    },
+    {
+      "id": "thirstily-drink",
+      "word": "thirstily",
+      "source": {
+        "book": "NCE1",
+        "lesson": 74
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adv.",
+      "meaningForCheck": "adv. 口渴地",
+      "excludedMeaningLabels": [
+        "adv. 急切地",
+        "adj. 口渴地"
+      ],
+      "teachingDefinition": "adv. 口渴地",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 156,
+      "sourcePrintedPage": 152,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "dictionaryDefinition": "adv. 口渴地, 渴求地, 急切地",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "9e11c8598ec62944f1b79384aa1c2eaf38d19af0e046dc9f2ce53a51b19d1bf4",
+      "sourcePageSha256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3",
+      "sourcePrintedMeaning": "口渴地",
+      "sourcePrintedPartOfSpeech": "adv.",
+      "textbookWordListDefinition": "口渴地",
+      "textbookWordListPartOfSpeech": "adv.",
+      "canonicalHeadwordEvidence": {
+        "headword": "thirstily",
+        "exampleSurfaceForm": "thirstily",
+        "relation": "printed headword",
+        "savedWord": "thirstily",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "drank thirstily 指因渴而喝水，中文大口喝表达方式；只审语言，不推断健康或补水建议。",
+        "changedFields": [],
+        "savedContentSha256": "9e11c8598ec62944f1b79384aa1c2eaf38d19af0e046dc9f2ce53a51b19d1bf4"
+      },
+      "reviewNotes": "drank thirstily 指因渴而喝水，中文大口喝表达方式；只审语言，不推断健康或补水建议。"
+    },
+    {
+      "id": "chemist-pharmacist",
+      "word": "chemist",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 药剂师",
+      "excludedMeaningLabels": [
+        "n. 化学家",
+        "n. 药房",
+        "v. 药剂师"
+      ],
+      "teachingDefinition": "n. 药剂师",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 化学家, 药剂师\n[化] 化学家; 化学师; 化学工作者; 药剂师; 药房",
+      "reviewNotes": "原书同时列药剂师和化学家，分开例句；本例只叙述流程，不含用药建议。 药房里的 chemist 人物义；核对处方姓名仅是虚构叙事，不给用药建议，中译 package 改为包裹避免擅加药包。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "5bf708c2a88c0271e5cad233ccf8b61e1bfc3bed166143253c708730278df19b",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "药剂师，化学家",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "药剂师，化学家",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "chemist",
+        "exampleSurfaceForm": "chemist",
+        "relation": "printed headword",
+        "savedWord": "chemist",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "药房里的 chemist 人物义；核对处方姓名仅是虚构叙事，不给用药建议，中译 package 改为包裹避免擅加药包。",
+        "changedFields": [
+          "zh",
+          "collocation"
+        ],
+        "savedContentSha256": "617b674e3b2e3ab340a2ffae0e3a21f5787afc921248862b8777ba6aed485c2e"
+      }
+    },
+    {
+      "id": "chemist-scientist",
+      "word": "chemist",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 化学家",
+      "excludedMeaningLabels": [
+        "n. 药剂师",
+        "n. 药房",
+        "v. 化学家"
+      ],
+      "teachingDefinition": "n. 化学家",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 化学家, 药剂师\n[化] 化学家; 化学师; 化学工作者; 药剂师; 药房",
+      "reviewNotes": "原书明示化学家，不用药房例句代替科学家义。 实验室检测水样与 research chemist 清楚指化学家；原表亦打印化学家，保留第二教材目标。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "45da8eda88fb1d4773fbfd9fc93dab3dd2a21f92fa4abfd0bd26f00f9db0048b",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "药剂师，化学家",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "药剂师，化学家",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "chemist",
+        "exampleSurfaceForm": "chemist",
+        "relation": "printed headword",
+        "savedWord": "chemist",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "实验室检测水样与 research chemist 清楚指化学家；原表亦打印化学家，保留第二教材目标。",
+        "changedFields": [],
+        "savedContentSha256": "45da8eda88fb1d4773fbfd9fc93dab3dd2a21f92fa4abfd0bd26f00f9db0048b"
+      }
+    },
+    {
+      "id": "chemist-pharmacy-place",
+      "word": "chemist",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 药房",
+      "excludedMeaningLabels": [
+        "n. 药剂师",
+        "n. 化学家",
+        "v. 药房"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 化学家, 药剂师\n[化] 化学家; 化学师; 化学工作者; 药剂师; 药房",
+      "reviewNotes": "英式所有格 chemist’s 指药房；不把裸 chemist 的人名词普遍译为药房。 英式 chemist’s 所有格省略 shop 指药房；不用裸 chemist 普遍表示处所。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "f34ce89c740372dce64b203a8c891d78df79abff377e03d2d3221446f75cfaea",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "药剂师，化学家",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "药剂师，化学家",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "chemist",
+        "exampleSurfaceForm": "chemist",
+        "relation": "printed headword",
+        "savedWord": "chemist",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "英式 chemist’s 所有格省略 shop 指药房；不用裸 chemist 普遍表示处所。",
+        "changedFields": [],
+        "savedContentSha256": "f34ce89c740372dce64b203a8c891d78df79abff377e03d2d3221446f75cfaea"
+      }
+    },
+    {
+      "id": "fruit-food",
+      "word": "fruit",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 水果",
+      "excludedMeaningLabels": [
+        "n. 果实",
+        "n. 结果",
+        "v. 水果"
+      ],
+      "teachingDefinition": "n. 水果",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 水果, 果类, 结果\n[医] 果实, 种实",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "bd90e842a14a4cd4d1c600ba646622ffcf6c2df4b5a4fc388453f5cc43ad414e",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "水果",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "水果",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "fruit",
+        "exampleSurfaceForm": "fruit",
+        "relation": "printed headword",
+        "savedWord": "fruit",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "fresh fruit 为食物水果，不是植物学类别或努力成果；携带食物的中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "bd90e842a14a4cd4d1c600ba646622ffcf6c2df4b5a4fc388453f5cc43ad414e"
+      },
+      "reviewNotes": "fresh fruit 为食物水果，不是植物学类别或努力成果；携带食物的中译一致。"
+    },
+    {
+      "id": "fruit-botanical",
+      "word": "fruit",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 果实",
+      "excludedMeaningLabels": [
+        "n. 水果",
+        "n. 结果",
+        "v. 果实"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 水果, 果类, 结果\n[医] 果实, 种实",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "2c0a46e7a3f8489f436b38ca09b42c7aede8b1150ce0dfc13406f24e66f26013",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "水果",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "水果",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "fruit",
+        "exampleSurfaceForm": "fruit",
+        "relation": "printed headword",
+        "savedWord": "fruit",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "the fruit of this plant 的 seeds 指植物果实；虚构这株植物，不作普遍科学断言。",
+        "changedFields": [],
+        "savedContentSha256": "2c0a46e7a3f8489f436b38ca09b42c7aede8b1150ce0dfc13406f24e66f26013"
+      },
+      "reviewNotes": "the fruit of this plant 的 seeds 指植物果实；虚构这株植物，不作普遍科学断言。"
+    },
+    {
+      "id": "fruit-result",
+      "word": "fruit",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 结果",
+      "excludedMeaningLabels": [
+        "n. 水果",
+        "n. 果实",
+        "v. 结果"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 水果, 果类, 结果\n[医] 果实, 种实",
+      "reviewNotes": "fruits of one’s efforts 的成果比喻单列，不和水果或植物果实混成一条。 fruits of its efforts 的复数比喻成果，不混同食物或植物果实。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "97e9e84882be25ba5ed4ca6e1e2ce5cb9b771e4bbeaf58e88aeac8dd0bee0f16",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "水果",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "水果",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "fruit",
+        "exampleSurfaceForm": "fruits",
+        "relation": "grammatical inflection of the printed headword",
+        "savedWord": "fruit",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "fruits of its efforts 的复数比喻成果，不混同食物或植物果实。",
+        "changedFields": [],
+        "savedContentSha256": "97e9e84882be25ba5ed4ca6e1e2ce5cb9b771e4bbeaf58e88aeac8dd0bee0f16"
+      }
+    },
+    {
+      "id": "newsagent-profession",
+      "word": "newsagent",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 报刊零售人",
+      "excludedMeaningLabels": [
+        "n. 报刊",
+        "v. 报刊零售人"
+      ],
+      "teachingDefinition": "n. 报刊零售人",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 报刊经销商",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "8042c2137b32120d6c59a1d5a2f6fa418cab1936e0acc78f0cd561e0c8780e18",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "报刊零售人",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "报刊零售人",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "newsagent",
+        "exampleSurfaceForm": "newsagent",
+        "relation": "printed headword",
+        "savedWord": "newsagent",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "newsagent 留报纸是报刊零售人的人物义；搭配改为人物，不用所有格店铺义混入。",
+        "changedFields": [
+          "collocation"
+        ],
+        "savedContentSha256": "d284d1376704be7c5d2f9c561e865212c22a6b0eb421deaa0c8b861c6beb4e57"
+      },
+      "reviewNotes": "newsagent 留报纸是报刊零售人的人物义；搭配改为人物，不用所有格店铺义混入。"
+    },
+    {
+      "id": "stationery-writing-materials",
+      "word": "stationery",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 文具",
+      "excludedMeaningLabels": [
+        "n. 信纸",
+        "adj. 静止的",
+        "v. 文具"
+      ],
+      "teachingDefinition": "n. 文具",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 文具, 信纸\n[法] 文具",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "7a61166e906be4234320e7a17e07e703eaefc690b6635724ceeae222c40b85f5",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "文具",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "文具",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "stationery",
+        "exampleSurfaceForm": "stationery",
+        "relation": "printed headword",
+        "savedWord": "stationery",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "pens and envelopes 明确文具集合、不可数名词；stationery cupboard 中译一致，非 stationary 形容词。",
+        "changedFields": [],
+        "savedContentSha256": "7a61166e906be4234320e7a17e07e703eaefc690b6635724ceeae222c40b85f5"
+      },
+      "reviewNotes": "pens and envelopes 明确文具集合、不可数名词；stationery cupboard 中译一致，非 stationary 形容词。"
+    },
+    {
+      "id": "stationery-letter-paper",
+      "word": "stationery",
+      "source": {
+        "book": "NCE1",
+        "lesson": 80
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 信纸",
+      "excludedMeaningLabels": [
+        "n. 文具",
+        "adj. 静止的",
+        "v. 信纸"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 168,
+      "sourcePrintedPage": 164,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageSHA256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "dictionaryDefinition": "n. 文具, 信纸\n[法] 文具",
+      "contentFile": "app/data/vocabulary-reviewed-batch5e.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "contentSha256": "858a53a588956514f61075b344125149d7daf100228309a724cce85897047944",
+      "sourcePageSha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63",
+      "sourcePrintedMeaning": "文具",
+      "sourcePrintedPartOfSpeech": "n.",
+      "textbookWordListDefinition": "文具",
+      "textbookWordListPartOfSpeech": "n.",
+      "canonicalHeadwordEvidence": {
+        "headword": "stationery",
+        "exampleSurfaceForm": "stationery",
+        "relation": "printed headword",
+        "savedWord": "stationery",
+        "actualEnrollmentCallback": "not run by this subagent; root owns callback validation"
+      },
+      "editorialReview": {
+        "reviewer": "Codex independent subagent /root/review_batch5e",
+        "status": "passed",
+        "notes": "cream stationery 与 thank-you letters 限定写信用的信纸，米色信纸搭配与中译一致。",
+        "changedFields": [],
+        "savedContentSha256": "858a53a588956514f61075b344125149d7daf100228309a724cce85897047944"
+      },
+      "reviewNotes": "cream stationery 与 thank-you letters 限定写信用的信纸，米色信纸搭配与中译一致。"
+    }
+  ]
+}
