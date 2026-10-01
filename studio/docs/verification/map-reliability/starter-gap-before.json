@@ -1,0 +1,88 @@
+{
+  "commit": "7b44608 / starter behavior from 12a045c",
+  "content": "real curriculum",
+  "traces": [
+    {
+      "id": "first",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": false,
+          "nextDay": 1
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": true,
+          "nextDay": 8
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": true,
+          "nextDay": 15
+        },
+        {
+          "day": 15,
+          "round": 3,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": true,
+          "nextDay": 36
+        }
+      ]
+    },
+    {
+      "id": "small-exchange",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": false,
+          "nextDay": 1
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": true,
+          "nextDay": 8
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": true,
+          "nextDay": 15
+        },
+        {
+          "day": 15,
+          "round": 3,
+          "bank": "legacy",
+          "sameItemsAsRound0": true,
+          "passed": true,
+          "stable": true,
+          "nextDay": 36
+        }
+      ]
+    }
+  ]
+}

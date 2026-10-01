@@ -1,0 +1,22 @@
+{
+  "identity": "sorted prompt/answer/book/lesson/start/end; item order and options ignored",
+  "bankDispatch": "bank selects source interpretation; changing only a marker does not establish novelty",
+  "units": 168,
+  "starters": 3,
+  "checkedBankPairs": 4071,
+  "maximumCandidatesNeeded": 3,
+  "candidateLimit": 3,
+  "legacyGroups": [
+    {
+      "id": "first",
+      "unmarkedDistinctMaterialGroups": 1,
+      "requiresExplicitMigration": true
+    },
+    {
+      "id": "small-exchange",
+      "unmarkedDistinctMaterialGroups": 1,
+      "requiresExplicitMigration": true
+    }
+  ],
+  "failures": []
+}

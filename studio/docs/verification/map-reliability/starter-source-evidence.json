@@ -1,0 +1,66 @@
+[
+  {
+    "id": "first",
+    "bank": "starter-v2",
+    "round": 1,
+    "sourceSha256": "83b94c8bdb3bc463856aa465fc3510c43461ea343318e57586ca98759373f8a1",
+    "clips": [
+      {
+        "en": "My coat and my umbrella please.",
+        "zh": "请把我的大衣和雨伞给我。",
+        "book": "NCE1",
+        "lesson": 3,
+        "start": 17.56,
+        "end": 22
+      },
+      {
+        "en": "Thank you sir.",
+        "zh": "谢谢您，先生。",
+        "book": "NCE1",
+        "lesson": 3,
+        "start": 25.03,
+        "end": 26.86
+      },
+      {
+        "en": "Sorry sir.",
+        "zh": "对不起，先生。",
+        "book": "NCE1",
+        "lesson": 3,
+        "start": 37.39,
+        "end": 39.67
+      }
+    ]
+  },
+  {
+    "id": "small-exchange",
+    "bank": "starter-v2",
+    "round": 1,
+    "sourceSha256": "83b94c8bdb3bc463856aa465fc3510c43461ea343318e57586ca98759373f8a1",
+    "clips": [
+      {
+        "en": "Here is my ticket.",
+        "zh": "这是我的票。",
+        "book": "NCE1",
+        "lesson": 3,
+        "start": 22,
+        "end": 25.03
+      },
+      {
+        "en": "Is this your umbrella?",
+        "zh": "这是您的伞吗？",
+        "book": "NCE1",
+        "lesson": 3,
+        "start": 39.67,
+        "end": 42.56
+      },
+      {
+        "en": "No it isn't.",
+        "zh": "不，它不是。",
+        "book": "NCE1",
+        "lesson": 3,
+        "start": 42.56,
+        "end": 45.69
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 {
   "runtime": "Actual React 19.2.6 in isolated headless Chrome; in-memory localStorage only",
-  "passed": 38,
+  "passed": 96,
   "failed": 0,
   "checks": [
     "mock: rejected write cannot save, complete or unlock",
@@ -40,6 +40,147 @@
     "project: relock hides but does not unmount the edited form",
     "project: relock conflict remains uncommitted",
     "project: explicit unlock restores the same input",
-    "project: same input can be saved after unlock"
-  ]
+    "project: same input can be saved after unlock",
+    "first day 0: all three source questions are required",
+    "first day 0: real component submission advances the due schedule",
+    "first day 0: consolidation needs a delayed independent material group",
+    "first day 0: component state survives backup restore without rewriting records",
+    "first day 1: all three source questions are required",
+    "first day 1: the due route selects different items regardless of order",
+    "first day 1: the new round explicitly records its bank",
+    "first day 1: real component submission advances the due schedule",
+    "first day 1: consolidation needs a delayed independent material group",
+    "first day 1: component state survives backup restore without rewriting records",
+    "first day 8: all three source questions are required",
+    "first day 8: the due route selects different items regardless of order",
+    "first day 8: the new round explicitly records its bank",
+    "first day 8: real component submission advances the due schedule",
+    "first day 8: consolidation needs a delayed independent material group",
+    "first day 8: component state survives backup restore without rewriting records",
+    "first day 15: all three source questions are required",
+    "first day 15: the due route selects different items regardless of order",
+    "first day 15: the new round explicitly records its bank",
+    "first day 15: real component submission advances the due schedule",
+    "first day 15: consolidation needs a delayed independent material group",
+    "first day 15: component state survives backup restore without rewriting records",
+    "first day 36: all three source questions are required",
+    "first day 36: the due route selects different items regardless of order",
+    "first day 36: the new round explicitly records its bank",
+    "first day 36: real component submission advances the due schedule",
+    "first day 36: consolidation needs a delayed independent material group",
+    "first day 36: component state survives backup restore without rewriting records",
+    "first: the original legacy proof stays unmarked",
+    "small-exchange day 0: all three source questions are required",
+    "small-exchange day 0: real component submission advances the due schedule",
+    "small-exchange day 0: consolidation needs a delayed independent material group",
+    "small-exchange day 0: component state survives backup restore without rewriting records",
+    "small-exchange day 1: all three source questions are required",
+    "small-exchange day 1: the due route selects different items regardless of order",
+    "small-exchange day 1: the new round explicitly records its bank",
+    "small-exchange day 1: real component submission advances the due schedule",
+    "small-exchange day 1: consolidation needs a delayed independent material group",
+    "small-exchange day 1: component state survives backup restore without rewriting records",
+    "small-exchange day 8: all three source questions are required",
+    "small-exchange day 8: the due route selects different items regardless of order",
+    "small-exchange day 8: the new round explicitly records its bank",
+    "small-exchange day 8: real component submission advances the due schedule",
+    "small-exchange day 8: consolidation needs a delayed independent material group",
+    "small-exchange day 8: component state survives backup restore without rewriting records",
+    "small-exchange day 15: all three source questions are required",
+    "small-exchange day 15: the due route selects different items regardless of order",
+    "small-exchange day 15: the new round explicitly records its bank",
+    "small-exchange day 15: real component submission advances the due schedule",
+    "small-exchange day 15: consolidation needs a delayed independent material group",
+    "small-exchange day 15: component state survives backup restore without rewriting records",
+    "small-exchange day 36: all three source questions are required",
+    "small-exchange day 36: the due route selects different items regardless of order",
+    "small-exchange day 36: the new round explicitly records its bank",
+    "small-exchange day 36: real component submission advances the due schedule",
+    "small-exchange day 36: consolidation needs a delayed independent material group",
+    "small-exchange day 36: component state survives backup restore without rewriting records",
+    "small-exchange: the original legacy proof stays unmarked"
+  ],
+  "starterTraces": [
+    {
+      "id": "first",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "stable": false,
+          "nextDay": 1
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 8
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 15
+        },
+        {
+          "day": 15,
+          "round": 3,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 36
+        },
+        {
+          "day": 36,
+          "round": 4,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 57
+        }
+      ]
+    },
+    {
+      "id": "small-exchange",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "stable": false,
+          "nextDay": 1
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 8
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 15
+        },
+        {
+          "day": 15,
+          "round": 3,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 36
+        },
+        {
+          "day": 36,
+          "round": 4,
+          "bank": "starter-v2",
+          "stable": true,
+          "nextDay": 57
+        }
+      ]
+    }
+  ],
+  "starterAudio": "Synthetic heard events only; source excerpts and required audio evidence are checked separately by the real-curriculum model tests."
 }

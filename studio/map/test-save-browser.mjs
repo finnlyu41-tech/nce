@@ -32,7 +32,8 @@ try{
   await send('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true},sessionId);
   const run=async expression=>{const result=await send('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true},sessionId);if(result.exceptionDetails)throw Error(result.exceptionDetails.text+': '+result.exceptionDetails.exception?.description);return result.result.value;};
   const wait=async expression=>{for(let i=0;i<100;i++){if(await run(expression))return;await delay(100)}throw Error(`Fixture did not settle: ${expression}`)};
-  await send('Page.navigate',{url:base+(kind==='project'?'?kind=project':'')},sessionId);
+  const starter=['first','small-exchange'].includes(kind);
+  await send('Page.navigate',{url:starter?new URL(`starter.html?kind=${kind}`,base).href:base+(kind==='project'?'?kind=project':'')},sessionId);
   await wait("!!document.querySelector('#root form')");
   const state=()=>run("document.querySelector('#inspect').click();JSON.parse(document.querySelector('#report').textContent)");
   const click=async id=>{await run(`document.querySelector('#${id}').click()`);await delay(100)};
@@ -97,9 +98,39 @@ try{
   await page.submit();check((await page.state()).writing===edited&&await page.success(),`${kind}: same input can be saved after unlock`);
   await page.close();
  }
+ const starterTraces=[];
+ const identity=qs=>JSON.stringify(qs.map(q=>JSON.stringify([q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start,q.clip?.end])).sort());
+ for(const id of ['first','small-exchange']){
+  const page=await open(id),trace=[];
+  let prior;
+  for(const [day,nextDay] of [[0,1],[1,8],[8,15],[15,36],[36,57]]){
+   if(day){await page.run(`window.starterFixture.advance(${day})`);await page.wait("!!document.querySelector('.focus-quiz')");}
+   const before=await page.state(),qs=before.questions;
+   check(qs.length===3,`${id} day ${day}: all three source questions are required`);
+   if(day)check(identity(qs)!==prior,`${id} day ${day}: the due route selects different items regardless of order`);
+   if(day)check(before.record.bank==='starter-v2',`${id} day ${day}: the new round explicitly records its bank`);
+   for(const [i,q] of qs.entries()){
+    await page.click('heard');
+    await page.run(`{const answer=${JSON.stringify(q.answer)};const button=[...document.querySelectorAll('.answer-choices button')].find(b=>b.textContent===answer);if(!button)throw Error('Question does not match its bank');button.click();}`);
+    await page.wait("!document.querySelector('.focus-quiz button[type=submit]').disabled");
+    await page.submit();
+   }
+   await page.wait("!!document.querySelector('.quiz-receipt.success')");
+   const after=await page.state();
+   check(after.passed&&!after.due&&after.nextDay===nextDay,`${id} day ${day}: real component submission advances the due schedule`);
+   check(after.stable===(day>0),`${id} day ${day}: consolidation needs a delayed independent material group`);
+   check(await page.run('window.starterFixture.roundTrip()'),`${id} day ${day}: component state survives backup restore without rewriting records`);
+   trace.push({day,round:after.record.round,bank:after.record.bank||'legacy',stable:after.stable,nextDay:after.nextDay});
+   prior=identity(qs);
+  }
+  check((await page.state()).record.attempts[0].bank===undefined,`${id}: the original legacy proof stays unmarked`);
+  starterTraces.push({id,trace});await page.close();
+ }
  const report={runtime:'Actual React 19.2.6 in isolated headless Chrome; in-memory localStorage only',passed:checks.length,failed:0,checks};
+ report.starterTraces=starterTraces;
+ report.starterAudio='Synthetic heard events only; source excerpts and required audio evidence are checked separately by the real-curriculum model tests.';
  await writeFile(join(out,'browser-after.json'),JSON.stringify(report,null,2)+'\n');
- console.log(`PASS (${checks.length} actual browser assertions): storage rejection/retry, concurrent updates, storage events, relock retention and stale receipts.`);
+ console.log(`PASS (${checks.length} actual browser assertions): storage rejection/retry, concurrent updates, storage events, relock retention, stale receipts and versioned starter due routes/backups.`);
 }finally{
  socket?.close();chrome.kill('SIGTERM');await delay(250);await rm(profile,{recursive:true,force:true});
 }
