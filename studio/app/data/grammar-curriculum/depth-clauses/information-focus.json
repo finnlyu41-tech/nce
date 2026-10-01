@@ -1,0 +1,399 @@
+{
+  "id": "information-focus",
+  "title": "信息焦点：内容、评价、强调与转述来源",
+  "stageId": "extension",
+  "order": 18,
+  "prerequisites": [
+    "reported-perspective",
+    "relative-reference",
+    "passive-focus",
+    "modal-evidence"
+  ],
+  "guideIds": [
+    "formal-it",
+    "that-clauses",
+    "likely",
+    "inversion",
+    "reporting-passive"
+  ],
+  "purposeIds": [
+    "reason",
+    "describe"
+  ],
+  "goal": "先还原完整命题，再选择评价、强调或转述形式，改写时保留人物、时间、否定范围和信息来源。",
+  "explanation": [
+    "组织一段说明，先分清两层：发生或拟发生什么，以及你怎样评价、强调或得知这件事。It is likely that… 表示可能性判断；It is reported that… 表示消息来自报道。改成相近句型时，不要把判断或转述写成已经核实的事实。",
+    "形式 it 让较长的内容放到后面。It is useful to… 评价一种做法，It is clear that… 评价一个完整命题；这类 it 不指某个物品。find it difficult to… 中，it 占住宾语位置，被评价的具体活动在 to 后。普通指代 it 则有上下文中的对象，不能见到 it 就叫形式主语。",
+    "名词后的 that 不一定是关系词。The claim that the valve was faulty 中，the valve was faulty 已是完整命题，说明 claim 的内容；The claim that the engineer disputed 中，disputed 后缺少的对象是 claim，that 承担这个位置。先找是否缺成分，比只看名词后出现 that 更可靠。这里限于这两种代表结构，不把省略、介词和多重嵌套都压成一个公式。",
+    "完整的内容小句也能作主语。Why the alarm stopped is unclear 中，Why the alarm stopped 整体是主语，内部用陈述语序；它不是把 Why did the alarm stop? 原样放到另一个句子里。长内容也可移到 It is unclear why… 后面。本单元给出角色和改写示范，问词小句尚无独立输入题。",
+    "It is likely that the supplier will deliver today 与 The supplier is likely to deliver today 常表达相同预测。换成 unlikely 表示不大可能，并不保证一定不发生。be likely to 需要 to；主语形式和事件时间要保留。likely、reported 和确定陈述不能仅因形式类似就互换。",
+    "否定或限制成分前置可以突出信息，常见于较正式的叙述。Rarely have I… 保留原来的完成时；Never did we… 由一般过去时引入 did，后接动词原形。先还原正常主语和谓语，再看移到前面的成分。Yesterday 或一个普通地点状语前置，不会自动触发这种部分倒装。",
+    "Not until the inspection ended did we… 只倒装外层主句，until 后仍是 the inspection ended。讲“刚发生就发生下一件事”时，可以用 No sooner had… than…，或 Hardly had… when…，先发生的动作使用过去完成。本单元练一种新情境 No sooner 输入；其他倒装类型及更复杂时间搭配仍有明确边界，不建议为显得高级而给每句倒装。 这些连接词并非一律要求过去完成时；本轮指定的先后叙述使用 had，其他时态要看实际关系。",
+    "被动转述的两条常见路径是 It is reported that… 与 人或物 + is reported to…。当前转述一般状态可用 to be / to do；当前转述更早的动作可用 to have + 过去分词。is / was 标记转述本身的时间，不定式表达相对时间；不能把一句过去事件简单换成 to 加过去式。to be doing 及 to have been done 等更细形式只列入后续范围。",
+    "写作或口头说明时，可用评价句引出问题，用从句补充内容，并把报道、推测和亲历分开。先确认表达目的，再选是否需要强调；这些是练习用途建议，不能据此预测 IELTS 分数，也不代表官方考纲。"
+  ],
+  "forms": [
+    {
+      "form": "It + be + 评价形容词 + to do / that + 完整从句",
+      "meaning": "先给评价，再把被评价的较长活动或命题放在后面。",
+      "useWhen": "如评价一种做法或说明某事实明显；形容词和后接结构要搭配，不把所有形容词机械接同一种从句。"
+    },
+    {
+      "form": "for + 人 + to do；of + 人 + to do（评价人的表现）",
+      "meaning": "for 可交代活动参与者；kind / generous 等配 of 可评价人的行为。",
+      "useWhen": "It is important for… 与 It was kind of… 的评价对象不同；这里说明区别，尚未独立输入检验全部搭配。"
+    },
+    {
+      "form": "find / think + it + 评价形容词 + to do",
+      "meaning": "it 先占宾语位置，后面的活动说明究竟什么困难或有用。",
+      "useWhen": "用 find it difficult to compare… 等完整结构；若直接评价具体对象，find the route confusing 不需要形式 it。"
+    },
+    {
+      "form": "内容名词 + that + 完整命题；名词 + 关系 that + 有缺位的小句",
+      "meaning": "分别说明名词的内容，或用名词填入修饰小句的一个位置。",
+      "useWhen": "对比 claim / fact 的内容与被 disputed / checked 的对象；先还原主语、谓语和宾语，不能只凭 that 的位置分类。"
+    },
+    {
+      "form": "Why / What 等内容小句 + 外层谓语；It + be + 评价 + why / what…",
+      "meaning": "把一个问题的内容当作句子成分，或把长主语后置。",
+      "useWhen": "内部保留陈述语序，如 why the alarm stopped；问词作内部主语等细分情况需按角色判断，不套直接疑问倒装。"
+    },
+    {
+      "form": "It is likely / unlikely that…；主语 + be likely / unlikely to do",
+      "meaning": "评价一件事发生的可能性，常可在两种主语安排之间改写。",
+      "useWhen": "保留事件参与者、时间和否定；unlikely 不是确定不发生，reported 也不是 likely 的同义替代。"
+    },
+    {
+      "form": "Never / Rarely + 助动词或情态词 + 主语 + 其余谓语",
+      "meaning": "把否定或低频信息移到前面以强调。",
+      "useWhen": "保留原时态；一般过去可用 did + 原形，已有 have / can 等则前置该词；普通 Yesterday 前置不用此规则。"
+    },
+    {
+      "form": "Not until + 时间成分或普通语序从句 + 助动词 + 主语 + 谓语",
+      "meaning": "突出直到某时才发生的外层事件。",
+      "useWhen": "只对外层主句部分倒装，until 内仍按其自身主谓关系；本轮有对比和错例，尚无该结构独立输入。"
+    },
+    {
+      "form": "No sooner had + 主语 + 过去分词 + than…；Hardly had… when…",
+      "meaning": "强调先一件事刚发生，接着另一件事就发生。",
+      "useWhen": "本轮以过去叙述练 No sooner…than；主句 had 前置，后件用符合叙述时间的形式，不混用本轮指定的连接结构。"
+    },
+    {
+      "form": "It + be + said / reported + that + 完整命题；主语 + be said / reported to be / do",
+      "meaning": "表达被转述的消息，同时改变信息焦点。",
+      "useWhen": "保留消息性质和转述时间；to be / do 常指同时状态或一般情况，不自动替代明确更早的动作。"
+    },
+    {
+      "form": "主语 + is / was said / reported to have + 过去分词",
+      "meaning": "表达在转述参照时间以前发生的动作。",
+      "useWhen": "先确认两个时间：何时转述、何时发生；to have 后是过去分词，报道内容仍可能未经核实。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一做法：长主语与评价先行",
+      "a": {
+        "en": "Checking the seals before launch is sensible.",
+        "zh": "下水前检查密封件是明智的。"
+      },
+      "b": {
+        "en": "It is sensible to check the seals before launch.",
+        "zh": "下水前检查密封件是明智的。"
+      },
+      "why": "两句评价同一做法；b 的 it 占主语位置，把检查活动放后。检查是建议做法，不是已完成的事实。"
+    },
+    {
+      "label": "徽章场景：指代对象与评价活动",
+      "a": {
+        "en": "The spare badge arrived. It is useful.",
+        "zh": "备用徽章到了。它很有用。"
+      },
+      "b": {
+        "en": "It is useful to carry a spare badge.",
+        "zh": "带一枚备用徽章很有用。"
+      },
+      "why": "a 的 it 指刚提到的徽章；b 的 it 不是徽章，而是先占位，实际评价携带备用徽章这个活动。"
+    },
+    {
+      "label": "路线场景：评价对象与形式宾语",
+      "a": {
+        "en": "I found the route confusing.",
+        "zh": "我觉得这条路线让人困惑。"
+      },
+      "b": {
+        "en": "I found it confusing to read the route notes.",
+        "zh": "我觉得阅读路线说明让人困惑。"
+      },
+      "why": "a 直接评价 route；b 评价阅读说明的活动，it 是形式宾语。两个宾语安排对应不同评价对象，不是自由删词。"
+    },
+    {
+      "label": "阀门争议：that 引内容还是占宾语位置",
+      "a": {
+        "en": "The claim that the valve was faulty worried the engineer.",
+        "zh": "关于阀门有故障的说法让工程师担心。"
+      },
+      "b": {
+        "en": "The claim that the engineer disputed concerned the valve.",
+        "zh": "工程师质疑的那项说法涉及阀门。"
+      },
+      "why": "a 中 the valve was faulty 是完整命题，说明 claim 的内容；b 中 engineer disputed 的宾语位置由 that 指向 claim，限定是哪项说法。"
+    },
+    {
+      "label": "警报场景：直接问题与作主语的内容",
+      "a": {
+        "en": "Why did the alarm stop?",
+        "zh": "警报为何停了？"
+      },
+      "b": {
+        "en": "Why the alarm stopped is unclear.",
+        "zh": "警报为何停了仍不清楚。"
+      },
+      "why": "a 是直接问句；b 内部用陈述语序，整个 Why… 作外层 is 的主语。保留问题内容，不保留直接问题的倒装。"
+    },
+    {
+      "label": "供货预测：两条路径保留低可能性",
+      "a": {
+        "en": "It is unlikely that the supplier will deliver today.",
+        "zh": "供应商今天不大可能送货。"
+      },
+      "b": {
+        "en": "The supplier is unlikely to deliver today.",
+        "zh": "供应商今天不大可能送货。"
+      },
+      "why": "两句都预测今天的送货可能性低；b 提出 supplier 作主语并接 to deliver，没有说已取消或必定不送。"
+    },
+    {
+      "label": "长队场景：普通语序与 Rarely 强调",
+      "a": {
+        "en": "I have rarely seen queues this long.",
+        "zh": "我很少见到这么长的队伍。"
+      },
+      "b": {
+        "en": "Rarely have I seen queues this long.",
+        "zh": "我很少见到这么长的队伍。"
+      },
+      "why": "b 把 rarely 前置而将已有 have 放到 I 前；完成时与低频意义保留，表达更强调、更正式。"
+    },
+    {
+      "label": "检查场景：until 内语序与外层强调",
+      "a": {
+        "en": "We did not notice the crack until the inspection ended.",
+        "zh": "直到检查结束，我们才注意到裂缝。"
+      },
+      "b": {
+        "en": "Not until the inspection ended did we notice the crack.",
+        "zh": "直到检查结束，我们才注意到裂缝。"
+      },
+      "why": "b 只在外层用 did we notice，inspection ended 内部不倒装；did 后的 notice 用原形。"
+    },
+    {
+      "label": "排练场景：刚开始就故障的两种连接",
+      "a": {
+        "en": "No sooner had we started the rehearsal than the microphone failed.",
+        "zh": "我们刚开始排练，麦克风就坏了。"
+      },
+      "b": {
+        "en": "Hardly had we started the rehearsal when the microphone failed.",
+        "zh": "我们刚开始排练，麦克风就坏了。"
+      },
+      "why": "两句都强调紧接发生；这两种常见过去叙述模式分别搭配 than 与 when，had 标明排练先开始。"
+    },
+    {
+      "label": "隧道报道：命题焦点与对象焦点",
+      "a": {
+        "en": "It is reported that the tunnel is closed.",
+        "zh": "据报道，隧道处于关闭状态。"
+      },
+      "b": {
+        "en": "The tunnel is reported to be closed.",
+        "zh": "据报道，隧道处于关闭状态。"
+      },
+      "why": "b 把 tunnel 提为主语并用 to be；两句都是当前报道中的状态，没有因改写就证实隧道确已关闭。"
+    },
+    {
+      "label": "桥梁报道：更早动作的时间保留",
+      "a": {
+        "en": "It is reported that the bridge opened in 2019.",
+        "zh": "据报道，那座桥在2019年开放了。"
+      },
+      "b": {
+        "en": "The bridge is reported to have opened in 2019.",
+        "zh": "据报道，那座桥在2019年开放了。"
+      },
+      "why": "当前转述2019年的更早动作，b 用 to have opened；is 仍说明当前报道，不能把更早动作改成同时状态。"
+    },
+    {
+      "label": "水库场景：预测与转述不互换",
+      "a": {
+        "en": "The reservoir is likely to be full.",
+        "zh": "水库很可能是满的。"
+      },
+      "b": {
+        "en": "The reservoir is reported to be full.",
+        "zh": "据报道，水库是满的。"
+      },
+      "why": "a 表示可能性判断；b 表示别人报道的内容。两句都不能仅凭形式说明说话者亲自核实，信息来源却不同。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "Is useful to label the cables.",
+      "correct": "It is useful to label the cables.",
+      "why": "这里是完整评价陈述，不是祈使句；用 it 占主语位置，实际评价 to label…。"
+    },
+    {
+      "wrong": "I find tiring to read the small print.",
+      "correct": "I find it tiring to read the small print.",
+      "why": "此结构需要形式宾语 it；to read 说明被评价的活动。"
+    },
+    {
+      "wrong": "The fact that the pump it failed delayed the test.",
+      "correct": "The fact that the pump failed delayed the test.",
+      "why": "the pump 已是内容从句主语；再加 it 使同一主语重复。"
+    },
+    {
+      "wrong": "The claim that the crew disputed it was misleading.",
+      "correct": "The claim that the crew disputed was misleading.",
+      "why": "关系 that 在这个修饰小句中作 disputed 的宾语，不再重复 it；若用内容 that，后面应另有完整命题。"
+    },
+    {
+      "wrong": "Why did the lights go out is unknown.",
+      "correct": "Why the lights went out is unknown.",
+      "why": "整个问题内容作外层主语，内部用陈述语序；不是直接问句。"
+    },
+    {
+      "wrong": "The meeting is likely start late.",
+      "correct": "The meeting is likely to start late.",
+      "why": "be likely 后用 to 加动词原形；不遗漏不定式标记。"
+    },
+    {
+      "wrong": "Rarely I have needed a second battery.",
+      "correct": "Rarely have I needed a second battery.",
+      "why": "本句采用 Rarely 前置的正式强调结构，将已有 have 放到 I 前。"
+    },
+    {
+      "wrong": "Not until did the guide return we left.",
+      "correct": "Not until the guide returned did we leave.",
+      "why": "until 内保持 the guide returned；倒装在外层，did 后 leave 用原形。"
+    },
+    {
+      "wrong": "No sooner had we sat down when the screen froze.",
+      "correct": "No sooner had we sat down than the screen froze.",
+      "why": "本句的 No sooner… 过去叙述模式配 than；不要把 Hardly…when 的连接词混入。"
+    },
+    {
+      "wrong": "Hardly had I entered than the music stopped.",
+      "correct": "Hardly had I entered when the music stopped.",
+      "why": "本句的 Hardly… 模式配 when；与 No sooner…than 对照。"
+    },
+    {
+      "wrong": "The site is said to have reopen in 2020.",
+      "correct": "The site is said to have reopened in 2020.",
+      "why": "to have 后接过去分词 reopened；现在转述更早动作。"
+    },
+    {
+      "wrong": "The houses is reported to be empty.",
+      "correct": "The houses are reported to be empty.",
+      "why": "改成 houses 作主语后，外层 be 随复数主语用 are，转述性质仍保留。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "information-focus-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "同一阀门争议：A The claim that the valve was faulty worried Jo. B The claim that Jo challenged concerned the valve. 哪个分析保留两种 that 的角色？",
+      "options": [
+        "A 的 that 引出完整内容；B 的 that 指 claim，作 challenged 的宾语。",
+        "A 的 that 指 claim，作 faulty 的主语；B 的 that 只连接完整命题。",
+        "A 和 B 都是内容从句；B 中 challenged 的宾语可由语境补回，所以 that 不占位置。"
+      ],
+      "answer": "A 的 that 引出完整内容；B 的 that 指 claim，作 challenged 的宾语。",
+      "explanation": "A 已有 the valve 作主语、was faulty 作谓语；B 是 Jo challenged the claim 的关系改写，claim 对应宾语缺位。不能见到名词后的 that 就全归为定语或内容从句。",
+      "hints": [
+        "分别把 that 后的小句单独还原：谁是什么，谁质疑什么？",
+        "A 的 the valve was faulty 已完整；B 的 Jo challenged 缺少被质疑的对象，回指 claim。"
+      ]
+    },
+    {
+      "id": "information-focus-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "保留 find + 评价 + to do 的表达和全部意思，只补这一处结构缺项：I find difficult to compare the ticket prices.",
+      "answer": "I find it difficult to compare the ticket prices.",
+      "explanation": "difficult 评价比较票价的活动，find 后需要形式宾语 it 占位。不能改成比较已完成，也不另换活动或评价。",
+      "hints": [
+        "find 在这一安排里需要先有宾语，再给 difficult 评价。",
+        "把形式宾语放在 find 与 difficult 之间；真正的活动仍是 to compare the ticket prices。"
+      ]
+    },
+    {
+      "id": "information-focus-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：预报显示强风，你判断夜班轮渡今晚不大可能出发，但尚未确认取消。用 the night ferry 作主语、be unlikely to，表达这个预测；词语：depart, tonight。写一个完整英文句子。",
+      "answer": "The night ferry is unlikely to depart tonight.",
+      "accepted": [
+        "Tonight, the night ferry is unlikely to depart.",
+        "The night ferry's unlikely to depart tonight.",
+        "Tonight, the night ferry's unlikely to depart."
+      ],
+      "explanation": "unlikely to depart 保留低可能性和今晚时间，没有把预测改成确定取消；ferry 是单数，外层用 is。这里有限参考核对指定结构，其他自由表达可另作待核对练习。",
+      "hints": [
+        "先安排 ferry 的 be，再接表达低可能性的形容词及不定式。",
+        "结构是主语 + is unlikely to + 动词原形；保留 tonight，不把判断写成已经取消。"
+      ]
+    },
+    {
+      "id": "information-focus-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "现在是同年九月，消息今天转述：It is reported that the museum reopened in March. 你未亲自核实。哪个改写同时保留报道性质和更早时间？",
+      "options": [
+        "The museum is reported to have reopened in March. — 当前转述更早事件，不等于已亲自核实。",
+        "The museum is reported to reopen in March. — to reopen 已足以把动作明确定位为三月完成的过去事件。",
+        "The museum is likely to have reopened in March. — likely 与 reported 在这里保留了相同消息来源。"
+      ],
+      "answer": "The museum is reported to have reopened in March. — 当前转述更早事件，不等于已亲自核实。",
+      "explanation": "is reported 保留当前转述；to have reopened 保留三月更早事件。likely 表说话者的可能性判断，不能无条件替换 reported 的消息来源。",
+      "hints": [
+        "保留两个层次：今天有人报道；开放发生在更早的三月。",
+        "当前转述用 is reported，更早动作用 to have + 过去分词；可能性评价和转述来源不是同一件事。"
+      ]
+    },
+    {
+      "id": "information-focus-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "今天转述一项2006年的未核实消息，保留时间和转述性质，只改动词形式这一处错误：The sculptor is said to have carve this fountain in 2006.",
+      "answer": "The sculptor is said to have carved this fountain in 2006.",
+      "explanation": "更早动作放在 to have 后，要用过去分词 carved。is said 表当前转述，不能改成说话者直接确认完成。",
+      "hints": [
+        "检查 to have 后面的动词形式；时间和消息来源已安排好。",
+        "have 后用 carve 的过去分词 carved，其余内容保持。"
+      ]
+    },
+    {
+      "id": "information-focus-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "新叙述：协调员刚发出日程表，会议时间就变了。用 No sooner 起首和 than 连接；第一件事先发生，用过去完成时；第二件事紧接着发生，用一般过去时。词语：the coordinator, send the agenda, the meeting time, change。写一个完整英文句子。",
+      "answer": "No sooner had the coordinator sent the agenda than the meeting time changed.",
+      "explanation": "No sooner 前置时用 had + 主语 + 过去分词；sent 标明先发出，than 后 changed 交代接着发生的变化。这是指定的叙述强调，不是日常每句都要倒装。",
+      "hints": [
+        "先用过去完成安排发日程表，再用一般过去表达紧接着发生的变化。",
+        "No sooner + had + 主语 + 过去分词 + than + 后件；send 的过去分词是 sent，change 的过去式是 changed。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "为社区阅览室的开放安排写3—4个连贯英文句子：先评价一项准备工作，再说一项尚未确定的预测或消息。至少用一种内容/评价结构和一种 likely 或被动转述；如果确有强调需要，可增加一处合适倒装。自己交代判断依据或消息来自哪里。",
+    "criteria": [
+      "评价对象清楚：it 指物品还是占位，长内容仍完整。",
+      "区分内容从句与修饰名词的小句，避免重复主语或宾语。",
+      "人物、时间和否定范围保持一致，likely 不写成保证，报道不写成亲历核实。",
+      "倒装有明确强调目的，助动词、连接词和正常内部语序合适。",
+      "这是开放表达草稿，记录为待核对，不由参考匹配推断熟练度或 IELTS 分数。"
+    ]
+  }
+}

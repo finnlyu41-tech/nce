@@ -1,0 +1,306 @@
+{
+  "id": "hypothetical-condition",
+  "title": "假设的时间与距离：现在可能、过去反事实与 as if",
+  "stageId": "extension",
+  "order": 17,
+  "guideIds": [
+    "condition-unreal",
+    "condition-past",
+    "as-if"
+  ],
+  "prerequisites": [
+    "linking-ideas",
+    "past-background",
+    "modal-evidence"
+  ],
+  "purposeIds": [
+    "plan",
+    "reason",
+    "story"
+  ],
+  "goal": "先确认条件和结果的时间、已知事实与说话态度，再选择过去形式、would / could 和 as if，不把过去形态自动当作过去事实。",
+  "explanation": [
+    "条件和结果各有自己的时间。If the studio had a wider doorway, we could move the piano inside 可以是在想象现在不存在的宽门口；had 是与现实拉开距离的过去形式，不表示过去曾有宽门。对未来也可以使用这种假设视角。它表达说话者怎样看待情况，不提供一个固定的成功概率，也不代表所有这类设想都永远不可能实现。",
+    "would 常说明假设中预想采取的行动或结果；could 常突出具备能力、条件或机会；might 更突出可能性。If we had a projector, we would show the diagrams 与 could show 都可能是自然英语，但重心不同。题目会明确是预想行动还是仅具备展示条件，不靠替换情态词就假称原意完全一样。",
+    "普通的当前／未来假设常用 if 加过去形式，主句再用 would、could 等加原形。假设 be 的正式写法可用 were，包括 If I were…；I / he / she 后的 was 也常见，不能仅见 was 就判为真实过去。if 后的 will / would 还可能表意愿或礼貌请求，这些特殊语境不是本单元的基本假设模板。",
+    "若事情已经结束，并且要设想另一种过去，if 部分常用 had 加过去分词，结果用 would / could have 加过去分词。If we had charged the recorder, it would have lasted through the interview 回到没有充电的那次采访；这里两部分都谈过去。could have 侧重本来具备的机会，不和 would have 的预想结果完全等同。",
+    "不能只看 had 这个单词。If we had a projector 中 had 是 have 的过去形式，后面接名词；If we had charged the recorder 中 had 是完成结构的助动词，后面接过去分词。先读所谈的现在、将来或已经结束的过去，再辨别结构，不能用“两个过去词一定就是昨天”判断。",
+    "as if / as though 描述一种表现像什么，不是 if 条件与主句结果的同一结构。认为情况可能属实时，可以用普通时态：Uma looks as if she has lost her voice 说她现在的样子像先前失了声，尚不保证事实已确认。需要体现与已知现实的距离时，可用过去形式；对更早的假想经历可用 had 加过去分词。选择要结合态度和时间，不是一见 as if 就机械后移。",
+    "Nico talks as if he owned the building, but he's only a guest 中，owned 说明与当前真实身份的距离，不声称他以前拥有大楼。若主句本身在过去，后面的过去形式也可能是正常的过去叙述；had done 也可能是相对过去参照点的更早事件。语境决定这是时间定位、非真实视角还是两者结合，形式本身不能确认全部背景。",
+    "混合条件把条件与结果放在不同时间：If Leena had backed up the notes, she would feel calmer now 是过去动作与当前感受；would have restored them after the laptop failed 则构造过去结果。也可从持续的人格或状态讨论过去结果，但要能解释跨时间联系。本单元只给这类边界的讲解、对比和错例，六题不构成完整混合条件检验。"
+  ],
+  "forms": [
+    {
+      "form": "if + 过去形式；would / could / might + 动词原形",
+      "meaning": "从与现实有距离的视角想象现在或未来的条件与结果。",
+      "useWhen": "语境确实是当前／未来的假设，而非普通过去故事；不由形式推算固定概率。"
+    },
+    {
+      "form": "If I / he / she / it were…；相应语境也常见 was",
+      "meaning": "用 be 表假设身份或状态，were 更明确、较正式地标出非真实视角。",
+      "useWhen": "如给建议或假想另一身份；结合语域与上下文，不一概排除常见的 was。"
+    },
+    {
+      "form": "would + 原形；could + 原形",
+      "meaning": "预想行动或结果；或假设下具备能力、机会。",
+      "useWhen": "先确定要表达的重心；两种句子可能都自然，但不能把仅有能力硬说成必定采取行动。"
+    },
+    {
+      "form": "if + had + 过去分词；would have + 过去分词",
+      "meaning": "构造另一种过去条件与过去预想结果。",
+      "useWhen": "明确回看已结束事件，并说明实际情况；had 和 have 后的目标动词使用过去分词。"
+    },
+    {
+      "form": "if + had + 过去分词；could have + 过去分词",
+      "meaning": "讨论另一过去条件下本来可能具备的能力或机会。",
+      "useWhen": "目标是未实现机会；本单元题目会给出实际未做的事实，不能只凭 could have 单独断言所有语境都未发生。"
+    },
+    {
+      "form": "as if / as though + 与时间对应的普通时态",
+      "meaning": "根据表现描述可能属实的情况，而不保证已经证实。",
+      "useWhen": "如当前观察用 is doing，先前完成且影响当前用 has done；不能把 as if 当作必须过去时的口令。"
+    },
+    {
+      "form": "as if / as though + 过去形式；或 had + 过去分词",
+      "meaning": "表达与现实有距离的当前情形，或相对更早的假想经历。",
+      "useWhen": "已知事实或说话态度支持非真实比较；另看主句参照时间，过去形式也可能承载普通时间关系。"
+    },
+    {
+      "form": "if + had done，would + 原形 + now；或跨时间的其他合适组合",
+      "meaning": "设想过去条件改变当前结果，或持续状态关联过去结果。",
+      "useWhen": "两边时间确实不同且因果联系可解释；不要因为 now 就把两边全改为现在，也不机械拼接任意两种形式。"
+    },
+    {
+      "form": "真实过去语境的 if + 过去时，主句用合适过去表达",
+      "meaning": "回忆过去实际遇到的条件、选择或反复做法。",
+      "useWhen": "如 If a class was full, we chose another time；先看是否是在叙述实际经历，不仅凭 if 后过去形式认定非真实。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一门口与钢琴，开放核查或当前假设",
+      "a": {
+        "en": "If the studio has a wider doorway, we can move the piano inside.",
+        "zh": "如果工作室有更宽的门口，我们就能把钢琴搬进去。"
+      },
+      "b": {
+        "en": "If the studio had a wider doorway, we could move the piano inside.",
+        "zh": "要是工作室有更宽的门口，我们就能把钢琴搬进去。"
+      },
+      "why": "a 可用于还在核查门口条件的场景；b 可在已知现门口不够宽时设想另一现实。b 的 had / could 不把话题自动变成过去搬运，也不报告固定的零概率。"
+    },
+    {
+      "label": "同一投影仪条件，预想展示或具备展示条件",
+      "a": {
+        "en": "If we had a projector, we would show the diagrams.",
+        "zh": "如果有投影仪，我们就会展示这些图表。"
+      },
+      "b": {
+        "en": "If we had a projector, we could show the diagrams.",
+        "zh": "如果有投影仪，我们就能展示这些图表。"
+      },
+      "why": "a 表预想行动，b 侧重能力或机会；b 本身不承诺一定展示。两句都可自然，但在仅谈具备条件的题目中不能把 would 解释为只表达能力。"
+    },
+    {
+      "label": "同一录音设备，下一次设想或已经错过的一次",
+      "a": {
+        "en": "If we charged the recorder, it would last through the interview.",
+        "zh": "要是把录音机充好电，它就能撑完整场采访。"
+      },
+      "b": {
+        "en": "If we had charged the recorder, it would have lasted through the interview.",
+        "zh": "如果当时把录音机充好电，它本来就能撑完整场采访。"
+      },
+      "why": "a 可在筹划下一次采访时构造假设；b 在已结束、没有充电的采访背景中改变过去。had charged 与 would have lasted 的完成形式对应过去，不只是给 had a recorder 加一个词。"
+    },
+    {
+      "label": "同一当前建议，were 与常见 was",
+      "a": {
+        "en": "If I were the organiser, I would shorten the introduction.",
+        "zh": "如果我是组织者，我会把开场介绍缩短。"
+      },
+      "b": {
+        "en": "If I was the organiser, I would shorten the introduction.",
+        "zh": "如果我是组织者，我会把开场介绍缩短。"
+      },
+      "why": "在这里同属当前假设，a 较正式并明确使用非真实 were；b 在日常也常见。不能因为 b 用 was 就擅自说我是过去的组织者。"
+    },
+    {
+      "label": "同一种谈话表现，普通形式与明确现实距离",
+      "a": {
+        "en": "Nico talks as if he owns the building.",
+        "zh": "Nico 说起话来像是拥有这栋楼。"
+      },
+      "b": {
+        "en": "Nico talks as if he owned the building, but he's only a guest.",
+        "zh": "Nico 说起话来仿佛拥有这栋楼，可他只是客人。"
+      },
+      "why": "a 普通现在形式没有单独标出过去假设距离，也不保证确实拥有。b 结合明说的客人身份拉开现实距离；owned 不表示曾经拥有。态度、时间与已给事实要一起读。"
+    },
+    {
+      "label": "同一失声外观，可能属实或明确只是表演",
+      "a": {
+        "en": "Uma looks as if she has lost her voice.",
+        "zh": "Uma 看起来像失了声。"
+      },
+      "b": {
+        "en": "Uma looks as if she had lost her voice, but she is only acting.",
+        "zh": "Uma 看起来仿佛失过声，但她只是表演。"
+      },
+      "why": "a 将失声作为可能发生的较早情况；b 按已知表演背景构造更早的假想经历。had lost 本身并非所有语境都证明情况虚假；这里依赖 but she is only acting 的事实。"
+    },
+    {
+      "label": "同一次未备份，当前感受或过去恢复结果",
+      "a": {
+        "en": "If Leena had backed up the notes, she would feel calmer now.",
+        "zh": "如果 Leena 当时备份了笔记，现在就会更安心。"
+      },
+      "b": {
+        "en": "If Leena had backed up the notes, she would have restored them after the laptop failed.",
+        "zh": "如果 Leena 当时备份了笔记，电脑出故障后本来就会恢复它们。"
+      },
+      "why": "a 的条件在过去，结果是当前感受；b 的结果也在过去。两句可以讨论同一次未备份，但不能因为条件相同就统一主句时间。混合条件在本单元属于介绍边界。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "If we had a projector, we could showed the diagrams.",
+      "correct": "If we had a projector, we could show the diagrams.",
+      "why": "若谈当前假设下的展示能力，could 后使用原形 show；had 是当前假设的过去形式，不要求结果动词再写 showed。"
+    },
+    {
+      "wrong": "If I were the organiser, I would to shorten the introduction.",
+      "correct": "If I were the organiser, I would shorten the introduction.",
+      "why": "普通假设结果里的 would 后直接接原形 shorten，不再加 to；if 从句的 were 保留身份假设。"
+    },
+    {
+      "wrong": "If we had charge the recorder, it would have lasted through the interview.",
+      "correct": "If we had charged the recorder, it would have lasted through the interview.",
+      "why": "回看过去未充电的采访，had 后需要过去分词 charged，而不是原形 charge。"
+    },
+    {
+      "wrong": "If we had charged the recorder, it would have last through the interview.",
+      "correct": "If we had charged the recorder, it would have lasted through the interview.",
+      "why": "过去假设结果用 would have 加过去分词 lasted，保留已结束采访的时间关系。"
+    },
+    {
+      "wrong": "It looks as if the heater are leaking.",
+      "correct": "It looks as if the heater is leaking.",
+      "why": "若观察到漏水迹象并认为可能正在发生，普通现在进行时可用；单数 heater 配 is，不因 as if 就改成过去形式。"
+    },
+    {
+      "wrong": "Uma looks as if she had lose her voice, but she is only acting.",
+      "correct": "Uma looks as if she had lost her voice, but she is only acting.",
+      "why": "此处按表演背景描述更早的假想经历，had 后仍需过去分词 lost；不是把原形 lose 直接接在 had 后。"
+    },
+    {
+      "wrong": "If Leena had backed up the notes, she would felt calmer now.",
+      "correct": "If Leena had backed up the notes, she would feel calmer now.",
+      "why": "若结果是现在更安心，主句用 would 加原形 feel；过去条件与当前结果可以跨时间，不因 had backed up 就把 felt 拼进结果。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "hypothetical-condition-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "培训室现在没有投影仪。你只想说：要是有，就具备展示图表的条件；没有承诺一定展示。请选择英文与“当前假设／能力”理由都准确的一项。",
+      "options": [
+        "If we had a projector, we could show the diagrams. —— had 构造现在的假设，could 说明具备展示条件。",
+        "If we had a projector, we would show the diagrams. —— would 在这里只说明有能力，并未表达预想行动。",
+        "If we had a projector, we could show the diagrams. —— had 说明过去曾拥有，could 说明图表已经展示过。"
+      ],
+      "answer": "If we had a projector, we could show the diagrams. —— had 构造现在的假设，could 说明具备展示条件。",
+      "explanation": "现在没有投影仪，had 构造当前的另一种现实；could 表假设下的能力。would show 也可作为预想行动的自然表达，但选项把 would 理由说成仅有能力，未保留本题目标；过去形态也不证明过去曾有或已展示。",
+      "hints": [
+        "先确定话题是现在的设备条件还是过去事实，再确定仅说能做到还是预想一定采取行动。",
+        "当前假设可用 had a projector；强调具备条件用 could + 原形，不把 had 解释成过去曾拥有。"
+      ]
+    },
+    {
+      "id": "hypothetical-condition-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "你目前没有备用书桌，要表达有书桌就能在这里工作。只把 worked 改成合适形式，保留其他词：If I had a spare desk, I could worked here.",
+      "answer": "If I had a spare desk, I could work here.",
+      "explanation": "could 表当前假设中的工作能力，后面接原形 work。had a spare desk 在给定语境中是现在假设，不是昨日拥有书桌的陈述。",
+      "hints": [
+        "当前能力已经由 could 表达，检查后面动作还需不需要过去词尾。",
+        "保留 if 小句，could 后直接用 work。"
+      ]
+    },
+    {
+      "id": "hypothetical-condition-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "这家餐厅的露台只接受预约。昨晚我们没有订位，也未在露台吃饭；现在讨论本来可有的机会。以 If 开头，用 we / book a table 构造过去条件；结果用 we / could / eat on the terrace / last night。将动词变为合适的过去完成／情态完成形式，保留两边都是过去及“机会”的重心，不增加事实。eat 的过去分词是 eaten。",
+      "answer": "If we had booked a table, we could have eaten on the terrace last night.",
+      "accepted": [
+        "If we'd booked a table, we could have eaten on the terrace last night.",
+        "If we had booked a table, we could've eaten on the terrace last night.",
+        "If we'd booked a table, we could've eaten on the terrace last night."
+      ],
+      "explanation": "过去条件使用 had booked，过去未实现机会使用 could have eaten；last night 定位已经结束的用餐。could 保留机会而非预想必然采取行动，had 可缩写为 'd，could have 可缩写为 could've。",
+      "hints": [
+        "订位和用餐都放在已经结束的昨晚，不能把其中一边改成当前状态。",
+        "if 小句使用 had + booked；过去机会用 could have + eaten，保留露台与昨晚。"
+      ]
+    },
+    {
+      "id": "hypothetical-condition-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "现在隔壁不断传来搬椅子的声音，你认为有人确实可能正在布置，并非明知虚假的想象。选择表达与时间／态度理由都准确的一项。",
+      "options": [
+        "It sounds as if someone is arranging the chairs. —— 普通进行时描述可能正在发生的事，声音还不能代替事实核实。",
+        "It sounds as if someone were arranging the chairs. —— were 将搬椅子的时间直接定位在昨天。",
+        "It sounds as if someone is arranging the chairs. —— is arranging 表明椅子已经摆完，不再有当前动作。"
+      ],
+      "answer": "It sounds as if someone is arranging the chairs. —— 普通进行时描述可能正在发生的事，声音还不能代替事实核实。",
+      "explanation": "本题把布置作为可能正在发生的情况，as if 后可用普通现在进行时，不强制过去形式。were arranging 可在其他背景表示现实距离，但不会仅由 were 就定位昨天；is arranging 也不是已经完成的摆放结果。",
+      "hints": [
+        "说话者认为情况可能正在发生，还是明确与现实相反？再核对形式是否说明当前过程。",
+        "as if 不强制过去时；普通 is arranging 可保留当前可能的过程，不能解释成已完成或昨天。"
+      ]
+    },
+    {
+      "id": "hypothetical-condition-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "Aya 昨晚忘了门禁代码，没能打开储藏室；这里设想若记得就会打开的另一种过去。只修正 open 的形式，不改条件或 would：If Aya had remembered the access code, she would have open the storage room.",
+      "answer": "If Aya had remembered the access code, she would have opened the storage room.",
+      "explanation": "这个过去反事实的结果用 would have 加过去分词 opened。if 中 had remembered 已正确定位更早的过去条件，本题只修正结果的分词。",
+      "hints": [
+        "条件和打开储藏室都在昨晚，不是当前开门的能力；检查 have 后的目标动词。",
+        "保留 would have，open 变成过去分词 opened。"
+      ]
+    },
+    {
+      "id": "hypothetical-condition-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "Eli（男性）从未到访那个港口，却描述得如临其境。以 Eli 开头，用 describe the harbour / as if（或 as though） / he / visit it / before 写一句。主句使用一般现在时；将比描述更早的到访作为与已知事实相反的假想，限定用 had + 过去分词，不新增地点或行为。",
+      "answer": "Eli describes the harbour as if he had visited it before.",
+      "accepted": [
+        "Eli describes the harbour as though he had visited it before.",
+        "Eli describes the harbour as if he'd visited it before.",
+        "Eli describes the harbour as though he'd visited it before."
+      ],
+      "explanation": "Eli describes 说当前表现，had visited it before 构造在描述之前的假想到访。实际从未到访由题目说明，不能据此声称所有 had visited 都虚假；as if 和 as though 可表达同一比较，had 可缩写为 'd。这里不是 if 条件与 would 结果的模板。",
+      "hints": [
+        "先确认当前描述者与已知未发生的到访；到访的假想时间在当前描述之前。",
+        "主句用单数 describes；比较后用 he had + visited，不拼成 would have 的条件结果。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "选一次真实的计划限制或过去错失机会，或明确标为假设的练习。写一项当前／未来假设和一项过去反事实，说明主句是预想结果还是具备机会；再根据观察写一个 as if 比较，交代它可能属实还是与已知现实有距离。自行选择情境，不复制投影仪、露台或 Eli。",
+    "criteria": [
+      "条件与结果各自的时间能说明；当前／未来假设中的过去形式没有被误当成过去发生的事实或固定零概率。",
+      "would / could 的选择符合预想行动与能力、机会的实际重心，情态词后形式正确。",
+      "过去反事实保留 had + 过去分词和 would / could have + 过去分词，事实与假想不互相矛盾。",
+      "as if / as though 描述表现或比较，不被机械套成条件结果；普通时态与非真实过去形式由态度和参照时间支持。",
+      "若自由表达使用混合条件，两边时间与跨时间联系可解释；本单元没有独立检验全部混合条件，自由表达仍需核对。"
+    ]
+  }
+}

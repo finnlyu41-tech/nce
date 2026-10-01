@@ -1,0 +1,107 @@
+[
+  {
+    "guideId": "may",
+    "unitId": "modal-evidence",
+    "formIndices": [
+      0,
+      1
+    ],
+    "contrastIndices": [
+      0,
+      1
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "modal-evidence-v0-recognise",
+      "modal-evidence-v0-repair"
+    ],
+    "scope": "讲解 may/might/could 的不确定可能，may be 与 maybe 的句法区别及 may 许可；复合识别题要求保留未知身份的 may be，单错误修正实际检验 May I + 原形。",
+    "remaining": "might/could 替代语气、maybe 独立造句、may/might 否定的范围及全部许可答复尚未逐项输入测试；不列固定概率等级。"
+  },
+  {
+    "guideId": "deduction-now",
+    "unitId": "modal-evidence",
+    "formIndices": [
+      2,
+      3
+    ],
+    "contrastIndices": [
+      2,
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      2,
+      3
+    ],
+    "practiceIds": [
+      "modal-evidence-v0-recognise"
+    ],
+    "scope": "用证据解释当前强推断、排除可能与正在进行的推断；在同一隔壁装修语境中识别 must be sanding 的结构和立场，并与身份可能区分。",
+    "remaining": "can't 当前排除和当前一般状态有完整对比、错例但未独立输入检验；mustn't 的禁止只作功能比较，不据此概括所有 must not 语境。"
+  },
+  {
+    "guideId": "deduction-past",
+    "unitId": "modal-evidence",
+    "formIndices": [
+      4
+    ],
+    "contrastIndices": [
+      4,
+      8
+    ],
+    "mistakeIndices": [
+      4
+    ],
+    "practiceIds": [
+      "modal-evidence-v0-produce"
+    ],
+    "scope": "比较 must be 当前状态与 must have done 过去推断，以及 must have 与 had to 的推断/义务区别；新换电池情境中独立产生 must have replaced。",
+    "remaining": "may/might/can't/couldn't have 的过去推断已有形式与使用条件，未逐项独立造句；负向推断、持续过程和其他情态完成用途需更多证据语境。"
+  },
+  {
+    "guideId": "past-ability",
+    "unitId": "modal-evidence",
+    "formIndices": [
+      5,
+      6,
+      7
+    ],
+    "contrastIndices": [
+      5,
+      6
+    ],
+    "mistakeIndices": [
+      5,
+      6
+    ],
+    "practiceIds": [
+      "modal-evidence-v1-repair"
+    ],
+    "scope": "比较 could 一般过去能力与 managed to/was able to 一次实际成功，明确 hear 等感知词的具体过去例外；单处补词题检验 managed to 的成功叙述。",
+    "remaining": "一般能力 could、单次失败 couldn't、was/were able to 和感知/心理具体语境已教，未逐项独立输入检验；礼貌请求和建议仅说明边界，不把 could 一概禁用于具体过去。"
+  },
+  {
+    "guideId": "could-have",
+    "unitId": "modal-evidence",
+    "formIndices": [
+      8,
+      9
+    ],
+    "contrastIndices": [
+      7
+    ],
+    "mistakeIndices": [
+      7
+    ],
+    "practiceIds": [
+      "modal-evidence-v1-recognise",
+      "modal-evidence-v1-produce"
+    ],
+    "scope": "在结果未知的路线中识别 could have 的过去可能，并在 Asha 未参加散步的新情境中造出已知未实现机会；参考均要求过去分词及与结果一致的理由。",
+    "remaining": "批评语气、第三条件句、混合时间假设及 couldn't have 的非推断用法未穷尽；不从 could have 形式本身推定事情未发生。"
+  }
+]

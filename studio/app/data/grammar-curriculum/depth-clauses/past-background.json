@@ -1,0 +1,284 @@
+{
+  "id": "past-background",
+  "title": "过去状态、背景与先后",
+  "stageId": "time",
+  "order": 14,
+  "prerequisites": [
+    "past-present-perfect",
+    "present-time",
+    "plan-timeline"
+  ],
+  "goal": "先找到过去的观察点，再区分当时的状态、正在展开的背景，以及更早已发生的事。",
+  "guideIds": [
+    "past-be",
+    "past-continuous",
+    "past-perfect"
+  ],
+  "purposeIds": [
+    "story",
+    "progress"
+  ],
+  "explanation": [
+    "讲过去的身份、状态或位置，先看谓语是不是 be：I / he / she / it 通常用 was，you / we / they 和复数名词用 were。否定把 not 接在 was/were 后；一般疑问把 was/were 移到主语前。普通动作的过去疑问则用 did + 主语 + 动词原形，不能把这两条路线拼在一起。",
+    "过去进行时像把镜头停在过去某一刻：was/were + 动词-ing 告诉读者，那时活动已经展开，镜头里还能看到过程。一般过去时则常把事情作为一个事件来讲。不是动作持续久就必须用进行时，也不是动作短就只能用一般过去时。",
+    "同样是 when I entered，后面写 was adjusting，画面是我进来时对方正在调整；写 adjusted，通常把调整也作为那段叙事中的一个事件，可能是我进来之后才开始。when 和 while 提供时间关系，不能代替你判断要表达背景、重叠还是先后。",
+    "过去完成时用 had + 过去分词，把事情放在另一个过去参照点之前。先问『我站在哪一个过去时刻回看？』，再问『哪件事在那之前？』。参照点可以在同一句，也可以已在前文交代；只是在讲很久以前的单个事件，并不因此必须加 had。",
+    "本轮先练『到过去参照点时已经完成』。例如快递员到达时，打包是已经完成、还在进行，还是随后发生？这三个意思不能仅靠把动词换成某个过去形式来猜，要核对事件关系。过去完成时也能表达此前的状态、经历或尚未完成的情况，留待更多语境深化。",
+    "after/before 已说明先后时，一般过去时也常能把顺序讲清楚；过去完成时可以把『那之前已经……』突出出来，不是见到连接词就强制改写。本轮部分题会明确要求过去完成时来检验该形式。开放叙事仍需按真实时间关系判断，不能把有限参考答案当成所有自然英语的清单。"
+  ],
+  "forms": [
+    {
+      "form": "主语 + was/were + 名词 / 形容词 / 地点",
+      "meaning": "把身份、状态或位置放在过去。",
+      "useWhen": "所述是过去的状态而非一个普通动作；I/he/she/it 用 was，you/we/they 和复数名词用 were。"
+    },
+    {
+      "form": "主语 + wasn't/weren't …；Was/Were + 主语 …?",
+      "meaning": "否定过去状态，或询问过去状态是否成立。",
+      "useWhen": "谓语已经是 be，直接加 not 或倒装 was/were；不再加 did。"
+    },
+    {
+      "form": "主语 + 动词过去式；didn't + 动词原形；Did + 主语 + 动词原形 …?",
+      "meaning": "讲过去发生的普通动作，并构成它的否定或疑问。",
+      "useWhen": "如 visit、empty、repair 是动作动词；did 已承载过去，不把它与 was/were 叠加。"
+    },
+    {
+      "form": "主语 + was/were + 动词-ing",
+      "meaning": "过去观察点上正在展开的活动或背景。",
+      "useWhen": "要呈现当时的过程，不承诺活动在那一刻已完成；be 与主语一致，后接 -ing。"
+    },
+    {
+      "form": "过去进行时背景 + when/while 时间关系 + 过去事件",
+      "meaning": "交代背景与另一事件的重叠或发生关系。",
+      "useWhen": "先按意思区分背景和事件；when/while 不是固定的时态开关，叙事视角可改变形式。"
+    },
+    {
+      "form": "主语 + had + 过去分词（如 had packed / had seen）",
+      "meaning": "从过去参照点回看更早发生的事情。",
+      "useWhen": "先有明确或可从上下文恢复的过去参照；本轮重点是那时已经完成的活动，不因 after/before 或『很久以前』机械使用。"
+    },
+    {
+      "form": "主语 + hadn't + 过去分词；Had + 主语 + 过去分词 …?",
+      "meaning": "否定或询问过去参照点之前的情况。",
+      "useWhen": "否定和疑问仍由 had 承担助动词工作，后面的动词保持过去分词；本轮介绍形式，不把阅读介绍算独立输入检验。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一更衣室：状态还是动作",
+      "a": {
+        "en": "Were the lockers empty after the match?",
+        "zh": "比赛后储物柜是空的吗？"
+      },
+      "b": {
+        "en": "Did the staff empty the lockers after the match?",
+        "zh": "工作人员在比赛后清空了储物柜吗？"
+      },
+      "why": "A 询问当时的状态，用 were；B 询问清空这个动作，用 did + empty。空着并不直接说明由谁清空。"
+    },
+    {
+      "label": "同一次进门：已有背景还是叙事事件",
+      "a": {
+        "en": "When I entered the workshop, Lia was adjusting the lamp.",
+        "zh": "我走进工作室时，Lia 正在调整那盏灯。"
+      },
+      "b": {
+        "en": "When I entered the workshop, Lia adjusted the lamp.",
+        "zh": "我走进工作室时，Lia 调整了那盏灯。"
+      },
+      "why": "A 把调整作为进门时已在展开的背景；B 把调整作为那段叙事中的一个事件，常可理解为进门后发生。两句都自然，差别在观察方式，不能只看 when 决定。"
+    },
+    {
+      "label": "同一次维修：完整时段还是一个观察点",
+      "a": {
+        "en": "They worked on the lamp all afternoon.",
+        "zh": "他们整个下午都在修那盏灯。"
+      },
+      "b": {
+        "en": "At three, they were working on the lamp.",
+        "zh": "三点时，他们正在修那盏灯。"
+      },
+      "why": "A 从完整下午概括维修工作，持续久也能用一般过去时；B 停在三点看过程。work on 在此说的是维修活动，并不表示灯已修好，完成与否还要另交代结果。"
+    },
+    {
+      "label": "同一次取件：已完成还是仍在进行",
+      "a": {
+        "en": "The team had packed the samples when the courier arrived.",
+        "zh": "快递员到达时，团队已经打包好了样品。"
+      },
+      "b": {
+        "en": "The team was packing the samples when the courier arrived.",
+        "zh": "快递员到达时，团队正在打包样品。"
+      },
+      "why": "A 从 arrived 这个过去参照回看此前完成的打包；B 把到达时的打包过程呈现出来。进行时不表示当时已全部打包好。"
+    },
+    {
+      "label": "同一次攀登：连接词已给顺序",
+      "a": {
+        "en": "After we checked the ropes, we began the climb.",
+        "zh": "检查绳索后，我们开始攀登。"
+      },
+      "b": {
+        "en": "After we had checked the ropes, we began the climb.",
+        "zh": "检查完绳索后，我们开始攀登。"
+      },
+      "why": "after 已使检查在先、攀登在后，两句都可用。B 进一步从开始攀登的过去时点突出此前的检查，不应把 A 判成时态错误。"
+    },
+    {
+      "label": "同一晚的工作室：不在场还是未去拜访",
+      "a": {
+        "en": "We weren't at the workshop that evening.",
+        "zh": "那天晚上我们不在工作室。"
+      },
+      "b": {
+        "en": "We didn't visit the workshop that evening.",
+        "zh": "那天晚上我们没有去工作室。"
+      },
+      "why": "A 否定过去位置，用 weren't；B 否定 visit 这个动作，用 didn't + 原形。它们关注的信息不同，否定结构也随谓语改变。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "The benches wasn't dry after the shower.",
+      "correct": "The benches weren't dry after the shower.",
+      "why": "benches 是复数主语，过去状态的否定用 were not/weren't。只修主谓一致，不把形容词 dry 当动作加 did。"
+    },
+    {
+      "wrong": "Did the lockers were empty after the match?",
+      "correct": "Were the lockers empty after the match?",
+      "why": "empty 在这里是状态形容词，谓语是 be。一般疑问把 were 移到主语前，不再添加 did。若要问『谁清空』，才需要改成动作路线。"
+    },
+    {
+      "wrong": "They was repairing the lamp.",
+      "correct": "They were repairing the lamp.",
+      "why": "进行时也需要 be 与主语一致；they 用 were，后面的 repairing 保持 -ing。"
+    },
+    {
+      "wrong": "Lia was adjust the lamp.",
+      "correct": "Lia was adjusting the lamp.",
+      "why": "要说当时正在调整，was 后应接 adjusting。若想把它讲成一个事件，可另用 adjusted，但那改变本例的目标视角。"
+    },
+    {
+      "wrong": "Ema had bake the bread before the guests arrived.",
+      "correct": "Ema had baked the bread before the guests arrived.",
+      "why": "已经选用过去完成结构，had 后必须是过去分词 baked。并非因为出现 before 就只有这一种时态可用。"
+    },
+    {
+      "wrong": "Had you saw the new display before the tour?",
+      "correct": "Had you seen the new display before the tour?",
+      "why": "过去完成疑问把 had 前置，see 的过去分词仍是 seen；saw 是一般过去式，不能放在这里。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "past-background-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "维修记录：他们 4:50 开始修灯，5:10 才停止。你把叙事镜头停在五点，看正在展开的活动。哪一项的英文结构和理由都符合这个视角？不要只看动作持续了多久。",
+      "options": [
+        "At five, they had repaired the lamp. ——五点之前已经完成修灯。",
+        "At five, they repaired the lamp. ——把修灯呈现为五点时正在展开的背景。",
+        "At five, they were repairing the lamp. ——把五点作为观察点，呈现当时的维修过程。",
+        "At five, they was repairing the lamp. ——把五点作为观察点，呈现当时的维修过程。"
+      ],
+      "answer": "At five, they were repairing the lamp. ——把五点作为观察点，呈现当时的维修过程。",
+      "explanation": "五点处在开始与停止之间，本题要求呈现当时的过程，所以用 they were repairing。had repaired 会把维修放在五点之前；repaired 可讲一个过去事件，但搭配这里声称『正在展开的背景』的理由不合题意；they was 的主谓一致有误。持续时间长本身并不禁止一般过去时。",
+      "hints": [
+        "先把开始、五点、停止放在时间线上：五点落在活动的哪一段？还要核对每项的理由。",
+        "过去某刻的过程用 was/were + -ing；复数 they 要与 be 保持一致。"
+      ]
+    },
+    {
+      "id": "past-background-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "阵雨后的公园里，几张长椅还没干。只改一个主谓一致错误，保留其余用词和过去否定状态：The benches wasn't dry after the shower.",
+      "answer": "The benches weren't dry after the shower.",
+      "accepted": [
+        "The benches were not dry after the shower."
+      ],
+      "explanation": "复数 benches 对应 were；否定状态可用 weren't 或 were not。dry 是形容词，不能在保留这个句子结构时添加 didn't。",
+      "hints": [
+        "先找主语是一个还是多个，再检查表达过去状态的谓语是否与它对应。",
+        "复数名词的过去 be 用 were；否定把 not 接在它后面。"
+      ]
+    },
+    {
+      "id": "past-background-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：门铃响时，你正在给幼苗浇水。用 I / water the seedlings（给幼苗浇水）/ when / the doorbell rang 写一句话。浇水用过去进行时，门铃事件保留所给一般过去式；两分句可交换顺序，不加其他信息。",
+      "answer": "I was watering the seedlings when the doorbell rang.",
+      "accepted": [
+        "When the doorbell rang, I was watering the seedlings."
+      ],
+      "explanation": "was watering 给门铃响这一过去事件铺出正在展开的背景；rang 是门铃响的事件。不能把 water 原形直接接在 was 后，也不需要把两个动词都改成过去完成时。这里只检验所给情境和指定词组。",
+      "hints": [
+        "先区分门铃这个事件与它发生时已经展开的活动，再安排两者关系。",
+        "I 对应 was；浇水动词要用 -ing，when 连接门铃响的过去事件。"
+      ]
+    },
+    {
+      "id": "past-background-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "记录写明：团队 13:30 已打包好样品，快递员 14:00 到达。以『快递员到达』为过去参照，选择明确标出此前已完成打包、且理由正确的一项。",
+      "options": [
+        "The team was packing the samples when the courier arrived. ——到达时打包还在过程中。",
+        "The team had already packed the samples when the courier arrived. ——到达是后来的参照，打包在那之前已完成。",
+        "The team had already packed the samples when the courier arrived. ——打包是到达之后才完成的事。",
+        "The team had already pack the samples when the courier arrived. ——到达是后来的参照，打包在那之前已完成。"
+      ],
+      "answer": "The team had already packed the samples when the courier arrived. ——到达是后来的参照，打包在那之前已完成。",
+      "explanation": "先完成打包，再到达；had already packed 把较早的完成放在 arrived 之前。was packing 描述到达时仍在展开的过程，不吻合记录；相同英文配『到达之后』的理由也不合时序；had 后需要过去分词 packed。这里的完成结构突出先后，不意味着有 when 就必须用它。",
+      "hints": [
+        "先确认哪件事在 13:30 已完成，哪件事在 14:00 提供回看的位置。",
+        "较早完成的一件事用 had + 过去分词；同时检查理由有没有把先后颠倒。"
+      ]
+    },
+    {
+      "id": "past-background-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "面包在客人到达前已经烤好。句子已经选择过去完成结构，只改 bake 的形式，保留其余词序：By the time the guests arrived, Ema had bake the bread.",
+      "answer": "By the time the guests arrived, Ema had baked the bread.",
+      "accepted": [],
+      "explanation": "had 后接过去分词，规则动词 bake 的过去分词是 baked。本题改的是已经选定的完成结构内的动词形式；不是在教所有含 before/after 的句子都必须用 had。",
+      "hints": [
+        "过去的客人到达是回看的参照。现在只检查助动词之后要求哪一种动词形式。",
+        "完成结构是 had + 过去分词；bake 属于规则变化，词尾已有 e。"
+      ]
+    },
+    {
+      "id": "past-background-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "新情境：音乐会九点开始；我们八点半就已查完所有门票。用 when / the concert began / we / check all the tickets / already 写一句话，查票用过去完成时，开始用所给一般过去式。两分句可交换顺序，可缩写 we had，不添加时间或其他信息。",
+      "answer": "When the concert began, we had already checked all the tickets.",
+      "accepted": [
+        "We had already checked all the tickets when the concert began.",
+        "When the concert began, we'd already checked all the tickets.",
+        "We'd already checked all the tickets when the concert began.",
+        "When the concert began, we had checked all the tickets already.",
+        "We had checked all the tickets already when the concert began.",
+        "When the concert began, we'd checked all the tickets already.",
+        "We'd checked all the tickets already when the concert began."
+      ],
+      "explanation": "concert began 提供九点这个过去参照；八点半已完成的查票用 had checked。already 可放在 had 与 checked 之间，也可在查票宾语之后；we'd 在此可展开为 we had。这里只按指定词组和完成视角检验，开放叙事中是否需要完成结构仍取决于语境。",
+      "hints": [
+        "把九点当作回看的位置；查票是在这个位置之前、当时，还是之后？",
+        "check 是规则动词；较早完成的查票用 had + 过去分词，already 要留在查票分句里。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "为一次真实活动写 4—6 句回顾：先交代当时的一个状态，再用正在进行的活动铺背景，最后从一个过去参照回看更早的一件事。可写课堂展示、旅行或协作任务；不必模仿上面的灯、面包或门票情境。标出观察点，并说明至少一次时态选择的理由。提交到现有表达路径后仍待核对，不因参考形式相似就算掌握。",
+    "criteria": [
+      "状态句按主语选 was/were，并与普通动作的 did 路线区分。",
+      "背景过程与事件的时间关系能读懂，不凭动作长短或 when/while 机械选时态。",
+      "过去完成句有清楚或从上下文可恢复的过去参照，且与真实先后关系一致。",
+      "若用 after/before，能解释为何选择一般过去或完成视角；不把连接词当强制规则。",
+      "表达自己的新内容；开放叙事的意义、自然度及事实关系继续人工核对。"
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+[
+  {
+    "guideId": "relative",
+    "unitId": "relative-reference",
+    "formIndices": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "contrastIndices": [
+      2,
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      0,
+      2,
+      5,
+      7
+    ],
+    "practiceIds": [
+      "relative-reference-v0-repair",
+      "relative-reference-v1-recognise",
+      "relative-reference-v1-produce"
+    ],
+    "scope": "先行词、人／物关系词、主宾职责与所属都有形式和同场景对比；实际练习删除重复主语、核对谁联系谁、用 whose 保留草图所属。whom 为正式宾语路线，who 的日常宾语用法也明示。",
+    "remaining": "动物或人格化对象、whose 指物、介词前置及 who／whom 语域当前有讲解，尚无各自独立造句；where／when、复杂嵌套及其他关系结构未完整训练。"
+  },
+  {
+    "guideId": "relative-omission",
+    "unitId": "relative-reference",
+    "formIndices": [
+      0,
+      1,
+      2,
+      3,
+      5
+    ],
+    "contrastIndices": [
+      1,
+      2,
+      3,
+      5
+    ],
+    "mistakeIndices": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "practiceIds": [
+      "relative-reference-v0-repair",
+      "relative-reference-v0-produce",
+      "relative-reference-v1-recognise"
+    ],
+    "scope": "对比限定宾语可省与完整从句主语须留、前置介词须保留关系词、非限定宾语不能裸省；陌生手电场景实际省宾语关系词，联系情境辨析补充从句中的保留。",
+    "remaining": "介词后置省略只有示范，没有独立输入题；分词型缩略、when 等关系副词省略及更长结构未训练，不把删掉整个谓语结构当作本单元的单词省略。"
+  },
+  {
+    "guideId": "non-defining",
+    "unitId": "relative-reference",
+    "formIndices": [
+      4,
+      5,
+      6
+    ],
+    "contrastIndices": [
+      0,
+      4,
+      5,
+      6
+    ],
+    "mistakeIndices": [
+      3,
+      4,
+      6
+    ],
+    "practiceIds": [
+      "relative-reference-v0-recognise",
+      "relative-reference-v1-recognise",
+      "relative-reference-v1-repair",
+      "relative-reference-v1-produce"
+    ],
+    "scope": "逗号与限定范围、关系词保留及 that 限制、whose 所属补充和 which 回指整件事均可定位；认知题检验全队与两人，输入题保留中间成对逗号及句末事实补充。",
+    "remaining": "非限定 where／when、数量词 of whom／which、插入语或同位语与关系从句细分未练；名字是否需限定仍取决于实际上下文，开放信息组织不由有限答案直接判为全面掌握。"
+  }
+]

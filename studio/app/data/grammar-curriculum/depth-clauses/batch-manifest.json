@@ -1,0 +1,1182 @@
+{
+  "schemaVersion": 1,
+  "id": "clauses-20261001",
+  "baselineCommit": "75b1cd7dbc384d56378e2d2795294410620dbd76",
+  "registration": "pending-mainline-integration",
+  "title": "从句、条件与篇章焦点，以及真实先修",
+  "unitIds": [
+    "past-background",
+    "modal-evidence",
+    "relative-reference",
+    "hypothetical-condition",
+    "information-focus"
+  ],
+  "guideIds": [
+    "past-be",
+    "past-continuous",
+    "past-perfect",
+    "may",
+    "deduction-now",
+    "deduction-past",
+    "past-ability",
+    "could-have",
+    "relative",
+    "relative-omission",
+    "non-defining",
+    "condition-unreal",
+    "condition-past",
+    "as-if",
+    "formal-it",
+    "that-clauses",
+    "likely",
+    "inversion",
+    "reporting-passive"
+  ],
+  "groups": [
+    {
+      "id": "past-background",
+      "batchId": "b2",
+      "title": "过去状态、背景与先后",
+      "stageId": "time",
+      "prerequisites": [
+        "past-present-perfect",
+        "present-time",
+        "plan-timeline"
+      ],
+      "purposeIds": [
+        "story",
+        "progress"
+      ],
+      "comparison": "状态与动作、背景与事件、过去参照前的已完成",
+      "guideIds": [
+        "past-be",
+        "past-continuous",
+        "past-perfect"
+      ]
+    },
+    {
+      "id": "modal-evidence",
+      "batchId": "b3",
+      "title": "依据、可能性与过去能力",
+      "stageId": "meaning",
+      "prerequisites": [
+        "modal-choice",
+        "past-background"
+      ],
+      "purposeIds": [
+        "reason",
+        "advise",
+        "story"
+      ],
+      "comparison": "确定度、现在与过去推断、一般能力与一次成功、未实现可能",
+      "guideIds": [
+        "may",
+        "deduction-now",
+        "deduction-past",
+        "past-ability",
+        "could-have"
+      ]
+    },
+    {
+      "id": "relative-reference",
+      "batchId": "b3",
+      "title": "限定对象与补充信息",
+      "stageId": "extension",
+      "prerequisites": [
+        "noun-reference",
+        "negative-precision"
+      ],
+      "purposeIds": [
+        "describe",
+        "reason"
+      ],
+      "comparison": "限定对象、宾语关系词省略与逗号补充信息",
+      "guideIds": [
+        "relative",
+        "relative-omission",
+        "non-defining"
+      ]
+    },
+    {
+      "id": "hypothetical-condition",
+      "batchId": "b3",
+      "title": "现实、假设与过去反事实",
+      "stageId": "extension",
+      "prerequisites": [
+        "linking-ideas",
+        "past-background",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "plan",
+        "reason",
+        "story"
+      ],
+      "comparison": "现实可能、现在假设、过去未发生与as if视角",
+      "guideIds": [
+        "condition-unreal",
+        "condition-past",
+        "as-if"
+      ]
+    },
+    {
+      "id": "information-focus",
+      "batchId": "b4",
+      "title": "内容焦点与评价表达",
+      "stageId": "extension",
+      "prerequisites": [
+        "reported-perspective",
+        "relative-reference",
+        "passive-focus",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "reason",
+        "describe"
+      ],
+      "comparison": "形式it、that角色、可能性评价、倒装强调与客观转述",
+      "guideIds": [
+        "formal-it",
+        "that-clauses",
+        "likely",
+        "inversion",
+        "reporting-passive"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "guideId": "past-be",
+      "title": "was / were：把身份、状态和位置放到过去",
+      "stageId": "time",
+      "batchId": "b2",
+      "unitId": "past-background",
+      "status": "implemented",
+      "prerequisites": [
+        "past-present-perfect",
+        "present-time",
+        "plan-timeline"
+      ],
+      "purposeIds": [
+        "story",
+        "progress"
+      ],
+      "comparison": "was/were状态与did普通动作；否定和疑问形式",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-67",
+          "book": "NCE1",
+          "lesson": 67,
+          "lastLesson": 68,
+          "position": 0
+        },
+        {
+          "entryId": "NCE1-69",
+          "book": "NCE1",
+          "lesson": 69,
+          "lastLesson": 70,
+          "position": 0
+        }
+      ],
+      "scope": "讲解 was/were 的过去身份、状态与位置，和 did 普通动作路线作对比；本轮用复数否定状态的单错误修正检验主谓一致。",
+      "remaining": "过去 be 的肯定、一般疑问和与动作疑问的区分已有可定位讲解与例句，尚未逐项独立输入测试；倒装特殊用法及全部 be 补语不在本轮。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "past-continuous",
+      "title": "过去进行时：给过去的事件铺背景",
+      "stageId": "time",
+      "batchId": "b2",
+      "unitId": "past-background",
+      "status": "implemented",
+      "prerequisites": [
+        "past-present-perfect",
+        "present-time",
+        "plan-timeline"
+      ],
+      "purposeIds": [
+        "story",
+        "progress"
+      ],
+      "comparison": "过去背景过程与过去时事件；while/when非机械标志",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-117",
+          "book": "NCE1",
+          "lesson": 117,
+          "lastLesson": 118,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-7",
+          "book": "NCE2",
+          "lesson": 7,
+          "lastLesson": 7,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-31",
+          "book": "NCE2",
+          "lesson": 31,
+          "lastLesson": 31,
+          "position": 1
+        },
+        {
+          "entryId": "NCE2-79",
+          "book": "NCE2",
+          "lesson": 79,
+          "lastLesson": 79,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-6",
+          "book": "NCE3",
+          "lesson": 6,
+          "lastLesson": 6,
+          "position": 0
+        }
+      ],
+      "scope": "比较过去观察点上的过程、一般过去事件及整体时段；识别五点的背景并在新浇水情境中造句，检查 be + -ing、背景与事件关系。",
+      "remaining": "否定和疑问形式、双背景重叠、状态动词的词义变化及进行时的其他篇章功能尚未独立测试；when/while 未作为固定时态触发词。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "past-perfect",
+      "title": "过去完成时：回到过去，再往前一步",
+      "stageId": "time",
+      "batchId": "b2",
+      "unitId": "past-background",
+      "status": "implemented",
+      "prerequisites": [
+        "past-present-perfect",
+        "present-time",
+        "plan-timeline"
+      ],
+      "purposeIds": [
+        "story",
+        "progress"
+      ],
+      "comparison": "过去参照前的已完成与一般过去顺序；是否需标先后",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-119",
+          "book": "NCE1",
+          "lesson": 119,
+          "lastLesson": 120,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-14",
+          "book": "NCE2",
+          "lesson": 14,
+          "lastLesson": 14,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-23",
+          "book": "NCE2",
+          "lesson": 23,
+          "lastLesson": 23,
+          "position": 1
+        },
+        {
+          "entryId": "NCE2-38",
+          "book": "NCE2",
+          "lesson": 38,
+          "lastLesson": 38,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-86",
+          "book": "NCE2",
+          "lesson": 86,
+          "lastLesson": 86,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-10",
+          "book": "NCE3",
+          "lesson": 10,
+          "lastLesson": 10,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-28",
+          "book": "NCE3",
+          "lesson": 28,
+          "lastLesson": 28,
+          "position": 1
+        },
+        {
+          "entryId": "NCE3-49",
+          "book": "NCE3",
+          "lesson": 49,
+          "lastLesson": 49,
+          "position": 0
+        },
+        {
+          "entryId": "NCE4-26",
+          "book": "NCE4",
+          "lesson": 26,
+          "lastLesson": 26,
+          "position": 1
+        }
+      ],
+      "scope": "用过去参照前已完成的活动解释 had + 过去分词；比较已完成与仍在进行，也给出 after 后两种自然时态；识别先后、修正过去分词，并在音乐会查票的新情境中造句。",
+      "remaining": "hadn't/Had 疑问为介绍，未逐项输入检验；此前状态、经历、before 所含未完成关系、过去完成进行时和反事实用法未穷尽，本轮不把 after/before 一概判为强制过去完成。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "may",
+      "title": "may / might：承认还有其他可能",
+      "stageId": "meaning",
+      "batchId": "b3",
+      "unitId": "modal-evidence",
+      "status": "implemented",
+      "prerequisites": [
+        "modal-choice",
+        "past-background"
+      ],
+      "purposeIds": [
+        "reason",
+        "advise",
+        "story"
+      ],
+      "comparison": "may/might可能与允许；maybe位置和语气",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-131",
+          "book": "NCE1",
+          "lesson": 131,
+          "lastLesson": 132,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-19",
+          "book": "NCE2",
+          "lesson": 19,
+          "lastLesson": 19,
+          "position": 1
+        },
+        {
+          "entryId": "NCE3-50",
+          "book": "NCE3",
+          "lesson": 50,
+          "lastLesson": 50,
+          "position": 0
+        }
+      ],
+      "scope": "讲解 may/might/could 的不确定可能，may be 与 maybe 的句法区别及 may 许可；复合识别题要求保留未知身份的 may be，单错误修正实际检验 May I + 原形。",
+      "remaining": "might/could 替代语气、maybe 独立造句、may/might 否定的范围及全部许可答复尚未逐项输入测试；不列固定概率等级。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "deduction-now",
+      "title": "must / can't：有根据地判断现在的情况",
+      "stageId": "meaning",
+      "batchId": "b3",
+      "unitId": "modal-evidence",
+      "status": "implemented",
+      "prerequisites": [
+        "modal-choice",
+        "past-background"
+      ],
+      "purposeIds": [
+        "reason",
+        "advise",
+        "story"
+      ],
+      "comparison": "must/may/cannot be依据推断与义务",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-127",
+          "book": "NCE1",
+          "lesson": 127,
+          "lastLesson": 128,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-34",
+          "book": "NCE3",
+          "lesson": 34,
+          "lastLesson": 34,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-24",
+          "book": "NCE4",
+          "lesson": 24,
+          "lastLesson": 24,
+          "position": 0
+        }
+      ],
+      "scope": "用证据解释当前强推断、排除可能与正在进行的推断；在同一隔壁装修语境中识别 must be sanding 的结构和立场，并与身份可能区分。",
+      "remaining": "can't 当前排除和当前一般状态有完整对比、错例但未独立输入检验；mustn't 的禁止只作功能比较，不据此概括所有 must not 语境。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "deduction-past",
+      "title": "must have done：推测过去发生过什么",
+      "stageId": "meaning",
+      "batchId": "b3",
+      "unitId": "modal-evidence",
+      "status": "implemented",
+      "prerequisites": [
+        "modal-choice",
+        "past-background"
+      ],
+      "purposeIds": [
+        "reason",
+        "advise",
+        "story"
+      ],
+      "comparison": "must/may/cannot have done回看依据；与must do义务区别",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-129",
+          "book": "NCE1",
+          "lesson": 129,
+          "lastLesson": 130,
+          "position": 0
+        },
+        {
+          "entryId": "NCE1-131",
+          "book": "NCE1",
+          "lesson": 131,
+          "lastLesson": 132,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-20",
+          "book": "NCE4",
+          "lesson": 20,
+          "lastLesson": 20,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-45",
+          "book": "NCE4",
+          "lesson": 45,
+          "lastLesson": 45,
+          "position": 0
+        }
+      ],
+      "scope": "比较 must be 当前状态与 must have done 过去推断，以及 must have 与 had to 的推断/义务区别；新换电池情境中独立产生 must have replaced。",
+      "remaining": "may/might/can't/couldn't have 的过去推断已有形式与使用条件，未逐项独立造句；负向推断、持续过程和其他情态完成用途需更多证据语境。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "past-ability",
+      "title": "could / was able to / managed to：会做与做成",
+      "stageId": "meaning",
+      "batchId": "b3",
+      "unitId": "modal-evidence",
+      "status": "implemented",
+      "prerequisites": [
+        "modal-choice",
+        "past-background"
+      ],
+      "purposeIds": [
+        "reason",
+        "advise",
+        "story"
+      ],
+      "comparison": "could一般能力与was able to一次成功；managed to重心",
+      "sourceEntries": [
+        {
+          "entryId": "NCE2-43",
+          "book": "NCE2",
+          "lesson": 43,
+          "lastLesson": 43,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-47",
+          "book": "NCE2",
+          "lesson": 47,
+          "lastLesson": 47,
+          "position": 2
+        },
+        {
+          "entryId": "NCE2-67",
+          "book": "NCE2",
+          "lesson": 67,
+          "lastLesson": 67,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-91",
+          "book": "NCE2",
+          "lesson": 91,
+          "lastLesson": 91,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-15",
+          "book": "NCE3",
+          "lesson": 15,
+          "lastLesson": 15,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-21",
+          "book": "NCE3",
+          "lesson": 21,
+          "lastLesson": 21,
+          "position": 1
+        }
+      ],
+      "scope": "比较 could 一般过去能力与 managed to/was able to 一次实际成功，明确 hear 等感知词的具体过去例外；单处补词题检验 managed to 的成功叙述。",
+      "remaining": "一般能力 could、单次失败 couldn't、was/were able to 和感知/心理具体语境已教，未逐项独立输入检验；礼貌请求和建议仅说明边界，不把 could 一概禁用于具体过去。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "could-have",
+      "title": "could have done：过去可能，或本来有机会",
+      "stageId": "meaning",
+      "batchId": "b3",
+      "unitId": "modal-evidence",
+      "status": "implemented",
+      "prerequisites": [
+        "modal-choice",
+        "past-background"
+      ],
+      "purposeIds": [
+        "reason",
+        "advise",
+        "story"
+      ],
+      "comparison": "could have done未实现机会与过去可能；依语境确定",
+      "sourceEntries": [
+        {
+          "entryId": "NCE3-15",
+          "book": "NCE3",
+          "lesson": 15,
+          "lastLesson": 15,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-20",
+          "book": "NCE4",
+          "lesson": 20,
+          "lastLesson": 20,
+          "position": 0
+        }
+      ],
+      "scope": "在结果未知的路线中识别 could have 的过去可能，并在 Asha 未参加散步的新情境中造出已知未实现机会；参考均要求过去分词及与结果一致的理由。",
+      "remaining": "批评语气、第三条件句、混合时间假设及 couldn't have 的非推断用法未穷尽；不从 could have 形式本身推定事情未发生。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "relative",
+      "title": "定语从句：在名词后说明“哪一个”",
+      "stageId": "extension",
+      "batchId": "b3",
+      "unitId": "relative-reference",
+      "status": "implemented",
+      "prerequisites": [
+        "noun-reference",
+        "negative-precision"
+      ],
+      "purposeIds": [
+        "describe",
+        "reason"
+      ],
+      "comparison": "人和物关系词、主宾职责与先行词",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-121",
+          "book": "NCE1",
+          "lesson": 121,
+          "lastLesson": 122,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-42",
+          "book": "NCE3",
+          "lesson": 42,
+          "lastLesson": 42,
+          "position": 1
+        },
+        {
+          "entryId": "NCE3-47",
+          "book": "NCE3",
+          "lesson": 47,
+          "lastLesson": 47,
+          "position": 1
+        },
+        {
+          "entryId": "NCE3-52",
+          "book": "NCE3",
+          "lesson": 52,
+          "lastLesson": 52,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-12",
+          "book": "NCE4",
+          "lesson": 12,
+          "lastLesson": 12,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-21",
+          "book": "NCE4",
+          "lesson": 21,
+          "lastLesson": 21,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-39",
+          "book": "NCE4",
+          "lesson": 39,
+          "lastLesson": 39,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-41",
+          "book": "NCE4",
+          "lesson": 41,
+          "lastLesson": 41,
+          "position": 0
+        }
+      ],
+      "scope": "先行词、人／物关系词、主宾职责与所属都有形式和同场景对比；实际练习删除重复主语、核对谁联系谁、用 whose 保留草图所属。whom 为正式宾语路线，who 的日常宾语用法也明示。",
+      "remaining": "动物或人格化对象、whose 指物、介词前置及 who／whom 语域当前有讲解，尚无各自独立造句；where／when、复杂嵌套及其他关系结构未完整训练。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "relative-omission",
+      "title": "关系词什么时候可以省略？",
+      "stageId": "extension",
+      "batchId": "b3",
+      "unitId": "relative-reference",
+      "status": "implemented",
+      "prerequisites": [
+        "noun-reference",
+        "negative-precision"
+      ],
+      "purposeIds": [
+        "describe",
+        "reason"
+      ],
+      "comparison": "限定从句宾语关系词可省与主语关系词须留",
+      "sourceEntries": [
+        {
+          "entryId": "NCE1-123",
+          "book": "NCE1",
+          "lesson": 123,
+          "lastLesson": 124,
+          "position": 0
+        },
+        {
+          "entryId": "NCE4-21",
+          "book": "NCE4",
+          "lesson": 21,
+          "lastLesson": 21,
+          "position": 0
+        },
+        {
+          "entryId": "NCE4-39",
+          "book": "NCE4",
+          "lesson": 39,
+          "lastLesson": 39,
+          "position": 0
+        }
+      ],
+      "scope": "对比限定宾语可省与完整从句主语须留、前置介词须保留关系词、非限定宾语不能裸省；陌生手电场景实际省宾语关系词，联系情境辨析补充从句中的保留。",
+      "remaining": "介词后置省略只有示范，没有独立输入题；分词型缩略、when 等关系副词省略及更长结构未训练，不把删掉整个谓语结构当作本单元的单词省略。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "non-defining",
+      "title": "非限定性定语从句：额外补充，而不是挑出哪一个",
+      "stageId": "extension",
+      "batchId": "b3",
+      "unitId": "relative-reference",
+      "status": "implemented",
+      "prerequisites": [
+        "noun-reference",
+        "negative-precision"
+      ],
+      "purposeIds": [
+        "describe",
+        "reason"
+      ],
+      "comparison": "逗号补充与限定对象；that及省略限制",
+      "sourceEntries": [
+        {
+          "entryId": "NCE4-12",
+          "book": "NCE4",
+          "lesson": 12,
+          "lastLesson": 12,
+          "position": 0
+        },
+        {
+          "entryId": "NCE4-25",
+          "book": "NCE4",
+          "lesson": 25,
+          "lastLesson": 25,
+          "position": 0
+        }
+      ],
+      "scope": "逗号与限定范围、关系词保留及 that 限制、whose 所属补充和 which 回指整件事均可定位；认知题检验全队与两人，输入题保留中间成对逗号及句末事实补充。",
+      "remaining": "非限定 where／when、数量词 of whom／which、插入语或同位语与关系从句细分未练；名字是否需限定仍取决于实际上下文，开放信息组织不由有限答案直接判为全面掌握。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "condition-unreal",
+      "title": "非真实条件：用过去形式拉开现实距离",
+      "stageId": "extension",
+      "batchId": "b3",
+      "unitId": "hypothetical-condition",
+      "status": "implemented",
+      "prerequisites": [
+        "linking-ideas",
+        "past-background",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "plan",
+        "reason",
+        "story"
+      ],
+      "comparison": "过去形态表示现在假设与真实过去；would结果",
+      "sourceEntries": [
+        {
+          "entryId": "NCE2-40",
+          "book": "NCE2",
+          "lesson": 40,
+          "lastLesson": 40,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-47",
+          "book": "NCE2",
+          "lesson": 47,
+          "lastLesson": 47,
+          "position": 1
+        },
+        {
+          "entryId": "NCE2-88",
+          "book": "NCE2",
+          "lesson": 88,
+          "lastLesson": 88,
+          "position": 1
+        },
+        {
+          "entryId": "NCE3-12",
+          "book": "NCE3",
+          "lesson": 12,
+          "lastLesson": 12,
+          "position": 1
+        },
+        {
+          "entryId": "NCE3-23",
+          "book": "NCE3",
+          "lesson": 23,
+          "lastLesson": 23,
+          "position": 0
+        },
+        {
+          "entryId": "NCE4-6",
+          "book": "NCE4",
+          "lesson": 6,
+          "lastLesson": 6,
+          "position": 0
+        },
+        {
+          "entryId": "NCE4-42",
+          "book": "NCE4",
+          "lesson": 42,
+          "lastLesson": 42,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-48",
+          "book": "NCE4",
+          "lesson": 48,
+          "lastLesson": 48,
+          "position": 2
+        }
+      ],
+      "scope": "过去形式表示当前／未来假设距离，与真实过去叙述、were／was 和 would／could 重心有定位讲解；认知题同时核对当前无投影仪的事实与能力理由，输入题检验 could 后原形。",
+      "remaining": "were／was、将来假设及 might 当前有介绍，但没有各自独立造句；if 中意愿 would 的特殊语境、建议语气及不同时态组合未穷尽，不将形式换算为固定概率。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "condition-past",
+      "title": "与过去事实相反：如果当时…就会…",
+      "stageId": "extension",
+      "batchId": "b3",
+      "unitId": "hypothetical-condition",
+      "status": "implemented",
+      "prerequisites": [
+        "linking-ideas",
+        "past-background",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "plan",
+        "reason",
+        "story"
+      ],
+      "comparison": "if had done/would have done过去反事实与现实过去",
+      "sourceEntries": [
+        {
+          "entryId": "NCE2-64",
+          "book": "NCE2",
+          "lesson": 64,
+          "lastLesson": 64,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-71",
+          "book": "NCE2",
+          "lesson": 71,
+          "lastLesson": 71,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-88",
+          "book": "NCE2",
+          "lesson": 88,
+          "lastLesson": 88,
+          "position": 2
+        },
+        {
+          "entryId": "NCE3-12",
+          "book": "NCE3",
+          "lesson": 12,
+          "lastLesson": 12,
+          "position": 2
+        },
+        {
+          "entryId": "NCE4-6",
+          "book": "NCE4",
+          "lesson": 6,
+          "lastLesson": 6,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-42",
+          "book": "NCE4",
+          "lesson": 42,
+          "lastLesson": 42,
+          "position": 2
+        }
+      ],
+      "scope": "过去条件与过去结果的完成形式、could have 的未实现机会及与当前结果的混合边界均有解释对比；陌生露台场景造句 past condition + could have eaten，改错核对 would have opened 的过去结果。",
+      "remaining": "混合条件目前只有解释、对比、错例，未独立检验；否定反事实、could／might 在更多过去语境的语义与口语 if would have 的语域差异未全面训练。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "as-if",
+      "title": "as if / as though：像是，仿佛",
+      "stageId": "extension",
+      "batchId": "b3",
+      "unitId": "hypothetical-condition",
+      "status": "implemented",
+      "prerequisites": [
+        "linking-ideas",
+        "past-background",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "plan",
+        "reason",
+        "story"
+      ],
+      "comparison": "真实可能与距现实的假设；不只凭as if决定时态",
+      "sourceEntries": [
+        {
+          "entryId": "NCE2-38",
+          "book": "NCE2",
+          "lesson": 38,
+          "lastLesson": 38,
+          "position": 1
+        }
+      ],
+      "scope": "as if／as though 的可能事实与现实距离、当前表现与更早假想都有形式及对比；声音情境实际辨析普通现在进行时，新港口情境构造更早且已知未发生的 had visited，允许同义 as though。",
+      "remaining": "过去主句中普通后移与非真实形式的重叠、不同语气下的讽刺及省略比较尚无独立练习；不把过去形态本身当作实际过去或必然虚假的证明。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "formal-it",
+      "title": "形式主语与形式宾语：让重内容放后面",
+      "stageId": "extension",
+      "batchId": "b4",
+      "unitId": "information-focus",
+      "status": "implemented",
+      "prerequisites": [
+        "reported-perspective",
+        "relative-reference",
+        "passive-focus",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "reason",
+        "describe"
+      ],
+      "comparison": "占位it与指代it；形式主语和find it形容词to do",
+      "sourceEntries": [
+        {
+          "entryId": "NCE3-29",
+          "book": "NCE3",
+          "lesson": 29,
+          "lastLesson": 29,
+          "position": 1
+        },
+        {
+          "entryId": "NCE3-41",
+          "book": "NCE3",
+          "lesson": 41,
+          "lastLesson": 41,
+          "position": 1
+        },
+        {
+          "entryId": "NCE4-46",
+          "book": "NCE4",
+          "lesson": 46,
+          "lastLesson": 46,
+          "position": 0
+        }
+      ],
+      "scope": "形式主语、形式宾语和普通it的评价对象有解释及同情境对照；find it difficult to的结构缺项由实际输入检验。",
+      "remaining": "形式主语和for/of参与者差异有说明，没有独立输入；不同评价动词、形容词与that/-ing搭配未穷尽。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "that-clauses",
+      "title": "that 从句：说明一个内容，还是修饰一个名词？",
+      "stageId": "extension",
+      "batchId": "b4",
+      "unitId": "information-focus",
+      "status": "implemented",
+      "prerequisites": [
+        "reported-perspective",
+        "relative-reference",
+        "passive-focus",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "reason",
+        "describe"
+      ],
+      "comparison": "同位语内容、关系修饰与名词性内容；what/why和强调角色",
+      "sourceEntries": [
+        {
+          "entryId": "NCE3-41",
+          "book": "NCE3",
+          "lesson": 41,
+          "lastLesson": 41,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-53",
+          "book": "NCE3",
+          "lesson": 53,
+          "lastLesson": 53,
+          "position": 0
+        }
+      ],
+      "scope": "完整内容与宾语缺位在相同claim场景比较，识别题检查角色与意义；问词内容小句作主语和正常内部语序有示范。",
+      "remaining": "内容that省略、表语与宾语位置、多重嵌套、what融合关系等未全面训练；问词主语小句没有独立输入题。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "likely",
+      "title": "likely：从可能性评价到人物主语",
+      "stageId": "extension",
+      "batchId": "b4",
+      "unitId": "information-focus",
+      "status": "implemented",
+      "prerequisites": [
+        "reported-perspective",
+        "relative-reference",
+        "passive-focus",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "reason",
+        "describe"
+      ],
+      "comparison": "it is likely that与主语be likely to；likely与probably",
+      "sourceEntries": [
+        {
+          "entryId": "NCE3-59",
+          "book": "NCE3",
+          "lesson": 59,
+          "lastLesson": 59,
+          "position": 0
+        }
+      ],
+      "scope": "事件主语与形式it的预测改写、低可能性、消息来源差异有对照；新造句实际表达今晚unlikely，识别保留reported而非偷换likely。",
+      "remaining": "过去可能性、likely to have done、likely作为副词以及复杂否定辖域没有全面输入；不设固定概率或成绩预测。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "inversion",
+      "title": "倒装：先还原普通语序，再看强调点",
+      "stageId": "extension",
+      "batchId": "b4",
+      "unitId": "information-focus",
+      "status": "implemented",
+      "prerequisites": [
+        "reported-perspective",
+        "relative-reference",
+        "passive-focus",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "reason",
+        "describe"
+      ],
+      "comparison": "否定或限制前置部分倒装与普通语序；only范围",
+      "sourceEntries": [
+        {
+          "entryId": "NCE3-28",
+          "book": "NCE3",
+          "lesson": 28,
+          "lastLesson": 28,
+          "position": 0
+        },
+        {
+          "entryId": "NCE3-51",
+          "book": "NCE3",
+          "lesson": 51,
+          "lastLesson": 51,
+          "position": 0
+        }
+      ],
+      "scope": "普通语序与正式强调、已有助动词、not until仅外层倒装、两种紧接连接均说明；陌生日程变动实际输入No sooner…than。",
+      "remaining": "Rarely/Never、Not until及Hardly有讲解与错例，没有各自独立输入；地点完全倒装、so/such、only、条件倒装和省略形式未穷尽。",
+      "registration": "pending-mainline-integration"
+    },
+    {
+      "guideId": "reporting-passive",
+      "title": "据说：It is said… 与 be said to…",
+      "stageId": "extension",
+      "batchId": "b4",
+      "unitId": "information-focus",
+      "status": "implemented",
+      "prerequisites": [
+        "reported-perspective",
+        "relative-reference",
+        "passive-focus",
+        "modal-evidence"
+      ],
+      "purposeIds": [
+        "reason",
+        "describe"
+      ],
+      "comparison": "it is said that与主语is said to；to have done先后",
+      "sourceEntries": [
+        {
+          "entryId": "NCE2-58",
+          "book": "NCE2",
+          "lesson": 58,
+          "lastLesson": 58,
+          "position": 0
+        },
+        {
+          "entryId": "NCE2-59",
+          "book": "NCE2",
+          "lesson": 59,
+          "lastLesson": 59,
+          "position": 3
+        },
+        {
+          "entryId": "NCE3-27",
+          "book": "NCE3",
+          "lesson": 27,
+          "lastLesson": 27,
+          "position": 0
+        }
+      ],
+      "scope": "It is reported that与对象作主语两路径、同时状态和更早动作、未核实来源有对照；认知题和单形式改错实际检验当前转述更早动作。",
+      "remaining": "更早动作只有识别及改错，尚无独立被动转述造句；进行不定式、被动不定式、转述过去视角及不同reporting verbs搭配未穷尽。",
+      "registration": "pending-mainline-integration"
+    }
+  ],
+  "remainingOwnership": {
+    "owner": "grammar-depth-line",
+    "guideCount": 33,
+    "guideIds": [
+      "pronouns",
+      "possession",
+      "have",
+      "adjectives",
+      "origin",
+      "distance",
+      "double-object",
+      "place",
+      "imperative",
+      "time-prepositions",
+      "already-yet",
+      "ago-before",
+      "used-to",
+      "be-used-to",
+      "always-continuous",
+      "phrasal-verbs",
+      "except",
+      "same-different",
+      "so-such",
+      "double-comparison",
+      "future-continuous",
+      "future-perfect",
+      "future-be",
+      "perfect-continuous",
+      "past-perfect-continuous",
+      "future-perfect-continuous",
+      "object-to",
+      "nonfinite",
+      "nonfinite-passive",
+      "participle",
+      "absolute",
+      "verb-review",
+      "rewrite"
+    ],
+    "groupIds": [
+      "reference-ownership",
+      "basic-descriptions",
+      "giving-directions",
+      "time-perspective",
+      "habit-change",
+      "linked-vocabulary",
+      "extended-timeline",
+      "duration-perspective",
+      "requests-nonfinite",
+      "structure-rewrite"
+    ],
+    "status": "planned-not-delivered"
+  },
+  "counts": {
+    "newUnits": 5,
+    "newGuides": 19,
+    "newPractices": 30,
+    "newForms": 44,
+    "newContrasts": 41,
+    "newMistakes": 41,
+    "localCombinedUnits": 18,
+    "localCombinedGuides": 64,
+    "localCombinedPractices": 108,
+    "remainingGuides": 33
+  },
+  "answerPolicy": {
+    "module": "grammar-clause-answer.ts",
+    "commaSensitiveQuestionIds": [
+      "relative-reference-v0-recognise",
+      "relative-reference-v0-repair",
+      "relative-reference-v0-produce",
+      "relative-reference-v1-recognise",
+      "relative-reference-v1-repair",
+      "relative-reference-v1-produce"
+    ],
+    "sentenceSensitiveQuestionIds": [
+      "relative-reference-v1-produce"
+    ],
+    "integration": "required-before-mainline-registration",
+    "existingQuestionBehaviour": "unchanged"
+  }
+}
