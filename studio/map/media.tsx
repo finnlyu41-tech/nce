@@ -6,7 +6,7 @@ import {playableRecording} from '../app/recording-audio';
 import {unitById, type Clip} from './curriculum';
 
 type Player = {play:(clip:Clip,done?:()=>void)=>void; stop:()=>void; label:string; active:string};
-const PlayerContext=createContext<Player>({play:()=>{},stop:()=>{},label:'',active:''});
+export const PlayerContext=createContext<Player>({play:()=>{},stop:()=>{},label:'',active:''});
 const clipKey=(c:Clip)=>`${c.book}-${c.lesson}-${c.start}-${c.end}`;
 export function AudioSpace({children,controls=true}:{children:React.ReactNode;controls?:boolean}) {
   const element=useRef<HTMLAudioElement>(null),urls=useRef(new Map<string,string>()),request=useRef<AbortController|null>(null);

@@ -1,5 +1,7 @@
 import { nodes, unitNodes, chapters, nodeById, questionsFor, type MapNode } from './content';
 import { overallBand } from '../app/readiness';
+import {unitById} from './curriculum';
+import {validSpeakingRecord,type SpeakingRecord} from './speaking-model';
 export const legacyStorageKey = 'wayfinder-ielts-map:v1';
 export const storageKey = 'wayfinder-ielts-map:v2';
 export const reviewDelay = 24 * 60 * 60 * 1000;
@@ -38,6 +40,7 @@ export type NodeRecord = {
     questionIndex?: number;
     exampleIndex?: number;
     practice?: ExpressionPractice;
+    speaking?: SpeakingRecord;
     project?: Project;
     round: number;
     answers: string[];
@@ -280,6 +283,7 @@ export function parseProgress(raw: string): Progress {
         if(v.exampleIndex!==undefined&&(!Number.isInteger(v.exampleIndex)||Number(v.exampleIndex)<0||Number(v.exampleIndex)>10))throw new Error('示范位置无效。');
         if(v.questionIndex!==undefined&&(!Number.isInteger(v.questionIndex)||Number(v.questionIndex)<0||Number(v.questionIndex)>19))throw new Error('答题位置无效。');
         if(v.practice!==undefined){const p=v.practice;if(nodeById(id)!.kind!=='unit'||!recordLike(p)||!Number.isInteger(p.step)||Number(p.step)<0||Number(p.step)>2||!text(p.guided,1000)||!text(p.recall,1000)||typeof p.hinted!=='boolean'||typeof p.checked!=='boolean')throw new Error('表达跟练记录无效。');}
+        if(v.speaking!==undefined){const unit=unitById(id);if(!unit||!validSpeakingRecord(v.speaking,unit))throw new Error('逐句跟读记录无效或教材版本不符。');}
         for (const p of v.attempts)
             if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || Number(p.round)>100000 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
                 throw new Error('检验记录无效。');

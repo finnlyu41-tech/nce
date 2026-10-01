@@ -212,6 +212,42 @@ check(modality.length===3&&modality[0].correct===1&&modality[0].total===2&&modal
 check(modality.slice(1).every(x=>x.correct===2),'Correct reading and word order remain visible in the receipt');
 const mixed=plans.questionSkills(c.questionsFor(c.nodeById('nce2-1'),0),[true,true,true,true,true,true,false]);
 check(mixed.at(-1).id==='grammar'&&mixed.at(-1).correct===0&&mixed.at(-1).step===1,'Grammar application gets a separate repair target');
+const speech=await import(await moduleURL(path.join(root,'speaking-model.ts')));
+const speechAudio=await import(await moduleURL(path.join(root,'speech-recordings.ts')));
+const one=c.units.find(u=>u.id==='nce1-1');
+const assessed={text:'Is this your handbag?',accuracy:58,fluency:80,completeness:100,words:[{word:'this',accuracy:40,error:'Mispronunciation',start:0.2,duration:0.4,phonemes:[{phoneme:'ð',accuracy:35}]}]};
+const improved={...assessed,accuracy:88,words:[{...assessed.words[0],accuracy:88,error:'None',phonemes:[{phoneme:'ð',accuracy:88}]}]};
+let spoken=speech.emptySpeaking(one);
+check(!speech.speakingDue(spoken,now),'A recording without actual feedback does not invent a problem');
+spoken=speech.recordedSpeaking(spoken,'take-first',false,true,yesterday);
+spoken=speech.assessedSpeaking(spoken,assessed,undefined,yesterday);
+check(spoken.correction.issues[0].phoneme==='ð'&&spoken.correction.issues[0].action.length>10,'Actual low phoneme produces a specific correction');
+check(!speech.speakingDue(spoken,yesterday+speech.speakingDelay-1)&&speech.speakingDue(spoken,yesterday+speech.speakingDelay),'Sentence recall waits a full 24 hours');
+check(!speech.recordedSpeaking(spoken,'take-early',true,false,yesterday+1).recalledAt,'Early recall cannot close the next-day task');
+check(!speech.recordedSpeaking(spoken,'take-help',true,true,now).recalledAt,'Assisted retry cannot close an independent recall');
+const helped={...spoken,hintAt:now};
+check(!speech.speakingDue(helped,now)&&speech.speakingReviewAt(helped)===now+speech.speakingDelay,'Looking at the original resets the independent wait');
+const recalled=speech.recordedSpeaking(spoken,'take-recalled',true,false,now);
+check(recalled.recalledAt===now&&!speech.speakingDue(recalled,now),'Due unassisted recording logs recall without grading pronunciation');
+const compared=speech.assessedSpeaking(recalled,improved,assessed,now);
+check(compared.comparison[0].includes('匹配度提高')&&compared.correction.at===yesterday,'Retry improvement is retained without inventing a new error');
+const relapse=speech.assessedSpeaking(recalled,assessed,improved,now);
+check(speech.speakingReviewAt(relapse)===now+speech.speakingDelay,'New concrete error schedules another recall');
+const speechState=m.unlockNode(m.emptyProgress(),one.id);
+speechState.records[one.id]={...m.emptyRecord(),speaking:compared};
+const restoredSpeech=m.parseProgress(m.exportProgress(speechState));
+check(JSON.stringify(restoredSpeech.records[one.id].speaking)===JSON.stringify(compared),'Feedback, two take IDs and comparison survive JSON backup');
+check(!m.achieved(first,restoredSpeech)&&!m.stable(first,restoredSpeech),'Pronunciation practice never awards course mastery');
+check(m.parseProgress(m.exportProgress(m.emptyProgress())).version===2,'Older progress without speaking fields remains valid');
+for(const patch of [{row:-1},{row:999},{source:'wrong'},{takes:[...recalled.takes,...recalled.takes]},{takes:[{...recalled.takes[0],assisted:'yes'}]},{hintAt:now+100000},{comparison:['x'.repeat(501)]},{correction:{at:now,issues:[{title:'test',action:'test',clip:{start:3,end:2}}]}}]){
+ const invalid=structuredClone(speechState);Object.assign(invalid.records[one.id].speaking,patch);assert.throws(()=>m.parseProgress(JSON.stringify(invalid)));count++;
+}
+for(const mode of ['practice','review'])check(nav.parseLearningRoute(`#/learn/${one.id}?speaking=${mode}`).speaking===mode,'Sentence practice has a focused deep link');
+for(const hash of ['#/map/nce1-1?speaking=review','#/learn/letters?speaking=review','#/learn/nce1-1?speaking=unknown'])check(!nav.parseLearningRoute(hash).speaking,'Unsupported speech routes cannot bypass the course');
+for(const unit of c.units)check(unit.rows[speech.speakingRow(unit)]?.en.length>0,'Every unit has an original source sentence');
+const audioPair={revision:'r1',takes:[{id:'take-first',blob:new Blob(['test']),result:assessed}]};
+check(speechAudio.validSpeechAudio(audioPair),'Valid saved audio and phoneme assessment accepted');
+for(const bad of [{...audioPair,takes:[...audioPair.takes,...audioPair.takes]},{...audioPair,takes:[{...audioPair.takes[0],blob:{}}]},{...audioPair,takes:[{...audioPair.takes[0],result:{...assessed,words:null}}]},{...audioPair,takes:[{...audioPair.takes[0],result:{...assessed,accuracy:NaN}}]}])check(!speechAudio.validSpeechAudio(bad),'Malformed saved assessment cannot render as valid feedback');
 console.log(`${count} checks passed: 168 source-bound units, audio evidence, source pairing, gates, spaced review, projects, four skills, mocks and progress safety.`);
 if(process.argv.includes('--fixtures')){
  const dir=path.join(root,'../work/map-verification');await fs.mkdir(dir,{recursive:true});

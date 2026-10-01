@@ -47,9 +47,10 @@ function App() {
         if (latest !== raw.current) {
             const incoming = latest ? parseProgress(latest) : emptyProgress();
             raw.current = latest;
+            stateRef.current = incoming;
             setState(incoming);
             setMessage('另一页面更新了进度，已加载最新记录。请重试刚才的操作。');
-            return;
+            return false;
         }
         if (latest)
             parseProgress(latest);
@@ -59,16 +60,19 @@ function App() {
         stateRef.current = next;
         setState(next);
         setStorageError('');
+        return true;
     }
     catch (e) {
         stateRef.current = next;
         setState(next);
         setStorageError(`尚未存入浏览器：${e instanceof Error ? e.message : '存储不可用'}。输入仅暂存在当前页面，请先导出进度，刷新会丢失未保存部分。`);
+        return false;
     } }, []);
     useEffect(() => { const storage = (event: StorageEvent) => { if (event.key === storageKey) {
         try {
             const incoming = event.newValue ? parseProgress(event.newValue) : emptyProgress();
             raw.current = event.newValue;
+            stateRef.current = incoming;
             setState(incoming);
             setMessage('已同步本浏览器其他页面的进度。');
         }
@@ -109,7 +113,7 @@ function App() {
         if (importInput.current)
             importInput.current.value = '';
     } }
-    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-unsaved-progress.json')}>导出当前进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} node={selected} state={state} save={save} close={()=>{setOverview(false);if(catalogueReturn.current)location.hash=catalogueReturn.current;else navigate(selected.id)}} select={id=>navigate(id,true)}/></>;
+    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-unsaved-progress.json')}>导出当前进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} speaking={route.speaking} node={selected} state={state} save={save} close={()=>{setOverview(false);if(catalogueReturn.current)location.hash=catalogueReturn.current;else navigate(selected.id)}} select={id=>navigate(id,true)}/></>;
     return <><StudioHeader active="learn" classicRoot={originalSite} mapUrl={`#/map/${current}`} reference={unitById(current)} actions={<details className="map-settings"><summary><Settings2 size={17}/><span>学习设置</span></summary><div><strong>解锁方式</strong><p>解锁允许直接进入，完成状态仍由实际学习记录决定。</p>{state.access?.all?<p className="manual-note">全部节点已手动解锁</p>:<button onClick={()=>save(s=>({...s,access:{all:true,nodes:s.access?.nodes||[]}}))}><Unlock size={16}/>直接解锁全部节点</button>}{(state.access?.all||!!state.access?.nodes.length)&&<button onClick={()=>save(s=>({...s,access:{all:false,nodes:[]}}))}>恢复按路线解锁</button>}<small>恢复路线规则会保留所有学习记录。</small><hr/><strong>地图进度备份</strong><button onClick={()=>download(exportProgress(state),`wayfinder-progress-${new Date().toISOString().slice(0,10)}.json`)}><Download size={16}/>导出地图进度</button><button onClick={()=>importInput.current?.click()}><Upload size={16}/>恢复地图进度</button><small>教材笔记、生词的备份在「记录」页。录音需单独下载。</small></div></details>}/>
 
   <main className="app-main learning-home">{route.catalogue&&<a className="learning-back" href={`#/map/${current}`}>← 回到学习</a>}<section className="page-heading"><div><h1 tabIndex={-1}>{route.catalogue?'找课':'学习'}</h1><p>{route.catalogue?'按目标或教材找课，接着同一份进度学习。':overview?'从起步到 IELTS 6.5，查看各阶段与解锁条件。':'沿着路线，一次学好一小步。'}</p></div>{!route.catalogue&&<div className="learning-view-actions"><a className="secondary" href="#/courses"><BookOpen size={16}/>找课</a><button className="text-button map-view-toggle" onClick={()=>{setOverview(!overview);if(overview)navigate(current)}}>{overview?'回到当前学习':'完整路线'}<ArrowRight size={16}/></button></div>}</section>
