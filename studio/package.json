@@ -38,6 +38,7 @@
     "verify:learning": "node scripts/test-learning-plan.mjs",
     "build:map": "pnpm prepare:map && vite build --config map/vite.config.ts --mode online",
     "verify:map": "pnpm prepare:map && node map/test-model.mjs && node scripts/test-map-mode.mjs",
+    "verify:map:reliability": "node map/test-reliability.mjs && node map/test-reviewer-navigation.mjs && node map/test-save.mjs",
     "prepare:map": "node map/prepare-curriculum.mjs"
   },
   "dependencies": {

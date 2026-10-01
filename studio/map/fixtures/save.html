@@ -1,0 +1,29 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Reliability — isolated in-memory fixture</title>
+<style>body{margin:0;font-family:system-ui}#fixture{padding:12px;background:#fff1bc;border-bottom:2px solid #b78a12}#fixture button{margin:4px;padding:8px}#fixture pre{white-space:pre-wrap;font-size:12px}</style>
+<section id="fixture"><strong>合成验收：内存存储，不读取或写入真实学习数据</strong><div>
+<button id="fail">注入写入失败</button><button id="restore">恢复写入</button><button id="conflict">另一页更新（下次保存冲突）</button><button id="relock">撤回访问（下次保存冲突）</button><button id="draft-event">另一页草稿事件</button><button id="minimum-event">单项要求改为 7</button><button id="inspect">检查已保存状态</button></div><pre id="report"></pre></section><div id="root"></div>
+<script type="module">
+import {emptyProgress,emptyRecord,today,reviewDelay,storageKey,achieved,statusMap} from '/model.ts';
+import {nodeById,questionsFor} from '/content.ts';
+const projectMode=new URLSearchParams(location.search).get('kind')==='project';
+const node=nodeById(projectMode?'chapter-1':'mock-one'),now=Date.now();
+const evidence={date:today(now),material:'Synthetic new Academic paper A',work:'Synthetic original answers and recording retained here with concrete supporting details.',reviewer:'Synthetic fixture teacher',feedback:'The reviewer checked specific corrections in the complete original and the new retest.',criteria:[true,true,true,true],unseen:true,timed:true,correct:'30',total:'40',dimensions:Array(4).fill('Specific feedback with supporting performance evidence and an actionable correction.'),revision:'Synthetic paper B retest corrected the same issue; remaining weakness recorded.',scores:['6.5','6.5','6.5','6.5'],kind:'academic',reference:'Synthetic paper answer key and band conversion table'};
+const project={text:'I am a student. This is my book. It is a good book. I read every day. '.repeat(20),recording:'Synthetic-project.wav',reviewer:'Synthetic fixture teacher',feedback:'The reviewer checked tense corrections in the complete original and the new retest.',criteria:[true,true,true,true],at:now};
+const initial={...emptyProgress(),access:{all:false,nodes:[node.id]},minimum:'6',lastNode:node.id};
+if(projectMode)for(const id of node.members){const unit=nodeById(id);const proof=(round,at)=>({round,at,answers:questionsFor(unit,round).map(q=>q.answer),assisted:false,heard:questionsFor(unit,round).flatMap((q,i)=>q.clip?[i]:[])});initial.records[id]={...emptyRecord(),phase:'challenge',round:1,attempts:[proof(0,now-2*reviewDelay),proof(1,now)]};}
+initial.records[node.id]={...emptyRecord(),draft:projectMode?project:evidence};
+const memory=new Map([[storageKey,JSON.stringify(initial)]]);let failWrites=false;
+const memoryStorage={getItem:key=>memory.get(String(key))??null,setItem(key,value){if(failWrites)throw new DOMException('Synthetic fixture: writes disabled','QuotaExceededError');memory.set(String(key),String(value));},removeItem:key=>memory.delete(String(key)),clear:()=>memory.clear(),key:i=>[...memory.keys()][i]??null,get length(){return memory.size;}};
+Object.defineProperty(window,'localStorage',{configurable:true,value:memoryStorage});
+const read=()=>JSON.parse(memory.get(storageKey)),write=state=>memory.set(storageKey,JSON.stringify({...state,updatedAt:Date.now()}));
+function inspect(){const state=read(),r=state.records[node.id];document.querySelector('#report').textContent=JSON.stringify({storage:'in-memory only',failWrites,node:node.id,completed:achieved(node,state),hasResult:!!(r.mock||r.project),minimum:state.minimum,lastNode:state.lastNode,writing:(r.mock||r.project||r.draft)?.work||(r.project||r.draft)?.text,successor:statusMap(state)[projectMode?'chapter-2':'mock-two']},null,2);}
+function event(state){write(state);dispatchEvent(new StorageEvent('storage',{key:storageKey,newValue:memory.get(storageKey)}));inspect();}
+document.querySelector('#fail').onclick=()=>{failWrites=true;inspect();};
+document.querySelector('#restore').onclick=()=>{failWrites=false;inspect();};
+document.querySelector('#conflict').onclick=()=>{const state=read();state.minimum='5.5';state.lastNode='letters';write(state);inspect();};
+document.querySelector('#relock').onclick=()=>{const state=read();state.access={all:false,nodes:[]};write(state);inspect();};
+document.querySelector('#draft-event').onclick=()=>{const state=read(),r=state.records[node.id];r.draft={...r.draft,[projectMode?'text':'work']:'Remote synthetic draft event: this must not overwrite uncommitted local edits.'};if(projectMode&&r.project)r.project={...r.project,text:'Remote synthetic project event'};event(state);};
+document.querySelector('#minimum-event').onclick=()=>{const state=read();state.minimum='7';event(state);};
+document.querySelector('#inspect').onclick=inspect;
+location.hash=`#/learn/${node.id}`;inspect();await import('/main.tsx');
+</script></html>
