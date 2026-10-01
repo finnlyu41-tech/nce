@@ -1,0 +1,98 @@
+[
+  {
+    "guideId": "double-object",
+    "unitId": "giving-directions",
+    "formIndices": [
+      0,
+      1,
+      2
+    ],
+    "contrastIndices": [
+      0,
+      1,
+      2
+    ],
+    "mistakeIndices": [
+      0,
+      1,
+      2
+    ],
+    "practiceIds": [
+      "giving-directions-v0-repair",
+      "giving-directions-v1-produce"
+    ],
+    "scope": "give人事物/to与buy/for同情境比较，实际改错to并在出海防水袋场景造buy物for人；explain的动词限制明确介绍。",
+    "remaining": "人+物语序、explain限制、长接收者语序和其他双宾语动词没有各自独立输入；原guide的which one/ones选择分支未深化或独立输入，地区/语体及代词顺序变体未穷尽。"
+  },
+  {
+    "guideId": "place",
+    "unitId": "giving-directions",
+    "formIndices": [
+      3,
+      4,
+      5
+    ],
+    "contrastIndices": [
+      3,
+      4,
+      5
+    ],
+    "mistakeIndices": [
+      3,
+      4,
+      5
+    ],
+    "practiceIds": [
+      "giving-directions-v0-recognise",
+      "giving-directions-v0-produce"
+    ],
+    "scope": "in/on/at位置视角与into/onto移动对照，不错判put in；识别实际进入路径并在门票回收箱新指示中输入into。",
+    "remaining": "静态地点、onto、go home和to目的地路线有介绍无各自输入；来源/经过路径、抽象地点和名词特有搭配未全面训练。"
+  },
+  {
+    "guideId": "imperative",
+    "unitId": "giving-directions",
+    "formIndices": [
+      6,
+      7,
+      8
+    ],
+    "contrastIndices": [
+      6
+    ],
+    "mistakeIndices": [
+      6,
+      7,
+      8
+    ],
+    "practiceIds": [
+      "giving-directions-v0-produce",
+      "giving-directions-v1-repair",
+      "giving-directions-v1-produce"
+    ],
+    "scope": "指示/否定/共同建议及语气边界有说明；否定新造句和删to改错、Please请求均实际输入，强调原形。",
+    "remaining": "Don't be、Let's/Let's not和含you的强调指示未分别独立输入；更间接请求、标牌省略及不同关系礼貌策略未穷尽。"
+  },
+  {
+    "guideId": "time-prepositions",
+    "unitId": "giving-directions",
+    "formIndices": [
+      9,
+      10
+    ],
+    "contrastIndices": [
+      7,
+      8
+    ],
+    "mistakeIndices": [
+      9,
+      10,
+      11
+    ],
+    "practiceIds": [
+      "giving-directions-v1-recognise"
+    ],
+    "scope": "时间层级、特定上午、next省略及by截止/until持续均讲解对照；识别题实际保留登记台持续开放而非截止开始。",
+    "remaining": "at/on/in、next等和by截止仅有介绍/错例，没有各自独立输入；原guide的from…to…起止范围未深化或独立输入，not until延迟发生、since/for、地区weekend和更多时间搭配未全面训练。"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "guideId": "already-yet",
+    "unitId": "time-perspective",
+    "formIndices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "contrastIndices": [
+      0,
+      1,
+      2,
+      5
+    ],
+    "mistakeIndices": [
+      0,
+      1,
+      2
+    ],
+    "practiceIds": [
+      "time-perspective-v0-recognise",
+      "time-perspective-v0-repair",
+      "time-perspective-v0-produce"
+    ],
+    "scope": "解释 already/yet 的预期与完成进度、already 句中/句末位置及普通疑问；识别提交/审批进度，修正 yet 问句分词，并在新聚会气球情境中产生未完成进度句。just 有可定位介绍与对比。",
+    "remaining": "already 的惊讶问句、句末位置和 just 仅介绍，未逐项独立输入检验；still、yet 的其他连接或程度用途，以及不同英语变体的过去时搭配未穷尽。"
+  },
+  {
+    "guideId": "ago-before",
+    "unitId": "time-perspective",
+    "formIndices": [
+      4,
+      5,
+      6
+    ],
+    "contrastIndices": [
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      3,
+      4
+    ],
+    "practiceIds": [
+      "time-perspective-v1-recognise",
+      "time-perspective-v1-repair",
+      "time-perspective-v1-produce"
+    ],
+    "scope": "比较 ago 当前基点、before/earlier 过去基点及 before 的经验用途；按周一/周三/周五记录识别真实参照，修正具体 ago 时间与现在完成的冲突，在山屋屋顶的新情境中从过去到达日回算两天。",
+    "remaining": "before 接事件和经验用法已有讲解，未逐项独立输入测试；多层转述、更复杂相对日期及其他 before 时态关系未穷尽，不概括为 before 总从过去算或 ago 只能配一种过去形式。"
+  }
+]

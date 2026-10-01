@@ -1789,7 +1789,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "reference-ownership",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "sentence-core",
         "noun-reference"
@@ -1836,8 +1836,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「指代、归属与拥有」深化：主格、宾格、物主和反身；指代哪个参与者。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "主宾角色、介词宾语、反身动作对象与独自/强调有讲解对比；识别实际确认谁等谁，改错按同一主体修正herself。",
+      "remaining": "反身已有改错而无独立造句；复杂指代歧义、单数they、形式it、多参与者叙事与惯用反身搭配未全面训练。"
     },
     {
       "guideId": "possession",
@@ -1845,7 +1845,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "reference-ownership",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "sentence-core",
         "noun-reference"
@@ -1885,8 +1885,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「指代、归属与拥有」深化：my名词与mine；名词所有格和并列归属。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "所属限定词/独立代词与单复所有格有说明；hers单错输入、共有工作室与ours在新情境独立造句，明确共有和分别归属对比。",
+      "remaining": "规则/不规则复数所有格、whose问法及分别归属有介绍，尚无各自输入；双重所有格、复合名词与名称变体未穷尽。"
     },
     {
       "guideId": "have",
@@ -1894,7 +1894,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "reference-ownership",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "sentence-core",
         "noun-reference"
@@ -1948,8 +1948,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「指代、归属与拥有」深化：拥有、动作搭配与完成助动词；have got与be。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "拥有、活动与完成助动词、have/be的职责有对照；新情境实际输入has…got当前问法，并识别has checked的完成角色和参照。",
+      "remaining": "do/does/did拥有路线、活动have与过去拥有尚无各自独立输入；使役have、have to与全部have got语用/方言差异未穷尽。"
     },
     {
       "guideId": "adjectives",
@@ -1957,7 +1957,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "basic-descriptions",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "reference-ownership",
         "comparisons"
@@ -1984,8 +1984,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「性质、来源与距离」深化：名词前与系动词后；形容词与副词职责。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "名词前、be/系动词后与动作副词的职责有同情境对比；识别look careful意义、单错误输入empty检验形容词不随复数变化。",
+      "remaining": "名词前完整描述和副词动作路线没有各自独立造句；形容词排列、特殊位置、-ed/-ing、程度搭配和全部系动词未全面训练。"
     },
     {
       "guideId": "origin",
@@ -1993,7 +1993,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "basic-descriptions",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "reference-ownership",
         "comparisons"
@@ -2020,8 +2020,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「性质、来源与距离」深化：be from与come from；be疑问与do疑问。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "be from/come from两种主干与地名/形容词对比，does后come实际改错并在展会新情境独立输入来源问题；不凭from推断全部身份。",
+      "remaining": "be from路线有示范尚无独立输入；国家/国籍名称、身份与居住/出生地的完整叙事、多义come from未穷尽。"
     },
     {
       "guideId": "distance",
@@ -2029,7 +2029,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "basic-descriptions",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "reference-ownership",
         "comparisons"
@@ -2049,8 +2049,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「性质、来源与距离」深化：how far与距离；away/from及as far as范围义。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "how far空间问题在新地点造句，识别as far as I know的知识范围；数字from/away、距离/耗时及空间终点/认知范围均有对照。",
+      "remaining": "数字距离回答、away省略参照和walk as far as仅介绍未分别输入；长度/耗时全部问法、相对far/near与惯用程度表达未穷尽。"
     },
     {
       "guideId": "double-object",
@@ -2058,7 +2058,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "giving-directions",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "questions-negation",
         "reference-ownership",
@@ -2086,8 +2086,8 @@
           "position": 2
         }
       ],
-      "scope": "计划在「指示、地点与时间定位」深化：give人事物与give事物to人；buy事物for人及动词限制。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "give人事物/to与buy/for同情境比较，实际改错to并在出海防水袋场景造buy物for人；explain的动词限制明确介绍。",
+      "remaining": "人+物语序、explain限制、长接收者语序和其他双宾语动词没有各自独立输入；原guide的which one/ones选择分支未深化或独立输入，地区/语体及代词顺序变体未穷尽。"
     },
     {
       "guideId": "place",
@@ -2095,7 +2095,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "giving-directions",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "questions-negation",
         "reference-ownership",
@@ -2165,8 +2165,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「指示、地点与时间定位」深化：in/on/at地点视角；into/onto路径与静态位置。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "in/on/at位置视角与into/onto移动对照，不错判put in；识别实际进入路径并在门票回收箱新指示中输入into。",
+      "remaining": "静态地点、onto、go home和to目的地路线有介绍无各自输入；来源/经过路径、抽象地点和名词特有搭配未全面训练。"
     },
     {
       "guideId": "imperative",
@@ -2174,7 +2174,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "giving-directions",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "questions-negation",
         "reference-ownership",
@@ -2202,8 +2202,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「指示、地点与时间定位」深化：指示、否定指示与let us建议；语气和礼貌。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "指示/否定/共同建议及语气边界有说明；否定新造句和删to改错、Please请求均实际输入，强调原形。",
+      "remaining": "Don't be、Let's/Let's not和含you的强调指示未分别独立输入；更间接请求、标牌省略及不同关系礼貌策略未穷尽。"
     },
     {
       "guideId": "time-prepositions",
@@ -2211,7 +2211,7 @@
       "stageId": "foundation",
       "batchId": "b2",
       "unitId": "giving-directions",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "questions-negation",
         "reference-ownership",
@@ -2260,8 +2260,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「指示、地点与时间定位」深化：at时点/on日期/in期间；by截止与until持续。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "时间层级、特定上午、next省略及by截止/until持续均讲解对照；识别题实际保留登记台持续开放而非截止开始。",
+      "remaining": "at/on/in、next等和by截止仅有介绍/错例，没有各自独立输入；原guide的from…to…起止范围未深化或独立输入，not until延迟发生、since/for、地区weekend和更多时间搭配未全面训练。"
     },
     {
       "guideId": "past-be",
@@ -2447,7 +2447,7 @@
       "stageId": "time",
       "batchId": "b2",
       "unitId": "time-perspective",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-present-perfect",
         "past-background"
@@ -2480,8 +2480,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「时间标记与观察基点」深化：already早已与yet尚未；still not/just及位置。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "解释 already/yet 的预期与完成进度、already 句中/句末位置及普通疑问；识别提交/审批进度，修正 yet 问句分词，并在新聚会气球情境中产生未完成进度句。just 有可定位介绍与对比。",
+      "remaining": "already 的惊讶问句、句末位置和 just 仅介绍，未逐项独立输入检验；still、yet 的其他连接或程度用途，以及不同英语变体的过去时搭配未穷尽。"
     },
     {
       "guideId": "ago-before",
@@ -2489,7 +2489,7 @@
       "stageId": "time",
       "batchId": "b2",
       "unitId": "time-perspective",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-present-perfect",
         "past-background"
@@ -2508,8 +2508,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「时间标记与观察基点」深化：ago现在基点与before过去或所述事件基点。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "比较 ago 当前基点、before/earlier 过去基点及 before 的经验用途；按周一/周三/周五记录识别真实参照，修正具体 ago 时间与现在完成的冲突，在山屋屋顶的新情境中从过去到达日回算两天。",
+      "remaining": "before 接事件和经验用法已有讲解，未逐项独立输入测试；多层转述、更复杂相对日期及其他 before 时态关系未穷尽，不概括为 before 总从过去算或 ago 只能配一种过去形式。"
     },
     {
       "guideId": "used-to",
@@ -2517,7 +2517,7 @@
       "stageId": "time",
       "batchId": "b2",
       "unitId": "habit-change",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "verb-complements"
@@ -2579,8 +2579,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「旧习惯、习惯于与说话者评价」深化：used to do过去习惯与过去一次事件；did后use。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "比较 used to 旧习惯/状态和已经适应，给出建立过去背景后的 would 反复动作；识别夜班变化，在新住处情境中产生旧状态与现在事实，并修正否定后动作原形。",
+      "remaining": "used to 疑问和 would 旧习惯只介绍，未逐项独立输入检验；否定/应答的变化暗示、书写变体及 would 其他功能未穷尽，不把单纯状态与反复动作混同。"
     },
     {
       "guideId": "be-used-to",
@@ -2588,7 +2588,7 @@
       "stageId": "meaning",
       "batchId": "b2",
       "unitId": "habit-change",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "verb-complements"
@@ -2608,8 +2608,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「旧习惯、习惯于与说话者评价」深化：be/get used to名词或doing与used to原形。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "讲解 be used to 已习惯、get used to 适应过程与被用来做的用途不定式；同一工作背景中识别已适应意义，并实际修正 carrying 补足语。",
+      "remaining": "get used to 过程、名词/代词补足语、不同时态及工具用途已有可定位形式/对比/错例，但未逐项独立输入测试；不概括为所有 be used to 后都要 -ing。"
     },
     {
       "guideId": "always-continuous",
@@ -2617,7 +2617,7 @@
       "stageId": "time",
       "batchId": "b2",
       "unitId": "habit-change",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "verb-complements"
@@ -2651,8 +2651,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「旧习惯、习惯于与说话者评价」深化：always进行的说话者评价与一般现在中性习惯。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "用同一借笔记行为比较频率与态度，并给出搬运中的抱怨/赞赏；识别感谢语境的 is always lending，在新的剧场留座情境中独立产生欣赏式反复行为句。",
+      "remaining": "过去 always 进行、其他反复副词及语调差异仅说明边界，未逐项独立输入检验；不将进行时固定为负面，不用固定频率阈值或认为活动必须不间断。"
     },
     {
       "guideId": "phrasal-verbs",
@@ -2660,7 +2660,7 @@
       "stageId": "meaning",
       "batchId": "b2",
       "unitId": "linked-vocabulary",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "noun-reference",
         "comparisons",
@@ -2710,8 +2710,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「搭配、例外与程度变化」深化：小品词意义与普通介词结构；代词宾语位置。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "整体搭配、可分名词/代词位置、不可分及不及物边界有说明；put it off实际改错，陌生聚会中输入turned up到场义。",
+      "remaining": "look after不可分及更多词义、动词+介词/小品词分类仅介绍；多义、重音、语体和动词特有补足结构需逐短语继续训练。"
     },
     {
       "guideId": "except",
@@ -2719,7 +2719,7 @@
       "stageId": "meaning",
       "batchId": "b2",
       "unitId": "linked-vocabulary",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "noun-reference",
         "comparisons",
@@ -2741,8 +2741,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「搭配、例外与程度变化」深化：except排除与besides添加；except for局部例外。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "集合排除与添加由实际识别检验，新聚会例外用except独立输入，并接受该语境except for；总体评价局部例外有对照。",
+      "remaining": "besides添加、局部except for尚无各自独立输入；except that/when、but/nothing but、否定范围与复杂集合未穷尽。"
     },
     {
       "guideId": "same-different",
@@ -2750,7 +2750,7 @@
       "stageId": "meaning",
       "batchId": "b2",
       "unitId": "linked-vocabulary",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "noun-reference",
         "comparisons",
@@ -2772,8 +2772,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「搭配、例外与程度变化」深化：the same as/different from/similar to；相同与相似。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "相同/相似/不同及同类比较对象有形式与对照；日程识别题实际检查the same as theirs与相似的程度差异，不否定自然地区用法。",
+      "remaining": "仅有识别，没有该guide专门改错或独立造句；different from/to/than语境、代词一致、多维比较与same的全部搭配未全面训练。"
     },
     {
       "guideId": "so-such",
@@ -2781,7 +2781,7 @@
       "stageId": "meaning",
       "batchId": "b2",
       "unitId": "linked-vocabulary",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "noun-reference",
         "comparisons",
@@ -2817,8 +2817,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「搭配、例外与程度变化」深化：so形容词副词与such名词组；结果that与单纯程度。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "形容词/副词中心与名词短语、数量little与尺寸little有对照；新puzzle改错实际输入such a单数名词缺项。",
+      "remaining": "本guide仅修复单数名词限定，尚无独立程度结果造句；so副词、数量分支、复数/不可数、无that用途和倒装未全面训练。"
     },
     {
       "guideId": "double-comparison",
@@ -2826,7 +2826,7 @@
       "stageId": "meaning",
       "batchId": "b2",
       "unitId": "linked-vocabulary",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "noun-reference",
         "comparisons",
@@ -2848,8 +2848,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「搭配、例外与程度变化」深化：comparative and comparative与the more…the more…同步变化。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "两项同步变化、一增一减与单项越来越有对照；新徒步经验限定we get/are与we hear，自行生成farther/further与less配对，并说明句式不验证因果。",
+      "remaining": "成对比较有一处独立输入，其它谓语时态、省略The sooner the better、多变量联系与渐变结构尚未分别训练；真实关联需证据核对。"
     },
     {
       "guideId": "may",
@@ -3093,7 +3093,7 @@
       "stageId": "time",
       "batchId": "b3",
       "unitId": "extended-timeline",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "plan-timeline"
@@ -3120,8 +3120,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「将来过程、截止点与安排」深化：未来某时过程与will do决定；安排中的过程视角。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "讲解未来观察点上的过程及安排询问；在打包时段中识别 will be packing，并在新花园导览情境中独立产生 will be guiding。",
+      "remaining": "否定、预期安排问句和未来暂时活动已有介绍，未逐项独立输入检验；不把 will be doing 固定为唯一安排表达或固定礼貌等级。"
     },
     {
       "guideId": "future-perfect",
@@ -3129,7 +3129,7 @@
       "stageId": "time",
       "batchId": "b3",
       "unitId": "extended-timeline",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "plan-timeline"
@@ -3163,8 +3163,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「将来过程、截止点与安排」深化：will have done届时完成与will do；by参照点。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "对比未来过程与截至未来的完成；复合识别题核对 will have sealed 截止结果，修正 sealed 分词，并在新植树计划中独立产生 will have planted。",
+      "remaining": "否定、疑问及持续至未来的状态仅介绍边界，未逐项独立输入检验；不因 by 一词强制选形式，不把完成结构所有用途限定为动作结束。"
     },
     {
       "guideId": "future-be",
@@ -3172,7 +3172,7 @@
       "stageId": "time",
       "batchId": "b3",
       "unitId": "extended-timeline",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "plan-timeline"
@@ -3192,8 +3192,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「将来过程、截止点与安排」深化：about to即将/due to安排/bound to确信；区分because of义。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "保留原 guide 的 about to/due to/bound/sure 形式与条件，并与正式 be to 安排作可定位比较；单处补词检验眼前 about to，复合识别题实际核对 be to 的正式安排与原形。",
+      "remaining": "due to 的预计/原因、bound/sure 的判断/叮嘱及过去 about to 已教，未逐项独立输入测试；be to 其他意义未穷尽，不把临近、安排与信心等同或分配固定概率。"
     },
     {
       "guideId": "perfect-continuous",
@@ -3201,7 +3201,7 @@
       "stageId": "time",
       "batchId": "b3",
       "unitId": "duration-perspective",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "past-present-perfect",
@@ -3264,8 +3264,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「持续过程与不同参照点」深化：have been doing持续与have done结果数量；状态动词限制。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "已讲清现在基点前的活动过程、仍在做与刚停止的语境、时长/起点、结果数量及稳定状态的对比；识别题实际区分活动 has been sewing 与稳定相识 has known，造句独立输入延续到现在的组装灯笼过程。",
+      "remaining": "否定/疑问、近期停止后当前痕迹、结果数量、for/since 改错和 live 两种视角已提供教学证据，但尚未各自独立输入检验；不同动词的动态状态意义、反复活动与更多时长组合仍需后续练习。"
     },
     {
       "guideId": "past-perfect-continuous",
@@ -3273,7 +3273,7 @@
       "stageId": "time",
       "batchId": "b3",
       "unitId": "duration-perspective",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "past-present-perfect",
@@ -3315,8 +3315,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「持续过程与不同参照点」深化：had been doing过去参照前持续与had done完成。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "已讲清从过去节点回看此前活动及持续长度、与普通过去完成时的数量/状态对比；改错实际补全 had been waiting，陌生造句独立形成 had been hiking 并保留过去参照分句。",
+      "remaining": "普通过去完成结果/状态、否定/疑问、近期停止造成过去可见痕迹和 for/since 起点变化仅讲解或对比，未各自独立检验；持续过程与过去进行时在完整叙事中的取舍仍需更多语境练习。"
     },
     {
       "guideId": "future-perfect-continuous",
@@ -3324,7 +3324,7 @@
       "stageId": "time",
       "batchId": "b3",
       "unitId": "duration-perspective",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "past-background",
         "past-present-perfect",
@@ -3352,8 +3352,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「持续过程与不同参照点」深化：will have been doing持续到未来与will have done完成。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "已讲清未来参照点之前的预计持续长度、结果/状态对比及完整 will have been 链；识别实际核对两点到五点的三小时过程，改错独立输入 coaching 以完成将来完成进行式。",
+      "remaining": "本变体尚未要求从头独立造出整句将来完成进行式；未来稳定状态、否定/疑问、起点在现在之前或之后的多种组合已讲解但未逐项独立检验，预测的事实依据仍需开放表达核对。"
     },
     {
       "guideId": "relative",
@@ -3689,7 +3689,7 @@
       "stageId": "extension",
       "batchId": "b4",
       "unitId": "requests-nonfinite",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "verb-complements",
         "passive-focus",
@@ -3717,8 +3717,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「非谓语的参与者与时间」深化：want/ask/tell人to do与主体自己to do；not to位置。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "形式、宾语的动作执行者、请求与结果边界、not to 与 didn't ask 的范围均可定位；认知题实际辨析请求对象与动作否定。",
+      "remaining": "本组六题未独立要求 ask/tell/want + 人 + to do 的肯定、否定造句；宾格及具体动词搭配仅教学展示，不把一次识别算成自由运用。"
     },
     {
       "guideId": "nonfinite",
@@ -3726,7 +3726,7 @@
       "stageId": "extension",
       "batchId": "b4",
       "unitId": "requests-nonfinite",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "verb-complements",
         "passive-focus",
@@ -3775,8 +3775,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「非谓语的参与者与时间」深化：有限谓语与to do/doing/done；主体及to have done先后。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "主句有限谓语、非谓语位置与相对时间有形式、对比和常错；题目实际检验先完成背景及共享主体。",
+      "remaining": "to have done 相对于未来参照点、不同动词或介词搭配、复杂并列及从句中的谓语链尚无本组独立输入；不定式完成形式未被六题全面检验。"
     },
     {
       "guideId": "nonfinite-passive",
@@ -3784,7 +3784,7 @@
       "stageId": "extension",
       "batchId": "b4",
       "unitId": "requests-nonfinite",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "verb-complements",
         "passive-focus",
@@ -3833,8 +3833,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「非谓语的参与者与时间」深化：to be done/being done与主动；to have been done先前完成。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "to be done、being done、to have been done 与 having been done 的承受者及相对时间有可定位证据；改错与陌生独立主格造句实际使用先完成被动背景。",
+      "remaining": "to be done、being done、to have been done 的独立输入仍需补；本轮完成被动背景表现不能概括为所有非谓语被动均会用。"
     },
     {
       "guideId": "participle",
@@ -3842,7 +3842,7 @@
       "stageId": "extension",
       "batchId": "b4",
       "unitId": "requests-nonfinite",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "verb-complements",
         "passive-focus",
@@ -3884,8 +3884,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「非谓语的参与者与时间」深化：doing主动进行与done被动完成；逻辑主语。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "名词后主动/被动分词与共享主体背景有对照；题目检验先完成分词的形式、主体归属和一个真实悬垂修正。",
+      "remaining": "名词后 doing/done 的独立缩写题、同时时间/条件/结果的多种背景、词汇化分词和非及物过去分词未被独立输入检验；不称全面覆盖分词。"
     },
     {
       "guideId": "absolute",
@@ -3893,7 +3893,7 @@
       "stageId": "extension",
       "batchId": "b4",
       "unitId": "requests-nonfinite",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "verb-complements",
         "passive-focus",
@@ -3914,8 +3914,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「非谓语的参与者与时间」深化：同主语分词与独立主语附加结构；with结构职责。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "显式背景主体、with 背景及条件性独立主格都有定位；两题实际识别不同主语与已给先后，并生成陌生的先完成被动独立主格。",
+      "remaining": "with 背景及 Space permitting 类型仅教学，未独立输入；原因/条件/伴随的选择须更多上下文练习，不能由一种 after 恢复或一个参考判断全结构掌握。"
     },
     {
       "guideId": "formal-it",
@@ -4115,7 +4115,7 @@
       "stageId": "time",
       "batchId": "b4",
       "unitId": "structure-rewrite",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "requests-nonfinite",
         "information-focus",
@@ -4222,8 +4222,8 @@
           "position": 0
         }
       ],
-      "scope": "计划在「守住原意的综合改写」深化：时间、过程完成、主被动、谓语位置四步；不只抓时间词。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "时间参照、过程/完成、主动/被动、谓语/非谓语有形式与同语境对照；题目实际组合过去完成被动、动词补语被动、未来完成被动与先前完成被动不定式。",
+      "remaining": "持续体与状态动词的判断、共享分词恢复及多层从句谓语链主要教学；六题没有独立要求所有时态及持续体的自由生成，形式匹配不能替代自己解释四步。"
     },
     {
       "guideId": "rewrite",
@@ -4231,7 +4231,7 @@
       "stageId": "extension",
       "batchId": "b4",
       "unitId": "structure-rewrite",
-      "status": "planned",
+      "status": "implemented",
       "prerequisites": [
         "requests-nonfinite",
         "information-focus",
@@ -4310,8 +4310,8 @@
           "position": 1
         }
       ],
-      "scope": "计划在「守住原意的综合改写」深化：变结构且守原意；参与者、时间、肯否、条件与程度。",
-      "remaining": "完整讲解、对比、错例与两变体分层练习尚未实现；现有基础讲解继续保留。"
+      "scope": "参与者、时间、主被动关系、肯否、程度、来源与事实关系均有可定位对照和错例；真实题检验记录来源、零个范围、指定参与者、舒适程度及否定指示，多维组合而非只贴标签。",
+      "remaining": "条件与可能性、让步名词化、持续过程/完成互检及多来源转述未由本组六题全面输入；开放迁移用标准另评，不把受限参考答案视作任意自然英语的完整自动判定。"
     }
   ]
 }

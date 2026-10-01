@@ -1,0 +1,297 @@
+{
+  "id": "duration-perspective",
+  "title": "持续过程与不同参照点",
+  "stageId": "time",
+  "order": 26,
+  "prerequisites": [
+    "past-background",
+    "past-present-perfect",
+    "extended-timeline"
+  ],
+  "goal": "先找现在、过去或未来的参照点，再说明此前持续的活动；把过程、已取得的结果和稳定状态分开表达。",
+  "guideIds": [
+    "perfect-continuous",
+    "past-perfect-continuous",
+    "future-perfect-continuous"
+  ],
+  "purposeIds": [
+    "progress",
+    "story",
+    "plan"
+  ],
+  "explanation": [
+    "完成进行时像是站在一个参照点，回看前面的一段活动。站在现在用 have/has been doing，站在故事中的过去时刻用 had been doing，站在预计的未来时刻用 will have been doing。先问“从哪里回看”，再问“此前在做什么、持续多久”，不要只看到 for 或 since 就选时态。",
+    "完成进行时突出活动的过程、持续或反复。现在完成进行时既能说仍在做，也能说刚停下而现在还有痕迹；过去或将来完成进行时也不单凭形式规定活动必须在参照点停止。Sam has been polishing handles all morning 关注他一上午的工作，不直接给出已经抛光了多少个把手。",
+    "普通完成时可以报告已完成的数量或结果，如 has polished six handles；也可以表达持续的状态，并非每次都表示事情已结束。日常表示“认识某人”的 know 通常不用进行形式，has known the stage manager for two years 同样带 for。live、work 等有些动词在持续语境中两种形式都自然，区别在叙述视角，不是“长期只能普通式、短期只能进行式”。",
+    "for 接时长，since 接起点，它们提供时间信息，不替你决定观察基点或动词意义。未来完成进行时把一段预计的持续长度算到将来的某刻；活动可以现在已经开始，也可以之后才开始。开放表达时还要核对实际起点、参照点和时长，不能为了使用某个形式而编造经历。"
+  ],
+  "forms": [
+    {
+      "form": "have/has been + -ing",
+      "meaning": "此前的活动与现在相连，重点是过程、持续或反复。",
+      "useWhen": "从现在回看活动；活动可以还在继续，也可以刚停止而当前有相关结果或痕迹。"
+    },
+    {
+      "form": "have/has + 过去分词（结果或持续状态）",
+      "meaning": "可报告已经取得的结果，也可报告延续到现在的状态。",
+      "useWhen": "想清楚表达完成数量，或使用 know 等日常稳定状态意义；不要把普通完成时一概理解成“已结束”。"
+    },
+    {
+      "form": "for + 时长；since + 起点",
+      "meaning": "分别给出持续多久和从何时开始。",
+      "useWhen": "依据语境选择与参照点相配的形式；这些标记也能与普通完成时等结构搭配，不自动要求进行式。"
+    },
+    {
+      "form": "had been + -ing",
+      "meaning": "从过去的参照点回看此前持续或反复的活动。",
+      "useWhen": "故事已经给出一个过去时刻或事件，需要交代此前的过程或持续长度；是否随后停止，要看语境。"
+    },
+    {
+      "form": "had + 过去分词（结果或持续状态）",
+      "meaning": "报告过去参照点之前的结果，或持续到该点的状态。",
+      "useWhen": "如需说明到快递员到达时已堆好多少箱，或此前认识某人多久；不因带 for 就强制改为进行式。"
+    },
+    {
+      "form": "will have been + -ing",
+      "meaning": "从未来参照点回看，预计某项活动到那时已持续多久。",
+      "useWhen": "计划或预测能给出活动起点及未来观察点；不单凭该形式断定活动会在那个时刻停止。"
+    },
+    {
+      "form": "will have + 过去分词（结果或持续状态）",
+      "meaning": "表达届时取得的结果，或延续到未来参照点的状态。",
+      "useWhen": "重点在完成数量或稳定关系等状态，例如到明年十一月已认识某人八年；状态意义通常不选进行式。"
+    },
+    {
+      "form": "否定：have/has/had not been doing；will not have been doing；疑问：Have/Has/Had + 主语 + been doing? / Will + 主语 + have been doing?",
+      "meaning": "否定或询问某段活动是否延续到相应参照点。",
+      "useWhen": "保留完整助动词链；how long 可以询问时长，但仍要根据语境选现在、过去或未来的基点。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一上午的工作：完成多少与做了多久",
+      "a": {
+        "en": "Sam has polished six handles this morning.",
+        "zh": "Sam 今天上午已经抛光了六个把手。"
+      },
+      "b": {
+        "en": "Sam has been polishing handles all morning.",
+        "zh": "Sam 一上午都在抛光把手。"
+      },
+      "why": "a 清楚报告六个已完成的结果，b 聚焦持续的活动，不直接交代已完成几个。进行式也可带数量来描述尚在进行的活动，不能把“出现数字”当成万能选式规则。"
+    },
+    {
+      "label": "同一项清洗活动：仍在做与刚停下",
+      "a": {
+        "en": "Nora has been washing chairs, and she's still at work.",
+        "zh": "Nora 一直在清洗椅子，现在还在忙。"
+      },
+      "b": {
+        "en": "Nora has been washing chairs, but she's just stopped for a rest.",
+        "zh": "Nora 刚才一直在清洗椅子，不过她刚停下来休息。"
+      },
+      "why": "两句都用现在完成进行时。后面的语境分别说明继续和刚停止；形式本身不保证说话此刻仍在做。"
+    },
+    {
+      "label": "同一次快递员到访：此前的数量与过程",
+      "a": {
+        "en": "When the courier arrived, we had stacked twenty boxes.",
+        "zh": "快递员到达时，我们已经堆好了二十个箱子。"
+      },
+      "b": {
+        "en": "When the courier arrived, we had been stacking boxes for half an hour.",
+        "zh": "快递员到达时，我们此前已经堆了半小时箱子。"
+      },
+      "why": "参照点都是过去的到访。a 报告当时已取得的数量，b 回看此前半小时的过程；b 没有单独说明快递员到达后是否继续堆箱子。"
+    },
+    {
+      "label": "同一场明日排练：届时的成果与持续长度",
+      "a": {
+        "en": "By five tomorrow, the actors will have rehearsed three scenes.",
+        "zh": "到明天五点，演员们将已排练完三个场景。"
+      },
+      "b": {
+        "en": "By five tomorrow, the actors will have been rehearsing for three hours.",
+        "zh": "到明天五点，演员们将已连续排练三个小时。"
+      },
+      "why": "同样从未来五点回看，a 关注排练完成的三个场景，b 关注三小时的活动长度。b 没有交代已排完几场，也不保证五点就结束排练。"
+    },
+    {
+      "label": "同一个住处：两种自然的持续视角",
+      "a": {
+        "en": "I have lived above the station for six years.",
+        "zh": "我在车站楼上住了六年了。"
+      },
+      "b": {
+        "en": "I have been living above the station for six years.",
+        "zh": "我在车站楼上一直住着，到现在有六年了。"
+      },
+      "why": "在仍住于此的语境中，两句都自然。a 把居住作为延续的事实，b 更突出持续过程；不能只靠六年很长就把 b 判错，或断定进行式一定是短暂居住。"
+    },
+    {
+      "label": "相同的两年：稳定相识关系与合作活动",
+      "a": {
+        "en": "She has known the stage manager for two years.",
+        "zh": "她认识这位舞台监督已经两年了。"
+      },
+      "b": {
+        "en": "She has been working with the stage manager for two years.",
+        "zh": "她与这位舞台监督一起工作已持续两年。"
+      },
+      "why": "两句都有 for two years；普通意义的 know 表示稳定相识关系，work 表示活动。选形式还要看动词在本句中的意义，不能见 for 就一律选进行式。"
+    },
+    {
+      "label": "同一相识经历：过去六年与未来八年（设现在为2025年）",
+      "a": {
+        "en": "When the gallery opened in November 2024, I had known the curator for six years.",
+        "zh": "画廊在2024年十一月开业时，我认识馆长已经六年了。"
+      },
+      "b": {
+        "en": "By November 2026, I will have known the curator for eight years.",
+        "zh": "到2026年十一月，我认识馆长就将满八年。"
+      },
+      "why": "设定现在为2025年，2018年十一月与馆长相识。相识到过去的2024年开业时满六年，到未来的2026年十一月满八年；稳定相识关系仍用普通完成时，改变观察基点分别用 had known 和 will have known。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "She has been sew the costumes for an hour.",
+      "correct": "She has been sewing the costumes for an hour.",
+      "why": "现在完成进行时的链是 has been + -ing；been 后要用 sewing。"
+    },
+    {
+      "wrong": "I have been repairing the fence since three days.",
+      "correct": "I have been repairing the fence for three days.",
+      "why": "three days 是时长，接 for；since 接 Tuesday 这样的起点。这里的改正不意味着所有 for 都必须配进行式。"
+    },
+    {
+      "wrong": "She has been knowing the stage manager for two years.",
+      "correct": "She has known the stage manager for two years.",
+      "why": "本句只说日常稳定的相识关系，know 通常用普通完成时；不是否认所有状态词在任何语境下都可能有进行用法。"
+    },
+    {
+      "wrong": "When the courier arrived, we had stacking boxes for half an hour.",
+      "correct": "When the courier arrived, we had been stacking boxes for half an hour.",
+      "why": "过去参照点之前的持续活动用 had been + -ing；这里缺少 been。"
+    },
+    {
+      "wrong": "When the gallery opened, I had knew the curator for six years.",
+      "correct": "When the gallery opened, I had known the curator for six years.",
+      "why": "过去完成时要用 had + 过去分词，know 的过去分词是 known；持续的相识状态不因 for 而需要进行式。"
+    },
+    {
+      "wrong": "By August, she will have been coach the team for a year.",
+      "correct": "By August, she will have been coaching the team for a year.",
+      "why": "将来完成进行时是 will have been + -ing；been 后用 coaching。"
+    },
+    {
+      "wrong": "By five tomorrow, the actors will been rehearsing for three hours.",
+      "correct": "By five tomorrow, the actors will have been rehearsing for three hours.",
+      "why": "回看未来参照点之前的持续长度，要保留 will have been，不能省掉 have。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "duration-perspective-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "现在是十一点。她从十点起一直在缝演出服，叙述重点是这段过程，没有统计已做完几套；她认识这位舞台监督已有两年。选择同时保留这两个意思、形式和理由都正确的一项。",
+      "options": [
+        "She had been sewing the costumes for an hour. She had known the stage manager for two years. ——从故事中的过去时刻回看这两段经历。",
+        "She has been sewing the costumes for an hour. She has been knowing the stage manager for two years. ——前句关注活动，后句关注稳定相识关系。",
+        "She has been sewing the costumes for an hour. She has known the stage manager for two years. ——前句回看持续到现在的活动，后句表达稳定相识关系。",
+        "She has been sew the costumes for an hour. She has known the stage manager for two years. ——前句回看持续到现在的活动，后句表达稳定相识关系。"
+      ],
+      "answer": "She has been sewing the costumes for an hour. She has known the stage manager for two years. ——前句回看持续到现在的活动，后句表达稳定相识关系。",
+      "explanation": "现在十一点是观察基点，从十点到现在的一小时过程用 has been sewing。普通意义的 know 是稳定相识关系，用 has known；for 并不自动要求进行式。had 的组合在过去叙述中可以成立，但本题明确从现在回看；has been knowing 不适合这里的日常相识意义，has been sew 又缺少 -ing。",
+      "hints": [
+        "先确定叙述是站在现在十一点，还是故事里另一个过去时刻；再区分缝制服的活动与相识关系。",
+        "现在的活动过程用 has been + -ing；稳定相识关系通常用 has + know 的过去分词。"
+      ]
+    },
+    {
+      "id": "duration-perspective-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "叙述昨天等船的经历：船靠岸时，我们已经等了四十分钟。下句要用过去完成进行时，只缺一个词；插入这个词，其他词保持不变：When the ferry docked, we had waiting for forty minutes.",
+      "answer": "When the ferry docked, we had been waiting for forty minutes.",
+      "explanation": "船昨天靠岸是过去参照点，等待已经持续到那个时刻。过去完成进行时由 had been waiting 构成；只需补 been，不需要同时改变 waiting 或 docked。",
+      "hints": [
+        "找出句子的过去观察点，再检查等待过程的助动词链是否完整。",
+        "过去完成进行时的结构是 had been + -ing；在 had 与 waiting 之间补上缺的一环。"
+      ]
+    },
+    {
+      "id": "duration-perspective-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "现在是周四，你从周二起一直在为节日组装灯笼，至今仍在做。用现在完成进行时描述这段过程；以 I 开头，使用 assemble the lanterns 和 since Tuesday，写一个肯定句。",
+      "answer": "I have been assembling the lanterns since Tuesday.",
+      "accepted": [
+        "I've been assembling the lanterns since Tuesday."
+      ],
+      "explanation": "以现在周四为参照点，强调从周二延续到现在的组装过程，用 have been assembling；since Tuesday 给出起点。本题限定了开头、词组和过程形式，参考范围不代表其他自然表达在一般英语中有错。",
+      "hints": [
+        "把周二看成活动起点，周四的现在看成观察点；句子要表达组装过程，而非报告已做完多少灯笼。",
+        "主语 I 后用 have been + assemble 的 -ing 形式，再加宾语和 since Tuesday。"
+      ]
+    },
+    {
+      "id": "duration-perspective-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "演员们计划明天下午两点开始排练。你现在展望明天五点，重点说明届时排练已持续三小时，不报告排完几个场景，也未说明五点是否停止。选择形式、参照点和理由都符合的一项。",
+      "options": [
+        "By five tomorrow, the actors will have rehearsed three scenes. ——届时可报告已完成三个场景。",
+        "By five tomorrow, the actors will have been rehearsing for three hours. ——从未来五点回看此前三小时的过程。",
+        "By five tomorrow, the actors had been rehearsing for three hours. ——从未来五点回看此前三小时的过程。",
+        "By five tomorrow, the actors will have been rehearse for three hours. ——从未来五点回看此前三小时的过程。"
+      ],
+      "answer": "By five tomorrow, the actors will have been rehearsing for three hours. ——从未来五点回看此前三小时的过程。",
+      "explanation": "从明天五点回看两点起的活动，需要 will have been rehearsing for three hours。will have rehearsed three scenes 是结果数量，而且题干没有给出三个场景这一事实；had 的观察点属于过去，rehearse 放在 been 后则缺少 -ing。正确句也不单独宣布五点会停下来。",
+      "hints": [
+        "先算两点到五点的持续长度，再区分这段活动的时长与完成场景的数量。",
+        "未来参照点前的持续过程用 will have been + -ing，for 后接 three hours。"
+      ]
+    },
+    {
+      "id": "duration-perspective-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "按当前计划，到八月她执教这支队伍将满一年，重点是持续的执教活动。下句的将来完成进行时只有一个词形错误，改正它并保留其他词：By August, she will have been coach the team for a year.",
+      "answer": "By August, she will have been coaching the team for a year.",
+      "explanation": "will have been 后面需要动词的 -ing 形式，所以只把 coach 改为 coaching。By August 是未来观察点，for a year 是算到那个点的活动长度；是否八月后继续执教，句子本身没有说明。",
+      "hints": [
+        "将来观察点和一年时长已经给出；检查最后的主要动词有没有与前面的助动词配合。",
+        "将来完成进行时是 will have been + -ing；保持前面的链不变，只调整 coach。"
+      ]
+    },
+    {
+      "id": "duration-perspective-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "讲述一次过去的山路行程：开始下雨时，我们此前已经徒步走了两小时，之后是否停下未说明。用过去完成进行时，使用 hike、for two hours 和 when the rain started，写一个完整句；可把 when 分句放句首或句末。",
+      "answer": "We had been hiking for two hours when the rain started.",
+      "accepted": [
+        "We'd been hiking for two hours when the rain started.",
+        "When the rain started, we had been hiking for two hours.",
+        "When the rain started, we'd been hiking for two hours."
+      ],
+      "explanation": "开始下雨是故事中的过去参照点，徒步在此前开始并已持续两小时，用 had been hiking。when 分句的前后位置和 had 的缩写都可变；这个过程形式本身不补充“我们因下雨停下”这一未给事实。",
+      "hints": [
+        "先把开始下雨放在过去时间线上，再向前回看徒步已经持续的两小时。",
+        "用 we had been + hike 的 -ing 形式加 for two hours，并用 when the rain started 标出过去观察点。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "选一个真实的学习、工作或日常活动，写三到四句进度记录：一处说明持续到现在的过程；一处回看某个过去节点；再写一个有明确未来节点的计划或预测。至少比较一次活动时长与已取得的结果。如果尚无相应经历，明确把那一句标为假设计划，不编造已发生的事。通过现有表达练习继续核对，开放作答需按标准检查后再记为完成。",
+    "criteria": [
+      "各句的观察基点清楚，have/has been、had been、will have been 与现在、过去或未来语境相配。",
+      "起点、for 时长和参照点互相一致；不因出现 for/since 就强制选进行式。",
+      "能区分持续过程、完成数量或稳定状态，know 等动词按本句意义选择普通完成式。",
+      "没有凭完成进行时擅自推断活动在观察点必定停止或仍在进行，必要时另加事实说明。",
+      "新情境来自本人真实经历或明确标出的计划；开放表达经核对前不直接视为掌握。"
+    ]
+  }
+}

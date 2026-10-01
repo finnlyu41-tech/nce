@@ -1,0 +1,420 @@
+{
+  "id": "requests-nonfinite",
+  "title": "非谓语的参与者与时间：谁做、谁承受、先发生什么",
+  "stageId": "extension",
+  "order": 27,
+  "prerequisites": [
+    "verb-complements",
+    "passive-focus",
+    "relative-reference"
+  ],
+  "guideIds": [
+    "object-to",
+    "nonfinite",
+    "nonfinite-passive",
+    "participle",
+    "absolute"
+  ],
+  "purposeIds": [
+    "describe",
+    "advise",
+    "story"
+  ],
+  "goal": "先找主句，再给每个附加动作标出执行者或承受者；用合适的非谓语结构表达请求、背景与先后，避免悬垂和凭空添加因果。",
+  "explanation": [
+    "先用普通句说明事实，再考虑缩短：谁提出希望或请求？谁做后面的动作？谁受到动作影响？这三个角色不一定是同一个人。",
+    "Dario wants to close… 让 Dario 自己做；Dario wants Mei to close… 把后面的执行者写成 Mei。ask/tell 的宾语还承接请求或指示；一句请求并不证明对方已经照做，也不自动表示获准做。",
+    "非谓语形式放在动词搭配、介词之后、名词修饰语或附加背景中。它们没有独立的人称时态，但有主动、被动与完成形式。主句谓语也可能是一整条 has been… / will have… 辅助链，而不是看到过去分词就判它是另一句。",
+    "to do 不固定表示将来，doing 不固定表示现在。to have done、having done 可突出在某个参照点之前完成；参照点也可能在未来。先后要结合主句和明说的时间来读。",
+    "being done 表被动关系，不等于每次都正在被做；having been done 同时标出先完成与被动。先问承受者，再问相对时间，避免只数 have、be 的数量。",
+    "本组练习清楚的共享主语分词背景：Having checked…, Suri… 中，检查者是 Suri。名词后面的 doing/done 修饰那个名词；两种位置的参与者要分别找。",
+    "背景与主句主语不同，可以保留完整从句，也可在较正式的书面表达中把背景自己的名词主语写出来。独立主格不是把任意句子的主语删掉；with + 名词 + 分词也能保留两组参与者。",
+    "分词或独立主格可随语境表达时间、原因、条件或伴随。形式本身不能替作者证明某件事是原因、某人获得许可或某个结果必然发生；需要明确这些关系时，写出 after/because/if 等从句。",
+    "六题只代表请求对象、先完成的主动/被动背景、共享主语与独立主语。to have been done、名词后分词、with 背景及条件性独立主格还需后续独立输入练习。"
+  ],
+  "forms": [
+    {
+      "form": "want / plan + to do",
+      "meaning": "在这里，主句主语也是后面动作的执行者；希望或计划不等于已完成事实。",
+      "useWhen": "描述主体自己的打算。仍要核对具体动词搭配；不能把所有动词后都接成 to do。"
+    },
+    {
+      "form": "ask / tell / want + 人的宾格或名词 + to do",
+      "meaning": "宾语指后面动作的执行者；ask/tell/want 分别表达请求、指示或希望等关系。",
+      "useWhen": "明确要求或希望谁做什么。人称代词用宾格，如 her；动作是否发生要另有证据。"
+    },
+    {
+      "form": "ask / tell + 宾语 + not to do",
+      "meaning": "否定的是被请求或被指示的动作；didn't ask + 宾语 + to do 否定请求事件，意义不同。",
+      "useWhen": "表达请某人别做。本组以常见的 not to 排列练习，不把所有 to not 的用法概括为不合语法。"
+    },
+    {
+      "form": "主句有限谓语；动词/介词补语或修饰语中的 to do / doing / done",
+      "meaning": "有限谓语承担句子的时态；非谓语部分承担搭配、修饰或背景任务。",
+      "useWhen": "先找主干和连接关系，再选第二个动作的位置。并列谓语和从句也合法，不是整个长句只能有一个有时态的动词。"
+    },
+    {
+      "form": "to have + 过去分词",
+      "meaning": "把动作看作在相关参照点之前完成；不独立规定一个日历时态。",
+      "useWhen": "例如现在声称做过某事，或计划到未来某点之前做完。是否真实完成仍取决于 claim/hope 等主句和语境。"
+    },
+    {
+      "form": "to be + 过去分词",
+      "meaning": "后面动作的主体是承受者，而不是执行者。",
+      "useWhen": "动词搭配需要 to 不定式，且表达希望或预期被邀请、被检查等；执行者需要时用 by 短语说明。"
+    },
+    {
+      "form": "being + 过去分词",
+      "meaning": "被动的 -ing 形式；可描述一般经历、所担心的事件等，不一定表示此刻进行。",
+      "useWhen": "介词或相应动词要求 -ing，且相关人物或事物承受动作；如 dislike 或 about 后。"
+    },
+    {
+      "form": "to have been + 过去分词",
+      "meaning": "不定式同时表达先完成与被动，承受者要与上下文对应。",
+      "useWhen": "声称、转述或评价先前被提名、被处理等情况；具体先后依参照点判断，不由 to have 固定为过去时间。"
+    },
+    {
+      "form": "Having + 过去分词…, 主句",
+      "meaning": "在本组共享主语的背景中，主句主语先完成该主动动作，再发生主句动作。",
+      "useWhen": "两动作执行者一致，且已明确先后。强调先完成不等于额外宣称它是原因。"
+    },
+    {
+      "form": "Having been + 过去分词…, 主句",
+      "meaning": "在本组共享主语的背景中，主句主语先承受该动作，然后发生主句动作。",
+      "useWhen": "先前完成的被动背景与主句主语对应；分词前没有另写自己的主语。"
+    },
+    {
+      "form": "名词 + doing… / 过去分词…",
+      "meaning": "在常见的及物动词修饰语中，doing 指向名词的主动关系，过去分词指向被动关系；时间还需语境。",
+      "useWhen": "缩短名词后的说明。不能把每个过去分词都当成被动或已完成；fallen 等及状态性形容词需按词义另看。"
+    },
+    {
+      "form": "Doing / Done…, 主句",
+      "meaning": "本组的前置背景分词与主句主语对应；主动执行者或被动承受者不能悬空。",
+      "useWhen": "添加同一主体的背景。两动作不一定是先后，也不一定有因果；需要无歧义的关系时保留完整从句。"
+    },
+    {
+      "form": "名词主语 + doing / having done / having been done…, 主句",
+      "meaning": "独立主格把背景自己的主语写出来；它可与主句主语不同。",
+      "useWhen": "较正式的叙述中压缩已有背景事实。先分别检查两组主语和主动/被动，再由已给语境确定时间、原因或其他关系。"
+    },
+    {
+      "form": "with + 名词/代词 + doing / done / 形容词等",
+      "meaning": "with 背景保留自己的参与者，常交代伴随状态；结构内部不直接接一个无连接的完整有限谓语。",
+      "useWhen": "需要说明另一个主体的背景，又不想误把它归到主句主语；原因或许可仍不能由 with 自动推出。"
+    },
+    {
+      "form": "Space permitting…, 主句",
+      "meaning": "背景有自己的主语 space，在明确的语境中表示若空间容纳得下；不是某个人颁发许可。",
+      "useWhen": "简洁的条件性书面表达。只有已确定是条件的语境才恢复为 if，其他独立主格不能照此套用。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一售货亭：希望自己做，还是希望另一人做",
+      "a": {
+        "en": "Dario wants to close the kiosk.",
+        "zh": "Dario 想自己关售货亭。"
+      },
+      "b": {
+        "en": "Dario wants Mei to close the kiosk.",
+        "zh": "Dario 想让 Mei 关售货亭。"
+      },
+      "why": "A 的 close 执行者是 Dario，B 是 Mei；主句 wants 的主体仍是 Dario。这是两种不同愿望，不能删掉 Mei 后当成等义改写。"
+    },
+    {
+      "label": "同一请求场景：请别关与没有提出关的请求",
+      "a": {
+        "en": "Dario asked Mei not to close the kiosk.",
+        "zh": "Dario 请 Mei 不要关售货亭。"
+      },
+      "b": {
+        "en": "Dario didn't ask Mei to close the kiosk.",
+        "zh": "Dario 没有请 Mei 关售货亭。"
+      },
+      "why": "A 有请求，内容是否定动作；B 否定请求事件。B 不说明 Dario 是否提出别的请求，两句都不证明 Mei 后来如何行动。"
+    },
+    {
+      "label": "同一辆小车：修饰主语与并列谓语",
+      "a": {
+        "en": "The cart rolling down the ramp frightened me.",
+        "zh": "正沿坡道滚下的小车吓到了我。"
+      },
+      "b": {
+        "en": "The cart rolled down the ramp and frightened me.",
+        "zh": "小车沿坡道滚了下来，并吓到了我。"
+      },
+      "why": "A 中 rolling 修饰 cart，frightened 是主句有限谓语；B 中 rolled 与 frightened 用 and 并列。两种组织方式都可成立，不能只按动词数量判错。"
+    },
+    {
+      "label": "同一批封条：常规声称与声称先前检查过",
+      "a": {
+        "en": "Noor claims to inspect the seals every morning.",
+        "zh": "Noor 声称自己每天早晨检查这些封条。"
+      },
+      "b": {
+        "en": "Noor claims to have inspected the seals this morning.",
+        "zh": "Noor 声称自己今天早晨已经检查过这些封条。"
+      },
+      "why": "A 的常规意义来自 every morning；B 的完成不定式把检查放在现在声称之前。claims 仍是来源限定，两句都不能单凭语法视为核实过的事实。"
+    },
+    {
+      "label": "同一策展人：发出邀请与接受邀请",
+      "a": {
+        "en": "Nadia hopes to invite the curator.",
+        "zh": "Nadia 希望邀请策展人。"
+      },
+      "b": {
+        "en": "Nadia hopes to be invited by the curator.",
+        "zh": "Nadia 希望受到策展人的邀请。"
+      },
+      "why": "A 的 Nadia 是 invite 的执行者，B 是承受者；hopes 描述愿望，to be 不额外给出邀请发生的日期。"
+    },
+    {
+      "label": "同一播音员：打断别人或被别人打断",
+      "a": {
+        "en": "Leon dislikes interrupting the announcer.",
+        "zh": "Leon 不喜欢打断那位播音员。"
+      },
+      "b": {
+        "en": "Leon dislikes being interrupted by the announcer.",
+        "zh": "Leon 不喜欢被那位播音员打断。"
+      },
+      "why": "dislikes 后用 -ing；being interrupted 改变动作关系，不是把时间机械改成现在进行。两句都可描述一般偏好。"
+    },
+    {
+      "label": "同一份氧气表：先作简报或先听简报",
+      "a": {
+        "en": "Having briefed the divers, Suri checked the oxygen chart.",
+        "zh": "向潜水员作完简报后，Suri 检查了氧气表。"
+      },
+      "b": {
+        "en": "Having been briefed by the divers, Suri checked the oxygen chart.",
+        "zh": "听完潜水员的简报后，Suri 检查了氧气表。"
+      },
+      "why": "两句背景都先完成，但 A 的 Suri 提供简报，B 的 Suri 接受简报。不能只留下 Having 而忽略 been 所标的被动关系。"
+    },
+    {
+      "label": "同一批乐器：打包的人与被打包的物品",
+      "a": {
+        "en": "The volunteers packing the instruments are downstairs.",
+        "zh": "正在打包乐器的志愿者在楼下。"
+      },
+      "b": {
+        "en": "The instruments already packed by the volunteers are downstairs.",
+        "zh": "志愿者已经打包好的乐器在楼下。"
+      },
+      "why": "A 的主语是执行打包的人，B 是承受打包的乐器；are 是两句主句的有限谓语。B 的完成背景有 already 支持，不能说过去分词在所有场景都表示过去时间。"
+    },
+    {
+      "label": "同一车站：谁正在接近站点",
+      "a": {
+        "en": "Approaching the stop, Elsa stepped back.",
+        "zh": "Elsa 接近站点时往后退了一步。"
+      },
+      "b": {
+        "en": "The tram approaching the stop, Elsa stepped back.",
+        "zh": "电车正接近站点，Elsa 往后退了一步。"
+      },
+      "why": "A 的背景执行者是 Elsa；B 把 the tram 写为背景自己的主语。B 自身没有把电车到来明说成退步的原因，也没有表示许可。"
+    },
+    {
+      "label": "同一舞台：with 背景保留灯的主语",
+      "a": {
+        "en": "With the lamps glowing above the stage, Anil introduced the speaker.",
+        "zh": "舞台上方的灯亮着，Anil 介绍了发言人。"
+      },
+      "b": {
+        "en": "While the lamps were glowing above the stage, Anil introduced the speaker.",
+        "zh": "舞台上方的灯亮着时，Anil 介绍了发言人。"
+      },
+      "why": "在这里明给的是同时背景，两句都保留 lamps 与 Anil 两组主语。B 用完整 while 从句；A 的 with 结构内用 glowing，不能直接放 were glowing。"
+    },
+    {
+      "label": "同一房间方案：条件不是人为授权",
+      "a": {
+        "en": "Space permitting, we'll add a reading desk.",
+        "zh": "空间容纳得下的话，我们会添一张阅读桌。"
+      },
+      "b": {
+        "en": "If space permits, we'll add a reading desk.",
+        "zh": "如果空间容纳得下，我们会添一张阅读桌。"
+      },
+      "why": "已明确为房间空间的条件，A 可恢复成 B。space 是 permit 的语法主语，但这里的意义是容纳得下，不是有人准许添桌；其他背景须另看语境。"
+    },
+    {
+      "label": "同一次提名：先前提名别人或先前被提名",
+      "a": {
+        "en": "Omar claims to have nominated the treasurer.",
+        "zh": "Omar 声称自己先前提名了财务主管。"
+      },
+      "b": {
+        "en": "Omar claims to have been nominated by the treasurer.",
+        "zh": "Omar 声称自己先前被财务主管提名。"
+      },
+      "why": "to have 表相对于声称的先完成；been 把 Omar 从提名执行者换成承受者。claims 的来源限定仍保留，不能当成独立核实。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "Dario wants Mei close the kiosk.",
+      "correct": "Dario wants Mei to close the kiosk.",
+      "why": "这个 want + 人 + 动作的搭配需要 to；Mei 是 close 的执行者。"
+    },
+    {
+      "wrong": "Dario asked she to carry the box.",
+      "correct": "Dario asked her to carry the box.",
+      "why": "代词是 asked 的宾语，同时是 carry 的执行者；这个位置用宾格 her。"
+    },
+    {
+      "wrong": "Dario didn't ask Mei to close the kiosk.",
+      "correct": "Dario asked Mei not to close the kiosk.",
+      "why": "如果要保留『请 Mei 别关』，否定放到动作内容。原句语法通顺，但否定的是请求事件，不能作为该意思的等义改写。"
+    },
+    {
+      "wrong": "The cart rolling down the ramp frighten me yesterday.",
+      "correct": "The cart rolling down the ramp frightened me yesterday.",
+      "why": "rolling 是名词修饰语；主句的 frighten 还要承担已结束的过去叙述，用 frightened。"
+    },
+    {
+      "wrong": "Noor claims to have inspect the seals.",
+      "correct": "Noor claims to have inspected the seals.",
+      "why": "完成不定式中的 have 后接过去分词；claims 的主句时态与来源限定不因此改变。"
+    },
+    {
+      "wrong": "Nadia hopes to be invite by the curator.",
+      "correct": "Nadia hopes to be invited by the curator.",
+      "why": "Nadia 是被邀请者；to be 后接 invite 的过去分词 invited。"
+    },
+    {
+      "wrong": "Leon dislikes been interrupted.",
+      "correct": "Leon dislikes being interrupted.",
+      "why": "dislikes 后需要 -ing 形式；being interrupted 表被打断的经历，been 不能直接替代 being。"
+    },
+    {
+      "wrong": "Having being briefed, Suri checked the oxygen chart.",
+      "correct": "Having been briefed, Suri checked the oxygen chart.",
+      "why": "先完成的被动背景用 having been + 过去分词；Suri 是简报接收者。"
+    },
+    {
+      "wrong": "The instruments packing by the volunteers are downstairs.",
+      "correct": "The instruments packed by the volunteers are downstairs.",
+      "why": "在这个及物动词修饰语里，乐器承受打包动作，用 packed；packing 会给乐器主动打包的关系。"
+    },
+    {
+      "wrong": "Crossing the square, the banner caught my eye.",
+      "correct": "While I was crossing the square, the banner caught my eye.",
+      "why": "若实际走过广场的是我，原背景不能清楚地对应主句主语 banner。保留 I 的完整时间从句，避免把旗帜当成走路者。"
+    },
+    {
+      "wrong": "Having been polished, we placed the trophy on the shelf.",
+      "correct": "The trophy having been polished, we placed it on the shelf.",
+      "why": "已知被抛光的是奖杯，摆放的是我们。背景加上自己的 trophy 主语，并在主句保留指代；不能把被抛光的关系套到 we。"
+    },
+    {
+      "wrong": "With the lamps were glowing above the stage, Anil introduced the speaker.",
+      "correct": "With the lamps glowing above the stage, Anil introduced the speaker.",
+      "why": "这个 with 背景不是独立的 while 从句，用名词 + glowing；若要保留 were，须改为完整的 while 从句。"
+    },
+    {
+      "wrong": "Omar claims to have been nominate by the treasurer.",
+      "correct": "Omar claims to have been nominated by the treasurer.",
+      "why": "完成被动不定式中 been 后还要有过去分词 nominated；Omar 仍是被提名者。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "requests-nonfinite-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "Zara 提出了一个请求：希望 Ben 不要拔打印机插头。尚不知道 Ben 后来是否照做。哪一项同时保留请求内容与参与者？",
+      "options": [
+        "Zara asked Ben not to unplug the printer. —— Ben 是 unplug 的执行者；请求内容是否定动作，结果还未知。",
+        "Zara didn't ask Ben to unplug the printer. —— didn't ask 把『别拔插头』放进了请求内容。",
+        "Zara asked Ben not to unplug the printer. —— Zara 是 unplug 的执行者；Ben 只是听到这句话的人。"
+      ],
+      "answer": "Zara asked Ben not to unplug the printer. —— Ben 是 unplug 的执行者；请求内容是否定动作，结果还未知。",
+      "explanation": "asked 的主体是 Zara；Ben 既是 asked 的宾语，也是 unplug 的逻辑执行者。not to 否定动作内容；didn't ask 否定提出请求这件事。请求不证明后来发生或没发生拔插头的动作。",
+      "hints": [
+        "把『谁请求谁』和『谁被要求做后面的动作』分开标注，再检查否定针对哪一件事。",
+        "找 asked + Ben + not to unplug：Ben 承接 unplug；didn't ask 会改变被否定的事件。"
+      ]
+    },
+    {
+      "id": "requests-nonfinite-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "巡护员先向骑行者作完路线简报，骑行者随后沿标记路线走。背景与主句都是骑行者，但骑行者是简报接收者。只改 being 这一处形式错误，保留其他词与背景后的逗号：Having being briefed by the ranger, the cyclists followed the marked trail.",
+      "answer": "Having been briefed by the ranger, the cyclists followed the marked trail.",
+      "explanation": "先完成并承受简报动作，需 having been briefed；followed 是主句过去谓语。背景省略的主体仍是 the cyclists，不是 by 短语里的 ranger；已给的先后不额外证明因果。",
+      "hints": [
+        "背景有『先完成』和『被作简报』两层，检查 having 后承接被动结构的 be 应是什么形式。",
+        "完成形式要求 have/having 后接过去分词；be 的过去分词是 been，briefed 保留。"
+      ]
+    },
+    {
+      "id": "requests-nonfinite-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "陌生情境：Mila 先数完筹码，然后封好小袋。两动作都是 Mila 做的，题面没有额外交代原因。用 Having 开头的共享主语完成分词背景写一句；用 count the tokens / Mila / seal the pouch，主句用一般过去时，背景后保留一个逗号。给定词形：counted、sealed。",
+      "answer": "Having counted the tokens, Mila sealed the pouch.",
+      "explanation": "Having counted 表先完成的主动动作；主句的 Mila 也是数筹码的人，sealed 承担过去叙述。句子保留先后与同一主体，没有另造被动承受者或原因从句。",
+      "hints": [
+        "先确定数与封是否同一执行者，再把已经先做完的动作放到 Having 背景里；主句仍须写出 Mila。",
+        "背景用 Having + counted + the tokens；逗号后以 Mila 为主语，seal 用给定过去式。"
+      ]
+    },
+    {
+      "id": "requests-nonfinite-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "记录只明确两件事的先后：潮水退下后，调查员进入了小海湾；没有写退潮是唯一原因，也没有写取得许可。读句 The tide having fallen, the surveyors entered the inlet. 哪一项恢复了已给的信息并正确解释两组主语？",
+      "options": [
+        "After the tide had fallen, the surveyors entered the inlet. —— 背景主语是 the tide，主句主语是 the surveyors；保留已给的先后。",
+        "After the tide had fallen, the surveyors entered the inlet. —— having fallen 省掉的是 the surveyors；他们是退潮动作的执行者。",
+        "Because the tide had fallen, the surveyors entered the inlet. —— 独立主格本身已把退潮明确标成进入的原因。"
+      ],
+      "answer": "After the tide had fallen, the surveyors entered the inlet. —— 背景主语是 the tide，主句主语是 the surveyors；保留已给的先后。",
+      "explanation": "the tide 已是 having fallen 的显式主语，the surveyors 是 entered 的主语；这是独立主格。题面给出先后，所以 after 的恢复可靠。because 句子本身合语法，但添加了记录未明说的因果断言；独立主格也不自动表示许可。after 不否认语境外可能有其他原因。",
+      "hints": [
+        "分词前是否已经有自己的名词？分别给 fallen 和 entered 找主体，再只恢复记录明确给出的关系。",
+        "the tide 承接 having fallen；the surveyors 承接 entered。题面明说先退潮后进入，可用 after，不必增加原因或许可。"
+      ]
+    },
+    {
+      "id": "requests-nonfinite-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "实际沿运河走、看见水獭的人是我；望远镜只是我带的装备。只修正主句主语这一处参与者错误，保留 Walking 背景、spotted an otter 和一个逗号：Walking along the canal, my binoculars spotted an otter.",
+      "answer": "Walking along the canal, I spotted an otter.",
+      "explanation": "本组的共享主语分词背景需要与主句主体对应。主句写 I，走路和看见才都归到实际参与者；改 Walking 的时间词或只删逗号不能解决主体悬垂。",
+      "hints": [
+        "沿运河走的是谁？检查逗号后的主语能否同时承担走路与看见两个动作。",
+        "把装备名词短语换成说话者的主格 I，Walking 与 spotted 的参与者便一致。"
+      ]
+    },
+    {
+      "id": "requests-nonfinite-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "陌生情境：快递员先送达服装，演员们在中午开始排练；记录只给先后，没有明说原因。写一句独立主格背景，以 The costumes 开头，用 having been + delivered，保留 by the courier；逗号后用 the performers / begin the rehearsal / at noon 的一般过去叙述。背景须有自己的主语，不能让演员成为被送达者。给定词形：delivered、began。",
+      "answer": "The costumes having been delivered by the courier, the performers began the rehearsal at noon.",
+      "explanation": "背景的主语 costumes 承受先前送达动作；主句的 performers 执行 began。having been delivered 同时保留先完成和被动；两组主语由逗号分开。句子不把先后扩写为 because 或获准排练。",
+      "hints": [
+        "把两条参与者线列开：送达的承受者是谁，开始排练的执行者又是谁？先完成的送达需要哪两层形式？",
+        "背景以 The costumes + having been delivered + by the courier 组成；逗号后保留 the performers，并用 began 与 at noon。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "选择一段自己的安排或经历，先写两句完整事实并标出各动作的主体，再用一种请求结构和一种非谓语背景改写。对象或时间关系若无法确定，保留完整从句，并说明缺少什么信息。",
+    "criteria": [
+      "指出主句有限谓语及整条辅助链，把补语、修饰语和背景的任务说清楚。",
+      "请求结构说明谁提出、谁被要求做，以及否定作用于请求还是动作；不把请求算成已实施或获准。",
+      "每个背景的执行者或承受者可定位；共享主语不能悬垂，独立主格或 with 背景保留自己的主体。",
+      "主动/被动与先后同时匹配已给事实；没有明给的原因、许可或结果不自行添加。",
+      "陌生表达的主体与结构应能自己解释；看懂示例、对上一次参考或完成本组六题，只代表本次表现。",
+      "本轮未独立检验 to have been done、名词后分词、with 背景及条件性独立主格的自由输入；后续换情境并间隔复现。"
+    ]
+  }
+}

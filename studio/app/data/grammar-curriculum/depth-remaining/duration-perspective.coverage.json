@@ -1,0 +1,77 @@
+[
+  {
+    "guideId": "perfect-continuous",
+    "unitId": "duration-perspective",
+    "formIndices": [
+      0,
+      1,
+      2,
+      7
+    ],
+    "contrastIndices": [
+      0,
+      1,
+      4,
+      5
+    ],
+    "mistakeIndices": [
+      0,
+      1,
+      2
+    ],
+    "practiceIds": [
+      "duration-perspective-v0-recognise",
+      "duration-perspective-v0-produce"
+    ],
+    "scope": "已讲清现在基点前的活动过程、仍在做与刚停止的语境、时长/起点、结果数量及稳定状态的对比；识别题实际区分活动 has been sewing 与稳定相识 has known，造句独立输入延续到现在的组装灯笼过程。",
+    "remaining": "否定/疑问、近期停止后当前痕迹、结果数量、for/since 改错和 live 两种视角已提供教学证据，但尚未各自独立输入检验；不同动词的动态状态意义、反复活动与更多时长组合仍需后续练习。"
+  },
+  {
+    "guideId": "past-perfect-continuous",
+    "unitId": "duration-perspective",
+    "formIndices": [
+      2,
+      3,
+      4,
+      7
+    ],
+    "contrastIndices": [
+      2,
+      6
+    ],
+    "mistakeIndices": [
+      3,
+      4
+    ],
+    "practiceIds": [
+      "duration-perspective-v0-repair",
+      "duration-perspective-v1-produce"
+    ],
+    "scope": "已讲清从过去节点回看此前活动及持续长度、与普通过去完成时的数量/状态对比；改错实际补全 had been waiting，陌生造句独立形成 had been hiking 并保留过去参照分句。",
+    "remaining": "普通过去完成结果/状态、否定/疑问、近期停止造成过去可见痕迹和 for/since 起点变化仅讲解或对比，未各自独立检验；持续过程与过去进行时在完整叙事中的取舍仍需更多语境练习。"
+  },
+  {
+    "guideId": "future-perfect-continuous",
+    "unitId": "duration-perspective",
+    "formIndices": [
+      2,
+      5,
+      6,
+      7
+    ],
+    "contrastIndices": [
+      3,
+      6
+    ],
+    "mistakeIndices": [
+      5,
+      6
+    ],
+    "practiceIds": [
+      "duration-perspective-v1-recognise",
+      "duration-perspective-v1-repair"
+    ],
+    "scope": "已讲清未来参照点之前的预计持续长度、结果/状态对比及完整 will have been 链；识别实际核对两点到五点的三小时过程，改错独立输入 coaching 以完成将来完成进行式。",
+    "remaining": "本变体尚未要求从头独立造出整句将来完成进行式；未来稳定状态、否定/疑问、起点在现在之前或之后的多种组合已讲解但未逐项独立检验，预测的事实依据仍需开放表达核对。"
+  }
+]

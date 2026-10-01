@@ -1,0 +1,278 @@
+{
+  "id": "extended-timeline",
+  "title": "将来过程、截止点与安排",
+  "stageId": "time",
+  "order": 25,
+  "prerequisites": [
+    "past-background",
+    "plan-timeline"
+  ],
+  "purposeIds": [
+    "progress",
+    "plan",
+    "story"
+  ],
+  "guideIds": [
+    "future-continuous",
+    "future-perfect",
+    "future-be"
+  ],
+  "goal": "把未来的观察点、截至那时的结果，以及即将发生或按安排发生的意味分开表达。",
+  "explanation": [
+    "将来进行形式 will be + -ing 把镜头放在未来某刻，呈现届时正在展开的活动。它可以描述预期过程或暂时安排，不只是问动作会不会发生。要有语境中的未来观察点，但不必每句都照抄 this time tomorrow。",
+    "将来完成形式 will have + 过去分词从未来时点回看。本轮重点是『到那时已做完』的活动，与 will be doing 的过程不同。by a future time 给出截至那时的参照，不必理解为动作恰好在那个时刻完成；将来完成也能表达持续至未来的状态，并非所有实例都等于一件动作结束。",
+    "询问 Will you be using …? 可以问预期的安排，便于自己协调；Will you use …? 在另一情境中可问意愿、请求或预测。两种都自然，不能只凭句型断言一种永远礼貌、另一种永远不礼貌。本轮介绍安排询问，主要输入检验未来过程与截止结果。",
+    "be about to + 原形突出眼前就要发生，动作通常还没开始；过去的 was/were about to 也可交代正要做却被打断，并不保证后来做了。它通常不搭 in three weeks 这类远距计划，不能把『即将』和很久以后的正式计划看作固定概率档位。",
+    "be to + 原形较正式，可表达安排、计划或指示；be due to + 原形常说按安排预计的时间。它们不由形式保证事件一定发生。due to + 名词还可表示原因，需与预计动作的结构分开。be to 的其他意义本轮不穷尽，也不和 about to 当作同义替换。",
+    "be bound/sure to 可表达很有把握的判断，仍不是官方概率或已验证结果；Be sure to … 还可作为叮嘱。先判断这句话在描述过程、截至某时的情况、临近行动、安排还是说话者判断，再选合适形式。开放计划中的时间关系与自然度继续核对。"
+  ],
+  "forms": [
+    {
+      "form": "主语 + will/won't be + 动词-ing",
+      "meaning": "未来观察点上正在展开或预计展开的活动。",
+      "useWhen": "想呈现届时的过程，不据此宣布活动在该点前已全部做完；will 后要有 be，动作要有 -ing。"
+    },
+    {
+      "form": "Will + 主语 + be + 动词-ing …?",
+      "meaning": "询问未来预期活动，常用于协调安排。",
+      "useWhen": "如了解届时是否有人使用场地；具体意愿、请求与礼貌仍看语境，本轮介绍但未逐项独立输入检验。"
+    },
+    {
+      "form": "主语 + will have + 过去分词；by + 未来参照",
+      "meaning": "从未来参照回看截至那时的情况，本轮突出已完成的活动。",
+      "useWhen": "要表达到未来截止点已完成，而不只是正在做；have 后用过去分词，不把所有将来完成都限定成动作结束。"
+    },
+    {
+      "form": "主语 + won't have + 过去分词；Will + 主语 + have + 过去分词 …?",
+      "meaning": "否定或询问截至未来参照点的情况。",
+      "useWhen": "仍使用 have + 过去分词来体现回看视角；本轮介绍形式，未逐项输入测试。"
+    },
+    {
+      "form": "主语 + be about to + 动词原形",
+      "meaning": "眼前正要发生的活动，或过去正要做的动作。",
+      "useWhen": "突出临近，通常不再配较远的固定时距；was/were about to 不保证动作后来实际发生。"
+    },
+    {
+      "form": "主语 + be to + 动词原形",
+      "meaning": "较正式的安排、计划或指示。",
+      "useWhen": "如正式通知中公布取件时间；与 about to 的临近意味区分，不给形式附固定概率，其他 be to 读法留待具体语境。"
+    },
+    {
+      "form": "主语 + be due to + 动词原形；due to + 名词",
+      "meaning": "前者表示预计按安排发生，后者可引出原因。",
+      "useWhen": "辨别后面是预计动作还是原因名词；计划可能改变，不能把 due to 的两条路线混为同一个用途。"
+    },
+    {
+      "form": "主语 + be bound/sure to + 动词原形；Be sure to + 动词原形",
+      "meaning": "很有把握的判断，或对听者的叮嘱。",
+      "useWhen": "从语境识别判断与指令；信心不是固定概率或事实证明，本轮给出例句但不逐项输入检验。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一次打包：未来过程与截至那时的完成",
+      "a": {
+        "en": "At ten tomorrow, we'll be packing the cartons.",
+        "zh": "明天十点，我们会正在打包纸箱。"
+      },
+      "b": {
+        "en": "By noon tomorrow, we'll have packed the cartons.",
+        "zh": "到明天正午，我们就会打包好那些纸箱。"
+      },
+      "why": "A 停在十点看过程；B 从正午回看已完成的打包。两种说法能出现在同一计划中，不能把正在做当作已经全部完成。"
+    },
+    {
+      "label": "同一工作室：问预期安排与另一意图",
+      "a": {
+        "en": "Will you be using the studio tomorrow evening?",
+        "zh": "你明晚会用工作室吗？"
+      },
+      "b": {
+        "en": "Will you use the studio tomorrow evening?",
+        "zh": "你明晚会使用工作室吗？"
+      },
+      "why": "A 可在协调共用场地时询问预期安排；B 可在商量选择场地时问打算或意愿。语境和语调决定具体用途，不只靠形式给礼貌程度排序。"
+    },
+    {
+      "label": "同一次公告：马上宣布与正式计划",
+      "a": {
+        "en": "The committee is about to announce the result.",
+        "zh": "委员会马上就要宣布结果了。"
+      },
+      "b": {
+        "en": "The committee is to announce the result on Monday.",
+        "zh": "按正式安排，委员会将在周一宣布结果。"
+      },
+      "why": "设定 A 的人已就位，眼前要宣布；B 是周四读到下周一的安排。about to 突出临近，be to 突出正式安排，差别不是百分比高低，安排也可能更改。"
+    },
+    {
+      "label": "同一渡轮：预计动作与延误原因",
+      "a": {
+        "en": "The ferry is due to dock at noon.",
+        "zh": "渡轮预计正午靠岸。"
+      },
+      "b": {
+        "en": "The ferry is late due to a signal fault.",
+        "zh": "渡轮因信号故障而晚点。"
+      },
+      "why": "A 的 due to 后是 dock 原形，表达预计时间；B 后是原因名词短语 a signal fault，说明为什么晚点。不能把所有 due to 都译作『按计划』。"
+    },
+    {
+      "label": "同一个标签问题：有把握的判断与叮嘱",
+      "a": {
+        "en": "Mia is bound to notice the missing label.",
+        "zh": "Mia 肯定会注意到缺失的标签。"
+      },
+      "b": {
+        "en": "Be sure to replace the missing label.",
+        "zh": "一定记得补上缺失的标签。"
+      },
+      "why": "A 是说话者很有把握的判断，不是外部验证；B 是对听者的叮嘱。sure to 的意义需读语境，不给判断结构固定概率。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "At ten tomorrow, we will be pack the cartons.",
+      "correct": "At ten tomorrow, we will be packing the cartons.",
+      "why": "未来过程用 will be + -ing，pack 需变成 packing；不是只有一个未来 will 就能省掉过程形式。"
+    },
+    {
+      "wrong": "Will you using the studio tomorrow evening?",
+      "correct": "Will you be using the studio tomorrow evening?",
+      "why": "这个预期活动问句需要 be + using，不能把 -ing 直接接在 will 的问句里。"
+    },
+    {
+      "wrong": "By noon, the team will have pack the cartons.",
+      "correct": "By noon, the team will have packed the cartons.",
+      "why": "已选定将来完成结构，have 后要过去分词 packed；这里的截止结果与进行时不同。"
+    },
+    {
+      "wrong": "The timer is about ring.",
+      "correct": "The timer is about to ring.",
+      "why": "表示眼前就要响的结构是 be about to + 原形，缺少的 to 不能省。"
+    },
+    {
+      "wrong": "The courier is to collects the cartons tomorrow.",
+      "correct": "The courier is to collect the cartons tomorrow.",
+      "why": "正式安排的 be to 后是动词原形 collect，不因主语 courier 是单数再给动作加 s。"
+    },
+    {
+      "wrong": "The ferry is due to docks at noon.",
+      "correct": "The ferry is due to dock at noon.",
+      "why": "表达预计动作的 due to 后用原形 dock；这个 to 不是后接原因名词的那种用法。"
+    },
+    {
+      "wrong": "Mia is bound to notices the missing label.",
+      "correct": "Mia is bound to notice the missing label.",
+      "why": "bound to 后接原形 notice，主语的单数已经由 is 体现；判断本身仍需要语境依据。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "extended-timeline-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "计划明天 9:30 开始打包纸箱，10:30 才停止；你要呈现十点时活动正在展开的画面。哪项的英文和理由都符合？cartons 指纸箱。",
+      "options": [
+        "At ten tomorrow, we'll be packing the cartons. ——把未来十点放在打包过程里。",
+        "At ten tomorrow, we'll have packed the cartons. ——十点之前已经完成打包。",
+        "At ten tomorrow, we'll pack the cartons. ——把未来十点放在打包过程里。",
+        "At ten tomorrow, we'll be pack the cartons. ——把未来十点放在打包过程里。"
+      ],
+      "answer": "At ten tomorrow, we'll be packing the cartons. ——把未来十点放在打包过程里。",
+      "explanation": "will be packing 看十点正在进行的活动；will have packed 看截至那时已完成，与题目目标不同。will pack 可在别的语境预测或讲将发生的事件，但没有表达本题指定的进行视角；will be pack 少了 -ing。时间短长本身不是选形式的唯一理由。",
+      "hints": [
+        "把十点放到开始和停止之间，先判断镜头要看过程还是回看完成。",
+        "未来进行需要 will + be + -ing；同时检查每项理由是否符合这个观察点。"
+      ]
+    },
+    {
+      "id": "extended-timeline-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "计时器只剩几秒就要响。只补一个缺失的词，保留其余词序：The timer is about ring.",
+      "answer": "The timer is about to ring.",
+      "accepted": [],
+      "explanation": "about to ring 表示眼前临近的动作；补上 to 即可。本例是在描述将要响，不是在读某个较远日期的正式安排，也不宣称一定不会被取消。",
+      "hints": [
+        "先确认这里在说近在眼前的动作，检查短语和动作之间的连接是否完整。",
+        "be about to 后接原形；is 和 ring 已合适，只补这个结构的连接词。"
+      ]
+    },
+    {
+      "id": "extended-timeline-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：明天 8:45—9:30，你会带访客参观花园。以 At nine tomorrow 开头，接 I / guide the visitors through the garden，用将来进行形式表示九点时的过程；不加其他信息，可缩写 I will。",
+      "answer": "At nine tomorrow, I will be guiding the visitors through the garden.",
+      "accepted": [
+        "At nine tomorrow, I'll be guiding the visitors through the garden."
+      ],
+      "explanation": "九点在导览过程内，所以用 will be guiding；guide 变 -ing 时去掉词尾 e。指定开头和词组使题目只检验这个未来过程，不用有限参考排斥其他开放计划。",
+      "hints": [
+        "九点落在导览时间段的哪一处？这里要说届时正在做什么，而不是届时已全部结束。",
+        "未来过程用 will be + -ing；I will 可缩成 I'll，guide 的词尾 e 要处理。"
+      ]
+    },
+    {
+      "id": "extended-timeline-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "正式取件通知：团队到明天正午就会封好纸箱；快递员按通知在明天两点取件。你同时要表达截止结果和正式安排，哪项的两个结构及理由吻合？seal 指封好。",
+      "options": [
+        "By noon tomorrow, the team will have sealed the cartons. The courier is to collect them at two. ——正午时正在封箱；快递员马上取走。",
+        "By noon tomorrow, the team will be sealing the cartons. The courier is to collect them at two. ——正午时已封好；两点取件属于正式安排。",
+        "By noon tomorrow, the team will have sealed the cartons. The courier is to collect them at two. ——正午时已封好；两点取件属于正式安排。",
+        "By noon tomorrow, the team will have sealed the cartons. The courier is to collects them at two. ——正午时已封好；两点取件属于正式安排。"
+      ],
+      "answer": "By noon tomorrow, the team will have sealed the cartons. The courier is to collect them at two. ——正午时已封好；两点取件属于正式安排。",
+      "explanation": "will have sealed 从正午回看已完成，is to collect 体现正式通知的安排，collect 保持原形。将第一句换成 will be sealing 是过程视角，不能配本题『已封好』的理由；相同英文配『正在、马上』也误读两种意味。安排形式不保证结果，about to 的临近与 be to 的正式安排也不是固定概率级别。",
+      "hints": [
+        "两句各承担一件事：到一个未来时点已做到哪一步，以及通知安排谁何时行动。",
+        "截止完成用 will have + 过去分词；正式安排可用 be to + 原形，不给 collect 另加单数 s。"
+      ]
+    },
+    {
+      "id": "extended-timeline-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "承诺到明天正午已经封好箱子。只改 seal 的形式，保留其余词序：By noon tomorrow, we will have seal the boxes.",
+      "answer": "By noon tomorrow, we will have sealed the boxes.",
+      "accepted": [
+        "By noon tomorrow, we'll have sealed the boxes."
+      ],
+      "explanation": "will have 后用过去分词 sealed，表示截至未来正午已完成封箱；we'll 可展开为 we will。只修已经选定结构中的动词形式，不把所有含 by 的英语一概归为完成时。",
+      "hints": [
+        "助动词框架已给出；检查它要的是原形、-ing，还是过去分词。",
+        "完成结构 have 后用过去分词；seal 是规则动词，加 -ed。"
+      ]
+    },
+    {
+      "id": "extended-timeline-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "新情境：今天周二，植树计划保证到本周六已经种完所有树。用 We / plant all the trees / by Saturday 写一句将来完成句，不加其他信息；by Saturday 可放句首或句末，we will 可缩写。",
+      "answer": "By Saturday, we will have planted all the trees.",
+      "accepted": [
+        "We will have planted all the trees by Saturday.",
+        "By Saturday, we'll have planted all the trees.",
+        "We'll have planted all the trees by Saturday."
+      ],
+      "explanation": "will have planted 从周六回看完成的植树结果；不是周六镜头内仍在种的 will be planting。by 给出截至那时的计划，不把句子解释成树只能在周六当天种完。",
+      "hints": [
+        "计划想保证的是周六看到已完成结果，还是周六仍在做的过程？先确定回看位置。",
+        "从未来截止点看已完成活动，用 will have + 过去分词；plant 属于规则变化。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "为一项真实或明确标注为设想的计划写 5—7 句：在未来某刻说明正在做什么，再说截至一个未来节点已经完成什么；另写一条眼前即将发生或正式安排的行动，解释它为何用 about to、be to 或 due to。若用 bound/sure，说明这是判断还是叮嘱。提交现有表达路径后时间关系、事实依据和自然度仍待核对。",
+    "criteria": [
+      "未来观察点与 will be doing 的过程相符，不凭 will 就视作截止完成。",
+      "will have done 的参照、过去分词与承诺结果清楚，by 的时距不被机械理解成恰在该时完成。",
+      "about to 的临近与 be to/due to 的安排分开；安排可改变，不写固定概率。",
+      "due to 的预计动作与原因名词不混同，bound/sure 的判断或叮嘱符合语境。",
+      "写自己的新计划；开放时间关系与真实性继续人工核对，不按有限答案自动认定掌握。"
+    ]
+  }
+}

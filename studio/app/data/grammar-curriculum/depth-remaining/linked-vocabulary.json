@@ -1,0 +1,67 @@
+{
+  "id": "linked-vocabulary",
+  "title": "搭配、例外与程度变化",
+  "stageId": "meaning",
+  "order": 24,
+  "prerequisites": ["noun-reference", "comparisons", "linking-ideas", "verb-complements"],
+  "goal": "按整体搭配组织动作，分清排除/添加与比较对象，再用程度结果和同步变化保留真实意思。",
+  "guideIds": ["phrasal-verbs", "except", "same-different", "so-such", "double-comparison"],
+  "purposeIds": ["describe", "compare", "reason"],
+  "explanation": [
+    "多词动词要一起记意思、是否带宾语、能否分开。put off表示推迟，名词宾语可放在put off后或两者中间；宾语是it/them等代词时，通常要放中间。look after表示照顾，是不可分结构，宾语留在after后；turn up表示到场时常不带宾语。不能看到小词就套同一种位置规则，也不能只查中心动词的字面义。",
+    "except从已说明的范围排除成员，besides添加另一项。Everyone arrived except the drummer排除鼓手；besides the drummer…通常在鼓手之外再增加参与者。except for常用在总体评价后补充局部例外，如房间整体整洁但角落杂乱；在某些集合语境except/except for也能重叠，不能写成永不通用的两条禁令。先核对是集合减一项还是增加一项。",
+    "比较时两边要同类：our schedule应与their schedule/theirs比，不直接与they/them这些人比。the same as表示相同，similar to只表示相似；different from是本轮先练的常用路线，different to/than在相应地区语境也可能自然，不一概判错。same的名词前后和词组the same as内部各有角色，不能省掉本轮结构中的the。",
+    "so/such能把程度与结果连起来。so + 形容词/副词 + that…聚焦性质或动作程度；such + (a/an) + 形容词 + 名词 + that…围绕名词短语。单数可数名词需要相应限定，如such a noisy rehearsal；复数或不可数名词不机械加a。结果that小句要有完整主语与谓语，so…that不是另一个单独的because。",
+    "数量程度通常用so many/few + 可数复数、so much/little + 不可数名词。little如果表示体积小，是形容词，such a little hut便是另一结构；不能仅看到little就固定用so。没有结果小句的so/such也有其他用途，本轮不全部覆盖。",
+    "the + 比较级 + 小句，the + 比较级 + 小句把两个变化联系：一边更大，另一边可以更大或更小。the earlier…，the less…同样符合结构；不能重复写more easier。more and more / -er and -er则常描述同一个量持续变化，不等于两条变化的配对。",
+    "成对比较能表达你所观察或预期的联系，句式本身不证明科学因果。若只是个人经验，应交代范围；不要把『排队越长等待越久』之类关系自动推成所有情况下必然。本轮6题实际输入可分代词位置、排除到场者、such单数名词和成对比较，并识别同类比较，细分搭配仍按各guide的remaining继续练。"
+  ],
+  "forms": [
+    {"form": "put off + 名词；put + 名词/代词 + off", "meaning": "推迟某事，代词宾语位于可分动词中间。", "useWhen": "put off表示推迟且带宾语；名词可两处，it/them等在中间，不把规则外推到全部短语动词。"},
+    {"form": "look after + 宾语；turn up（到场）", "meaning": "不可分的照顾结构，及到场义的不及物结构。", "useWhen": "look after宾语在整个组合后；turn up到场义不强加宾语，其他意思需另查搭配。"},
+    {"form": "整体范围 + except + 被排除成员", "meaning": "从已知集合中减去一项或若干项。", "useWhen": "明确例外不满足该整体陈述，如所有人都到场但鼓手没有；不是添加。"},
+    {"form": "besides + 已知项，另有的项…", "meaning": "在已知项之外添加内容。", "useWhen": "通常表示此外还有，核对是否真的将该项包含在相关集合中。"},
+    {"form": "总体评价 + except for + 局部例外", "meaning": "补充使总体评价不完全成立的局部情况。", "useWhen": "如整体整洁但有一个杂乱角落；部分集合语境也可与except重叠，不当绝对禁止规则。"},
+    {"form": "A + be + the same as + 同类B", "meaning": "比较同类对象，表示相同。", "useWhen": "如our schedule与theirs；保留the/as，不能用人代替人的日程。"},
+    {"form": "A + be + different from / similar to + 同类B", "meaning": "说明差异或相似，而非把相似当完全相同。", "useWhen": "本轮先练from/to；different to/than有地区用法，按指定练习路线核对而非全面判错。"},
+    {"form": "so + 形容词/副词 + that + 完整小句", "meaning": "把性质或动作程度与结果连接。", "useWhen": "程度中心是形容词/副词，如so noisy / so quickly；that后保留主谓。"},
+    {"form": "such + (a/an) + 形容词 + 名词 + that + 完整小句", "meaning": "以名词短语为中心说明程度与结果。", "useWhen": "单数可数名词需a/an；复数或不可数不机械加a。"},
+    {"form": "so many/few + 可数复数；so much/little + 不可数名词", "meaning": "加强数量程度，可接结果that小句。", "useWhen": "little表示少量时按数量；such a little hut中的little是小尺寸，不套so little数量规则。"},
+    {"form": "the + 比较级 + 小句，the + 比较级 + 小句", "meaning": "表达两项变化之间所观察或预期的联系。", "useWhen": "两边各有the；方向可一增一减，不重复more+-er；句式本身不验证真实因果。"},
+    {"form": "比较级 + and + 比较级；more and more + 形容词", "meaning": "描述同一性质越来越怎样。", "useWhen": "一个量持续变化，如quieter and quieter；不是与另一个量配对的the…the结构。"}
+  ],
+  "contrasts": [
+    {"label": "同一次巡检：名词宾语的两种位置", "a": {"en": "They put off the inspection.", "zh": "他们推迟了巡检。"}, "b": {"en": "They put the inspection off.", "zh": "他们推迟了巡检。"}, "why": "put off的名词宾语可在后或中间；若用it代替the inspection，则写put it off，不写put off it。"},
+    {"label": "同一只小狗：字面方向与整体搭配", "a": {"en": "They looked after the puppy.", "zh": "他们照顾了小狗。"}, "b": {"en": "They looked at the puppy.", "zh": "他们看着小狗。"}, "why": "look after作为整体是照顾，look at是观看目标；小词改变意义，after照顾义也不任意分开。"},
+    {"label": "同一场排练：排除或添加", "a": {"en": "Everyone arrived except the drummer.", "zh": "除了鼓手没到，其他人都到了。"}, "b": {"en": "Besides the drummer, two singers arrived.", "zh": "除了鼓手，两名歌手也到了。"}, "why": "A将鼓手从到场集合排除；B以鼓手已到场为背景添加歌手。中文都可能说『除了』，参与者事实不同。"},
+    {"label": "同一间排练室：排除成员与局部评价", "a": {"en": "Every area was tidy except the doorway.", "zh": "各处都整洁，门口除外。"}, "b": {"en": "The room was tidy except for the doorway.", "zh": "房间总体整洁，只是门口有例外。"}, "why": "A从房间各区域范围排除门口，B对总体评价补充局部例外；一些语境两种说法可重叠，不将此对比当绝对互斥。"},
+    {"label": "同一份日程：相同与相似", "a": {"en": "Our schedule is the same as theirs.", "zh": "我们的日程和他们的一样。"}, "b": {"en": "Our schedule is similar to theirs.", "zh": "我们的日程和他们的相似。"}, "why": "theirs代替their schedule，两边都是日程；similar to只表示相似，不能自动断言完全相同。"},
+    {"label": "同一场排练：形容词中心与名词中心", "a": {"en": "The rehearsal was so noisy that we closed the window.", "zh": "排练太吵，我们关上了窗。"}, "b": {"en": "It was such a noisy rehearsal that we closed the window.", "zh": "那是一场很吵的排练，我们关上了窗。"}, "why": "A的so修饰noisy；B的such带a noisy rehearsal，单数名词需a。相似结果不能让两种结构随意拼接。"},
+    {"label": "同一间小屋：数量少与体积小", "a": {"en": "There was so little space in the hut that we left the boxes outside.", "zh": "小屋里空间太少，我们把箱子留在外面。"}, "b": {"en": "It was such a little hut that we left the boxes outside.", "zh": "那间小屋太小，我们把箱子留在外面。"}, "why": "A的little是不可数space的数量少；B的little形容hut体积小，由such a名词短语承载。"},
+    {"label": "同一条步道：联系两种变化与只说一种", "a": {"en": "The higher we climbed, the quieter the trail became.", "zh": "我们爬得越高，步道就越安静。"}, "b": {"en": "The trail became quieter and quieter.", "zh": "步道变得越来越安静。"}, "why": "A把高度与安静的两项变化连接；B只说安静程度持续变化。A表达本次观察，不凭语法证明所有高处必定更安静。"},
+    {"label": "同一次分装：一增一减", "a": {"en": "The more carefully we packed, the fewer bottles broke.", "zh": "我们包装得越仔细，破损的瓶子越少。"}, "b": {"en": "The more carefully we packed, the more bottles we could fit in each box.", "zh": "我们包装得越仔细，每箱能装的瓶子越多。"}, "why": "两句都用配对比较，但第二项一减一增；应按实际观察选择，不从the more自动推定两边都增加。"}
+  ],
+  "mistakes": [
+    {"wrong": "Please put off it.", "correct": "Please put it off.", "why": "put off可分，代词宾语it放在两部分之间。"},
+    {"wrong": "They looked the puppy after.", "correct": "They looked after the puppy.", "why": "照顾义look after不可分，不能套可分动词的宾语位置。"},
+    {"wrong": "Everyone arrived besides the drummer.（唯一没到的是鼓手）", "correct": "Everyone arrived except the drummer.", "why": "事实要求排除鼓手，besides是添加路线，不保留原意。"},
+    {"wrong": "Besides for the doorway, the room was tidy.", "correct": "Except for the doorway, the room was tidy.", "why": "这里补充总体评价的局部例外，用except for；besides for不是这条例外结构。"},
+    {"wrong": "Our schedule is same as theirs.", "correct": "Our schedule is the same as theirs.", "why": "本轮the same as结构保留the。"},
+    {"wrong": "Our schedule is the same as them.", "correct": "Our schedule is the same as theirs.", "why": "应比较日程与他们的日程，theirs代替their schedule；them是人，比较类别不一致。"},
+    {"wrong": "Our schedule is similar from theirs.", "correct": "Our schedule is similar to theirs.", "why": "similar的常用比较路线是to，不按different from套介词。"},
+    {"wrong": "It was such noisy rehearsal that we closed the window.", "correct": "It was such a noisy rehearsal that we closed the window.", "why": "单数可数rehearsal在此需要a，such不代替该限定。"},
+    {"wrong": "The rehearsal was such noisy that we closed the window.", "correct": "The rehearsal was so noisy that we closed the window.", "why": "这里直接修饰形容词noisy，选so；such需相应名词短语。"},
+    {"wrong": "The rehearsal was so noisy that closed the window.", "correct": "The rehearsal was so noisy that we closed the window.", "why": "结果小句的动作需要自己的主语，本意是我们关窗，不能省去we。"},
+    {"wrong": "The more higher we climbed, the quieter the trail became.", "correct": "The higher we climbed, the quieter the trail became.", "why": "higher已是比较级，不重复more；两边保留配对结构的the。"},
+    {"wrong": "The higher we climbed, quieter the trail became.", "correct": "The higher we climbed, the quieter the trail became.", "why": "第二条变化也按the + 比较级 + 小句组织，不能省掉这一the。"}
+  ],
+  "practices": [
+    {"id": "linked-vocabulary-v0-recognise", "kind": "recognise", "variant": 0, "prompt": "检查结果：台灯没亮，其他灯都亮了。哪项英语与集合解释都准确？", "options": ["Every lamp worked except the desk lamp. —— 将台灯排除，其他灯工作。", "Every lamp worked except the desk lamp. —— 台灯也被包含在工作的灯里。", "Besides the desk lamp, two wall lights worked. —— 台灯被排除，只添加两盏壁灯。", "Besides the desk lamp, two wall lights worked. —— 这证明除台灯外的所有灯都工作，且台灯没亮。"], "answer": "Every lamp worked except the desk lamp. —— 将台灯排除，其他灯工作。", "explanation": "except从every lamp的工作集合中排除台灯，保留唯一例外。besides添加到场/工作成员，不能因此推出台灯没亮或全部其他灯工作。", "hints": ["先列哪些灯亮、哪些没亮：这次要从整体中减去还是增加一项？", "唯一没亮者用except排除；besides通常表示另外还有。"]},
+    {"id": "linked-vocabulary-v0-repair", "kind": "repair", "variant": 0, "prompt": "it指已提到的徒步活动；你要请求推迟到下个月。只修正代词宾语的位置，不换其他词：Please put off it until next month.", "answer": "Please put it off until next month.", "explanation": "put off表示推迟且可分，代词it位于put与off之间。名词the hike可放后面，但代词不照搬put off the hike的位置。", "hints": ["这个组合是否可分？代词it与完整名词宾语的位置规则相同吗？", "把it移到put与off中间，保留until next month。"]},
+    {"id": "linked-vocabulary-v0-produce", "kind": "produce", "variant": 0, "prompt": "新场景：一次徒步中，你观察到越远离公路，能听到的车声越少；只陈述这次经验。用the…the成对比较，第一小句用we get或we are说明距离，第二小句用we hear；用far from the road / little traffic noise自行生成比较形式。", "answer": "The farther we get from the road, the less traffic noise we hear.", "accepted": ["The further we get from the road, the less traffic noise we hear.", "The farther we are from the road, the less traffic noise we hear.", "The further we are from the road, the less traffic noise we hear."], "explanation": "farther/further表达距离更远，less修饰不可数traffic noise；两边均有the。这里表达给定经验的关系，不能仅凭句式扩展为所有场景的因果规律；本题指定两小句谓语，其他自然写法另待语境核对。", "hints": ["两个量分别是离公路的距离和车声多少：一项变大，另一项怎样变？", "空间距离可用farther/further；不可数noise用less。每边都以the + 比较形式组织，再补指定主语谓语。"]},
+    {"id": "linked-vocabulary-v1-recognise", "kind": "recognise", "variant": 1, "prompt": "两组已经逐项核对，日程完全相同，比较的是日程而不是人员。哪项比较对象、程度与解释都正确？", "options": ["Our schedule is the same as theirs. —— theirs代替their schedule，比较同类对象并表达相同。", "Our schedule is similar to theirs. —— similar证明逐项完全相同，强度与the same相同。", "Our schedule is the same as them. —— them代替他们的日程，不涉及人员。", "Our schedule is different from theirs. —— different在这里表达完全相同。"], "answer": "Our schedule is the same as theirs. —— theirs代替their schedule，比较同类对象并表达相同。", "explanation": "theirs是他们的日程，与our schedule同类；the same as表达给定的完全相同。similar to自然但只说相似，different from自然却说差异。", "hints": ["需要完全相同还是大致相似？另一边应是人员还是他们的日程？", "the same as给相同关系；theirs代替their schedule，them指人。"]},
+    {"id": "linked-vocabulary-v1-repair", "kind": "repair", "variant": 1, "prompt": "只补一个缺少的限定词，保留such和全部其他内容：It was such difficult puzzle that we needed a clue.", "answer": "It was such a difficult puzzle that we needed a clue.", "explanation": "puzzle是单数可数名词，such后面的a difficult puzzle需要a。若改为so difficult则要重组主干，本题只检验这一个缺项。", "hints": ["such后现在是一整个名词短语，puzzle是单数可数还是不可数？", "在such与difficult之间补a，形成such a + 形容词 + 单数名词。"]},
+    {"id": "linked-vocabulary-v1-produce", "kind": "produce", "variant": 1, "prompt": "陌生情境：昨天聚会结束时，除了那位摄影师没到，其他所有人都到场了。用Everyone作主语、turn up表示到场、the photographer作唯一例外，写一句过去回顾，自行选择排除或添加的词。", "answer": "Everyone turned up except the photographer.", "accepted": ["Everyone turned up except for the photographer."], "explanation": "turned up以整体搭配表达过去到场，except排除唯一未到的摄影师；此集合语境except for也可自然。besides会添加摄影师，改变事实。", "hints": ["先把turn up放进过去时间，再核对摄影师是在集合内还是要排除。", "turn的过去式是turned；except（这里也可except for）引出唯一未到者，不用besides添加。"]}
+  ],
+  "transfer": {"prompt": "写4–6句回顾一次真实活动：用一条已核对搭配的多词动词，说明一个参与者例外或新增者，再比较同类对象；可选程度结果或the…the表达观察到的联系。注明事实范围和一个选择理由。检查词典中的宾语位置，不把相似说成相同，也不把语法联系当科学因果；自由表达仍待核对。", "criteria": ["多词动词的意义、可分性与代词位置有依据。", "except/besides保持真实排除或添加关系，局部例外表述不绝对化。", "比较对象同类，相同/相似/不同的强度准确。", "程度结果有完整主谓，成对比较形式和事实范围清楚；读例句不算掌握。"]}
+}

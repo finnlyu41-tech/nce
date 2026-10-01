@@ -1,0 +1,5 @@
+[
+  {"guideId": "adjectives", "unitId": "basic-descriptions", "formIndices": [0, 1], "contrastIndices": [0, 1, 2], "mistakeIndices": [0, 1, 2], "practiceIds": ["basic-descriptions-v0-recognise", "basic-descriptions-v1-repair"], "scope": "名词前、be/系动词后与动作副词的职责有同情境对比；识别look careful意义、单错误输入empty检验形容词不随复数变化。", "remaining": "名词前完整描述和副词动作路线没有各自独立造句；形容词排列、特殊位置、-ed/-ing、程度搭配和全部系动词未全面训练。"},
+  {"guideId": "origin", "unitId": "basic-descriptions", "formIndices": [2, 3, 4], "contrastIndices": [3, 4], "mistakeIndices": [3, 4, 5], "practiceIds": ["basic-descriptions-v0-repair", "basic-descriptions-v1-produce"], "scope": "be from/come from两种主干与地名/形容词对比，does后come实际改错并在展会新情境独立输入来源问题；不凭from推断全部身份。", "remaining": "be from路线有示范尚无独立输入；国家/国籍名称、身份与居住/出生地的完整叙事、多义come from未穷尽。"},
+  {"guideId": "distance", "unitId": "basic-descriptions", "formIndices": [5, 6, 7], "contrastIndices": [5, 6, 7], "mistakeIndices": [6, 7], "practiceIds": ["basic-descriptions-v0-produce", "basic-descriptions-v1-recognise"], "scope": "how far空间问题在新地点造句，识别as far as I know的知识范围；数字from/away、距离/耗时及空间终点/认知范围均有对照。", "remaining": "数字距离回答、away省略参照和walk as far as仅介绍未分别输入；长度/耗时全部问法、相对far/near与惯用程度表达未穷尽。"}
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "guideId": "verb-review",
+    "unitId": "structure-rewrite",
+    "formIndices": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      9
+    ],
+    "contrastIndices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      8
+    ],
+    "mistakeIndices": [
+      0,
+      1,
+      2,
+      3,
+      8,
+      9
+    ],
+    "practiceIds": [
+      "structure-rewrite-v0-recognise",
+      "structure-rewrite-v0-repair",
+      "structure-rewrite-v0-produce",
+      "structure-rewrite-v1-repair",
+      "structure-rewrite-v1-produce"
+    ],
+    "scope": "时间参照、过程/完成、主动/被动、谓语/非谓语有形式与同语境对照；题目实际组合过去完成被动、动词补语被动、未来完成被动与先前完成被动不定式。",
+    "remaining": "持续体与状态动词的判断、共享分词恢复及多层从句谓语链主要教学；六题没有独立要求所有时态及持续体的自由生成，形式匹配不能替代自己解释四步。"
+  },
+  {
+    "guideId": "rewrite",
+    "unitId": "structure-rewrite",
+    "formIndices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "contrastIndices": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "mistakeIndices": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "practiceIds": [
+      "structure-rewrite-v0-recognise",
+      "structure-rewrite-v0-produce",
+      "structure-rewrite-v1-recognise",
+      "structure-rewrite-v1-repair",
+      "structure-rewrite-v1-produce"
+    ],
+    "scope": "参与者、时间、主被动关系、肯否、程度、来源与事实关系均有可定位对照和错例；真实题检验记录来源、零个范围、指定参与者、舒适程度及否定指示，多维组合而非只贴标签。",
+    "remaining": "条件与可能性、让步名词化、持续过程/完成互检及多来源转述未由本组六题全面输入；开放迁移用标准另评，不把受限参考答案视作任意自然英语的完整自动判定。"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "guideId": "phrasal-verbs",
+    "unitId": "linked-vocabulary",
+    "formIndices": [
+      0,
+      1
+    ],
+    "contrastIndices": [
+      0,
+      1
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "linked-vocabulary-v0-repair",
+      "linked-vocabulary-v1-produce"
+    ],
+    "scope": "整体搭配、可分名词/代词位置、不可分及不及物边界有说明；put it off实际改错，陌生聚会中输入turned up到场义。",
+    "remaining": "look after不可分及更多词义、动词+介词/小品词分类仅介绍；多义、重音、语体和动词特有补足结构需逐短语继续训练。"
+  },
+  {
+    "guideId": "except",
+    "unitId": "linked-vocabulary",
+    "formIndices": [
+      2,
+      3,
+      4
+    ],
+    "contrastIndices": [
+      2,
+      3
+    ],
+    "mistakeIndices": [
+      2,
+      3
+    ],
+    "practiceIds": [
+      "linked-vocabulary-v0-recognise",
+      "linked-vocabulary-v1-produce"
+    ],
+    "scope": "集合排除与添加由实际识别检验，新聚会例外用except独立输入，并接受该语境except for；总体评价局部例外有对照。",
+    "remaining": "besides添加、局部except for尚无各自独立输入；except that/when、but/nothing but、否定范围与复杂集合未穷尽。"
+  },
+  {
+    "guideId": "same-different",
+    "unitId": "linked-vocabulary",
+    "formIndices": [
+      5,
+      6
+    ],
+    "contrastIndices": [
+      4
+    ],
+    "mistakeIndices": [
+      4,
+      5,
+      6
+    ],
+    "practiceIds": [
+      "linked-vocabulary-v1-recognise"
+    ],
+    "scope": "相同/相似/不同及同类比较对象有形式与对照；日程识别题实际检查the same as theirs与相似的程度差异，不否定自然地区用法。",
+    "remaining": "仅有识别，没有该guide专门改错或独立造句；different from/to/than语境、代词一致、多维比较与same的全部搭配未全面训练。"
+  },
+  {
+    "guideId": "so-such",
+    "unitId": "linked-vocabulary",
+    "formIndices": [
+      7,
+      8,
+      9
+    ],
+    "contrastIndices": [
+      5,
+      6
+    ],
+    "mistakeIndices": [
+      7,
+      8,
+      9
+    ],
+    "practiceIds": [
+      "linked-vocabulary-v1-repair"
+    ],
+    "scope": "形容词/副词中心与名词短语、数量little与尺寸little有对照；新puzzle改错实际输入such a单数名词缺项。",
+    "remaining": "本guide仅修复单数名词限定，尚无独立程度结果造句；so副词、数量分支、复数/不可数、无that用途和倒装未全面训练。"
+  },
+  {
+    "guideId": "double-comparison",
+    "unitId": "linked-vocabulary",
+    "formIndices": [
+      10,
+      11
+    ],
+    "contrastIndices": [
+      7,
+      8
+    ],
+    "mistakeIndices": [
+      10,
+      11
+    ],
+    "practiceIds": [
+      "linked-vocabulary-v0-produce"
+    ],
+    "scope": "两项同步变化、一增一减与单项越来越有对照；新徒步经验限定we get/are与we hear，自行生成farther/further与less配对，并说明句式不验证因果。",
+    "remaining": "成对比较有一处独立输入，其它谓语时态、省略The sooner the better、多变量联系与渐变结构尚未分别训练；真实关联需证据核对。"
+  }
+]

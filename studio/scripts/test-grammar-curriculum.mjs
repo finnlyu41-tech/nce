@@ -36,7 +36,7 @@ const pristine=JSON.stringify(model.initial);
 const delayed=(record,at=now+30*day)=>progress.delayedGrammarEvidence(record,at);
 const status=(record,at=now+30*day)=>progress.grammarProgressStatus(record,at);
 
-assert.equal(units.length,18,'This delivery requires the original eight, five B1 and five registered clause units');
+assert.equal(units.length,28,'This delivery requires the original eight, five B1, five clause and ten remaining registered units');
 assert.equal(new Set(ids(units)).size,units.length);
 assert.deepEqual(stages.map(stage=>stage.id),['foundation','time','meaning','extension']);
 const stagedGuides=stages.flatMap(stage=>stage.guideIds);

@@ -6,12 +6,13 @@ import reported from './data/grammar-curriculum/depth-b1/reported.json';
 import complements from './data/grammar-curriculum/depth-b1/complements.json';
 import negative from './data/grammar-curriculum/depth-b1/negative.json';
 import {grammarClauseUnits} from './grammar-curriculum-clauses';
+import {grammarRemainingUnits} from './grammar-curriculum-remaining';
 import {grammarEntries,grammarGuides,grammarGuidesFor,type GrammarEntry} from './textbook-grammar';
 import type {NceBookId} from './model';
 import type {GrammarUnit,GrammarStage,GrammarPurpose,GrammarStageId} from './grammar-curriculum-types';
 
 export const grammarCurriculumVersion=1;
-export const grammarUnits=[...core,...extensions,timeline,passive,reported,complements,negative,...grammarClauseUnits].sort((a,b)=>a.order-b.order) as GrammarUnit[];
+export const grammarUnits=[...core,...extensions,timeline,passive,reported,complements,negative,...grammarClauseUnits,...grammarRemainingUnits].sort((a,b)=>a.order-b.order) as GrammarUnit[];
 export const grammarPurposes:GrammarPurpose[]=[
  {id:'describe',title:'介绍与描述',context:'身份、状态、环境和日常生活',ieltsUse:'口语介绍熟悉的人和地点；写作描述对象或现象'},
  {id:'ask',title:'询问信息',context:'问清事实、时间、地点和能力',ieltsUse:'口语交流与澄清信息'},

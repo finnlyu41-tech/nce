@@ -1,0 +1,60 @@
+{
+  "id": "reference-ownership",
+  "title": "指代、归属与拥有",
+  "stageId": "foundation",
+  "order": 19,
+  "prerequisites": ["sentence-core", "noun-reference"],
+  "goal": "把谁做事、动作涉及谁、东西属于谁分清，再选代词形式和 have / be 的结构。",
+  "guideIds": ["pronouns", "possession", "have"],
+  "purposeIds": ["describe", "ask"],
+  "explanation": [
+    "先确定代词指谁，再看它在句子里做什么。主语用 I/he/she/we/they，动词宾语和介词后用 me/him/her/us/them；you 和 it 的两种形式相同。代词不自动指最近的名字：两个参与者都可能符合时，重复姓名往往比猜 he/she 更清楚。",
+    "主语和宾语是同一个参与者时，某些动作要用 myself/yourself/himself/herself/itself/ourselves/yourselves/themselves。例如她伤到的是自己，hurt herself 和 hurt her 的指向不同。by herself 常表示独自或没有别人帮助；She herself… 的 herself 是强调，并不充当动作宾语。不是句里出现某人就必须用反身，也不把普通主语 I 换成 myself。",
+    "my/your/his/her/its/our/their 放在名词前说明归属；mine/yours/his/hers/ours/theirs 代替整个所属名词短语，后面不再接名词，也不加撇号。名词所有格的单数常加 's，规则复数已以 s 结尾时在末尾加撇号；children 这类不以 s 结尾的复数仍用 's。Whose…? 询问归属，who's 通常是 who is 或 who has 的缩写。",
+    "并列名字的所有格能改变归属：Rosa and Eli's bicycle 在通常语境中指两人共有的一辆；Rosa's and Eli's bicycles 则指各自的车。还要核对 bicycle/bicycles 与真实物品数量，不能只挪撇号。's 能表达关系或所属，不是每次都代表法律意义的所有权。",
+    "have + 名词可以表示拥有，也可以是 have a rest 等活动搭配；完成时里的 have/has/had 则后接过去分词，为时态服务。普通拥有常问 Do/Does…have…?，普通过去动作问 Did…have…?。have got 表示当前拥有时问 Have/Has…got…?，不能把 does 和 has got 拼起来。过去拥有通常用 had，而非机械套 had got；get 的过去完成时 had got 是另一种时间意义。",
+    "be 说明身份或状态，have 说明拥有或相关活动，不能拿 is 直接替代 has。She is a photographer 与 She has a camera 说的事情不同。本轮检验有限指代和所属、当前 have got 的问法与完成助动词识别；复杂歧义、所有格习惯搭配和 have 的全部用途没有逐项训练。开放描述需要按真实参与者再核对，不以参考相似度断言掌握。"
+  ],
+  "forms": [
+    {"form": "I/he/she/we/they + 谓语；动词/介词 + me/him/her/us/them", "meaning": "同一参与者作主语或宾语时使用不同人称形式。", "useWhen": "先明确指代对象，再看角色；you/it 不因主宾位置变形。"},
+    {"form": "主语 + 动作 + 与主语一致的反身代词", "meaning": "该动作的宾语与主语是同一参与者。", "useWhen": "如 hurt herself；不能因距离近就把指向另一个人的 her 改成 herself。"},
+    {"form": "by + myself/herself/ourselves…；主语 + 强调反身代词 + 谓语", "meaning": "表示独自或强调亲自做事。", "useWhen": "区分动作宾语和附加信息；反身代词不能独立代替普通主语。"},
+    {"form": "my/her/our… + 名词；mine/hers/ours… 单独使用", "meaning": "前者限定所属名词，后者代替整个所属名词短语。", "useWhen": "如 our tent / ours；his 两种角色形式相同，独立所有代词不写多余撇号。"},
+    {"form": "单数名词 's；以 s 结尾的规则复数名词 '；children's 等不规则复数", "meaning": "表达所属或关系，并保留拥有者的数量。", "useWhen": "先分清拥有者是一个还是多个；不把复数 -s 与所属标记混为一谈。"},
+    {"form": "A and B's + 共有物；A's and B's + 各自的物品", "meaning": "区别共同归属和分别归属。", "useWhen": "核对共有/各自的事实及物品的单复数，不只移动撇号。"},
+    {"form": "主语 + have/has/had + 名词；Do/Does/Did + 主语 + have…?", "meaning": "have 作实义动词表示拥有或活动。", "useWhen": "does/did 后用原形 have；be 的身份状态句使用自己的问法。"},
+    {"form": "主语 + have/has got + 名词；Have/Has + 主语 + got…?", "meaning": "问或陈述当前拥有。", "useWhen": "本轮限定拥有义，不套用到过去拥有或每种 have 活动；不另加 do/does。"},
+    {"form": "主语 + have/has/had + 过去分词", "meaning": "have 在完成结构中承担助动词工作。", "useWhen": "如 has checked，实义动作是 check；先修的完成时间关系继续适用。"}
+  ],
+  "contrasts": [
+    {"label": "同一次交接：谁等谁", "a": {"en": "We waited for them outside the workshop.", "zh": "我们在工作室外等他们。"}, "b": {"en": "They waited for us outside the workshop.", "zh": "他们在工作室外等我们。"}, "why": "we/they 是发出等待动作的主语；介词 for 后的 them/us 是等候对象。交换形式也交换参与者角色。"},
+    {"label": "同一次划伤：自己还是另一人", "a": {"en": "Mina scratched herself while moving the frame.", "zh": "Mina 搬相框时划伤了自己。"}, "b": {"en": "Mina scratched her while moving the frame.", "zh": "Mina 搬相框时划伤了她。"}, "why": "A 的动作接受者就是 Mina；B 的 her 在通常语境中指另一位女性，需前文交代，不自动等于 Mina。"},
+    {"label": "同一次整理：对象还是独自做", "a": {"en": "Mina prepared herself for the interview.", "zh": "Mina 为面试作好了自身准备。"}, "b": {"en": "Mina prepared the display by herself.", "zh": "Mina 独自准备了展台。"}, "why": "A 的 herself 是 prepare 的宾语；B 的宾语是 the display，by herself 补充谁帮忙的信息。"},
+    {"label": "同一个帐篷：保留还是省去名词", "a": {"en": "That is our tent.", "zh": "那是我们的帐篷。"}, "b": {"en": "That tent is ours.", "zh": "那个帐篷是我们的。"}, "why": "A 的 our 必须带 tent；B 的 ours 已代替 our tent。两句可指同一归属，但后面有没有名词决定形式。"},
+    {"label": "同一对骑行伙伴：共有还是各自", "a": {"en": "Rosa and Eli's bicycle is in the shed.", "zh": "Rosa 和 Eli 共有的自行车在棚里。"}, "b": {"en": "Rosa's and Eli's bicycles are in the shed.", "zh": "Rosa 的和 Eli 的自行车都在棚里。"}, "why": "A 的一个所属标记与单数 bicycle 通常表示共有一辆；B 对两位拥有者分别标记，复数 bicycles 与 are 对应各自的车。"},
+    {"label": "同一个工匠：身份与拥有", "a": {"en": "The maker is a photographer.", "zh": "这位制作者是摄影师。"}, "b": {"en": "The maker has a camera.", "zh": "这位制作者有一台相机。"}, "why": "is 联系身份；has 说明拥有。拥有相机并不推出职业，身份也不是拥有句。"},
+    {"label": "同一把梯子：两种当前问法", "a": {"en": "Does the workshop have a ladder?", "zh": "工作室有梯子吗？"}, "b": {"en": "Has the workshop got a ladder?", "zh": "工作室有梯子吗？"}, "why": "A 用 does + have，B 用 has + got。当前拥有可以两路表达，但不能拼成 Does…has got。"},
+    {"label": "同一次休息：过去事件与完成问法", "a": {"en": "Did Lena have a break at ten?", "zh": "Lena 十点休息了吗？"}, "b": {"en": "Has Lena had a break yet?", "zh": "Lena 到现在休息过了吗？"}, "why": "A 的 did 把普通活动放在十点这个过去时间，have 是原形；B 的 has 是完成助动词，had 是活动 have 的过去分词。不是看到 have 就沿用同一问法。"}
+  ],
+  "mistakes": [
+    {"wrong": "The guide walked with we.", "correct": "The guide walked with us.", "why": "with 后是介词宾语，用 us，不用主语形式 we。"},
+    {"wrong": "Mina scratched her.（实际划伤的是 Mina 自己）", "correct": "Mina scratched herself.", "why": "宾语与主语是同一人，使用反身代词；her 通常另有所指。"},
+    {"wrong": "Myself arranged the display.", "correct": "I arranged the display myself.", "why": "普通主语用 I；myself 可作亲自做事的附加强调。"},
+    {"wrong": "That is ours tent.", "correct": "That is our tent.", "why": "名词 tent 前用限定词 our，ours 不再直接带名词。"},
+    {"wrong": "The blue helmet is her.", "correct": "The blue helmet is hers.", "why": "这里代替 her helmet，用独立所有代词 hers。"},
+    {"wrong": "These badges are our's.", "correct": "These badges are ours.", "why": "独立所有代词 ours 本身已表归属，不写撇号。"},
+    {"wrong": "Rosa and Eli's bicycles are here.（要明确各有一辆）", "correct": "Rosa's and Eli's bicycles are here.", "why": "分别归属要分别标记；共有语境不能与各自拥有混读。"},
+    {"wrong": "Does the workshop has a ladder?", "correct": "Does the workshop have a ladder?", "why": "does 已处理一般现在时与第三人称，后面保持原形 have。"},
+    {"wrong": "Does the workshop has got a ladder?", "correct": "Has the workshop got a ladder?", "why": "若选择 have got 问法，由 has 提问，不另加 does。"},
+    {"wrong": "She is a camera.（要说她拥有一台）", "correct": "She has a camera.", "why": "is 会陈述她是相机；拥有物品用 has，按原意修正。"}
+  ],
+  "practices": [
+    {"id": "reference-ownership-v0-recognise", "kind": "recognise", "variant": 0, "prompt": "Ava 和我等 Leon 与 Ruth，不是他们等我们。选择代词形式、参与者角色和理由都正确的一项。", "options": ["We waited for them. —— we 发出等待动作，them 是 for 后的等候对象。", "They waited for us. —— Ava 和我发出等待动作，Leon 与 Ruth 是等候对象。", "We waited for they. —— for 后仍用主格来保持指代。", "Us waited for them. —— 动作发出者也用宾格。"], "answer": "We waited for them. —— we 发出等待动作，them 是 for 后的等候对象。", "explanation": "说话者和 Ava 合为 we；Leon 与 Ruth 合为 them，位于 for 后。第二项英文自然，但颠倒了这个场景的角色。", "hints": ["先画出谁在等、被等的是谁，再看 for 后的位置。", "动作发出者用 we；介词后的对象用 them。"]},
+    {"id": "reference-ownership-v0-repair", "kind": "repair", "variant": 0, "prompt": "蓝色头盔属于 Noor。只修正一个代词形式，保留其他词：The blue helmet is her.", "answer": "The blue helmet is hers.", "explanation": "这里不再接 helmet，要用独立所有代词 hers 代替 her helmet。her 可以作宾格或名词前的限定词，但不承担这个独立所属角色。", "hints": ["is 后面要代替『她的头盔』整组，还是还要再带一个名词？", "名词前用 her；独立代替所属名词短语用 hers。"]},
+    {"id": "reference-ownership-v0-produce", "kind": "produce", "variant": 0, "prompt": "陌生情境：你要参加救援演练，想问救援队目前是否有备用对讲机。用 have got 问法及 the rescue team / a spare radio 造一个完整问题；本题把救援队作为一个单数组织来问，自行确定助动词形式与位置。", "answer": "Has the rescue team got a spare radio?", "explanation": "本题把 the rescue team 作为一个单数组织来问，用 has；当前拥有的 have got 问法把 has 提前。Do…have 也能询问拥有，但本题指定练习另一条结构。", "hints": ["本题指定 got 这条问法，不另加 do/does；把这里的救援队看作一个组织。", "将 has 放在主语前，再接 got + 备用物品，组成疑问。"]},
+    {"id": "reference-ownership-v1-recognise", "kind": "recognise", "variant": 1, "prompt": "要问 Malik 到现在是否检查完阀门。哪一项把 have 的角色与这层时间意义都说明正确？", "options": ["Has Malik checked the valves? —— has 是完成助动词，checked 表达检查动作，问到目前的完成情况。", "Has Malik checked the valves? —— has 表示 Malik 拥有，checked 是拥有的物品。", "Does Malik have the valves? —— do + have 表示到现在检查已完成。", "Did Malik check the valves at noon? —— did 把提问限定为与现在有联系的完成时。"], "answer": "Has Malik checked the valves? —— has 是完成助动词，checked 表达检查动作，问到目前的完成情况。", "explanation": "has + checked 构成现在完成时；has 在这里不是拥有义。does…have 问的是拥有，did…at noon 问过去指定时间的动作，不能偷换任务。", "hints": ["先看 has 后面是名词还是动作的过去分词，再看参照点。", "checked 是 check 的过去分词；has 为完成时服务，不把检查改成拥有。"]},
+    {"id": "reference-ownership-v1-repair", "kind": "repair", "variant": 1, "prompt": "搬支架时划伤的是 Tessa 自己，不是另一人。只换宾语代词：Tessa cut her while moving the stand.", "answer": "Tessa cut herself while moving the stand.", "explanation": "动作发出者和被划伤者都是 Tessa，用 herself。her 会在通常语境中指另一个人；本题依据事实修正，不是最近名词机械匹配。", "hints": ["把做动作和接受动作的人分别写出来，是否是同一个？", "主语 Tessa 与宾语同一人，女性单数反身形式是 herself。"]},
+    {"id": "reference-ownership-v1-produce", "kind": "produce", "variant": 1, "prompt": "新场景：Theo 与 Priya 共同使用且共同拥有一间工作室；它在我们的工作室对面。用 Theo and Priya / studio / be opposite，明确共有关系；用独立所有代词代替 our studio，自行确定所属写法与be形式，造一个句子。", "answer": "Theo and Priya's studio is opposite ours.", "explanation": "最后一个名字后的 's 与单数 studio 表达这里明确的共有关系；ours 代替 our studio。分别所有的两间工作室则是另一层事实，不应套用同一所属写法。", "hints": ["要保留『共同一间』和『我们的那间』，两处名词短语怎样避免歧义？", "共有的一间写 Theo and Priya's studio，用 is；opposite 后用独立所有代词 ours。"]}
+  ],
+  "transfer": {"prompt": "描述一次真实借用或协作：谁递给谁、东西属于谁、对方现在有什么可借。写 4–6 句，至少一处明确主宾格、一处独立所有代词，再选 have 或 have got 问当前拥有。若两个人都可能被代词指到，直接写名字。此表达保存为待核对，不凭读过例句计掌握。", "criteria": ["代词指向明确，主宾格与实际角色一致。", "独立所有代词不再带名词，共有或各自归属与事实一致。", "have / be 职责明确，所选拥有问法内部不混搭。", "说明一次选择理由；自己的表达仍需按语境核对。"]}
+}

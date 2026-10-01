@@ -1,0 +1,134 @@
+[
+  {
+    "guideId": "object-to",
+    "unitId": "requests-nonfinite",
+    "formIndices": [
+      0,
+      1,
+      2
+    ],
+    "contrastIndices": [
+      0,
+      1
+    ],
+    "mistakeIndices": [
+      0,
+      1,
+      2
+    ],
+    "practiceIds": [
+      "requests-nonfinite-v0-recognise"
+    ],
+    "scope": "形式、宾语的动作执行者、请求与结果边界、not to 与 didn't ask 的范围均可定位；认知题实际辨析请求对象与动作否定。",
+    "remaining": "本组六题未独立要求 ask/tell/want + 人 + to do 的肯定、否定造句；宾格及具体动词搭配仅教学展示，不把一次识别算成自由运用。"
+  },
+  {
+    "guideId": "nonfinite",
+    "unitId": "requests-nonfinite",
+    "formIndices": [
+      3,
+      4,
+      8,
+      9,
+      11
+    ],
+    "contrastIndices": [
+      2,
+      3,
+      6
+    ],
+    "mistakeIndices": [
+      3,
+      4,
+      7,
+      9
+    ],
+    "practiceIds": [
+      "requests-nonfinite-v0-repair",
+      "requests-nonfinite-v0-produce",
+      "requests-nonfinite-v1-repair"
+    ],
+    "scope": "主句有限谓语、非谓语位置与相对时间有形式、对比和常错；题目实际检验先完成背景及共享主体。",
+    "remaining": "to have done 相对于未来参照点、不同动词或介词搭配、复杂并列及从句中的谓语链尚无本组独立输入；不定式完成形式未被六题全面检验。"
+  },
+  {
+    "guideId": "nonfinite-passive",
+    "unitId": "requests-nonfinite",
+    "formIndices": [
+      5,
+      6,
+      7,
+      9,
+      12
+    ],
+    "contrastIndices": [
+      4,
+      5,
+      6,
+      11
+    ],
+    "mistakeIndices": [
+      5,
+      6,
+      7,
+      12
+    ],
+    "practiceIds": [
+      "requests-nonfinite-v0-repair",
+      "requests-nonfinite-v1-produce"
+    ],
+    "scope": "to be done、being done、to have been done 与 having been done 的承受者及相对时间有可定位证据；改错与陌生独立主格造句实际使用先完成被动背景。",
+    "remaining": "to be done、being done、to have been done 的独立输入仍需补；本轮完成被动背景表现不能概括为所有非谓语被动均会用。"
+  },
+  {
+    "guideId": "participle",
+    "unitId": "requests-nonfinite",
+    "formIndices": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "contrastIndices": [
+      6,
+      7,
+      8
+    ],
+    "mistakeIndices": [
+      7,
+      8,
+      9
+    ],
+    "practiceIds": [
+      "requests-nonfinite-v0-repair",
+      "requests-nonfinite-v0-produce",
+      "requests-nonfinite-v1-repair"
+    ],
+    "scope": "名词后主动/被动分词与共享主体背景有对照；题目检验先完成分词的形式、主体归属和一个真实悬垂修正。",
+    "remaining": "名词后 doing/done 的独立缩写题、同时时间/条件/结果的多种背景、词汇化分词和非及物过去分词未被独立输入检验；不称全面覆盖分词。"
+  },
+  {
+    "guideId": "absolute",
+    "unitId": "requests-nonfinite",
+    "formIndices": [
+      12,
+      13,
+      14
+    ],
+    "contrastIndices": [
+      8,
+      9,
+      10
+    ],
+    "mistakeIndices": [
+      10,
+      11
+    ],
+    "practiceIds": [
+      "requests-nonfinite-v1-recognise",
+      "requests-nonfinite-v1-produce"
+    ],
+    "scope": "显式背景主体、with 背景及条件性独立主格都有定位；两题实际识别不同主语与已给先后，并生成陌生的先完成被动独立主格。",
+    "remaining": "with 背景及 Space permitting 类型仅教学，未独立输入；原因/条件/伴随的选择须更多上下文练习，不能由一种 after 恢复或一个参考判断全结构掌握。"
+  }
+]

@@ -1,0 +1,73 @@
+[
+  {
+    "guideId": "used-to",
+    "unitId": "habit-change",
+    "formIndices": [
+      0,
+      1,
+      2
+    ],
+    "contrastIndices": [
+      0,
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "habit-change-v0-recognise",
+      "habit-change-v0-produce",
+      "habit-change-v1-repair"
+    ],
+    "scope": "比较 used to 旧习惯/状态和已经适应，给出建立过去背景后的 would 反复动作；识别夜班变化，在新住处情境中产生旧状态与现在事实，并修正否定后动作原形。",
+    "remaining": "used to 疑问和 would 旧习惯只介绍，未逐项独立输入检验；否定/应答的变化暗示、书写变体及 would 其他功能未穷尽，不把单纯状态与反复动作混同。"
+  },
+  {
+    "guideId": "be-used-to",
+    "unitId": "habit-change",
+    "formIndices": [
+      3,
+      4,
+      5
+    ],
+    "contrastIndices": [
+      0,
+      1,
+      2
+    ],
+    "mistakeIndices": [
+      2,
+      3,
+      4
+    ],
+    "practiceIds": [
+      "habit-change-v0-recognise",
+      "habit-change-v0-repair"
+    ],
+    "scope": "讲解 be used to 已习惯、get used to 适应过程与被用来做的用途不定式；同一工作背景中识别已适应意义，并实际修正 carrying 补足语。",
+    "remaining": "get used to 过程、名词/代词补足语、不同时态及工具用途已有可定位形式/对比/错例，但未逐项独立输入测试；不概括为所有 be used to 后都要 -ing。"
+  },
+  {
+    "guideId": "always-continuous",
+    "unitId": "habit-change",
+    "formIndices": [
+      6
+    ],
+    "contrastIndices": [
+      5,
+      6
+    ],
+    "mistakeIndices": [
+      5,
+      6
+    ],
+    "practiceIds": [
+      "habit-change-v1-recognise",
+      "habit-change-v1-produce"
+    ],
+    "scope": "用同一借笔记行为比较频率与态度，并给出搬运中的抱怨/赞赏；识别感谢语境的 is always lending，在新的剧场留座情境中独立产生欣赏式反复行为句。",
+    "remaining": "过去 always 进行、其他反复副词及语调差异仅说明边界，未逐项独立输入检验；不将进行时固定为负面，不用固定频率阈值或认为活动必须不间断。"
+  }
+]

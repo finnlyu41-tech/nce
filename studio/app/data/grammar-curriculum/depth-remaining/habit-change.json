@@ -1,0 +1,301 @@
+{
+  "id": "habit-change",
+  "title": "旧习惯、习惯于与说话者评价",
+  "stageId": "time",
+  "order": 23,
+  "prerequisites": [
+    "past-background",
+    "verb-complements"
+  ],
+  "purposeIds": [
+    "describe",
+    "story",
+    "reason"
+  ],
+  "guideIds": [
+    "used-to",
+    "be-used-to",
+    "always-continuous"
+  ],
+  "goal": "把过去常做或曾有的状态、如今习惯于的情况，以及对反复行为的评价分开表达。",
+  "explanation": [
+    "used to + 动词原形回顾过去的反复动作或较稳定的状态，通常让读者理解现在已经不同。它不把一次单独事件变成旧习惯。若只讲某天发生一次的事，用适合该事件的过去形式；一般过去时也能讲旧习惯，只是改变的意味往往不如 used to 明显。",
+    "used to 可以接 live、own 等状态动词。would 也可描写过去反复动作，但需要已经建立的过去背景，常用于叙事；它通常不直接替代 used to 来说一个单纯过去状态。本轮给出动作的并列对比，不将 would 的条件、意愿等其他功能混进旧习惯判断。",
+    "be used to + 名词或 -ing 说已经习惯某种情况；get used to 说逐渐适应。这里的 to 是介词。be 可以随时间变化，例如 was used to 或 will be used to，因此『习惯于』不等于只能说现在，也不说明从前已停止做。",
+    "工具被用来做什么是另一种结构：be used to + 动词原形，是 use 的被动和目的不定式，例如手推车被用来搬箱子。不要因看见 be used to 就统一改成 -ing；先看是『习惯于』还是『被用来』。本轮用同一搬运场景把两种意思分开。",
+    "always 配进行时，常把某种反复出现、在说话者眼中有代表性的行为突出出来，能带抱怨，也能带欣赏或惊讶。它不是只有负面态度，也不意味着活动一天二十四小时不间断。态度要结合事实、上下文和语气判断。",
+    "本轮既检验结构，也检验要表达哪一种意思。旧习惯句后的动作保持原形；习惯于后用名词或 -ing；always 进行时保留 be + -ing。开放经历的真实变化和说话者态度仍需核对，不能只因用了某个格式就自动算掌握。"
+  ],
+  "forms": [
+    {
+      "form": "主语 + used to + 动词原形",
+      "meaning": "过去反复做，或过去有某种较稳定状态，通常暗示如今不同。",
+      "useWhen": "不是一次单独事件；动作与状态都可使用，后面的动词不再加过去词尾。"
+    },
+    {
+      "form": "主语 + didn't use to + 原形；Did + 主语 + use to + 原形 …?",
+      "meaning": "否定或询问过去的习惯、状态。",
+      "useWhen": "本轮采用常用书面 did/didn't + use to 路线；did 后的动作也保持原形，不把拼写变体问题与后面动作变形混在一起。"
+    },
+    {
+      "form": "已建立的过去背景 + would + 动词原形",
+      "meaning": "在过去背景中描述反复动作，常有叙事感。",
+      "useWhen": "上下文能定位过去时期；通常不直接替代 used to 表达单纯过去状态，would 其他意义另看语境。"
+    },
+    {
+      "form": "主语 + be used to + 名词 / 代词 / 动词-ing",
+      "meaning": "已经熟悉或习惯某种情况。",
+      "useWhen": "to 是介词；be 随现在、过去或将来变化，不从这个形式推出旧习惯已停止。"
+    },
+    {
+      "form": "主语 + get/be getting used to + 名词 / 动词-ing",
+      "meaning": "逐渐适应某种情况，突出习惯形成的过程。",
+      "useWhen": "想区别『正在适应』与『已习惯』；介词 to 后仍是名词或 -ing，而非随 get 改回原形。"
+    },
+    {
+      "form": "人或物 + be used + to do（use 的被动 + 目的）",
+      "meaning": "被用来执行某个用途或任务。",
+      "useWhen": "如工具的功能说明；这里 to 引出目的原形，不能把所有 be used to 都误认成习惯于。"
+    },
+    {
+      "form": "主语 + am/is/are（或过去 was/were）always + 动词-ing",
+      "meaning": "突出反复、具有代表性的行为及说话者的感受。",
+      "useWhen": "语境可支持抱怨、欣赏或惊讶；be 与主语和时间一致，不将态度固定为负面或理解成不间断行动。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一人夜间打包：旧习惯与已经适应",
+      "a": {
+        "en": "Tess used to pack boxes at night.",
+        "zh": "Tess 以前常在夜里打包箱子。"
+      },
+      "b": {
+        "en": "Tess is used to packing boxes at night.",
+        "zh": "Tess 已经习惯夜里打包箱子了。"
+      },
+      "why": "A 回顾旧习惯，通常暗示如今有变化；B 说这种工作对她已不陌生，不由此宣布她现在停止做。多一个 be，to 的作用和后面形式都改变。"
+    },
+    {
+      "label": "同一工作：已习惯与正在适应",
+      "a": {
+        "en": "Tess is used to packing boxes at night.",
+        "zh": "Tess 已经习惯夜里打包箱子了。"
+      },
+      "b": {
+        "en": "Tess is getting used to packing boxes at night.",
+        "zh": "Tess 正在适应夜里打包箱子。"
+      },
+      "why": "A 是熟悉的状态；B 是适应过程，两句的介词 to 后都用 packing。get 的变化不把后面变回 pack。"
+    },
+    {
+      "label": "同一搬运场景：工具用途与人的习惯",
+      "a": {
+        "en": "The trolley is used to carry boxes.",
+        "zh": "这辆手推车被用来搬箱子。"
+      },
+      "b": {
+        "en": "The porter is used to carrying boxes.",
+        "zh": "搬运工已经习惯搬箱子了。"
+      },
+      "why": "A 是 use 的被动，to carry 说明用途；B 是习惯于，介词 to 后用 carrying。用途结构不只限物品，但在工具说明中很常见；不要一见 be used to 就统一判成习惯。"
+    },
+    {
+      "label": "同一次旧工作背景：两种反复动作表达",
+      "a": {
+        "en": "When I worked at the café, I used to wipe the tables before opening.",
+        "zh": "我以前在咖啡馆工作时，常在开门前擦桌子。"
+      },
+      "b": {
+        "en": "When I worked at the café, I would wipe the tables before opening.",
+        "zh": "我以前在咖啡馆工作时，总会在开门前擦桌子。"
+      },
+      "why": "过去工作背景已清楚，wipe 是反复动作，两句都自然；would 在这个叙事框架中可用。不能只因看到 would 就解释成条件结果。"
+    },
+    {
+      "label": "同一家咖啡馆：状态与反复动作",
+      "a": {
+        "en": "I used to own a small café.",
+        "zh": "我以前有一家小咖啡馆。"
+      },
+      "b": {
+        "en": "I used to open the café at dawn.",
+        "zh": "我以前常在黎明时开咖啡馆的门。"
+      },
+      "why": "used to 两种都能表达。若过去背景已建立，B 的反复开门动作还可用 would 来叙述；A 的单纯拥有状态通常不直接这样替换，不据此概括 would 的全部用法。"
+    },
+    {
+      "label": "同一个借笔记行为：频率与更突出的感受",
+      "a": {
+        "en": "Kai always lends me his notes.",
+        "zh": "Kai 总把他的笔记借给我。"
+      },
+      "b": {
+        "en": "Kai is always lending me his notes.",
+        "zh": "Kai 总是把他的笔记借给我。"
+      },
+      "why": "A 常作频率说明；B 更突出这种反复行为，若上下文是感谢，就可听出欣赏。A 也能随语气带态度，不能把两种形式硬分成『一条毫无感情、一条必然抱怨』。"
+    },
+    {
+      "label": "同一搬箱团队：抱怨与赞赏都可用进行形式",
+      "a": {
+        "en": "Owen is always leaving boxes in the doorway.",
+        "zh": "Owen 老把箱子留在门口。"
+      },
+      "b": {
+        "en": "Kai is always carrying boxes for our team.",
+        "zh": "Kai 总帮我们团队搬箱子。"
+      },
+      "why": "设定 A 的上下文在抱怨通道被挡，B 的上下文在感谢主动帮助；两句都有 always + 进行时，态度由语境给出，不由结构统一决定。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "Tess used to packed boxes at night.",
+      "correct": "Tess used to pack boxes at night.",
+      "why": "旧习惯由 used to 表达，后面的动作是原形 pack，不再用 packed。"
+    },
+    {
+      "wrong": "Mina didn't use to likes loud music.",
+      "correct": "Mina didn't use to like loud music.",
+      "why": "didn't use to 后的动词保持原形 like，不加第三人称单数 s；本例只修动作形式。"
+    },
+    {
+      "wrong": "I'm used to carries fragile boxes.",
+      "correct": "I'm used to carrying fragile boxes.",
+      "why": "本例说已经习惯搬易碎物品的箱子，介词 to 后用 carrying；有限动词 carries 不能在这里承担该补足语。"
+    },
+    {
+      "wrong": "Tess is getting used to packs boxes.",
+      "correct": "Tess is getting used to packing boxes.",
+      "why": "正在适应仍是介词 to + -ing，packs 不是合适补足语；不是 get 出现后就改变 to 的性质。"
+    },
+    {
+      "wrong": "This trolley is use to carry boxes.",
+      "correct": "This trolley is used to carry boxes.",
+      "why": "工具被用来做某事，use 的被动需要过去分词 used；后面目的原形 carry 是合适的，不应机械改成 carrying。"
+    },
+    {
+      "wrong": "Kai always lending me his notes.",
+      "correct": "Kai is always lending me his notes.",
+      "why": "作为完整的现在进行陈述，需要 is + lending；always 不替代 be。"
+    },
+    {
+      "wrong": "The helpers is always finding spare chairs.",
+      "correct": "The helpers are always finding spare chairs.",
+      "why": "helpers 是复数，进行结构用 are；不因 always 表反复就忽略 be 的主谓一致。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "habit-change-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "Tess 以前夜里打包，现在改做白班；她如今已适应白天打包，觉得不陌生。哪项的两个结构与理由同时吻合？句中 at night/ during the day 分别指夜里/白天。",
+      "options": [
+        "Tess is used to packing boxes at night. She used to pack boxes during the day. ——过去夜班习惯；如今已适应白班。",
+        "Tess used to pack boxes at night. She is used to packing boxes during the day. ——过去夜班习惯；如今已适应白班。",
+        "Tess used to packing boxes at night. She is used to packing boxes during the day. ——过去夜班习惯；如今已适应白班。",
+        "Tess used to pack boxes at night. She is used to packing boxes during the day. ——如今夜班已适应；白班属于停止的旧习惯。"
+      ],
+      "answer": "Tess used to pack boxes at night. She is used to packing boxes during the day. ——过去夜班习惯；如今已适应白班。",
+      "explanation": "used to pack 回顾已经改变的夜班习惯；is used to packing 表示如今已熟悉白班工作。把两套结构互换会改变意思；used to packing 缺少 be 时不合旧习惯原形路线；相同正确英文配颠倒的理由也不合语境。",
+      "hints": [
+        "把两条信息分开：哪一条是已经改变的过去工作方式，哪一条是现在觉得熟悉的情况？",
+        "旧习惯是 used to + 原形；习惯于有 be，介词 to 后可接 -ing。"
+      ]
+    },
+    {
+      "id": "habit-change-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "你在说『我已经习惯搬装着易碎物品的箱子』。只改 carries 的形式，保留其余用词：I'm used to carries fragile boxes.",
+      "answer": "I'm used to carrying fragile boxes.",
+      "accepted": [
+        "I am used to carrying fragile boxes."
+      ],
+      "explanation": "这里是习惯于，to 是介词，动作补足语用 carrying；carries 是有限动词形式，不合这个位置。工具被用来搬运可另用 be used to carry，但不是本题已习惯的目标意义。",
+      "hints": [
+        "先用题目的中文意思辨别这是『已习惯』还是『被用来』，再看动作补足语。",
+        "习惯于的介词 to 后用 -ing；carry 的 -ing 要保留 y。"
+      ]
+    },
+    {
+      "id": "habit-change-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：Lea 以前住在一家面包店楼上，现在住在港口附近。用 Lea / live above a bakery / but / she / live near the harbour / now 写一句话；前半句用 used to 回顾过去状态，后半句用一般现在时。可将 harbour 写成美式 harbor，不加其他信息。",
+      "answer": "Lea used to live above a bakery, but she lives near the harbour now.",
+      "accepted": [
+        "Lea used to live above a bakery, but now she lives near the harbour.",
+        "Lea used to live above a bakery, but she now lives near the harbour.",
+        "Lea used to live above a bakery, but she lives near the harbor now.",
+        "Lea used to live above a bakery, but now she lives near the harbor.",
+        "Lea used to live above a bakery, but she now lives near the harbor."
+      ],
+      "explanation": "used to live 回顾已改变的居住状态，live 保持原形；后半句现在的 she 用 lives，now 可自然放在这一分句不同位置。本题指定过去状态与当前事实，不能改成 is used to living 来表示适应。",
+      "hints": [
+        "这里说的是住处发生变化，还是在同一住处逐渐适应？分清过去状态与现在事实。",
+        "过去状态用 used to + 原形；当前 she 的一般现在动作需主谓一致，now 留在现在分句里。"
+      ]
+    },
+    {
+      "id": "habit-change-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "Kai 多次把他自己的笔记借给你，你很感激。选择用 always + 现在进行时突出这个反复行为、且意义理由吻合的一项；lend 指借给别人，borrow 指向别人借。",
+      "options": [
+        "Kai is always borrowing my notes. ——反复把自己的笔记借给我，语境表达欣赏。",
+        "Kai is always lending me his notes. ——Kai 正在逐渐适应借出笔记。",
+        "Kai is always lending me his notes. ——反复把自己的笔记借给我，语境表达欣赏。",
+        "Kai always lending me his notes. ——反复把自己的笔记借给我，语境表达欣赏。"
+      ],
+      "answer": "Kai is always lending me his notes. ——反复把自己的笔记借给我，语境表达欣赏。",
+      "explanation": "is always lending 突出反复帮助，这里明确给出了感谢语境，因而可表达欣赏。borrowing my notes 把借出方向颠倒；把相同英文读成逐渐适应是另一个结构的意思；没有 is 的选项不是完整进行句。一般现在时也能表达这件事，本题指定检验进行形式，不把它泛判成抱怨。",
+      "hints": [
+        "先确认是谁把谁的笔记借给谁，再检查评价是题干给出的感谢，还是你自行套入的抱怨。",
+        "always 的进行陈述仍需 be + -ing；第三人称 Kai 用 is，lending 和 borrowing 的方向不同。"
+      ]
+    },
+    {
+      "id": "habit-change-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "Mina 在回顾过去不喜欢吵闹音乐的状态。只改 likes，保留 didn't use to 和其他词序：Mina didn't use to likes loud music.",
+      "answer": "Mina didn't use to like loud music.",
+      "accepted": [
+        "Mina did not use to like loud music."
+      ],
+      "explanation": "本题常用书面否定结构是 didn't use to + 原形；like 不加 s。否定形式本身不在所有对话里强制推出现在一定相反，实际变化仍需看上下文。",
+      "hints": [
+        "否定框架已经给好，检查最后的动作是否还该随 Mina 加第三人称 s。",
+        "didn't use to 后接动词原形；可把 didn't 展开为 did not，其余结构不变。"
+      ]
+    },
+    {
+      "id": "habit-change-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "新情境：每逢社区剧场活动，邻居总帮我们留座，我们很感激。用 Our neighbours / always / save seats for us 写一句现在进行时，突出反复帮助和欣赏；不加其他信息，neighbours 可写成美式 neighbors。",
+      "answer": "Our neighbours are always saving seats for us.",
+      "accepted": [
+        "Our neighbors are always saving seats for us."
+      ],
+      "explanation": "are always saving 用进行形式突出这种反复帮助；复数 neighbours 用 are，save 的 -ing 是 saving。题干的感谢支持欣赏，并非进行时自身只能表示抱怨或不间断留座。",
+      "hints": [
+        "这是带感谢语境的反复帮助，不是一次单独事件；找出复数主语与要突出的行为。",
+        "复数主语用 are + always + -ing；save 变 -ing 时去掉词尾 e。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "写 5—7 句自己的习惯变化：交代一个已经改变的过去动作或状态、一项已习惯或正在适应的情况，再评价一个反复出现的行为。可用欣赏、惊讶或抱怨，说明真实背景和态度；如用工具用途的 be used to do，要明确区别于人的习惯于。提交现有表达路径后，经历与态度仍待核对。",
+    "criteria": [
+      "used to 与一次事件分开，原形正确，过去背景和真实变化能读懂。",
+      "be/get used to 的状态或过程意义清楚，名词/-ing 补足语合适。",
+      "若出现 be used to do，能说明它是被动用途而非机械改成习惯于。",
+      "always 进行形式完整，反复行为与所表达态度吻合，不一概理解为负面或连续不停。",
+      "开放叙事是自己的新内容；would 的语境及真实变化继续人工核对，不按有限答案自动打分。"
+    ]
+  }
+}

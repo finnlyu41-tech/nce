@@ -1,0 +1,306 @@
+{
+  "id": "basic-descriptions",
+  "title": "性质、来源与距离",
+  "stageId": "foundation",
+  "order": 20,
+  "prerequisites": [
+    "reference-ownership",
+    "comparisons"
+  ],
+  "goal": "选对描述对象、来源问法和距离参照，写出完整句子而不是堆形容词。",
+  "guideIds": [
+    "adjectives",
+    "origin",
+    "distance"
+  ],
+  "purposeIds": [
+    "describe",
+    "ask",
+    "compare"
+  ],
+  "explanation": [
+    "形容词描述人或物的性质，常放在名词前或 be/look/feel 等系动词后。a narrow corridor 中 narrow 给名词加说明；The corridor is narrow 则有主语和谓语，完整陈述它的性质。very 只加强程度，不能代替 is。复数变化通常落在名词或 be 上，形容词不跟着加 -s。",
+    "判断 look 后用形容词还是副词，要先看它做什么。The keeper looks careful 是『看起来谨慎』，careful 说明 keeper；The keeper looks carefully at the panel 是『仔细看面板』，carefully 说明看的方式。不能因为看到 look 就机械改成形容词或副词。本轮介绍一般位置与这项意义区别，alive 等特殊位置的形容词未逐一训练。",
+    "来源可以用 be from，也可以用 come from。Where is Rosa from? 只把 be 提前；Where does Rosa come from? 用 does 提问，come 恢复原形。不能把 are 与 come 无助动词地拼起来。来自国家可以写 from Portugal，相关形容词可以写 Portuguese；两种表达的语法不同，国籍、出生地与现在住处在真实叙述中还要另核对，不凭一个 from 自动推出全部身份。",
+    "问空间距离先写 How far…from…?，给出参照地点。The tower is four kilometres from the harbour 与 The tower is four kilometres away 可以描述同一距离，后句的参照地点需从上下文恢复。通常不写 four kilometres far。How long 问所用时间或物体长度，How far 问距离，回答两公里和十分钟是不同维度。",
+    "as far as 有两种常见视角：walk as far as the checkpoint 表示走到那个范围终点，as far as I know 表示在我所知范围内。后一种限定信息依据，既不是路程，也不是绝对保证。far/near 的相对程度依赖交通和语境；本轮不凭它们换算具体公里数。",
+    "描述实际地点可把性质、来源和距离连起来，但要保持一条句子主干、一套问法与明确参照。有限题目分别检查形容词角色、来源原形和距离/知识范围，不宣称描述词、国家名称或全部距离惯用法已学完。自己的路线或来源信息仍保存为待核对。"
+  ],
+  "forms": [
+    {
+      "form": "限定词 + 形容词 + 名词；主语 + be + 形容词",
+      "meaning": "给名词加性质说明，或完整陈述主语的状态。",
+      "useWhen": "如 a narrow corridor / The corridor is narrow；形容词不随复数名词加-s，be与主语一致。"
+    },
+    {
+      "form": "主语 + look/feel + 形容词；动作动词 + 方式副词",
+      "meaning": "区别主语看起来的性质与动作完成方式。",
+      "useWhen": "先判断 look 是系动词还是观看动作；look carefully at…中的副词说明动作。"
+    },
+    {
+      "form": "主语 + be from + 来源；Where + be + 主语 + from?",
+      "meaning": "说明或询问来自哪里。",
+      "useWhen": "所选主干是 be；只对 be 倒装，不无故加入 come/do。"
+    },
+    {
+      "form": "主语 + come/comes from…；Where + do/does + 主语 + come from?",
+      "meaning": "用实义动词 come 询问或陈述来源。",
+      "useWhen": "does 后用 come 原形；与 be from 是两套内部一致的问法。"
+    },
+    {
+      "form": "主语 + be + 来源/国籍相关形容词；主语 + be from + 地名",
+      "meaning": "用形容词描述相关身份，或用地名说明来源。",
+      "useWhen": "如 Portuguese / from Portugal；真实国籍、出生地和住处需另明确，不靠形式猜身份。"
+    },
+    {
+      "form": "How far + be + 地点 + from + 参照地点?",
+      "meaning": "询问两地点间的空间距离。",
+      "useWhen": "要问距离而非所用时间；保留参照点与主语一致的be。"
+    },
+    {
+      "form": "地点 + be + 数字距离 + from…；地点 + be + 数字距离 + away",
+      "meaning": "给出实际距离，并显式或由语境恢复起点。",
+      "useWhen": "通常不用数字距离+far；away单独出现时读者需知道从哪里算起。"
+    },
+    {
+      "form": "行动 + as far as + 终点；as far as I know + 内容",
+      "meaning": "限定走到的终点，或限定所知信息的范围。",
+      "useWhen": "两者都说范围，但前者空间、后者认知；后者不保证信息绝对准确。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一走廊：名词说明与完整陈述",
+      "a": {
+        "en": "We found a narrow corridor behind the stage.",
+        "zh": "我们在舞台后发现了一条窄走廊。"
+      },
+      "b": {
+        "en": "The corridor behind the stage is narrow.",
+        "zh": "舞台后的那条走廊很窄。"
+      },
+      "why": "A 的 narrow 修饰 corridor；B 的 narrow 跟在 is 后陈述性质。very narrow 也不能独自替代谓语。"
+    },
+    {
+      "label": "同一管理员：看起来如何与如何看",
+      "a": {
+        "en": "The keeper looks careful.",
+        "zh": "这位管理员看起来很谨慎。"
+      },
+      "b": {
+        "en": "The keeper looks carefully at the panel.",
+        "zh": "这位管理员仔细看面板。"
+      },
+      "why": "A 的 looks 联系主语的性质，接 careful；B 的 looks 表示观看，carefully 修饰动作。两句都可用，改形式要按原意。"
+    },
+    {
+      "label": "同一个搁架：单数与复数",
+      "a": {
+        "en": "The shelf is empty.",
+        "zh": "那个搁架是空的。"
+      },
+      "b": {
+        "en": "The shelves are empty.",
+        "zh": "那些搁架是空的。"
+      },
+      "why": "名词 shelf/shelves 与 is/are 变化，形容词 empty 不加-s。"
+    },
+    {
+      "label": "同一位制作者：来源的两套问法",
+      "a": {
+        "en": "Where is Rosa from?",
+        "zh": "Rosa 来自哪里？"
+      },
+      "b": {
+        "en": "Where does Rosa come from?",
+        "zh": "Rosa 来自哪里？"
+      },
+      "why": "A 的谓语是 be，B 的实义动词是 come，由 does 提问。两个问题可有相同回答，但不能混搭助动词。"
+    },
+    {
+      "label": "同一个来源信息：地名与相关形容词",
+      "a": {
+        "en": "The designer is from Portugal.",
+        "zh": "这位设计师来自葡萄牙。"
+      },
+      "b": {
+        "en": "The designer is Portuguese.",
+        "zh": "这位设计师是葡萄牙人。"
+      },
+      "why": "A 在 from 后接地名，B 直接接形容词；身份叙述可相关，但 from 的来源义本身不证明出生地、居住地和国籍完全相同。"
+    },
+    {
+      "label": "同一座塔：把参照点说出或留在语境",
+      "a": {
+        "en": "The tower is four kilometres from the harbour.",
+        "zh": "那座塔离港口四公里。"
+      },
+      "b": {
+        "en": "The tower is four kilometres away.",
+        "zh": "那座塔在四公里之外。"
+      },
+      "why": "A 明示从港口算起；B 的 away 需要前文已有参照。数字距离通常直接跟 from/away，不再加 far。"
+    },
+    {
+      "label": "同一段路：距离与耗时",
+      "a": {
+        "en": "How far is the tower from the harbour?",
+        "zh": "那座塔离港口多远？"
+      },
+      "b": {
+        "en": "How long does it take to reach the tower from the harbour?",
+        "zh": "从港口到那座塔要多久？"
+      },
+      "why": "A 的回答是空间距离；B 的回答是所用时间。速度与交通变化会改变耗时，不能把两者当同一个问题。"
+    },
+    {
+      "label": "同一个检查站：走到哪里与知道多少",
+      "a": {
+        "en": "We walked as far as the checkpoint.",
+        "zh": "我们一直走到了检查站。"
+      },
+      "b": {
+        "en": "As far as I know, the checkpoint is open today.",
+        "zh": "据我所知，检查站今天开放。"
+      },
+      "why": "A 指路程范围的终点；B 限定消息在说话者所知范围内，不给距离，也不作绝对保证。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "The corridor very narrow.",
+      "correct": "The corridor is very narrow.",
+      "why": "性质陈述需要 be；very 只是程度副词，不能充当谓语。"
+    },
+    {
+      "wrong": "The shelves are empties.",
+      "correct": "The shelves are empty.",
+      "why": "这里的 empty 是形容词，不因 shelves 复数而加-s。"
+    },
+    {
+      "wrong": "The keeper looks carefully.（要说看起来谨慎）",
+      "correct": "The keeper looks careful.",
+      "why": "此处 look 表示看起来，careful 陈述主语的性质；动作方式是另一种语境。"
+    },
+    {
+      "wrong": "Where are you come from?",
+      "correct": "Where are you from? / Where do you come from?",
+      "why": "先选 be from 或 come from，保持助动词与实义动词一致，不能混合两套结构。"
+    },
+    {
+      "wrong": "Where does Rosa comes from?",
+      "correct": "Where does Rosa come from?",
+      "why": "does 已承担第三人称与时态，come 保持原形。"
+    },
+    {
+      "wrong": "The designer is from Portuguese.",
+      "correct": "The designer is from Portugal.",
+      "why": "from 后此处需地名 Portugal；Portuguese 是相关形容词或人称名词，不代替国家名。"
+    },
+    {
+      "wrong": "The tower is four kilometres far from the harbour.",
+      "correct": "The tower is four kilometres from the harbour.",
+      "why": "数字已给出距离，通常直接接 from，不写four kilometres far。"
+    },
+    {
+      "wrong": "How long is the tower from the harbour?（要问距离）",
+      "correct": "How far is the tower from the harbour?",
+      "why": "本意是两地距离，不是塔的长度或路程耗时，用How far。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "basic-descriptions-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "要评价巡检员『看起来谨慎』，不是描述她看仪表的方式。选择结构和理由都贴合的一项。",
+      "options": [
+        "The inspector looks careful. —— careful 描述她看起来的性质，look 在此是系动词。",
+        "The inspector looks carefully at the gauge. —— carefully 描述她看起来的性质。",
+        "The inspector is carefully. —— carefully 描述巡检员本人的状态。",
+        "The inspector looks careful at the gauge. —— careful 描述观看动作的方式。"
+      ],
+      "answer": "The inspector looks careful. —— careful 描述她看起来的性质，look 在此是系动词。",
+      "explanation": "任务要陈述人的性质，用looks + careful。looks carefully at…在动作语境中自然，却改变了这里要表达的重点。",
+      "hints": [
+        "这里是『看起来怎样的人』还是『怎样进行观看』？",
+        "look作系动词时，后面的形容词描述主语；观看动作才常用方式副词。"
+      ]
+    },
+    {
+      "id": "basic-descriptions-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "只修正一个动词形式，保留 does 和其他词：Where does Rosa comes from?",
+      "answer": "Where does Rosa come from?",
+      "explanation": "这条路线用does提问，后面come用原形；comes只用于没有does的普通第三人称肯定句。",
+      "hints": [
+        "第三人称标记已经出现在哪个词上？",
+        "does 后保持实义动词原形come，不再加-s。"
+      ]
+    },
+    {
+      "id": "basic-descriptions-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：你想确认天文台离轮渡码头的空间距离，不问交通耗时。用 How far / the observatory / from the ferry terminal，造一个含be的完整问题。",
+      "answer": "How far is the observatory from the ferry terminal?",
+      "explanation": "How far 询问距离；单数observatory用is，from后明确ferry terminal作为参照。How long does it take…是在问另一维度。",
+      "hints": [
+        "先确认想要公里数还是分钟数，再给地点选择be。",
+        "How far 后接is + 单数地点，再用from引出参照点。"
+      ]
+    },
+    {
+      "id": "basic-descriptions-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "没有测量路程；你只掌握消息『在我所知范围内，山坡上的小屋今天有人值守』。哪项意义与理由都正确？",
+      "options": [
+        "As far as I know, the cabin is staffed today. —— 限定知识范围，消息仍可能需要核实。",
+        "As far as I know, the cabin is staffed today. —— 给出小屋离我的具体公里数。",
+        "We walked as far as the cabin. —— 只限定信息来源，不表示走到小屋。",
+        "The cabin is three kilometres away. —— 说明此消息只是据我所知，没有给路程。"
+      ],
+      "answer": "As far as I know, the cabin is staffed today. —— 限定知识范围，消息仍可能需要核实。",
+      "explanation": "as far as I know限定说话者知识范围，不是空间距离或绝对担保。walk as far as…会说明实际到达的范围，数字+away则给距离。",
+      "hints": [
+        "本场景有没有走路或测距？表达限制的是哪类范围？",
+        "I know 说明这里是知识范围；明确终点或数字距离是另外两种表达。"
+      ]
+    },
+    {
+      "id": "basic-descriptions-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "描述多个搁架的状态。只修正形容词形式，保留其他词：The shelves are empties.",
+      "answer": "The shelves are empty.",
+      "explanation": "shelves与are对应复数；形容词empty不随主语加-s。这里empties不是要表达的状态形式。",
+      "hints": [
+        "复数的变化需要落在每一个词上吗？先分名词、be和形容词。",
+        "shelves/are已经体现复数，empty保持形容词原形。"
+      ]
+    },
+    {
+      "id": "basic-descriptions-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "陌生情境：展会来了几位新的餐饮承办人（caterers），你想问他们来自哪里；只练come from路线。用 Where / the new caterers / come from 造一个完整问题，自行选择助动词与语序。",
+      "answer": "Where do the new caterers come from?",
+      "explanation": "复数the new caterers用do，come保持原形。Where are the new caterers from?也自然，但本题明确选择come from路线；不混合两套问法。",
+      "hints": [
+        "选定come这条实义动词路线后，先看问的是一位还是几位参与者。",
+        "复数主语选do，放在主语前；come保持原形，from留在末尾。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "写4–6句介绍真实地点或你认识的人：说明一个性质、问或说一个来源，再问两处间距离或给出带参照点的距离。若只是在转述所知消息，明确表达信息范围。每个问题选定be或do路线，附一句选择理由。自己的描述与事实仍待核对。",
+    "criteria": [
+      "性质说明有完整主干，形容词/副词职责按原意区分。",
+      "来源问法内部一致，地名与相关形容词不混用。",
+      "空间距离与交通耗时区分，参照点明确。",
+      "知识范围不冒充测量或绝对保证；表达保存为待核对。"
+    ]
+  }
+}

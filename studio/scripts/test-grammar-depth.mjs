@@ -60,18 +60,19 @@ for(const name of b1Names){
 assert.equal(curriculum.grammarCurriculumVersion,1,'Adding units does not invalidate original exercise evidence');
 assert.equal(progress.emptyGrammarProgress().version,1);
 for(const unit of originals)assert.equal(progress.grammarProgressKey(unit.id),`grammar-curriculum-v1-${unit.id}`,'Storage namespace is preserved');
-assert.equal(units.length,18);assert.equal(new Set(units.map(unit=>unit.id)).size,18);
+assert.equal(units.length,28);assert.equal(new Set(units.map(unit=>unit.id)).size,28);
 assert.equal(additions.length,5);assert.equal(new Set(additions.map(unit=>unit.id)).size,5);
 assert(additions.every(unit=>!originalUnitIds.includes(unit.id)));
 const clauseUnitIds=['past-background','modal-evidence','relative-reference','hypothetical-condition','information-focus'];
-assert.deepEqual(sorted(units.map(unit=>unit.id)),sorted([...originalUnitIds,...additions.map(unit=>unit.id),...clauseUnitIds]));
+const remainingUnitIds=['reference-ownership','basic-descriptions','giving-directions','time-perspective','habit-change','linked-vocabulary','extended-timeline','duration-perspective','requests-nonfinite','structure-rewrite'];
+assert.deepEqual(sorted(units.map(unit=>unit.id)),sorted([...originalUnitIds,...additions.map(unit=>unit.id),...clauseUnitIds,...remainingUnitIds]));
 for(const unit of [...originals,...additions])assert.deepEqual(curriculum.grammarUnitFor(unit.id),unit,'Catalog registers the actual authored unit');
 assert.equal(additions.flatMap(unit=>unit.guideIds).length,20);
 assert.deepEqual(sorted(additions.flatMap(unit=>unit.guideIds)),sorted(b1Guides));
 assert(b1Guides.every(id=>!originalGuides.has(id)),'B1 addresses previously undelivered concepts');
 const currentGuides=new Set(units.flatMap(unit=>unit.guideIds));
-assert.equal(currentGuides.size,64);assert.equal(units.flatMap(unit=>unit.practices).length,108);
-assert.deepEqual(curriculum.grammarCoverage(),{textbookEntries:276,existingGuides:97,completeUnits:18,deepenedGuides:64});
+assert.equal(currentGuides.size,97);assert.equal(units.flatMap(unit=>unit.practices).length,168);
+assert.deepEqual(curriculum.grammarCoverage(),{textbookEntries:276,existingGuides:97,completeUnits:28,deepenedGuides:97});
 assert.deepEqual(stages.map(stage=>stage.id),['foundation','time','meaning','extension']);
 const stageFor=new Map(stages.flatMap(stage=>stage.guideIds.map(guideId=>[guideId,stage.id])));
 assert.equal(stages.flatMap(stage=>stage.guideIds).length,97);assert.equal(stageFor.size,97);
@@ -128,10 +129,10 @@ for(const concept of plan.concepts){
  for(const id of concept.prerequisites)assert(priorTo(id,group));assert(concept.purposeIds.length&&concept.purposeIds.every(id=>group.purposeIds.includes(id)));
  assert(nonempty(concept.comparison)&&nonempty(concept.scope)&&nonempty(concept.remaining));
  assert.deepEqual(sortSources(concept.sourceEntries),sortSources(sourceEntries(concept.guideId)),`${concept.guideId}: all source entries and 0-based positions are truthful`);
- if(concept.batchId===b1.id||clauseUnitIds.includes(concept.unitId)){assert.equal(concept.status,'implemented');assert(currentGuides.has(concept.guideId))}
- else{assert.equal(concept.status,'planned');assert(!currentGuides.has(concept.guideId));assert.equal(curriculum.grammarUnitFor(concept.unitId),undefined,'Planned units are not presented as delivered content')}
+ assert.equal(concept.status,'implemented');assert(currentGuides.has(concept.guideId));
+ assert(curriculum.grammarUnitFor(concept.unitId)?.guideIds.includes(concept.guideId),'Every covered guide has a real registered unit');
 }
-assert.equal(plan.concepts.filter(concept=>concept.status==='implemented').length,39);assert.equal(plan.concepts.filter(concept=>concept.status==='planned').length,33);
+assert.equal(plan.concepts.filter(concept=>concept.status==='implemented').length,72);assert.equal(plan.concepts.filter(concept=>concept.status==='planned').length,0);
 assert.equal(evidence.length,20);assert.equal(new Set(evidence.map(row=>row.guideId)).size,20);
 for(const row of evidence){
  const unit=curriculum.grammarUnitFor(row.unitId);assert(unit&&unit.guideIds.includes(row.guideId));
@@ -160,13 +161,13 @@ assert.deepEqual(countRows(secondary),{occurrences:77,concepts:45,entries:53});
 assert.deepEqual(countRows(secondary.filter(row=>originalGuides.has(row.guideId))),{occurrences:22,concepts:13,entries:19});
 assert.deepEqual(countRows(secondary.filter(row=>b1Guides.includes(row.guideId))),{occurrences:28,concepts:13,entries:25});
 assert.deepEqual(countRows(secondary.filter(row=>originalGuides.has(row.guideId)||b1Guides.includes(row.guideId))),{occurrences:50,concepts:26,entries:37});
-assert.deepEqual(countRows(secondary.filter(row=>currentGuides.has(row.guideId))),{occurrences:59,concepts:34,entries:42});
-assert.deepEqual(countRows(secondary.filter(row=>!currentGuides.has(row.guideId))),{occurrences:18,concepts:11,entries:16});
-console.log('Depth ledger: exact 72-guide remainder; B1 20 and clauses 19 implemented, 33 planned, four stages and acyclic prerequisites passed.');
-console.log('NCE2 secondary: 77 occurrences / 45 concepts / 53 entries; original + B1 remains 50 / 26 / 37; all registered coverage is 59 / 34 / 42, with 18 / 11 / 16 remaining.');
+assert.deepEqual(countRows(secondary.filter(row=>currentGuides.has(row.guideId))),{occurrences:77,concepts:45,entries:53});
+assert.deepEqual(countRows(secondary.filter(row=>!currentGuides.has(row.guideId))),{occurrences:0,concepts:0,entries:0});
+console.log('Depth ledger: exact 72-guide remainder; B1 20, clauses 19 and remaining 33 implemented, zero planned, four stages and acyclic prerequisites passed.');
+console.log('NCE2 secondary: 77 occurrences / 45 concepts / 53 entries; original + B1 remains 50 / 26 / 37; all registered coverage is 77 / 45 / 53, with 0 / 0 / 0 remaining.');
 
 const allQuestionIds=units.flatMap(unit=>unit.practices.map(practice=>practice.id)),newQuestionIds=new Set();
-assert.equal(new Set(allQuestionIds).size,108,'New practice ids cannot overwrite existing response identities');
+assert.equal(new Set(allQuestionIds).size,168,'New practice ids cannot overwrite existing response identities');
 for(const unit of additions){
  assert(nonempty(unit.title)&&nonempty(unit.goal)&&unit.explanation.length>=2&&unit.explanation.every(nonempty));
  assert(nonempty(unit.transfer.prompt)&&unit.transfer.criteria.length>=3&&unit.transfer.criteria.every(nonempty));
@@ -216,4 +217,4 @@ for(const unit of additions){
 }
 assert.equal(curriculum.searchGrammarUnits({query:'NCE1 NCE2 1'}).length,0);assert.equal(curriculum.searchGrammarUnits({book:'NCE1',query:'NCE2 1'}).length,0);
 const untouched=JSON.stringify(model.initial);for(const unit of units)progress.grammarProgressFor(model.initial,unit);assert.equal(JSON.stringify(model.initial),untouched);
-console.log('Depth curriculum: 18 units / 64 concepts / 108 practices, 30 B1 answer/hint/production contracts, unique React keys, selected-guide callbacks and 348 exact source searches passed.');
+console.log('Depth curriculum: 28 units / 97 concepts / 168 practices, 30 B1 answer/hint/production contracts, unique React keys, selected-guide callbacks and 348 exact source searches passed.');

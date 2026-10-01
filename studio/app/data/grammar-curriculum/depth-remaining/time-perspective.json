@@ -1,0 +1,269 @@
+{
+  "id": "time-perspective",
+  "title": "时间标记与观察基点",
+  "stageId": "time",
+  "order": 22,
+  "prerequisites": [
+    "past-present-perfect",
+    "past-background"
+  ],
+  "purposeIds": [
+    "story",
+    "progress"
+  ],
+  "guideIds": [
+    "already-yet",
+    "ago-before"
+  ],
+  "goal": "用时间标记补充进度和预期，并说明『以前』究竟从现在还是另一个观察点往回算。",
+  "explanation": [
+    "先判断事情做到哪一步，再选标记。already 说在参照时刻之前已经发生，有时带『比预期早』的意味；普通进度询问中的 yet 关心截至现在是否发生，否定中的 not … yet 则说还没有完成，通常仍有期待。",
+    "现在完成时中，already 常在 have/has 与过去分词之间，也可自然放在分句末尾；yet 在本轮的普通疑问和否定里常放句末。Have you already …? 可以带提前完成的惊讶，Have you … yet? 则常是普通进度询问。不是所有 already/yet 都只配现在完成时，标记也不代替动词结构。",
+    "just 与现在完成时搭配时常说刚刚发生，通常放在 have/has 与过去分词之间。本轮介绍它与 already/yet 的差别，但输入检验重点仍是 already/yet。若要给出明确结束的过去时间，应另核对过去时路线，不能只因有『已经』就选现在完成时。",
+    "一段时间 + ago 通常从说话的现在往回算。若今天是周五，two days ago 指周三。本轮用一般过去时定位这样的具体已结束时间；其他过去形式仍要按事件关系判断，ago 不是只能搭一个过去形式的口诀。",
+    "一段时间 + before/earlier 可以从已建立的观察点往回算。本轮重点是过去观察点：周五回忆周三的说法，周三所说的『两天以前』可能是周一，而不是从现在周五倒数两天。转述时要保住日期与参照，不把 ago 换 before 当成脱离语境的机械替词。",
+    "before 也可接一个参照事件，或单独表示以前的经验，例如说某个标志以前见过；它不总表示『从过去基点倒数一段时间』。先给读者一个清楚的基点，再用时距或事件说明先后，开放叙事的日期关系仍待核对。"
+  ],
+  "forms": [
+    {
+      "form": "主语 + have/has already + 过去分词；have/has + 过去分词 … already",
+      "meaning": "截至当前参照已经发生，可能比预期早。",
+      "useWhen": "汇报与现在有关的已完成进度；already 可在助动词与分词之间，也可在分句末，不能漏掉 have/has 或分词。"
+    },
+    {
+      "form": "主语 + haven't/hasn't + 过去分词 … yet",
+      "meaning": "截至现在还未完成，通常仍期待它发生。",
+      "useWhen": "本轮普通的未完成进度陈述；yet 常放句末，不把『还没』替成普通肯定 already 的意义。"
+    },
+    {
+      "form": "Have/Has + 主语 + 过去分词 … yet?；Have/Has + 主语 already + 过去分词 …?",
+      "meaning": "yet 常问预期进度；already 疑问可突出提前发生的惊讶。",
+      "useWhen": "询问至今是否发生；两种问法都需要完成结构，态度仍由语境决定。"
+    },
+    {
+      "form": "主语 + have/has just + 过去分词",
+      "meaning": "与现在有关的事情刚刚发生。",
+      "useWhen": "强调距现在很近；不将 just、already 或 yet 当成唯一时态标志，本轮仅介绍 just。"
+    },
+    {
+      "form": "具体过去事件 + 一段时间 + ago",
+      "meaning": "从现在往前计算具体的过去时距。",
+      "useWhen": "说话基点是现在，且要定位已结束的过去时间；本轮用一般过去时，不与普通现在完成时拼成某次确定的过去日期。"
+    },
+    {
+      "form": "较早事件 + 一段时间 + before/earlier",
+      "meaning": "从已建立的参照点往前计算时距。",
+      "useWhen": "本轮从另一过去时点回看；如参照变了，实际日期也可能随之变，不能忽略语境只换单词。"
+    },
+    {
+      "form": "before + 参照事件；完整句子 … before",
+      "meaning": "说明早于某事件，或曾有过的经验。",
+      "useWhen": "看 before 是带事件的连接方式还是经验副词；它本身不强制某个时态，不能概括成总从过去基点算。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一画稿：提交完成与审批待办",
+      "a": {
+        "en": "I've already submitted the design.",
+        "zh": "我已经交了画稿。"
+      },
+      "b": {
+        "en": "The organiser hasn't approved it yet.",
+        "zh": "组织者还没有批准它。"
+      },
+      "why": "同一工作流程里，A 汇报已完成的一步，B 汇报截至现在仍待完成的一步；already 与 not … yet 的预期不同，不是把同一个『已经』随意放进两句。"
+    },
+    {
+      "label": "同一标签：普通进度与提前完成的惊讶",
+      "a": {
+        "en": "Have you printed the labels yet?",
+        "zh": "标签打印好了吗？"
+      },
+      "b": {
+        "en": "Have you already printed the labels?",
+        "zh": "你已经把标签打印好了吗？"
+      },
+      "why": "A 常是等待打印结果的进度询问；B 可在以为还没开始时表达提前完成的惊讶。两种结构都自然，already 并非只能用于肯定陈述。"
+    },
+    {
+      "label": "同一次送件：already 的常见位置",
+      "a": {
+        "en": "Nora has already delivered the envelope.",
+        "zh": "Nora 已经送出了信封。"
+      },
+      "b": {
+        "en": "Nora has delivered the envelope already.",
+        "zh": "Nora 已经送出了信封。"
+      },
+      "why": "两句都可用，位置改变不把已完成进度变成未完成；句末 already 可受语气强调。本轮不把唯一位置当成正确英语的边界。"
+    },
+    {
+      "label": "同一次领取：现在回看与转述过去回看",
+      "a": {
+        "en": "I collected the prints two days ago.",
+        "zh": "我两天前取了那些印刷品。"
+      },
+      "b": {
+        "en": "On Friday, I told Lou that I had collected the prints two days before.",
+        "zh": "周五我告诉 Lou，我在那之前两天取了那些印刷品。"
+      },
+      "why": "设定 A 在周五说，指周三领取；B 在之后回忆周五说法，two days before 从周五回算，也指周三。表述视角改变，真实领取日期保持不变；若现在换成周日再说 ago，倒数出的日期会不同。"
+    },
+    {
+      "label": "同一个标志：以前的经验与确定时距",
+      "a": {
+        "en": "I've seen this logo before.",
+        "zh": "我以前见过这个标志。"
+      },
+      "b": {
+        "en": "I saw this logo two months ago.",
+        "zh": "我两个月前见过这个标志。"
+      },
+      "why": "A 的 before 没给具体日期，讲与现在有关的经验；B 的 ago 从现在定位两个月前的一次过去经历。before 不总等于『从另一个过去时点倒数』。"
+    },
+    {
+      "label": "同一封回信：刚刚与此前已完成",
+      "a": {
+        "en": "Ada has just replied.",
+        "zh": "Ada 刚刚回复了。"
+      },
+      "b": {
+        "en": "Ada has already replied.",
+        "zh": "Ada 已经回复了。"
+      },
+      "why": "A 突出回复距现在很近；B 说至今已完成，可能比预期早，却不靠 already 自身说明是刚才回复。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "Mara has already submit the form.",
+      "correct": "Mara has already submitted the form.",
+      "why": "完成结构需要过去分词 submitted；already 不替代这个动词要求。"
+    },
+    {
+      "wrong": "Has the organiser approve the design yet?",
+      "correct": "Has the organiser approved the design yet?",
+      "why": "Has 前置后的动词仍是过去分词 approved；yet 用来问预期进度，不会把动词改回原形。"
+    },
+    {
+      "wrong": "Omar has just wrote a reply.",
+      "correct": "Omar has just written a reply.",
+      "why": "just 放在助动词与分词之间；write 在完成结构中用 written，不用一般过去式 wrote。"
+    },
+    {
+      "wrong": "I have bought the adapter three days ago.",
+      "correct": "I bought the adapter three days ago.",
+      "why": "本例直接从现在定位三天前那次已结束的购买，没有另设开放时间范围。用一般过去时 bought，去掉多出的 have；不是所有『已经买了』都用现在完成时。"
+    },
+    {
+      "wrong": "When the parade began, we had met the musicians before two days.",
+      "correct": "When the parade began, we had met the musicians two days before.",
+      "why": "要从游行开始这个过去基点往前算两天，时距放在 before 之前：two days before。before two days 不能在此代替这个时距结构。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "time-perspective-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "你提前交了画稿；组织者截至现在还没批准，你仍在等批准。选出英文结构与进度理由都符合的一项。submit the design 指交画稿，approve 指批准。",
+      "options": [
+        "I have already submitted the design, but the organiser hasn't approved it yet. ——提交仍待办；审批已完成。",
+        "I haven't submitted the design yet, but the organiser has already approved it. ——提交已完成；审批还未完成。",
+        "I have already submitted the design, but the organiser hasn't approved it yet. ——提交已完成；审批还未完成。",
+        "I have already submit the design, but the organiser hasn't approved it yet. ——提交已完成；审批还未完成。"
+      ],
+      "answer": "I have already submitted the design, but the organiser hasn't approved it yet. ——提交已完成；审批还未完成。",
+      "explanation": "already submitted 对应提前完成的提交，hasn't approved … yet 对应尚待批准；两处完成结构都需分词。相同英文配相反理由不符合进度；把两个完成状态颠倒也不符合；have already submit 缺少正确分词。本题不据此把其他语境中的 already 位置一概判错。",
+      "hints": [
+        "先列出哪一步已经完成、哪一步仍在等待，再分别核对英文和理由。",
+        "完成陈述要有 have/has + 过去分词；本轮普通否定进度用 not … yet。"
+      ]
+    },
+    {
+      "id": "time-perspective-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "你在问画稿审批的进度。只改 approve 的形式，保留其余词序：Has the organiser approve the design yet?",
+      "answer": "Has the organiser approved the design yet?",
+      "accepted": [],
+      "explanation": "现在完成疑问用 Has + 主语 + 过去分词，approve 改为 approved；yet 保持句末。这里只修一个动词形式，不另换问法。",
+      "hints": [
+        "问句开头已经有助动词；检查后面动作需要原形、过去式还是过去分词。",
+        "完成疑问中的 has 不改变后面用过去分词的要求；approve 是规则动词。"
+      ]
+    },
+    {
+      "id": "time-perspective-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：聚会准备到现在还没给气球充气，但这仍在待办清单上。用 We / inflate the balloons（给气球充气）/ yet 写一句现在完成时否定；保留词组，不加其他信息，可用完整或缩写否定。",
+      "answer": "We haven't inflated the balloons yet.",
+      "accepted": [
+        "We have not inflated the balloons yet."
+      ],
+      "explanation": "haven't inflated … yet 汇报截至现在还没完成的准备，并保留预期；inflate 的过去分词是 inflated。这里只检验指定进度和词组，不给开放表达列所有同义说法。",
+      "hints": [
+        "这是到现在仍未做完的待办；先选与这个进度对应的否定框架。",
+        "复数 We 用 have，完成式动作需过去分词；yet 留在这个否定进度句的末尾。"
+      ]
+    },
+    {
+      "id": "time-perspective-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "现在是周五。Eli 周一收到了包裹，周三谈到此事。你正在回忆他周三的说法，要从『周三说话』往前算两天。哪项的英文与基点理由都保住周一收件这个日期？",
+      "options": [
+        "On Wednesday, Eli said he had received the parcel two days before. ——从周三说话的时点回算两天。",
+        "On Wednesday, Eli said he had received the parcel two days ago. ——从现在周五回算两天。",
+        "On Wednesday, Eli said he had received the parcel two days before. ——从现在周五回算两天。",
+        "On Wednesday, Eli said he had receive the parcel two days before. ——从周三说话的时点回算两天。"
+      ],
+      "answer": "On Wednesday, Eli said he had received the parcel two days before. ——从周三说话的时点回算两天。",
+      "explanation": "two days before 以已建立的周三说话时点回算到周一；从现在周五倒数的 two days ago 则指周三，改变了记录的收件日。had received 把收件置于过去说话之前，had receive 的形式不完整。转述并非必须机械替词：关键是本题明确保持过去基点和实际日期。",
+      "hints": [
+        "画三个日期：收件、说话、现在。先选题目让你从哪一个日期倒数。",
+        "过去基点的时距可用 two days before/earlier；若还用了 had，后面的动词必须是过去分词。"
+      ]
+    },
+    {
+      "id": "time-perspective-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "你现在直接汇报三天前那次购买，不另设过去回看基点。只去掉一个多余的助动词，保留其余词序：I have bought the adapter three days ago.",
+      "answer": "I bought the adapter three days ago.",
+      "accepted": [],
+      "explanation": "three days ago 直接定位已结束的过去购买，一般过去式 bought 已足够；去掉 have。若改成其他开放时间范围或经验，就会改变本题目标，不能只凭中文『已买』保留现在完成时。",
+      "hints": [
+        "three days ago 从哪个基点计算？它给的是确定的过去时间，还是延续到现在的开放范围？",
+        "本题用一般过去时；bought 已是 buy 的过去式，不需要另加完成助动词。"
+      ]
+    },
+    {
+      "id": "time-perspective-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "新情境：我们周五到达山屋，记录显示主人周三已修好屋顶。以 When we arrived at the cabin 开头，接 our host / repair the roof，用过去完成时；末尾用 two days before 从到达那天回算。可用 earlier 替换 before，不加其他信息。",
+      "answer": "When we arrived at the cabin, our host had repaired the roof two days before.",
+      "accepted": [
+        "When we arrived at the cabin, our host had repaired the roof two days earlier."
+      ],
+      "explanation": "arrived 提供周五这个过去基点；had repaired 交代此前完成，two days before/earlier 回算到周三。若现在并非周五，直接换 ago 会改变基点。本题固定开头和词组来检验有限目标，其他自然叙述需另看完整语境。",
+      "hints": [
+        "题目让你站在到达山屋的过去时点回看。把屋顶修好放在这个点之前，再计算时距。",
+        "较早完成用 had + 过去分词；时距 two days 放在 before/earlier 前，基点由 arrived 分句提供。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "写一段真实任务的进度与回顾（4—6 句）：说一项已完成、一项尚待完成；再交代一件确定过去事件，以及从另一过去观察点回看的更早事件。注明说话的今天和两个过去日期，解释 ago/before/earlier 的基点。提交现有表达路径后日期与自然度仍待核对。",
+    "criteria": [
+      "already/yet 的已完成、未完成和预期与事实相符，动词结构完整。",
+      "already 的位置自然，普通 yet 进度疑问或否定保留其目标意义。",
+      "ago 从当前说话基点计算，before/earlier 的参照点能从上下文找到。",
+      "视角改变时仍保持真实日期，不机械替换词后留下矛盾。",
+      "写自己的新内容；开放进度和时间关系继续人工核对，不按有限参考自动认定掌握。"
+    ]
+  }
+}

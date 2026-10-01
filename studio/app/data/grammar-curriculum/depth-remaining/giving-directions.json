@@ -1,0 +1,362 @@
+{
+  "id": "giving-directions",
+  "title": "指示、地点与时间定位",
+  "stageId": "foundation",
+  "order": 21,
+  "prerequisites": [
+    "questions-negation",
+    "reference-ownership",
+    "plan-timeline"
+  ],
+  "goal": "把谁接收、放在哪里或移向哪里、何时完成或持续到何时说清，用合适语气给出指示。",
+  "guideIds": [
+    "double-object",
+    "place",
+    "imperative",
+    "time-prepositions"
+  ],
+  "purposeIds": [
+    "ask",
+    "advise",
+    "plan"
+  ],
+  "explanation": [
+    "give/send/show 等动词常同时交代物品与接收者：give someone something 或 give something to someone。buy/make 等常用 for 表示为谁准备：buy someone something 或 buy something for someone。to 与 for 依动词和意义选择，不能把所有『给谁』都写成同一个介词。explain 常用 explain something to someone，不能随意套 explain someone something。",
+    "地点介词表达观察视角。in 把对象看成区域或空间内部，on 看接触表面，at 常把地点看作一个活动点；at the gallery 与 in the gallery 可以谈同一处但关注角度不同，不是一个中文『在』对应唯一介词。描述位置仍要保留be主干；go to 表示去某目的地，go home 通常不带to。",
+    "into/onto 突出进入内部或移到表面的路径，in/on 常突出位置或结果。put the folder in the drawer 与 put it into the drawer 在适当语境都自然，不能一概把in判错；The folder is in the drawer 只说明位置，不报告曾怎样移进去。移动路径、静态位置与来源from是不同的信息。",
+    "祈使句通常省略you，动词原形开头；否定用Don't + 原形，be也一样，如Don't be impatient。please能缓和语气，但场合、关系与语调仍决定请求是否合适。Let's + 原形提出包含说话者的一起行动建议；Let's not…提出一起不做。直接指示、请求与共同建议不是同一种参与关系。",
+    "时间定位通常用at + 钟点，on + 日期/星期/特定一天的早晚，in + 月份/年份/季节或泛指早中晚。this/next/last/every + 时间通常不加这些介词。at night是常见搭配，特定某天早晨用on。weekend的介词有地区差异，本轮不把另一地区的自然表达判错。",
+    "by noon给完成的截止点：不晚于正午；until noon把状态或活动延伸到正午。The desk is open until six说开放持续，The desk must open by six说最迟几点开始，两者不能机械替换。not…until还可以说直到那个时候才发生，另需上下文；本轮先区分肯定截止与持续。结合指示时，选择真实任务的时间关系，不用关键词替代意义判断。",
+    "本轮输入give…to、buy…for和否定祈使，识别地点路径和by/until。多数地点、时间介词还有依名词、地区和搭配改变的用法，不是背完四条规则就掌握。写自己的真实安排需明确接收者、位置/路径和时间，同时保留待核对状态。"
+  ],
+  "forms": [
+    {
+      "form": "give/send/show + 人 + 物；give/send/show + 物 + to + 人",
+      "meaning": "交代接收者和传递、发送或展示的东西。",
+      "useWhen": "相应动词允许两种结构；不要倒置谁给谁，宾格代词如her作接收者。"
+    },
+    {
+      "form": "buy/make + 人 + 物；buy/make + 物 + for + 人",
+      "meaning": "为某人购买或制作物品。",
+      "useWhen": "for引出受益者，不把give…to的惯用路线套到全部动词。"
+    },
+    {
+      "form": "explain + 事情 + to + 人",
+      "meaning": "说明解释什么及向谁解释。",
+      "useWhen": "本轮提示动词的结构限制，不套explain人事情；不保证所有相关动词都同样。"
+    },
+    {
+      "form": "主语 + be + in/on/at + 地点",
+      "meaning": "用内部、表面或活动点视角说明位置。",
+      "useWhen": "按真实空间关系与所选视角，不按中文逐词固定对应。"
+    },
+    {
+      "form": "move/put… + into/onto…；go… + to + 目的地",
+      "meaning": "突出进入内部、移到表面或去某处的路径/终点。",
+      "useWhen": "into/onto突出变化，put…in/on也能说明结果位置；静态is in不自动报告移动。"
+    },
+    {
+      "form": "go home；go to my/their home",
+      "meaning": "回家或去某人家。",
+      "useWhen": "home在go home中直接作地点表达；有my/their等的名词短语可由to引入。"
+    },
+    {
+      "form": "（Please +）动词原形…",
+      "meaning": "直接指示或请求对方行动。",
+      "useWhen": "通常省略you，语气是否合适还依场合关系；不在原形前加to。"
+    },
+    {
+      "form": "Don't + 动词原形…；Don't be + 形容词…",
+      "meaning": "指示对方不做某事或避免某状态。",
+      "useWhen": "be同样用Don't，不拼成Don't to或Don't is。"
+    },
+    {
+      "form": "Let's + 动词原形…；Let's not + 动词原形…",
+      "meaning": "提出包含说话者的共同建议。",
+      "useWhen": "要一起做/不做时；不同于仅指示听话者的祈使句。"
+    },
+    {
+      "form": "at + 时点；on + 日期/特定一天；in + 较长期间",
+      "meaning": "在不同时间层级定位活动。",
+      "useWhen": "next/last/this/every时间通常不加介词；at night与地区习惯需另记，不过度绝对化。"
+    },
+    {
+      "form": "完成事件 + by + 截止点；状态/活动 + until + 终点",
+      "meaning": "区别最迟完成与持续到何时。",
+      "useWhen": "先核对事件是达成截止还是延续状态；not…until有另一个延迟发生意义。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一张通行证：接收者在前或在后",
+      "a": {
+        "en": "Give her the pass.",
+        "zh": "把通行证给她。"
+      },
+      "b": {
+        "en": "Give the pass to her.",
+        "zh": "把通行证给她。"
+      },
+      "why": "A在人后接物；B在物后用to接人。都保持她是接收者，不把her变成传递者。"
+    },
+    {
+      "label": "同一个充电器：受益者与动词搭配",
+      "a": {
+        "en": "We bought Jo a charger.",
+        "zh": "我们给Jo买了充电器。"
+      },
+      "b": {
+        "en": "We bought a charger for Jo.",
+        "zh": "我们为Jo买了充电器。"
+      },
+      "why": "buy常用for引出受益者；此处不是把give…to的形式随意复制。"
+    },
+    {
+      "label": "同一套步骤：给予与解释的动词限制",
+      "a": {
+        "en": "Show the steps to the assistant.",
+        "zh": "把步骤展示给助理。"
+      },
+      "b": {
+        "en": "Explain the steps to the assistant.",
+        "zh": "向助理解释这些步骤。"
+      },
+      "why": "show可另写Show the assistant the steps；explain通常保留explain事情to人，不能假设每个动词都可人+物。"
+    },
+    {
+      "label": "同一家画廊：活动点与内部空间",
+      "a": {
+        "en": "The students are at the gallery.",
+        "zh": "学生们在画廊那儿。"
+      },
+      "b": {
+        "en": "The students are in the gallery.",
+        "zh": "学生们在画廊里面。"
+      },
+      "why": "A把画廊看作活动地点；B明确内部空间。两句可描述同处，视角不同，不自动把at改成in。"
+    },
+    {
+      "label": "同一抽屉：位置与进入路径",
+      "a": {
+        "en": "The folder is in the drawer.",
+        "zh": "文件夹在抽屉里。"
+      },
+      "b": {
+        "en": "The assistant slid the folder into the drawer.",
+        "zh": "助理把文件夹滑进抽屉。"
+      },
+      "why": "A报告静态位置；B用into突出进入内部的路径。put…in也可自然表达结果位置，并不因此错误。"
+    },
+    {
+      "label": "同一张桌子：表面位置与移动",
+      "a": {
+        "en": "The parcel is on the table.",
+        "zh": "包裹在桌面上。"
+      },
+      "b": {
+        "en": "The helper lifted the parcel onto the table.",
+        "zh": "帮手把包裹抬到了桌上。"
+      },
+      "why": "A给表面位置；B用onto强调到达该表面的运动，位置句自身不说如何过去。"
+    },
+    {
+      "label": "同一次检查：只要求对方与一起行动",
+      "a": {
+        "en": "Check the seals before departure.",
+        "zh": "出发前检查密封处。"
+      },
+      "b": {
+        "en": "Let's check the seals before departure.",
+        "zh": "我们出发前一起检查密封处吧。"
+      },
+      "why": "A通常面向听话者给指示；B包含说话者的共同建议。please可缓和A，却不自动变成一起做。"
+    },
+    {
+      "label": "同一段上午：泛指与特定一天",
+      "a": {
+        "en": "We test the sensors in the morning.",
+        "zh": "我们上午测试传感器。"
+      },
+      "b": {
+        "en": "We will test the sensors on Friday morning.",
+        "zh": "我们星期五上午会测试传感器。"
+      },
+      "why": "in the morning泛指上午时段；特定星期五的上午用on，不能只看morning一个词。"
+    },
+    {
+      "label": "同一个登记台：持续开放与最迟开始",
+      "a": {
+        "en": "The desk is open until six.",
+        "zh": "登记台一直开放到六点。"
+      },
+      "b": {
+        "en": "The desk must open by six.",
+        "zh": "登记台必须最迟六点开始开放。"
+      },
+      "why": "A的开放状态延续到终点；B给开始开放的截止点。时间相同但事件关系不同，不能互换until/by。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "Please give the pass for her.",
+      "correct": "Please give the pass to her.",
+      "why": "give物to人表达传递的接收者；此处不是为她购买的for受益关系。"
+    },
+    {
+      "wrong": "We bought a charger to Jo.",
+      "correct": "We bought a charger for Jo.",
+      "why": "buy物for人表示为某人购买，不按give的搭配写to。"
+    },
+    {
+      "wrong": "Explain the assistant the steps.",
+      "correct": "Explain the steps to the assistant.",
+      "why": "explain通常用事情to人；它的结构限制不同于show/give。"
+    },
+    {
+      "wrong": "The students at the gallery.",
+      "correct": "The students are at the gallery.",
+      "why": "位置短语不能取代完整谓语，复数主语需are。"
+    },
+    {
+      "wrong": "The folder is into the drawer.",
+      "correct": "The folder is in the drawer.",
+      "why": "这里仅描述静态位置，in合适；into通常突出进入路径，需相应移动语境。"
+    },
+    {
+      "wrong": "Let's go to home.",
+      "correct": "Let's go home.",
+      "why": "go home通常直接接home；go to my home中的my home则是另一个名词短语结构。"
+    },
+    {
+      "wrong": "Don't to touch the samples.",
+      "correct": "Don't touch the samples.",
+      "why": "Don't后用动词原形，不加to。"
+    },
+    {
+      "wrong": "Don't is impatient.",
+      "correct": "Don't be impatient.",
+      "why": "否定祈使中be也用原形，不与第三人称is混搭。"
+    },
+    {
+      "wrong": "Let's to check the seals.",
+      "correct": "Let's check the seals.",
+      "why": "共同建议Let's后接原形，不加to。"
+    },
+    {
+      "wrong": "We will test the sensors in Friday morning.",
+      "correct": "We will test the sensors on Friday morning.",
+      "why": "特定某一天的上午用on，不按泛指morning套in。"
+    },
+    {
+      "wrong": "We will meet in next week.",
+      "correct": "We will meet next week.",
+      "why": "next限定的时间短语通常直接使用，不另加in。"
+    },
+    {
+      "wrong": "The desk is open by six.（要说一直开放至六点）",
+      "correct": "The desk is open until six.",
+      "why": "要保留开放状态持续到终点，用until；by表达截至那时已成立，改变时间关系。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "giving-directions-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "助理实际把标贴移进文件夹内部，要突出进入的路径。哪项结构和说明都贴合？不要把put…in一概判错。",
+      "options": [
+        "The assistant put the labels into the folder. —— into突出进入内部；put…in也可自然说明结果位置。",
+        "The labels are in the folder. —— is/are位置句本身报告了助理的进入动作。",
+        "The assistant put the labels on the folder. —— on在此突出进入文件夹内部。",
+        "The assistant put the labels into the folder. —— into在此表示原有的内部位置。"
+      ],
+      "answer": "The assistant put the labels into the folder. —— into突出进入内部；put…in也可自然说明结果位置。",
+      "explanation": "into突出进入内部；is/are in报告位置，不自行报告移入过程。on指表面，与这里的内部不同。认识意义并不要求把另一种自然的put…in判错。",
+      "hints": [
+        "这次描述想强调原有位置、到表面，还是移进内部？",
+        "into突出进入，in可报告内部位置；put搭配in也能表达放置结果。"
+      ]
+    },
+    {
+      "id": "giving-directions-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "要把通行证递给她，不是为她购买。只修正一个介词：Please give the pass for her.",
+      "answer": "Please give the pass to her.",
+      "explanation": "此give物to人结构中，to引出接收者。buy物for人是受益关系，不能机械挪到这里。",
+      "hints": [
+        "这里的动词是传递give还是为人购买buy？",
+        "give后物品在前时，用to引出接收者her。"
+      ]
+    },
+    {
+      "id": "giving-directions-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：活动门票尚待清点，你提醒帮手不要把门票放进回收箱。用put / the tickets / the recycling box造一个否定祈使句，自行选句首形式；本题用into突出进入路径（put…in也自然，可说明结果位置）。",
+      "answer": "Don't put the tickets into the recycling box.",
+      "accepted": [
+        "Do not put the tickets into the recycling box."
+      ],
+      "explanation": "Don't后接原形put，不加to；into表放进内部的路径。本题指定该路径表达，以便同练否定祈使与位置/变化的选择。",
+      "hints": [
+        "先选对方不做事的句首形式，再确定进入内部的路径词。",
+        "Don't + 原形put + 物品，再用into引出回收箱；不加主语you或to。"
+      ]
+    },
+    {
+      "id": "giving-directions-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "值班安排明确：登记台现在已经开放，状态一直持续至六点；不是要求最迟六点才开始开放。选择时间关系与说明都正确的一项。",
+      "options": [
+        "The desk is open until six. —— until把已存在的开放状态延伸至六点。",
+        "The desk must open by six. —— by表示它现在已开放并持续到六点。",
+        "The desk is open until six. —— until在此给开启动作最迟完成的时间。",
+        "The desk opens at six. —— at说明当前开放状态一直延伸到六点。"
+      ],
+      "answer": "The desk is open until six. —— until把已存在的开放状态延伸至六点。",
+      "explanation": "until延续开放状态；by给事件的最迟截止点，at给发生时点。相同数字不意味着时间关系相同。",
+      "hints": [
+        "已在开放并要继续，与还要达成一个开始开放事件，是哪一类关系？",
+        "持续状态到终点用until；截止达成用by，单个发生时点用at。"
+      ]
+    },
+    {
+      "id": "giving-directions-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "只删去一个多余词，不换其他内容：Don't to move the display.",
+      "answer": "Don't move the display.",
+      "accepted": [
+        "Do not move the display."
+      ],
+      "explanation": "Don't后的否定祈使用move原形，不接to。保留原来不要移动展台的指示。",
+      "hints": [
+        "Don't后是原形，还是带to的不定式？",
+        "删去to，使Don't直接接move。"
+      ]
+    },
+    {
+      "id": "giving-directions-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "陌生情境：给即将出海的朋友买一个防水袋。以Please开始，用buy / a waterproof pouch / her造请求；把物品放在buy后，自行用合适介词明确受益者是她。",
+      "answer": "Please buy a waterproof pouch for her.",
+      "explanation": "buy物for人表示为她购买。Please buy her a waterproof pouch也自然，但本题指定物品在buy后并练for结构。",
+      "hints": [
+        "先确认买什么、为谁买；本题明确物品在动词后。",
+        "Please + 原形buy + a waterproof pouch，for后用宾格her。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "为一次真实活动写4–6句安排：告诉接收者拿什么、放到哪里或去哪里，至少一个否定提醒，再说明截止或持续时间。可以加一条Let's共同建议。核对give/buy等动词的接收者结构、静态/路径和by/until的真实时间关系；你的安排保存为待核对，不自动评成绩。",
+    "criteria": [
+      "接收者/受益者明确，所选动词允许该结构。",
+      "位置与进入/到达路径区分，不把自然的put in/on一概判错。",
+      "否定指示使用Don't+原形，语气适合实际关系。",
+      "时间时点/日期/期间以及截止/持续意义清楚，未把读过规则算掌握。"
+    ]
+  }
+}

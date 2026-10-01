@@ -1,0 +1,72 @@
+[
+  {
+    "guideId": "future-continuous",
+    "unitId": "extended-timeline",
+    "formIndices": [
+      0,
+      1
+    ],
+    "contrastIndices": [
+      0,
+      1
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "extended-timeline-v0-recognise",
+      "extended-timeline-v0-produce"
+    ],
+    "scope": "讲解未来观察点上的过程及安排询问；在打包时段中识别 will be packing，并在新花园导览情境中独立产生 will be guiding。",
+    "remaining": "否定、预期安排问句和未来暂时活动已有介绍，未逐项独立输入检验；不把 will be doing 固定为唯一安排表达或固定礼貌等级。"
+  },
+  {
+    "guideId": "future-perfect",
+    "unitId": "extended-timeline",
+    "formIndices": [
+      2,
+      3
+    ],
+    "contrastIndices": [
+      0
+    ],
+    "mistakeIndices": [
+      2
+    ],
+    "practiceIds": [
+      "extended-timeline-v1-recognise",
+      "extended-timeline-v1-repair",
+      "extended-timeline-v1-produce"
+    ],
+    "scope": "对比未来过程与截至未来的完成；复合识别题核对 will have sealed 截止结果，修正 sealed 分词，并在新植树计划中独立产生 will have planted。",
+    "remaining": "否定、疑问及持续至未来的状态仅介绍边界，未逐项独立输入检验；不因 by 一词强制选形式，不把完成结构所有用途限定为动作结束。"
+  },
+  {
+    "guideId": "future-be",
+    "unitId": "extended-timeline",
+    "formIndices": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "contrastIndices": [
+      2,
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "practiceIds": [
+      "extended-timeline-v0-repair",
+      "extended-timeline-v1-recognise"
+    ],
+    "scope": "保留原 guide 的 about to/due to/bound/sure 形式与条件，并与正式 be to 安排作可定位比较；单处补词检验眼前 about to，复合识别题实际核对 be to 的正式安排与原形。",
+    "remaining": "due to 的预计/原因、bound/sure 的判断/叮嘱及过去 about to 已教，未逐项独立输入测试；be to 其他意义未穷尽，不把临近、安排与信心等同或分配固定概率。"
+  }
+]

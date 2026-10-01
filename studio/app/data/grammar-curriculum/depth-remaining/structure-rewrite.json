@@ -1,0 +1,344 @@
+{
+  "id": "structure-rewrite",
+  "title": "守住原意的综合改写：先核对事实，再换结构",
+  "stageId": "extension",
+  "order": 28,
+  "prerequisites": [
+    "requests-nonfinite",
+    "information-focus",
+    "hypothetical-condition",
+    "extended-timeline",
+    "duration-perspective"
+  ],
+  "guideIds": [
+    "verb-review",
+    "rewrite"
+  ],
+  "purposeIds": [
+    "reason",
+    "compare",
+    "progress"
+  ],
+  "goal": "把时间参照、过程或完成、动作参与者和谓语位置一起判断；改写后反向核对来源、肯否、程度与条件，能够解释哪些信息保留、哪些不能推出。",
+  "explanation": [
+    "先把原句拆成一张事实清单：谁提出或执行动作，谁承受；动作在什么参照点之前、当时或之后；是完成结果还是持续过程；作者在陈述事实、转述来源、预测还是假设。",
+    "选动词形式按四步走：找时间参照；看过程与完成；看主动与被动；看当前位置需要有限谓语，还是搭配、修饰或背景中的非谓语。一个时间词只能提供部分证据，不能代替四步。",
+    "有限谓语常是一整条辅助链。had been fitted 中 had 承担过去时间，been 与 fitted 表被动；to have been fitted 是非谓语完成被动，是否更早和是否真实仍取决于主句与语境。",
+    "若目标要求主动改被动，词形语态和句子焦点会改变，但谁做、谁承受不能交换。原文明说执行者且任务要求保留，就带回 by + 执行者；by + 时间则可能表示截止点，两种职责不同。",
+    "完成与持续不是同义替换。到某时工作了多久不等于到某时全做完；状态动词也不因出现 for 就自动使用进行时。反过来，过去分词并不单独说明句子的日历时间。",
+    "改写要守住否定范围、人物范围和程度。not all 只否定『全部』，不等于 none；对某个人而言 too…to 的限制不能扩成对所有人都不可能。题面说无法舒适地做，也不能删掉 comfortably 改成根本做不了。",
+    "保留消息来源和说话立场：according to a log、is said to、may、if 各有职责。语法通顺的句子仍可能把转述变为直接断言，把可能变为确定，或把条件删成必然结果。",
+    "先后不自动等于原因，能力不足不等于被禁止，请求也不证明已经执行。用 because、not allowed、didn't ask 等结构替换前，须核对原文是否真的给出这些关系。",
+    "完成后做反向核对：用自己的话复述新句，看主体、时间、主被动关系、肯否、程度、来源和条件是否与原清单一致。本组六题代表一些组合，不能把一个固定参考等同于所有综合改写已经掌握。"
+  ],
+  "forms": [
+    {
+      "form": "时间参照 → 过程/完成 → 主动/被动 → 谓语/非谓语",
+      "meaning": "四个维度同时约束词形与结构；找出一个时间词不等于完成判断。",
+      "useWhen": "空格、改错与改写前都先读完整事实。有限谓语可是一条辅助链；非谓语补语另核具体搭配与主体。"
+    },
+    {
+      "form": "will have done / will have been doing + by 某未来参照点",
+      "meaning": "前者可强调到该点的完成或累计结果，后者突出持续过程；持续时长不必承诺全部完成。",
+      "useWhen": "计划或预测已明确未来参照点与表达焦点。状态性的 own 等一般用完成简单形式；不能仅凭 for 强选进行时。"
+    },
+    {
+      "form": "主动的完成谓语 ↔ 相同时体的 have/has/had/will have been + 过去分词",
+      "meaning": "改变主语焦点时，原动作的执行者、承受者和先完成关系仍要保留。",
+      "useWhen": "目标指定被动，且动词可用于该被动结构；原文重要的执行者用 by 短语带回，不能与截止时间的 by 混淆。"
+    },
+    {
+      "form": "有限的 ask/expect/report… + 对应的 to do / to be done / to have been done",
+      "meaning": "主句承担请求、预期或转述，非谓语部分承担实际动作关系及相对先后。",
+      "useWhen": "已有支配动词，后面不能机械加独立时态；被动不定式的承受者与主句/宾语角色须一致。"
+    },
+    {
+      "form": "not all… 与 none…；not to do 与 didn't ask…to do",
+      "meaning": "否定的范围与对象不同。not all 不说明确切零个，none 说明零个；动作否定与请求事件否定不能互换。",
+      "useWhen": "原文给出数量、请求内容或否定范围时逐项保留，不用一个否定词模糊替换另一个。"
+    },
+    {
+      "form": "according to 来源 / is said to… / may… / if…",
+      "meaning": "分别约束消息来源、转述立场、可能性或条件；它们不是可随意删去的装饰。",
+      "useWhen": "原文只提供记录、说法、可能或条件时保留对应职责；不能把改写当作新增亲历事实或保证。"
+    },
+    {
+      "form": "too + 形容词 + for 某人 + to do ↔ so + 形容词 + that 某人 could not do",
+      "meaning": "在明确的过去能力限制语境中，可保留同一人和同一程度结果；介词后对象与不定式里的缺口也须对应。",
+      "useWhen": "本组的物理尺寸或高度妨碍动作，原文确实表示不能。保留 comfortably 等限制；不能改成禁止或所有人都不能。"
+    },
+    {
+      "form": "although + 完整从句 ↔ despite + 名词/-ing 短语",
+      "meaning": "结构可变，已给的让步关系仍不等于原因关系。",
+      "useWhen": "原事实是『虽然 X，仍 Y』。名词化时保留原主体与事实，不自行用 because 替换。"
+    },
+    {
+      "form": "Having done…, 同一主体主句 ↔ After 主体 had done…, 主句",
+      "meaning": "在明确的先后情境中，把同一主体的先完成动作恢复为有限时间从句。",
+      "useWhen": "检查分词与主句主体对应。换成被动主句后，不能让 reading 等承受者变成 inspected 的执行者。"
+    },
+    {
+      "form": "原事实清单 ↔ 新句反向复述",
+      "meaning": "结构正确和原意保留是两个都需要检查的目标，词形匹配只是其中一部分。",
+      "useWhen": "提交前核对参与者、参照点、过程/结果、主被动关系、肯否、程度、来源和条件；未知事项继续保持未知。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一校准计划：截止前做完与那个时点正在做",
+      "a": {
+        "en": "The technicians will have calibrated the scales by six tomorrow.",
+        "zh": "按这一预测，技师们会在明天六点前校准好这些秤。"
+      },
+      "b": {
+        "en": "At six tomorrow, the technicians will be calibrating the scales.",
+        "zh": "按这一预测，明天六点时技师们正在校准这些秤。"
+      },
+      "why": "A 聚焦截止点前的完成，B 聚焦六点的过程。两个未来辅助链不能因为都带 tomorrow 就视为同义。"
+    },
+    {
+      "label": "同一批硬币：持续时长与全部完成",
+      "a": {
+        "en": "By noon, I will have been sorting the coins for two hours.",
+        "zh": "到中午，我就已经分拣这些硬币两小时了。"
+      },
+      "b": {
+        "en": "By noon, I will have sorted all the coins.",
+        "zh": "到中午，我会已经分拣完所有这些硬币。"
+      },
+      "why": "A 给持续过程的时长，不保证全部分完，也不表示此前一个都没分完；B 给全量完成，不交代用了两小时。"
+    },
+    {
+      "label": "同一次测试：主动与被动保留更早未做的事实",
+      "a": {
+        "en": "The crew had not fitted either brace before the test.",
+        "zh": "测试前，工作人员两根支撑条都没有安装。"
+      },
+      "b": {
+        "en": "Neither brace had been fitted by the crew before the test.",
+        "zh": "测试前，两根支撑条都没有被工作人员安装。"
+      },
+      "why": "在这里已知是两根支撑条，either 在否定下对应 neither；B 保留更早未完成、执行者 crew 及被动承受者 brace。它没有说测试后是否安装。"
+    },
+    {
+      "label": "同一指示：前移被要求的人，不改变后面执行者",
+      "a": {
+        "en": "The foreman asked the apprentices to insulate the pipe.",
+        "zh": "工头请学徒给管道做保温。"
+      },
+      "b": {
+        "en": "The apprentices were asked by the foreman to insulate the pipe.",
+        "zh": "学徒被工头要求给管道做保温。"
+      },
+      "why": "asked 的主动变成 were asked；to insulate 的执行者仍是 apprentices。指示来源 foreman 保留，但两句都不证明保温已经完成。"
+    },
+    {
+      "label": "同一份登记簿：有转述限定与直接断言",
+      "a": {
+        "en": "The archivist is said to have copied the register in 1998.",
+        "zh": "据说，那位档案员在 1998 年抄录了登记簿。"
+      },
+      "b": {
+        "en": "The archivist copied the register in 1998.",
+        "zh": "那位档案员在 1998 年抄录了登记簿。"
+      },
+      "why": "动作内容接近，但 B 丢失 A 的转述立场，不是完整保留原意的改写。is said 在现在，to have copied 与 in 1998 共同交代先前的抄录。"
+    },
+    {
+      "label": "同一台阶：高度与同一个人的能力限制",
+      "a": {
+        "en": "The ledge was too high for Vik to reach.",
+        "zh": "那个凸台太高，Vik 够不着。"
+      },
+      "b": {
+        "en": "The ledge was so high that Vik could not reach it.",
+        "zh": "那个凸台高得 Vik 够不着。"
+      },
+      "why": "在给定的实际高度限制中，两句保留 Vik 与无法够到的结果。A 的不定式中 reach 的宾语由 ledge 对应，不重复 it；could not 不等于 was not allowed。"
+    },
+    {
+      "label": "同一批锁：不是全部与一个也没有",
+      "a": {
+        "en": "Not all the locks were tested.",
+        "zh": "并非所有这些锁都接受了测试。"
+      },
+      "b": {
+        "en": "None of the locks were tested.",
+        "zh": "这些锁一个也没有接受测试。"
+      },
+      "why": "A 否定全量，未说明究竟测试了多少，零个也与 A 相容；B 明确是零个。把 B 弱化为 A 会丢失原信息，把 A 强化为 B 会捏造零个。"
+    },
+    {
+      "label": "同一趟渡轮：变结构而保留让步",
+      "a": {
+        "en": "Although the ferry was delayed, we kept our reservation.",
+        "zh": "虽然渡轮晚点了，我们仍保留了预约。"
+      },
+      "b": {
+        "en": "Despite the ferry's delay, we kept our reservation.",
+        "zh": "尽管渡轮晚点，我们仍保留了预约。"
+      },
+      "why": "B 把晚点从句换为名词短语，保留同一事实和让步关系；because 会宣称因果，不能单凭改写添加。"
+    },
+    {
+      "label": "同一次测量：显式时间从句核对共享主体",
+      "a": {
+        "en": "Having inspected the cable, Mira recorded the reading.",
+        "zh": "检查完线缆后，Mira 记录了读数。"
+      },
+      "b": {
+        "en": "After Mira had inspected the cable, she recorded the reading.",
+        "zh": "Mira 检查完线缆后，她记录了读数。"
+      },
+      "why": "在已给的先后背景中，两句检查者与记录者都是 Mira。恢复成 B 能核对逻辑主语；不能把 reading 前移后仍让它承担 inspect。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "The gauges will have been calibrate by Friday.",
+      "correct": "The gauges will have been calibrated by Friday.",
+      "why": "截止点前的完成被动需要 will have been + 过去分词；gauges 承受校准动作。"
+    },
+    {
+      "wrong": "No one has opened the cupboard yesterday.",
+      "correct": "No one opened the cupboard yesterday.",
+      "why": "原意是在已结束的 yesterday 时段没有人开柜门，用过去叙述；不能只看 no one 就选现在完成，换成 since yesterday 又会改变时间范围。"
+    },
+    {
+      "wrong": "I will have been owning this camera for five years by December.",
+      "correct": "I will have owned this camera for five years by December.",
+      "why": "own 在这个拥有状态的意义下通常不用进行形式；for five years 不自动要求进行时，仍保留未来参照点和持续状态。"
+    },
+    {
+      "wrong": "The apprentices were asked by the foreman insulate the pipe.",
+      "correct": "The apprentices were asked by the foreman to insulate the pipe.",
+      "why": "asked 的被动指示后保留 to 不定式；apprentices 是 insulate 的执行者，不是管道。"
+    },
+    {
+      "wrong": "The archivist copied the register in 1998.",
+      "correct": "The archivist is said to have copied the register in 1998.",
+      "why": "若原文只是『据说』，前一句虽然合语法，却丢掉转述限定。改写须保留来源立场与先前时间，不能自行升级为直接事实断言。"
+    },
+    {
+      "wrong": "The ledge was so high that Vik was not allowed to reach it.",
+      "correct": "The ledge was so high that Vik could not reach it.",
+      "why": "给定事实是尺寸造成能力限制，不是有人禁止。原句本身可以合语法，但作为该事实的改写改变了关系。"
+    },
+    {
+      "wrong": "Not all the locks were tested.",
+      "correct": "None of the locks were tested.",
+      "why": "如果原记录明确一个也没测，not all 只否定全量，会丢失零个的信息。它并非语法错误，问题是没有完整保留这次原意。"
+    },
+    {
+      "wrong": "Because the ferry was delayed, we kept our reservation.",
+      "correct": "Although the ferry was delayed, we kept our reservation.",
+      "why": "原文给的是晚点与仍保留预约的让步关系；because 添加了原因断言。两种句型都能合语法，但不是同一个事实关系。"
+    },
+    {
+      "wrong": "Having inspected the cable, the reading was recorded by Mira.",
+      "correct": "Having inspected the cable, Mira recorded the reading.",
+      "why": "inspect 的执行者是 Mira；背景没有自己的显式主语时，不能把主句承受者 reading 当成检查者。"
+    },
+    {
+      "wrong": "The conservator is said to have restore the mosaic.",
+      "correct": "The conservator is said to have restored the mosaic.",
+      "why": "先前完成的不定式用 to have + 过去分词；is said 的现在转述立场与修复事件的先后分别表达。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "structure-rewrite-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "原记录：According to the maintenance log, the crew had not replaced either fuse before the inspector arrived. 已知是两只保险丝。要改为被动，并显式保留日志来源、执行者、两只都未更换和过去参照点。哪一项及其理由符合？",
+      "options": [
+        "According to the maintenance log, neither fuse had been replaced by the crew before the inspector arrived. —— 日志来源仍在，crew 是执行者，两只都未在该参照点前完成更换。",
+        "According to the maintenance log, not both fuses had been replaced by the crew before the inspector arrived. —— not both 完整保留原记录的零只更换信息。",
+        "Neither fuse had been replaced by the crew before the inspector arrived. —— 被动形式保留动作关系，也仍显式标出了日志来源。"
+      ],
+      "answer": "According to the maintenance log, neither fuse had been replaced by the crew before the inspector arrived. —— 日志来源仍在，crew 是执行者，两只都未在该参照点前完成更换。",
+      "explanation": "had been replaced 保留过去参照前的完成被动；not…either 在这两只的语境里对应 neither。not both 只否定两只全换好，未保留明确零只；第三项动作关系正确，却删掉题目要求显式保留的来源。记录不说明检查员到来后是否更换。",
+      "hints": [
+        "先列四个必须保留的信息：哪份来源、谁更换、两只的否定范围、相对于哪个过去事件。逐项对照，不只找 been。",
+        "过去完成被动用 had been replaced；原文两只都未换对应 neither，by the crew 与 before the inspector arrived 保留各自角色。还要留下 according to 的来源。"
+      ]
+    },
+    {
+      "id": "structure-rewrite-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "一段已结束的徒步记录说，徒步者避开了农场狗的视线：hikers 是被看见的对象，dogs 是看见的执行者，avoided 已是正确的过去谓语。只修正 see 这一处形式错误，保留全部其他词：The hikers avoided being see by the farm dogs.",
+      "answer": "The hikers avoided being seen by the farm dogs.",
+      "explanation": "先看过去叙述 avoided，再看动词补语：avoid 后用 -ing，且 hikers 承受 see，所以是 being seen。by the farm dogs 标动作执行者，不能当截止时间；see 的过去分词是 seen。",
+      "hints": [
+        "avoided 已承担主句过去时间；后面是在搭配里描述『被看见』，不是再加一个独立过去谓语。",
+        "保留 being，后面应接 see 的过去分词 seen；不要改成主动 seeing 或有限过去式 saw。"
+      ]
+    },
+    {
+      "id": "structure-rewrite-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "陌生计划记录：According to the work schedule, the team will have installed the acoustic panels by Saturday morning. 改成以 acoustic panels 为主语的被动一句，保留 according to 来源和截止前完成的预测；沿用所有原词组。仍以 According to the work schedule 开头，by the team 紧跟动作，by Saturday morning 放句末。给定过去分词：installed。不要把日程预测改成已经发生。",
+      "answer": "According to the work schedule, the acoustic panels will have been installed by the team by Saturday morning.",
+      "explanation": "未来截止前的完成主动 will have installed 变成 will have been installed；panels 承受安装，team 仍是执行者。第一个 by 引人，第二个 by 引截止时间；来源限定还在，句子没有断言此刻已装好。",
+      "hints": [
+        "先固定来源与未来截止点，再让 panels 当承受者主语。完成与被动各需要哪一部分辅助链？执行者不能在换主语时消失。",
+        "用 will have been + installed，接 by the team；保留原来的来源开头，并把 by Saturday morning 留在末尾。"
+      ]
+    },
+    {
+      "id": "structure-rewrite-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "原事实是过去的尺寸限制：The bench was too narrow for Omar to lie on comfortably. 要用 so…that 改写，保留 Omar 与『无法舒适地躺』，没有给出禁止或完全无法躺的事实。哪一项及其理由符合？",
+      "options": [
+        "The bench was so narrow that Omar could not lie on it comfortably. —— 保留 Omar、窄的程度与无法舒适地躺的限制。",
+        "The bench was so narrow that Omar was not allowed to lie on it comfortably. —— not allowed 保留由尺寸造成的能力限制。",
+        "The bench was so narrow that Omar could not lie on it. —— 省略 comfortably 只减少词数，没有扩大不能的范围。"
+      ],
+      "answer": "The bench was so narrow that Omar could not lie on it comfortably. —— 保留 Omar、窄的程度与无法舒适地躺的限制。",
+      "explanation": "too narrow 在已给情境里对应 so narrow that…could not；新有限从句要保留 on 的宾语 it。not allowed 添加了禁止；删 comfortably 则从无法舒适地躺扩大成完全不能躺，两项都改变原事实。",
+      "hints": [
+        "把能力、许可与动作上的程度限制分开：题面究竟否定躺这个动作，还是否定舒适地躺？",
+        "保留 could not 与 comfortably；so…that 后是完整从句，lie on 的对象 it 也要保留。"
+      ]
+    },
+    {
+      "id": "structure-rewrite-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "目前流传的说法是：一位本地艺术家在 2016 年绘制了壁画；这段记录只是转述。保留 The mural 的承受者角色、is said 与先前时间。只补被动结构缺少的一个辅助词，其他词不改：The mural is said to have painted by a local artist in 2016.",
+      "answer": "The mural is said to have been painted by a local artist in 2016.",
+      "explanation": "is said 承担现在的转述；to have 表相对先前的绘制，mural 承受 paint，因此还要 been 构成 to have been painted。by a local artist 与 in 2016 保留执行者、时间；加一个词即可修正，不能删除 is said 升级为直接事实。",
+      "hints": [
+        "分别检查现在说法、先前绘制与壁画承受动作三层。现有 have painted 是主动还是被动？",
+        "在 have 与 painted 之间补被动需要的 been，组成完成被动不定式；is said 不改。"
+      ]
+    },
+    {
+      "id": "structure-rewrite-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "陌生搬运记录有两条事实：The trolley was so wide that Pavel could not wheel it through the gate. The manager asked Pavel not to remove the gate. 写指定的两句改写：第一句以 The trolley was too wide for Pavel 开头，用 to wheel through the gate，不重复 it；第二句以 Pavel was asked by the manager 开头，保留 not to remove the gate。保留过去的尺寸限制、指示来源与动作否定；不能改成 Pavel 没收到请求，也不能宣称他后来如何行动。两句之间须有句号。",
+      "answer": "The trolley was too wide for Pavel to wheel through the gate. Pavel was asked by the manager not to remove the gate.",
+      "explanation": "第一句把 so…that 的尺寸结果改为 too…for…to，保留同一人和过门动作。第二句前移被要求的人，was asked 保留过去被动指示，by the manager 保留来源，not to 否定拆门动作；两条有限主干分别成句。记录仍未说明 Pavel 是否照做。",
+      "hints": [
+        "先独立核对两条事实：谁受到尺寸限制；谁向谁提出什么否定动作。不要把不能搬过门解释成被禁止，也不要把『请别拆』改成『没请求』。",
+        "第一句用 too wide + for Pavel + to wheel through the gate；第二句保留 was asked + by the manager + not to remove the gate。两条有限主干用句号分开。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "选两三句自己的记录或计划，先列参与者、时间参照、过程/完成、肯否、程度、来源与条件；再做一次结构改写和一次更日常的表达。逐项反向解释新句，指出哪些结果仍然未知。",
+    "criteria": [
+      "根据完整语境解释所选动词链的时间、体、主被动与有限/非谓语位置；不能只报时态标签。",
+      "若主动被动转换，原执行者与承受者仍可定位；任务要求保留的来源及执行者没有遗漏。",
+      "否定范围、人物范围、程度限制与能力/许可不混用；请求不被改成已执行事实。",
+      "保留未来截止、持续时长或先后中真正给出的信息；不从持续过程捏造全量完成。",
+      "转述、可能与条件仍有对应表达；没有给出的原因或结果不额外增加。",
+      "陌生自由表达应能自己核对并在另一个情境复现；一次参考匹配及本组六题不等于综合改写全掌握。",
+      "本轮尚未独立检验所有条件、持续体、让步名词化和多来源转述的自由组合；需要后续开放表达与间隔练习。"
+    ]
+  }
+}

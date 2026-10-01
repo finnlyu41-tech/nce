@@ -1,0 +1,5 @@
+[
+  {"guideId": "pronouns", "unitId": "reference-ownership", "formIndices": [0, 1, 2], "contrastIndices": [0, 1, 2], "mistakeIndices": [0, 1, 2], "practiceIds": ["reference-ownership-v0-recognise", "reference-ownership-v1-repair"], "scope": "主宾角色、介词宾语、反身动作对象与独自/强调有讲解对比；识别实际确认谁等谁，改错按同一主体修正herself。", "remaining": "反身已有改错而无独立造句；复杂指代歧义、单数they、形式it、多参与者叙事与惯用反身搭配未全面训练。"},
+  {"guideId": "possession", "unitId": "reference-ownership", "formIndices": [3, 4, 5], "contrastIndices": [3, 4], "mistakeIndices": [3, 4, 5, 6], "practiceIds": ["reference-ownership-v0-repair", "reference-ownership-v1-produce"], "scope": "所属限定词/独立代词与单复所有格有说明；hers单错输入、共有工作室与ours在新情境独立造句，明确共有和分别归属对比。", "remaining": "规则/不规则复数所有格、whose问法及分别归属有介绍，尚无各自输入；双重所有格、复合名词与名称变体未穷尽。"},
+  {"guideId": "have", "unitId": "reference-ownership", "formIndices": [6, 7, 8], "contrastIndices": [5, 6, 7], "mistakeIndices": [7, 8, 9], "practiceIds": ["reference-ownership-v0-produce", "reference-ownership-v1-recognise"], "scope": "拥有、活动与完成助动词、have/be的职责有对照；新情境实际输入has…got当前问法，并识别has checked的完成角色和参照。", "remaining": "do/does/did拥有路线、活动have与过去拥有尚无各自独立输入；使役have、have to与全部have got语用/方言差异未穷尽。"}
+]
