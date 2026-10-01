@@ -1,0 +1,288 @@
+{
+  "id": "relative-reference",
+  "title": "限定对象与补充信息：先找名词，再看从句里的位置",
+  "stageId": "extension",
+  "order": 16,
+  "guideIds": [
+    "relative",
+    "relative-omission",
+    "non-defining"
+  ],
+  "prerequisites": [
+    "noun-reference",
+    "negative-precision"
+  ],
+  "purposeIds": [
+    "describe",
+    "reason"
+  ],
+  "goal": "用关系从句识别对象或补充信息，分清主语、宾语与所属；让逗号、省略和 which 的指向保留真实意思。",
+  "explanation": [
+    "先在主句找到要说明的人或物，再把从句还原成一个小句，看这个名词原来占哪一个位置。The technician who fixed the hinge is here 中，技术员是 fixed 的主语；The technician whom I called is here 中，I 是 called 的主语，技术员是联系对象。关系词承担这个位置，不能再重复加 he 或 him。",
+    "限定从句帮助挑出所说的对象，不加补充型逗号；非限定从句给已经明确的对象补信息，用逗号隔开。The volunteers who checked the radios stayed late 用检查任务识别一组人；The volunteers, who checked the radios, stayed late 把检查任务作为这一整组志愿者的补充事实。若明确六人中只有两人检查过，后一写法不能仍声称只描述那两人。",
+    "限定从句里的 who、which、that 作宾语时，常可以省略，因为小句自己的主语仍在：The charger I packed is missing。作主语时，完整小句需要关系词，如 the charger that powers the tablet；不能直接删成 the charger powers the tablet is missing。把整个从句改为分词短语是另一种结构，本单元不把它叫直接省一个关系词。",
+    "指人作主语常用 who，限定从句也可用 that；指物常用 which 或 that。指人作宾语，whom 是较正式的选择，日常也常用 who。介词放前面时，正式表达常用 to whom、with whom 或 with which，关系词不能裸删；介词留在后面时，限定宾语从句可以说 the person I sent the receipt to。",
+    "whose 后跟所属的名词，不是单独替换一个人：whose logo 指那人的标志设计，whose bicycle 指那人的自行车。whose 也能用于物的所属，如 a cabinet whose door is damaged；动词与所属名词的实际数量相配。who 和 whom 不能直接充当 whose，whose + 名词这一组也不能按普通宾语关系词规则只删掉 whose。",
+    "非限定从句中保留 who、whom、which 或 whose 等合适关系词，不用 that，也不直接省掉宾语关系词。补充部分插在主句中间时，两侧的逗号都要在；放在主句末尾时，前面用逗号。名字并不会在任何语境都自动要求逗号：若需要从同名者中挑选，也可能使用限定从句，先读场景。",
+    "逗号后的 which 还可指前面整个事实，不只是最近一个名词。The lenses travel in padded boxes, which reassures the courier 中，reassures 的单数对应前面“镜片用软垫箱运输”这个事实；若 which 直接修饰复数 lenses，则相应谓语按复数。先问是给哪件物品加属性，还是对整件事作评价；不靠逗号本身猜一个新事实。"
+  ],
+  "forms": [
+    {
+      "form": "人 + who / that + 谓语；物 + which / that + 谓语",
+      "meaning": "被修饰名词充当完整关系小句的主语。",
+      "useWhen": "限定某人或某物；保留关系词，不再加重复的 he、she、it 等主语。"
+    },
+    {
+      "form": "人 + whom / who / that + 主语 + 谓语；物 + which / that + 主语 + 谓语",
+      "meaning": "被修饰名词充当小句的宾语，小句另有自己的主语。",
+      "useWhen": "限定所联系、使用或携带的对象；whom 较正式，who 常见，不再重复添加 him 或 it 作同一宾语。"
+    },
+    {
+      "form": "限定名词 + 主语 + 谓语（省宾语关系词）",
+      "meaning": "保留限定关系与完整主谓，但不再写作宾语的关系词。",
+      "useWhen": "限定从句无补充型逗号，省去的是普通宾语位置；不能用于完整小句中的主语关系词、whose 或非限定从句。"
+    },
+    {
+      "form": "人 + to / with 等 + whom；物 + 介词 + which；或限定从句把介词留在末尾",
+      "meaning": "保留从句动词与对象之间的介词关系。",
+      "useWhen": "介词前置的正式路线保留 whom / which；若用口语的介词后置路线，限定宾语关系词可以省。此处不全面裁定所有语域中 who / whom 的选择。"
+    },
+    {
+      "form": "人或物 + whose + 所属名词 + 从句其余部分",
+      "meaning": "说明属于被修饰对象的人或物，以及它的情况。",
+      "useWhen": "如 whose logo 或 whose door；所属名词的角色和数量决定后续结构，不能换成 who logo，也不裸删 whose。"
+    },
+    {
+      "form": "已明确名词，who / whom / which / whose + 补充从句，主句其余部分",
+      "meaning": "补充已经明确对象的信息，而非挑出一个子集。",
+      "useWhen": "根据场景确认对象已明确；中间补充用成对逗号，句末补充用前置逗号；不以 that 或省关系词代替。"
+    },
+    {
+      "form": "完整主句，which + 对整个事实的说明",
+      "meaning": "以 which 回指前面发生或成立的整件事。",
+      "useWhen": "评价结果、影响或反应；本单元示例将整件事作为一个事实配单数谓语，不与最近复数名词的修饰关系混淆。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一志愿者小队，挑出一组或补充全组信息",
+      "a": {
+        "en": "The volunteers who checked the radios stayed late.",
+        "zh": "检查过对讲机的那些志愿者留到了很晚。"
+      },
+      "b": {
+        "en": "The volunteers, who checked the radios, stayed late.",
+        "zh": "那组志愿者留到了很晚；他们都检查过对讲机。"
+      },
+      "why": "a 用从句限定所谈对象，不单独报告全队人数。b 给主句所指的整组志愿者补充检查事实；在六人仅两人检查的场景，不能给全队加逗号后仍声称只选那两人。"
+    },
+    {
+      "label": "同一件充电器，宾语关系词可保留或省略",
+      "a": {
+        "en": "The charger that I packed is missing.",
+        "zh": "我装进包里的充电器不见了。"
+      },
+      "b": {
+        "en": "The charger I packed is missing.",
+        "zh": "我装进包里的充电器不见了。"
+      },
+      "why": "两句谈同一件事；I 已是 packed 的主语，that 是宾语，在这个限定从句中可省。省略没有改变谁打包了什么。"
+    },
+    {
+      "label": "同一维修场景，主语位置或宾语位置",
+      "a": {
+        "en": "The technician who fixed the hinge is here.",
+        "zh": "修好铰链的那位技术员在这里。"
+      },
+      "b": {
+        "en": "The technician whom I called is here.",
+        "zh": "我联系过的那位技术员在这里。"
+      },
+      "why": "a 的 who 做 fixed 的主语；b 的 I 做 called 的主语，whom 是宾语。两句分别用维修行为和我的联系来识别对象，不是所有关系词都能用同一省略规则。"
+    },
+    {
+      "label": "同一发送收据的关系，介词前置或后置",
+      "a": {
+        "en": "The person to whom I sent the receipt replied.",
+        "zh": "我发送收据给的那个人回复了。"
+      },
+      "b": {
+        "en": "The person I sent the receipt to replied.",
+        "zh": "我发送收据给的那个人回复了。"
+      },
+      "why": "a 用正式的 to whom，不能把 whom 裸删；b 把 to 留在后面，限定从句的宾语关系词可以省。发送对象与回复者没有改变。"
+    },
+    {
+      "label": "同一 Vera 和自行车，所属补充或两句说明",
+      "a": {
+        "en": "Vera, whose bicycle has a flat tyre, will be late.",
+        "zh": "Vera 会迟到；她的自行车有一条轮胎没气了。"
+      },
+      "b": {
+        "en": "Vera will be late. Her bicycle has a flat tyre.",
+        "zh": "Vera 会迟到。她的自行车有一条轮胎没气了。"
+      },
+      "why": "a 的 whose bicycle 把 b 中 Her bicycle 的所属关系带入补充从句；has 与单数 bicycle 对应，不把 whose 理解为另一个人或可随意省略的宾语词。两句都未单独声明这是迟到的唯一原因。"
+    },
+    {
+      "label": "同一联系和感谢行为，对象已明确或仍靠描述识别",
+      "a": {
+        "en": "I thanked Leo, whom I had called earlier.",
+        "zh": "我感谢了 Leo；我先前联系过他。"
+      },
+      "b": {
+        "en": "I thanked the caretaker I had called earlier.",
+        "zh": "我感谢了先前联系过的那位管理员。"
+      },
+      "why": "若 Leo 就是那位管理员，两句可报告同一事件，但组织信息不同：a 补充已明确的 Leo，whom 不能直接省；b 用联系行为限定管理员，宾语关系词可以省。日常 a 也可用 who 作宾语，不把 who 一概判错。"
+    },
+    {
+      "label": "同一镜片运输事实，修饰物品或回指整件事",
+      "a": {
+        "en": "The lenses, which are fragile, travel in padded boxes.",
+        "zh": "这些镜片用软垫箱运输；镜片很脆弱。"
+      },
+      "b": {
+        "en": "The lenses travel in padded boxes, which reassures the courier.",
+        "zh": "这些镜片用软垫箱运输，这让快递员放心。"
+      },
+      "why": "a 的 which 指复数 lenses，配 are；b 的单数 reassures 指“镜片用软垫箱运输”整个事实，不是把复数 boxes 说成单数。两句共享运输事实，但补充的信息不同。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "The technician who he fixed the hinge is here.",
+      "correct": "The technician who fixed the hinge is here.",
+      "why": "要说技术员本人修了铰链，who 已占主语位置，he 是重复主语；只删 he，不把修理人改成别人。"
+    },
+    {
+      "wrong": "The charger powers the tablet is missing.",
+      "correct": "The charger that powers the tablet is missing.",
+      "why": "若原意是“给平板供电的那只充电器不见了”，powers 需要关系主语 that 或 which 连接完整从句；不能按宾语省略规则裸删。"
+    },
+    {
+      "wrong": "The charger that I packed it is missing.",
+      "correct": "The charger that I packed is missing.",
+      "why": "that 已代表 packed 的宾语，不再添 it 表同一充电器。也可按限定宾语规则写 The charger I packed is missing。"
+    },
+    {
+      "wrong": "Vera, that works on the night shift, is awake.",
+      "correct": "Vera, who works on the night shift, is awake.",
+      "why": "若 Vera 已明确、夜班是补充信息，用带逗号的 who 从句，不在非限定从句里使用 that。"
+    },
+    {
+      "wrong": "I thanked Leo, I had called earlier.",
+      "correct": "I thanked Leo, whom I had called earlier.",
+      "why": "这里要补充“我先前联系过 Leo”，不是独立并列陈述；非限定宾语从句不能裸省关系词。whom 较正式，who 也可保留同一关系。"
+    },
+    {
+      "wrong": "I spoke to the designer who logo won the vote.",
+      "correct": "I spoke to the designer whose logo won the vote.",
+      "why": "要说明设计师的标志设计，需要 whose logo 的所属关系；who 不能直接作为 logo 的所属限定。"
+    },
+    {
+      "wrong": "The lenses travel in padded boxes, that reassures the courier.",
+      "correct": "The lenses travel in padded boxes, which reassures the courier.",
+      "why": "补充对整个运输事实的反应，用 which，不用非限定位置的 that；reassures 对应一个事实，而非复数镜片或箱子。"
+    },
+    {
+      "wrong": "The person to I sent the receipt replied.",
+      "correct": "The person to whom I sent the receipt replied.",
+      "why": "采用介词前置路线时，to 后仍需关系词连接到 the person，不能直接裸接小句 I sent the receipt；也可另用介词后置路线，但不能只删前置 whom。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "relative-reference-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "六人志愿者小队中，只有检查对讲机的两人留到了很晚；其余四人没有检查、也按时离开。要用检查任务挑出那两人，选择句子与范围理由都准确的一项。",
+      "options": [
+        "The volunteers who checked the radios stayed late. —— 从句挑出检查过的那两人，没有把检查事实扩到全队。",
+        "The volunteers, who checked the radios, stayed late. —— 逗号只让语气柔和，仍只选出检查过的两人。",
+        "The volunteers who checked the radios stayed late. —— who 是 checked 的宾语，可从这个完整小句里直接删掉。"
+      ],
+      "answer": "The volunteers who checked the radios stayed late. —— 从句挑出检查过的那两人，没有把检查事实扩到全队。",
+      "explanation": "限定从句无补充逗号，用检查任务识别两人。给全队加补充型逗号会把检查事实说成这一整组的补充，和四人未检查不符；who 在这里是 checked 的主语，第三项的省略理由也错。",
+      "hints": [
+        "先看主句要指全队还是一个子集，再看从句是识别条件还是全组补充事实。",
+        "要挑出检查者，用不带补充逗号的 who checked the radios；who 本身做 checked 的主语。"
+      ]
+    },
+    {
+      "id": "relative-reference-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "有几位修锁师傅，你要指实际装锁的那位女性。只修正从句主语这一处错误，保留 who 和限定关系，不加逗号：The mechanic who she fitted the lock gave me a receipt.",
+      "answer": "The mechanic who fitted the lock gave me a receipt.",
+      "explanation": "who 已指安装锁的师傅，并作 fitted 的主语。she 重复占同一主语位置；删掉后仍是那位师傅装锁并给我收据。",
+      "hints": [
+        "把后面小句还原为“那位师傅装了锁”：现在有哪两个成分重复指她？",
+        "保留作主语的 who，删除紧接在后的 she；限定从句不用补充逗号。"
+      ]
+    },
+    {
+      "id": "relative-reference-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "你借过几样装备，现在说从巡护员借来的那只手电仍能用。以 The torch 开头，用 I borrowed from the ranger / still works 组成一句；指定省略作 borrowed 宾语的关系词，不加逗号，不另添 it 或新的信息。",
+      "answer": "The torch I borrowed from the ranger still works.",
+      "explanation": "I 是 borrowed 的主语，借用对象 torch 占宾语位置。限定从句可省宾语关系词，still works 是主句谓语；不再补 it 重复指手电。",
+      "hints": [
+        "先分出主句“手电仍能用”和用于识别手电的“我从巡护员借的”。",
+        "在 The torch 后直接接 I borrowed from the ranger；关系词原本作宾语，主句再接 still works。"
+      ]
+    },
+    {
+      "id": "relative-reference-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "双方已明确联系人是 Marisol，你昨天联系过她，她已确认订位。昨天联系是补充信息。选择表达与主宾语／省略理由都正确的一项。",
+      "options": [
+        "Marisol, whom I contacted yesterday, has confirmed our booking. —— I 是 contacted 的主语；补充从句仍保留宾语关系词与逗号。",
+        "Marisol, I contacted yesterday, has confirmed our booking. —— I 已作主语，所以此处像限定从句一样可裸省宾语关系词。",
+        "Marisol, who contacted me yesterday, has confirmed our booking. —— 只换关系词，仍保留我昨天联系她的方向。"
+      ],
+      "answer": "Marisol, whom I contacted yesterday, has confirmed our booking. —— I 是 contacted 的主语；补充从句仍保留宾语关系词与逗号。",
+      "explanation": "whom 是 contacted 的宾语，指 Marisol；从句补充已明确对象，不能裸省。第三项的 who 作主语，变成她联系我，改变方向。写 whom 是正式路线；Marisol, who I contacted yesterday,… 在日常也能保留相同宾语关系。",
+      "hints": [
+        "谁联系谁？先找到 contacted 的主语，再确认这个从句是在补充已明确的对象。",
+        "保留 I contacted 的宾语关系词；带逗号的补充从句不能按限定宾语规则直接省掉。"
+      ]
+    },
+    {
+      "id": "relative-reference-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "双方已知道 Ethan 是哪位朋友，维修咖啡馆的工作是补充信息。只把关系词 that 改成合适的指人关系词，保留两个逗号和所有其他词：Ethan, that works at the repair café, knows the owner.",
+      "answer": "Ethan, who works at the repair café, knows the owner.",
+      "explanation": "补充已明确的 Ethan，使用非限定的 who，不使用 that。who 仍作 works 的主语；两个逗号界定补充部分，删除它们会改变信息组织。",
+      "hints": [
+        "先确认是用工作地点挑一个同名者，还是给已明确朋友补信息。",
+        "这里是逗号包围的补充从句；关系主语指人，用 who 替换 that。"
+      ]
+    },
+    {
+      "id": "relative-reference-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "双方已明确艺术家 Noa。她的草图在门厅，她将在周日主持工作坊；参加者已经收到材料，这整个事实让组织者放心。按顺序写两句：用 Noa / whose sketches are in the foyer / will lead the workshop on Sunday，把所属信息紧接 Noa 作逗号补充；再用 The participants / have received their materials / which reassures the organisers，让 which 指收到材料整件事。保留给定词组和必要逗号，不增加事实。",
+      "answer": "Noa, whose sketches are in the foyer, will lead the workshop on Sunday. The participants have received their materials, which reassures the organisers.",
+      "explanation": "whose sketches 保留 Noa 与草图的所属关系，两个逗号把它标为补充。第二句的 which 指参与者已收到材料的整体事实，用单数 reassures；不是把复数 materials 当作 reassures 的主语。",
+      "hints": [
+        "第一句检查草图属于谁、对象是否已明确；第二句检查评价的是物品还是一个事实。",
+        "Noa 后用逗号包围 whose sketches…；完整第二主句后用逗号接 which reassures…，不把补充部分变成限定条件。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "用一次真实活动或你明确标为假设的场景介绍两个人或物。写一句靠从句识别对象的描述，再给一个已明确对象补充所属信息，并对一个完整事实补充影响。注明从句中谁作主语、谁作宾语、哪些关系词能省；不要复制手电、Noa 或 Marisol 的练习。",
+    "criteria": [
+      "先行词和关系词的指向清楚，主语与宾语角色不颠倒，也没有重复的 he / it 等成分。",
+      "需要识别对象时使用限定关系；对象已明确的补充用正确逗号边界，增加或删除逗号不与实际范围冲突。",
+      "宾语省略限于合适的限定结构；完整小句的主语关系词、非限定关系词和 whose 没有被裸删。",
+      "whose + 名词保留所属；who / whom 的选择结合角色与语域，不把所有日常宾语 who 判错。",
+      "which 的物品或整件事指向可解释，谓语数量与实际指向对应；开放描述自然性仍需核对。"
+    ]
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "id": "modal-evidence",
+  "title": "依据、可能性与过去能力",
+  "stageId": "meaning",
+  "order": 15,
+  "prerequisites": [
+    "modal-choice",
+    "past-background"
+  ],
+  "goal": "用证据和时间判断情态动词的意思，区分现在与过去的推断、过去能力，以及尚未核实或确实未实现的可能。",
+  "guideIds": [
+    "may",
+    "deduction-now",
+    "deduction-past",
+    "past-ability",
+    "could-have"
+  ],
+  "purposeIds": [
+    "reason",
+    "advise",
+    "story"
+  ],
+  "explanation": [
+    "先问『说话者在推断、允许，还是讲能力？』，再选形式。may/might/could 可以表示不确定的可能；must 常表示根据证据作出的强推断，can't 可表示根据证据排除一种可能。这些词没有固定概率刻度，强推断也不是已经被外部证实的事实。",
+    "may be 是情态动词加 be，maybe 是『也许』这个副词，后面需要完整句子。may 也可用于较正式的请求和许可，如向有权限的人询问能否使用设备；许可与可能性要由情境区分，不把每个 may 都译成『也许』。",
+    "现在推断可用 must/can't + 原形；若判断活动正在进行，可用 must/may/might/could be + -ing。在『你不得复制钥匙』的规定里，mustn't 表示禁止；在『这不可能是我的钥匙』的推断里，can't 表示排除。这里的禁止和推断不是同一个意思，不用 mustn't 去机械替换 can't。",
+    "回看过去的推断用情态动词 + have + 过去分词：must have done 是很确信以前做过，may/might/could have done 保留过去的可能，can't/couldn't have done 在相应证据语境中可排除过去的可能。讲过去被要求做某事通常用 had to，不能把它与 must have 的推断混同；义务本身也不直接证明已经履行。",
+    "过去一般能力可用 could；肯定地讲一次具体尝试实际成功，通常用 was/were able to 或 managed to 来突出『做到了』。这不是对 could 的全面禁令：couldn't 能讲一次失败，see/hear/understand 等感知或心理动词的 could 也能出现在具体过去情境；could 还有礼貌请求和建议等用法。本轮重点是一般能力与实际成功的区别。",
+    "could have + 过去分词至少要分两种阅读：『可能发生过，但还不知道』，或『当时本可以，却已知没有做』。形式本身不宣布事情未发生。只有补充了真实结果或明确语境，才可读出未实现的机会；讨论过去可选行动时也不要凭一个 could have 就断言对方没做。"
+  ],
+  "forms": [
+    {
+      "form": "may/might/could + 动词原形；may be …；Maybe + 完整句子",
+      "meaning": "保留一种尚未确定的可能；may be 和 maybe 用不同句法表达相近的『也许』。",
+      "useWhen": "证据不足以确认，愿意承认其他可能；不为这些情态动词分配固定概率。maybe 本身不能作谓语，may 后的 be 也不能省成副词。"
+    },
+    {
+      "form": "May I + 动词原形 …?；You may + 动词原形 …",
+      "meaning": "较正式地请求或给予许可。",
+      "useWhen": "向能作许可决定的人询问，或由有权限的人答复；may 后接原形，不加 to。与『或许会』的推断用途按情境区分。"
+    },
+    {
+      "form": "must/can't + be/do …",
+      "meaning": "根据当前证据作强推断，或排除某种当前可能。",
+      "useWhen": "推断当下的身份、状态或行为；推断不等于已核实的事实，can't 的排除与规定中 mustn't 的禁止不同。"
+    },
+    {
+      "form": "must/may/might/could + be + 动词-ing",
+      "meaning": "判断某活动现在正在进行，并表达相应确信程度。",
+      "useWhen": "活动时间是现在的过程，情态后先有 be 再有 -ing；可能与强推断由语境和说话者立场决定。"
+    },
+    {
+      "form": "must/may/might/could/can't/couldn't + have + 过去分词",
+      "meaning": "从现在或叙事语境推断更早的事情：强推断、可能，或不可能。",
+      "useWhen": "目标是过去的情况而非当前义务；have 后用过去分词。否定推断的具体读法仍需证据，不能据此概括 couldn't have 的全部用途。"
+    },
+    {
+      "form": "could + 动词原形",
+      "meaning": "讲过去的一般能力；感知和心理动词也可描述具体过去情境中能感到或理解的情况。",
+      "useWhen": "常配过去的一段生活时期；具体肯定成功通常选 able to/managed to 更清楚，但不一概禁止单次语境中的 could。"
+    },
+    {
+      "form": "was/were able to + 动词原形；managed to + 动词原形",
+      "meaning": "突出过去某次实际成功做到了，managed to 常带克服困难的意味。",
+      "useWhen": "题目或叙事已确认一次具体成功；was/were 与主语一致，able 和 managed 后均需 to 来连接动作。"
+    },
+    {
+      "form": "couldn't + 动词原形；wasn't/weren't able to + 动词原形",
+      "meaning": "表达过去没有能力或在某次情境中未能做到。",
+      "useWhen": "一般能力不足和一次失败都可用否定能力形式；实际是哪一类，需要时间与结果信息，本轮只作对照介绍。"
+    },
+    {
+      "form": "could have + 过去分词（结果未知）",
+      "meaning": "把过去发生过的某件事作为一种可能。",
+      "useWhen": "结果尚未核实；不从这个结构本身推出『一定没发生』。"
+    },
+    {
+      "form": "could have + 过去分词（已知未做）",
+      "meaning": "回看当时具备的机会或可选行动，但实际没有采取。",
+      "useWhen": "上下文已明确结果，或用 but … didn't/其他实际结果把未实现说清；不要把这一读法强套到结果未知的推断。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一个包裹：may be 与 maybe",
+      "a": {
+        "en": "The parcel may be at reception.",
+        "zh": "包裹也许在前台。"
+      },
+      "b": {
+        "en": "Maybe the parcel is at reception.",
+        "zh": "也许包裹在前台。"
+      },
+      "why": "两句都保留位置的可能。A 用 may + be 作谓语；B 的 maybe 是句子副词，后面的主语仍需 is。不能写 parcel maybe at reception 来省掉谓语。"
+    },
+    {
+      "label": "同一前台：许可还是位置推测",
+      "a": {
+        "en": "You may leave your bag here.",
+        "zh": "你可以把包留在这里。"
+      },
+      "b": {
+        "en": "Your bag may be at reception.",
+        "zh": "你的包也许在前台。"
+      },
+      "why": "A 设定为前台工作人员向客人作许可答复，may leave 表示获准放包；B 设定为寻找包时的推测，may be 表示位置尚未确认。情境帮助区分 may 的功能。"
+    },
+    {
+      "label": "同一水壶：依据还是规定",
+      "a": {
+        "en": "The kettle is whistling. The water must be boiling.",
+        "zh": "水壶正在鸣响。水想必正在沸腾。"
+      },
+      "b": {
+        "en": "Borrowers must return the kettle before lunch.",
+        "zh": "借用者必须在午饭前归还水壶。"
+      },
+      "why": "A 用声音作依据，must be boiling 是当前过程的强推断；B 设定为器材借用规定，must return 是义务。相同 must 不能一概译成命令，也不能一概译成推断。"
+    },
+    {
+      "label": "同一钥匙：排除可能还是禁止行动",
+      "a": {
+        "en": "This key can't be mine; mine is still in my pocket.",
+        "zh": "这把钥匙不可能是我的；我的还在口袋里。"
+      },
+      "b": {
+        "en": "You mustn't copy this key.",
+        "zh": "你不得复制这把钥匙。"
+      },
+      "why": "A 用自己的钥匙还在口袋作依据排除身份；B 是不准复制的规定。这里 can't 的推断与 mustn't 的禁止功能不同，不能在保留意思时互换。"
+    },
+    {
+      "label": "同一次刷漆：现在状态还是过去事件",
+      "a": {
+        "en": "The paint must be dry now.",
+        "zh": "油漆现在想必已经干了。"
+      },
+      "b": {
+        "en": "The painter must have finished yesterday.",
+        "zh": "油漆工想必昨天就已做完了。"
+      },
+      "why": "A 推断现在的状态，用 must be；B 推断昨天的事件，用 must have + finished。两句的依据仍要由上下文支持，结构本身不证明判断正确。"
+    },
+    {
+      "label": "同一人、同一技能：一般能力与一次成功",
+      "a": {
+        "en": "At primary school, Nina could tie a strong knot.",
+        "zh": "上小学时，Nina 会打牢固的绳结。"
+      },
+      "b": {
+        "en": "During yesterday's rescue drill, Nina managed to tie a strong knot.",
+        "zh": "在昨天的救援演练中，Nina 成功打了一个牢固的绳结。"
+      },
+      "why": "A 讲那段时期具备的技能；B 明确一次演练中实际做到了，managed to 突出成功。通常不只用肯定 could 来确认这种一次完成，但感知、心理等用法另需按语境判断。"
+    },
+    {
+      "label": "同一听觉：具体时刻并不一概排除 could",
+      "a": {
+        "en": "At the age of ten, Ren could hear the alarm across the courtyard.",
+        "zh": "十岁时，Ren 就能听见庭院另一边的警报声。"
+      },
+      "b": {
+        "en": "Yesterday, Ren could hear the alarm across the courtyard.",
+        "zh": "昨天，Ren 能听见庭院另一边的警报声。"
+      },
+      "why": "A 明确说十岁那段时期的听觉能力；B 指昨天的具体情境。hear 这类感知动词可在两种过去语境中配 could，不能把『单次肯定成功通常用 able to/managed to』误扩成『具体过去一律不能用 could』。"
+    },
+    {
+      "label": "同一种过去选择：结果未知与已知没做",
+      "a": {
+        "en": "Jun could have called a taxi; we don't know how he got home.",
+        "zh": "Jun 可能叫过出租车；我们不知道他是怎么回家的。"
+      },
+      "b": {
+        "en": "Jun could have called a taxi, but he didn't.",
+        "zh": "Jun 当时本可以叫出租车，但他没有叫。"
+      },
+      "why": "A 是尚未核实的过去可能，不能推出他没叫；B 的 but he didn't 明确未实现的机会。could have called 相同，真实结果信息改变阅读。"
+    },
+    {
+      "label": "同一次搬椅子：过去推断与过去义务",
+      "a": {
+        "en": "They must have moved the chairs before the event.",
+        "zh": "他们想必在活动前搬过那些椅子。"
+      },
+      "b": {
+        "en": "They had to move the chairs before the event.",
+        "zh": "他们那时必须在活动前搬那些椅子。"
+      },
+      "why": "A 根据证据推断过去做过；B 讲过去的要求。had to 并不靠自身说明要求已履行，must have 也不是过去义务的固定形式。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "The parcel maybe at reception.",
+      "correct": "The parcel may be at reception.",
+      "why": "要保留这个主语和情态谓语结构，用分开的 may be。若用副词 maybe，则可写 Maybe the parcel is at reception，不能省掉句子的谓语。"
+    },
+    {
+      "wrong": "May I to use this scanner?",
+      "correct": "May I use this scanner?",
+      "why": "这里是请求许可，情态 may 后接动词原形 use；多出的 to 不是礼貌成分。Can/Could I 也可自然请求，但不属于本例保留 may 的改错目标。"
+    },
+    {
+      "wrong": "The water must boiling.",
+      "correct": "The water must be boiling.",
+      "why": "要推断水正在沸腾，结构是 must + be + boiling，不能把 -ing 直接接在情态动词后。"
+    },
+    {
+      "wrong": "This key can't is mine.",
+      "correct": "This key can't be mine.",
+      "why": "情态 can't 后接原形 be，不接 is；在给出的钥匙身份语境中，这是排除可能的推断。"
+    },
+    {
+      "wrong": "They must have move the chairs.",
+      "correct": "They must have moved the chairs.",
+      "why": "已经选择过去推断的情态完成结构，have 后应接过去分词 moved，不用原形 move。"
+    },
+    {
+      "wrong": "We managed open the safe after several attempts.",
+      "correct": "We managed to open the safe after several attempts.",
+      "why": "managed 后用 to + 原形连接成功做成的动作；本例表示多次尝试后确实打开保险箱，不是在讲一般能力。"
+    },
+    {
+      "wrong": "She was able finish the task.",
+      "correct": "She was able to finish the task.",
+      "why": "表示做得到的结构是 be able to + 原形，不能漏掉 to。这里 was 把它放在过去。"
+    },
+    {
+      "wrong": "Jun could have call a taxi.",
+      "correct": "Jun could have called a taxi.",
+      "why": "could have 后用过去分词 called；是结果未知的过去可能还是已知未用的机会，要再读上下文，不能只据形式判定没有叫车。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "modal-evidence-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "你听到隔壁持续打磨墙面的声音。根据这个声音，你很确信有人正在打磨墙面；但两位装修工 Mia 和 Omar 都可能在场，你不知道是哪一位。哪项的两句英文及理由同时符合这两种立场？sanding the wall 指打磨墙面。",
+      "options": [
+        "Someone must be sanding the wall. It may be Mia. ——要求有人打磨墙面；已经确认身份是 Mia。",
+        "Someone may be sanding the wall. It must be Mia. ——对活动很确信；身份还待确认。",
+        "Someone must be sanding the wall. It may be Mia. ——活动正在进行的强推断；身份仍有可能性。",
+        "Someone must sanding the wall. It may be Mia. ——活动正在进行的强推断；身份仍有可能性。"
+      ],
+      "answer": "Someone must be sanding the wall. It may be Mia. ——活动正在进行的强推断；身份仍有可能性。",
+      "explanation": "must be sanding 把正在进行的活动作为基于声音的强推断；may be Mia 保留身份不确定。must 后直接接 sanding 缺少 be；把第一句的确信改成 may、第二句的未知身份改成 must 会偏离指定立场；相同英文配『要求、已确认』的理由也误读了情境。may/might/could 可在别的表达中保留可能，本题不是给它们分配概率，也不把强推断当已证实事实。",
+      "hints": [
+        "分开看两条信息：哪一条你很确信，哪一条仍可能有别的人选？再核对英文和理由是否同时吻合。",
+        "正在进行的推断需要情态 + be + -ing；may be 可保留身份的可能，别把强推断读成规定。"
+      ]
+    },
+    {
+      "id": "modal-evidence-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "你向工作人员较正式地请求使用扫描仪的许可。保留 May I 和其余用词，只去掉一处多余的词：May I to use this scanner?",
+      "answer": "May I use this scanner?",
+      "accepted": [],
+      "explanation": "May I + 原形可请求许可，use 前不加 to。Could I/Can I 等也可自然表达请求，但本题检验保留 May I 的单处修正，不据此排斥其他英语请求。",
+      "hints": [
+        "请求许可仍用情态动词结构；检查情态之后与动作之间是否多了一个连接词。",
+        "may 后接动词原形，疑问中的 I 不改变这一要求。"
+      ]
+    },
+    {
+      "id": "modal-evidence-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "新情境：账单列有换电池工时，设备里的电池型号也变了。你据此很确信技师在昨天的维修中换过电池，但没有亲眼见到。用 The technician / replace the battery 和 must 写一句对那次过去行为的推断：用情态完成结构，不改成义务或直接事实，不另加时间信息；可缩写 must have。",
+      "answer": "The technician must have replaced the battery.",
+      "accepted": [
+        "The technician must've replaced the battery."
+      ],
+      "explanation": "目标是推断已经发生的维修行为，所以用 must have + replaced；不是要求技师现在换电池的 must replace，也不是过去义务 had to replace。证据支持说话者的确信，参考句没有宣称这是外部已验证的事实。",
+      "hints": [
+        "推断发生在回看维修时，被推断的动作则发生在昨天；不要把说话的现在与动作的过去混为一层。",
+        "过去推断用 must + have + 过去分词；replace 是规则动词，注意词尾已有 e。"
+      ]
+    },
+    {
+      "id": "modal-evidence-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "Mina 昨晚进入过展厅。前门和侧门当时都开着，但我们没有路线记录，不知道她走了哪一扇门；这里是在提出『她可能走过侧门』，不是确认她放弃了这个机会。哪项的结构和理由都符合？",
+      "options": [
+        "Mina could have used the side entrance. ——把使用侧门当作一种未核实的过去可能。",
+        "Mina could have used the side entrance. ——当时有机会走侧门，而且已确认她没走。",
+        "Mina could have use the side entrance. ——把使用侧门当作一种未核实的过去可能。",
+        "Mina couldn't have used the side entrance. ——把使用侧门当作一种未核实的过去可能。"
+      ],
+      "answer": "Mina could have used the side entrance. ——把使用侧门当作一种未核实的过去可能。",
+      "explanation": "could have used 可提出过去的一种可能，题干没有核实路线，不能从这个形式推出『她没走侧门』。could have use 缺少过去分词；couldn't have used 在排除路线的推断语境里意味着不可能，也不符合这里保留可能的理由。明确未实现机会的另一个读法，要有已知结果或补充上下文。",
+      "hints": [
+        "题干已确认的是进入展厅，尚未确认的是哪扇门；把未知结果与已知没有做区分开。",
+        "过去的可能用 could + have + 过去分词；否定会改变这里要保留的可能。"
+      ]
+    },
+    {
+      "id": "modal-evidence-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "多次尝试后，我们确实打开了保险箱。只补一个缺失的词，保留 managed 和其余词序：We managed open the safe after several attempts.",
+      "answer": "We managed to open the safe after several attempts.",
+      "accepted": [],
+      "explanation": "managed to open 明确多次尝试后一次实际成功；缺的是连接动作的 to。一般过去能力可用 could，本题没有要求把一个自然 could 句机械判错，而是修正已选定的 managed 结构。",
+      "hints": [
+        "这里已确认成功，并选用了 managed；只检查它如何与后面的动作连接。",
+        "managed 后接 to + 动词原形，open 本身不用改过去式。"
+      ]
+    },
+    {
+      "id": "modal-evidence-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "新情境：Asha 当时有时间，也受邀参加我们的散步，但她没有参加，选择待在家。用 Asha / join our walk / but / she / stay at home 写一句话：前半句用 could have 表示那次未用的机会，后半句用一般过去式交代实际结果。可缩写 could have，也可用 home 替换 at home；不加其他信息。",
+      "answer": "Asha could have joined our walk, but she stayed at home.",
+      "accepted": [
+        "Asha could've joined our walk, but she stayed at home.",
+        "Asha could have joined our walk, but she stayed home.",
+        "Asha could've joined our walk, but she stayed home."
+      ],
+      "explanation": "could have joined 回看当时可选的参加机会，but she stayed at home 给出已知的实际结果，因而这里可读出机会没有实现。若不知道她参加与否，相同情态完成结构也可能只是过去可能；不能把所有 could have 都判作『没发生』。",
+      "hints": [
+        "先标出当时可做的事，再标出题干已确认的真实结果；两部分不要都写成未知推测。",
+        "前半句用 could have + 过去分词，后半句用 stay 的一般过去式；but 保留机会与结果的差别。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "为一次真实经历或可核对的小故事写 5—7 句解释：列出一个事实依据，分别表达一条现在推断与一条过去推断；再比较一段时期的一般能力和一次实际成功。最后用 could have 提出一种过去可能或未实现的机会，并明确结果是否已知。可据此给出下一次行动的建议，避免把推测写成已证实事实。提交现有表达路径后，开放内容与推断依据仍待核对。",
+    "criteria": [
+      "推断有可理解的依据；确信程度符合说话者立场，不写固定概率或把 must 当验证证明。",
+      "现在过程、当前状态与过去事件所用 be/-ing/have + 过去分词的时间关系正确。",
+      "推断、许可、义务和能力能按情境分开，尤其区分 can't 的排除与本单元 mustn't 的禁止。",
+      "一般能力与具体一次成功表达清楚，遇到感知/心理动词时不机械禁止 could。",
+      "could have 后的真实结果明确标为未知或已知未做，理由与实际结果不矛盾。",
+      "写出自己的新内容；事实、自然度及开放建议的适切性继续人工核对，不用有限答案自动打分。"
+    ]
+  }
+}

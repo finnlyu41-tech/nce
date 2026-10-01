@@ -1,0 +1,74 @@
+[
+  {
+    "guideId": "condition-unreal",
+    "unitId": "hypothetical-condition",
+    "formIndices": [
+      0,
+      1,
+      2,
+      8
+    ],
+    "contrastIndices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "hypothetical-condition-v0-recognise",
+      "hypothetical-condition-v0-repair"
+    ],
+    "scope": "过去形式表示当前／未来假设距离，与真实过去叙述、were／was 和 would／could 重心有定位讲解；认知题同时核对当前无投影仪的事实与能力理由，输入题检验 could 后原形。",
+    "remaining": "were／was、将来假设及 might 当前有介绍，但没有各自独立造句；if 中意愿 would 的特殊语境、建议语气及不同时态组合未穷尽，不将形式换算为固定概率。"
+  },
+  {
+    "guideId": "condition-past",
+    "unitId": "hypothetical-condition",
+    "formIndices": [
+      3,
+      4,
+      7
+    ],
+    "contrastIndices": [
+      2,
+      6
+    ],
+    "mistakeIndices": [
+      2,
+      3,
+      6
+    ],
+    "practiceIds": [
+      "hypothetical-condition-v0-produce",
+      "hypothetical-condition-v1-repair"
+    ],
+    "scope": "过去条件与过去结果的完成形式、could have 的未实现机会及与当前结果的混合边界均有解释对比；陌生露台场景造句 past condition + could have eaten，改错核对 would have opened 的过去结果。",
+    "remaining": "混合条件目前只有解释、对比、错例，未独立检验；否定反事实、could／might 在更多过去语境的语义与口语 if would have 的语域差异未全面训练。"
+  },
+  {
+    "guideId": "as-if",
+    "unitId": "hypothetical-condition",
+    "formIndices": [
+      5,
+      6
+    ],
+    "contrastIndices": [
+      4,
+      5
+    ],
+    "mistakeIndices": [
+      4,
+      5
+    ],
+    "practiceIds": [
+      "hypothetical-condition-v1-recognise",
+      "hypothetical-condition-v1-produce"
+    ],
+    "scope": "as if／as though 的可能事实与现实距离、当前表现与更早假想都有形式及对比；声音情境实际辨析普通现在进行时，新港口情境构造更早且已知未发生的 had visited，允许同义 as though。",
+    "remaining": "过去主句中普通后移与非真实形式的重叠、不同语气下的讽刺及省略比较尚无独立练习；不把过去形态本身当作实际过去或必然虚假的证明。"
+  }
+]

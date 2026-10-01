@@ -1,0 +1,115 @@
+[
+  {
+    "guideId": "formal-it",
+    "unitId": "information-focus",
+    "formIndices": [
+      0,
+      1,
+      2
+    ],
+    "contrastIndices": [
+      0,
+      1,
+      2
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "information-focus-v0-repair"
+    ],
+    "scope": "形式主语、形式宾语和普通it的评价对象有解释及同情境对照；find it difficult to的结构缺项由实际输入检验。",
+    "remaining": "形式主语和for/of参与者差异有说明，没有独立输入；不同评价动词、形容词与that/-ing搭配未穷尽。"
+  },
+  {
+    "guideId": "that-clauses",
+    "unitId": "information-focus",
+    "formIndices": [
+      3,
+      4
+    ],
+    "contrastIndices": [
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      2,
+      3,
+      4
+    ],
+    "practiceIds": [
+      "information-focus-v0-recognise"
+    ],
+    "scope": "完整内容与宾语缺位在相同claim场景比较，识别题检查角色与意义；问词内容小句作主语和正常内部语序有示范。",
+    "remaining": "内容that省略、表语与宾语位置、多重嵌套、what融合关系等未全面训练；问词主语小句没有独立输入题。"
+  },
+  {
+    "guideId": "likely",
+    "unitId": "information-focus",
+    "formIndices": [
+      5
+    ],
+    "contrastIndices": [
+      5,
+      11
+    ],
+    "mistakeIndices": [
+      5
+    ],
+    "practiceIds": [
+      "information-focus-v0-produce",
+      "information-focus-v1-recognise"
+    ],
+    "scope": "事件主语与形式it的预测改写、低可能性、消息来源差异有对照；新造句实际表达今晚unlikely，识别保留reported而非偷换likely。",
+    "remaining": "过去可能性、likely to have done、likely作为副词以及复杂否定辖域没有全面输入；不设固定概率或成绩预测。"
+  },
+  {
+    "guideId": "inversion",
+    "unitId": "information-focus",
+    "formIndices": [
+      6,
+      7,
+      8
+    ],
+    "contrastIndices": [
+      6,
+      7,
+      8
+    ],
+    "mistakeIndices": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "practiceIds": [
+      "information-focus-v1-produce"
+    ],
+    "scope": "普通语序与正式强调、已有助动词、not until仅外层倒装、两种紧接连接均说明；陌生日程变动实际输入No sooner…than。",
+    "remaining": "Rarely/Never、Not until及Hardly有讲解与错例，没有各自独立输入；地点完全倒装、so/such、only、条件倒装和省略形式未穷尽。"
+  },
+  {
+    "guideId": "reporting-passive",
+    "unitId": "information-focus",
+    "formIndices": [
+      9,
+      10
+    ],
+    "contrastIndices": [
+      9,
+      10,
+      11
+    ],
+    "mistakeIndices": [
+      10,
+      11
+    ],
+    "practiceIds": [
+      "information-focus-v1-recognise",
+      "information-focus-v1-repair"
+    ],
+    "scope": "It is reported that与对象作主语两路径、同时状态和更早动作、未核实来源有对照；认知题和单形式改错实际检验当前转述更早动作。",
+    "remaining": "更早动作只有识别及改错，尚无独立被动转述造句；进行不定式、被动不定式、转述过去视角及不同reporting verbs搭配未穷尽。"
+  }
+]

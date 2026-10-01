@@ -1,0 +1,70 @@
+[
+  {
+    "guideId": "past-be",
+    "unitId": "past-background",
+    "formIndices": [
+      0,
+      1,
+      2
+    ],
+    "contrastIndices": [
+      0,
+      5
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "past-background-v0-repair"
+    ],
+    "scope": "讲解 was/were 的过去身份、状态与位置，和 did 普通动作路线作对比；本轮用复数否定状态的单错误修正检验主谓一致。",
+    "remaining": "过去 be 的肯定、一般疑问和与动作疑问的区分已有可定位讲解与例句，尚未逐项独立输入测试；倒装特殊用法及全部 be 补语不在本轮。"
+  },
+  {
+    "guideId": "past-continuous",
+    "unitId": "past-background",
+    "formIndices": [
+      3,
+      4
+    ],
+    "contrastIndices": [
+      1,
+      2,
+      3
+    ],
+    "mistakeIndices": [
+      2,
+      3
+    ],
+    "practiceIds": [
+      "past-background-v0-recognise",
+      "past-background-v0-produce"
+    ],
+    "scope": "比较过去观察点上的过程、一般过去事件及整体时段；识别五点的背景并在新浇水情境中造句，检查 be + -ing、背景与事件关系。",
+    "remaining": "否定和疑问形式、双背景重叠、状态动词的词义变化及进行时的其他篇章功能尚未独立测试；when/while 未作为固定时态触发词。"
+  },
+  {
+    "guideId": "past-perfect",
+    "unitId": "past-background",
+    "formIndices": [
+      5,
+      6
+    ],
+    "contrastIndices": [
+      3,
+      4
+    ],
+    "mistakeIndices": [
+      4,
+      5
+    ],
+    "practiceIds": [
+      "past-background-v1-recognise",
+      "past-background-v1-repair",
+      "past-background-v1-produce"
+    ],
+    "scope": "用过去参照前已完成的活动解释 had + 过去分词；比较已完成与仍在进行，也给出 after 后两种自然时态；识别先后、修正过去分词，并在音乐会查票的新情境中造句。",
+    "remaining": "hadn't/Had 疑问为介绍，未逐项输入检验；此前状态、经历、before 所含未完成关系、过去完成进行时和反事实用法未穷尽，本轮不把 after/before 一概判为强制过去完成。"
+  }
+]
