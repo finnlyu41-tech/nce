@@ -40,7 +40,16 @@ const preparedData = new WeakMap<PreparedCapabilityReviewRestore, PreparedData>(
 const MAX_TIME = 8640000000000000;
 const clone = <T>(value: T): T => JSON.parse(JSON.stringify(value));
 const isObject = (value: unknown): value is RecordValue => !!value && typeof value === 'object' && !Array.isArray(value);
-const same = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b);
+// Stored raw strings still compare byte-for-byte; known JSON objects compare by fields, independent of key order.
+function same(a: unknown, b: unknown): boolean {
+  if(a===b)return true;
+  if(Array.isArray(a))return Array.isArray(b)&&a.length===b.length&&a.every((value,index)=>same(value,b[index]));
+  if(isObject(a)&&isObject(b)) {
+    const keys=Object.keys(a);
+    return keys.length===Object.keys(b).length&&keys.every(key=>Object.hasOwn(b,key)&&same(a[key],b[key]));
+  }
+  return false;
+}
 const union = <T>(...values: T[][]): T[] => [...new Set(values.flat())];
 const fail = (status: string, message: string): Failed => ({ok: false, status, message});
 class BackupError extends Error {status: string; constructor(status: string, message: string) {super(message); this.status = status;}}
