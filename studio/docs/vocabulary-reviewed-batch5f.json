@@ -1,0 +1,2954 @@
+{
+  "schemaVersion": 1,
+  "batch": "5f",
+  "baseCommit": "f23a75d00c00745449e62335051ace3d9b080564",
+  "headwords": 30,
+  "senseExamples": 40,
+  "textbookTargetSenseExamples": 33,
+  "dictionaryExtensionSenseExamples": 7,
+  "origin": "original",
+  "reviewBasis": "Independent Codex editorial review of every assigned bilingual sentence, POS, collocation and intended sense; actual source-image visual inspection plus immutable per-ID hashes and current exact Chinese-token/POS matcher checks. Not human or browser acceptance.",
+  "humanReview": false,
+  "browserReview": false,
+  "trueAudioReview": false,
+  "sourceScope": "Existing local NCE1 Lesson 82 word list plus 25 NCE2 word lists. Printed labels remain distinct from editorial clarification and seven inferred POS values. Sentences are original aids, not textbook quotations. No global all-sense completeness claim.",
+  "draftProvenance": {
+    "assignmentFile": "work/review-assignments/batch5f.json",
+    "assignmentSha256": "0c0b861ad8627a3e2566baca6bd2528d634935eae944bd824514265342d898f9",
+    "sourceRoot": "/Users/finnlyu/Documents/Codex/2026-10-01/task-3/english-flashcards/studio",
+    "readOnly": true,
+    "files": [
+      {
+        "kind": "saved-content",
+        "path": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "sha256": "955e0d769a27c467180ee2fa1a4fbb54086f70aa901fc3df6e166b1f71c7715d"
+      },
+      {
+        "kind": "saved-content",
+        "path": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "sha256": "df3372ad42c2b7bcb66b4d4969250a786f03fff2490ca831731d2bf54d8c556d"
+      },
+      {
+        "kind": "saved-ledger",
+        "path": "docs/vocabulary-examples-batch9-59-82.json",
+        "sha256": "42e809992c2078e482392c8a28d1cbd9bd7ea2e5221076ece6abafb834cf8272"
+      },
+      {
+        "kind": "saved-ledger",
+        "path": "docs/vocabulary-examples-batch11-nce2.json",
+        "sha256": "4e4411ed7b05f435d09b95fe97523be22ab78ba7b3d6c589166203226fe9f693"
+      }
+    ]
+  },
+  "sourceEvidence": [
+    {
+      "sourceId": "NCE1-82",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "localImage": "dist-online/lesson-pages/c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490.jpg",
+      "sourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "breakfast",
+          "definition": "n. 早饭",
+          "partOfSpeech": "n."
+        },
+        {
+          "word": "haircut",
+          "definition": "n. 理发",
+          "partOfSpeech": "n."
+        },
+        {
+          "word": "holiday",
+          "definition": "n. 假日",
+          "partOfSpeech": "n."
+        },
+        {
+          "word": "party",
+          "definition": "n. 聚会",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-5",
+      "source": {
+        "book": "NCE2",
+        "lesson": 5
+      },
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 28,
+      "sourcePageSha256": "b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36",
+      "localImage": "dist-online/lesson-pages/b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "spare part",
+          "definition": "备件",
+          "partOfSpeech": null
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-11",
+      "source": {
+        "book": "NCE2",
+        "lesson": 11
+      },
+      "sourcePDFPage": 92,
+      "sourcePrintedPage": 52,
+      "sourcePageSha256": "ee7086d2bc988ce8f553c55822da44854d6829753d43d03f272ada511dc28334",
+      "localImage": "dist-online/lesson-pages/ee7086d2bc988ce8f553c55822da44854d6829753d43d03f272ada511dc28334.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "deserve",
+          "definition": "v. 应得到，值得",
+          "partOfSpeech": "v."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-12",
+      "source": {
+        "book": "NCE2",
+        "lesson": 12
+      },
+      "sourcePDFPage": 96,
+      "sourcePrintedPage": 56,
+      "sourcePageSha256": "b33803882a597b82a6534ba959e0c6446c87bc3a76b45523024b3a6a471a588e",
+      "localImage": "dist-online/lesson-pages/b33803882a597b82a6534ba959e0c6446c87bc3a76b45523024b3a6a471a588e.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "luck",
+          "definition": "n. 运气，幸运",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-13",
+      "source": {
+        "book": "NCE2",
+        "lesson": 13
+      },
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "3b26bbe1e7d2afbad2e091c6314485493bdfabda389bbb76bf4eda0882e54312",
+      "localImage": "dist-online/lesson-pages/3b26bbe1e7d2afbad2e091c6314485493bdfabda389bbb76bf4eda0882e54312.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "pop singer",
+          "definition": "流行歌手",
+          "partOfSpeech": null
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-27",
+      "source": {
+        "book": "NCE2",
+        "lesson": 27
+      },
+      "sourcePDFPage": 170,
+      "sourcePrintedPage": 130,
+      "sourcePageSha256": "946a6a492fadab1cd9fb10cb41a02a918c03dbb02fd2107114b6ba49ca537e75",
+      "localImage": "dist-online/lesson-pages/946a6a492fadab1cd9fb10cb41a02a918c03dbb02fd2107114b6ba49ca537e75.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "sleeping bag",
+          "definition": "睡袋",
+          "partOfSpeech": null
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-30",
+      "source": {
+        "book": "NCE2",
+        "lesson": 30
+      },
+      "sourcePDFPage": 182,
+      "sourcePrintedPage": 142,
+      "sourcePageSha256": "97a4d1f0a66763d338e280cda00103bdf33d177d6e5fdbd8def32f433b22e865",
+      "localImage": "dist-online/lesson-pages/97a4d1f0a66763d338e280cda00103bdf33d177d6e5fdbd8def32f433b22e865.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "polo",
+          "definition": "n. 水球",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-33",
+      "source": {
+        "book": "NCE2",
+        "lesson": 33
+      },
+      "sourcePDFPage": 194,
+      "sourcePrintedPage": 154,
+      "sourcePageSha256": "666015654a369075e46ff32f1389450ebe5715deaef4cd9ecbea411a46c3865e",
+      "localImage": "dist-online/lesson-pages/666015654a369075e46ff32f1389450ebe5715deaef4cd9ecbea411a46c3865e.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "darkness",
+          "definition": "n. 黑暗",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-45",
+      "source": {
+        "book": "NCE2",
+        "lesson": 45
+      },
+      "sourcePDFPage": 242,
+      "sourcePrintedPage": 202,
+      "sourcePageSha256": "05c0a0724908f05cd7458e03f5dcc76fcbc9f47e6d65cd38e767d4e6331e94dd",
+      "localImage": "dist-online/lesson-pages/05c0a0724908f05cd7458e03f5dcc76fcbc9f47e6d65cd38e767d4e6331e94dd.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "conscience",
+          "definition": "n. 良心，道德心",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-50",
+      "source": {
+        "book": "NCE2",
+        "lesson": 50
+      },
+      "sourcePDFPage": 276,
+      "sourcePrintedPage": 236,
+      "sourcePageSha256": "a5a9ddee45e8aefdc667e2824a65e3af26a16c9dba30e2fc3643baeb807211b4",
+      "localImage": "dist-online/lesson-pages/a5a9ddee45e8aefdc667e2824a65e3af26a16c9dba30e2fc3643baeb807211b4.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "ride",
+          "definition": "n. 旅行",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-51",
+      "source": {
+        "book": "NCE2",
+        "lesson": 51
+      },
+      "sourcePDFPage": 280,
+      "sourcePrintedPage": 240,
+      "sourcePageSha256": "d750178f74f184942b99664b50563028e8e1ac2fee912ec45660777c9bbe20e3",
+      "localImage": "dist-online/lesson-pages/d750178f74f184942b99664b50563028e8e1ac2fee912ec45660777c9bbe20e3.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "virtue",
+          "definition": "n. 美德",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-55",
+      "source": {
+        "book": "NCE2",
+        "lesson": 55
+      },
+      "sourcePDFPage": 296,
+      "sourcePrintedPage": 256,
+      "sourcePageSha256": "69dd509a6841432265eac5f761ee19ae2646ddd358c548da3e5900643399fa95",
+      "localImage": "dist-online/lesson-pages/69dd509a6841432265eac5f761ee19ae2646ddd358c548da3e5900643399fa95.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "mine",
+          "definition": "n. 矿",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-56",
+      "source": {
+        "book": "NCE2",
+        "lesson": 56
+      },
+      "sourcePDFPage": 300,
+      "sourcePrintedPage": 260,
+      "sourcePageSha256": "fa937f2c7eacd6e694364cd554aeb016ec36d196794a85a3acfed370f6b4044b",
+      "localImage": "dist-online/lesson-pages/fa937f2c7eacd6e694364cd554aeb016ec36d196794a85a3acfed370f6b4044b.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "sound",
+          "definition": "n. 声音",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-58",
+      "source": {
+        "book": "NCE2",
+        "lesson": 58
+      },
+      "sourcePDFPage": 308,
+      "sourcePrintedPage": 268,
+      "sourcePageSha256": "be5438aed0c8f963e578395157b2757c90f6f978d69f7f8894a26d3a4be8782c",
+      "localImage": "dist-online/lesson-pages/be5438aed0c8f963e578395157b2757c90f6f978d69f7f8894a26d3a4be8782c.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "blessing",
+          "definition": "n. 福分，福气",
+          "partOfSpeech": "n."
+        },
+        {
+          "word": "disguise",
+          "definition": "n. 伪装",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-65",
+      "source": {
+        "book": "NCE2",
+        "lesson": 65
+      },
+      "sourcePDFPage": 336,
+      "sourcePrintedPage": 296,
+      "sourcePageSha256": "05bde0e341623ef053525cd3bff7e3cad59af66b856941a71ec912a9c5caa4cc",
+      "localImage": "dist-online/lesson-pages/05bde0e341623ef053525cd3bff7e3cad59af66b856941a71ec912a9c5caa4cc.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "versus",
+          "definition": "prep. 对",
+          "partOfSpeech": "prep."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-66",
+      "source": {
+        "book": "NCE2",
+        "lesson": 66
+      },
+      "sourcePDFPage": 340,
+      "sourcePrintedPage": 300,
+      "sourcePageSha256": "956b237e408e26b109d8a8d1a9cf212a37767df50811ba99fc511f6253f0e859",
+      "localImage": "dist-online/lesson-pages/956b237e408e26b109d8a8d1a9cf212a37767df50811ba99fc511f6253f0e859.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "packing case",
+          "definition": "包装箱",
+          "partOfSpeech": null
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-68",
+      "source": {
+        "book": "NCE2",
+        "lesson": 68
+      },
+      "sourcePDFPage": 348,
+      "sourcePrintedPage": 308,
+      "sourcePageSha256": "29c99b615aedb860353ab6b18ab32c1aa8674d47ca5acc557b15f625e6a656d5",
+      "localImage": "dist-online/lesson-pages/29c99b615aedb860353ab6b18ab32c1aa8674d47ca5acc557b15f625e6a656d5.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "persistent",
+          "definition": "adj. 坚持的，固执的",
+          "partOfSpeech": "adj."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-69",
+      "source": {
+        "book": "NCE2",
+        "lesson": 69
+      },
+      "sourcePDFPage": 352,
+      "sourcePrintedPage": 312,
+      "sourcePageSha256": "4db2a01ba583c9733a6dcf8ef0ea2c1a19ef190554ebd880ce98101f17213ded",
+      "localImage": "dist-online/lesson-pages/4db2a01ba583c9733a6dcf8ef0ea2c1a19ef190554ebd880ce98101f17213ded.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "murder",
+          "definition": "n. 谋杀",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-73",
+      "source": {
+        "book": "NCE2",
+        "lesson": 73
+      },
+      "sourcePDFPage": 382,
+      "sourcePrintedPage": 342,
+      "sourcePageSha256": "a0c97750d665c9b13aa5762f5aea8e45771716cd347f7ca3c6f163e6629c8146",
+      "localImage": "dist-online/lesson-pages/a0c97750d665c9b13aa5762f5aea8e45771716cd347f7ca3c6f163e6629c8146.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "record-holder",
+          "definition": "纪录保持者",
+          "partOfSpeech": null
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-74",
+      "source": {
+        "book": "NCE2",
+        "lesson": 74
+      },
+      "sourcePDFPage": 386,
+      "sourcePrintedPage": 346,
+      "sourcePageSha256": "e3acc362dac7760dd65e4da36ad9a3a4173530f75b02151d4c594cacb682fc6c",
+      "localImage": "dist-online/lesson-pages/e3acc362dac7760dd65e4da36ad9a3a4173530f75b02151d4c594cacb682fc6c.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "limelight",
+          "definition": "n. 舞台灯光",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-76",
+      "source": {
+        "book": "NCE2",
+        "lesson": 76
+      },
+      "sourcePDFPage": 394,
+      "sourcePrintedPage": 354,
+      "sourcePageSha256": "da3ad298ada794b7ebef657ce3e2ccabdea02f09a4739994ad3bceca59cd5f09",
+      "localImage": "dist-online/lesson-pages/da3ad298ada794b7ebef657ce3e2ccabdea02f09a4739994ad3bceca59cd5f09.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "fool",
+          "definition": "n. 傻瓜",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-86",
+      "source": {
+        "book": "NCE2",
+        "lesson": 86
+      },
+      "sourcePDFPage": 434,
+      "sourcePrintedPage": 394,
+      "sourcePageSha256": "afe6a142ce00fec3ce1cd841a4fc20b56516cb60d2a17f7d4dfa23e4b868dda6",
+      "localImage": "dist-online/lesson-pages/afe6a142ce00fec3ce1cd841a4fc20b56516cb60d2a17f7d4dfa23e4b868dda6.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "water ski",
+          "definition": "（由快艇牵引水橇）滑水",
+          "partOfSpeech": null
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-87",
+      "source": {
+        "book": "NCE2",
+        "lesson": 87
+      },
+      "sourcePDFPage": 438,
+      "sourcePrintedPage": 398,
+      "sourcePageSha256": "044852291259862d5fdb72a00884cab5a706eda8a6a1900fe4b6e89ef8072f11",
+      "localImage": "dist-online/lesson-pages/044852291259862d5fdb72a00884cab5a706eda8a6a1900fe4b6e89ef8072f11.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "alibi",
+          "definition": "n. 不在犯罪现场",
+          "partOfSpeech": "n."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-90",
+      "source": {
+        "book": "NCE2",
+        "lesson": 90
+      },
+      "sourcePDFPage": 450,
+      "sourcePrintedPage": 410,
+      "sourcePageSha256": "28fdea0644b38463712d848d1b34a4e785c3d91ba159086c79edb99742786692",
+      "localImage": "dist-online/lesson-pages/28fdea0644b38463712d848d1b34a4e785c3d91ba159086c79edb99742786692.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "oil rig",
+          "definition": "石油钻塔",
+          "partOfSpeech": null
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-93",
+      "source": {
+        "book": "NCE2",
+        "lesson": 93
+      },
+      "sourcePDFPage": 462,
+      "sourcePrintedPage": 422,
+      "sourcePageSha256": "16f0ce83f586a7170f97142238a0a5c4227637372562dd6cd8511432128ea3fc",
+      "localImage": "dist-online/lesson-pages/16f0ce83f586a7170f97142238a0a5c4227637372562dd6cd8511432128ea3fc.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "noble",
+          "definition": "adj. 高尚的，壮丽的",
+          "partOfSpeech": "adj."
+        }
+      ]
+    },
+    {
+      "sourceId": "NCE2-95",
+      "source": {
+        "book": "NCE2",
+        "lesson": 95
+      },
+      "sourcePDFPage": 470,
+      "sourcePrintedPage": 430,
+      "sourcePageSha256": "468fdd242b196f4544b60fed9192424396a8a8dd9e4d13ec0671f5536ec1f620",
+      "localImage": "dist-online/lesson-pages/468fdd242b196f4544b60fed9192424396a8a8dd9e4d13ec0671f5536ec1f620.jpg",
+      "sourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "inspection": "Actual original-resolution view_image of full page in this independent Codex review",
+      "printedWordList": [
+        {
+          "word": "fantasy",
+          "definition": "n. 幻想故事",
+          "partOfSpeech": "n."
+        }
+      ]
+    }
+  ],
+  "sourceMetadataCorrections": [
+    {
+      "word": "noble",
+      "source": {
+        "book": "NCE2",
+        "lesson": 93
+      },
+      "field": "wordlistDefinition",
+      "savedDraftValue": "adj. 崇高的，壮丽的",
+      "actualPrintedValue": "adj. 高尚的，壮丽的",
+      "reason": "Actual full-page view and enlarged word-list crop distinguish printed 高尚的 from title 崇高的礼物. Editorial target 崇高 remains an explicitly stated synonym, not a claimed literal printed word."
+    }
+  ],
+  "usageReferences": [
+    {
+      "title": "Merriam-Webster: limelight",
+      "url": "https://www.merriam-webster.com/dictionary/limelight",
+      "accessed": "2026-10-01",
+      "appliesTo": [
+        "limelight-stage-lighting",
+        "limelight-performing-life"
+      ],
+      "basis": "Definitions distinguish historical stage illumination and the center of public attention; paraphrased only, no dictionary example copied."
+    },
+    {
+      "title": "Merriam-Webster: holiday",
+      "url": "https://www.merriam-webster.com/dictionary/holiday",
+      "accessed": "2026-10-01",
+      "appliesTo": [
+        "holiday-public-day",
+        "holiday-verb"
+      ],
+      "basis": "Noun holiday/day off and intransitive vacation use verified; sentences remain original."
+    },
+    {
+      "title": "Merriam-Webster: noble",
+      "url": "https://www.merriam-webster.com/dictionary/noble",
+      "accessed": "2026-10-01",
+      "appliesTo": [
+        "noble-high-minded",
+        "noble-impressive-appearance"
+      ],
+      "basis": "Adjective moral ideals and impressive appearance uses verified separately; sentences remain original."
+    },
+    {
+      "title": "Merriam-Webster: water-ski",
+      "url": "https://www.merriam-webster.com/dictionary/water-ski",
+      "accessed": "2026-10-01",
+      "appliesTo": [
+        "waterski-water-sport"
+      ],
+      "basis": "Hyphenated water-ski explicitly listed as an intransitive verb, distinct from water ski noun; the canonical catalog headword waterski remains unchanged. No dictionary example copied."
+    }
+  ],
+  "changes": [
+    {
+      "id": "party-social-gathering",
+      "reason": "原中译为妹妹，英语明确 younger sister，保留妹妹信息而不让英文 sister 自动确证年龄关系。",
+      "before": {
+        "en": "We're having a small party for my sister's birthday on Saturday."
+      },
+      "after": {
+        "en": "We're having a small party for my younger sister's birthday on Saturday."
+      }
+    },
+    {
+      "id": "waterski-water-sport",
+      "reason": "原 cousin / 我表姐 增加了英语未指定的性别、长幼和堂表关系，改用姓名；滑水限制留在义项说明而不额外添加句中信息。",
+      "before": {
+        "en": "My cousin learnt to water-ski at a club beside the lake.",
+        "zh": "我表姐在湖边的一家俱乐部学会了由快艇牵引的滑水。"
+      },
+      "after": {
+        "en": "Anna learnt to water-ski at a club beside the lake.",
+        "zh": "安娜在湖边的一家俱乐部学会了滑水。"
+      }
+    },
+    {
+      "id": "ride-journey",
+      "reason": "乘坐/乘车粗标签未明确名词行程，收窄为本句实际使用的乘车行程。",
+      "before": {
+        "matches": [
+          "旅行",
+          "乘坐",
+          "乘车",
+          "乘车行程"
+        ]
+      },
+      "after": {
+        "matches": [
+          "旅行",
+          "乘车行程"
+        ]
+      }
+    },
+    {
+      "id": "darkness-absence-of-light",
+      "reason": "以完整名词 cue 无光替换单字暗，仍核对原书黑暗目标。",
+      "before": {
+        "sense": "黑暗；无光",
+        "matches": [
+          "黑暗",
+          "暗"
+        ]
+      },
+      "after": {
+        "sense": "黑暗；无光",
+        "matches": [
+          "黑暗",
+          "无光"
+        ]
+      }
+    },
+    {
+      "id": "disguise-concealing-appearance",
+      "reason": "演员假发体现外表装扮，不据此确证常含人格虚伪意味的假面目。",
+      "before": {
+        "matches": [
+          "伪装",
+          "假面目"
+        ]
+      },
+      "after": {
+        "matches": [
+          "伪装"
+        ]
+      }
+    },
+    {
+      "id": "limelight-performing-life",
+      "reason": "原页注释1的舞台在演员避开公众关注的语境中为引申义。编辑释义明确公众关注/演艺生活，排除物理舞台粗标签；保留源页原打印释义另行记录。",
+      "before": {
+        "sense": "演艺舞台；公众关注（本课标题引申义）",
+        "matches": [
+          "舞台",
+          "演艺舞台",
+          "公众关注"
+        ],
+        "teachingDefinition": "n. 舞台（本课标题指备受公众关注的演艺生活）"
+      },
+      "after": {
+        "sense": "公众关注；演艺生活（本课标题引申义）",
+        "matches": [
+          "公众关注",
+          "演艺生活"
+        ],
+        "teachingDefinition": "n. 公众关注；演艺生活（本课标题的“舞台”引申义）"
+      }
+    },
+    {
+      "id": "fantasy-imaginary-story",
+      "reason": "巨树内城市体现幻想故事，普通虚构故事标签过宽，不把一切虚构作品都确证为 fantasy。",
+      "before": {
+        "sense": "幻想故事；虚构故事（作品）",
+        "matches": [
+          "幻想故事",
+          "虚构故事"
+        ]
+      },
+      "after": {
+        "sense": "幻想故事（想象作品）",
+        "matches": [
+          "幻想故事"
+        ]
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "breakfast-morning-meal",
+      "word": "breakfast",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 早饭",
+      "excludedMeaningLabels": [
+        "n. 午餐",
+        "v. 早饭",
+        "adj. 早饭",
+        "adv. 早饭",
+        "prep. 早饭",
+        "pron. 早饭",
+        "det. 早饭"
+      ],
+      "teachingDefinition": "n. 早饭",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 早餐",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "breakfast",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 早饭",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "have breakfast 使用名词早饭；catching 的先后关系与“吃过早饭后赶上”一致，未添加交通义。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "34c28937cc1001b2bec2f3f7b69e4c817955a0f0ece24f73e214e33c3ed20f02",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "34c28937cc1001b2bec2f3f7b69e4c817955a0f0ece24f73e214e33c3ed20f02"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "haircut-service",
+      "word": "haircut",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 理发",
+      "excludedMeaningLabels": [
+        "n. 发式",
+        "v. 理发",
+        "adj. 理发",
+        "adv. 理发",
+        "prep. 理发",
+        "pron. 理发",
+        "det. 理发"
+      ],
+      "teachingDefinition": "n. 理发",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 理发, (男子的)发式",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "haircut",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 理发",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "book a haircut 为预约剪发服务；原因从句对应头发挡眼，未混入剪出的发型。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "1af882b83b21fb2f05491476f3c318bf6fb041cda338bd25a880a06a72ed7719",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "1af882b83b21fb2f05491476f3c318bf6fb041cda338bd25a880a06a72ed7719"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "haircut-style",
+      "word": "haircut",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 发式",
+      "excludedMeaningLabels": [
+        "n. 理发",
+        "v. 发式",
+        "adj. 发式",
+        "adv. 发式",
+        "prep. 发式",
+        "pron. 发式",
+        "det. 发式"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 理发, (男子的)发式",
+      "reviewNotes": "new haircut 的 look different 描述剪出的发型；人物无性别适用限制，不把旧词典男子限定当教学事实。",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "haircut",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 理发",
+      "sourceEvidencePart": "word-list",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "7a446f0d53f9c7bdd1c3efed1afb5961720fe7fe25cc0bfa69405f48507bad96",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "7a446f0d53f9c7bdd1c3efed1afb5961720fe7fe25cc0bfa69405f48507bad96"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "holiday-vacation",
+      "word": "holiday",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 假日",
+      "excludedMeaningLabels": [
+        "n. 节日",
+        "vi. 度假",
+        "v. 假日",
+        "adj. 假日",
+        "adv. 假日",
+        "prep. 假日",
+        "pron. 假日",
+        "det. 假日"
+      ],
+      "teachingDefinition": "n. 假日",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 假日, 假期, 节日\nvi. 度假",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "holiday",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 假日",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "spend our holiday 为度过假期的名词用法；海岸旁村庄与安静环境中译一致，未用公共节日义替代。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "1776d16bb69ee23da09ace5ff5b73b19eeb4ef65bd69e92a826a7a8dab1b79ef",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "1776d16bb69ee23da09ace5ff5b73b19eeb4ef65bd69e92a826a7a8dab1b79ef"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "holiday-public-day",
+      "word": "holiday",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 节日",
+      "excludedMeaningLabels": [
+        "n. 假日",
+        "vi. 度假",
+        "n. 假期",
+        "v. 节日",
+        "adj. 节日",
+        "adv. 节日",
+        "prep. 节日",
+        "pron. 节日",
+        "det. 节日"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 假日, 假期, 节日\nvi. 度假",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "holiday",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 假日",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "public holidays 是公共假日的特定名词语境；图书馆闭馆对应 closed，作为扩展不冒充词表另印了节日目标。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "23b2b3ac55de18bd02ab444fd8d617e2fb8ae14bcab07ca5de36f71074ef91f0",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "23b2b3ac55de18bd02ab444fd8d617e2fb8ae14bcab07ca5de36f71074ef91f0"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "holiday-verb",
+      "word": "holiday",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "vi.",
+      "meaningForCheck": "vi. 度假",
+      "excludedMeaningLabels": [
+        "n. 假日",
+        "n. 节日",
+        "n. 度假",
+        "adj. 度假",
+        "adv. 度假",
+        "prep. 度假",
+        "pron. 度假",
+        "det. 度假"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 假日, 假期, 节日\nvi. 度假",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "holiday",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 假日",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "holiday in 是英式不及物动词度假；every winter 与每年冬天对应，排除假期名词。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "365debc10f6698089db97938b086fadcba715f42805dc14fa84af5dc27671345",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "365debc10f6698089db97938b086fadcba715f42805dc14fa84af5dc27671345"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "party-social-gathering",
+      "word": "party",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 聚会",
+      "excludedMeaningLabels": [
+        "n. 党",
+        "n. 团体",
+        "n. 当事人",
+        "v. 参加聚会",
+        "v. 聚会",
+        "adj. 聚会",
+        "adv. 聚会",
+        "prep. 聚会",
+        "pron. 聚会",
+        "det. 聚会"
+      ],
+      "teachingDefinition": "n. 聚会",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 宴会, 党, 政党, 团体, 当事人, 聚会\nv. 举办聚会",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "party",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 聚会",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "have a small party / birthday party 为生日聚会名词；英语补 younger 后与妹妹年龄关系一致。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "3158f53213e6694d759a642d7d50be2812d243a034d9bd96cdd3f7f743dcc36a",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "593260b54d9b63852473b4ff4c6c16cde9c51eae6846204d53c1f3047d5cde04"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "party-political-group",
+      "word": "party",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 党",
+      "excludedMeaningLabels": [
+        "n. 聚会",
+        "n. 团体",
+        "n. 当事人",
+        "v. 参加聚会",
+        "v. 党",
+        "adj. 党",
+        "adv. 党",
+        "prep. 党",
+        "pron. 党",
+        "det. 党"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 宴会, 党, 政党, 团体, 当事人, 聚会\nv. 举办聚会",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "party",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 聚会",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "members vote / choose a leader 的组织是政党；党员和党首中译准确，区别社交聚会和泛团体。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "675cfc8c9c43b57244b7bf32ca00dafff3bcd1260eb82d86c56247f467238921",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "675cfc8c9c43b57244b7bf32ca00dafff3bcd1260eb82d86c56247f467238921"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "party-group-of-people",
+      "word": "party",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 团体",
+      "excludedMeaningLabels": [
+        "n. 聚会",
+        "n. 党",
+        "n. 当事人",
+        "v. 参加聚会",
+        "v. 团体",
+        "adj. 团体",
+        "adv. 团体",
+        "prep. 团体",
+        "pron. 团体",
+        "det. 团体"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 宴会, 党, 政党, 团体, 当事人, 聚会\nv. 举办聚会",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "party",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 聚会",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "a party of hikers 为一队人；徒步者和到达时间准确，不是社交聚会或政党。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "3cd1b78f1fe1ecdea67db812c841f07e0ad5ca6e65625d8ec95ec87611a45b7f",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "3cd1b78f1fe1ecdea67db812c841f07e0ad5ca6e65625d8ec95ec87611a45b7f"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "party-contract-side",
+      "word": "party",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 当事人",
+      "excludedMeaningLabels": [
+        "n. 聚会",
+        "n. 党",
+        "n. 团体",
+        "v. 参加聚会",
+        "v. 当事人",
+        "adj. 当事人",
+        "adv. 当事人",
+        "prep. 当事人",
+        "pron. 当事人",
+        "det. 当事人"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 宴会, 党, 政党, 团体, 当事人, 聚会\nv. 举办聚会",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "party",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 聚会",
+      "sourceEvidencePart": "word-list",
+      "reviewNotes": "both parties signed the agreement 为协议双方当事人；核对最终稿的时间顺序准确，未添加法律结论。",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "a3b32ab1718128f402ef800c3262ef5325f763048ff5ef90588e4d6b4a591047",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "a3b32ab1718128f402ef800c3262ef5325f763048ff5ef90588e4d6b4a591047"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "party-verb",
+      "word": "party",
+      "source": {
+        "book": "NCE1",
+        "lesson": 82
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 参加聚会",
+      "excludedMeaningLabels": [
+        "n. 聚会",
+        "n. 党",
+        "n. 团体",
+        "n. 当事人",
+        "v. 举办聚会",
+        "n. 宴会",
+        "n. 参加聚会",
+        "adj. 参加聚会",
+        "adv. 参加聚会",
+        "prep. 参加聚会",
+        "pron. 参加聚会",
+        "det. 参加聚会"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 172,
+      "sourcePrintedPage": 168,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "dictionaryDefinition": "n. 宴会, 党, 政党, 团体, 当事人, 聚会\nv. 举办聚会",
+      "reviewNotes": "partied until midnight 描述参加聚会并玩乐；不据此推断该群人举办活动，排除旧词典举办聚会标签。",
+      "sourcePageSha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490",
+      "sourcePrintedWord": "party",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 聚会",
+      "sourceEvidencePart": "word-list",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "47d30af3bf3f818efc8eda5f3ecc5d226e0b8cc5ca46a4fe4ccf2b625fd8875d",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch9-59-82.json",
+        "contentSha256": "47d30af3bf3f818efc8eda5f3ecc5d226e0b8cc5ca46a4fe4ccf2b625fd8875d"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "spare-part-replacement",
+      "word": "spare part",
+      "source": {
+        "book": "NCE2",
+        "lesson": 5
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 备件",
+      "excludedMeaningLabels": [
+        "n. 部分",
+        "n. 空闲时间",
+        "v. 备件",
+        "adj. 备件",
+        "adv. 备件",
+        "prep. 备件",
+        "pron. 备件",
+        "det. 备件"
+      ],
+      "teachingDefinition": "n. 备件",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 28,
+      "sourcePageSha256": "b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": null,
+      "wordlistDefinition": "备件",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "备件",
+      "reviewNotes": "keep spare parts 为持有可替换零件，洗衣机修理店情境明确；原词表未印词性，正文 spare parts 是复数名词。",
+      "sourcePrintedWord": "spare part",
+      "editoriallyInferredPartOfSpeech": "n.",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "106f9f26736308617484ac0653389ae992fbb7c2c4d791d3b673253a89feef06",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "106f9f26736308617484ac0653389ae992fbb7c2c4d791d3b673253a89feef06",
+        "wordlistDefinition": "备件"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "deserve-merit",
+      "word": "deserve",
+      "source": {
+        "book": "NCE2",
+        "lesson": 11
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 应得到，值得",
+      "excludedMeaningLabels": [
+        "n. 值得",
+        "v. 应得报答",
+        "n. 应得到，值得",
+        "adj. 应得到，值得",
+        "adv. 应得到，值得",
+        "prep. 应得到，值得",
+        "pron. 应得到，值得",
+        "det. 应得到，值得"
+      ],
+      "teachingDefinition": "v. 应得到，值得",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 92,
+      "sourcePrintedPage": 52,
+      "sourcePageSha256": "ee7086d2bc988ce8f553c55822da44854d6829753d43d03f272ada511dc28334",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "v.",
+      "wordlistDefinition": "v. 应得到，值得",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "vt. 该得到, 值得\nvi. 应得报答",
+      "reviewNotes": "deserve praise 为因志愿工作值得表扬；花园修复对应 restoring，无独立报答义推断。",
+      "sourcePrintedWord": "deserve",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "5437108f8be366d2963039bb4cd14fc7f44a1bf253ecd02e31c7c33bac4fa088",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "5437108f8be366d2963039bb4cd14fc7f44a1bf253ecd02e31c7c33bac4fa088",
+        "wordlistDefinition": "v. 应得到，值得"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "luck-fortune",
+      "word": "luck",
+      "source": {
+        "book": "NCE2",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 运气，幸运",
+      "excludedMeaningLabels": [
+        "vi. 靠好运成功",
+        "n. 侥幸",
+        "v. 运气，幸运",
+        "adj. 运气，幸运",
+        "adv. 运气，幸运",
+        "prep. 运气，幸运",
+        "pron. 运气，幸运",
+        "det. 运气，幸运"
+      ],
+      "teachingDefinition": "n. 运气，幸运",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 96,
+      "sourcePrintedPage": 56,
+      "sourcePageSha256": "b33803882a597b82a6534ba959e0c6446c87bc3a76b45523024b3a6a471a588e",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 运气，幸运",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 运气, 幸运, 好运, 侥幸\nvi. 靠好运成功",
+      "reviewNotes": "with a little luck 使用抽象名词运气，条件和关门前找到钥匙的期望准确，不是动词成功或侥幸义的独立确认。",
+      "sourcePrintedWord": "luck",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "17856ccb6c550a172f91566b926fe82e4f5d98010ac32f0071c2f1ad10e40d2b",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "17856ccb6c550a172f91566b926fe82e4f5d98010ac32f0071c2f1ad10e40d2b",
+        "wordlistDefinition": "n. 运气，幸运"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "pop-singer-profession",
+      "word": "pop singer",
+      "source": {
+        "book": "NCE2",
+        "lesson": 13
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 流行歌手",
+      "excludedMeaningLabels": [
+        "n. 流行音乐",
+        "v. 唱歌",
+        "v. 流行歌手",
+        "adj. 流行歌手",
+        "adv. 流行歌手",
+        "prep. 流行歌手",
+        "pron. 流行歌手",
+        "det. 流行歌手"
+      ],
+      "teachingDefinition": "n. 流行歌手",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 100,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "3b26bbe1e7d2afbad2e091c6314485493bdfabda389bbb76bf4eda0882e54312",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": null,
+      "wordlistDefinition": "流行歌手",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "流行音乐歌手,通俗音乐歌手",
+      "reviewNotes": "young pop singer 为流行歌手人物短语，家庭录音室录歌中译一致；原词表无打印词性，正文 singers 支持编辑名词判断。",
+      "sourcePrintedWord": "pop singer",
+      "editoriallyInferredPartOfSpeech": "n.",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "4f7326cfefa8378a6a3336f273c46fb330711dd5d2959c5e181d930eddc5ce93",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "4f7326cfefa8378a6a3336f273c46fb330711dd5d2959c5e181d930eddc5ce93",
+        "wordlistDefinition": "流行歌手"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "sleeping-bag-camping",
+      "word": "sleeping bag",
+      "source": {
+        "book": "NCE2",
+        "lesson": 27
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 睡袋",
+      "excludedMeaningLabels": [
+        "v. 睡觉",
+        "n. 手提包",
+        "v. 睡袋",
+        "adj. 睡袋",
+        "adv. 睡袋",
+        "prep. 睡袋",
+        "pron. 睡袋",
+        "det. 睡袋"
+      ],
+      "teachingDefinition": "n. 睡袋",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 170,
+      "sourcePrintedPage": 130,
+      "sourcePageSha256": "946a6a492fadab1cd9fb10cb41a02a918c03dbb02fd2107114b6ba49ca537e75",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": null,
+      "wordlistDefinition": "睡袋",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "睡袋",
+      "reviewNotes": "roll up my sleeping bag 为卷起睡袋；先后收拾帐篷对应 before，原词表无打印词性而正文 bags 支持名词。",
+      "sourcePrintedWord": "sleeping bag",
+      "editoriallyInferredPartOfSpeech": "n.",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "6587fdd9b73abc6594758d0110ca5bd4cb0dc809e03af3bbeaf227002a891c06",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "6587fdd9b73abc6594758d0110ca5bd4cb0dc809e03af3bbeaf227002a891c06",
+        "wordlistDefinition": "睡袋"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "polo-water-sport",
+      "word": "polo",
+      "source": {
+        "book": "NCE2",
+        "lesson": 30
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 水球（本课用法；water polo）",
+      "excludedMeaningLabels": [
+        "n. 马球",
+        "n. polo 衫",
+        "v. 水球（本课用法；water polo）",
+        "adj. 水球（本课用法；water polo）",
+        "adv. 水球（本课用法；water polo）",
+        "prep. 水球（本课用法；water polo）",
+        "pron. 水球（本课用法；water polo）",
+        "det. 水球（本课用法；water polo）"
+      ],
+      "teachingDefinition": "n. 水球（本课用法；water polo）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 182,
+      "sourcePrintedPage": 142,
+      "sourcePageSha256": "97a4d1f0a66763d338e280cda00103bdf33d177d6e5fdbd8def32f433b22e865",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 水球",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 马球, 水球",
+      "reviewNotes": "原词表 n. 水球。本句明确 water polo 与 indoor pool，防止通用 polo 被误教为水球专称；马球义未审读。",
+      "sourcePrintedWord": "polo",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "4faeac6480989995831c88ed86a3f4d5649fb6907c8cb092136ad3a8b8f78368",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "4faeac6480989995831c88ed86a3f4d5649fb6907c8cb092136ad3a8b8f78368",
+        "wordlistDefinition": "n. 水球"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "darkness-absence-of-light",
+      "word": "darkness",
+      "source": {
+        "book": "NCE2",
+        "lesson": 33
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 黑暗",
+      "excludedMeaningLabels": [
+        "n. 深色",
+        "n. 隐密",
+        "n. 无知",
+        "v. 黑暗",
+        "adj. 黑暗",
+        "adv. 黑暗",
+        "prep. 黑暗",
+        "pron. 黑暗",
+        "det. 黑暗"
+      ],
+      "teachingDefinition": "n. 黑暗",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 194,
+      "sourcePrintedPage": 154,
+      "sourcePageSha256": "666015654a369075e46ff32f1389450ebe5715deaef4cd9ecbea411a46c3865e",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 黑暗",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 黑暗, 暗, 深色, 隐密, 模糊, 无知",
+      "reviewNotes": "was plunged into darkness 指停电导致无光环境；黑暗、无光完整名词 cue 适配，排除深色、无知等义。",
+      "sourcePrintedWord": "darkness",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "f21ef22a14779d253423fc09a4739c80ac9df347de6e41abc2e806bfd7c83904",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "306cc7a3e9d1911a88b89c4c8d2289f54c2ba09a6d3431fbf2dea1c5500a93cc",
+        "wordlistDefinition": "n. 黑暗"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "conscience-moral-sense",
+      "word": "conscience",
+      "source": {
+        "book": "NCE2",
+        "lesson": 45
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 良心，道德心",
+      "excludedMeaningLabels": [
+        "n. 正义感",
+        "v. 良心",
+        "v. 良心，道德心",
+        "adj. 良心，道德心",
+        "adv. 良心，道德心",
+        "prep. 良心，道德心",
+        "pron. 良心，道德心",
+        "det. 良心，道德心"
+      ],
+      "teachingDefinition": "n. 良心，道德心",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 242,
+      "sourcePrintedPage": 202,
+      "sourcePageSha256": "05c0a0724908f05cd7458e03f5dcc76fcbc9f47e6d65cd38e767d4e6331e94dd",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 良心，道德心",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 良心\n[法] 良心, 道德感, 正义感",
+      "reviewNotes": "conscience would not let her 是良心约束；take credit for others work 对应占别人功劳，clear conscience 搭配仍为同一良心义。",
+      "sourcePrintedWord": "conscience",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "f042fd556d22066f50a65948db4dbc41a10ec34254da20865771150ab03ce076",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "f042fd556d22066f50a65948db4dbc41a10ec34254da20865771150ab03ce076",
+        "wordlistDefinition": "n. 良心，道德心"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "ride-journey",
+      "word": "ride",
+      "source": {
+        "book": "NCE2",
+        "lesson": 50
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 旅行（乘车行程）",
+      "excludedMeaningLabels": [
+        "v. 乘车",
+        "n. 骑马",
+        "v. 欺骗",
+        "n. 乘坐",
+        "n. 乘车",
+        "n. 受骗",
+        "n. 欺骗",
+        "v. 旅行（乘车行程）",
+        "adj. 旅行（乘车行程）",
+        "adv. 旅行（乘车行程）",
+        "prep. 旅行（乘车行程）",
+        "pron. 旅行（乘车行程）",
+        "det. 旅行（乘车行程）"
+      ],
+      "teachingDefinition": "n. 旅行（乘车行程）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 276,
+      "sourcePrintedPage": 236,
+      "sourcePageSha256": "a5a9ddee45e8aefdc667e2824a65e3af26a16c9dba30e2fc3643baeb807211b4",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 旅行",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 骑马, 乘坐, 乘车, 搭便车\nvt. 骑, 乘坐, 压迫, 控制\nvi. 骑马, 乘车, 漂游",
+      "reviewNotes": "bus ride 为乘公交车的行程，took longer 的历时描述中译准确；正文标题的受骗惯用语未在此条确证。",
+      "sourcePrintedWord": "ride",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "5d51375b366af338ef6fe71be9ddb278d9a8aa96956c92e790415f234289bb60",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "84bb35ff92c456a8834eb422e443bb75b62b58e500df1c276a6ae2093ffe2cb7",
+        "wordlistDefinition": "n. 旅行"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "virtue-moral-quality",
+      "word": "virtue",
+      "source": {
+        "book": "NCE2",
+        "lesson": 51
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 美德",
+      "excludedMeaningLabels": [
+        "n. 功效",
+        "n. 效力",
+        "n. 贞操",
+        "v. 美德",
+        "adj. 美德",
+        "adv. 美德",
+        "prep. 美德",
+        "pron. 美德",
+        "det. 美德"
+      ],
+      "teachingDefinition": "n. 美德",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 280,
+      "sourcePrintedPage": 240,
+      "sourcePageSha256": "d750178f74f184942b99664b50563028e8e1ac2fee912ec45660777c9bbe20e3",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 美德",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 德行, 美德, 优点, 功效, 效力\n[法] 美德, 贞操, 优点",
+      "reviewNotes": "patience is a virtue 描述耐心是美德；倾听不同观点语境自然，未纳入效力、功效或贞操标签。",
+      "sourcePrintedWord": "virtue",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "0af8415897612a71c38ff28cd5d48050e989be6d5cd2be98e344fdd42cdfca1f",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "0af8415897612a71c38ff28cd5d48050e989be6d5cd2be98e344fdd42cdfca1f",
+        "wordlistDefinition": "n. 美德"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "mine-extraction-site",
+      "word": "mine",
+      "source": {
+        "book": "NCE2",
+        "lesson": 55
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 矿",
+      "excludedMeaningLabels": [
+        "pron. 我的",
+        "v. 开采",
+        "n. 地雷",
+        "n. 矿藏",
+        "v. 矿",
+        "adj. 矿",
+        "adv. 矿",
+        "prep. 矿",
+        "pron. 矿",
+        "det. 矿"
+      ],
+      "teachingDefinition": "n. 矿",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 296,
+      "sourcePrintedPage": 256,
+      "sourcePageSha256": "69dd509a6841432265eac5f761ee19ae2646ddd358c548da3e5900643399fa95",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 矿",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 矿, 矿藏, 地雷\nvt. 挖掘, 开采, 在...布雷, 破坏\nvi. 开矿, 埋设地雷\npron. 我的",
+      "reviewNotes": "coal out of the mine 指开采场所；中文矿井具体呈现该场所，museum model 只是原创语境，不是源文引用。",
+      "sourcePrintedWord": "mine",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "0c31c1e2350249dd0222c3642f7dad8f89efddf2edfe4d6a24c33ac3bad4b5ab",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "0c31c1e2350249dd0222c3642f7dad8f89efddf2edfe4d6a24c33ac3bad4b5ab",
+        "wordlistDefinition": "n. 矿"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "sound-audible-noise",
+      "word": "sound",
+      "source": {
+        "book": "NCE2",
+        "lesson": 56
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 声音",
+      "excludedMeaningLabels": [
+        "adj. 健全的",
+        "v. 听起来",
+        "n. 海峡",
+        "n. 探条",
+        "v. 声音",
+        "adj. 声音",
+        "adv. 声音",
+        "prep. 声音",
+        "pron. 声音",
+        "det. 声音"
+      ],
+      "teachingDefinition": "n. 声音",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 300,
+      "sourcePrintedPage": 260,
+      "sourcePageSha256": "fa937f2c7eacd6e694364cd554aeb016ec36d196794a85a3acfed370f6b4044b",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 声音",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 声音, 语音, 吵闹, 声调, 听力范围, 探条, 海峡\na. 健全的, 可靠的, 合理的, 健康的, 彻底的, 资金充实的\nadv. 彻底地, 充分地\nvi. 发出声音, 回响, 测深, 试探, 听起来",
+      "reviewNotes": "sound of a bicycle bell 为可听声响；made me turn 对应转头望向，非听起来动词、健全形容词或海峡名词。",
+      "sourcePrintedWord": "sound",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "00e58c12702650995f0e057b0c8b49fc3b766188fe2cb2bc68fe396734bab98e",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "00e58c12702650995f0e057b0c8b49fc3b766188fe2cb2bc68fe396734bab98e",
+        "wordlistDefinition": "n. 声音"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "blessing-benefit",
+      "word": "blessing",
+      "source": {
+        "book": "NCE2",
+        "lesson": 58
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 福分，福气",
+      "excludedMeaningLabels": [
+        "n. 祝福",
+        "v. 保佑",
+        "v. 福分，福气",
+        "adj. 福分，福气",
+        "adv. 福分，福气",
+        "prep. 福分，福气",
+        "pron. 福分，福气",
+        "det. 福分，福气"
+      ],
+      "teachingDefinition": "n. 福分，福气",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 308,
+      "sourcePrintedPage": 268,
+      "sourcePageSha256": "be5438aed0c8f963e578395157b2757c90f6f978d69f7f8894a26d3a4be8782c",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 福分，福气",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 祝福",
+      "reviewNotes": "nearby library is a blessing 为有益之事/福气，needed study 条件准确；不以旧词典祝福粗义覆盖原书目标。",
+      "sourcePrintedWord": "blessing",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "ab64ede1d4f6df6c1bcce69bd9d9275da9f5efa3795f0267ca2dbc4fb06b4c3d",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "ab64ede1d4f6df6c1bcce69bd9d9275da9f5efa3795f0267ca2dbc4fb06b4c3d",
+        "wordlistDefinition": "n. 福分，福气"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "disguise-concealing-appearance",
+      "word": "disguise",
+      "source": {
+        "book": "NCE2",
+        "lesson": 58
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 伪装",
+      "excludedMeaningLabels": [
+        "v. 隐瞒",
+        "v. 假装",
+        "n. 假装",
+        "n. 假面目",
+        "v. 伪装",
+        "adj. 伪装",
+        "adv. 伪装",
+        "prep. 伪装",
+        "pron. 伪装",
+        "det. 伪装"
+      ],
+      "teachingDefinition": "n. 伪装",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 308,
+      "sourcePrintedPage": 268,
+      "sourcePageSha256": "be5438aed0c8f963e578395157b2757c90f6f978d69f7f8894a26d3a4be8782c",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 伪装",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 假面目, 假装\nvt. 假装, 隐瞒",
+      "reviewNotes": "wig as part of his disguise 为外表伪装名词，演员舞台情境与最后一场戏一致，假面目匹配词已删。",
+      "sourcePrintedWord": "disguise",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "e6c39898c36b28199459a333ee0fad737f2c0f7a42c23499226b3a245e4a1057",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "c22101dc100fe9ab12bedb18c5c00697a509ab4766a360729f39af01f55d98a1",
+        "wordlistDefinition": "n. 伪装"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "versus-opposing-teams",
+      "word": "versus",
+      "source": {
+        "book": "NCE2",
+        "lesson": 65
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "prep.",
+      "meaningForCheck": "prep. 对",
+      "excludedMeaningLabels": [
+        "prep. 诉",
+        "prep. 相形",
+        "n. 对阵",
+        "n. 对",
+        "v. 对",
+        "adj. 对",
+        "adv. 对",
+        "pron. 对",
+        "det. 对"
+      ],
+      "teachingDefinition": "prep. 对",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 336,
+      "sourcePrintedPage": 296,
+      "sourcePageSha256": "05bde0e341623ef053525cd3bff7e3cad59af66b856941a71ec912a9c5caa4cc",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "prep.",
+      "wordlistDefinition": "prep. 对",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "prep. 对...\n[法] 诉, 对, 相形",
+      "reviewNotes": "North School versus West School 的比赛双方对阵符合 prep. 对；篮球决赛和海报信息准确，不标法律诉讼或比较义。",
+      "sourcePrintedWord": "versus",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "0e5ca991973a6495ada0bc74783dc3bba8febf29244d0ac0bfee5b642d646fa4",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "0e5ca991973a6495ada0bc74783dc3bba8febf29244d0ac0bfee5b642d646fa4",
+        "wordlistDefinition": "prep. 对"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "packing-case-shipping-container",
+      "word": "packing case",
+      "source": {
+        "book": "NCE2",
+        "lesson": 66
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 包装箱",
+      "excludedMeaningLabels": [
+        "[化] 填料函",
+        "n. 填料函",
+        "v. 包装箱",
+        "adj. 包装箱",
+        "adv. 包装箱",
+        "prep. 包装箱",
+        "pron. 包装箱",
+        "det. 包装箱"
+      ],
+      "teachingDefinition": "n. 包装箱",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 340,
+      "sourcePrintedPage": 300,
+      "sourcePageSha256": "956b237e408e26b109d8a8d1a9cf212a37767df50811ba99fc511f6253f0e859",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": null,
+      "wordlistDefinition": "包装箱",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "[化] 填料函",
+      "reviewNotes": "wooden packing case 运输包装箱名词；六灯容纳关系准确，化工填料函粗词典标签明确排除。",
+      "sourcePrintedWord": "packing case",
+      "editoriallyInferredPartOfSpeech": "n.",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "936a1c8b628f2a9cd44ad3e0b5b03b8dbc63231ed2dc8c93be2d34ba64766a39",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "936a1c8b628f2a9cd44ad3e0b5b03b8dbc63231ed2dc8c93be2d34ba64766a39",
+        "wordlistDefinition": "包装箱"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "persistent-determined",
+      "word": "persistent",
+      "source": {
+        "book": "NCE2",
+        "lesson": 68
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 坚持的",
+      "excludedMeaningLabels": [
+        "adj. 持续的",
+        "adj. 作用持久的",
+        "n. 固执",
+        "adj. 固执的",
+        "n. 坚持的",
+        "v. 坚持的",
+        "adv. 坚持的",
+        "prep. 坚持的",
+        "pron. 坚持的",
+        "det. 坚持的"
+      ],
+      "teachingDefinition": "adj. 坚持的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 348,
+      "sourcePrintedPage": 308,
+      "sourcePageSha256": "29c99b615aedb860353ab6b18ab32c1aa8674d47ca5acc557b15f625e6a656d5",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wordlistDefinition": "adj. 坚持的，固执的",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "a. 固执的, 坚持的, 持续的, 作用持久的\n[法] 坚持的, 固执的, 持续的",
+      "reviewNotes": "persistent student + kept practising 为坚持努力的正面人性形容词；困难乐段的弹奏目标和直到能对应完整。",
+      "sourcePrintedWord": "persistent",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "a26c93d2c5986ddd1a891e2658657c27c21bd67d77f635fd118ba3772482abaa",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "a26c93d2c5986ddd1a891e2658657c27c21bd67d77f635fd118ba3772482abaa",
+        "wordlistDefinition": "adj. 坚持的，固执的"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "persistent-stubborn",
+      "word": "persistent",
+      "source": {
+        "book": "NCE2",
+        "lesson": 68
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 固执的",
+      "excludedMeaningLabels": [
+        "adj. 持续的",
+        "adj. 作用持久的",
+        "n. 固执",
+        "adj. 坚持的",
+        "n. 固执的",
+        "v. 固执的",
+        "adv. 固执的",
+        "prep. 固执的",
+        "pron. 固执的",
+        "det. 固执的"
+      ],
+      "teachingDefinition": "adj. 固执的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 348,
+      "sourcePrintedPage": 308,
+      "sourcePageSha256": "29c99b615aedb860353ab6b18ab32c1aa8674d47ca5acc557b15f625e6a656d5",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wordlistDefinition": "adj. 坚持的，固执的",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "a. 固执的, 坚持的, 持续的, 作用持久的\n[法] 坚持的, 固执的, 持续的",
+      "reviewNotes": "persistent caller 反复追问已回答的问题体现不肯停止的负面语境；固执与坚持两个标签作为语境分列而非独立全义项分母。",
+      "sourcePrintedWord": "persistent",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "1e7bde8f661cd566e09b1d809acc4d63289e14de8faf27b0e8a7f3647fa33b76",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "1e7bde8f661cd566e09b1d809acc4d63289e14de8faf27b0e8a7f3647fa33b76",
+        "wordlistDefinition": "adj. 坚持的，固执的"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "murder-crime-noun",
+      "word": "murder",
+      "source": {
+        "book": "NCE2",
+        "lesson": 69
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 谋杀",
+      "excludedMeaningLabels": [
+        "v. 谋杀",
+        "v. 损毁",
+        "v. 破坏",
+        "adj. 谋杀",
+        "adv. 谋杀",
+        "prep. 谋杀",
+        "pron. 谋杀",
+        "det. 谋杀"
+      ],
+      "teachingDefinition": "n. 谋杀",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 352,
+      "sourcePrintedPage": 312,
+      "sourcePageSha256": "4db2a01ba583c9733a6dcf8ef0ea2c1a19ef190554ebd880ce98101f17213ded",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 谋杀",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 谋杀\nvt. 谋杀, 损毁, 破坏\nvi. 犯杀人罪",
+      "reviewNotes": "a murder 是小说情境中的谋杀案名词；investigates / 调查和 seaside hotel / 海滨酒店对应，非动词实施。",
+      "sourcePrintedWord": "murder",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "e4caca894a006e64b6e076bd94e1e6dc6661bad017606891c1b4f6b24f9b1e1b",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "e4caca894a006e64b6e076bd94e1e6dc6661bad017606891c1b4f6b24f9b1e1b",
+        "wordlistDefinition": "n. 谋杀"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "record-holder-sport",
+      "word": "record-holder",
+      "source": {
+        "book": "NCE2",
+        "lesson": 73
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 纪录保持者",
+      "excludedMeaningLabels": [
+        "v. 保持纪录",
+        "n. 记录",
+        "v. 纪录保持者",
+        "adj. 纪录保持者",
+        "adv. 纪录保持者",
+        "prep. 纪录保持者",
+        "pron. 纪录保持者",
+        "det. 纪录保持者"
+      ],
+      "teachingDefinition": "n. 纪录保持者",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 382,
+      "sourcePrintedPage": 342,
+      "sourcePageSha256": "a0c97750d665c9b13aa5762f5aea8e45771716cd347f7ca3c6f163e6629c8146",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": null,
+      "wordlistDefinition": "纪录保持者",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 记录保持者, 保持最高记录者",
+      "reviewNotes": "school record-holder 为学校纪录保持者人物名词；younger runners / 年纪较小的跑步队员及 starts / 起跑准确，源连字符保留。",
+      "sourcePrintedWord": "record-holder",
+      "editoriallyInferredPartOfSpeech": "n.",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "68859554c9ca5e302b27c5beeb2c7d25b5561c4a8669b88bb5658f6664d5f47f",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "68859554c9ca5e302b27c5beeb2c7d25b5561c4a8669b88bb5658f6664d5f47f",
+        "wordlistDefinition": "纪录保持者"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "limelight-stage-lighting",
+      "word": "limelight",
+      "source": {
+        "book": "NCE2",
+        "lesson": 74
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 舞台灯光（旧式石灰光）",
+      "excludedMeaningLabels": [
+        "v. 使受到注目",
+        "v. 使显露头角",
+        "n. 舞台",
+        "n. 公众关注",
+        "n. 演艺生活",
+        "v. 舞台灯光（旧式石灰光）",
+        "adj. 舞台灯光（旧式石灰光）",
+        "adv. 舞台灯光（旧式石灰光）",
+        "prep. 舞台灯光（旧式石灰光）",
+        "pron. 舞台灯光（旧式石灰光）",
+        "det. 舞台灯光（旧式石灰光）"
+      ],
+      "teachingDefinition": "n. 舞台灯光（旧式石灰光）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 386,
+      "sourcePrintedPage": 346,
+      "sourcePageSha256": "e3acc362dac7760dd65e4da36ad9a3a4173530f75b02151d4c594cacb682fc6c",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 舞台灯光",
+      "sourceEvidencePart": "word-list",
+      "dictionaryObservedMeaning": "n. 石灰光, 石灰光灯, 以石灰光灯照射的舞台\nvt. 使受到注目, 使显露头角",
+      "reviewNotes": "theatres once used limelight 的历史舞台灯光用法与原表灯光义相符；石灰光是经 MW 释义核验后的编辑说明，非原书打印词。",
+      "sourcePrintedWord": "limelight",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "8f817461bec84121933b417be50ffdb0c681db0b63b7f92ee9c658027e2b3b83",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "8f817461bec84121933b417be50ffdb0c681db0b63b7f92ee9c658027e2b3b83",
+        "wordlistDefinition": "n. 舞台灯光"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "limelight-performing-life",
+      "word": "limelight",
+      "source": {
+        "book": "NCE2",
+        "lesson": 74
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 公众关注；演艺生活（本课标题的“舞台”引申义）",
+      "excludedMeaningLabels": [
+        "v. 使受到注目",
+        "v. 使显露头角",
+        "n. 舞台灯光",
+        "n. 石灰光",
+        "n. 石灰光灯",
+        "n. 舞台",
+        "n. 舞台平台",
+        "n. 物理舞台",
+        "v. 公众关注；演艺生活（本课标题的“舞台”引申义）",
+        "adj. 公众关注；演艺生活（本课标题的“舞台”引申义）",
+        "adv. 公众关注；演艺生活（本课标题的“舞台”引申义）",
+        "prep. 公众关注；演艺生活（本课标题的“舞台”引申义）",
+        "pron. 公众关注；演艺生活（本课标题的“舞台”引申义）",
+        "det. 公众关注；演艺生活（本课标题的“舞台”引申义）"
+      ],
+      "teachingDefinition": "n. 公众关注；演艺生活（本课标题的“舞台”引申义）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 386,
+      "sourcePrintedPage": 346,
+      "sourcePageSha256": "e3acc362dac7760dd65e4da36ad9a3a4173530f75b02151d4c594cacb682fc6c",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 舞台灯光",
+      "sourceEvidencePart": "word-list-and-title-note-1",
+      "dictionaryObservedMeaning": "n. 石灰光, 石灰光灯, 以石灰光灯照射的舞台\nvt. 使受到注目, 使显露头角",
+      "reviewNotes": "原页标题注释的舞台指演员离开公众关注的生活。新定义明确公众关注/演艺生活，英文 singer/family 与中译一致；物理舞台不匹配。",
+      "sourcePrintedWord": "limelight",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "9d28fa78500ca98f772af6c502a6415e15f679833d809b23e833532cc8db53b6",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "45db53471e763cb2bf94e477ccfaef9f266d9962703f0ebb120e088dd2bfcc06",
+        "wordlistDefinition": "n. 舞台灯光"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "fool-silly-person",
+      "word": "fool",
+      "source": {
+        "book": "NCE2",
+        "lesson": 76
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 傻瓜",
+      "excludedMeaningLabels": [
+        "n. 奶油拌水果",
+        "v. 愚弄",
+        "adj. 傻的",
+        "v. 傻瓜",
+        "adj. 傻瓜",
+        "adv. 傻瓜",
+        "prep. 傻瓜",
+        "pron. 傻瓜",
+        "det. 傻瓜"
+      ],
+      "teachingDefinition": "n. 傻瓜",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 394,
+      "sourcePrintedPage": 354,
+      "sourcePageSha256": "da3ad298ada794b7ebef657ce3e2ccabdea02f09a4739994ad3bceca59cd5f09",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 傻瓜",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 愚人, 受骗者, 奶油拌水果\nvt. 愚弄, 欺骗, 浪费\nvi. 干傻事, 开玩笑, 游荡\na. 傻的",
+      "reviewNotes": "feel like a fool 是自嘲愚人名词；推标拉字的门为清晰误操作，未做甜点、动词愚弄或形容词扩展。",
+      "sourcePrintedWord": "fool",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "359096528614be704379350db08cdcd86111d81c96535fe77b2c2f46deb0d311",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "359096528614be704379350db08cdcd86111d81c96535fe77b2c2f46deb0d311",
+        "wordlistDefinition": "n. 傻瓜"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "waterski-water-sport",
+      "word": "waterski",
+      "source": {
+        "book": "NCE2",
+        "lesson": 86
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 滑水（由快艇牵引）",
+      "excludedMeaningLabels": [
+        "n. 水橇",
+        "n. 滑水板",
+        "v. 滑雪",
+        "n. 滑水（由快艇牵引）",
+        "adj. 滑水（由快艇牵引）",
+        "adv. 滑水（由快艇牵引）",
+        "prep. 滑水（由快艇牵引）",
+        "pron. 滑水（由快艇牵引）",
+        "det. 滑水（由快艇牵引）"
+      ],
+      "teachingDefinition": "v. 滑水（由快艇牵引）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 434,
+      "sourcePrintedPage": 394,
+      "sourcePageSha256": "afe6a142ce00fec3ce1cd841a4fc20b56516cb60d2a17f7d4dfa23e4b868dda6",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": null,
+      "wordlistDefinition": "（由快艇牵引水橇）滑水",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": " 进行水橇滑水",
+      "reviewNotes": "原词表 water ski 未印词性，正文 had been water skiing 支持动词编辑判断。MW 同时列 water ski 名词与 water-ski 不及物动词，例句连字符为已核对动词拼写；规范词头仍为目录 waterski。姓名修复消除 cousin 过译。",
+      "sourcePrintedWord": "water ski",
+      "editoriallyInferredPartOfSpeech": "v.",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "0f541afce6c371bc6cf30d02a01986a70ba601fd4901ad9acf2f55bc4f1ee979",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "b57b3bf99b1186527ac59445d0e53fe74ca68c0ef3967a961b61d71a61da6142",
+        "wordlistDefinition": "（由快艇牵引水橇）滑水"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "alibi-absence-evidence",
+      "word": "alibi",
+      "source": {
+        "book": "NCE2",
+        "lesson": 87
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 不在犯罪现场（的证明）",
+      "excludedMeaningLabels": [
+        "n. 托辞",
+        "v. 为...辩解",
+        "v. 不在犯罪现场（的证明）",
+        "adj. 不在犯罪现场（的证明）",
+        "adv. 不在犯罪现场（的证明）",
+        "prep. 不在犯罪现场（的证明）",
+        "pron. 不在犯罪现场（的证明）",
+        "det. 不在犯罪现场（的证明）"
+      ],
+      "teachingDefinition": "n. 不在犯罪现场（的证明）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 438,
+      "sourcePrintedPage": 398,
+      "sourcePageSha256": "044852291259862d5fdb72a00884cab5a706eda8a6a1900fe4b6e89ef8072f11",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 不在犯罪现场",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 不在犯罪现场, 托辞\nv. 为...辩解",
+      "reviewNotes": "原表不在犯罪现场与标题证明相结合；原创电影照片/音乐会情境说明不在场证明，未转成托辞或辩解动词。",
+      "sourcePrintedWord": "alibi",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "adc37c13707c7374a77efdcb73cacef5c43b3368116bb648bb17a9d018f413c8",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "adc37c13707c7374a77efdcb73cacef5c43b3368116bb648bb17a9d018f413c8",
+        "wordlistDefinition": "n. 不在犯罪现场"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "oil-rig-drilling-structure",
+      "word": "oil rig",
+      "source": {
+        "book": "NCE2",
+        "lesson": 90
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 石油钻塔",
+      "excludedMeaningLabels": [
+        "v. 钻探",
+        "n. 石油",
+        "v. 石油钻塔",
+        "adj. 石油钻塔",
+        "adv. 石油钻塔",
+        "prep. 石油钻塔",
+        "pron. 石油钻塔",
+        "det. 石油钻塔"
+      ],
+      "teachingDefinition": "n. 石油钻塔",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 450,
+      "sourcePrintedPage": 410,
+      "sourcePageSha256": "28fdea0644b38463712d848d1b34a4e785c3d91ba159086c79edb99742786692",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": null,
+      "wordlistDefinition": "石油钻塔",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 石油钻塔",
+      "reviewNotes": "offshore oil rig 为海上石油钻塔结构；detailed model / 制作精细的模型准确，词性由正文 rigs 编辑判断。",
+      "sourcePrintedWord": "oil rig",
+      "editoriallyInferredPartOfSpeech": "n.",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "63b093a0b469f0e499c9e1862c00f9b69b5c586e4a524b7345332934c16c500e",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "63b093a0b469f0e499c9e1862c00f9b69b5c586e4a524b7345332934c16c500e",
+        "wordlistDefinition": "石油钻塔"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "noble-high-minded",
+      "word": "noble",
+      "source": {
+        "book": "NCE2",
+        "lesson": 93
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 崇高的",
+      "excludedMeaningLabels": [
+        "n. 贵族",
+        "adj. 贵族的",
+        "adj. 化学惰性的",
+        "adj. 壮丽的",
+        "n. 崇高的",
+        "v. 崇高的",
+        "adv. 崇高的",
+        "prep. 崇高的",
+        "pron. 崇高的",
+        "det. 崇高的"
+      ],
+      "teachingDefinition": "adj. 崇高的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 462,
+      "sourcePrintedPage": 422,
+      "sourcePageSha256": "16f0ce83f586a7170f97142238a0a5c4227637372562dd6cd8511432128ea3fc",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wordlistDefinition": "adj. 高尚的，壮丽的",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 贵族\na. 高贵的, 高尚的, 贵族的, 辉煌的",
+      "reviewNotes": "原词表打印高尚的，壮丽的，标题译崇高的礼物。noble aim 是公益项目的崇高目标，崇高为与高尚对应的编辑同义释义；every child 有书可读准确，未用贵族身份或化学义替代。",
+      "sourcePrintedWord": "noble",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "ed8334760ff0f6d399077918cbcbe6c76864b1a34d9ece9e6588d54921e7d02f",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "ed8334760ff0f6d399077918cbcbe6c76864b1a34d9ece9e6588d54921e7d02f",
+        "wordlistDefinition": "adj. 崇高的，壮丽的"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "noble-impressive-appearance",
+      "word": "noble",
+      "source": {
+        "book": "NCE2",
+        "lesson": 93
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 壮丽的",
+      "excludedMeaningLabels": [
+        "n. 贵族",
+        "adj. 贵族的",
+        "adj. 化学惰性的",
+        "adj. 崇高的",
+        "adj. 高尚的",
+        "n. 壮丽的",
+        "v. 壮丽的",
+        "adv. 壮丽的",
+        "prep. 壮丽的",
+        "pron. 壮丽的",
+        "det. 壮丽的"
+      ],
+      "teachingDefinition": "adj. 壮丽的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 462,
+      "sourcePrintedPage": 422,
+      "sourcePageSha256": "16f0ce83f586a7170f97142238a0a5c4227637372562dd6cd8511432128ea3fc",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wordlistDefinition": "adj. 高尚的，壮丽的",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 贵族\na. 高贵的, 高尚的, 贵族的, 辉煌的",
+      "reviewNotes": "noble facade 是建筑外观壮丽形容词，正立面、古老音乐厅和窄街关系准确；语体较正式，非贵族或道德评价。",
+      "sourcePrintedWord": "noble",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "6915221e73bf90d7bae396c36fb66c2266243c254e5dd3c8f44a1687300c5379",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "6915221e73bf90d7bae396c36fb66c2266243c254e5dd3c8f44a1687300c5379",
+        "wordlistDefinition": "adj. 崇高的，壮丽的"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    },
+    {
+      "id": "fantasy-imaginary-story",
+      "word": "fantasy",
+      "source": {
+        "book": "NCE2",
+        "lesson": 95
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 幻想故事",
+      "excludedMeaningLabels": [
+        "n. 幻想",
+        "n. 白日梦",
+        "[医] 幻想",
+        "n. 虚构故事",
+        "v. 幻想故事",
+        "adj. 幻想故事",
+        "adv. 幻想故事",
+        "prep. 幻想故事",
+        "pron. 幻想故事",
+        "det. 幻想故事"
+      ],
+      "teachingDefinition": "n. 幻想故事",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 470,
+      "sourcePrintedPage": 430,
+      "sourcePageSha256": "468fdd242b196f4544b60fed9192424396a8a8dd9e4d13ec0671f5536ec1f620",
+      "sourceSHA256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wordlistDefinition": "n. 幻想故事",
+      "sourceEvidencePart": "word-list-and-context",
+      "dictionaryObservedMeaning": "n. 幻想, 想象的产物\n[医] 幻想",
+      "reviewNotes": "a fantasy about a city inside a giant tree 为幻想故事作品名词；giant tree / 巨树与题材准确，普通虚构故事粗匹配已删。",
+      "sourcePrintedWord": "fantasy",
+      "reviewer": "Independent Codex content review /root/review_batch5f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5f.ts",
+      "contentSha256": "86f5df7b807460c21d8aa56a3e075d1cd7098d35e5017f1855a1ae7afbac560a",
+      "savedDraft": {
+        "contentFile": "app/data/vocabulary-examples-nce2-gaps.ts",
+        "ledgerFile": "docs/vocabulary-examples-batch11-nce2.json",
+        "contentSha256": "aca62866efccbf5f1fe5214bc265d3b48d693ea7a53bc2d9528e5bf0f7a4af17",
+        "wordlistDefinition": "n. 幻想故事"
+      },
+      "humanReview": false,
+      "browserReview": false,
+      "trueAudioReview": false
+    }
+  ],
+  "remainingBoundaries": [
+    "Root must still register this isolated reviewed module and ledger before it contributes production coverage.",
+    "Canonical headword real TSX enrollment callbacks are owned by root and have not been run in this subtask. In particular printed water ski / example water-ski / catalog waterski must be checked together.",
+    "No browser, phone, actual audio, teacher/human review, external publication, push or PR occurred.",
+    "This review covers only the assigned 30 headwords / 40 original examples, not all dictionary or textbook senses."
+  ],
+  "verification": {
+    "status": "passed",
+    "batch": "5f",
+    "headwords": 30,
+    "examples": 40,
+    "hashChecks": 40,
+    "ownSenseChecks": 40,
+    "meaningForCheckChecks": 40,
+    "approvedCueChecks": 76,
+    "excludedMeaningChecks": 366,
+    "sourceAssociationChecks": 40,
+    "sourceTargetBindingChecks": 33,
+    "actualViewedSourceImagePages": 26,
+    "printedMissingPOSExplicitlyInferred": 7,
+    "contentChanges": [
+      "party-social-gathering",
+      "waterski-water-sport",
+      "ride-journey",
+      "darkness-absence-of-light",
+      "disguise-concealing-appearance",
+      "limelight-performing-life",
+      "fantasy-imaginary-story"
+    ],
+    "helperSha256": "ca199f9b82b569988a5deb654ca9e3e86581a4c11175bfff5bcdb8f89484be14",
+    "contentFileSha256": "a40d1805ffb53e8675cf93264063e6f28636911b7811114ffd2c9016a93699a5",
+    "checks": "write:false esbuild in-memory replacement with only this isolated batch, then actual current exact Chinese-token/POS matcher. No registry, helper, other batch, saved draft, progress or remote writes.",
+    "notTested": [
+      "Production registration",
+      "Real TSX canonical-word enrollment callback",
+      "Browser",
+      "Phone",
+      "Actual audio",
+      "Human/teacher review",
+      "Full build",
+      "All dictionary/textbook senses"
+    ],
+    "command": "node work/batch5f/check.mjs",
+    "checkScriptSha256": "626a1ade3255032107d6f08b182c4402bd0ae9730a5cb55df5c1a66d3e6d8052"
+  }
+}
