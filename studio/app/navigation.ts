@@ -1,9 +1,9 @@
 import {bookCounts, type NceBookId} from './model';
 
-export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
+export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;unit?:string;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
 const roadmapNodes=['baseline','starter','foundation','bridge','listening','reading','writing','speaking','mock','finish'];
 const views=['roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
-const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing'],grammar:['book','topic']};
+const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing'],grammar:['path','book','topic','practice']};
 export function parseRoute(hash:string):StudioRoute{
  const [path,query='']=hash.replace(/^#\/?/,'').split('?'),parts=path.split('/');
  const view=views.includes(parts[0])?parts[0]:'today',route:StudioRoute={view},params=new URLSearchParams(query);
@@ -15,10 +15,11 @@ export function parseRoute(hash:string):StudioRoute{
  const tab=params.get('tab');if(tab&&tabs[view]?.includes(tab))route.tab=tab;
  const node=params.get('node');if(view==='roadmap'&&node&&roadmapNodes.includes(node))route.node=node;
  const mission=params.get('mission');if(view==='roadmap'&&mission&&/^[a-z][a-z0-9-]{1,60}$/.test(mission)&&!['constructor','prototype'].includes(mission))route.mission=mission;
+ const unit=params.get('unit');if(view==='grammar'&&unit&&/^[a-z][a-z-]{1,60}$/.test(unit)&&!['constructor','prototype'].includes(unit))route.unit=unit;
  const goal=params.get('goal'),practice=params.get('practice');
- if((view==='nce'&&route.lesson&&(tab==='practice'||tab==='grammar'))||view==='roadmap'){
+ if((view==='nce'&&route.lesson&&(tab==='practice'||tab==='grammar'))||view==='grammar'&&route.lesson&&tab==='practice'||view==='roadmap'){
   if(goal&&/^[a-z-]{1,60}$/.test(goal)&&!['constructor','prototype'].includes(goal))route.goal=goal;
-  if(view==='nce'&&tab==='practice'&&practice&&['model','independent','transfer','review'].includes(practice))route.practice=practice as StudioRoute['practice'];
+  if((view==='nce'||view==='grammar')&&tab==='practice'&&practice&&['model','independent','transfer','review'].includes(practice))route.practice=practice as StudioRoute['practice'];
  }
  const mode=params.get('mode');if(view==='nce'&&route.lesson&&tab==='listen'&&(mode==='recall'||mode==='dictation'))route.mode=mode;
  const step=params.get('step');if(view==='nce'&&route.lesson&&tab==='notes'&&step!==null&&/^[0-4]$/.test(step))route.step=Number(step);
@@ -39,10 +40,11 @@ export function routeHash(route:StudioRoute){
  if(route.view==='nce'&&route.lesson&&route.tab==='notes'&&Number.isInteger(route.step)&&route.step!>=0&&route.step!<=4)params.set('step',String(route.step));
  if((route.view==='grammar'||route.view==='words'&&route.tab==='index')&&Number.isInteger(route.page)&&route.page!>0&&route.page!<=9999)params.set('page',String(route.page));
  if(route.view==='nce'&&route.lesson&&route.tab==='listen'&&(route.mode==='recall'||route.mode==='dictation'))params.set('mode',route.mode);
- if((route.view==='nce'&&route.lesson&&(route.tab==='practice'||route.tab==='grammar'))||route.view==='roadmap'){
+ if((route.view==='nce'&&route.lesson&&(route.tab==='practice'||route.tab==='grammar'))||route.view==='grammar'&&route.lesson&&route.tab==='practice'||route.view==='roadmap'){
   if(route.goal&&/^[a-z-]{1,60}$/.test(route.goal)&&!['constructor','prototype'].includes(route.goal))params.set('goal',route.goal);
-  if(route.view==='nce'&&route.tab==='practice'&&route.practice&&['model','independent','transfer','review'].includes(route.practice))params.set('practice',route.practice);
+  if((route.view==='nce'||route.view==='grammar')&&route.tab==='practice'&&route.practice&&['model','independent','transfer','review'].includes(route.practice))params.set('practice',route.practice);
  }
+ if(route.view==='grammar'&&route.unit&&/^[a-z][a-z-]{1,60}$/.test(route.unit)&&!['constructor','prototype'].includes(route.unit))params.set('unit',route.unit);
  return path+(params.size?'?'+params:'');
 }
 export function navigate(route:StudioRoute,{replace=false,keepScroll=false,scrollTarget}:{replace?:boolean;keepScroll?:boolean;scrollTarget?:string}={}){

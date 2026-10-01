@@ -13,17 +13,18 @@ export type GrammarCurriculumProps={
  state:State;update:(change:(state:State)=>State)=>void;
  onOpenLesson?:(book:NceBookId,lesson:number)=>void;
  onPracticeGuide?:(book:NceBookId,lesson:number,guideId:string,task?:{unitId:string;prompt:string;criteria:string[]})=>void;
+ selectedUnit?:string;onSelectUnit?:(id:string)=>void;
 };
 const bookNames:Record<NceBookId,string>={NCE1:'第一册',NCE2:'第二册',NCE3:'第三册',NCE4:'第四册'};
 const kindNames={recognise:'识别意思与结构',repair:'修正一个错误',produce:'在限定情境中造句'};
 
 function GrammarUnitLesson({unit,props,select,preferredBook}:{unit:GrammarUnit;props:GrammarCurriculumProps;select:(id:string)=>void;preferredBook?:NceBookId}){
- const progress=grammarProgressFor(props.state,unit),[mode,setMode]=useState<'learn'|'practice'>(progress.inRound?'practice':'learn'),[position,setPosition]=useState(0);
+ const progress=grammarProgressFor(props.state,unit),[mode,setMode]=useState<'learn'|'practice'>(progress.inRound?'practice':'learn'),[position,setPosition]=useState(()=>progress.inRound?Math.max(0,grammarRoundQuestions(unit,progress.round).findIndex(q=>!progress.responses[q.id]?.checkedValue)):0);
  const heading=useRef<HTMLHeadingElement>(null),questions=grammarRoundQuestions(unit,progress.round),q=questions[position];
  const needsNewerVersion=grammarProgressNeedsNewerVersion(props.state.drafts[grammarProgressKey(unit.id)]);
  const response=progress.responses[q.id]||emptyGrammarResponse(),last=progress.attempts.at(-1),submitted=!progress.inRound&&last?.round===progress.round;
  const patch=(change:(p:GrammarUnitProgress)=>GrammarUnitProgress)=>props.update(state=>updateGrammarProgress(state,unit.id,change));
- useEffect(()=>{heading.current?.focus({preventScroll:true})},[mode,position]);
+ useEffect(()=>{heading.current?.focus({preventScroll:true});if(mode==='practice')heading.current?.scrollIntoView({block:'start'})},[mode,position,submitted]);
  function begin(){patch(beginGrammarRound);setPosition(0);setMode('practice')}
  function openTheory(){patch(revisitGrammarTheory);setMode('learn')}
  function saveAnswer(){
@@ -35,11 +36,11 @@ function GrammarUnitLesson({unit,props,select,preferredBook}:{unit:GrammarUnit;p
  }
  const links=lessonsForGrammarUnit(unit);
  return <article className="grammar-unit-detail">
-  <div className="grammar-unit-heading"><div><span className="eyebrow">代表单元 {unit.order} · {grammarStages.find(s=>s.id===unit.stageId)?.title}</span><h2 ref={heading} tabIndex={-1}>{unit.title}</h2></div><span className="grammar-status">{grammarProgressStatus(progress)}</span></div>
+  <div className="grammar-unit-heading"><div><span className="eyebrow">单元 {unit.order}</span><h1 ref={heading} tabIndex={-1}>{unit.title}</h1></div><span className="grammar-status">{grammarProgressStatus(progress)}</span></div>
   <p className="grammar-unit-goal">学会后能做：{unit.goal}</p>
   {needsNewerVersion&&<p role="status" className="notice">这个单元的进度来自较新的版本。讲解仍可阅读，请使用较新版本继续练习；原记录已保留。</p>}
-  <div className="grammar-unit-prerequisites"><strong>建议先学</strong>{grammarPrerequisites(unit).length?grammarPrerequisites(unit).map(previous=><button key={previous.id} className="text-btn" onClick={()=>select(previous.id)}>{previous.title}<ArrowRight size={14}/></button>):<span>从这一个开始；先会辨认句子的主语。</span>}</div>
-  <div className="grammar-unit-purposes">{unit.purposeIds.map(id=>{const p=grammarPurposes.find(p=>p.id===id)!;return <span key={id}>{p.title} · {p.context}</span>})}</div>
+  {mode==='learn'&&<><div className="grammar-unit-prerequisites"><strong>建议先学</strong>{grammarPrerequisites(unit).length?grammarPrerequisites(unit).map(previous=><button key={previous.id} className="text-btn" onClick={()=>select(previous.id)}>{previous.title}<ArrowRight size={14}/></button>):<span>从这一个开始；先会辨认句子的主语。</span>}</div>
+  <div className="grammar-unit-purposes">{unit.purposeIds.map(id=>{const p=grammarPurposes.find(p=>p.id===id)!;return <span key={id}>{p.title} · {p.context}</span>})}</div></>}
   {mode==='learn'?<>
    <section className="grammar-unit-explanation"><h3>先弄懂意思</h3>{unit.explanation.map(text=><p key={text}>{text}</p>)}</section>
    <section><h3>形式、意义与使用条件</h3><div className="grammar-form-list">{unit.forms.map(form=><div key={form.form}><strong>{form.form}</strong><p>{form.meaning}</p><p className="small muted">什么时候用：{form.useWhen}</p></div>)}</div></section>
@@ -69,15 +70,16 @@ function GrammarUnitLesson({unit,props,select,preferredBook}:{unit:GrammarUnit;p
 }
 
 export function GrammarCurriculum(props:GrammarCurriculumProps){
- const [query,setQuery]=useState(''),[stage,setStage]=useState<GrammarStageId|''>(''),[purpose,setPurpose]=useState(''),[book,setBook]=useState<NceBookId|''>(''),[selected,setSelected]=useState(''),[concept,setConcept]=useState('');
+ const [query,setQuery]=useState(''),[stage,setStage]=useState<GrammarStageId|''>(''),[purpose,setPurpose]=useState(''),[book,setBook]=useState<NceBookId|''>(''),[selected,setSelected]=useState(props.selectedUnit||''),[concept,setConcept]=useState('');
+ useEffect(()=>{if(props.selectedUnit!==undefined)setSelected(props.selectedUnit)},[props.selectedUnit]);
  const units=searchGrammarUnits({query,stageId:stage||undefined,purposeId:purpose||undefined,book:book||undefined}),coverage=grammarCoverage();
  const active=grammarUnits.find(unit=>unit.id===selected),conceptEntry=concept?lessonsForGrammarGuide(concept).find(e=>!book||e.book===book):undefined;
  const concepts=searchGrammarConcepts(query,stage||undefined).filter(c=>(!purpose||grammarUnits.some(u=>u.guideIds.includes(c.id)&&u.purposeIds.includes(purpose)))&&(!book||lessonsForGrammarGuide(c.id).some(e=>e.book===book)));
  function leaveCurrent(){if(active)props.update(state=>updateGrammarProgress(state,active.id,revisitGrammarTheory))}
- function select(id:string){leaveCurrent();setSelected(id);setConcept('');props.update(state=>updateGrammarProgress(state,id,markGrammarSeen))}
+ function select(id:string){leaveCurrent();setSelected(id);setConcept('');props.update(state=>updateGrammarProgress(state,id,markGrammarSeen));props.onSelectUnit?.(id)}
  return <section className="grammar-curriculum" aria-label="语法知识主线与表达用途">
-  <header className="grammar-curriculum-heading"><span className="eyebrow">从句子骨架到自己的表达</span><h1>语法主线</h1><p>先看想完成什么表达，再找需要的用法；看懂、自己练和延迟检验分别记录。</p></header>
-  {active?<><button className="text-btn grammar-curriculum-back" onClick={()=>{leaveCurrent();setSelected('')}}><ArrowLeft size={16}/>返回主线与筛选结果</button><GrammarUnitLesson key={active.id} unit={active} props={props} select={select} preferredBook={book||undefined}/></>:<>
+  {!active&&<header className="grammar-curriculum-heading"><span className="eyebrow">从句子骨架到自己的表达</span><h1>语法主线</h1><p>先看想完成什么表达，再找需要的用法；看懂、自己练和延迟检验分别记录。</p></header>}
+  {active?<><button className="text-btn grammar-curriculum-back" onClick={()=>{leaveCurrent();setSelected('');props.onSelectUnit?.('')}}><ArrowLeft size={16}/>返回主线与筛选结果</button><GrammarUnitLesson key={active.id} unit={active} props={props} select={select} preferredBook={book||undefined}/></>:<>
    <div className="grammar-curriculum-filters"><label className="grammar-curriculum-search"><Search size={17}/><input aria-label="搜索语法主线" value={query} onChange={e=>setQuery(e.target.value)} placeholder="用法、表达用途、英文例句或 NCE1 第57课"/></label><label>学习阶段<select aria-label="筛选学习阶段" value={stage} onChange={e=>setStage(e.target.value as GrammarStageId|'')}><option value="">全部阶段</option>{grammarStages.map(s=><option key={s.id} value={s.id}>{s.title}</option>)}</select></label><label>表达用途<select aria-label="筛选表达用途" value={purpose} onChange={e=>setPurpose(e.target.value)}><option value="">全部用途</option>{grammarPurposes.map(p=><option key={p.id} value={p.id}>{p.title}</option>)}</select></label><label>关联教材<select aria-label="筛选关联教材" value={book} onChange={e=>setBook(e.target.value as NceBookId|'')}><option value="">四册全部</option>{Object.entries(bookNames).map(([id,name])=><option key={id} value={id}>{name}</option>)}</select></label></div>
    <p role="status" className="grammar-curriculum-count">找到 {units.length} 个完整代表单元 · 共 {coverage.completeUnits} 个，深化 {coverage.deepenedGuides} / {coverage.existingGuides} 个已有知识点。{coverage.textbookEntries} 个教材入口用于查课，入口数量不等于独立课程数。</p>
    {!units.length&&<div className="panel empty"><p>没有同时匹配这些条件的代表单元。</p><button className="btn secondary" onClick={()=>{setQuery('');setStage('');setPurpose('');setBook('')}}>清除筛选</button></div>}

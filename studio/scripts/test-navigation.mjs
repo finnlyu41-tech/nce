@@ -17,9 +17,12 @@ for(const route of [
  {view:'today'}, {view:'words'}, {view:'nce'}, {view:'nce',book:'NCE1'}, {view:'nce',book:'NCE1',lesson:1,tab:'listen',mode:'recall'}, {view:'nce',book:'NCE1',lesson:1,tab:'notes',step:0}, {view:'nce',book:'NCE2',lesson:11,tab:'notes',step:4}, {view:'nce',book:'NCE1',lesson:144,tab:'practice'},
  {view:'nce',book:'NCE3',filter:'active',query:'自己的笔记'}, {view:'lesson',lesson:36,tab:'grammar'},
  {view:'nce',book:'NCE2',lesson:11,tab:'listen',mode:'dictation'}, {view:'nce',book:'NCE1',lesson:99,tab:'materials'},
+ {view:'grammar',tab:'path',unit:'sentence-core'}, {view:'grammar',book:'NCE1',lesson:1,tab:'practice',goal:'be',practice:'transfer',unit:'sentence-core'},
  {view:'grammar',book:'NCE1',lesson:59,tab:'topic',query:'some any',category:'noun',page:124}, {view:'grammar',book:'NCE3',lesson:47,tab:'book'},
  {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'ielts',tab:'speaking',task:'bank-3-25-5'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
 ])assert.deepEqual(parseRoute(routeHash(route)),route);
+assert.equal(parseRoute('#/grammar?tab=path&unit=constructor').unit,undefined);
+assert.equal(parseRoute('#/nce/NCE1/1?unit=sentence-core').unit,undefined);
 assert.deepEqual(parseRoute('#/nce/__proto__/1'),{view:'nce'});
 assert.deepEqual(parseRoute('#/words/NCE1/145?tab=book'),{view:'words',book:'NCE1',tab:'book'});
 assert.equal(parseRoute('#/words?tab=index&letter=%3Cscript%3E&page=-1').letter,undefined);
