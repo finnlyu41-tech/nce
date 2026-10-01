@@ -1,0 +1,335 @@
+{
+  "id": "passive-focus",
+  "title": "被动与代办：把话题和执行者分清",
+  "stageId": "extension",
+  "order": 10,
+  "prerequisites": [
+    "sentence-core",
+    "past-present-perfect",
+    "modal-choice"
+  ],
+  "guideIds": [
+    "passive",
+    "passive-forms",
+    "passive-double",
+    "causative",
+    "need-doing"
+  ],
+  "purposeIds": [
+    "describe",
+    "progress"
+  ],
+  "goal": "围绕受动作影响的对象汇报进展，区分正在被做、已完成、需要被做，以及请人代做或被要求做。",
+  "explanation": [
+    "先问这句话要谈谁。主动句 A volunteer stamped the tickets 先谈志愿者；被动句 The tickets were stamped 先谈票。执行者未知、不重要或上下文已知时，可省略 by 短语；若要说明由谁做，再补 by a volunteer。改被动应保留事件，不是凭空更换谁做了什么。",
+    "普通被动的核心是 be 加过去分词，时态和主谓一致主要体现在 be 上。were stamped 是过去被盖章；happen、arrive 等在这里没有可被提升的宾语，不能机械套 was happened 或 was arrived。不是所有动词或所有含形容词的 be 句都要作被动分析。",
+    "汇报进展时，is being painted 强调正在被粉刷，has been painted 强调现在已经完成。will be painted 是将来被做，can / must / should be painted 分别说明可能、义务或建议。being 与 been 不能互换，have / has 后的完成被动需要 been，情态词后的被动需要 be 原形。",
+    "give、send、offer 等合适的双宾语动词可把接受者或物品作为主语。The visitors were given a route card 先谈接受者；A route card was given to the visitors 先谈物。不是所有动词都允许接受者直接作这种被动主语，如 explain 通常用 The rule was explained to us，而非套用 We were explained the rule。",
+    "I had my watch serviced 常表示我安排别人保养手表，不说明我亲手做。have / get 加对象和过去分词也可能说遭遇，如 had his window smashed，不能一律推断为付钱安排。这里完整训练安排服务，并介绍遭遇边界；价格、同意或付费不是这个结构单独保证的事实。",
+    "make someone do 强调让或迫使对方做，换成被动时要恢复 to：someone was made to do。它和 have something done 的对象不同：前者把做事的人放在 make 后，后者把被处理的物放在 have 后。get someone to do 是另一种使役形式，本单元说明它的区别，尚未独立训练。",
+    "The gate needs painting 的 -ing 形式表达门需要被刷漆，也可写 needs to be painted；We need to paint the gate 则说明我们需要动手。need doing 是 need 的特定搭配，不等于所有 -ing 都有被动意义；是否已经完成也没有由 needs painting 保证。"
+  ],
+  "forms": [
+    {
+      "form": "受影响的人或物 + be + 过去分词 (+ by + 执行者)",
+      "meaning": "将动作涉及的对象放到话题位置。",
+      "useWhen": "原动作有合适宾语；be 承担时态和一致，执行者重要时才补 by。"
+    },
+    {
+      "form": "am / is / are being + 过去分词",
+      "meaning": "某对象当前正在受到动作处理。",
+      "useWhen": "汇报仍在进行的安装、清洗或修缮；不要用已完成形式代替进行状态。"
+    },
+    {
+      "form": "have / has been + 过去分词",
+      "meaning": "某处理已完成并与当前状态有关。",
+      "useWhen": "从当前视角汇报完成结果；have / has 后是 been，不是 being。"
+    },
+    {
+      "form": "will / can / must / should + be + 过去分词",
+      "meaning": "将来的处理，或被处理的可能、义务与建议。",
+      "useWhen": "时间或情态由前面的词表达；后面仍保留 be 与过去分词。"
+    },
+    {
+      "form": "接受者 + be given / offered / sent + 物；物 + be given / offered / sent + to + 接受者",
+      "meaning": "同一给予事件可突出接受者，也可突出物品。",
+      "useWhen": "动词确实允许相应双宾语结构；人称代词提升为主语时改变格，如 us 变 we。"
+    },
+    {
+      "form": "have / get + 对象 + 过去分词",
+      "meaning": "安排他人处理对象，或在相应语境中经历某事。",
+      "useWhen": "have / get 表达时间，对象是被处理的物；本单元练代办，不把遭遇误认成安排。"
+    },
+    {
+      "form": "make + 人 + 原形；人 + be made + to + 原形",
+      "meaning": "让或迫使某人做事，以及被要求做事的视角。",
+      "useWhen": "从主动使役改为被动时恢复 to；get + 人 + to do 形式不同，不套 make 的原形规则。"
+    },
+    {
+      "form": "对象 + need(s) + -ing；对象 + need(s) to be + 过去分词",
+      "meaning": "对象需要被清洗、修理等，未说明已经处理完成。",
+      "useWhen": "need 的这种搭配中，主语是受到处理的对象；单数主语用 needs。"
+    },
+    {
+      "form": "执行者 + need(s) to + 动词原形",
+      "meaning": "执行者需要做某事。",
+      "useWhen": "比如 We need to paint the gate；按当前含义辨别谁动手，不把 need doing 当作所有情境的通用形式。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "同一事件，不同话题",
+      "a": {
+        "en": "A volunteer stamped the tickets.",
+        "zh": "一位志愿者给票盖了章。"
+      },
+      "b": {
+        "en": "The tickets were stamped by a volunteer.",
+        "zh": "这些票由一位志愿者盖了章。"
+      },
+      "why": "a 先谈志愿者，b 先谈受到处理的票。动作和执行者没有改变；被动不是说票自己盖章。"
+    },
+    {
+      "label": "处理正在进行或已经完成",
+      "a": {
+        "en": "The entrance is being repainted.",
+        "zh": "入口正在重新刷漆。"
+      },
+      "b": {
+        "en": "The entrance has been repainted.",
+        "zh": "入口已经重新刷好漆了。"
+      },
+      "why": "a 用 is being 加过去分词，强调过程；b 用 has been 加过去分词，强调当前完成结果。混用 being 与 been 会改变进展信息。"
+    },
+    {
+      "label": "义务与将来安排",
+      "a": {
+        "en": "The spare keys must be returned today.",
+        "zh": "备用钥匙今天必须归还。"
+      },
+      "b": {
+        "en": "The spare keys will be returned tomorrow.",
+        "zh": "备用钥匙明天会归还。"
+      },
+      "why": "a 的 must 说明义务，b 的 will 指向未来；两句都用 be returned 保留钥匙是被归还对象的关系。"
+    },
+    {
+      "label": "接受者作话题或物品作话题",
+      "a": {
+        "en": "The visitors were given a route card.",
+        "zh": "访客得到了一张路线卡。"
+      },
+      "b": {
+        "en": "A route card was given to the visitors.",
+        "zh": "一张路线卡发给了访客。"
+      },
+      "why": "a 先谈访客，b 先谈路线卡。物品作主语的 give 被动通常用 to 交代接受者，不是只把两组名词换位置。"
+    },
+    {
+      "label": "安排师傅处理或自己动手",
+      "a": {
+        "en": "I had my watch serviced by a technician.",
+        "zh": "我请技术员保养了手表。"
+      },
+      "b": {
+        "en": "I serviced my watch myself.",
+        "zh": "我自己保养了手表。"
+      },
+      "why": "a 的 my watch 是被处理的对象，serviced 是过去分词；b 的 I 是执行者。只说 My watch was serviced 并不能确定是谁安排服务。"
+    },
+    {
+      "label": "相似结构不保证都是自愿安排",
+      "a": {
+        "en": "Ravi booked a repair and had his window replaced.",
+        "zh": "拉维预约了维修，请人更换了窗户。"
+      },
+      "b": {
+        "en": "Ravi had his window smashed during the break-in.",
+        "zh": "入室盗窃时，拉维的窗户被砸坏了。"
+      },
+      "why": "a 的预约背景说明安排服务；b 描述不愿发生的遭遇。have + 对象 + 过去分词不能单独保证主语自愿或付费。"
+    },
+    {
+      "label": "make 主动不带 to，被动恢复 to",
+      "a": {
+        "en": "The coach made them repeat the drill.",
+        "zh": "教练让他们重复做练习。"
+      },
+      "b": {
+        "en": "They were made to repeat the drill.",
+        "zh": "他们被要求重复做练习。"
+      },
+      "why": "主动是 made + them + repeat；them 提升为主语变 they，被动后使用 to repeat。不能把主动的无 to 形式原样照搬。"
+    },
+    {
+      "label": "对象需要被处理或某人需要动手",
+      "a": {
+        "en": "The gate needs painting.",
+        "zh": "大门需要刷漆。"
+      },
+      "b": {
+        "en": "We need to paint the gate.",
+        "zh": "我们需要给大门刷漆。"
+      },
+      "why": "a 没有把大门当作刷漆执行者，等同于 needs to be painted；b 直接说我们需要动手。两句均未保证刷漆已经完成。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "The delay was happened yesterday.",
+      "correct": "The delay happened yesterday.",
+      "why": "happen 在这里不带可转换的宾语，不能机械构造 was happened。"
+    },
+    {
+      "wrong": "The tickets were stamp at the desk.",
+      "correct": "The tickets were stamped at the desk.",
+      "why": "被动的 were 后需要过去分词 stamped，不是原形 stamp。"
+    },
+    {
+      "wrong": "The screen has being installed.",
+      "correct": "The screen has been installed.",
+      "why": "若要说安装已经完成，完成被动是 has been installed。正在安装则另用 is being installed。"
+    },
+    {
+      "wrong": "The spare keys can borrowed.",
+      "correct": "The spare keys can be borrowed.",
+      "why": "can 后的被动要接 be 加过去分词，不能直接接 borrowed。"
+    },
+    {
+      "wrong": "Us were given a checklist.",
+      "correct": "We were given a checklist.",
+      "why": "接受者 us 提升为主语后应改用主格 we；过去被动 were given 保留同一给予关系，不是把我们改成给予动作的执行者。"
+    },
+    {
+      "wrong": "I had my watch service.",
+      "correct": "I had my watch serviced.",
+      "why": "安排他人保养的结构是 had + 被处理的物 + 过去分词 serviced。"
+    },
+    {
+      "wrong": "They were made repeat the drill.",
+      "correct": "They were made to repeat the drill.",
+      "why": "make 的被动要恢复 to，主动 made them repeat 的无 to 形式不能直接搬来。"
+    },
+    {
+      "wrong": "The gate needs to paint.",
+      "correct": "The gate needs painting.",
+      "why": "若大门是被刷漆对象，可用 needs painting 或 needs to be painted；needs to paint 把它当作要动手的执行者。"
+    },
+    {
+      "wrong": "The labels will are printed tomorrow.",
+      "correct": "The labels will be printed tomorrow.",
+      "why": "will 后的 be 使用原形，不随复数 labels 改为 are；printed 保留过去分词。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "passive-focus-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "宣传册已经分发完，现在可以汇报结果；执行者不重要。要先谈宣传册，选择句子与话题／完成状态理由都正确的一项。",
+      "options": [
+        "The leaflets have been distributed. —— 先谈宣传册，目前分发已完成。",
+        "The museum staff have distributed the leaflets. —— 宣传册在主语位置，未提执行者。",
+        "The leaflets are being distributed. —— 先谈宣传册，目前分发已完成。",
+        "The leaflets have being distributed. —— 先谈宣传册，目前分发已完成。"
+      ],
+      "answer": "The leaflets have been distributed. —— 先谈宣传册，目前分发已完成。",
+      "explanation": "正确项以宣传册为主语，have been 加过去分词说明当前完成结果。第二项先谈 staff 并交代了执行者；第三项表示仍在分发，与已完成不符；第四项在 have 后误用 being。",
+      "hints": [
+        "先找谁应作话题，再区分“过程仍在进行”与“当前已经完成”；相同的中文理由可能配了错误形式。",
+        "受影响的复数 leaflets 作主语，完成被动用 have been + distributed。"
+      ]
+    },
+    {
+      "id": "passive-focus-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "备用钥匙可以被借用。只修正缺少的被动助动词：The spare keys can borrowed. 保留 the spare keys、can 和 borrowed。",
+      "answer": "The spare keys can be borrowed.",
+      "accepted": [
+        "The spare keys can be borrowed."
+      ],
+      "explanation": "can 后的被动使用 be 加过去分词，补入 be。这里钥匙是被借用对象；不要改成钥匙去借东西的主动句。",
+      "hints": [
+        "情态词表达可能性已经存在；检查表示对象受到处理的被动结构是否完整。",
+        "在 can 后补 be，保留过去分词 borrowed。"
+      ]
+    },
+    {
+      "id": "passive-focus-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "馆员昨天发给我们借阅证：The librarian gave us library cards yesterday. 写一句以 We 开头的过去被动，让接受者作话题；保留 library cards、by the librarian 和 yesterday，不增加其他信息。",
+      "answer": "We were given library cards by the librarian yesterday.",
+      "accepted": [
+        "We were given library cards by the librarian yesterday.",
+        "We were given library cards yesterday by the librarian."
+      ],
+      "explanation": "接受者 us 提升为主语变 we，过去被动是 were given，物品 library cards 保留在后面。执行者和昨天仍在句中，事件没有改成我们给别人发证。",
+      "hints": [
+        "把原来的接受者提升为主语后，代词格和过去被动的 be 形式都要改变。",
+        "句首用 We were given library cards，随后保留 by the librarian 与 yesterday。"
+      ]
+    },
+    {
+      "id": "passive-focus-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "昨天你安排技术员保养手表，自己没有动手。要保留“我安排他人代做”的信息，选择英文与执行者解释都正确的一项。",
+      "options": [
+        "I had my watch serviced yesterday. —— 我安排他人处理，手表是处理对象。",
+        "I serviced my watch yesterday. —— 我安排他人处理，手表是处理对象。",
+        "My watch was serviced yesterday. —— 明确交代我就是服务安排者。",
+        "I had my watch servicing yesterday. —— 我安排他人处理，手表是处理对象。"
+      ],
+      "answer": "I had my watch serviced yesterday. —— 我安排他人处理，手表是处理对象。",
+      "explanation": "had 加对象和过去分词 serviced 保留我安排服务的信息。I serviced 把我作为动手者；普通被动 My watch was serviced 本身是合理英语，但未明确保留安排者，因而未满足本题目标；最后一项误用 -ing。",
+      "hints": [
+        "题目要求的不只“手表被保养”，还要交代你安排他人动手；检查对象后形式与实际执行者。",
+        "用 had + my watch + 过去分词 serviced；普通主动与省略安排者的被动表达不同信息。"
+      ]
+    },
+    {
+      "id": "passive-focus-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "大门现在需要被刷漆，尚未处理。改正：The gate needs to paint. 保留 The gate needs 与 paint 的意思；可用 need doing 或 need to be done 两种结构，不改成有人已经刷完。",
+      "answer": "The gate needs painting.",
+      "accepted": [
+        "The gate needs painting.",
+        "The gate needs to be painted."
+      ],
+      "explanation": "need doing 与 need to be done 都能表达对象需要被处理。这里 gate 不是刷漆的人，needs 保留当前的需要而非完成状态。",
+      "hints": [
+        "主语是等待处理的对象，并非动手的人；也不能把“需要”改成“已完成”。",
+        "可写 needs painting，或 needs to be painted；paint 的过去分词是 painted。"
+      ]
+    },
+    {
+      "id": "passive-focus-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "调度员昨晚要求司机们在外面等待：The dispatcher made the drivers wait outside last night. 写一句以 The drivers 开头的过去被动；保留 by the dispatcher、wait outside 和 last night，重点检查 make 变被动后的 to。",
+      "answer": "The drivers were made by the dispatcher to wait outside last night.",
+      "accepted": [
+        "The drivers were made by the dispatcher to wait outside last night.",
+        "The drivers were made to wait outside by the dispatcher last night.",
+        "The drivers were made to wait outside last night by the dispatcher."
+      ],
+      "explanation": "the drivers 提为复数主语，过去被动使用 were made；make 变被动后恢复 to wait。原来的执行者和时间保留，句子描述被要求等待的司机。",
+      "hints": [
+        "这是 make 加人和动作的主动结构。改被动不只补 be，还要检查动作前缺哪个词。",
+        "用 The drivers were made … to wait outside，并保留 by the dispatcher 与 last night。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "选一次真实的设备维护、活动准备或借还物品。围绕物品写一句当前进展或需要；再写一句谁安排处理、或谁被要求做什么。说明执行者已知与否，不凭被动句猜测是谁付费。开放表达中的动词搭配和事实是否准确仍需核对。",
+    "criteria": [
+      "话题对象确实受到动作影响，be 的时态和数量正确，动作使用过去分词。",
+      "正在被做、当前已完成、需要被做互不混淆；情态被动保留 be。",
+      "give 等双宾语变换保留接受关系；物作主语时使用合适介词，不机械套到 explain 等不同搭配。",
+      "have / get 对象 done 区分安排与遭遇；make 的被动恢复 to，need doing 不误读为对象自己动手。"
+    ]
+  }
+}

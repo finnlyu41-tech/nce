@@ -1,0 +1,285 @@
+{
+  "id": "verb-complements",
+  "title": "动词后接什么：动作作名词、结构意义与目的",
+  "stageId": "extension",
+  "order": 12,
+  "prerequisites": [
+    "sentence-core",
+    "modal-choice"
+  ],
+  "goal": "根据前面的词和实际意思选择 -ing、to do 或介词结构，并说清目的动作由谁完成。",
+  "guideIds": [
+    "gerund",
+    "verb-patterns",
+    "verb-prepositions",
+    "purpose"
+  ],
+  "purposeIds": [
+    "describe",
+    "plan",
+    "reason"
+  ],
+  "explanation": [
+    "先找主句中真正带时态的动词，再问后面这个动作在做什么工作。-ing 可以把活动当作一件事，放在主语或宾语的位置；它并不总表示“正在”。Repairing bicycles requires practice 中，修自行车这件事是主语，不是一个省略了 be 的进行时。",
+    "动词后接什么需要连着前面的词学：enjoy / avoid / finish 常接 -ing，want / decide 常接 to do。有些动词两种形式都能用，意思却会变；也有 start / begin 等在不少语境中两者都可以，不能靠“第二个动作一律加 to”判断。",
+    "stop doing 停止的是 doing 所说的活动；stop to do 则暂停原来的活动，去做另一件事。remember doing 回忆已经发生的经历，remember to do 则是在想起或提醒时记住一个还需要执行的任务。过去式 remembered to do 通常说明没有忘记，而且做成了，不等于事后回忆一个画面。",
+    "to 有两种常见身份。hope to visit 中，它是不定式标记，后接原形；look forward to visiting 中，它是介词，后接名词或 -ing。还要确认中心词本身的搭配：talk about a timetable 有 about，discuss a timetable 直接接讨论对象，不能凭中文把 about 加到每个“讨论”后。",
+    "说明目的时，先把两件事的主体说清楚。I raise the screen to see it better 通常表示我抬高屏幕，为了自己看清；若目的是让访客看清，so that the visitor can see it better 可以明确另一个主体。so that 也能连接同一主体；to do 并不等于“只要出现目的都能用”。",
+    "目的说明想达到什么，不保证结果已经达到。本单元先练同一主体的 to do 与明确写出主体的 so that 从句；带 for somebody to do 的目的结构、try / regret 等更多意义变化留给后续练习。"
+  ],
+  "forms": [
+    {
+      "form": "-ing 短语作主语 + 单数谓语",
+      "meaning": "把一种活动当作一件事来谈。",
+      "useWhen": "介绍活动需要什么或有什么特点；普通活动作一个整体时用单数谓语，不补成 be + -ing。"
+    },
+    {
+      "form": "enjoy / avoid / finish + 动词 -ing",
+      "meaning": "把喜欢、避免或完成的活动作为前面动词的对象。",
+      "useWhen": "这些常用搭配后接活动；先识别前面的动词，不把它们机械改为 to do。"
+    },
+    {
+      "form": "want / decide / hope + to + 动词原形",
+      "meaning": "说想做、决定做或希望发生的事。",
+      "useWhen": "本单元列出的动词后使用不定式；不是所有动词都遵循这组搭配。"
+    },
+    {
+      "form": "stop + -ing；stop + to do",
+      "meaning": "停止某项活动；或停下原来的事，为了做另一件事。",
+      "useWhen": "需要保留“哪件事停止了、之后想做什么”的区别；先看情境，不根据词形猜意思。"
+    },
+    {
+      "form": "remember + -ing；remember + to do",
+      "meaning": "回忆做过的事；或记住一个需要执行的任务。",
+      "useWhen": "讲记忆中的经历用 -ing；提醒下一步行动用 to do。过去 remembered to do 通常表示没有忘记并实际做了。"
+    },
+    {
+      "form": "介词 + 名词 / 动词 -ing；look forward to + 名词 / -ing",
+      "meaning": "把人、事物或活动接在介词后；这里的 to 是介词。",
+      "useWhen": "前面的整体搭配要求介词时，如 be interested in、look forward to；不能把所有 to 都看成不定式标记。"
+    },
+    {
+      "form": "talk about / depend on / wait for + 对象；discuss + 对象",
+      "meaning": "用中心词需要的结构，说明谈论、依赖、等待或讨论的对象。",
+      "useWhen": "连着中心词核对固定搭配；discuss 在这里直接接宾语，不另加 about。"
+    },
+    {
+      "form": "主句 + to / in order to + 动词原形",
+      "meaning": "说明主句行动的目的。",
+      "useWhen": "在本单元的基本结构中，两项行动的主体相同或可以清楚还原；不把不同主体悄悄省掉。"
+    },
+    {
+      "form": "主句 + so that + 主语 + can / could 等 + 动词原形",
+      "meaning": "明确说出谁要达到什么目的。",
+      "useWhen": "目的行动由另一个人完成，或需要明确表达能力与条件时；同一主体也可以使用。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "谈一种活动，与描述正在发生不同",
+      "a": {
+        "en": "Repairing bicycles requires practice.",
+        "zh": "修自行车需要练习。"
+      },
+      "b": {
+        "en": "Owen is repairing a bicycle.",
+        "zh": "Owen 正在修一辆自行车。"
+      },
+      "why": "a 的 Repairing bicycles 是活动主语；b 用 is repairing 作谓语，描述正在展开的动作。不能见到 -ing 就补一个 be。"
+    },
+    {
+      "label": "停止这项活动，还是停下来做它",
+      "a": {
+        "en": "Kai stopped singing.",
+        "zh": "Kai 停止了唱歌。"
+      },
+      "b": {
+        "en": "Kai stopped to sing.",
+        "zh": "Kai 停下原来在做的事，去唱歌。"
+      },
+      "why": "a 停止的是唱歌；b 的 to sing 说明停下来的目的，原来的活动需要从语境知道。形式变化改变事件关系。"
+    },
+    {
+      "label": "回忆经历，与提醒任务不同",
+      "a": {
+        "en": "I remember paying the fee.",
+        "zh": "我记得自己付过那笔费用。"
+      },
+      "b": {
+        "en": "Please remember to pay the fee.",
+        "zh": "请记得去付那笔费用。"
+      },
+      "why": "a 在回忆已经发生的付款；b 在提醒需要执行的付款。不能用 remember paying 来替代当前的行动提醒。"
+    },
+    {
+      "label": "相近意思，中心词所需的介词不同",
+      "a": {
+        "en": "We talked about the timetable.",
+        "zh": "我们谈了时间安排。"
+      },
+      "b": {
+        "en": "We discussed the timetable.",
+        "zh": "我们讨论了时间安排。"
+      },
+      "why": "talk 在这个意思下接 about，再接话题；discuss 直接接讨论对象。中文意思相近，不表示英文结构完全一样。"
+    },
+    {
+      "label": "同一个 to，不一定有相同身份",
+      "a": {
+        "en": "I'm looking forward to visiting the gallery.",
+        "zh": "我期待参观那家画廊。"
+      },
+      "b": {
+        "en": "I hope to visit the gallery.",
+        "zh": "我希望参观那家画廊。"
+      },
+      "why": "look forward to 的 to 是介词，后接 visiting；hope 后的 to 是不定式标记，后接 visit。两种表达的态度也不同，不只是替换一个词尾。"
+    },
+    {
+      "label": "目的动作由我做，还是由访客做",
+      "a": {
+        "en": "I raise the screen to see it better.",
+        "zh": "我抬高屏幕，为了自己看得更清楚。"
+      },
+      "b": {
+        "en": "I raise the screen so that the visitor can see it better.",
+        "zh": "我抬高屏幕，好让访客看得更清楚。"
+      },
+      "why": "a 通常把 see 的主体理解为 I；b 明确写出 the visitor。so that 也可保留 I，不是只在主体不同的时候才允许使用。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "Making soup take time.",
+      "correct": "Making soup takes time.",
+      "why": "Making soup 在这里把活动当成一个整体作主语，普通现在时的谓语用单数 takes。"
+    },
+    {
+      "wrong": "We enjoy to make pottery.",
+      "correct": "We enjoy making pottery.",
+      "why": "enjoy 后接活动时使用 -ing，不把这组常用结构改成 to do。"
+    },
+    {
+      "wrong": "I look forward to visit the gallery.",
+      "correct": "I look forward to visiting the gallery.",
+      "why": "look forward to 的 to 是介词，后面的动作使用 -ing；hope to visit 中的 to 则是另一种结构。"
+    },
+    {
+      "wrong": "We discussed about the timetable.",
+      "correct": "We discussed the timetable.",
+      "why": "本句 discuss 直接接讨论对象，about 多余；换成 talk 时才使用 talked about。"
+    },
+    {
+      "wrong": "Please remember paying the fee tomorrow.",
+      "correct": "Please remember to pay the fee tomorrow.",
+      "why": "情境是提醒明天尚待执行的付款任务，需要 remember to pay；remember paying 在这里不能保留同样的提醒意思。"
+    },
+    {
+      "wrong": "I raise the screen to the visitor can see it.",
+      "correct": "I raise the screen so that the visitor can see it.",
+      "why": "to 后不能这样直接放一个带主语的完整分句；so that 能明确引出目的行动的主体 the visitor。"
+    },
+    {
+      "wrong": "She stopped to coughing.",
+      "correct": "She stopped coughing.",
+      "why": "若要说她原来在咳嗽、后来停止了，使用 stop coughing；不是停下另一件事去咳嗽，to 后也不能直接接 coughing。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "verb-complements-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "她先在慢跑，然后暂停慢跑去伸展身体；没有说她停止伸展。选择句子与理由都保留这个事件关系的一项。",
+      "options": [
+        "She stopped to stretch. —— 停下慢跑，是为了伸展身体。",
+        "She stopped stretching. —— stretching 是停下慢跑后的目的，所以意思相同。",
+        "She stopped to stretch. —— 这说明她不再伸展身体。"
+      ],
+      "answer": "She stopped to stretch. —— 停下慢跑，是为了伸展身体。",
+      "explanation": "stop to stretch 里的 to stretch 说明停下来的目的，原来暂停的是慢跑。stop stretching 停止的是伸展本身。本题同时核对所选表达和理由。",
+      "hints": [
+        "先分清哪项活动停止了，哪项活动是接下来要做的。",
+        "目的行动用 stop 后的 to + 原形；不要把它当成被停止的活动。"
+      ]
+    },
+    {
+      "id": "verb-complements-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "只修正 meet 的形式，保留其他信息：We are looking forward to meet the new neighbours.",
+      "answer": "We are looking forward to meeting the new neighbours.",
+      "accepted": [
+        "We're looking forward to meeting the new neighbours."
+      ],
+      "explanation": "look forward to 是整体搭配，这里的 to 是介词，后面把 meeting the new neighbours 当作活动。不是遇到 to 就一律使用动词原形。",
+      "hints": [
+        "先看 to 是否属于前面的固定搭配。",
+        "look forward to 后接活动时使用 -ing；只改变 meet 的形式。"
+      ]
+    },
+    {
+      "id": "verb-complements-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "以 Growing herbs（种香草这件事）开头，用 take / patience（耐心）写一般现在时陈述。只调整谓语形式，不增加数量词或别的行动。",
+      "answer": "Growing herbs takes patience.",
+      "explanation": "Growing herbs 是把活动当作一个整体的主语，谓语用单数 takes；这里不是 be + growing 的进行时。",
+      "hints": [
+        "把整项活动当成一件事，先判断谁作主语。",
+        "活动短语已在主语位置；take 按这个单数整体调整，不补 be。"
+      ]
+    },
+    {
+      "id": "verb-complements-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "Mina 昨天已经寄出了包裹，现在记得寄包裹时的情景；不是提醒下一次去寄。选择表达与理由都符合的一项。",
+      "options": [
+        "Mina remembers posting the parcel. —— 她现在在回忆已经发生的寄件。",
+        "Mina remembers to post the parcel. —— to post 在这里直接表示对昨天画面的回忆。",
+        "Mina remembers posting the parcel. —— 这句话是在提醒她一个尚待执行的寄件任务。"
+      ],
+      "answer": "Mina remembers posting the parcel. —— 她现在在回忆已经发生的寄件。",
+      "explanation": "remember posting 回忆已发生的活动；remember to post 是记住需要去执行的任务。昨天已寄出和现在回忆这一画面，决定本题用 posting；并非仅凭 yesterday 机械选词形。",
+      "hints": [
+        "要说的是过去经历的记忆，还是还需要做的任务？",
+        "回忆做过的事用 remember + -ing；核对选项的理由是否也这样解释。"
+      ]
+    },
+    {
+      "id": "verb-complements-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "只删除多余的介词，保留事件和时间：After the meeting, we discussed about the timetable.",
+      "answer": "After the meeting, we discussed the timetable.",
+      "explanation": "discuss 在这里直接接 the timetable 作宾语，不使用 about。talked about 可以表达相近事件，但题目要求保留 discussed，只修正原结构。",
+      "hints": [
+        "讨论对象已经紧跟中心动词；检查这个动词是否还需要介词。",
+        "本句 discuss 直接接对象，删除 about，不更换其他词。"
+      ]
+    },
+    {
+      "id": "verb-complements-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "说明我把地图举高，是为了让团队看清它。以 I 开头，按 I / hold the map higher / so that / the group / can see it 组成一句一般现在时表达；保留两个不同主体和 can，不加入新的目的。",
+      "answer": "I hold the map higher so that the group can see it.",
+      "explanation": "主句动作由 I 做，目的动作由 the group 做，so that 后明确写出目的主体。若只写 I hold the map higher to see it，通常会被理解为我自己要看清，改变任务意思。",
+      "hints": [
+        "先分别找出举地图的人和看地图的人。",
+        "用 so that 引出 the group can see it，不能省掉这个不同的主体。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "为一次真实的出行、合作或兴趣活动写四句：把一项活动作为主语；说明期待或正在考虑做什么；用 stop 或 remember 区分两个可能意思；说明你做一个准备是为了自己还是为了别人。自行选择活动，别复制香草、包裹、画廊或地图情境。",
+    "criteria": [
+      "-ing 作主语时是在谈一种活动，主句有独立谓语，主谓数量对应。",
+      "每个后续动作的形式与前面的动词或介词搭配一致，能说明 to 是不定式标记还是介词。",
+      "stop / remember 的形式保留实际事件关系，未把停止活动、目的或回忆互相混淆。",
+      "目的句能明确还原各动作主体；主体不同不会被简略的 to do 隐藏。",
+      "目的表达是希望达到的目标，没有未经说明就把它当作已实现结果；自由表达与搭配仍需进一步核对。"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "guideId": "object-clause",
+    "unitId": "reported-perspective",
+    "formIndices": [
+      0
+    ],
+    "contrastIndices": [
+      0
+    ],
+    "mistakeIndices": [
+      0
+    ],
+    "practiceIds": [
+      "reported-perspective-v0-recognise",
+      "reported-perspective-v1-produce"
+    ],
+    "scope": "that 的连接作用、可省略性、完整从句主谓和现在视角有明确对比；认知题核对当前陈述，造句允许省 that 而保留完整内容。",
+    "remaining": "think／know 的否定范围、宾语从句引导词的全部用法及复杂嵌套未训练；不把 that 当作从句主语。"
+  },
+  {
+    "guideId": "reported",
+    "unitId": "reported-perspective",
+    "formIndices": [
+      1,
+      2,
+      3
+    ],
+    "contrastIndices": [
+      1,
+      2,
+      3
+    ],
+    "mistakeIndices": [
+      1,
+      2,
+      3
+    ],
+    "practiceIds": [
+      "reported-perspective-v0-repair",
+      "reported-perspective-v1-recognise",
+      "reported-perspective-v1-produce"
+    ],
+    "scope": "say／tell、原说话者与接受者、过去视角后移和仍成立可不后移有定位证据；单错误修正接受者搭配，认知题核对 you 的实际指向，新情境检验 have checked→had checked。",
+    "remaining": "will→would 与相对日期变化在解释和形式中介绍，尚无独立输入变换；仍成立事实的自由时态选择、地点指代、所有情态和时态后移未穷尽。"
+  },
+  {
+    "guideId": "indirect-question",
+    "unitId": "reported-perspective",
+    "formIndices": [
+      4,
+      5
+    ],
+    "contrastIndices": [
+      4,
+      5
+    ],
+    "mistakeIndices": [
+      4,
+      5
+    ],
+    "practiceIds": [
+      "reported-perspective-v0-produce",
+      "reported-perspective-v1-recognise"
+    ],
+    "scope": "特殊疑问与是否问题有成对例句、陈述语序和外层问号说明；新机场情境造句 what time 从句，认知题同时核对 whether、语序与接受者。",
+    "remaining": "who 作主语的直接与间接问题、选择疑问、whether 与 if 的细分限制及更深嵌套未训练；不把 if 的是否用法套入条件句规则。"
+  },
+  {
+    "guideId": "reported-commands",
+    "unitId": "reported-perspective",
+    "formIndices": [
+      6,
+      7,
+      8
+    ],
+    "contrastIndices": [
+      6,
+      7
+    ],
+    "mistakeIndices": [
+      6,
+      7,
+      8
+    ],
+    "practiceIds": [
+      "reported-perspective-v1-repair",
+      "reported-perspective-v1-produce"
+    ],
+    "scope": "请求、建议与 suggest 搭配差异有形式和对比；单错误改错接受否定不定式的合理次序，新情境转述建议检验 advised me to keep。",
+    "remaining": "suggest 仅作搭配介绍，尚无独立输入；复杂建议 that 从句、语气力度与隐含请求须结合真实背景，开放转述准确性仍待核对。"
+  }
+]

@@ -3,9 +3,8 @@ import {readFile} from 'node:fs/promises';
 import {stripTypeScriptTypes} from 'node:module';
 import ts from 'typescript';
 
-// The explicit preview is only for the first three units while the parallel
-// content task is running. The default run must load and validate all eight.
-const corePreview=process.argv.includes('--core-preview');
+// Verify the full original and depth curriculum; partial previews cannot
+// satisfy this delivery check.
 const root=new URL('../app/',import.meta.url),cache=new Map();
 async function moduleURL(name){
  if(cache.has(name))return cache.get(name);
@@ -15,7 +14,7 @@ async function moduleURL(name){
  for(const match of [...source.matchAll(/^import (?!type )(.+?) from '(\.\/.+?)';/gm)]){
   const dep=match[2].slice(2);
   if(dep.endsWith('.json')){
-   const json=corePreview&&dep==='data/grammar-curriculum/extension-units.json'?'[]':await readFile(new URL(dep,root),'utf8');
+   const json=await readFile(new URL(dep,root),'utf8');
    source=source.replace(match[0],`const ${match[1]}=${json};`);
   }else source=source.replaceAll("'"+match[2]+"'",JSON.stringify(await moduleURL(dep+'.ts')));
  }
@@ -37,7 +36,7 @@ const pristine=JSON.stringify(model.initial);
 const delayed=(record,at=now+30*day)=>progress.delayedGrammarEvidence(record,at);
 const status=(record,at=now+30*day)=>progress.grammarProgressStatus(record,at);
 
-assert.equal(units.length,corePreview?3:8,'The default suite requires eight complete representative units');
+assert.equal(units.length,13,'This delivery requires the original eight units and five depth units');
 assert.equal(new Set(ids(units)).size,units.length);
 assert.deepEqual(stages.map(stage=>stage.id),['foundation','time','meaning','extension']);
 const stagedGuides=stages.flatMap(stage=>stage.guideIds);
@@ -451,7 +450,7 @@ for(const [field,value] of Object.entries(legacy))if(field!=='drafts')assert.dee
 for(const [draft,value] of Object.entries(legacy.drafts))assert.equal(state.drafts[draft],value,'Old text and LearningRecord drafts remain byte-for-byte unchanged');
 assert(model.validateState(state));
 const file=files.makeProgressFile(state,new Date(now));
-assert(file.size<128*1024,'All eight grammar units plus legacy fixtures stay far below the 25 MB backup limit');
+assert(file.size<128*1024,'All grammar units plus legacy fixtures stay far below the 25 MB backup limit');
 const imported=await files.readProgressFile(file);
 assert.deepEqual(imported.state,state);assert.equal(imported.savedAt,new Date(now).toISOString());
 for(const unit of units)assert.deepEqual(progress.grammarProgressFor(imported.state,unit),progress.grammarProgressFor(state,unit));
@@ -493,4 +492,3 @@ const longImport=(await files.readProgressFile(files.makeProgressFile(longAnswer
 for(const response of Object.values(progress.grammarProgressFor(longImport,firstUnit).responses))assert.equal(response.value.length,1000);
 assert.equal(JSON.stringify(model.initial),pristine);
 console.log(`Grammar persistence: malformed/future/content-version compatibility, no legacy mastery migration, preserved State and drafts, bounded history/answers, real makeProgressFile/readProgressFile roundtrip (${file.size} bytes) passed.`);
-if(corePreview)console.log('CORE PREVIEW ONLY: run again without --core-preview before delivery to require the full eight-unit curriculum.');

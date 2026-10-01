@@ -1,0 +1,106 @@
+[
+  {
+    "guideId": "passive",
+    "unitId": "passive-focus",
+    "formIndices": [
+      0
+    ],
+    "contrastIndices": [
+      0
+    ],
+    "mistakeIndices": [
+      0,
+      1
+    ],
+    "practiceIds": [
+      "passive-focus-v0-recognise",
+      "passive-focus-v0-produce"
+    ],
+    "scope": "话题选择、be 加过去分词、可省执行者与及物边界有讲解和对比；题目核对受影响对象、接受者主语及执行关系。",
+    "remaining": "get 被动、状态性 be 加形容词／分词辨别、复杂动词与介词被动未全面训练；不承诺任一动词均可机械转换。"
+  },
+  {
+    "guideId": "passive-forms",
+    "unitId": "passive-focus",
+    "formIndices": [
+      1,
+      2,
+      3
+    ],
+    "contrastIndices": [
+      1,
+      2
+    ],
+    "mistakeIndices": [
+      2,
+      3,
+      8
+    ],
+    "practiceIds": [
+      "passive-focus-v0-recognise",
+      "passive-focus-v0-repair"
+    ],
+    "scope": "进行、完成、将来和情态被动有对应形式与状态对比；认知题区分完成与进行，单错误输入题实际补 can be。",
+    "remaining": "将来被动仅有讲解、对比与错例，没有独立输入题；正在进行与完成被动尚无独立造句，过去完成被动及所有时态组合未穷尽。"
+  },
+  {
+    "guideId": "passive-double",
+    "unitId": "passive-focus",
+    "formIndices": [
+      4
+    ],
+    "contrastIndices": [
+      3
+    ],
+    "mistakeIndices": [
+      4
+    ],
+    "practiceIds": [
+      "passive-focus-v0-produce"
+    ],
+    "scope": "接受者与物品两种 give 被动有成对例句、介词和代词格说明；新情境将 us 提为 we，保留借阅证、执行者与过去时间。",
+    "remaining": "物品作主语有示范但未单独输入；offer／send／buy 等搭配的介词差异和 explain 等不同搭配的边界未全面训练。"
+  },
+  {
+    "guideId": "causative",
+    "unitId": "passive-focus",
+    "formIndices": [
+      5,
+      6
+    ],
+    "contrastIndices": [
+      4,
+      5,
+      6
+    ],
+    "mistakeIndices": [
+      5,
+      6
+    ],
+    "practiceIds": [
+      "passive-focus-v1-recognise",
+      "passive-focus-v1-produce"
+    ],
+    "scope": "安排服务与自己动手、安排与非自愿遭遇、make 主动／被动有形式和例句；题目实际检验代办意义及 be made to 的新情境变换。",
+    "remaining": "get 对象 done 与 get 人 to do 仅作区分介绍；遭遇用法未独立输入，不能从结构单独断言自愿、付费或授权。"
+  },
+  {
+    "guideId": "need-doing",
+    "unitId": "passive-focus",
+    "formIndices": [
+      7,
+      8
+    ],
+    "contrastIndices": [
+      7
+    ],
+    "mistakeIndices": [
+      7
+    ],
+    "practiceIds": [
+      "passive-focus-v1-repair"
+    ],
+    "scope": "对象需要被处理与执行者需要动手有形式、意义、使用条件及对比；输入题同时接受 needs painting 与 needs to be painted。",
+    "remaining": "needn't have done 的已做但不必要、need 作为情态词的其他形式及语域差异未训练；不把所有 -ing 都解释为被动。"
+  }
+]

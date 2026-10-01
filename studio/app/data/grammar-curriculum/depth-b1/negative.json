@@ -1,0 +1,290 @@
+{
+  "id": "negative-precision",
+  "title": "把否定范围说准：零个、两个都不、并非全部",
+  "stageId": "foundation",
+  "order": 13,
+  "prerequisites": [
+    "noun-reference",
+    "questions-negation"
+  ],
+  "goal": "区分 no、none、neither 与 not all 的范围，用不定代词清楚说明人或物，并避免重复否定改变意思。",
+  "guideIds": [
+    "none",
+    "indefinite",
+    "negative-scope"
+  ],
+  "purposeIds": [
+    "describe",
+    "compare",
+    "reason"
+  ],
+  "explanation": [
+    "先确定在谈哪一组，再确定否定到什么程度。no 放在名词前，如 no spare batteries；none 可以代替双方知道的数量或东西，也可以用 none of 指定一组。不能把 none 直接放在一个裸名词前，当作 no 使用。",
+    "若范围恰好是两个人或两件事，要明确说“两者都不”，neither 很清楚。本单元用 Neither lift is working 这样的单数名词结构。none 常用来报告已知范围里的零个或零量，不应把“两个常用 neither”误记成所有语境里 none 都绝不能涉及两个。",
+    "Not all the sketches are finished 否定的是“全都完成”这个判断；None of the sketches is finished 则说一幅完成的也没有。not all 本身不报具体数量，单独使用也不保证至少有一幅已完成。要让听者知道到底完成几幅，需要额外说明事实；不能把 not all 直接改成 none 而声称原意不变。",
+    "someone、anyone、nobody、something 等叫不定代词，因为它们没有说出具体是谁或是什么，不是“不定冠词”。-one / -body 指人，-thing 指事物。这些复合不定代词作主语时通常用单数谓语；形容词通常放在代词后，如 something unusual。",
+    "some- 和 any- 不是按肯定句、否定句、问句机械分配。中立询问是否存在时常用 any-，主动提供或请求时也可用 some-；Anyone can use this guide 中，anyone 表示不挑人。Someone hasn't signed the form 说某个人没签，不能因为有 hasn't 就改成 nobody，改变范围。",
+    "若想表达完全没有，nobody / nothing 自身已有否定意义，通常配没有额外 not 的谓语。Nobody is available 表示无人可用；不要为了加强这个意思写成 Nobody isn't available。特殊语境中的双重否定可能有另一个意思，本单元只练清楚表达零个的标准形式。",
+    "none of 后接已限定的一组，如 the engineers、these photos 或 them，不直接接裸复数。指复数个体时，none of 的谓语可按语体与表达习惯用单数或复数；本单元示范单数，但练习接受相应的复数。指不可数的整体时通常用单数。"
+  ],
+  "forms": [
+    {
+      "form": "no + 单数 / 复数 / 不可数名词",
+      "meaning": "说明指定名词所指的人、物或量为零。",
+      "useWhen": "名词仍然写在句中，如 no spare batteries；no 在这里是限定词，不写成 none batteries。"
+    },
+    {
+      "form": "none；none of + the / these / my 等限定词 + 名词；none of + 代词",
+      "meaning": "代替已知的数量或事物，或从明确的一组中表示零个、零量。",
+      "useWhen": "上下文已说明在数什么，或用 of 后的限定成分指明范围。可数复数的单复数谓语存在自然变化；不可数的量通常配单数。"
+    },
+    {
+      "form": "neither + 单数可数名词；neither of the two + 复数名词",
+      "meaning": "恰好两个对象都不符合所说的情况。",
+      "useWhen": "上下文明确只有两个；本单元 neither + 单数名词用单数谓语。更复杂的 neither…nor 与口语主谓变化另行练习。"
+    },
+    {
+      "form": "not all + 复数名词；not every + 单数名词",
+      "meaning": "否定“全部都符合”，不把它直接等同于零个符合。",
+      "useWhen": "至少有一个例外，或暂时只知道全体判断不成立；如要说明仍有多少符合，需要再给事实。"
+    },
+    {
+      "form": "someone / anyone / nobody / something 等 + 单数谓语；不定代词 + 形容词",
+      "meaning": "指未具体命名的人或物，再补一个特点。",
+      "useWhen": "不需要或不知道具体名字；先用 -one / -body 与 -thing 区分人和事物，形容词放在代词后。"
+    },
+    {
+      "form": "some- / any- 复合不定代词，结合谓语与说话意图选择",
+      "meaning": "表示某个对象、是否存在或不挑哪一个，而不是只编码句子的肯定或否定。",
+      "useWhen": "中立询问、主动提供、请求、自由选择和“某个人没做”各有不同意图；不能只看 not 或问号。"
+    },
+    {
+      "form": "nobody / no one / nothing + 没有额外 not 的谓语",
+      "meaning": "让 no- 承担完全没有的否定。",
+      "useWhen": "要表达无人或无物符合时，使用 Nobody is… / Nothing is…；不用再次否定同一个意思。"
+    }
+  ],
+  "contrasts": [
+    {
+      "label": "名词还在句中，还是数量已经可省略",
+      "a": {
+        "en": "We have no spare batteries.",
+        "zh": "我们没有备用电池。"
+      },
+      "b": {
+        "en": "How many spare batteries do you have? — None.",
+        "zh": "你们有多少节备用电池？——一节也没有。"
+      },
+      "why": "a 在 batteries 前用 no；b 的问题已经说明所数的东西，none 可以独立代替零个的数量。不要拼成 none batteries。"
+    },
+    {
+      "label": "恰好两个都不，与一组里零个",
+      "a": {
+        "en": "Neither lift is working.",
+        "zh": "两部电梯都不能用。"
+      },
+      "b": {
+        "en": "None of the four lifts is working.",
+        "zh": "四部电梯一部能用的也没有。"
+      },
+      "why": "a 的范围是恰好两部，neither 清楚指出两者都不；b 指定四部中的零部，用 none of。b 按可数复数理解时使用 are working 也可，不据此判错自然表达。"
+    },
+    {
+      "label": "全体判断不成立，与零个符合不同",
+      "a": {
+        "en": "Not all the sketches are finished.",
+        "zh": "这些草图并没有全部画完。"
+      },
+      "b": {
+        "en": "None of the sketches is finished.",
+        "zh": "这些草图一幅完成的也没有。"
+      },
+      "why": "a 只否定全都完成，不单独报告已完成的数量；b 明确是零幅完成。a 与已有几幅完成的情境相容，也可能在零幅完成时成立，不能把 a 当成 b 的同义改写。"
+    },
+    {
+      "label": "未知的人，与未知的事物",
+      "a": {
+        "en": "Someone is waiting outside.",
+        "zh": "有个人在外面等。"
+      },
+      "b": {
+        "en": "Something is moving outside.",
+        "zh": "外面有什么东西在动。"
+      },
+      "why": "someone 指人，something 指事物；这两个复合不定代词都按单数配 is，但并没有告诉听者具体是谁或是什么。"
+    },
+    {
+      "label": "不定代词与普通名词的修饰位置",
+      "a": {
+        "en": "I noticed something unusual in the hallway.",
+        "zh": "我注意到走廊里有不同寻常的东西。"
+      },
+      "b": {
+        "en": "I noticed an unusual mark in the hallway.",
+        "zh": "我注意到走廊里有一道不同寻常的痕迹。"
+      },
+      "why": "something 后放 unusual；普通名词 mark 前放 unusual。b 进一步说出了东西的类别，并不是只把相同词语换位置。"
+    },
+    {
+      "label": "主动提供，与中立询问有没有",
+      "a": {
+        "en": "Would you like something warm to drink?",
+        "zh": "你想喝点热饮吗？"
+      },
+      "b": {
+        "en": "Is there anything warm to drink?",
+        "zh": "有没有什么热的东西可以喝？"
+      },
+      "why": "a 在主动提供，some- 很自然；b 在询问是否存在，any- 很自然。问号本身不能决定用词，也不能据此断言所有其他选择都不合语法。"
+    },
+    {
+      "label": "肯定句可有 any-，否定谓语前可有 some-",
+      "a": {
+        "en": "Anyone can use this guide.",
+        "zh": "任何人都可以使用这份指南。"
+      },
+      "b": {
+        "en": "Someone hasn't signed the form.",
+        "zh": "有个人还没签那张表。"
+      },
+      "why": "a 的 anyone 不挑具体的人；b 肯定某个人存在，再说这个人没签。改成 Nobody has signed the form 会扩大到无人签字，改变事实。"
+    }
+  ],
+  "mistakes": [
+    {
+      "wrong": "We have none spare batteries.",
+      "correct": "We have no spare batteries.",
+      "why": "batteries 仍然写在句中，需要 no 作名词前的限定词；none 可以独立替代已知的数量，但不能这样直接限定裸名词。"
+    },
+    {
+      "wrong": "None of engineers is available.",
+      "correct": "None of the engineers is available.",
+      "why": "若指已知的一组工程师，none of 后需要 the、these 等限定成分；这里不能直接接裸复数 engineers。按复数个体理解时 are available 也可。"
+    },
+    {
+      "wrong": "Neither of the three entrances is open.",
+      "correct": "None of the three entrances is open.",
+      "why": "若要说这组三个入口全都关闭，不能用限定两者的 neither 表达整组三个。改成 none of，保留零个开放的范围。"
+    },
+    {
+      "wrong": "Someone are at the door.",
+      "correct": "Someone is at the door.",
+      "why": "someone 没有指定名字，但作为复合不定代词作主语时通常按单数处理，用 is。"
+    },
+    {
+      "wrong": "I found useful something.",
+      "correct": "I found something useful.",
+      "why": "修饰 something 的形容词通常放在它后面；不能照普通名词的前置形容词顺序排列。"
+    },
+    {
+      "wrong": "Nobody isn't available.",
+      "correct": "Nobody is available.",
+      "why": "当你想说“没有一个人可用”时，nobody 已承担否定，再加 not 不能用来加强相同意思；原句在特殊逻辑解释中还可能改变含义。"
+    },
+    {
+      "wrong": "None of the five reports is complete.",
+      "correct": "Not all five reports are complete.",
+      "why": "如果事实是三份已完成、两份未完成，原句把已完成数量说成零；应否定全部完成。此处错误是与事实不符，不是原句在所有情境中都不合语法。"
+    }
+  ],
+  "practices": [
+    {
+      "id": "negative-precision-v0-recognise",
+      "kind": "recognise",
+      "variant": 0,
+      "prompt": "五份报告中三份已完成、两份未完成。选择句子与理由都忠实于这个事实的一项；不要求报告精确数量，但不能把已完成数量说成零。",
+      "options": [
+        "Not all five reports are complete. —— 否定“五份全完成”，不等于“零份完成”。",
+        "None of the five reports is complete. —— 这只是说还没全部完成。",
+        "Some of the five reports are incomplete. —— 所以五份都未完成。"
+      ],
+      "answer": "Not all five reports are complete. —— 否定“五份全完成”，不等于“零份完成”。",
+      "explanation": "not all 保留并非全部完成的意思。none of 会说一份完成的也没有，与三份已完成冲突；some…incomplete 本身符合事实，但选项的理由把“有一些”错误扩大为“全部”。本题同时核对表达和理由。",
+      "hints": [
+        "先把三份已完成与两份未完成同时保留，不能把任何一边抹掉。",
+        "否定全体判断可用 not all；none of 则明确说零个符合。"
+      ]
+    },
+    {
+      "id": "negative-precision-v0-repair",
+      "kind": "repair",
+      "variant": 0,
+      "prompt": "只替换 seats 前面的一个词，表达可用座位为零，保留其余词语：There are none seats available.",
+      "answer": "There are no seats available.",
+      "explanation": "名词 seats 仍然在句中，用 no 直接限定它；none 应独立替代已知数量，或接 of 指定范围，不能直接作 none seats。",
+      "hints": [
+        "对象名词还在不在句中？要找直接放在名词前的形式。",
+        "直接限定 seats 用 no；只替换原句的 none。"
+      ]
+    },
+    {
+      "id": "negative-precision-v0-produce",
+      "kind": "produce",
+      "variant": 0,
+      "prompt": "用 There / be / something / unexpected / in this photo 表达“这张照片里有意想不到的东西”。以 There 开头，把 be 用一般现在时的合适形式；不指定东西的类别，不加其他信息。",
+      "answer": "There is something unexpected in this photo.",
+      "accepted": [
+        "There's something unexpected in this photo."
+      ],
+      "explanation": "something 指未具体说明的事物，按单数配 is；unexpected 放在不定代词后。不同于 an unexpected object 的普通名词结构。",
+      "hints": [
+        "先用不定代词表示事物，再补它的特点。",
+        "本句使用 There is；something 后面放 unexpected，再补地点。"
+      ]
+    },
+    {
+      "id": "negative-precision-v1-recognise",
+      "kind": "recognise",
+      "variant": 1,
+      "prompt": "这里只有两个入口，而且两个都关闭。选择表达与语法理由都正确的一项；如果句子意思相容但理由错误，也不选。",
+      "options": [
+        "Neither entrance is open. —— 范围恰好是两个，neither 明确否定两者。",
+        "Not every entrance is open. —— 这句话本身就保证两个入口都不开放。",
+        "No entrance is open. —— no 在这里代替名词，后面不应跟 entrance。"
+      ],
+      "answer": "Neither entrance is open. —— 范围恰好是两个，neither 明确否定两者。",
+      "explanation": "neither 清楚说明两个都不。not every 只否定全体开放，不能单独保证两个都关闭；No entrance is open 本身也可以表达没有入口开放，但该选项把名词前的 no 错说成代词，理由不成立。不是把自然的 no entrance 句判错。",
+      "hints": [
+        "本题要求范围清楚，而且对 no / neither 的词语作用解释正确。",
+        "要表达两个入口都不开放，可用 neither；no 若放在 entrance 前是在限定这个名词，并未代替它。"
+      ]
+    },
+    {
+      "id": "negative-precision-v1-repair",
+      "kind": "repair",
+      "variant": 1,
+      "prompt": "你要说“没有一个人可用”，不是用双重否定表达另一个意思。保留 Nobody 开头、available 和一般现在时，只删除重复的 not：Nobody isn't available.",
+      "answer": "Nobody is available.",
+      "explanation": "nobody 已表达没有人，is 不再加 not，才能清楚保留零个人可用的意思。isn't 中的 not 删除后成为 is；这是按题目意图订正，不声称所有双重否定在任何语境中都无意义。",
+      "hints": [
+        "找出已经表示“没有人”的部分；否定同一意思不需要做两次。",
+        "保留 Nobody，谓语使用没有 not 的 is，再接 available。"
+      ]
+    },
+    {
+      "id": "negative-precision-v1-produce",
+      "kind": "produce",
+      "variant": 1,
+      "prompt": "这六张照片一张清楚的也没有。以 None of these six photos 开头，用 be / clear 写一句一般现在时陈述；不加第二个否定词，也不要改成仅仅“并非全部清楚”。",
+      "answer": "None of these six photos is clear.",
+      "accepted": [
+        "None of these six photos are clear."
+      ],
+      "explanation": "none of these six photos 指定整组六张中的零张，保留全体否定。is 是示范中的单数一致；把可数复数当作一组个体理解时 are 也可以。not all 会弱化为对全体判断的否定，没有明确保证零张清楚。",
+      "hints": [
+        "要明确的是六张中的零张，不只是全体判断不成立。",
+        "none of 后的 these six photos 已限定范围，接 be 与 clear；不要再加 not。"
+      ]
+    }
+  ],
+  "transfer": {
+    "prompt": "选一次整理、活动报名或比较选择的真实情境，先说你比较的是哪一组。分别表达“零个符合”“只有两个且两个都不符合”“并非全部符合”，再用一个复合不定代词补充未命名的人或物的特点。各句可用不同小情境，不能让零个和已有一部分符合在同一事实中相互矛盾。",
+    "criteria": [
+      "先交代集合或对象，no、none of 与 neither 的范围可还原；none 不直接放在裸名词前。",
+      "neither 的明确范围是两者；not all / not every 没有被等同于 none 或擅自补成精确数量。",
+      "不定代词与人或物的类型对应，单数谓语与后置形容词位置正确。",
+      "some- / any- 的选择与提供、询问、自由选择或某个人未做的实际意图相符，而非只根据 not 或问号。",
+      "完全否定没有靠重复 not 强化；每个数量判断与真实事实相符，自由表达仍需核对。"
+    ]
+  }
+}
