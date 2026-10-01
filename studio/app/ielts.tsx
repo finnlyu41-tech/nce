@@ -27,12 +27,13 @@ export default function IELTS({data,drafts,saveDraft,onAnswer,onFinish}:{data:an
  useEffect(()=>()=>window.speechSynthesis?.cancel(),[]);
  if(!data.reading)return null;
  return <><div className="page-heading"><div><div className="eyebrow">THE NEXT CHAPTER</div><h1>走向雅思，先把能力练起来。</h1><p>原创衔接训练，覆盖听、说、读、写。短练习不是完整模拟考试。</p></div></div><Tabs value={tab} onValueChange={v=>{window.speechSynthesis?.cancel();setTab(v)}}><TabsList className="ielts-tabs"><TabsTrigger value="overview">训练概览</TabsTrigger><TabsTrigger value="listening"><Headphones size={15}/>听力</TabsTrigger><TabsTrigger value="reading"><BookOpen size={15}/>阅读</TabsTrigger><TabsTrigger value="speaking"><Mic size={15}/>口语</TabsTrigger><TabsTrigger value="writing"><PenLine size={15}/>写作</TabsTrigger></TabsList><TabsContent value="overview">
- <div className="ielts-practice-grid" aria-label="选择雅思专项练习">{[
+ <section className="panel"><h2>从四课小循环开始</h2><p>围绕社区学习中心练听、读、说、写，一次走完一个小目标。先看示范，再独立尝试、订正，之后换新材料回想。</p><a className="btn" href="#/ielts?tab=course">进入四课学习 <ArrowRight size={17}/></a><p className="muted small">原创衔接样例，包含在本站学习进度中；不替代教材和完整模考。</p></section>
+ <details className="panel reserve-materials"><summary>按专项选择其他练习</summary><div className="ielts-practice-grid" aria-label="选择雅思专项练习">{[
   {id:'listening',label:'听力练习',text:'听对话，抓住关键信息',Icon:Headphones},
   {id:'reading',label:'阅读练习',text:'读短文，练习定位与理解',Icon:BookOpen},
   {id:'speaking',label:'口语练习',text:'从想内容到脱离提示表达',Icon:Mic},
   {id:'writing',label:'写作练习',text:'限时写作，逐项自查修改',Icon:PenLine}
- ].map(({id,label,text,Icon})=><button className="panel ielts-practice-card" key={id} onClick={()=>setTab(id)}><Icon size={22}/><strong>{label}</strong><span>{text}</span><ArrowRight size={17}/></button>)}</div>
+ ].map(({id,label,text,Icon})=><button className="panel ielts-practice-card" key={id} onClick={()=>setTab(id)}><Icon size={22}/><strong>{label}</strong><span>{text}</span><ArrowRight size={17}/></button>)}</div></details>
  <details className="panel reserve-materials"><summary>学习路线与阶段建议 <ChevronRight size={17}/></summary><p className="muted small">{data.trainingNotice}</p><StudyRoute/></details>
  <Readiness drafts={drafts} saveDraft={saveDraft}/>
  <details className="panel reserve-materials"><summary>考试说明与资料来源 <ChevronRight size={17}/></summary><div className="two-col section-space">{data.facts.map((f:any)=><section className="panel fact-card" key={f.title}><h3>{f.title}</h3><p>{f.body}</p><span className="muted small">来源：IELTS 官方说明 · 离线摘要</span></section>)}</div><section className="section-space"><h3>资料来源记录</h3><p className="muted">信息核对日期：{data.checked}。考试安排以报考机构及官方最新说明为准。</p><div className="sources-list">{data.sources.map((s:any)=><div className="offline-source" key={s.url}>{s.title}<small>{s.url}</small></div>)}</div></section></details>

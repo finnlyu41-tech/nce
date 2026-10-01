@@ -21,7 +21,10 @@ for(const route of [
  {view:'grammar',tab:'path',unit:'sentence-core'}, {view:'grammar',tab:'path',unit:'sentence-core',check:true}, {view:'grammar',book:'NCE1',lesson:1,tab:'practice',goal:'be',practice:'transfer',unit:'sentence-core'},
  {view:'grammar',book:'NCE1',lesson:59,tab:'topic',query:'some any',category:'noun',page:124}, {view:'grammar',book:'NCE3',lesson:47,tab:'book'},
  {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'ielts',tab:'speaking',task:'bank-3-25-5'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
+ {view:'ielts',tab:'course'}, {view:'ielts',tab:'course',task:'sample-academic-reading'}, {view:'ielts',tab:'course',task:'sample-general-training-writing'},
 ])assert.deepEqual(parseRoute(routeHash(route)),route);
+assert.equal(parseRoute('#/words?tab=review&task=sample-academic-reading').task,undefined);
+assert.equal(parseRoute('#/ielts?tab=course&task=sample-academic-unknown').task,undefined);
 assert.equal(parseRoute('#/grammar?tab=path&unit=constructor').unit,undefined);
 assert.equal(parseRoute('#/words?check=1').check,undefined);
 assert.equal(parseRoute('#/grammar?tab=path&check=1').check,undefined);

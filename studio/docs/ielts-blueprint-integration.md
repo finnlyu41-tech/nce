@@ -4,6 +4,16 @@
 
 本轮持有 `studio/ielts-blueprint/`、独立覆盖校验/测试脚本及交接文档。已有 `studio/app/ielts-blueprint.ts` 是旧学习路径，保持原样；`globalnav`、`map/model.ts`、`app/model.ts`、入口组件、评分和进度存储交主线统一接线。其他工作树脏改动不计入基线已实现覆盖。后续用户要求优先可玩的最小演示，已单独提交 `65e3fb32db4c8b735a436cbb584d642724e77dac`，仅新增 `public/demos/yesterday/`、自己的本机状态与演示打包/测试/说明；不需要接入这份蓝图。主英语线程统一串行发布，本工作树没有合并或部署。
 
+## 主线接入状态
+
+蓝图和四课源码 `a1741e0` 已接入主线为 `9c029ff`；正式发布状态以 `README.md` 顶部与公开 `version.json` 为准。主线在现有学习目录的雅思分类、原雅思资料页提供 `#/ielts?tab=course`，不新增主导航模式。原教材、漫画、音频、笔记和专项入口保留。
+
+`app/ielts-sample-workspace.tsx` 通过既有 `State.drafts['ielts-sample-sequence-v1']` 保存文本、位置、曝光和作答，随现有整站备份导入导出；`ielts-sample-progress.ts` 严格校验封装版本、材料与时间关系。坏档及未来版本保留原文，恢复冲突不覆盖新记录，刷新中断的播放保留次数但不认作完整听过。真实录音仍仅临时回听，不存入文字备份。
+
+`ielts-sample-next.ts` 只读同一份记录，半途续做、订正及有新材料的到期复验接入现有今日推荐；直达参数只定位课程，不提交答案或增加完成。跨类别曝光由原模型核对，两份复验新材料用尽后停止推荐旧题。四课依次前进，目录、过程和记录按需展开。该入口不改变地图解锁、FSRS 或正式成绩。
+
+验证入口：`node scripts/test-ielts-blueprint.mjs`、`node scripts/test-ielts-sample-sequence.mjs`、`node scripts/test-ielts-sample-workspace.mjs`、`node scripts/test-today-practice.mjs` 和 `pnpm verify:navigation`。浏览器控制工具暂不可用，主线整合后的真实交互、移动布局及音频仍待复验，不以类型或资源校验代替。
+
 ## 先交的现状
 
 | 现有模块 | 实际行为 | 覆盖判断与证据 |
