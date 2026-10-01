@@ -31,7 +31,7 @@
     "verify:pronunciation": "node scripts/test-pronunciation.mjs",
     "verify:demos": "node scripts/test-demo-audio.mjs",
     "verify:recording": "node scripts/test-recording-session.mjs",
-    "verify:progress": "node scripts/test-progress-save.mjs",
+    "verify:progress": "node scripts/test-progress-save.mjs && node --experimental-strip-types --test scripts/test-capability-review-backup.mjs && node scripts/test-progress-capability-ui.mjs",
     "package:grammar": "python3 scripts/package-grammar-pages.py",
     "verify:grammar": "node scripts/test-textbook-grammar.mjs",
     "verify:chinese-recall": "node scripts/test-chinese-recall.mjs",
