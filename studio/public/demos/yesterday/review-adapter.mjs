@@ -134,6 +134,21 @@ function mergeBackup(live, backup, now) {
   assertSnapshot(merged, now);
   return {ok: true, status: 'restored', changed: true, snapshot: merged};
 }
+/** Shared pure backup rules for synchronous file capture and coordinated restoration. */
+export function buildReviewBackup(snapshot, now = Date.now()) {
+  try {
+    assertSnapshot(snapshot, now);
+    return {ok: true, status: 'exported', snapshot: clone(snapshot), backup: {kind: BACKUP_KIND, version: 1, namespace: STORAGE_KEY, exportedAt: now, snapshot: clone(snapshot)}};
+  } catch (error) {return caught(error);}
+}
+export function validateReviewBackup(value, now = Date.now()) {
+  try {const backup = typeof value === 'string' ? JSON.parse(value) : clone(value); assertBackup(backup, now); return {ok: true, status: 'valid', backup};}
+  catch (error) {return caught(error);}
+}
+export function mergeReviewBackup(live, value, now = Date.now()) {
+  try {assertSnapshot(live, now); const backup = typeof value === 'string' ? JSON.parse(value) : clone(value); return mergeBackup(live, backup, now);}
+  catch (error) {return caught(error);}
+}
 function browserPort(name) {try {return name === 'storage' ? globalThis.localStorage : globalThis.navigator?.locks;} catch {return undefined;}}
 
 /** All writes are a fresh read-modify-write under the shared Web Locks name. */
@@ -193,13 +208,13 @@ export function createReviewStore(options = {}) {
     async exportBackup() {
       try {
         const at = currentTime(), live = readAt(at);
-        return live.ok ? {ok: true, status: 'exported', snapshot: live.snapshot, backup: {kind: BACKUP_KIND, version: 1, namespace: STORAGE_KEY, exportedAt: at, snapshot: clone(live.snapshot)}} : live;
+        return live.ok ? buildReviewBackup(live.snapshot, at) : live;
       } catch (error) {return caught(error);}
     },
     async restoreBackup(value) {
       try {
         const captured = typeof value === 'string' ? value : JSON.stringify(value);
-        return await locked((snapshot, at) => {try {return mergeBackup(snapshot, JSON.parse(captured), at);} catch (error) {return caught(error);}});
+        return await locked((snapshot, at) => {try {return mergeReviewBackup(snapshot, captured, at);} catch (error) {return caught(error);}});
       } catch {return failure('invalid-data', 'Backup input could not be captured.');}
     },
   };
