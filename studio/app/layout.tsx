@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import "./home-screen.css";
+import "./mobile-layout.css";
 
 export const metadata: Metadata = {
   title: "句句有进步 · English Studio",

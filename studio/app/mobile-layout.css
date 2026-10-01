@@ -1,0 +1,110 @@
+/* Shared mobile presentation only. Progress, grading and queues stay in their owners. */
+@media (max-width: 759px) {
+  html {
+    scroll-padding-top: calc(16px + env(safe-area-inset-top, 0px));
+    scroll-padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .studio-header {
+    padding: calc(8px + env(safe-area-inset-top, 0px))
+      max(16px, env(safe-area-inset-right, 0px)) 0
+      max(16px, env(safe-area-inset-left, 0px));
+    gap: 8px;
+  }
+
+  .studio-header .studio-brand { min-height: 44px; }
+  .studio-header .studio-navigation { padding-bottom: 8px; }
+
+  .studio-classic > .workspace {
+    padding: 18px max(16px, env(safe-area-inset-right, 0px))
+      calc(32px + env(safe-area-inset-bottom, 0px))
+      max(16px, env(safe-area-inset-left, 0px));
+  }
+
+  .studio-classic .page-heading { margin-bottom: 16px; }
+  .studio-classic .page-heading p { margin-top: 6px; line-height: 1.65; }
+
+  /* Keep the recall action in view without clipping long words or revealed examples. */
+  .studio-classic .flashcard { min-height: 0; padding: 16px; }
+  .studio-classic .flash-content { min-height: 0; padding: 20px 0; gap: 8px; }
+  .studio-classic .flash-content h2 {
+    font-size: clamp(28px, 9vw, 36px);
+    line-height: 1.25;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .studio-classic .flash-content p { max-width: 100%; overflow-wrap: anywhere; }
+  .studio-classic .vocabulary-tabs { margin-bottom: 12px; }
+  .studio-classic .vocabulary-scope { font-size: 13px; line-height: 1.65; }
+
+  /* 16px editable controls avoid the small-text focus zoom used by mobile Safari. */
+  :is(.studio-classic, .learning-home, .focus-content)
+    :is(input:not([type="checkbox"]):not([type="radio"]), textarea, select) {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  :is(.studio-classic, .learning-home, .focus-content) select { min-height: 44px; }
+  .focus-content :is(input, textarea) {
+    scroll-margin-top: 16px;
+    scroll-margin-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .studio-classic :is(.icon-btn, .text-btn),
+  .focus-page :is(.focus-tools button, .hint-button) { min-height: 44px; }
+  .studio-classic .icon-btn { min-width: 44px; }
+  .app-main .map-controls button { width: 44px; height: 44px; }
+
+  .focus-page .focus-header {
+    height: auto;
+    min-height: calc(60px + env(safe-area-inset-top, 0px));
+    padding: env(safe-area-inset-top, 0px)
+      max(16px, env(safe-area-inset-right, 0px)) 0
+      max(16px, env(safe-area-inset-left, 0px));
+  }
+  .focus-page .focus-content {
+    padding: 18px max(16px, env(safe-area-inset-right, 0px))
+      calc(36px + env(safe-area-inset-bottom, 0px))
+      max(16px, env(safe-area-inset-left, 0px));
+  }
+  .focus-page .focus-course-heading { margin-bottom: 14px; }
+  .focus-page .focus-course-heading h1 { font-size: 22px; }
+  .focus-page .focus-steps { gap: 4px; margin-bottom: 18px; }
+  .focus-page .focus-steps button { min-height: 44px; font-size: 13px; gap: 4px; }
+  .focus-page .focus-steps button > span { width: 18px; height: 18px; flex-shrink: 0; }
+  .speaking-practice > .mini-label { margin-top: 14px; }
+  .speaking-practice > p { line-height: 1.75; }
+  .speaking-practice .record-consent { min-height: 44px; padding: 6px 0; }
+  .speaking-practice .record-consent input { width: 24px; height: 24px; margin: 2px 0 0; }
+
+  .focus-page .audio-dock {
+    display: grid;
+    grid-template-columns: 16px minmax(0, 1fr) auto 44px;
+    gap: 6px;
+    min-height: calc(68px + env(safe-area-inset-bottom, 0px));
+    padding: 12px max(16px, env(safe-area-inset-right, 0px))
+      calc(12px + env(safe-area-inset-bottom, 0px))
+      max(16px, env(safe-area-inset-left, 0px));
+  }
+  .focus-page .audio-dock > span { min-width: 0; font-size: 12px; line-height: 1.5; }
+  .focus-page .audio-dock label { font-size: 0; gap: 0; }
+  .focus-page .audio-dock select { min-height: 44px; min-width: 76px; font-size: 16px; }
+  .focus-page .audio-dock button { width: 44px; min-height: 44px; display: grid; place-items: center; }
+  .focus-page:has(.audio-dock) .focus-content {
+    padding-bottom: calc(116px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Let an editing task use the viewport while keeping playback controls reachable. */
+  .focus-page:has(.focus-content input:not([type="checkbox"]):not([type="radio"]):focus,
+    .focus-content textarea:focus) .audio-dock {
+    position: static;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 759px) and (max-height: 650px) {
+  .studio-classic .flash-content { padding: 12px 0; gap: 6px; }
+  .focus-page .focus-content { padding-top: 14px; }
+  .focus-page .focus-listen { padding: 12px 0; }
+}
