@@ -1,0 +1,1224 @@
+[
+  {
+    "id": "past-present-perfect",
+    "title": "过去与现在完成：交代时间，连接现在",
+    "stageId": "time",
+    "order": 5,
+    "prerequisites": [
+      "present-time"
+    ],
+    "goal": "区分已结束的过去时间与截至现在的经历、结果和持续状态；先说经历，再用过去时补充细节。",
+    "guideIds": [
+      "past-simple",
+      "present-perfect",
+      "past-or-perfect"
+    ],
+    "purposeIds": [
+      "story",
+      "progress"
+    ],
+    "explanation": [
+      "先决定你想把听者带到哪里。一般过去时把事件放进已结束的过去时间，如昨晚、去年，或故事前文已经交代的那一天；现在完成时则从现在回看此前发生的事。不是事情离现在近就一定用完成时。",
+      "一般过去时用动词过去式。普通实义动词的否定和提问由 did 承担过去标记，因此后面的动词回到原形：didn't send、Did you send…?。be 的过去形式是 was / were，不套用这条 did 规则。",
+      "现在完成时用 have / has 加过去分词。它可以讲截至现在的经历、当前相关的完成结果，也可以讲仍持续的状态。现在完成时不能只靠 already、ever 等词机械判断，仍要看时间范围和表达重心。",
+      "持续到现在的状态常用 for 加时长，或 since 加起点。例如 has lived here for three years 表示三年后仍住在这里。若说的是已经结束的居住阶段，则可以用 lived here for three years；出现 for 不等于必须用完成时。",
+      "先用完成时介绍经历，再用过去时交代具体日期和细节，是自然的叙述顺序。today、this week 等范围是否仍开放，要结合说话时的视角；本单元的自动练习使用清楚的情境，避免把可能的不同视角判成错误。"
+    ],
+    "forms": [
+      {
+        "form": "主语 + 动词过去式",
+        "meaning": "事件位于已结束的过去时间或过去故事中。",
+        "useWhen": "交代 yesterday、last month、in 2021 等过去时间，或按顺序讲过去的事件。"
+      },
+      {
+        "form": "主语 + didn't + 动词原形；Did + 主语 + 动词原形…?",
+        "meaning": "否定或询问过去是否发生了某个动作。",
+        "useWhen": "普通实义动词的过去否定和提问；be 用 was / were 的对应形式。"
+      },
+      {
+        "form": "主语 + have / has + 过去分词",
+        "meaning": "截至现在的经历、相关结果或持续状态。",
+        "useWhen": "当前时间仍是参照点，且没有把该动作限定在一个明确结束的过去时段。"
+      },
+      {
+        "form": "have / has + lived / known / worked… + for + 时长 / since + 起点",
+        "meaning": "某种状态从过去延续到现在。",
+        "useWhen": "情境明确说明状态仍持续；for three months 是时长，since March 是起点。"
+      },
+      {
+        "form": "Have you ever…? — Yes, I… + 过去时间",
+        "meaning": "先问截至现在的经历，再定位其中一次事件。",
+        "useWhen": "分享经历后补充何时、何地和发生了什么；后续细节可以切换到过去时。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "结束的时间与当前结果",
+        "a": {
+          "en": "We repaired the lift last Tuesday.",
+          "zh": "我们上周二修好了电梯。"
+        },
+        "b": {
+          "en": "We have repaired the lift, so you can use it now.",
+          "zh": "我们已经修好电梯，所以现在可以使用了。"
+        },
+        "why": "a 把维修定位在过去的某一天；b 强调现在已经能使用的结果。完成时的理由是当前重心，不只是“已经”这个中文词。"
+      },
+      {
+        "label": "已结束的居住与仍持续的居住",
+        "a": {
+          "en": "Noah lived in this building for two years before he moved away.",
+          "zh": "诺亚搬走前在这栋楼住了两年。"
+        },
+        "b": {
+          "en": "Noah has lived in this building for two years and still lives here.",
+          "zh": "诺亚在这栋楼已经住了两年，现在仍住在这里。"
+        },
+        "why": "两句都有 for two years。a 的居住已结束，b 延续到现在，所以不能见到 for 就自动选完成时。"
+      },
+      {
+        "label": "经历与某一次经历的细节",
+        "a": {
+          "en": "I have visited a wind farm.",
+          "zh": "我参观过风力发电场。"
+        },
+        "b": {
+          "en": "I visited one near the coast in 2023.",
+          "zh": "我在 2023 年参观了沿海的一座。"
+        },
+        "why": "a 表示截至现在有这项经历；b 给出明确过去时间。两句可以依次出现，无需全段维持同一种时态。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "We have opened the reading room last month.",
+        "correct": "We opened the reading room last month.",
+        "why": "last month 把开张事件定位在一个已结束的过去时段，本题应使用一般过去时。"
+      },
+      {
+        "wrong": "Did you sent the form?",
+        "correct": "Did you send the form?",
+        "why": "过去标记已经在 did 上，send 保持原形。"
+      },
+      {
+        "wrong": "Mina has went to the clinic.",
+        "correct": "Mina has gone to the clinic.",
+        "why": "has 后需要过去分词 gone；went 是一般过去式。这里表示她去了诊所，目前还不在原处。"
+      },
+      {
+        "wrong": "He has known his neighbour since five years.",
+        "correct": "He has known his neighbour for five years.",
+        "why": "five years 是时长，用 for；since 后给起点，如 since 2021。这个完成时情境表示现在仍认识对方。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "past-present-perfect-v0-recognise",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "阅览室上个月已经开张。保留 last month 来交代开张时间，选择合适的一句。",
+        "options": [
+          "We opened the reading room last month.",
+          "We have opened the reading room last month.",
+          "We open the reading room last month.",
+          "We did opened the reading room last month."
+        ],
+        "answer": "We opened the reading room last month.",
+        "explanation": "last month 是已结束的过去时段，肯定句用 opened；没有 did 时直接使用过去式。",
+        "hints": [
+          "先判断 last month 是否仍是开放的当前时间范围。",
+          "这是一般过去时肯定句；open 的规则过去式是在词尾加 -ed。"
+        ]
+      },
+      {
+        "id": "past-present-perfect-v0-repair",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "改正：I have sent the booking form yesterday. 保留“我昨天发送了预订表”这件事和 yesterday，可移动时间词的位置。",
+        "answer": "I sent the booking form yesterday.",
+        "accepted": [
+          "I sent the booking form yesterday.",
+          "Yesterday, I sent the booking form."
+        ],
+        "explanation": "yesterday 定位结束的过去时间，把 have sent 改为 sent。两种时间词位置都保留了同一信息。",
+        "hints": [
+          "这句话在回答哪一天发送，而不是强调当前是否完成。",
+          "去掉现在完成时的助动词；send 的过去式是 sent。"
+        ]
+      },
+      {
+        "id": "past-present-perfect-v0-produce",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "用 we / not buy / tickets / last night 写一句“我们昨晚没有买票”。使用一般过去时否定，不增加新信息。",
+        "answer": "We didn't buy tickets last night.",
+        "accepted": [
+          "We didn't buy tickets last night.",
+          "We did not buy tickets last night.",
+          "Last night, we didn't buy tickets.",
+          "Last night, we did not buy tickets."
+        ],
+        "explanation": "否定由 didn't / did not 承担过去标记，buy 保持原形。昨晚是已结束的过去时间。",
+        "hints": [
+          "普通动作的过去否定需要一个助动词，主要动词不再重复过去标记。",
+          "用 didn't 或 did not，再接 buy；last night 可放句尾或句首。"
+        ]
+      },
+      {
+        "id": "past-present-perfect-v1-recognise",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "Lea 从 2022 年起住在这里，现在仍住在这里。选择把这个持续状态连接到现在的一句。",
+        "options": [
+          "Lea has lived here since 2022.",
+          "Lea lived here from 2022 to 2023.",
+          "Lea has live here since 2022.",
+          "Lea lives here since 2022."
+        ],
+        "answer": "Lea has lived here since 2022.",
+        "explanation": "仍持续的状态用 has lived；since 2022 给出起点。from 2022 to 2023 则表达已经结束的居住阶段。",
+        "hints": [
+          "情境说她现在仍住这里，哪个形式能连起过去起点与现在？",
+          "Lea 用 has；live 的过去分词是 lived，起点前保留 since。"
+        ]
+      },
+      {
+        "id": "past-present-perfect-v1-repair",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "Mina 目前去了诊所，还没有回来。改正：Mina has went to the clinic, so she isn't here. 保留这两部分信息。",
+        "answer": "Mina has gone to the clinic, so she isn't here.",
+        "accepted": [
+          "Mina has gone to the clinic, so she isn't here.",
+          "Mina has gone to the clinic, so she is not here.",
+          "Mina's gone to the clinic, so she isn't here.",
+          "Mina's gone to the clinic, so she is not here."
+        ],
+        "explanation": "has 后用过去分词 gone。后半句交代她当前不在这里的结果；此处 Mina's 是 Mina has 的缩写。",
+        "hints": [
+          "检查 has 后的动词：完成时需要哪一种动词形式？",
+          "go 的过去式是 went，过去分词是 gone；此处换成后者。"
+        ]
+      },
+      {
+        "id": "past-present-perfect-v1-produce",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "别人现在问路线计划是否完成。用 I / finish / the route plan / already 写一句，使用现在完成时说明当前已完成的结果。",
+        "answer": "I have already finished the route plan.",
+        "accepted": [
+          "I have already finished the route plan.",
+          "I've already finished the route plan.",
+          "I have finished the route plan already.",
+          "I've finished the route plan already."
+        ],
+        "explanation": "have finished 表示当前已经完成。already 可放在 have 后、分词前，也可放句尾；不要凭空添加 yesterday 等结束的过去时间。",
+        "hints": [
+          "回答重心是现在准备好了没有，主要动词前需要完成时助动词。",
+          "I 配 have，finish 的过去分词是 finished；already 常放在两者之间。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "描述你真实的一次学习或出行经历：先说截至现在做过什么，再交代其中一次的具体过去时间和两件事；最后说一个目前的结果或仍持续的状态。可以替换成你愿意分享的情境，不必套用示范地名。",
+      "criteria": [
+        "介绍经历时把参照点放在现在，使用 have / has 加过去分词。",
+        "给出明确结束的日期或时段时，使用一般过去时，并能按事件顺序讲细节。",
+        "如果使用 for / since，区分时长与起点，并说明状态是否仍持续。",
+        "普通过去否定或提问中的 did 后用原形，完成时的 have / has 后用过去分词，不重复或混用过去标记。"
+      ]
+    }
+  },
+  {
+    "id": "noun-reference",
+    "title": "冠词与数量：让名词指得清、数得对",
+    "stageId": "foundation",
+    "order": 3,
+    "prerequisites": [
+      "sentence-core"
+    ],
+    "goal": "区分新引入的一个、双方确定的对象与泛指；按可数性选择冠词、单位和数量词。",
+    "guideIds": [
+      "articles",
+      "countable",
+      "some-any",
+      "quantity"
+    ],
+    "purposeIds": [
+      "describe",
+      "compare"
+    ],
+    "explanation": [
+      "先问名词是在数独立个体，还是在说材料、信息等整体。envelope 可以一封一封数；equipment、information、luggage 在本单元的常见含义中通常不可数。不可数不等于不能计量，可以加 a piece of、two pieces of 等单位。",
+      "普通单数可数名词通常需要限定词。第一次介绍一个、尚未让双方确定的对象，可用 a / an；a 与 an 看紧随其后的发音，如 an envelope、a useful tool。职业、物品等也遵循这个检查顺序。",
+      "the 的关键是听者能确定你指哪一个，不只是世界上独一无二。前文刚提过、现场双方看得到，或后面的说明足以定位，都可能使用 the。若要说所有自行车或汤这一类，复数可数名词和不可数名词常用零冠词，也就是前面不加 a / an / the。",
+      "some 常表示有一些；否定中说明一个也没有、一般询问是否有时，any 很常见。主动提供或请求中问句也常用 some，所以不要把“问句一律用 any”当规则。部分特殊语境还会改变选择，练习会说明说话意图。",
+      "many / fewer 通常配复数可数名词，much / less 通常配不可数名词；more 和 a lot of 两类都可用。a few / a little 表示还有一些，few / little 常强调少到不足。本单元按清楚的标准书面搭配练习，不把所有惯用数量表达都塞进一条规则。"
+    ],
+    "forms": [
+      {
+        "form": "a / an + 单数可数名词",
+        "meaning": "引入一个尚未被双方确定的对象。",
+        "useWhen": "第一次介绍某个物品或身份；按后面词语的起始发音选 a 或 an。"
+      },
+      {
+        "form": "the + 名词",
+        "meaning": "让听者定位一个已知或可确定的对象或群体。",
+        "useWhen": "前文已提过、当前语境可定位，或说明语使双方知道指哪一个。"
+      },
+      {
+        "form": "零冠词 + 复数可数名词 / 不可数名词",
+        "meaning": "泛指一类事物或整体。",
+        "useWhen": "一般讨论 bicycles、soup、equipment 等，而非某一批特定对象。"
+      },
+      {
+        "form": "a piece of / two pieces of + 不可数名词",
+        "meaning": "借助单位计量不能直接加 a 或 -s 的名词。",
+        "useWhen": "需要数 information、equipment、luggage 等；单位有单复数，后面的材料或整体名词保持相应常见形式。"
+      },
+      {
+        "form": "some / any + 复数可数名词或不可数名词",
+        "meaning": "表达不确定数量、是否存在或一个也没有。",
+        "useWhen": "肯定和主动提供常用 some；普通否定和询问常用 any，仍要结合意图。"
+      },
+      {
+        "form": "many / fewer + 复数可数名词；much / less + 不可数名词",
+        "meaning": "表达数量多或比另一情况少。",
+        "useWhen": "比较独立个体的数量与不可数的量；more 和 a lot of 可用于两类。"
+      },
+      {
+        "form": "a few / few + 复数名词；a little / little + 不可数名词",
+        "meaning": "有一些可用，或少到不够用。",
+        "useWhen": "不仅报告少，还要表达说话者对“够不够”的判断。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "新引入与再次定位",
+        "a": {
+          "en": "There is a notebook in my bag.",
+          "zh": "我的包里有一本笔记本。"
+        },
+        "b": {
+          "en": "The notebook in my bag is for sketches.",
+          "zh": "我包里的那本笔记本是用来画草图的。"
+        },
+        "why": "a 引入一本笔记本；b 在该对象已可确定的语境中指向它。the 不要求这本笔记本在世界上独一无二。"
+      },
+      {
+        "label": "泛指与特指：零冠词不是漏写",
+        "a": {
+          "en": "Bicycles are useful for short trips.",
+          "zh": "自行车适合短途出行。"
+        },
+        "b": {
+          "en": "The bicycles outside the shop are for rent.",
+          "zh": "店外的那些自行车供出租。"
+        },
+        "why": "a 讨论自行车这一类，用泛指复数的零冠词；b 定位店外的特定一批，用 the。"
+      },
+      {
+        "label": "同一不可数名词，也能泛指或特指",
+        "a": {
+          "en": "Soup warms me up on cold days.",
+          "zh": "天冷时，汤能让我暖和起来。"
+        },
+        "b": {
+          "en": "The soup in this bowl is cold.",
+          "zh": "这个碗里的汤凉了。"
+        },
+        "why": "不可数名词并非永远不加 the。a 讨论汤这一类，b 定位这碗里的汤。"
+      },
+      {
+        "label": "有一点与少到不够",
+        "a": {
+          "en": "We have a little flour, so we can make a small cake.",
+          "zh": "我们还有一点面粉，可以做一个小蛋糕。"
+        },
+        "b": {
+          "en": "We have little flour, so we need to buy more.",
+          "zh": "我们面粉很少，需要再买一些。"
+        },
+        "why": "a little 强调仍有一些可用；little 强调不足。两句不只差一个 a，还改变了对数量的判断。"
+      },
+      {
+        "label": "一般询问与主动提供",
+        "a": {
+          "en": "Do you have any fruit in the kitchen?",
+          "zh": "厨房里有水果吗？"
+        },
+        "b": {
+          "en": "Would you like some fruit?",
+          "zh": "你想吃点水果吗？"
+        },
+        "why": "a 普通询问有没有，any 常见；b 主动提供，some 很自然。不能仅根据句末问号决定用词。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "This is umbrella.",
+        "correct": "This is an umbrella.",
+        "why": "这里引入一把伞；umbrella 是单数可数名词，需要限定词，起始发音为元音，使用 an。"
+      },
+      {
+        "wrong": "We need three equipments for the lab.",
+        "correct": "We need three pieces of equipment for the lab.",
+        "why": "equipment 在这里通常不可数，数量写在可数单位 pieces 上，不给 equipment 加 -s。"
+      },
+      {
+        "wrong": "She gave me an advice.",
+        "correct": "She gave me a piece of advice.",
+        "why": "advice 在常见含义中不可数；要表达一条建议，借助 a piece of。"
+      },
+      {
+        "wrong": "There are much chairs in the hall.",
+        "correct": "There are many chairs in the hall.",
+        "why": "chairs 是复数可数名词，表达数量多通常用 many；much 用于不可数的量。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "noun-reference-v0-recognise",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "你在一般讨论自行车这种交通方式，没有指定某一批车。选择使用泛指复数的一句。",
+        "options": [
+          "Bicycles are useful for short trips.",
+          "The bicycles outside the shop are useful for short trips.",
+          "A bicycles are useful for short trips.",
+          "Bicycle are useful for short trips."
+        ],
+        "answer": "Bicycles are useful for short trips.",
+        "explanation": "泛指自行车这一类，复数 bicycles 前不加冠词。带 outside the shop 的选项在定位特定一批，改变了任务要求。",
+        "hints": [
+          "这里需要的是一类事物，而不是让听者找到某几辆车。",
+          "使用复数 Bicycles，并在这个泛指情境中省去冠词。"
+        ]
+      },
+      {
+        "id": "noun-reference-v0-repair",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "改正：We need three equipments for the lab. 保留“三件实验室设备”的数量与用途，用 piece 作计量单位。",
+        "answer": "We need three pieces of equipment for the lab.",
+        "accepted": [
+          "We need three pieces of equipment for the lab.",
+          "For the lab, we need three pieces of equipment."
+        ],
+        "explanation": "three 后把单位 piece 变成 pieces，再接 of equipment。equipment 本身在这个含义中不加 -s。",
+        "hints": [
+          "可数的是计量单位；检查单位与后面的整体名词分别是否需要复数。",
+          "用 three pieces of equipment；用途 for the lab 可放句尾或句首。"
+        ]
+      },
+      {
+        "id": "noun-reference-v0-produce",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "第一次提到需要一只信封。用 we / need / envelope / for the letter 写一句，不是特指某一只，使用合适的不定冠词。",
+        "answer": "We need an envelope for the letter.",
+        "accepted": [
+          "We need an envelope for the letter.",
+          "For the letter, we need an envelope."
+        ],
+        "explanation": "envelope 是单数可数名词，且起始发音为元音；引入尚未确定的一个，用 an envelope。",
+        "hints": [
+          "需要一个尚未指定的对象；检查单数名词前的限定词和后面词的起始发音。",
+          "使用 an envelope，谓语是 need；for the letter 表达用途。"
+        ]
+      },
+      {
+        "id": "noun-reference-v1-recognise",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "信封一张也没有。选择数量词与复数可数名词都合适的否定句。",
+        "options": [
+          "We haven't got any envelopes.",
+          "We haven't got much envelopes.",
+          "We haven't got an envelopes.",
+          "We haven't got a envelopes."
+        ],
+        "answer": "We haven't got any envelopes.",
+        "explanation": "普通否定中 any envelopes 表示一张信封也没有。much 不配复数可数 envelopes，a / an 也不能直接限定这个复数。",
+        "hints": [
+          "envelopes 是复数可数名词；找能用于普通否定、表示一个也没有的数量词。",
+          "本情境使用 any；a / an 只限定单数可数名词。"
+        ]
+      },
+      {
+        "id": "noun-reference-v1-repair",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "按本单元的标准书面搭配改正：We need less chairs and fewer water. 保留椅子和水都需要减少的意思，可调整两者顺序。",
+        "answer": "We need fewer chairs and less water.",
+        "accepted": [
+          "We need fewer chairs and less water.",
+          "We need less water and fewer chairs."
+        ],
+        "explanation": "chairs 可数，用 fewer；water 按整体的量处理，用 less。本题明确练标准书面搭配，不据此否定所有惯用数量表达。",
+        "hints": [
+          "两种名词的可数性不同，减少个体数量与减少整体的量需要分别处理。",
+          "fewer 配 chairs，less 配 water；不要只看中文都叫“更少”。"
+        ]
+      },
+      {
+        "id": "noun-reference-v1-produce",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "你正在主动给客人提供茶。以 Would you like 开头，用 some 和 tea 写一句“你想喝点茶吗？”，不增加新情境。",
+        "answer": "Would you like some tea?",
+        "accepted": [
+          "Would you like some tea?",
+          "Would you like to have some tea?"
+        ],
+        "explanation": "主动提供时问句中用 some 很自然。tea 在这里指饮品的量，不需要 a / an；to have 的展开仍保留同一提供意图。",
+        "hints": [
+          "这不是中立地盘点有没有茶，而是在主动提供。问句也能使用表示“一些”的词。",
+          "把 some 放在 tea 前，完成 Would you like…? 的问句。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "选一个真实的房间、活动或随身包。先介绍一个新物品，再提到同一个物品；另外写一句对某类事物的概括，和一句数量或主动提供的表达。自行选择物品，不照抄 notebook、bicycles 或 tea。",
+      "criteria": [
+        "新引入的单数可数名词有合适的限定词，a / an 按发音选择。",
+        "再次提到或定位对象时，听者能从语境知道 the 指谁。",
+        "泛指复数或不可数名词时，能说明为什么使用零冠词，避免把泛指改成特指。",
+        "计量和数量词符合名词当前含义的可数性；some / any 的选择符合实际说话意图。"
+      ]
+    }
+  },
+  {
+    "id": "comparisons",
+    "title": "比较与程度：说明差异、范围与够不够",
+    "stageId": "meaning",
+    "order": 6,
+    "prerequisites": [
+      "noun-reference",
+      "present-time"
+    ],
+    "goal": "比较可比的对象，交代最高级范围，并区分程度高、过度和达到需要的程度。",
+    "guideIds": [
+      "comparison",
+      "degree",
+      "adverbs"
+    ],
+    "purposeIds": [
+      "compare"
+    ],
+    "explanation": [
+      "比较前先说清对象与标准：价格和价格、路线长度和路线长度、这次做事的方式和上次的方式。只有把两边放在同一标准上，比较句才有意义；不要把一辆车的价格直接与另一个人比较。",
+      "比较级常用 -er 或 more…，后面用 than 引出比较对象；不要把两个比较标记叠在一起。最高级挑出某个范围中最突出的一项，通常用 the 加 -est / most…，并交代 in… 或 of… 的范围。短词与长词的规律只是常见模式，不规则形式要单独记。",
+      "as…as 中间用原级，表示同等程度；not as…as 表示达不到对方的程度。判断句子的真假还要看标准的方向：not as cheap 意味着没那么便宜，不是价格更低。",
+      "形容词描述对象，副词说明怎样做动作。可以比较一段说明是否 clear，也可以比较谁 explains more clearly。fast 等词本身可以作副词，不是所有副词都要加 -ly。",
+      "very 只加强程度，too 表示超过合适范围，enough 表示达到所需程度。too heavy for me to lift 不只是很重，还说我搬不动；big enough 中 enough 放在形容词后，enough space 中则放在名词前。"
+    ],
+    "forms": [
+      {
+        "form": "形容词比较级 / more + 形容词 + than + 可比对象",
+        "meaning": "一个对象比另一个在同一标准上程度更高。",
+        "useWhen": "比较价格、大小、便利性等；easier 不再加 more，better 等使用不规则形式。"
+      },
+      {
+        "form": "the + 最高级 + in / of + 范围",
+        "meaning": "在给定范围中挑出最突出的一项。",
+        "useWhen": "比较某组或某场所的多项，范围应能从句子或情境确定。"
+      },
+      {
+        "form": "as + 原级 + as；not as + 原级 + as",
+        "meaning": "程度相同，或没有对方达到的程度。",
+        "useWhen": "对照两个对象；注意所选形容词的方向，如 cheap、fast、comfortable。"
+      },
+      {
+        "form": "动词 + 副词比较级 / more + 副词 + than…",
+        "meaning": "比较做动作的方式或程度。",
+        "useWhen": "比较 explains more clearly、runs faster 等，而非直接描述一个名词。"
+      },
+      {
+        "form": "very + 形容词；too + 形容词 + for + 人 + to + 动词",
+        "meaning": "程度高，或过度到妨碍某人做事。",
+        "useWhen": "very 不自动表示做不到；too 句型要保留谁做动作，如 for me to lift。"
+      },
+      {
+        "form": "形容词 / 副词 + enough；enough + 名词",
+        "meaning": "程度或数量达到当前需要。",
+        "useWhen": "解释尺寸、能力、速度或数量是否够用；否定形式表示尚未达到需要。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "两项的差异与一组中的最高级",
+        "a": {
+          "en": "The bus is cheaper than the train.",
+          "zh": "坐公交比坐火车便宜。"
+        },
+        "b": {
+          "en": "The bus is the cheapest of the three options.",
+          "zh": "公交是这三种选择中最便宜的。"
+        },
+        "why": "a 建立公交与火车的比较；b 从三项里挑出最低价格的选择。最高级需要可确定的范围。"
+      },
+      {
+        "label": "同等程度与达不到",
+        "a": {
+          "en": "This chair is as comfortable as that one.",
+          "zh": "这把椅子和那把一样舒适。"
+        },
+        "b": {
+          "en": "This chair isn't as comfortable as that one.",
+          "zh": "这把椅子没有那把舒适。"
+        },
+        "why": "两句都使用 comfortable 原级。否定改变了比较结果，不应换成 as more comfortable as。"
+      },
+      {
+        "label": "比较说明本身与比较说明方式",
+        "a": {
+          "en": "Asha's explanation is clearer than mine.",
+          "zh": "阿莎的说明比我的更清楚。"
+        },
+        "b": {
+          "en": "Asha explains the steps more clearly than I do.",
+          "zh": "阿莎把步骤解释得比我更清楚。"
+        },
+        "why": "a 的 clear 描述 explanation；b 的 clearly 修饰 explains。两种比较分别落在对象属性和做事方式上。"
+      },
+      {
+        "label": "很宽与宽到过不去",
+        "a": {
+          "en": "The box is very wide.",
+          "zh": "这个箱子很宽。"
+        },
+        "b": {
+          "en": "The box is too wide to fit through the doorway.",
+          "zh": "这个箱子太宽，过不了门口。"
+        },
+        "why": "a 只报告程度高；b 明确超过了通过门口所允许的宽度。不能把每个“非常”都翻成 too。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "This folder is more easier to use than that one.",
+        "correct": "This folder is easier to use than that one.",
+        "why": "easier 已是比较级，再加 more 重复标记。"
+      },
+      {
+        "wrong": "This chair is as more comfortable as that one.",
+        "correct": "This chair is as comfortable as that one.",
+        "why": "as…as 中间用原级 comfortable，不使用比较级。"
+      },
+      {
+        "wrong": "Asha explains the steps more clear than I do.",
+        "correct": "Asha explains the steps more clearly than I do.",
+        "why": "这里比较解释动作的方式，用副词 clearly 的比较形式 more clearly。"
+      },
+      {
+        "wrong": "These shoes aren't enough big for me.",
+        "correct": "These shoes aren't big enough for me.",
+        "why": "enough 修饰形容词 big 时放在后面；修饰名词时才放前面，如 enough room。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "comparisons-v0-recognise",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "车 A 的最高速度是每小时 20 公里，车 B 是每小时 30 公里。选择符合这些信息、且使用同级比较否定的一句。",
+        "options": [
+          "Car A isn't as fast as car B.",
+          "Car A is as fast as car B.",
+          "Car A is faster than car B.",
+          "Car A isn't as faster as car B."
+        ],
+        "answer": "Car A isn't as fast as car B.",
+        "explanation": "A 达不到 B 的速度，使用 not as fast as；as…as 中的 fast 保持原级。",
+        "hints": [
+          "先看谁更快，再检查任务要求的是同级比较的肯定还是否定。",
+          "A 没有 B 快，用 isn't as fast as，不能在 as 中间用 faster。"
+        ]
+      },
+      {
+        "id": "comparisons-v0-repair",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "改正：This folder is more easier to use than that one. 保留两个文件夹与“更容易使用”的比较关系。",
+        "answer": "This folder is easier to use than that one.",
+        "accepted": [
+          "This folder is easier to use than that one.",
+          "This folder is easier to use than that one is."
+        ],
+        "explanation": "去掉重复的 more，保留 easier。比较小句末尾可省略或保留 is，不改变关系。",
+        "hints": [
+          "检查比较程度是不是被标记了两次。",
+          "easier 已含比较意义，前面不再使用 more。"
+        ]
+      },
+      {
+        "id": "comparisons-v0-produce",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "用 This chair / comfortable / that one 写一句“这把椅子和那把一样舒适”。必须使用 as…as，不增加新信息。",
+        "answer": "This chair is as comfortable as that one.",
+        "accepted": [
+          "This chair is as comfortable as that one.",
+          "This chair is as comfortable as that one is."
+        ],
+        "explanation": "as comfortable as 表示同等舒适，comfortable 保持原级；that one 代替另一把椅子，比较对象一致。",
+        "hints": [
+          "两者同等程度，不需要更高或更低的比较级。",
+          "This chair 后接 is as comfortable as，再接 that one。"
+        ]
+      },
+      {
+        "id": "comparisons-v1-recognise",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "箱子宽于门口，因此无法通过。选择明确表达“过宽导致无法通过”的一句。",
+        "options": [
+          "The box is too wide to fit through the doorway.",
+          "The box is very wide.",
+          "The box is wide enough to fit through the doorway.",
+          "The box is too wide fit through the doorway."
+        ],
+        "answer": "The box is too wide to fit through the doorway.",
+        "explanation": "too…to… 把过度与做不到连接起来。very 只说很宽；wide enough 表示达到需要的宽度，不能表达本情境的障碍。",
+        "hints": [
+          "任务需要说出程度超过允许范围及其结果，只有“很宽”还不够。",
+          "使用 too wide to fit；不要遗漏不定式的 to。"
+        ]
+      },
+      {
+        "id": "comparisons-v1-repair",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "改正：Asha explains the steps more clear than I do. 保留阿莎与我解释步骤的方式比较。",
+        "answer": "Asha explains the steps more clearly than I do.",
+        "accepted": [
+          "Asha explains the steps more clearly than I do.",
+          "Asha explains the steps more clearly than me."
+        ],
+        "explanation": "修饰 explains 的是副词 clearly，比较方式用 more clearly。than I do 和常见的 than me 都能保留这两个人的比较。",
+        "hints": [
+          "要修饰的是“解释”这个动作，还是一个名词？",
+          "动作方式用 clearly；它的比较形式是 more clearly。"
+        ]
+      },
+      {
+        "id": "comparisons-v1-produce",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "用 These shoes / big / enough / for me 写一句“这些鞋对我来说不够大”。使用 enough 修饰形容词的否定句。",
+        "answer": "These shoes aren't big enough for me.",
+        "accepted": [
+          "These shoes aren't big enough for me.",
+          "These shoes are not big enough for me."
+        ],
+        "explanation": "复数主语配 are；否定是 aren't / are not。enough 放在 big 后，说明尺寸达不到我的需要。",
+        "hints": [
+          "主语是复数；enough 修饰形容词时的位置与修饰名词时不同。",
+          "用 are not / aren't，随后是 big enough for me。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "比较两个你真实考虑的学习工具、交通选择或学习地点。自行选择两个标准，写出一项差异和一项同等或未达到的程度；再说明什么条件对你来说够用或过度。若用最高级，要说明你比较的范围。",
+      "criteria": [
+        "两边的比较对象和标准一致，读者能知道在比价格、速度、舒适度还是做事方式。",
+        "比较级不重复标记，as…as 中使用原级；最高级有明确范围。",
+        "描述对象时使用合适的形容词，描述动作方式时使用合适的副词。",
+        "very、too、enough 表达的程度与实际结论一致，不把“很”自动当成“过度”。"
+      ]
+    }
+  },
+  {
+    "id": "modal-choice",
+    "title": "情态选择：能力、许可、义务与建议",
+    "stageId": "meaning",
+    "order": 7,
+    "prerequisites": [
+      "questions-negation"
+    ],
+    "goal": "根据说话意图区分能做、获准、必须、禁止、不必与建议，尤其避免把禁止误说成不必。",
+    "guideIds": [
+      "can",
+      "obligation",
+      "should",
+      "had-better"
+    ],
+    "purposeIds": [
+      "advise",
+      "plan"
+    ],
+    "explanation": [
+      "先确定你想表达的意思，再选形式。can 可表达能力，也可表达许可：I can edit a video 是能力，Can I use this desk? 在合适场景中是在请求许可。仅看到 can 不能脱离上下文判定含义。",
+      "must 和 have to 都可表达必要或义务。must 常带说话者的要求，have to 常交代规则或情境需要，但很多场合可以互换，不能当成绝对二分。已经发生的过去义务通常用 had to。",
+      "否定的差别更关键：mustn't 是禁止，don't have to / needn't 是没有必要。后者仍允许你做，不是命令你不要做。活动安排中说错这一点，会直接改变他人的选择。",
+      "should 常用于较温和的建议或责任；had better 常针对眼前情况提醒可能的不良后果，语气更有紧迫感。had better 里的 had 通常不表示过去，它经常谈现在或将来。",
+      "can、must、should 后直接接动词原形，不加 to 或第三人称 -s；提问时一般把情态词移到主语前，不另加 do。have to 按普通动词规则变化，如 does she have to…?；had better 的否定是 had better not 加原形。"
+    ],
+    "forms": [
+      {
+        "form": "can / can't + 动词原形；Can + 主语 + 动词原形…?",
+        "meaning": "能力、许可，或相应的否定和询问。",
+        "useWhen": "结合情境判断是会不会做，还是可不可以做；can 后不加 to，也不和 do 叠加构成普通疑问。"
+      },
+      {
+        "form": "must + 原形；have / has to + 原形；过去 had to + 原形",
+        "meaning": "必须做或情境要求做。",
+        "useWhen": "交代义务与必要；have to 随人称和时间变化，must 后的动词保持原形。"
+      },
+      {
+        "form": "mustn't / must not + 原形",
+        "meaning": "不准做、被禁止。",
+        "useWhen": "说明确禁令，如不能在某处拍照，而不是表达可做可不做。"
+      },
+      {
+        "form": "don't / doesn't have to + 原形；needn't + 原形",
+        "meaning": "不必做，但允许选择做。",
+        "useWhen": "说明安排中某项不是必需，不应误写为 mustn't。"
+      },
+      {
+        "form": "should / shouldn't + 原形",
+        "meaning": "说明怎样做较好，或怎样做不合适。",
+        "useWhen": "给日常建议或表达责任；并非严格禁令，具体力度仍看语境。"
+      },
+      {
+        "form": "had better + 原形；had better not + 原形",
+        "meaning": "针对当前情况提醒更妥当的做法，常含不照做会有后果的意思。",
+        "useWhen": "眼前有问题或紧迫风险；不是用来报告过去已经做了什么。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "能力与许可靠情境区分",
+        "a": {
+          "en": "I can edit a short video.",
+          "zh": "我会剪辑短视频。"
+        },
+        "b": {
+          "en": "Can I use this desk for an hour?",
+          "zh": "我可以用这张桌子一小时吗？"
+        },
+        "why": "a 陈述技能；b 在向桌子的使用管理者询问时，是请求许可。两句都用 can，但说话意图不同。"
+      },
+      {
+        "label": "禁止与不必",
+        "a": {
+          "en": "You mustn't bring food into the archive.",
+          "zh": "你不准把食物带进档案室。"
+        },
+        "b": {
+          "en": "You don't have to bring a printed copy.",
+          "zh": "你不必带纸质副本。"
+        },
+        "why": "a 禁止带食物；b 说明纸质副本不是必需，带了也可以。否定形式不能按同一个中文“不要”处理。"
+      },
+      {
+        "label": "一般建议与当前紧迫提醒",
+        "a": {
+          "en": "You should save your work regularly.",
+          "zh": "你应该定期保存工作。"
+        },
+        "b": {
+          "en": "You'd better save the file now; the battery is almost empty.",
+          "zh": "你最好现在保存文件，电池快没电了。"
+        },
+        "why": "a 是一般的好习惯建议；b 有眼前的断电后果，had better 更贴合这个紧迫情境。"
+      },
+      {
+        "label": "当前义务与过去义务",
+        "a": {
+          "en": "We have to wear badges in this building.",
+          "zh": "在这栋楼里，我们必须佩戴证件。"
+        },
+        "b": {
+          "en": "We had to wear badges at yesterday's event.",
+          "zh": "在昨天的活动中，我们必须佩戴证件。"
+        },
+        "why": "a 交代当前规则；b 把义务放到昨天，使用 had to。不是把 must 直接改成一个所谓的过去式。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "Lina cannot to drive.",
+        "correct": "Lina cannot drive.",
+        "why": "cannot 后直接接动词原形，不能加 to。can't 是同一否定的缩写。"
+      },
+      {
+        "wrong": "Do you can repair it?",
+        "correct": "Can you repair it?",
+        "why": "普通情态疑问把 can 放到主语前，不另加 do。"
+      },
+      {
+        "wrong": "She must wears a badge.",
+        "correct": "She must wear a badge.",
+        "why": "must 不随第三人称变化，后面 wear 也保持原形。"
+      },
+      {
+        "wrong": "We had better don't leave the door unlocked.",
+        "correct": "We had better not leave the door unlocked.",
+        "why": "had better 的否定在 better 后加 not，再接原形；不插入 don't。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "modal-choice-v0-recognise",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "会议资料已有电子版，纸质副本可带也可不带。选择表达“不必带”，而非禁令或义务的一句。",
+        "options": [
+          "You don't have to bring a printed copy.",
+          "You mustn't bring a printed copy.",
+          "You must bring a printed copy.",
+          "You have to bring a printed copy."
+        ],
+        "answer": "You don't have to bring a printed copy.",
+        "explanation": "don't have to 表示没有必要，仍允许带。mustn't 是禁止；must / have to 都说明要带，均改变了本情境。",
+        "hints": [
+          "场景允许两种选择，哪种否定不会禁止带副本？",
+          "“不必”使用 don't have to；mustn't 是“不准”。"
+        ]
+      },
+      {
+        "id": "modal-choice-v0-repair",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "改正：Lina cannot to drive. 保留“莉娜不会开车”的能力否定，可使用完整形式或缩写。",
+        "answer": "Lina cannot drive.",
+        "accepted": [
+          "Lina cannot drive.",
+          "Lina can't drive."
+        ],
+        "explanation": "cannot / can't 后直接用原形 drive，不加 to。两种否定形式表达同一能力限制。",
+        "hints": [
+          "检查情态词后是否多加了不定式标记。",
+          "保留 cannot 或 can't，后面直接接 drive。"
+        ]
+      },
+      {
+        "id": "modal-choice-v0-produce",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "规定禁止在这个房间使用相机。用 You / use a camera / in this room 写一句，必须使用 must 的禁止形式。",
+        "answer": "You mustn't use a camera in this room.",
+        "accepted": [
+          "You mustn't use a camera in this room.",
+          "You must not use a camera in this room.",
+          "In this room, you mustn't use a camera.",
+          "In this room, you must not use a camera."
+        ],
+        "explanation": "明确禁令用 mustn't / must not；use 保持原形。don't have to 只表示不必，不能传达这里的规定。",
+        "hints": [
+          "规定不给“做或不做”的选择，需要表达禁止。",
+          "用 mustn't / must not 加 use a camera；地点可放句尾或句首。"
+        ]
+      },
+      {
+        "id": "modal-choice-v1-recognise",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "电池快没电了，你要用 had better 提醒对方现在保存文件。选择形式正确的一句。",
+        "options": [
+          "You'd better save the file now.",
+          "You'd better to save the file now.",
+          "You'd not better save the file now.",
+          "You'd better saving the file now."
+        ],
+        "answer": "You'd better save the file now.",
+        "explanation": "You'd better 是 You had better 的缩写，随后直接接原形 save。这里谈当前的紧迫情况，had 不代表过去。",
+        "hints": [
+          "had better 后需要动词原形；本句要求的是肯定提醒。",
+          "用 You'd better save，不加 to，也不使用 -ing。"
+        ]
+      },
+      {
+        "id": "modal-choice-v1-repair",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "改正：We had better don't leave the door unlocked. 保留针对当前安全情况的提醒，可使用缩写。",
+        "answer": "We had better not leave the door unlocked.",
+        "accepted": [
+          "We had better not leave the door unlocked.",
+          "We'd better not leave the door unlocked."
+        ],
+        "explanation": "否定是 had better not + leave，不使用 don't。这里提醒现在或接下来不要让门处于未锁状态。",
+        "hints": [
+          "这是 had better 的否定，不是普通实义动词的 do 否定。",
+          "把 don't 换成 not，放在 better 后、leave 前。"
+        ]
+      },
+      {
+        "id": "modal-choice-v1-produce",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "给普通运动建议：“我们不应该省略热身”。用 We / skip / the warm-up 和 should 的否定形式写一句，不把建议改成禁令。",
+        "answer": "We shouldn't skip the warm-up.",
+        "accepted": [
+          "We shouldn't skip the warm-up.",
+          "We should not skip the warm-up."
+        ],
+        "explanation": "shouldn't / should not 配原形 skip，表达较温和的建议。mustn't 会把本题要求的建议改成禁止。",
+        "hints": [
+          "本题是普通建议；选能表达“不应该”的情态词，并保留动词原形。",
+          "用 shouldn't 或 should not，随后接 skip the warm-up。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "为一次真实的活动、旅行或学习安排写 4 句提醒：一条能力或许可、一条必须做的事、一条不必做或被禁止的事，以及一条建议。说明每句的真实背景；只在确有当前紧迫后果时使用 had better。",
+      "criteria": [
+        "can 的能力或许可意图能从场景看出来，提问不用 do 与 can 叠加。",
+        "义务句的时间和人称正确，情态词后使用原形；过去义务可用 had to。",
+        "清楚区分 mustn't 的禁止与 don't have to 的可做可不做。",
+        "should 与 had better 的语气符合背景；若用 had better not，not 的位置正确。"
+      ]
+    }
+  },
+  {
+    "id": "linking-ideas",
+    "title": "连接意思：原因、转折与真实条件",
+    "stageId": "meaning",
+    "order": 8,
+    "prerequisites": [
+      "present-time",
+      "past-present-perfect"
+    ],
+    "goal": "先判断两个意思的关系，再选择句子或名词结构；表达原因、让步与可能发生的条件。",
+    "guideIds": [
+      "complex-sentences",
+      "reason",
+      "concession",
+      "condition-real"
+    ],
+    "purposeIds": [
+      "reason",
+      "plan",
+      "story"
+    ],
+    "explanation": [
+      "连接词不只是让句子变长。先确认两个意思是在补充、说明原因、表示出乎预期，还是提出条件。The road was closed 和 We took another road 之间可以是原因；改变连接词会改变你给读者的解释。",
+      "and、but、so 可以连接两个地位相当的完整分句。because、although、if 引出的从句依附于主信息；正式完整句里不能只留下 Because the road was closed. 而没有主句。口头回答可以使用省略，但本单元练完整句。",
+      "because 后接完整从句，because of 后接名词短语。不能把 because of 与一个带主语、谓语的从句直接拼在一起。原因从句可以在主句前或后；从句在前时通常用逗号隔开。",
+      "although 表示承认一个事实后，仍出现原本不那么预期的结果；but 也能表达转折。连接同一对分句的基本结构时，选 Although…, … 或 …, but…，不要同时写 although…but…。原因也不要照搬中文写 because…so…。",
+      "本单元先练普通、可能发生的将来条件：if 从句通常用一般现在时，结果可用 will、can 或祈使句。普遍规律常在两边都用一般现在时。不是所有出现 if 的句子都不能有 will：if 表示“是否”的间接问题，或 will 表意愿等特殊用法，要另按含义判断。"
+    ],
+    "forms": [
+      {
+        "form": "完整分句 + and / but / so + 完整分句",
+        "meaning": "补充、转折或结果。",
+        "useWhen": "把两个完整意思并列连接，连接词的关系须符合情境。"
+      },
+      {
+        "form": "主句 + because + 原因从句；Because + 原因从句, 主句",
+        "meaning": "用完整原因解释主句中的行动或判断。",
+        "useWhen": "原因中有主语和谓语；不再加 so 来连接同一对分句。"
+      },
+      {
+        "form": "主句 + because of + 名词短语",
+        "meaning": "用名词结构说明原因。",
+        "useWhen": "如 because of the delay；若后面是 the train was late，改用 because。"
+      },
+      {
+        "form": "Although + 从句, 主句；主句 + although + 从句",
+        "meaning": "承认前提后仍发生另一结果。",
+        "useWhen": "表达让步，不同时用 but 作为同一对分句的基本连接词。"
+      },
+      {
+        "form": "If + 一般现在时, 主句 + will / can + 原形或祈使句",
+        "meaning": "提出普通的、可能发生的将来条件及结果。",
+        "useWhen": "如讨论接下来的天气或安排；这是本单元的练习范围，不是对所有 if 用法的禁令。"
+      },
+      {
+        "form": "If + 一般现在时, 主句 + 一般现在时",
+        "meaning": "习惯或普遍的条件关系。",
+        "useWhen": "表达每当条件出现通常怎样，而非只预测下一次的单独结果。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "原因从句与名词原因",
+        "a": {
+          "en": "We changed the route because the bridge was closed.",
+          "zh": "我们改了路线，因为桥封闭了。"
+        },
+        "b": {
+          "en": "We changed the route because of the bridge closure.",
+          "zh": "我们因桥梁封闭改了路线。"
+        },
+        "why": "a 的原因有完整主语和谓语，配 because；b 的 bridge closure 是名词结构，配 because of。两句原因相同，结构不同。"
+      },
+      {
+        "label": "并列转折与让步背景",
+        "a": {
+          "en": "The room was small, but it suited us.",
+          "zh": "房间小，但适合我们。"
+        },
+        "b": {
+          "en": "Although the room was small, it suited us.",
+          "zh": "虽然房间小，它还是适合我们。"
+        },
+        "why": "a 并列连接两个陈述；b 把小房间作为让步背景，突出适合我们的主信息。两种结构都不需要 although 与 but 双重连接。"
+      },
+      {
+        "label": "一次未来可能与习惯",
+        "a": {
+          "en": "If I have time tomorrow, I'll repair the shelf.",
+          "zh": "如果明天有时间，我就修架子。"
+        },
+        "b": {
+          "en": "If I miss breakfast, I feel hungry by ten.",
+          "zh": "如果我不吃早餐，到十点就会饿。"
+        },
+        "why": "a 讨论明天一次可能发生的条件，主句用 will；b 说个人的经常性情况，两边使用现在时。"
+      },
+      {
+        "label": "if 是条件，还是“是否”",
+        "a": {
+          "en": "If the bus arrives on time, we'll reach the museum before lunch.",
+          "zh": "如果公交准点到，我们午饭前就能到博物馆。"
+        },
+        "b": {
+          "en": "I wonder if the bus will arrive on time.",
+          "zh": "我想知道公交是否会准点到。"
+        },
+        "why": "a 的 if 引出未来条件，通常用 arrives；b 的 if 意为“是否”，不是这个条件句结构，will arrive 可以使用。不要把“if 后永远不能用 will”当规则。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "Because the road was icy, so we drove slowly.",
+        "correct": "Because the road was icy, we drove slowly.",
+        "why": "在这对原因与行动之间，because 已完成连接，不再叠加 so。也可选择 The road was icy, so we drove slowly. 的并列结果结构。"
+      },
+      {
+        "wrong": "Although the battery was low, but the torch still worked.",
+        "correct": "Although the battery was low, the torch still worked.",
+        "why": "although 已引出让步背景，主句不再用 but 连接同一对分句。"
+      },
+      {
+        "wrong": "The picnic was cancelled because of it was raining.",
+        "correct": "The picnic was cancelled because it was raining.",
+        "why": "it was raining 是完整从句，用 because；because of 后则要改成名词结构，如 the rain。"
+      },
+      {
+        "wrong": "If the path will be dry tomorrow, we'll cycle to the lake.",
+        "correct": "If the path is dry tomorrow, we'll cycle to the lake.",
+        "why": "本例是普通的将来真实条件，if 小句用一般现在时表达未来可能。这个修正不适用于 if 表“是否”或 will 表意愿等其他用法。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "linking-ideas-v0-recognise",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "风太大是课程改到室内的原因。选择用完整原因从句清楚表达这个关系的一句。",
+        "options": [
+          "We moved the class indoors because the wind was strong.",
+          "We moved the class indoors although the wind was strong.",
+          "We moved the class indoors because of the wind was strong.",
+          "Because the wind was strong."
+        ],
+        "answer": "We moved the class indoors because the wind was strong.",
+        "explanation": "because 后的 the wind was strong 是完整原因从句。although 改成让步关系；because of 不能直接配这个从句；最后一项缺主句。",
+        "hints": [
+          "这里需要回答“为什么改到室内”，并保留原因和行动两部分。",
+          "有完整主语和谓语的原因用 because，不用 because of。"
+        ]
+      },
+      {
+        "id": "linking-ideas-v0-repair",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "改正：Although the battery was low, but the torch still worked. 必须保留 although 和电量低、手电筒仍工作两项信息，可调整从句位置。",
+        "answer": "Although the battery was low, the torch still worked.",
+        "accepted": [
+          "Although the battery was low, the torch still worked.",
+          "The torch still worked although the battery was low."
+        ],
+        "explanation": "although 和 but 不在此处同时作为同一对分句的基本连接词。保留 although 时去掉 but；从句前后两种位置都可表达让步。",
+        "hints": [
+          "本题已有让步连接词；检查是否又加入了一个相同作用的并列连接词。",
+          "保留 although，删去 but，确保主句 the torch still worked 仍完整。"
+        ]
+      },
+      {
+        "id": "linking-ideas-v0-produce",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "昨天桥封闭，所以我们走了另一条路。用 We / take another road / the bridge was closed 写一句，必须用 because 表原因，并用一般过去时。",
+        "answer": "We took another road because the bridge was closed.",
+        "accepted": [
+          "We took another road because the bridge was closed.",
+          "Because the bridge was closed, we took another road."
+        ],
+        "explanation": "take 的过去式是 took；because 连接完整原因 the bridge was closed。原因从句可在主句前后，不再加 so。",
+        "hints": [
+          "先把行动与原因各写成完整分句；行动发生在过去。",
+          "行动用 We took another road，原因用 because the bridge was closed。"
+        ]
+      },
+      {
+        "id": "linking-ideas-v1-recognise",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "讨论明天一个普通、可能发生的条件：小路干燥时，我们会骑车去湖边。选择符合本单元未来真实条件结构的一句。",
+        "options": [
+          "If the path is dry tomorrow, we'll cycle to the lake.",
+          "If the path will be dry tomorrow, we'll cycle to the lake.",
+          "If the path dry tomorrow, we'll cycle to the lake.",
+          "If the path is dry tomorrow, we'll cycling to the lake."
+        ],
+        "answer": "If the path is dry tomorrow, we'll cycle to the lake.",
+        "explanation": "普通未来条件用 if + is dry；结果用 will + cycle 原形。tomorrow 说明未来，不要求把条件小句也改成 will。",
+        "hints": [
+          "本题已经限定普通的将来条件；条件与结果部分的时态形式不必一样。",
+          "if 小句用 is dry，主句用 will cycle；will 后不用 -ing。"
+        ]
+      },
+      {
+        "id": "linking-ideas-v1-repair",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "改正：The picnic was cancelled because of it was raining. 保留完整原因从句 it was raining 和野餐被取消的信息，可调整原因从句位置。",
+        "answer": "The picnic was cancelled because it was raining.",
+        "accepted": [
+          "The picnic was cancelled because it was raining.",
+          "Because it was raining, the picnic was cancelled.",
+          "The picnic was canceled because it was raining.",
+          "Because it was raining, the picnic was canceled."
+        ],
+        "explanation": "完整从句配 because，删除 of。cancelled 和 canceled 是可接受的两种拼写，前后位置不改变原因关系。",
+        "hints": [
+          "看原因部分是一个名词短语，还是有主语和谓语的完整从句。",
+          "it was raining 是从句，前面用 because，不用 because of。"
+        ]
+      },
+      {
+        "id": "linking-ideas-v1-produce",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "讨论一次可能的到货安排：“如果桌子周五送到，我们就会周六组装它”。用 the desk / arrive on Friday / we / assemble it on Saturday 写一句，使用 if 的普通未来真实条件与 will 结果。",
+        "answer": "If the desk arrives on Friday, we'll assemble it on Saturday.",
+        "accepted": [
+          "If the desk arrives on Friday, we'll assemble it on Saturday.",
+          "If the desk arrives on Friday, we will assemble it on Saturday.",
+          "We'll assemble it on Saturday if the desk arrives on Friday.",
+          "We will assemble it on Saturday if the desk arrives on Friday."
+        ],
+        "explanation": "条件中 the desk 为单数，使用 arrives；结果用 will assemble。把主句放在前面仍表达同一条件关系。",
+        "hints": [
+          "条件讨论未来可能，但普通 if 小句用现在时；还要检查单数主语的动词。",
+          "条件用 the desk arrives on Friday，结果用 we will / we'll assemble it on Saturday。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "描述一个你真实需要调整的学习或活动计划。写一句原因、一句让步或转折，再写一句普通的未来条件及结果；每句提供你自己的内容，而不是只替换示范句的一个名词。",
+      "criteria": [
+        "原因、让步和条件确实符合意思，不把连接词当作可随意替换的装饰。",
+        "because 后是完整从句，because of 后是名词结构；完整句保留主信息。",
+        "同一对分句不叠加 although 与 but，或 because 与 so。",
+        "普通的未来真实条件在 if 小句中使用合适的现在时，结果可用 will / can 或祈使句；能区分 if 表“是否”的其他结构。"
+      ]
+    }
+  }
+]

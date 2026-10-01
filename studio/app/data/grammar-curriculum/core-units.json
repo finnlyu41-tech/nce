@@ -1,0 +1,556 @@
+[
+  {
+    "id": "sentence-core",
+    "title": "先搭句子骨架：谁、做什么、是什么",
+    "stageId": "foundation",
+    "order": 1,
+    "prerequisites": [],
+    "goal": "区分动作句与 be 句，给一句话保留清楚的主语和谓语。",
+    "guideIds": [
+      "word-order",
+      "be",
+      "there-be"
+    ],
+    "purposeIds": [
+      "describe",
+      "story"
+    ],
+    "explanation": [
+      "先问两个问题：在说谁或什么？它做了什么，或者是什么、怎么样、在哪里？前者是主语，后者需要谓语。英语的普通陈述句通常先主语、后谓语；不要直接照中文省略 be。",
+      "有动作时用动作动词：My sister works here。说身份、状态或位置时可用 be：My sister is tired。不是每个英文句子都需要 be，也不是每个动词后都需要宾语：She sleeps 已经完整。",
+      "要引入一个地方有什么，可用 there is / there are。there be 介绍场景中有什么，have 则可表达某人拥有；数量决定 is 或 are。先把骨架搭好，再补时间、地点，不必一开始就写长句。"
+    ],
+    "forms": [
+      {
+        "form": "主语 + 动作动词 (+ 宾语)",
+        "meaning": "交代谁做什么；宾语是动作直接涉及的人或物。",
+        "useWhen": "用在 read a book 等及物动作；sleep 等不及物动作可以没有宾语。"
+      },
+      {
+        "form": "主语 + am / is / are + 身份、状态或位置",
+        "meaning": "说是什么、怎么样或在哪里。",
+        "useWhen": "现在的身份或状态；I 用 am，单数用 is，you 和复数用 are。"
+      },
+      {
+        "form": "There is + 单数 / 不可数名词；There are + 复数名词",
+        "meaning": "介绍有某人或某物存在。",
+        "useWhen": "先介绍一个场景有什么；不同于某人拥有某物的 have。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "动作与状态",
+        "a": {
+          "en": "Mia works in a library.",
+          "zh": "Mia 在一家图书馆工作。"
+        },
+        "b": {
+          "en": "Mia is tired after work.",
+          "zh": "Mia 下班后很累。"
+        },
+        "why": "works 是动作谓语；tired 是形容词，要由 is 连接主语。不要写 Mia is works。"
+      },
+      {
+        "label": "地点与存在",
+        "a": {
+          "en": "The books are on the desk.",
+          "zh": "那些书在桌上。"
+        },
+        "b": {
+          "en": "There are two books on the desk.",
+          "zh": "桌上有两本书。"
+        },
+        "why": "第一句定位已知的书，第二句向对方介绍桌上有什么。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "My friend very kind.",
+        "correct": "My friend is very kind.",
+        "why": "kind 描述状态，普通陈述句需要 be 作谓语。"
+      },
+      {
+        "wrong": "She is reads every evening.",
+        "correct": "She reads every evening.",
+        "why": "reads 已是谓语，不能再直接加 is；正在阅读则是 is reading。"
+      },
+      {
+        "wrong": "There is two chairs.",
+        "correct": "There are two chairs.",
+        "why": "two chairs 是复数，这里的基础书面表达用 are。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "core-r0",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "要表达“Leo 现在很忙”，选择骨架完整的句子。",
+        "options": [
+          "Leo busy now.",
+          "Leo is busy now.",
+          "Leo is works now."
+        ],
+        "answer": "Leo is busy now.",
+        "explanation": "busy 是状态，用 is 连接单数主语 Leo。",
+        "hints": [
+          "先判断 busy 是动作还是状态。",
+          "这里需要：单数主语 + be + 形容词。"
+        ]
+      },
+      {
+        "id": "core-f0",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "只修正主谓数量：There is three windows in this room.",
+        "answer": "There are three windows in this room.",
+        "explanation": "three windows 是复数，there are 介绍有几扇窗。",
+        "hints": [
+          "数一数引入的是一个还是多个物品。",
+          "three windows 是复数；只替换 be 的形式。"
+        ]
+      },
+      {
+        "id": "core-p0",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "用 My sister / is / a nurse 组成一句话，介绍你姐姐的职业。",
+        "answer": "My sister is a nurse.",
+        "explanation": "My sister 是主语，is 连接职业；单数职业名词前保留 a。",
+        "hints": [
+          "先找人物，再找连接身份的词。",
+          "使用：人物 + be + 单数职业。"
+        ]
+      },
+      {
+        "id": "core-r1",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "要介绍“花园里有一棵树”，选择相应表达。",
+        "options": [
+          "A tree has a garden.",
+          "There is a tree in the garden.",
+          "There are a tree in the garden."
+        ],
+        "answer": "There is a tree in the garden.",
+        "explanation": "there is 引入单数 a tree；have 的句子会改变意思。",
+        "hints": [
+          "要表达存在还是某人拥有东西？",
+          "引入单数物品用 there + 单数 be。"
+        ]
+      },
+      {
+        "id": "core-f1",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "只删除多余的词，表达日常活动：Ben is plays tennis on Sundays.",
+        "answer": "Ben plays tennis on Sundays.",
+        "explanation": "plays 已经表示动作，不在前面再放 is。",
+        "hints": [
+          "找出已经表示动作的动词。",
+          "一般动作陈述句用主语 + 动作谓语。"
+        ]
+      },
+      {
+        "id": "core-p1",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "用 We / are / at home 组成一句话，说明我们的位置。",
+        "answer": "We are at home.",
+        "explanation": "We 是复数主语，用 are 连接地点 at home。",
+        "hints": [
+          "先放人物，再说在哪里。",
+          "We 对应复数 be；地点短语放在后面。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "介绍一个你熟悉的人和一个房间：分别写身份或状态、日常动作、房间里有什么。",
+      "criteria": [
+        "每句有主语和谓语。",
+        "动作句没有多余的 be，状态句没有省略 be。",
+        "there is / are 与数量对应；内容符合你设定的情境。"
+      ]
+    }
+  },
+  {
+    "id": "questions-negation",
+    "title": "提问与否定：先找 be、助动词或情态动词",
+    "stageId": "foundation",
+    "order": 2,
+    "prerequisites": [
+      "sentence-core"
+    ],
+    "goal": "把 be 句和普通动作句变成问句或否定句，保留动词正确形式。",
+    "guideIds": [
+      "be-question",
+      "present-simple",
+      "past-simple"
+    ],
+    "purposeIds": [
+      "ask",
+      "story"
+    ],
+    "explanation": [
+      "先看原句的谓语。已有 be 时，把 be 移到主语前面提问，在 be 后加 not 否定。普通动作的一般现在时通常借 do / does，一般过去时借 did；这些助动词承担时态或人称后，动作动词回到原形。",
+      "问具体信息时，把 what、where、when 等放在普通问句前：Where does she work? 但询问主语是谁时结构不同：Who works here? 本单元先练一般问句和普通信息问句，不把所有问句套成一种公式。",
+      "已经有 can 等情态动词时，直接用 can 提问或加 not：Can she swim? She cannot swim。短回答沿用问句的 be 或助动词，避免 Yes, I am 与 Do you…? 不对应。"
+    ],
+    "forms": [
+      {
+        "form": "Be + 主语 + 补充信息？；主语 + be not + 补充信息",
+        "meaning": "询问或否定身份、状态、位置。",
+        "useWhen": "原句已经使用 be，例如 She is ready。"
+      },
+      {
+        "form": "Do / Does + 主语 + 动词原形？；主语 + do / does not + 动词原形",
+        "meaning": "询问或否定现在的普通动作、习惯。",
+        "useWhen": "一般现在时的普通动作；第三人称单数用 does。"
+      },
+      {
+        "form": "Did + 主语 + 动词原形？；主语 + did not + 动词原形",
+        "meaning": "询问或否定过去发生的普通动作。",
+        "useWhen": "过去的动作；be 的过去式 was / were 直接提问或否定，不借 did。"
+      },
+      {
+        "form": "Can + 主语 + 动词原形？；主语 + cannot + 动词原形",
+        "meaning": "询问或否定能力、许可。",
+        "useWhen": "原句已有 can；不再叠加 do。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "be 与普通动作",
+        "a": {
+          "en": "Is Nora at home?",
+          "zh": "Nora 在家吗？"
+        },
+        "b": {
+          "en": "Does Nora work at home?",
+          "zh": "Nora 在家工作吗？"
+        },
+        "why": "at home 是地点信息，用 be；work 是动作，用 does，work 不加 -s。"
+      },
+      {
+        "label": "动作词的形式",
+        "a": {
+          "en": "He went to the museum yesterday.",
+          "zh": "他昨天去了博物馆。"
+        },
+        "b": {
+          "en": "Did he go to the museum yesterday?",
+          "zh": "他昨天去博物馆了吗？"
+        },
+        "why": "陈述用 went，问句的过去时间由 did 表达，所以用 go。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "Does she likes coffee?",
+        "correct": "Does she like coffee?",
+        "why": "does 已带第三人称单数，like 使用原形。"
+      },
+      {
+        "wrong": "I didn't saw him.",
+        "correct": "I didn't see him.",
+        "why": "didn't 已表达过去，see 不再用过去式。"
+      },
+      {
+        "wrong": "Do you are ready?",
+        "correct": "Are you ready?",
+        "why": "原句使用 be，直接移到主语前。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "question-r0",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "询问“她每天步行上班吗？”，选择正确问句。",
+        "options": [
+          "Does she walk to work every day?",
+          "Does she walks to work every day?",
+          "Is she walk to work every day?"
+        ],
+        "answer": "Does she walk to work every day?",
+        "explanation": "普通动作 walk 借 does 提问，主句动词用原形。",
+        "hints": [
+          "walk 是普通动作，主语是第三人称单数。",
+          "助动词承担人称后，动作使用原形。"
+        ]
+      },
+      {
+        "id": "question-f0",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "只修正动作形式：Did Tom bought a ticket?",
+        "answer": "Did Tom buy a ticket?",
+        "explanation": "did 后使用 buy，过去式 bought 用在普通过去陈述句。",
+        "hints": [
+          "句首哪个词已经表达了过去时间？",
+          "did 后的主要动词回到原形。"
+        ]
+      },
+      {
+        "id": "question-p0",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "把 They are ready. 变成一般疑问句，不增加其他词。",
+        "answer": "Are they ready?",
+        "explanation": "把 are 移到 they 前，其他信息保持。",
+        "hints": [
+          "原句的谓语是 be 还是普通动作？",
+          "be 问句把 be 移到主语前。"
+        ]
+      },
+      {
+        "id": "question-r1",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "回答 Did you call Eva?，选择助动词对应的短回答。",
+        "options": [
+          "Yes, I am.",
+          "Yes, I do.",
+          "Yes, I did."
+        ],
+        "answer": "Yes, I did.",
+        "explanation": "问句使用 did，回答也使用 did。",
+        "hints": [
+          "留意问句在询问什么时间的动作。",
+          "短回答沿用问句的助动词。"
+        ]
+      },
+      {
+        "id": "question-f1",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "只修正一般现在时否定中的动词：He doesn't drives at night.",
+        "answer": "He doesn't drive at night.",
+        "explanation": "doesn't 已处理单数人称，drive 不加 -s。",
+        "hints": [
+          "哪个词已经表达第三人称单数？",
+          "doesn't 后接动作原形。"
+        ]
+      },
+      {
+        "id": "question-p1",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "把 We visited the gallery yesterday. 变为否定句，保持其他信息。",
+        "answer": "We did not visit the gallery yesterday.",
+        "accepted": [
+          "We didn't visit the gallery yesterday."
+        ],
+        "explanation": "did not / didn't 后接 visit，不再用 visited。",
+        "hints": [
+          "过去的普通动作否定借助 did。",
+          "使用过去助动词 + not 后，动作回到原形。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "向一位朋友了解生活：问一个现在的习惯和一个昨天的活动，再替朋友写一肯定一否定回答。",
+      "criteria": [
+        "根据谓语选择 be、do / does 或 did。",
+        "助动词后动作使用原形。",
+        "回答与问题的时间和意思对应；特殊主语问句另行核对。"
+      ]
+    }
+  },
+  {
+    "id": "present-time",
+    "title": "一般现在与现在进行：常态、状态和临时画面",
+    "stageId": "time",
+    "order": 4,
+    "prerequisites": [
+      "sentence-core",
+      "questions-negation"
+    ],
+    "goal": "根据表达意图选择习惯或正在进行的动作，而不是只认时间关键词。",
+    "guideIds": [
+      "present-simple",
+      "present-continuous",
+      "present-contrast"
+    ],
+    "purposeIds": [
+      "describe",
+      "progress",
+      "compare"
+    ],
+    "explanation": [
+      "一般现在时把事情作为习惯、通常情况、事实或状态来介绍。现在进行时把动作作为此刻或这段时间正在展开的画面；不一定恰好在说话的那一秒进行。",
+      "先判断想传达的意思，再看时间词。every day 常帮助说明习惯，now 常提示眼前情况，但单凭一个词不能总是决定时态。I know the answer now 仍用一般现在时，因为 know 在这里表示状态。",
+      "进行时需要 be 和 -ing 两部分；第三人称单数的一般现在时常加 -s。love、know、believe 等状态意义通常不用进行时；某些动词换成动作意义时可以用，如 I am thinking about the problem。"
+    ],
+    "forms": [
+      {
+        "form": "I / you / we / they + 动词原形；he / she / it + 动词 -s",
+        "meaning": "日常习惯、通常事实和状态。",
+        "useWhen": "把活动当成稳定安排，或动词表达拥有、知道等状态时。"
+      },
+      {
+        "form": "主语 + am / is / are + 动词 -ing",
+        "meaning": "此刻或当前一段时间正在进行的动作、临时安排。",
+        "useWhen": "突出动作正在展开；先确认该动词在当前意思下适合进行时。"
+      },
+      {
+        "form": "Usually…, but today…",
+        "meaning": "把平常情况与临时变化放在一起。",
+        "useWhen": "先陈述常态，再描述今天或最近的临时动作。"
+      }
+    ],
+    "contrasts": [
+      {
+        "label": "习惯与眼前动作",
+        "a": {
+          "en": "I walk to work every weekday.",
+          "zh": "我每个工作日步行上班。"
+        },
+        "b": {
+          "en": "I am taking the bus today.",
+          "zh": "我今天正在乘公交车。"
+        },
+        "why": "walk 说明习惯；am taking 突出今天的临时情况，不能因为 today 就一律用过去式。"
+      },
+      {
+        "label": "稳定安排与临时项目",
+        "a": {
+          "en": "Lina teaches English.",
+          "zh": "Lina 教英语。"
+        },
+        "b": {
+          "en": "Lina is teaching an evening course this month.",
+          "zh": "Lina 这个月在教一门晚课。"
+        },
+        "why": "第一句介绍工作，第二句描述当前一段时间的安排；不要求她此刻就在课堂里。"
+      },
+      {
+        "label": "状态与动作意义",
+        "a": {
+          "en": "I think this route is safer.",
+          "zh": "我认为这条路线更安全。"
+        },
+        "b": {
+          "en": "I am thinking about a different route.",
+          "zh": "我正在考虑另一条路线。"
+        },
+        "why": "think 表示观点时通常用一般现在；think about 表示思考活动时可用进行时。"
+      }
+    ],
+    "mistakes": [
+      {
+        "wrong": "She reading now.",
+        "correct": "She is reading now.",
+        "why": "进行时需要 be + -ing，不能只有 -ing。"
+      },
+      {
+        "wrong": "He work here every day.",
+        "correct": "He works here every day.",
+        "why": "一般现在时中第三人称单数的普通动作常加 -s。"
+      },
+      {
+        "wrong": "I am knowing the answer.",
+        "correct": "I know the answer.",
+        "why": "know 在这里是知道这一状态，通常不用进行时。"
+      }
+    ],
+    "practices": [
+      {
+        "id": "present-r0",
+        "kind": "recognise",
+        "variant": 0,
+        "prompt": "描述眼前正在发生的画面：看！孩子们正在跳舞。",
+        "options": [
+          "Look! The children dance.",
+          "Look! The children are dancing.",
+          "Look! The children is dancing."
+        ],
+        "answer": "Look! The children are dancing.",
+        "explanation": "这里突出正在发生的动作，复数 children 对应 are dancing。",
+        "hints": [
+          "情境是在介绍习惯还是眼前动作？",
+          "复数主语的进行时使用 be + -ing。"
+        ]
+      },
+      {
+        "id": "present-f0",
+        "kind": "repair",
+        "variant": 0,
+        "prompt": "只补一个词，描述正在做的事：Ravi cooking dinner now.",
+        "answer": "Ravi is cooking dinner now.",
+        "explanation": "Ravi 是单数，进行时为 is cooking。",
+        "hints": [
+          "-ing 前是否缺少进行时的一部分？",
+          "单数主语用相应的 be 连接 -ing。"
+        ]
+      },
+      {
+        "id": "present-p0",
+        "kind": "produce",
+        "variant": 0,
+        "prompt": "用 My father / read / the news / every morning 写一句习惯陈述，调整动词形式。",
+        "answer": "My father reads the news every morning.",
+        "accepted": [
+          "Every morning, my father reads the news."
+        ],
+        "explanation": "习惯用一般现在时；my father 是第三人称单数，read 变 reads。",
+        "hints": [
+          "这是每天重复的安排。",
+          "第三人称单数的普通动作需要相应词尾。"
+        ]
+      },
+      {
+        "id": "present-r1",
+        "kind": "recognise",
+        "variant": 1,
+        "prompt": "你想说明自己现在知道答案这一状态，选合适句子。",
+        "options": [
+          "I am knowing the answer now.",
+          "I know the answer now.",
+          "I knows the answer now."
+        ],
+        "answer": "I know the answer now.",
+        "explanation": "know 表示状态；即使有 now，这里仍用一般现在时。",
+        "hints": [
+          "now 之外，还要判断动词表达的意思。",
+          "know 在这里是状态；I 使用动词原形。"
+        ]
+      },
+      {
+        "id": "present-f1",
+        "kind": "repair",
+        "variant": 1,
+        "prompt": "只修正 be 的形式：We is staying with a friend this week.",
+        "answer": "We are staying with a friend this week.",
+        "explanation": "We 配 are，this week 描述当前一段时间的临时居住。",
+        "hints": [
+          "观察主语的数量。",
+          "We 对应的 be 形式用于复数主语。"
+        ]
+      },
+      {
+        "id": "present-p1",
+        "kind": "produce",
+        "variant": 1,
+        "prompt": "用 She / work / from home / this week 写一句临时安排，使用现在进行时。",
+        "answer": "She is working from home this week.",
+        "accepted": [
+          "This week, she is working from home."
+        ],
+        "explanation": "临时安排用 is working；进行时也可指当前一段时间。",
+        "hints": [
+          "这是暂时的安排，题目要求进行时。",
+          "单数主语 + be + 动词 -ing，再补地点和时间。"
+        ]
+      }
+    ],
+    "transfer": {
+      "prompt": "比较你平常的一天与今天的变化：说一个习惯，再说一个今天或本周正在进行的临时活动。",
+      "criteria": [
+        "能解释每句表达常态还是临时画面。",
+        "第三人称单数和 be 的形式与主语对应。",
+        "进行时保留 be 与 -ing，不把所有 now 句都改成进行时。"
+      ]
+    }
+  }
+]
