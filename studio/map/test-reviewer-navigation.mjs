@@ -71,7 +71,10 @@ const rejected = [
   'self', 'MYSELF', 'ＳＥＬＦ', 'Self-assessment', 'self assessment',
   'self review', 'self evaluation', 'AI', 'ChatGPT', 'GPT-4',
   'Claude', 'Gemini', 'DeepSeek', '人工智能', 'AI (ChatGPT)', 'ChatGPT 评阅',
-  'GPT', 'AI 助手'
+  'GPT', 'AI 助手',
+  '我自己', '本人自评', '自己评分', '自我评分', 'Self rating',
+  '我 自己', '本人（自评）', '自己－评分', '自我：评分',
+  'SELF RATING', 'Ｓｅｌｆ　ｒａｔｉｎｇ', 'self-rating'
 ];
 const accepted = [
   '陈老师', 'Alex Chen', 'Dr Self', 'Selfridge Language Centre',

@@ -80,7 +80,7 @@ export function validDate(date: string, at = Date.now()) { return /^\d{4}-\d{2}-
 export const normalize = (s: string) => s.toLowerCase().trim().replace(/[’‘]/g, "'").replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ').replace(/\bcan't\b/g,'cannot').replace(/\bwon't\b/g,'will not').replace(/\b(\w+)n't\b/g,'$1 not').replace(/\bi'm\b/g,'i am').replace(/\b(\w+)'re\b/g,'$1 are').replace(/\b(\w+)'ve\b/g,'$1 have').replace(/\b(\w+)'ll\b/g,'$1 will');
 export function grade(node: MapNode, answers: string[], round: number) { const qs = questionsFor(node, round); return qs.map((q, i) => [q.answer, ...q.accepted || []].flatMap(a=>a.split(/\s+\/\s+/)).some(a => normalize(a) === normalize(answers[i] || ''))); }
 export const passedQuiz = (n: MapNode, p: QuizProof, at=Date.now()) => Number.isFinite(p.at) && p.at > 0 && p.at <= at && Number.isInteger(p.round) && p.round >= 0 && p.assisted === false && questionsFor(n, p.round).length > 0 && questionsFor(n,p.round).every((q,i)=>!q.clip || p.heard?.includes(i)) && grade(n, p.answers, p.round).every(Boolean);
-const questionIdentity=(n:MapNode,p:QuizProof)=>JSON.stringify(questionsFor(n,p.round).map(q=>[q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start]));
+const questionIdentity=(n:MapNode,p:Pick<QuizProof,'round'>)=>JSON.stringify(questionsFor(n,p.round).map(q=>[q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start]));
 const reviewInterval=(passes:number)=>(passes>=4?21:passes>=2?7:1)*reviewDelay;
 // Count independent reviews that were actually due. Raw attempts remain intact.
 function reviewProofs(n:MapNode,state:Progress,at:number) {
@@ -111,7 +111,7 @@ export function stable(n:MapNode,state:Progress,at=Date.now()) {
 // This validates the declared source only; it cannot independently verify a reviewer.
 export function externalReviewer(source:string):boolean {
     const key=source.normalize('NFKC').trim().toLowerCase().replace(/[\s\p{P}\p{S}]+/gu,'');
-    if(!key||/^(自评|自己|本人|自我评估|自我评价|自我评阅|自己评阅|self|myself|selfassessment|selfreview|selfevaluation|selfassessed|selfrated)$/.test(key))return false;
+    if(!key||/^(自评|(?:我(?:自己)?|自己|本人|自我)(?:自评|评分|评阅|评估|评价|打分)?|self(?:assessment|review|evaluation|assessed|rated|rating)?|myself)$/.test(key))return false;
     return !/^(?:ai(?:chatgpt|claude|gemini|deepseek)?|人工智能|chatgpt(?:\d\w*)?|gpt(?:\d\w*)?|claude(?:\d\w*)?|gemini(?:\d\w*)?|deepseek)(?:评分|评阅|反馈|老师|评估|助手|ai|review|reviewer|assessment|feedback|assistant|teacher)?$/.test(key);
 }
 export function projectErrors(n:MapNode,p:Project,at=Date.now()) {
@@ -241,10 +241,20 @@ export function changeStudyStep(state:Progress,id:string,step:number,at=Date.now
     return {...next,records:{...next.records,[id]:{...(next.records[id]||record),phase:step===3?'challenge':'learn',studyStep:step===3?record.studyStep:step}}};
 }
 export function restartQuiz(state:Progress,id:string,at=Date.now()):Progress {
-    if(!nodeById(id)||statusMap(state,at)[id]==='locked'||!Number.isFinite(at)||at<=0)return state;
+    const node=nodeById(id);
+    if(!node||statusMap(state,at)[id]==='locked'||!Number.isFinite(at)||at<=0)return state;
     const record=state.records[id]||emptyRecord();
+    if(record.round>=100000)return state;
+    const reference=due(node,state,at)?reviewProofs(node,state,at).passes.at(-1)||record:record;
+    const previous=questionIdentity(node,reference);
+    let round=record.round+1;
+    // Source excerpts cycle every three rounds; starters alternate or rotate sooner.
+    // A new round number or shuffled choices alone is not a new assessed bank.
+    for(let candidate=round;candidate<=Math.min(record.round+3,100000);candidate++) {
+        if(questionIdentity(node,{round:candidate})!==previous){round=candidate;break;}
+    }
     const legacyHelp=record.assisted&&record.attempts.at(-1)?.round!==record.round&&record.quizHelpAt===undefined;
-    return {...state,records:{...state.records,[id]:{...record,...legacyHelp?{quizHelpAt:at}:{},phase:'challenge',round:record.round+1,answers:[],heard:[],assisted:false,questionIndex:0}}};
+    return {...state,records:{...state.records,[id]:{...record,...legacyHelp?{quizHelpAt:at}:{},phase:'challenge',round,answers:[],heard:[],assisted:false,questionIndex:0}}};
 }
 export function continueNode(state:Progress,at=Date.now()) {
     const status=statusMap(state,at),last=state.lastNode?nodeById(state.lastNode):undefined;

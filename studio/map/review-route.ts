@@ -7,5 +7,5 @@ export function prepareDueReview(state:Progress,id:string,now=Date.now()):Progre
  if(!node||!['unit','starter','lesson','checkpoint'].includes(node.kind)||!last||
    statusMap(state,now)[id]==='locked'||last.round!==record.round||
    !passedQuiz(node,last,now)||!due(node,state,now))return state;
- return restartQuiz(state,id);
+ return restartQuiz(state,id,now);
 }

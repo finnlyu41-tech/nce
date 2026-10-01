@@ -6,6 +6,7 @@ import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {stripTypeScriptTypes} from 'node:module';
+import {createHash} from 'node:crypto';
 
 const root=path.dirname(fileURLToPath(import.meta.url)),cache=new Map();
 const args=process.argv.slice(2),baselineIndex=args.indexOf('--baseline');
@@ -68,7 +69,8 @@ if(baseline) {
     await report(observations);
     Date.now=realNow;
 } else {
-    const cases=[],failures=[];
+    const review=await import(await moduleURL(path.join(root,'review-route.ts')));
+    const cases=[],failures=[],routeTraces=[];
     const test=(name,run)=>{
         clock=now;
         try{run();cases.push(name)}catch(error){failures.push({name,message:error.message});console.error(`FAIL ${name}: ${error.message}`)}
@@ -201,13 +203,96 @@ if(baseline) {
         assert.equal(m.stable(unit,s,historical+day),false);
         assert.equal(m.due(unit,s,historical+day),true);
     });
-    test('Four effective independent delayed sessions can still earn the 21-day interval',()=>{
-        const first=now-40*day,last=first+15*day,s=stateFor([proof(0,first),proof(1,first+day),proof(0,first+8*day),proof(1,last)]);
+    test('Four scheduled independent sessions from real review entries earn the 21-day interval',()=>{
+        const first=now-40*day,last=first+15*day;
+        clock=first;
+        let s=m.startNode({...m.emptyProgress(),access:{all:true,nodes:[]}},unit.id,clock);
+        s=m.changeStudyStep(m.changeStudyStep(s,unit.id,0),unit.id,3);
+        for(const date of [0,1,8,15]) {
+            clock=first+date*day;
+            if(date)s=review.prepareDueReview(s,unit.id,clock);
+            s=submit(s,s.records[unit.id].round,clock);
+        }
         assert.equal(m.stable(unit,s,last),true);
-        assert.equal(m.nextReviewAt(unit,s),last+21*day);
+        assert.equal(m.nextReviewAt(unit,s,last),last+21*day);
         assert.equal(m.due(unit,s,last+8*day),false);
         assert.equal(m.due(unit,s,last+21*day-1),false);
         assert.equal(m.due(unit,s,last+21*day),true);
+    });
+    for(const id of [unit.id,'first','letters'])test(`Real due-review entry selects independent actual content across four sessions: ${id}`,()=>{
+        const node=c.nodeById(id),first=now-40*day;
+        const identity=round=>JSON.stringify(c.questionsFor(node,round).map(q=>[q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start]));
+        const trace=[];
+        routeTraces.push({id,trace});
+        clock=first;
+        let s=m.startNode({...m.emptyProgress(),access:{all:true,nodes:[]}},id,clock);
+        s=m.changeStudyStep(s,id,0);
+        s=m.changeStudyStep(s,id,3);
+        let previousIdentity;
+        for(const [index,date] of [0,1,8,15].entries()) {
+            clock=first+date*day;
+            const existing=structuredClone(s.records[id].attempts);
+            if(index) {
+                assert.equal(m.due(node,s,clock),true,`${id} must be due before session ${index+1}`);
+                s=review.prepareDueReview(s,id,clock);
+                assert.deepEqual(s.records[id].attempts,existing,'Opening a due review preserves all prior raw attempts');
+                assert.equal(s.records[id].phase,'challenge');
+                assert.equal(s.records[id].answers.length,0,'The actual entry opens a fresh independent round');
+                const unfinished={...s,records:{...s.records,[id]:{...s.records[id],answers:['answer being entered']}}};
+                assert.deepEqual(review.prepareDueReview(unfinished,id,clock),unfinished,'Re-entering an unfinished due check preserves its answer');
+            }
+            const record=s.records[id],round=record.round,questions=c.questionsFor(node,round),signature=identity(round);
+            if(index<3)assert.equal(round,index,'The first three actual scheduled entries use rounds 0, 1, and 2');
+            assert.ok(!index||round>trace.at(-1).round,'The entry advances the real round counter');
+            const ready={...s,records:{...s.records,[id]:{...record,answers:questions.map(q=>q.answer.split(/\s+\/\s+/)[0]),heard:questions.flatMap((q,i)=>q.clip?[i]:[])}}};
+            s=m.submitQuiz(ready,id,clock);
+            const allCorrect=m.passedQuiz(node,s.records[id].attempts.at(-1),clock);
+            const nextReviewAt=m.nextReviewAt(node,s,clock),sameContentAsPrevious=index?signature===previousIdentity:false;
+            trace.push({day:date,round,allCorrect,due:m.due(node,s,clock),nextReviewDay:(nextReviewAt-first)/day,sameContentAsPrevious,signatureSha256:createHash('sha256').update(signature).digest('hex')});
+            assert.equal(allCorrect,true,'Reference answers and required audio evidence pass the actual selected round');
+            assert.equal(sameContentAsPrevious,false,'A due entry must select different assessed content from the preceding effective review');
+            assert.equal(m.due(node,s,clock),false,'A valid due independent review clears the current due status');
+            assert.equal(nextReviewAt,first+[1,8,15,36][index]*day,'Actual scheduled sessions retain the 1-day, 7-day, 7-day, 21-day progression');
+            previousIdentity=signature;
+        }
+        assert.equal(s.records[id].attempts.length,4,'Skipped equivalent banks do not create invented attempts');
+        assert.equal(m.due(node,s,first+36*day-1),false);
+        assert.equal(m.due(node,s,first+36*day),true);
+        const restored=m.parseProgress(m.exportProgress(s));
+        assert.deepEqual(restored.records,s.records,'Actual route-selected rounds and their raw evidence survive v2 backup');
+    });
+    test('An early raw pass does not replace the effective bank used by the next due entry',()=>{
+        const first=now-40*day,identity=round=>JSON.stringify(c.questionsFor(unit,round).map(q=>[q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start]));
+        const trace=[];
+        routeTraces.push({id:unit.id,scenario:'early raw repeat before scheduled review',trace});
+        clock=first;
+        let s=m.startNode({...m.emptyProgress(),access:{all:true,nodes:[]}},unit.id,clock);
+        s=m.changeStudyStep(m.changeStudyStep(s,unit.id,0),unit.id,3);
+        const finish=event=>{
+            const round=s.records[unit.id].round,signature=identity(round);
+            s=submit(s,round,clock);
+            assert.equal(m.passedQuiz(unit,s.records[unit.id].attempts.at(-1),clock),true);
+            trace.push({event,day:(clock-first)/day,round,due:m.due(unit,s,clock),nextReviewDay:(m.nextReviewAt(unit,s,clock)-first)/day,signatureSha256:createHash('sha256').update(signature).digest('hex')});
+            return {round,signature};
+        };
+        finish('first independent pass');
+        clock=first+day;
+        s=review.prepareDueReview(s,unit.id,clock);
+        const effective=finish('first delayed independent review');
+        assert.equal(m.nextReviewAt(unit,s,clock),first+8*day);
+        clock=first+2*day;
+        s=m.restartQuiz(s,unit.id,clock);
+        const early=finish('early raw independent repeat');
+        assert.equal(m.nextReviewAt(unit,s,clock),first+8*day,'An early pass must not move the effective review anchor');
+        assert.equal(m.due(unit,s,clock),false);
+        clock=first+8*day;
+        s=review.prepareDueReview(s,unit.id,clock);
+        assert.ok(s.records[unit.id].round>early.round,'The actual entry advances from the current raw round');
+        assert.notEqual(identity(s.records[unit.id].round),effective.signature,'The selected bank must differ from the effective delayed review, regardless of the early raw pass');
+        finish('next scheduled independent review');
+        assert.equal(m.due(unit,s,clock),false);
+        assert.equal(m.nextReviewAt(unit,s,clock),first+15*day,'Four raw passes with an early repeat still represent only three effective scheduled sessions');
+        assert.equal(s.records[unit.id].attempts.length,4,'The early practice is retained as original evidence');
     });
     test('Latest failed unit is recommended before its available unlearned successor',()=>{
         assert.equal(m.continueNode(failureState).id,unit.id);
@@ -301,6 +386,6 @@ if(baseline) {
         assert.equal(m.stable(unit,restored,now),false);
     });
     Date.now=realNow;
-    await report({content:'real prepared curriculum',passed:cases.length,failed:failures.length,cases,failures});
+    await report({content:'real prepared curriculum',passed:cases.length,failed:failures.length,cases,failures,routeTraces});
     if(failures.length)process.exitCode=1;
 }
