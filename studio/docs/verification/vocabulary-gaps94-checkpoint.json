@@ -1,0 +1,666 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-01T23:22:22.489027+00:00",
+  "branch": "codex/vocabulary-gaps94-20261001",
+  "baseCommit": "acfaffc6a8fe7033fca26c5c5b1dcb7c9bc0dce2",
+  "exactRuntimeCodeCommitBuiltAndTested": "97daa69bf3ba0456870ca0de0ff7b0f3b294da36",
+  "runtimeCommits": [
+    {
+      "commit": "4ecefaa9d4848d35af4f55c4b26d82970333959e",
+      "subject": "fix(vocabulary): bind withdraw source headword correction to reviewed page"
+    },
+    {
+      "commit": "fe2a338e2e69f29d0323608f8bdad6aa8ee69f3c",
+      "subject": "feat(vocabulary): register reviewed batch 6c with source inventory evidence"
+    },
+    {
+      "commit": "e72278198e91489c1e1b31ba20d67e050565212e",
+      "subject": "feat(vocabulary): register reviewed batch 6a and deduplicated sweet sources"
+    },
+    {
+      "commit": "82a9ef3c0127502a422dcee7f43e26cdaa3ba63f",
+      "subject": "fix(vocabulary): keep source correction guards on corrected indexes"
+    },
+    {
+      "commit": "7efc2e128bb2d0b0cc42bad2a5595651cda614a4",
+      "subject": "feat(vocabulary): register reviewed batch 6d and source-bound withdraw forms"
+    },
+    {
+      "commit": "d47f95b55c79abc38ffc0861a3ae0db1d6e84f7d",
+      "subject": "feat(vocabulary): register reviewed batch 6b and complete lesson 50 inventory"
+    },
+    {
+      "commit": "97daa69bf3ba0456870ca0de0ff7b0f3b294da36",
+      "subject": "feat(vocabulary): freeze audit inputs and generate finite source review queue"
+    }
+  ],
+  "scope": "Complete the frozen 94 raw gaps / 95 finite authored targets; keep all-source follow-up queue separate. No new unbounded content batch.",
+  "frozenTargetPlan": {
+    "path": "work/gaps94/finite-target-plan.json",
+    "sha256": "e5b0ca6a74ed5d4db0abc992af080b0993a870769f8a83dfe28fd8339f15f764",
+    "rawGapHeads": 94,
+    "correctedMissingCanonicalHeads": 93,
+    "existingCanonicalHeadTargetAdded": "withdraw",
+    "authoredCanonicalHeads": 94,
+    "uniqueTargetExamples": 95,
+    "sourceTargetAssociations": 96,
+    "strictPrintedTargets": 93,
+    "editoriallyNormalizedTargets": 2,
+    "remainingFrozenTargets": 0
+  },
+  "batches": {
+    "a": {
+      "verification": "docs/verification/vocabulary-gap-batch6a.json",
+      "verificationSha256": "d80381ecef3bd2554cfdf037ce536f754e4105432607793aecd4745ab0008d0a",
+      "contentFile": {
+        "path": "app/data/vocabulary-gap-batch6a.ts",
+        "sha256": "c7964226e04f5a2fb96b3970e1862dbb7747ef63223b451057b546a72253d9c0"
+      },
+      "ledger": {
+        "path": "docs/vocabulary-gap-batch6a.json",
+        "sha256": "132fcf11acaa5266ed9474c0e5b69632c00d80d87783b90fa0dd44a654bf9e0c"
+      },
+      "independentReport": {
+        "path": "work/gaps94/independent-review/batch6a-stage-b-final.json",
+        "sha256": "db439dfef87ab6bc9f7b803364a45dabf73133bb8077e60e656bf966b686cb9e"
+      },
+      "uniqueExamples": 25,
+      "sourceTargetRows": 26,
+      "reviewer": "Codex /root/nce1_people_adjectives",
+      "humanCertification": false,
+      "rootRegistrationChecks": {
+        "contentExamples": 373,
+        "nativeCallbackSourceHeadwordPairs": 228,
+        "completeSourceWordInventories": 29,
+        "logs": [
+          {
+            "path": "work/gaps94/batch6a/registered-examples.log",
+            "sha256": "ea1d6e624c97ce4aaa764da7859c687da0381ba2dad61aa1b8796ac6af0e0a6b"
+          },
+          {
+            "path": "work/gaps94/batch6a/registered-native-callbacks.log",
+            "sha256": "0c2a8a17e2ea211adecbcec972240765dd6283ab8e0432b326aebd9383715927"
+          },
+          {
+            "path": "work/gaps94/batch6a/registered-lint.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "work/gaps94/batch6a/registered-audit.log",
+            "sha256": "6a9d0e228d7e33e95bd49b08035aed15ee2f503533f0b22570d121695791167c"
+          }
+        ]
+      }
+    },
+    "b": {
+      "verification": "docs/verification/vocabulary-gap-batch6b.json",
+      "verificationSha256": "bb4e5514dde31f4200c6b434d06a0f496a48126b52920166cafe2841a0ab420e",
+      "contentFile": {
+        "path": "app/data/vocabulary-gap-batch6b.ts",
+        "sha256": "b8112890092dd11e891b53fffa5748d12de7ad3df213b9dae0e3bf54113536fd"
+      },
+      "ledger": {
+        "path": "docs/vocabulary-gap-batch6b.json",
+        "sha256": "b6dc43237915c0bb5c940b41ad32cac09f06933fe6a5d48f3288c5b5a03e8684"
+      },
+      "independentReport": {
+        "path": "work/gaps94/independent-review/batch6b-stage-b-final.json",
+        "sha256": "d2aac80ba2fde2be67b7d26598f1fe37ebc7f3b246e12c274c7de8602f8f5915"
+      },
+      "uniqueExamples": 24,
+      "sourceTargetRows": 24,
+      "reviewer": "Codex /root/review_batch5f",
+      "humanCertification": false,
+      "rootRegistrationChecks": {
+        "contentExamples": 420,
+        "nativeCallbackSourceHeadwordPairs": 275,
+        "completeSourceWordInventories": 38,
+        "logs": [
+          {
+            "path": "work/gaps94/batch6b/registered-examples.log",
+            "sha256": "f95ba0c9474a6a621b1c9b8305b0040e37d83293031bfbbcb72f5b5625b46dfb"
+          },
+          {
+            "path": "work/gaps94/batch6b/registered-native-callbacks.log",
+            "sha256": "7b448d24fee9f564ea8f205578ecc76d9b1d3792ef6c6f09222055b443b10918"
+          },
+          {
+            "path": "work/gaps94/batch6b/registered-lint.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "work/gaps94/batch6b/registered-audit.log",
+            "sha256": "29e5d0ce18b47ecef68636ae42e86498e4de5de48d46aa445760ee823920f0af"
+          }
+        ]
+      }
+    },
+    "c": {
+      "verification": "docs/verification/vocabulary-gap-batch6c.json",
+      "verificationSha256": "3f3f445a3516ca43ea3cb2926f8e2e367a75d4cb5b10556dad1b2ed42ed7a126",
+      "contentFile": {
+        "path": "app/data/vocabulary-gap-batch6c.ts",
+        "sha256": "e91db5e4d6065ce981da5bcdb67d18e77964bc90e0ed16b12f48c92ac951d86c"
+      },
+      "ledger": {
+        "path": "docs/vocabulary-gap-batch6c.json",
+        "sha256": "fd6018b79291f3784955a2f9d0a0d62e72f605c5f6b35c137b4e07cb64d123e5"
+      },
+      "independentReport": {
+        "path": "work/gaps94/independent-review/batch6c-stage-b-final.json",
+        "sha256": "5112763ad543b2458980de6f3fa476125d3e5fda45e880e566b33f114297ad92"
+      },
+      "uniqueExamples": 23,
+      "sourceTargetRows": 23,
+      "reviewer": "Codex /root/nce1_people_adjectives",
+      "humanCertification": false,
+      "rootRegistrationChecks": {
+        "contentExamples": 348,
+        "nativeCallbackSourceHeadwordPairs": 203,
+        "completeSourceWordInventories": 20,
+        "logs": [
+          {
+            "path": "work/gaps94/batch6c/registered-examples-with-independent-proof.log",
+            "sha256": "fb75eaf3fc685d13c766421b96729849ef486384a3e95d64403fcabc389cd9d4"
+          },
+          {
+            "path": "work/gaps94/batch6c/registered-native-callbacks.log",
+            "sha256": "0eceb6886b5df1415642323812537af6824f0bc5ae88a9847ecfb17634a9b39b"
+          },
+          {
+            "path": "work/gaps94/batch6c/registered-lint.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "work/gaps94/batch6c/registered-audit.log",
+            "sha256": "dd412e90183834675e6b453c42aa0c06d24cf6f6ecf330e64823db3f9b6f4b64"
+          }
+        ]
+      }
+    },
+    "d": {
+      "verification": "docs/verification/vocabulary-gap-batch6d.json",
+      "verificationSha256": "469445fbd92e24378a7f66b45d94462d116380c6cf29ce6d49800aca1aa8fe67",
+      "contentFile": {
+        "path": "app/data/vocabulary-gap-batch6d.ts",
+        "sha256": "d0716150c03bcfba963c064e66f1382a6a934c00a0801ee1156803eb18577bea"
+      },
+      "ledger": {
+        "path": "docs/vocabulary-gap-batch6d.json",
+        "sha256": "b8372216f416e39a206c71ca8275ba455eed8bac8b559aac1f383d0b5483fbb6"
+      },
+      "independentReport": {
+        "path": "work/gaps94/independent-review/batch6d-stage-b-editorial.json",
+        "sha256": "0592b74f6fe18dd1df516d0b51f8b81e865877ae3f30a9e1568cef980857376e"
+      },
+      "uniqueExamples": 23,
+      "sourceTargetRows": 23,
+      "reviewer": "Codex /root/review_batch5e",
+      "humanCertification": false,
+      "rootRegistrationChecks": {
+        "contentExamples": 396,
+        "nativeCallbackSourceHeadwordPairs": 251,
+        "withdrawFormsAndOldAliasesPassed": true,
+        "completeSourceWordInventories": 29,
+        "logs": [
+          {
+            "path": "work/gaps94/batch6d/registered-examples.log",
+            "sha256": "cb8786a782400100d190e4fc0263c79667c17b6ca2680ead29f11168b9b1ae89"
+          },
+          {
+            "path": "work/gaps94/batch6d/registered-native-callbacks.log",
+            "sha256": "8afcef0a40f7fcce5a4e6e65cb7d3042cfd44ddf78f5b0a08b22e1549cd15884"
+          },
+          {
+            "path": "work/gaps94/batch6d/registered-lint.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "work/gaps94/batch6d/registered-audit.log",
+            "sha256": "0e25993d96bb3db0cc93b35d2f13b5c73b0d7a7374a2ac8b84d758715e076b91"
+          }
+        ]
+      }
+    }
+  },
+  "counts": {
+    "textbookLessons": 348,
+    "textbookTerms": 3346,
+    "textbookOccurrences": 3614,
+    "bilingualCandidateTerms": 3047,
+    "bilingualCandidateOccurrences": 3267,
+    "originalHeadwords": 315,
+    "originalSenseExamples": 420,
+    "recordedReviewedOriginalHeadwords": 315,
+    "recordedReviewedOriginalSenseExamples": 420,
+    "originalsNeedingReview": 0,
+    "textbookTermsWithoutOriginalTableEntry": 3031,
+    "textbookTermsWithAnyAuthoredEntryIncludingIELTS": 316,
+    "textbookTermsWithoutAnyAuthoredEntryIncludingIELTS": 3030,
+    "textbookTermsWithCandidateOrIndexedMeaningMatchedOriginal": 3325,
+    "textbookTermsWithoutCandidateOrIndexedMeaningMatchedOriginal": 21,
+    "candidateOnlyWithoutRecordedReviewedOriginal": 3031,
+    "ieltsSeedEntries": 12,
+    "ieltsSeedDistinctHeadwords": 12,
+    "ieltsTextbookHeadwordOverlap": 1,
+    "ieltsOriginalTableOverlap": 0,
+    "authoredHeadwordUnionIncludingIELTS": 327,
+    "unionOfTextbookAndIELTSHeadwords": 3357,
+    "sourceOccurrencesWithExactTeachingSourceMetadata": 275,
+    "recordedReviewedIdentifiedSourceTargetSenses": 275,
+    "confirmedSourceTargetSenseDenominator": null,
+    "fullyReviewedSourceOccurrenceDenominator": 3614,
+    "fullyReviewedSourceOccurrences": 38,
+    "textbookTermsWithCandidateOrSourceDisplayedOriginal": 3346,
+    "textbookTermsWithoutCandidateOrSourceDisplayedOriginal": 0,
+    "editoriallyNormalizedIdentifiedSourceTargetSenses": 2
+  },
+  "completeSourceInventories": [
+    {
+      "path": "docs/vocabulary-source-targets-nce1-006.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "completeWordList": true,
+      "sourceWords": 13,
+      "targetSenses": 13,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-014.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "completeWordList": true,
+      "sourceWords": 3,
+      "targetSenses": 3,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-100.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 100
+      },
+      "completeWordList": true,
+      "sourceWords": 1,
+      "targetSenses": 1,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-120.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 120
+      },
+      "completeWordList": true,
+      "sourceWords": 1,
+      "targetSenses": 1,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-122.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 122
+      },
+      "completeWordList": true,
+      "sourceWords": 1,
+      "targetSenses": 1,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-124.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 124
+      },
+      "completeWordList": true,
+      "sourceWords": 1,
+      "targetSenses": 1,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-034.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 34
+      },
+      "completeWordList": true,
+      "sourceWords": 6,
+      "targetSenses": 7,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-042.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 42
+      },
+      "completeWordList": true,
+      "sourceWords": 3,
+      "targetSenses": 3,
+      "humanCertification": false
+    },
+    {
+      "path": "docs/vocabulary-source-targets-nce1-050.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 50
+      },
+      "completeWordList": true,
+      "sourceWords": 9,
+      "targetSenses": 9,
+      "humanCertification": false
+    }
+  ],
+  "completeSourceWords": 38,
+  "completeSourceTargets": 39,
+  "completeSourceLessons": 9,
+  "newCompleteSourceWords": 22,
+  "newCompleteSourceTargets": 23,
+  "newCompleteSourceLessons": 7,
+  "finiteQueue": {
+    "manifest": {
+      "path": "work/vocabulary-coverage/gaps94-source-review/manifest.json",
+      "sha256": "c64f74d045dda693a85d1f8e668050f9f8f3fa7cad77df81d2d03056235f6115"
+    },
+    "counts": {
+      "lessonBoundary": 348,
+      "sourceWordReviewUnits": 3614,
+      "sourceWordsWithCompleteTargetInventory": 38,
+      "sourceWordEnumerationPending": 3576,
+      "sourceWordsWithRegisteredTargets": 273,
+      "candidateOnlySourceWords": 3266,
+      "sourcePagesToReconcile": 386,
+      "recordedEmptyLessonsToConfirm": 27,
+      "knownReviewedPrintedTargets": 275,
+      "knownEditoriallyNormalizedTargets": 2,
+      "knownGrammarNormalizedTargets": 3,
+      "confirmedWholeTextbookPrintedTargetDenominator": null
+    },
+    "outputHashes": {
+      "source-word-review-queue.json": "8fd464511ede6d2a06cb2fb925516c0ea9dd55ebeeb2a4cf766daaf6b74dc780",
+      "source-page-reconciliation.json": "c9d49d739ac4ec4f9386ced815737d539b84141e6376e5fe0f0313b6e198c50e",
+      "pending-source-word-ids.json": "03f09891da07bef3be7eb21aa42e9aee2b01f5d185f0e528b5440bba59c26d1d"
+    },
+    "allInputCount": 336,
+    "allInputHashesPreservedAfterBuilds": true,
+    "globalTargetCompletion": false,
+    "percentageClaim": null,
+    "wholePrintedTargetDenominator": null
+  },
+  "audit": {
+    "path": "work/vocabulary-coverage/gaps94-final/summary.json",
+    "sha256": "19cc00f8cd9846d9cf2dfb3397f7bc84e83cc5082d28ea4c250f186d5f9e36b7",
+    "auditReadHashCount": 331,
+    "protectedModelMatchesFrozenBaseline": true
+  },
+  "codeMethodReview": {
+    "path": "docs/verification/vocabulary-source-planner-review.json",
+    "sha256": "3f36794a281da27bc95ab97238998cba55657c358d0b0f75e5efe42a2a54b10a",
+    "status": "passed-for-reviewed-code-and-method",
+    "historicalReviewFixture": "6c frozen; final counts independently re-generated by root"
+  },
+  "checks": {
+    "types": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm check",
+      "log": "work/gaps94/checkpoint/types.log",
+      "logSha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    "examples": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm verify:vocabulary-examples",
+      "log": "work/gaps94/checkpoint/examples.log",
+      "logSha256": "f95ba0c9474a6a621b1c9b8305b0040e37d83293031bfbbcb72f5b5625b46dfb"
+    },
+    "flashcards": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm verify:flashcards",
+      "log": "work/gaps94/checkpoint/flashcards.log",
+      "logSha256": "5942feeae21b478bf498cd11c0df0f20238371102af47bd1a9b9e9428ac7f6ee"
+    },
+    "progress": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm verify:progress",
+      "log": "work/gaps94/checkpoint/progress.log",
+      "logSha256": "5bc9a8cce8c0007da4d3d609a8f3318da15e17101d599cba8f3c2c3184b6979d"
+    },
+    "vocabulary": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm verify:vocabulary",
+      "log": "work/gaps94/checkpoint/vocabulary.log",
+      "logSha256": "77b1a1baeb1a3834867ddcec0496a75c57e250603f9a372f6f82459987c22ac7"
+    },
+    "navigation": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm verify:navigation",
+      "log": "work/gaps94/checkpoint/navigation.log",
+      "logSha256": "9ae477de2a1e13df2f037e3360a776c43dc94e06d95aed671d2b512af7f59e77"
+    },
+    "targeted-lint": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm exec eslint app/data/vocabulary-gap-batch6a.ts app/data/vocabulary-gap-batch6b.ts app/data/vocabulary-gap-batch6c.ts app/data/vocabulary-gap-batch6d.ts app/data/vocabulary-source-corrections.ts app/textbook-vocabulary.ts app/reviewed-word-forms.ts app/vocabulary-examples.ts scripts/test-vocabulary.mjs scripts/test-vocabulary-examples.mjs scripts/test-flashcard-sources.mjs scripts/audit-vocabulary-coverage.mjs scripts/plan-vocabulary-source-review.mjs",
+      "log": "work/gaps94/checkpoint/targeted-lint.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "audit": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "node scripts/audit-vocabulary-coverage.mjs --snapshot=97daa69 --output-subdir=gaps94-final",
+      "log": "work/gaps94/checkpoint/audit.log",
+      "logSha256": "dd0840b5697f0454aa0c644ec881d7c2aaeb69a44bf87b369bcd5c95d7af4620"
+    },
+    "source-queue": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm plan:vocabulary-review",
+      "log": "work/gaps94/checkpoint/source-queue.log",
+      "logSha256": "bb2cfd4dc601b168dfa50c255c08890aceedba4d1ce84735ff1f9f5ed8ee577d"
+    },
+    "build-online": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "PATH=\"$PWD/work/bin:$PATH\" corepack pnpm package:online",
+      "log": "work/gaps94/checkpoint/build-online.log",
+      "logSha256": "9a1ed5532e4ace51bfe14f24b0f85a51d558084589d937b8cbae140b34b0b691"
+    },
+    "verify-online": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm verify:online",
+      "log": "work/gaps94/checkpoint/verify-online.log",
+      "logSha256": "5ffe70db14d5c7ba163a5e6c50187ca393d90406462ee5b6bc6b054626e14f64"
+    },
+    "materials": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "corepack pnpm verify:materials",
+      "log": "work/gaps94/checkpoint/materials.log",
+      "logSha256": "19ab6d7e722cfc299f4fdf31e70443da7384f18b8c4aa4832168fa9a91e195b8"
+    },
+    "build-offline": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "PATH=\"$PWD/work/bin:$PATH\" corepack pnpm package:static",
+      "log": "work/gaps94/checkpoint/build-offline.log",
+      "logSha256": "be6d26d057987e0e512c3d61164293df10c47fa22bb505e3ed0b54f4954c132e"
+    },
+    "protection": {
+      "status": "passed",
+      "exitCode": 0,
+      "command": "python3 work/gaps94/checkpoint/verify-boundary.py",
+      "log": "work/gaps94/checkpoint/protection.log",
+      "logSha256": "081824f0a5a998f99b1815500bfaed44327ea2101385e6c9f6c14ad5254105fb"
+    },
+    "existing-ui-lint": {
+      "status": "expected-existing-failure-unchanged",
+      "exitCode": 1,
+      "fullUiLintPassed": false,
+      "errors": 3,
+      "warnings": 1,
+      "diagnostics": [
+        {
+          "path": "app/textbook-vocabulary-ui.tsx",
+          "line": 60,
+          "column": 51,
+          "rule": "react-hooks/set-state-in-effect",
+          "severity": 2
+        },
+        {
+          "path": "app/textbook-vocabulary-ui.tsx",
+          "line": 61,
+          "column": 51,
+          "rule": "react-hooks/set-state-in-effect",
+          "severity": 2
+        },
+        {
+          "path": "app/textbook-vocabulary-ui.tsx",
+          "line": 86,
+          "column": 264,
+          "rule": "@next/next/no-location-assign-relative-destination",
+          "severity": 1
+        },
+        {
+          "path": "app/word-lookup.tsx",
+          "line": 22,
+          "column": 35,
+          "rule": "react-hooks/set-state-in-effect",
+          "severity": 2
+        }
+      ],
+      "sameAsBaseline": true,
+      "comparisonNormalizesOnlyAbsoluteWorktreePrefix": true,
+      "rulesWeakened": false,
+      "log": "work/gaps94/checkpoint/ui-lint.json",
+      "logSha256": "e83910949c164046a34a31f64fbf7fa7dd5a13142058544db40864bc892bb98d"
+    }
+  },
+  "verificationScope": {
+    "fsrsBehaviorScenarios": 15,
+    "actualCanonicalSourceHeadwordCallbacks": 275,
+    "reviewedSourceFormFixtures": 8,
+    "progressCapabilityBackupTests": 20,
+    "actualProgressUiAdapterTests": 14,
+    "onlineFiles": 1950,
+    "materials": 556,
+    "dictionaryWords": 8502,
+    "rawTextbookEntries": 3615,
+    "correctedRuntimeSourceEntries": 3614,
+    "allNewIdsInOnlineAndOfflinePackagedHtml": 95,
+    "browserExecutedThisRound": false,
+    "actualAudioExecutedThisRound": false,
+    "humanTeacherReviewed": false
+  },
+  "dependency": {
+    "ts-fsrs": "5.4.2",
+    "existingSettings": {
+      "request_retention": 0.9,
+      "enable_fuzz": false,
+      "enable_short_term": true,
+      "learning_steps": [
+        "1m",
+        "10m"
+      ],
+      "relearning_steps": [
+        "10m"
+      ],
+      "weightParameters": "existing defaults"
+    },
+    "newDependencies": [],
+    "lockfileChanged": false,
+    "schedulerChanged": false,
+    "newMigrationRequired": false,
+    "existingVersionedMigrationAndBackupsPreserved": true
+  },
+  "protection": {
+    "path": "work/gaps94/checkpoint/protection.json",
+    "sha256": "9bdf27139e20706e596ad5e5511e7d330dd03f18bfab1b7ed49ffbb2807ff1eb",
+    "checker": "work/gaps94/checkpoint/verify-boundary.py",
+    "checkerSha256": "7b06dfa4486dea1e5ef99089b4b9eb23a261429c23eb6860413b11dbd7819343",
+    "old325ContentHashesPreserved": true,
+    "old10DraftFilesPreserved": true,
+    "protectedHashes": {
+      "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+      "app/flashcards.ts": "b7327bae677085b3321bc54e9e7540deb64c60a0c79f780bd7800d9df8e44333",
+      "app/flashcard-types.ts": "f001cd06ca977a1188b176c8eff664a7d07ef851fbead642864626694222fd7f",
+      "app/flashcard-ui.tsx": "0e56924938c929eede02889ecbab9aba8b7d3e7a470e6a238a44ba1c20331749",
+      "app/progress-save.tsx": "51777b9bb7ce2a6ae75c9cefe2fcf57a9eda8eea3aa9eae2ec8a6edac5f6579b",
+      "app/textbook-vocabulary-ui.tsx": "bf85c23f2f5a07b72c3a3222da1e2381f816b12c04ee838df53808d1ae29fb6e",
+      "app/word-lookup.tsx": "035f3faf51daa9c6d571a45435f0ef697dfeaf691fc30bc99d50d7e5cc2aa7e4",
+      "app/vocabulary-usage.ts": "d3954b7d12486d8fb9219011bfbaf76655ed19c2c7aa9dca3ddfe5ebecfd03ab",
+      "app/ielts-flashcard-examples.ts": "614efe8a7352915f8f5f4286638189df805257717ee9ba18bd4f303959ce7491",
+      "app/nce-utils.ts": "305551097bb84a2a07e44ef545fc03e81bbd756e53daa0066086e9d61df0637b",
+      "pnpm-lock.yaml": "22336ed8eb4954d3877fc49982f153f2cdc19f45c554106d378c7b136607eb3f",
+      "eslint.config.mjs": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06",
+      "tsconfig.json": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4"
+    },
+    "priorWorktrees": {
+      "english-flashcards": {
+        "head": "b00108b72baf3870d70adea57fe304211975905e",
+        "status": [
+          "?? studio/app/data/vocabulary-examples-nce1-14-20.ts",
+          "?? studio/app/data/vocabulary-examples-nce1-22-32.ts",
+          "?? studio/app/data/vocabulary-examples-nce1-52-54.ts",
+          "?? studio/app/data/vocabulary-examples-nce1-59-82.ts",
+          "?? studio/app/data/vocabulary-examples-nce2-gaps.ts",
+          "?? studio/docs/vocabulary-examples-batch11-nce2.json",
+          "?? studio/docs/vocabulary-examples-batch5-objects-colours.json",
+          "?? studio/docs/vocabulary-examples-batch6-22-32.json",
+          "?? studio/docs/vocabulary-examples-batch8-countries-languages.json",
+          "?? studio/docs/vocabulary-examples-batch9-59-82.json"
+        ]
+      },
+      "english-vocabulary-review-batch5a": {
+        "head": "f23a75d00c00745449e62335051ace3d9b080564",
+        "status": []
+      },
+      "english-vocabulary-review-20261001": {
+        "head": "acfaffc6a8fe7033fca26c5c5b1dcb7c9bc0dce2",
+        "status": []
+      }
+    },
+    "rawIndexDictionaryLanguageInputsPreserved": true,
+    "publisherWorktreeModifiedByThisTask": false,
+    "personalLearningDataRead": false
+  },
+  "packagedHtml": {
+    "proof": "work/gaps94/checkpoint/bundle-inclusion.json",
+    "sha256": "8c2280a90acccef208787f5db405e751ed53bd173761d5d49104dd99a5919e30",
+    "outputs": {
+      "dist-online/index.html": {
+        "packaging": "inline JavaScript in standalone HTML",
+        "allNewExampleIdsIncluded": 95,
+        "sha256": "3fa0858d5db65f8d76bc14192c2abea4ff68a9d36d16fff2d6e0583c98d0b3a7"
+      },
+      "dist/index.html": {
+        "packaging": "inline JavaScript in standalone HTML",
+        "allNewExampleIdsIncluded": 95,
+        "sha256": "edfcb7a225443d60456609cc9287858e6490ca93722c3c22aa0c473122b26e97"
+      }
+    }
+  },
+  "remainingLimits": [
+    "3,576 finite source word units await complete printed entry enumeration; whole printed target denominator is unknown.",
+    "386 whole-page tasks and 27 recorded-empty lessons remain explicitly queued; lexical candidates are not sense certification.",
+    "regularly faded printed gloss tail is not certified; NCE1-142 is not declared source-inventory-complete.",
+    "water ski / waterski printed-to-canonical alias needs explicit reconciliation.",
+    "stale and indulge editorial normalizations are kept separate from strict printed target completeness.",
+    "No current browser / mobile widths / real audio / human teacher acceptance was performed this round.",
+    "The earlier source OCR upper-45% ROI and small bilingual CPU samples cannot establish the whole-textbook printed target denominator."
+  ],
+  "remoteWriteAttemptedThisRound": false,
+  "merged": false,
+  "published": false,
+  "authorization": "Local implementation/testing only. Earlier remote push was refused by automatic approval; pending direct Finn authorization and trusted private remote confirmation; no retry."
+}
