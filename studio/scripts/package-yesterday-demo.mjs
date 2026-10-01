@@ -1,0 +1,11 @@
+import {copyFile, mkdir} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {resolve, join} from 'node:path';
+const source = fileURLToPath(new URL('../public/demos/yesterday/',import.meta.url));
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 2 || args[0] !== '--out-root')) throw new Error('Usage: node scripts/package-yesterday-demo.mjs [--out-root directory]');
+const outputRoot = args.length ? resolve(args[1]) : fileURLToPath(new URL('../dist-online/',import.meta.url));
+const destination = join(outputRoot,'demos','yesterday');
+await mkdir(destination,{recursive:true});
+for (const file of ['index.html','styles.css','content.mjs','model.mjs','app.mjs']) await copyFile(join(source,file),join(destination,file));
+console.log(`Copied 5 standalone demo assets to ${destination}; no main state or deployment changed.`);
