@@ -1,42 +1,70 @@
-# 可立即接入的昨日经历最小演示
+# 昨日经历演示与自动复习交接
 
-独立入口：`public/demos/yesterday/index.html`。线上目标路径 `/demos/yesterday/`。零框架依赖、零远程请求、零音频／评分服务；这是一条过去时阅读与表达小闭环，不是雅思模拟或完整课程。
+入口是 `/demos/yesterday/`。在已接受的五步演示上，完成后现在自动保存约 24 小时后的能力复习计划；刷新恢复，到期提供继续入口，实际作答后自动安排下一次。用户无需复制计划。课文、原音频、漫画及主站已有进度没有改动。
 
-已由主线串行发布：[正式体验](https://finn-english-studio.pages.dev/demos/yesterday/)，版本 `2026-10-01-yesterday-demo-v12`，发布源码 `c602d8af34ad93c7720645857808a3bbdcb55c60`，独立部署 `20b1f624`。两域名 102 项公开回读通过；正式入口实际打开，脚本 MIME 正确，控制台无错误或警告。
+这是独立阅读／结构表达流程样例，不是雅思模拟、完整课程或官方评分。初始九道原创题继续保留；新增两组三道原创复习题。做过的题保留曝光历史，新题用尽后标为同题复做。开放草稿仍未评分、待核对；不推断掌握或 Band。
 
-## 接入与发布
+此前五步演示已随 v12 发布到 [正式入口](https://finn-english-studio.pages.dev/demos/yesterday/)，发布源码 `c602d8af34ad93c7720645857808a3bbdcb55c60`，独立部署 `20b1f624`。当时两域名 102 项资源回读及入口浏览器检查通过；该历史验收不涵盖本轮自动复习。
 
-主线可只取演示的独立提交；不需要等待或接入 `ielts-blueprint/`。
+## 给统一主发布线
 
-1. 获取 `public/demos/yesterday/` 的五个文件，以及 `scripts/package-yesterday-demo.mjs`、`scripts/test-yesterday-demo.mjs`。
-2. 主线 `pnpm package:online` 已统一复制五个演示文件到 `dist-online/demos/yesterday/`，并将哈希加入 `version.json`。无需额外复制；`scripts/package-yesterday-demo.mjs` 仅供独立预览打包。Worker 仅开放这五个文件与规范入口，其余路径仍受现有白名单限制。
-3. 按主线已有发布流程发布；检查 `/demos/yesterday/` 与其四个相对资源返回成功，并在手机打开入口。既有站点访问控制保持由主线管理。
-4. 回报实际线上 URL／发布版本／手机运行结果；没有回执前不可称已上线。
+来源分支 `codex/yesterday-review-20261001`。只取本轮自动复习提交即可，不需要接入 `ielts-blueprint/`。独立分支基于 `a1741e0a385495d22b98b1fc89afa4170f0128b9`；复查主工作树 HEAD `191f7ecab82e46033660c93326891703041d3f90` 时，演示目录和复制脚本仍与本轮修改前的版本一致。
 
-本机运行：`python3 -m http.server 4317 --bind 127.0.0.1 --directory public`。
+本轮文件仅限 `public/demos/yesterday/`、演示复制／验证脚本与交接／验证文档。未修改主 `map/model`、评分、进度门槛、全局导航、FSRS、grammar drafts、教材或主站打包输出。未 push、merge 或 deploy；发布仍由主英语线程 `01a0f10c-ff5c-7aa1-8a42-8ee650bbb2f5` 串行处理。
 
-## 体验与边界
+1. 取完整 `public/demos/yesterday/` 的 **11 个文件**，保留 `scripts/package-yesterday-demo.mjs`。新增入口为 `bootstrap.mjs`，不要漏掉模块依赖。
+2. 主线正常 online 打包后，在 `studio/` 执行 `node scripts/package-yesterday-demo.mjs`。现有 `package-standalone.py` 不自动复制全部 public，这一步不能省略。它只复制演示文件，不移除主站其他资产。
+3. 主线今天学习入口若要显示到期事项，读取下面的独立适配接口并使用 `openPractice(task)`；打开练习不等于完成。全局入口接线由主线统一做，本分支仅在演示页头接了到期提醒。
+4. 主线备份若需要收录该能力，应纳入两个独立 namespace。计划按适配器 `exportBackup/restoreBackup` 合并；练习首答、曝光和草稿在原 demo key。主站既有备份登记尚未接入，不能称已被主站备份保护。
+5. 发布后回读实际 HTTPS 地址的 11 个资源、`.mjs` MIME、Web Locks 可用性、刷新恢复与真实手机行为。仅在回读确认后称已上线；本机测试地址不作为交付 URL。
 
-默认沿一条路线走，每步只有一个主下一步。回看／跳过在收起的次要菜单里，任何步骤可返回，不设置科目、模式或偏好问卷。
+## 自动保存与练习行为
 
-1. 先试 1 道原创结构题，保留第一次作答。
-2. 对比 `went / didn’t go / Did…go`，说明过去只标记一次。
-3. 撤去讲解，用新人物与地点回答两道独立结构题。
-4. 自动选择实际错误对应的补救，说明错因，用新情境再试。重复错误简短说明，再换题；每个目标只备两道小样例，耗尽时明确提示。可选开放草稿仅保存／自查，待核对。
-5. 显示首答、提示和不同情境结果；明确未检验听力、真实口语和长期保持。给出明天 2 分钟、一周后 3 分钟的建议，未来复习始终为未进行，不自动排程或提醒。
+- 旧 `planSaved` 只是建议标记，不生成计划。必须实际回答 `new-omar` 和 `new-may` 两道独立题、进入记录页并确认保存。未作答跳过、草稿或点击均不足。
+- 新完成使用真实结束时间；符合条件的旧记录使用最后实际作答时间，不重新起算。重复渲染、刷新、重新体验不能重置已有计划。
+- 初次到期是实际完成后 24 小时，时间保存在 UTC epoch milliseconds，页面按当前浏览器时区显示。跨日、时区或夏令时不改变间隔；迟到只保留一项真实到期任务，不补造过去的完成。
+- 到期做肯定、否定、问句各一道。三题均正确且未用提示，下一次在实际结果后七天；有错题或帮助，一天后再练。这是演示教学安排，不是官方测评阈值。
+- 进入／看题不产生结果。每道题保留首答、帮助、曝光与时间；看过未答复习题后回看规则，也记帮助。刷新或关闭后重开恢复当前复习题。
+- 两组材料共享持久曝光；耗尽时明确标为同题复做，不计陌生迁移。重复作答可以安排练习间隔，不证明长期迁移或自由表达。
+- 页面打开时在初始化、焦点恢复、storage 事件及每分钟检查到期；关闭网站后不发通知，没有后台权限、推送或通知申请。
 
-提示按钮、看到未答题后回看规则都会保留帮助标记。已回答的原题不能覆盖首答；同题重新体验保留曝光历史，不重新计作新题证据。开放回答不打分、不计算 Band 或掌握。原创素材共九道短题，均是样例，未做专家教案验收。页面明确“本演示先体验阅读／表达流程，听力待接”。
+## 存储与主线接口
 
-唯一存储键：`nce-demo-yesterday-v1`，仅浏览器本机体验状态，不读写主线学习进度、评分、词卡、语法 drafts 或地图状态。草稿不发往服务端；用户在复制按钮上主动操作时复制到自己的剪贴板。
+原体验 key `nce-demo-yesterday-v1` 保留向后兼容的 version 1，新增可选 `finishedAt/reviewSession/reviewSeenIds`。它独立使用同名 Web Lock、新鲜读取及预期 raw 比较：其他标签改了内容时拒绝覆盖，当前输入仍留在本页。
 
-## 验证结果
+计划／真实结果在新 key `nce-capability-review:v1`，与词卡 FSRS 分开。详见 [适配器 API、schema 与备份规则](yesterday-review-adapter.md)。最小调用：
 
-- `node scripts/test-yesterday-demo.mjs`：28 项行为与边界检查通过。
-- `node --check public/demos/yesterday/app.mjs`：通过。
-- 浏览器实际走通：首答错误 → 三种形式讲解 → 独立题期间回看（自动帮助标记）→ 错答／另题正确 → 原错因补救 → 同类重复错误 → 换新情境正确 → 开放草稿待核对 → 保存建议 → 刷新恢复；未发生控制台 error／warn。
-- 390×844 与 320×700 视口实查没有横向溢出。主动作只有一个，固定在屏内，按钮 49px；320px 下长内容可滚动。
-- 最终测试记录显示 4 道不同情境首答、无提示答对 2 道、用帮助 1 道；这是本机测试证据示例，不是学习者成绩。保存建议后仍显示“未来复习尚未进行”。
+```js
+const store = createReviewStore({storage: localStorage, locks: navigator.locks, now: Date.now});
+const current = await store.read();
+const due = current.ok ? getDueTasks(current.snapshot, Date.now()) : [];
+const href = due[0] ? openPractice(due[0]) : null;
+// 只有练习确实完成后才能调用，resultId 必须规范化且幂等。
+await store.recordResult({taskId, resultId: `${taskId}:result`, outcome, at});
+```
 
-截图：[390 首屏](verification/yesterday-390-start.jpg)、[320 讲解](verification/yesterday-320-learn.jpg)、[320 换题](verification/yesterday-320-fresh.jpg)、[390 证据页](verification/yesterday-390-evidence-full.jpg)。
+所有写操作在共享 exclusive Web Lock 内重新读取再写，确认原文回读才显示已保存。锁缺失、quota、损坏／未来数据、未确认写入不会隐藏重置。保存失败保留本页输入，主按钮提供重试；重复点击、同结果重试只有一个 receipt。不同标签抢同次任务时第一份真实结果与排期保留，页面说明冲突。时间异常不升级为成功。
 
-线上路径、既有响应头下 `.mjs` 的 MIME 类型与发布回执已由主线核实。真手机浏览器、真实长期学习效果尚未验证，未接音频。最小演示已完成，蓝图与四课样例另存，不是这次发布的前置。
+Web Locks 是同 origin 内协作的序列化机制，代码绕过适配器仍可篡改 localStorage；没有安全证明或跨浏览器兼容性承诺。规范参考：[W3C Web Locks](https://www.w3.org/TR/web-locks/)。本演示在安全上下文使用该 API；主站接入需实际检验。
+
+## 验证与证据
+
+在 studio 执行：
+
+```sh
+node scripts/test-yesterday-demo.mjs
+node scripts/test-yesterday-review.mjs
+node scripts/test-yesterday-review-flow.mjs
+node scripts/test-yesterday-review-controller.mjs
+node scripts/test-yesterday-review-save.mjs
+node scripts/test-yesterday-review-browser.mjs --playwright-module /path/to/playwright/index.mjs --browser /path/to/chrome
+node scripts/package-yesterday-demo.mjs --out-root work/yesterday-preview
+```
+
+28 原演示检查、30 适配器场景、19 练习／旧数据／demo 保存检查、1 刷新与保存交错复现、3 控制器保存集成检查、12 真实浏览器场景，共 **93 项通过**。浏览器为隔离的 headless Chrome 154.0.8037.59，注入时钟和 quota 故障；未使用学习者或线上状态。CUA 连接在本轮失效，改用本机 Playwright 启动独立浏览器验证。没有把模拟时钟或故障开关发布到产品。
+
+真实浏览器验证了：自动创建、刷新／退出重进、到期入口、当前题恢复、七天／一天排期、有限新题耗尽、回看帮助、时区变化、quota 后重试、多标签保留首份记录及零运行错误。390×844 与 320×700 已检查；320 下无横向溢出。
+
+证据：[测试 JSON](verification/yesterday-review-browser.json)、[自动保存](verification/yesterday-review-saved.png)、[到期入口](verification/yesterday-review-due.png)、[320 复习通过](verification/yesterday-review-passed-320.png)、[320 需要再练](verification/yesterday-review-needs-practice-320.png)、[同题复做](verification/yesterday-review-repeat-320.png)、[保存失败保留输入](verification/yesterday-review-save-failure.png)。JSON 内本机端口仅是已关闭的测试服务；不是线上地址。
+
+剩余主线工作是今天学习／全局到期入口、既有备份登记、正式发布与 HTTPS 回读。真实长期学习效果、听力、自由口语和开放表达评分仍未验证。
