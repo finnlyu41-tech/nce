@@ -1,8 +1,8 @@
 import {answerMatches} from './learning-plan';
 import type {GrammarPractice} from './grammar-curriculum-types';
 
-// Only the new relative-clause checks assess comma placement. All existing
-// exercises keep their established matching and progress interpretation.
+// These relative-clause checks assess comma placement. Other grammar exercises
+// use the shared matcher with equivalent final English/Chinese full stops.
 export const grammarClauseCommaSensitiveIds=[
  'relative-reference-v0-recognise','relative-reference-v0-repair','relative-reference-v0-produce',
  'relative-reference-v1-recognise','relative-reference-v1-repair','relative-reference-v1-produce',
@@ -10,6 +10,7 @@ export const grammarClauseCommaSensitiveIds=[
 export const grammarClauseSentenceSensitiveIds=['relative-reference-v1-produce'] as const;
 const commaSensitive=new Set<string>(grammarClauseCommaSensitiveIds);
 const sentenceSensitive=new Set<string>(grammarClauseSentenceSensitiveIds);
+const terminalFullStop=(value:string)=>value.replace(/。(\s*)$/,'.$1');
 const compatiblePunctuation=(value:string)=>value.normalize('NFKC').replace(/。/g,'.');
 const sentenceParts=(value:string)=>value.trim().replace(/\.$/,'').split('.');
 const commaPartsMatch=(value:string,answer:string)=>{
@@ -19,7 +20,7 @@ const commaPartsMatch=(value:string,answer:string)=>{
 
 export function grammarClauseAnswerMatches(practice:GrammarPractice,value:string){
  const candidates=[practice.answer,...(practice.accepted||[])];
- if(!commaSensitive.has(practice.id))return candidates.some(answer=>answerMatches(value,answer));
+ if(!commaSensitive.has(practice.id))return candidates.some(reference=>reference.split(/\s+\/\s+/).some(answer=>answerMatches(terminalFullStop(value),terminalFullStop(answer))));
  // Matching each comma-delimited segment preserves the exact semantic boundary
  // while reusing the existing case, whitespace and contraction handling. A
  // missing, extra or moved comma changes the segments and cannot silently pass.
