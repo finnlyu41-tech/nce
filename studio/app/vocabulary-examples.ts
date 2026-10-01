@@ -2,6 +2,7 @@ import type {NceBookId} from './model';
 import {nce1NationalitiesExamples} from './data/vocabulary-examples-nce1-06';
 import {nce1BrandExamples} from './data/vocabulary-examples-nce1-06-brands';
 import {nce1PeopleAdjectiveExamples} from './data/vocabulary-examples-nce1-08-12';
+import {nce1Lesson14ReviewedExamples} from './data/vocabulary-examples-nce1-14-reviewed';
 
 export type UsageExample={
  id:string;
@@ -180,7 +181,7 @@ const initialVocabularyExamples:UsageExample[]=[
   collocation:{en:'too lazy to cook',zh:'懒得做饭'},origin:'original'},
 ];
 
-export const originalVocabularyExamples:UsageExample[]=[...initialVocabularyExamples,...nce1NationalitiesExamples,...nce1BrandExamples,...nce1PeopleAdjectiveExamples];
+export const originalVocabularyExamples:UsageExample[]=[...initialVocabularyExamples,...nce1NationalitiesExamples,...nce1BrandExamples,...nce1PeopleAdjectiveExamples,...nce1Lesson14ReviewedExamples];
 
 const normalizeWord=(word:string)=>word.normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
 const normalizeText=(text:string)=>text.normalize('NFKC').trim();

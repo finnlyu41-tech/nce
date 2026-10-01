@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "batch": "nce1-examples-5a-lesson14-reviewed",
+  "baseCommit": "b00108b72baf3870d70adea57fe304211975905e",
+  "savedDraft": {
+    "contentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+    "contentSha256": "541194d7198a45c7fb3808cc8b829e193acd324651e95517dae9e40e079648fb",
+    "ledger": "docs/vocabulary-examples-batch5-objects-colours.json",
+    "ledgerSha256": "c642896ab06e87e7769019bed60c5719b7c007aa63af60ab4e89d6b82fca569b",
+    "originalHeadwords": 18,
+    "originalExamples": 43,
+    "extractedHeadwords": 3,
+    "extractedExamples": 9,
+    "originalDraftFilesChanged": false,
+    "unselectedDraftEntriesRegistered": false
+  },
+  "headwords": 3,
+  "senseExamples": 9,
+  "textbookTargetExamples": 3,
+  "dictionaryExtensionExamples": 6,
+  "origin": "original",
+  "humanCertification": false,
+  "reviewBasis": "Root and independent Codex editorial review against the actual original word-list image, exact meaning/POS cues, natural English, Chinese translation and collocations. Final independent hash/exclusion recheck is recorded separately.",
+  "sourceScope": "Source page proves only the word-list association and three printed noun targets; the six extension senses are original aids and are not claimed as targets on this page. No example is a textbook quotation.",
+  "sourceEvidence": {
+    "book": "NCE1",
+    "lesson": 14,
+    "sourcePDFPage": 32,
+    "sourcePrintedPage": 28,
+    "src": "/lesson-pages/c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8.jpg",
+    "sha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+    "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+    "actualImageOpenedByRoot": true,
+    "actualImageOpenedByIndependentReviewer": true
+  },
+  "entries": [
+    {
+      "id": "carpet-floor",
+      "word": "carpet",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 地毯",
+      "excludedMeaningLabels": [
+        "vt. 铺以地毯",
+        "n. 地毯状物"
+      ],
+      "teachingDefinition": "n. 地毯",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "f8bcd508bb9db8afb6cbd134f8976793cfb882a91ea1c2760e7836af9910c9b5",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "地毯",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "carpet",
+        "ipa": "ˈkɑːpɪt",
+        "meaning": "n. 地毯, 地毯状物\nvt. 铺以地毯, 铺盖"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "原表n.地毯；用吸尘器清理地毯，after因果/时序与crumbs中译吻合。"
+    },
+    {
+      "id": "carpet-cover-floor",
+      "word": "carpet",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "vt.",
+      "meaningForCheck": "vt. 铺以地毯",
+      "excludedMeaningLabels": [
+        "n. 地毯",
+        "n. 地毯状物",
+        "vt. 铺盖",
+        "vt. 斥责"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "reviewNotes": "仅审读给实际地面铺地毯的动词义，不扩展为一切铺盖或斥责的用法。",
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "65b43387b06f0abdf45037b6233c90f6befca1b5d3aef0d9fbf4297b0c720853",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "地毯",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "carpet",
+        "ipa": "ˈkɑːpɪt",
+        "meaning": "n. 地毯, 地毯状物\nvt. 铺以地毯, 铺盖"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "扩展只限实际地面铺地毯的动词；楼梯脚步声目的与quiet对应。添加完整自义项cue，排除泛铺盖/斥责。"
+    },
+    {
+      "id": "case-luggage",
+      "word": "case",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 箱子",
+      "excludedMeaningLabels": [
+        "n. 情况",
+        "n. 病例",
+        "n. 案件",
+        "n. 案例",
+        "vt. 装箱"
+      ],
+      "teachingDefinition": "n. 箱子",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "reviewNotes": "原书箱子，在本原创情境中为英式英语的行李箱；不把 in this case 的情况义混入例句。",
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "b7a06efb77b079ac47741a04f905550af133d0148cff52a74c4cea1fb9745e5a",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "箱子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "case",
+        "ipa": "keɪs",
+        "meaning": "n. 情形, 情况, 箱, 容器, 事实, 病例, 案例, 框子\nvt. 装箱, 包盖"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "原表n.箱子，本句采用行李箱情境；my/our旅程关系在中译保留，排除情况/案件/病例。"
+    },
+    {
+      "id": "case-protective-container",
+      "word": "case",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 保护盒",
+      "excludedMeaningLabels": [
+        "n. 情况",
+        "n. 病例",
+        "n. 案件",
+        "n. 事实",
+        "n. 容器",
+        "n. 盒子",
+        "n. 容器（化学反应罐）"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "207f39f332aaea1e1c3b24656d74c70305c4f1d009cb35dae8a1459036f109d2",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "箱子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "case",
+        "ipa": "keɪs",
+        "meaning": "n. 情形, 情况, 箱, 容器, 事实, 病例, 案例, 框子\nvt. 装箱, 包盖"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "扩展仅具体保护盒/眼镜盒，break译损坏，不添加跌落；泛容器或普通盒子不能确证保护义。"
+    },
+    {
+      "id": "case-situation",
+      "word": "case",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 情况",
+      "excludedMeaningLabels": [
+        "n. 箱子",
+        "n. 容器",
+        "n. 病例",
+        "n. 案件"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "6095655c5b72ad86360ac38cc7b22037aef274b1878a6c91a9cc93d9ae3ba2d5",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "箱子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "case",
+        "ipa": "keɪs",
+        "meaning": "n. 情形, 情况, 箱, 容器, 事实, 病例, 案例, 框子\nvt. 装箱, 包盖"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "in this case是情形/情况；比较坐火车和开车费用，不把箱子义混入。"
+    },
+    {
+      "id": "case-legal-proceeding",
+      "word": "case",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 案件",
+      "excludedMeaningLabels": [
+        "n. 箱子",
+        "n. 病例",
+        "n. 情况",
+        "n. 案例"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "reviewNotes": "现词典的案例粗标不足以确证诉讼；此条只匹配显式案件/诉讼，不把任何案例标签当作法律义。",
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "1a34f68dcd1c38baa7d2b15557d1aef09a6ace1ccda01cce5204114ecb0b1988",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "箱子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "case",
+        "ipa": "keɪs",
+        "meaning": "n. 情形, 情况, 箱, 容器, 事实, 病例, 案例, 框子\nvt. 装箱, 包盖"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "court/heard/evidence确证法律案件；当前粗词典案例不确证法律义，显式案件/诉讼才匹配。"
+    },
+    {
+      "id": "case-medical-occurrence",
+      "word": "case",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 病例",
+      "excludedMeaningLabels": [
+        "n. 箱子",
+        "n. 容器",
+        "n. 情况",
+        "n. 案件"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "69b5a62753b6c36002ece7c9b709a2a8926cfab10e3b936bc99e34cdf00ce203",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "箱子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "case",
+        "ipa": "keɪs",
+        "meaning": "n. 情形, 情况, 箱, 容器, 事实, 病例, 案例, 框子\nvt. 装箱, 包盖"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "fictional诊所报告新增flu病例，three/week中译保留；不构成医疗建议或事实报告。"
+    },
+    {
+      "id": "dog-animal",
+      "word": "dog",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 狗",
+      "excludedMeaningLabels": [
+        "n. 坏蛋",
+        "vt. 跟踪"
+      ],
+      "teachingDefinition": "n. 狗",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "6568c8d60089af0fbbfb98a8d97b2e145b91e6b21abdabee2d45bab6d36f29d5",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "狗",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "dog",
+        "ipa": "dɒɡ",
+        "meaning": "n. 狗, 坏蛋\nvt. 跟踪, 尾随"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "原表n.狗；the shopping为买来的东西，译文保留our/gate，不补未明说的车；搭配our dog。"
+    },
+    {
+      "id": "dog-follow-persistently",
+      "word": "dog",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "vt.",
+      "meaningForCheck": "vt. 尾随",
+      "excludedMeaningLabels": [
+        "n. 狗",
+        "n. 坏蛋"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source"
+      ],
+      "sourcePDFPage": 32,
+      "sourcePrintedPage": 28,
+      "reviewNotes": "动词含紧跟不放、令人困扰的语气；不是动物名词义。",
+      "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+      "contentSha256": "291784482c55480f7e1d938976bf6a915d59ec988a96c049673e7089d818f044",
+      "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+      "sourcePrintedMeaning": "狗",
+      "sourcePrintedPartOfSpeech": "n.",
+      "dictionarySnapshot": {
+        "word": "dog",
+        "ipa": "dɒɡ",
+        "meaning": "n. 狗, 坏蛋\nvt. 跟踪, 尾随"
+      },
+      "reviewer": "Root Codex + independent Codex /root/saved_batch_content_audit; no human certification",
+      "editorialReview": "动词dogged表示紧跟尾随；from hotel to airport与中译一致，搭配dog an actor，不宣称全部动词义。"
+    }
+  ],
+  "independentReview": {
+    "reviewer": "Independent Codex /root/saved_batch_content_audit",
+    "status": "passed-canonical-headword-scope",
+    "recordedAt": "2026-10-01T20:42:40.446Z",
+    "report": "docs/verification/vocabulary-independent-review-batch5a.json",
+    "humanCertification": false
+  }
+}

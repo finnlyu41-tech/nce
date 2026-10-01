@@ -1,0 +1,33 @@
+import type {UsageExample} from '../vocabulary-examples';
+
+// Original usage examples. teachingSources identify the word-list association,
+// not the source of these sentences. Dictionary extensions are separate senses.
+export const nce1Lesson14ReviewedExamples:UsageExample[]=[
+ {id:'carpet-floor',word:'carpet',partOfSpeech:'n.',sense:'地毯',matches:['地毯'],teachingDefinition:'n. 地毯',teachingSources:[{book:'NCE1',lesson:14}],
+  en:'We vacuumed the carpet after the children spilled biscuit crumbs on it.',zh:'孩子们把饼干屑撒到地毯上后，我们用吸尘器清理了它。',
+  collocation:{en:'vacuum the carpet',zh:'用吸尘器清理地毯'},origin:'original'},
+ {id:'carpet-cover-floor',word:'carpet',partOfSpeech:'vt.',sense:'给地面铺地毯',matches:['铺以地毯','铺地毯','给地面铺地毯'],teachingSources:[{book:'NCE1',lesson:14}],
+  en:'They carpeted the stairs to make them quieter to walk on.',zh:'他们给楼梯铺了地毯，使上下楼时的脚步声小一些。',
+  collocation:{en:'carpet the stairs',zh:'给楼梯铺地毯'},origin:'original'},
+ {id:'case-luggage',word:'case',partOfSpeech:'n.',sense:'箱子；行李箱',matches:['箱子','行李箱','箱'],teachingDefinition:'n. 箱子',teachingSources:[{book:'NCE1',lesson:14}],
+  en:'I packed my case the night before our train journey.',zh:'我们乘火车出行的前一晚，我收拾好了行李箱。',
+  collocation:{en:'pack a case',zh:'收拾行李箱'},origin:'original'},
+ {id:'case-protective-container',word:'case',partOfSpeech:'n.',sense:'保护盒；眼镜盒（存放与保护物品）',matches:['保护盒','眼镜盒','保护用的容器'],teachingSources:[{book:'NCE1',lesson:14}],
+  en:"I keep my glasses in a hard case so they won't break in my bag.",zh:'我把眼镜放在硬质眼镜盒里，免得它们在包中损坏。',
+  collocation:{en:'a hard case',zh:'硬质保护盒'},origin:'original'},
+ {id:'case-situation',word:'case',partOfSpeech:'n.',sense:'情况；情形',matches:['情况','情形'],teachingSources:[{book:'NCE1',lesson:14}],
+  en:'In this case, taking the train will be cheaper than driving.',zh:'在这种情况下，坐火车会比开车便宜。',
+  collocation:{en:'in this case',zh:'在这种情况下'},origin:'original'},
+ {id:'case-legal-proceeding',word:'case',partOfSpeech:'n.',sense:'法律案件；诉讼',matches:['案件','诉讼'],teachingSources:[{book:'NCE1',lesson:14}],
+  en:'The court heard the case after both sides submitted their evidence.',zh:'双方提交证据后，法院审理了这起案件。',
+  collocation:{en:'hear a case',zh:'审理案件'},origin:'original'},
+ {id:'case-medical-occurrence',word:'case',partOfSpeech:'n.',sense:'病例',matches:['病例'],teachingSources:[{book:'NCE1',lesson:14}],
+  en:'The clinic reported three new cases of flu this week.',zh:'诊所报告本周新增三例流感病例。',
+  collocation:{en:'new cases of flu',zh:'新增流感病例'},origin:'original'},
+ {id:'dog-animal',word:'dog',partOfSpeech:'n.',sense:'狗',matches:['狗'],teachingDefinition:'n. 狗',teachingSources:[{book:'NCE1',lesson:14}],
+  en:'Our dog waited by the gate while we unloaded the shopping.',zh:'我们卸下买来的东西时，我们家的狗在大门旁等着。',
+  collocation:{en:'our dog',zh:'我们家的狗'},origin:'original'},
+ {id:'dog-follow-persistently',word:'dog',partOfSpeech:'vt.',sense:'不断跟踪；尾随',matches:['跟踪','尾随'],teachingSources:[{book:'NCE1',lesson:14}],
+  en:'Reporters dogged the actor from the hotel to the airport.',zh:'记者们从酒店一直尾随这名演员到机场。',
+  collocation:{en:'dog an actor',zh:'尾随一名演员'},origin:'original'},
+];

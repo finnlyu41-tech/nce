@@ -50,6 +50,13 @@ assert.deepEqual(m.examplesForMeaning('short','adj. 简短的'),[]);
 assert.deepEqual(m.examplesForMeaning('thin','adj. 稀薄的'),[]);
 assert.equal(m.reviewedTeachingDefinition('Fiat',[{book:'NCE1',lesson:6}]),'n. 菲亚特（汽车品牌）');
 assert.equal(m.reviewedTeachingDefinition('Fiat',[{book:'NCE2',lesson:87}]),'','Unrelated source cannot override a dictionary sense');
+for(const [word,meaning,id] of [['carpet','n. 地毯','carpet-floor'],['case','n. 箱子','case-luggage'],['dog','n. 狗','dog-animal']]){
+ assert.equal(m.reviewedTeachingDefinition(word,[{book:'NCE1',lesson:14}]),meaning);
+ assert.deepEqual(m.examplesForMeaning(word,meaning).map(example=>example.id),[id],'Printed noun targets cannot select an extension');
+ assert.equal(m.reviewedTeachingDefinition(word,[{book:'NCE1',lesson:13}]),'','Word-list association does not certify the previous lesson');
+}
+assert.deepEqual(m.examplesForMeaning('case','n. 容器（化学反应罐）'),[],'A coarse container label cannot certify the protective-case sense');
+assert.deepEqual(m.examplesForMeaning('case','n. 案例'),[],'A coarse example-case label cannot certify a court case');
 const ledger=JSON.parse(await readFile(new URL('docs/vocabulary-examples-batch2.json',root),'utf8'));
 assert.equal(new Set(ledger.entries.map(item=>item.word)).size,ledger.headwords);
 assert.equal(ledger.entries.length,ledger.senseExamples);

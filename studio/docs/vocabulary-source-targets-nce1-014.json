@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "scope": "All three printed NCE1 Lesson 14 headwords and their noun target meanings only; no certification of every dictionary sense or unrelated source occurrence.",
+  "source": {
+    "book": "NCE1",
+    "lesson": 14
+  },
+  "sourcePDFPage": 32,
+  "sourcePrintedPage": 28,
+  "sourcePageSha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+  "completeWordList": true,
+  "review": "Root and independent Codex read the actual source word-list image and confirmed case/carpet/dog, printed n. and target meanings. No human teacher certification.",
+  "humanCertification": false,
+  "entries": [
+    {
+      "word": "case",
+      "targetExampleIds": [
+        "case-luggage"
+      ],
+      "checkedMeaning": "n. 箱子",
+      "sourcePrintedMeaning": "箱子",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "carpet",
+      "targetExampleIds": [
+        "carpet-floor"
+      ],
+      "checkedMeaning": "n. 地毯",
+      "sourcePrintedMeaning": "地毯",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "dog",
+      "targetExampleIds": [
+        "dog-animal"
+      ],
+      "checkedMeaning": "n. 狗",
+      "sourcePrintedMeaning": "狗",
+      "sourcePrintedPartOfSpeech": "n."
+    }
+  ]
+}

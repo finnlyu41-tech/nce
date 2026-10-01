@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "batch": "nce1-examples-5a-lesson14-reviewed",
+  "recordedAt": "2026-10-01T20:38:41.664Z",
+  "baseCommit": "b00108b72baf3870d70adea57fe304211975905e",
+  "branch": "codex/vocabulary-review-20261001-batch5a",
+  "worktree": "english-vocabulary-review-batch5a",
+  "published": false,
+  "remoteWriteAttempted": false,
+  "merged": false,
+  "newHeadwords": 3,
+  "newExamples": 9,
+  "textbookTargetExamples": 3,
+  "extensionExamples": 6,
+  "counts": {
+    "textbookLessons": 348,
+    "textbookTerms": 3347,
+    "textbookOccurrences": 3615,
+    "bilingualCandidateTerms": 3047,
+    "bilingualCandidateOccurrences": 3267,
+    "originalHeadwords": 74,
+    "originalSenseExamples": 108,
+    "recordedReviewedOriginalHeadwords": 74,
+    "recordedReviewedOriginalSenseExamples": 108,
+    "originalsNeedingReview": 0,
+    "textbookTermsWithoutOriginalTableEntry": 3273,
+    "textbookTermsWithAnyAuthoredEntryIncludingIELTS": 75,
+    "textbookTermsWithoutAnyAuthoredEntryIncludingIELTS": 3272,
+    "textbookTermsWithCandidateOrIndexedMeaningMatchedOriginal": 3104,
+    "textbookTermsWithoutCandidateOrIndexedMeaningMatchedOriginal": 243,
+    "candidateOnlyWithoutRecordedReviewedOriginal": 3032,
+    "ieltsSeedEntries": 12,
+    "ieltsSeedDistinctHeadwords": 12,
+    "ieltsTextbookHeadwordOverlap": 1,
+    "ieltsOriginalTableOverlap": 0,
+    "authoredHeadwordUnionIncludingIELTS": 86,
+    "unionOfTextbookAndIELTSHeadwords": 3358,
+    "sourceOccurrencesWithExactTeachingSourceMetadata": 30,
+    "recordedReviewedIdentifiedSourceTargetSenses": 30,
+    "confirmedSourceTargetSenseDenominator": null,
+    "fullyReviewedSourceOccurrenceDenominator": 3615,
+    "fullyReviewedSourceOccurrences": 16,
+    "textbookTermsWithCandidateOrSourceDisplayedOriginal": 3106,
+    "textbookTermsWithoutCandidateOrSourceDisplayedOriginal": 241
+  },
+  "byBook": {
+    "NCE1": {
+      "occurrences": 904,
+      "terms": 864,
+      "bilingualCandidateOccurrences": 611,
+      "termsWithBilingualCandidate": 587,
+      "originalHeadwords": 74,
+      "termsWithoutCandidateOrIndexedOriginal": 196,
+      "termsWithoutCandidateOrDisplayedOriginal": 194,
+      "firstSourceAssignedGapTerms": 194,
+      "occurrencesWithExactTeachingSourceMetadata": 30,
+      "confirmedSourceTargetSenses": 30,
+      "confirmedSourceTargetSenseDenominator": null
+    },
+    "NCE2": {
+      "occurrences": 861,
+      "terms": 838,
+      "bilingualCandidateOccurrences": 827,
+      "termsWithBilingualCandidate": 806,
+      "originalHeadwords": 5,
+      "termsWithoutCandidateOrIndexedOriginal": 26,
+      "termsWithoutCandidateOrDisplayedOriginal": 26,
+      "firstSourceAssignedGapTerms": 26,
+      "occurrencesWithExactTeachingSourceMetadata": 0,
+      "confirmedSourceTargetSenses": 0,
+      "confirmedSourceTargetSenseDenominator": null
+    },
+    "NCE3": {
+      "occurrences": 1059,
+      "terms": 1047,
+      "bilingualCandidateOccurrences": 1046,
+      "termsWithBilingualCandidate": 1034,
+      "originalHeadwords": 0,
+      "termsWithoutCandidateOrIndexedOriginal": 13,
+      "termsWithoutCandidateOrDisplayedOriginal": 13,
+      "firstSourceAssignedGapTerms": 13,
+      "occurrencesWithExactTeachingSourceMetadata": 0,
+      "confirmedSourceTargetSenses": 0,
+      "confirmedSourceTargetSenseDenominator": null
+    },
+    "NCE4": {
+      "occurrences": 791,
+      "terms": 781,
+      "bilingualCandidateOccurrences": 783,
+      "termsWithBilingualCandidate": 773,
+      "originalHeadwords": 0,
+      "termsWithoutCandidateOrIndexedOriginal": 8,
+      "termsWithoutCandidateOrDisplayedOriginal": 8,
+      "firstSourceAssignedGapTerms": 8,
+      "occurrencesWithExactTeachingSourceMetadata": 0,
+      "confirmedSourceTargetSenses": 0,
+      "confirmedSourceTargetSenseDenominator": null
+    }
+  },
+  "compiledContentInputHashes": {
+    "app/ielts-flashcard-examples.ts": "614efe8a7352915f8f5f4286638189df805257717ee9ba18bd4f303959ce7491",
+    "app/nce-utils.ts": "305551097bb84a2a07e44ef545fc03e81bbd756e53daa0066086e9d61df0637b",
+    "app/vocabulary-examples.ts": "ca199f9b82b569988a5deb654ca9e3e86581a4c11175bfff5bcdb8f89484be14",
+    "app/textbook-vocabulary.ts": "c722dc34718c92522838abaffa8ade2ad793428f2a5f269429c1e6d1a5991eba",
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/data/vocabulary-examples-nce1-14-reviewed.ts": "b9b517d34148410c57c2157e7bd9b71854d559a85bb005416cf8374d37c3de8f",
+    "app/data/vocabulary-examples-nce1-06-brands.ts": "c97ed9eb0be130fc31b6fe92ca7dd73770e816a8009640f1ba1390ef2ae2f8c6",
+    "app/data/vocabulary-examples-nce1-06.ts": "035c58a9352c9cf18d8fb957d8896412a72f8dbfb7e3520f3114a907eb516330",
+    "app/data/vocabulary-examples-nce1-08-12.ts": "422ab6c2e94defd56048423c189ebe5d27a2dcdac36abef87d351ce80b26c2f8"
+  },
+  "frozenImplementationHashes": {
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/flashcards.ts": "b7327bae677085b3321bc54e9e7540deb64c60a0c79f780bd7800d9df8e44333",
+    "app/flashcard-types.ts": "f001cd06ca977a1188b176c8eff664a7d07ef851fbead642864626694222fd7f",
+    "app/flashcard-ui.tsx": "0e56924938c929eede02889ecbab9aba8b7d3e7a470e6a238a44ba1c20331749",
+    "app/progress-save.tsx": "51777b9bb7ce2a6ae75c9cefe2fcf57a9eda8eea3aa9eae2ec8a6edac5f6579b",
+    "app/textbook-vocabulary-ui.tsx": "bf85c23f2f5a07b72c3a3222da1e2381f816b12c04ee838df53808d1ae29fb6e",
+    "app/word-lookup.tsx": "f8c0dd0f91ba985cf6df09b463bfb2beb96f5bac9b78ed65bad603cadcfff619",
+    "pnpm-lock.yaml": "22336ed8eb4954d3877fc49982f153f2cdc19f45c554106d378c7b136607eb3f"
+  },
+  "frozenImplementationUnchanged": true,
+  "previous99ExamplesFrozenByRegisteredContentHash": true,
+  "originalSavedDraftFileHashesUnchanged": 10,
+  "unselectedSavedDrafts": {
+    "headwordUnits": 147,
+    "examples": 217,
+    "basis": "Subtract this selected three-headword/nine-example group from the prior saved-fragment ledger total of 150 headword units / 226 examples; not a new global unique-headword denominator.",
+    "reviewed": false,
+    "registered": false,
+    "countedAsFinished": false
+  },
+  "sourceInventory": {
+    "path": "docs/vocabulary-source-targets-nce1-014.json",
+    "sha256": "74045734433fc02ce1154b67cc13810534053699d5dbb39fc1da1a015f9c0d4b",
+    "sourceWords": 3,
+    "targetSenses": 3,
+    "completeWordList": true,
+    "globalTargetSenseDenominator": null,
+    "fullyInventoriedSourceWordUnits": 16,
+    "totalSourceWordUnits": 3615,
+    "sourceWordUnitsRemainingToEnumerate": 3599
+  },
+  "checksPassed": [
+    "corepack pnpm verify:vocabulary-examples",
+    "corepack pnpm verify:flashcards",
+    "corepack pnpm check",
+    "corepack pnpm exec eslint app/data/vocabulary-examples-nce1-14-reviewed.ts app/vocabulary-examples.ts scripts/test-vocabulary-examples.mjs scripts/test-flashcard-sources.mjs",
+    "node scripts/audit-vocabulary-coverage.mjs --output-subdir=batch5a",
+    "corepack pnpm package:online",
+    "corepack pnpm verify:online",
+    "corepack pnpm package:static",
+    "corepack pnpm verify:progress",
+    "git diff --check",
+    "All nine self-senses and registered positive/excluded labels",
+    "Three real lookup add callbacks preserve the source noun target while an extension remains visible"
+  ],
+  "logHashes": [
+    {
+      "path": "work/examples-batch5a.log",
+      "command": "corepack pnpm verify:vocabulary-examples",
+      "sha256": "a23a81efdcff1e1b812b6a4eca9ef7799dc5100fc0237a6d915d07e1055e7211"
+    },
+    {
+      "path": "work/flashcards-batch5a.log",
+      "command": "corepack pnpm verify:flashcards",
+      "sha256": "52d2cd7b113f79c4ff7500d39f482307d00bf87e145869f220b0cbd50a204db7"
+    },
+    {
+      "path": "work/types-batch5a.log",
+      "command": "corepack pnpm check",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "work/lint-batch5a.log",
+      "command": "corepack pnpm exec eslint app/data/vocabulary-examples-nce1-14-reviewed.ts app/vocabulary-examples.ts scripts/test-vocabulary-examples.mjs scripts/test-flashcard-sources.mjs",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/audit-batch5a.log",
+      "command": "node scripts/audit-vocabulary-coverage.mjs --output-subdir=batch5a",
+      "sha256": "4f4e47c95aa48eec934dc7fd34f263c80969aa7cd76a2c7380979b44d581263a"
+    },
+    {
+      "path": "work/build-online-batch5a.log",
+      "command": "corepack pnpm package:online",
+      "sha256": "8e2d0669787cd923d74d8eb779ce16984f33ee0edf25c9a360fbe544cae2dfda"
+    },
+    {
+      "path": "work/online-batch5a.log",
+      "command": "corepack pnpm verify:online",
+      "sha256": "5ffe70db14d5c7ba163a5e6c50187ca393d90406462ee5b6bc6b054626e14f64"
+    },
+    {
+      "path": "work/build-offline-batch5a.log",
+      "command": "corepack pnpm package:static",
+      "sha256": "eebba52382002327a53ccb2216ae80ee5a6885eafc958412f153177f19bb7fdf"
+    },
+    {
+      "path": "work/progress-batch5a.log",
+      "command": "corepack pnpm verify:progress",
+      "sha256": "38c01c584a3503607065e774f24a16b759e2dc81e165f698aac948eece91f56c"
+    }
+  ],
+  "onlineFiles": 1950,
+  "materials": 556,
+  "independentReview": {
+    "status": "passed-canonical-headword-scope",
+    "reviewer": "Independent Codex /root/saved_batch_content_audit",
+    "examples": 9,
+    "positiveLabels": 9,
+    "excludedLabels": 34,
+    "sourcePageImageRead": true,
+    "humanCertification": false,
+    "path": "docs/verification/vocabulary-independent-review-batch5a.json",
+    "sha256": "d1ed588aa8ab3146fcc2da0855d43258f7ff683d5215dddf87e6efed29a166c0",
+    "selfSenseLabels": 9,
+    "canonicalLookupCallbacks": 3
+  },
+  "lint": {
+    "targetedModulesPassed": true,
+    "fullUiPassed": false,
+    "uiUnchangedFromPreviouslyComparedBase": true,
+    "inheritedBaselineErrors": 3,
+    "inheritedBaselineWarnings": 1
+  },
+  "notClaimed": [
+    "All textbook or dictionary senses complete",
+    "All saved 150-word drafts reviewed",
+    "Browser/320/390 acceptance",
+    "Actual speech/audio acceptance",
+    "Named human teacher certification",
+    "A real elapsed day/timezone trial",
+    "Push, PR, merge or deployment"
+  ],
+  "knownLimitations": [
+    {
+      "id": "inflected-carpets-target-binding",
+      "result": "not-passed-and-not-counted",
+      "evidence": "docs/verification/vocabulary-independent-review-batch5a.json",
+      "scope": "Canonical printed headwords only in this batch; source-constrained lemma support remains pending."
+    }
+  ],
+  "additionalInputHashes": {
+    "docs/vocabulary-examples-batch5a-lesson14.json": "1ffaf38410a8fcec01f7e8f4ce86eeace57b4123da62dd305f2408890cf0c507",
+    "docs/vocabulary-source-targets-nce1-014.json": "74045734433fc02ce1154b67cc13810534053699d5dbb39fc1da1a015f9c0d4b",
+    "docs/vocabulary-examples-review-index.json": "0427e492e1026b4d0df02e91cb298f0a622094b80645b9ce0c7db85a5ce48f1a",
+    "scripts/test-vocabulary-examples.mjs": "50f822572fee0d624ba680d92165237f57f4a1e7bc1d790c22f0ab0ad025c6b8",
+    "scripts/test-flashcard-sources.mjs": "f25d763753ce0c26bc0f70f80c96ebce7a51443fb3de2b40b4b62983a3b025d1"
+  }
+}

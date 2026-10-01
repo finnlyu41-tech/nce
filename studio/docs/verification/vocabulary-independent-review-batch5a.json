@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "batch": "nce1-examples-5a-lesson14-reviewed",
+  "recordedAt": "2026-10-01T20:42:40.446Z",
+  "reviewer": "Independent Codex /root/saved_batch_content_audit",
+  "result": "passed-canonical-headword-scope",
+  "headwords": 3,
+  "examples": 9,
+  "targetExamples": 3,
+  "extensionExamples": 6,
+  "contentFile": "app/data/vocabulary-examples-nce1-14-reviewed.ts",
+  "contentFileSha256": "b9b517d34148410c57c2157e7bd9b71854d559a85bb005416cf8374d37c3de8f",
+  "ledger": "docs/vocabulary-examples-batch5a-lesson14.json",
+  "ledgerSha256": "1ffaf38410a8fcec01f7e8f4ce86eeace57b4123da62dd305f2408890cf0c507",
+  "entries": [
+    {
+      "id": "carpet-floor",
+      "scope": "textbook-target",
+      "contentSha256": "f8bcd508bb9db8afb6cbd134f8976793cfb882a91ea1c2760e7836af9910c9b5",
+      "result": "passed",
+      "conclusion": "Cleaning-carpet context, translation and collocation agree."
+    },
+    {
+      "id": "carpet-cover-floor",
+      "scope": "dictionary-extension",
+      "contentSha256": "65b43387b06f0abdf45037b6233c90f6befca1b5d3aef0d9fbf4297b0c720853",
+      "result": "passed",
+      "conclusion": "Natural stair-carpet usage; full self-sense cue now matches; broad covering and scolding are excluded."
+    },
+    {
+      "id": "case-luggage",
+      "scope": "textbook-target",
+      "contentSha256": "b7a06efb77b079ac47741a04f905550af133d0148cff52a74c4cea1fb9745e5a",
+      "result": "passed",
+      "conclusion": "Luggage context and pack a case agree; Chinese keeps our journey."
+    },
+    {
+      "id": "case-protective-container",
+      "scope": "dictionary-extension",
+      "contentSha256": "207f39f332aaea1e1c3b24656d74c70305c4f1d009cb35dae8a1459036f109d2",
+      "result": "passed",
+      "conclusion": "Protective-glasses case context; Chinese does not add falling; generic container/box labels are excluded."
+    },
+    {
+      "id": "case-situation",
+      "scope": "dictionary-extension",
+      "contentSha256": "6095655c5b72ad86360ac38cc7b22037aef274b1878a6c91a9cc93d9ae3ba2d5",
+      "result": "passed",
+      "conclusion": "In this case denotes the situation; train/driving cost comparison agrees."
+    },
+    {
+      "id": "case-legal-proceeding",
+      "scope": "dictionary-extension",
+      "contentSha256": "1a34f68dcd1c38baa7d2b15557d1aef09a6ace1ccda01cce5204114ecb0b1988",
+      "result": "passed",
+      "conclusion": "Court, evidence and hear a case support a judicial case; generic 案例 is excluded."
+    },
+    {
+      "id": "case-medical-occurrence",
+      "scope": "dictionary-extension",
+      "contentSha256": "69b5a62753b6c36002ece7c9b709a2a8926cfab10e3b936bc99e34cdf00ce203",
+      "result": "passed",
+      "conclusion": "Three new flu cases and this week agree; this is a fictional language example."
+    },
+    {
+      "id": "dog-animal",
+      "scope": "textbook-target",
+      "contentSha256": "6568c8d60089af0fbbfb98a8d97b2e145b91e6b21abdabee2d45bab6d36f29d5",
+      "result": "passed",
+      "conclusion": "Our/gate preserved; the shopping denotes purchased things, with no added vehicle."
+    },
+    {
+      "id": "dog-follow-persistently",
+      "scope": "dictionary-extension",
+      "contentSha256": "291784482c55480f7e1d938976bf6a915d59ec988a96c049673e7089d818f044",
+      "result": "passed",
+      "conclusion": "Persistent following of an actor, translation and dog an actor agree."
+    }
+  ],
+  "sourcePage": {
+    "actuallyOpened": true,
+    "book": "NCE1",
+    "lesson": 14,
+    "pdfPage": 32,
+    "printedPage": 28,
+    "sha256": "c578374b5e4af684834ad5bc90ed7ad9711dbb1792921ffc330fb74fc4c2f8c8",
+    "completePrintedWordList": [
+      {
+        "word": "case",
+        "partOfSpeech": "n.",
+        "meaning": "箱子"
+      },
+      {
+        "word": "carpet",
+        "partOfSpeech": "n.",
+        "meaning": "地毯"
+      },
+      {
+        "word": "dog",
+        "partOfSpeech": "n.",
+        "meaning": "狗"
+      }
+    ]
+  },
+  "checks": {
+    "method": "Read-only source image inspection and in-memory esbuild write:false execution of the real source functions/TSX with hook stubs.",
+    "contentHashesPassed": 9,
+    "selfSenseLabelsPassed": 9,
+    "positiveLabelsPassed": 9,
+    "excludedLabelsPassed": 34,
+    "canonicalLookupCallbacksPassed": 3,
+    "canonicalWords": [
+      "case",
+      "carpet",
+      "dog"
+    ],
+    "extensionContextPreserved": true,
+    "nounTargetOriginalSaved": true
+  },
+  "knownLimitation": {
+    "status": "not-passed-and-not-counted",
+    "input": {
+      "word": "carpets",
+      "source": {
+        "book": "NCE1",
+        "lesson": 14
+      },
+      "resolvedDictionaryHeadword": "carpet",
+      "selectedExampleId": "carpet-cover-floor"
+    },
+    "actualSaved": {
+      "word": "carpets",
+      "ipa": "ˈkɑːpɪt",
+      "meaning": "n. 地毯, 地毯状物\nvt. 铺以地毯, 铺盖",
+      "example": "They carpeted the stairs to make them quieter to walk on.",
+      "exampleTranslation": "他们给楼梯铺了地毯，使上下楼时的脚步声小一些。",
+      "sources": [
+        {
+          "kind": "nce",
+          "book": "NCE1",
+          "lesson": 14
+        }
+      ]
+    },
+    "reason": "Current source-reviewed target binding uses the surface selection word; it does not map this inflected form to a reviewed lemma target. Unreviewed-form dictionary fallback remains in place.",
+    "nextReviewScope": "A source-constrained lemma/inflection design; do not treat every raw dictionary label or morphology hint as a confirmed target sense."
+  },
+  "humanCertification": false,
+  "browserVerified": false,
+  "actualAudioVerified": false,
+  "personalProgressRead": false,
+  "reviewerWroteFiles": false,
+  "unselectedDraftsReviewed": false,
+  "unselectedDraftsCountedAsComplete": false
+}

@@ -121,6 +121,9 @@ for(const [word,lesson,raw,selected,target] of [
  ['his',12,'pron. 他的',{en:'This bag is mine, and the one beside it is his.',zh:'这个包是我的，旁边那个是他的。'},'his-possessive-determiner'],
  ['old',10,'n. 以前\\na. 年老的, 旧的',{en:'This old coat has a torn pocket, but it is still warm.',zh:'这件旧大衣的一个口袋破了，但穿着仍然暖和。'},'old-age'],
  ['make',6,'vt. 制造, 安排',{en:'Making a bookcase',zh:'制作一个书架',source:{book:'NCE1',lesson:37}},'make-product-brand'],
+ ['case',14,'n. 情形, 情况, 箱, 容器, 事实, 病例, 案例',{en:'The court heard the case after both sides submitted their evidence.',zh:'双方提交证据后，法院审理了这起案件。'},'case-luggage'],
+ ['carpet',14,'n. 地毯, 地毯状物\nvt. 铺以地毯, 铺盖',{en:'They carpeted the stairs to make them quieter to walk on.',zh:'他们给楼梯铺了地毯，使上下楼时的脚步声小一些。'},'carpet-floor'],
+ ['dog',14,'n. 狗, 坏蛋\nvt. 跟踪, 尾随',{en:'Reporters dogged the actor from the hotel to the airport.',zh:'记者们从酒店一直尾随这名演员到机场。'},'dog-animal'],
 ]){
  const selection={word,example:selected.en,exampleTranslation:selected.zh,exampleSource:selected.source,sources:[{kind:'nce',book:'NCE1',lesson}]};
  reset([selection,{word,meaning:raw},false,'',false],{});let saved;
