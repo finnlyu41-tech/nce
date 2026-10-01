@@ -1,0 +1,1014 @@
+{
+  "batch": "nce1-examples-4-people-adjectives",
+  "baseCommit": "b46812edff731dabe9c302d2147698c34f132621",
+  "headwords": 14,
+  "senseExamples": 24,
+  "textbookTargetExamples": 14,
+  "dictionaryExtensionExamples": 10,
+  "origin": "original",
+  "reviewBasis": "Codex editorial source-image and content review, with a separate check of each stated sense, part of speech, natural sentence, Chinese translation and collocation. Not a claim of human teacher review or a full dictionary-sense audit.",
+  "sourceBook": {
+    "book": "NCE1",
+    "sourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+    "pdfPageNumbering": "One-based PDF page numbers; corresponding printed page numbers are four lower in these three pages.",
+    "reviewedPDFPages": [
+      20,
+      24,
+      28
+    ],
+    "pageImageSha256Check": "Actual local JPG bytes match the current source-bound lesson-page index."
+  },
+  "dictionarySnapshotSha256": "41d983d5f8017035719842fad2275f949d39e348cdc6f50bf00ae0a9a9cee209",
+  "sourceLabelBoundary": "teachingSources identifies checked textbook word lists for the headword. Original sentences are not textbook quotations or official exam material. Only textbook-target entries have teachingDefinition; extensions do not redefine the course word list.",
+  "compactDictionaryRisks": [
+    {
+      "word": "old",
+      "risk": "The compact dictionary currently starts with n. 以前, 往昔 while the textbook teaches adj. 老的. Use the checked teaching definition in this lesson context; do not rewrite the dictionary or claim the noun line is the target."
+    },
+    {
+      "word": "blouse",
+      "risk": "The dictionary has 宽松的上衣; the actual textbook word-list entry is 女衬衫. The checked target retains the more specific clothing term."
+    },
+    {
+      "word": "her",
+      "risk": "The dictionary combines 她的 and 她. This batch supplies separately labelled possessive-determiner and object-pronoun examples; single-character cues must be whole tokens."
+    },
+    {
+      "word": "his",
+      "risk": "Both uses translate as 他的. An explicit possessive determiner/adjective or pronoun label now selects that grammatical function; an unlabelled meaning remains ambiguous. Chemistry abbreviation excluded."
+    },
+    {
+      "words": [
+        "old",
+        "short",
+        "thin",
+        "sister"
+      ],
+      "risk": "Chinese substring matches can attach 老的 to 古老的, 短的 to 简短的, 薄的 to 稀薄的, or 姐妹 to 姐妹般对待. These are explicit exclusion checks, not silently accepted coverage."
+    }
+  ],
+  "dictionaryUnreviewedMeaningLabels": {
+    "taxi driver": [],
+    "old": [
+      "n. 以前",
+      "n. 往昔",
+      "a. 老练的"
+    ],
+    "short": [
+      "a. 近的",
+      "a. 简短的",
+      "adv. 简短地",
+      "adv. 突然",
+      "n. 扼要",
+      "n. 短片",
+      "n. 缺乏",
+      "vt. 故意少给",
+      "vt. 使短路"
+    ],
+    "tall": [
+      "a. 长的（需核对适用语境）",
+      "a. 夸大的",
+      "adv. 夸大地"
+    ],
+    "thin": [
+      "a. 稀疏的",
+      "a. 稀薄的",
+      "a. 淡的",
+      "a. 弱的",
+      "a. 空洞的",
+      "vt. 使变薄",
+      "vt. 使变细",
+      "vt. 使稀少",
+      "vt. 使淡",
+      "vi. 变薄",
+      "vi. 变细",
+      "vi. 变少",
+      "vi. 变淡",
+      "adv. 薄地",
+      "adv. 稀疏地",
+      "adv. 微弱地"
+    ],
+    "woman": [
+      "n. 女仆（陈旧释义，需审语域）",
+      "a. 女用的",
+      "a. 女性的",
+      "a. 妇女的",
+      "vt. 贬称为女人（陈旧/贬义条目，需审语域）",
+      "vt. 使成女人腔（陈旧/贬义条目，需审语域）"
+    ],
+    "young": [
+      "a. 无经验的",
+      "a. 朝气蓬勃的",
+      "n. 青年们"
+    ],
+    "blouse": [],
+    "brother": [],
+    "father": [
+      "n. 祖先",
+      "n. 长辈",
+      "n. 神父",
+      "n. 创始者",
+      "vt. 当某人的父亲",
+      "vt. 保护",
+      "vt. 创作",
+      "vt. 发明",
+      "vt. 培养"
+    ],
+    "her": [],
+    "his": [
+      "[化] 组氨酸（缩写，不是本课物主形式；未生成英语人称代词例句）"
+    ],
+    "mother": [
+      "n. 修女院长",
+      "vt. 产生",
+      "vt. 照看",
+      "vt. 收养"
+    ],
+    "sister": [
+      "n. 护士",
+      "n. 修女",
+      "vt. 姐妹般对待"
+    ]
+  },
+  "additionalBoundary": "No exhaustive claim is made for specialist usages, religious/group kinship titles, hyphenated compounds or every lesson context. Existing textbook lexical candidates alone are not reviewed-sense coverage.",
+  "entries": [
+    {
+      "id": "taxi-driver-profession",
+      "word": "taxi driver",
+      "source": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 20,
+      "sourcePrintedPage": 16,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "5e6d7336213340a1032950299a363358d03f5713162e7af0eddc3dd690fba75a",
+      "textbookWordListMeaning": "出租汽车司机",
+      "textbookWordListPartOfSpeech": "noun phrase",
+      "meaningForCheck": "出租汽车司机",
+      "excludedMeaningLabels": [
+        "出租汽车",
+        "司机程序",
+        "电影名称"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "出租车司机是职业名词；教材出租汽车司机与词典出租车司机/的士司机同义。英文等候取行李语境、中译及work as职业搭配逐项检查。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "n. 出租汽车司机",
+      "contentSha256": "87e2435f95400df8928c86fabf1976375c97ec4bef41ecb17a99198f2fc000df",
+      "sourcePageSha256": "5e6d7336213340a1032950299a363358d03f5713162e7af0eddc3dd690fba75a"
+    },
+    {
+      "id": "old-age",
+      "word": "old",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "老的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "adj. 老的",
+      "excludedMeaningLabels": [
+        "旧的",
+        "古老的",
+        "老练的",
+        "以前",
+        "往昔"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书教人的年龄。grandfather/is old与年龄一致；中译用年纪大，an old man是年龄搭配。老的不能因子串命中古老的。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "adj. 老的",
+      "contentSha256": "22ebf905b5b7284183b9ce0f5514303d6694c058f88ecc6a749c3724a9f86802",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "old-used",
+      "word": "old",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "老的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "a. 旧的",
+      "excludedMeaningLabels": [
+        "老的",
+        "年长的",
+        "古老的",
+        "老练的"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "物品使用年久或破旧义；破口袋和仍暖和说明物品状态，不能借此证明人的年龄或历史古老义。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "caeb9fc0ef6b243eb11e98ef1d98d808bddac1b0aeef4a304b27aff2cb382b1f",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "old-ancient",
+      "word": "old",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "老的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "a. 古老的",
+      "excludedMeaningLabels": [
+        "老的",
+        "年长的",
+        "旧的",
+        "老练的"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "六百年前建造提供历史年代语境，old castle与古老城堡中译一致；同词与old-age不同义项。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "b241adf8baa6aa73adf76a4fcc65dc51e95721e1cb44e0fb953c7e25145c2872",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "short-height",
+      "word": "short",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "矮的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "adj. 矮的",
+      "excludedMeaningLabels": [
+        "短的",
+        "短期的",
+        "简短的",
+        "少量的"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书short与tall对照的是身高。够不到高层架子支持矮义；too short to reach搭配自然，未暗示短长度。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "adj. 矮的",
+      "contentSha256": "bd1cfdc60554fa417131eb48a9beb86d380dba5aa4a68799eb8e508f1bbe5f8e",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "short-length",
+      "word": "short",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "矮的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "a. 短的",
+      "excludedMeaningLabels": [
+        "矮的",
+        "短期的",
+        "简短的",
+        "少量的",
+        "短片",
+        "使短路"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "线缆与插座距离属于物理长度。too short中译太短；短的不能因子串匹配简短的。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "4e17bc354b8ec70ba9180bcef539bcf7009c20fec4e6ebf76c4cd12f6090348e",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "short-duration",
+      "word": "short",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "矮的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "a. 短期的",
+      "excludedMeaningLabels": [
+        "矮的",
+        "短的",
+        "简短的",
+        "少量的",
+        "短片"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "short break表达持续时间短，中译短暂休息；本例属于常见持续时间义，不是人的身高或文字简短。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "5236e1d7c772946b3de3ec9e4fca96cd16bf6a3ffc741f4afd762e695fd4d21e",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "short-supply",
+      "word": "short",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "矮的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "a. 少量的",
+      "excludedMeaningLabels": [
+        "矮的",
+        "短的",
+        "短期的",
+        "简短的",
+        "短片"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "词典少量的用本例明确限制为供应不足。in short supply是固定搭配，译供应不足；不将short泛化为所有a small quantity用法。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "3ad6728a72437e7b60d2e81f30c124037ccdf6ca126d22037e0adfa1a9b898e6",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "tall-height",
+      "word": "tall",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "高的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "adj. 高的",
+      "excludedMeaningLabels": [
+        "夸大的",
+        "夸大地",
+        "长的"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书高的是身高；长裤腿说明身高语境。tall man及中译相符，未声称覆盖tall tale夸大义。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "adj. 高的",
+      "contentSha256": "f2be919e1901fa9725e77274fb6d550dfae44613f61542899bb88f2b178bd469",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "thin-body",
+      "word": "thin",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "瘦的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "adj. 瘦的",
+      "excludedMeaningLabels": [
+        "薄的",
+        "细的",
+        "稀薄的",
+        "稀疏的",
+        "淡的",
+        "弱的",
+        "空洞的",
+        "使变薄"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书薄/瘦中此课教身材瘦。thin man的描述与瘦削中译对应；句子没有厚度、浓度或体重建议。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "adj. 瘦的",
+      "contentSha256": "3c1909a13e83cf63011d7184451bdc94614ea4c0bba189a7ee7b7bf1c815e908",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "thin-layer",
+      "word": "thin",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "瘦的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "a. 薄的",
+      "excludedMeaningLabels": [
+        "瘦的",
+        "细的",
+        "稀薄的",
+        "稀疏的",
+        "弱的",
+        "空洞的",
+        "使变薄"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "包装玻璃杯的纸层厚度义，a thin layer of paper搭配正确。薄的不能因子串命中稀薄的。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "6567f553acdbdf88943ff815d0ed85ac36911121ee4365d87a8e69d2023bd242",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "thin-wire",
+      "word": "thin",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "瘦的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "a. 细的",
+      "excludedMeaningLabels": [
+        "瘦的",
+        "薄的",
+        "稀薄的",
+        "弱的",
+        "使变细"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "wire小孔语境表达直径细；wire译金属丝而不是无依据的铁丝，搭配a thin wire检查通过。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "9cd0c446dc3f2fcf07f4dabcf0890304eccf3231503d01a88fe01125b2ca716e",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "woman-adult",
+      "word": "woman",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "女人",
+      "textbookWordListPartOfSpeech": "n.",
+      "meaningForCheck": "n. 女人",
+      "excludedMeaningLabels": [
+        "女仆",
+        "女用的",
+        "女性的",
+        "贬称为女人"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书woman是成年女性名词。the woman的指称和中译女士一致；不取词典陈旧女仆或贬义动词条目。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "n. 女人",
+      "contentSha256": "c96f4507c680415fe4364d3d27828eedf659a5f6cd8298894e1be696d5142dc0",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "young-age",
+      "word": "young",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adjective",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "年轻的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "adj. 年轻的",
+      "excludedMeaningLabels": [
+        "无经验的",
+        "朝气蓬勃的",
+        "青年们",
+        "幼小动物",
+        "崽"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书年龄形容词；young violinist中译年轻的小提琴手。首次演出不单独证明无经验义，例句仍明确标年龄。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "adj. 年轻的",
+      "contentSha256": "ac7cbb744daf545647edfdd5e1904e1addcb434d8f54ac33d34c2853e425aa1c",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "young-offspring",
+      "word": "young",
+      "source": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 24,
+      "sourcePrintedPage": 20,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d",
+      "textbookWordListMeaning": "年轻的",
+      "textbookWordListPartOfSpeech": "adj.",
+      "meaningForCheck": "n. 幼小动物",
+      "excludedMeaningLabels": [
+        "年轻的",
+        "无经验的",
+        "朝气蓬勃的",
+        "青年们"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "its young在食物与狐狸语境是动物幼崽的集合名词，不能充当名词前young形容词例。feed its young及中译检查。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "250b0656d34241341e71443b8d70d211c5931c6d64968b70c541b5584525557f",
+      "sourcePageSha256": "e476fc1ee027ddf13b150f842b2486f332b898ef4c58b2224e047494efe8263d"
+    },
+    {
+      "id": "blouse-clothing",
+      "word": "blouse",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "女衬衫",
+      "textbookWordListPartOfSpeech": "n.",
+      "meaningForCheck": "n. 女衬衫",
+      "excludedMeaningLabels": [
+        "外套",
+        "裙子",
+        "夹克"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书比词典宽松的上衣更准确为女衬衫。cotton blouse与裙子搭配的服装语境、中译材质及穿去上班时态检查。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "n. 女衬衫",
+      "contentSha256": "94c6c88be5846415baad4489d217379abe068255a0f75d5f222eb672e0c585ee",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "brother-family",
+      "word": "brother",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "兄，弟",
+      "textbookWordListPartOfSpeech": "n.",
+      "meaningForCheck": "n. 兄，弟",
+      "excludedMeaningLabels": [
+        "兄弟会成员",
+        "修道士",
+        "战友",
+        "弟子"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书兄/弟是同一亲属关系义，可用younger brother表示弟。stabilisers译辅助轮，未扩展宗教或团体称谓。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "n. 兄，弟",
+      "contentSha256": "2d3760743f7ba4472ec11050b742c2e2319c9aca36d2c5f67637a3f15b957875",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "father-parent",
+      "word": "father",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "父亲",
+      "textbookWordListPartOfSpeech": "n.",
+      "meaningForCheck": "n. 父亲",
+      "excludedMeaningLabels": [
+        "祖先",
+        "长辈",
+        "神父",
+        "创始者",
+        "培养",
+        "保护",
+        "发明"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "父亲是家庭关系名词；my father和轮胎检查中译一致，未给词典多种抽象名词/动词义套同一句。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "n. 父亲",
+      "contentSha256": "9fe33f45fa8ddb68310ced494b59e359e0df42bda713329c4e273ee81a951800",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "her-possessive-determiner",
+      "word": "her",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "possessive adjective / determiner",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "她的",
+      "textbookWordListPartOfSpeech": "possessive adjective",
+      "meaningForCheck": "possessive adjective 她的",
+      "excludedMeaningLabels": [
+        "她",
+        "他的",
+        "她们的",
+        "pron. 她的"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书标possessive adjective。her keys后接名词，落钥匙中译与left对应；不可据此当her宾格或独立物主代词hers。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "possessive adjective 她的",
+      "contentSha256": "90626b2489f3b8592b599686b9a997c1b13e6e87203cefa059bba3c945852edb",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "her-object",
+      "word": "her",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "object pronoun",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "她的",
+      "textbookWordListPartOfSpeech": "possessive adjective",
+      "meaningForCheck": "pron. 她",
+      "excludedMeaningLabels": [
+        "她的",
+        "他的",
+        "她们"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "called her中的her为动词宾语。单字她必须完整token；不能匹配她的并把宾格例接到所属义。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "contentSha256": "d60972d98e6a45b25fc0b5ddc2d2612f30009c4253c632c411773e614971fbb9",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "his-possessive-determiner",
+      "word": "his",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "possessive adjective / determiner",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "他的",
+      "textbookWordListPartOfSpeech": "possessive adjective",
+      "meaningForCheck": "possessive adjective 他的",
+      "excludedMeaningLabels": [
+        "他",
+        "她的",
+        "组氨酸",
+        "pron. 他的"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书标possessive adjective。his passport后接名词，zipped pocket译带拉链的口袋。与独立his共享中文他的，靠词性和例句展示语法功能。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "possessive adjective 他的",
+      "matchingBoundary": "Meaning without a grammar label can show both uses; a declared determiner or pronoun label selects the corresponding function. The original global dictionary is not rewritten.",
+      "contentSha256": "f3c2627071b92a7cf25996fb6ee9bb9025c24057761a3271bb34824a9763b292",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "his-possessive-pronoun",
+      "word": "his",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "possessive pronoun",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "他的",
+      "textbookWordListPartOfSpeech": "possessive adjective",
+      "meaningForCheck": "pron. 他的",
+      "excludedMeaningLabels": [
+        "他",
+        "她的",
+        "组氨酸",
+        "possessive adjective 他的"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "is his后的his独立代替his bag，物主代词例。第12课练习另使用his，词表主要标签仍是possessive adjective；本扩展行不冒充另一本教材原句。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "matchingBoundary": "Meaning without a grammar label can show both uses; a declared determiner or pronoun label selects the corresponding function. The original global dictionary is not rewritten.",
+      "contentSha256": "2217b29850a72cc0d47a4402687c74c9b0479a4db75fd46825c621419ae1e76a",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "mother-parent",
+      "word": "mother",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "母亲",
+      "textbookWordListPartOfSpeech": "n.",
+      "meaningForCheck": "n. 母亲",
+      "excludedMeaningLabels": [
+        "修女院长",
+        "产生",
+        "照看",
+        "收养"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "母亲家庭关系名词。is taking an evening class表当前参加课程，中译摄影夜课和my mother搭配检查。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "n. 母亲",
+      "contentSha256": "54a23cf7859f93da456d2dcbda9ff39a04d7abd1ffaf7ade4ee81e3eb882adc6",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    },
+    {
+      "id": "sister-family",
+      "word": "sister",
+      "source": {
+        "book": "NCE1",
+        "lesson": 12
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "noun",
+      "sourcePDFPage": 28,
+      "sourcePrintedPage": 24,
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePageImageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba",
+      "textbookWordListMeaning": "姐，妹",
+      "textbookWordListPartOfSpeech": "n.",
+      "meaningForCheck": "n. 姐，妹",
+      "excludedMeaningLabels": [
+        "护士",
+        "修女",
+        "姐妹般对待"
+      ],
+      "reviewed": [
+        "source word-list image",
+        "target sense and grammatical function",
+        "natural sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "reviewer": "Codex editorial review; not a human teacher certification",
+      "reviewNote": "原书姐/妹是家庭关系义，elder sister表示姐，sent a recipe中译发来食谱。姐妹cue不能命中姐妹般对待。",
+      "contentFile": "app/data/vocabulary-examples-nce1-08-12.ts",
+      "teachingDefinition": "n. 姐，妹",
+      "contentSha256": "83eea387d3e031feefa2a4f7f46d7a99747e66213b051ecb053ac9970f09d9b4",
+      "sourcePageSha256": "49102fcb4bdca58b27ffd82d97bdfdf00fde4da564c8ceb7fba7345f5d8f36ba"
+    }
+  ],
+  "integrationEditorialReview": {
+    "reviewer": "root Codex",
+    "scope": "All 24 English sentences, Chinese translations, parts of speech, source association, collocations and excluded labels",
+    "changes": [
+      "Blouse sentence explicitly says loose to support that stated clothing definition",
+      "Her keys translation keeps leave without inventing an accidental loss",
+      "Possessive determiner and independent pronoun select separate displays under their declared grammar labels"
+    ],
+    "humanCertification": false
+  }
+}

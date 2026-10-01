@@ -10,11 +10,11 @@
     "NCE4": 783,
     "NCE2": 827
   },
-  "originalHeadwords": 57,
-  "originalSenseExamples": 75,
-  "originalsMatchingIndexedDefinitions": 54,
-  "originalsMatchingTeachingOrIndexedDefinitions": 57,
-  "termsWithCandidateOrReviewedOriginal": 3089,
-  "termsWithoutEither": 258,
+  "originalHeadwords": 71,
+  "originalSenseExamples": 99,
+  "originalsMatchingIndexedDefinitions": 68,
+  "originalsMatchingTeachingOrIndexedDefinitions": 71,
+  "termsWithCandidateOrReviewedOriginal": 3103,
+  "termsWithoutEither": 244,
   "ieltsSeedExamples": 12
 }

@@ -117,6 +117,25 @@ for(const [word,raw,expected,id] of [['Fiat','n. 命令, 严命, 许可','n. 菲
  assert.deepEqual(state,before,'Reading or explicitly passing a new teaching word never edits legacy state by itself');
 }
 const fiatEntry={word:'fiat',ipa:'test',meaning:'n. 命令'};
+for(const [word,lesson,raw,expected,id] of [
+ ['old',10,'n. 以前, 往昔\\na. 年老的, 古老的','adj. 老的','old-age'],
+ ['her',12,'pron. 她的, 她','possessive adjective 她的','her-possessive-determiner'],
+ ['his',12,'pron. 他的','possessive adjective 他的','his-possessive-determiner'],
+ ['blouse',12,'n. 宽松的上衣','n. 女衬衫','blouse-clothing'],
+]){
+ const source={book:'NCE1',lesson,title:'',pages:[]},entry={word,meaning:raw};
+ const catalog={lessons:[{...source,key:'NCE1-'+lesson,words:[{word,forms:[]}]}],terms:[{key:word,word,sources:[source]}],entries:1};
+ reset([catalog,'',0,{[word]:entry},false,false,0,null],{view:'words',book:'NCE1',lesson,tab:'book'});let saved;
+ const tree=TextbookVocabularyBrowser({state,onAdd:word=>{saved=word}}),row=find(tree,node=>typeof node.type==='function'&&node.type.name==='VocabularyRow'),rendered=row.type(row.props);
+ const usage=find(rendered,node=>typeof node.type==='function'&&node.type.name==='VocabularyExamples');
+ assert.deepEqual(usage.props.examples.map(example=>example.id),[id],'The word row binds the reviewed source target and grammatical function');
+ find(rendered,node=>node.type==='button'&&node.props.className?.includes('vocabulary-enroll')).props.onClick();
+ assert.equal(saved.meaning,expected);assert.equal(saved.example,usage.props.examples[0].en);assert.equal(h.enrolledChecks[0].meaning,expected);
+ reset([{word,example:'',sources:saved.sources},entry,false,'',false],{});let lookupWord;
+ const lookup=WordLookupProvider({children:null,onAdd:word=>{lookupWord=word}});
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+ assert.equal(lookupWord.meaning,expected);assert.equal(lookupWord.example,saved.example,'The lookup default add preserves the target function');
+}
 reset([{word:'Fiat',example:'',sources:[{kind:'nce',book:'NCE2',lesson:87}]},fiatEntry,false,'',false],{});let unrelatedFiat;
 const unrelatedLookup=WordLookupProvider({children:null,onAdd:word=>{unrelatedFiat=word}});
 find(unrelatedLookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();

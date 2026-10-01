@@ -1,6 +1,7 @@
 import type {NceBookId} from './model';
 import {nce1NationalitiesExamples} from './data/vocabulary-examples-nce1-06';
 import {nce1BrandExamples} from './data/vocabulary-examples-nce1-06-brands';
+import {nce1PeopleAdjectiveExamples} from './data/vocabulary-examples-nce1-08-12';
 
 export type UsageExample={
  id:string;
@@ -179,7 +180,7 @@ const initialVocabularyExamples:UsageExample[]=[
   collocation:{en:'too lazy to cook',zh:'懒得做饭'},origin:'original'},
 ];
 
-export const originalVocabularyExamples:UsageExample[]=[...initialVocabularyExamples,...nce1NationalitiesExamples,...nce1BrandExamples];
+export const originalVocabularyExamples:UsageExample[]=[...initialVocabularyExamples,...nce1NationalitiesExamples,...nce1BrandExamples,...nce1PeopleAdjectiveExamples];
 
 const normalizeWord=(word:string)=>word.normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
 const normalizeText=(text:string)=>text.normalize('NFKC').trim();
@@ -189,9 +190,12 @@ const meaningTokens=(meaning:string)=>withoutMeaningNotes(meaning).split(/[,，;
 const meaningSections=(meaning:string)=>withoutMeaningNotes(meaning).split(/\n|(?=\b(?:n|vt|vi|v|adj|a|adv|ad|prep|pron|num|conj|int|interj|aux|det)\.)|(?=\bpossessive (?:adjective|determiner))/i).filter(section=>section.trim());
 const meaningPartOfSpeech=(text:string)=>{
  const label=withoutMeaningNotes(text).trim().toLowerCase();
- if(label.startsWith('possessive '))return 'pron';
+ if(/^possessive (?:adjective|determiner)/.test(label))return 'det';
+ if(/^(?:possessive pronoun|object pronoun|pronoun)/.test(label))return 'pron';
+ const fullLabel=label.match(/^(noun|verb|adjective|adverb|preposition)\b/)?.[1];
+ if(fullLabel)return {noun:'n',verb:'v',adjective:'adj',adverb:'adv',preposition:'prep'}[fullLabel as 'noun'|'verb'|'adjective'|'adverb'|'preposition'];
  const pos=label.match(/^(n|vt|vi|v|adj|a|adv|ad|prep|pron|num|conj|int|interj|aux|det)\./)?.[1];
- return pos==='a'?'adj':pos==='vt'||pos==='vi'?'v':pos==='ad'?'adv':pos==='det'?'pron':pos;
+ return pos==='a'?'adj':pos==='vt'||pos==='vi'?'v':pos==='ad'?'adv':pos;
 };
 
 export function reviewedTeachingDefinition(word:string,sources:{book:NceBookId;lesson:number}[]=[]):string{
@@ -216,7 +220,10 @@ export function reviewedTeachingIpa(word:string,sources:{book:NceBookId;lesson:n
 
 export function reviewedUsageDefinition(word:string,sources:{book:NceBookId;lesson:number}[]=[]):string{
  const headword=normalizeWord(word);
- return [...new Set(originalVocabularyExamples.filter(example=>normalizeWord(example.word)===headword&&(!sources.length||!example.teachingSources?.length||example.teachingSources.some(associated=>sources.some(source=>source.book===associated.book&&source.lesson===associated.lesson)))).map(example=>[example.partOfSpeech,example.sense].filter(Boolean).join(' ')))].join('\n');
+ return [...new Set(originalVocabularyExamples.filter(example=>normalizeWord(example.word)===headword&&(!sources.length||!example.teachingSources?.length||example.teachingSources.some(associated=>sources.some(source=>source.book===associated.book&&source.lesson===associated.lesson)))).map(example=>{
+  const pos=meaningPartOfSpeech(example.partOfSpeech||'');
+  return [pos?pos+'.':example.partOfSpeech,example.sense].filter(Boolean).join(' ');
+ }))].join('\n');
 }
 
 export function examplesForMeaning(word:string,meaning:string,query=''):UsageExample[]{

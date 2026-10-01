@@ -41,6 +41,13 @@ assert.deepEqual(m.examplesForMeaning('Swedish','n. 瑞典人；瑞典语\nadj. 
 assert.deepEqual(m.examplesForMeaning('Fiat','命令'),[]);
 assert.deepEqual(m.examplesForMeaning('Mini','超短裙'),[]);
 assert.deepEqual(m.examplesForMeaning('Ford','浅滩'),[]);
+assert.deepEqual(m.examplesForMeaning('his','possessive adjective 他的').map(item=>item.id),['his-possessive-determiner']);
+assert.deepEqual(m.examplesForMeaning('his','pron. 他的').map(item=>item.id),['his-possessive-pronoun']);
+assert.deepEqual(m.examplesForMeaning('her','pron. 她').map(item=>item.id),['her-object']);
+assert.deepEqual(m.examplesForMeaning('her','possessive adjective 她的').map(item=>item.id),['her-possessive-determiner']);
+assert.deepEqual(m.examplesForMeaning('old','n. 以前'),[]);
+assert.deepEqual(m.examplesForMeaning('short','adj. 简短的'),[]);
+assert.deepEqual(m.examplesForMeaning('thin','adj. 稀薄的'),[]);
 assert.equal(m.reviewedTeachingDefinition('Fiat',[{book:'NCE1',lesson:6}]),'n. 菲亚特（汽车品牌）');
 assert.equal(m.reviewedTeachingDefinition('Fiat',[{book:'NCE2',lesson:87}]),'','Unrelated source cannot override a dictionary sense');
 const ledger=JSON.parse(await readFile(new URL('docs/vocabulary-examples-batch2.json',root),'utf8'));

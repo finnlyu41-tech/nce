@@ -4,7 +4,8 @@
   "registeredLedgers": [
     "docs/vocabulary-examples-batch3-nationalities.json",
     "docs/vocabulary-examples-batch3-brands.json",
-    "docs/vocabulary-examples-batch3-retained-cues.json"
+    "docs/vocabulary-examples-batch3-retained-cues.json",
+    "docs/vocabulary-examples-batch4-people-adjectives.json"
   ],
   "scope": "Each unchanged content hash has a recorded Codex editorial review. Counts do not establish all textbook or dictionary senses or human certification.",
   "sourceTargetInventories": [

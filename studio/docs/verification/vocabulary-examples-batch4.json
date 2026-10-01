@@ -1,0 +1,90 @@
+{
+  "batch": "nce1-examples-4-people-adjectives",
+  "parentCommit": "de4ab4f88b6b3ef00e47f6bf4191a5bc8e5cc230",
+  "verifiedAt": "2026-10-01T19:40:29.275Z",
+  "published": false,
+  "humanCertification": false,
+  "browserVerified": false,
+  "headwordsAdded": 14,
+  "examplesAdded": 24,
+  "textbookTargetExamples": 14,
+  "dictionaryExtensionExamples": 10,
+  "counts": {
+    "textbookLessons": 348,
+    "textbookTerms": 3347,
+    "textbookOccurrences": 3615,
+    "bilingualCandidateTerms": 3047,
+    "bilingualCandidateOccurrences": 3267,
+    "originalHeadwords": 71,
+    "originalSenseExamples": 99,
+    "recordedReviewedOriginalHeadwords": 71,
+    "recordedReviewedOriginalSenseExamples": 99,
+    "originalsNeedingReview": 0,
+    "textbookTermsWithoutOriginalTableEntry": 3276,
+    "textbookTermsWithAnyAuthoredEntryIncludingIELTS": 72,
+    "textbookTermsWithoutAnyAuthoredEntryIncludingIELTS": 3275,
+    "textbookTermsWithCandidateOrIndexedMeaningMatchedOriginal": 3101,
+    "textbookTermsWithoutCandidateOrIndexedMeaningMatchedOriginal": 246,
+    "candidateOnlyWithoutRecordedReviewedOriginal": 3032,
+    "ieltsSeedEntries": 12,
+    "ieltsSeedDistinctHeadwords": 12,
+    "ieltsTextbookHeadwordOverlap": 1,
+    "ieltsOriginalTableOverlap": 0,
+    "authoredHeadwordUnionIncludingIELTS": 83,
+    "unionOfTextbookAndIELTSHeadwords": 3358,
+    "sourceOccurrencesWithExactTeachingSourceMetadata": 27,
+    "recordedReviewedIdentifiedSourceTargetSenses": 27,
+    "confirmedSourceTargetSenseDenominator": null,
+    "fullyReviewedSourceOccurrenceDenominator": 3615,
+    "fullyReviewedSourceOccurrences": 13,
+    "textbookTermsWithCandidateOrSourceDisplayedOriginal": 3103,
+    "textbookTermsWithoutCandidateOrSourceDisplayedOriginal": 244
+  },
+  "protectedModelMatchesFrozenBaseline": true,
+  "contentInputHashes": {
+    "app/ielts-flashcard-examples.ts": "614efe8a7352915f8f5f4286638189df805257717ee9ba18bd4f303959ce7491",
+    "app/nce-utils.ts": "305551097bb84a2a07e44ef545fc03e81bbd756e53daa0066086e9d61df0637b",
+    "app/textbook-vocabulary.ts": "c722dc34718c92522838abaffa8ade2ad793428f2a5f269429c1e6d1a5991eba",
+    "app/vocabulary-examples.ts": "ce70ef2bd2adc55e85f43e70643c3a203104378005c8fa3b4aa8de95171d0562",
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/data/vocabulary-examples-nce1-08-12.ts": "422ab6c2e94defd56048423c189ebe5d27a2dcdac36abef87d351ce80b26c2f8",
+    "app/data/vocabulary-examples-nce1-06-brands.ts": "e52e139073b9d0fcd0f2088aa98bb7ff10069350437530e9e6466a0137354503",
+    "app/data/vocabulary-examples-nce1-06.ts": "c14926e4a42b6fb1781c8a5293b9a1451864dc0711723e9d37f0d85bde601fd9"
+  },
+  "checksPassed": [
+    "check",
+    "verify:vocabulary-examples: 99 frozen examples and source page checks",
+    "verify:flashcards: 15 scenarios and real source callbacks",
+    "new module/helper/tests ESLint",
+    "local source inventory audit",
+    "git diff --check"
+  ],
+  "notRunForThisBatch": [
+    "full online/offline build after the new determiner/POS helper change",
+    "browser, narrow screens, audio or real-day checks",
+    "named human teacher review"
+  ],
+  "logHashes": [
+    {
+      "path": "work/vocabulary-coverage/examples-batch4.log",
+      "sha256": "3d2c4e3cdc9f29736f96deb031da2340bd520847f2167ea4321a0136b7dc1344"
+    },
+    {
+      "path": "work/vocabulary-coverage/flashcards-batch4.log",
+      "sha256": "52d2cd7b113f79c4ff7500d39f482307d00bf87e145869f220b0cbd50a204db7"
+    },
+    {
+      "path": "work/vocabulary-coverage/types-batch4.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "work/vocabulary-coverage/audit-batch4.log",
+      "sha256": "36149217566f4fecf5eec3840ad7c09a368505d50e1d03ec90241e67c56c0c5c"
+    },
+    {
+      "path": "work/vocabulary-coverage/lint-batch4.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "checkpoint": "User requested stopping new content and returning the saved boundary. Other unregistered fragments stay outside this commit."
+}
