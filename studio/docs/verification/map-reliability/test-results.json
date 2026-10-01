@@ -1,0 +1,47 @@
+{
+  "auditBaseline": "97c85c5eb8ce785f7e837c85b6a064a437bd732a",
+  "integratedRemote": "0bec6cf3cc510191c075eaf62f5b38527eaa335b",
+  "minimalStarterFix": "5cf9a61e7e4058a72c58d602531502845185c04b",
+  "results": {
+    "originalMapChecks": 12881,
+    "realCurriculumScenarios": 41,
+    "reviewerNavigationChecks": 252,
+    "sourceComponentStorageAndBankChecks": 102,
+    "sourceComponentBaselineReproduction": 12,
+    "actualReactBrowserChecks": 96,
+    "actualReactStorageBrowserChecks": 38,
+    "actualReactStarterBrowserChecks": 58,
+    "unorderedBankCombinations": 4071,
+    "todayPracticeChecks": 48,
+    "capabilityTodayChecks": 18,
+    "typeScript": "passed",
+    "navigation": "passed",
+    "classicProgressBackup": "passed",
+    "learningPlan": "passed",
+    "onlineClassicBuild": "passed",
+    "mapBuild": "passed",
+    "offlineBuildAndPackage": "passed",
+    "mapWorkerRoutingAndSourceIsolation": "passed",
+    "onlineVerifiedFiles": 1950,
+    "onlineVerifiedBytes": 706959756
+  },
+  "originalFourAcceptance": {
+    "failureHelpCooldownAndEffectiveSessions": "Real-curriculum scenarios cover failure/help reset, one-second correction, cross-day independent material, same-day/early repeats, future/reversed time; raw history preserved.",
+    "sharedExternalReviewSource": "252 isolated reviewer/navigation checks and shared real-curriculum validator scenario; five reported aliases rejected; eight real external names accepted; existing score standards retained.",
+    "continueLatestRepairAndVoluntarySkip": "Real-curriculum and isolated navigation tests verify latest due/failed node is recommended and learner-selected next node stays resumable.",
+    "actualSaveReceiptAndRetry": "12 baseline failures reproduced; original 74 source-component checks and 38 actual-browser storage/conflict/event/relock checks retained; no false completion or unlock on failed save."
+  },
+  "starterCompatibility": "Unmarked old rounds retain exact original questions, answers and grade interpretation; order-only old stable evidence becomes pending review. New groups require explicit bank markers and preserve mixed raw backups. Unknown or unrelated bank markers are rejected.",
+  "remainingIntegrationItem": "Release owner owns app/today-practice.ts resume comparison: include last?.bank!==record.bank alongside round, preserving samplePracticeTasks. This branch does not change global Today.",
+  "data": "All failures, histories, audio-completion events and browser records were synthetic. No real learner record was read or modified. Browser heard events test callbacks and do not certify real playback; six source clips are audited against real transcript boundaries.",
+  "deployment": "Not deployed; release owner integrates and independently verifies after the current batch.",
+  "productionSha256": {
+    "studio/map/model.ts": "0fbf5f3d5bd114927d04f34245256d002f5e7408dc520a45b28c3af2fd977cb5",
+    "studio/map/main.tsx": "1bd907cbc6895e980df28a1ac326b3e52b1a0266be8c73ac71e6f7f201a1bf41",
+    "studio/map/learning.tsx": "a663a4f7b226292f40f44b7f056c8bb0571c97b7c2ab48c9a7fcaf1fea88b294",
+    "studio/map/course.tsx": "c68f9d66ab4eef12a7ac4bea85533bd5b033c69aa1e1b179ce21c976a3cf5745",
+    "studio/map/content.ts": "43189e8c7cf08e100948cfe88396a535acc3ef926bb2feb77becd6aaa7de33a4",
+    "studio/map/curriculum.ts": "4006708895fc5c15c8816f0fb2ad23efc51380895018ba8a5f3066a02f16b2a2",
+    "studio/map/review-route.ts": "3fdcaafd0471dd479f17f73e87523cac8b457f486e3d371f0e94cb10484fd386"
+  }
+}

@@ -139,7 +139,7 @@ check(draftState.records['chapter-1'].draft.text==='new writing entered while re
 check(draftState.records['chapter-1'].draft.recording==='finished.wav','Late callback also saves recording reference');
 const history={...m.emptyProgress(),records:{first:{...m.emptyRecord(),...proof(c.nodeById('first'),0,yesterday),attempts:[proof(c.nodeById('first'),0,yesterday)]}}};
 let repeat=history;for(let i=0;i<15;i++)repeat=m.submitQuiz(repeat,'first',now);
-check(repeat.records.first.attempts.length===12&&repeat.records.first.attempts[0].at===yesterday,'Bounded history preserves earliest independent proof');
+check(repeat.records.first.attempts.length===16&&repeat.records.first.attempts[0].at===yesterday,'Every raw attempt and earliest independent proof are retained');
 check(m.storageKey!==m.legacyStorageKey,'Old map records never silently repurposed');
 // Manual access never creates assessment evidence or completes prerequisite nodes.
 const blank=m.emptyProgress(),late=c.nodeById('nce2-96'),chapter=c.nodeById('chapter-14');

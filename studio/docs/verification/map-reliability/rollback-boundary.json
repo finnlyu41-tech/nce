@@ -1,0 +1,9 @@
+{
+  "oldParserCommit": "0bec6cf (published v17; same 12-attempt limitation as v15)",
+  "newBankRoundTrip": "all original raw fields retained",
+  "newBankPassesNewModel": true,
+  "newBankPassesOldModel": false,
+  "newThirteenAttemptsRestore": 13,
+  "oldThirteenAttemptsRestore": "rejected",
+  "requiredBeforeOldRollback": "Keep a full backup made by the new version; retain the new parser and bank interpretation for faithful restore. Never truncate history to fit the old parser."
+}

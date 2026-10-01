@@ -1,6 +1,6 @@
 import { nodes, unitNodes, chapters, nodeById, questionsFor, type MapNode } from './content';
 import { overallBand } from '../app/readiness';
-import {unitById} from './curriculum';
+import {unitById,type StarterBank} from './curriculum';
 import {validSpeakingRecord,type SpeakingRecord} from './speaking-model';
 export const legacyStorageKey = 'wayfinder-ielts-map:v1';
 export const storageKey = 'wayfinder-ielts-map:v2';
@@ -8,6 +8,7 @@ export const reviewDelay = 24 * 60 * 60 * 1000;
 export type QuizProof = {
     at: number;
     round: number;
+    bank?: StarterBank;
     answers: string[];
     assisted: boolean;
     heard?: number[];
@@ -43,11 +44,14 @@ export type NodeRecord = {
     speaking?: SpeakingRecord;
     project?: Project;
     round: number;
+    bank?: StarterBank;
     answers: string[];
     assisted: boolean;
     heard?: number[];
     phase: 'learn' | 'challenge';
     attempts: QuizProof[];
+    // Latest answer or hint exposure, including an unsubmitted round.
+    quizHelpAt?: number;
     evidence?: Evidence;
     mock?: Mock;
     draft?: Record<string, string | number | boolean | boolean[] | string[]>;
@@ -76,11 +80,44 @@ export function updateDraft(state:Progress,id:string,changes:NonNullable<NodeRec
 export const today = (at = Date.now()) => { const d = new Date(at); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 export function validDate(date: string, at = Date.now()) { return /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0, 10) === date && date <= today(at); }
 export const normalize = (s: string) => s.toLowerCase().trim().replace(/[’‘]/g, "'").replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ').replace(/\bcan't\b/g,'cannot').replace(/\bwon't\b/g,'will not').replace(/\b(\w+)n't\b/g,'$1 not').replace(/\bi'm\b/g,'i am').replace(/\b(\w+)'re\b/g,'$1 are').replace(/\b(\w+)'ve\b/g,'$1 have').replace(/\b(\w+)'ll\b/g,'$1 will');
-export function grade(node: MapNode, answers: string[], round: number) { const qs = questionsFor(node, round); return qs.map((q, i) => [q.answer, ...q.accepted || []].flatMap(a=>a.split(/\s+\/\s+/)).some(a => normalize(a) === normalize(answers[i] || ''))); }
-export const passedQuiz = (n: MapNode, p: QuizProof, at=Date.now()) => p.at > 0 && p.at <= at && !p.assisted && questionsFor(n, p.round).length > 0 && questionsFor(n,p.round).every((q,i)=>!q.clip || p.heard?.includes(i)) && grade(n, p.answers, p.round).every(Boolean);
+export function grade(node: MapNode, answers: string[], round: number, bank?:StarterBank) { const qs = questionsFor(node, round, bank); return qs.map((q, i) => [q.answer, ...q.accepted || []].flatMap(a=>a.split(/\s+\/\s+/)).some(a => normalize(a) === normalize(answers[i] || ''))); }
+const hasStarterReviewBank=(n:MapNode)=>n.kind==='starter'&&['first','small-exchange'].includes(n.id);
+const validBank=(n:MapNode,bank:unknown)=>bank===undefined||bank==='starter-v2'&&hasStarterReviewBank(n);
+export const passedQuiz = (n: MapNode, p: QuizProof, at=Date.now()) => Number.isFinite(p.at) && p.at > 0 && p.at <= at && Number.isInteger(p.round) && p.round >= 0 && validBank(n,p.bank) && p.assisted === false && questionsFor(n, p.round, p.bank).length > 0 && questionsFor(n,p.round,p.bank).every((q,i)=>!q.clip || p.heard?.includes(i)) && grade(n, p.answers, p.round, p.bank).every(Boolean);
+// Preserve multiplicity, but ignore question order and answer-choice shuffles.
+const questionIdentity=(n:MapNode,p:Pick<QuizProof,'round'|'bank'>)=>JSON.stringify(questionsFor(n,p.round,p.bank).map(q=>JSON.stringify([q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start,q.clip?.end])).sort());
+const reviewInterval=(passes:number)=>(passes>=4?21:passes>=2?7:1)*reviewDelay;
+// Count independent reviews that were actually due. Raw attempts remain intact.
+function reviewProofs(n:MapNode,state:Progress,at:number) {
+    const record=state.records[n.id], passes:QuizProof[]=[];
+    let previousAt=0,repairAt:number|undefined;
+    for(const proof of record?.attempts||[]) {
+        const validTime=Number.isFinite(proof.at)&&proof.at>0&&proof.at<=at&&proof.at>=previousAt;
+        if(Number.isFinite(proof.at))previousAt=Math.max(previousAt,proof.at);
+        if(!validTime||!passedQuiz(n,proof,at)) {
+            passes.length=0;repairAt=validTime?proof.at:at;continue;
+        }
+        if(record?.quizHelpAt!==undefined&&proof.at<=record.quizHelpAt)continue;
+        const prior=passes.at(-1);
+        if(!prior||proof.at-prior.at>=reviewInterval(passes.length)&&questionIdentity(n,proof)!==questionIdentity(n,prior))passes.push(proof);
+    }
+    if(record?.quizHelpAt!==undefined&&(!Number.isFinite(record.quizHelpAt)||record.quizHelpAt>at||!passes.length)) {
+        passes.length=0;repairAt=Number.isFinite(record.quizHelpAt)?Math.min(record.quizHelpAt,at):at;
+    }
+    // Legacy v2 cannot date unsubmitted help. Only an explicit restart dates that boundary.
+    if(record?.assisted&&(record.attempts.at(-1)?.round!==record.round||record.attempts.at(-1)?.bank!==record.bank)) {
+        passes.length=0;repairAt=at;
+    }
+    return {passes,repairAt};
+}
 export function stable(n:MapNode,state:Progress,at=Date.now()) {
-    const attempts=state.records[n.id]?.attempts||[], last=attempts.at(-1);
-    return !!last && passedQuiz(n,last,at) && attempts.some(p=>passedQuiz(n,p,at) && last.at-p.at>=reviewDelay && JSON.stringify(questionsFor(n,last.round).map(q=>[q.prompt,q.answer,q.clip?.start]))!==JSON.stringify(questionsFor(n,p.round).map(q=>[q.prompt,q.answer,q.clip?.start])));
+    return reviewProofs(n,state,at).passes.length>=2;
+}
+// This validates the declared source only; it cannot independently verify a reviewer.
+export function externalReviewer(source:string):boolean {
+    const key=source.normalize('NFKC').trim().toLowerCase().replace(/[\s\p{P}\p{S}]+/gu,'');
+    if(!key||/^(自评|(?:我(?:自己)?|自己|本人|自我)(?:自评|评分|评阅|评估|评价|打分)?|self(?:assessment|review|evaluation|assessed|rated|rating)?|myself)$/.test(key))return false;
+    return !/^(?:ai(?:chatgpt|claude|gemini|deepseek)?|人工智能|chatgpt(?:\d\w*)?|gpt(?:\d\w*)?|claude(?:\d\w*)?|gemini(?:\d\w*)?|deepseek)(?:评分|评阅|反馈|老师|评估|助手|ai|review|reviewer|assessment|feedback|assistant|teacher)?$/.test(key);
 }
 export function projectErrors(n:MapNode,p:Project,at=Date.now()) {
     const errors:string[]=[];
@@ -88,7 +125,7 @@ export function projectErrors(n:MapNode,p:Project,at=Date.now()) {
     const minimum=n.chapter!<6?Number(chapters[n.chapter!][3])*3:Number(chapters[n.chapter!][3]);
     if(words.length<minimum)errors.push(`先写出自己的表达（本章至少 ${minimum} 个英文单词，任务要求见上方）。`);
     if(p.recording.trim().length<3)errors.push('保留录音，填写录音文件名或保存位置。');
-    if(!p.reviewer.trim() || /^(自评|自己|self)$/i.test(p.reviewer.trim()))errors.push('请一位能判断本章表达的老师或伙伴听读作品，填写评阅者。');
+    if(!externalReviewer(p.reviewer))errors.push('请一位能判断本章表达的老师或伙伴听读作品，填写外部评阅者；自评或 AI 不能代替外评。');
     if(p.feedback.trim().length<20)errors.push('填写具体反馈和订正，至少 20 字。');
     if(p.criteria.length!==4||!p.criteria.every(x=>x===true))errors.push('完成四项作品检查。');
     if(!Number.isFinite(p.at)||p.at<=0||p.at>at)errors.push('作品记录时间无效。');
@@ -117,8 +154,8 @@ export function evidenceErrors(n: MapNode, e: Evidence, at = Date.now()): string
         errors.push('先完成四项达标条件。');
     if (!e.unseen)
         errors.push('请用未做过的新材料完成检验。');
-    if (['writing', 'speaking'].includes(n.lane || '') && (!e.reviewer.trim() || /^(自评|自己|self)$/i.test(e.reviewer.trim())))
-        errors.push('口语和写作需要填写评阅者或机构，不能用自查代替。');
+    if (['writing', 'speaking'].includes(n.lane || '') && !externalReviewer(e.reviewer))
+        errors.push('口语和写作需要填写外部评阅者或机构，自评或 AI 不能代替外评。');
     if (['listening', 'reading'].includes(n.lane || '')) {
         const a = Number(e.correct), b = Number(e.total), full = n.id.endsWith('-full');
         if (!e.correct.trim() || !e.total.trim() || !Number.isInteger(a) || !Number.isInteger(b) || b < 8 || b > 40 || a < 0 || a > b)
@@ -145,8 +182,10 @@ export function mockErrors(m: Mock, minimum: string, at = Date.now()): string[] 
         e.push('填写完整试卷名称与听读换分依据。');
     if (!m.unseen || !m.timed)
         e.push('使用没做过的新试卷，并按考试要求限时完成四项。');
-    if (!m.reviewer.trim() || m.feedback.trim().length < 10 || m.work.trim().length < 10)
-        e.push('保留口写评阅者、具体反馈及原稿／录音的位置。');
+    if (!externalReviewer(m.reviewer))
+        e.push('填写口写外部评阅者或机构，自评或 AI 不能代替外评。');
+    if (m.feedback.trim().length < 10 || m.work.trim().length < 10)
+        e.push('保留具体反馈及原稿／录音的位置。');
     if (m.scores.length !== 4 || m.scores.some(x => !x.trim() || !Number.isFinite(Number(x)) || Number(x) < 0 || Number(x) > 9 || Number(x) * 2 % 1 !== 0))
         e.push('四项分数须为 0–9 的整分或半分。');
     if (!['0', '5.5', '6', '6.5', '7'].includes(minimum))
@@ -194,23 +233,41 @@ export function learningLabel(n:MapNode,state:Progress) {
     const r=state.records[n.id];
     return r && (r.startedAt||r.attempts.length||r.draft||r.evidence||r.mock||r.project||r.answers.length) ? '学习中 · 尚未完成':'尚未学习';
 }
-export function changeStudyStep(state:Progress,id:string,step:number):Progress {
-    if(!Number.isInteger(step)||step<0||step>3||!nodeById(id)||statusMap(state)[id]==='locked')return state;
-    const record=state.records[id]||emptyRecord();
-    const checked=record.attempts.at(-1)?.round===record.round;
-    return {...state,records:{...state.records,[id]:{...record,phase:step===3?'challenge':'learn',studyStep:step===3?record.studyStep:step,assisted:record.assisted||(record.phase==='challenge'&&step!==3&&!checked)}}};
+export function noteQuizHelp(state:Progress,id:string,at=Date.now()):Progress {
+    const node=nodeById(id);
+    if(!node||statusMap(state,at)[id]==='locked'||!['lesson','checkpoint','starter','unit'].includes(node.kind)||!Number.isFinite(at)||at<=0)return state;
+    const record=state.records[id]||emptyRecord(),last=record.attempts.at(-1),checked=last?.round===record.round&&last.bank===record.bank;
+    return {...state,records:{...state.records,[id]:{...record,quizHelpAt:Math.max(record.quizHelpAt||0,at),assisted:record.assisted||!checked}}};
 }
-export function restartQuiz(state:Progress,id:string):Progress {
-    if(!nodeById(id)||statusMap(state)[id]==='locked')return state;
+export function changeStudyStep(state:Progress,id:string,step:number,at=Date.now()):Progress {
+    if(!Number.isInteger(step)||step<0||step>3||!nodeById(id)||statusMap(state,at)[id]==='locked')return state;
     const record=state.records[id]||emptyRecord();
-    return {...state,records:{...state.records,[id]:{...record,phase:'challenge',round:record.round+1,answers:[],heard:[],assisted:false,questionIndex:0}}};
+    const next=step!==3&&record.phase==='challenge'?noteQuizHelp(state,id,at):state;
+    return {...next,records:{...next.records,[id]:{...(next.records[id]||record),phase:step===3?'challenge':'learn',studyStep:step===3?record.studyStep:step}}};
 }
-export function continueNode(state:Progress) {
-    const status=statusMap(state),last=state.lastNode?nodeById(state.lastNode):undefined;
-    if(last&&status[last.id]!=='locked'&&!achieved(last,state))return last;
+export function restartQuiz(state:Progress,id:string,at=Date.now()):Progress {
+    const node=nodeById(id);
+    if(!node||statusMap(state,at)[id]==='locked'||!Number.isFinite(at)||at<=0)return state;
+    const record=state.records[id]||emptyRecord();
+    if(record.round>=100000)return state;
+    const reference=due(node,state,at)?reviewProofs(node,state,at).passes.at(-1)||record:record;
+    const previous=questionIdentity(node,reference);
+    const bank=hasStarterReviewBank(node)?'starter-v2':record.bank;
+    let round=record.round+1;
+    // Source excerpts cycle every three rounds; versioned starters alternate groups.
+    // A new round number or shuffled choices alone is not a new assessed bank.
+    for(let candidate=round;candidate<=Math.min(record.round+3,100000);candidate++) {
+        if(questionIdentity(node,{round:candidate,bank})!==previous){round=candidate;break;}
+    }
+    const last=record.attempts.at(-1),legacyHelp=record.assisted&&(last?.round!==record.round||last?.bank!==record.bank)&&record.quizHelpAt===undefined;
+    return {...state,records:{...state.records,[id]:{...record,...bank?{bank}:{},...legacyHelp?{quizHelpAt:at}:{},phase:'challenge',round,answers:[],heard:[],assisted:false,questionIndex:0}}};
+}
+export function continueNode(state:Progress,at=Date.now()) {
+    const status=statusMap(state,at),last=state.lastNode?nodeById(state.lastNode):undefined;
+    if(last&&status[last.id]!=='locked'&&(!achieved(last,state,at)||due(last,state,at)))return last;
     if(last){const next=[...nodes,...unitNodes].find(n=>n.requires.includes(last.id)&&status[n.id]==='available');if(next)return next;}
-    if(last?.parent){const siblings=(nodeById(last.parent)?.members||[]).map(id=>nodeById(id)!);const next=siblings.find(n=>due(n,state))||siblings.find(n=>status[n.id]==='available');if(next)return next;}
-    return nodes.find(n=>due(n,state)&&status[n.id]!=='locked')||nodes.find(n=>status[n.id]==='available')||nodeById('finish')!;
+    if(last?.parent){const siblings=(nodeById(last.parent)?.members||[]).map(id=>nodeById(id)!);const next=siblings.find(n=>due(n,state,at))||siblings.find(n=>status[n.id]==='available');if(next)return next;}
+    return nodes.find(n=>due(n,state,at)&&status[n.id]!=='locked')||nodes.find(n=>status[n.id]==='available')||nodeById('finish')!;
 }
 export function statusMap(state: Progress, at = Date.now()) {
     const result: Record<string, 'locked' | 'available' | 'passed'> = {};
@@ -230,29 +287,24 @@ export function officialReached(state: Progress, at = Date.now()) {
     return !!o && validDate(o.date, at) && !!o.reference.trim() && o.scores.length === 4 && o.scores.every(s => s.trim() !== '' && Number.isFinite(Number(s)) && Number(s) >= 0 && Number(s) <= 9 && Number(s) * 2 % 1 === 0) && ['0', '5.5', '6', '6.5', '7'].includes(state.minimum) && o.scores.every(s => Number(s) >= Number(state.minimum)) && (overallBand(o.scores.map(Number)) || 0) >= 6.5;
 }
 export function due(n: MapNode, state: Progress, at = Date.now()): boolean {
-    if(n.kind==='course') return (n.members||[]).some(id=>due(nodeById(id)!,state,at));
-    const attempts = state.records[n.id]?.attempts || [], last=attempts.at(-1);
-    const first=attempts.find(p=>passedQuiz(n,p,at));
-    if(!first || !last) return false;
-    if(!passedQuiz(n,last,at)) return true;
-    if(!stable(n,state,at)) return at-first.at>=reviewDelay;
-    const passes=attempts.filter(p=>passedQuiz(n,p,at));
-    return at-last.at>= (passes.length>=4?21:7)*reviewDelay;
+    if(n.kind==='course')return (n.members||[]).some(id=>due(nodeById(id)!,state,at));
+    const time=nextReviewAt(n,state,at);
+    return time!==undefined&&time<=at;
 }
-export function nextReviewAt(n:MapNode,state:Progress) {
-    const first=state.records[n.id]?.attempts.find(p=>passedQuiz(n,p));
-    return first ? first.at+reviewDelay : undefined;
+export function nextReviewAt(n:MapNode,state:Progress,at=Date.now()) {
+    const attempts=state.records[n.id]?.attempts||[];
+    if(!attempts.some(p=>passedQuiz(n,p,at)))return undefined;
+    const {passes,repairAt}=reviewProofs(n,state,at),last=passes.at(-1);
+    return last?last.at+reviewInterval(passes.length):repairAt;
 }
 export function submitQuiz(state: Progress, id: string, at = Date.now()): Progress {
     const n = nodeById(id);
     if (!n || statusMap(state, at)[id] === 'locked' || !['lesson', 'checkpoint', 'starter', 'unit'].includes(n.kind))
         return state;
     const r = state.records[id] || emptyRecord();
-    const attempt = { at, round: r.round, answers: [...r.answers], assisted: r.assisted, heard: [...(r.heard||[])] };
-    let attempts = [...r.attempts, attempt].slice(-12);
-    const proof = r.attempts.find(p => passedQuiz(n, p, at));
-    if (proof && !attempts.includes(proof))
-        attempts = [proof, ...attempts.slice(-11)];
+    const attempt = { at, round: r.round, ...r.bank?{bank:r.bank}:{}, answers: [...r.answers], assisted: r.assisted, heard: [...(r.heard||[])] };
+    // Preserve failures and help barriers as well as passes; export keeps the raw history.
+    const attempts = [...r.attempts, attempt];
     return { ...state, updatedAt: at, records: { ...state.records, [id]: { ...r, attempts } } };
 }
 const recordLike = (x: unknown): x is Record<string, unknown> => !!x && typeof x === 'object' && !Array.isArray(x);
@@ -276,8 +328,9 @@ export function parseProgress(raw: string): Progress {
     }
     if(x.lastNode!==undefined){if(typeof x.lastNode!=='string'||!nodeById(x.lastNode))throw new Error('学习位置无效。');result.lastNode=x.lastNode;}
     for (const [id, v] of Object.entries(x.records)) {
-        if (!nodeById(id) || !recordLike(v) || !Number.isInteger(v.round) || Number(v.round) < 0 || Number(v.round) > 100000 || !['learn', 'challenge'].includes(String(v.phase)) || typeof v.assisted !== 'boolean' || !Array.isArray(v.answers) || v.answers.length > 20 || v.answers.some(a => !text(a, 1000)) || !Array.isArray(v.attempts) || v.attempts.length > 12)
+        if (!nodeById(id) || !recordLike(v) || !Number.isInteger(v.round) || Number(v.round) < 0 || Number(v.round) > 100000 || !['learn', 'challenge'].includes(String(v.phase)) || typeof v.assisted !== 'boolean' || !Array.isArray(v.answers) || v.answers.length > 20 || v.answers.some(a => !text(a, 1000)) || !Array.isArray(v.attempts) || v.attempts.length > 100000)
             throw new Error('学习记录的结构不正确。');
+        if(v.quizHelpAt!==undefined&&(!Number.isFinite(v.quizHelpAt)||Number(v.quizHelpAt)<=0||Number(v.quizHelpAt)>Date.now()))throw new Error('答案或提示查看时间无效。');
         if(v.startedAt!==undefined&&(!Number.isFinite(v.startedAt)||Number(v.startedAt)<=0||Number(v.startedAt)>Date.now()))throw new Error('学习开始时间无效。');
         if(v.studyStep!==undefined&&(!Number.isInteger(v.studyStep)||Number(v.studyStep)<0||Number(v.studyStep)>2))throw new Error('学习步骤无效。');
         if(v.exampleIndex!==undefined&&(!Number.isInteger(v.exampleIndex)||Number(v.exampleIndex)<0||Number(v.exampleIndex)>10))throw new Error('示范位置无效。');
@@ -287,6 +340,7 @@ export function parseProgress(raw: string): Progress {
         for (const p of v.attempts)
             if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || Number(p.round)>100000 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
                 throw new Error('检验记录无效。');
+        for(const p of [v,...v.attempts] as Record<string,unknown>[]) if(!validBank(nodeById(id)!,p.bank))throw new Error('检验题组版本无效。请保留完整原备份，并用支持该版本的页面恢复。');
         for(const p of [v, ...v.attempts] as Record<string,unknown>[]) if(p.heard!==undefined && (!Array.isArray(p.heard)||p.heard.length>20||p.heard.some(i=>!Number.isInteger(i)||Number(i)<0||Number(i)>19))) throw new Error('听力记录无效。');
         if(v.project!==undefined) {const p=v.project;if(!recordLike(p)||!['text','recording','reviewer','feedback'].every(k=>text(p[k]))||!Array.isArray(p.criteria)||p.criteria.length!==4||p.criteria.some(x=>typeof x!=='boolean')||!Number.isFinite(p.at)||Number(p.at)<=0||Number(p.at)>Date.now())throw new Error('作品记录无效。');}
         if (v.evidence !== undefined && !validEvidence(v.evidence))

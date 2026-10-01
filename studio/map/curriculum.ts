@@ -4,6 +4,8 @@ import type {Question, NceBookId} from '../app/model';
 
 export type Clip = {book: NceBookId; lesson: number; start: number; end: number};
 export type MapQuestion = Question & {mode?: 'listen' | 'order'; clip?: Clip};
+export type StarterBank = 'starter-v2';
+type StarterLine = {en:string;zh:string;clip?:Clip};
 export type Unit = {id: string; book: 'NCE1' | 'NCE2'; lesson: number; lastLesson: number; title: string; sourceSha256: string; rows: {en: string; zh: string; start: number; end: number}[]};
 export const units = data as Unit[];
 export const unitById = (id: string) => units.find(u => u.id === id);
@@ -92,13 +94,34 @@ export const starters = [
   ], tip: 'handbag 是手提包，umbrella 是雨伞；my 是“我的”，your 是“你的”。先听懂，再跟读，然后选意思。', question: '对方问你的包，你要肯定回答，选哪一句？', answer: 'Yes, it is.', options: ['Yes, it is.', 'Pardon?', 'Thank you very much.']},
 ] as const;
 
-export function starterQuestions(id: string, round: number): MapQuestion[] {
+// Keep every unmarked legacy round's questions intact. New rounds opt into
+// different source excerpts; merely reordering the old three is not new material.
+// NCE1 lesson 3, language sourceSha256:
+// 83b94c8bdb3bc463856aa465fc3510c43461ea343318e57586ca98759373f8a1
+const starterReviewLines:Record<string,StarterLine[]> = {
+  first:[
+    {en:'My coat and my umbrella please.',zh:'请把我的大衣和雨伞给我。',clip:clip(3,17.56,22)},
+    {en:'Thank you sir.',zh:'谢谢您，先生。',clip:clip(3,25.03,26.86)},
+    {en:'Sorry sir.',zh:'对不起，先生。',clip:clip(3,37.39,39.67)},
+  ],
+  'small-exchange':[
+    {en:'Here is my ticket.',zh:'这是我的票。',clip:clip(3,22,25.03)},
+    {en:'Is this your umbrella?',zh:'这是您的伞吗？',clip:clip(3,39.67,42.56)},
+    {en:"No it isn't.",zh:'不，它不是。',clip:clip(3,42.56,45.69)},
+  ],
+};
+export function starterStudyLines(id:string,bank?:StarterBank):StarterLine[] {
+  const lines=starters.find(s=>s.id===id)?.lines||[];
+  return bank==='starter-v2'?[...lines,...(starterReviewLines[id]||[])]:[...lines];
+}
+
+export function starterQuestions(id: string, round: number, bank?:StarterBank): MapQuestion[] {
   const s = starters.find(s => s.id === id)!;
   if (id === 'letters') {
     const pairs = round % 2 ? [['M', 'm'], ['R', 'r'], ['T', 't'], ['Y', 'y']] : [['A', 'a'], ['B', 'b'], ['E', 'e'], ['G', 'g']];
     return pairs.map(([upper, lower], i) => ({id: `letter-${i}`, type: 'choice', prompt: `为 ${upper} 找到对应的小写字母。`, options: [lower, i % 2 ? 'a' : 'z', i % 2 ? 'n' : 'v'].sort(), answer: lower, explanation: `${upper} — ${lower}`}));
   }
-  const lines = [...s.lines];
+  const lines:StarterLine[] = bank==='starter-v2'&&round%2&&starterReviewLines[id]?[...starterReviewLines[id]]:[...s.lines];
   const offset = round % lines.length;
   return [...lines.slice(offset), ...lines.slice(0, offset)].map((row, i) => ({id: `sound-${i}`, type: 'choice', mode: 'listen', prompt: '听一句原声，选择对应的意思。', clip: 'clip' in row ? row.clip : undefined, options: lines.map(x => x.zh).sort(), answer: row.zh, explanation: `${row.en} — ${row.zh}`}));
 }

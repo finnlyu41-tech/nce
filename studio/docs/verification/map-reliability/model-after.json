@@ -1,0 +1,377 @@
+{
+  "content": "real prepared curriculum",
+  "passed": 41,
+  "failed": 0,
+  "cases": [
+    "Historical first pass remains learned when the latest review fails",
+    "A one-second corrected retry starts a fresh 24-hour consolidation cooldown",
+    "A different bank cannot consolidate before 24 hours after reacquisition",
+    "Reacquisition followed by a truly delayed independent different bank consolidates",
+    "A delayed retry of the same bank cannot replace independent review evidence",
+    "An assisted attempt resets consolidation even when its answers are correct",
+    "A response without required listening evidence resets independent consolidation",
+    "Returning to help during an unchecked challenge resets status before submission",
+    "Unsubmitted help remains a reset barrier after export and rejects a future marker",
+    "Help after an already checked stable round still requires new delayed independent evidence",
+    "First pass still opens the next unit immediately but never means stable",
+    "Same-day raw passes neither inflate the review tier nor move its anchor",
+    "Early cross-day rehearsal also leaves the effective seven-day schedule unchanged",
+    "Identical assessed source items remain the same bank despite option reordering",
+    "Four scheduled independent sessions from real review entries earn the 21-day interval",
+    "Real due-review entry selects genuinely different material across scheduled sessions: nce1-1",
+    "Real due-review entry selects genuinely different material across scheduled sessions: letters",
+    "Real due-review entry selects genuinely different material across scheduled sessions: first",
+    "Real due-review entry selects genuinely different material across scheduled sessions: small-exchange",
+    "An early raw pass does not replace the effective bank used by the next due entry",
+    "Legacy starter rotations preserve original questions and grades without proving consolidation: first",
+    "Mixed legacy and starter-v2 histories retain evidence and actual bank semantics: first",
+    "Versioned starter early practice leaves the effective review date and bank unchanged: first",
+    "Versioned starter failure and reacquisition require new delayed independent material: first",
+    "Versioned starter B uses readable source transcript and exact audio boundaries: first",
+    "Legacy starter rotations preserve original questions and grades without proving consolidation: small-exchange",
+    "Mixed legacy and starter-v2 histories retain evidence and actual bank semantics: small-exchange",
+    "Versioned starter early practice leaves the effective review date and bank unchanged: small-exchange",
+    "Versioned starter failure and reacquisition require new delayed independent material: small-exchange",
+    "Versioned starter B uses readable source transcript and exact audio boundaries: small-exchange",
+    "Unknown starter bank markers are rejected in current records and historical proofs",
+    "The starter-v2 marker is rejected on unrelated unit, letter, and mock records",
+    "Sorted material identity and explicit bank dispatch satisfy the three-candidate bound",
+    "Latest failed unit is recommended before its available unlearned successor",
+    "External-review provenance is consistent for chapter, writing, speaking, and mocks",
+    "Future proofs cannot consolidate or postpone an already overdue review",
+    "Nonchronological legacy history is conservative and survives unchanged",
+    "Same-timestamp failure and correction cannot reuse an older pass as delayed evidence",
+    "Legacy v2 backups retain all old records while receiving stricter derived status",
+    "A legacy unsubmitted assisted challenge cannot retain old consolidation across restart",
+    "More than 12 retries retain the first proof and the failure reset barrier"
+  ],
+  "failures": [],
+  "routeTraces": [
+    {
+      "id": "nce1-1",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 1,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "d5a05e5e68ff99f7ba2867c327662f435560cb0ee233d40fc955c303ddfc64be"
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 8,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "1033ff6baac0b316d814c81741442366f195cf023c0e166e48220523cad957a3"
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 15,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "d5a05e5e68ff99f7ba2867c327662f435560cb0ee233d40fc955c303ddfc64be"
+        },
+        {
+          "day": 15,
+          "round": 4,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 36,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "1033ff6baac0b316d814c81741442366f195cf023c0e166e48220523cad957a3"
+        }
+      ]
+    },
+    {
+      "id": "letters",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 1,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "4778b0ee32229cb16621ac7af7606a3794a5dfb5668408e14b9d110efaf0a0ad"
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 8,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "7f3a50769c9cbb58902ba904620b0e3ffde11272ec547b18adc83862623867e2"
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 15,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "4778b0ee32229cb16621ac7af7606a3794a5dfb5668408e14b9d110efaf0a0ad"
+        },
+        {
+          "day": 15,
+          "round": 3,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 36,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "7f3a50769c9cbb58902ba904620b0e3ffde11272ec547b18adc83862623867e2"
+        }
+      ]
+    },
+    {
+      "id": "first",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 1,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "d8682b8c1edd81be96ca5c264c5cdd01831eef587c5888b550629333b5fda3d2"
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 8,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "dfcb73db32e42d7467d012bf70b4d3ad15408f2cc2fc2021820f5c0655ac2329"
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 15,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "d8682b8c1edd81be96ca5c264c5cdd01831eef587c5888b550629333b5fda3d2"
+        },
+        {
+          "day": 15,
+          "round": 3,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 36,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "dfcb73db32e42d7467d012bf70b4d3ad15408f2cc2fc2021820f5c0655ac2329"
+        },
+        {
+          "day": 36,
+          "round": 4,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 57,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "d8682b8c1edd81be96ca5c264c5cdd01831eef587c5888b550629333b5fda3d2"
+        }
+      ]
+    },
+    {
+      "id": "small-exchange",
+      "trace": [
+        {
+          "day": 0,
+          "round": 0,
+          "bank": "legacy",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 1,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "304431c3cc971e381483c4a73991959090fadab3b5d2374df138a8ffbcee3e57"
+        },
+        {
+          "day": 1,
+          "round": 1,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 8,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "6e352ee9b1a88ad6977539e977afb064c5ca69fee7832a7dc1e4e0072c9d6539"
+        },
+        {
+          "day": 8,
+          "round": 2,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 15,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "304431c3cc971e381483c4a73991959090fadab3b5d2374df138a8ffbcee3e57"
+        },
+        {
+          "day": 15,
+          "round": 3,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 36,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "6e352ee9b1a88ad6977539e977afb064c5ca69fee7832a7dc1e4e0072c9d6539"
+        },
+        {
+          "day": 36,
+          "round": 4,
+          "bank": "starter-v2",
+          "allCorrect": true,
+          "due": false,
+          "nextReviewDay": 57,
+          "sameContentAsPrevious": false,
+          "signatureSha256": "304431c3cc971e381483c4a73991959090fadab3b5d2374df138a8ffbcee3e57"
+        }
+      ]
+    },
+    {
+      "id": "nce1-1",
+      "scenario": "early raw repeat before scheduled review",
+      "trace": [
+        {
+          "event": "first independent pass",
+          "day": 0,
+          "round": 0,
+          "due": false,
+          "nextReviewDay": 1,
+          "signatureSha256": "d5a05e5e68ff99f7ba2867c327662f435560cb0ee233d40fc955c303ddfc64be"
+        },
+        {
+          "event": "first delayed independent review",
+          "day": 1,
+          "round": 1,
+          "due": false,
+          "nextReviewDay": 8,
+          "signatureSha256": "1033ff6baac0b316d814c81741442366f195cf023c0e166e48220523cad957a3"
+        },
+        {
+          "event": "early raw independent repeat",
+          "day": 2,
+          "round": 2,
+          "due": false,
+          "nextReviewDay": 8,
+          "signatureSha256": "d5a05e5e68ff99f7ba2867c327662f435560cb0ee233d40fc955c303ddfc64be"
+        },
+        {
+          "event": "next scheduled independent review",
+          "day": 8,
+          "round": 3,
+          "due": false,
+          "nextReviewDay": 15,
+          "signatureSha256": "d5a05e5e68ff99f7ba2867c327662f435560cb0ee233d40fc955c303ddfc64be"
+        }
+      ]
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "id": "first",
+      "bank": "starter-v2",
+      "round": 1,
+      "sourceSha256": "83b94c8bdb3bc463856aa465fc3510c43461ea343318e57586ca98759373f8a1",
+      "clips": [
+        {
+          "en": "My coat and my umbrella please.",
+          "zh": "请把我的大衣和雨伞给我。",
+          "book": "NCE1",
+          "lesson": 3,
+          "start": 17.56,
+          "end": 22
+        },
+        {
+          "en": "Thank you sir.",
+          "zh": "谢谢您，先生。",
+          "book": "NCE1",
+          "lesson": 3,
+          "start": 25.03,
+          "end": 26.86
+        },
+        {
+          "en": "Sorry sir.",
+          "zh": "对不起，先生。",
+          "book": "NCE1",
+          "lesson": 3,
+          "start": 37.39,
+          "end": 39.67
+        }
+      ]
+    },
+    {
+      "id": "small-exchange",
+      "bank": "starter-v2",
+      "round": 1,
+      "sourceSha256": "83b94c8bdb3bc463856aa465fc3510c43461ea343318e57586ca98759373f8a1",
+      "clips": [
+        {
+          "en": "Here is my ticket.",
+          "zh": "这是我的票。",
+          "book": "NCE1",
+          "lesson": 3,
+          "start": 22,
+          "end": 25.03
+        },
+        {
+          "en": "Is this your umbrella?",
+          "zh": "这是您的伞吗？",
+          "book": "NCE1",
+          "lesson": 3,
+          "start": 39.67,
+          "end": 42.56
+        },
+        {
+          "en": "No it isn't.",
+          "zh": "不，它不是。",
+          "book": "NCE1",
+          "lesson": 3,
+          "start": 42.56,
+          "end": 45.69
+        }
+      ]
+    }
+  ],
+  "bankBounds": {
+    "identity": "sorted prompt/answer/book/lesson/start/end; item order and options ignored",
+    "bankDispatch": "bank selects source interpretation; changing only a marker does not establish novelty",
+    "units": 168,
+    "starters": 3,
+    "checkedBankPairs": 4071,
+    "maximumCandidatesNeeded": 3,
+    "candidateLimit": 3,
+    "legacyGroups": [
+      {
+        "id": "first",
+        "unmarkedDistinctMaterialGroups": 1,
+        "requiresExplicitMigration": true
+      },
+      {
+        "id": "small-exchange",
+        "unmarkedDistinctMaterialGroups": 1,
+        "requiresExplicitMigration": true
+      }
+    ],
+    "failures": []
+  }
+}

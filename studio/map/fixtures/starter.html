@@ -1,0 +1,19 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Starter banks — isolated fixture</title>
+<style>body{margin:0;font-family:system-ui}#fixture{padding:12px;background:#fff1bc}#fixture button{margin:4px;padding:8px}#report{white-space:pre-wrap;font-size:12px}</style>
+<section id="fixture"><strong>合成复习验收：注入时钟、内存存储；音频完成仅模拟</strong><button id="heard">模拟本题原声已听完</button><button id="inspect">检查合成状态</button><pre id="report"></pre></section><div id="root"></div>
+<script type="module">
+import {emptyProgress,emptyRecord,reviewDelay,storageKey,stable,due,nextReviewAt,passedQuiz,parseProgress,exportProgress} from '/model.ts';
+import {nodeById,questionsFor} from '/content.ts';
+const id=new URLSearchParams(location.search).get('kind');if(!['first','small-exchange'].includes(id))throw Error('Synthetic starter only');
+const node=nodeById(id),base=Date.now()-40*reviewDelay;let clock=base;Date.now=()=>clock;
+const initial={...emptyProgress(),lastNode:id,access:{all:false,nodes:[id]},records:{[id]:{...emptyRecord(),phase:'challenge'}}};
+const memory=new Map([[storageKey,JSON.stringify(initial)]]);
+Object.defineProperty(window,'localStorage',{configurable:true,value:{getItem:key=>memory.get(String(key))??null,setItem:(key,value)=>memory.set(String(key),String(value)),removeItem:key=>memory.delete(String(key)),clear:()=>memory.clear(),key:i=>[...memory.keys()][i]??null,get length(){return memory.size;}}});
+const read=()=>JSON.parse(memory.get(storageKey));
+function inspect(){const state=read(),record=state.records[id],qs=questionsFor(node,record.round,record.bank),last=record.attempts.at(-1);const value={storage:'in-memory only',day:(clock-base)/reviewDelay,id,record,questions:qs,passed:!!last&&passedQuiz(node,last,clock),stable:stable(node,state,clock),due:due(node,state,clock),nextDay:(nextReviewAt(node,state,clock)-base)/reviewDelay};document.querySelector('#report').textContent=JSON.stringify(value,null,2);return value;}
+function publish(state){memory.set(storageKey,JSON.stringify(state));dispatchEvent(new StorageEvent('storage',{key:storageKey,newValue:memory.get(storageKey)}));inspect();}
+document.querySelector('#heard').onclick=()=>{const state=read(),record=state.records[id],index=record.questionIndex||0;record.heard=[...new Set([...(record.heard||[]),index])];publish(state);};
+document.querySelector('#inspect').onclick=inspect;
+window.starterFixture={inspect,advance(day){clock=base+day*reviewDelay;location.hash=`#/learn/${id}?review=1`;},roundTrip(){const state=read(),records=JSON.stringify(state.records),restored=parseProgress(exportProgress(state));if(JSON.stringify(restored.records)!==records)throw Error('Backup rewrote raw records');publish(restored);return true;}};
+location.hash=`#/learn/${id}`;inspect();await import('/main.tsx');
+</script></html>
