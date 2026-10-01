@@ -1,5 +1,5 @@
 import type {State} from './model';
-import {answerMatches} from './learning-plan';
+import {grammarClauseAnswerMatches} from './grammar-clause-answer';
 import {grammarCurriculumVersion,grammarUnitFor} from './grammar-curriculum';
 import type {GrammarPractice,GrammarUnit} from './grammar-curriculum-types';
 
@@ -13,7 +13,7 @@ export const grammarProgressKey=(id:string)=>`grammar-curriculum-v1-${id}`;
 export const emptyGrammarProgress=():GrammarUnitProgress=>({version:1,contentVersion:grammarCurriculumVersion,seenAt:0,round:0,inRound:false,assisted:false,responses:{},attempts:[]});
 export const emptyGrammarResponse=():GrammarResponse=>({value:'',hintLevel:0,checkedValue:null,matched:false});
 export function grammarRoundQuestions(unit:GrammarUnit,round:number){return unit.practices.filter(p=>p.variant===round%2)}
-export function grammarAnswerMatches(practice:GrammarPractice,value:string){return [practice.answer,...(practice.accepted||[])].some(answer=>answerMatches(value,answer))}
+export function grammarAnswerMatches(practice:GrammarPractice,value:string){return grammarClauseAnswerMatches(practice,value)}
 
 export function readGrammarProgress(raw:string|undefined,unit:GrammarUnit):GrammarUnitProgress{
  const clean=emptyGrammarProgress();

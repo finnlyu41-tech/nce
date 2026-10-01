@@ -84,7 +84,7 @@ async function choose(unit){
  await until(titleIs,unit.title,'unit '+unit.id);
  assert((await evaluate(()=>location.hash)).includes('unit='+unit.id),'Actual unit route contains its ID');
 }
-const summary={profile:'task-owned-empty',preview:origin,productionRegistered:false,viewports:[],questions:0,checks:[],runtimeErrors:errors};
+const summary={profile:'task-owned-empty',preview:origin,localSourceRegistered:process.argv.includes('--integrated'),productionRegistered:false,productionPublished:false,viewports:[],questions:0,checks:[],runtimeErrors:errors};
 try{
  await send('Page.enable');await send('Runtime.enable');
  await loadPage('Page.navigate',{url:origin+'/previews/clauses-review.html#/grammar?tab=path'});

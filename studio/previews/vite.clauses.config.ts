@@ -9,6 +9,8 @@ const isolatedAnswerPolicy:Plugin={
  name:'clauses-isolated-answer-policy',enforce:'pre',
  transform(source,id){
   if(!id.split('?')[0].endsWith('/app/grammar-curriculum-progress.ts'))return null;
+  // Integrated source already uses the strict matcher; do not adapt it in memory.
+  if(source.includes("import {grammarClauseAnswerMatches} from './grammar-clause-answer';")&&source.includes('export function grammarAnswerMatches(practice:GrammarPractice,value:string){return grammarClauseAnswerMatches(practice,value)}'))return null;
   if(source.split(original).length!==2)throw Error('语法进度接口已变化；请先核对本地审阅适配。');
   return {code:"import {grammarClauseAnswerMatches} from './grammar-clause-answer';\n"+source.replace(original,'export function grammarAnswerMatches(practice:GrammarPractice,value:string){return grammarClauseAnswerMatches(practice,value)}'),map:null};
  },

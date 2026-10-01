@@ -61,3 +61,34 @@ node node_modules/vite/bin/vite.js --config previews/vite.clauses.config.ts --co
 本轮剩余 33 项由同一 grammar-depth 实施线负责，已经并行编写为独立 `depth-remaining/` 的 10 单元（19–28），不要求逐批确认，不编辑本包或共享入口。详单在本包 manifest 的 `remainingOwnership`。继续补完所有当前 guide 的有限教学覆盖，仍保留逐子范围待训练说明。
 
 B1 的恢复来源已保存于 `/tmp/english-grammar-recovery-20261001/`，本包 source/patch/checklist 和浏览器证据另保存至 `/tmp/english-grammar-clauses-recovery-20261001/`。发生整合冲突时以各独立数据模块与明确接口为准，不覆盖用户进度或其他实施线工作树。
+
+## v19 隔离恢复与受控接线回执（2026-10-01）
+
+前文是原作者 `fc8c4ba4f8368705037907ec396e2a1bc4b72418` 的独立包交接快照；本节记录其后的恢复接线，不将原本未注册的预览证据当作生产验收。
+
+- 固定发布基线：`bce3d3342bde7ea5e657e892495dc787798d5e04`（v19）。独立树 `/tmp/english-grammar-clauses-integration-20261001`，分支 `codex/grammar-clauses-integration-20261001`。
+- 精确恢复源提交为 `52f2d993474c61cb6f56b54bdaa45f1b4de927f9`；其 19 文件差异与原 `fc8c4ba` 完全相同。恢复补丁 236864 bytes，SHA-256 `c14d719eb614da3171848e87aaa253cdcbb4f99e611894f237e6635e1ac4c172`，与 Git 原提交导出逐字节一致。
+- 原 5 单元数据、5 个逐项 coverage、manifest、导出、答案助手、纯模型/TSX 测试共 14 文件逐字节保留。未采纳原树任何 `depth-remaining` 或其他未提交文件，也没有中断其编写者。
+- 发布 owner 明确授权后，仅接线两个共享接口及覆盖台账：真实课程注册 5 单元；答案委托严格助手；19 行只更新 `status/scope/remaining`，来源、先修、分组等字段保持原样。v19 进度模块除 import 与委托两行之外逐字节不变，版本 1 与保存键保持原义。
+- 合并后为 **18 单元 / 64 个不重复 guide / 108 题**；新增 **19 个无重叠 guide**。原 72 项深化台账中 39 implemented、33 planned。原 25 项基础覆盖不在这 72 项中。64/97 表示有限教学覆盖，仍不表示独立掌握。
+- 必要断言同步登记新批；旧基础/B1 语义指纹、20 项 B1 逐项证据和 NCE2 原覆盖断言继续保留。NCE2 次级 guide 的完整总数仍为 77 出现 / 45 概念 / 53 入口，已注册覆盖去重为 59 / 34 / 42，未注册为 18 / 11 / 16；入口集合有交叉，不能简单相减入口数。
+
+实际复跑结果（日志位于 `studio/work/clauses-integration/`，截图/Chrome 报告位于 `studio/work/clauses-browser-check/`）：
+
+- 注册前 standalone 包在 v19 通过；`--integrated` 正确失败 `13 != 18`。受控接线后 `node scripts/test-grammar-clauses.mjs --integrated` 通过，直接读取真实注册与真实进度模块，不追加内存注册、不替换 matcher。
+- 新批 5/19/30、348 次精确教材检索、9 个 NCE2 次级关联、30 正确 + 3 错误真实 TSX 作答、8 个精确迁移回调、6 个标点敏感题、两级提示/重做/重载及真实 9128-byte 备份往返通过。
+- 全课程 18/64/108、432 条延迟证据链、57 个真实 TSX 交互/状态检查、真实 19648-byte 备份往返与旧记录兼容通过。原 depth、learning-plan、progress-save、276 教材组 / 348 课次 / 97 guide、导航回归通过。
+- v19 双区备份 20/20、真实 TSX 恢复界面 14/14、Today 49/49、capability Today 19/19、map 12881 检查通过；这些 Node/TSX 检查不声明为生产浏览器验证。
+- TypeScript、本批及两接口 ESLint、独立预览、在线 classic、离线 classic、在线 map 构建通过。构建保留既有大包尺寸警告。地图资料从 v19 已打包的静态教材重建，与发布树的 `map/curriculum.json` 逐字节一致；未执行发布打包、上传或部署。
+- 使用新的任务空白 Chrome profile、localhost `43411/43412`，真实 30 道题逐题作答，两变体、提示保存/重载、重做、必要逗号遗漏失败、旧样例保留、自由表达待核对、精确教材跳转/重载全部通过。320/390 无横向溢出，已查看截图；未捕获运行时错误为 0。该报告明确 `localSourceRegistered=true`、`productionRegistered=false`、`productionPublished=false`。
+
+本批只交给唯一发布 owner 串行接入。**尚未部署**；正式新版浏览器、正式教材图片/真音频与部署后两域名回读仍由发布线验收。其他设备/独立树的未推送状态未知，不由该基线的干净状态推断。剩余 33 guide 的后续原子任务保持原归属。
+
+接线后复跑使用 `--integrated`；无此开关的命令用于原始未注册包，会严格要求原台账未变。真实 Chrome 复跑可覆盖端口：
+
+```sh
+node scripts/test-grammar-clauses.mjs --integrated
+node scripts/test-grammar-curriculum.mjs
+node scripts/test-grammar-depth.mjs
+GRAMMAR_CLAUSES_PREVIEW_ORIGIN=http://127.0.0.1:43411 GRAMMAR_CLAUSES_DEBUG_ORIGIN=http://127.0.0.1:43412 node scripts/test-grammar-clauses-browser.mjs --integrated
+```
