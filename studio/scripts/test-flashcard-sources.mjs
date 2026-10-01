@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {mkdir,readdir} from 'node:fs/promises';
+import {mkdir,readdir,readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 
 // Exercise the real source components' click callbacks without a browser, network
@@ -8,10 +8,10 @@ const root=new URL('../',import.meta.url),pnpmRoot=new URL('node_modules/.pnpm/'
 const builder=(await readdir(pnpmRoot)).find(name=>/^esbuild@\d+\.\d+\.\d+$/.test(name));
 assert(builder,'Install the locked project dependencies before running source checks');
 const {build}=await import(new URL(`${builder}/node_modules/esbuild/lib/main.js`,pnpmRoot));
-const harnessSource=`export const harness={states:[],cursor:0,writes:[],route:{},enrolled:false,enrolledChecks:[],speechCalls:[],open:()=>{}};`;
+const harnessSource=`export const harness={states:[],cursor:0,refs:[],refCursor:0,writes:[],route:{},enrolled:false,enrolledChecks:[],speechCalls:[],open:()=>{}};`;
 const mocks={
  'test:harness':harnessSource,
- 'react':`import {harness as h} from 'test:harness';export const useEffect=()=>{},useMemo=f=>f(),useRef=v=>({current:v}),createContext=()=>({Provider:'ContextProvider'}),useContext=()=>h.open;export function useState(initial){const index=h.cursor++;if(!(index in h.states))h.states[index]=initial;return [h.states[index],value=>{h.states[index]=typeof value==='function'?value(h.states[index]):value;h.writes.push({index,value:h.states[index]})}]}`,
+ 'react':`import {harness as h} from 'test:harness';export const useEffect=()=>{},useMemo=f=>f(),createContext=()=>({Provider:'ContextProvider'}),useContext=()=>h.open;export function useRef(value){const index=h.refCursor++;return h.refs[index]||(h.refs[index]={current:value})}export function useState(initial){const index=h.cursor++;if(!(index in h.states))h.states[index]=initial;return [h.states[index],value=>{h.states[index]=typeof value==='function'?value(h.states[index]):value;h.writes.push({index,value:h.states[index]})}]}`,
  'react/jsx-runtime':`export const Fragment='Fragment';export const jsx=(type,props)=>({type,props:props||{}});export const jsxs=jsx;`,
  'lucide-react':`export const ArrowRight='ArrowRight',BookOpen='BookOpen',Check='Check',ChevronLeft='ChevronLeft',ChevronRight='ChevronRight',Plus='Plus',Search='Search',Volume2='Volume2';`,
  '@/components/ui/dialog':`export const Dialog='Dialog',DialogContent='DialogContent',DialogHeader='DialogHeader',DialogTitle='DialogTitle',DialogDescription='DialogDescription';`,
@@ -19,8 +19,8 @@ const mocks={
  './flashcards':`import {harness} from 'test:harness';export const isFlashcardEnrolled=(state,word)=>{harness.enrolledChecks.push(word);return harness.enrolled};`,
  './runtime-mode':`export const ONLINE=true;`,
  './study-path':`export const bookNames={NCE1:'第一册',NCE2:'第二册',NCE3:'第三册',NCE4:'第四册'};`,
- './lesson-context':`export const loadPages=()=>{throw Error('Source checks must not fetch textbook material')};`,
- './language':`export const loadDictionary=()=>{throw Error('Source checks must not fetch dictionary material')},loadLessonLanguage=()=>{throw Error('Source checks must not fetch lesson material')},findWord=()=>undefined;`,
+ './lesson-context':`import {harness as h} from 'test:harness';export const loadPages=refresh=>{if(h.loadPages)return h.loadPages(refresh);throw Error('Source checks must not fetch textbook material')};`,
+ './language':`import {harness as h} from 'test:harness';export const loadDictionary=()=>{if(h.loadDictionary)return h.loadDictionary();throw Error('Source checks must not fetch dictionary material')},loadLessonLanguage=()=>{throw Error('Source checks must not fetch lesson material')},findWord=(dictionary,word)=>h.findWord?.(dictionary,word);`,
  './speech':`import {harness} from 'test:harness';export const speak=word=>harness.speechCalls.push(word);`,
  './playback-speed':`export const PlaybackSpeed='PlaybackSpeed';`,
  './navigation':`export const navigate=()=>{};`,
@@ -30,7 +30,7 @@ const mocks={
 const output=new URL('work/flashcards/source-components-test.mjs',root);
 await mkdir(new URL('work/flashcards/',root),{recursive:true});
 await build({
- stdin:{contents:"export {TextbookVocabularyBrowser} from './app/textbook-vocabulary-ui.tsx';export {WordLookupProvider,WordLookupButton,WordText} from './app/word-lookup.tsx';export {initial} from './app/model.ts';export {ieltsFlashcardExamples,ieltsFlashcardDescription} from './app/ielts-flashcard-examples.ts';export {harness} from 'test:harness';",resolveDir:fileURLToPath(root),sourcefile:'source-test-entry.ts',loader:'ts'},
+ stdin:{contents:"export {TextbookVocabularyBrowser} from './app/textbook-vocabulary-ui.tsx';export {WordLookupProvider,WordLookupButton,WordText} from './app/word-lookup.tsx';export {initial} from './app/model.ts';export {ieltsFlashcardExamples,ieltsFlashcardDescription} from './app/ielts-flashcard-examples.ts';export {findWord as actualFindWord} from './app/language';export {reviewedHeadwordForForm,resolveReviewedLookupEntry} from './app/reviewed-word-forms';export {buildVocabularyCatalog} from './app/textbook-vocabulary';export {enrollFlashcard as actualEnrollFlashcard} from './app/flashcards';export {originalVocabularyExamples,examplesForMeaning,reviewedTeachingDefinition,reviewedTeachingSources} from './app/vocabulary-examples';export {harness} from 'test:harness';",resolveDir:fileURLToPath(root),sourcefile:'source-test-entry.ts',loader:'ts'},
  bundle:true,platform:'node',format:'esm',target:'node22',jsx:'automatic',outfile:fileURLToPath(output),logLevel:'silent',
  plugins:[{name:'source-component-harness',setup(build){
   build.onResolve({filter:/.*/},args=>Object.hasOwn(mocks,args.path)?{path:args.path,namespace:'source-check'}:args.path.endsWith('.css')?{path:args.path,namespace:'empty-css'}:undefined);
@@ -38,8 +38,8 @@ await build({
   build.onLoad({filter:/.*/,namespace:'empty-css'},()=>({contents:'',loader:'js'}));
  }}],
 });
-const {TextbookVocabularyBrowser,WordLookupProvider,WordLookupButton,WordText,initial,ieltsFlashcardExamples,ieltsFlashcardDescription,harness:h}=await import(output.href);
-const reset=(states,route)=>Object.assign(h,{states,cursor:0,writes:[],route,enrolledChecks:[],speechCalls:[],open:()=>{}});
+const {TextbookVocabularyBrowser,WordLookupProvider,WordLookupButton,WordText,initial,ieltsFlashcardExamples,ieltsFlashcardDescription,actualFindWord,reviewedHeadwordForForm,resolveReviewedLookupEntry,buildVocabularyCatalog,actualEnrollFlashcard,originalVocabularyExamples,examplesForMeaning,reviewedTeachingDefinition,reviewedTeachingSources,harness:h}=await import(output.href);
+const reset=(states,route)=>Object.assign(h,{states,cursor:0,refs:[],refCursor:0,writes:[],route,enrolledChecks:[],speechCalls:[],loadPages:undefined,loadDictionary:undefined,findWord:actualFindWord,open:()=>{}});
 function elements(node){if(!node||typeof node!=='object')return [];if(Array.isArray(node))return node.flatMap(elements);return [node,...elements(node.props?.children)]}
 const find=(tree,predicate)=>{const item=elements(tree).find(predicate);assert(item,'Expected component element missing');return item};
 
@@ -233,4 +233,155 @@ reset([],{});let clicked;h.open=value=>{clicked=value};
 const text=WordText({text:'network',...selection,sources:expectedSources});find(text,node=>node.type==='button').props.onClick();
 assert.deepEqual(clicked.sources,expectedSources);assert.equal(clicked.exampleTranslation,example.zh);
 assert.equal(ieltsFlashcardExamples.length,12);assert(ieltsFlashcardDescription.includes('本站原创')&&ieltsFlashcardDescription.includes('非 IELTS 官方题库'));
+
+// Use the real packaged dictionary and validated source index. In particular,
+// carpets has no dictionary entry; cases and dogs have coarse plural entries.
+const realDictionary=JSON.parse(await readFile(new URL('dist-online/language/dictionary.json',root),'utf8')).words;
+const realPages=JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.json',root),'utf8'));
+const realCatalog=buildVocabularyCatalog(realPages),source14={book:'NCE1',lesson:14};
+assert.equal(actualFindWord(realDictionary,'carpets'),undefined);
+assert.equal(actualFindWord(realDictionary,'cases').word,'cases');
+assert.equal(actualFindWord(realDictionary,'dogs').word,'dogs');
+const renderLookup=onAdd=>{h.cursor=0;h.refCursor=0;return WordLookupProvider({children:null,onAdd})};
+async function openRealLookup(selected,onAdd,route={}){
+ reset([null,undefined,false,'',false],route);
+ h.loadDictionary=async()=>realDictionary;h.loadPages=async()=>realPages;
+ await renderLookup(onAdd).props.value(selected);
+ return renderLookup(onAdd);
+}
+// Every registered source target, including explicitly recorded grammar
+// normalizations, must work through both real component add callbacks. Source
+// normalization does not imply the printed source's other noun senses are done.
+const reviewIndex=JSON.parse(await readFile(new URL('docs/vocabulary-examples-review-index.json',root),'utf8'));
+const registeredLedgers=await Promise.all(reviewIndex.registeredLedgers.map(async relative=>JSON.parse(await readFile(new URL(relative,root),'utf8'))));
+const targets=new Map();
+for(const ledger of registeredLedgers)for(const record of ledger.entries){
+ if(!['textbook-target','textbook-target-grammar-normalized'].includes(record.scope))continue;
+ const example=originalVocabularyExamples.find(example=>example.id===record.id);assert(example);
+ for(const source of example.teachingSources||[]){
+  const key=JSON.stringify([example.word.toLowerCase(),source.book,source.lesson]);
+  targets.set(key,{word:example.word,source});
+ }
+}
+for(const {word,source} of targets.values()){
+ const lesson=realCatalog.lessons.find(lesson=>lesson.book===source.book&&lesson.lesson===source.lesson);
+ assert(lesson.words.some(item=>item.word.toLowerCase()===word.toLowerCase()),word+' canonical source headword');
+ const targetMeaning=reviewedTeachingDefinition(word,[source]);assert(targetMeaning);
+ const targetExamples=examplesForMeaning(word,targetMeaning).filter(example=>example.teachingSources?.some(item=>item.book===source.book&&item.lesson===source.lesson));assert(targetExamples.length);
+ const expectedSources=reviewedTeachingSources(word,[source]).map(source=>({kind:'nce',...source}));
+ reset([realCatalog,'',0,realDictionary,false,false,0,null],{view:'words',book:source.book,lesson:source.lesson,tab:'book'});let fromRow;
+ const tree=TextbookVocabularyBrowser({state,onAdd:word=>{fromRow=word}}),row=find(tree,node=>typeof node.type==='function'&&node.type.name==='VocabularyRow'&&node.props.word.toLowerCase()===word.toLowerCase());
+ const rendered=row.type(row.props),button=find(rendered,node=>node.type==='button'&&node.props.className?.includes('vocabulary-enroll'));
+ assert.equal(button.props.disabled,false,word+' canonical dictionary entry enables enrollment');button.props.onClick();
+ assert.equal(fromRow.word,row.props.word);assert.equal(fromRow.meaning,targetMeaning);assert.deepEqual(fromRow.sources,expectedSources);
+ assert(targetExamples.some(example=>example.en===fromRow.example&&example.zh===fromRow.exampleTranslation),word+' row enrolls the reviewed target example');
+ let fromLookup;const lookup=await openRealLookup({word,example:'',sources:expectedSources},word=>{fromLookup=word});
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+ assert.equal(fromLookup.word,word);assert.equal(fromLookup.meaning,targetMeaning);assert.deepEqual(fromLookup.sources,expectedSources);
+ assert(targetExamples.some(example=>example.en===fromLookup.example&&example.zh===fromLookup.exampleTranslation),word+' lookup enrolls the reviewed target example');
+ assert.equal(reviewedTeachingDefinition(word,[{book:source.book,lesson:source.lesson===1?2:1}]),'','No unrelated lesson target certification');
+}
+console.log('PASS registered canonical target callbacks: '+targets.size+' source-headword pairs through both vocabulary row and asynchronous lookup.');
+let enrolledCarpet;
+for(const [surface,headword,meaning,target] of [
+ ['carpets','carpet','n. 地毯','carpet-floor'],
+ ['cases','case','n. 箱子','case-luggage'],
+ ['dogs','dog','n. 狗','dog-animal'],
+ ["carpet's",'carpet','n. 地毯','carpet-floor'],
+ ["case's",'case','n. 箱子','case-luggage'],
+ ["dog's",'dog','n. 狗','dog-animal'],
+]){
+ const selected={word:surface,example:'The selected context stays visible.',exampleTranslation:'所选语境保持可见。',sources:[{kind:'nce',...source14}]};
+ let saved;
+ const lookup=await openRealLookup(selected,word=>{saved=word});
+ assert.equal(h.states[1].reviewedHeadword,headword);
+ assert(elements(lookup).some(node=>node.props?.className==='muted small'&&node.props.children.join?.('')==='词形对应：'+headword));
+ const usage=find(lookup,node=>typeof node.type==='function'&&node.type.name==='VocabularyExamples');
+ assert(usage.props.examples.some(example=>example.en===selected.example),'Selected context is retained');
+ const targetExample=usage.props.examples.find(example=>example.id===target);assert(targetExample);
+ const raw=actualFindWord(realDictionary,surface)||realDictionary[headword];
+ assert(elements(lookup).some(node=>node.props?.className==='lookup-meaning'&&node.props.children===raw.meaning),'Original dictionary text is retained');
+ find(lookup,node=>node.type==='button'&&node.props.className==='text-btn').props.onClick();
+ assert.deepEqual(h.speechCalls,[headword],'Pronunciation receives the canonical headword; real audio is not tested');
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+ assert.equal(saved.word,headword);assert.equal(saved.meaning,meaning);assert.equal(saved.ipa,realDictionary[headword].ipa);
+ assert.equal(saved.example,targetExample.en);assert.equal(saved.exampleTranslation,targetExample.zh);
+ assert.deepEqual(saved.sources,[{kind:'nce',...source14}]);assert.equal(h.states[0].word,surface);
+ if(surface==='carpets')enrolledCarpet=saved;
+}
+for(const [surface,sources] of [['carpets',[{book:'NCE1',lesson:13}]],['cases',[]],['dogged',[source14]],['japanning',[{book:'NCE1',lesson:54}]],['polishing',[{book:'NCE1',lesson:54}]]]){
+ assert.equal(reviewedHeadwordForForm(surface,sources,realCatalog),undefined,'Unreviewed forms or unrelated sources cannot approve a target');
+ const resolved=await resolveReviewedLookupEntry(surface,sources,realDictionary,async()=>realCatalog);
+ assert.deepEqual(resolved,actualFindWord(realDictionary,surface),'Unapproved lookup preserves the actual dictionary fallback');
+}
+{
+ let saved;
+ const lookup=await openRealLookup({word:'cases',example:'',sources:[{kind:'nce',book:'NCE1',lesson:13}]},word=>{saved=word});
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+ assert.equal(saved.word,'cases');assert.equal(saved.meaning,realDictionary.cases.meaning);
+ assert(!elements(lookup).some(node=>node.props?.children==='加入本课义项'));
+}
+for(const loadCatalog of [async()=>{throw Error('Source index temporarily unavailable')},async()=>buildVocabularyCatalog({...realPages,version:99})]){
+ assert.deepEqual(await resolveReviewedLookupEntry('cases',[source14],realDictionary,loadCatalog),realDictionary.cases,'Failure keeps the dictionary entry without target certification');
+ assert.equal(await resolveReviewedLookupEntry('carpets',[source14],realDictionary,loadCatalog),undefined);
+ assert.equal((await resolveReviewedLookupEntry('cases',[source14],realDictionary,async()=>realCatalog)).reviewedHeadword,'case','A later open retries successfully');
+}
+{
+ let reads=0;
+ const ordinary=await resolveReviewedLookupEntry('network',[{book:'NCE1',lesson:14}],realDictionary,()=>{reads++;throw Error('A normal dictionary lookup must not load the source index')});
+ assert.deepEqual(ordinary,actualFindWord(realDictionary,'network'));assert.equal(reads,0);
+ const selected={word:'cases',example:'',sources:[{kind:'nce',...source14}]};
+ reset([null,undefined,false,'',false],{});h.loadDictionary=async()=>realDictionary;
+ const cachedInvalid=structuredClone(realPages);cachedInvalid.lessons['NCE1-14'].vocabulary.words[0].forms=null;
+ const refreshCalls=[];let cached=cachedInvalid;
+ h.loadPages=async refresh=>{refreshCalls.push(refresh===true);if(refresh)cached=realPages;return cached};
+ await renderLookup(()=>{}).props.value(selected);
+ assert.deepEqual(refreshCalls,[false,true],'A structurally invalid cached index requests an actual fresh load');
+ assert.equal(h.states[1].reviewedHeadword,'case');
+ h.loadPages=async()=>cachedInvalid;
+ await renderLookup(()=>{}).props.value(selected);
+ assert.equal(h.states[1].reviewedHeadword,undefined,'Repeated invalid data safely retains the dictionary fallback');
+ h.loadPages=async refresh=>refresh?realPages:cachedInvalid;
+ await renderLookup(()=>{}).props.value(selected);
+ assert.equal(h.states[1].reviewedHeadword,'case','Reopening can refresh and recover from a previously invalid cached index');
+}
+{
+ const corrupt=structuredClone(realCatalog);
+ corrupt.lessons.find(lesson=>lesson.key==='NCE1-14').words.find(word=>word.word==='case').forms.push('carpets');
+ assert.equal(reviewedHeadwordForForm('carpets',[source14],corrupt),'carpet','An unrelated automatic hint cannot expand the reviewed form list');
+ const dictionary={cases:{...realDictionary.cases,reviewedHeadword:'dog',headwordIpa:'untrusted'}};
+ assert.deepEqual(await resolveReviewedLookupEntry('cases',[],dictionary,async()=>realCatalog),realDictionary.cases,'Dictionary metadata cannot certify a source or override canonical IPA');
+}
+{
+ reset([null,undefined,false,'',false],{});h.loadDictionary=async()=>realDictionary;
+ let release;h.loadPages=()=>new Promise(resolve=>{release=resolve});
+ const open=renderLookup(()=>{}).props.value;
+ const firstRequest=open({word:'carpets',example:'',sources:[{kind:'nce',...source14}]});
+ await Promise.resolve();
+ const secondRequest=open({word:'Fiat',example:'',sources:[{kind:'nce',book:'NCE1',lesson:6}]});
+ await secondRequest;assert(release);release(realPages);await firstRequest;
+ assert.equal(h.states[0].word,'Fiat');assert.equal(h.states[1].word,'fiat','An old catalog response cannot overwrite the later lookup');assert.equal(h.states[2],false);
+}
+{
+ reset([null,undefined,false,'',false],{});h.loadDictionary=async()=>realDictionary;
+ let release;h.loadPages=()=>new Promise(resolve=>{release=resolve});
+ const pending=renderLookup(()=>{}).props.value({word:'carpets',example:'',sources:[{kind:'nce',...source14}]});
+ await Promise.resolve();assert(release);
+ find(renderLookup(()=>{}),node=>node.type==='Dialog').props.onOpenChange(false);
+ const writesAfterClose=h.writes.length;release(realPages);await pending;
+ assert.equal(h.states[0],null);assert.equal(h.writes.length,writesAfterClose,'Closing cancels stale entry and loading writes');
+}
+{
+ const at=Date.UTC(2026,9,1,10),firstEnrollment=actualEnrollFlashcard(structuredClone(initial),enrolledCarpet,[],at);
+ const snapshot=structuredClone(firstEnrollment),again=actualEnrollFlashcard(firstEnrollment,{...enrolledCarpet,word:'carpet'},[],at+1000);
+ assert.equal(Object.keys(again.flashcards.notes).length,1);assert.equal(Object.keys(again.flashcards.cards).length,1);
+ assert.deepEqual(again.flashcards.cards,snapshot.flashcards.cards);assert.deepEqual(again.flashcards.reviews,snapshot.flashcards.reviews);
+ assert.deepEqual(JSON.parse(JSON.stringify(again)),again,'Local JSON refresh preserves the canonical word and schedule');
+ const legacy={...structuredClone(initial),personalWords:[{word:'carpets',meaning:'我的旧释义',example:'My old example.'}],cards:{carpets:{box:3,due:at+5000}}};
+ const prior=actualEnrollFlashcard(legacy,{word:'carpets',meaning:'我的旧释义',example:'My old example.'},[],at),next=actualEnrollFlashcard(prior,enrolledCarpet,[],at);
+ assert.deepEqual(next.personalWords,prior.personalWords);assert.deepEqual(next.cards,prior.cards);
+ for(const [id,card] of Object.entries(prior.flashcards.cards))assert.deepEqual(next.flashcards.cards[id],card,'Existing alias schedules are never silently rewritten');
+ for(const [id,note] of Object.entries(prior.flashcards.notes))assert.deepEqual(next.flashcards.notes[id],note,'Existing alias content is retained');
+}
+console.log('PASS reviewed word forms: six source-scoped noun plurals/possessives, real dictionary fallback, index failure/retry, stale async lookup, canonical enrollment and preservation of old aliases.');
 console.log('PASS source component callbacks: cross-book sources under filters, enrolled-source updates, translations, valid route fallback, rejected-add feedback and original examples.');

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "baseCommit": "f23a75d00c00745449e62335051ace3d9b080564",
+  "recordedAt": "2026-10-01T21:25:56.309822+00:00",
+  "scope": "Six explicitly reviewed NCE1 Lesson 14 noun plurals and possessives only",
+  "approvedForms": [
+    "carpets",
+    "cases",
+    "dogs",
+    "carpet's",
+    "case's",
+    "dog's"
+  ],
+  "dictionaryEvidence": {
+    "carpets": "absent",
+    "cases": "independent coarse plural entry",
+    "dogs": "independent coarse plural entry",
+    "sha256": "41d983d5f8017035719842fad2275f949d39e348cdc6f50bf00ae0a9a9cee209"
+  },
+  "sourceIndexSha256": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596",
+  "passed": [
+    "30 registered canonical source/headword pairs through actual vocabulary row and asynchronous lookup callbacks",
+    "6 reviewed form lookup callbacks preserve selected context and dictionary text",
+    "wrong source, unapproved forms and source54 japanning/polishing remain unbound",
+    "ordinary dictionary words do not request source index",
+    "invalid cached index invokes loadPages(true); repeated invalid data safely falls back and subsequent open recovers",
+    "stale requests and closed dialog do not write entry/loading state",
+    "actual canonical enrollment deduplicates and preserves schedule/reviews",
+    "JSON refresh retains canonical record",
+    "existing alias personal words, classic cards and flashcard notes/schedules remain unchanged",
+    "15 existing FSRS behavior scenarios",
+    "TypeScript",
+    "new helper and source test ESLint",
+    "git diff --check"
+  ],
+  "independentReview": {
+    "reviewer": "Codex /root/review_batch5d",
+    "readOnly": true,
+    "initialFindings": [
+      "invalid resolved source cache did not refresh",
+      "unrelated dictionary lookup waited for source index"
+    ],
+    "resolution": "Both fixed; reviewer independently reproduced real loader/cache/provider behavior with write:false in-memory bundle",
+    "blockingFindingsRemaining": 0,
+    "humanCertification": false
+  },
+  "uiLint": {
+    "passed": false,
+    "baselineCompared": "f23a75d",
+    "sameDiagnostic": {
+      "ruleId": "react-hooks/set-state-in-effect",
+      "severity": 2,
+      "column": 35
+    },
+    "baselineErrors": 1,
+    "currentErrors": 1,
+    "rulesWeakened": false
+  },
+  "implementationHashes": {
+    "app/reviewed-word-forms.ts": "e15aef1ec364fc5e298fcb3e844f8f95a5f2787af3c1819b17b2c2f9d740d9f9",
+    "app/word-lookup.tsx": "035f3faf51daa9c6d571a45435f0ef697dfeaf691fc30bc99d50d7e5cc2aa7e4",
+    "scripts/test-flashcard-sources.mjs": "5ca2397064ea05876c12ff13bdfa7c6949222a35f5bce0b7ab034cad9cdb259f"
+  },
+  "protectedHashes": {
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/flashcards.ts": "b7327bae677085b3321bc54e9e7540deb64c60a0c79f780bd7800d9df8e44333",
+    "app/flashcard-types.ts": "f001cd06ca977a1188b176c8eff664a7d07ef851fbead642864626694222fd7f",
+    "app/flashcard-ui.tsx": "0e56924938c929eede02889ecbab9aba8b7d3e7a470e6a238a44ba1c20331749",
+    "app/progress-save.tsx": "51777b9bb7ce2a6ae75c9cefe2fcf57a9eda8eea3aa9eae2ec8a6edac5f6579b",
+    "app/textbook-vocabulary-ui.tsx": "bf85c23f2f5a07b72c3a3222da1e2381f816b12c04ee838df53808d1ae29fb6e",
+    "pnpm-lock.yaml": "22336ed8eb4954d3877fc49982f153f2cdc19f45c554106d378c7b136607eb3f"
+  },
+  "protectedFilesUnchanged": true,
+  "logs": [
+    {
+      "path": "work/word-forms-callbacks.log",
+      "sha256": "eca87d5dd2c54977c4a194751d634dc4efc8aed18436b66689229f16fd474b53"
+    },
+    {
+      "path": "work/word-forms-fsrs.log",
+      "sha256": "ea48e8eb017786398f5d7ecfae656a9fd648a4179ddbb5a1805d8e1dd98dabdc"
+    },
+    {
+      "path": "work/word-forms-types.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "work/word-forms-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/word-lookup-frozen-lint.json",
+      "sha256": "7e6ec4291e800919d8604e16556653fb48ee1727bbf3ce95dd4472162a91250e"
+    },
+    {
+      "path": "work/word-lookup-current-lint.json",
+      "sha256": "41c024e312e955d348f9961a6d99d70176da04467a4cc0f9a1128c8804cf9a37"
+    }
+  ],
+  "notVerified": [
+    "Browser",
+    "320/390",
+    "Actual audio",
+    "React route-change effect cancellation",
+    "Human teacher review",
+    "All English inflections",
+    "Remote publication"
+  ],
+  "remoteWriteAttempted": false,
+  "published": false
+}
