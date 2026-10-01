@@ -8,6 +8,8 @@ import {ieltsFlashcardExamples,ieltsFlashcardDescription} from './ielts-flashcar
 import {speak} from './speech';
 import {PlaybackSpeed} from './playback-speed';
 import fsrsAttribution from './data/fsrs-attribution.json';
+import {VocabularyExamples} from './vocabulary-example-ui';
+import {usageExamples} from './vocabulary-usage';
 import './flashcard.css';
 
 const grades:{rating:FlashcardRating;label:string;help:string}[]=[
@@ -93,7 +95,7 @@ export function FlashcardReview({state,update,ready,onAdd,onSelectWords}:{state:
      {!flipped?<p className="muted">先试着回想，再翻开答案。</p>:<>
       <p className="meaning" lang={current.card.direction==='recognition'?'zh-CN':'en'}>{current.card.direction==='recognition'?current.note.meaning:current.note.word}</p>
       {current.note.ipa&&<p className="ipa" lang="en">{current.note.ipa}</p>}
-      {current.note.examples.map((example,i)=><div key={i} className="flashcard-example"><p lang="en">{example.en}</p>{example.zh&&<p lang="zh-CN" className="muted">{example.zh}</p>}</div>)}
+      <VocabularyExamples examples={usageExamples(current.note.word,current.note.meaning,current.note.examples)}/>
       <Sources sources={current.note.sources}/>
       {current.card.direction==='production'&&<button className="text-btn" onClick={()=>speak(current.note.word)}><Volume2 size={16}/>听英文</button>}
      </>}
@@ -106,6 +108,6 @@ export function FlashcardReview({state,update,ready,onAdd,onSelectWords}:{state:
    </div>:<div className="empty"><Check size={34}/><h2>{summary.total?'当前来源暂无到期词卡':'从需要记住的词开始'}</h2><p>{summary.total?'短时巩固和到期复习会在时间到达后出现。也可到词表加入新词。':'在教材词表点「加入复习」，或展开下方原创雅思词卡。'}</p><button className="btn" onClick={onSelectWords}>到教材词表选词<ArrowRight size={16}/></button>{Object.values(state.flashcards?.cards||{}).some(c=>c.due>clock)&&<p className="muted small">最近一次复习：{new Date(Math.min(...Object.values(state.flashcards!.cards).filter(c=>c.due>clock).map(c=>c.due))).toLocaleString('zh-CN')}</p>}</div>}
   </section>
   <details className="panel section-space flashcard-library"><summary>我的词条 · {Object.keys(state.flashcards?.notes||{}).length} 个义项</summary><label className="flashcard-search">查找词条<input value={query} onChange={e=>setQuery(e.target.value)} placeholder="英文或中文意思"/></label><div className="flashcard-note-list">{notes.slice(0,50).map(note=><article key={note.id}><div><strong lang="en">{note.word}</strong><p>{note.meaning||'释义待补全'}</p><Sources sources={note.sources}/></div>{!note.incomplete&&!Object.values(state.flashcards?.cards||{}).some(card=>card.noteId===note.id&&card.direction==='production')?<button className="btn secondary small" onClick={()=>apply(s=>addReverseCard(s,note.id))}><Plus size={14}/>加中文→英文卡</button>:<span className="muted small">{note.incomplete?'待补全':'两种方向分别复习'}</span>}</article>)}</div>{!notes.length&&<p className="muted">没有匹配的词条。</p>}{notes.length>50&&<p className="muted small">显示前 50 个结果，请输入关键词继续查找。</p>}</details>
-  <details className="panel section-space flashcard-originals"><summary>雅思主题词卡 · 本站原创 {ieltsFlashcardExamples.length} 个</summary><p className="muted small">{ieltsFlashcardDescription}</p><button className="btn secondary" onClick={addExamples}><Plus size={16}/>加入这组主题词卡</button><div className="flashcard-note-list">{ieltsFlashcardExamples.map(word=><article key={word.word+':'+word.meaning}><div><strong lang="en">{word.word}</strong><p>{word.meaning}</p><Sources sources={word.sources||[]}/></div><button className="btn secondary small" onClick={()=>onAdd(word)}>{isFlashcardEnrolled(state,word)?'补充来源 / 例句':'加入复习'}</button></article>)}</div></details>
+  <details className="panel section-space flashcard-originals"><summary>雅思主题词卡 · 本站原创 {ieltsFlashcardExamples.length} 个</summary><p className="muted small">{ieltsFlashcardDescription}</p><button className="btn secondary" onClick={addExamples}><Plus size={16}/>加入这组主题词卡</button><div className="flashcard-note-list">{ieltsFlashcardExamples.map(word=><article key={word.word+':'+word.meaning}><div><strong lang="en">{word.word}</strong><p>{word.meaning}</p>{(!current||flipped)&&<VocabularyExamples examples={usageExamples(word.word,word.meaning,[{en:word.example,zh:word.exampleTranslation}])}/>}<Sources sources={word.sources||[]}/></div><button className="btn secondary small" onClick={()=>onAdd(word)}>{isFlashcardEnrolled(state,word)?'补充来源 / 例句':'加入复习'}</button></article>)}</div></details>
  </section>;
 }

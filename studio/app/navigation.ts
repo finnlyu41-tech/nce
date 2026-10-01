@@ -1,6 +1,6 @@
 import {bookCounts, type NceBookId} from './model';
 
-export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;unit?:string;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
+export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;unit?:string;check?:true;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
 const roadmapNodes=['baseline','starter','foundation','bridge','listening','reading','writing','speaking','mock','finish'];
 const views=['roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
 const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','listening','reading','speaking','writing'],grammar:['path','book','topic','practice']};
@@ -16,6 +16,7 @@ export function parseRoute(hash:string):StudioRoute{
  const node=params.get('node');if(view==='roadmap'&&node&&roadmapNodes.includes(node))route.node=node;
  const mission=params.get('mission');if(view==='roadmap'&&mission&&/^[a-z][a-z0-9-]{1,60}$/.test(mission)&&!['constructor','prototype'].includes(mission))route.mission=mission;
  const unit=params.get('unit');if(view==='grammar'&&unit&&/^[a-z][a-z-]{1,60}$/.test(unit)&&!['constructor','prototype'].includes(unit))route.unit=unit;
+ if(view==='grammar'&&tab==='path'&&route.unit&&params.get('check')==='1')route.check=true;
  const goal=params.get('goal'),practice=params.get('practice');
  if((view==='nce'&&route.lesson&&(tab==='practice'||tab==='grammar'))||view==='grammar'&&route.lesson&&tab==='practice'||view==='roadmap'){
   if(goal&&/^[a-z-]{1,60}$/.test(goal)&&!['constructor','prototype'].includes(goal))route.goal=goal;
@@ -45,6 +46,7 @@ export function routeHash(route:StudioRoute){
   if((route.view==='nce'||route.view==='grammar')&&route.tab==='practice'&&route.practice&&['model','independent','transfer','review'].includes(route.practice))params.set('practice',route.practice);
  }
  if(route.view==='grammar'&&route.unit&&/^[a-z][a-z-]{1,60}$/.test(route.unit)&&!['constructor','prototype'].includes(route.unit))params.set('unit',route.unit);
+ if(route.view==='grammar'&&route.tab==='path'&&params.has('unit')&&route.check)params.set('check','1');
  return path+(params.size?'?'+params:'');
 }
 export function navigate(route:StudioRoute,{replace=false,keepScroll=false,scrollTarget}:{replace?:boolean;keepScroll?:boolean;scrollTarget?:string}={}){

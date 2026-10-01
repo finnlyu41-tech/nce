@@ -60,6 +60,15 @@ def main():
         checks.append(verify(base, '/map/', None, status=405, method='POST'))
         for path, digest in version['map_assets'].items():
             checks.append(verify(base, '/'+path, digest))
+        for path, digest in version.get('demo_assets', {}).items():
+            checks.append(verify(base, '/demos/yesterday/' if path.endswith('/index.html') else '/'+path, digest))
+        if version.get('demo_assets'):
+            checks.append(verify(base, '/demos/yesterday/index.html', None, status=308))
+            checks.append(verify(base, '/demos/yesterday', None, status=308))
+            checks.append(verify(base, '/demos/yesterday/', None, method='HEAD'))
+            checks.append(verify(base, '/demos/yesterday/', None, method='POST', status=405))
+            checks.append(verify(base, '/demos/yesterday/unknown.mjs', None, status=404))
+            checks.append(verify(base, '/demos/yesterday/.env', None, status=404))
         for path in ['/map/main.tsx', '/map/model.ts', '/map/test-model.mjs', '/map/assets/unknown.js', '/map/unknown']:
             checks.append(verify(base, path, None, status=404))
         for path in ['/README.md', '/.env', '/work/local-codex/SESSION.json', '/grammar/ocr.json', '/grammar/source.pdf']:

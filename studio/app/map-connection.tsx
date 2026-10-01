@@ -13,7 +13,7 @@ export function mapUnitId(book?:NceBookId,lesson?:number) {
 }
 export function useMapProgress(enabled=true) {
   const [state,setState]=useState<Progress>(emptyProgress),[error,setError]=useState('');
-  useEffect(()=>{if(!enabled)return;const read=()=>{try{const raw=localStorage.getItem(storageKey);setState(raw?parseProgress(raw):emptyProgress());setError('')}catch{setError('地图记录暂时无法读取，原始记录仍保留。')}};read();const sync=(e:StorageEvent)=>{if(e.key===storageKey||e.key===null)read()};window.addEventListener('storage',sync);window.addEventListener('focus',read);return()=>{window.removeEventListener('storage',sync);window.removeEventListener('focus',read)}},[enabled]);
+  useEffect(()=>{if(!enabled)return;const read=()=>{try{const raw=localStorage.getItem(storageKey);setState(raw?parseProgress(raw):emptyProgress());setError('')}catch{setError('地图记录暂时无法读取，原始记录仍保留。')}};read();const sync=(e:StorageEvent)=>{if(e.key===storageKey||e.key===null)read()};window.addEventListener('storage',sync);window.addEventListener('focus',read);window.addEventListener('pageshow',read);return()=>{window.removeEventListener('storage',sync);window.removeEventListener('focus',read);window.removeEventListener('pageshow',read)}},[enabled]);
   return {state,error};
 }
 export function mapHref(state:Progress,book?:NceBookId,lesson?:number,learn=false) {

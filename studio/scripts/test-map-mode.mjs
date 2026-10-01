@@ -21,7 +21,7 @@ const canonical = await get('/map?from=classic');
 assert.equal(canonical.status, 308);
 assert.equal(canonical.headers.get('Location'), '/map/?from=classic');
 assert.equal(assetCalls, 0, 'Canonical URL is resolved before reading assets');
-for (const path of ['/', '/map/', '/map/index.html', ...Object.keys(version.map_assets).map(p => '/'+p)]) {
+for (const path of ['/', '/map/', '/map/index.html', '/demos/yesterday/', ...Object.keys(version.map_assets).map(p => '/'+p), ...Object.keys(version.demo_assets).filter(p => !p.endsWith('/index.html')).map(p => '/'+p)]) {
   const response = await get(path, {headers: {Authorization: 'Basic obsolete-test-value'}});
   assert.equal(response.status, 200, path);
   assert.match(response.headers.get('Content-Security-Policy'), /script-src 'self'/);
@@ -33,11 +33,17 @@ for (const path of ['/', '/map/', '/map/index.html', ...Object.keys(version.map_
 assert.equal(await (await get('/map/', {method: 'HEAD'})).text(), '');
 assert.equal((await get('/map/', {method: 'POST'})).status, 405);
 assert.equal((await get('/map', {method: 'POST'})).status, 405);
-for (const path of ['/map/main.tsx', '/map/model.ts', '/map/test-model.mjs', '/map/.env', '/map/assets/index-12345678.js.map', '/map/assets/unknown.js', '/map/unknown']) {
+assert.equal((await get('/demos/yesterday/index.html')).headers.get('Location'),'/demos/yesterday/');
+const demoCanonical=await get('/demos/yesterday?from=learning');
+assert.equal(demoCanonical.status,308);
+assert.equal(demoCanonical.headers.get('Location'),'/demos/yesterday/?from=learning');
+assert.equal(await (await get('/demos/yesterday/',{method:'HEAD'})).text(),'');
+assert.equal((await get('/demos/yesterday/',{method:'POST'})).status,405);
+for (const path of ['/demos/', '/demos/yesterday/.env', '/demos/yesterday/unknown.mjs', '/demos/yesterday/app.mjs.map', '/map/main.tsx', '/map/model.ts', '/map/test-model.mjs', '/map/.env', '/map/assets/index-12345678.js.map', '/map/assets/unknown.js', '/map/unknown']) {
   const before = assetCalls;
   assert.equal((await get(path)).status, 404, path);
   assert.equal(assetCalls, before, 'Unpackaged paths never reach ASSETS');
 }
 assert.equal((await worker.fetch(new Request('http://test.example/map/'), env)).status, 426);
 assert.equal((await worker.fetch(new Request('https://test.example/map/'), {})).status, 503);
-console.log('Map packaging routes, redirects, GET/HEAD, cache, CSP, credentials and source isolation passed.');
+console.log('Map and lesson demo routes, redirects, GET/HEAD, cache, CSP, credentials and source isolation passed.');

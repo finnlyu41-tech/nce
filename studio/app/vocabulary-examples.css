@@ -1,0 +1,10 @@
+.vocabulary-usage{min-width:0;text-align:left;margin:12px 0;overflow-wrap:anywhere;white-space:normal}
+.vocabulary-usage-item{padding:12px 14px;border-left:3px solid #d4e2d6;border-radius:0 8px 8px 0;background:#f6f8f4;margin:10px 0;min-width:0}
+.vocabulary-usage .vocabulary-usage-label{font-size:11px;color:#5a735f;margin:0 0 8px;line-height:1.7}
+.vocabulary-usage-label a{display:inline-block;color:inherit;margin-left:8px;text-decoration:underline;text-underline-offset:3px}
+.vocabulary-usage .vocabulary-collocation{font-size:13px;line-height:1.6;margin:0 0 8px;color:#435449}
+.vocabulary-usage .vocabulary-usage-english{font-size:15px;line-height:1.65;margin:4px 0;font-weight:400}
+.vocabulary-usage .vocabulary-usage-chinese{font-size:14px;line-height:1.7;margin:4px 0;color:#63706a}
+.vocabulary-usage .small{margin:8px 0 0;font-size:11px;line-height:1.6}
+.vocabulary-context-action{font-size:12px;min-height:44px}
+@media(max-width:640px){.vocabulary-usage-item{padding:10px 12px}.vocabulary-usage .vocabulary-usage-english{font-size:14px}.vocabulary-usage .vocabulary-usage-chinese{font-size:13px}}

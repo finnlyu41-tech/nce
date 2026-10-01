@@ -1,4 +1,5 @@
 'use client';
+import {TodayPracticeQueue} from './today-practice-ui';
 import {GrammarWorkspace} from './grammar-workspace';
 import {useState,useEffect,useMemo,useRef} from 'react';
 import {BookOpen,LayoutDashboard,Layers,NotebookPen,GraduationCap,ChartNoAxesCombined,ArrowUpRight,ArrowRight,Play,Check,Volume2,Search,Headphones,Flame,Target,Clock3,ChevronRight,Plus,RotateCcw,FolderOpen,Info} from 'lucide-react';
@@ -13,9 +14,9 @@ import {LessonView,Grammar,Quiz,WordCard,speak,Recorder} from './learning';
 import IELTS from './ielts';
 import {ExpressionCollection} from './expression-guide-ui';
 import NceStudio,{nceCompleted} from './nce';
-import {LearningToday,LearningReviews,LearningRecords} from './learning-plan-ui';
-import {LearningRoadmap,RoadmapHome} from './learning-roadmap-ui';
-import {BlueprintPosition,JourneyReviews,JourneyRecords} from './ielts-blueprint-ui';
+import {LearningRecords} from './learning-plan-ui';
+import {LearningRoadmap} from './learning-roadmap-ui';
+import {BlueprintPosition,JourneyRecords} from './ielts-blueprint-ui';
 import {journeySnapshot} from './ielts-journey';
 import {roadmapActiveStep,roadmapSteps} from './learning-roadmap';
 import {dueLearningGoals} from './learning-plan';
@@ -51,7 +52,7 @@ export default function StudyApp(){
  return destination?<main className="loading" role="status">正在打开学习… <a href={destination}>进入学习</a></main>:<StudyWorkspace/>;
 }
 function StudyWorkspace(){
- const {state:mapState}=useMapProgress(ONLINE);
+ const {state:mapState,error:mapError}=useMapProgress(ONLINE);
  const route=useRoute();useRouteScroll();const view=route.view,lessonId=route.lesson||1;
  const materialStart=useMemo(()=>route.book&&route.lesson?{book:route.book,lesson:route.lesson}:null,[route.book,route.lesson]);
  const [persisted,setPersisted]=useState<State|null>(null);
@@ -85,23 +86,18 @@ function StudyWorkspace(){
  {ONLINE&&<SiteMaterials startAt={materialStart} visible={view==='cloud'} state={state} restore={incoming=>{setState(s=>prepareFlashcardRestore(s,incoming,courseWords));setStorageError(false);setStorageBlocked(false)}} openLesson={(book,lesson)=>navigate({view:'nce',book,lesson,tab:'listen'})}/>}
  {(view==='nce'||view==='library')&&<>{view==='library'&&<nav className="course-resources" aria-label="课程资料与专项"><button onClick={()=>go('grammar')}>语法与句型检索</button><button onClick={()=>go('words')}>教材词汇索引</button><button onClick={()=>go('ielts')}>雅思专项</button><details className="course-more"><summary>更多资料</summary><button onClick={()=>go('courses')}>备用练习素材</button><button onClick={()=>go('cloud')}>整册资料与下载</button></details></nav>}<NceStudio goCloud={(book,lesson)=>navigate({view:'cloud',book,lesson})} state={state} update={setState} addWord={addPersonalWord} onAnswer={answer} goIELTS={()=>go('ielts')}/></>}
  {view==='roadmap'&&ready&&<LearningRoadmap state={state} update={setState}/>}
- {view==='today'&&<>
-  <PageTitle eyebrow="IELTS ACADEMIC · ONE STEP AT A TIME" title="今天，从这里继续。" text="一个具体的小任务，一步看得见的进步。"/>
-  {ready&&(ONLINE?<MapConnection view="home"/>:<RoadmapHome state={state}/>)}
-  <section className="learning-home-support"><div><strong>需要巩固的，已经排在这里</strong><p className="muted small">{journeySnapshot(state).due.length} 个路线小步 · {dueLearningGoals(state).length} 个用法 · {dueCount} 个生词到期</p></div><button className="btn secondary" onClick={()=>go('review')}>打开复习<ArrowRight size={16}/></button></section>
-  {state.nceLast&&<details className="blueprint-backup-home"><summary>继续上次的教材补漏</summary><LearningToday state={state}/></details>}
- </>}
+ {(view==='today'||view==='review')&&<TodayPracticeQueue state={state} map={mapState} ready={ready} online={ONLINE} error={mapError}/> }
 
  {view==='courses'&&<><PageTitle eyebrow="EXTRA PRACTICE" title="需要时，再来练一练。" text="36 个原创单元作为备用素材，不需要另学一套课程。听读优先使用新概念原声；这里的语音为设备合成。"/><div className="filter-bar"><Tabs value={stage} onValueChange={setStage}><TabsList>{['all','基础起步','表达进阶','雅思衔接'].map(v=><TabsTrigger key={v} value={v}>{v==='all'?'全部课程':v}</TabsTrigger>)}</TabsList></Tabs><SearchField value={search} onChange={setSearch} placeholder="搜索课程或语法"/></div><div className="course-grid">{filteredLessons.map(l=><button className="course-card" key={l.id} onClick={()=>openLesson(l.id)}><div className="section-top"><span className="unit-label">UNIT {String(l.id).padStart(2,'0')}</span>{state.completed.includes(l.id)?<span className="completed"><Check size={14}/>已完成</span>:<span className="muted small">{l.level}</span>}</div><h3>{l.title}</h3><p className="course-sub" lang="en">{l.subtitle}</p><p className="muted small">{l.grammar.title}</p><div className="course-bottom"><span>8 个词汇 · 8 道练习</span><ArrowRight size={17}/></div></button>)}</div>{!filteredLessons.length&&<div className="empty">没有找到相关课程，换个关键词试试。</div>}<div className="notice row spread"><p>沿着新概念主线继续学习，遇到卡点时再回来。</p><button className="btn secondary" onClick={()=>go('nce')}>返回新概念</button></div></>}
  {view==='lesson'&&<LessonView key={lesson.id} lesson={lesson} state={state} addWord={addWord} onAnswer={answer} onFinish={score=>finish(score,lesson.id)} onNext={()=>lesson.id===36?go('courses'):openLesson(lesson.id+1)}/>}
  {view==='quiz'&&<><PageTitle eyebrow="PRACTICE ROOM" title={quizMode==='mistakes'?'把错题，变成会的题。':'12 题基础诊断'} text={quizMode==='mistakes'?'答对后移出错题本；记录保存在当前浏览器。':'覆盖三个阶段的语法要点，仅用于发现薄弱项，不是雅思估分。'}/><section className="panel narrow"><Quiz key={quizMode} questions={quizItems} onAnswer={answer} onFinish={score=>finish(score)}/></section></>}
- {(view==='words'||view==='review')&&<>
-  <PageTitle eyebrow={view==='review'?"RECALL · THEN CHECK":"NEW CONCEPT ENGLISH · VOCABULARY"} title={view==='review'?"先回想，再看答案。":"单词"} text={view==='review'?"用法与生词一起巩固。先做一小轮，有余力再继续。":"按教材每课的「生词和短语」学习；查找单词、回到原书，把不熟悉的词加入复习。"}/>{view==='review'&&<>{ONLINE&&<MapConnection view="review"/>}<LearningReviews state={state}/><details className="panel reserve-materials"><summary>旧版路线复习</summary><JourneyReviews state={state}/></details></>}
-  {view==='words'&&<nav className="vocabulary-tabs" aria-label="词汇学习方式">{[['book','按课词表'],['index','单词索引'],['review','生词复习']].map(([id,label])=><button key={id} className={(route.tab||'book')===id?'active':''} aria-current={(route.tab||'book')===id?'page':undefined} onClick={()=>navigate(id==='review'?{view:'words',book:route.book,lesson:route.lesson,tab:'review'}:id==='book'?{view:'words',book:route.book||last.book,lesson:route.lesson||(route.book&&route.book!==last.book?1:last.lesson),tab:id}:{view:'words',tab:id})}>{label}{id==='review'&&dueCount>0?` · ${dueCount}`:''}</button>)}</nav>}
-  {view==='words'&&route.tab!=='review'?<TextbookVocabularyBrowser state={state} currentCourse={last} onAdd={addPersonalWord}/>:<>
-  <FlashcardReview state={state} update={setState} ready={ready} onAdd={addPersonalWord} onSelectWords={()=>navigate({view:ONLINE?'words':'nce',book:last.book,lesson:last.lesson,tab:ONLINE?'book':'listen'})}/>
-  <details className="panel section-space"><summary>需要加词时，查看当前课词表</summary><CurrentCourseVocabulary state={state} currentCourse={last}/></details>
-  <ReserveVocabulary words={courseWords} cards={state.cards} isEnrolled={w=>isFlashcardEnrolled(state,w)} addWord={addWord}/>
+ {view==='words'&&<>
+  <PageTitle eyebrow="NEW CONCEPT ENGLISH · VOCABULARY" title="单词" text="在例句里理解，在回想中记住。按课查找，或继续复习。"/>
+  <nav className="vocabulary-tabs" aria-label="词汇学习方式">{[['book','按课词表'],['index','单词索引'],['review','生词复习']].map(([id,label])=><button key={id} className={(route.tab||'book')===id?'active':''} aria-current={(route.tab||'book')===id?'page':undefined} onClick={()=>navigate(id==='review'?{view:'words',book:route.book,lesson:route.lesson,tab:'review'}:id==='book'?{view:'words',book:route.book||last.book,lesson:route.lesson||(route.book&&route.book!==last.book?1:last.lesson),tab:id}:{view:'words',tab:id})}>{label}{id==='review'&&dueCount>0?` · ${dueCount}`:''}</button>)}</nav>
+  {route.tab!=='review'?<TextbookVocabularyBrowser state={state} currentCourse={last} onAdd={addPersonalWord}/>:<>
+   <FlashcardReview state={state} update={setState} ready={ready} onAdd={addPersonalWord} onSelectWords={()=>navigate({view:ONLINE?'words':'nce',book:last.book,lesson:last.lesson,tab:ONLINE?'book':'listen'})}/>
+   <details className="panel section-space"><summary>需要加词时，查看当前课词表</summary><CurrentCourseVocabulary state={state} currentCourse={last}/></details>
+   <ReserveVocabulary words={courseWords} cards={state.cards} isEnrolled={w=>isFlashcardEnrolled(state,w)} addWord={addWord}/>
   </>}
  </>}
 
