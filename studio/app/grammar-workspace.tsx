@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import type {NceBookId,State} from './model';
 import {GrammarCurriculum} from './grammar-curriculum-ui';
 import {grammarUnitFor,guideBelongsToEntry} from './grammar-curriculum';
@@ -8,15 +9,17 @@ import {useRoute} from './use-route';
 import {navigate} from './navigation';
 import {ONLINE} from './runtime-mode';
 import {mapUnitId} from './map-connection';
-import {updateGrammarProgress,revisitGrammarTheory} from './grammar-curriculum-progress';
+import {updateGrammarProgress,revisitGrammarTheory,beginGrammarRound} from './grammar-curriculum-progress';
 
 export function GrammarWorkspace({state,update}:{state:State;update:(change:(s:State)=>State)=>void}) {
   const route=useRoute(),tab=route.tab||(route.book?'book':'path'),curriculum=tab==='path'||tab==='practice';
   const unit=route.unit?grammarUnitFor(route.unit):undefined;
+  useEffect(()=>{if(!route.check)return;if(unit)update(s=>updateGrammarProgress(s,unit.id,beginGrammarRound));navigate({...route,check:undefined},{replace:true,keepScroll:true})},[route.check,unit?.id]);
   const entry=route.book&&route.lesson?grammarEntryFor(route.book,route.lesson):undefined;
   const validPractice=!!entry&&!!route.goal&&guideBelongsToEntry(entry,route.goal)&&(!route.unit||!!unit&&unit.guideIds.includes(route.goal));
   const leaveUnit=()=>{if(unit)update(s=>updateGrammarProgress(s,unit.id,revisitGrammarTheory))};
   const openLesson=(book:NceBookId,lesson:number)=>{const id=ONLINE&&mapUnitId(book,lesson);if(id)location.href=`/map/#/learn/${id}`;else navigate({view:'nce',book,lesson,tab:'listen'})};
+  if(route.check)return <p role="status">正在准备这一组检验…</p>;
   return <>
     <nav className="vocabulary-tabs" aria-label="句型语法学习方式">
       <button aria-current={curriculum?'page':undefined} className={curriculum?'active':''} onClick={()=>{leaveUnit();navigate({view:'grammar',tab:'path'})}}>按能力学习</button>

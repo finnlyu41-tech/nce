@@ -182,6 +182,8 @@ function completeRound(unit,record,at,{hint=false,theory=false,wrong=false}={}){
  }
  return progress.finishGrammarRound(next,unit,at);
 }
+let reliabilityChecks=0;
+const reliable=(record,expected,message,at=now+30*day)=>{assert.equal(delayed(record,at),expected,message);reliabilityChecks++};
 for(const unit of units){
  const empty=progress.emptyGrammarProgress(),questions=progress.grammarRoundQuestions(unit,0),first=questions[0];
  assert(!delayed(empty));
@@ -253,13 +255,53 @@ for(const unit of units){
  const failed=completeRound(unit,spaced,now+2*day,{wrong:true});
  assert(!delayed(failed),'A latest failed check supersedes earlier passes');
  assert.equal(status(failed),'已练习 · 有题待核对');
+ // A pass before a later failure/help cannot certify an immediately corrected round.
+ for(const interruption of [{wrong:true},{hint:true},{theory:true}]){
+  const interrupted=completeRound(unit,spaced,now+2*day,interruption);
+  const corrected=completeRound(unit,interrupted,now+2*day+1000);
+  reliable(corrected,false,`${unit.id}: correction after ${JSON.stringify(interruption)} needs fresh delayed evidence`);
+  assert.equal(status(corrected),'本轮独立检验通过','A corrected round reports only its own independent result');
+  const beforeBoundary=completeRound(unit,corrected,now+3*day+999);
+  reliable(beforeBoundary,false,'A fresh alternate pass at 24 hours minus 1 ms is still early');
+  const recovered=completeRound(unit,corrected,now+3*day+1000);
+  reliable(recovered,true,'Two fresh independent alternate passes at 24 hours rebuild evidence after a setback');
+  assert.equal(status(recovered),'延迟异题检验通过');
+  const reopened=progress.readGrammarProgress(JSON.stringify(corrected),unit);
+  assert.deepEqual(reopened.attempts,corrected.attempts,'Reload preserves the interruption and corrected-round history');
+  reliable(reopened,false,'Reload cannot bypass a failure or assisted round');
+ }
+ const active=progress.beginGrammarRound(spaced);
+ const activeHint=progress.showGrammarHint(active,unit,progress.grammarRoundQuestions(unit,active.round)[0].id);
+ reliable(activeHint,false,'Newly requested help suspends old delayed evidence even before the round is finished');
+ reliable(progress.revisitGrammarTheory(active),false,'Reopening theory during a new round suspends old delayed evidence');
+ const attempt=(round,at)=>({round,at,variant:round%2,passed:true,independent:true});
+ const history=attempts=>({...progress.emptyGrammarProgress(),round:Math.max(...attempts.map(value=>value.round)),attempts});
+ const sameRound=history([attempt(0,now),attempt(1,now+day),attempt(1,now+2*day)]);
+ reliable(sameRound,false,'A duplicate last round is not another independent attempt');
+ reliable(history([attempt(0,now),attempt(0,now+day),attempt(1,now+2*day)]),false,'A duplicate earlier round cannot serve as a fresh delayed anchor');
+ reliable(history([attempt(0,now),attempt(1,now),attempt(2,now+day)]),false,'Equal timestamps cannot establish a valid ordered evidence chain');
+ const reversedTime=history([attempt(0,now),attempt(1,now+3*day),attempt(2,now+2*day),attempt(3,now+4*day)]);
+ reliable(reversedTime,false,'A later pass cannot reuse the pass whose timestamp moved backwards');
+ reliable(history([attempt(0,now),attempt(3,now+day),attempt(2,now+2*day),attempt(4,now+3*day)]),false,'A reversed round cannot restore an older delayed anchor');
+ const futureMiddle=history([attempt(0,now),attempt(1,now+4*day),attempt(2,now+2*day),attempt(3,now+3*day)]);
+ reliable(futureMiddle,false,'A future middle record cannot be skipped to join old and current passes',now+3*day);
+ reliable(futureMiddle,false,'When the future time arrives, reverse chronology still cannot establish evidence',now+4*day);
+ reliable(history([...reversedTime.attempts,attempt(4,now+5*day)]),true,'Two valid subsequent passes rebuild evidence without deleting malformed history');
+ const duplicateReload=progress.readGrammarProgress(JSON.stringify(sameRound),unit);
+ const reversedReload=progress.readGrammarProgress(JSON.stringify(reversedTime),unit);
+ assert.deepEqual(duplicateReload.attempts,sameRound.attempts);assert.deepEqual(reversedReload.attempts,reversedTime.attempts);
+ reliable(duplicateReload,false,'The current draft format preserves, but does not count, duplicate rounds');
+ reliable(reversedReload,false,'The current draft format preserves, but does not count, reverse chronology');
+ const snapshot=structuredClone(reversedReload);
+ delayed(reversedReload);status(reversedReload);
+ assert.deepEqual(reversedReload,snapshot,'Evidence evaluation is read-only and leaves the original history intact');
  let bounded=progress.emptyGrammarProgress();
  for(let i=0;i<15;i++)bounded=completeRound(unit,bounded,now+i*day);
  assert.equal(bounded.attempts.length,12);
  assert.equal(bounded.attempts[0].round,3);assert.equal(bounded.attempts.at(-1).round,14);
  assert.equal(progress.emptyGrammarProgress().attempts.length,0,'Independent progress values do not share history');
 }
-console.log('Grammar practice: viewing, bounded progressive hints, theory assistance/reload, checked-answer invalidation, redo/history, duplicate finish, 24-hour boundary, distinct questions and latest failure passed.');
+console.log(`Grammar practice: existing flow plus ${reliabilityChecks} evidence-chain checks covering failure/help recovery, exact delay, active hints, duplicate/reversed/future chronology and preserved history passed.`);
 
 // Execute the real TSX component with an in-memory hook/element harness. There
 // is no browser or CSS dependency; event handlers, branches and progress writes
@@ -339,7 +381,20 @@ for(const unit of units){
  assert(progress.grammarProgressFor(state,unit).assisted);
  assert.equal(progress.grammarProgressFor(state,unit).responses[progress.grammarRoundQuestions(unit,1)[0].id].hintLevel,2,'Hint assistance survives the rendered reload');
 }
-console.log(`Grammar UI: ${uiChecks} real answer events, no mid-round feedback leak, complete-round results, alternate-set redo, hint ceiling/reload and selected-guide transfer callbacks passed.`);
+// The rendered status must not regain its old delayed badge after immediate correction.
+for(const interruption of [{wrong:true},{hint:true},{theory:true}]){
+ const unit=units[0],at=Date.now()-4*day;
+ let record=completeRound(unit,progress.emptyGrammarProgress(),at);
+ record=completeRound(unit,record,at+day);
+ record=completeRound(unit,record,at+2*day,interruption);
+ record=completeRound(unit,record,at+2*day+1000);
+ const state=progress.updateGrammarProgress(model.initial,unit.id,()=>record);
+ ui.resetHooks();const tree=ui.renderUnit(unit,{state,update:()=>{}});
+ const badge=children(tree).find(node=>node?.props?.className==='grammar-status');
+ assert.equal(textOf(badge),'本轮独立检验通过','The visible unit status reflects fresh evidence after failure/help');
+ uiChecks++;
+}
+console.log(`Grammar UI: ${uiChecks} real answer/status checks, no mid-round feedback leak, complete-round results, alternate-set redo, hint ceiling/reload and selected-guide transfer callbacks passed.`);
 
 const firstUnit=units[0],firstQuestion=progress.grammarRoundQuestions(firstUnit,0)[0];
 for(const raw of [undefined,'{bad','null','[]','42','"draft"','{"version":0}','{"version":2}'])assert.deepEqual(progress.readGrammarProgress(raw,firstUnit),progress.emptyGrammarProgress(),'Malformed or unsupported optional records safely show an empty practice');
@@ -416,6 +471,19 @@ const futureTimeImport=(await files.readProgressFile(files.makeProgressFile(futu
 assert.deepEqual(progress.grammarProgressFor(futureTimeImport,firstUnit).attempts,progress.grammarProgressFor(futureTime,firstUnit).attempts,'Clock-skewed timestamps survive the real progress export');
 assert(!delayed(progress.grammarProgressFor(futureTimeImport,firstUnit),now));
 assert.equal(status(progress.grammarProgressFor(futureTimeImport,firstUnit),now),'练习时间待核对');
+const interruptedBackup=progress.updateGrammarProgress(state,firstUnit.id,record=>completeRound(firstUnit,completeRound(firstUnit,record,now+2*day,{wrong:true}),now+2*day+1000));
+const interruptionImport=(await files.readProgressFile(files.makeProgressFile(interruptedBackup,new Date(now+2*day+1000)))).state;
+assert.deepEqual(interruptionImport,interruptedBackup,'Backup preserves failed and corrected attempts along with all unrelated user records');
+assert(!delayed(progress.grammarProgressFor(interruptionImport,firstUnit)),'A real progress-file roundtrip cannot restore superseded delayed evidence');
+const unorderedState=progress.updateGrammarProgress(legacy,firstUnit.id,()=>({...progress.emptyGrammarProgress(),round:3,attempts:[
+ {at:now,round:0,variant:0,passed:true,independent:true},
+ {at:now+3*day,round:1,variant:1,passed:true,independent:true},
+ {at:now+2*day,round:2,variant:0,passed:true,independent:true},
+ {at:now+4*day,round:3,variant:1,passed:true,independent:true}
+]}));
+const unorderedImport=(await files.readProgressFile(files.makeProgressFile(unorderedState,new Date(now+4*day)))).state;
+assert.deepEqual(unorderedImport,unorderedState,'Reverse chronology remains available for inspection after export/import');
+assert(!delayed(progress.grammarProgressFor(unorderedImport,firstUnit)),'Export/import does not sort malformed history into a passing sequence');
 const longAnswers=progress.updateGrammarProgress(legacy,firstUnit.id,record=>{
  let next=progress.beginGrammarRound(record);
  for(const question of progress.grammarRoundQuestions(firstUnit,next.round))next=progress.setGrammarAnswer(next,firstUnit,question.id,'练'.repeat(2000));

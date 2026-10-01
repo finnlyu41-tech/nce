@@ -77,8 +77,21 @@ export function finishGrammarRound(progress:GrammarUnitProgress,unit:GrammarUnit
  return {...progress,inRound:false,attempts:[...progress.attempts,attempt].slice(-12)};
 }
 export function delayedGrammarEvidence(progress:GrammarUnitProgress,now=Date.now()){
- const last=progress.attempts.at(-1);if(!last?.passed||!last.independent||last.at>now)return false;
- return progress.attempts.some(previous=>previous.passed&&previous.independent&&previous.at<=now&&previous.variant!==last.variant&&last.at-previous.at>=24*60*60*1000);
+ if(progress.inRound&&progress.assisted)return false;
+ let previous:GrammarRoundAttempt|undefined,delayed=false;
+ let firstPass:Partial<Record<0|1,GrammarRoundAttempt>>={};
+ for(const attempt of progress.attempts){
+  const ordered=!previous||(attempt.round>previous.round&&attempt.at>previous.at);
+  previous=attempt;
+  // Failure, assistance or invalid chronology breaks the evidence chain; keep the raw history intact.
+  if(!ordered||!validTime(attempt.at)||attempt.at>now||!validRound(attempt.round)||attempt.round>progress.round||attempt.variant!==attempt.round%2||!attempt.passed||!attempt.independent){
+   firstPass={};delayed=false;continue;
+  }
+  const other=firstPass[attempt.variant===0?1:0];
+  delayed=!!other&&attempt.at-other.at>=24*60*60*1000;
+  firstPass[attempt.variant]??=attempt;
+ }
+ return delayed;
 }
 export function grammarProgressStatus(progress:GrammarUnitProgress,now=Date.now()){
  if(progress.inRound)return '练习进行中';

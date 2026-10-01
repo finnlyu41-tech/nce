@@ -22,6 +22,7 @@ import {LessonExplainer} from './lesson-explainer';
 import {ChineseRecall} from './chinese-recall-ui';
 import {ReadingLayout} from './sentence-illustration-ui';
 import {sentenceAtTime,sentenceEnd} from './sentence-illustration';
+import {useReadingPosition} from './use-reading-position';
 const books=Object.keys(bookCounts) as NceBookId[];
 const accentLabel=(file:SiteMaterial)=>file.accent==='us'?'美音':file.accent==='uk'?'英音':'版本未标注';
 type Loaded={file:SiteMaterial;blob:Blob;url:string;text?:string};
@@ -35,8 +36,8 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  const lastRequest=useRef<{file:SiteMaterial;forLesson?:number}|null>(null);
  const [playback,setPlayback]=useState<'idle'|'waiting'|'playing'>('idle');
  const playbackRequest=useRef(0);
- const [showTranslation,setShowTranslation]=useState(false),[dictationLine,setDictationLine]=useState(0),[dictationAnswer,setDictationAnswer]=useState(''),[dictationChecked,setDictationChecked]=useState(false);
- const [sceneLine,setSceneLine]=useState(0),[recordingLine,setRecordingLine]=useState<number|null>(null);
+ const [showTranslation,setShowTranslation]=useState(false),[dictationAnswer,setDictationAnswer]=useState(''),[dictationChecked,setDictationChecked]=useState(false);
+ const [recordingLine,setRecordingLine]=useState<number|null>(null);
  const practiceKind=practiceMode?route.mode||'shadow':'shadow';
  useEffect(()=>{audio.current?.pause();endAt.current=null;setActive(-1);setHideText(practiceKind!=='shadow');setShowTranslation(false)},[practiceKind]);
  const seekTarget=useRef<number|null>(null),currentLine=useRef(0),stoppedLine=useRef<number|null>(null);
@@ -47,6 +48,11 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  stateRef.current=state;
  const files=manifest?.files||[],primary=loaded.find(x=>x.file.id===selected)||loaded[0],recording=loaded.find(x=>x.file.type.startsWith('audio/')),transcript=loaded.find(x=>x.text!==undefined);
  const structure=useMemo(()=>splitLesson(parseLessonText(transcript?.text||''),primary?.file.book,true),[transcript?.text,primary?.file.book]),rows=structure.body;
+ const readingSource=transcript&&rows.length?`site:${primary?.file.book}:${primary?.file.lesson}:${transcript.file.sha256}:${recording?.file.sha256||'text'}`:undefined;
+ const {line:sceneLine,setLine:setSceneLine,entry:readingEntry}=useReadingPosition(readingSource,rows.length),dictationLine=sceneLine;
+ currentLine.current=sceneLine;
+ useEffect(()=>{audio.current?.pause();endAt.current=null;setActive(-1);setRecordingLine(null);setDictationAnswer('');setDictationChecked(false);restoreAudioPosition()},[readingEntry,readingSource]);
+ function restoreAudioPosition(){const player=audio.current,time=rows[currentLine.current]?.time;if(player&&player.readyState>=1&&time!==undefined){stoppedLine.current=currentLine.current;seekTarget.current=time;player.currentTime=time}}
  useEffect(()=>{if(!visible){audio.current?.pause();controller.current?.abort();indexController.current?.abort()}},[visible]);
  useEffect(()=>()=>{controller.current?.abort();indexController.current?.abort()},[]);
  useEffect(()=>()=>{loaded.forEach(x=>URL.revokeObjectURL(x.url))},[loaded]);
@@ -82,7 +88,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
   controller.current?.abort();audio.current?.pause();endAt.current=null;
   const abort=new AbortController();controller.current=abort;lastRequest.current={file,forLesson};
   setLoaded([]);setSelected('');
-  setPageOnly(null);setSceneLine(0);setRecordingLine(null);currentLine.current=0;seekTarget.current=null;stoppedLine.current=null;setDictationLine(0);setDictationAnswer('');setDictationChecked(false);
+  setPageOnly(null);setRecordingLine(null);currentLine.current=0;seekTarget.current=null;stoppedLine.current=null;setDictationAnswer('');setDictationChecked(false);
   setBusy('正在读取 '+(file.title||file.name));setError('');setProgress(0);setReplace(false);setActive(-1);
   const results:Loaded[]=[];
   try{
@@ -99,15 +105,15 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
    }));
    if(abort.signal.aborted)throw new DOMException('Aborted','AbortError');
    setLoaded(results);setSelected(file.id);setBook(file.book);setLesson(file.lesson||forLesson||1);setPdfLesson(file.type==='application/pdf'?forLesson:undefined);setHideText(practiceMode&&practiceKind!=='shadow');setShowTranslation(false);
-   if(!embedded)requestAnimationFrame(()=>readerPanel.current?.scrollIntoView({behavior:'smooth',block:'start'}));
+   if(!embedded&&!history.state?.studioReadingPosition?.source)requestAnimationFrame(()=>readerPanel.current?.scrollIntoView({behavior:'smooth',block:'start'}));
   }catch(e){const cancelled=abort.signal.aborted;abort.abort();results.forEach(x=>URL.revokeObjectURL(x.url));if(!cancelled)setError(e instanceof Error?e.message:'教材读取失败')}
   finally{if(controller.current===abort)setBusy('')}
  }
  function followLine(index:number){
   if(!rows.length||index>=rows.length){setActive(-1);return;}
-  setActive(index);index=Math.max(0,index);setSceneLine(index);if(currentLine.current!==index)setRecordingLine(null);
+  index=Math.max(0,index);if(!setSceneLine(index))return;setActive(index);if(currentLine.current!==index)setRecordingLine(null);
   if(practiceMode&&currentLine.current!==index){
-   setDictationLine(index);setDictationAnswer('');setDictationChecked(false);
+   setDictationAnswer('');setDictationChecked(false);
    if(practiceKind==='dictation'){setHideText(true);setShowTranslation(false)}
   }
   currentLine.current=index;
@@ -166,7 +172,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
  const pdfPage=primary&&pdfLesson?materialLessonPage(primary.file,pdfLesson):undefined;
  const readerUrl=primary?primary.url+(pdfPage?`#page=${pdfPage}`:''):'';
  const passage=<><h3 className="lesson-body-title">{hideText?'先听，再试着写下来':'课文正文'}</h3><p className="muted small">{hideText?'原文、中文和原书图片已收起，点喇叭听整句。':'点句子选中 · 点单词查词 · 点喇叭听原声'}</p><div className="site-transcript">{rows.map((row,i)=><div key={i}>
-  <div className={'site-line '+(active===i?'active':'')} data-reading-line={i} aria-current={sceneLine===i?'true':undefined} role="group" aria-label={`课文第 ${i+1} 句`} tabIndex={0} onClick={event=>{if(!(event.target as HTMLElement).closest('button,a,input,select,textarea'))selectLine(i)}} onKeyDown={event=>{if(event.target===event.currentTarget&&(event.key==='Enter'||event.key===' ')){event.preventDefault();selectLine(i)}}}>
+  <div className={'site-line '+(sceneLine===i?'active':'')} data-reading-line={i} aria-current={sceneLine===i?'true':undefined} role="group" aria-label={`课文第 ${i+1} 句`} tabIndex={0} onClick={event=>{if(!(event.target as HTMLElement).closest('button,a,input,select,textarea'))selectLine(i)}} onKeyDown={event=>{if(event.target===event.currentTarget&&(event.key==='Enter'||event.key===' ')){event.preventDefault();selectLine(i)}}}>
    <span className="site-time">{row.time===undefined?'—':`${Math.floor(row.time/60)}:${String(Math.floor(row.time%60)).padStart(2,'0')}`}</span>
    <div>{hideText?`第 ${i+1} 句（点击听音）`:<WordText text={row.en} exampleTranslation={row.zh}/>} {!hideText&&showTranslation&&row.zh&&<p className="line-translation">{row.zh}</p>}</div>
    <div className="line-actions"><button className="icon-btn line-play" disabled={!recording||row.time===undefined} onClick={()=>playLine(i)} aria-label={`播放第 ${i+1} 句`}><Volume2 size={18}/></button>{practiceMode&&<button className="icon-btn" aria-label={`跟读第 ${i+1} 句`} aria-expanded={recordingLine===i&&sceneLine===i&&!hideText&&practiceKind==='shadow'} onClick={()=>{selectLine(i);setRecordingLine(i);changePractice('shadow');requestAnimationFrame(()=>practicePanel.current?.scrollIntoView({behavior:'smooth',block:'nearest'}))}}><Mic size={18}/></button>}</div>
@@ -197,7 +203,7 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
     <p className="muted small">{accentLabel(primary.file)} · 第 {primary.file.lesson||'未核定'} 课</p>
     {!embedded&&primary.file.lessonNote&&<p className="notice">{primary.file.lessonNote}</p>}
     {!practiceMode&&<LessonQuestion lesson={structure} answer={state.drafts[`listen-answer-${primary.file.book}-${primary.file.lesson}`]||''} onChange={value=>{const current=stateRef.current;restore({...current,drafts:{...current.drafts,[`listen-answer-${primary.file.book}-${primary.file.lesson}`]:value}})}}/>}
-    {recording&&<div className="cloud-player"><audio ref={audio} controls preload="metadata" src={recording.url} aria-label="网站课文音频" onTimeUpdate={timeUpdate} onPlay={()=>{stoppedLine.current=null}} onPlaying={()=>setPlayback('playing')} onWaiting={()=>setPlayback('waiting')} onPause={()=>setPlayback('idle')} onSeeking={seeking} onSeeked={timeUpdate} onEnded={()=>{endAt.current=null;setActive(-1)}} onError={()=>{setPlayback('idle');setError('音频不能解码，请重新读取教材')}} onLoadedMetadata={()=>{if(audio.current)audio.current.playbackRate=Number(rate)}}/><div className="row wrap"><PlaybackSpeed ariaLabel="网站音频播放速度"/><button className="text-btn" onClick={()=>{endAt.current=null;if(audio.current){seek(rows[0]?.time||0);followLine(0);startPlayback(audio.current)}}}>听全文</button>{transcript&&practiceKind!=='recall'&&<button className="text-btn" aria-expanded={!hideText} onClick={()=>{setHideText(!hideText);setShowTranslation(false)}}>{hideText?'显示原文':'隐藏原文'}</button>}</div>{playback!=='idle'&&<p className="small muted" role="status">{playback==='waiting'?'正在准备音频…':'正在播放'}</p>}</div>}
+    {recording&&<div className="cloud-player"><audio ref={audio} controls preload="metadata" src={recording.url} aria-label="网站课文音频" onTimeUpdate={timeUpdate} onPlay={()=>{stoppedLine.current=null}} onPlaying={()=>setPlayback('playing')} onWaiting={()=>setPlayback('waiting')} onPause={()=>setPlayback('idle')} onSeeking={seeking} onSeeked={timeUpdate} onEnded={()=>{endAt.current=null;setActive(-1)}} onError={()=>{setPlayback('idle');setError('音频不能解码，请重新读取教材')}} onLoadedMetadata={()=>{if(audio.current)audio.current.playbackRate=Number(rate);restoreAudioPosition()}}/><div className="row wrap"><PlaybackSpeed ariaLabel="网站音频播放速度"/><button className="text-btn" onClick={()=>{endAt.current=null;if(audio.current){seek(rows[0]?.time||0);followLine(0);startPlayback(audio.current)}}}>听全文</button>{transcript&&practiceKind!=='recall'&&<button className="text-btn" aria-expanded={!hideText} onClick={()=>{setHideText(!hideText);setShowTranslation(false)}}>{hideText?'显示原文':'隐藏原文'}</button>}</div>{playback!=='idle'&&<p className="small muted" role="status">{playback==='waiting'?'正在准备音频…':'正在播放'}</p>}</div>}
     {practiceKind==='recall'?<ChineseRecall rows={rows} canListen={!!recording&&rows.every(r=>r.time!==undefined)} onListen={playLine} onStop={()=>{audio.current?.pause();endAt.current=null;setActive(-1)}}/>:<>
     {practiceMode&&practiceKind==='dictation'&&rows.length>0&&<label className="field record-line-select">选择听写句<select aria-label="选择练习句" value={dictationLine} onChange={e=>selectLine(Number(e.target.value))}>{rows.map((row,i)=><option key={i} value={i}>{`第 ${i+1} 句`}</option>)}</select></label>}
     <ReadingLayout book={primary.file.book} lesson={primary.file.lesson} line={sceneLine} rowCount={rows.length} sourceSha256={transcript?.file.sha256} activeLine={hideText?-1:active} showIllustration={!hideText}>
