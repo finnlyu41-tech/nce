@@ -31,12 +31,12 @@ export function buildVocabularyCatalog(index:PageIndex):VocabularyCatalog{
     if(seen.has(wordKey))throw Error('本课词表有重复项，需要核对。');
     seen.add(wordKey);
    }
-   const words=vocabulary.words.filter(item=>{
-    const correction=vocabularySourceCorrections.find(c=>c.book===book&&c.lesson===lesson&&vocabularyKey(c.indexWord)===vocabularyKey(item.word));
-    if(!correction)return true;
+   const corrections=vocabularySourceCorrections.filter(c=>c.book===book&&c.lesson===lesson);
+   // Keep the source gate when the duplicate has already been removed.
+   for(const correction of corrections){
     if(!pages.some(page=>page.page===correction.sourcePDFPage&&page.sha256===correction.sourcePageSha256)||!vocabulary.words.some(word=>vocabularyKey(word.word)===vocabularyKey(correction.canonicalHeadword)))throw Error('原书词头修订与当前词表不一致，请重新加载教材词表。');
-    return false;
-   });
+   }
+   const words=vocabulary.words.filter(item=>!corrections.some(c=>vocabularyKey(c.indexWord)===vocabularyKey(item.word)));
    for(const item of words){
     const wordKey=vocabularyKey(item.word);entries++;
     const term=terms.get(wordKey);

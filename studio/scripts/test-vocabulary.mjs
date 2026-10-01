@@ -75,6 +75,8 @@ for(const mutate of [
  d=>{d.lessons['NCE1-1'].vocabulary.words.push(d.lessons['NCE1-1'].vocabulary.words[0])},
  d=>{d.lessons['NCE3-19'].vocabulary.words=d.lessons['NCE3-19'].vocabulary.words.filter(word=>word.word!=='withdraw')},
  d=>{const page=d.lessons['NCE3-19'].pages.find(page=>page.page===112);page.sha256='0'.repeat(64);page.src='/lesson-pages/'+page.sha256+'.jpg'},
+ d=>{d.lessons['NCE3-19'].vocabulary.words=d.lessons['NCE3-19'].vocabulary.words.filter(word=>!['withdraw','withdrawn'].includes(word.word))},
+ d=>{d.lessons['NCE3-19'].vocabulary.words=d.lessons['NCE3-19'].vocabulary.words.filter(word=>word.word!=='withdrawn');const page=d.lessons['NCE3-19'].pages.find(page=>page.page===112);page.sha256='0'.repeat(64);page.src='/lesson-pages/'+page.sha256+'.jpg'},
 ]){
  const changed=structuredClone(index);mutate(changed);assert.throws(()=>buildVocabularyCatalog(changed));
 }
