@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "scope": "All printed headwords and finite target meanings in this source word list; no certification of every dictionary sense or unrelated source occurrence.",
+  "source": {
+    "book": "NCE1",
+    "lesson": 100
+  },
+  "sourcePDFPage": 208,
+  "sourcePageSha256": "0310f15d7113169317e559e49e58b43b7c53d085525a1f3d89417fe4840f0cc0",
+  "completeWordList": true,
+  "review": "Author source reading and independent original-detail full-page enumeration; final independent EN/Chinese/collocation/POS review at frozen content hashes.",
+  "independentWholePageProofSha256": "90a531c9aa6adc4e27d10f5d660cf09206e5c9e59633160b29c6eb9788873cdf",
+  "independentContentReview": "docs/verification/vocabulary-gap-batch6c.json",
+  "humanCertification": false,
+  "entries": [
+    {
+      "word": "licence",
+      "targetExampleIds": [
+        "gap6c-licence-permit-noun"
+      ],
+      "checkedMeaning": "n. 执照",
+      "sourcePrintedMeaning": "执照",
+      "sourcePrintedPartOfSpeech": "n."
+    }
+  ]
+}

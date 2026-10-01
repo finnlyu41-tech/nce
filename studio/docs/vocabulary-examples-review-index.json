@@ -11,11 +11,19 @@
     "docs/vocabulary-reviewed-batch5c.json",
     "docs/vocabulary-reviewed-batch5d.json",
     "docs/vocabulary-reviewed-batch5e.json",
-    "docs/vocabulary-reviewed-batch5f.json"
+    "docs/vocabulary-reviewed-batch5f.json",
+    "docs/vocabulary-gap-batch6c.json"
   ],
   "scope": "Each unchanged content hash has a recorded Codex editorial review. Counts do not establish all textbook or dictionary senses or human certification.",
   "sourceTargetInventories": [
     "docs/vocabulary-source-targets-nce1-006.json",
-    "docs/vocabulary-source-targets-nce1-014.json"
+    "docs/vocabulary-source-targets-nce1-014.json",
+    "docs/vocabulary-source-targets-nce1-100.json",
+    "docs/vocabulary-source-targets-nce1-120.json",
+    "docs/vocabulary-source-targets-nce1-122.json",
+    "docs/vocabulary-source-targets-nce1-124.json"
+  ],
+  "independentContentReviews": [
+    "docs/verification/vocabulary-gap-batch6c.json"
   ]
 }

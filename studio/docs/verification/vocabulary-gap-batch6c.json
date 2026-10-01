@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "batch": "6c",
+  "status": "passed",
+  "reviewer": "Codex /root/nce1_people_adjectives",
+  "humanCertification": false,
+  "authorRecordsRetainedAtReviewedHash": true,
+  "contentFile": {
+    "path": "app/data/vocabulary-gap-batch6c.ts",
+    "sha256": "e91db5e4d6065ce981da5bcdb67d18e77964bc90e0ed16b12f48c92ac951d86c"
+  },
+  "ledger": {
+    "path": "docs/vocabulary-gap-batch6c.json",
+    "sha256": "fd6018b79291f3784955a2f9d0a0d62e72f605c5f6b35c137b4e07cb64d123e5"
+  },
+  "contentExamples": 23,
+  "independentMechanicalCounts": {
+    "runtimeRecords": 23,
+    "ledgerRecords": 23,
+    "contentHashes": 23,
+    "ownSensePositive": 23,
+    "meaningForCheckPositive": 23,
+    "teachingDefinitionPositive": 23,
+    "ownSensePOSUnique": 23,
+    "excludedMeaningAndPOS": 106,
+    "sourceAssociations": 23,
+    "sourcePageBytes": 23,
+    "unrelatedSourceRejections": 23,
+    "positiveMatcherCues": 35
+  },
+  "independentReport": {
+    "path": "work/gaps94/independent-review/batch6c-stage-b-final.json",
+    "sha256": "5112763ad543b2458980de6f3fa476125d3e5fda45e880e566b33f114297ad92"
+  },
+  "reviewedExamples": [
+    {
+      "id": "gap6c-sydney-city",
+      "contentSha256": "2096d22aa96dd12d7038c58294b5b1b0f72e32bbf06a6ee7d98e4ff618169c6f",
+      "independentEditorialNote": "City proper name/capitalization. Leaving luggage at hotel before walking around city is natural; Chinese preserves action and order. explore Sydney on foot is a specific collocation, no present travel assertion."
+    },
+    {
+      "id": "gap6c-licence-permit-noun",
+      "contentSha256": "01fb6cc5ecc985997299dc3f7ddac9684f0ba6ea971cdbda0be8653c07a4fbbb",
+      "independentEditorialNote": "British noun permit in driving licence, found under receipts. Chinese location and possessive correspond; no licensing verb or legal instruction. Printed n.执照/source100 verified."
+    },
+    {
+      "id": "gap6c-clever-intelligent",
+      "contentSha256": "17bef26484c8c58f5420532c46617d84da5c8166983e6ad8faf0094f6b5101c5",
+      "independentEditorialNote": "Intelligent pupil solving a puzzle without requesting a hint illustrates printed聪明的. EN/Chinese agree, clever pupil adjective-noun collocation appropriate, not clever trick meaning."
+    },
+    {
+      "id": "gap6c-stupid-foolish",
+      "contentSha256": "25a2815adea3b1cf7d051a49f7bc688fa23f0ac0f7ce25f2287743ced458c656",
+      "independentEditorialNote": "stupid of me to do something correctly judges the speaker's unwise act, not a third-person insult or numbness. Ticket-left-at-home details match Chinese."
+    },
+    {
+      "id": "gap6c-cheap-low-price",
+      "contentSha256": "1440ebbb8459b5ccb6700199b45981694fec2ece7bc5308c102c46b547b84c11",
+      "independentEditorialNote": "Low-price lunches in a café, no automatic poor quality. Chinese retains college-nearby location and price meaning. cheap lunches natural plural."
+    },
+    {
+      "id": "gap6c-expensive-high-price",
+      "contentSha256": "36384c65ab0ab005beddd73befceae031a759898a5f877950074293771575b46",
+      "independentEditorialNote": "Ticket is too expensive, therefore bus chosen. Chinese preserves reasoning; an expensive ticket naturally exemplifies adjective without claiming luxurious."
+    },
+    {
+      "id": "gap6c-stale-food-not-fresh",
+      "contentSha256": "2f5e455914821d41f61f2cc49857631f50fcf144cbbd139c5948ad7d8c22031e",
+      "independentEditorialNote": "stale and dry after bag open overnight is natural food-not-fresh scene. Chinese matches staleness and dryness without claiming rotting/rancidity. Ledger retains raw变馊的 and explicitly labels editorial normalization. Raw变馊/腐馊/酸败 labels excluded by actual helper."
+    },
+    {
+      "id": "gap6c-loud-volume-adjective",
+      "contentSha256": "693ab2f6747263b4d9323572792d301e04555d97bf2551464393f2ac17310d9c",
+      "independentEditorialNote": "High-volume upstairs music adjective; Chinese reflects source and interruption. loud music does not certify adverb or showy clothing."
+    },
+    {
+      "id": "gap6c-high-physical-height",
+      "contentSha256": "25900f051b7f99de445c29677a9675cbd9827880303e8ff8fb7ac1449d3d37b3",
+      "independentEditorialNote": "Physical ceiling height with spacious-room effect. 高高的天花板 accurately renders high ceiling; no stature/price/status/adverb expansion."
+    },
+    {
+      "id": "gap6c-soft-material",
+      "contentSha256": "791bb1aae48b1d743a022be40ff90f2757e1eb67347533d094f0d6c1e2d6d042",
+      "independentEditorialNote": "Cushion soft enough to act as pillow: material tactile meaning. Chinese and a soft cushion agree; no kindness, weakness or voice target."
+    },
+    {
+      "id": "gap6c-sour-taste",
+      "contentSha256": "b82309253157b098928dad7012c034429a22d91f8ec78ee95b6d11c6dcea01de",
+      "independentEditorialNote": "lemonade tasted sour due to omitted sugar; tasting-state adjective, not become-sour verb or mood. Chinese causal relationship and taste sour match."
+    },
+    {
+      "id": "gap6c-carry-take-with",
+      "contentSha256": "c53d7599ff6b43079f443010ceb8123a44084a51e1ba391c4c1d67e3a421c689",
+      "independentEditorialNote": "carried a spare umbrella in her bag in case it rained is natural past precaution. Chinese preserves spare umbrella and purpose; canonical carry, not past headcarried or support/contain branches."
+    },
+    {
+      "id": "gap6c-correct-fix-verb",
+      "contentSha256": "99c5d8a7a54e1b838a3b6dcdb01b9c657e0d688e7ce9b11393de4a29e8e8e6b5",
+      "independentEditorialNote": "Imperative correct the address before posting parcel, clearly printed correcting verb. Chinese更正 and collocation更正地址 are accurate synonyms of原印改正/纠正; recorded proposal change covers Chinese/collocation revision. Wrong adjective/POS labels reject."
+    },
+    {
+      "id": "gap6c-least-smallest-amount",
+      "contentSha256": "49e3413c1b771913a4b0f9fe67d897db53712ede83640affe7a420d4c243f7bd",
+      "independentEditorialNote": "the least sugar among3 recipes naturally expresses minimum amount of mass noun. Chinese minimum quantity matches. Raw最小的/最少的 and traditional adj. label retained separately from modern determiner analysis; no smallest physical object or adverb least."
+    },
+    {
+      "id": "gap6c-worse-bad-comparative",
+      "contentSha256": "0c24cf661e6993be9d6900b73121ed04670e345c0244be51d7dffed037cc2498",
+      "independentEditorialNote": "be worse than expected about weather is comparative adjective; Chinese更糟 preserves bad comparative and picnic postponement. Headworse retained, not bad or malformed forms."
+    },
+    {
+      "id": "gap6c-asleep-sleeping-state",
+      "contentSha256": "add52aa6197f1818bb19b2ba88c7bc6e74e4a43e44afa61d99582536b7638fb0",
+      "independentEditorialNote": "was asleep is predicate state adjective, lowering radio natural response. Chinese睡着 correct, not sleeping verb or numbness/death. be asleep collocation appropriate; source用作表语 preserved."
+    },
+    {
+      "id": "gap6c-exercise-book-notebook",
+      "contentSha256": "60eb1f1534262f8e9a040cb314b87a45f858552aab59b26b3868d0405f04a8a3",
+      "independentEditorialNote": "Full compound noun in write the date at top of new page. Chinese new-page top and date match; write in an exercise book natural. Source actually PDF247/printed243, no fitness manual."
+    },
+    {
+      "id": "gap6c-road-physical-route",
+      "contentSha256": "d135cd8612b32fbc8c79a8d2162fb037899f7890c6a3fdf643153ae0854360de",
+      "independentEditorialNote": "Physical village road narrows beyond an old bridge; EN/Chinese spatial relations agree. the road to the village literal, not road to success metaphor."
+    },
+    {
+      "id": "gap6c-kitten-young-cat",
+      "contentSha256": "cf967e8efcffca93d2e51193435edcc6d5e593a703faea5f7a1d6de000ef4e57",
+      "independentEditorialNote": "Single young cat hid under sofa when cleaner started; Chinese preserves both trigger and place without universal animal assertion. Animal noun/POS and canonical head retained."
+    },
+    {
+      "id": "gap6c-get-on-board-vehicle",
+      "contentSha256": "e949cf24dfb8733273629f51152874a98adcb119817e55e32ab2b07df9d39f2b",
+      "independentEditorialNote": "Passengers get off before speaker boards bus, natural past sequence. Chinese下车/上公交 agree; canonical get on despite got on surface. Source has no printed POS; inferred verb phrase explicitly recorded, not falsely attributed to source."
+    },
+    {
+      "id": "gap6c-middle-aged-person",
+      "contentSha256": "bea68b194b75a9e065173887861214e7af0bf21cc27b1e2c3ed950a4117ed7ce",
+      "independentEditorialNote": "Hyphenated adjective modifies neighbour in concrete helping scene. Chinese preserves age group and carrying table upstairs; no invented exact age or gender and no middle age noun."
+    },
+    {
+      "id": "gap6c-worried-concerned-adjective",
+      "contentSha256": "7e577ba6fd88a5f27a77b76da06298c085894a85eb7c2c59fa8d4d22ebefbe97",
+      "independentEditorialNote": "looked worried when train still had not arrived is emotion-state adjective. Chinese迟迟没到/显得担心 matches; raw担心/担忧 POSadj. retained with Chinese grammatical的 normalization. No unhappy or worry verb."
+    },
+    {
+      "id": "gap6c-regularly-frequency",
+      "contentSha256": "c5118ca1c04a21faba0481ec393593fd3aab3f5f6ca95a79e2f29b58b9427548",
+      "independentEditorialNote": "Library visits regularly, usually Friday afternoons, naturally represents repeated customary frequency, not guaranteed schedule. Chinese经常/通常 agree. Actual printclear经常地 is the only certified target; unreadable tail is explicitly unresolved, not guessed."
+    }
+  ],
+  "mandatoryCorrections": [],
+  "globalSourceCompleteness": false,
+  "limits": [
+    {
+      "word": "regularly",
+      "lesson": "NCE1-142",
+      "limit": "Clear printed adv.经常地 certified; faded trailing original print unresolved. This PASS does not certify source-wide enumeration or NCE1-142 closure."
+    },
+    {
+      "word": "stale",
+      "lesson": "NCE1-104",
+      "limit": "One editorially normalized food-not-fresh target; not an accepted original rotten/rancid target or literal raw-gloss closure."
+    }
+  ],
+  "rootRegistrationChecks": {
+    "contentExamples": 348,
+    "nativeCallbackSourceHeadwordPairs": 203,
+    "completeSourceWordInventories": 20,
+    "logs": [
+      {
+        "path": "work/gaps94/batch6c/registered-examples-with-independent-proof.log",
+        "sha256": "fb75eaf3fc685d13c766421b96729849ef486384a3e95d64403fcabc389cd9d4"
+      },
+      {
+        "path": "work/gaps94/batch6c/registered-native-callbacks.log",
+        "sha256": "0eceb6886b5df1415642323812537af6824f0bc5ae88a9847ecfb17634a9b39b"
+      },
+      {
+        "path": "work/gaps94/batch6c/registered-lint.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "work/gaps94/batch6c/registered-audit.log",
+        "sha256": "dd412e90183834675e6b453c42aa0c06d24cf6f6ecf330e64823db3f9b6f4b64"
+      }
+    ]
+  }
+}

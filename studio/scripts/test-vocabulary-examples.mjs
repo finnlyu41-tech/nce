@@ -20,6 +20,14 @@ const registeredLedgers=await Promise.all(reviewIndex.registeredLedgers.map(asyn
 const contentHash=example=>createHash('sha256').update(JSON.stringify({id:example.id,word:example.word,sense:example.sense,matches:example.matches,en:example.en,zh:example.zh,collocation:example.collocation,origin:example.origin,partOfSpeech:example.partOfSpeech,teachingDefinition:example.teachingDefinition,teachingSources:example.teachingSources,teachingIpa:example.teachingIpa})).digest('hex');
 const registeredReviews=new Map([...baseline.reviewedOriginals,...registeredLedgers.flatMap(ledger=>ledger.entries)].map(item=>[item.id,item]));
 const expectedIds=new Set([...baseline.reviewedOriginals.map(item=>item.id),...registeredLedgers.flatMap(ledger=>ledger.entries.map(item=>item.id))]);
+for(const path of reviewIndex.independentContentReviews||[]){
+ const review=JSON.parse(await readFile(new URL(path,root),'utf8'));
+ assert.equal(review.status,'passed','A registered independent review must have completed its content reading');
+ for(const input of [review.contentFile,review.ledger])assert.equal(createHash('sha256').update(await readFile(new URL(input.path,root))).digest('hex'),input.sha256,'Independent review binds the exact registered file: '+input.path);
+ const reviewedLedger=JSON.parse(await readFile(new URL(review.ledger.path,root),'utf8'));
+ assert.deepEqual(new Set(review.reviewedExamples.map(item=>item.id)),new Set(reviewedLedger.entries.map(item=>item.id)),'Independent review includes every unique content ID, including repeated-source records');
+ for(const item of review.reviewedExamples)assert.equal(item.contentSha256,registeredReviews.get(item.id)?.contentSha256,'Independent per-ID review binds its frozen content');
+}
 assert.deepEqual(new Set(m.originalVocabularyExamples.map(example=>example.id)),expectedIds,'Every prior and registered content ID is retained, without unreviewed additions');
 for(const example of m.originalVocabularyExamples){
  assert(example.en.trim()&&example.zh.trim()&&example.sense.trim()&&example.matches.length);
@@ -155,7 +163,7 @@ for(const ledger of registeredLedgers)for(const item of ledger.entries){
  assert(lesson?.words.some(word=>m.vocabularyKey(word.word)===m.vocabularyKey(item.word)),'Claimed associated word-list source exists');
  if(item.sourcePDFPage)assert(lesson.pages.some(page=>page.page===item.sourcePDFPage&&page.sha256===item.sourcePageSha256),'Reviewed source points to the actual indexed vocabulary page');
  const example=m.originalVocabularyExamples.find(example=>example.id===item.id);
- if(item.scope==='textbook-target'){
+ if(['textbook-target','textbook-target-grammar-normalized','textbook-target-editorial-normalized'].includes(item.scope)){
   const meaning=m.reviewedTeachingDefinition(item.word,[item.source]);
   assert(example.teachingDefinition&&m.examplesForMeaning(item.word,meaning).some(example=>example.id===item.id),'The actual source-scoped teaching definition displays its target');
  }

@@ -1,0 +1,1801 @@
+{
+  "schemaVersion": 1,
+  "batch": "6c",
+  "baseCommit": "acfaffc6a8fe7033fca26c5c5b1dcb7c9bc0dce2",
+  "headwords": 23,
+  "senseExamples": 23,
+  "textbookTargetExamples": 22,
+  "editorialNormalizedTargetExamples": 1,
+  "dictionaryExtensionExamples": 0,
+  "origin": "original",
+  "humanCertification": false,
+  "globalCompleteness": false,
+  "sourceTargetEnumerationComplete": false,
+  "scope": "Exactly 23 accepted finite textbook targets and 23 original fictional examples. Stale is a separately counted semantic normalization, not proof of raw rotten/rancid print. Regularly uses only clear 经常地; faded trailing print remains unresolved. Author self-review only; root owns separate final content review, registration and enrollment checks.",
+  "stageA": {
+    "planFile": "work/gaps94/batch6c/target-plan.json",
+    "planSha256": "2b18343e4b41892ce22f2f24b9579242b6fae77abf153553301d91014a43fd01",
+    "acceptedFinitePlan": "work/gaps94/finite-target-plan.json",
+    "sourcePlanIndependentReview": "Reported passed by root before Stage B; no human certification"
+  },
+  "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+  "sourcePages": [
+    {
+      "book": "NCE1",
+      "lesson": 94,
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "image": "dist-online/lesson-pages/e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 100,
+      "sourcePDFPage": 208,
+      "sourcePrintedPage": 204,
+      "sourcePageSha256": "0310f15d7113169317e559e49e58b43b7c53d085525a1f3d89417fe4840f0cc0",
+      "image": "dist-online/lesson-pages/0310f15d7113169317e559e49e58b43b7c53d085525a1f3d89417fe4840f0cc0.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 104,
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "image": "dist-online/lesson-pages/a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 106,
+      "sourcePDFPage": 220,
+      "sourcePrintedPage": 216,
+      "sourcePageSha256": "8f15c916844ed54958d23a1145da36c6c5e9d0317f421a2f41130ea33b42ddda",
+      "image": "dist-online/lesson-pages/8f15c916844ed54958d23a1145da36c6c5e9d0317f421a2f41130ea33b42ddda.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 110,
+      "sourcePDFPage": 228,
+      "sourcePrintedPage": 224,
+      "sourcePageSha256": "38b90b4bd2ad14b78c6dd29e0606bd381851ee657ec9b73ba44c121bdf2529a2",
+      "image": "dist-online/lesson-pages/38b90b4bd2ad14b78c6dd29e0606bd381851ee657ec9b73ba44c121bdf2529a2.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 116,
+      "sourcePDFPage": 240,
+      "sourcePrintedPage": 236,
+      "sourcePageSha256": "8f64d992e09c193f6f77c15a9d1a4c4e469a6851f1ff6c6f99b617ec802c77a3",
+      "image": "dist-online/lesson-pages/8f64d992e09c193f6f77c15a9d1a4c4e469a6851f1ff6c6f99b617ec802c77a3.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 120,
+      "sourcePDFPage": 247,
+      "sourcePrintedPage": 243,
+      "sourcePageSha256": "16c207ed546daaa0ceaeb498efefdef1a859b49b5651f5d71c720c360187db1b",
+      "image": "dist-online/lesson-pages/16c207ed546daaa0ceaeb498efefdef1a859b49b5651f5d71c720c360187db1b.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 122,
+      "sourcePDFPage": 252,
+      "sourcePrintedPage": 248,
+      "sourcePageSha256": "122b90653308c3328e3fa3db07a8031afe8acf141f7018d9e3ee4db5022980bd",
+      "image": "dist-online/lesson-pages/122b90653308c3328e3fa3db07a8031afe8acf141f7018d9e3ee4db5022980bd.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 124,
+      "sourcePDFPage": 256,
+      "sourcePrintedPage": 252,
+      "sourcePageSha256": "b08a6a81dbec5e23ef3e328997408f451d631ae9929328e189c599ca2c7bf7b0",
+      "image": "dist-online/lesson-pages/b08a6a81dbec5e23ef3e328997408f451d631ae9929328e189c599ca2c7bf7b0.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 141,
+      "sourcePDFPage": 290,
+      "sourcePrintedPage": 286,
+      "sourcePageSha256": "feee97b9cebfda84cbb6e0329baf5a80b4c11ebfcc5b39c5c70ae30324f27b82",
+      "image": "dist-online/lesson-pages/feee97b9cebfda84cbb6e0329baf5a80b4c11ebfcc5b39c5c70ae30324f27b82.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 142,
+      "sourcePDFPage": 292,
+      "sourcePrintedPage": 288,
+      "sourcePageSha256": "ad9bbf4676d1ddb6dcd9353ef57c5a32e33c4fe4f4e6e3787ca74838a052a3a9",
+      "image": "dist-online/lesson-pages/ad9bbf4676d1ddb6dcd9353ef57c5a32e33c4fe4f4e6e3787ca74838a052a3a9.jpg",
+      "actualImageViewed": true,
+      "role": "word-list"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 110,
+      "sourcePDFPage": 227,
+      "sourcePrintedPage": 223,
+      "sourcePageSha256": "55138b6a4acb9b9030aa4f2c8e2810a63787722a84a8b3a0992c5c0a89d53c9c",
+      "image": "dist-online/lesson-pages/55138b6a4acb9b9030aa4f2c8e2810a63787722a84a8b3a0992c5c0a89d53c9c.jpg",
+      "actualImageViewed": true,
+      "role": "necessary lesson context"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 141,
+      "sourcePDFPage": 289,
+      "sourcePrintedPage": 285,
+      "sourcePageSha256": "4d7b76ea32a8c62fe4a0c84934c818c548490d92aec9a0e761ca3dc3b5409bc1",
+      "image": "dist-online/lesson-pages/4d7b76ea32a8c62fe4a0c84934c818c548490d92aec9a0e761ca3dc3b5409bc1.jpg",
+      "actualImageViewed": true,
+      "role": "necessary lesson context"
+    },
+    {
+      "book": "NCE1",
+      "lesson": 142,
+      "sourcePDFPage": 291,
+      "sourcePrintedPage": null,
+      "sourcePageSha256": "dc4fbe87c357bdaa2fd6449567f54099daa67a74748552409c817f65ab9490bc",
+      "image": "dist-online/lesson-pages/dc4fbe87c357bdaa2fd6449567f54099daa67a74748552409c817f65ab9490bc.jpg",
+      "actualImageViewed": true,
+      "role": "necessary lesson context",
+      "printedPageNote": "Footer not reliably legible in this scan; no guessed printed footer is certified"
+    }
+  ],
+  "sourceBookVerification": {
+    "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+    "method": "Concatenate existing local material parts in order and verify full PDF SHA-256",
+    "extraRendering": {
+      "sourcePDFPage": 292,
+      "image": "work/gaps94/batch6c/regularly-page292-original.png",
+      "imageSha256": "63be174b7710c03c97d25e463c6e925588c91ac1b76e799bffa6e14e161d3e03",
+      "method": "Render original PDF with native CoreGraphics at4x to PNG without content alteration; view_image original detail",
+      "result": "Clear 经常地 and original right-side fading confirmed; trailing gloss remains uncertified"
+    }
+  },
+  "unresolved": [
+    {
+      "word": "regularly",
+      "id": "gap6c-regularly-frequency",
+      "source": {
+        "book": "NCE1",
+        "lesson": 142
+      },
+      "sourcePDFPage": 292,
+      "sourcePrintedPage": 288,
+      "sourcePageSha256": "ad9bbf4676d1ddb6dcd9353ef57c5a32e33c4fe4f4e6e3787ca74838a052a3a9",
+      "type": "source-scan-readability",
+      "detail": "原扫描右侧尾段严重褪色。现有JPG及经全书SHA核验的原PDF4x PNG均已实看；经常地清晰，尾段无法可靠逐字转录，未猜任何第二打印释义。",
+      "status": "unresolved; unclaimed and excluded from source-wide enumeration"
+    }
+  ],
+  "checks": {
+    "method": "Native existing helper in-memory esbuild write:false; original array temporarily appended with only this new batch; no registry or matcher source mutation",
+    "contentHashes": 23,
+    "ownSensePositive": 23,
+    "ownSenseWithPOSUnique": 23,
+    "teachingDefinitionPositive": 23,
+    "meaningForCheckPositive": 23,
+    "sourceScopedTargets": 23,
+    "unrelatedSourceRejections": 23,
+    "canonicalHeadsAndSurfaceForms": 23,
+    "indexedSourceRecords": 23,
+    "uniqueWordListPageImageHashes": 11,
+    "excludedMeaningAndPOS": 106,
+    "helperUnchanged": true,
+    "stageAPlanUnchanged": true,
+    "assignmentAndPageIndexUnchanged": true,
+    "notRun": [
+      "actual enrollment callbacks",
+      "production registration",
+      "complete source gloss enumeration",
+      "full app build",
+      "remote writes",
+      "browser",
+      "true audio",
+      "human/teacher review",
+      "independent final content review"
+    ]
+  },
+  "entries": [
+    {
+      "id": "gap6c-sydney-city",
+      "word": "Sydney",
+      "source": {
+        "book": "NCE1",
+        "lesson": 94
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 94
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "teachingDefinition": "n. 悉尼",
+      "meaningForCheck": "n. 悉尼",
+      "excludedMeaningLabels": [
+        "adj. 悉尼的",
+        "n. 人名",
+        "v. 悉尼"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 196,
+      "sourcePrintedPage": 192,
+      "sourcePageSha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "Sydney",
+      "sourcePrintedMeaning": "悉尼",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "保留Sydney大写；只教城市名，不添港口、旅游价格或当前行程事实。",
+      "canonicalHeadword": "Sydney",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "Sydney",
+        "outputWord": "Sydney",
+        "exampleSurfaceForm": "Sydney",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "2096d22aa96dd12d7038c58294b5b1b0f72e32bbf06a6ee7d98e4ff618169c6f",
+      "dictionaryMeaningSnapshot": "n. 悉尼（澳大利亚港市）",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "保留Sydney大写；只教城市名，不添港口、旅游价格或当前行程事实。",
+        "naturalEnglishSentence": "before exploring结构自然；Sydney专名大写，on foot修饰游览。",
+        "ChineseTranslation": "放行李先于步行游览，人物和时序一致，没有额外地理或行程事实。",
+        "collocation": "explore Sydney on foot具体指步行游览这个城市。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-licence-permit-noun",
+      "word": "licence",
+      "source": {
+        "book": "NCE1",
+        "lesson": 100
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 100
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "teachingDefinition": "n. 执照",
+      "meaningForCheck": "n. 执照",
+      "excludedMeaningLabels": [
+        "vt. 许可",
+        "n. 特许",
+        "n. 放纵",
+        "v. 执照"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 208,
+      "sourcePrintedPage": 204,
+      "sourcePageSha256": "0310f15d7113169317e559e49e58b43b7c53d085525a1f3d89417fe4840f0cc0",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "licence",
+      "sourcePrintedMeaning": "执照",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "本课licence是英式名词；不把词典的许可动词并入，不给驾驶资格、申办或有效期限建议。",
+      "canonicalHeadword": "licence",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "licence",
+        "outputWord": "licence",
+        "exampleSurfaceForm": "licence",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "01fb6cc5ecc985997299dc3f7ddac9684f0ba6ea971cdbda0be8653c07a4fbbb",
+      "dictionaryMeaningSnapshot": "n. 执照, 许可证, 特许\nvt. 许可, 特许, 认可",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "本课licence是英式名词；不把词典的许可动词并入，不给驾驶资格、申办或有效期限建议。",
+        "naturalEnglishSentence": "found his driving licence是有宾语的过去时，under a pile of receipts给出清楚地点。",
+        "ChineseTranslation": "found/under/pile of receipts分别为找到/下面/一堆收据，没有把执照当动作。",
+        "collocation": "a driving licence是英式名词执照的自然搭配，不提供申办法规。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-clever-intelligent",
+      "word": "clever",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 聪明的",
+      "meaningForCheck": "adj. 聪明的",
+      "excludedMeaningLabels": [
+        "adj. 精明的",
+        "adj. 巧妙的",
+        "n. 聪明",
+        "adv. 聪明的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "clever",
+      "sourcePrintedMeaning": "聪明的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "限定人的聪明/理解能力；不额外承诺精明算计或巧妙设计义。",
+      "canonicalHeadword": "clever",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "clever",
+        "outputWord": "clever",
+        "exampleSurfaceForm": "clever",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "17bef26484c8c58f5420532c46617d84da5c8166983e6ad8faf0094f6b5101c5",
+      "dictionaryMeaningSnapshot": "a. 聪明的, 精明的",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "限定人的聪明/理解能力；不额外承诺精明算计或巧妙设计义。",
+        "naturalEnglishSentence": "clever定语修饰pupil，solved和without asking for a hint连用自然。",
+        "ChineseTranslation": "没有请求提示而非没有看提示；没有额外推定所有提示不存在。",
+        "collocation": "a clever pupil是人物聪明义，不换成clever design巧妙义。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-stupid-foolish",
+      "word": "stupid",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 笨的",
+      "meaningForCheck": "adj. 笨的",
+      "excludedMeaningLabels": [
+        "adj. 麻木的",
+        "n. 笨人",
+        "adv. 笨的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "stupid",
+      "sourcePrintedMeaning": "笨的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "用说话人自述不明智行为承载本课笨的，不给人贴永久能力标签；不扩麻木义。",
+      "canonicalHeadword": "stupid",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "stupid",
+        "outputWord": "stupid",
+        "exampleSurfaceForm": "stupid",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "25a2815adea3b1cf7d051a49f7bc688fa23f0ac0f7ce25f2287743ced458c656",
+      "dictionaryMeaningSnapshot": "a. 愚蠢的, 麻木的",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "用说话人自述不明智行为承载本课笨的，不给人贴永久能力标签；不扩麻木义。",
+        "naturalEnglishSentence": "It was stupid of me to do句法自然，评价说话人这次行为。",
+        "ChineseTranslation": "留车票在家和自述笨相符，不擅自改成他人或永久能力评价。",
+        "collocation": "stupid of me绑定不明智行为的形容词评价。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-cheap-low-price",
+      "word": "cheap",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 便宜的",
+      "meaningForCheck": "adj. 便宜的",
+      "excludedMeaningLabels": [
+        "adj. 可鄙的",
+        "adj. 劣质的",
+        "adv. 便宜地",
+        "adv. 便宜的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "cheap",
+      "sourcePrintedMeaning": "便宜的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "仅虚构物品价格低；不认证劣质、可鄙、吝啬或便宜地副词义。",
+      "canonicalHeadword": "cheap",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "cheap",
+        "outputWord": "cheap",
+        "exampleSurfaceForm": "cheap",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "1440ebbb8459b5ccb6700199b45981694fec2ece7bc5308c102c46b547b84c11",
+      "dictionaryMeaningSnapshot": "a. 便宜的, 不值钱的, 可鄙的\nadv. 便宜地",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "仅虚构物品价格低；不认证劣质、可鄙、吝啬或便宜地副词义。",
+        "naturalEnglishSentence": "cheap是lunches前的形容词；sells lunches是自然食物销售表达。",
+        "ChineseTranslation": "附近咖啡馆、学院、低价午餐对应，不添具体金额或质量断言。",
+        "collocation": "cheap lunches只表达午餐价格低。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-expensive-high-price",
+      "word": "expensive",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 贵的",
+      "meaningForCheck": "adj. 贵的",
+      "excludedMeaningLabels": [
+        "adj. 奢华的",
+        "adj. 浪费的",
+        "n. 费用",
+        "adv. 贵的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "expensive",
+      "sourcePrintedMeaning": "贵的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "仅虚构票价高；不把贵与奢华、挥霍性格自动等同。",
+      "canonicalHeadword": "expensive",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "expensive",
+        "outputWord": "expensive",
+        "exampleSurfaceForm": "expensive",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "36384c65ab0ab005beddd73befceae031a759898a5f877950074293771575b46",
+      "dictionaryMeaningSnapshot": "a. 贵的, 奢华的, 费用浩大的, 乱化钱的\n[经] 高价的, 昂贵的, 浪费的",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "仅虚构票价高；不把贵与奢华、挥霍性格自动等同。",
+        "naturalEnglishSentence": "too expensive为票价形容词，so连接选择公交的结果。",
+        "ChineseTranslation": "票贵与改乘公交关系一致，不添票已买或公交具体价格。",
+        "collocation": "an expensive ticket为同一高价形容词用法。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-stale-food-not-fresh",
+      "word": "stale",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target-editorial-normalized",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 不新鲜的；放久的",
+      "meaningForCheck": "adj. 不新鲜的；放久的",
+      "excludedMeaningLabels": [
+        "n. 尿",
+        "vi. 撒尿",
+        "adj. 腐败的",
+        "adj. 腐馊的",
+        "adj. 陈腐的",
+        "adv. 不新鲜的；放久的",
+        "adj. 变馊的",
+        "adj. 酸败的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "stale",
+      "sourcePrintedMeaning": "变馊的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": {
+        "sourcePrintedMeaning": "变馊的",
+        "sourcePrintedPartOfSpeech": "adj.",
+        "normalizedMeaning": "不新鲜的；放久的（食物）",
+        "reason": "源简释的编辑澄清。自然stale bread在本虚构情境中指敞袋过夜后不新鲜、发干，不把stale简单等同腐馊或腐败。",
+        "defaultTeachingDefinition": "adj. 不新鲜的；放久的",
+        "unclaimedMeanings": [
+          "rotten",
+          "rancid",
+          "腐馊的",
+          "腐败的",
+          "酸败的"
+        ],
+        "literalSourceRottenOrRancidCoverageClaim": false
+      },
+      "finiteSenseBoundary": "原印变馊的完整保留；这是源简释的编辑澄清，英语stale bread写不新鲜/放久发干，不硬译腐馊或腐败，不声称原印腐败义完成，也不讨论可食性。",
+      "canonicalHeadword": "stale",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "stale",
+        "outputWord": "stale",
+        "exampleSurfaceForm": "stale",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "2f5e455914821d41f61f2cc49857631f50fcf144cbbd139c5948ad7d8c22031e",
+      "dictionaryMeaningSnapshot": "n. 尿\na. 不新鲜的, 陈腐的, 疲惫的, 陈旧的\nvt. 使变旧, 走味\nvi. 变陈旧, 走味, 失时效, 撒尿",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "原印变馊的完整保留；这是源简释的编辑澄清，英语stale bread写不新鲜/放久发干，不硬译腐馊或腐败，不声称原印腐败义完成，也不讨论可食性。",
+        "naturalEnglishSentence": "was stale and dry为两个并列表语形容词；because接过去完成时解释敞袋过夜的先行情境。",
+        "ChineseTranslation": "译不新鲜、发干，未译腐馊、腐败，未作可食性判断。",
+        "collocation": "stale bread仅放久不新鲜/发干面包；不以rotten/rancid认证本条。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-loud-volume-adjective",
+      "word": "loud",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 大声的",
+      "meaningForCheck": "adj. 大声的",
+      "excludedMeaningLabels": [
+        "adv. 大声地",
+        "adj. 浮夸的",
+        "adj. 不断的",
+        "adv. 大声的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "loud",
+      "sourcePrintedMeaning": "大声的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "形容声音音量；不把副词loud/大声地或衣着浮夸的另义算成本课目标。",
+      "canonicalHeadword": "loud",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "loud",
+        "outputWord": "loud",
+        "exampleSurfaceForm": "loud",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "693ab2f6747263b4d9323572792d301e04555d97bf2551464393f2ac17310d9c",
+      "dictionaryMeaningSnapshot": "a. 大声的, 不断的, 喧吵的\nadv. 高声地, 大声地",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "形容声音音量；不把副词loud/大声地或衣着浮夸的另义算成本课目标。",
+        "naturalEnglishSentence": "loud定语修饰music，from upstairs指声音来源，interrupted our conversation自然。",
+        "ChineseTranslation": "楼上来源、音量大和打断谈话三项一致，没有引入说话人大声地的副词义。",
+        "collocation": "loud music明确音乐音量大。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-high-physical-height",
+      "word": "high",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 高的",
+      "meaningForCheck": "adj. 高的",
+      "excludedMeaningLabels": [
+        "n. 高处",
+        "adv. 高度地",
+        "adj. 高级的",
+        "adj. 昂贵的",
+        "adj. 傲慢的",
+        "adv. 高的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "high",
+      "sourcePrintedMeaning": "高的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "仅物理高度的形容词；不用hung it high等副词结构认证本条，不扩身份高级、价格昂贵或兴奋迷醉义。",
+      "canonicalHeadword": "high",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "high",
+        "outputWord": "high",
+        "exampleSurfaceForm": "high",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "25900f051b7f99de445c29677a9675cbd9827880303e8ff8fb7ac1449d3d37b3",
+      "dictionaryMeaningSnapshot": "n. 高度, 高处\na. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的\nadv. 高度地, 奢侈地",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "仅物理高度的形容词；不用hung it high等副词结构认证本条，不扩身份高级、价格昂贵或兴奋迷醉义。",
+        "naturalEnglishSentence": "high为ceiling的形容词定语，makes the room feel spacious是自然使役结构。",
+        "ChineseTranslation": "天花板高与房间显得宽敞相符，不增房间实际面积扩大。",
+        "collocation": "a high ceiling是物理高度，不是高级地位或高价格。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-soft-material",
+      "word": "soft",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 软的",
+      "meaningForCheck": "adj. 软的",
+      "excludedMeaningLabels": [
+        "adj. 温柔的",
+        "adj. 软弱的",
+        "adj. 柔和的",
+        "adv. 柔软地",
+        "n. 纸币",
+        "adv. 软的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "soft",
+      "sourcePrintedMeaning": "软的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "材料触感软；不把温柔、软弱、柔和声音等统称为本例已覆盖。",
+      "canonicalHeadword": "soft",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "soft",
+        "outputWord": "soft",
+        "exampleSurfaceForm": "soft",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "791bb1aae48b1d743a022be40ff90f2757e1eb67347533d094f0d6c1e2d6d042",
+      "dictionaryMeaningSnapshot": "a. 软的, 温和的, 柔和的, 柔滑的, 温柔的, 软弱的, 坡度小的, 笨的, 纸币的\nn. 柔软的东西, 笨人, 纸币\nadv. 柔软地, 温和地",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "材料触感软；不把温柔、软弱、柔和声音等统称为本例已覆盖。",
+        "naturalEnglishSentence": "was soft enough to use as a pillow自然；soft为材料质地表语形容词。",
+        "ChineseTranslation": "够软与可以当枕头用对应，不推定温柔性格或保健作用。",
+        "collocation": "a soft cushion明确触感软。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-sour-taste",
+      "word": "sour",
+      "source": {
+        "book": "NCE1",
+        "lesson": 104
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 104
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 酸的",
+      "meaningForCheck": "adj. 酸的",
+      "excludedMeaningLabels": [
+        "vi. 变酸",
+        "vt. 使失望",
+        "adj. 愠怒的",
+        "n. 酸味",
+        "adv. 酸的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 216,
+      "sourcePrintedPage": 212,
+      "sourcePageSha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "sour",
+      "sourcePrintedMeaning": "酸的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "味觉形容词；不扩变酸动词、愠怒情绪或发酵过程，也不提供饮食建议。",
+      "canonicalHeadword": "sour",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "sour",
+        "outputWord": "sour",
+        "exampleSurfaceForm": "sour",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "b82309253157b098928dad7012c034429a22d91f8ec78ee95b6d11c6dcea01de",
+      "dictionaryMeaningSnapshot": "a. 酸的, 酸臭的, 发酵的, 愠怒的, 讨厌的, 拙劣的, 不健全的\nvi. 变酸, 发酵, 厌烦, 变坏\nvt. 使变酸, 使失望\nn. 酸味, 酸饮料",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "味觉形容词；不扩变酸动词、愠怒情绪或发酵过程，也不提供饮食建议。",
+        "naturalEnglishSentence": "tasted sour为系动词加味觉形容词；had left out the sugar表示先前漏放糖。",
+        "ChineseTranslation": "漏放糖与柠檬水酸的虚构叙事对应，不把sour译为生气或变酸动作。",
+        "collocation": "taste sour中sour为表语形容词，非副词。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-carry-take-with",
+      "word": "carry",
+      "source": {
+        "book": "NCE1",
+        "lesson": 106
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 106
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "teachingDefinition": "v. 携带",
+      "meaningForCheck": "v. 携带",
+      "excludedMeaningLabels": [
+        "n. 进位",
+        "vt. 支持",
+        "vt. 包含",
+        "vi. 能达到",
+        "adj. 携带"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 220,
+      "sourcePrintedPage": 216,
+      "sourcePageSha256": "8f15c916844ed54958d23a1145da36c6c5e9d0317f421a2f41130ea33b42ddda",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "carry",
+      "sourcePrintedMeaning": "携带",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "把实物带在身边；保存规范头carry，不用计算进位、支持观点、包含内容义补数。",
+      "canonicalHeadword": "carry",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "carry",
+        "outputWord": "carry",
+        "exampleSurfaceForm": "carried",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "c53d7599ff6b43079f443010ceb8123a44084a51e1ba391c4c1d67e3a421c689",
+      "dictionaryMeaningSnapshot": "n. 进位, 射程, 运载\nvt. 携带, 运送, 支持, 传送, 包含\nvi. 被携带, 能达到\n[计] 进位; 进位数",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "把实物带在身边；保存规范头carry，不用计算进位、支持观点、包含内容义补数。",
+        "naturalEnglishSentence": "carried为carry规则过去式；carry an umbrella in a bag和in case it rained自然。",
+        "ChineseTranslation": "包里带备用伞和防备下雨对应，没有说已下雨。",
+        "collocation": "carry an umbrella是携带实物；保存规范词頭carry。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-correct-fix-verb",
+      "word": "correct",
+      "source": {
+        "book": "NCE1",
+        "lesson": 106
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 106
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "teachingDefinition": "v. 改正；纠正",
+      "meaningForCheck": "v. 改正；纠正",
+      "excludedMeaningLabels": [
+        "adj. 正确的",
+        "adj. 合适的",
+        "n. 改正",
+        "adj. 改正；纠正"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 220,
+      "sourcePrintedPage": 216,
+      "sourcePageSha256": "8f15c916844ed54958d23a1145da36c6c5e9d0317f421a2f41130ea33b42ddda",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "correct",
+      "sourcePrintedMeaning": "改正，纠正",
+      "sourcePrintedPartOfSpeech": "v.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "本课实际打印v.改正，纠正；只做此动词目标，不把词典adj.正确的列成教材目标或顺带加扩展。",
+      "canonicalHeadword": "correct",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "correct",
+        "outputWord": "correct",
+        "exampleSurfaceForm": "correct",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "99c5d8a7a54e1b838a3b6dcdb01b9c657e0d688e7ce9b11393de4a29e8e8e6b5",
+      "dictionaryMeaningSnapshot": "a. 正确的, 合适的\nvt. 改正, 订正",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "本课实际打印v.改正，纠正；只做此动词目标，不把词典adj.正确的列成教材目标或顺带加扩展。",
+        "naturalEnglishSentence": "Please correct the address为祈使动词+宾语，before you post表示先更正后寄。",
+        "ChineseTranslation": "中译用自然的更正地址表达原表改正、纠正动作，不把correct address当形容词。",
+        "collocation": "correct the address是动词搭配，更正地址。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": [
+          "zh",
+          "collocation.zh"
+        ]
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-least-smallest-amount",
+      "word": "least",
+      "source": {
+        "book": "NCE1",
+        "lesson": 110
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 110
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 最少的（little的最高级；量最小）",
+      "meaningForCheck": "adj. 最少的（little的最高级；量最小）",
+      "excludedMeaningLabels": [
+        "n. 最少",
+        "adv. 最少",
+        "adv. 至少",
+        "adj. 个头最小的",
+        "adj. 少的",
+        "adv. 最少的（little的最高级；量最小）"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 228,
+      "sourcePrintedPage": 224,
+      "sourcePageSha256": "38b90b4bd2ad14b78c6dd29e0606bd381851ee657ec9b73ba44c121bdf2529a2",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "least",
+      "sourcePrintedMeaning": "最小的，最少的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": "little的最高级",
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": "原表以adj.标示，运行检查保留该POS标签；本句现代句法为不可数名词前的数量限定词，是little表示量的最高级。",
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "110本课chocolate/coffee对比和最少数量；原印最小的按量最小解释，不认证任意实体体积smallest、at least至少或least修饰形容词副词的程度义。保存least不改成little。",
+      "canonicalHeadword": "least",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "least",
+        "outputWord": "least",
+        "exampleSurfaceForm": "least",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "49e3413c1b771913a4b0f9fe67d897db53712ede83640affe7a420d4c243f7bd",
+      "dictionaryMeaningSnapshot": "n. 最少, 最小, 最小限度\na. 最少的, 最小的\nadv. 最小, 最少",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "110本课chocolate/coffee对比和最少数量；原印最小的按量最小解释，不认证任意实体体积smallest、at least至少或least修饰形容词副词的程度义。保存least不改成little。",
+        "naturalEnglishSentence": "Of the three recipes建立比较集合；the least sugar是little数量最高级，后接不可数名词。",
+        "ChineseTranslation": "三个对象和糖用量最少对应；不是实体个头最小或至少。",
+        "collocation": "the least sugar明确数量限定。原表adj.保留，现代句法限定词另记。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-worse-bad-comparative",
+      "word": "worse",
+      "source": {
+        "book": "NCE1",
+        "lesson": 110
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 110
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 更坏的（bad的比较级）",
+      "meaningForCheck": "adj. 更坏的（bad的比较级）",
+      "excludedMeaningLabels": [
+        "adj. 坏的",
+        "adj. 最坏的",
+        "n. 更坏的事",
+        "adv. 更坏地",
+        "adv. 更坏的（bad的比较级）"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 228,
+      "sourcePrintedPage": 224,
+      "sourcePageSha256": "38b90b4bd2ad14b78c6dd29e0606bd381851ee657ec9b73ba44c121bdf2529a2",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "worse",
+      "sourcePrintedMeaning": "更坏的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": "bad的比较级",
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": "bad的比较级形容词；be worse/ worse than结构，不当副词或名词。",
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "只教bad比较级的质量更坏；保存规范头worse，源forms的bad只是范式关系而r是解析垃圾，均不能当作已审可保存词形。",
+      "canonicalHeadword": "worse",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "worse",
+        "outputWord": "worse",
+        "exampleSurfaceForm": "worse",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "0c24cf661e6993be9d6900b73121ed04670e345c0244be51d7dffed037cc2498",
+      "dictionaryMeaningSnapshot": "n. 更坏的事, 更恶劣的事, 败局\na. 更坏的, 更恶劣的\nadv. 更坏地, 更恶劣地",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "只教bad比较级的质量更坏；保存规范头worse，源forms的bad只是范式关系而r是解析垃圾，均不能当作已审可保存词形。",
+        "naturalEnglishSentence": "was worse than we expected为bad的比较级形容词表语；so postponed叙事关系自然。",
+        "ChineseTranslation": "比预想更糟和推迟野餐对应，不写最糟或更坏地行动副词。",
+        "collocation": "worse than expected展示比较级；保留规范头worse，不保存bad或解析垃圾r。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-asleep-sleeping-state",
+      "word": "asleep",
+      "source": {
+        "book": "NCE1",
+        "lesson": 116
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 116
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 睡着的（用作表语）",
+      "meaningForCheck": "adj. 睡着的（用作表语）",
+      "excludedMeaningLabels": [
+        "v. 睡觉",
+        "adv. 熟睡地",
+        "adj. 麻木的",
+        "adj. 长眠的",
+        "adv. 睡着的（用作表语）"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 240,
+      "sourcePrintedPage": 236,
+      "sourcePageSha256": "8f64d992e09c193f6f77c15a9d1a4c4e469a6851f1ff6c6f99b617ec802c77a3",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "asleep",
+      "sourcePrintedMeaning": "睡觉，睡着",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": "用作表语",
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": "原印睡觉，睡着及用作表语完整保留；默认释义用睡着的反映状态形容词，不以睡觉的动词义认证，不放在名词前说an asleep person。",
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "只教处于睡眠状态的表语形容词，不扩长眠死亡、肢体麻木或熟睡地副词义。",
+      "canonicalHeadword": "asleep",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "asleep",
+        "outputWord": "asleep",
+        "exampleSurfaceForm": "asleep",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "add52aa6197f1818bb19b2ba88c7bc6e74e4a43e44afa61d99582536b7638fb0",
+      "dictionaryMeaningSnapshot": "a. 睡着的, 长眠的, 麻木的\nadv. 熟睡地",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "只教处于睡眠状态的表语形容词，不扩长眠死亡、肢体麻木或熟睡地副词义。",
+        "naturalEnglishSentence": "was asleep为状态表语形容词；turned the radio down指调低音量。",
+        "ChineseTranslation": "室友睡着的状态与调低收音机音量相符，没有死亡或肢体麻木语境。",
+        "collocation": "be asleep用作表语，不写an asleep person。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-exercise-book-notebook",
+      "word": "exercise book",
+      "source": {
+        "book": "NCE1",
+        "lesson": 120
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 120
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "teachingDefinition": "n. 练习本",
+      "meaningForCheck": "n. 练习本",
+      "excludedMeaningLabels": [
+        "n. 健身指南",
+        "n. 练习题",
+        "v. 锻炼",
+        "v. 练习本"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 247,
+      "sourcePrintedPage": 243,
+      "sourcePageSha256": "16c207ed546daaa0ceaeb498efefdef1a859b49b5651f5d71c720c360187db1b",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "exercise book",
+      "sourcePrintedMeaning": "练习本",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "完整两词规范头exercise book，指写练习的本子，不分拆成exercise健身或套成健身手册。",
+      "canonicalHeadword": "exercise book",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "exercise book",
+        "outputWord": "exercise book",
+        "exampleSurfaceForm": "exercise book",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "60eb1f1534262f8e9a040cb314b87a45f858552aab59b26b3868d0405f04a8a3",
+      "dictionaryMeaningSnapshot": "n. 练习本",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "完整两词规范头exercise book，指写练习的本子，不分拆成exercise健身或套成健身手册。",
+        "naturalEnglishSentence": "Write the date at the top of a new page in your exercise book为自然书写指令。",
+        "ChineseTranslation": "日期、练习本新页及顶端对应，不把练习本译为健身手册或单道题。",
+        "collocation": "write in an exercise book保留完整两词名词头。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-road-physical-route",
+      "word": "road",
+      "source": {
+        "book": "NCE1",
+        "lesson": 122
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 122
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "teachingDefinition": "n. 路",
+      "meaningForCheck": "n. 路",
+      "excludedMeaningLabels": [
+        "n. 方法",
+        "n. 途径",
+        "v. 修路",
+        "v. 路"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 252,
+      "sourcePrintedPage": 248,
+      "sourcePageSha256": "122b90653308c3328e3fa3db07a8031afe8acf141f7018d9e3ee4db5022980bd",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "road",
+      "sourcePrintedMeaning": "路",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "实体道路；不把road to success等方法/人生途径比喻算完成。",
+      "canonicalHeadword": "road",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "road",
+        "outputWord": "road",
+        "exampleSurfaceForm": "road",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "d135cd8612b32fbc8c79a8d2162fb037899f7890c6a3fdf643153ae0854360de",
+      "dictionaryMeaningSnapshot": "n. 路, 道路, 公路, 途径, 方法\n[法] 公路, 道路, 行车道",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "实体道路；不把road to success等方法/人生途径比喻算完成。",
+        "naturalEnglishSentence": "road作主语，narrows为表示空间变化的不及物动词，after the old bridge给出沿路位置。",
+        "ChineseTranslation": "通村道路过旧桥后变窄与原句空间关系一致，不添真实路线事实。",
+        "collocation": "the road to the village仅实体道路，不是成功方法比喻。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-kitten-young-cat",
+      "word": "kitten",
+      "source": {
+        "book": "NCE1",
+        "lesson": 124
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 124
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "teachingDefinition": "n. 小猫",
+      "meaningForCheck": "n. 小猫",
+      "excludedMeaningLabels": [
+        "n. 淘气姑娘",
+        "vt. 产仔",
+        "vt. 卖弄风情",
+        "v. 小猫"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 256,
+      "sourcePrintedPage": 252,
+      "sourcePageSha256": "b08a6a81dbec5e23ef3e328997408f451d631ae9929328e189c599ca2c7bf7b0",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "kitten",
+      "sourcePrintedMeaning": "小猫",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "虚构单只幼猫叙事；不扩淘气姑娘比喻或产仔动词，不作所有猫的行为断言。",
+      "canonicalHeadword": "kitten",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "kitten",
+        "outputWord": "kitten",
+        "exampleSurfaceForm": "kitten",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "cf967e8efcffca93d2e51193435edcc6d5e593a703faea5f7a1d6de000ef4e57",
+      "dictionaryMeaningSnapshot": "n. 小猫, 淘气姑娘\nvt. 产仔, 卖弄风情",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "虚构单只幼猫叙事；不扩淘气姑娘比喻或产仔动词，不作所有猫的行为断言。",
+        "naturalEnglishSentence": "kitten作动物名词主语，hid under the sofa和when the vacuum cleaner started自然。",
+        "ChineseTranslation": "吸尘器启动与小猫躲沙发下时序相符，只是虚构单只猫叙事。",
+        "collocation": "a kitten under the sofa具体动物场景，非人物比喻或产仔动词。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-get-on-board-vehicle",
+      "word": "get on",
+      "source": {
+        "book": "NCE1",
+        "lesson": 141
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 141
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "teachingDefinition": "v. 登上（交通工具）",
+      "meaningForCheck": "v. 登上（交通工具）",
+      "excludedMeaningLabels": [
+        "v. 融洽相处",
+        "v. 进展",
+        "v. 生活",
+        "v. 穿上",
+        "adj. 登上（交通工具）"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 290,
+      "sourcePrintedPage": 286,
+      "sourcePageSha256": "feee97b9cebfda84cbb6e0329baf5a80b4c11ebfcc5b39c5c70ae30324f27b82",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "get on",
+      "sourcePrintedMeaning": "登上",
+      "sourcePrintedPartOfSpeech": null,
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "editoriallyInferredPartOfSpeech": "v. (verb phrase)",
+      "grammarNormalization": "v. (verb phrase)",
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "词表无打印POS，另记动词短语推断。141实际指lady上火车，新句用同一交通工具登乘义，排除相处、进展、生活和穿上。不把got on保存成新词头。",
+      "canonicalHeadword": "get on",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "get on",
+        "outputWord": "get on",
+        "exampleSurfaceForm": "got on",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "e949cf24dfb8733273629f51152874a98adcb119817e55e32ab2b07df9d39f2b",
+      "dictionaryMeaningSnapshot": "生活, 融洽相处, 进展, 穿上, 上去, 使前进",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "词表无打印POS，另记动词短语推断。141实际指lady上火车，新句用同一交通工具登乘义，排除相处、进展、生活和穿上。不把got on保存成新词头。",
+        "naturalEnglishSentence": "waited for the passengers to get off before we got on the bus为自然登乘叙事；got on是过去式短语。",
+        "ChineseTranslation": "先等乘客下车后再上公交的顺序对应，未译为相处、进展或穿上。",
+        "collocation": "get on a bus与本课登火车同为登乘交通工具；规范头get on。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-middle-aged-person",
+      "word": "middle-aged",
+      "source": {
+        "book": "NCE1",
+        "lesson": 141
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 141
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 中年的",
+      "meaningForCheck": "adj. 中年的",
+      "excludedMeaningLabels": [
+        "n. 中年",
+        "adj. 中世纪的",
+        "adv. 中年的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 290,
+      "sourcePrintedPage": 286,
+      "sourcePageSha256": "feee97b9cebfda84cbb6e0329baf5a80b4c11ebfcc5b39c5c70ae30324f27b82",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "middle-aged",
+      "sourcePrintedMeaning": "中年的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "保留连字符middle-aged，指中年人；不把middle age年龄阶段名词当同一可保存词头，也不复制本课人物描写。",
+      "canonicalHeadword": "middle-aged",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "middle-aged",
+        "outputWord": "middle-aged",
+        "exampleSurfaceForm": "middle-aged",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "bea68b194b75a9e065173887861214e7af0bf21cc27b1e2c3ed950a4117ed7ce",
+      "dictionaryMeaningSnapshot": "a. 中年的",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "保留连字符middle-aged，指中年人；不把middle age年龄阶段名词当同一可保存词头，也不复制本课人物描写。",
+        "naturalEnglishSentence": "middle-aged连字符形容词定语修饰neighbour，helped us carry语法自然。",
+        "ChineseTranslation": "中年邻居帮搬桌子上楼对应，不加性别、能力或年龄数字。",
+        "collocation": "a middle-aged neighbour绑定中年人形容词，非middle age名词。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-worried-concerned-adjective",
+      "word": "worried",
+      "source": {
+        "book": "NCE1",
+        "lesson": 142
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 142
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "teachingDefinition": "adj. 担心的；担忧的",
+      "meaningForCheck": "adj. 担心的；担忧的",
+      "excludedMeaningLabels": [
+        "v. 担心",
+        "v. 使担忧",
+        "adj. 闷闷不乐的",
+        "n. 烦恼",
+        "adv. 担心的；担忧的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 292,
+      "sourcePrintedPage": 288,
+      "sourcePageSha256": "ad9bbf4676d1ddb6dcd9353ef57c5a32e33c4fe4f4e6e3787ca74838a052a3a9",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "worried",
+      "sourcePrintedMeaning": "担心，担忧",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "read from actual page image",
+      "grammarNormalization": "原表担心，担忧的POS是adj.；中文加的只是标明形容词，不扩新义。",
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "保留worried为规范头/情绪形容词，排除worry动词和源forms垃圾pd，不以词典闷闷不乐的替代本课担心。",
+      "canonicalHeadword": "worried",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "worried",
+        "outputWord": "worried",
+        "exampleSurfaceForm": "worried",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "7e577ba6fd88a5f27a77b76da06298c085894a85eb7c2c59fa8d4d22ebefbe97",
+      "dictionaryMeaningSnapshot": "a. 担心的, 闷闷不乐的",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "保留worried为规范头/情绪形容词，排除worry动词和源forms垃圾pd，不以词典闷闷不乐的替代本课担心。",
+        "naturalEnglishSentence": "looked worried为系动词+情绪形容词，still hadn’t arrived为当时先前未完成到达。",
+        "ChineseTranslation": "火车迟迟没到时显得担心相符；不译闷闷不乐或担心某人的动词。",
+        "collocation": "look worried是表语情绪状态，保存worried而非worry/pd。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [],
+      "humanCertification": false
+    },
+    {
+      "id": "gap6c-regularly-frequency",
+      "word": "regularly",
+      "source": {
+        "book": "NCE1",
+        "lesson": 142
+      },
+      "sources": [
+        {
+          "book": "NCE1",
+          "lesson": 142
+        }
+      ],
+      "scope": "textbook-target",
+      "partOfSpeech": "adv.",
+      "teachingDefinition": "adv. 经常地",
+      "meaningForCheck": "adv. 经常地",
+      "excludedMeaningLabels": [
+        "adv. 正式地",
+        "adv. 一丝不苟地",
+        "adv. 按规则地",
+        "adj. 经常地",
+        "adv. 有规则地"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural English sentence",
+        "Chinese translation",
+        "collocation",
+        "source",
+        "POS",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 292,
+      "sourcePrintedPage": 288,
+      "sourcePageSha256": "ad9bbf4676d1ddb6dcd9353ef57c5a32e33c4fe4f4e6e3787ca74838a052a3a9",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePrintedHeadword": "regularly",
+      "sourcePrintedMeaning": "经常地",
+      "sourcePrintedPartOfSpeech": "adv.",
+      "sourcePrintedUsageNote": null,
+      "sourcePrintedGlossStatus": "partial: clear 经常地 plus unreadable trailing print",
+      "grammarNormalization": null,
+      "semanticNormalization": null,
+      "finiteSenseBoundary": "本页经常地清晰，末段极淡无法可靠逐字转录；仅认证清晰的经常地目标，未猜任何第二打印释义。本课反复开窗、修车、改本上下文支持惯常动作，不扩正式地或一丝不苟地。",
+      "canonicalHeadword": "regularly",
+      "canonicalHeadwordEvidence": {
+        "sourcePrintedHeadword": "regularly",
+        "outputWord": "regularly",
+        "exampleSurfaceForm": "regularly",
+        "actualEnrollmentCallback": "not run here; root owns native TSX callback validation"
+      },
+      "contentFile": "app/data/vocabulary-gap-batch6c.ts",
+      "contentSha256": "c5118ca1c04a21faba0481ec393593fd3aab3f5f6ca95a79e2f29b58b9427548",
+      "dictionaryMeaningSnapshot": "adv. 有规则地, 一丝不苟地, 正式地",
+      "reviewer": "Codex /root/review_batch5e (author self-review); separate final independent content review pending",
+      "editorialReview": {
+        "status": "self-reviewed against accepted finite source plan",
+        "targetSense": "本页经常地清晰，末段极淡无法可靠逐字转录；仅认证清晰的经常地目标，未猜任何第二打印释义。本课反复开窗、修车、改本上下文支持惯常动作，不扩正式地或一丝不苟地。",
+        "naturalEnglishSentence": "visits the library regularly修饰惯常动作；usually on Friday afternoons给出常见时段而非绝对每周安排。",
+        "ChineseTranslation": "经常及通常对应，未把副词解释为正式地、一丝不苟地。",
+        "collocation": "visit the library regularly只认证清晰经常地目标；源尾段淡印不转录猜测。",
+        "sourceAndPOS": "Raw printed headword/gloss/POS/page retained separately from grammar normalization and inferred POS; all original source page SHA checks repeated",
+        "changesFromStageAProposal": []
+      },
+      "unresolved": [
+        {
+          "type": "source-scan-readability",
+          "detail": "原扫描右侧尾段严重褪色。现有JPG及经全书SHA核验的原PDF4x PNG均已实看；经常地清晰，尾段无法可靠逐字转录，未猜任何第二打印释义。",
+          "status": "unresolved; unclaimed and excluded from source-wide enumeration"
+        }
+      ],
+      "humanCertification": false
+    }
+  ]
+}
