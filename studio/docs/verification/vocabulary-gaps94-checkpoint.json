@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "recordedAt": "2026-10-01T23:22:22.489027+00:00",
+  "recordedAt": "2026-10-01T23:39:15.107007+00:00",
   "branch": "codex/vocabulary-gaps94-20261001",
   "baseCommit": "acfaffc6a8fe7033fca26c5c5b1dcb7c9bc0dce2",
   "exactRuntimeCodeCommitBuiltAndTested": "97daa69bf3ba0456870ca0de0ff7b0f3b294da36",
@@ -494,7 +494,9 @@
       "exitCode": 0,
       "command": "PATH=\"$PWD/work/bin:$PATH\" corepack pnpm package:static",
       "log": "work/gaps94/checkpoint/build-offline.log",
-      "logSha256": "be6d26d057987e0e512c3d61164293df10c47fa22bb505e3ed0b54f4954c132e"
+      "logSha256": "434afd70165874e7dd33d2f7fe2ee3665cd218e3eed68e9005ce8c442a8f288d",
+      "previousLogSha256": "be6d26d057987e0e512c3d61164293df10c47fa22bb505e3ed0b54f4954c132e",
+      "receiptRefresh": "Repeated offline build passed on the same runtime code; packaged HTML SHA is unchanged."
     },
     "protection": {
       "status": "passed",
@@ -585,7 +587,7 @@
   },
   "protection": {
     "path": "work/gaps94/checkpoint/protection.json",
-    "sha256": "9bdf27139e20706e596ad5e5511e7d330dd03f18bfab1b7ed49ffbb2807ff1eb",
+    "sha256": "970093bec3863c2fd4b14e0c6a87eea95d96c6c6aed5d376b80dbd7b16c8d4f0",
     "checker": "work/gaps94/checkpoint/verify-boundary.py",
     "checkerSha256": "7b06dfa4486dea1e5ef99089b4b9eb23a261429c23eb6860413b11dbd7819343",
     "old325ContentHashesPreserved": true,
@@ -632,7 +634,19 @@
     },
     "rawIndexDictionaryLanguageInputsPreserved": true,
     "publisherWorktreeModifiedByThisTask": false,
-    "personalLearningDataRead": false
+    "personalLearningDataRead": false,
+    "refreshReason": "A supplemental checker reused the local protection output paths. Source code and original commits were unchanged. The original checker was rerun successfully, its deterministic log SHA retained, and the current proof SHA rebound here. Supplemental outputs use separate paths.",
+    "recheckedAtDeliverySnapshot": "9e0afae9d78faf3399ea2ae52743ad781d62e097",
+    "supplemental": {
+      "path": "work/gaps94/checkpoint/supplemental-protection.json",
+      "sha256": "679fc49ce5b81e03afe4c4c9aca4b17d387513a7e4821484d55750bff05f3ec6",
+      "checker": "work/gaps94/checkpoint/verify-protection.mjs",
+      "checkerSha256": "9a7bb97dd5c87e98b732d25b47ab74df8d930c268ab4a84256b5014e6b2cce78",
+      "log": "work/gaps94/checkpoint/supplemental-protection.log",
+      "logSha256": "679fc49ce5b81e03afe4c4c9aca4b17d387513a7e4821484d55750bff05f3ec6",
+      "status": "passed",
+      "scope": "Frozen compiled catalog identity, complete objects for all old 325 examples, 14 protected files, exact finite source and page queue identity."
+    }
   },
   "packagedHtml": {
     "proof": "work/gaps94/checkpoint/bundle-inclusion.json",
