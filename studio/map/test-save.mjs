@@ -27,15 +27,26 @@ export default {createElement:(type,props,...children)=>jsx(type,{...props,child
 const fixtureSource=`
 const station=(id,kind,requires=[],extra={})=>({id,kind,requires,title:id,subtitle:'Synthetic fixture',stage:'skills',minutes:5,...extra});
 export const unitNodes=[station('nce1-1','unit',[],{parent:'chapter-1'}),station('nce1-3','unit',['nce1-1'],{parent:'chapter-1'})];
-export const nodes=[station('first','starter',[],{stage:'starter'}),station('chapter-1','course',['first'],{chapter:0,members:unitNodes.map(n=>n.id),project:'Synthetic reviewed work'}),station('chapter-2','course',['chapter-1'],{chapter:1,members:[]}),station('reading-short','task',['chapter-1'],{lane:'reading'}),station('reading-after','task',['reading-short'],{lane:'reading'}),station('mock-one','mock',['reading-after']),station('mock-two','mock',['mock-one']),station('finish','finish',['mock-two'])];
+export const nodes=[station('first','starter',[],{stage:'starter'}),station('small-exchange','starter',['first'],{stage:'starter'}),station('chapter-1','course',['first'],{chapter:0,members:unitNodes.map(n=>n.id),project:'Synthetic reviewed work'}),station('chapter-2','course',['chapter-1'],{chapter:1,members:[]}),station('reading-short','task',['chapter-1'],{lane:'reading'}),station('reading-after','task',['reading-short'],{lane:'reading'}),station('mock-one','mock',['reading-after']),station('mock-two','mock',['mock-one']),station('finish','finish',['mock-two'])];
 export const nodeById=id=>[...nodes,...unitNodes].find(n=>n.id===id);
 export const units=unitNodes.map(n=>({id:n.id,book:'NCE1',lesson:n.id==='nce1-1'?1:3,lastLesson:n.id==='nce1-1'?2:4,title:n.title,rows:[],sourceSha256:'synthetic'}));
 export const unitById=id=>units.find(u=>u.id===id);
 export const chapters=Array.from({length:14},()=>['Synthetic','','',6]);
-export const questionsFor=(node,round=0)=>['starter','unit','lesson','checkpoint'].includes(node.kind)?[{prompt:'Synthetic bank '+round%2,answer:'answer '+round%2,explanation:'Synthetic reference'}]:[];
+export const questionsFor=(node,round=0,bank)=>{
+ if(!['starter','unit','lesson','checkpoint'].includes(node.kind))return [];
+ if(['first','small-exchange'].includes(node.id)){
+  const legacy={prompt:'Synthetic legacy '+node.id,answer:'legacy answer '+node.id,explanation:'Synthetic legacy reference '+node.id};
+  if(bank!=='starter-v2'||round%2===0)return [legacy];
+  return [{prompt:'Synthetic fresh lesson 3 '+node.id,answer:'fresh answer '+node.id,explanation:'Synthetic fresh lesson 3 reference '+node.id,type:'choice',options:['fresh answer '+node.id,'unmatched'],clip:{book:'NCE1',lesson:3,start:node.id==='first'?1:11,end:node.id==='first'?3:13}}];
+ }
+ return [{prompt:'Synthetic bank '+round%2,answer:'answer '+round%2,explanation:'Synthetic reference'}];
+};
 export const stages=[{id:'skills',title:'Synthetic skills'},{id:'starter',title:'Synthetic start'}],originalSite='/';
 export const resources={scoring:{url:'/synthetic-scoring',title:'Synthetic scoring'}},courseUrl=()=>'/synthetic',sourceLabel=u=>u.id;
-export const starters=[{id:'first',lines:[],question:'Synthetic',options:['a'],answer:'a',tip:''}];
+const oldLines=id=>Array.from({length:3},(_,i)=>({en:'Synthetic legacy '+id+' line '+(i+1),zh:'原示范 '+(i+1),clip:{book:'NCE1',lesson:1,start:i+1,end:i+2}}));
+const newLines=id=>Array.from({length:3},(_,i)=>({en:'Synthetic new lesson 3 '+id+' line '+(i+1),zh:'新示范 '+(i+1),clip:{book:'NCE1',lesson:3,start:i+1,end:i+2}}));
+export const starters=['first','small-exchange'].map(id=>({id,lines:oldLines(id),question:'Synthetic guided '+id,options:['a'],answer:'a',tip:''}));
+export const starterStudyLines=(id,bank)=>bank==='starter-v2'?[...oldLines(id),...newLines(id)]:oldLines(id);
 export const guidesFor=()=>[],firstChapterFocus={};
 `;
 const icons='ArrowRight ArrowUpRight Check CheckCircle2 ChevronLeft Lightbulb Lock RotateCcw X Flag BookOpen ExternalLink Clock3 Download Upload ChevronRight Milestone Unlock Settings2'.split(' ');
@@ -67,7 +78,7 @@ const mocks={
 const dir=await mkdtemp(join(tmpdir(),'english-map-save-')),output=join(dir,'components.mjs');
 try{
  await build({
-  stdin:{contents:"import './map/main.tsx';export {LearningRoom} from './map/learning.tsx';export {CourseRoom} from './map/course.tsx';export * as model from './map/model.ts';export * as content from 'test:fixture';export {harness} from 'test:harness';",resolveDir:fileURLToPath(root),sourcefile:'save-test-entry.ts',loader:'ts'},
+  stdin:{contents:"import './map/main.tsx';export {LearningRoom} from './map/learning.tsx';export {CourseRoom,StarterTeaching} from './map/course.tsx';export * as model from './map/model.ts';export * as content from 'test:fixture';export {harness} from 'test:harness';",resolveDir:fileURLToPath(root),sourcefile:'save-test-entry.ts',loader:'ts'},
   bundle:true,platform:'node',format:'esm',target:'node22',jsx:'automatic',outfile:output,logLevel:'silent',
   plugins:[{name:'save-source-components',setup(build){
    build.onResolve({filter:/.*/},args=>Object.hasOwn(mocks,args.path)?{path:args.path,namespace:'save-fixture'}:args.path.endsWith('.css')?{path:args.path,namespace:'empty-css'}:undefined);
@@ -78,7 +89,7 @@ try{
  });
  globalThis.document={getElementById:()=>({focus(){}}),querySelector:()=>null};
  globalThis.window={scrollTo(){}};
- const {LearningRoom,CourseRoom,model:m,content:c,harness:h}=await import(pathToFileURL(output));
+ const {LearningRoom,CourseRoom,StarterTeaching,model:m,content:c,harness:h}=await import(pathToFileURL(output));
  const App=h.root.type;
  let checks=0;
  const check=(value,label)=>{assert.ok(value,label);checks++};
@@ -89,14 +100,14 @@ try{
  }
  function elements(node){if(!node||typeof node!=='object')return [];if(Array.isArray(node))return node.flatMap(elements);return [node,...elements(node.props?.children)]}
  const find=(tree,predicate)=>{const item=elements(tree).find(predicate);assert(item,'Expected component element missing');return item};
- const textOf=node=>typeof node==='string'?node:Array.isArray(node)?node.map(textOf).join(''):node&&typeof node==='object'?textOf(node.props?.children):'';
+ const textOf=node=>['string','number'].includes(typeof node)?String(node):Array.isArray(node)?node.map(textOf).join(''):node&&typeof node==='object'?textOf(node.props?.children):'';
  const input=(frame,label)=>find(frame.tree,n=>n.type==='label'&&textOf(n).startsWith(label));
  const field=(frame,label)=>find(input(frame,label),n=>['input','textarea','select'].includes(n.type));
  const submit=frame=>{find(frame.tree,n=>n.type==='form').props.onSubmit({preventDefault(){}});frame.render()};
  const evidenceSuccess=frame=>elements(frame.tree).some(n=>n.props?.className==='saved-message');
  const projectSuccess=frame=>textOf(frame.tree).includes('作品记录已保存。');
  const now=Date.now(),day=m.reviewDelay;
- const proof=(node,round,at)=>({round,at,answers:c.questionsFor(node,round).map(q=>q.answer),assisted:false});
+ const proof=(node,round,at,bank)=>{const qs=c.questionsFor(node,round,bank);return {round,at,answers:qs.map(q=>q.answer),assisted:false,...(bank?{bank}:{}),...(qs.some(q=>q.clip)?{heard:qs.flatMap((q,i)=>q.clip?[i]:[])}:{})}};
  const evidence={date:m.today(now),material:'Synthetic unseen paper A',work:'My own answer with a retained source and clear details.',reviewer:'Synthetic external teacher',feedback:'Specific errors were reviewed and corrected with evidence.',criteria:[true,true,true,true],unseen:true,timed:true,correct:'30',total:'40',dimensions:['','','',''],revision:'New paper B: the same error was checked and corrected.'};
  const project={text:'This is my own original story. I can describe my day clearly. '.repeat(4),recording:'synthetic-take.wav',reviewer:'Synthetic external teacher',feedback:'The reviewer identified tense errors and checked the revised response.',criteria:[true,true,true,true],at:now};
  function progress(kind='evidence'){
@@ -316,6 +327,44 @@ try{
    find(form.tree,n=>n.props?.className==='hint-button').props.onClick();refresh(form,app);
    check(app.state().records[node.id].assisted&&app.state().records[node.id].quizHelpAt>=now,'The real hint callback records assisted practice and exposure');
   }
-  console.log(`PASS save reliability (${checks} assertions): real App/form/quiz callbacks; read/write exceptions; corrupt/startup reads; failed draft and assessment retry; no false completion/unlocks; conflict and storage-event input retention; late Recorder callback; mock/official requirements; help exposure; backup round trip. No browser data, media or network.`);
+  for(const id of ['first','small-exchange']){
+   const node=c.nodeById(id),legacy=proof(node,1,now-2*day),state=m.emptyProgress();state.access={all:false,nodes:[id]};
+   state.records[id]={...m.emptyRecord(),round:1,phase:'challenge',answers:[...legacy.answers],attempts:[legacy]};
+   const app=appFixture(state,`#/learn/${id}`),room=renderFrame(LearningRoom,{...app.room(),close(){},select(){}});
+   const FocusedQuiz=find(room.tree,n=>typeof n.type==='function'&&n.type.name==='FocusedQuiz').type;
+   const form=renderFrame(FocusedQuiz,{node,state:app.state(),save:app.room().save,close(){},select(){}});
+   check(elements(form.tree).some(n=>n.props?.className?.includes('quiz-receipt'))&&textOf(form.tree).includes('Synthetic legacy reference '+id)&&textOf(form.tree).includes('✓ 已匹配'),id+': unmarked historical receipt keeps its original questions and grading');
+   app.save(s=>({...s,records:{...s.records,[id]:{...s.records[id],bank:'starter-v2',round:1,phase:'challenge',answers:[],heard:[]}}}));refresh(form,app);
+   check(!elements(form.tree).some(n=>n.props?.className?.includes('quiz-receipt')),id+': the same round in another bank is a pending challenge');
+   const question=find(form.tree,n=>typeof n.type==='function'&&n.type.name==='QuestionAnswer');
+   check(question.props.q.prompt==='Synthetic fresh lesson 3 '+id&&question.props.q.clip.lesson===3,id+': the active component selects new source material by bank marker');
+   const fresh=proof(node,1,now,'starter-v2');
+   check(m.grade(node,legacy.answers,1,'starter-v2').every(value=>!value),id+': adding a bank label cannot make old answers match new material');
+   check(!m.passedQuiz(node,{...fresh,heard:[]}),id+': the new source audio must be heard');
+   const sameMaterial=proof(node,0,now,'starter-v2'),sameState={...app.state(),records:{...app.state().records,[id]:{...app.state().records[id],round:0,attempts:[legacy,sameMaterial]}}};
+   check(!m.stable(node,sameState),id+': a bank marker over unchanged source material cannot prove consolidation');
+   const answer=renderFrame(question.type,question.props);find(answer.tree,n=>n.type==='button'&&textOf(n)==='fresh answer '+id).props.onClick();refresh(form,app);
+   const updatedQuestion=find(form.tree,n=>typeof n.type==='function'&&n.type.name==='QuestionAnswer'),heardAnswer=renderFrame(updatedQuestion.type,updatedQuestion.props);find(heardAnswer.tree,n=>n.type==='ClipButton').props.done();refresh(form,app);
+   submit(form);refresh(form,app);const durable=m.parseProgress(app.storage.value),last=durable.records[id].attempts.at(-1);
+   check(last.bank==='starter-v2'&&last.heard.includes(0)&&m.passedQuiz(node,last),id+': actual choice, audio and submit callbacks persist the matching versioned proof');
+   check(textOf(form.tree).includes('Synthetic fresh lesson 3 reference '+id)&&textOf(form.tree).includes('✓ 已匹配')&&!textOf(form.tree).includes('Synthetic legacy reference '+id),id+': the new historical receipt grades and explains the proof bank');
+   check(m.stable(node,durable)&&JSON.stringify(durable.records[id].attempts[0])===JSON.stringify(legacy),id+': a delayed independent new group consolidates without rewriting the old proof');
+  }
+  for(const id of ['first','small-exchange']){
+   const node=c.nodeById(id),legacy=proof(node,1,now-2*day);let state=m.emptyProgress();state.access={all:false,nodes:[id]};
+   state.records[id]={...m.emptyRecord(),round:1,phase:'learn',attempts:[legacy]};
+   const save=change=>{state=change(state);return true},room=renderFrame(LearningRoom,{node,state,save,close(){},select(){}});
+   find(room.tree,n=>n.type==='button'&&textOf(n).endsWith('自己试')).props.onClick();
+   check(state.records[id].bank==='starter-v2'&&c.questionsFor(node,state.records[id].round,state.records[id].bank)[0].clip?.lesson===3,id+': learning after a completed old round starts an independent marked group');
+   state={...state,records:{...state.records,[id]:{...m.emptyRecord(),bank:'starter-v2',round:1,phase:'learn',attempts:[legacy]}}};room.render({...room.props,state});
+   find(room.tree,n=>n.type==='button'&&textOf(n).endsWith('自己试')).props.onClick();
+   check(state.records[id].round===1&&state.records[id].bank==='starter-v2'&&state.records[id].phase==='challenge',id+': the step transition compares both round and bank before restarting');
+   const oldStudy={...state,records:{...state.records,[id]:{...state.records[id],bank:undefined,exampleIndex:3}}},oldTeaching=renderFrame(StarterTeaching,{node,state:oldStudy,save,ready(){}});
+   check(textOf(oldTeaching.tree).includes('Synthetic guided '+id)&&!textOf(oldTeaching.tree).includes('Synthetic new lesson 3'),id+': unmarked teaching keeps the original three-line guided path');
+   const newStudy={...state,records:{...state.records,[id]:{...state.records[id],exampleIndex:3}}},newTeaching=renderFrame(StarterTeaching,{node,state:newStudy,save,ready(){}});
+   check(textOf(newTeaching.tree).includes('示范 4 / 6')&&textOf(newTeaching.tree).includes('Synthetic new lesson 3 '+id+' line 1'),id+': marked teaching appends the new three source lines');
+   check(find(newTeaching.tree,n=>n.type==='ClipButton').props.clip.lesson===3,id+': the appended teaching line plays the fixed new lesson source');
+  }
+  console.log(`PASS save reliability (${checks} assertions): real App/form/quiz callbacks; read/write exceptions; corrupt/startup reads; failed draft and assessment retry; no false completion/unlocks; conflict and storage-event input retention; late Recorder callback; mock/official requirements; help exposure; versioned starter questions, source audio and historical receipts; backup round trip. No browser data, media or network.`);
  }
 }finally{await rm(dir,{recursive:true,force:true})}

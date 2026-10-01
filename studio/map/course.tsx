@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {ArrowRight, Check, Lock, RotateCcw, BookOpen, Lightbulb} from 'lucide-react';
 import {nodeById, courseUrl, type MapNode} from './content';
-import {unitById, guidesFor, firstChapterFocus, sourceLabel, starters, type Unit, type MapQuestion} from './curriculum';
+import {unitById, guidesFor, firstChapterFocus, sourceLabel, starters, starterStudyLines, type Unit, type MapQuestion} from './curriculum';
 import {achieved, learningLabel, manuallyUnlocked, emptyRecord, updateDraft, chapterProgress, statusMap, stable, due, nextReviewAt, projectErrors, type Project, type Progress} from './model';
 import {ClipButton, Recorder, StopAudio} from './media';
 import {loadLessonLanguage, loadDictionary, findWord, type LessonLanguage, type DictionaryEntry} from '../app/language';
@@ -16,10 +16,11 @@ import {LessonReader} from './lesson-reader';
 
 export function StarterTeaching({node,state,save,ready}:{node:MapNode;state:Progress;save:Save;ready:()=>void}){
   const starter=starters.find(s=>s.id===node.id)!;
+  const lines=starterStudyLines(node.id,state.records[node.id]?.bank);
   const [choice,setChoice]=useState('');
-  const index=Math.min(state.records[node.id]?.exampleIndex||0,starter.lines.length),row=starter.lines[index];
+  const index=Math.min(state.records[node.id]?.exampleIndex||0,lines.length),row=lines[index];
   const move=(exampleIndex:number)=>{setChoice('');save(s=>({...s,records:{...s.records,[node.id]:{...(s.records[node.id]||emptyRecord()),exampleIndex}}}));};
-  return <section className="focus-starter"><StopAudio key={index}/>{row?<><div className="quiz-position"><span>示范 {index+1} / {starter.lines.length}</span><span>听一句，跟着说</span></div><article className="starter-one"><p lang="en">{row.en}</p><p>{row.zh}</p>{'clip' in row&&<ClipButton clip={row.clip} label="听这一句"/>}</article><div className="quiz-actions"><button className="text-button" disabled={index===0} onClick={()=>move(index-1)}>上一句</button><button className="primary" onClick={()=>move(index+1)}>{index===starter.lines.length-1?'跟着试一次':'下一句'}<ArrowRight size={17}/></button></div><details className="starter-tip"><summary>怎么学这一小步？</summary><p>{starter.tip}</p></details></>:<><span className="mini-label">跟着试 · 这一步可以看示范</span><h2>{starter.question}</h2><div className="choices">{starter.options.map(o=><button key={o} aria-pressed={choice===o} className={choice===o?'picked':''} onClick={()=>setChoice(o)}>{o}</button>)}</div>{choice&&<p role="status">{choice===starter.answer?'选对了。接下来收起示范，独立试一次。':'还不太对，可以回听上一句再选。'}</p>}<div className="quiz-actions"><button className="text-button" onClick={()=>move(starter.lines.length-1)}>回看示范</button><button className="primary" onClick={ready}>自己试<ArrowRight size={17}/></button></div></>}</section>;
+  return <section className="focus-starter"><StopAudio key={index}/>{row?<><div className="quiz-position"><span>示范 {index+1} / {lines.length}</span><span>听一句，跟着说</span></div><article className="starter-one"><p lang="en">{row.en}</p><p>{row.zh}</p>{row.clip&&<ClipButton clip={row.clip} label="听这一句"/>}</article><div className="quiz-actions"><button className="text-button" disabled={index===0} onClick={()=>move(index-1)}>上一句</button><button className="primary" onClick={()=>move(index+1)}>{index===lines.length-1?'跟着试一次':'下一句'}<ArrowRight size={17}/></button></div><details className="starter-tip"><summary>怎么学这一小步？</summary><p>{starter.tip}</p></details></>:<><span className="mini-label">跟着试 · 这一步可以看示范</span><h2>{starter.question}</h2><div className="choices">{starter.options.map(o=><button key={o} aria-pressed={choice===o} className={choice===o?'picked':''} onClick={()=>setChoice(o)}>{o}</button>)}</div>{choice&&<p role="status">{choice===starter.answer?'选对了。接下来收起示范，独立试一次。':'还不太对，可以回听上一句再选。'}</p>}<div className="quiz-actions"><button className="text-button" onClick={()=>move(lines.length-1)}>回看示范</button><button className="primary" onClick={ready}>自己试<ArrowRight size={17}/></button></div></>}</section>;
 }
 
 const beginnerMeanings:Record<string,string>={'excuse':'Excuse me 连起来表示“请问／劳驾”','me':'我（放在动作后面）','yes':'是的；表示肯定','is':'是（与 this、it 等搭配）','this':'这；这个','your':'你的；你们的','handbag':'手提包','pardon':'Pardon? 表示“请再说一遍”','it':'它；这件东西','thank you':'谢谢','very much':'非常'};

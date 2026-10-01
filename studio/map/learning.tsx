@@ -22,11 +22,11 @@ export function LearningRoom({node,state,save,close,select,speaking}:{node:MapNo
     const unit=node.kind==='unit',quiz=['unit','starter','lesson','checkpoint'].includes(node.kind);
     const assessment=['course','task','mock','finish'].includes(node.kind);
     const step=record.phase==='challenge'?3:record.studyStep||0;
-    const questions=questionsFor(node,record.round),index=Math.min(record.questionIndex||0,Math.max(0,questions.length-1));
+    const questions=questionsFor(node,record.round,record.bank),index=Math.min(record.questionIndex||0,Math.max(0,questions.length-1));
     useEffect(()=>{if(!locked)save(s=>startNode(s,node.id))},[node.id,locked]);
     useEffect(()=>{if(speaking&&!locked&&record.phase==='challenge')save(s=>changeStudyStep(s,node.id,0))},[node.id,speaking,locked]);
     useEffect(()=>{window.scrollTo({top:0});(document.getElementById(`question-${index}`)||title.current)?.focus({preventScroll:true})},[node.id,step,index,speaking]);
-    const changeStep=(next:number)=>save(s=>next===3&&s.records[node.id]?.phase==='learn'&&s.records[node.id]?.attempts.at(-1)?.round===s.records[node.id]?.round?restartQuiz(s,node.id):changeStudyStep(s,node.id,next));
+    const changeStep=(next:number)=>save(s=>next===3&&s.records[node.id]?.phase==='learn'&&s.records[node.id]?.attempts.at(-1)?.round===s.records[node.id]?.round&&s.records[node.id]?.attempts.at(-1)?.bank===s.records[node.id]?.bank?restartQuiz(s,node.id):changeStudyStep(s,node.id,next));
     return <main className="focus-page"><header className="focus-header"><button className="back-button" onClick={close}><ChevronLeft size={17}/>学习</button><a className="focus-brand" href="#/courses">句句有进步<span>找课</span></a><span className="focus-saved">进度自动保留</span></header><AudioSpace controls={false}><div className="focus-content"><div className="focus-course-heading"><p>{node.subtitle}{unit&&speaking!=='review'&&<> · <span lang="en">{node.title}</span></>}</p><h1 ref={title} tabIndex={-1}>{unit?lessonPlan(unitById(node.id)!).goal:node.title}</h1><span>{manuallyUnlocked(node,state)?'手动解锁 · ':''}{learningLabel(node,state)}</span></div>
     {locked?<section className="locked-room"><Lock size={28}/><h2>这一课还没有开放</h2><p>可以直接开始，也可以按地图顺序学习。解锁不会标记已完成。</p><button className="primary" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button></section>:speaking&&unit?<SpeakingPractice key={`${node.id}-${speaking}`} unit={unitById(node.id)!} state={state} save={save} review={speaking==='review'} close={()=>select(node.id)}/>:quiz?<>
       <nav className="focus-steps" aria-label="本课学习步骤">{(unit?[[0,'听懂'],[1,'看懂'],[2,'自己用'],[3,'检验']]:[[0,'听与跟练'],[3,'自己试']]).map(([value,label],i)=><button key={value} aria-current={step===value?'step':undefined} onClick={()=>changeStep(Number(value))}><span>{i+1}</span>{label}</button>)}</nav><StopAudio key={`${step}-${index}`}/>
@@ -37,14 +37,14 @@ export function LearningRoom({node,state,save,close,select,speaking}:{node:MapNo
     </div></AudioSpace></main>;
 }
 function FocusedQuiz({node,state,save,select,close}:{node:MapNode;state:Progress;save:Save;select:(id:string)=>void;close:()=>void}){
-  const record=state.records[node.id]||emptyRecord(),questions=questionsFor(node,record.round),last=record.attempts.at(-1),checked=!!last&&last.round===record.round;
+  const record=state.records[node.id]||emptyRecord(),questions=questionsFor(node,record.round,record.bank),last=record.attempts.at(-1),checked=!!last&&last.round===record.round&&last.bank===record.bank;
   const index=Math.min(record.questionIndex||0,questions.length-1),q=questions[index];
   const receiptTitle=useRef<HTMLHeadingElement>(null);
   useEffect(()=>{if(checked){window.scrollTo({top:0});receiptTitle.current?.focus({preventScroll:true})}},[checked]);
   const patch=(change:Partial<NodeRecord>)=>save(s=>({...s,records:{...s.records,[node.id]:{...(s.records[node.id]||emptyRecord()),...change}}}));
   const complete=(i:number)=>!!record.answers[i]?.trim()&&(!questions[i].clip||!!record.heard?.includes(i));
   if(checked){
-    const pass=passedQuiz(node,last),result=grade(node,last.answers,last.round),statuses=statusMap(state);
+    const pass=passedQuiz(node,last),result=grade(node,last.answers,last.round,last.bank),statuses=statusMap(state);
     const next=[...nodes,...unitNodes].find(n=>n.requires.includes(node.id)&&statuses[n.id]==='available');
     const skills=questionSkills(questions,result),repair=skills.find(s=>s.correct<s.total);
     const reviewed=stable(node,state),reviewAt=nextReviewAt(node,state);

@@ -31,13 +31,15 @@ let clock=now;
 Date.now=()=>clock;
 const unit=c.nodeById('nce1-1'),next=c.nodeById('nce1-3'),chapter=c.nodeById('chapter-1');
 assert.ok(unit&&next&&chapter,'The real first chapter must be prepared before these tests run');
-const proof=(round,at,node=unit)=>({round,at,answers:c.questionsFor(node,round).map(q=>q.answer.split(/\s+\/\s+/)[0]),assisted:false,heard:c.questionsFor(node,round).flatMap((q,i)=>q.clip?[i]:[])});
+const assessedIdentity=(node,round,bank)=>JSON.stringify(c.questionsFor(node,round,bank).map(q=>JSON.stringify([q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start,q.clip?.end])).sort());
+const proof=(round,at,node=unit,bank)=>({round,at,...bank===undefined?{}:{bank},answers:c.questionsFor(node,round,bank).map(q=>q.answer.split(/\s+\/\s+/)[0]),assisted:false,heard:c.questionsFor(node,round,bank).flatMap((q,i)=>q.clip?[i]:[])});
 const wrong=(round,at)=>({...proof(round,at),answers:['deliberately incorrect synthetic response']});
-const stateFor=(attempts,record={})=>({...m.emptyProgress(),access:{all:true,nodes:[]},lastNode:unit.id,records:{[unit.id]:{...m.emptyRecord(),...record,attempts}}});
-const submit=(state,round,at)=>{
-    const p=proof(round,at);
-    const ready={...state,records:{...state.records,[unit.id]:{...state.records[unit.id],round:p.round,answers:p.answers,heard:p.heard,assisted:false,phase:'challenge'}}};
-    return m.submitQuiz(ready,unit.id,at);
+const progressFor=(node,attempts,record={})=>({...m.emptyProgress(),access:{all:true,nodes:[]},lastNode:node.id,records:{[node.id]:{...m.emptyRecord(),...record,attempts}}});
+const stateFor=(attempts,record={})=>progressFor(unit,attempts,record);
+const submit=(state,round,at,node=unit)=>{
+    const record=state.records[node.id],p=proof(round,at,node,record?.bank);
+    const ready={...state,records:{...state.records,[node.id]:{...record,round:p.round,answers:p.answers,heard:p.heard,assisted:false,phase:'challenge'}}};
+    return m.submitQuiz(ready,node.id,at);
 };
 const project={text:'I am a student. This is my book. I read it every day. '.repeat(25),recording:'synthetic-original.wav',reviewer:'Synthetic external teacher',feedback:'Specific external feedback identified the tense error and checked the corrected recording.',criteria:[true,true,true,true],at:now};
 const evidence={date:m.today(now),material:'Synthetic new paper A',work:'This is my own complete answer with concrete supporting details. '.repeat(45),reviewer:'Synthetic external IELTS teacher',feedback:'Specific feedback checked the original and corrected tense use.',criteria:[true,true,true,true],unseen:true,timed:true,correct:'30',total:'40',dimensions:Array(4).fill('Specific performance evidence and an actionable correction from the external reviewer.'),revision:'Synthetic new paper B retest: the error was corrected and remaining weaknesses recorded.'};
@@ -70,7 +72,27 @@ if(baseline) {
     Date.now=realNow;
 } else {
     const review=await import(await moduleURL(path.join(root,'review-route.ts')));
-    const cases=[],failures=[],routeTraces=[];
+    const curriculum=await import(await moduleURL(path.join(root,'curriculum.ts')));
+    const sourceLesson3=JSON.parse(await fs.readFile(path.join(root,'../dist-online/language/NCE1/3.json'),'utf8'));
+    const cases=[],failures=[],routeTraces=[],sourceEvidence=[];
+    let bankBounds;
+    const legacyStarterRows={
+        first:[
+            {en:'Excuse me!',zh:'想请别人注意时：请问／劳驾。',clip:{book:'NCE1',lesson:1,start:15.11,end:16.66}},
+            {en:'Pardon?',zh:'没听清时：请再说一遍。',clip:{book:'NCE1',lesson:1,start:21.44,end:23.17}},
+            {en:'Thank you very much.',zh:'得到帮助后：非常感谢。',clip:{book:'NCE1',lesson:1,start:29.49,end:33}},
+        ],
+        'small-exchange':[
+            {en:'Is this your handbag?',zh:'这是你的手提包吗？Is 放在句首，表示在问。',clip:{book:'NCE1',lesson:1,start:18.26,end:21.44}},
+            {en:'Yes, it is.',zh:'是的，是我的。先模仿整句。',clip:{book:'NCE1',lesson:1,start:26.73,end:29.49}},
+            {en:'This is not my umbrella.',zh:'这不是我的伞。not 表示否定。',clip:{book:'NCE1',lesson:3,start:33.72,end:37.39}},
+        ],
+    };
+    const legacyQuestions=(id,round)=>{
+        const rows=legacyStarterRows[id],offset=round%rows.length;
+        return [...rows.slice(offset),...rows.slice(0,offset)].map((row,i)=>({id:`sound-${i}`,type:'choice',mode:'listen',prompt:'听一句原声，选择对应的意思。',clip:row.clip,options:rows.map(x=>x.zh).sort(),answer:row.zh,explanation:`${row.en} — ${row.zh}`}));
+    };
+
     const test=(name,run)=>{
         clock=now;
         try{run();cases.push(name)}catch(error){failures.push({name,message:error.message});console.error(`FAIL ${name}: ${error.message}`)}
@@ -219,9 +241,10 @@ if(baseline) {
         assert.equal(m.due(unit,s,last+21*day-1),false);
         assert.equal(m.due(unit,s,last+21*day),true);
     });
-    for(const id of [unit.id,'first','letters'])test(`Real due-review entry selects independent actual content across four sessions: ${id}`,()=>{
+    for(const id of [unit.id,'letters','first','small-exchange'])test(`Real due-review entry selects genuinely different material across scheduled sessions: ${id}`,()=>{
         const node=c.nodeById(id),first=now-40*day;
-        const identity=round=>JSON.stringify(c.questionsFor(node,round).map(q=>[q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start]));
+        const versioned=['first','small-exchange'].includes(id),dates=versioned?[0,1,8,15,36]:[0,1,8,15];
+        const identity=(round,bank)=>assessedIdentity(node,round,bank);
         const trace=[];
         routeTraces.push({id,trace});
         clock=first;
@@ -229,7 +252,7 @@ if(baseline) {
         s=m.changeStudyStep(s,id,0);
         s=m.changeStudyStep(s,id,3);
         let previousIdentity;
-        for(const [index,date] of [0,1,8,15].entries()) {
+        for(const [index,date] of dates.entries()) {
             clock=first+date*day;
             const existing=structuredClone(s.records[id].attempts);
             if(index) {
@@ -241,28 +264,31 @@ if(baseline) {
                 const unfinished={...s,records:{...s.records,[id]:{...s.records[id],answers:['answer being entered']}}};
                 assert.deepEqual(review.prepareDueReview(unfinished,id,clock),unfinished,'Re-entering an unfinished due check preserves its answer');
             }
-            const record=s.records[id],round=record.round,questions=c.questionsFor(node,round),signature=identity(round);
-            if(index<3)assert.equal(round,index,'The first three actual scheduled entries use rounds 0, 1, and 2');
+            const record=s.records[id],round=record.round,questions=c.questionsFor(node,round,record.bank),signature=identity(round,record.bank);
+            if(!versioned&&index<3)assert.equal(round,index,'Ordinary unit and letter entries retain rounds 0, 1, and 2');
+            if(versioned&&index)assert.equal(record.bank,'starter-v2','The due entry explicitly migrates to the versioned starter bank');
             assert.ok(!index||round>trace.at(-1).round,'The entry advances the real round counter');
             const ready={...s,records:{...s.records,[id]:{...record,answers:questions.map(q=>q.answer.split(/\s+\/\s+/)[0]),heard:questions.flatMap((q,i)=>q.clip?[i]:[])}}};
             s=m.submitQuiz(ready,id,clock);
+            assert.equal(s.records[id].attempts.at(-1).bank,record.bank,'Submission preserves the selected bank marker');
             const allCorrect=m.passedQuiz(node,s.records[id].attempts.at(-1),clock);
             const nextReviewAt=m.nextReviewAt(node,s,clock),sameContentAsPrevious=index?signature===previousIdentity:false;
-            trace.push({day:date,round,allCorrect,due:m.due(node,s,clock),nextReviewDay:(nextReviewAt-first)/day,sameContentAsPrevious,signatureSha256:createHash('sha256').update(signature).digest('hex')});
+            trace.push({day:date,round,bank:record.bank||'legacy',allCorrect,due:m.due(node,s,clock),nextReviewDay:(nextReviewAt-first)/day,sameContentAsPrevious,signatureSha256:createHash('sha256').update(signature).digest('hex')});
             assert.equal(allCorrect,true,'Reference answers and required audio evidence pass the actual selected round');
             assert.equal(sameContentAsPrevious,false,'A due entry must select different assessed content from the preceding effective review');
             assert.equal(m.due(node,s,clock),false,'A valid due independent review clears the current due status');
-            assert.equal(nextReviewAt,first+[1,8,15,36][index]*day,'Actual scheduled sessions retain the 1-day, 7-day, 7-day, 21-day progression');
+            assert.equal(nextReviewAt,first+[1,8,15,36,57][index]*day,'Actual scheduled sessions retain the 1-day, 7-day, 7-day, 21-day progression');
             previousIdentity=signature;
         }
-        assert.equal(s.records[id].attempts.length,4,'Skipped equivalent banks do not create invented attempts');
-        assert.equal(m.due(node,s,first+36*day-1),false);
-        assert.equal(m.due(node,s,first+36*day),true);
+        assert.equal(s.records[id].attempts.length,dates.length,'Skipped equivalent banks do not create invented attempts');
+        const nextDate=versioned?57:36;
+        assert.equal(m.due(node,s,first+nextDate*day-1),false);
+        assert.equal(m.due(node,s,first+nextDate*day),true);
         const restored=m.parseProgress(m.exportProgress(s));
         assert.deepEqual(restored.records,s.records,'Actual route-selected rounds and their raw evidence survive v2 backup');
     });
     test('An early raw pass does not replace the effective bank used by the next due entry',()=>{
-        const first=now-40*day,identity=round=>JSON.stringify(c.questionsFor(unit,round).map(q=>[q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start]));
+        const first=now-40*day,identity=round=>assessedIdentity(unit,round);
         const trace=[];
         routeTraces.push({id:unit.id,scenario:'early raw repeat before scheduled review',trace});
         clock=first;
@@ -293,6 +319,150 @@ if(baseline) {
         assert.equal(m.due(unit,s,clock),false);
         assert.equal(m.nextReviewAt(unit,s,clock),first+15*day,'Four raw passes with an early repeat still represent only three effective scheduled sessions');
         assert.equal(s.records[unit.id].attempts.length,4,'The early practice is retained as original evidence');
+    });
+    for(const id of ['first','small-exchange']) {
+        const node=c.nodeById(id);
+        test(`Legacy starter rotations preserve original questions and grades without proving consolidation: ${id}`,()=>{
+            for(const round of [0,1,2,3,4,5,99999,100000]) {
+                const original=legacyQuestions(id,round),answers=original.map(q=>q.answer);
+                assert.deepEqual(c.questionsFor(node,round),original,'All unmarked legacy rounds retain their original question interpretation');
+                assert.equal(m.grade(node,answers,round).every(Boolean),true,'Original answers still grade against the original legacy questions');
+            }
+            assert.equal(assessedIdentity(node,0),assessedIdentity(node,1),'Rotating legacy item order does not supply different material');
+            const old=[proof(0,historical,node),proof(1,historical+day,node)];
+            const s=progressFor(node,old,{round:1,answers:old[1].answers,heard:old[1].heard,phase:'challenge'});
+            assert.equal(old.every(p=>m.passedQuiz(node,p,now)),true);
+            assert.equal(m.achieved(node,s,now),true);
+            assert.equal(m.stable(node,s,now),false);
+            assert.equal(m.due(node,s,now),true);
+            const restored=m.parseProgress(m.exportProgress(s));
+            assert.deepEqual(restored.records,s.records,'Legacy answers, order, and bank absence survive backup unchanged');
+            assert.equal('bank' in restored.records[id],false);
+            assert.equal(restored.records[id].attempts.some(p=>'bank' in p),false);
+        });
+        test(`Mixed legacy and starter-v2 histories retain evidence and actual bank semantics: ${id}`,()=>{
+            const old=[proof(0,historical,node),proof(1,historical+day,node)];
+            let s=progressFor(node,old,{round:1,answers:old[1].answers,heard:old[1].heard,phase:'challenge'});
+            clock=now;
+            s=review.prepareDueReview(s,id,clock);
+            assert.equal(s.records[id].bank,'starter-v2');
+            assert.notEqual(assessedIdentity(node,s.records[id].round,s.records[id].bank),assessedIdentity(node,0),'Changing only the marker cannot substitute for genuinely different material');
+            s=submit(s,s.records[id].round,clock,node);
+            assert.deepEqual(s.records[id].attempts.slice(0,2),old,'Migration never rewrites old raw proof fields');
+            assert.equal(s.records[id].attempts.at(-1).bank,'starter-v2');
+            assert.equal(m.stable(node,s,clock),true);
+            const restored=m.parseProgress(m.exportProgress(s));
+            assert.deepEqual(restored.records,s.records);
+            assert.equal(m.stable(node,restored,clock),true);
+            for(const p of restored.records[id].attempts)assert.equal(m.grade(node,p.answers,p.round,p.bank).every(Boolean),true);
+        });
+        test(`Versioned starter early practice leaves the effective review date and bank unchanged: ${id}`,()=>{
+            const first=now-40*day;
+            clock=first;
+            let s=m.startNode({...m.emptyProgress(),access:{all:true,nodes:[]}},id,clock);
+            s=m.changeStudyStep(m.changeStudyStep(s,id,0),id,3);
+            s=submit(s,s.records[id].round,clock,node);
+            clock=first+day;s=review.prepareDueReview(s,id,clock);s=submit(s,s.records[id].round,clock,node);
+            const anchor=s.records[id].attempts.at(-1);
+            clock=first+2*day;s=m.restartQuiz(s,id,clock);s=submit(s,s.records[id].round,clock,node);
+            assert.equal(m.nextReviewAt(node,s,clock),first+8*day,'Early practice does not move a scheduled review date');
+            assert.equal(s.records[id].attempts.at(-1).bank,'starter-v2');
+            clock=first+8*day;s=review.prepareDueReview(s,id,clock);
+            assert.notEqual(assessedIdentity(node,s.records[id].round,s.records[id].bank),assessedIdentity(node,anchor.round,anchor.bank),'A due entry compares against the effective delayed session rather than an early raw pass');
+            s=submit(s,s.records[id].round,clock,node);
+            assert.equal(m.due(node,s,clock),false);
+            assert.equal(m.nextReviewAt(node,s,clock),first+15*day,'Four raw attempts with early practice still count as three effective sessions');
+            assert.equal(s.records[id].attempts.length,4);
+        });
+        test(`Versioned starter failure and reacquisition require new delayed independent material: ${id}`,()=>{
+            const first=now-40*day,failureAt=first+8*day,recoveredAt=failureAt+1000,retainedAt=recoveredAt+day;
+            clock=first;
+            let s=m.startNode({...m.emptyProgress(),access:{all:true,nodes:[]}},id,clock);
+            s=m.changeStudyStep(m.changeStudyStep(s,id,0),id,3);
+            s=submit(s,s.records[id].round,clock,node);
+            clock=first+day;s=review.prepareDueReview(s,id,clock);s=submit(s,s.records[id].round,clock,node);
+            clock=failureAt;s=review.prepareDueReview(s,id,clock);
+            const r=s.records[id],bad={...r,answers:['deliberately incorrect synthetic response']};
+            s=m.submitQuiz({...s,records:{...s.records,[id]:bad}},id,clock);
+            assert.equal(s.records[id].attempts.at(-1).bank,'starter-v2');
+            assert.equal(m.stable(node,s,clock),false);
+            assert.equal(m.due(node,s,clock),true);
+            assert.equal(m.achieved(node,s,clock),true,'Historical first learning completion remains intact');
+            clock=recoveredAt;s=m.restartQuiz(s,id,clock);s=submit(s,s.records[id].round,clock,node);
+            const reacquired=s.records[id].attempts.at(-1);
+            assert.equal(m.stable(node,s,clock),false);
+            assert.equal(m.nextReviewAt(node,s,clock),retainedAt);
+            assert.equal(m.due(node,s,retainedAt-1),false);
+            clock=retainedAt;s=review.prepareDueReview(s,id,clock);
+            assert.notEqual(assessedIdentity(node,s.records[id].round,s.records[id].bank),assessedIdentity(node,reacquired.round,reacquired.bank));
+            s=submit(s,s.records[id].round,clock,node);
+            assert.equal(m.stable(node,s,clock),true);
+            assert.equal(m.nextReviewAt(node,s,clock),retainedAt+7*day);
+            assert.equal(s.records[id].attempts.length,5,'All legacy, new, failed, and recovered proof rows remain present');
+            assert.deepEqual(m.parseProgress(m.exportProgress(s)).records,s.records);
+        });
+        test(`Versioned starter B uses readable source transcript and exact audio boundaries: ${id}`,()=>{
+            const expected=id==='first'?[
+                ['My coat and my umbrella please.',17.56,22],['Thank you sir.',25.03,26.86],['Sorry sir.',37.39,39.67],
+            ]:[
+                ['Here is my ticket.',22,25.03],['Is this your umbrella?',39.67,42.56],["No it isn't.",42.56,45.69],
+            ];
+            const questions=c.questionsFor(node,1,'starter-v2');
+            assert.equal(questions.length,3);
+            assert.notEqual(assessedIdentity(node,0,'starter-v2'),assessedIdentity(node,1,'starter-v2'),'The two banks use genuinely different material');
+            const clips=[];
+            for(const [en,start,end] of expected) {
+                const index=sourceLesson3.rows.findIndex(row=>row.en===en&&row.time===start),row=sourceLesson3.rows[index];
+                assert.ok(row&&row.zh.trim(),'The original English and Chinese transcript row is readable');
+                assert.equal(sourceLesson3.rows[index+1].time,end,'The clip ends at the next actual transcript boundary');
+                const q=questions.find(q=>q.clip?.book==='NCE1'&&q.clip.lesson===3&&q.clip.start===start&&q.clip.end===end);
+                assert.ok(q,`The actual B bank includes ${en} at its real source interval`);
+                assert.ok(q.explanation.includes(en),'The displayed explanation identifies the actual spoken source');
+                clips.push({en,zh:row.zh,book:'NCE1',lesson:3,start,end});
+            }
+            sourceEvidence.push({id,bank:'starter-v2',round:1,sourceSha256:sourceLesson3.sourceSha256,clips});
+        });
+    }
+    test('Unknown starter bank markers are rejected in current records and historical proofs',()=>{
+        const node=c.nodeById('first');
+        for(const bank of ['starter-v3','legacy','',null])for(const target of ['record','proof']) {
+            const s=progressFor(node,[proof(0,historical,node)]);
+            if(target==='record')s.records.first.bank=bank;else s.records.first.attempts[0].bank=bank;
+            assert.throws(()=>m.parseProgress(JSON.stringify(s)),`${target} must reject unknown bank ${bank}`);
+        }
+    });
+    test('The starter-v2 marker is rejected on unrelated unit, letter, and mock records',()=>{
+        for(const id of [unit.id,'letters','mock-one'])for(const target of ['record','proof']) {
+            const node=c.nodeById(id),attempts=id==='mock-one'?[]:[proof(0,historical,node)],s=progressFor(node,attempts);
+            if(target==='record')s.records[id].bank='starter-v2';
+            else {if(!s.records[id].attempts.length)s.records[id].attempts=[proof(0,historical,c.nodeById('first'))];s.records[id].attempts[0].bank='starter-v2'}
+            assert.throws(()=>m.parseProgress(JSON.stringify(s)),`${target} marker is invalid for ${id}`);
+        }
+    });
+    test('Sorted material identity and explicit bank dispatch satisfy the three-candidate bound',()=>{
+        const gcd=(a,b)=>b?gcd(b,a%b):a,failures=[],legacyGroups=[];
+        let checkedPairs=0,maximumCandidatesNeeded=0;
+        const nodes=[...c.unitNodes,...c.nodes.filter(n=>n.kind==='starter')];
+        for(const node of nodes) {
+            const u=curriculum.unitById(node.id),versioned=['first','small-exchange'].includes(node.id);
+            const grammar=u&&(u.book!=='NCE1'||u.lesson>23)?curriculum.guidesFor(u).length:1;
+            const period=u?3*grammar/gcd(3,grammar):node.id==='letters'?2:3;
+            const contexts=versioned?[{anchorBank:undefined,anchorPeriod:3,nextBank:'starter-v2',currentPeriod:6},{anchorBank:'starter-v2',anchorPeriod:2,nextBank:'starter-v2',currentPeriod:2}]:[{anchorBank:undefined,anchorPeriod:period,nextBank:undefined,currentPeriod:period}];
+            if(versioned) {
+                const distinct=new Set(Array.from({length:3},(_,round)=>assessedIdentity(node,round))).size;
+                legacyGroups.push({id:node.id,unmarkedDistinctMaterialGroups:distinct,requiresExplicitMigration:true});
+                assert.equal(distinct,1,'Legacy rotations remain one material group, not new evidence');
+                assert.equal(new Set([0,1].map(round=>assessedIdentity(node,round,'starter-v2'))).size,2);
+            }
+            for(const context of contexts)for(let current=0;current<context.currentPeriod;current++)for(let anchor=0;anchor<context.anchorPeriod;anchor++) {
+                checkedPairs++;
+                const previous=assessedIdentity(node,anchor,context.anchorBank);
+                const offset=[1,2,3].find(delta=>assessedIdentity(node,current+delta,context.nextBank)!==previous);
+                if(offset===undefined)failures.push({id:node.id,current,anchor,...context});else maximumCandidatesNeeded=Math.max(maximumCandidatesNeeded,offset);
+            }
+        }
+        bankBounds={identity:'sorted prompt/answer/book/lesson/start/end; item order and options ignored',bankDispatch:'bank selects source interpretation; changing only a marker does not establish novelty',units:c.unitNodes.length,starters:3,checkedBankPairs:checkedPairs,maximumCandidatesNeeded,candidateLimit:3,legacyGroups,failures};
+        assert.deepEqual(failures,[]);
     });
     test('Latest failed unit is recommended before its available unlearned successor',()=>{
         assert.equal(m.continueNode(failureState).id,unit.id);
@@ -386,6 +556,9 @@ if(baseline) {
         assert.equal(m.stable(unit,restored,now),false);
     });
     Date.now=realNow;
-    await report({content:'real prepared curriculum',passed:cases.length,failed:failures.length,cases,failures,routeTraces});
+    await report({content:'real prepared curriculum',passed:cases.length,failed:failures.length,cases,failures,routeTraces,sourceEvidence,bankBounds});
+    await fs.mkdir(path.join(root,'../work'),{recursive:true});
+    await fs.writeFile(path.join(root,'../work/map-review-banks-bound.json'),JSON.stringify(bankBounds,null,2)+'\n');
+    await fs.writeFile(path.join(root,'../work/starter-v2-source-evidence.json'),JSON.stringify(sourceEvidence,null,2)+'\n');
     if(failures.length)process.exitCode=1;
 }

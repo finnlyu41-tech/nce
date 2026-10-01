@@ -1,6 +1,6 @@
 import { nodes, unitNodes, chapters, nodeById, questionsFor, type MapNode } from './content';
 import { overallBand } from '../app/readiness';
-import {unitById} from './curriculum';
+import {unitById,type StarterBank} from './curriculum';
 import {validSpeakingRecord,type SpeakingRecord} from './speaking-model';
 export const legacyStorageKey = 'wayfinder-ielts-map:v1';
 export const storageKey = 'wayfinder-ielts-map:v2';
@@ -8,6 +8,7 @@ export const reviewDelay = 24 * 60 * 60 * 1000;
 export type QuizProof = {
     at: number;
     round: number;
+    bank?: StarterBank;
     answers: string[];
     assisted: boolean;
     heard?: number[];
@@ -43,6 +44,7 @@ export type NodeRecord = {
     speaking?: SpeakingRecord;
     project?: Project;
     round: number;
+    bank?: StarterBank;
     answers: string[];
     assisted: boolean;
     heard?: number[];
@@ -78,9 +80,12 @@ export function updateDraft(state:Progress,id:string,changes:NonNullable<NodeRec
 export const today = (at = Date.now()) => { const d = new Date(at); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
 export function validDate(date: string, at = Date.now()) { return /^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0, 10) === date && date <= today(at); }
 export const normalize = (s: string) => s.toLowerCase().trim().replace(/[’‘]/g, "'").replace(/[.,!?;:]/g, '').replace(/\s+/g, ' ').replace(/\bcan't\b/g,'cannot').replace(/\bwon't\b/g,'will not').replace(/\b(\w+)n't\b/g,'$1 not').replace(/\bi'm\b/g,'i am').replace(/\b(\w+)'re\b/g,'$1 are').replace(/\b(\w+)'ve\b/g,'$1 have').replace(/\b(\w+)'ll\b/g,'$1 will');
-export function grade(node: MapNode, answers: string[], round: number) { const qs = questionsFor(node, round); return qs.map((q, i) => [q.answer, ...q.accepted || []].flatMap(a=>a.split(/\s+\/\s+/)).some(a => normalize(a) === normalize(answers[i] || ''))); }
-export const passedQuiz = (n: MapNode, p: QuizProof, at=Date.now()) => Number.isFinite(p.at) && p.at > 0 && p.at <= at && Number.isInteger(p.round) && p.round >= 0 && p.assisted === false && questionsFor(n, p.round).length > 0 && questionsFor(n,p.round).every((q,i)=>!q.clip || p.heard?.includes(i)) && grade(n, p.answers, p.round).every(Boolean);
-const questionIdentity=(n:MapNode,p:Pick<QuizProof,'round'>)=>JSON.stringify(questionsFor(n,p.round).map(q=>[q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start]));
+export function grade(node: MapNode, answers: string[], round: number, bank?:StarterBank) { const qs = questionsFor(node, round, bank); return qs.map((q, i) => [q.answer, ...q.accepted || []].flatMap(a=>a.split(/\s+\/\s+/)).some(a => normalize(a) === normalize(answers[i] || ''))); }
+const hasStarterReviewBank=(n:MapNode)=>n.kind==='starter'&&['first','small-exchange'].includes(n.id);
+const validBank=(n:MapNode,bank:unknown)=>bank===undefined||bank==='starter-v2'&&hasStarterReviewBank(n);
+export const passedQuiz = (n: MapNode, p: QuizProof, at=Date.now()) => Number.isFinite(p.at) && p.at > 0 && p.at <= at && Number.isInteger(p.round) && p.round >= 0 && validBank(n,p.bank) && p.assisted === false && questionsFor(n, p.round, p.bank).length > 0 && questionsFor(n,p.round,p.bank).every((q,i)=>!q.clip || p.heard?.includes(i)) && grade(n, p.answers, p.round, p.bank).every(Boolean);
+// Preserve multiplicity, but ignore question order and answer-choice shuffles.
+const questionIdentity=(n:MapNode,p:Pick<QuizProof,'round'|'bank'>)=>JSON.stringify(questionsFor(n,p.round,p.bank).map(q=>JSON.stringify([q.prompt,q.answer,q.clip?.book,q.clip?.lesson,q.clip?.start,q.clip?.end])).sort());
 const reviewInterval=(passes:number)=>(passes>=4?21:passes>=2?7:1)*reviewDelay;
 // Count independent reviews that were actually due. Raw attempts remain intact.
 function reviewProofs(n:MapNode,state:Progress,at:number) {
@@ -100,7 +105,7 @@ function reviewProofs(n:MapNode,state:Progress,at:number) {
         passes.length=0;repairAt=Number.isFinite(record.quizHelpAt)?Math.min(record.quizHelpAt,at):at;
     }
     // Legacy v2 cannot date unsubmitted help. Only an explicit restart dates that boundary.
-    if(record?.assisted&&record.attempts.at(-1)?.round!==record.round) {
+    if(record?.assisted&&(record.attempts.at(-1)?.round!==record.round||record.attempts.at(-1)?.bank!==record.bank)) {
         passes.length=0;repairAt=at;
     }
     return {passes,repairAt};
@@ -231,7 +236,7 @@ export function learningLabel(n:MapNode,state:Progress) {
 export function noteQuizHelp(state:Progress,id:string,at=Date.now()):Progress {
     const node=nodeById(id);
     if(!node||statusMap(state,at)[id]==='locked'||!['lesson','checkpoint','starter','unit'].includes(node.kind)||!Number.isFinite(at)||at<=0)return state;
-    const record=state.records[id]||emptyRecord(),checked=record.attempts.at(-1)?.round===record.round;
+    const record=state.records[id]||emptyRecord(),last=record.attempts.at(-1),checked=last?.round===record.round&&last.bank===record.bank;
     return {...state,records:{...state.records,[id]:{...record,quizHelpAt:Math.max(record.quizHelpAt||0,at),assisted:record.assisted||!checked}}};
 }
 export function changeStudyStep(state:Progress,id:string,step:number,at=Date.now()):Progress {
@@ -247,14 +252,15 @@ export function restartQuiz(state:Progress,id:string,at=Date.now()):Progress {
     if(record.round>=100000)return state;
     const reference=due(node,state,at)?reviewProofs(node,state,at).passes.at(-1)||record:record;
     const previous=questionIdentity(node,reference);
+    const bank=hasStarterReviewBank(node)?'starter-v2':record.bank;
     let round=record.round+1;
-    // Source excerpts cycle every three rounds; starters alternate or rotate sooner.
+    // Source excerpts cycle every three rounds; versioned starters alternate groups.
     // A new round number or shuffled choices alone is not a new assessed bank.
     for(let candidate=round;candidate<=Math.min(record.round+3,100000);candidate++) {
-        if(questionIdentity(node,{round:candidate})!==previous){round=candidate;break;}
+        if(questionIdentity(node,{round:candidate,bank})!==previous){round=candidate;break;}
     }
-    const legacyHelp=record.assisted&&record.attempts.at(-1)?.round!==record.round&&record.quizHelpAt===undefined;
-    return {...state,records:{...state.records,[id]:{...record,...legacyHelp?{quizHelpAt:at}:{},phase:'challenge',round,answers:[],heard:[],assisted:false,questionIndex:0}}};
+    const last=record.attempts.at(-1),legacyHelp=record.assisted&&(last?.round!==record.round||last?.bank!==record.bank)&&record.quizHelpAt===undefined;
+    return {...state,records:{...state.records,[id]:{...record,...bank?{bank}:{},...legacyHelp?{quizHelpAt:at}:{},phase:'challenge',round,answers:[],heard:[],assisted:false,questionIndex:0}}};
 }
 export function continueNode(state:Progress,at=Date.now()) {
     const status=statusMap(state,at),last=state.lastNode?nodeById(state.lastNode):undefined;
@@ -296,7 +302,7 @@ export function submitQuiz(state: Progress, id: string, at = Date.now()): Progre
     if (!n || statusMap(state, at)[id] === 'locked' || !['lesson', 'checkpoint', 'starter', 'unit'].includes(n.kind))
         return state;
     const r = state.records[id] || emptyRecord();
-    const attempt = { at, round: r.round, answers: [...r.answers], assisted: r.assisted, heard: [...(r.heard||[])] };
+    const attempt = { at, round: r.round, ...r.bank?{bank:r.bank}:{}, answers: [...r.answers], assisted: r.assisted, heard: [...(r.heard||[])] };
     // Preserve failures and help barriers as well as passes; export keeps the raw history.
     const attempts = [...r.attempts, attempt];
     return { ...state, updatedAt: at, records: { ...state.records, [id]: { ...r, attempts } } };
@@ -334,6 +340,7 @@ export function parseProgress(raw: string): Progress {
         for (const p of v.attempts)
             if (!recordLike(p) || !Number.isFinite(p.at) || Number(p.at) <= 0 || Number(p.at) > Date.now() || !Number.isInteger(p.round) || Number(p.round) < 0 || Number(p.round)>100000 || !Array.isArray(p.answers) || p.answers.length > 20 || p.answers.some(a => !text(a, 1000)) || typeof p.assisted !== 'boolean')
                 throw new Error('检验记录无效。');
+        for(const p of [v,...v.attempts] as Record<string,unknown>[]) if(!validBank(nodeById(id)!,p.bank))throw new Error('检验题组版本无效。请保留完整原备份，并用支持该版本的页面恢复。');
         for(const p of [v, ...v.attempts] as Record<string,unknown>[]) if(p.heard!==undefined && (!Array.isArray(p.heard)||p.heard.length>20||p.heard.some(i=>!Number.isInteger(i)||Number(i)<0||Number(i)>19))) throw new Error('听力记录无效。');
         if(v.project!==undefined) {const p=v.project;if(!recordLike(p)||!['text','recording','reviewer','feedback'].every(k=>text(p[k]))||!Array.isArray(p.criteria)||p.criteria.length!==4||p.criteria.some(x=>typeof x!=='boolean')||!Number.isFinite(p.at)||Number(p.at)<=0||Number(p.at)>Date.now())throw new Error('作品记录无效。');}
         if (v.evidence !== undefined && !validEvidence(v.evidence))

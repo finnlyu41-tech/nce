@@ -1,6 +1,6 @@
 import { type JourneyMission } from '../app/ielts-journey-content';
 import { blueprintResources, blueprintNodes } from '../app/ielts-blueprint';
-import {units, chapters, unitById, unitQuestions, starters, starterQuestions, sourceLabel, type MapQuestion} from './curriculum';
+import {units, chapters, unitById, unitQuestions, starters, starterQuestions, sourceLabel, type MapQuestion, type StarterBank} from './curriculum';
 export {units, chapters, unitById, starters, sourceLabel} from './curriculum';
 declare const __STUDIO_CLASSIC_URL__: string;
 export const originalSite = typeof __STUDIO_CLASSIC_URL__ === 'string' ? __STUDIO_CLASSIC_URL__ : '/';
@@ -64,9 +64,9 @@ for (const lane of lanes) {
 }
 nodes.push({ id: 'mock-one', title: '第一套完整模考', subtitle: '四项放到一起，找到仍需修补的地方。', kind: 'mock', stage: 'summit', requires: exits, minutes: 180 }, { id: 'mock-two', title: '第二套新题复验', subtitle: '另一套没做过的 Academic 完整试卷。', kind: 'mock', stage: 'summit', requires: ['mock-one'], minutes: 180 }, { id: 'finish', title: 'IELTS 6.5', subtitle: '准备就绪，再用正式成绩确认抵达。', kind: 'finish', stage: 'summit', requires: ['mock-two'], minutes: 0 });
 export const nodeById = (id: string) => nodes.find(n => n.id === id) || unitNodes.find(n=>n.id===id);
-export function questionsFor(node: MapNode, round = 0): MapQuestion[] {
+export function questionsFor(node: MapNode, round = 0, bank?:StarterBank): MapQuestion[] {
     if (node.kind === 'unit') return unitQuestions(unitById(node.id)!, round);
-    if (node.kind === 'starter') return starterQuestions(node.id, round);
+    if (node.kind === 'starter') return starterQuestions(node.id, round, bank);
     return [];
 }
 export function courseUrl(node: MapNode) {
