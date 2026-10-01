@@ -124,12 +124,21 @@ test('a never-submitted map check can resume from its saved question',()=>{
  assert.equal(find(select(base(),mapState(first,[],{phase:'challenge',questionIndex:1,answers:['pending']})),'map:first')?.kind,'resume');
 });
 test('map delayed different rounds follow actual seven-day and twenty-one-day intervals',()=>{
- for(const [count,interval] of [[2,7],[4,21]]){
-  const attempts=Array.from({length:count},(_,i)=>proof(letters,NOW-(interval+count-1-i)*DAY,i));
+ for(const [days,interval] of [[[0,1],7],[[0,1,8,15],21]]){
+  const attempts=days.map((day,i)=>proof(letters,NOW-(interval+days.at(-1)-day)*DAY,i));
   const progress=mapState(letters,attempts);assert(map.stable(letters,progress,NOW));
   assert.equal(find(select(base(),progress,NOW-1),'map:letters'),undefined);
   assert.equal(find(select(base(),progress),'map:letters')?.kind,'review');
  }
+});
+test('early map repeats do not promote four raw passes into a twenty-one-day interval',()=>{
+ const anchor=NOW-7*DAY;
+ const attempts=[proof(letters,anchor-DAY,0),proof(letters,anchor,1),proof(letters,anchor+DAY,2),proof(letters,anchor+2*DAY,3)];
+ const progress=mapState(letters,attempts);
+ assert.equal(map.nextReviewAt(letters,progress,NOW),NOW);
+ assert.equal(find(select(base(),progress,NOW-1),'map:letters'),undefined);
+ assert.equal(find(select(base(),progress),'map:letters')?.kind,'review');
+ assert.equal(progress.records[letters.id].attempts.length,4);
 });
 test('speech correction waits 24h, fresh hints postpone it, and a recorded recall clears only that task',()=>{
  const node=content.unitNodes[0],unit=content.unitById(node.id),speech={row:0,source:unit.sourceSha256,takes:[],comparison:[],correction:{at:NOW-DAY,issues:[{title:'核对一个音',action:'先听再说'}]}};

@@ -1,0 +1,31 @@
+{
+  "content": "real prepared curriculum",
+  "passed": 23,
+  "failed": 0,
+  "cases": [
+    "Historical first pass remains learned when the latest review fails",
+    "A one-second corrected retry starts a fresh 24-hour consolidation cooldown",
+    "A different bank cannot consolidate before 24 hours after reacquisition",
+    "Reacquisition followed by a truly delayed independent different bank consolidates",
+    "A delayed retry of the same bank cannot replace independent review evidence",
+    "An assisted attempt resets consolidation even when its answers are correct",
+    "A response without required listening evidence resets independent consolidation",
+    "Returning to help during an unchecked challenge resets status before submission",
+    "Unsubmitted help remains a reset barrier after export and rejects a future marker",
+    "Help after an already checked stable round still requires new delayed independent evidence",
+    "First pass still opens the next unit immediately but never means stable",
+    "Same-day raw passes neither inflate the review tier nor move its anchor",
+    "Early cross-day rehearsal also leaves the effective seven-day schedule unchanged",
+    "Identical assessed source items remain the same bank despite option reordering",
+    "Four effective independent delayed sessions can still earn the 21-day interval",
+    "Latest failed unit is recommended before its available unlearned successor",
+    "External-review provenance is consistent for chapter, writing, speaking, and mocks",
+    "Future proofs cannot consolidate or postpone an already overdue review",
+    "Nonchronological legacy history is conservative and survives unchanged",
+    "Same-timestamp failure and correction cannot reuse an older pass as delayed evidence",
+    "Legacy v2 backups retain all old records while receiving stricter derived status",
+    "A legacy unsubmitted assisted challenge cannot retain old consolidation across restart",
+    "More than 12 retries retain the first proof and the failure reset barrier"
+  ],
+  "failures": []
+}

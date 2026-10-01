@@ -1,0 +1,25 @@
+{
+  "baseline": "97c85c5",
+  "content": "real prepared curriculum",
+  "oldPassFailureThenOneSecondCorrection": {
+    "stable": true,
+    "due": false
+  },
+  "assistedThenOneSecondCorrection": {
+    "stable": true,
+    "due": false
+  },
+  "sameDayRawPasses": {
+    "stable": true,
+    "dueAfterEightDays": false
+  },
+  "twoSelfReviewedMocks": {
+    "errors": [],
+    "isReady": true
+  },
+  "continueAfterLatestFailure": {
+    "lastNode": "nce1-1",
+    "due": true,
+    "recommended": "nce1-3"
+  }
+}

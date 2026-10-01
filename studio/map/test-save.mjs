@@ -57,6 +57,8 @@ const mocks={
  './current-route':`export const CurrentRoute='CurrentRoute';`,
  './catalogue':`export const CourseCatalogue='CourseCatalogue';`,
  '../app/study-mode':`export const StudioHeader='StudioHeader';`,
+ '../app/use-classic-progress':`export const useClassicProgress=()=>({state:{},ready:false,error:''});`,
+ '../app/today-practice-ui':`export const TodayPracticeQueue='TodayPracticeQueue';`,
  '../app/language':`export const loadLessonLanguage=()=>Promise.reject(Error('No fixture media')),loadDictionary=()=>Promise.resolve({}),findWord=()=>undefined;`,
  '../app/network':`export const readJsonResource=()=>Promise.reject(Error('No fixture network'));`,
  '../app/lesson-structure':`export const splitLesson=()=>({body:[]});`,

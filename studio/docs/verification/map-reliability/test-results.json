@@ -1,0 +1,31 @@
+{
+  "auditBaseline": "97c85c5eb8ce785f7e837c85b6a064a437bd732a",
+  "integratedRemote": "59f70631a289ef24eab1632ae019a1e971f42e70",
+  "results": {
+    "originalMapChecks": 12881,
+    "realCurriculumScenarios": 23,
+    "reviewerNavigationChecks": 192,
+    "sourceComponentStorageChecks": 74,
+    "sourceComponentBaselineReproduction": 12,
+    "actualReactBrowserChecks": 38,
+    "todayPracticeChecks": 48,
+    "typeScript": "passed",
+    "navigation": "passed",
+    "classicProgressBackup": "passed",
+    "learningPlan": "passed",
+    "onlineClassicBuild": "passed",
+    "mapBuild": "passed",
+    "offlineBuildAndPackage": "passed",
+    "mapWorkerRoutingAndSourceIsolation": "passed",
+    "onlineVerifiedFiles": 1944,
+    "onlineVerifiedBytes": 706959756
+  },
+  "productionSha256": {
+    "studio/map/model.ts": "1367437009ea6346ed141c0ecfb49d03b874705965d2ba56f62f6e990ceee21c",
+    "studio/map/main.tsx": "1bd907cbc6895e980df28a1ac326b3e52b1a0266be8c73ac71e6f7f201a1bf41",
+    "studio/map/learning.tsx": "d6a59b5e25690040a405420a9e2b37d313ef1195a8d7eb1ecaa8c3814e928525",
+    "studio/map/course.tsx": "1f9299243832c85c92e4ef9a197aa7339767800ebd0ac7fbcdd23e24cba65a1b"
+  },
+  "data": "All failures, histories and browser records were synthetic. No real learner record was read or modified.",
+  "deployment": "Not deployed; release owner integrates after the current batch."
+}
