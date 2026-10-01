@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {mkdir,readdir,readFile,writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
+import {createHash} from 'node:crypto';
 
 const root=new URL('../',import.meta.url),packages=new URL('node_modules/.pnpm/',root);
 const builder=(await readdir(packages)).find(name=>/^esbuild@\d+\.\d+\.\d+$/.test(name));
@@ -8,19 +9,40 @@ assert(builder,'Install locked dependencies before running vocabulary example ch
 const {build}=await import(new URL(builder+'/node_modules/esbuild/lib/main.js',packages));
 const output=new URL('work/vocabulary-examples/test-bundle.mjs',root);
 await mkdir(new URL('work/vocabulary-examples/',root),{recursive:true});
-await build({stdin:{contents:"export {originalVocabularyExamples,examplesForMeaning} from './app/vocabulary-examples';export {usageExamples,loadVocabularyContext} from './app/vocabulary-usage';export {VocabularyExamples} from './app/vocabulary-example-ui';export {FlashcardReview} from './app/flashcard-ui';export {initial,validateState} from './app/model';export * from './app/flashcards';export {buildVocabularyCatalog,vocabularyKey} from './app/textbook-vocabulary';export {vocabularyExample} from './app/nce-utils';export {ieltsFlashcardExamples} from './app/ielts-flashcard-examples';export {renderToStaticMarkup} from 'react-dom/server';export {createElement} from 'react';",resolveDir:fileURLToPath(root),sourcefile:'example-check.ts',loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',jsx:'automatic',outfile:fileURLToPath(output),packages:'external',logLevel:'silent',plugins:[{name:'local-example-checks',setup(builder){builder.onResolve({filter:/\.css$/},args=>({path:args.path,namespace:'empty-css'}));builder.onLoad({filter:/.*/,namespace:'empty-css'},()=>({contents:'',loader:'js'}));builder.onResolve({filter:/^\.\/runtime-mode$/},()=>({path:'runtime',namespace:'local-mode'}));builder.onLoad({filter:/.*/,namespace:'local-mode'},()=>({contents:'export const ONLINE=true;',loader:'js'}));}}]});
+await build({stdin:{contents:"export {originalVocabularyExamples,examplesForMeaning,reviewedTeachingDefinition} from './app/vocabulary-examples';export {usageExamples,loadVocabularyContext} from './app/vocabulary-usage';export {VocabularyExamples} from './app/vocabulary-example-ui';export {FlashcardReview} from './app/flashcard-ui';export {initial,validateState} from './app/model';export * from './app/flashcards';export {buildVocabularyCatalog,vocabularyKey} from './app/textbook-vocabulary';export {vocabularyExample} from './app/nce-utils';export {ieltsFlashcardExamples} from './app/ielts-flashcard-examples';export {renderToStaticMarkup} from 'react-dom/server';export {createElement} from 'react';",resolveDir:fileURLToPath(root),sourcefile:'example-check.ts',loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',jsx:'automatic',outfile:fileURLToPath(output),packages:'external',logLevel:'silent',plugins:[{name:'local-example-checks',setup(builder){builder.onResolve({filter:/\.css$/},args=>({path:args.path,namespace:'empty-css'}));builder.onLoad({filter:/.*/,namespace:'empty-css'},()=>({contents:'',loader:'js'}));builder.onResolve({filter:/^\.\/runtime-mode$/},()=>({path:'runtime',namespace:'local-mode'}));builder.onLoad({filter:/.*/,namespace:'local-mode'},()=>({contents:'export const ONLINE=true;',loader:'js'}));}}]});
 const m=await import(output.href),now=Date.now(),base=()=>structuredClone(m.initial);
 const render=(component,props)=>m.renderToStaticMarkup(m.createElement(component,props));
 
 assert.equal(new Set(m.originalVocabularyExamples.map(example=>example.id)).size,m.originalVocabularyExamples.length,'Every sense has its own stable content ID');
-assert.equal(new Set(m.originalVocabularyExamples.map(example=>example.word)).size,44,'The documented two batches have 44 headwords');
-assert.equal(m.originalVocabularyExamples.length,52,'39 first-batch senses and 13 second-batch senses are retained');
+const reviewIndex=JSON.parse(await readFile(new URL('docs/vocabulary-examples-review-index.json',root),'utf8'));
+const baseline=JSON.parse(await readFile(new URL(reviewIndex.baseline,root),'utf8'));
+const registeredLedgers=await Promise.all(reviewIndex.registeredLedgers.map(async path=>JSON.parse(await readFile(new URL(path,root),'utf8'))));
+const contentHash=example=>createHash('sha256').update(JSON.stringify({id:example.id,word:example.word,sense:example.sense,matches:example.matches,en:example.en,zh:example.zh,collocation:example.collocation,origin:example.origin,partOfSpeech:example.partOfSpeech,teachingDefinition:example.teachingDefinition,teachingSources:example.teachingSources,teachingIpa:example.teachingIpa})).digest('hex');
+const registeredReviews=new Map([...baseline.reviewedOriginals,...registeredLedgers.flatMap(ledger=>ledger.entries)].map(item=>[item.id,item]));
+const expectedIds=new Set([...baseline.reviewedOriginals.map(item=>item.id),...registeredLedgers.flatMap(ledger=>ledger.entries.map(item=>item.id))]);
+assert.deepEqual(new Set(m.originalVocabularyExamples.map(example=>example.id)),expectedIds,'Every prior and registered content ID is retained, without unreviewed additions');
 for(const example of m.originalVocabularyExamples){
  assert(example.en.trim()&&example.zh.trim()&&example.sense.trim()&&example.matches.length);
  assert(example.collocation.en.trim()&&example.collocation.zh.trim());
  assert.equal(example.origin,'original');
  assert(m.examplesForMeaning(example.word,example.sense).some(item=>item.id===example.id),'Each example supports its labelled sense');
+ assert.equal(contentHash(example),registeredReviews.get(example.id)?.contentSha256,'Changed content requires an updated content review');
 }
+for(const ledger of registeredLedgers)for(const item of ledger.entries){
+ const example=m.originalVocabularyExamples.find(example=>example.id===item.id);
+ assert(example&&example.word===item.word,'Registered review resolves to its actual content');
+ assert(m.examplesForMeaning(item.word,item.meaningForCheck).some(example=>example.id===item.id),'Reviewed sense and POS select the intended example');
+ for(const meaning of item.excludedMeaningLabels||[])assert(!m.examplesForMeaning(item.word,meaning).some(example=>example.id===item.id),'An excluded sense or POS cannot select this example');
+ const rendered=render(m.VocabularyExamples,{examples:m.usageExamples(item.word,item.meaningForCheck)});
+ assert(rendered.includes(example.en.replaceAll('&','&amp;').replaceAll("'",'&#x27;').replaceAll('"','&quot;'))&&rendered.includes(example.zh),'Reviewed bilingual content renders as escaped text');
+ if(example.teachingSources?.length)assert(rendered.includes('关联词表：'),'Original content identifies its associated list without claiming to be a textbook quote');
+}
+assert.deepEqual(m.examplesForMeaning('Swedish','n. 瑞典人；瑞典语\nadj. 瑞典的；瑞典语的','瑞典人').map(item=>item.id),['swedish-people-collective']);
+assert.deepEqual(m.examplesForMeaning('Fiat','命令'),[]);
+assert.deepEqual(m.examplesForMeaning('Mini','超短裙'),[]);
+assert.deepEqual(m.examplesForMeaning('Ford','浅滩'),[]);
+assert.equal(m.reviewedTeachingDefinition('Fiat',[{book:'NCE1',lesson:6}]),'n. 菲亚特（汽车品牌）');
+assert.equal(m.reviewedTeachingDefinition('Fiat',[{book:'NCE2',lesson:87}]),'','Unrelated source cannot override a dictionary sense');
 const ledger=JSON.parse(await readFile(new URL('docs/vocabulary-examples-batch2.json',root),'utf8'));
 assert.equal(new Set(ledger.entries.map(item=>item.word)).size,ledger.headwords);
 assert.equal(ledger.entries.length,ledger.senseExamples);
@@ -72,6 +94,21 @@ m.usageExamples('book','预订');
 assert.equal(JSON.stringify(migrated),snapshot);
 assert.equal(legacyCard.due,imported.cards.book.due);
 assert.equal(legacyCard.fsrs,undefined);
+let oldFiat=m.enrollFlashcard(base(),{word:'Fiat',meaning:'n. 命令',example:'A user sentence.',exampleTranslation:'用户原译文'},[{kind:'personal'}],now-1000);
+const oldFiatCard=Object.values(oldFiat.flashcards.cards)[0],oldFiatToken={cardId:oldFiatCard.id,revision:oldFiatCard.revision};
+oldFiat=m.revealFlashcard(m.selectFlashcard(oldFiat,oldFiatCard.id),oldFiatToken);
+oldFiat=m.rateFlashcard(oldFiat,oldFiatToken,'good',now);
+const preservedFiat=structuredClone(oldFiat),oldSchedule=structuredClone(oldFiat.flashcards.cards[oldFiatCard.id]);
+m.reviewedTeachingDefinition('Fiat',[{book:'NCE1',lesson:6}]);m.usageExamples('Fiat','n. 命令',[{en:'A user sentence.',zh:'用户原译文'}]);
+assert.deepEqual(oldFiat,preservedFiat,'Teaching display never rewrites a saved other sense or its FSRS log');
+const brandMeaning=m.reviewedTeachingDefinition('Fiat',[{book:'NCE1',lesson:6}]),brand=m.examplesForMeaning('Fiat',brandMeaning)[0];
+const brandWord={word:'Fiat',meaning:brandMeaning,example:brand.en,exampleTranslation:brand.zh};
+const withBrand=m.enrollFlashcard(oldFiat,brandWord,[{kind:'nce',book:'NCE1',lesson:6}],now);
+const addedAgain=m.enrollFlashcard(withBrand,brandWord,[{kind:'nce',book:'NCE1',lesson:6}],now);
+assert.equal(Object.keys(addedAgain.flashcards.notes).length,2,'An explicit different sense is separate; repeated same-sense enrollment is deduplicated');
+assert.deepEqual(addedAgain.flashcards.cards[oldFiatCard.id],oldSchedule);
+assert.deepEqual(addedAgain.flashcards.reviews,oldFiat.flashcards.reviews);
+assert(m.validateState(addedAgain));
 const unsafe=render(m.VocabularyExamples,{examples:[{en:'<script>alert(1)</script>',zh:'<img src=x onerror=alert(1)>',origin:'saved'}]});
 assert(!unsafe.includes('<script>')&&!unsafe.includes('<img'),'Examples and translations remain escaped text');
 assert(unsafe.includes('&lt;script&gt;'));
@@ -91,13 +128,24 @@ try{
 const pageIndex=JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.json',root),'utf8'));
 const dictionary=JSON.parse(await readFile(new URL('dist-online/language/dictionary.json',root),'utf8')).words;
 const catalog=m.buildVocabularyCatalog(pageIndex),contexts=new Map(),missing=[],byBook={};
+for(const ledger of registeredLedgers)for(const item of ledger.entries){
+ if(!item.source)continue;
+ const lesson=catalog.lessons.find(lesson=>lesson.book===item.source.book&&lesson.lesson===item.source.lesson);
+ assert(lesson?.words.some(word=>m.vocabularyKey(word.word)===m.vocabularyKey(item.word)),'Claimed associated word-list source exists');
+ if(item.sourcePDFPage)assert(lesson.pages.some(page=>page.page===item.sourcePDFPage&&page.sha256===item.sourcePageSha256),'Reviewed source points to the actual indexed vocabulary page');
+ const example=m.originalVocabularyExamples.find(example=>example.id===item.id);
+ if(item.scope==='textbook-target'){
+  const meaning=m.reviewedTeachingDefinition(item.word,[item.source]);
+  assert(example.teachingDefinition&&m.examplesForMeaning(item.word,meaning).some(example=>example.id===item.id),'The actual source-scoped teaching definition displays its target');
+ }
+}
 for(const item of ledger.entries){
  const term=catalog.terms.find(term=>term.key===m.vocabularyKey(item.word));
  assert(term?.sources.some(source=>source.book===item.source.book&&source.lesson===item.source.lesson),'The reviewed word belongs to the claimed actual lesson');
  const displayed=dictionary[term.key]?.meaning.split('\n')[0]||'';
  assert(m.examplesForMeaning(item.word,displayed).some(example=>example.id===item.id),'The current compact dictionary meaning can display the reviewed sense');
 }
-let occurrenceCandidates=0,termCandidates=0,originalTerms=0,totalCovered=0;
+let occurrenceCandidates=0,termCandidates=0,originalTerms=0,indexedOriginalTerms=0,totalCovered=0;
 for(const term of catalog.terms){
  let found=false;
  for(const source of term.sources){
@@ -107,12 +155,14 @@ for(const term of catalog.terms){
   const row=m.vocabularyExample(contexts.get(id),term.word,forms);
   if(row?.zh.trim()){found=true;occurrenceCandidates++;byBook[source.book]=(byBook[source.book]||0)+1}
  }
- const authored=m.examplesForMeaning(term.word,dictionary[term.key]?.meaning||'');
+ const indexed=m.examplesForMeaning(term.word,dictionary[term.key]?.meaning||'');
+ const authored=m.examplesForMeaning(term.word,m.reviewedTeachingDefinition(term.word,term.sources)||dictionary[term.key]?.meaning||'');
+ if(indexed.length)indexedOriginalTerms++;
  if(found)termCandidates++;
  if(authored.length)originalTerms++;
  if(found||authored.length)totalCovered++;else missing.push({word:term.word,sources:term.sources.map(source=>source.book+'-'+source.lesson)});
 }
-const coverage={basis:'Existing indexed lesson sentences: lexical candidates, not a manual audit of all dictionary senses',textbookTerms:catalog.terms.length,textbookOccurrences:catalog.entries,occurrencesWithBilingualCandidate:occurrenceCandidates,termsWithBilingualCandidate:termCandidates,candidatesByBook:byBook,originalHeadwords:new Set(m.originalVocabularyExamples.map(example=>m.vocabularyKey(example.word))).size,originalSenseExamples:m.originalVocabularyExamples.length,originalsMatchingIndexedDefinitions:originalTerms,termsWithCandidateOrReviewedOriginal:totalCovered,termsWithoutEither:missing.length,ieltsSeedExamples:12};
+const coverage={basis:'Existing lesson sentences are lexical candidates; reviewed source teaching meanings override dictionary display only in the associated vocabulary list. This is not an audit of all senses',textbookTerms:catalog.terms.length,textbookOccurrences:catalog.entries,occurrencesWithBilingualCandidate:occurrenceCandidates,termsWithBilingualCandidate:termCandidates,candidatesByBook:byBook,originalHeadwords:new Set(m.originalVocabularyExamples.map(example=>m.vocabularyKey(example.word))).size,originalSenseExamples:m.originalVocabularyExamples.length,originalsMatchingIndexedDefinitions:indexedOriginalTerms,originalsMatchingTeachingOrIndexedDefinitions:originalTerms,termsWithCandidateOrReviewedOriginal:totalCovered,termsWithoutEither:missing.length,ieltsSeedExamples:12};
 await writeFile(new URL('work/vocabulary-examples/coverage.json',root),JSON.stringify(coverage,null,2));
 await writeFile(new URL('work/vocabulary-examples/missing-examples.csv',root),'word,sources\n'+missing.map(item=>'"'+item.word.replaceAll('"','""')+'","'+item.sources.join(' | ')+'"').join('\n')+'\n');
 console.log(JSON.stringify(coverage,null,2));

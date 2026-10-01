@@ -7,7 +7,7 @@ import {ieltsFlashcardExamples} from './ielts-flashcard-examples';
 export type ExampleSource={book:NceBookId;lesson:number};
 export type ExampleHint=ExampleSource&{forms?:string[]};
 export type ContextExample=LanguageRow&{source:ExampleSource};
-export type DisplayExample={en:string;zh?:string;sense?:string;collocation?:{en:string;zh:string};origin:'original'|'textbook'|'saved';source?:ExampleSource};
+export type DisplayExample={en:string;zh?:string;sense?:string;partOfSpeech?:string;teachingSources?:ExampleSource[];collocation?:{en:string;zh:string};origin:'original'|'textbook'|'saved';source?:ExampleSource};
 const key=(text:string)=>text.normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
 
 // Meaning-bound originals are a display layer. Reading this function never

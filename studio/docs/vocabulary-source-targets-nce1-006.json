@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "scope": "All 13 headword entries and their printed target meanings on the NCE1 Lesson 6 word list only. This does not enumerate dictionary extensions, unrelated lesson sources or every possible sense of these words.",
+  "source": {
+    "book": "NCE1",
+    "lesson": 6
+  },
+  "sourcePDFPage": 16,
+  "sourcePrintedPage": 12,
+  "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+  "completeWordList": true,
+  "review": "Root Codex checked the actual word-list image and all 13 target entries. Content also has a separate frozen hash and declared editorial review; no human teacher certification.",
+  "humanCertification": false,
+  "entries": [
+    {
+      "word": "Swedish",
+      "targetExampleIds": [
+        "swedish-country-adjective"
+      ],
+      "checkedMeaning": "a. 瑞典的",
+      "sourcePrintedMeaning": "瑞典的",
+      "sourcePrintedPartOfSpeech": "adj."
+    },
+    {
+      "word": "English",
+      "targetExampleIds": [
+        "english-country-adjective"
+      ],
+      "checkedMeaning": "a. 英国的",
+      "sourcePrintedMeaning": "英国的",
+      "sourcePrintedPartOfSpeech": "adj."
+    },
+    {
+      "word": "American",
+      "targetExampleIds": [
+        "american-country-adjective"
+      ],
+      "checkedMeaning": "a. 美国的",
+      "sourcePrintedMeaning": "美国的",
+      "sourcePrintedPartOfSpeech": "adj."
+    },
+    {
+      "word": "Italian",
+      "targetExampleIds": [
+        "italian-country-adjective"
+      ],
+      "checkedMeaning": "a. 意大利的",
+      "sourcePrintedMeaning": "意大利的",
+      "sourcePrintedPartOfSpeech": "adj."
+    },
+    {
+      "word": "make",
+      "targetExampleIds": [
+        "make-product-brand"
+      ],
+      "checkedMeaning": "n. （产品的）牌子",
+      "sourcePrintedMeaning": "（产品的）牌号",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Volvo",
+      "targetExampleIds": [
+        "volvo-car-brand"
+      ],
+      "checkedMeaning": "沃尔沃",
+      "sourcePrintedMeaning": "沃尔沃",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Peugeot",
+      "targetExampleIds": [
+        "peugeot-car-brand"
+      ],
+      "checkedMeaning": "标致",
+      "sourcePrintedMeaning": "标致",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Mercedes",
+      "targetExampleIds": [
+        "mercedes-car-brand"
+      ],
+      "checkedMeaning": "梅赛德斯",
+      "sourcePrintedMeaning": "梅赛德斯",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Toyota",
+      "targetExampleIds": [
+        "toyota-car-brand"
+      ],
+      "checkedMeaning": "丰田",
+      "sourcePrintedMeaning": "丰田",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Daewoo",
+      "targetExampleIds": [
+        "daewoo-car-brand"
+      ],
+      "checkedMeaning": "大宇",
+      "sourcePrintedMeaning": "大宇",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Mini",
+      "targetExampleIds": [
+        "mini-car-brand"
+      ],
+      "checkedMeaning": "迷你",
+      "sourcePrintedMeaning": "迷你",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Ford",
+      "targetExampleIds": [
+        "ford-car-brand"
+      ],
+      "checkedMeaning": "福特",
+      "sourcePrintedMeaning": "福特",
+      "sourcePrintedPartOfSpeech": "n."
+    },
+    {
+      "word": "Fiat",
+      "targetExampleIds": [
+        "fiat-car-brand"
+      ],
+      "checkedMeaning": "菲亚特",
+      "sourcePrintedMeaning": "菲亚特",
+      "sourcePrintedPartOfSpeech": "n."
+    }
+  ]
+}

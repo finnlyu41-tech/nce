@@ -1,3 +1,7 @@
+import type {NceBookId} from './model';
+import {nce1NationalitiesExamples} from './data/vocabulary-examples-nce1-06';
+import {nce1BrandExamples} from './data/vocabulary-examples-nce1-06-brands';
+
 export type UsageExample={
  id:string;
  word:string;
@@ -7,12 +11,17 @@ export type UsageExample={
  zh:string;
  collocation:{en:string;zh:string};
  origin:'original';
+ partOfSpeech?:string;
+ teachingSources?:{book:NceBookId;lesson:number}[];
+ // A checked target on this word-list page, not a general dictionary override.
+ teachingDefinition?:string;
+ teachingIpa?:string;
 };
 
 // Original examples for this site. These are usage aids, not textbook quotations
 // or official exam material. Each item belongs to the stated sense of its word.
-export const originalVocabularyExamples:UsageExample[]=[
- {id:'excuse-politeness',word:'excuse',sense:'礼貌地请原谅；打扰一下',matches:['原谅','宽恕','请原谅'],
+const initialVocabularyExamples:UsageExample[]=[
+ {id:'excuse-politeness',word:'excuse',sense:'礼貌地请原谅；打扰一下',matches:['原谅','宽恕','请原谅','礼貌地请原谅','打扰一下'],
   en:'Excuse me, could I get past?',zh:'不好意思，我能从这里过去吗？',
   collocation:{en:'excuse me',zh:'不好意思；打扰一下'},origin:'original'},
  {id:'excuse-pretext',word:'excuse',sense:'借口；托辞',matches:['借口','托辞'],
@@ -21,7 +30,7 @@ export const originalVocabularyExamples:UsageExample[]=[
  {id:'handbag-bag',word:'handbag',sense:'手提包',matches:['手提包','手袋'],
   en:'She carries a small handbag because she only needs her phone and keys.',zh:'她只带手机和钥匙，所以拎着一个小手提包。',
   collocation:{en:'carry a handbag',zh:'拎手提包'},origin:'original'},
- {id:'pardon-politeness',word:'pardon',sense:'请求原谅；礼貌地打断',matches:['原谅','宽恕'],
+ {id:'pardon-politeness',word:'pardon',sense:'请求原谅；礼貌地打断',matches:['原谅','宽恕','请求原谅','礼貌地打断'],
   en:'Pardon me for interrupting, but the last bus leaves in ten minutes.',zh:'抱歉打断一下，不过末班公交十分钟后就开了。',
   collocation:{en:'pardon me for interrupting',zh:'抱歉打断一下'},origin:'original'},
  {id:'pen-writing',word:'pen',sense:'钢笔；书写用的笔',matches:['钢笔','笔'],
@@ -84,7 +93,7 @@ export const originalVocabularyExamples:UsageExample[]=[
  {id:'nurse-profession',word:'nurse',sense:'护士',matches:['护士'],
   en:'A registered nurse showed us how to change the bandage.',zh:'一位注册护士向我们示范了如何更换绷带。',
   collocation:{en:'a registered nurse',zh:'一位注册护士'},origin:'original'},
- {id:'busy-occupied',word:'busy',sense:'忙碌；没空',matches:['忙碌','没空','忙'],
+ {id:'busy-occupied',word:'busy',sense:'忙碌；没空',matches:['忙碌','忙碌的','没空','没空的','忙'],
   en:"I'm busy with a report this morning, but I can call you after lunch.",zh:'今天上午我忙着写报告，不过午饭后可以给你打电话。',
   collocation:{en:'busy with a report',zh:'忙着写报告'},origin:'original'},
  {id:'job-position',word:'job',sense:'工作；职业',matches:['工作','职业','职位'],
@@ -135,7 +144,7 @@ export const originalVocabularyExamples:UsageExample[]=[
  {id:'hairdresser-profession',word:'hairdresser',sense:'美发师；理发师',matches:['美发师','理发师'],
   en:'My hairdresser suggested a shorter cut because I swim every day.',zh:'因为我每天游泳，理发师建议我把头发剪短一些。',
   collocation:{en:'make an appointment with a hairdresser',zh:'预约理发师'},origin:'original'},
- {id:'housewife-home',word:'housewife',sense:'家庭主妇（教材用词）',matches:['主妇','家庭妇女'],
+ {id:'housewife-home',word:'housewife',sense:'家庭主妇（教材用词）',matches:['主妇','家庭主妇','家庭妇女'],
   en:'The documentary follows a housewife who starts a community garden.',zh:'这部纪录片跟拍了一位创建社区花园的家庭主妇。',
   collocation:{en:'a full-time housewife',zh:'全职家庭主妇'},origin:'original'},
  {id:'mechanic-repair',word:'mechanic',sense:'机械工；修理技工',matches:['机械工','技工','汽车修理工'],
@@ -153,7 +162,7 @@ export const originalVocabularyExamples:UsageExample[]=[
  {id:'postman-delivery',word:'postman',sense:'邮递员',matches:['邮递员'],
   en:'The postman rang the bell because the parcel was too big for the letterbox.',zh:'包裹太大，塞不进信箱，邮递员便按了门铃。',
   collocation:{en:'the local postman',zh:'当地的邮递员'},origin:'original'},
- {id:'clean-hygiene',word:'clean',sense:'干净的；清洁的',matches:['干净','清洁的'],
+ {id:'clean-hygiene',word:'clean',sense:'干净的；清洁的',matches:['干净','干净的','清洁的'],
   en:'Wipe the table with a clean cloth before setting out the plates.',zh:'摆盘子前，先用一块干净的布擦桌子。',
   collocation:{en:'a clean cloth',zh:'一块干净的布'},origin:'original'},
  {id:'dirty-unclean',word:'dirty',sense:'脏的；不清洁的',matches:['肮脏的','脏的'],
@@ -165,26 +174,68 @@ export const originalVocabularyExamples:UsageExample[]=[
  {id:'hot-spicy',word:'hot',sense:'辣的；辛辣的',matches:['辣的','辛辣'],
   en:"This hot sauce is too spicy for me, so I'll use less next time.",zh:'这款辣酱对我来说太辣了，下次我会少放一点。',
   collocation:{en:'hot sauce',zh:'辣酱'},origin:'original'},
- {id:'lazy-effort',word:'lazy',sense:'懒惰的；怠惰的',matches:['懒惰','怠惰','懒'],
+ {id:'lazy-effort',word:'lazy',sense:'懒惰的；怠惰的',matches:['懒惰','懒惰的','怠惰','怠惰的','懒'],
   en:'He felt too lazy to cook, so he heated some leftover rice.',zh:'他懒得做饭，于是热了些剩饭。',
   collocation:{en:'too lazy to cook',zh:'懒得做饭'},origin:'original'},
 ];
 
+export const originalVocabularyExamples:UsageExample[]=[...initialVocabularyExamples,...nce1NationalitiesExamples,...nce1BrandExamples];
+
 const normalizeWord=(word:string)=>word.normalize('NFKC').trim().toLowerCase().replace(/[’‘]/g,"'").replace(/\s+/g,' ');
 const normalizeText=(text:string)=>text.normalize('NFKC').trim();
-const meaningTokens=(meaning:string)=>normalizeText(meaning).split(/[,，;；/、\n]+/).map(token=>token.trim().replace(/^(?:(?:\[[^\]\n]{1,24}\]|(?:n|vt|vi|v|adj|a|adv|ad|prep|pron|num|conj|int|interj|aux)\.)\s*)+/i,'').replace(/[。.]$/,'').trim()).filter(Boolean);
+const withoutMeaningNotes=(text:string)=>normalizeText(text).replace(/\([^)]*\)|（[^）]*）/g,'');
+const meaningToken=(token:string)=>withoutMeaningNotes(token).replace(/^(?:(?:\[[^\]\n]{1,24}\]|(?:n|vt|vi|v|adj|a|adv|ad|prep|pron|num|conj|int|interj|aux|det)\.|possessive (?:adjective|determiner))\s*)+/i,'').replace(/[。.]$/,'').trim();
+const meaningTokens=(meaning:string)=>withoutMeaningNotes(meaning).split(/[,，;；/、\n]+/).map(meaningToken).filter(Boolean);
+const meaningSections=(meaning:string)=>withoutMeaningNotes(meaning).split(/\n|(?=\b(?:n|vt|vi|v|adj|a|adv|ad|prep|pron|num|conj|int|interj|aux|det)\.)|(?=\bpossessive (?:adjective|determiner))/i).filter(section=>section.trim());
+const meaningPartOfSpeech=(text:string)=>{
+ const label=withoutMeaningNotes(text).trim().toLowerCase();
+ if(label.startsWith('possessive '))return 'pron';
+ const pos=label.match(/^(n|vt|vi|v|adj|a|adv|ad|prep|pron|num|conj|int|interj|aux|det)\./)?.[1];
+ return pos==='a'?'adj':pos==='vt'||pos==='vi'?'v':pos==='ad'?'adv':pos==='det'?'pron':pos;
+};
+
+export function reviewedTeachingDefinition(word:string,sources:{book:NceBookId;lesson:number}[]=[]):string{
+ const headword=normalizeWord(word);
+ return [...new Set(originalVocabularyExamples.filter(example=>normalizeWord(example.word)===headword&&example.teachingDefinition&&example.teachingSources?.some(associated=>sources.some(source=>source.book===associated.book&&source.lesson===associated.lesson))).map(example=>example.teachingDefinition!))].join('\n');
+}
+
+export function reviewedTeachingSources(word:string,sources:{book:NceBookId;lesson:number}[]=[]):{book:NceBookId;lesson:number}[]{
+ const headword=normalizeWord(word),seen=new Set<string>();
+ return originalVocabularyExamples.filter(example=>normalizeWord(example.word)===headword&&example.teachingDefinition).flatMap(example=>example.teachingSources||[]).filter(source=>{
+  const id=source.book+'-'+source.lesson;
+  if(seen.has(id)||!sources.some(requested=>requested.book===source.book&&requested.lesson===source.lesson))return false;
+  seen.add(id);return true;
+ });
+}
+
+export function reviewedTeachingIpa(word:string,sources:{book:NceBookId;lesson:number}[]=[]):string|undefined{
+ const headword=normalizeWord(word);
+ const forms=[...new Set(originalVocabularyExamples.filter(example=>normalizeWord(example.word)===headword&&example.teachingIpa&&example.teachingSources?.some(associated=>sources.some(source=>source.book===associated.book&&source.lesson===associated.lesson))).map(example=>example.teachingIpa!))];
+ return forms.length===1?forms[0]:undefined;
+}
+
+export function reviewedUsageDefinition(word:string,sources:{book:NceBookId;lesson:number}[]=[]):string{
+ const headword=normalizeWord(word);
+ return [...new Set(originalVocabularyExamples.filter(example=>normalizeWord(example.word)===headword&&(!sources.length||!example.teachingSources?.length||example.teachingSources.some(associated=>sources.some(source=>source.book===associated.book&&source.lesson===associated.lesson)))).map(example=>[example.partOfSpeech,example.sense].filter(Boolean).join(' ')))].join('\n');
+}
 
 export function examplesForMeaning(word:string,meaning:string,query=''):UsageExample[]{
- const headword=normalizeWord(word),tokens=meaningTokens(meaning);
- if(!headword||!tokens.length)return [];
+ const headword=normalizeWord(word),sections=meaningSections(meaning);
+ if(!headword||!sections.length)return [];
  const candidates=originalVocabularyExamples.filter(example=>normalizeWord(example.word)===headword&&example.matches.some(cue=>{
   const term=normalizeText(cue);
-  // One-character cues are whole tokens: 轻 is not 轻浮, 书 is not 书法,
-  // and 看 is not 看守. The action 停车 must also not match a place 停车处.
-  return [...term].length===1||term==='停车'?tokens.includes(term):tokens.some(token=>token.includes(term));
+  // Chinese definition tokens must agree as a whole: 老的 is not 古老的,
+  // 薄的 is not 稀薄的, and 短的 is not 简短的. Parenthetical usage notes
+  // are not part of the meaning token. Additional synonyms need explicit cues.
+  return sections.some(section=>{
+   const expected=meaningPartOfSpeech(example.partOfSpeech||''),actual=meaningPartOfSpeech(section);
+   return (!expected||!actual||expected===actual)&&meaningTokens(section).includes(meaningToken(term));
+  });
  }));
  const search=normalizeText(query);
  if((search.match(/[\u3400-\u9fff]/g)||[]).length<2)return candidates;
+ const exact=candidates.filter(example=>example.matches.some(cue=>meaningToken(cue)===meaningToken(search)));
+ if(exact.length)return exact;
  const focused=candidates.filter(example=>[example.sense,...example.matches,example.zh,example.collocation.zh].some(text=>normalizeText(text).includes(search)));
  return focused.length?focused:candidates;
 }

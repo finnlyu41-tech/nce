@@ -1,0 +1,155 @@
+{
+  "batch": "nce1-examples-3",
+  "baseCommit": "b46812edff731dabe9c302d2147698c34f132621",
+  "verifiedAt": "2026-10-01T19:24:58.338Z",
+  "published": false,
+  "humanCertification": false,
+  "browserVerified": false,
+  "productionVersionReadOnly": "2026-10-01-grammar-coverage-v21",
+  "counts": {
+    "textbookLessons": 348,
+    "textbookTerms": 3347,
+    "textbookOccurrences": 3615,
+    "bilingualCandidateTerms": 3047,
+    "bilingualCandidateOccurrences": 3267,
+    "originalHeadwords": 57,
+    "originalSenseExamples": 75,
+    "recordedReviewedOriginalHeadwords": 57,
+    "recordedReviewedOriginalSenseExamples": 75,
+    "originalsNeedingReview": 0,
+    "textbookTermsWithoutOriginalTableEntry": 3290,
+    "textbookTermsWithAnyAuthoredEntryIncludingIELTS": 58,
+    "textbookTermsWithoutAnyAuthoredEntryIncludingIELTS": 3289,
+    "textbookTermsWithCandidateOrIndexedMeaningMatchedOriginal": 3087,
+    "textbookTermsWithoutCandidateOrIndexedMeaningMatchedOriginal": 260,
+    "candidateOnlyWithoutRecordedReviewedOriginal": 3032,
+    "ieltsSeedEntries": 12,
+    "ieltsSeedDistinctHeadwords": 12,
+    "ieltsTextbookHeadwordOverlap": 1,
+    "ieltsOriginalTableOverlap": 0,
+    "authoredHeadwordUnionIncludingIELTS": 69,
+    "unionOfTextbookAndIELTSHeadwords": 3358,
+    "sourceOccurrencesWithExactTeachingSourceMetadata": 13,
+    "recordedReviewedIdentifiedSourceTargetSenses": 13,
+    "confirmedSourceTargetSenseDenominator": null,
+    "fullyReviewedSourceOccurrenceDenominator": 3615,
+    "fullyReviewedSourceOccurrences": 13,
+    "textbookTermsWithCandidateOrSourceDisplayedOriginal": 3089,
+    "textbookTermsWithoutCandidateOrSourceDisplayedOriginal": 258
+  },
+  "confirmedPartialSourceInventories": [
+    {
+      "path": "docs/vocabulary-source-targets-nce1-006.json",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "completeWordList": true,
+      "sourceWords": 13,
+      "targetSenses": 13,
+      "humanCertification": false
+    }
+  ],
+  "protectedModelMatchesFrozenBaseline": true,
+  "coverageMetrics": {
+    "rawDictionary": "Candidate OR original matching the unchanged global dictionary. This historical metric can miss corrected brand / proper noun target definitions.",
+    "sourceDisplayed": "Candidate OR original matching the explicitly source-scoped teaching definition, falling back to the unchanged dictionary. Content presence still does not certify all senses."
+  },
+  "contentInputHashes": {
+    "app/ielts-flashcard-examples.ts": "614efe8a7352915f8f5f4286638189df805257717ee9ba18bd4f303959ce7491",
+    "app/nce-utils.ts": "305551097bb84a2a07e44ef545fc03e81bbd756e53daa0066086e9d61df0637b",
+    "app/textbook-vocabulary.ts": "c722dc34718c92522838abaffa8ade2ad793428f2a5f269429c1e6d1a5991eba",
+    "app/vocabulary-examples.ts": "0252e7e154b04cd7ef85513b5dbaf7f42095c49335f33ce78f13f9a3ff5f6aa6",
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/data/vocabulary-examples-nce1-06-brands.ts": "e52e139073b9d0fcd0f2088aa98bb7ff10069350437530e9e6466a0137354503",
+    "app/data/vocabulary-examples-nce1-06.ts": "c14926e4a42b6fb1781c8a5293b9a1451864dc0711723e9d37f0d85bde601fd9"
+  },
+  "reviewDocuments": [
+    "docs/vocabulary-coverage-baseline-v21.json",
+    "docs/vocabulary-examples-batch3-nationalities.json",
+    "docs/vocabulary-examples-batch3-brands.json",
+    "docs/vocabulary-examples-batch3-retained-cues.json",
+    "docs/vocabulary-source-targets-nce1-006.json"
+  ],
+  "logHashes": [
+    {
+      "path": "work/vocabulary-coverage/flashcards-batch3.log",
+      "sha256": "52d2cd7b113f79c4ff7500d39f482307d00bf87e145869f220b0cbd50a204db7"
+    },
+    {
+      "path": "work/vocabulary-coverage/examples-batch3.log",
+      "sha256": "e4744a71f30986707683f447ccb0aa925c38befb61e66f2edf6ebf48fb42c0d0"
+    },
+    {
+      "path": "work/vocabulary-coverage/types-batch3.log",
+      "sha256": "8366207267355d3e3d5bf3bf6e8c94c5f93f6078c34f08973fa2b38cdda6cc92"
+    },
+    {
+      "path": "work/vocabulary-coverage/progress-batch3.log",
+      "sha256": "dea9bfcd60716855bbf698d3b99d15d504599a6034d3f2a79723f222f1552cec"
+    },
+    {
+      "path": "work/vocabulary-coverage/vocabulary-batch3.log",
+      "sha256": "a684b19fd20966bef3fe1e39173d0493898eb28fecb656b56da7e785aeba5db1"
+    },
+    {
+      "path": "work/vocabulary-coverage/audit-batch3.log",
+      "sha256": "cf5e0ce5b7660ee887e6bb5de9714d1001de394d406dcf38aff6b0e514d5f4cd"
+    },
+    {
+      "path": "work/vocabulary-coverage/lint-data-batch3.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/vocabulary-coverage/lint-audit-batch3.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "work/vocabulary-coverage/lint-baseline-comparison-batch3.json",
+      "sha256": "c59f668af57d9d98485bd1cad0fff99c250873cf32ed171525a3ae9c4164ce41"
+    },
+    {
+      "path": "work/vocabulary-coverage/build-online-batch3.log",
+      "sha256": "3baa1b3bf1b9030570f1d8544bdf700f4e5526045d0c01a828071dc3824d0000"
+    },
+    {
+      "path": "work/vocabulary-coverage/online-batch3.log",
+      "sha256": "5ffe70db14d5c7ba163a5e6c50187ca393d90406462ee5b6bc6b054626e14f64"
+    },
+    {
+      "path": "work/vocabulary-coverage/materials-batch3.log",
+      "sha256": "82782439025a08833fbbadd1a979be19c1ce480cf6bd426a8590446469819a83"
+    },
+    {
+      "path": "work/vocabulary-coverage/build-offline-batch3.log",
+      "sha256": "ce1c02555199191144d7b7a053fa523a4f67e6d7281050da804ceca5cc65fced"
+    }
+  ],
+  "checks": [
+    "check",
+    "verify:vocabulary",
+    "verify:vocabulary-examples",
+    "verify:flashcards",
+    "verify:progress",
+    "verify:materials",
+    "package:online",
+    "verify:online",
+    "package:static",
+    "source inventory and frozen content audit",
+    "new data and helper ESLint"
+  ],
+  "lint": {
+    "fullUiPassed": false,
+    "baselineErrors": 3,
+    "baselineWarnings": 1,
+    "workingErrors": 3,
+    "workingWarnings": 1,
+    "diagnosticsAndErrorSourceLinesUnchanged": true
+  },
+  "notClaimed": [
+    "All textbook/dictionary senses reviewed",
+    "Named human or teacher review",
+    "Browser/layout/audio or real 24-hour verification",
+    "Publishing or notifying an unavailable thread route"
+  ]
+}

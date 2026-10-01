@@ -88,6 +88,60 @@ reset([{word:'book',example:''},bookEntry,false,'',false],{});let savedFallback;
 const lookupFallback=WordLookupProvider({children:null,onAdd:word=>{savedFallback=word}});
 find(lookupFallback,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
 assert(savedFallback.example.includes('borrowed a book')&&savedFallback.exampleTranslation.includes('借了一本'),'Lookup fallback enrollment retains a matched original and translation');
+reset([{word:'books',example:''},bookEntry,false,'',false],{});let inflectedWord;
+const inflectedLookup=WordLookupProvider({children:null,onAdd:word=>{inflectedWord=word}});
+find(inflectedLookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+assert.equal(inflectedWord.word,'books','The saved surface form remains unchanged');
+assert.equal(inflectedWord.example,savedFallback.example,'An unreviewed inflection retains dictionary-headword example fallback');
+
+// Real source components must use the reviewed teaching sense rather than a
+// homograph's dictionary default. Other courses and existing records retain
+// their own dictionary meaning; source labels alone cannot override it.
+const lesson6={book:'NCE1',lesson:6,title:'',pages:[]};
+for(const [word,raw,expected,id] of [['Fiat','n. 命令, 严命, 许可','n. 菲亚特（汽车品牌）','fiat-car-brand'],['make','vt. 制造, 安排','n. （产品的）牌子','make-product-brand'],['English','n. 英语\na. 英文的, 英国人的','adj. 英格兰的（原书简释：英国的）','english-country-adjective']]){
+ const key=word.toLowerCase(),entry={word:key,ipa:'test',meaning:raw};
+ const catalog={lessons:[{...lesson6,key:'NCE1-6',words:[{word,forms:[]}]}],terms:[{key,word,sources:[lesson6]}],entries:1};
+ reset([catalog,'',0,{[key]:entry},false,false,0,null],{view:'words',book:'NCE1',lesson:6,tab:'book'});
+ const added=[],tree=TextbookVocabularyBrowser({state,onAdd:word=>added.push(word)}),row=find(tree,node=>typeof node.type==='function'&&node.type.name==='VocabularyRow'),rendered=row.type(row.props);
+ const usage=find(rendered,node=>typeof node.type==='function'&&node.type.name==='VocabularyExamples');
+ assert(usage.props.examples.some(example=>example.id===id),'A source-scoped target is displayed even when dictionary default differs');
+ find(rendered,node=>node.type==='button'&&node.props.className?.includes('vocabulary-enroll')).props.onClick();
+ assert.equal(added[0].meaning,expected);assert(added[0].example&&added[0].exampleTranslation);
+ assert.deepEqual(added[0].sources,[{kind:'nce',book:'NCE1',lesson:6}]);
+ assert.equal(h.enrolledChecks[0].meaning,expected,'Enrollment indicator and add callback use the same teaching sense');
+ reset([{word,example:'',sources:added[0].sources},entry,false,'',false],{});let lookupWord;
+ const lookup=WordLookupProvider({children:null,onAdd:word=>{lookupWord=word}});
+ assert(elements(lookup).some(node=>node.props?.className==='lookup-meaning'&&node.props.children===raw),'Lookup retains the complete original dictionary text');
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+ assert.equal(lookupWord.meaning,expected);assert.deepEqual(lookupWord.sources,added[0].sources);
+ assert.deepEqual(state,before,'Reading or explicitly passing a new teaching word never edits legacy state by itself');
+}
+const fiatEntry={word:'fiat',ipa:'test',meaning:'n. 命令'};
+reset([{word:'Fiat',example:'',sources:[{kind:'nce',book:'NCE2',lesson:87}]},fiatEntry,false,'',false],{});let unrelatedFiat;
+const unrelatedLookup=WordLookupProvider({children:null,onAdd:word=>{unrelatedFiat=word}});
+find(unrelatedLookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+assert.equal(unrelatedFiat.meaning,fiatEntry.meaning,'An unrelated lesson cannot apply a brand definition');
+assert.equal(unrelatedFiat.example,'','An unrelated dictionary meaning cannot enroll a brand example merely because the lookup can display other reviewed uses');
+assert.equal(unrelatedFiat.exampleTranslation,undefined);
+
+// Reviewed extensions remain visible in the full lookup even when the coarse
+// dictionary omits a collective noun. The default add still uses the lesson's
+// target adjective, rather than saving a different displayed sense.
+for(const [word,raw,count,target] of [
+ ['English','n. 英语\\na. 英文的, 英国人的',4,'english-country-adjective'],
+ ['Swedish','n. 瑞典语\\na. 瑞典的, 瑞典语的',4,'swedish-country-adjective'],
+ ['American','n. 美国人\\na. 美国的, 美洲的',2,'american-country-adjective'],
+ ['Italian','n. 意大利人, 意大利语\\na. 意大利的, 意大利语的',4,'italian-country-adjective'],
+]){
+ reset([{word,example:'',sources:[{kind:'nce',book:'NCE1',lesson:6}]},{word,meaning:raw},false,'',false],{});let saved;
+ const lookup=WordLookupProvider({children:null,onAdd:word=>{saved=word}});
+ const usage=find(lookup,node=>typeof node.type==='function'&&node.type.name==='VocabularyExamples');
+ assert.equal(usage.props.examples.filter(example=>example.origin==='original').length,count,'All explicitly reviewed senses are accessible in the full lookup');
+ const teachingExample=usage.props.examples.find(example=>example.id===target);assert(teachingExample);
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();
+ assert.equal(saved.example,teachingExample.en,'The default add keeps the source target example');
+ assert.equal(saved.exampleTranslation,teachingExample.zh);
+}
 
 const selection={word:'network',example:example.en,exampleTranslation:example.zh};
 for(const {sources,route,expected} of [

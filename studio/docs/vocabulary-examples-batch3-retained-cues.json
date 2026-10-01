@@ -1,0 +1,105 @@
+{
+  "batch": "retained-original-cues-after-v21",
+  "baseCommit": "b46812edff731dabe9c302d2147698c34f132621",
+  "newSenseExamples": 0,
+  "origin": "original",
+  "reviewBasis": "Root Codex rechecked unchanged English, Chinese and collocation while adding exact definition cues to preserve existing display under strict matching; not human or teacher certification.",
+  "entries": [
+    {
+      "id": "busy-occupied",
+      "word": "busy",
+      "scope": "retained-original-compatibility",
+      "meaningForCheck": "忙碌的",
+      "excludedMeaningLabels": [],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "exact cue compatibility"
+      ],
+      "contentFile": "app/vocabulary-examples.ts",
+      "contentSha256": "412ffa3ddc8c443fe227a8b3e96b466216db28f7d14a99889f028ca4e98d043c"
+    },
+    {
+      "id": "clean-hygiene",
+      "word": "clean",
+      "scope": "retained-original-compatibility",
+      "meaningForCheck": "干净的",
+      "excludedMeaningLabels": [],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "exact cue compatibility"
+      ],
+      "contentFile": "app/vocabulary-examples.ts",
+      "contentSha256": "c8b19963cf0a6961a246e1b8eb31307638ce898527f1c9aa1a2384039e3059fd"
+    },
+    {
+      "id": "lazy-effort",
+      "word": "lazy",
+      "scope": "retained-original-compatibility",
+      "meaningForCheck": "懒惰的",
+      "excludedMeaningLabels": [],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "exact cue compatibility"
+      ],
+      "contentFile": "app/vocabulary-examples.ts",
+      "contentSha256": "3861824ea385f240440aa8531100bd8cd351124364c79b4420248b033a34aa48"
+    },
+    {
+      "id": "excuse-politeness",
+      "word": "excuse",
+      "scope": "retained-original-compatibility",
+      "meaningForCheck": "礼貌地请原谅",
+      "excludedMeaningLabels": [],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "exact cue compatibility"
+      ],
+      "contentFile": "app/vocabulary-examples.ts",
+      "contentSha256": "536d32451da5e805e5c419739e2c65a1459798c1390f6080d298ffde6e5c9fe7"
+    },
+    {
+      "id": "pardon-politeness",
+      "word": "pardon",
+      "scope": "retained-original-compatibility",
+      "meaningForCheck": "请求原谅",
+      "excludedMeaningLabels": [],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "exact cue compatibility"
+      ],
+      "contentFile": "app/vocabulary-examples.ts",
+      "contentSha256": "bb653232c444e77f434e4e8adb6428afc992c461b42272431f7688d358ae3512"
+    },
+    {
+      "id": "housewife-home",
+      "word": "housewife",
+      "scope": "retained-original-compatibility",
+      "meaningForCheck": "家庭主妇",
+      "excludedMeaningLabels": [],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "exact cue compatibility"
+      ],
+      "contentFile": "app/vocabulary-examples.ts",
+      "contentSha256": "10f383d94e656a4c0ca24b0daa081ed3d69499b3e58594bfa0baa3823e6ff1b4"
+    }
+  ]
+}

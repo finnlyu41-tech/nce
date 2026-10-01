@@ -1,0 +1,291 @@
+{
+  "batch": "nce1-examples-3-brands",
+  "baseCommit": "b46812edff731dabe9c302d2147698c34f132621",
+  "headwords": 9,
+  "senseExamples": 9,
+  "textbookTargetExamples": 9,
+  "dictionaryExtensionExamples": 0,
+  "origin": "original",
+  "reviewBasis": "Root Codex editorial review against the word-list image, natural English, Chinese translation and collocation; not a human or teacher certification. Independent Codex review requested.",
+  "sourceEvidence": {
+    "book": "NCE1",
+    "lesson": 6,
+    "sourcePDFPage": 16,
+    "sourcePrintedPage": 12,
+    "src": "/lesson-pages/0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9.jpg",
+    "sha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+    "verification": "Actual page opened with view_image; make noun brand and eight brand headwords verified."
+  },
+  "entries": [
+    {
+      "id": "make-product-brand",
+      "word": "make",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "n. （产品的）牌子",
+      "excludedMeaningLabels": [
+        "制造",
+        "安排",
+        "造成"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "What make 用名词询问产品品牌，不把制造动词套入。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "25bc538c30f9fc44db6875ce6f77f04b9a845fc223ce3e5ce18ce49c776e5b9a"
+    },
+    {
+      "id": "volvo-car-brand",
+      "word": "Volvo",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "沃尔沃",
+      "excludedMeaningLabels": [
+        "车站"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "Volvo 作品牌及车辆专名，park 与停车情境一致。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "0ba6d2c4cd0e95b4ddd63547347c2a05b8d30db0f0bae0bc275dac4be9f354af"
+    },
+    {
+      "id": "peugeot-car-brand",
+      "word": "Peugeot",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "标致",
+      "excludedMeaningLabels": [
+        "漂亮"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "Peugeot 作车辆品牌，rented 与 rent 搭配、中译相同。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "33656cb21d5e9ccdadc80d6ff20cb4c00a66f6beb3cd248b70d1374fb66a51b4"
+    },
+    {
+      "id": "mercedes-car-brand",
+      "word": "Mercedes",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "梅赛德斯",
+      "excludedMeaningLabels": [
+        "梅塞德斯（人名）"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "a Mercedes 指车辆，不由人名义召回。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "2810ab9d5e2e2f57bc73453c15626d031327bf69fd6e39338f7337bb6ab584f9"
+    },
+    {
+      "id": "toyota-car-brand",
+      "word": "Toyota",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "丰田",
+      "excludedMeaningLabels": [
+        "丰收"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "used 为二手，full service history 为完整保养记录。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "04d37701d879174e69d5984fb09efdeeac1d9319034256893778408a6c47eee8"
+    },
+    {
+      "id": "daewoo-car-brand",
+      "word": "Daewoo",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "大宇",
+      "excludedMeaningLabels": [
+        "宇宙"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "二手车情境不宣称品牌当前公司状态。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "3e11c77bf566a608fbc6591d85160b8fc20d9cbd7e58af991dcddc033a64187c"
+    },
+    {
+      "id": "mini-car-brand",
+      "word": "Mini",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "迷你",
+      "excludedMeaningLabels": [
+        "微型汽车",
+        "超短裙",
+        "同类中的极小者"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "Mini 大写品牌车辆，与普通微型汽车或超短裙义分开。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "e37ffc9f7457aa8a361ece625c107e0201b48056177696dbdcbeff76f97332b8"
+    },
+    {
+      "id": "ford-car-brand",
+      "word": "Ford",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "福特",
+      "excludedMeaningLabels": [
+        "浅滩",
+        "涉水"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "a Ford 指车辆，浅滩义保留独立。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "544d43c0f51f25e2d2be05c709bfa750ea4063f6716dc869d61209b260f0d164"
+    },
+    {
+      "id": "fiat-car-brand",
+      "word": "Fiat",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "partOfSpeech": "n.（品牌专名）",
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "meaningForCheck": "菲亚特",
+      "excludedMeaningLabels": [
+        "命令",
+        "严命",
+        "许可"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "associated textbook list"
+      ],
+      "editorialReview": "Fiat 品牌须显示菲亚特释义，不使用 fiat 命令义。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06-brands.ts",
+      "contentSha256": "135a14dd16c2acb5c21b0aaf416f994cc896b7067ba670ec9e0b4cc87e8c9f67"
+    }
+  ],
+  "remainingScope": [
+    "General make, mini, ford and fiat dictionary senses are not all reviewed.",
+    "Brand sentences describe fictional ordinary situations, not current ownership, origin or official endorsements.",
+    "The word-list association is not the source of these original sentences."
+  ],
+  "independentEditorialReview": {
+    "reviewer": "independent Codex content agent",
+    "scope": "all 9 English sentences, Chinese translations, noun usage, collocations, source association and exclusions",
+    "changes": "Toyota cousin relationship removed from both languages; no present company facts asserted",
+    "humanCertification": false
+  }
+}

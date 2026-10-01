@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "baseline": "docs/vocabulary-coverage-baseline-v21.json",
+  "registeredLedgers": [
+    "docs/vocabulary-examples-batch3-nationalities.json",
+    "docs/vocabulary-examples-batch3-brands.json",
+    "docs/vocabulary-examples-batch3-retained-cues.json"
+  ],
+  "scope": "Each unchanged content hash has a recorded Codex editorial review. Counts do not establish all textbook or dictionary senses or human certification.",
+  "sourceTargetInventories": [
+    "docs/vocabulary-source-targets-nce1-006.json"
+  ]
+}

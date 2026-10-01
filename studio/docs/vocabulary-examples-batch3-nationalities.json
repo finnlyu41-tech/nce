@@ -1,0 +1,534 @@
+{
+  "batch": "nce1-examples-3-nationalities",
+  "baseCommit": "b46812edff731dabe9c302d2147698c34f132621",
+  "headwords": 4,
+  "senseExamples": 14,
+  "textbookTargetExamples": 4,
+  "dictionaryExtensionExamples": 10,
+  "origin": "original",
+  "reviewBasis": "Codex 编辑逐条核对原书词性/教学义项、自然英语、中译、搭配、单复数与集合名词用法；未宣称真人或教师认证，也未宣称所有扩展义项已审读。",
+  "sourceEvidence": {
+    "index": "dist-online/lesson-pages/index.json",
+    "key": "NCE1-6",
+    "sourcePDFPage": 16,
+    "sourcePrintedPage": 12,
+    "src": "/lesson-pages/0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9.jpg",
+    "sha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+    "verification": "Local page opened with view_image; local bytes SHA-256 matches the page index; all four target words are explicitly adj. in the New words and expressions list",
+    "dictionary": "dist-online/language/dictionary.json",
+    "dictionaryObservedMeanings": {
+      "American": "n. 美国人\na. 美国的, 美洲的",
+      "English": "n. 英语\na. 英文的, 英国人的",
+      "Italian": "n. 意大利人, 意大利语\na. 意大利的, 意大利语的",
+      "Swedish": "n. 瑞典人, 瑞典语\na. 瑞典的, 瑞典人的, 瑞典语的"
+    }
+  },
+  "usageReferences": [
+    {
+      "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/nationalities-languages-countries-and-regions",
+      "purpose": "国籍形容词、表示人的名词及语言名词的区别；未复制其例句"
+    },
+    {
+      "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/english_1",
+      "purpose": "English 与 the English 指英格兰及其人群，不能涵盖整个 United Kingdom；未复制其例句"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/Swedish",
+      "purpose": "Swedish 的语言名词及表示瑞典人群时的复数构式；未复制其例句"
+    },
+    {
+      "url": "https://www.merriam-webster.com/dictionary/swede",
+      "purpose": "单个瑞典人使用 Swede；未复制其例句"
+    },
+    {
+      "url": "https://www.collinsdictionary.com/dictionary/english/swedish",
+      "purpose": "the Swedish 的集合称呼核对；未复制其例句"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/us/dictionary/english/american",
+      "purpose": "American 美国义与美洲义的边界；未复制其例句"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/us/dictionary/english/italian",
+      "purpose": "Italian 国家/语言形容词、可数人名词与语言名词核对；未复制其例句"
+    }
+  ],
+  "remainingObservedDictionarySenses": [
+    {
+      "word": "American",
+      "meaning": "a. 美洲的",
+      "status": "not-reviewed",
+      "reason": "不把美国国籍原创句归入整个美洲；本分片没有为这一扩展义编写例句和搭配"
+    }
+  ],
+  "usageBoundaries": [
+    "English country adjective retains the textbook label 英国的, while the original example and sense label clarify England; British is the broader United Kingdom label.",
+    "The English and the Swedish are collective labels with plural agreement; they are not countable singular nouns and do not imply uniform traits of all people.",
+    "American/Italian person nouns allow an American/an Italian and plural Americans/Italians; language nouns English/Italian/Swedish are uncountable.",
+    "teachingSources records an associated vocabulary list only; sourcePDFPage identifies the word list, not the source of these original sentences."
+  ],
+  "entries": [
+    {
+      "id": "swedish-country-adjective",
+      "word": "Swedish",
+      "partOfSpeech": "adj.",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "a. 瑞典的",
+      "excludedMeaningLabels": [
+        "n. 瑞典人",
+        "n. 瑞典语",
+        "a. 瑞典语的"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "A Swedish student: Swedish 修饰 student，不能把 a Swedish 当作单个人名词。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "6a8ecb959ba481c0ad550698b9cf5b8d388c3fe58a82d9ef1e741a5332acab47"
+    },
+    {
+      "id": "swedish-language-adjective",
+      "word": "Swedish",
+      "partOfSpeech": "adj.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "a. 瑞典语的",
+      "excludedMeaningLabels": [
+        "n. 瑞典语",
+        "a. 瑞典的",
+        "n. 瑞典人"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "Swedish 修饰 spelling，句中每个名字的拼写与中文译文一致；与语言名词分开。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "d7ccaf42d5af4b25a0e34a16513594f685b3bd6b9156450299e9c65b4555ec41"
+    },
+    {
+      "id": "swedish-language-noun",
+      "word": "Swedish",
+      "partOfSpeech": "n.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "n. 瑞典语",
+      "excludedMeaningLabels": [
+        "a. 瑞典语的",
+        "n. 瑞典人",
+        "a. 瑞典人的"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "learn Swedish 中 Swedish 为语言名词，不加 a，不构造复数 Swedishes。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "669275b7714c085adfea214f88e887abf4138e268262fe2c87f20ed16c25e437"
+    },
+    {
+      "id": "swedish-people-collective",
+      "word": "Swedish",
+      "partOfSpeech": "n.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "n. 瑞典人",
+      "excludedMeaningLabels": [
+        "a. 瑞典人的",
+        "n. 瑞典语",
+        "n. 一名瑞典人"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "the Swedish 为集合称呼，句中与 the Danish 并列接 were；单个人为 a Swede，复数为 Swedes。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "a5b0515f956a8c3f8c9993d50bccd4a6775e60df2f179a343a0510941864f292"
+    },
+    {
+      "id": "english-country-adjective",
+      "word": "English",
+      "partOfSpeech": "adj.",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "a. 英国的",
+      "excludedMeaningLabels": [
+        "n. 英语",
+        "a. 英文的",
+        "n. 英格兰人",
+        "a. 苏格兰的"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "保留原书英国的教学释义；原创句和译文明确 England/英格兰，不能扩大为全部英国人或苏格兰、威尔士。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "fe07f90404b2fafb9ed28398e9807c02432332f3561d44e3f4aecf30a2bc7aec"
+    },
+    {
+      "id": "english-language-adjective",
+      "word": "English",
+      "partOfSpeech": "adj.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "a. 英文的",
+      "excludedMeaningLabels": [
+        "n. 英语",
+        "a. 英国人的",
+        "n. 英格兰人"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "an English translation 中 English 修饰 translation，an 属于译本这一可数名词短语。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "655b5123ab50bd9c4acec4d1c0ba9f77fcd3cdced70a85e84e91a98506596ba3"
+    },
+    {
+      "id": "english-language-noun",
+      "word": "English",
+      "partOfSpeech": "n.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "n. 英语",
+      "excludedMeaningLabels": [
+        "a. 英语的",
+        "a. 英文的",
+        "a. 英国人的",
+        "n. 英格兰人",
+        "n. 英语教师"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "in English 表示用英语，English 不可数且不加 a；法语版只是原创句上下文。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "0512feda0e0ba101ecf25d982fa0e16c12109cde9a8a1b87e758386a3e02c86c"
+    },
+    {
+      "id": "english-people-collective",
+      "word": "English",
+      "partOfSpeech": "n.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "n. 英格兰人",
+      "excludedMeaningLabels": [
+        "a. 英格兰人的",
+        "n. 英语",
+        "n. 一个英格兰人",
+        "n. 英国人"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "the English 集合指英格兰人；单个人用 an English person/Englishman/Englishwoman，不用 an English；当前 ECDICT 未单列该名词义。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "c80d3e45038eb264f41ca091ec2316df522b648734792777013aeebf8a6fc194"
+    },
+    {
+      "id": "american-country-adjective",
+      "word": "American",
+      "partOfSpeech": "adj.",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "a. 美国的",
+      "excludedMeaningLabels": [
+        "n. 美国人",
+        "a. 美洲的",
+        "n. 美洲居民",
+        "a. 南美洲的"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "an American designer 中 American 修饰 designer；本条只覆盖美国含义，不借此声称美洲义已审读。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "de19ced7c6b7674d29576cc8bdeb5b9e9b70eb383f994fe5342bf42732a299a7"
+    },
+    {
+      "id": "american-person-noun",
+      "word": "American",
+      "partOfSpeech": "n.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "n. 美国人",
+      "excludedMeaningLabels": [
+        "a. 美国人的",
+        "a. 美国的",
+        "a. 美洲的",
+        "n. 美洲居民",
+        "n. 美国英语"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "an American 为一位美国人；复数 Americans，首字母大写；favourite 使用英式拼写。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "d41d1cad26b864e192dd3a290ce05991fecbf4aa89f5f18cd393106dabf4730a"
+    },
+    {
+      "id": "italian-country-adjective",
+      "word": "Italian",
+      "partOfSpeech": "adj.",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "a. 意大利的",
+      "excludedMeaningLabels": [
+        "n. 意大利人",
+        "n. 意大利语",
+        "a. 意大利语的"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "Italian 修饰 coffee maker；译文意大利产的对应产地属性，未宣称某一现实品牌产地。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "4a2d077b49e70cbf3f4a1276f55399a17c76bd17e8eea80ee8e474db4d3e079f"
+    },
+    {
+      "id": "italian-language-adjective",
+      "word": "Italian",
+      "partOfSpeech": "adj.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "a. 意大利语的",
+      "excludedMeaningLabels": [
+        "n. 意大利语",
+        "n. 意大利人",
+        "a. 意大利的"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "Italian dialogue 指意大利语对白；中文准确表达字幕帮助理解，并未添加原句没有的中文字幕。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "b1d7b5fc236af5ad87c4112e5687410c08abf22cb79302ee8bb1d497f18835ab"
+    },
+    {
+      "id": "italian-person-noun",
+      "word": "Italian",
+      "partOfSpeech": "n.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "n. 意大利人",
+      "excludedMeaningLabels": [
+        "a. 意大利人的",
+        "a. 意大利的",
+        "n. 意大利语",
+        "n. 意大利面"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "Two Italians 为可数名词复数；单数 an Italian，与形容词及不可数语言义分开。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "b1c1ea9fc0867b14f1d7efd4865188313fcd460dd66595a06e3349ac74bdc97a"
+    },
+    {
+      "id": "italian-language-noun",
+      "word": "Italian",
+      "partOfSpeech": "n.",
+      "scope": "dictionary-extension",
+      "source": {
+        "book": "NCE1",
+        "lesson": 6
+      },
+      "sourcePDFPage": 16,
+      "sourcePrintedPage": 12,
+      "sourcePageSha256": "0cfd28bb3f18ae34ad37f2b9ea1924ddc85cc935ef936665d6646771ab8159a9",
+      "sourceAssociation": "Associated textbook vocabulary list; original sentence is not a textbook quotation",
+      "meaningForCheck": "n. 意大利语",
+      "excludedMeaningLabels": [
+        "a. 意大利语的",
+        "n. 意大利人",
+        "a. 意大利的"
+      ],
+      "reviewed": [
+        "target sense",
+        "part of speech",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "countability and nationality usage",
+        "associated textbook list"
+      ],
+      "editorialReview": "practise Italian 为练习意大利语；语言名词不可数，practise 为英式动词拼写。",
+      "contentFile": "app/data/vocabulary-examples-nce1-06.ts",
+      "contentSha256": "634f8defa9bc94dbd1f80b7e8003b4e6026929c792fdc74899ed357a53c17466"
+    }
+  ],
+  "integrationEditorialReview": {
+    "reviewer": "root Codex",
+    "scope": "all 14 sentences, Chinese, POS, countability, collocations, source and exclusion labels",
+    "changes": "English teaching definition now specifies England while retaining the source wording as an annotation",
+    "humanCertification": false
+  }
+}

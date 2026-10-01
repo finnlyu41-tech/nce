@@ -1,0 +1,1140 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "v21-b46812e",
+  "generatedAt": "2026-10-01T18:07:50.117Z",
+  "scope": "Existing local textbook word index, existing original usage examples and existing IELTS seed aid; no user learning data, network request or scheduler mutation.",
+  "sourceCommitClaim": "b46812e",
+  "inputHashes": {
+    "work/vocabulary-coverage/v21-vocabulary-examples.ts": "b7b9a2025d1162dc4f4af339168e0c685871e8362ca558171072021d3ac29f17",
+    "app/textbook-vocabulary.ts": "c722dc34718c92522838abaffa8ade2ad793428f2a5f269429c1e6d1a5991eba",
+    "app/nce-utils.ts": "305551097bb84a2a07e44ef545fc03e81bbd756e53daa0066086e9d61df0637b",
+    "app/ielts-flashcard-examples.ts": "614efe8a7352915f8f5f4286638189df805257717ee9ba18bd4f303959ce7491",
+    "dist-online/lesson-pages/index.json": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596",
+    "dist-online/language/dictionary.json": "41d983d5f8017035719842fad2275f949d39e348cdc6f50bf00ae0a9a9cee209",
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/flashcards.ts": "b7327bae677085b3321bc54e9e7540deb64c60a0c79f780bd7800d9df8e44333",
+    "app/flashcard-types.ts": "f001cd06ca977a1188b176c8eff664a7d07ef851fbead642864626694222fd7f",
+    "app/progress-save.tsx": "51777b9bb7ce2a6ae75c9cefe2fcf57a9eda8eea3aa9eae2ec8a6edac5f6579b",
+    "pnpm-lock.yaml": "22336ed8eb4954d3877fc49982f153f2cdc19f45c554106d378c7b136607eb3f",
+    "app/vocabulary-examples.ts": "b7b9a2025d1162dc4f4af339168e0c685871e8362ca558171072021d3ac29f17"
+  },
+  "languageResourceCount": 276,
+  "languageResourcesSha256": "680e3a5928dce0d4c21f9e05da7ee57ac8e5455c58315a6dad7cb62f27313291",
+  "counts": {
+    "textbookLessons": 348,
+    "textbookTerms": 3347,
+    "textbookOccurrences": 3615,
+    "bilingualCandidateTerms": 3047,
+    "bilingualCandidateOccurrences": 3267,
+    "originalHeadwords": 44,
+    "originalSenseExamples": 52,
+    "recordedReviewedOriginalHeadwords": 44,
+    "recordedReviewedOriginalSenseExamples": 52,
+    "originalsNeedingReview": 0,
+    "textbookTermsWithoutOriginalTableEntry": 3303,
+    "textbookTermsWithAnyAuthoredEntryIncludingIELTS": 45,
+    "textbookTermsWithoutAnyAuthoredEntryIncludingIELTS": 3302,
+    "textbookTermsWithCandidateOrIndexedMeaningMatchedOriginal": 3077,
+    "textbookTermsWithoutCandidateOrIndexedMeaningMatchedOriginal": 270,
+    "candidateOnlyWithoutRecordedReviewedOriginal": 3033,
+    "ieltsSeedEntries": 12,
+    "ieltsSeedDistinctHeadwords": 12,
+    "ieltsTextbookHeadwordOverlap": 1,
+    "ieltsOriginalTableOverlap": 0,
+    "authoredHeadwordUnionIncludingIELTS": 56,
+    "unionOfTextbookAndIELTSHeadwords": 3358,
+    "sourceOccurrencesWithExactTeachingSourceMetadata": 0,
+    "recordedReviewedIdentifiedSourceTargetSenses": 0,
+    "confirmedSourceTargetSenseDenominator": null,
+    "fullyReviewedSourceOccurrenceDenominator": null,
+    "fullyReviewedSourceOccurrences": 0
+  },
+  "byBook": {
+    "NCE1": {
+      "occurrences": 904,
+      "terms": 864,
+      "bilingualCandidateOccurrences": 611,
+      "termsWithBilingualCandidate": 587,
+      "originalHeadwords": 44,
+      "termsWithoutCandidateOrDisplayedOriginal": 223,
+      "firstSourceAssignedGapTerms": 223,
+      "occurrencesWithExactTeachingSourceMetadata": 0,
+      "confirmedSourceTargetSenses": 0,
+      "confirmedSourceTargetSenseDenominator": null
+    },
+    "NCE2": {
+      "occurrences": 861,
+      "terms": 838,
+      "bilingualCandidateOccurrences": 827,
+      "termsWithBilingualCandidate": 806,
+      "originalHeadwords": 5,
+      "termsWithoutCandidateOrDisplayedOriginal": 26,
+      "firstSourceAssignedGapTerms": 26,
+      "occurrencesWithExactTeachingSourceMetadata": 0,
+      "confirmedSourceTargetSenses": 0,
+      "confirmedSourceTargetSenseDenominator": null
+    },
+    "NCE3": {
+      "occurrences": 1059,
+      "terms": 1047,
+      "bilingualCandidateOccurrences": 1046,
+      "termsWithBilingualCandidate": 1034,
+      "originalHeadwords": 0,
+      "termsWithoutCandidateOrDisplayedOriginal": 13,
+      "firstSourceAssignedGapTerms": 13,
+      "occurrencesWithExactTeachingSourceMetadata": 0,
+      "confirmedSourceTargetSenses": 0,
+      "confirmedSourceTargetSenseDenominator": null
+    },
+    "NCE4": {
+      "occurrences": 791,
+      "terms": 781,
+      "bilingualCandidateOccurrences": 783,
+      "termsWithBilingualCandidate": 773,
+      "originalHeadwords": 0,
+      "termsWithoutCandidateOrDisplayedOriginal": 8,
+      "firstSourceAssignedGapTerms": 8,
+      "occurrencesWithExactTeachingSourceMetadata": 0,
+      "confirmedSourceTargetSenses": 0,
+      "confirmedSourceTargetSenseDenominator": null
+    }
+  },
+  "ieltsTextbookOverlap": [
+    {
+      "word": "proportion",
+      "sources": [
+        {
+          "book": "NCE3",
+          "lesson": 56
+        }
+      ]
+    }
+  ],
+  "denominators": {
+    "headwords": {
+      "known": 3347,
+      "unit": "normalized textbook headword; presence is not all-sense coverage"
+    },
+    "sourceWords": {
+      "known": 3615,
+      "unit": "book / lesson / normalized headword"
+    },
+    "targetSenses": {
+      "known": null,
+      "status": "not-confirmed",
+      "unit": "book / lesson / headword / confirmed target sense",
+      "rule": "An editor must enumerate the source target senses and retain evidence; splitting the global dictionary or finding a lexical form does not establish this denominator."
+    },
+    "dictionarySenses": {
+      "known": null,
+      "status": "not-enumerated",
+      "rule": "The current dictionary contains coarse and separator-based labels; dictionary text is retained as evidence, not converted automatically into individual teaching targets."
+    }
+  },
+  "reviewMeaning": {
+    "recordedEditorialReview": "Frozen content hashes and referenced prior editorial records; not a named human teacher certification.",
+    "candidateOnly": "A matching surface form has a nonempty bilingual sentence. Sense, part of speech, translation and collocation have not been certified for that source.",
+    "notReviewed": "Neither lexical candidate nor recorded review resolves the source target sense.",
+    "explicitScopeReviewIncomplete": "An original carries teachingSources, but no claim that the source target sense denominator is complete."
+  },
+  "hundredPercentClaims": {
+    "perContent": true,
+    "scope": "Only each specifically recorded, unchanged example ID and its reviewed sentence / Chinese translation / collocation. This does not certify every sense of its headword, every repeated lesson source, every dictionary label or every candidate sentence.",
+    "allTextbookHeadwords": false,
+    "allSourceTargetSenses": false,
+    "allDictionarySenses": false
+  },
+  "reviewDocuments": [
+    "docs/vocabulary-examples-batch2.json",
+    "docs/vocabulary-examples-batch3-nationalities.json"
+  ],
+  "protectedModelUnchangedDuringAudit": true,
+  "protectedModelMatchesFrozenBaseline": null,
+  "filesWrittenOnlyUnder": "work/vocabulary-coverage/",
+  "reviewRecordCreatedAt": "2026-10-01T18:08:27.140Z",
+  "editorialStatus": "Previously delivered Codex editorial checks, preserved by content hash; no named human reviewer or teacher certification is recorded.",
+  "originalContentSnapshot": {
+    "path": "work/vocabulary-coverage/v21-vocabulary-examples.ts",
+    "sha256": "b7b9a2025d1162dc4f4af339168e0c685871e8362ca558171072021d3ac29f17",
+    "historicalVerification": "docs/verification/vocabulary-examples-batch2.json"
+  },
+  "humanReviewRecorded": false,
+  "hashContract": {
+    "algorithm": "SHA-256",
+    "encoding": "UTF-8",
+    "serialization": "JSON.stringify object in field order, omitting undefined fields",
+    "fieldOrder": [
+      "id",
+      "word",
+      "sense",
+      "matches",
+      "en",
+      "zh",
+      "collocation",
+      "origin",
+      "partOfSpeech",
+      "teachingDefinition",
+      "teachingSources"
+    ],
+    "changeRule": "Sentence, translation, collocation, meaning cue or teaching-source changes invalidate this recorded review until an editor reviews the changed content and records a fresh hash."
+  },
+  "reviewedOriginals": [
+    {
+      "id": "excuse-politeness",
+      "word": "excuse",
+      "sense": "礼貌地请原谅；打扰一下",
+      "contentSha256": "729207aeece2c925ac292c120e1da3eaadfff07f21b94e9de493f8e68b67d489",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "excuse-pretext",
+      "word": "excuse",
+      "sense": "借口；托辞",
+      "contentSha256": "06e6a972448f5140eea38b2b6e11fffc2cfa1ab489a1d36d85cebbda663360fd",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "handbag-bag",
+      "word": "handbag",
+      "sense": "手提包",
+      "contentSha256": "5f2339cbdb832a5a13dc22020b06215e437cda26c1b262364e7ecf72b5ca3ad9",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "pardon-politeness",
+      "word": "pardon",
+      "sense": "请求原谅；礼貌地打断",
+      "contentSha256": "03983cc7d1a6f10626c8fb97dddf3bb11823cb24dd79f8a47a282786a81af5bd",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "pen-writing",
+      "word": "pen",
+      "sense": "钢笔；书写用的笔",
+      "contentSha256": "38f392954c1ed3ffdd2f6852937b7971091035a6f5d1ec7ce5a0de9e6826c9d2",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "pencil-writing",
+      "word": "pencil",
+      "sense": "铅笔",
+      "contentSha256": "0bd1296284afa543ddd2d8e77b8a7845c4533e873feb89c5d1c7adccdc58b55f",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "coat-clothing",
+      "word": "coat",
+      "sense": "外套",
+      "contentSha256": "3bf8a8f4060718f075d30c8ba7f7584e491c2e685deee5cb33deeb8bc8a18e0b",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "dress-clothing",
+      "word": "dress",
+      "sense": "连衣裙（服装）",
+      "contentSha256": "45d5e08d4a2a47dfc36b26042ac0be63769077d0c48c557b3d6f73d9e24d4a10",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "skirt-clothing",
+      "word": "skirt",
+      "sense": "裙子；半身裙",
+      "contentSha256": "b92d50226550e198de967fda4ff9c73944a70efaf383f17d677a3825b897b564",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "shirt-clothing",
+      "word": "shirt",
+      "sense": "衬衫",
+      "contentSha256": "74e8cbd297996c882ce5b8039804bfae30d40ca9fa90918fbf63f3da225b5db6",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "car-vehicle",
+      "word": "car",
+      "sense": "汽车",
+      "contentSha256": "0d777703ee72f71d63b4487e99153575e09118ba32677f70c7d0b307396592b4",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "house-home",
+      "word": "house",
+      "sense": "房子；住宅",
+      "contentSha256": "f8825bb2ce49be7c1f0d6016aa8345e9972d5d125841879996752a9a33d8fc2c",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "umbrella-rain",
+      "word": "umbrella",
+      "sense": "雨伞",
+      "contentSha256": "20d7d8d272652a7022409929898921b19295d78ae80cb67707269de5de64293e",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "cloakroom-storage",
+      "word": "cloakroom",
+      "sense": "寄物间；衣帽间",
+      "contentSha256": "851c5782fc86a4818bfc706234f02e5678e318fe6a858f373f16cb4258fdaa58",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "ticket-travel",
+      "word": "ticket",
+      "sense": "车票",
+      "contentSha256": "ed4a7b95090204d199b97c5b1b7ccc6341977245d054e894dd1679a2d70ffefa",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "number-identifier",
+      "word": "number",
+      "sense": "号码；编号",
+      "contentSha256": "d6e30dc1ec13678ba201825835a584d254f4701ed872e081c59f927901991ab9",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "school-place",
+      "word": "school",
+      "sense": "学校",
+      "contentSha256": "3d971f25149f451228a2f1ad37eb40cacb33e4cbf9ca5652620da4a41f6ab8b1",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "teacher-person",
+      "word": "teacher",
+      "sense": "教师；老师",
+      "contentSha256": "6e86acc745ffc7880fb8e57edb7f8cbdafc933a5f7465954d6d5efbadd8761c6",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "son-child",
+      "word": "son",
+      "sense": "儿子",
+      "contentSha256": "8a28afa8f45ec1acd8dee30e97c3cda54ea504a2b3a51b1891d4795e03f87e0e",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "daughter-child",
+      "word": "daughter",
+      "sense": "女儿",
+      "contentSha256": "8183a22d6d53edcbe28aa3fc7a035927281f47ec26f180b8b3d60d3c03dfd6a0",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "family-people",
+      "word": "family",
+      "sense": "家庭；家人",
+      "contentSha256": "cf4fa28be60e86d6535780b4affac4b6f216973542ba0fc2bdcfb8c2bea1c11c",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "student-learner",
+      "word": "student",
+      "sense": "学生",
+      "contentSha256": "8de414e44c12aa2b3bbfe952fd41981cbf81ae0e894336ac661f0e4ba100d023",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "engineer-profession",
+      "word": "engineer",
+      "sense": "工程师",
+      "contentSha256": "26faa3644034b200d9b10258617f85a816d34c4d75f30d5d4fc94358494e43d2",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "nurse-profession",
+      "word": "nurse",
+      "sense": "护士",
+      "contentSha256": "637cbdcd46b0e7489e751cb814bb635e80438562b8ad4460ddbfae2110628382",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "busy-occupied",
+      "word": "busy",
+      "sense": "忙碌；没空",
+      "contentSha256": "a8fc01d698e1ddb85227edbd33c3f0aa5d7cde28b07a429e64a3fda62d7eface",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "job-position",
+      "word": "job",
+      "sense": "工作；职业",
+      "contentSha256": "a915016284b541eb50051aed7179cac716e807428f575956adccc3773685eecc",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "name-person",
+      "word": "name",
+      "sense": "姓名；名字",
+      "contentSha256": "68fd2d301d9afb3e7000c8182f763c1b94120dcbdfb54d9bbb2ab428ee3d9bcd",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "bank-finance",
+      "word": "bank",
+      "sense": "银行",
+      "contentSha256": "3e2763dbf0ad4a9d22d6430f8c560c4f60e78d8457e035af6b0c052a608317ab",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "bank-riverside",
+      "word": "bank",
+      "sense": "河岸；堤岸",
+      "contentSha256": "5ac1a276b521fa7d6081b1b5e2510b2207f84f9cd85f000a477a495a13653580",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "light-illumination",
+      "word": "light",
+      "sense": "灯光；光线",
+      "contentSha256": "a4e9cb429fadf93d22aec4cf1ac62687551a8118b039fcfcebab49e4bb1b488f",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "light-weight",
+      "word": "light",
+      "sense": "轻便；重量轻",
+      "contentSha256": "546c4c3f8da2f78e9069d6d40198108c079a1465eae572fb49caf2856684dac2",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "watch-timepiece",
+      "word": "watch",
+      "sense": "手表",
+      "contentSha256": "fce90aa2ff97bcc4fd9e81e4981221ad470fc7725e66a32851a377a27c0457a2",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "watch-observe",
+      "word": "watch",
+      "sense": "观看；注视",
+      "contentSha256": "5a6ce407bd33d610c1d6c7a0f5d142bc83d64b89e7ce57419a0860e7ff6308ec",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "book-publication",
+      "word": "book",
+      "sense": "书；书籍",
+      "contentSha256": "fb835a9e0b59d3f1a44b9ae2bc2d5f88907845ebcbc82b492a10d8c9f61520af",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "book-reserve",
+      "word": "book",
+      "sense": "预订；预约",
+      "contentSha256": "a51174bb86198818afa68ba6c5607785bb1f21488c70771f2407795cc9beff98",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "match-competition",
+      "word": "match",
+      "sense": "比赛",
+      "contentSha256": "095e20ec078e0439c7be3358b711852c50e81bcbcfebf3f2bd45565e970b6237",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "match-fire",
+      "word": "match",
+      "sense": "火柴",
+      "contentSha256": "b91aab15253390563dc32ed154dff673986f88346cd0dd8b7cda1ca4e9ea507f",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "park-place",
+      "word": "park",
+      "sense": "公园",
+      "contentSha256": "473abd43b37bad5f0676855d49c8472f5d058ad5280d1db761abf348b6f7bce8",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "park-vehicle",
+      "word": "park",
+      "sense": "停车",
+      "contentSha256": "d20d22c0f65aa0c9256cee2a4fc0ce5d406b16c8d40610466d82d5c39d766e79",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples.md + docs/vocabulary-examples-sense-risks.md",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false
+    },
+    {
+      "id": "air-hostess-profession",
+      "word": "air hostess",
+      "sense": "空姐（教材称呼）",
+      "contentSha256": "677d3c8b6b72a0689b89e9f57e2dd240fbd2d9dc35a9a36ea742bd07ae2733ef",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "空中小姐"
+    },
+    {
+      "id": "hairdresser-profession",
+      "word": "hairdresser",
+      "sense": "美发师；理发师",
+      "contentSha256": "94716b0f54136fb3723ad6e19dbd05cbd7fe5da669b8e57e9605f574e282d74a",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "理发师"
+    },
+    {
+      "id": "housewife-home",
+      "word": "housewife",
+      "sense": "家庭主妇（教材用词）",
+      "contentSha256": "edcb609d238e0df7dcf4ccc2deeba3c4a12f0beb0d6bcef8757ea256aca41cf1",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "家庭妇女"
+    },
+    {
+      "id": "mechanic-repair",
+      "word": "mechanic",
+      "sense": "机械工；修理技工",
+      "contentSha256": "86cfc72c878c1424cbead7f533996ee720c37248d7743bc3135044bb847b9794",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "机械工"
+    },
+    {
+      "id": "milkman-delivery",
+      "word": "milkman",
+      "sense": "送奶工",
+      "contentSha256": "491052d4c9a4675ca5b2af2de67289cdebc1f3f3ff79babff6f19c75b9d7aa09",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "送奶工"
+    },
+    {
+      "id": "policeman-traffic",
+      "word": "policeman",
+      "sense": "警察（男性称呼）",
+      "contentSha256": "0a0dcac23e0958afd9eeed3b7c8b0284bcc3b0ef89c54c59eb6b54bdfecfceb0",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "警察"
+    },
+    {
+      "id": "policewoman-help",
+      "word": "policewoman",
+      "sense": "女警察",
+      "contentSha256": "77fe066893f2d6702d1d80c52ea044943a289b0e12f727eb287e9028b56c5578",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "女警察"
+    },
+    {
+      "id": "postman-delivery",
+      "word": "postman",
+      "sense": "邮递员",
+      "contentSha256": "bf698d4dce2c94e76fda76928e1b03c4085175dea6e509601f3fc36153f87095",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 8
+      },
+      "meaningForCheck": "邮递员"
+    },
+    {
+      "id": "clean-hygiene",
+      "word": "clean",
+      "sense": "干净的；清洁的",
+      "contentSha256": "cd1e9c4e5c7a58cecbcd35811f506aabea7c80f0f9cbced5ad8179043ec37a94",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "干净的"
+    },
+    {
+      "id": "dirty-unclean",
+      "word": "dirty",
+      "sense": "脏的；不清洁的",
+      "contentSha256": "9dabfc5d3e1cd6e98870f73bdc0fd0ee594711d1c58ec4bff217a479b0f585a6",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "肮脏的"
+    },
+    {
+      "id": "hot-temperature",
+      "word": "hot",
+      "sense": "热的；烫的（温度高）",
+      "contentSha256": "336c5fb301e07ffa571ce8fde29079bbd97040630cb98a3d3db40dafd505b3af",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "热的"
+    },
+    {
+      "id": "hot-spicy",
+      "word": "hot",
+      "sense": "辣的；辛辣的",
+      "contentSha256": "3f90e9efaef26b8880ae2fdf376a916169ca290509badf5c27476bc9b02b18d2",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "辣的"
+    },
+    {
+      "id": "lazy-effort",
+      "word": "lazy",
+      "sense": "懒惰的；怠惰的",
+      "contentSha256": "7874f9fc44c75b5c0c4ac350bbc8480f3141f4c1bb1c9139020fea0094d2d9a0",
+      "scope": "labelled-original-sense",
+      "reviewerKind": "Codex editorial record",
+      "humanReviewRecorded": false,
+      "reviewEvidence": "docs/vocabulary-examples-batch2.json",
+      "reviewed": [
+        "labelled target sense",
+        "English sentence",
+        "Chinese translation",
+        "collocation"
+      ],
+      "sourceWordTargetInventoryComplete": false,
+      "recordedSource": {
+        "book": "NCE1",
+        "lesson": 10
+      },
+      "meaningForCheck": "懒惰的"
+    }
+  ],
+  "continuationSchema": {
+    "unit": "book / lesson / vocabularyKey / explicitly reviewed target sense",
+    "exampleTeachingSources": "Associates an original with a book/lesson; does not by itself complete source target-sense inventory.",
+    "exampleTeachingDefinition": "Only actual textbook target senses receive correct POS and a source-specific definition; dictionary extensions stay separate.",
+    "newBatchLedger": "id, word, source, scope, partOfSpeech, sourcePDFPage, sourceSHA, meaningForCheck, excludedMeaningLabels, reviewed, contentSha256",
+    "sourceWordCompletion": "To claim every target sense for one source word reviewed, an editor must explicitly record the full target-sense inventory and evidence. None of the v21 3615 source-word rows has that completion record.",
+    "unknownPolicy": "Keep target-sense denominator null / not-confirmed until the textbook source is reviewed; never derive it by splitting global dictionary text."
+  }
+}
