@@ -1,0 +1,2577 @@
+{
+  "schemaVersion": 1,
+  "batch": "nce1-reviewed-batch5b",
+  "baseCommit": "f23a75d00c00745449e62335051ace3d9b080564",
+  "headwords": 30,
+  "senseExamples": 50,
+  "textbookTargetExamples": 33,
+  "dictionaryExtensionExamples": 17,
+  "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+  "contentFileSha256": "25c9cfe22f8f80495b894ad9598d4f8ea45842515a1be6cea991a1d5e0d996ab",
+  "exportName": "vocabularyReviewedBatch5BExamples",
+  "humanCertification": false,
+  "reviewBasis": "Independent Codex editorial review of every assigned entry against the actual seven local original word-list images, English sentence, Chinese translation, collocation, printed part of speech, source-specific target, and declared canonical headword. Exact global matcher is unchanged.",
+  "sourceScope": "The source pages prove word-list association and printed targets. All sentences are original usage aids. Language, colour-noun/pigment and other dictionary extension senses are not claimed as printed textbook targets. The 50 allocated senses do not establish complete dictionary or textbook-sense coverage.",
+  "savedDrafts": [
+    {
+      "file": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sha256": "541194d7198a45c7fb3808cc8b829e193acd324651e95517dae9e40e079648fb",
+      "changed": false
+    },
+    {
+      "file": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "sha256": "c642896ab06e87e7769019bed60c5719b7c007aa63af60ab4e89d6b82fca569b",
+      "changed": false
+    },
+    {
+      "file": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "sha256": "abf44e40b8319426ae6ec59102635cccef146db7bdaff09c548a59d36ff35aa2",
+      "changed": false
+    },
+    {
+      "file": "docs/vocabulary-examples-batch6-22-32.json",
+      "sha256": "0e806bb4645b86d61e6e98611229b65e523e4bb06014ed8bf792f251238d2a67",
+      "changed": false
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "book": "NCE1",
+      "lesson": 15,
+      "sourcePDFPage": 34,
+      "sourcePrintedPage": 30,
+      "src": "/lesson-pages/34c132447bb75035e69dbbdc0596f3c9631b3842054a747ab409ba2d5965a099.jpg",
+      "sha256": "34c132447bb75035e69dbbdc0596f3c9631b3842054a747ab409ba2d5965a099",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByIndependentReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 16,
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "src": "/lesson-pages/22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9.jpg",
+      "sha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByIndependentReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 19,
+      "sourcePDFPage": 42,
+      "sourcePrintedPage": 38,
+      "src": "/lesson-pages/8ebb1a7e9fbc016aed7dc7e12d544bb9cfba3c663cdde1198b6f3f5bdb407434.jpg",
+      "sha256": "8ebb1a7e9fbc016aed7dc7e12d544bb9cfba3c663cdde1198b6f3f5bdb407434",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByIndependentReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 20,
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "src": "/lesson-pages/40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73.jpg",
+      "sha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByIndependentReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 22,
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "src": "/lesson-pages/fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe.jpg",
+      "sha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByIndependentReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 24,
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "src": "/lesson-pages/b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e.jpg",
+      "sha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByIndependentReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 30,
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "src": "/lesson-pages/6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7.jpg",
+      "sha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByIndependentReviewer": true
+    }
+  ],
+  "changes": [
+    {
+      "id": "girl-young-person",
+      "reason": "不从未说明年龄的 girl 句扩展到明确少女年龄标签。",
+      "before": {
+        "matches": [
+          "女孩",
+          "姑娘",
+          "少女"
+        ]
+      },
+      "after": {
+        "matches": [
+          "女孩",
+          "姑娘"
+        ]
+      }
+    },
+    {
+      "id": "russian-national-adjective",
+      "reason": "用管弦乐团的国籍背景明确国家形容词，减少 Russian novel 被读成俄语语言标签的歧义。",
+      "before": {
+        "en": "We discussed a Russian novel in our book club.",
+        "zh": "我们在读书会上讨论了一本俄罗斯小说。",
+        "collocation": {
+          "en": "a Russian novel",
+          "zh": "一本俄罗斯小说"
+        }
+      },
+      "after": {
+        "en": "We bought tickets to hear a Russian orchestra play at the concert hall.",
+        "zh": "我们买了票，准备去音乐厅听一支俄罗斯管弦乐团演奏。",
+        "collocation": {
+          "en": "a Russian orchestra",
+          "zh": "一支俄罗斯管弦乐团"
+        }
+      }
+    },
+    {
+      "id": "russian-language-adjective",
+      "reason": "调整中文定语关系，明确是安全须知的俄语译文。",
+      "before": {
+        "zh": "导游给了我们一份俄语的安全须知译文。"
+      },
+      "after": {
+        "zh": "导游给了我们一份安全须知的俄语译文。"
+      }
+    },
+    {
+      "id": "orange-fruit",
+      "reason": "移除柑橘泛类匹配；younger brother 为中译弟弟提供明确依据。",
+      "before": {
+        "matches": [
+          "橙子",
+          "柑橘"
+        ],
+        "en": "I peeled an orange and shared half with my brother."
+      },
+      "after": {
+        "matches": [
+          "橙子"
+        ],
+        "en": "I peeled an orange and shared half with my younger brother."
+      }
+    },
+    {
+      "id": "heavy-weight",
+      "reason": "重量语境不替笨重形态或操作困难义作审核。",
+      "before": {
+        "matches": [
+          "重的",
+          "笨重的",
+          "重量大的"
+        ]
+      },
+      "after": {
+        "matches": [
+          "重的",
+          "重量大的"
+        ]
+      }
+    },
+    {
+      "id": "heavy-burden",
+      "reason": "经济负担句只审沉重的；不扩到工作任务繁重的。",
+      "before": {
+        "sense": "沉重的；繁重的（负担）",
+        "matches": [
+          "沉重的",
+          "繁重的"
+        ]
+      },
+      "after": {
+        "sense": "沉重的（经济负担）",
+        "matches": [
+          "沉重的"
+        ]
+      }
+    },
+    {
+      "id": "long-desire",
+      "reason": "完整呈现 after a week of noisy building work 的时间背景。",
+      "before": {
+        "zh": "施工闹了一周，我渴望过一个安静的周末。"
+      },
+      "after": {
+        "zh": "经历了一周吵闹的施工后，我渴望过一个安静的周末。"
+      }
+    },
+    {
+      "id": "large-size-adjective",
+      "reason": "普通尺寸大的信封不替额外宽大含义作审核。",
+      "before": {
+        "matches": [
+          "大的",
+          "宽大的"
+        ]
+      },
+      "after": {
+        "matches": [
+          "大的"
+        ]
+      }
+    },
+    {
+      "id": "little-size-adjective",
+      "reason": "木盒尺寸小不证明矮小的人体身高义。",
+      "before": {
+        "matches": [
+          "小的",
+          "矮小的"
+        ]
+      },
+      "after": {
+        "matches": [
+          "小的"
+        ]
+      }
+    },
+    {
+      "id": "bottle-container-noun",
+      "reason": "内容物未说明，不能自动认证酒瓶这一专用容器标签。",
+      "before": {
+        "matches": [
+          "瓶子",
+          "酒瓶"
+        ]
+      },
+      "after": {
+        "matches": [
+          "瓶子"
+        ]
+      }
+    },
+    {
+      "id": "tin-canned-food",
+      "reason": "满装汤的罐头情境不填罐头盒这一空容器标签；中译明确 packed 的打包装行李动作。",
+      "before": {
+        "matches": [
+          "罐头",
+          "罐头盒"
+        ],
+        "zh": "我们为露营准备了两罐汤罐头。"
+      },
+      "after": {
+        "matches": [
+          "罐头"
+        ],
+        "zh": "为了露营，我们把两罐汤罐头装进了行李。"
+      }
+    },
+    {
+      "id": "desk-school-furniture",
+      "reason": "学校课桌句不自动认证办公桌或家庭书桌情境。",
+      "before": {
+        "sense": "课桌；书桌；办公桌（家具）",
+        "matches": [
+          "课桌",
+          "书桌",
+          "办公桌"
+        ]
+      },
+      "after": {
+        "sense": "课桌（学校家具）",
+        "matches": [
+          "课桌"
+        ]
+      }
+    },
+    {
+      "id": "big-size",
+      "reason": "实际查看的第22课也打印 adj. 大的，添加经过原页核验的同义来源。",
+      "before": {
+        "teachingSources": [
+          {
+            "book": "NCE1",
+            "lesson": 20
+          }
+        ]
+      },
+      "after": {
+        "teachingSources": [
+          {
+            "book": "NCE1",
+            "lesson": 20
+          },
+          {
+            "book": "NCE1",
+            "lesson": 22
+          }
+        ]
+      }
+    },
+    {
+      "id": "small-size",
+      "reason": "实际查看的第22课也打印 adj. 小的，添加经过原页核验的同义来源。",
+      "before": {
+        "teachingSources": [
+          {
+            "book": "NCE1",
+            "lesson": 20
+          }
+        ]
+      },
+      "after": {
+        "teachingSources": [
+          {
+            "book": "NCE1",
+            "lesson": 20
+          },
+          {
+            "book": "NCE1",
+            "lesson": 22
+          }
+        ]
+      }
+    }
+  ],
+  "verification": {
+    "script": "node work/batch5b/review.mjs",
+    "esbuildWrite": false,
+    "actualOutputModuleSyntaxExportAndHashChecks": true,
+    "inMemoryRegistryScope": "Only the 50 assigned examples; global integration interactions and UI add callbacks are reserved for root.",
+    "globalMatcherChangedByThisReview": false,
+    "registryChangedByThisReview": false,
+    "senseAndMeaningPositiveChecks": 100,
+    "excludedMeaningChecks": 207,
+    "explicitWrongPartOfSpeechChecks": 50,
+    "contentHashes": 50,
+    "sourcePageHashes": 7,
+    "sourceBookHashBasis": "Saved source manifest; the whole book PDF was not rehashed in this review.",
+    "emptyAdjectiveAndVerbIsolation": true,
+    "bigSmallAdditionalSourceBinding": true,
+    "canonicalHeadwordChecks": "All 50 declared word fields retain the assigned canonical spelling. Actual UI add callbacks are reserved for root integration.",
+    "browserTested": false,
+    "audioTested": false,
+    "humanReviewed": false,
+    "userProgressRead": false,
+    "unallocatedDraftsRegistered": false
+  },
+  "entries": [
+    {
+      "id": "girl-young-person",
+      "word": "girl",
+      "source": {
+        "book": "NCE1",
+        "lesson": 15
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 女孩",
+      "excludedMeaningLabels": [
+        "n. 女佣",
+        "n. 少女",
+        "adj. 女孩"
+      ],
+      "teachingDefinition": "n. 女孩；姑娘",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 34,
+      "sourcePrintedPage": 30,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "34c132447bb75035e69dbbdc0596f3c9631b3842054a747ab409ba2d5965a099",
+      "contentSha256": "b542f52e4c6f2d9767d2759195814d0b1dcb19b9f91644c5d22724c7d5e233af",
+      "sourcePrintedMeaning": "女孩，姑娘",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 女孩",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "女孩把拾得的钱包交至车站办公室；in the green coat、found、took it 均有中译对应。仅女孩/姑娘；女佣和明确少女年龄标签未审。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "2127f7c14f3b44818804303e2ee7b523328aeb91390dfd3812e8a941302e7688",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 女孩，姑娘"
+    },
+    {
+      "id": "dutch-national-adjective",
+      "word": "Dutch",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 荷兰的",
+      "excludedMeaningLabels": [
+        "n. 荷兰人",
+        "n. 荷兰语",
+        "adj. 荷兰语的",
+        "n. 荷兰的"
+      ],
+      "teachingDefinition": "adj. 荷兰的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "8c49895c45a3b841d0e5b4238e966c8bfd02bb3adefde9f0cde1b4373aab0806",
+      "sourcePrintedMeaning": "荷兰人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "n. 荷兰的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "Dutch cheese 是奶酪产地/文化国籍形容词；过去购买和市场地点中译一致。原打印 adj. & n. 合并标签的形容词支分为荷兰的。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "8c49895c45a3b841d0e5b4238e966c8bfd02bb3adefde9f0cde1b4373aab0806",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 荷兰人",
+      "editorialSenseSeparation": "The page prints adj. & n. as a combined label. The original example uses one separate grammatical function; the individual adj./n. teaching label is an editorial separation, not a verbatim printed label."
+    },
+    {
+      "id": "dutch-people",
+      "word": "Dutch",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 荷兰人",
+      "excludedMeaningLabels": [
+        "adj. 荷兰的",
+        "n. 荷兰语",
+        "adj. 荷兰语的",
+        "adj. 荷兰人"
+      ],
+      "teachingDefinition": "n. 荷兰人（总称）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "134a3daf9806062a0475d092979599705023b6f873892bd57776644e333d97d1",
+      "sourcePrintedMeaning": "荷兰人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "adj. 荷兰人",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "the Dutch 为复数人群总称，语境是徒步团中的荷兰成员；offered to help 与提出帮忙相符。未把单个人写作 a Dutch。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "134a3daf9806062a0475d092979599705023b6f873892bd57776644e333d97d1",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 荷兰人",
+      "editorialSenseSeparation": "The page prints adj. & n. as a combined label. The original example uses one separate grammatical function; the individual adj./n. teaching label is an editorial separation, not a verbatim printed label."
+    },
+    {
+      "id": "dutch-language",
+      "word": "Dutch",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 荷兰语",
+      "excludedMeaningLabels": [
+        "adj. 荷兰语的",
+        "n. 荷兰人",
+        "adj. 荷兰的",
+        "adj. 荷兰语"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "565babb189e884bfd629ab637eecdf75b9d7cee3e2d07c8709417a29abc75c18",
+      "sourcePrintedMeaning": "荷兰人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "adj. 荷兰语",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "study Dutch 的 Dutch 为语言名词；before work 和 twenty minutes 中译完整。语言义是原书词条的扩展，不声称第16课打印了荷兰语。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "565babb189e884bfd629ab637eecdf75b9d7cee3e2d07c8709417a29abc75c18",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 荷兰人"
+    },
+    {
+      "id": "dutch-language-adjective",
+      "word": "Dutch",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 荷兰语的",
+      "excludedMeaningLabels": [
+        "n. 荷兰语",
+        "adj. 荷兰的",
+        "n. 荷兰人",
+        "n. 荷兰语的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "f4a2b158d90bd284c8518b390c111c6d814874b839b24a014aa5274c6cb25531",
+      "sourcePrintedMeaning": "荷兰人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "n. 荷兰语的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "Dutch translation 明示译文语言，避免与产地形容词混排；printed below 对应印在下方。是语言形容词扩展。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "f4a2b158d90bd284c8518b390c111c6d814874b839b24a014aa5274c6cb25531",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 荷兰人"
+    },
+    {
+      "id": "russian-national-adjective",
+      "word": "Russian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 俄国的",
+      "excludedMeaningLabels": [
+        "n. 俄国人",
+        "n. 俄语",
+        "adj. 俄语的",
+        "n. 俄国的"
+      ],
+      "teachingDefinition": "adj. 俄罗斯的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "bd788922424479bbca0b398eaf1e3d74e6bf00d319aa70e61631f265725adcd7",
+      "sourcePrintedMeaning": "俄罗斯人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "n. 俄国的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "Russian orchestra 明示乐团国籍背景；买票与准备去音乐厅听演奏的中译一致。俄罗斯的来自原书 adj. & n. 标签的形容词支。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "77ed7ba7f9e3ed6e788eb5e69590c3eaa9bb8333fac2aa11981073ac959880ed",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 俄罗斯人",
+      "editorialSenseSeparation": "The page prints adj. & n. as a combined label. The original example uses one separate grammatical function; the individual adj./n. teaching label is an editorial separation, not a verbatim printed label."
+    },
+    {
+      "id": "russian-person",
+      "word": "Russian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 俄国人",
+      "excludedMeaningLabels": [
+        "adj. 俄国的",
+        "n. 俄语",
+        "adj. 俄语的",
+        "adj. 俄国人"
+      ],
+      "teachingDefinition": "n. 俄罗斯人",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "8a246c6a656c504e2a8b8a6398e3806d373d6a221a2c681c3fec037fb09a233c",
+      "sourcePrintedMeaning": "俄罗斯人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "adj. 俄国人",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "a Russian 是可数单个人名词，sitting next to me 的列车位置和 helped me read 中译相符；没有泛用于语言名词。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "8a246c6a656c504e2a8b8a6398e3806d373d6a221a2c681c3fec037fb09a233c",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 俄罗斯人",
+      "editorialSenseSeparation": "The page prints adj. & n. as a combined label. The original example uses one separate grammatical function; the individual adj./n. teaching label is an editorial separation, not a verbatim printed label."
+    },
+    {
+      "id": "russian-language",
+      "word": "Russian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 俄语",
+      "excludedMeaningLabels": [
+        "adj. 俄语的",
+        "n. 俄国人",
+        "adj. 俄国的",
+        "adj. 俄语"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "0a170f48a925d8d25811b7378160aef27305d13be36ddb7f204b186decc8ef2e",
+      "sourcePrintedMeaning": "俄罗斯人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "adj. 俄语",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "speak Russian 为俄语语言名词；at home 和 with her grandmother 中译对应。原书第16课只作为关联词表证据，语言义另标扩展。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "0a170f48a925d8d25811b7378160aef27305d13be36ddb7f204b186decc8ef2e",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 俄罗斯人"
+    },
+    {
+      "id": "russian-language-adjective",
+      "word": "Russian",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 俄语的",
+      "excludedMeaningLabels": [
+        "n. 俄语",
+        "adj. 俄国的",
+        "n. 俄国人",
+        "n. 俄语的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "75beefb390201ae8eb67f5cb3c2a277e2920b123bef0c5a01d5306724b35ad5b",
+      "sourcePrintedMeaning": "俄罗斯人",
+      "sourcePrintedPartOfSpeech": "adj. & n.",
+      "wrongPartOfSpeechMeaning": "n. 俄语的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "Russian translation 为译文语言修饰语；新中译明确安全须知的俄语译文。第16课合并国籍标签不当作俄语的直接目标证明。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "3f3a1a8d1f5575ab1be09cbeacd1254566db5858d8a4fd377e22a0f6f9373e5d",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. & n. 俄罗斯人"
+    },
+    {
+      "id": "black-colour-adjective",
+      "word": "black",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 黑色的",
+      "excludedMeaningLabels": [
+        "n. 黑色",
+        "n. 黑颜料",
+        "n. 黑色的"
+      ],
+      "teachingDefinition": "adj. 黑色的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "fc2e682f9742db9a99a633ad329120986072f7e8a60c6557b551016fdaf62bb5",
+      "sourcePrintedMeaning": "黑色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 黑色的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "black umbrella 的 black 为颜色形容词；by the door 和 for rainy days 中译对应，名词颜色/颜料分开。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "fc2e682f9742db9a99a633ad329120986072f7e8a60c6557b551016fdaf62bb5",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 黑色的"
+    },
+    {
+      "id": "black-colour-noun",
+      "word": "black",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 黑色",
+      "excludedMeaningLabels": [
+        "adj. 黑色的",
+        "n. 黑颜料",
+        "adj. 黑色"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "64e5a246175562719555368ce1c188ad6680cab95274739d189f2965db27d837",
+      "sourcePrintedMeaning": "黑色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 黑色",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "chose black 中 black 是颜色名词，选门色与窗框相配的原因中译一致；仅颜色扩展，不表示颜料实体。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "64e5a246175562719555368ce1c188ad6680cab95274739d189f2965db27d837",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 黑色的"
+    },
+    {
+      "id": "black-pigment",
+      "word": "black",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 黑颜料",
+      "excludedMeaningLabels": [
+        "n. 黑色",
+        "adj. 黑色的",
+        "adj. 黑颜料"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "20e4911d64cbddc6125f420169c33985d9d3bb53b1d0dd070db16c36961fabe2",
+      "sourcePrintedMeaning": "黑色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 黑颜料",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "blue paint 提供颜料混合情境，a touch of black 是少许黑颜料；darker 对应颜色更深。颜色名词与颜料情境分条。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "20e4911d64cbddc6125f420169c33985d9d3bb53b1d0dd070db16c36961fabe2",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 黑色的"
+    },
+    {
+      "id": "orange-colour-adjective",
+      "word": "orange",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 橘黄色的",
+      "excludedMeaningLabels": [
+        "n. 柑橘",
+        "n. 橘色",
+        "n. 橘黄色的"
+      ],
+      "teachingDefinition": "adj. 橘黄色的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "d60cdc87baf1890be657cbb0f5c7230ecc59179c1b463baef0a8d4cf23b2b31a",
+      "sourcePrintedMeaning": "橘黄色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 橘黄色的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "救援艇的 orange 为橘黄色形容词，方便从岸上看见与 so 从句相符；水果/颜色名词分开。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "d60cdc87baf1890be657cbb0f5c7230ecc59179c1b463baef0a8d4cf23b2b31a",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 橘黄色的"
+    },
+    {
+      "id": "orange-fruit",
+      "word": "orange",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 橙子",
+      "excludedMeaningLabels": [
+        "adj. 橘色的",
+        "n. 橘色",
+        "n. 柑橘",
+        "n. 橘子",
+        "n. 柠檬",
+        "adj. 橙子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "a9ba7e4bf7b5313fccd0357534239f7deb73dad544db28a808fe6c7505dc958f",
+      "sourcePrintedMeaning": "橘黄色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 橙子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "peel an orange 明示橙子水果；shared half 与把一半分给弟弟对应，英文补 younger 解决兄弟年龄信息不等价。仅橙子，不用柑橘泛类或橘子替代。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "bc8aa39c053c143eea9a83368f80f49656199d7ded476bcd6d84862f43966fa2",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 橘黄色的"
+    },
+    {
+      "id": "orange-colour-noun",
+      "word": "orange",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 橘色",
+      "excludedMeaningLabels": [
+        "n. 柑橘",
+        "adj. 橘色的",
+        "adj. 橘色"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "5793a300b874570393e8b06da39bbb13842dcef27d98672971889e280a7ebd9f",
+      "sourcePrintedMeaning": "橘黄色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 橘色",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "海报 orange 与 dark blue 搭配为颜色名词；works well with 的中译自然。与水果柑橘和颜色形容词分开。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "5793a300b874570393e8b06da39bbb13842dcef27d98672971889e280a7ebd9f",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 橘黄色的"
+    },
+    {
+      "id": "red-colour-adjective",
+      "word": "red",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 红色的",
+      "excludedMeaningLabels": [
+        "n. 红色",
+        "n. 红颜料",
+        "adj. 红肿的",
+        "n. 赤字",
+        "n. 红色的"
+      ],
+      "teachingDefinition": "adj. 红色的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "19cc84c688aa54046f8cffa9b397a89bff952d7c28a7fecb1275dc539474c06f",
+      "sourcePrintedMeaning": "红色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 红色的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "red ribbon 为红色形容词，包裹系丝带和交给母亲的时序准确；不代表红肿或财务赤字。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "19cc84c688aa54046f8cffa9b397a89bff952d7c28a7fecb1275dc539474c06f",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 红色的"
+    },
+    {
+      "id": "red-colour-noun",
+      "word": "red",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 红色",
+      "excludedMeaningLabels": [
+        "adj. 红色的",
+        "n. 红颜料",
+        "n. 赤字",
+        "adj. 红色"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "8958c65e5ede1462e67d4ef6f6e7463090a4b9d6664aa8d75a16c4e149b50156",
+      "sourcePrintedMeaning": "红色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 红色",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "Red 作主语是颜色名词，地图上与灰色可见程度比较中译准确；in red 是同义自然搭配。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "8958c65e5ede1462e67d4ef6f6e7463090a4b9d6664aa8d75a16c4e149b50156",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 红色的"
+    },
+    {
+      "id": "red-pigment",
+      "word": "red",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 红颜料",
+      "excludedMeaningLabels": [
+        "n. 红色",
+        "adj. 红色的",
+        "n. 赤字",
+        "adj. 红颜料"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "d47df929197dee9350dfe5a331eb6382236eb0a6509c102118dd1526efb1bc50",
+      "sourcePrintedMeaning": "红色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 红颜料",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "white paint 与 make pink 指向颜料混合，少许红颜料和粉红色结果中译准确；不是赤字或单纯颜色名。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "d47df929197dee9350dfe5a331eb6382236eb0a6509c102118dd1526efb1bc50",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 红色的"
+    },
+    {
+      "id": "yellow-colour-adjective",
+      "word": "yellow",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 黄色的",
+      "excludedMeaningLabels": [
+        "n. 黄色",
+        "n. 黄色的"
+      ],
+      "teachingDefinition": "adj. 黄色的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "46ae1305cd2a2c8fc8c5ef487572e03c3de35685dbd10342454fedf33099e4f6",
+      "sourcePrintedMeaning": "黄色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 黄色的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "yellow folder 是黄色形容词；桌面位置和明天使用的笔记中译对应。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "46ae1305cd2a2c8fc8c5ef487572e03c3de35685dbd10342454fedf33099e4f6",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 黄色的"
+    },
+    {
+      "id": "yellow-colour-noun",
+      "word": "yellow",
+      "source": {
+        "book": "NCE1",
+        "lesson": 16
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 黄色",
+      "excludedMeaningLabels": [
+        "adj. 黄色的",
+        "adj. 黄色"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 36,
+      "sourcePrintedPage": 32,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "22b5b9d2a339def7285191c922b6c4a918677b2e11a000a941673b945ec195f9",
+      "contentSha256": "5c7044fa39fac414aa60d715c4e020f8d2c48e199c55ae0137ba924b5c6a7fc5",
+      "sourcePrintedMeaning": "黄色的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 黄色",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "choose yellow 为选择颜色，nursery walls 在此为婴儿房墙面；语言自然，明确名词扩展。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "5c7044fa39fac414aa60d715c4e020f8d2c48e199c55ae0137ba924b5c6a7fc5",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 黄色的"
+    },
+    {
+      "id": "boy-young-person",
+      "word": "boy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 19
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 男孩",
+      "excludedMeaningLabels": [
+        "n. 儿子",
+        "adj. 男孩"
+      ],
+      "teachingDefinition": "n. 男孩",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 42,
+      "sourcePrintedPage": 38,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "8ebb1a7e9fbc016aed7dc7e12d544bb9cfba3c663cdde1198b6f3f5bdb407434",
+      "contentSha256": "251c7acf6a656757700f1c7b64538fb9a6f1a012f2f6383e8dcb8673befff668",
+      "sourcePrintedMeaning": "男孩",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 男孩",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "the boy next door 为隔壁男孩，帮忙搬土进花园中译对应；不泛用于儿子亲属义。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "251c7acf6a656757700f1c7b64538fb9a6f1a012f2f6383e8dcb8673befff668",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 男孩"
+    },
+    {
+      "id": "big-size",
+      "word": "big",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 大的",
+      "excludedMeaningLabels": [
+        "adj. 重要的",
+        "adv. 大量地",
+        "n. 大的"
+      ],
+      "teachingDefinition": "adj. 大的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "f2d25226abf23b99a1b511fadb7978a5045ef7aacee72ee0e58dd382b604c0d9",
+      "sourcePrintedMeaning": "大的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 大的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "box too big to fit under the bed 明示空间尺寸；太大放不进床底中译准确，排除重要程度义。第20与22课都打印此目标。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "9bbad2c030f7f2ee5c1613afdb59591b4be47fdbf573c7628479d7e623caa901",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 大的",
+      "additionalSourceEvidence": [
+        {
+          "source": {
+            "book": "NCE1",
+            "lesson": 22
+          },
+          "sourcePDFPage": 48,
+          "sourcePrintedPage": 44,
+          "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+          "sourcePrintedPartOfSpeech": "adj.",
+          "sourcePrintedMeaning": "大的",
+          "actualImageOpenedByIndependentReviewer": true
+        }
+      ]
+    },
+    {
+      "id": "big-importance",
+      "word": "big",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 重要的",
+      "excludedMeaningLabels": [
+        "adj. 大的",
+        "adv. 大量地",
+        "n. 重要的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "0818470e0efe8e49002a099ff1623fc6c868a626d5356f4debaef87c01a09444",
+      "sourcePrintedMeaning": "大的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 重要的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "a big decision 为重要决定，选择大学的建议与中译完整；不拿重要程度去覆盖尺寸大的。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "0818470e0efe8e49002a099ff1623fc6c868a626d5356f4debaef87c01a09444",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 大的"
+    },
+    {
+      "id": "grandfather-family",
+      "word": "grandfather",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 祖父",
+      "excludedMeaningLabels": [
+        "n. 始祖",
+        "[电] 原始资料组",
+        "adj. 祖父"
+      ],
+      "teachingDefinition": "n. 祖父；外祖父",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "c3b722f1a63bc4eab30d6f253f751d0a9ea26a801abb69daa610bde9020a1cf8",
+      "sourcePrintedMeaning": "祖父，外祖父",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 祖父",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "祖父/外祖父在英语同一亲属类别；句中给看年轻时照片，中译选祖父的合法具体情境。两种家系名称来自原打印，不是把始祖当亲属。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "c3b722f1a63bc4eab30d6f253f751d0a9ea26a801abb69daa610bde9020a1cf8",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 祖父，外祖父"
+    },
+    {
+      "id": "grandmother-family",
+      "word": "grandmother",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 祖母",
+      "excludedMeaningLabels": [
+        "n. 女祖先",
+        "adj. 祖母"
+      ],
+      "teachingDefinition": "n. 祖母；外祖母",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "d0a4166082e5fc9268e8c053801848749715ce04545af072fb2e4913e6e49c41",
+      "sourcePrintedMeaning": "祖母，外祖母",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 祖母",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "祖母/外祖母在英语同一亲属类别；教补破衬衫与中译相符，mend a torn shirt 为自然搭配。未扩至女祖先。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "d0a4166082e5fc9268e8c053801848749715ce04545af072fb2e4913e6e49c41",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 祖母，外祖母"
+    },
+    {
+      "id": "heavy-weight",
+      "word": "heavy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 重的",
+      "excludedMeaningLabels": [
+        "adj. 繁重的",
+        "adv. 沉重地",
+        "n. 重物",
+        "adj. 笨重的",
+        "adj. 沉重的",
+        "n. 重的"
+      ],
+      "teachingDefinition": "adj. 重的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "15101184f908389cdcdc3b343d21d26bf7ed8f613f783119434aacde463c080b",
+      "sourcePrintedMeaning": "重的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 重的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "行李箱太重而不能抬上架子是物理重量；中译保持能力限制。笨重的操作/形状特征并未单独证明，已移除。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "f488074cb4a9f1dccc5c54204f4cc80cafca40b4a2b650051c9c3e9079dfa3fe",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 重的"
+    },
+    {
+      "id": "heavy-burden",
+      "word": "heavy",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 沉重的",
+      "excludedMeaningLabels": [
+        "adj. 重的",
+        "adv. 沉重地",
+        "n. 严肃角色",
+        "adj. 繁重的",
+        "adj. 巨大的",
+        "adj. 过度的",
+        "n. 沉重的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "fb38dafdf2fd7fe717d35b427556663da76f5beab7f963791f30f4ba800d2a4f",
+      "sourcePrintedMeaning": "重的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 沉重的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "heavy financial burden 为沉重经济负担，repairs/维修费用的语用中译自然。只审经济负担程度，不给繁重工作任务背书。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "e45310e13c4d3af8578f25c32f852f67ce1a1d8a70382b047a4f0012b80174c1",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 重的"
+    },
+    {
+      "id": "long-length",
+      "word": "long",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 长的",
+      "excludedMeaningLabels": [
+        "adj. 长久的",
+        "adj. 冗长的",
+        "adj. 做多头的",
+        "vi. 渴望",
+        "n. 长整型",
+        "n. 长的"
+      ],
+      "teachingDefinition": "adj. 长的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "595ab88e64d18359c9a8eae938b9ee76de38c50ae7b95123eb6d7bd82f76a33c",
+      "sourcePrintedMeaning": "长的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 长的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "long cable 的长为物理长度；另一侧插座说明为什么需长电线。时间持续、金融多头、动词渴望分开。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "595ab88e64d18359c9a8eae938b9ee76de38c50ae7b95123eb6d7bd82f76a33c",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 长的"
+    },
+    {
+      "id": "long-duration-adjective",
+      "word": "long",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 长久的",
+      "excludedMeaningLabels": [
+        "adj. 长的",
+        "adv. 长久",
+        "adj. 冗长的",
+        "adj. 做多头的",
+        "n. 长久的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "35765b8564b83c3d1e39edef7cff5cc9e4933871149544e4cc8d38f92891ec06",
+      "sourcePrintedMeaning": "长的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 长久的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "long meeting 是会议持续时间形容词；中途短暂休息中译相符，不推断令人厌烦的冗长。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "35765b8564b83c3d1e39edef7cff5cc9e4933871149544e4cc8d38f92891ec06",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 长的"
+    },
+    {
+      "id": "long-desire",
+      "word": "long",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "vi.",
+      "meaningForCheck": "vi. 渴望",
+      "excludedMeaningLabels": [
+        "adj. 长的",
+        "adj. 做多头的",
+        "adv. 长久",
+        "n. 长信号",
+        "adj. 渴望"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "558bd8a5ca747ef19dc7bc57d8361d5c57696e03cda9a957926826ca3ec0fbb1",
+      "sourcePrintedMeaning": "长的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 渴望",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "long for 为不及物动词加介词的渴望搭配；一周吵闹施工后希望安静周末的中译完整。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "f40c1feb03ad439f23768d18f310fdc9df5dca635de91329703cf9e1ce16fec0",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 长的"
+    },
+    {
+      "id": "long-duration-adverb",
+      "word": "long",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adv.",
+      "meaningForCheck": "adv. 长久",
+      "excludedMeaningLabels": [
+        "adj. 长久的",
+        "n. 长时间",
+        "vi. 渴望",
+        "adj. 长久"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "d9bd4a0b7b36caaa9764558494f8200aa702b1039d47375134e16d2ccd58fee0",
+      "sourcePrintedMeaning": "长的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "adj. 长久",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "did not wait long 的 long 修饰等候时长；two minutes later 中译与否定式匹配。副词不认证名词或时间形容词。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "d9bd4a0b7b36caaa9764558494f8200aa702b1039d47375134e16d2ccd58fee0",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 长的"
+    },
+    {
+      "id": "shoe-footwear",
+      "word": "shoe",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 鞋",
+      "excludedMeaningLabels": [
+        "n. 外胎",
+        "vt. 为马钉蹄铁",
+        "adj. 鞋"
+      ],
+      "teachingDefinition": "n. 鞋子",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "b0603034f6f840551eb3ff0358a5130c250dbc95f68926da5dc957e0b52dd595",
+      "sourcePrintedMeaning": "鞋子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 鞋",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "comfortable pair of shoes 为普通鞋子，复数 shoes 保留规范词头 shoe；计划整日城中步行与穿舒适鞋因果中译相符。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "b0603034f6f840551eb3ff0358a5130c250dbc95f68926da5dc957e0b52dd595",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 鞋子"
+    },
+    {
+      "id": "small-size",
+      "word": "small",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 小的",
+      "excludedMeaningLabels": [
+        "adj. 少的",
+        "adj. 小气的",
+        "n. 狭小部分",
+        "n. 小的"
+      ],
+      "teachingDefinition": "adj. 小的",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "b4eaf4cbe756d707bfd3fa356615db2a1982643ed39bbd357ecd91cd51294afc",
+      "sourcePrintedMeaning": "小的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 小的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "small table 为家具尺寸小，保留开门空间的目的中译准确。第20与22课都打印此形容词目标，数量少另外成条。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "01bd21e419b5b58c10624bffed63174208e8ae26d57f2bd3061131850a0ebdf1",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 小的",
+      "additionalSourceEvidence": [
+        {
+          "source": {
+            "book": "NCE1",
+            "lesson": 22
+          },
+          "sourcePDFPage": 48,
+          "sourcePrintedPage": 44,
+          "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+          "sourcePrintedPartOfSpeech": "adj.",
+          "sourcePrintedMeaning": "小的",
+          "actualImageOpenedByIndependentReviewer": true
+        }
+      ]
+    },
+    {
+      "id": "small-quantity",
+      "word": "small",
+      "source": {
+        "book": "NCE1",
+        "lesson": 20
+      },
+      "scope": "dictionary-extension",
+      "partOfSpeech": "adj.",
+      "meaningForCheck": "adj. 少的",
+      "excludedMeaningLabels": [
+        "adj. 小的",
+        "adj. 小气的",
+        "adv. 些微地",
+        "n. 少的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "sourcePDFPage": 44,
+      "sourcePrintedPage": 40,
+      "sourceSHA256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch5-objects-colours.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-14-20.ts",
+      "sourcePageSha256": "40efd2904317de68cc54bf3234f5e5c8fa8686a21b45908b34d8c11bd611bd73",
+      "contentSha256": "cc787dd9e64abc1c62441e80d81f5e35ec0d1e2186a4a55e95f952737272dcfd",
+      "sourcePrintedMeaning": "小的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 少的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "editorialReview": "a small amount of water 为少量水，酱汁太稠时添加中译自然；不是桌子尺寸小或小气。",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "cc787dd9e64abc1c62441e80d81f5e35ec0d1e2186a4a55e95f952737272dcfd",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 小的"
+    },
+    {
+      "id": "empty-container-adjective",
+      "word": "empty",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "adj. 空的",
+      "excludedMeaningLabels": [
+        "vt. 倒空",
+        "a. 空虚的",
+        "a. 空腹的",
+        "a. 空洞的",
+        "n. 空的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "jar was empty 表容器状态，so 与洗罐留作下一批果酱的中译因果对应；第22课形容词不能混入第30课倒空动词。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "29efdfdb3e5e8aed4b2c22b713cde5870b6804cb47301ac7d0bf1851d0b8b209",
+      "sourcePrintedMeaning": "空的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 空的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "29efdfdb3e5e8aed4b2c22b713cde5870b6804cb47301ac7d0bf1851d0b8b209",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 空的",
+      "teachingDefinition": "adj. 空的"
+    },
+    {
+      "id": "full-container-adjective",
+      "word": "full",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "adj. 满的",
+      "excludedMeaningLabels": [
+        "n. 全部",
+        "a. 完全的",
+        "a. 丰富的",
+        "a. 丰满的",
+        "adv. 整整",
+        "n. 满的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "full suitcase 表容器已装满，因而另备袋装鞋；中译与分号关系相符。全部名词/完全/丰富等扩展未审。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "e8df2cfe9809f783acc0a7376b2cad817c299f5f811994c493a9debd827d9e7e",
+      "sourcePrintedMeaning": "满的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 满的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "e8df2cfe9809f783acc0a7376b2cad817c299f5f811994c493a9debd827d9e7e",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 满的",
+      "teachingDefinition": "adj. 满的"
+    },
+    {
+      "id": "large-size-adjective",
+      "word": "large",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "adj. 大的",
+      "excludedMeaningLabels": [
+        "a. 大量的",
+        "a. 广博的",
+        "adv. 大大地",
+        "adj. 宽大的",
+        "n. 大的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "大信封用于不折叠证书，为尺寸形容词；must not be folded 中译准确。已移除未单独核验的宽大的标签。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "715d0c4e34038b59c917ec351a22833340f5f4740d38b9bcd9b94229cf422b2e",
+      "sourcePrintedMeaning": "大的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 大的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "226959767432250878224d0f2d943870ae621f68c61edc2b4787ef6f8c19a1ad",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 大的",
+      "teachingDefinition": "adj. 大的"
+    },
+    {
+      "id": "little-size-adjective",
+      "word": "little",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "adj. 小的",
+      "excludedMeaningLabels": [
+        "n. 少许",
+        "a. 很少的",
+        "a. 琐碎的",
+        "a. 短暂的",
+        "adv. 稍微",
+        "adj. 矮小的",
+        "n. 小的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "little wooden box 能放进外套口袋，为尺寸小形容词；木盒不是人体身高矮小或数量很少。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "41b408de63c1155e44a6f73e46e24074f58a44100d5f9a3e2c0dcd522ec595c5",
+      "sourcePrintedMeaning": "小的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 小的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "bed8e65d0be3cbcbed4c985324cb772fd5b2571c493654064744face7479a374",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 小的",
+      "teachingDefinition": "adj. 小的"
+    },
+    {
+      "id": "blunt-edge-adjective",
+      "word": "blunt",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "adj.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "adj. 钝的",
+      "excludedMeaningLabels": [
+        "a. 坦率的",
+        "a. 麻痹的",
+        "n. 钝的"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "blunt scissors 无法把厚纸板剪整齐，是刃口钝；neatly 中译明确，不代表言语坦率。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "7bfb73d2bf1577f71786de983ab6abd05a664538839b2bf2b047d2d0cff8755a",
+      "sourcePrintedMeaning": "钝的",
+      "sourcePrintedPartOfSpeech": "adj.",
+      "wrongPartOfSpeechMeaning": "n. 钝的",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "7bfb73d2bf1577f71786de983ab6abd05a664538839b2bf2b047d2d0cff8755a",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "adj. 钝的",
+      "teachingDefinition": "adj. 钝的"
+    },
+    {
+      "id": "box-container-noun",
+      "word": "box",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "n. 盒子，箱子",
+      "excludedMeaningLabels": [
+        "n. 方框",
+        "n. 一巴掌",
+        "vi. 拳击",
+        "vt. 装箱",
+        "adj. 盒子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "cardboard box 是可数容器，lid 为盒盖；装旧照片并给盖做标签中译自然。方框、拳击和装箱动词排除。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "b4b2c1d9311c4d4a90288885d380bc4f99ac099145ded398ef1cfb0d773f1ffa",
+      "sourcePrintedMeaning": "盒子，箱子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 盒子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "b4b2c1d9311c4d4a90288885d380bc4f99ac099145ded398ef1cfb0d773f1ffa",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 盒子，箱子",
+      "teachingDefinition": "n. 盒子，箱子"
+    },
+    {
+      "id": "glass-drinking-container",
+      "word": "glass",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "n. 杯子",
+      "excludedMeaningLabels": [
+        "n. 玻璃",
+        "n. 透镜",
+        "n. 眼镜",
+        "vt. 装玻璃于",
+        "adj. 杯子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "a glass 为可数饮水杯，filled with water 对应倒满水；beside guest plate 对应客人盘子旁，材料玻璃/眼镜分开。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "895d7e288426135a279538b3758be1e03d911d3c66c190d23f6f1e98c08560cf",
+      "sourcePrintedMeaning": "杯子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 杯子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "895d7e288426135a279538b3758be1e03d911d3c66c190d23f6f1e98c08560cf",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 杯子",
+      "teachingDefinition": "n. 杯子"
+    },
+    {
+      "id": "bottle-container-noun",
+      "word": "bottle",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "n. 瓶子",
+      "excludedMeaningLabels": [
+        "vt. 装瓶",
+        "vt. 抑制",
+        "vt. 围困",
+        "n. 酒瓶",
+        "adj. 瓶子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "bottle 为有盖容器，拧紧瓶盖再放背包的时序中译准确；内容物未说明，不用酒瓶专类标签填数。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "0fb358865106e02539229eba6439d20c90f6341e50c23d9de0d1dc179b5c7c50",
+      "sourcePrintedMeaning": "瓶子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 瓶子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "3a5314b3496fe39a2233ac751db80cac9498a8d606a19416f4f82c6157c5a6c0",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 瓶子",
+      "teachingDefinition": "n. 瓶子"
+    },
+    {
+      "id": "tin-canned-food",
+      "word": "tin",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "n. 罐头",
+      "excludedMeaningLabels": [
+        "n. 锡",
+        "n. 马口铁",
+        "a. 锡制的",
+        "vt. 镀锡于",
+        "n. 罐头盒",
+        "adj. 罐头"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "two tins of soup 为英式食物罐头计数；新中译明确 packed 的装进行李动作和露营目的。排除锡金属及空罐头盒标签。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "66c37f9cc80b13f61fa9905fbf587518da9b62cb491175975e1e5e99bb61b5cb",
+      "sourcePrintedMeaning": "罐头",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 罐头",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "f5aa61ffe898c275ce1d18c3254c5dea542116b869a9bb5116d391b87bde2615",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 罐头",
+      "teachingDefinition": "n. 罐头"
+    },
+    {
+      "id": "knife-cutting-tool",
+      "word": "knife",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "n. 刀子",
+      "excludedMeaningLabels": [
+        "n. 匕首",
+        "vt. 伤害",
+        "vt. 戳",
+        "vi. 穿过",
+        "adj. 刀子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "small knife 削苹果是切削日常工具名词，句中使用动作和中译相符；不自动覆盖匕首武器或伤害动词。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "a392095c1ca9e5e7de3a1d7bed863916b3aef1c77d23858a3725e57235b7cfe2",
+      "sourcePrintedMeaning": "刀子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 刀子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "a392095c1ca9e5e7de3a1d7bed863916b3aef1c77d23858a3725e57235b7cfe2",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 刀子",
+      "teachingDefinition": "n. 刀子"
+    },
+    {
+      "id": "fork-eating-tool",
+      "word": "fork",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "n. 叉子",
+      "excludedMeaningLabels": [
+        "n. 分岔",
+        "vt. 叉起",
+        "vi. 分支",
+        "[计] 派生指令",
+        "adj. 叉子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "with his fork 表可数餐具，叉起土豆再尝的动作中译相符；词头 fork 保持名词，不能借动作翻译混成 fork 动词。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "76876b7dd45a2dd717c94853ee1658057fe91ff83cfa9f2f27308b50ecb7928d",
+      "sourcePrintedMeaning": "叉子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 叉子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "76876b7dd45a2dd717c94853ee1658057fe91ff83cfa9f2f27308b50ecb7928d",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 叉子",
+      "teachingDefinition": "n. 叉子"
+    },
+    {
+      "id": "spoon-eating-tool",
+      "word": "spoon",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 22
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 48,
+      "sourcePrintedPage": 44,
+      "sourcePageSha256": "fd115d2a1fca250865a34dc95959a0d18608a1be62759c12f61323ea3cff0bbe",
+      "meaningForCheck": "n. 勺子",
+      "excludedMeaningLabels": [
+        "n. 匙形工具",
+        "vt. 以匙舀起",
+        "vt. 调情",
+        "adj. 勺子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "wooden spoon 搅汤至盐溶解为勺子工具名词；中译自然，匙/调羹保持同类器具，不认证舀动词或匙形工具泛类。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "6a3912aac0e4c0ed2581d9b56d498d000cb930dc045f53f631e4d8f86dc739d5",
+      "sourcePrintedMeaning": "勺子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 勺子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "6a3912aac0e4c0ed2581d9b56d498d000cb930dc045f53f631e4d8f86dc739d5",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 勺子",
+      "teachingDefinition": "n. 勺子"
+    },
+    {
+      "id": "desk-school-furniture",
+      "word": "desk",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "meaningForCheck": "n. 课桌",
+      "excludedMeaningLabels": [
+        "n. 工作台",
+        "n. 书桌",
+        "n. 办公桌",
+        "adj. 课桌"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "at school 与 exercise books 明示课桌情境，抽屉中存练习本的中译相符；收窄为课桌，家庭书桌/办公桌另待审核。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "679c971ed69fefc8c513e1d2c72cac88ea2298e5c1f5f3242dfe51ca822aff07",
+      "sourcePrintedMeaning": "课桌",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 课桌",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "4a45df18fda53f411859cb24475c37c4304505434b5e5b509d7669a26882155b",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 课桌",
+      "teachingDefinition": "n. 课桌"
+    },
+    {
+      "id": "table-furniture-noun",
+      "word": "table",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "meaningForCheck": "n. 桌子",
+      "excludedMeaningLabels": [
+        "n. 表格",
+        "n. 铭文",
+        "n. 高原",
+        "vt. 搁置",
+        "adj. 桌子"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "move the table 为可搬家具，午饭前挪近窗户的中译对应 closer；不覆盖表格、高原或搁置动词。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "3c80793973d98b516d48ebdac0733886e08f64b5796005a992e9854d91926d2d",
+      "sourcePrintedMeaning": "桌子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 桌子",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "3c80793973d98b516d48ebdac0733886e08f64b5796005a992e9854d91926d2d",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 桌子",
+      "teachingDefinition": "n. 桌子"
+    },
+    {
+      "id": "cupboard-kitchen-storage",
+      "word": "cupboard",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "partOfSpeech": "n.",
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "meaningForCheck": "n. 食橱",
+      "excludedMeaningLabels": [
+        "n. 衣柜",
+        "adj. 食橱"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "洗盘子后放回 cupboard 为食橱/碗柜/餐具柜实体同义，put back 中译准确；不表示衣柜。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "8d6a6e50b45e8f92b2b936e63e69407802cb7ea34c3ffec7b580bfbfd5f4bb81",
+      "sourcePrintedMeaning": "食橱",
+      "sourcePrintedPartOfSpeech": "n.",
+      "wrongPartOfSpeechMeaning": "adj. 食橱",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "8d6a6e50b45e8f92b2b936e63e69407802cb7ea34c3ffec7b580bfbfd5f4bb81",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "n. 食橱",
+      "teachingDefinition": "n. 食橱"
+    },
+    {
+      "id": "empty-remove-contents-verb",
+      "word": "empty",
+      "scope": "textbook-target",
+      "source": {
+        "book": "NCE1",
+        "lesson": 30
+      },
+      "partOfSpeech": "v.",
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "meaningForCheck": "v. 倒空，使……变空",
+      "excludedMeaningLabels": [
+        "a. 空的",
+        "a. 空虚的",
+        "n. 空车",
+        "vt. 使排出",
+        "adj. 倒空"
+      ],
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "canonical headword",
+        "word-list source"
+      ],
+      "editorialReview": "empty the bin 为倒空容器动作，先倒垃圾再套新袋中译与 before 对应；第30课 v. 标签和第22课状态 adj. 标签单独匹配。",
+      "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "contentSha256": "16913242c65dce42a7437b8e99384c3546d1093c167c715fd79299dbcc63e330",
+      "sourcePrintedMeaning": "倒空，使……变空",
+      "sourcePrintedPartOfSpeech": "v.",
+      "wrongPartOfSpeechMeaning": "adj. 倒空",
+      "reviewer": "Independent Codex /root/review_batch5b; no human certification",
+      "reviewStatus": "pass",
+      "savedDraftContentSha256": "16913242c65dce42a7437b8e99384c3546d1093c167c715fd79299dbcc63e330",
+      "humanCertification": false,
+      "sourceWordlistDefinition": "v. 倒空，使……变空",
+      "teachingDefinition": "v. 倒空，使……变空"
+    }
+  ]
+}

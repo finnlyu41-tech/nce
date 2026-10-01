@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "batch": "5b",
+  "recordedAt": "2026-10-01T21:29:13.802385+00:00",
+  "baseCommit": "f7596646f7429234e7d4fed2c83b89e849541c19",
+  "branch": "codex/vocabulary-review-20261001",
+  "reviewedCopy": {
+    "contentFile": "app/data/vocabulary-reviewed-batch5b.ts",
+    "contentSha256": "25c9cfe22f8f80495b894ad9598d4f8ea45842515a1be6cea991a1d5e0d996ab",
+    "ledgerFile": "docs/vocabulary-reviewed-batch5b.json",
+    "ledgerSha256": "adc1c8e8813e70c0c6bd05682703f4115cfa08b54bc17407bde1442462d0c49a"
+  },
+  "newHeadwords": 30,
+  "newExamples": 50,
+  "scopes": {
+    "dictionary-extension": 17,
+    "textbook-target": 33
+  },
+  "sourceImagesHashChecked": 7,
+  "perIdCanonicalHeadwordAndPageChecks": 50,
+  "frozenOriginalDraftFilesUnchanged": 10,
+  "protectedFilesUnchanged": true,
+  "protectedHashes": {
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/flashcards.ts": "b7327bae677085b3321bc54e9e7540deb64c60a0c79f780bd7800d9df8e44333",
+    "app/flashcard-types.ts": "f001cd06ca977a1188b176c8eff664a7d07ef851fbead642864626694222fd7f",
+    "app/flashcard-ui.tsx": "0e56924938c929eede02889ecbab9aba8b7d3e7a470e6a238a44ba1c20331749",
+    "app/progress-save.tsx": "51777b9bb7ce2a6ae75c9cefe2fcf57a9eda8eea3aa9eae2ec8a6edac5f6579b",
+    "pnpm-lock.yaml": "22336ed8eb4954d3877fc49982f153f2cdc19f45c554106d378c7b136607eb3f"
+  },
+  "integratedCoverage": {
+    "basis": "Existing lesson sentences are lexical candidates; reviewed source teaching meanings override dictionary display only in the associated vocabulary list. This is not an audit of all senses",
+    "textbookTerms": 3347,
+    "textbookOccurrences": 3615,
+    "occurrencesWithBilingualCandidate": 3267,
+    "termsWithBilingualCandidate": 3047,
+    "candidatesByBook": {
+      "NCE1": 611,
+      "NCE3": 1046,
+      "NCE4": 783,
+      "NCE2": 827
+    },
+    "originalHeadwords": 104,
+    "originalSenseExamples": 158,
+    "originalsMatchingIndexedDefinitions": 100,
+    "originalsMatchingTeachingOrIndexedDefinitions": 104,
+    "termsWithCandidateOrReviewedOriginal": 3136,
+    "termsWithoutEither": 211,
+    "ieltsSeedExamples": 12
+  },
+  "integratedCanonicalSourceHeadwordPairs": 63,
+  "integratedCallbacksPerPair": [
+    "Vocabulary row",
+    "Asynchronous lookup"
+  ],
+  "savedDraftsRemaining": {
+    "headwordUnits": 117,
+    "examples": 167
+  },
+  "passed": [
+    "Every registered content hash and ID retained",
+    "Self-sense / reviewed positive / excluded sense and POS gates",
+    "Actual registered source-target component callbacks",
+    "Six reviewed word-form regression callbacks and recovery",
+    "Canonical source headword and real image page hash for every new ID",
+    "Targeted data/helper ESLint",
+    "Original ten saved files and protected learning/FSRS/backup files unchanged"
+  ],
+  "logs": [
+    {
+      "path": "work/batch5b/integrated-examples.log",
+      "sha256": "dd251e80478e8f492844a72ee5c277a65546e9f5c47638a673f51af44976c7a6"
+    },
+    {
+      "path": "work/batch5b/integrated-callbacks.log",
+      "sha256": "aad0feaf4e1f889e1940392bc19c0b2b03f4232a39e845f1f1bf160bc08abdcf"
+    },
+    {
+      "path": "work/batch5b/integrated-lint.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "notVerified": [
+    "Full checkpoint build (deferred until all five batches are integrable)",
+    "Browser",
+    "320/390",
+    "Actual audio",
+    "Human teacher",
+    "All source or dictionary senses"
+  ],
+  "published": false,
+  "remoteWriteAttempted": false,
+  "merged": false
+}
