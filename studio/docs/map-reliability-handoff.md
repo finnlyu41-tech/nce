@@ -1,6 +1,6 @@
 # 学习地图状态与保存修复交接
 
-原四项与后续独立换题兼容修复已完成验收，待主发布者串行集成；本分支未部署。独立分支 `codex/map-reliability-recovered-20261001`，工作树 `/tmp/english-reliability-recovered-20261001`，实际 origin 为 `finnlyu41-tech/nce`。
+原四项与后续独立换题兼容修复已合入主发布线，发布验收进行中。来源分支 `codex/map-reliability-recovered-20261001`，实际 origin 为 `finnlyu41-tech/nce`；来源分支未独立部署。
 
 审计基线 `97c85c5eb8ce785f7e837c85b6a064a437bd732a` 与 `076906e` 之间仅 README 改动。补丁固定合并远端 v17 主线 `0bec6cf`（合并提交 `5be5973`），保留主发布者的 Today、samplePracticeTasks、自动复习、语法与最小 demo。后续最小修复提交 `5cf9a61` 在原检查点 `12a045c` 之后；它修改六个生产文件与两份测试。整个分支生产范围为 `map/model.ts`、`main.tsx`、`learning.tsx`、`course.tsx`、`content.ts`、`curriculum.ts`、`review-route.ts`；仅给两个起步节点追加独立材料，不扩课程体系或重构导航。
 
@@ -92,6 +92,6 @@ node map/test-save-browser.mjs
 
 Codex app 的通知／附件连接一度返回 `Transport closed`；连接恢复后已实际告知发布 owner `5cf9a61` 范围与全部兼容边界。owner 回执确认等待证据后串行接入，并报告独立只读复核：36 组旧题／备份、112 个 marker 限制、240 轮换题与真实 due 流通过。
 
-**主线集成待办（owner 已接手）：** `app/today-practice.ts` 的 resume 还需同时比较 `last?.bank !== record.bank`，否则同 round 的旧 proof 与新 bank 半途作答可能漏队列项。保留 `samplePracticeTasks` 接线。本分支未改全局 Today；owner 承诺接入时最小补齐并独立复验。这一项闭合前不能宣称全站串行发布已验收。
+**主线集成结果：** `271112b` 已补齐 `app/today-practice.ts` 的 resume 同时比较 round 与 bank，保留 `samplePracticeTasks` 接线。新增真实同轮不同题组、半途答案导出／恢复及提交后的回归；主线 49 项今日推荐、18 项自动复习接线、12,881 项地图模型、41 个可靠性场景、252 项外评／导航和 102 项真实 TSX 检查通过。发布版本的浏览器交互仍须单独验收，不能以来源截图替代。
 
 现有 Obsidian 路径及指定 Dropbox 根 AGENTS.md 不可读，未创建替代 vault 或重复状态库。本文件保留本批集成、兼容与验收决定。主发布者集成时仅接收本分支相对在线主线的补丁，当前批次完成后串行上线。
