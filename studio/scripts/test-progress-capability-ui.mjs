@@ -21,12 +21,13 @@ try {
   await build({stdin: {contents: `
     export * as capability from './app/capability-review-backup';
     export * as files from './app/progress-file';
+    export * as offline from './app/offline-store';
     export * as demo from './public/demos/yesterday/model.mjs';
     export * as review from './public/demos/yesterday/review-adapter.mjs';
     export {initial, validateState} from './app/model';
     export * as flashcards from './app/flashcards';
   `, resolveDir: rootPath, sourcefile: 'progress-capability-ui-check.ts', loader: 'ts'}, bundle: true, platform: 'node', format: 'esm', target: 'node22', outfile: output, logLevel: 'silent'});
-  const {capability, files, demo, review, initial, validateState, flashcards} = await import(pathToFileURL(output).href);
+  const {capability, files, offline, demo, review, initial, validateState, flashcards} = await import(pathToFileURL(output).href);
   const START = Date.now() - 3 * review.DAY_MS, NOW = START + 2 * review.DAY_MS;
   let completed = demo.initialState(START);
   completed = demo.showQuestion(completed, 'new-omar');
@@ -45,21 +46,39 @@ try {
   // conflict check or flashcard compatibility logic in the test implementation.
   const hostSource = await readFile(new URL('app/study-app.tsx', root), 'utf8');
   const hostAST = ts.createSourceFile('study-app.tsx', hostSource, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
-  const callbacks = [];
-  function visit(node) {if (ts.isFunctionDeclaration(node) && node.name?.text === 'restoreProgress') callbacks.push(node); ts.forEachChild(node, visit);}
-  visit(hostAST); assert.equal(callbacks.length, 1, 'Find the real host restoreProgress callback');
-  const hostFactorySource = `export function createHostRestore(dependencies) {
-    const {stateRef, validateState, prepareFlashcardRestore, courseWords, storageMode, writeState, localStorage, KEY, setState, setPersisted, setStorageError, setStorageBlocked} = dependencies;
-    ${callbacks[0].getText(hostAST)}
-    return restoreProgress;
-  }`;
+  const callbacks = new Map(), autosaves = [];
+  function visit(node) {
+    if (ts.isFunctionDeclaration(node) && ['restoreProgress', 'captureProgressRestore'].includes(node.name?.text)) callbacks.set(node.name.text, node);
+    if (ts.isCallExpression(node) && node.expression.getText(hostAST) === 'useEffect' && node.arguments[0]?.getText(hostAST).includes('await writeState(state)')) autosaves.push(node.arguments[0]);
+    ts.forEachChild(node, visit);
+  }
+  visit(hostAST); assert.equal(callbacks.size, 2, 'Find the actual host capture and restore callbacks');
+  assert.equal(autosaves.length, 1, 'Find the actual host autosave effect');
+  const hostFactorySource = `export function createHostCallbacks(dependencies) {
+    const {stateRef, validateState, prepareFlashcardRestore, courseWords, storageMode, readStateSnapshot, writeState, writeLegacyState, restoreStateSnapshot, restoreLegacyStateSnapshot, localStorage, KEY, setState, setPersisted, setStorageError, setStorageBlocked, state, ready, storageBlocked, persisted} = dependencies;
+    ${callbacks.get('captureProgressRestore').getText(hostAST)}
+    ${callbacks.get('restoreProgress').getText(hostAST)}
+    return {restore:restoreProgress,capture:captureProgressRestore,autosave:()=>(${autosaves[0].getText(hostAST)})()};
+  }
+  export function createHostRestore(dependencies) {return createHostCallbacks(dependencies).restore;}`;
   const hostFactoryCode = ts.transpileModule(hostFactorySource, {compilerOptions: {target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ESNext}}).outputText;
-  const {createHostRestore} = await import('data:text/javascript;base64,' + Buffer.from(hostFactoryCode).toString('base64'));
-  function hostDependencies(state, writeState, options = {}) {
-    const stateRef = {current: state}, setters = [], writes = [];
-    return {stateRef, setters, writes, validateState, courseWords: [], storageMode: 'db', KEY: 'english-studio-v1',
+  const {createHostRestore, createHostCallbacks} = await import('data:text/javascript;base64,' + Buffer.from(hostFactoryCode).toString('base64'));
+  function hostDependencies(state, write, options = {}) {
+    const stateRef = {current: state}, setters = [], writes = [], database = {raw:JSON.stringify(state)};
+    return {stateRef, setters, writes, database, validateState, courseWords: [], storageMode: 'db', KEY: 'english-studio-v1', state, ready:true, storageBlocked:false, persisted:state,
       prepareFlashcardRestore: flashcards.prepareFlashcardRestore,
-      writeState: async next => {writes.push(next); await writeState(next);},
+      readStateSnapshot: async () => ({mode:'db',raw:database.raw}),
+      writeState: async (next, guard) => {
+        if (guard && (database.raw !== guard.expectedRaw || guard.unchanged && !guard.unchanged())) throw Error('学习记录已更新，请重新核对后恢复。');
+        writes.push(next); await write(next);
+        database.raw = next === undefined ? null : JSON.stringify(next);
+      },
+      restoreStateSnapshot: async (snapshot, guard) => {
+        if (database.raw !== guard.expectedRaw || guard.unchanged && !guard.unchanged()) throw Error('学习记录已更新，请重新核对后恢复。');
+        const next = snapshot.raw === null ? undefined : JSON.parse(snapshot.raw);
+        writes.push(next); await write(next); database.raw = snapshot.raw;
+      },
+      writeLegacyState: offline.writeLegacyState, restoreLegacyStateSnapshot: offline.restoreLegacyStateSnapshot,
       localStorage: globalThis.localStorage,
       setState: next => setters.push(['state', next]), setPersisted: next => setters.push(['persisted', next]),
       setStorageError: value => setters.push(['error', value]), setStorageBlocked: value => setters.push(['blocked', value]),
@@ -171,26 +190,30 @@ try {
  }
 
   function mount(env, options = {}) {
-    let state = options.state || currentState();
+    let state = options.state || currentState(), persistedState = copy(state);
     const restored = [], dependencies = {...files, ...capability, toast: (kind, message) => env.toasts.push({kind, message})};
     for (const name of ['captureCapabilityReviewBackup', 'prepareCapabilityReviewRestore', 'executeCapabilityReviewRestore']) {
       dependencies[name] = (...args) => {env.calls.push({name, args}); return capability[name](...args);};
     }
     const view = renderer(dependencies);
     let activeSettings;
-    const host = hostDependencies(state, async () => {
+    const host = hostDependencies(state, async next => {
       if (activeSettings.exact && options.failRollback) throw Error('Textbook rollback denied');
       if (!activeSettings.exact && options.failApply) throw Error('Textbook write denied');
+      persistedState = next === undefined ? undefined : copy(next);
     }, {setState: next => {state = next; view.update({state});}});
-    const actualRestore = createHostRestore(host);
+    const callbacks = createHostCallbacks(host), actualRestore = callbacks.restore;
     const restore = async (incoming, settings) => {
       restored.push({incoming, settings, before: state});
-      assert.equal(settings.expected, state, 'The host receives the actual expected state reference');
+      assert.ok(settings.expected && settings.persisted, 'The host receives both frozen page and persisted guards');
       activeSettings = settings;
       return actualRestore(incoming, settings);
     };
-    view.mount({state, ready: options.ready ?? true, status: 'test-memory', restore});
-    return {view, restored, get state() {return state;}};
+    view.mount({state, ready: options.ready ?? true, status: 'test-memory', captureRestore:callbacks.capture, restore});
+    return {view, restored, get state() {return state;}, get persistedState() {return persistedState;},
+      writeFromOtherTab(next) {persistedState = copy(next); host.database.raw = JSON.stringify(next);},
+      editThisPage(next) {state = next; host.stateRef.current = next; view.update({state});},
+      get mainWrites() {return host.writes;}};
   }
   async function click(host, env, label) {
     const target = button(host.view, label); assert.notEqual(target.props.disabled, true);
@@ -255,6 +278,61 @@ try {
       assert.match(successes(env)[0].message, /旧文件不含句子练习与自动复习.*原样保留/); host.view.unmount();
     });
   });
+  for (const [version, file] of [[1, legacyFile], [2, completeFile]]) {
+    test(`v${version} rejects another tab's textbook save after preview, preserving all three stores`, async () => {
+      await environment(populated(), async env => {
+        const host = mount(env), original = host.state, dualBefore = env.storage.snapshot();
+        await open(host); await choose(host, file);
+        const newer = {...copy(original), drafts: {note: `v${version} another tab saved AFTER preview`}};
+        host.writeFromOtherTab(newer);
+        assert.equal(host.state, original, 'Other-tab persistence does not update this page State reference');
+        await click(host, env, '确认替换并恢复');
+        assert.deepEqual(host.persistedState, newer, 'Confirmation must not overwrite the newly persisted textbook note');
+        assert.equal(host.state, original); assert.deepEqual(env.storage.snapshot(), dualBefore); noWrites(env.storage);
+        assert.equal(host.mainWrites.length, 0, 'A stale main preflight must never trigger a rollback write');
+        assert.equal(successes(env).length, 0); assert.deepEqual(env.events, []);
+        assert.match(env.toasts.at(-1).message, /重新核对/);
+        assert.match(text(host.view.tree), /重新核对当前记录/); host.view.unmount();
+      });
+    });
+  }
+  for (const [version, file] of [[1, legacyFile], [2, completeFile]]) {
+    test(`v${version} also freezes this page's State at preview and allows a fresh re-preview`, async () => {
+      await environment(populated(), async env => {
+        const host = mount(env), dualBefore = env.storage.snapshot(); await open(host); await choose(host, file);
+        const newer = {...copy(host.state), drafts:{note:`v${version} same-page new input after preview`}};
+        host.editThisPage(newer); host.writeFromOtherTab(newer);
+        await click(host, env, '确认替换并恢复');
+        assert.equal(host.state, newer); assert.deepEqual(host.persistedState, newer); assert.equal(host.mainWrites.length, 0);
+        assert.equal(successes(env).length, 0); assert.deepEqual(env.storage.snapshot(), dualBefore);
+        await click(host, env, '重新核对当前记录'); await click(host, env, '确认替换并恢复');
+        assert.deepEqual(host.state.drafts, incomingState().drafts); assert.equal(successes(env).length, 1);
+        await click(host, env, '恢复上一次替换前的教材记录'); await click(host, env, '确认替换并恢复');
+        assert.deepEqual(host.state.drafts, newer.drafts); host.view.unmount();
+      });
+    });
+  }
+  test('a fresh re-preview preserves the actual other-tab State as the undo snapshot', async () => {
+    await environment(populated(), async env => {
+      const host=mount(env); await open(host); await choose(host,completeFile);
+      const newer={...copy(host.state),drafts:{note:'Other-tab original for precise undo'}};host.writeFromOtherTab(newer);
+      await click(host,env,'确认替换并恢复');await click(host,env,'重新核对当前记录');await click(host,env,'确认替换并恢复');
+      assert.deepEqual(host.state.drafts,incomingState().drafts);
+      await click(host,env,'恢复上一次替换前的教材记录');await click(host,env,'确认替换并恢复');
+      assert.deepEqual(host.state.drafts,newer.drafts);assert.deepEqual(host.persistedState.drafts,newer.drafts);host.view.unmount();
+    });
+  });
+  test('cancelled previews and malformed files preserve input, persisted State and both namespaces', async () => {
+    await environment(populated(), async env => {
+      const host=mount(env),original=host.state,dualBefore=env.storage.snapshot();await open(host);
+      await choose(host,new File(['{broken'],'bad.json',{type:'application/json'}));
+      assert.equal(host.state,original);assert.deepEqual(host.persistedState,original);assert.equal(host.mainWrites.length,0);
+      assert.equal(successes(env).length,0);assert.ok(env.toasts.some(value=>value.kind==='error'));
+      for(const file of [legacyFile,completeFile]) {await choose(host,file);await click(host,env,'取消恢复');}
+      assert.equal(host.state,original);assert.deepEqual(host.persistedState,original);assert.equal(host.mainWrites.length,0);
+      assert.deepEqual(env.storage.snapshot(),dualBefore);noWrites(env.storage);assert.deepEqual(env.events,[]);host.view.unmount();
+    });
+  });
   test('invalid capability payloads stop at preflight without touching either storage or textbook state', async () => {
     await environment(populated(), async env => {
       const host = mount(env), before = env.storage.snapshot(), classic = host.state;
@@ -316,22 +394,21 @@ try {
       assert.equal(host.restored.length, 2);
       const [apply, rollback] = host.restored;
       assert.equal(apply.settings.expected, original); assert.equal(apply.settings.exact, undefined);
-      assert.equal(rollback.incoming, original); assert.equal(rollback.settings.exact, true);
+      assert.deepEqual(rollback.incoming, original); assert.equal(rollback.settings.exact, true);
       assert.equal(rollback.settings.expected, rollback.before, 'Rollback guards the exact applied State reference');
       assert.notEqual(rollback.settings.expected, original);
-      assert.equal(host.state, original); assert.deepEqual(env.storage.snapshot(), before);
+      assert.deepEqual(host.state, original); assert.deepEqual(env.storage.snapshot(), before);
       assert.deepEqual(env.locks.requests, [demo.storageKey, review.STORAGE_KEY].sort());
       assert.equal(successes(env).length, 0); assert.deepEqual(env.events, []);
       assert.match(env.toasts.at(-1).message, /恢复未完成/);
       assert.match(text(host.view.tree), /重新核对当前记录/); host.view.unmount();
     });
   });
-  test('a rejected textbook write still runs guarded exact rollback without writing either capability namespace', async () => {
+  test('a rejected uncommitted textbook write skips rollback without writing either capability namespace', async () => {
     await environment(new MemoryStorage(), async env => {
       const host = mount(env, {failApply: true}), original = host.state;
       await open(host); await choose(host, completeFile); await click(host, env, '确认替换并恢复');
-      assert.equal(host.restored.length, 2);
-      assert.deepEqual(host.restored[1].settings, {exact: true, expected: original});
+      assert.equal(host.restored.length, 1);
       assert.equal(host.state, original); noWrites(env.storage);
       assert.equal(successes(env).length, 0); assert.deepEqual(env.events, []);
       assert.match(env.toasts.at(-1).message, /恢复未完成/); host.view.unmount();
@@ -367,6 +444,68 @@ try {
     });
   });
 
+  test('a newer other-tab main write during dual failure is preserved and reported as partial recovery', async () => {
+    await environment(new MemoryStorage(), async env => {
+      const host=mount(env),before=copy(host.state);await open(host);await choose(host,completeFile);
+      const newer={...copy(before),drafts:{note:'Other tab saved while dual apply failed'}};
+      env.storage.failWrite=key=>{if(key===review.STORAGE_KEY){host.writeFromOtherTab(newer);return true;}return false;};
+      await click(host,env,'确认替换并恢复');
+      assert.deepEqual(host.persistedState,newer);assert.equal(host.mainWrites.length,1,'Conflicting rollback must abort without another write');
+      assert.equal(successes(env).length,0);assert.deepEqual(env.events,[]);assert.match(text(host.view.tree),/部分记录的回退未能确认/);
+      await click(host,env,'下载恢复资料');const recovery=JSON.parse(await env.downloads[0].text());
+      assert.deepEqual(recovery.before.state,before);assert.equal(recovery.details.status,'partial-failure');
+      assert.equal(recovery.details.recovery.main,'rollback-failed');assert.equal(recovery.main.original.raw,JSON.stringify(before));host.view.unmount();
+    });
+  });
+  test('the actual autosave effect skips a committed restore and cannot rewrite it over another tab', async () => {
+    await environment(new MemoryStorage(),async()=>{
+      const next=incomingState(),host=hostDependencies(next,async()=>{});host.database.raw=JSON.stringify({...next,drafts:{note:'Other tab saved after restore commit'}});
+      const callbacks=createHostCallbacks(host);assert.equal(callbacks.autosave(),undefined);await Promise.resolve();
+      assert.deepEqual(host.writes,[]);assert.match(host.database.raw,/Other tab saved after restore commit/);
+      const dirty=hostDependencies(next,async()=>{},{persisted:currentState()});createHostCallbacks(dirty).autosave();
+      for(let i=0;i<5;i++)await Promise.resolve();assert.equal(dirty.writes.length,1,'An ordinary unsaved edit still persists');
+    });
+  });
+  test('the actual host records a committed receipt before rejecting input changed during persistence', async () => {
+    await environment(new MemoryStorage(),async()=>{
+      const before=currentState();let resolveWrite,committed;
+      const host=hostDependencies(before,()=>new Promise(resolve=>{resolveWrite=resolve;}));const callbacks=createHostCallbacks(host),checkpoint=await callbacks.capture();
+      const saving=callbacks.restore(incomingState(),{expected:checkpoint.expected,persisted:checkpoint.persisted,onCommitted:next=>{committed=next;}});
+      const newer={...copy(before),drafts:{note:'Local input while persistence was pending'}};host.stateRef.current=newer;resolveWrite();
+      await assert.rejects(saving,/保存期间.*已更新/);assert.ok(committed);assert.equal(host.stateRef.current,newer);assert.deepEqual(host.setters,[]);
+      await assert.rejects(callbacks.restore(before,{exact:true,expected:committed,persisted:{mode:'db',raw:JSON.stringify(committed)},rollbackTo:checkpoint.persisted}),/已更新/);
+      assert.equal(host.writes.length,1,'The guarded rollback cannot overwrite the current local input');
+    });
+  });
+  test('the actual preview rejects a State change while its persisted capture was pending', async () => {
+    await environment(new MemoryStorage(),async()=>{
+      const before=currentState();let release;
+      const host=hostDependencies(before,async()=>{},{readStateSnapshot:()=>new Promise(resolve=>{release=resolve;})});
+      const capturing=createHostCallbacks(host).capture();host.stateRef.current={...copy(before),drafts:{note:'Edited while preview was reading'}};
+      release({mode:'db',raw:JSON.stringify(before)});await assert.rejects(capturing,/已更新/);assert.deepEqual(host.writes,[]);assert.deepEqual(host.setters,[]);
+    });
+  });
+  test('a valid file can repair a damaged main record while guarded rollback preserves its original raw', async () => {
+    await environment(new MemoryStorage(),async()=>{
+      const page=currentState(),damaged={...copy(initial),correct:1,attempts:0};assert.equal(validateState(damaged),false);
+      const host=hostDependencies(page,async()=>{});host.database.raw=JSON.stringify(damaged);
+      const callbacks=createHostCallbacks(host),checkpoint=await callbacks.capture();assert.equal(checkpoint.state,page);assert.equal(checkpoint.persisted.raw,JSON.stringify(damaged));
+      let applied;await callbacks.restore(incomingState(),{expected:page,persisted:checkpoint.persisted,onCommitted:next=>{applied=next;}});
+      assert.ok(validateState(JSON.parse(host.database.raw)));assert.deepEqual(host.setters.slice(-2),[['error',false],['blocked',false]]);
+      await callbacks.restore(checkpoint.state,{exact:true,expected:applied,persisted:{mode:'db',raw:JSON.stringify(applied)},rollbackTo:checkpoint.persisted});
+      assert.equal(host.database.raw,JSON.stringify(damaged));assert.deepEqual(host.setters.slice(-2),[['error',true],['blocked',true]]);
+    });
+  });
+  test('legacy malformed stored JSON can be repaired, then precisely rolled back under its shared lock', async () => {
+    await environment(new MemoryStorage([['english-studio-v1','{damaged raw']]),async env=>{
+      const page=currentState(),host=hostDependencies(page,async()=>{},{storageMode:'legacy'}),callbacks=createHostCallbacks(host);
+      const checkpoint=await callbacks.capture();assert.equal(checkpoint.state,page);assert.equal(checkpoint.persisted.raw,'{damaged raw');
+      let applied;await callbacks.restore(incomingState(),{expected:page,persisted:checkpoint.persisted,onCommitted:next=>{applied=next;}});
+      assert.ok(validateState(JSON.parse(env.storage.getItem('english-studio-v1'))));
+      await callbacks.restore(page,{exact:true,expected:applied,persisted:{mode:'legacy',raw:JSON.stringify(applied)},rollbackTo:checkpoint.persisted});
+      assert.equal(env.storage.getItem('english-studio-v1'),'{damaged raw');assert.deepEqual(host.setters.slice(-2),[['error',true],['blocked',true]]);
+    });
+  });
   test('the actual host awaits persistence and leaves all State references and setters unchanged on rejection', async () => {
     await environment(new MemoryStorage(), async () => {
       const before = currentState(); let rejectWrite;

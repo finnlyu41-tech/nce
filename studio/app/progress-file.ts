@@ -1,11 +1,18 @@
 import {State, validateState} from './model';
+import type {StateStorageSnapshot} from './offline-store';
 
 export const MAX_PROGRESS_BYTES = 25 * 1024 * 1024;
 const FORMAT = 'english-studio-progress';
 // Capability payloads are transported intact here. Their owner validates them
 // before a restore preview or write; this file layer does not own a scheduler.
 export type ProgressSnapshot = {state: State; savedAt: string | null; capability?: unknown};
-export type ProgressRestoreOptions = {exact?: boolean; expected?: State};
+export type ProgressRestoreCheckpoint = {state: State; expected: State; persisted: StateStorageSnapshot};
+export type ProgressRestoreOptions = {
+  exact?: boolean; expected?: State; persisted?: StateStorageSnapshot;
+  rollbackTo?: StateStorageSnapshot;
+  /** Runs immediately after persistence commits, before publishing page State. */
+  onCommitted?: (state: State) => void;
+};
 const hasCapabilityPayload = (value: unknown) => !!value && typeof value === 'object' && !Array.isArray(value);
 
 export function makeProgressFile(state: State, now = new Date(), capability?: unknown): File {

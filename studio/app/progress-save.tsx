@@ -4,20 +4,21 @@ import {ChevronDown, Cloud, Download, FolderOpen} from 'lucide-react';
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {toast} from 'sonner';
 import {State} from './model';
-import {downloadProgress, makeProgressFile, readProgressFile, saveProgressToFiles, ProgressSnapshot, ProgressRestoreOptions} from './progress-file';
+import {downloadProgress, makeProgressFile, readProgressFile, saveProgressToFiles, ProgressSnapshot, ProgressRestoreCheckpoint, ProgressRestoreOptions} from './progress-file';
 import {captureCapabilityReviewBackup, prepareCapabilityReviewRestore, executeCapabilityReviewRestore} from './capability-review-backup';
 import './progress-save.css';
 import {ONLINE} from './runtime-mode';
 
-type Props = {state: State; ready: boolean; status: string; restore: (state: State, options?: ProgressRestoreOptions) => Promise<State>};
+type Props = {state: State; ready: boolean; status: string; captureRestore: () => Promise<ProgressRestoreCheckpoint>; restore: (state: State, options?: ProgressRestoreOptions) => Promise<State>};
 type Prepared = ReturnType<typeof prepareCapabilityReviewRestore>;
 const message = (error: unknown) => error instanceof Error ? error.message : '操作未完成，请重试。';
 
-export function ProgressSave({state, ready, status, restore}: Props) {
+export function ProgressSave({state, ready, status, captureRestore, restore}: Props) {
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
   const [pending, setPending] = useState<ProgressSnapshot | null>(null);
   const [prepared, setPrepared] = useState<Prepared | null>(null);
+  const [checkpoint, setCheckpoint] = useState<ProgressRestoreCheckpoint | null>(null);
   const [previous, setPrevious] = useState<ProgressSnapshot | null>(null);
   const [backupIssue, setBackupIssue] = useState('');
   const [recovery, setRecovery] = useState<File | null>(null);
@@ -60,8 +61,8 @@ export function ProgressSave({state, ready, status, restore}: Props) {
     if (!file || working.current) return;
     working.current = true;
     setBusy(true);
-    try { preview(await readProgressFile(file)); }
-    catch (error) { setPending(null); setPrepared(null); toast.error(message(error)); }
+    try { await preview(await readProgressFile(file)); }
+    catch (error) { setPending(null); setPrepared(null); setCheckpoint(null); toast.error(message(error)); }
     finally {
       if (input.current) input.current.value = '';
       working.current = false;
@@ -69,38 +70,59 @@ export function ProgressSave({state, ready, status, restore}: Props) {
     }
   }
 
-  function preview(snapshot: ProgressSnapshot) {
+  async function preview(snapshot: ProgressSnapshot) {
+    setPrepared(null);
+    setCheckpoint(null);
+    const frozen = await captureRestore();
     const result = prepareCapabilityReviewRestore(snapshot.capability);
     if (!result.ok) throw Error(result.message || '句子练习记录有冲突，未修改任何记录。');
     setPending(snapshot);
     setPrepared(result);
+    setCheckpoint(frozen);
     setReceipt('');
   }
 
+  async function recheck(snapshot: ProgressSnapshot) {
+    if (working.current) return;
+    working.current = true;
+    setBusy(true);
+    try { await preview(snapshot); }
+    catch (error) { toast.error(message(error)); }
+    finally { working.current = false; setBusy(false); }
+  }
+
   async function apply() {
-    if (!pending || !prepared?.ok || working.current) return;
+    if (!pending || !prepared?.ok || !checkpoint || working.current) return;
     working.current = true;
     setBusy(true);
     try {
       const captured = captureCapabilityReviewBackup();
       if (!captured.ok && pending.capability !== undefined) throw Error(captured.message || '无法保留恢复前的句子练习记录。');
-      const before: ProgressSnapshot = {state, savedAt: new Date().toISOString(), ...(captured.ok ? {capability: captured.backup} : {})};
+      const before: ProgressSnapshot = {state: checkpoint.state, savedAt: new Date().toISOString(), ...(captured.ok ? {capability: captured.backup} : {})};
       let applied: State | undefined;
+      let applyError: unknown;
       const result = await executeCapabilityReviewRestore(prepared.prepared, {
-        apply: async () => { applied = await restore(pending.state, {expected: before.state}); },
-        rollback: async () => { await restore(before.state, {exact: true, expected: applied || before.state}); },
+        apply: async () => {
+          try { await restore(pending.state, {expected: checkpoint.expected, persisted: checkpoint.persisted, onCommitted: next => {applied = next;}}); }
+          catch (error) { applyError = error; throw error; }
+        },
+        rollback: async () => {
+          if (applied) await restore(before.state, {exact: true, expected: applied, persisted: {mode: checkpoint.persisted.mode, raw: JSON.stringify(applied)}, rollbackTo: checkpoint.persisted});
+        },
       });
       if (!result.ok) {
         if (result.status === 'partial-failure') {
-          setRecovery(new File([JSON.stringify({format: 'english-studio-recovery', version: 1, failedAt: new Date().toISOString(), before, details: result})], 'English-Studio-restore-recovery.json', {type: 'application/json'}));
+          setRecovery(new File([JSON.stringify({format: 'english-studio-recovery', version: 1, failedAt: new Date().toISOString(), before, main: {original: checkpoint.persisted, applied: applied ? JSON.stringify(applied) : null}, details: result})], 'English-Studio-restore-recovery.json', {type: 'application/json'}));
           setReceipt('恢复未完成，部分记录的回退未能确认。请先下载恢复资料，保留当前页面。');
         }
         setPrepared(null);
-        throw Error(result.message || '恢复未完成，请重新核对记录后重试。');
+        setCheckpoint(null);
+        throw Error(applyError && !applied ? message(applyError) : (result.message || '恢复未完成，请重新核对记录后重试。') + (applyError ? message(applyError) : ''));
       }
       setPrevious(before);
       setPending(null);
       setPrepared(null);
+      setCheckpoint(null);
       setRecovery(null);
       window.dispatchEvent(new Event('english-studio-progress-restored'));
       const text = pending.capability === undefined ? '教材记录已恢复。旧文件不含句子练习与自动复习，当前已有记录原样保留。' : '进度已恢复；句子练习与自动复习已核对，较新的作答和复习结果会保留。';
@@ -119,7 +141,7 @@ export function ProgressSave({state, ready, status, restore}: Props) {
         <ChevronDown size={16}/>
       </button>
     </div>
-    <Dialog open={open} onOpenChange={value => { if (!busy) { setOpen(value); if (!value) { setPending(null); setPrepared(null); } } }}>
+    <Dialog open={open} onOpenChange={value => { if (!busy) { setOpen(value); if (!value) { setPending(null); setPrepared(null); setCheckpoint(null); } } }}>
       <DialogContent className="progress-save-dialog">
         <DialogHeader><DialogTitle>{pending ? '恢复这份学习进度？' : '保存与恢复进度'}</DialogTitle>
           <DialogDescription>{pending ? !pending.state.flashcards&&state.flashcards ? '教材笔记和草稿将按文件恢复；当前闪卡记录会保留，并补入旧备份中缺失的词卡。请先保存当前进度。' : '教材笔记、词卡和文字练习将按文件恢复。请先保存当前进度，以便回退。' : '随时留一份进度文件，换设备时手动恢复继续学。'}</DialogDescription>
@@ -135,8 +157,8 @@ export function ProgressSave({state, ready, status, restore}: Props) {
           </div>
           <button className="btn secondary" disabled={busy} onClick={() => save()}><Download size={17}/>先保存当前进度</button>
           <div className="row progress-restore-confirm">
-            <button className="btn secondary" disabled={busy} onClick={() => { setPending(null); setPrepared(null); }}>取消恢复</button>
-            {prepared?.ok ? <button className="btn" disabled={busy} onClick={apply}>{busy ? '正在恢复…' : '确认替换并恢复'}</button> : <button className="btn" disabled={busy} onClick={() => { try { preview(pending); } catch (error) { toast.error(message(error)); } }}>重新核对当前记录</button>}
+            <button className="btn secondary" disabled={busy} onClick={() => { setPending(null); setPrepared(null); setCheckpoint(null); }}>取消恢复</button>
+            {prepared?.ok && checkpoint ? <button className="btn" disabled={busy} onClick={apply}>{busy ? '正在恢复…' : '确认替换并恢复'}</button> : <button className="btn" disabled={busy} onClick={() => recheck(pending)}>重新核对当前记录</button>}
           </div>
         </> : <>
           {ONLINE && (standalone ? <p className="home-screen-status">正在以主屏幕 App 使用。进度保存在这个 App 内，和 Safari 分开；可在下方从文件恢复。</p> :
@@ -159,7 +181,7 @@ export function ProgressSave({state, ready, status, restore}: Props) {
             <p className="muted small">若浏览器仅支持下载，请下载后移到 iCloud Drive。另一台设备打开本站，点下方「从文件恢复进度」选择这份文件。每次接续需手动保存和恢复，不会自动合并两台设备的进度。</p>
           </section>
           <button className="btn secondary" disabled={busy} onClick={() => input.current?.click()}><FolderOpen size={17}/>从文件恢复进度</button>
-          {previous && <button className="text-btn" disabled={busy} onClick={() => { try { preview(previous); } catch (error) { toast.error(message(error)); } }}>恢复上一次替换前的教材记录</button>}
+          {previous && <button className="text-btn" disabled={busy} onClick={() => recheck(previous)}>恢复上一次替换前的教材记录</button>}
           {previous && <p className="muted small">此回退副本仅在本页保留，刷新后清除。句子练习仍保留较新的作答与复习结果。</p>}
         </>}
         {backupIssue && <div role="alert"><p>{backupIssue}</p><p>可以先单独保留当前教材记录；句子练习和自动复习原文留在浏览器中。</p><button className="btn secondary" disabled={busy} onClick={() => save(false, false)}>仅保存教材记录</button></div>}
