@@ -1,6 +1,6 @@
 # 学习地图状态与保存修复交接
 
-原四项与后续独立换题兼容修复已合入主发布线，发布验收进行中。来源分支 `codex/map-reliability-recovered-20261001`，实际 origin 为 `finnlyu41-tech/nce`；来源分支未独立部署。
+原四项与后续独立换题兼容修复已合入主发布线，随 v18（源码 `5f8591b`，独立部署 `fe99ffde`）上线；1,950 文件及两域名 114 项 HTTP／哈希／MIME 通过，正式浏览器仍待独立验收。来源分支 `codex/map-reliability-recovered-20261001`，实际 origin 为 `finnlyu41-tech/nce`；来源分支未独立部署。
 
 审计基线 `97c85c5eb8ce785f7e837c85b6a064a437bd732a` 与 `076906e` 之间仅 README 改动。补丁固定合并远端 v17 主线 `0bec6cf`（合并提交 `5be5973`），保留主发布者的 Today、samplePracticeTasks、自动复习、语法与最小 demo。后续最小修复提交 `5cf9a61` 在原检查点 `12a045c` 之后；它修改六个生产文件与两份测试。整个分支生产范围为 `map/model.ts`、`main.tsx`、`learning.tsx`、`course.tsx`、`content.ts`、`curriculum.ts`、`review-route.ts`；仅给两个起步节点追加独立材料，不扩课程体系或重构导航。
 
