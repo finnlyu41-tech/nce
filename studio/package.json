@@ -21,6 +21,7 @@
     "verify:online": "python3 scripts/verify-online.py",
     "verify:navigation": "node scripts/test-navigation.mjs",
     "verify:vocabulary": "node scripts/test-vocabulary.mjs",
+    "verify:flashcards": "node scripts/test-flashcards.mjs && node scripts/test-flashcard-sources.mjs",
     "package:language": "python3 scripts/package-language.py",
     "verify:playback": "node scripts/test-playback.mjs",
     "verify:loading": "node scripts/test-loading.mjs",
@@ -62,6 +63,7 @@
     "recharts": "^3.8.0",
     "sonner": "^2.0.8",
     "tailwind-merge": "3.6.0",
+    "ts-fsrs": "5.4.2",
     "vaul": "^1.1.2",
     "zod": "^3.25.76"
   },
