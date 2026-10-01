@@ -120,6 +120,24 @@ test('unfinished map check resumes without producing a second review or course e
  assert.equal(task?.kind,'resume');assert.equal(task?.href,'/map/#/learn/first');
  assert.equal(out.filter(t=>t.href.split('?')[0]==='/map/#/learn/first').length,1);
 });
+test('restored unfinished starter bank resumes even when its round matches a legacy pass',()=>{
+ const now=Date.now()-1000,legacy=proof(first,now-MINUTE,1),questions=content.questionsFor(first,1,'starter-v2');
+ assert.notDeepEqual(questions.map(q=>q.answer),legacy.answers,'The fixture uses genuinely different current and legacy questions');
+ const progress=mapState(first,[legacy],{round:1,bank:'starter-v2',phase:'challenge',answers:[questions[0].answer],heard:[0],questionIndex:1});
+ const restored=map.parseProgress(map.exportProgress(progress)),before=structuredClone(restored);
+ assert.deepEqual(restored.records,progress.records,'Export and restore preserve the partial current answer and original legacy proof');
+ assert.equal(restored.records.first.attempts[0].bank,undefined,'A current bank must not be assigned to the old proof');
+ assert(map.passedQuiz(first,restored.records.first.attempts[0],now));
+ assert(!map.due(first,restored,now),'The unfinished task is resumable before its older completed check is due');
+ const out=select(base(),restored,now),task=find(out,'map:first');
+ assert.equal(out[0].id,'map:first');assert.equal(task?.kind,'resume');assert.equal(task?.href,'/map/#/learn/first');
+ assert.equal(out.filter(t=>t.href.split('?')[0]==='/map/#/learn/first').length,1);
+ assert.equal(reviewRoute.prepareDueReview(restored,first.id,now+DAY),restored,'Even a later due link preserves the unfinished different bank');
+ assert.deepEqual(restored,before,'Recommendation and due-link inspection leave the restored answer, question and history unchanged');
+ const completed=map.submitQuiz({...restored,records:{...restored.records,first:{...restored.records.first,answers:questions.map(q=>q.answer),heard:questions.flatMap((q,i)=>q.clip?[i]:[])}}},first.id,now);
+ assert.equal(completed.records.first.attempts.at(-1).bank,'starter-v2');
+ assert.equal(find(select(base(),completed,now),'map:first'),undefined,'A completed matching round and bank must not remain a resume task');
+});
 test('a never-submitted map check can resume from its saved question',()=>{
  assert.equal(find(select(base(),mapState(first,[],{phase:'challenge',questionIndex:1,answers:['pending']})),'map:first')?.kind,'resume');
 });

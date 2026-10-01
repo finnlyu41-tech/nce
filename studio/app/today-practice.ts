@@ -59,7 +59,7 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
   const unit=unitById(node.id),title=unit?lessonPlan(unit).goal:node.title;
   const validTime=usableHistory(record?.attempts||[],now)&&(!record?.startedAt||record.startedAt<=now);
   const quizNode=['lesson','checkpoint','starter','unit'].includes(node.kind);
-  const resume=validTime&&quizNode&&record?.phase==='challenge'&&last?.round!==record.round;
+  const resume=validTime&&quizNode&&record?.phase==='challenge'&&(last?.round!==record.round||last?.bank!==record.bank);
   const repair=validTime&&quizNode&&!!last&&!passedQuiz(node,last,now);
   const review=validTime&&quizNode&&due(node,map,now);
   if(resume||repair||review)add({id:'map:'+node.id,title,
