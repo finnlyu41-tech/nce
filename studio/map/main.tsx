@@ -1,14 +1,15 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowRight, Check, Lock, Flag, Clock3, BookOpen, Download, Upload, RotateCcw, ChevronRight, X, Milestone, Unlock, Settings2 } from 'lucide-react';
-import { nodes, nodeById, stages, originalSite, questionsFor, type MapNode } from './content';
+import { nodes, nodeById, stages, originalSite, questionsFor, unitById, type MapNode } from './content';
 import { achieved, continueNode, learningLabel, manuallyUnlocked, unlockNode, chapterProgress, legacyStorageKey, emptyProgress, parseProgress, storageKey, statusMap, due, officialReached, exportProgress, type Progress } from './model';
 import { LearningGraph, type GraphHandle, skillIcon } from './graph';
 import { LearningRoom, type Save } from './learning';
 import './style.css';
 import { StudioHeader } from '../app/study-mode';
 import {CurrentRoute} from './current-route';
-const parseRoute = (fallback = 'first') => { const match = location.hash.match(/^#\/(map|learn)\/([a-z0-9-]+)$/); return { id: match && nodeById(match[2]) ? match[2] : fallback, learn: !!match && match[1] === 'learn' }; };
+import {CourseCatalogue} from './catalogue';
+import {parseLearningRoute, catalogueHash, type CatalogueGroup} from './navigation';
 function App() {
     const raw = useRef<string | null>(null);
     const [message, setMessage] = useState('');
@@ -22,9 +23,11 @@ function App() {
     } });
     const stateRef = useRef(state);
     stateRef.current = state;
-    const [route, setRoute] = useState(() => parseRoute(continueNode(state).id));
-    useEffect(()=>{if(!route.learn){window.scrollTo({top:0});document.querySelector<HTMLHeadingElement>('.page-heading h1')?.focus({preventScroll:true})}},[route.learn]);
+    const [route, setRoute] = useState(() => parseLearningRoute(location.hash,continueNode(state).id));
+    useEffect(()=>{if(!route.learn){window.scrollTo({top:0});document.querySelector<HTMLHeadingElement>('.page-heading h1')?.focus({preventScroll:true})}},[route.learn,route.catalogue]);
     const [overview,setOverview]=useState(false);
+    const catalogueReturn=useRef<string|null>(null);
+    useEffect(()=>{if(route.catalogue){catalogueReturn.current=catalogueHash(route.catalogue,route.query);setOverview(false)}else if(!route.learn)catalogueReturn.current=null},[route.catalogue,route.query,route.learn]);
     const [mobile, setMobile] = useState(window.innerWidth < 760);
     const graph = useRef<GraphHandle>(null);
     const importInput = useRef<HTMLInputElement>(null);
@@ -38,7 +41,7 @@ function App() {
     catch {
         setStorageError('学习记录暂时无法读取。原始记录仍保留，请先导出原始记录或检查浏览器存储。');
     } }, []);
-    useEffect(() => { const hash = () => setRoute(parseRoute()), resize = () => setMobile(window.innerWidth < 760); window.addEventListener('hashchange', hash); window.addEventListener('resize', resize); return () => { window.removeEventListener('hashchange', hash); window.removeEventListener('resize', resize); }; }, []);
+    useEffect(() => { const hash = () => setRoute(parseLearningRoute(location.hash,continueNode(stateRef.current).id)), resize = () => setMobile(window.innerWidth < 760); window.addEventListener('hashchange', hash); window.addEventListener('resize', resize); return () => { window.removeEventListener('hashchange', hash); window.removeEventListener('resize', resize); }; }, []);
     const save: Save = useCallback(change => { const next = { ...change(stateRef.current), updatedAt: Date.now() }; try {
         const latest = localStorage.getItem(storageKey);
         if (latest !== raw.current) {
@@ -86,6 +89,11 @@ function App() {
         setRoute({ id, learn });
     else
         location.hash = next; };
+    const browse = (group:CatalogueGroup='all',query=route.query||'',replace=false) => {
+        const hash=catalogueHash(group,query);
+        if(replace){history.replaceState(null,'',hash);setRoute(parseLearningRoute(hash,current));}
+        else location.hash=hash;
+    };
     const focus = (id: string) => {const n=nodeById(id)!;navigate(id,!!n.parent); graph.current?.focus(n.parent||id); };
     function download(content: string, name: string) { const url = URL.createObjectURL(new Blob([content], { type: 'application/json' })); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
     async function readFile(file?: File) { if (!file)
@@ -101,16 +109,16 @@ function App() {
         if (importInput.current)
             importInput.current.value = '';
     } }
-    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-unsaved-progress.json')}>导出当前进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} node={selected} state={state} save={save} close={()=>{setOverview(false);navigate(selected.id)}} select={id=>navigate(id,true)}/></>;
-    return <><StudioHeader active="map" classicRoot={originalSite} mapUrl={`#/map/${route.id}`} actions={<details className="map-settings"><summary><Settings2 size={17}/><span>学习设置</span></summary><div><strong>解锁方式</strong><p>解锁允许直接进入，完成状态仍由实际学习记录决定。</p>{state.access?.all?<p className="manual-note">全部节点已手动解锁</p>:<button onClick={()=>save(s=>({...s,access:{all:true,nodes:s.access?.nodes||[]}}))}><Unlock size={16}/>直接解锁全部节点</button>}{(state.access?.all||!!state.access?.nodes.length)&&<button onClick={()=>save(s=>({...s,access:{all:false,nodes:[]}}))}>恢复按路线解锁</button>}<small>恢复路线规则会保留所有学习记录。</small><hr/><strong>地图进度备份</strong><button onClick={()=>download(exportProgress(state),`wayfinder-progress-${new Date().toISOString().slice(0,10)}.json`)}><Download size={16}/>导出地图进度</button><button onClick={()=>importInput.current?.click()}><Upload size={16}/>恢复地图进度</button><small>教材笔记、生词的备份在「记录」页。录音需单独下载。</small></div></details>}/>
+    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-unsaved-progress.json')}>导出当前进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} node={selected} state={state} save={save} close={()=>{setOverview(false);if(catalogueReturn.current)location.hash=catalogueReturn.current;else navigate(selected.id)}} select={id=>navigate(id,true)}/></>;
+    return <><StudioHeader active="learn" classicRoot={originalSite} mapUrl={`#/map/${current}`} reference={unitById(current)} actions={<details className="map-settings"><summary><Settings2 size={17}/><span>学习设置</span></summary><div><strong>解锁方式</strong><p>解锁允许直接进入，完成状态仍由实际学习记录决定。</p>{state.access?.all?<p className="manual-note">全部节点已手动解锁</p>:<button onClick={()=>save(s=>({...s,access:{all:true,nodes:s.access?.nodes||[]}}))}><Unlock size={16}/>直接解锁全部节点</button>}{(state.access?.all||!!state.access?.nodes.length)&&<button onClick={()=>save(s=>({...s,access:{all:false,nodes:[]}}))}>恢复按路线解锁</button>}<small>恢复路线规则会保留所有学习记录。</small><hr/><strong>地图进度备份</strong><button onClick={()=>download(exportProgress(state),`wayfinder-progress-${new Date().toISOString().slice(0,10)}.json`)}><Download size={16}/>导出地图进度</button><button onClick={()=>importInput.current?.click()}><Upload size={16}/>恢复地图进度</button><small>教材笔记、生词的备份在「记录」页。录音需单独下载。</small></div></details>}/>
 
-  <main className="app-main"><section className="page-heading"><div><h1 tabIndex={-1}>学习地图</h1><p>{overview?'从起步到 IELTS 6.5，查看各阶段与解锁条件。':'每次学好眼前一小步。'}</p></div><button className="secondary map-view-toggle" onClick={()=>{setOverview(!overview);if(overview)navigate(current)}}>{overview?'回到当前学习':'查看完整路线'}<ArrowRight size={16}/></button></section>
-   {overview&&<nav className="stage-nav" aria-label="路线阶段">{stages.map((s, i) => <button className={selected.stage === s.id ? 'active' : ''} key={s.id} onClick={() => { const first = nodes.find(n => n.stage === s.id)!; navigate(first.id); graph.current?.stage(s.id); }}><span>{String(i + 1).padStart(2, '0')}</span>{['零基础', '新概念一册', '新概念二册', '听说读写', '6.5 终点'][i]}{i < 4 && <ChevronRight size={13}/>}</button>)}</nav>}
+  <main className="app-main learning-home">{route.catalogue&&<a className="learning-back" href={`#/map/${current}`}>← 回到学习</a>}<section className="page-heading"><div><h1 tabIndex={-1}>{route.catalogue?'找课':'学习'}</h1><p>{route.catalogue?'按目标或教材找课，接着同一份进度学习。':overview?'从起步到 IELTS 6.5，查看各阶段与解锁条件。':'沿着路线，一次学好一小步。'}</p></div>{!route.catalogue&&<div className="learning-view-actions"><a className="secondary" href="#/courses"><BookOpen size={16}/>找课</a><button className="text-button map-view-toggle" onClick={()=>{setOverview(!overview);if(overview)navigate(current)}}>{overview?'回到当前学习':'完整路线'}<ArrowRight size={16}/></button></div>}</section>
+   {!route.catalogue&&overview&&<nav className="stage-nav" aria-label="路线阶段">{stages.map((s, i) => <button className={selected.stage === s.id ? 'active' : ''} key={s.id} onClick={() => { const first = nodes.find(n => n.stage === s.id)!; navigate(first.id); graph.current?.stage(s.id); }}><span>{String(i + 1).padStart(2, '0')}</span>{['零基础', '新概念一册', '新概念二册', '听说读写', '6.5 终点'][i]}{i < 4 && <ChevronRight size={13}/>}</button>)}</nav>}
    {storageError && <div role="alert" className="storage-error">{storageError}<button onClick={() => download(raw.current || '{}', 'wayfinder-original-record.json')}>导出原始记录</button></div>}
    {legacy&&<div className="legacy-notice"><span>旧版地图记录已保留。新版从零基础连续课程开始，旧的小测通过不自动换算成新课程掌握。</span><button onClick={()=>download(legacy,'wayfinder-v1-preserved.json')}>导出旧版记录</button><button aria-label="收起旧版记录提醒" onClick={()=>setLegacy(null)}><X size={15}/></button></div>}
-   {overview?<div className="workspace"><LearningGraph state={state} selected={graphSelected.id} select={id => {navigate(id);if(mobile)setOverview(false)}} mobile={mobile} current={current} ref={graph}/><aside className="node-panel" aria-label="选中节点详情"><NodeDetails node={graphSelected} status={statuses[graphSelected.id]} state={state} focus={focus} start={() => {setOverview(false);navigate(graphSelected.id,graphSelected.kind!=='course')}} current={current} unlock={()=>{save(s=>unlockNode(s,graphSelected.id));navigate(graphSelected.id,true)}}/><div className="panel-bottom"><div className="next-review"><RotateCcw size={16}/><div><strong>{review.length ? `${review.length} 个节点待巩固` : '小步前进，也记得回头看看'}</strong><p>{review.length ? '换题回想，让学过的内容留下来。' : '通过检验的内容，第二天再回想一次。'}</p></div>{review.length > 0 && <button aria-label="打开待复习节点" onClick={() => focus(review[0].id)}><ArrowRight size={17}/></button>}</div><div className="save-tools"><span><i className="live-dot"/>进度保存在此浏览器</span><button aria-label="导出学习地图进度" title="导出进度" onClick={() => download(exportProgress(state), `wayfinder-progress-${new Date().toISOString().slice(0, 10)}.json`)}><Download size={16}/></button><button aria-label="恢复学习地图进度" title="恢复进度" onClick={() => importInput.current?.click()}><Upload size={16}/></button></div></div></aside></div>:<CurrentRoute selected={selected} current={nodeById(current)!} state={state} open={id=>navigate(id,true)} locate={()=>navigate(current)}/>}
+   {route.catalogue?<CourseCatalogue key={route.catalogue} group={route.catalogue} query={route.query||''} state={state} current={current} browse={group=>browse(group)} search={query=>browse(route.catalogue!,query,true)} open={id=>navigate(id,true)}/>:overview?<div className="workspace"><LearningGraph state={state} selected={graphSelected.id} select={id => {navigate(id);if(mobile)setOverview(false)}} mobile={mobile} current={current} ref={graph}/><aside className="node-panel" aria-label="选中节点详情"><NodeDetails node={graphSelected} status={statuses[graphSelected.id]} state={state} focus={focus} start={() => {setOverview(false);navigate(graphSelected.id,graphSelected.kind!=='course')}} current={current} unlock={()=>{save(s=>unlockNode(s,graphSelected.id));navigate(graphSelected.id,true)}}/><div className="panel-bottom"><div className="next-review"><RotateCcw size={16}/><div><strong>{review.length ? `${review.length} 个节点待巩固` : '小步前进，也记得回头看看'}</strong><p>{review.length ? '换题回想，让学过的内容留下来。' : '通过检验的内容，第二天再回想一次。'}</p></div>{review.length > 0 && <button aria-label="打开待复习节点" onClick={() => focus(review[0].id)}><ArrowRight size={17}/></button>}</div><div className="save-tools"><span><i className="live-dot"/>进度保存在此浏览器</span><button aria-label="导出学习地图进度" title="导出进度" onClick={() => download(exportProgress(state), `wayfinder-progress-${new Date().toISOString().slice(0, 10)}.json`)}><Download size={16}/></button><button aria-label="恢复学习地图进度" title="恢复进度" onClick={() => importInput.current?.click()}><Upload size={16}/></button></div></div></aside></div>:<CurrentRoute selected={selected} current={nodeById(current)!} state={state} open={id=>navigate(id,true)} locate={()=>navigate(current)}/>}
    <input type="file" hidden ref={importInput} accept="application/json,.json" onChange={e=>readFile(e.target.files?.[0])}/>
-   <footer className="site-footer"><span>{overview?`${passed} / ${nodes.length} 站完成学习`:'进度保存在此浏览器 · 可在学习设置中备份'}</span><span>Academic 6.5 <i /> 学习解锁规则为本站练习安排</span></footer>
+   <footer className="site-footer"><span>{overview&&!route.catalogue?`${passed} / ${nodes.length} 站完成学习`:'进度保存在此浏览器 · 可在学习设置中备份'}</span><span>Academic 6.5 <i /> 学习解锁规则为本站练习安排</span></footer>
   </main>
   {message && <div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={() => setMessage('')}><X size={16}/></button></div>}
 

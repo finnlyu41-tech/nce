@@ -12,6 +12,7 @@ import {PlaybackSpeed} from './playback-speed';
 import {navigate} from './navigation';
 import {useRoute} from './use-route';
 import {ONLINE} from './runtime-mode';
+import {mapUnitId} from './map-connection';
 import {grammarPrintedPage} from './textbook-grammar';
 import {buildVocabularyCatalog,searchVocabulary,vocabularyKey,vocabularyPage,type VocabularyCatalog,type VocabularySource} from './textbook-vocabulary';
 import './textbook-vocabulary.css';
@@ -34,8 +35,8 @@ function VocabularyRow({word,number,entry,enrolled,example,onAdd,children,query=
  </article>;
 }
 
-export function TextbookVocabularyBrowser({state,onAdd}:{state:State;onAdd:(word:Word)=>void}){
- const route=useRoute(),mode=route.tab==='index'?'index':'book',last=state.nceLast||{book:'NCE1' as const,lesson:1};
+export function TextbookVocabularyBrowser({state,currentCourse,onAdd}:{state:State;currentCourse?:{book:NceBookId;lesson:number};onAdd:(word:Word)=>void}){
+ const route=useRoute(),mode=route.tab==='index'?'index':'book',last=currentCourse||state.nceLast||{book:'NCE1' as const,lesson:1};
  const book=route.book||last.book,lesson=route.lesson||(book===last.book?last.lesson:1),query=route.query||'';
  const [catalog,setCatalog]=useState<VocabularyCatalog|null>(null),[error,setError]=useState(''),[attempt,setAttempt]=useState(0);
  const [dictionary,setDictionary]=useState<Record<string,DictionaryEntry>>({}),[dictionaryError,setDictionaryError]=useState(false),[dictionaryLoading,setDictionaryLoading]=useState(true),[dictionaryAttempt,setDictionaryAttempt]=useState(0);
@@ -64,7 +65,7 @@ export function TextbookVocabularyBrowser({state,onAdd}:{state:State;onAdd:(word
   {dictionaryError&&<p role="alert" className="notice">词典未能加载，教材词表和原书仍可查看。中文检索暂不可用。<button className="text-btn" onClick={()=>setDictionaryAttempt(dictionaryAttempt+1)}>重试词典</button></p>}
   
   {mode==='book'&&entry?<section className="panel vocabulary-lesson-panel">
-   <div className="vocabulary-section-heading"><div><h2>第 {lesson} 课{entry.title?` · ${entry.title}`:''}</h2><p className="muted small">{entry.words.length} 个生词与短语 · 保留原书顺序</p></div><button className="text-btn" onClick={()=>navigate({view:'nce',book,lesson,tab:'words'})}>回到本课<ArrowRight size={16}/></button></div>
+   <div className="vocabulary-section-heading"><div><h2>第 {lesson} 课{entry.title?` · ${entry.title}`:''}</h2><p className="muted small">{entry.words.length} 个生词与短语 · 保留原书顺序</p></div><button className="text-btn" onClick={()=>{const id=mapUnitId(book,lesson);if(id)location.href=`/map/#/learn/${id}`;else navigate({view:'nce',book,lesson,tab:'words'})}}>回到本课<ArrowRight size={16}/></button></div>
    <div className="vocabulary-source-bar"><SourceLinks source={entry}/><PlaybackSpeed ariaLabel="教材词汇发音语速"/></div>
    <p className="vocabulary-definition-note">词典简释 · 点词看完整释义，教材原义见原书。</p>
    {entry.words.length?<div className="textbook-vocabulary-list">{entry.words.map(({word,forms},i)=><VocabularyRow key={word} word={word} number={i+1} entry={dictionary[vocabularyKey(word)]} enrolled={enrolled(word)} onAdd={onAdd} example={vocabularyExample(exampleSource?.key===entry.key?exampleSource.rows:[],word,forms)}/>)}</div>:<div className="empty"><h3>本课原书没有单列新词</h3><p>可回顾配套听读课的词汇，再进入本课练习。</p>{book==='NCE1'&&lesson%2===0&&<button className="btn secondary" onClick={()=>selectLesson(book,lesson-1)}>复习第 {lesson-1} 课词表<ArrowRight size={16}/></button>}</div>}

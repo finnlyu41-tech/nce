@@ -1,4 +1,5 @@
 'use client';
+import {mapUnitId} from './map-connection';
 import {useEffect,useState} from 'react';
 import {ArrowRight,ArrowLeft,BookOpen,ChevronDown,ChevronLeft,ChevronRight,Search} from 'lucide-react';
 import {useRoute} from './use-route';
@@ -37,7 +38,7 @@ function OriginalGrammar({entry}:{entry:GrammarEntry}){
    {error&&<p role="alert">{error} <button className="text-btn" onClick={()=>{setError('');setRetry(retry+1)}}>重新加载</button></p>}
    {asset?<a className="textbook-page-link" href={asset.src} target="_blank" rel="noreferrer"><img key={`${asset.src}-${retry}`} src={asset.src} alt={`${grammarBooks.find(b=>b.id===entry.book)?.name}，${grammarLessonLabel(entry)}，原书第 ${grammarPrintedPage(entry.book,page)} 页，PDF 第 ${page} 页`} onError={()=>setError('原书图片未能加载，请重试或打开完整 PDF')} onLoad={()=>setError('')}/><span>点图放大查看原文</span></a>:!error&&<p role="status">正在加载对应原书页…</p>}
    <div className="textbook-page-controls"><button className="btn secondary" aria-label="上一页语法原文" disabled={position<=0} onClick={()=>{setPage(entry.pages[position-1]);setError('')}}><ChevronLeft size={16}/>上一页</button><label>原书页<select aria-label="选择语法原文页码" value={page} onChange={e=>{setPage(Number(e.target.value));setError('')}}>{entry.pages.map(p=><option key={p} value={p}>{grammarPrintedPage(entry.book,p)}（PDF {p}）</option>)}</select></label><button className="btn secondary" aria-label="下一页语法原文" disabled={position===entry.pages.length-1} onClick={()=>{setPage(entry.pages[position+1]);setError('')}}>下一页<ChevronRight size={16}/></button></div>
-   <div className="row wrap"><button className="text-btn" onClick={()=>navigate({view:'nce',book:entry.book,lesson:entry.lesson,tab:'materials'})}>返回第 {entry.lesson} 课课文<ArrowRight size={15}/></button><button className="text-btn" onClick={()=>navigate({view:'nce',book:entry.book,lesson:entry.lastLesson,tab:entry.book==='NCE1'?'materials':'practice'})}>进入本课原书练习<ArrowRight size={15}/></button></div>
+   <div className="row wrap"><button className="text-btn" onClick={()=>{const id=ONLINE&&mapUnitId(entry.book,entry.lesson);if(id)location.href=`/map/#/learn/${id}`;else navigate({view:'nce',book:entry.book,lesson:entry.lesson,tab:'materials'})}}>返回第 {entry.lesson} 课学习<ArrowRight size={15}/></button><button className="text-btn" onClick={()=>navigate({view:'nce',book:entry.book,lesson:entry.lastLesson,tab:entry.book==='NCE1'?'materials':'practice'})}>进入本课原书练习<ArrowRight size={15}/></button></div>
    <p className="small muted">索引列出本课语法栏目所在页。需看上下文或整册时，打开完整原书。</p>
    {pdf?<a className="text-btn" href={`${pdf}#page=${page}`} target="_blank" rel="noreferrer">打开完整 PDF · 第 {page} 页</a>:<button className="text-btn" disabled={busy} onClick={()=>setPdfRequest(pdfRequest+1)}>{busy?'正在校验整册 PDF…':'加载完整原书 PDF'}</button>}
   </>:<p className="notice">本地版未附原书图片，请按以上册数、课号和页码查阅自己的教材。索引与检索可离线使用。</p>}
@@ -64,7 +65,7 @@ export function TextbookGrammar(){
  const open=(entry:GrammarEntry)=>navigate({...route,view:'grammar',book,lesson:selected?.id===entry.id?undefined:entry.lesson,page:undefined},{keepScroll:true});
  const bookInfo=grammarBooks.find(b=>b.id===book)!;
  return <section className="textbook-grammar">
-  <div className="page-heading"><div><div className="eyebrow">NEW CONCEPT ENGLISH · GRAMMAR EXPLAINED</div><h1>语法与句型</h1><p>按教材进度，把用法和句型讲清楚；读懂例句，再试着自己说。</p></div></div>
+  <div className="page-heading"><div><div className="eyebrow">NEW CONCEPT ENGLISH · GRAMMAR EXPLAINED</div><h1>句型语法</h1><p>按教材进度，把用法和句型讲清楚；读懂例句，再试着自己说。</p></div></div>
   {selected&&<button className="text-btn textbook-index-back" onClick={()=>navigate({...route,lesson:undefined,page:undefined})}><ArrowLeft size={16}/>返回{query||category?'检索结果':'本册目录'}（{entries.length} 组）</button>}
   {selected&&<button className="text-btn grammar-browse-toggle" aria-expanded={browseOpen} aria-controls="grammar-browse" onClick={()=>setBrowseOpen(!browseOpen)}>{bookInfo.name} · {browseOpen?'收起目录与检索':'切换课次或检索'}<ChevronDown size={16}/></button>}
   <div id="grammar-browse" hidden={!!selected&&!browseOpen}>

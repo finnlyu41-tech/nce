@@ -5,6 +5,13 @@ const moduleUrl=source=>'data:text/javascript;base64,'+Buffer.from(source).toStr
 const model=moduleUrl(stripTypeScriptTypes(await readFile(new URL('../app/model.ts',import.meta.url),'utf8')));
 const source=(await readFile(new URL('../app/navigation.ts',import.meta.url),'utf8')).replace("'./model'",JSON.stringify(model));
 const {parseRoute,routeHash,navigate}=await import(moduleUrl(stripTypeScriptTypes(source)));
+const {learningRedirect,studioSection}=await import(moduleUrl(stripTypeScriptTypes(await readFile(new URL('../app/studio-navigation.ts',import.meta.url),'utf8'))));
+assert.equal(learningRedirect(parseRoute('')), '/map/');
+for(const hash of ['#/library','#nce','#/nce'])assert.equal(learningRedirect(parseRoute(hash)), '/map/#/courses');
+assert.equal(learningRedirect(parseRoute('#/nce/NCE2?q=story')), '/map/#/courses/NCE2?q=story');
+for(const hash of ['#/nce/NCE1/1?tab=notes&step=2','#/nce/NCE1/99?tab=grammar','#/nce/NCE3','#/nce/NCE4/48?tab=listen','#/words?tab=index&q=book','#/grammar/NCE1/1','#/roadmap?mission=starter-hello','#/courses'])assert.equal(learningRedirect(parseRoute(hash)),undefined,`Preserve saved lesson, reference and supplementary link: ${hash}`);
+for(const [view,section] of [['library','learn'],['nce','learn'],['today','learn'],['words','words'],['grammar','grammar'],['review','review'],['progress','records']])assert.equal(studioSection(view),section);
+
 for(const route of [
  {view:'words',book:'NCE1',lesson:99,tab:'book'}, {view:'words',tab:'review'}, {view:'words',tab:'index',letter:'H',query:'手提包',page:2}, {view:'words',book:'NCE4',tab:'index',page:4},
  {view:'today'}, {view:'words'}, {view:'nce'}, {view:'nce',book:'NCE1'}, {view:'nce',book:'NCE1',lesson:1,tab:'listen',mode:'recall'}, {view:'nce',book:'NCE1',lesson:1,tab:'notes',step:0}, {view:'nce',book:'NCE2',lesson:11,tab:'notes',step:4}, {view:'nce',book:'NCE1',lesson:144,tab:'practice'},

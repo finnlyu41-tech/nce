@@ -23,6 +23,22 @@ const c = await import(await moduleURL(path.join(root, 'content.ts')));
 if(process.argv.includes('--validate')){const file=process.argv[process.argv.indexOf('--validate')+1];const state=m.parseProgress(await fs.readFile(file,'utf8'));console.log(JSON.stringify({version:state.version,records:Object.keys(state.records),chapter1:m.chapterProgress(c.nodeById('chapter-1'),state),firstUnit:m.statusMap(state)['nce1-1']}));process.exit(0)}
 let count=0;
 const check=(value,message)=>{assert.ok(value,message);count++};
+const nav=await import(await moduleURL(path.join(root,'navigation.ts')));
+for(const group of nav.catalogueGroups){
+ const route=nav.parseLearningRoute(nav.catalogueHash(group.id,'介绍 / bag?'), 'nce2-7');
+ check(route.id==='nce2-7'&&route.catalogue===group.id&&route.query==='介绍 / bag?'&&!route.learn,'Catalogue deep links preserve context and encoded search');
+}
+check(nav.catalogueItems('NCE1','').length===72&&nav.catalogueItems('NCE2','').length===96,'Catalogue uses the same 168 learning units');
+check(nav.catalogueItems('starter','').length===3&&nav.catalogueItems('ielts','').length===15,'Starter and IELTS nodes stay reachable');
+check(nav.catalogueItems('NCE1','第 2 课')[0]?.id==='nce1-1','Paired even lesson finds the shared unit');
+check(nav.catalogueItems('all','1').length===2,'Exact lesson search avoids lesson 11 or 101');
+check(nav.catalogueItems('NCE1','介绍一位朋友').length>0,'Ability goals are searchable');
+check(nav.catalogueItems('NCE1','Excuse me!')[0]?.id==='nce1-1','Original English title is searchable');
+check(nav.catalogueItems('NCE1','不存在的课程').length===0,'Unmatched search does not display unrelated courses');
+for(const hash of ['#/map/letters','#/learn/nce2-96'])check(nav.parseLearningRoute(hash).id===hash.split('/')[2],'Existing node deep links remain valid');
+check(nav.parseLearningRoute('#/learn/unknown','letters').learn===false,'Invalid lesson links never start the fallback node');
+check(nav.parseLearningRoute('#/courses/__proto__','letters').id==='letters','Malformed catalogue URL keeps a safe location');
+check(nav.parseLearningRoute('#/courses/constructor').catalogue==='all','Unknown catalogue group defaults safely');
 const now=Date.now(),yesterday=now-2*m.reviewDelay;
 const proof=(node,round,at)=>({round,at,answers:c.questionsFor(node,round).map(q=>q.answer.split(/\s+\/\s+/)[0]),assisted:false,heard:c.questionsFor(node,round).flatMap((q,i)=>q.clip?[i]:[])});
 check(c.nodes.length===32,'32 navigable overview stations');
