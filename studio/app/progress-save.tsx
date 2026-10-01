@@ -83,13 +83,15 @@ export function ProgressSave({state, ready, status, restore}: Props) {
     <Dialog open={open} onOpenChange={value => { if (!busy) { setOpen(value); if (!value) setPending(null); } }}>
       <DialogContent className="progress-save-dialog">
         <DialogHeader><DialogTitle>{pending ? '恢复这份学习进度？' : '保存与恢复进度'}</DialogTitle>
-          <DialogDescription>{pending ? '确认后，当前浏览器的学习记录会被这份文件替换。请先保存当前进度，以便随时回退。' : '随时留一份进度文件，换设备也能继续学。'}</DialogDescription>
+          <DialogDescription>{pending ? !pending.state.flashcards&&state.flashcards ? '课程、笔记和草稿将按文件恢复；当前闪卡记录会保留，并补入旧备份中缺失的词卡。请先保存当前进度，以便回退。' : '确认后，当前浏览器的学习记录会被这份文件替换。请先保存当前进度，以便随时回退。' : '随时留一份进度文件，换设备也能继续学。'}</DialogDescription>
         </DialogHeader>
         {pending ? <>
           <div className="progress-file-summary">
             <strong>{pending.savedAt ? `保存于 ${new Date(pending.savedAt).toLocaleString('zh-CN')}` : '这份备份未记录保存时间'}</strong>
-            <p>{Object.keys(pending.state.nce || {}).length} 个课次记录 · {Object.keys(pending.state.cards).length} 张复习卡 · {Object.keys(pending.state.drafts).length} 份练习草稿</p>
+            <p>{Object.keys(pending.state.nce || {}).length} 个课次记录 · {Object.keys(pending.state.flashcards?.cards||pending.state.cards).length} 张复习卡 · {Object.keys(pending.state.drafts).length} 份练习草稿</p>
             <p>恢复包含笔记、生词、学习记录和文字草稿；不会替换本机教材音频。</p>
+            {!pending.state.flashcards&&state.flashcards&&<p className="notice">这是旧版备份，不含新的闪卡记录。恢复会保留当前闪卡排程和评分，并补入旧备份中的缺失词卡。</p>}
+            {pending.state.flashcards&&<p>文件包含闪卡排程、来源、评分和半途翻面状态，将按文件完整恢复。</p>}
           </div>
           <button className="btn secondary" disabled={busy} onClick={() => save()}><Download size={17}/>先保存当前进度</button>
           <div className="row progress-restore-confirm">
