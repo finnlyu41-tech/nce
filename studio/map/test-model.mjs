@@ -35,6 +35,8 @@ check(nav.catalogueItems('all','1').length===2,'Exact lesson search avoids lesso
 check(nav.catalogueItems('NCE1','介绍一位朋友').length>0,'Ability goals are searchable');
 check(nav.catalogueItems('NCE1','Excuse me!')[0]?.id==='nce1-1','Original English title is searchable');
 check(nav.catalogueItems('NCE1','不存在的课程').length===0,'Unmatched search does not display unrelated courses');
+for(const hash of ['', '#', '#/', '#/today'])check(nav.parseLearningRoute(hash).home===true,'Home remains the daily recommendation when restored progress changes the current node');
+check(!nav.parseLearningRoute('#/map/letters').home,'An explicit inspected node remains a separate detail view');
 for(const hash of ['#/map/letters','#/learn/nce2-96'])check(nav.parseLearningRoute(hash).id===hash.split('/')[2],'Existing node deep links remain valid');
 check(nav.parseLearningRoute('#/learn/unknown','letters').learn===false,'Invalid lesson links never start the fallback node');
 check(nav.parseLearningRoute('#/courses/__proto__','letters').id==='letters','Malformed catalogue URL keeps a safe location');
