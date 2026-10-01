@@ -1,0 +1,1498 @@
+{
+  "schemaVersion": 1,
+  "batch": "vocabulary-reviewed-batch5c",
+  "baseCommit": "f23a75d00c00745449e62335051ace3d9b080564",
+  "headwords": 29,
+  "senseExamples": 29,
+  "textbookTargetExamples": 29,
+  "dictionaryExtensionExamples": 0,
+  "origin": "original",
+  "humanCertification": false,
+  "reviewBasis": "Independent Codex editorial reading of every assigned English sentence, Chinese translation, collocation and target sense, with actual view_image inspection of all six associated word-list images. Script checks verify the content and meaning/POS contracts; they do not replace editorial review.",
+  "sourceScope": "Only the 29 assigned word-list targets are audited. Original sentences are not textbook quotations. Dictionary snapshots are reference data, not certification of other dictionary senses.",
+  "savedDraft": {
+    "sourceRoot": "/Users/finnlyu/Documents/Codex/2026-10-01/task-3/english-flashcards/studio",
+    "files": [
+      {
+        "file": "app/data/vocabulary-examples-nce1-22-32.ts",
+        "sha256": "abf44e40b8319426ae6ec59102635cccef146db7bdaff09c548a59d36ff35aa2"
+      },
+      {
+        "file": "app/data/vocabulary-examples-nce1-59-82.ts",
+        "sha256": "955e0d769a27c467180ee2fa1a4fbb54086f70aa901fc3df6e166b1f71c7715d"
+      },
+      {
+        "file": "docs/vocabulary-examples-batch6-22-32.json",
+        "sha256": "0e806bb4645b86d61e6e98611229b65e523e4bb06014ed8bf792f251238d2a67"
+      },
+      {
+        "file": "docs/vocabulary-examples-batch9-59-82.json",
+        "sha256": "42e809992c2078e482392c8a28d1cbd9bd7ea2e5221076ece6abafb834cf8272"
+      }
+    ],
+    "originalDraftFilesChanged": false,
+    "unselectedDraftEntriesRegistered": false
+  },
+  "sourceEvidence": [
+    {
+      "book": "NCE1",
+      "lesson": 24,
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "src": "/lesson-pages/b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e.jpg",
+      "sha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 26,
+      "sourcePDFPage": 56,
+      "sourcePrintedPage": 52,
+      "src": "/lesson-pages/52e79dcef719376605372692424e064d73c40b08026513ed9394c8f76eeba106.jpg",
+      "sha256": "52e79dcef719376605372692424e064d73c40b08026513ed9394c8f76eeba106",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 30,
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "src": "/lesson-pages/6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7.jpg",
+      "sha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 32,
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "src": "/lesson-pages/6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3.jpg",
+      "sha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 59,
+      "sourcePDFPage": 122,
+      "sourcePrintedPage": 118,
+      "src": "/lesson-pages/d199cc2093210ce4f7825304eeb75d1a315bc96d617068f631bf6b8bc5e6a3bb.jpg",
+      "sha256": "d199cc2093210ce4f7825304eeb75d1a315bc96d617068f631bf6b8bc5e6a3bb",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true
+    },
+    {
+      "book": "NCE1",
+      "lesson": 62,
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "src": "/lesson-pages/90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381.jpg",
+      "sha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "bookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "actualImageOpenedByReviewer": true
+    }
+  ],
+  "entries": [
+    {
+      "id": "cigarette-tobacco-noun",
+      "word": "cigarette",
+      "canonicalHeadword": "cigarette",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 香烟",
+      "excludedMeaningLabels": [
+        "n. 烟斗",
+        "n. 雪茄"
+      ],
+      "teachingDefinition": "n. 香烟",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "香烟",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "11526f755220f37df1c36665f7537f9e9f994784a44c26cdc988553f34f5ffc8",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "11526f755220f37df1c36665f7537f9e9f994784a44c26cdc988553f34f5ffc8",
+      "dictionarySnapshot": {
+        "word": "cigarette",
+        "ipa": ".sɪɡəˈret",
+        "meaning": "n. 香烟, 纸烟"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 香烟。put out 是熄灭，before coming back inside 对应回屋前；可数 cigarette 和搭配自然，句子仅叙述行为。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "television-appliance-noun",
+      "word": "television",
+      "canonicalHeadword": "television",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 电视机",
+      "excludedMeaningLabels": [
+        "n. 电视节目",
+        "n. 电视广播",
+        "n. 电视"
+      ],
+      "teachingDefinition": "n. 电视机",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "电视机",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "d7143e4b2fed04cb5f9416394a198d57f5b0f085bb57c84a2e48b08114ce304a",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "66463f263e7f9c1b3242a264f80b9b55eed2b11096fb1586574e24894f333b4c",
+      "dictionarySnapshot": {
+        "word": "television",
+        "ipa": "ˈtelɪ.vɪʒən",
+        "meaning": "n. 电视\n[电] 电视"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 电视机。unplug 与搬到另一间房明确设备义；英语先拔插头的时序与中译一致。删除宽泛“电视” cue，不认证节目或广播媒介义。",
+      "changesFromSavedDraft": {
+        "reason": "将设备目标 cue 限定为电视机。",
+        "fields": [
+          "matches"
+        ]
+      }
+    },
+    {
+      "id": "floor-room-surface",
+      "word": "floor",
+      "canonicalHeadword": "floor",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 地板",
+      "excludedMeaningLabels": [
+        "n. 楼层",
+        "n. 底部",
+        "n. 底价",
+        "n. 基底",
+        "vt. 打倒",
+        "n. 地面"
+      ],
+      "teachingDefinition": "n. 地板",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "地板",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "fef4f0ec93e840bec80f8c5c60d644a96c66c9de1598f0e7b98b3ad5066a9317",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "04e186918e0b918ffc6b1553d65956b45eeb5bcba5613283199ef8782bbd1b90",
+      "dictionarySnapshot": {
+        "word": "floor",
+        "ipa": "flɒː",
+        "meaning": "n. 地板, 楼层, 底部, 底价\nvt. 铺地板, 打倒\nn. 地面, 地板, 基底\n[计] 基底"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 地板。wooden floor 与泥脚印明确室内铺装表面，中译湿鞋和木地板吻合；将宽泛“地面” cue 收窄为“室内地面”，不认证户外地面、楼层或动词义。",
+      "changesFromSavedDraft": {
+        "reason": "将宽泛地面 cue 收窄为室内地面，保留原书地板目标。",
+        "fields": [
+          "matches"
+        ]
+      }
+    },
+    {
+      "id": "dressing-table-furniture",
+      "word": "dressing table",
+      "canonicalHeadword": "dressing table",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 梳妆台",
+      "excludedMeaningLabels": [
+        "n. 镜架台"
+      ],
+      "teachingDefinition": "n. 梳妆台",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "梳妆台",
+      "sourcePrintedPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": {
+        "label": "n.",
+        "basis": "Noun phrase naming a piece of furniture or a retail worker.",
+        "notPrintedOnSourcePage": true
+      },
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "ac144cbcac60330c074f447d58bffca94510ea33e5c0ed5cc642a44e0bfa7b97",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "ac144cbcac60330c074f447d58bffca94510ea33e5c0ed5cc642a44e0bfa7b97",
+      "dictionarySnapshot": {
+        "word": "dressing table",
+        "ipa": "ˈdresɪŋ ˈteɪbl",
+        "meaning": "n. 梳妆台; 镜架台"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表印梳妆台但未印词性，编辑分析为名词短语。hairbrush 存在梳妆台抽屉里的描述自然，梳子为此处日常中译；家具搭配与源目标吻合。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "magazine-periodical-noun",
+      "word": "magazine",
+      "canonicalHeadword": "magazine",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 杂志",
+      "excludedMeaningLabels": [
+        "n. 弹盒",
+        "n. 胶卷盒",
+        "n. 仓库",
+        "[计] 卡片箱"
+      ],
+      "teachingDefinition": "n. 杂志",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "杂志",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "6a22ccf4e0b9466a61e2998f725dbaaf3393da692b4cb4b67b05b93cc3910a90",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "6a22ccf4e0b9466a61e2998f725dbaaf3393da692b4cb4b67b05b93cc3910a90",
+      "dictionarySnapshot": {
+        "word": "magazine",
+        "ipa": ".mæɡəˈziːn",
+        "meaning": "n. 杂志, 仓库, 弹盒, 胶卷盒\n[计] 卡片箱, 介质装卸程序"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 杂志。a gardening magazine 是一本园艺刊物；at the dentist's 是牙医诊所，while waiting 与等候看牙医时吻合，未认证弹匣或仓库义。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "bed-furniture-noun",
+      "word": "bed",
+      "canonicalHeadword": "bed",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 床",
+      "excludedMeaningLabels": [
+        "n. 河床",
+        "n. 路基",
+        "n. 一层",
+        "vt. 栽种",
+        "n. 睡眠处"
+      ],
+      "teachingDefinition": "n. 床",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "床",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "f198f50d177af5d76285f471e60c9c412bc4435b87fc6bc65e99b5b7adb23bac",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "286c4445064af3d48e66890de1c843d4d1c79bd3b9a074c9f1a76ff34ff6743a",
+      "dictionarySnapshot": {
+        "word": "bed",
+        "ipa": "bed",
+        "meaning": "n. 床, 睡眠处, 河床, 底座, 路基, 一层\nvt. 提供宿处, 栽种, 安装\nvi. 睡, 形成坚实的一层"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 床。folded the blanket 和 the foot of the bed 是叠毯放在床尾，中译与可数家具义一致。删除宽泛“睡眠处” cue，未认证河床或路基义。",
+      "changesFromSavedDraft": {
+        "reason": "将家具目标 cue 限定为床。",
+        "fields": [
+          "matches"
+        ]
+      }
+    },
+    {
+      "id": "newspaper-printed-paper",
+      "word": "newspaper",
+      "canonicalHeadword": "newspaper",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 报纸",
+      "excludedMeaningLabels": [
+        "n. 报社",
+        "n. 新闻报道"
+      ],
+      "teachingDefinition": "n. 报纸",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "报纸",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "fb117146a7dc6b112f671eb0e4ae16cd9142114d4e77e0a7872d4d953ae0b69f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "fb117146a7dc6b112f671eb0e4ae16cd9142114d4e77e0a7872d4d953ae0b69f",
+      "dictionarySnapshot": {
+        "word": "newspaper",
+        "ipa": "ˈnjuːz.peɪpə",
+        "meaning": "n. 报纸"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 报纸。spread an old newspaper over the table 明确铺开纸质报纸，before painting the model 对应给模型上色前；非机构或报道义。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "stereo-sound-equipment",
+      "word": "stereo",
+      "canonicalHeadword": "stereo",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 24
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 立体声音响",
+      "excludedMeaningLabels": [
+        "n. 铅版",
+        "n. 立体照片",
+        "a. 立体的"
+      ],
+      "teachingDefinition": "n. 立体声音响",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 52,
+      "sourcePrintedPage": 48,
+      "sourcePageSha256": "b40a7cd0ed1f2be0b5cd1fc2fae38ab6a87327a6b1cb7c4532f4fd88b0671e2e",
+      "sourcePrintedMeaning": "立体声音响",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "f5021042d25085abf6e961466d86976162e7497a696a456e3b4e8304ac919ccc",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "f5021042d25085abf6e961466d86976162e7497a696a456e3b4e8304ac919ccc",
+      "dictionarySnapshot": {
+        "word": "stereo",
+        "ipa": "ˈstɪərɪəʊ",
+        "meaning": "n. 铅版, 立体照片\na. 立体的, 立体感觉的"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 立体声音响。turn down the stereo 指调低音量，后句听不清电话那头的人为自然理由，中译未把 turn down 错作关掉。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "where-question-location",
+      "word": "where",
+      "canonicalHeadword": "where",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 26
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "adv.",
+      "meaningForCheck": "adv. 在哪里",
+      "excludedMeaningLabels": [
+        "n. 地点",
+        "pron. 哪里"
+      ],
+      "teachingDefinition": "adv. 在哪里",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 56,
+      "sourcePrintedPage": 52,
+      "sourcePageSha256": "52e79dcef719376605372692424e064d73c40b08026513ed9394c8f76eeba106",
+      "sourcePrintedMeaning": "在哪里",
+      "sourcePrintedPartOfSpeech": "adv.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "eb5956e6d7831ca986d1b0fd447700d95e3b3ed912da22b87739d44117426b2b",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "eb5956e6d7831ca986d1b0fd447700d95e3b3ed912da22b87739d44117426b2b",
+      "dictionarySnapshot": {
+        "word": "where",
+        "ipa": "hwєə",
+        "meaning": "adv. 在哪里\npron. 哪里\nn. 地点"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 adv. 在哪里。Where did you leave the keys 是询问钥匙放置地点，did 后 leave 原形；厨房与走廊及完成时信息均在中译中保留。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "sharpen-pencil-tool-verb",
+      "word": "sharpen",
+      "canonicalHeadword": "sharpen",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 30
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 削尖，使锋利",
+      "excludedMeaningLabels": [
+        "vt. 使敏捷",
+        "vt. 加重",
+        "vi. 变锋利",
+        "vt. 使尖锐（观点）"
+      ],
+      "teachingDefinition": "v. 削尖，使锋利",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "sourcePrintedMeaning": "削尖；使锋利",
+      "sourcePrintedPartOfSpeech": "v.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "3aa785db258ce62adcdbc2cdf6f5ebf98dd75045284b3f498c8d636d0ac9a40a",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "e3c380603a5ea480c2dad4942367879ad22dcc2cdc36cd030514640c4b2fd937",
+      "dictionarySnapshot": {
+        "word": "sharpen",
+        "ipa": "ˈʃɑːpn",
+        "meaning": "vt. 使尖锐, 使敏捷, 加重, 削尖\nvi. 尖锐化, 变锋利"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 v. 削尖；使锋利。Sharpen the pencil 是削尖物理工具，before draw 的时序与中译一致；删除“使尖锐” cue，不将观点等抽象尖锐义算作本例已审。",
+      "changesFromSavedDraft": {
+        "reason": "删除可指抽象观点的“使尖锐” cue。",
+        "fields": [
+          "matches"
+        ]
+      }
+    },
+    {
+      "id": "put-on-clothing-phrase",
+      "word": "put on",
+      "canonicalHeadword": "put on",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 30
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "穿上",
+      "excludedMeaningLabels": [
+        "增加",
+        "上演",
+        "假装",
+        "施加于",
+        "把...放上去"
+      ],
+      "teachingDefinition": "穿上",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "sourcePrintedMeaning": "穿上",
+      "sourcePrintedPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": {
+        "label": "v.",
+        "basis": "Phrasal verb describing an action on clothing or an electric light.",
+        "notPrintedOnSourcePage": true
+      },
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "e5c041812cf7b5104125628da23cfc54d6fcab10c995c82fdbfff5406d6098a1",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "e5c041812cf7b5104125628da23cfc54d6fcab10c995c82fdbfff5406d6098a1",
+      "dictionarySnapshot": {
+        "word": "put on",
+        "ipa": "",
+        "meaning": "把...放上去, 穿上, 假装, 增加, 上演, 使...上场, 使起作用, 施加于"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表穿上，未印词性，编辑分析为衣物短语动词。put on your waterproof coat 是穿防水外套，未来雨中步行的说明与中译一致；非上演或增加义。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "take-off-clothing-phrase",
+      "word": "take off",
+      "canonicalHeadword": "take off",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 30
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "脱掉",
+      "excludedMeaningLabels": [
+        "起飞",
+        "取消",
+        "离开",
+        "拿掉",
+        "减去"
+      ],
+      "teachingDefinition": "脱掉",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "sourcePrintedMeaning": "脱掉",
+      "sourcePrintedPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": {
+        "label": "v.",
+        "basis": "Phrasal verb describing an action on clothing or an electric light.",
+        "notPrintedOnSourcePage": true
+      },
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "5c9101760b7062a3d65d50ceb0cf669939c33e8d20460e2e82a7498d2e8ad345",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "5c9101760b7062a3d65d50ceb0cf669939c33e8d20460e2e82a7498d2e8ad345",
+      "dictionarySnapshot": {
+        "word": "take off",
+        "ipa": "",
+        "meaning": "拿掉, 取消, 脱下, 领走, 减去, 复制, 起飞, 离开, 岔开\n[经] 取消"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表脱掉，未印词性，编辑分析为衣物短语动词。take off muddy boots 与 leave them by the door 自然，them 指靴子；不认证起飞、取消或离开义。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "turn-on-light-phrase",
+      "word": "turn on",
+      "canonicalHeadword": "turn on",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 30
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "开（电灯）",
+      "excludedMeaningLabels": [
+        "开始",
+        "变得兴奋",
+        "突然显出",
+        "v. 攻击"
+      ],
+      "teachingDefinition": "开（电灯）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "sourcePrintedMeaning": "开（电灯）",
+      "sourcePrintedPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": {
+        "label": "v.",
+        "basis": "Phrasal verb describing an action on clothing or an electric light.",
+        "notPrintedOnSourcePage": true
+      },
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "5aaf691ca369f6004bfba99ac1c5326365e02e68d6d76a49a2fe52bf6eeb7ea2",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "5aaf691ca369f6004bfba99ac1c5326365e02e68d6d76a49a2fe52bf6eeb7ea2",
+      "dictionarySnapshot": {
+        "word": "turn on",
+        "ipa": "",
+        "meaning": "开, 开始, 变得兴奋, 突然显出"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表开（电灯），未印词性，编辑分析为短语动词。lamp 是灯，so you can see the small print 与看清小字目的吻合；只认证电灯开启情境。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "turn-off-light-phrase",
+      "word": "turn off",
+      "canonicalHeadword": "turn off",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 30
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "关（电灯）",
+      "excludedMeaningLabels": [
+        "生产",
+        "制造",
+        "使厌烦",
+        "解雇",
+        "拐弯",
+        "车削成"
+      ],
+      "teachingDefinition": "关（电灯）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 64,
+      "sourcePrintedPage": 60,
+      "sourcePageSha256": "6a9a9ef8a00a718f51cc826e0510bf017e6cf769945b3954c7ccca2ececcf9a7",
+      "sourcePrintedMeaning": "关（电灯）",
+      "sourcePrintedPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": {
+        "label": "v.",
+        "basis": "Phrasal verb describing an action on clothing or an electric light.",
+        "notPrintedOnSourcePage": true
+      },
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "9215072bfa5e91cb838519dc3b440d9c6aa1e18525467708dd08713dd706d88d",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "9215072bfa5e91cb838519dc3b440d9c6aa1e18525467708dd08713dd706d88d",
+      "dictionarySnapshot": {
+        "word": "turn off",
+        "ipa": "",
+        "meaning": "关掉, 卖掉, 使转变方向, 解雇, 生产, 制造, 车削成, 使厌烦, 拐弯, 变成"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表关（电灯），未印词性，编辑分析为短语动词。turn off the bedroom light 是关卧室灯，once everyone is downstairs 对应等大家下楼后；不认证制造或拐弯等义。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "type-keyboard-action",
+      "word": "type",
+      "canonicalHeadword": "type",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 打字",
+      "excludedMeaningLabels": [
+        "n. 类型",
+        "n. 典型",
+        "vt. 测定类型"
+      ],
+      "teachingDefinition": "v. 打字",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "打字",
+      "sourcePrintedPartOfSpeech": "v.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "0670aa0302cd10f6260df7439393dbb6942b8e1fdb1af116b7a4ee108b6e06a1",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "0670aa0302cd10f6260df7439393dbb6942b8e1fdb1af116b7a4ee108b6e06a1",
+      "dictionarySnapshot": {
+        "word": "type",
+        "ipa": "taɪp",
+        "meaning": "n. 类型, 样式, 典型, 榜样, 标志, 符号, 型, 式\nvi. 打字\nvt. 作为代表, 测定类型, 用打字机打\n[计] 类型; 键入; DOS内部命令:在屏幕上显示指定文件的内容"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 v. 打字。type the address 与看不清手写字的理由自然；中译打出来明确文字输入动作，未认证类型名词或测定类型。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "letter-written-message",
+      "word": "letter",
+      "canonicalHeadword": "letter",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 信",
+      "excludedMeaningLabels": [
+        "n. 字母",
+        "n. 证书",
+        "n. 学问",
+        "vt. 用字母标明"
+      ],
+      "teachingDefinition": "n. 信",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "信",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "5ac63c43402c29aaf4019c604276f211247dda61f4f1ce81440b7b6363843f56",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "5ac63c43402c29aaf4019c604276f211247dda61f4f1ce81440b7b6363843f56",
+      "dictionarySnapshot": {
+        "word": "letter",
+        "ipa": "ˈletə",
+        "meaning": "n. 信, 字母, 证书, 字面意义, 铅字, 学问, 出租人\nvt. 写字母于, 在...上刻字母, 用字母标明\nvi. 写印刷体字\n[计] 字母"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 信。a letter explaining the changes to the timetable 指学校的一封通信；中译说明课表改动及寄来信件与常规书信语境吻合，非字母或证书义。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "basket-container-noun",
+      "word": "basket",
+      "canonicalHeadword": "basket",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 篮子",
+      "excludedMeaningLabels": [
+        "vt. 装入篮"
+      ],
+      "teachingDefinition": "n. 篮子",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "篮子",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "946fbaf228d1a2716d0f392af6c41db65da10cd79c3290ee28e7b388e3d78e62",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "946fbaf228d1a2716d0f392af6c41db65da10cd79c3290ee28e7b388e3d78e62",
+      "dictionarySnapshot": {
+        "word": "basket",
+        "ipa": "ˈbɑːskɪt",
+        "meaning": "n. 篮, 篮子\nvt. 装入篮"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 篮子。picnic food in a basket 和 by the front door 分别是容器与位置，中译放进篮子、搁在前门边吻合，未认证装入篮动词。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "eat-food-action",
+      "word": "eat",
+      "canonicalHeadword": "eat",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 吃",
+      "excludedMeaningLabels": [
+        "v. 腐蚀"
+      ],
+      "teachingDefinition": "v. 吃",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "吃",
+      "sourcePrintedPartOfSpeech": "v.",
+      "exampleInflection": "ate; example.word stays eat",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "85a46fd28a8411f7b9ad9227f29a9ba4435296067f0e37c081d3b070e33fd9b1",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "85a46fd28a8411f7b9ad9227f29a9ba4435296067f0e37c081d3b070e33fd9b1",
+      "dictionarySnapshot": {
+        "word": "eat",
+        "ipa": "iːt",
+        "meaning": "v. 吃, 腐蚀"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 v. 吃。ate 是 eat 的过去式，吃的是三明治；on a bench overlooking the river 与中译能眺望河面的长椅吻合，规范词头保持 eat。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "bone-body-noun",
+      "word": "bone",
+      "canonicalHeadword": "bone",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 骨头",
+      "excludedMeaningLabels": [
+        "n. 骨制品",
+        "vt. 剔骨",
+        "vi. 专心致志"
+      ],
+      "teachingDefinition": "n. 骨头",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "骨头",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "f993446b3a7e17d9fef3d4a99ae840d81745526b3286b42fa0089d12405a6274",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "f993446b3a7e17d9fef3d4a99ae840d81745526b3286b42fa0089d12405a6274",
+      "dictionarySnapshot": {
+        "word": "bone",
+        "ipa": "bəʊn",
+        "meaning": "n. 骨头, 骨, 骨制品\nvt. 剔骨\nvi. 专心致志"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 骨头。buried a bone under the rose bush 描述狗埋一根骨头，过去动作和玫瑰灌木下的位置与中译吻合；非剔骨或专心致志动词。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "tooth-body-noun",
+      "word": "tooth",
+      "canonicalHeadword": "tooth",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 牙齿",
+      "excludedMeaningLabels": [
+        "n. 齿状物",
+        "n. 爱好",
+        "vi. 啮合"
+      ],
+      "teachingDefinition": "n. 牙齿",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "牙齿",
+      "sourcePrintedPartOfSpeech": "n.",
+      "sourcePrintedForms": [
+        "teeth"
+      ],
+      "exampleInflection": "teeth; example.word stays tooth",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "ab9244fbda21f3dff5702863a6395fc220b562c12deb0aa43a3d827f559ad06f",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "ab9244fbda21f3dff5702863a6395fc220b562c12deb0aa43a3d827f559ad06f",
+      "dictionarySnapshot": {
+        "word": "tooth",
+        "ipa": "tuːθ",
+        "meaning": "n. 牙齿, 齿状物, 爱好\nvt. 装以齿, 将...切成齿状\nvi. 啮合"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 牙齿，并印复数 teeth。between my teeth 为牙缝，was stuck 与卡着吻合；规范词头 tooth，句内保留正确不规则复数，不使用 tooths。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "cook-prepare-food-verb",
+      "word": "cook",
+      "canonicalHeadword": "cook",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 做（饭菜）",
+      "excludedMeaningLabels": [
+        "n. 厨师",
+        "n. 厨子",
+        "vt. 加热"
+      ],
+      "teachingDefinition": "v. 做（饭菜）",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "做（饭菜）",
+      "sourcePrintedPartOfSpeech": "v.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "15f1a542eb4d1f30a0a317740ea86e2eb63e5cdba85b04acfd97617437877fcd",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "15f1a542eb4d1f30a0a317740ea86e2eb63e5cdba85b04acfd97617437877fcd",
+      "dictionarySnapshot": {
+        "word": "cook",
+        "ipa": "kʊk",
+        "meaning": "n. 厨子, 厨师\nvt. 烹调, 煮饭, 加热\nvi. 在煮着"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 v. 做（饭菜）。cook dinner 与室友同时 sets the table 是做晚饭和摆餐桌，中译通常与 while 时间关系吻合；非厨师名词。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "milk-cow-drink-noun",
+      "word": "milk",
+      "canonicalHeadword": "milk",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 牛奶",
+      "excludedMeaningLabels": [
+        "vt. 挤乳",
+        "vt. 榨取",
+        "n. 乳状物"
+      ],
+      "teachingDefinition": "n. 牛奶",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "牛奶",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "25d30018b96404ccb45d2b88f3c3fe20a7049eb209f280fed4d3c2f69fe1c574",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "25d30018b96404ccb45d2b88f3c3fe20a7049eb209f280fed4d3c2f69fe1c574",
+      "dictionarySnapshot": {
+        "word": "milk",
+        "ipa": "mɪlk",
+        "meaning": "n. 奶, 乳状物\nvt. 挤乳, 榨取\nvi. 产乳"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 牛奶。a little milk 为不可数饮品，poured into tea and stirred 对应倒进茶后搅拌；非挤乳或榨取动词，未认证泛指乳状物。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "meal-food-occasion-noun",
+      "word": "meal",
+      "canonicalHeadword": "meal",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 饭，一顿饭",
+      "excludedMeaningLabels": [
+        "n. 粗粉",
+        "vi. 进餐"
+      ],
+      "teachingDefinition": "n. 饭，一顿饭",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "饭，一顿饭",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "89394127387f8a74aa185fd125e1604cd9413dfab57624b0aa92aaaca6ee4904",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "89394127387f8a74aa185fd125e1604cd9413dfab57624b0aa92aaaca6ee4904",
+      "dictionarySnapshot": {
+        "word": "meal",
+        "ipa": "miːl",
+        "meaning": "n. 一餐, 膳食, 粗粉\nvi. 进餐"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 饭，一顿饭。share a simple meal 为一起吃一顿简单的饭，after finishing the afternoon's work 与中译时序吻合；非粗粉或进餐动词。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "drink-liquid-action",
+      "word": "drink",
+      "canonicalHeadword": "drink",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 32
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "v.",
+      "meaningForCheck": "v. 喝",
+      "excludedMeaningLabels": [
+        "n. 饮料",
+        "n. 酒",
+        "v. 喝酒"
+      ],
+      "teachingDefinition": "v. 喝",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 68,
+      "sourcePrintedPage": 64,
+      "sourcePageSha256": "6a4b9ee3e9845611faa09869f68cdc3337f5fa47930c1f56f7a5ac3393b400d3",
+      "sourcePrintedMeaning": "喝",
+      "sourcePrintedPartOfSpeech": "v.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-22-32.ts",
+      "savedLedger": "docs/vocabulary-examples-batch6-22-32.json",
+      "savedContentSha256": "67883c558d291df62b87da4348eb82b4a1472950210e2ef1987e60dbf322bb01",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "67883c558d291df62b87da4348eb82b4a1472950210e2ef1987e60dbf322bb01",
+      "dictionarySnapshot": {
+        "word": "drink",
+        "ipa": "drɪŋk",
+        "meaning": "n. 饮料, 酒\nv. 喝, 喝酒"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 v. 喝。stopped to drink water 是停下来喝水，搬箱子上楼后的时序与中译一致；未错译成停止喝水，非饮料名词或专指喝酒义。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "shop-assistant-retail",
+      "word": "shop assistant",
+      "canonicalHeadword": "shop assistant",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 59
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 售货员",
+      "excludedMeaningLabels": [
+        "n. 助手"
+      ],
+      "teachingDefinition": "n. 售货员",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 122,
+      "sourcePrintedPage": 118,
+      "sourcePageSha256": "d199cc2093210ce4f7825304eeb75d1a315bc96d617068f631bf6b8bc5e6a3bb",
+      "sourcePrintedMeaning": "售货员",
+      "sourcePrintedPartOfSpeech": null,
+      "editoriallyInferredPartOfSpeech": {
+        "label": "n.",
+        "basis": "Noun phrase naming a piece of furniture or a retail worker.",
+        "notPrintedOnSourcePage": true
+      },
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentSha256": "e1357b450e707bb458167d5e9dab73cd1b5da908c17011de08645651119bdf48",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "8115edb9892448f603e9cb6b08a3080ca02e9d73afa4f36581d709b790ab1920",
+      "dictionarySnapshot": {
+        "word": "shop assistant",
+        "ipa": "ʃɔp əˈsɪstənt",
+        "meaning": "n. 店员"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表售货员，未印词性，编辑分析为名词短语。找到合适尺码夹克并拿到试衣间的服务语境对应售货员；修中译为“尺码适合我的”，避免“适合我尺码的”生硬表达。",
+      "changesFromSavedDraft": {
+        "reason": "修正生硬中译，保留尺码、夹克和试衣间信息。",
+        "fields": [
+          "zh"
+        ]
+      }
+    },
+    {
+      "id": "aspirin-medicine-name",
+      "word": "aspirin",
+      "canonicalHeadword": "aspirin",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 阿斯匹林",
+      "excludedMeaningLabels": [
+        "n. 阿片"
+      ],
+      "teachingDefinition": "n. 阿斯匹林",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "阿斯匹林",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentSha256": "8711b441243b48ea903f222fdd00ca6912ffe2f7685e542b6b9953af4789a373",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "8711b441243b48ea903f222fdd00ca6912ffe2f7685e542b6b9953af4789a373",
+      "dictionarySnapshot": {
+        "word": "aspirin",
+        "ipa": "ˈæspərɪn",
+        "meaning": "n. 阿斯匹林\n[化] 乙酰水杨酸; 阿司匹灵; 邻乙酸基苯甲酸"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 阿斯匹林，例句中译采用通行写法阿司匹林。checked whether tablets contained aspirin 与检查药片是否含有此药名吻合，contain aspirin 搭配自然；不提供剂量、治疗或服用建议。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "dentist-profession",
+      "word": "dentist",
+      "canonicalHeadword": "dentist",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 牙医",
+      "excludedMeaningLabels": [
+        "n. 内科医生"
+      ],
+      "teachingDefinition": "n. 牙医",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "牙医",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentSha256": "346e4871b986b37246c0cf9b934cda1b3a76dbdcc4422a85e1ca5c5a35a164f5",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "346e4871b986b37246c0cf9b934cda1b3a76dbdcc4422a85e1ca5c5a35a164f5",
+      "dictionarySnapshot": {
+        "word": "dentist",
+        "ipa": "ˈdentɪst",
+        "meaning": "n. 牙科医生\n[医] 牙医师"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 牙医。an appointment with the dentist at four 表示四点牙医预约，提前下班的原因及中译一致；非内科医生。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "earache-pain",
+      "word": "earache",
+      "canonicalHeadword": "earache",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 耳痛",
+      "excludedMeaningLabels": [
+        "n. 头痛"
+      ],
+      "teachingDefinition": "n. 耳痛",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "耳痛",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentSha256": "c520bb7846a0cd63a7a2ff7809ca146281b68ec56ef9fb8a72328f2a3059dec9",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "c520bb7846a0cd63a7a2ff7809ca146281b68ec56ef9fb8a72328f2a3059dec9",
+      "dictionarySnapshot": {
+        "word": "earache",
+        "ipa": "ˈɪəreɪk",
+        "meaning": "n. 耳朵痛\n[医] 耳痛"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 耳痛。had earache 为自然英式不可数用法；because 与因耳痛缺席排练的原因吻合，不推断治疗或诊断。",
+      "changesFromSavedDraft": null
+    },
+    {
+      "id": "flu-illness-name",
+      "word": "flu",
+      "canonicalHeadword": "flu",
+      "canonicalHeadwordBasis": "Exact headword on the viewed word-list image and local source vocabulary index; no dictionary lemma substitution.",
+      "source": {
+        "book": "NCE1",
+        "lesson": 62
+      },
+      "scope": "textbook-target",
+      "partOfSpeech": "n.",
+      "meaningForCheck": "n. 流行性感冒",
+      "excludedMeaningLabels": [
+        "n. 普通感冒"
+      ],
+      "teachingDefinition": "n. 流行性感冒",
+      "reviewed": [
+        "target sense",
+        "natural sentence",
+        "Chinese translation",
+        "collocation",
+        "part of speech",
+        "word-list source",
+        "canonical headword"
+      ],
+      "sourcePDFPage": 128,
+      "sourcePrintedPage": 124,
+      "sourcePageSha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381",
+      "sourcePrintedMeaning": "流行性感冒",
+      "sourcePrintedPartOfSpeech": "n.",
+      "savedContentFile": "app/data/vocabulary-examples-nce1-59-82.ts",
+      "savedLedger": "docs/vocabulary-examples-batch9-59-82.json",
+      "savedContentSha256": "e51d546cf39e792368f7db3d5bac90339687f539d6ceaf7cabce7ae7aabafb1b",
+      "contentFile": "app/data/vocabulary-reviewed-batch5c.ts",
+      "contentSha256": "e51d546cf39e792368f7db3d5bac90339687f539d6ceaf7cabce7ae7aabafb1b",
+      "dictionarySnapshot": {
+        "word": "flu",
+        "ipa": "fluː",
+        "meaning": "n. 流感, 流行性感冒"
+      },
+      "reviewer": "Independent Codex /root/review_batch5c; no human certification",
+      "editorialReview": "原表 n. 流行性感冒。had the flu 和取消面试因果与中译患流感吻合；不把流感混同普通感冒，也不提供健康建议。",
+      "changesFromSavedDraft": null
+    }
+  ],
+  "pending": [
+    "Root integration and actual source-bound UI callback checks",
+    "Integrated checkpoint build",
+    "Browser and phone review",
+    "True audio playback",
+    "Teacher or human editorial review"
+  ],
+  "remoteWrites": false
+}
