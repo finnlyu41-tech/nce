@@ -4,7 +4,7 @@ import {ArrowLeft,ArrowRight,BookOpen,Search} from 'lucide-react';
 import type {NceBookId,State} from './model';
 import type {GrammarStageId,GrammarUnit} from './grammar-curriculum-types';
 import {grammarUnits,grammarStages,grammarPurposes,grammarPrerequisites,lessonsForGrammarUnit,lessonsForGrammarGuide,searchGrammarUnits,searchGrammarConcepts,grammarPracticeLink,guideBelongsToEntry} from './grammar-curriculum';
-import {grammarProgressFor,grammarProgressKey,grammarProgressNeedsNewerVersion,updateGrammarProgress,markGrammarSeen,beginGrammarRound,setGrammarAnswer,showGrammarHint,revisitGrammarTheory,checkGrammarResponse,finishGrammarRound,grammarRoundQuestions,grammarProgressStatus,emptyGrammarResponse,type GrammarUnitProgress} from './grammar-curriculum-progress';
+import {grammarProgressFor,grammarProgressKey,grammarProgressNeedsNewerVersion,updateGrammarProgress,markGrammarSeen,beginGrammarRound,setGrammarAnswer,showGrammarHint,revisitGrammarTheory,checkGrammarResponse,finishGrammarRound,grammarRoundQuestions,grammarProgressStatus,grammarMaterialNotice,emptyGrammarResponse,type GrammarUnitProgress} from './grammar-curriculum-progress';
 import {GrammarExplanation} from './grammar-explanation-ui';
 import {grammarGuides,grammarLessonLabel} from './textbook-grammar';
 import './grammar-curriculum.css';
@@ -26,7 +26,7 @@ function GrammarUnitLesson({unit,props,select,preferredBook}:{unit:GrammarUnit;p
  const [references,setReferences]=useState<string[]>([]),[lessonsOpen,setLessonsOpen]=useState(false);
  const patch=(change:(p:GrammarUnitProgress)=>GrammarUnitProgress)=>props.update(state=>updateGrammarProgress(state,unit.id,change));
  useEffect(()=>{heading.current?.focus({preventScroll:true});if(mode==='practice')heading.current?.scrollIntoView({block:'start'})},[mode,position,submitted]);
- function begin(){patch(beginGrammarRound);setReferences([]);setPosition(0);setMode('practice')}
+ function begin(){patch(p=>beginGrammarRound(p,unit));setReferences([]);setPosition(0);setMode('practice')}
  function openTheory(){patch(revisitGrammarTheory);setMode('learn')}
  function saveAnswer(){
   patch(p=>{
@@ -40,6 +40,7 @@ function GrammarUnitLesson({unit,props,select,preferredBook}:{unit:GrammarUnit;p
   <div className="grammar-unit-heading"><div><span className="eyebrow">单元 {unit.order}</span><h1 ref={heading} tabIndex={-1}>{unit.title}</h1></div><span className="grammar-status">{grammarProgressStatus(progress)}</span></div>
   <p className="grammar-unit-goal">学会后能做：{unit.goal}</p>
   {needsNewerVersion&&<p role="status" className="notice">这个单元的进度来自较新的版本。讲解仍可阅读，请使用较新版本继续练习；原记录已保留。</p>}
+  <p role="status" className="small muted">{grammarMaterialNotice(progress,unit)}</p>
   {mode==='learn'&&<div className="grammar-exercise-start"><div><p>三题：识别、改错、造句。提示或回看讲解会记为跟练。</p></div><button className="btn" disabled={needsNewerVersion} onClick={begin}>{progress.inRound?'继续练习':progress.attempts.length?'再练一组':'开始练习'}<ArrowRight size={16}/></button></div>}
   {mode==='learn'&&<><div className="grammar-unit-prerequisites"><strong>建议先学</strong>{grammarPrerequisites(unit).length?grammarPrerequisites(unit).map(previous=><button key={previous.id} className="text-btn" onClick={()=>select(previous.id)}>{previous.title}<ArrowRight size={14}/></button>):<span>从这一个开始；先会辨认句子的主语。</span>}</div>
   <div className="grammar-unit-purposes">{unit.purposeIds.map(id=>{const p=grammarPurposes.find(p=>p.id===id)!;return <span key={id}>{p.title} · {p.context}</span>})}</div></>}
@@ -51,7 +52,7 @@ function GrammarUnitLesson({unit,props,select,preferredBook}:{unit:GrammarUnit;p
   </>:submitted?<section className="grammar-round-result" aria-label="本轮练习结果">
    <h3>{grammarProgressStatus(progress)}</h3><p>本轮三题已完成。识别题核对指定选项；改错和造句只核对本站参考表达，其他合理写法需进一步核对。</p>
    <ol>{questions.map(question=>{const answer=progress.responses[question.id],open=references.includes(question.id);return <li key={question.id}><strong>{kindNames[question.kind]} · {answer?.matched?'与参考一致':'与参考不同，待核对'}</strong><p>{question.prompt}</p><p>你的回答：<span lang="en">{answer?.checkedValue}</span></p><button className="btn secondary" aria-expanded={open} aria-controls={`grammar-reference-${question.id}`} onClick={()=>setReferences(ids=>open?ids.filter(id=>id!==question.id):[...ids,question.id])}>{open?'收起参考与解释':'查看参考与解释'}</button>{open&&<div id={`grammar-reference-${question.id}`} className="grammar-result-reference"><p lang="en">{question.answer}</p><p>{question.explanation}</p>{!!question.accepted?.length&&<p className="small">也接受：{question.accepted.join(' / ')}</p>}</div>}</li>})}</ol>
-   <p className="small muted">首次通过只证明这一组题的表现。至少相隔 24 小时，换另一组题且无提示通过，才显示“延迟异题检验通过”；自由表达仍需核对。</p>
+   <p className="small muted">首次通过只证明这一组题的表现。至少相隔 24 小时，在完整展示历史下首次看到另一组材料并无提示通过，才显示“延迟未见材料检验通过”。复用材料只算复习；这仍不是陌生情境迁移或 IELTS 能力证明，自由表达仍需核对。</p>
    <div className="row wrap"><button className="btn" onClick={begin}>换一组题重做<ArrowRight size={16}/></button><button className="btn secondary" onClick={openTheory}>回看讲解</button></div>
   </section>:<section className="grammar-progressive-practice" aria-label="三步语法练习">
    <div className="grammar-question-position"><span>第 {position+1} / 3 题 · {kindNames[q.kind]}</span><span>{progress.assisted?'本轮使用过帮助':'本轮尚未使用帮助'}</span></div>
