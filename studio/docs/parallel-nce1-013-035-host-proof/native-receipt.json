@@ -1,0 +1,782 @@
+{
+  "scope": "Local actual built classic/map app; fresh synthetic QA records; no storage injection or clock/audio fabrication",
+  "base": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+  "registeredCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35"
+  ],
+  "selectedNativeCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-25",
+    "nce1-35"
+  ],
+  "origin": "http://127.0.0.1:57574",
+  "proof": "/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/work/parallel-nce1-013-035-host/native-hkDAP5",
+  "checks": [
+    {
+      "name": "nine native selected courses keep independent draft keys through refresh",
+      "ok": true,
+      "elapsedMs": 2931,
+      "detail": {
+        "courses": 9,
+        "independentKeys": 18
+      }
+    },
+    {
+      "name": "native Today has nine distinct pending links and no duplicate recommended task",
+      "ok": true,
+      "elapsedMs": 223,
+      "detail": {
+        "links": [
+          "/map/#/learn/nce1-1",
+          "/map/#/learn/nce1-3",
+          "/map/#/learn/nce1-5",
+          "/map/#/learn/nce1-7",
+          "/map/#/learn/nce1-9",
+          "/map/#/learn/nce1-11",
+          "/map/#/learn/nce1-13",
+          "/map/#/learn/nce1-25",
+          "/map/#/learn/nce1-35"
+        ]
+      }
+    },
+    {
+      "name": "ordinary native note survives selected course writes",
+      "ok": true,
+      "elapsedMs": 346
+    },
+    {
+      "name": "actual downloaded backup includes all nine snapshots and sidecars",
+      "ok": true,
+      "elapsedMs": 0,
+      "detail": {
+        "sha256": "ac939dc099c856ea0b8bdde1bb75c876f21bab49526a3787309c5192ca3f9632"
+      }
+    },
+    {
+      "name": "two native tabs save different course drafts without overwriting either or the note",
+      "ok": true,
+      "elapsedMs": 691
+    },
+    {
+      "name": "nce1-13 original text/comic/real audio bind this selected lesson",
+      "ok": true,
+      "elapsedMs": 793,
+      "detail": {
+        "languagePath": "/language/NCE1/13.json",
+        "sourceSha256": "6a7c5c324a0a891c2fb0b7dc430ed2f38a3c99d3cc6ba526adbbc49e780dc0a7",
+        "clipLabels": [
+          "听单件物品的颜色问句",
+          "听my说明自己的物品（his/her练习见14课）",
+          "听it回答颜色"
+        ],
+        "audio": [
+          {
+            "currentTime": 16.67,
+            "duration": 56.008189,
+            "readyState": 1,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      }
+    },
+    {
+      "name": "nce1-25 original text/comic/real audio bind this selected lesson",
+      "ok": true,
+      "elapsedMs": 783,
+      "detail": {
+        "languagePath": "/language/NCE1/25.json",
+        "sourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+        "clipLabels": [
+          "听首次介绍一件厨房物品",
+          "听已确定物品的位置，为位置问答提供情境",
+          "听房间中间的位置陈述"
+        ],
+        "audio": [
+          {
+            "currentTime": 23.120544,
+            "duration": 72.166938,
+            "readyState": 4,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      }
+    },
+    {
+      "name": "nce1-35 original text/comic/real audio bind this selected lesson",
+      "ok": true,
+      "elapsedMs": 783,
+      "detail": {
+        "languagePath": "/language/NCE1/35.json",
+        "sourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+        "clipLabels": [
+          "听村庄位置事实；结合第75–76页Where句型练习转换为位置疑问",
+          "听in与between说明静态位置",
+          "听一组孩子当前从建筑内部向外移动"
+        ],
+        "audio": [
+          {
+            "currentTime": 23.500544,
+            "duration": 85.719438,
+            "readyState": 4,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      }
+    },
+    {
+      "name": "nce1-1 native pipeline saves originals and follows pending priority to nce1-3",
+      "ok": true,
+      "elapsedMs": 6298,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-3",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-3 native pipeline saves originals and follows pending priority to nce1-5",
+      "ok": true,
+      "elapsedMs": 5995,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-5",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-5 native pipeline saves originals and follows pending priority to nce1-7",
+      "ok": true,
+      "elapsedMs": 6119,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-7",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-7 native pipeline saves originals and follows pending priority to nce1-9",
+      "ok": true,
+      "elapsedMs": 6983,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-9",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-9 native pipeline saves originals and follows pending priority to nce1-11",
+      "ok": true,
+      "elapsedMs": 6301,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-11",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-11 native pipeline saves originals and follows pending priority to nce1-13",
+      "ok": true,
+      "elapsedMs": 6716,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-13",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-13 native pipeline saves originals and follows pending priority to nce1-25",
+      "ok": true,
+      "elapsedMs": 6965,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-25",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-25 native pipeline saves originals and follows pending priority to nce1-35",
+      "ok": true,
+      "elapsedMs": 7102,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-35",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "nce1-35 native pipeline saves originals and follows pending priority to nce1-37",
+      "ok": true,
+      "elapsedMs": 7181,
+      "detail": {
+        "attempts": 12,
+        "successor": "nce1-37",
+        "openExpression": "awaiting-human-review"
+      }
+    },
+    {
+      "name": "native imported pending backup restores nine course positions without deleting the ordinary note",
+      "ok": true,
+      "elapsedMs": 1056
+    },
+    {
+      "name": "native finished backup restore keeps nine original attempt sets and separate corrections",
+      "ok": true,
+      "elapsedMs": 1158
+    },
+    {
+      "name": "native restore retains future-content-version raw and blocks selected13",
+      "ok": true,
+      "elapsedMs": 2117
+    },
+    {
+      "name": "native restore retains foreign-course-envelope raw and blocks selected13",
+      "ok": true,
+      "elapsedMs": 1785
+    },
+    {
+      "name": "native restore retains foreign-correction-ID raw and blocks selected13",
+      "ok": true,
+      "elapsedMs": 1715
+    },
+    {
+      "name": "limited 320 CSS viewport selected13/25/35 and records avoid horizontal page overflow",
+      "ok": true,
+      "elapsedMs": 805,
+      "detail": {
+        "measurements": [
+          {
+            "id": "nce1-13",
+            "inner": 320,
+            "scroll": 320,
+            "body": 320
+          },
+          {
+            "id": "nce1-25",
+            "inner": 320,
+            "scroll": 320,
+            "body": 320
+          },
+          {
+            "id": "nce1-35",
+            "inner": 320,
+            "scroll": 320,
+            "body": 320
+          }
+        ],
+        "records": {
+          "inner": 320,
+          "scroll": 320
+        },
+        "device": "desktop Chrome emulation; not physical phone"
+      }
+    },
+    {
+      "name": "limited 390 CSS viewport selected13/25/35 and records avoid horizontal page overflow",
+      "ok": true,
+      "elapsedMs": 763,
+      "detail": {
+        "measurements": [
+          {
+            "id": "nce1-13",
+            "inner": 390,
+            "scroll": 390,
+            "body": 390
+          },
+          {
+            "id": "nce1-25",
+            "inner": 390,
+            "scroll": 390,
+            "body": 390
+          },
+          {
+            "id": "nce1-35",
+            "inner": 390,
+            "scroll": 390,
+            "body": 390
+          }
+        ],
+        "records": {
+          "inner": 390,
+          "scroll": 390
+        },
+        "device": "desktop Chrome emulation; not physical phone"
+      }
+    },
+    {
+      "name": "nine completed course receipts preserve map and FSRS grading boundaries",
+      "ok": true,
+      "elapsedMs": 7,
+      "detail": {
+        "selectedCourses": 9,
+        "mapRecords": 1,
+        "mapAttempts": 0,
+        "accessOnly": true,
+        "wordRatingsCreated": 0
+      }
+    }
+  ],
+  "passed": 25,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "RuntimeExceptions": [],
+  "requests": [
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/language/NCE1/7.json",
+      "size": 1511
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/language/NCE1/13.json",
+      "size": 1327
+    },
+    {
+      "path": "/lesson-pages/ab70c14637ab1766e5b746e12ed306ebea66ec241ad19d7d0b30216f4ffa69cd.jpg",
+      "size": 290900
+    },
+    {
+      "path": "/materials/manifest.json",
+      "size": 391151
+    },
+    {
+      "path": "/materials/f5cdec23ea3c185a10b2ee10201f063e3f7ae28c999cedffb70a5e0bbc909508/0000.bin",
+      "size": 1123134
+    },
+    {
+      "path": "/language/NCE1/25.json",
+      "size": 1434
+    },
+    {
+      "path": "/lesson-pages/d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f.jpg",
+      "size": 337109
+    },
+    {
+      "path": "/materials/b6cfd111a22c08fc8351658b8b34ad1e7a435999d36fb5820a52ec5b33a01410/0000.bin",
+      "size": 1381683
+    },
+    {
+      "path": "/language/NCE1/35.json",
+      "size": 1826
+    },
+    {
+      "path": "/lesson-pages/563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45.jpg",
+      "size": 255245
+    },
+    {
+      "path": "/materials/4707db85e0d4f41c4715f48a4cf3372e7c059eceef5ce61ff09402324c3e139b/0000.bin",
+      "size": 1598514
+    },
+    {
+      "path": "/language/NCE1/37.json",
+      "size": 1829
+    },
+    {
+      "path": "/lesson-pages/0d0b6470a3a2221374aece840830babae7af0c2dd160b6decf206324d32b26d4.jpg",
+      "size": 348366
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "size": 79684
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "size": 2421562
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-BMUyxIY6.css",
+      "size": 323107
+    },
+    {
+      "path": "/assets/standalone-CoAXBPJm.js",
+      "size": 3087981
+    }
+  ],
+  "sourceSha256": {
+    "course-loop/registry.mjs": "26abf32d62736750d0b6de1ab4f60808d82cc9d336903ca856b64f587baf701f",
+    "course-loop/host-contract.d.ts": "b329a6f67ef7fcb404141ee1198fa56564fe72d8ca1fda614bf841679b51cec1",
+    "app/course-loop-next.ts": "5d84da055c92b5eeca4439fb49f06d33134b4670e49009b4a507bf43c7fd54cf",
+    "app/course-loop-progress.ts": "3fb5edb5a9ffdb7396709fb29c7e9e883f0483e05c95bc1cbfc9ac27a0e9eb85",
+    "app/course-loop-ui.tsx": "d5cd8edd2d6d3bb66156032bd22e2e194868803f27aaa87ae0f81a2b30909dd4",
+    "app/today-practice.ts": "38cabaefb794cfba8c04b4a191cd2d16f1eb4d6d8f8bfa4521de889ea55a86be",
+    "app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028",
+    "app/progress-file.ts": "67ef85cd106c87faf762442304afcc91f5ec8fadab0ae968eb5a852455ce5d10",
+    "app/progress-save.tsx": "49951e975a9f6779ecc3d0b4ad6b31481d5ad50540e3dbfd20f842320ece237b"
+  },
+  "unverified": [
+    "published origin",
+    "natural24h/7d",
+    "physical phone",
+    "audibility",
+    "human expression",
+    "learning gain"
+  ],
+  "retries": []
+}

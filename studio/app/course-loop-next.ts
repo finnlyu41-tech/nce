@@ -17,7 +17,7 @@ export function nextCourse(state:State,map:Progress,now=Date.now()):MapNode {
  if(due)return nodeById(due.course.id)!;
  const finished=saved.filter(item=>item.next?.kind==='continue-route'||item.next?.kind==='needs-new-material');
  if(!finished.length)return continueNode(map,now);
- const successorIds:Record<string,string>={'nce1-1':'nce1-3','nce1-3':'nce1-5','nce1-5':'nce1-7','nce1-7':'nce1-9','nce1-9':'nce1-11','nce1-11':'nce1-13'};
+ const successorIds:Record<string,string>={'nce1-1':'nce1-3','nce1-3':'nce1-5','nce1-5':'nce1-7','nce1-7':'nce1-9','nce1-9':'nce1-11','nce1-11':'nce1-13','nce1-13':'nce1-15','nce1-15':'nce1-17','nce1-17':'nce1-19','nce1-19':'nce1-21','nce1-21':'nce1-23','nce1-23':'nce1-25','nce1-25':'nce1-27','nce1-27':'nce1-29','nce1-29':'nce1-31','nce1-31':'nce1-33','nce1-33':'nce1-35','nce1-35':'nce1-37'};
  const successor=(id:string)=>nodeById(successorIds[id])!;
  const current=continueNode(map,now),last=map.lastNode?nodeById(map.lastNode):undefined;
  // Preserve advanced or reset map routes. A completed selected course can

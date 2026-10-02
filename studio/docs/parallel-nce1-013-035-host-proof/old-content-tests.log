@@ -1,0 +1,220 @@
+TAP version 13
+# Subtest: two explicitly authored groups have six complete three-target banks and objective criteria
+ok 1 - two explicitly authored groups have six complete three-target banks and objective criteria
+  ---
+  duration_ms: 2.334209
+  type: 'test'
+  ...
+# Subtest: new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+ok 2 - new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+  ---
+  duration_ms: 0.534333
+  type: 'test'
+  ...
+# Subtest: lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+ok 3 - lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+  ---
+  duration_ms: 0.233708
+  type: 'test'
+  ...
+# Subtest: lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+ok 4 - lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+  ---
+  duration_ms: 0.244625
+  type: 'test'
+  ...
+# Subtest: lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+ok 5 - lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+  ---
+  duration_ms: 0.93675
+  type: 'test'
+  ...
+# Subtest: lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+ok 6 - lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+  ---
+  duration_ms: 0.358875
+  type: 'test'
+  ...
+# Subtest: media references reuse exact existing comic/LRC source identities and source-bound time ranges
+ok 7 - media references reuse exact existing comic/LRC source identities and source-bound time ranges
+  ---
+  duration_ms: 6.154875
+  type: 'test'
+  ...
+# Subtest: new groups contain no copied textbook body, audio blobs, storage access or fake score
+ok 8 - new groups contain no copied textbook body, audio blobs, storage access or fake score
+  ---
+  duration_ms: 1.893209
+  type: 'test'
+  ...
+# Subtest: all independent blind answers and reported natural variants fit final finite matching
+ok 9 - all independent blind answers and reported natural variants fit final finite matching
+  ---
+  duration_ms: 1.707917
+  type: 'test'
+  ...
+# Subtest: short nationality structure is explicit before submission, not a hidden grading rule
+ok 10 - short nationality structure is explicit before submission, not a hidden grading rule
+  ---
+  duration_ms: 0.6955
+  type: 'test'
+  ...
+# Subtest: coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+ok 11 - coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+  ---
+  duration_ms: 1.169792
+  type: 'test'
+  ...
+# Subtest: three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+ok 12 - three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+  ---
+  duration_ms: 1.931791
+  type: 'test'
+  ...
+# Subtest: all accepted keys and documented semantic counterexamples obey the final content matcher
+ok 13 - all accepted keys and documented semantic counterexamples obey the final content matcher
+  ---
+  duration_ms: 1.132583
+  type: 'test'
+  ...
+# Subtest: written question and statement marks cannot be swallowed into the other response type
+ok 14 - written question and statement marks cannot be swallowed into the other response type
+  ---
+  duration_ms: 0.767458
+  type: 'test'
+  ...
+# Subtest: normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+ok 15 - normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+  ---
+  duration_ms: 0.186916
+  type: 'test'
+  ...
+# Subtest: three source identities and time labels remain bound to existing matching textbook/comic groups
+ok 16 - three source identities and time labels remain bound to existing matching textbook/comic groups
+  ---
+  duration_ms: 5.669584
+  type: 'test'
+  ...
+# Subtest: independent blind solutions and final real-factory checker probes agree after any revision
+ok 17 - independent blind solutions and final real-factory checker probes agree after any revision
+  ---
+  duration_ms: 2.555375
+  type: 'test'
+  ...
+# Subtest: production factory source is the unchanged current integration base file, without source substitution or shadow reducer
+ok 18 - production factory source is the unchanged current integration base file, without source substitution or shadow reducer
+  ---
+  duration_ms: 24.088792
+  type: 'test'
+  ...
+# Subtest: nce1-7: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 19 - nce1-7: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 2.944667
+  type: 'test'
+  ...
+# Subtest: nce1-7: source/hint identities, originals and correction requirements survive repair retry
+ok 20 - nce1-7: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 5.383167
+  type: 'test'
+  ...
+# Subtest: nce1-7: text/audio/comic each count as help without inventing audio or map evidence
+ok 21 - nce1-7: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.394417
+  type: 'test'
+  ...
+# Subtest: nce1-7: partial input and corrections restore through the actual factory with original timestamps
+ok 22 - nce1-7: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 1.984708
+  type: 'test'
+  ...
+# Subtest: nce1-7: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 23 - nce1-7: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 9.585625
+  type: 'test'
+  ...
+# Subtest: nce1-9: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 24 - nce1-9: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 0.686125
+  type: 'test'
+  ...
+# Subtest: nce1-9: source/hint identities, originals and correction requirements survive repair retry
+ok 25 - nce1-9: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 2.930167
+  type: 'test'
+  ...
+# Subtest: nce1-9: text/audio/comic each count as help without inventing audio or map evidence
+ok 26 - nce1-9: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.858917
+  type: 'test'
+  ...
+# Subtest: nce1-9: partial input and corrections restore through the actual factory with original timestamps
+ok 27 - nce1-9: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 1.651333
+  type: 'test'
+  ...
+# Subtest: nce1-9: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 28 - nce1-9: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 8.912708
+  type: 'test'
+  ...
+# Subtest: nce1-11: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 29 - nce1-11: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 0.38
+  type: 'test'
+  ...
+# Subtest: nce1-11: source/hint identities, originals and correction requirements survive repair retry
+ok 30 - nce1-11: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 3.053833
+  type: 'test'
+  ...
+# Subtest: nce1-11: text/audio/comic each count as help without inventing audio or map evidence
+ok 31 - nce1-11: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.316625
+  type: 'test'
+  ...
+# Subtest: nce1-11: partial input and corrections restore through the actual factory with original timestamps
+ok 32 - nce1-11: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 1.283875
+  type: 'test'
+  ...
+# Subtest: nce1-11: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 33 - nce1-11: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 7.419708
+  type: 'test'
+  ...
+# Subtest: new course envelopes and question IDs remain isolated; unsupported course/content versions keep raw
+ok 34 - new course envelopes and question IDs remain isolated; unsupported course/content versions keep raw
+  ---
+  duration_ms: 0.258208
+  type: 'test'
+  ...
+# Subtest: CL00 default exports remain equivalent to production factory binding and original key semantics
+ok 35 - CL00 default exports remain equivalent to production factory binding and original key semantics
+  ---
+  duration_ms: 0.850292
+  type: 'test'
+  ...
+1..35
+# tests 35
+# suites 0
+# pass 35
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 175.685417

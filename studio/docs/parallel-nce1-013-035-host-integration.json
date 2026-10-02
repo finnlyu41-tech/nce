@@ -1,0 +1,129 @@
+{
+  "base": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+  "remoteHeadsAtVerification": {
+    "codex/english-studio-online-20260926": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+    "codex/ielts-map-20260930": "c6b9b0182317fba09d1957b9844d6edc63f51ac4"
+  },
+  "sourceCommits": [
+    {
+      "original": "48ce25f",
+      "candidate": "e802fea"
+    },
+    {
+      "original": "750b45d",
+      "candidate": "8917a97"
+    },
+    {
+      "original": "8c5f48c",
+      "candidate": "c259448"
+    },
+    {
+      "original": "22d6cd9",
+      "candidate": "b2f9f2e"
+    },
+    {
+      "original": "49db3ea",
+      "candidate": "5f6e17a"
+    }
+  ],
+  "registeredIds": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35"
+  ],
+  "newContentTasks": 216,
+  "productionFactorySha256": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+  "frozenContentFileSha256": {
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-013.mjs": "be867044ba334c5e228bdea2d17cec9df10a6efaadfc89cc24bf714775b23d72",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-015.mjs": "f7fe9d2a6512045351e9df71607479751855d16cb929d684ca7e5a767ba6f380",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-017.mjs": "c53f06cb1f59b477de9b6472e57e3a4b558b90f26c80cd1e4ff5e14b2d321914",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-019.mjs": "c71bc30c74d9dc5afebf39f096999e9718624c1e8fbfed90e74d1bfa73414961",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-021.mjs": "ea8b204285e175bd44bead98c988d024f37026fcaba5fe92e010336f092c2d37",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-023.mjs": "6fc43ba93835e9e1a79cba32c329840e83cc26aa059f5a4c2e406e46cbd9d5f5",
+    "studio/course-loop/parallel-nce1-025-035/lesson-nce1-025.mjs": "6688a900b5b8ec0fea783f1d9a1cfe6ee3029dadf890b475a6650246d5dbbf9d",
+    "studio/course-loop/parallel-nce1-025-035/lesson-nce1-027.mjs": "8bb9a5c3fe2d2d63f317abebba7d2949bbff04da6a11cdf3b3af36ba75e36041",
+    "studio/course-loop/parallel-nce1-025-035/lesson-nce1-029.mjs": "0310d2c572df388817a33fc5ac5156d67e7a3dbebe9b043989c9f09b95e34c5e",
+    "studio/course-loop/parallel-nce1-025-035/lesson-nce1-031.mjs": "df4244cb7823f5276e4159b042a92e4809f84122a013a39803f73954f0266617",
+    "studio/course-loop/parallel-nce1-025-035/lesson-nce1-033.mjs": "eed29b43244efbfd62528ef7d049779af641cb9671104589e56e08e15b4362c5",
+    "studio/course-loop/parallel-nce1-025-035/lesson-nce1-035.mjs": "f05869ac63601d80b598352bce4e7a7cf06c992036c39867513575240c9f89f0"
+  },
+  "productionUnchanged": [
+    "app/course-loop-ui.tsx",
+    "app/course-loop-progress.ts",
+    "app/today-practice.ts",
+    "app/offline-store.ts",
+    "app/progress-file.ts",
+    "map/learning.tsx"
+  ],
+  "validation": {
+    "hostAndCL00TestsPassed": 46,
+    "oldAdjacentContentFactoryTestsPassed": 35,
+    "sourceContractTestsPassed": 16,
+    "nativeBuiltHostChecksPassed": 25,
+    "authorSixSourcePanelsPassed": 6,
+    "typecheck": true,
+    "classicBuild": true,
+    "mapBuild": true
+  },
+  "nativeTestScope": {
+    "ordinaryRecords": "fresh isolated Chrome QA only",
+    "sources": [
+      13,
+      25,
+      35
+    ],
+    "nativePipelines": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      25,
+      35
+    ],
+    "dueScheduling": "synthetic model tests only, no natural24h evidence"
+  },
+  "uiOwnerFollowUp": "Current map/learning.tsx:36 displays lessonPlan goal for registered courses; publisher should use registered lesson.goal and revalidate final UI. This candidate does not own UI.",
+  "unverified": [
+    "published origin",
+    "physical phone",
+    "natural24h/7d retention",
+    "audibility",
+    "human expression quality",
+    "learning gain"
+  ],
+  "evidenceSha256": {
+    "docs/parallel-nce1-013-035-host-proof/source-after.log": "1eb8fd75cc6e2678b5aab4b68bcb522161b06ad910b1a71c8d32d7b9ec9c2259",
+    "docs/parallel-nce1-013-035-host-proof/viewport-390-nce1-13.png": "93519e853d8210323381b42742fc9f7199352e5ffb6b1d607e3002c12480e348",
+    "docs/parallel-nce1-013-035-host-proof/author-source-evidence.sha256": "1c0f1c4b0d6af28df26726eb0d607b7c09af224e78e06ff8f9c4644cd4ba5ac8",
+    "docs/parallel-nce1-013-035-host-proof/old-content-tests.log": "65497ce17dc53c02cfd7aaadd4f945f2010ef1b32d77a753d3c0282c3ce6f2bb",
+    "docs/parallel-nce1-013-035-host-proof/native-receipt.json": "58138ba6e186ab0317968d187266d00f45489efb660a129e30b7defc3c58559a",
+    "docs/parallel-nce1-013-035-host-proof/typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/parallel-nce1-013-035-host-proof/author-source-completion-binding.json": "3a3858cfe2cb0432009a6509b67279a8db461b933ee4d4b8ad67bded2fe57f97",
+    "docs/parallel-nce1-013-035-host-proof/map-build.log": "2e68d0307fdebdbb0e630f26ad078644d4c6aba5f05ea152d2effc7520fa3434",
+    "docs/parallel-nce1-013-035-host-proof/native.log": "2e28225f26772ea653ac145ce623b1774b7fd10f00c6d85766b1910a1e99a2cb",
+    "docs/parallel-nce1-013-035-host-proof/host-unit.log": "b32e4dffcdcc26dec4f5bcbe7ca6d1c6c122da7b921e31de4b38dc7b092f7ae0",
+    "docs/parallel-nce1-013-035-host-proof/author-source-receipt.json": "b8e92106f1d3ad3c649691b5497f8cf9583f5c0e5ad04c83fb44d96837652a96",
+    "docs/parallel-nce1-013-035-host-proof/viewport-320-records.png": "5e1548cc05c4686c84256f35b4f3495d06abe64f98899f66f249184f48fe46fe",
+    "docs/parallel-nce1-013-035-host-proof/viewport-390-nce1-35.png": "2bf7ecff46ae01aaa85fef84fd61d31e2c59427e514f830f70e58dd39ed56975",
+    "docs/parallel-nce1-013-035-host-proof/viewport-390-nce1-25.png": "4bcda7d68d0c410c4caa8cd5ca3b019852f4423c3925eaeafdc62246ab2764cb",
+    "docs/parallel-nce1-013-035-host-proof/classic-build.log": "f70f5b373afa2c39da8f475643fddb9960683fb510d4a490a40574bb9daa5e7e"
+  }
+}

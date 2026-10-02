@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: nce1-13: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 1 - nce1-13: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 5.36125
+  type: 'test'
+  ...
+# Subtest: nce1-15: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 2 - nce1-15: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.329042
+  type: 'test'
+  ...
+# Subtest: nce1-17: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 3 - nce1-17: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.295834
+  type: 'test'
+  ...
+# Subtest: nce1-19: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 4 - nce1-19: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.085625
+  type: 'test'
+  ...
+# Subtest: nce1-21: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 5 - nce1-21: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.388125
+  type: 'test'
+  ...
+# Subtest: nce1-23: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 6 - nce1-23: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.291083
+  type: 'test'
+  ...
+# Subtest: nce1-25: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 7 - nce1-25: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.09925
+  type: 'test'
+  ...
+# Subtest: nce1-27: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 8 - nce1-27: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.111084
+  type: 'test'
+  ...
+# Subtest: nce1-29: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 9 - nce1-29: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.884208
+  type: 'test'
+  ...
+# Subtest: nce1-31: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 10 - nce1-31: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.567333
+  type: 'test'
+  ...
+# Subtest: nce1-33: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 11 - nce1-33: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.172584
+  type: 'test'
+  ...
+# Subtest: nce1-35: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 12 - nce1-35: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.900291
+  type: 'test'
+  ...
+# Subtest: exact SourcePanel guard accepts only the matching source in all 12 by 12 pairs
+ok 13 - exact SourcePanel guard accepts only the matching source in all 12 by 12 pairs
+  ---
+  duration_ms: 0.362584
+  type: 'test'
+  ...
+# Subtest: exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitution and wrong book or lesson
+ok 14 - exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitution and wrong book or lesson
+  ---
+  duration_ms: 1.119625
+  type: 'test'
+  ...
+# Subtest: actual comic guard accepts only same-course source and body row count in all 12 by 12 pairs
+ok 15 - actual comic guard accepts only same-course source and body row count in all 12 by 12 pairs
+  ---
+  duration_ms: 1.27725
+  type: 'test'
+  ...
+# Subtest: audio clip intervals stay within the matching LRC timeline and use teaching targets from this course
+ok 16 - audio clip intervals stay within the matching LRC timeline and use teaching targets from this course
+  ---
+  duration_ms: 0.307167
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 278.623125

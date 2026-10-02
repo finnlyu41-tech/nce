@@ -1,0 +1,286 @@
+TAP version 13
+# Subtest: real registry exposes exactly eighteen courses and never reads coverage as registration
+ok 1 - real registry exposes exactly eighteen courses and never reads coverage as registration
+  ---
+  duration_ms: 1.65425
+  type: 'test'
+  ...
+# Subtest: production matcher keeps the nationality question guard, original text and help state
+ok 2 - production matcher keeps the nationality question guard, original text and help state
+  ---
+  duration_ms: 1.865458
+  type: 'test'
+  ...
+# Subtest: one recommendation advances 1 through 35 to existing 37 with access-only map starts
+ok 3 - one recommendation advances 1 through 35 to existing 37 with access-only map starts
+  ---
+  duration_ms: 178.625917
+  type: 'test'
+  ...
+# Subtest: advanced map route survives six waiting courses
+ok 4 - advanced map route survives six waiting courses
+  ---
+  duration_ms: 0.836
+  type: 'test'
+  ...
+# Subtest: access reset condition link preserves v31 behavior with the old CL00-only backup
+ok 5 - access reset condition link preserves v31 behavior with the old CL00-only backup
+  ---
+  duration_ms: 0.9
+  type: 'test'
+  ...
+# Subtest: pending selected courses resume before due work and agree with Today oldest pending order
+ok 6 - pending selected courses resume before due work and agree with Today oldest pending order
+  ---
+  duration_ms: 8.595792
+  type: 'test'
+  ...
+# Subtest: multiple waiting due courses choose earliest due and expose one Today task per course
+ok 7 - multiple waiting due courses choose earliest due and expose one Today task per course
+  ---
+  duration_ms: 7.355916
+  type: 'test'
+  ...
+# Subtest: every selected record summary stays in its own course and unknown raw remains unchanged
+ok 8 - every selected record summary stays in its own course and unknown raw remains unchanged
+  ---
+  duration_ms: 5.431333
+  type: 'test'
+  ...
+# Subtest: wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+ok 9 - wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+  ---
+  duration_ms: 21.417209
+  type: 'test'
+  ...
+# Subtest: course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+ok 10 - course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+  ---
+  duration_ms: 6.891417
+  type: 'test'
+  ...
+# Subtest: starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+ok 11 - starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+  ---
+  duration_ms: 0.81725
+  type: 'test'
+  ...
+# Subtest: production factory, registry and UI never import the historical preview or test adapter
+ok 12 - production factory, registry and UI never import the historical preview or test adapter
+  ---
+  duration_ms: 14.050125
+  type: 'test'
+  ...
+# Subtest: eighteen real bindings preserve old defaults and distinct storage keys
+ok 13 - eighteen real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 3.39325
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all eighteen courses
+ok 14 - actual factory and registered model retain first answers and corrections for all eighteen courses
+  ---
+  duration_ms: 9.262041
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 18 by 18 pairs
+ok 15 - every envelope and correction sidecar is accepted only by its exact course across 18 by 18 pairs
+  ---
+  duration_ms: 17.331458
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 16 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 26.065583
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 17 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 25.443417
+  type: 'test'
+  ...
+# Subtest: eighteen pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 18 - eighteen pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 23.974291
+  type: 'test'
+  ...
+# Subtest: eighteen due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 19 - eighteen due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 66.234125
+  type: 'test'
+  ...
+# Subtest: shared continuation advances every odd course through 35 to existing 37 with access intent only
+ok 20 - shared continuation advances every odd course through 35 to existing 37 with access intent only
+  ---
+  duration_ms: 117.167375
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 21 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 3.935166
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 22 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 30.021042
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all eighteen records, sidecars and original classic history
+ok 23 - actual progress backup and validator preserve all eighteen records, sidecars and original classic history
+  ---
+  duration_ms: 4.841333
+  type: 'test'
+  ...
+# Subtest: content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+ok 24 - content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+  ---
+  duration_ms: 2.472708
+  type: 'test'
+  ...
+# Subtest: bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+ok 25 - bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+  ---
+  duration_ms: 0.345541
+  type: 'test'
+  ...
+# Subtest: initial route exposes only first test item and cannot finish or bypass first attempts
+ok 26 - initial route exposes only first test item and cannot finish or bypass first attempts
+  ---
+  duration_ms: 0.833541
+  type: 'test'
+  ...
+# Subtest: diagnostic wrong answer selects targeted teaching first; original persists
+ok 27 - diagnostic wrong answer selects targeted teaching first; original persists
+  ---
+  duration_ms: 2.269792
+  type: 'test'
+  ...
+# Subtest: reading/audio/comic access recorded separately; active answer becomes assisted
+ok 28 - reading/audio/comic access recorded separately; active answer becomes assisted
+  ---
+  duration_ms: 0.605791
+  type: 'test'
+  ...
+# Subtest: study materials do not pre-expose independent or delayed banks
+ok 29 - study materials do not pre-expose independent or delayed banks
+  ---
+  duration_ms: 2.347583
+  type: 'test'
+  ...
+# Subtest: first answer cannot be overwritten; duplicate submit rejected
+ok 30 - first answer cannot be overwritten; duplicate submit rejected
+  ---
+  duration_ms: 0.20925
+  type: 'test'
+  ...
+# Subtest: guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+ok 31 - guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+  ---
+  duration_ms: 1.096292
+  type: 'test'
+  ...
+# Subtest: wrong independent answer requires correct separate correction plus note
+ok 32 - wrong independent answer requires correct separate correction plus note
+  ---
+  duration_ms: 3.897125
+  type: 'test'
+  ...
+# Subtest: hinted correct answer remains assisted and requires correction note
+ok 33 - hinted correct answer remains assisted and requires correction note
+  ---
+  duration_ms: 3.70575
+  type: 'test'
+  ...
+# Subtest: repair failure must retry; later pass keeps both attempts and makes no mastery claim
+ok 34 - repair failure must retry; later pass keeps both attempts and makes no mastery claim
+  ---
+  duration_ms: 5.348042
+  type: 'test'
+  ...
+# Subtest: one route returns resume then continue-route and only real due review
+ok 35 - one route returns resume then continue-route and only real due review
+  ---
+  duration_ms: 4.836875
+  type: 'test'
+  ...
+# Subtest: review entry/view alone does not create results or postpone due
+ok 36 - review entry/view alone does not create results or postpone due
+  ---
+  duration_ms: 4.662416
+  type: 'test'
+  ...
+# Subtest: actual complete unassisted new review schedules seven days from completion, not original due
+ok 37 - actual complete unassisted new review schedules seven days from completion, not original due
+  ---
+  duration_ms: 5.851958
+  type: 'test'
+  ...
+# Subtest: failed or helped review schedules one day, even with otherwise correct answers
+ok 38 - failed or helped review schedules one day, even with otherwise correct answers
+  ---
+  duration_ms: 17.757375
+  type: 'test'
+  ...
+# Subtest: two review banks exhaust honestly; opening prior material never replenishes bank
+ok 39 - two review banks exhaust honestly; opening prior material never replenishes bank
+  ---
+  duration_ms: 9.8405
+  type: 'test'
+  ...
+# Subtest: UTC elapsed interval unaffected by display timezone or missed days
+ok 40 - UTC elapsed interval unaffected by display timezone or missed days
+  ---
+  duration_ms: 24.195583
+  type: 'test'
+  ...
+# Subtest: JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+ok 41 - JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+  ---
+  duration_ms: 6.941667
+  type: 'test'
+  ...
+# Subtest: corrupt/future/unsupported snapshots preserve raw instead of resetting
+ok 42 - corrupt/future/unsupported snapshots preserve raw instead of resetting
+  ---
+  duration_ms: 3.207667
+  type: 'test'
+  ...
+# Subtest: out-of-order or injected future action rejected and state immutable
+ok 43 - out-of-order or injected future action rejected and state immutable
+  ---
+  duration_ms: 0.398417
+  type: 'test'
+  ...
+# Subtest: host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+ok 44 - host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+  ---
+  duration_ms: 17.7335
+  type: 'test'
+  ...
+# Subtest: typing drafts coalesce without dropping submitted originals or help events
+ok 45 - typing drafts coalesce without dropping submitted originals or help events
+  ---
+  duration_ms: 28.653625
+  type: 'test'
+  ...
+# Subtest: explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+ok 46 - explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+  ---
+  duration_ms: 0.555667
+  type: 'test'
+  ...
+1..46
+# tests 46
+# suites 0
+# pass 46
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 687.911709

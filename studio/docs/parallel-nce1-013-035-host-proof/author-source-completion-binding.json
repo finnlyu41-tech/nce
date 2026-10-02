@@ -1,0 +1,24 @@
+{
+  "sourceFixCommit": "49db3eaa1285dd9834b0a965d8c70c1f42b384b6",
+  "hostCandidateCommit": "5f6e17a501da1dc6857f933414fb884788a31434",
+  "sourceOnlyAuditAtCommit": "studio/docs/parallel-nce1-025-035-proof/source-only-correction.json",
+  "pendingBrowserStatementAtCommit": "Superseded by this post-cherry-pick actual production browser evidence; historical commit retained unchanged.",
+  "receiptSha256": "b8e92106f1d3ad3c649691b5497f8cf9583f5c0e5ad04c83fb44d96837652a96",
+  "actualProductionSourcePanel": {
+    "sixGroupsPassed": 6,
+    "textRowCounts": [
+      12,
+      13,
+      9,
+      14,
+      11,
+      15
+    ],
+    "matchingComicSourceAndPageHashes": true,
+    "fourAudioControlsPerGroup": true,
+    "originalPackagedAudioMetadataAndSeekPassed": 6,
+    "runtimeExceptions": 0
+  },
+  "metadataAndMatcherSourceScope": "Each of six modules differs from 22d6cd9 only in source.languageSha256; no instructional/question/matcher bytes changed.",
+  "limitation": "Local candidate only; no published origin or audible playback claim; author separately owns integration persistence and publishing."
+}

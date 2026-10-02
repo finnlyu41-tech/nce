@@ -1,0 +1,351 @@
+{
+  "commit": "49db3eaa1285dd9834b0a965d8c70c1f42b384b6",
+  "candidateCommit": "5f6e17a501da1dc6857f933414fb884788a31434",
+  "origin": "http://127.0.0.1:57329",
+  "scope": "Actual production SourcePanel in built registered map app; native mouse controls and fresh isolated synthetic QA browser; no personal profile, storage injection, clock override, media fabrication or publisher changes.",
+  "checks": [
+    {
+      "course": "nce1-25",
+      "ok": true,
+      "text": {
+        "count": 12,
+        "failed": false
+      },
+      "comic": {
+        "src": "/lesson-pages/d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f.jpg",
+        "width": 1500,
+        "height": 2123,
+        "alt": "第 25 课，教材插图",
+        "sentence": "1"
+      },
+      "audio": {
+        "labels": [
+          "听完整课文",
+          "听首次介绍一件厨房物品",
+          "听已确定物品的位置，为位置问答提供情境",
+          "听房间中间的位置陈述"
+        ],
+        "metadata": [
+          {
+            "duration": 72.166938,
+            "currentTime": 23.12,
+            "readyState": 1,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      },
+      "sourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091"
+    },
+    {
+      "course": "nce1-27",
+      "ok": true,
+      "text": {
+        "count": 13,
+        "failed": false
+      },
+      "comic": {
+        "src": "/lesson-pages/d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79.jpg",
+        "width": 1500,
+        "height": 2123,
+        "alt": "第 27 课，教材插图",
+        "sentence": "1"
+      },
+      "audio": {
+        "labels": [
+          "听完整课文",
+          "听首次介绍若干杂志",
+          "听询问书的位置",
+          "听复数物品的位置陈述"
+        ],
+        "metadata": [
+          {
+            "duration": 78.812878,
+            "currentTime": 31.280544,
+            "readyState": 4,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      },
+      "sourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd"
+    },
+    {
+      "course": "nce1-29",
+      "ok": true,
+      "text": {
+        "count": 9,
+        "failed": false
+      },
+      "comic": {
+        "src": "/lesson-pages/9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49.jpg",
+        "width": 1500,
+        "height": 2123,
+        "alt": "第 29 课，第 1 幅教材漫画",
+        "sentence": "1"
+      },
+      "audio": {
+        "labels": [
+          "听完整课文",
+          "听询问必须完成的任务",
+          "听规定动作，练习用must转述义务",
+          "听两个动作的直接指令"
+        ],
+        "metadata": [
+          {
+            "duration": 54.209878,
+            "currentTime": 26.830544,
+            "readyState": 4,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      },
+      "sourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7"
+    },
+    {
+      "course": "nce1-31",
+      "ok": true,
+      "text": {
+        "count": 14,
+        "failed": false
+      },
+      "comic": {
+        "src": "/lesson-pages/ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177.jpg",
+        "width": 1500,
+        "height": 2123,
+        "alt": "第 31 课，教材插图",
+        "sentence": "1"
+      },
+      "audio": {
+        "labels": [
+          "听完整课文",
+          "听单数What动作疑问",
+          "听单个人的坐与攀爬动作",
+          "听单只动物当前动作和横穿路线"
+        ],
+        "metadata": [
+          {
+            "duration": 58.875067,
+            "currentTime": 21.45,
+            "readyState": 4,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      },
+      "sourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8"
+    },
+    {
+      "course": "nce1-33",
+      "ok": true,
+      "text": {
+        "count": 11,
+        "failed": false
+      },
+      "comic": {
+        "src": "/lesson-pages/061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997.jpg",
+        "width": 1500,
+        "height": 2123,
+        "alt": "第 33 课，教材插图",
+        "sentence": "1"
+      },
+      "audio": {
+        "labels": [
+          "听完整课文",
+          "听复数当前动作陈述；结合第71–72页迁移为What动作疑问",
+          "听They are说明一组人的当前行走动作",
+          "听and连接的两个人作当前动作主语"
+        ],
+        "metadata": [
+          {
+            "duration": 69.195813,
+            "currentTime": 31.780544,
+            "readyState": 4,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      },
+      "sourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3"
+    },
+    {
+      "course": "nce1-35",
+      "ok": true,
+      "text": {
+        "count": 15,
+        "failed": false
+      },
+      "comic": {
+        "src": "/lesson-pages/563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45.jpg",
+        "width": 1500,
+        "height": 2123,
+        "alt": "第 35 课，第 1 幅教材漫画",
+        "sentence": "1"
+      },
+      "audio": {
+        "labels": [
+          "听完整课文",
+          "听村庄位置事实；结合第75–76页Where句型练习转换为位置疑问",
+          "听in与between说明静态位置",
+          "听一组孩子当前从建筑内部向外移动"
+        ],
+        "metadata": [
+          {
+            "duration": 85.719438,
+            "currentTime": 23.500544,
+            "readyState": 4,
+            "paused": false
+          }
+        ],
+        "audibility": "not asserted"
+      },
+      "sourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7"
+    }
+  ],
+  "passed": 6,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "runtimeExceptions": [],
+  "requests": [
+    "/map/",
+    "/map/assets/index-CAq2FR33.js",
+    "/map/assets/index-DzZZn-7x.css",
+    "/favicon.ico",
+    "/language/NCE1/25.json",
+    "/lesson-pages/d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f.jpg",
+    "/materials/manifest.json",
+    "/materials/b6cfd111a22c08fc8351658b8b34ad1e7a435999d36fb5820a52ec5b33a01410/0000.bin",
+    "/language/NCE1/27.json",
+    "/lesson-pages/d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79.jpg",
+    "/materials/e794222fa2566b32c35cb023937078840530314e86cb38d7ed9b3597f3b1acb1/0000.bin",
+    "/language/NCE1/29.json",
+    "/lesson-pages/9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49.jpg",
+    "/materials/4c99a7ab13dc598649b48cbfe887c74e19c2c088d87d0d348f7cab1ba36f626e/0000.bin",
+    "/language/NCE1/31.json",
+    "/lesson-pages/ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177.jpg",
+    "/materials/95257874f4524ee0d6a00c4dc8c295af64b515cf3e6d85ee48ad0e3b14aeab50/0000.bin",
+    "/language/NCE1/33.json",
+    "/lesson-pages/061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997.jpg",
+    "/materials/87e8b774760bcd2488fb4f6bd9e3b9c8fc0b287a95f288bee9e0bda16c3b97dd/0000.bin",
+    "/language/NCE1/35.json",
+    "/lesson-pages/563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45.jpg",
+    "/materials/4707db85e0d4f41c4715f48a4cf3372e7c059eceef5ce61ff09402324c3e139b/0000.bin"
+  ],
+  "responses": [
+    {
+      "path": "/map/",
+      "status": 200
+    },
+    {
+      "path": "/map/assets/index-DzZZn-7x.css",
+      "status": 200
+    },
+    {
+      "path": "/map/assets/index-CAq2FR33.js",
+      "status": 200
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "path": "/language/NCE1/25.json",
+      "status": 200
+    },
+    {
+      "path": "/lesson-pages/d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f.jpg",
+      "status": 200
+    },
+    {
+      "path": "/materials/manifest.json",
+      "status": 200
+    },
+    {
+      "path": "/materials/b6cfd111a22c08fc8351658b8b34ad1e7a435999d36fb5820a52ec5b33a01410/0000.bin",
+      "status": 200
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 404
+    },
+    {
+      "path": "/language/NCE1/27.json",
+      "status": 200
+    },
+    {
+      "path": "/lesson-pages/d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79.jpg",
+      "status": 200
+    },
+    {
+      "path": "/materials/e794222fa2566b32c35cb023937078840530314e86cb38d7ed9b3597f3b1acb1/0000.bin",
+      "status": 200
+    },
+    {
+      "path": "/language/NCE1/29.json",
+      "status": 200
+    },
+    {
+      "path": "/lesson-pages/9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49.jpg",
+      "status": 200
+    },
+    {
+      "path": "/materials/4c99a7ab13dc598649b48cbfe887c74e19c2c088d87d0d348f7cab1ba36f626e/0000.bin",
+      "status": 200
+    },
+    {
+      "path": "/language/NCE1/31.json",
+      "status": 200
+    },
+    {
+      "path": "/lesson-pages/ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177.jpg",
+      "status": 200
+    },
+    {
+      "path": "/materials/95257874f4524ee0d6a00c4dc8c295af64b515cf3e6d85ee48ad0e3b14aeab50/0000.bin",
+      "status": 200
+    },
+    {
+      "path": "/language/NCE1/33.json",
+      "status": 200
+    },
+    {
+      "path": "/lesson-pages/061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997.jpg",
+      "status": 200
+    },
+    {
+      "path": "/materials/87e8b774760bcd2488fb4f6bd9e3b9c8fc0b287a95f288bee9e0bda16c3b97dd/0000.bin",
+      "status": 200
+    },
+    {
+      "path": "/language/NCE1/35.json",
+      "status": 200
+    },
+    {
+      "path": "/lesson-pages/563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45.jpg",
+      "status": 200
+    },
+    {
+      "path": "/materials/4707db85e0d4f41c4715f48a4cf3372e7c059eceef5ce61ff09402324c3e139b/0000.bin",
+      "status": 200
+    }
+  ],
+  "fileSha256": {
+    "app/course-loop-ui.tsx": "d5cd8edd2d6d3bb66156032bd22e2e194868803f27aaa87ae0f81a2b30909dd4",
+    "course-loop/registry.mjs": "26abf32d62736750d0b6de1ab4f60808d82cc9d336903ca856b64f587baf701f",
+    "map/dist/index.html": "0d527349520015468fb5a975060a4263fc3a97855361bb075989ac8f244530a5",
+    "static-export/standalone.html": "9eb8d6a51b1bc14136c23f7d4120441aa759c528cd43dc6721974b973b7342d8",
+    "map/dist/assets/index-CAq2FR33.js": "aafa0e225520d00c180f3743df2a2953dce8ba7dd49086212590de49d490be8d",
+    "map/dist/assets/index-DzZZn-7x.css": "2926024eca6eb181a63df62c38da23c77bccf4c7177e1593140e4b99a6baa8d8",
+    "static-export/assets/standalone-CoAXBPJm.js": "1b9777288b9f33389ee1f88f1b84f1c299b3c6685004675145eff0d4039b8ca2",
+    "static-export/assets/style-BMUyxIY6.css": "167f64e309e112f5bdad475d31776de2d65a7dae23c96ec15023bf035a410820"
+  },
+  "unverified": [
+    "published origin",
+    "natural24h/7d",
+    "physical phone",
+    "audibility",
+    "human open expression",
+    "learning gains"
+  ]
+}
