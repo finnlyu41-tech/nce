@@ -21,9 +21,9 @@ export function SpeakingPractice({unit,state,save,review,close}:{unit:Unit;state
     if(takes.length<record.takes.length)setStatus('文字反馈已保留，部分录音不在此浏览器。可以重新录一遍；进度备份不包含音频。');
   }).catch(e=>{if(alive){setInitial([]);setError(e.message)}});return()=>{alive=false;player.stop()}},[unit.id]);
   useEffect(()=>{if(!review&&speakingReviewAt(record)!==undefined)patch({...record,hintAt:Date.now()})},[unit.id,review]);
-  function patch(next:SpeakingRecord){
+  async function patch(next:SpeakingRecord){
     latest.current=next;
-    return save(s=>({...s,records:{...s.records,[unit.id]:{...(s.records[unit.id]||emptyRecord()),speaking:next}}}));
+    return await save(s=>({...s,records:{...s.records,[unit.id]:{...(s.records[unit.id]||emptyRecord()),speaking:next}}}));
   }
   function reveal(){help.current=true;setConceal(false);patch({...latest.current,hintAt:Date.now()});}
   async function changed(takes:SavedTake[],event:'recorded'|'assessed'){
@@ -39,7 +39,7 @@ export function SpeakingPractice({unit,state,save,review,close}:{unit:Unit;state
     }
     try{
       revision.current=await writeSpeechAudio(unit.id,revision.current,takes);
-      if(!patch(next))throw Error('音频已存入本机，但学习记录未保存成功。请先下载录音并导出进度，再重试保存。');
+      if(!await patch(next))throw Error('音频已存入本机，但学习记录未保存成功。请先下载录音并导出进度，再重试保存。');
       pendingChange.current=null;
       setStatus(event==='assessed'?'本句问题与重读比较已保存在本机。':next.recalledAt===next.takes[0]?.at?'已记录无提示重说；发音是否改善仍需回听或主动提交评估。':'已保存本次录音。回听后可以主动提交评估，再练一处。');
     }catch(e){setStatus('');throw e;}
