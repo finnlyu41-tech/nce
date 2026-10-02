@@ -27,8 +27,10 @@ try {
     export {initial, validateState} from './app/model';
     export * as flashcards from './app/flashcards';
     export * as autosave from './app/progress-autosave';
+    export * as stage from './stage-assessment/model';
+    export {prepareStageBackupRestore} from './stage-assessment/host-progress';
   `, resolveDir: rootPath, sourcefile: 'progress-capability-ui-check.ts', loader: 'ts'}, bundle: true, platform: 'node', format: 'esm', target: 'node22', outfile: output, logLevel: 'silent'});
-  const {capability, files, offline, demo, review, initial, validateState, flashcards, autosave} = await import(pathToFileURL(output).href);
+  const {capability, files, offline, demo, review, initial, validateState, flashcards, autosave, stage, prepareStageBackupRestore} = await import(pathToFileURL(output).href);
   const START = Date.now() - 3 * review.DAY_MS, NOW = START + 2 * review.DAY_MS;
   let completed = demo.initialState(START);
   completed = demo.showQuestion(completed, 'new-omar');
@@ -168,6 +170,7 @@ try {
     const captureCapabilityReviewBackup=(...args)=>activeRuntime.dependencies.captureCapabilityReviewBackup(...args);
     const prepareCapabilityReviewRestore=(...args)=>activeRuntime.dependencies.prepareCapabilityReviewRestore(...args);
     const executeCapabilityReviewRestore=(...args)=>activeRuntime.dependencies.executeCapabilityReviewRestore(...args);
+    const prepareStageBackupRestore=(...args)=>activeRuntime.dependencies.prepareStageBackupRestore(...args);
     const toast=Object.assign((...args)=>activeRuntime.dependencies.toast('notice',...args),{success:(...args)=>activeRuntime.dependencies.toast('success',...args),error:(...args)=>activeRuntime.dependencies.toast('error',...args)});
     function testJSX(type,props,...children){return {type,props:{...props,children:children.flat(Infinity).filter(child=>child!==null&&child!==undefined&&child!==false)}}}
     export function createRenderer(runtime){return props=>{activeRuntime=runtime;return runtime.render(ProgressSave,props)}}
@@ -202,7 +205,7 @@ try {
 
   function mount(env, options = {}) {
     let state = options.state || currentState(), persistedState = copy(state);
-    const restored = [], dependencies = {...files, ...capability, toast: (kind, message) => env.toasts.push({kind, message})};
+    const restored = [], dependencies = {...files, ...capability, prepareStageBackupRestore, toast: (kind, message) => env.toasts.push({kind, message})};
     for (const name of ['captureCapabilityReviewBackup', 'prepareCapabilityReviewRestore', 'executeCapabilityReviewRestore']) {
       dependencies[name] = (...args) => {env.calls.push({name, args}); return capability[name](...args);};
     }
@@ -556,6 +559,72 @@ try {
       const before = currentState(), host = hostDependencies(before, async () => {}, {storageMode: 'legacy'}), restore = createHostRestore(host);
       await assert.rejects(restore(incomingState(), {expected: before}), /write denied/);
       assert.equal(host.stateRef.current, before); assert.deepEqual(host.setters, [['error',true]]); assert.deepEqual(host.writes, []);assert.equal(host.retries.length,1);
+    });
+  });
+
+  // Synthetic records exercise the actual shared ProgressSave confirmation and
+  // extracted StudyWorkspace callbacks. They are not natural-delay evidence.
+  function stageFixture() {
+    let record=stage.emptyRecord('shared-restore-synthetic',true),at=NOW-12*stage.DAY,n=0;
+    const send=command=>{record=stage.append(record,{id:'stage-fixture-'+(++n),at:++at,command},at);};
+    send({type:'learning',skills:['reading'],kind:'complete',note:'synthetic only'});
+    for(const phase of ['T1','T2']) {
+      if(phase==='T2')at+=stage.DAY;
+      send({type:'open',skill:'reading',phase,unseen:true});const id=stage.project(record).attempts.at(-1).id;
+      send({type:'draft',id,answers:['synthetic original','','','','','']});send({type:'submit',id});
+      send({type:'review',id,review:{reviewer:{role:'teacher',qualified:true,calibrated:true,external:true,basis:'pure fixture only'},targetElicited:true,disputed:false,secondReview:false,basis:'synthetic only',judgments:Array(6).fill('correct'),criticalReversed:false}});
+    }
+    return record;
+  }
+  const stageState=record=>({...currentState(),drafts:{note:'unrelated original',[stage.draftKey]:JSON.stringify(record)}});
+  const due=record=>['T2','T3'].map(phase=>{const i=stage.interval(stage.project(record),'reading',phase,NOW);return {anchor:i.anchor,dueAt:i.dueAt};});
+  test('shared ProgressSave same-location roundtrip retains exact stage raw, first answers and both original due dates',async()=>{
+    await environment(populated(),async env=>{
+      const record=stageFixture(),state=stageState(record),host=mount(env,{state});
+      await open(host);await choose(host,files.makeProgressFile(state,new Date(NOW)));await click(host,env,'确认替换并恢复');
+      assert.equal(host.state.drafts[stage.draftKey],state.drafts[stage.draftKey]);assert.deepEqual(due(JSON.parse(host.state.drafts[stage.draftKey])),due(record));
+      assert.equal(successes(env).length,1);host.view.unmount();
+    });
+  });
+  for(const earlier of [false,true])test(`shared ProgressSave ${earlier?'older-stage':'missing-stage'} backup retains the current stage raw`,async()=>{
+    await environment(populated(),async env=>{
+      const record=stageFixture(),state=stageState(record),host=mount(env,{state}),incoming=incomingState();
+      if(earlier)incoming.drafts[stage.draftKey]=JSON.stringify({...record,events:record.events.slice(0,-1)});
+      await open(host);await choose(host,files.makeProgressFile(incoming,new Date(NOW)));await click(host,env,'确认替换并恢复');
+      assert.equal(host.state.drafts[stage.draftKey],state.drafts[stage.draftKey]);assert.deepEqual(due(JSON.parse(host.state.drafts[stage.draftKey])),due(record));
+      assert.equal(host.state.drafts.note,incoming.drafts.note);host.view.unmount();
+    });
+  });
+  test('shared ProgressSave new source preserves every original event and due; only imported qualification is pending',async()=>{
+    await environment(populated(),async env=>{
+      const record=stageFixture(),host=mount(env),incoming=stageState(record);
+      await open(host);await choose(host,files.makeProgressFile(incoming,new Date(NOW)));await click(host,env,'确认替换并恢复');
+      const restored=JSON.parse(host.state.drafts[stage.draftKey]);assert.deepEqual(restored.events.slice(0,-1),record.events);assert.equal(restored.events.at(-1).command.type,'restore');
+      assert.deepEqual(stage.project(restored).attempts,stage.project(record).attempts);assert.deepEqual(due(restored),due(record));
+      for(const phase of ['T2','T3']){const i=stage.interval(stage.project(restored),'reading',phase,NOW);assert.equal(i.verification,'restored-time-unverified');assert.equal(i.ready,false);}
+      host.view.unmount();
+    });
+  });
+  for(const kind of ['divergent','future','schema','unknown','equal-future','equal-schema'])test(`shared ProgressSave rejects ${kind} stage before any write and preserves all stores`,async()=>{
+    await environment(populated(),async env=>{
+      const record=stageFixture(),changed=copy(record);
+      if(kind==='divergent')changed.events[2].command.answers[0]='forked answer';
+      if(kind.includes('future'))changed.events.at(-1).at=NOW+stage.DAY;
+      if(kind.includes('schema'))changed.version=99;
+      if(kind==='unknown')changed.unsupported=true;
+      const state=stageState(kind.startsWith('equal-')?changed:record),host=mount(env,{state}),incoming=stageState(changed),before=env.storage.snapshot();
+      await open(host);await choose(host,files.makeProgressFile(incoming,new Date(NOW)));await click(host,env,'确认替换并恢复');
+      assert.equal(host.state,state);assert.equal(host.mainWrites.length,0);assert.deepEqual(env.storage.snapshot(),before);assert.equal(successes(env).length,0);assert.match(env.toasts.at(-1).message,/恢复未完成/);host.view.unmount();
+    });
+  });
+  test('shared ProgressSave capability failure rolls the exact stage, State and storage snapshot back after main commit',async()=>{
+    await environment(new MemoryStorage([['unrelated-key','keep']]),async env=>{
+      const record=stageFixture(),state=stageState(record),host=mount(env,{state}),incoming=incomingState();
+      const changed=copy(record);changed.events.push({id:'synthetic-exposure',at:NOW,command:{type:'expose',pack:'F'}});incoming.drafts[stage.draftKey]=JSON.stringify(changed);
+      const before=env.storage.snapshot();await open(host);await choose(host,files.makeProgressFile(incoming,new Date(NOW),captured.backup));
+      env.storage.failWrite=key=>key===review.STORAGE_KEY;await click(host,env,'确认替换并恢复');
+      assert.equal(host.restored.length,2);assert.equal(host.restored[1].settings.exact,true);assert.deepEqual(host.restored[1].settings.rollbackTo,{mode:'db',raw:JSON.stringify(state)});
+      assert.deepEqual(host.state,state);assert.deepEqual(host.persistedState,state);assert.equal(host.state.drafts[stage.draftKey],state.drafts[stage.draftKey]);assert.deepEqual(env.storage.snapshot(),before);assert.equal(successes(env).length,0);host.view.unmount();
     });
   });
 

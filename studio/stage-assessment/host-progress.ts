@@ -35,9 +35,9 @@ export function prepareStageBackupRestore(current:State,incoming:State,now=Date.
  if(!validateState(current)||!validateState(incoming))throw Error('整站备份格式无效，未修改记录。');
  const existing=current.drafts[draftKey],source=incoming.drafts[draftKey];
  if(source===undefined)return existing===undefined?incoming:{...incoming,drafts:{...incoming.drafts,[draftKey]:existing}};
- if(existing===source)return incoming;
  const restored=readRecord(source,now),live=readRecord(existing,now);
  if(restored.status!=='ready')throw Error(restored.status==='blocked'?restored.reason:'恢复证据缺失。');
+ if(existing===source)return incoming;
  if(live.status==='blocked')throw Error(live.reason);
  if(live.status==='ready'){
   if(JSON.stringify(restored.record.events.slice(0,-1))===JSON.stringify(live.record.events)&&restored.record.events.at(-1)?.command.type==='restore'&&restored.record.courseVersion===live.record.courseVersion&&restored.record.priorLearning===live.record.priorLearning)return incoming;

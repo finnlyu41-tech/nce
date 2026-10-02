@@ -43,3 +43,18 @@ test('shared then StageHost restore preparation is idempotent and corrupt Today 
  const tasks=stageTodayTasks({...initial,drafts:{[draftKey]:'corrupt'}},e.now,'/#/stage-assessment','/#/today');
  assert.equal(tasks.length,1);assert.equal(tasks[0].kind,'resume');assert.match(tasks[0].evidence,/不当作自然到期/);
 });
+
+test('equal raw cannot bypass future, unknown schema, or unknown field validation during a whole-site restore',()=>{
+ const e=evidence();
+ for(const [name,change] of [
+  ['future',r=>{r.events.at(-1).at=e.now+DAY;}],
+  ['schema',r=>{r.version=99;}],
+  ['unknown',r=>{r.unsupported=true;}]
+ ]){
+  const r=structuredClone(e.r);change(r);const raw=JSON.stringify(r);
+  const current={...structuredClone(initial),drafts:{other:'keep',[draftKey]:raw}};
+  const before=JSON.stringify(current);
+  assert.throws(()=>prepareStageBackupRestore(current,{...current,scores:{replace:1}},e.now),undefined,name);
+  assert.equal(JSON.stringify(current),before);
+ }
+});
