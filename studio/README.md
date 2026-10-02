@@ -1,6 +1,10 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v32 · 相邻课程连续练习
+## 当前发布 v33 · IELTS 第04小批
+
+版本 `2026-10-02-ielts-curriculum-batch04-v33`，运行源码 `7ac26f188293d1c18903c38088f505bf63e374aa`，固定部署 [4b30b3d4](https://4b30b3d4.finn-english-studio.pages.dev)，入口 [课程](https://finn-english-studio.pages.dev/#/ielts?tab=course)。新增 L12 sentence completion / R05 paragraph information matching；共用听力与两类独立阅读共18份原创材料/54题（含示范与引导），每类目录现有12课。原答、订正、帮助、类别隔离、刷新、实际备份恢复/回退和 Today 已通过生产绑定验证；本机及两个线上地址各51组原生Chrome验收、54项公开哈希一致。CL01原键和国籍疑问边界继续保留。真实听感、自然24小时/7天、真机与人工评分仍待核验，不换算Band。[接线与验证](docs/ielts-curriculum-batch-04-production-integration.md)。
+
+## 已发布 v32 · 相邻课程连续练习
 
 当前版本 `2026-10-02-course-loop-batch01-v32`，运行源码 `7c1ec8402fdf895fe8e4dcd12344cbadc2cae479`，固定部署 [60c8b3bd](https://60c8b3bd.finn-english-studio.pages.dev)，生产入口 [学习](https://finn-english-studio.pages.dev/map/)。第 1–2、3–4、5–6 课使用各自的连续练习与保存键，单一课程推荐可接续至既有第 7 课；新两组共36道原创题，国籍肯定陈述题保留问号边界。教材面板绑定本课原文、漫画和原声。普通 NCE 课的路线条件现显示本组地图检验要求。整站备份、恢复、回退及多标签写入保留已验证；本机和两个公开地址各通过89组原生Chrome验收，54项公开资源哈希一致。273组仍没有新增连续练习完成声明；自然24小时/7天、真机、实际听感与自由表达人工核验尚未验证。IELTS第四/第五批没有混入此发布。范围与证据见[生产接线记录](docs/course-loop-batch-01-production-integration.md)。
 
