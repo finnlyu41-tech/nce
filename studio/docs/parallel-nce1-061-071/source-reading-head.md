@@ -1,0 +1,11 @@
+# 61–66 source reading
+
+Read the actual packaged LRC JSON for 61, 63 and 65 and visually inspected the existing paired exercise images at PDF index pages 128, 132 and 136 (printed pages 124, 128 and 132). The frozen source snapshot came from candidate 3b94546947e29befbcbf0de74ecacab521f64b2d. No source resource was authored, downloaded again or substituted.
+
+- 61/62 teaches asking a condition, have/feel/look and must + base verb. Exercise 62 contrasts third person have/feel and invariant must. New tasks use fictional actor descriptions and nonmedical activity rules. They do not reproduce Jimmy's dialogue or prescribe actions from symptoms.
+- 63/64 teaches prohibition, negative commands and changing person without changing the modal meaning. 63 has affirmative `Come upstairs`; negative imperative teaching is explicitly attributed to the existing exercise 64, rather than claiming a negative command was heard in that positive clip.
+- 65/66 teaches at + clock times, in/at/from and reflexive pronouns. LRC 65 gives half past, quarter past and enjoy yourself/ourselves. The full in/at/from distinctions and other reflexive persons come from exercise 66; clip labels identify this extension. The original English/Chinese source interpretation of 30.19 is left untouched; these new clock tasks state exact times and do not infer a deadline from that translation.
+
+The `languageSha256` values are the LRC JSON's internal `sourceSha256`, separately verified against original LRC part bytes. The JSON file digest is different and is used only for transport integrity. Source tests execute the unchanged production SourcePanel predicate and actual production comic binding, reject wrong book/lesson/hash/row counts, and hash all paired grammar page assets. Audio clip labels describe the grammar heard or explicitly name the paired exercise extension. Successful decoding/seeking is not evidence of audibility or listening ability.
+
+Every question is newly authored. The source text, comics and audio remain optional instructional help, and the real factory records that assistance before any independent attempt. Open expression stays awaiting human review. Natural 24h/7d, listening quality, pronunciation and learning gains have not been tested.

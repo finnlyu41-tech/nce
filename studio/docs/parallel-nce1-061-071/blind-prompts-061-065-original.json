@@ -1,0 +1,290 @@
+[
+  {
+    "courseId": "nce1-61",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n61-ask-condition",
+        "context": "戏剧排练中，Owen突然停下来，你不知道原因。",
+        "prompt": "主语不用代词，用Owen和What is the matter with询问他怎么了。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n61-describe-condition",
+        "context": "虚构角色卡：男演员Eli有耳痛；用he转述。earache表示耳痛。",
+        "prompt": "用He、have、an earache写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n61-must-base",
+        "context": "博物馆布展规定：我们现在必须关掉灯。",
+        "prompt": "用We、must、turn off the lights、now写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n61-ask-condition",
+        "context": "虚构广播剧里，一位女士突然沉默。你用her问她的状况。",
+        "prompt": "用What is the matter with和her发问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：What is the matter with后用题目指定的人名或宾格代词。"
+      },
+      {
+        "id": "guided-n61-describe-condition",
+        "context": "赶场前，两位配音演员说自己感觉累；用they指他们。",
+        "prompt": "用They、feel、tired（累）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：名词症状配have/has，形容词配feel/look；再核对第三人称-s。"
+      },
+      {
+        "id": "guided-n61-must-base",
+        "context": "安全培训剧本规定：Lena必须检查这扇门，check the door表示检查门。",
+        "prompt": "以Lena开头，用must和check the door写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：must后直接接原形，不写musts、must to或must加-s动词。"
+      },
+      {
+        "id": "independent-n61-ask-condition",
+        "context": "志愿者见两位旅客神情异常，不知道发生了什么。你用them询问。",
+        "prompt": "用What is the matter with和them问一句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n61-describe-condition",
+        "context": "虚构人物说明：舞台经理Mina看起来苍白；pale表示苍白。",
+        "prompt": "以Mina开头，用look、pale写一句，只描述外观。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n61-must-base",
+        "context": "出发名单规定：两位队员必须带自己的票；用they转述。bring their tickets表示带他们的票。",
+        "prompt": "用They、must、bring their tickets写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n61-ask-condition",
+        "context": "保留上一轮首答和订正。下面是另一情境：上一轮把人名与宾格混用。新广播剧中你直接问搭档怎么了。",
+        "prompt": "用What is the matter with和you发问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n61-describe-condition",
+        "context": "保留上一轮首答和订正。下面是另一情境：新角色卡上有一位女孩：她有牙痛，toothache表示牙痛。",
+        "prompt": "用She、have、a toothache写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n61-must-base",
+        "context": "保留上一轮首答和订正。下面是另一情境：新的剧本排练安排：我必须写这张便条，write the note表示写便条。",
+        "prompt": "用I、must、write the note写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n61-ask-condition",
+        "context": "新志愿活动中你要询问Asha怎么了；并未知道原因。",
+        "prompt": "用Asha和What is the matter with写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n61-describe-condition",
+        "context": "虚构故事的两位角色都有重感冒，a bad cold表示重感冒；用we转述。",
+        "prompt": "用We、have、a bad cold写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n61-must-base",
+        "context": "场馆规则要求：Ravi现在必须等在这里。wait here表示在这里等。",
+        "prompt": "以Ravi开头，用must、wait here、now写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n61-ask-condition",
+        "context": "木偶剧中男孩神情不对；你用him向另一位角色询问。",
+        "prompt": "用What is the matter with和him写一句问话。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n61-describe-condition",
+        "context": "虚构航海故事里，一名男角色说自己感觉不舒服。",
+        "prompt": "用He、feel、ill（不舒服）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n61-must-base",
+        "context": "书店开门前规定：我们必须打开前门，open the front door表示打开前门。",
+        "prompt": "用We、must、open the front door写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-63",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n63-negative-command",
+        "context": "拼图比赛中，裁判直接提醒选手别移动这张卡。move this card表示移动这张卡。",
+        "prompt": "不用主语，用Do not和move this card写直接指令。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n63-must-prohibition",
+        "context": "虚构演出规定：一位演员Leo不得关掉这盏灯。turn off this lamp表示关掉这盏灯。",
+        "prompt": "以Leo开头，用must not和turn off this lamp写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n63-person-modal-contrast",
+        "context": "同伴原话是I often paint here；转述一名女孩的习惯，用she。",
+        "prompt": "用She、often、paint here写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n63-negative-command",
+        "context": "读书活动中，你直接叫对方别合上这本书。close this book表示合上这本书。",
+        "prompt": "不用主语，用Do not和close this book写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：Do not后用原形，保留指定that/this和动作。"
+      },
+      {
+        "id": "guided-n63-must-prohibition",
+        "context": "展览明确禁止游客碰这些模型，touch these models表示碰这些模型。",
+        "prompt": "用Visitors、must not、touch these models写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留must not；后面不加to或第三人称-s。"
+      },
+      {
+        "id": "guided-n63-person-modal-contrast",
+        "context": "一名男孩的许可卡写I can use this desk；你用he转述。",
+        "prompt": "用He、can、use this desk写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：普通动词看人称；情态动词后保持原形和原有肯否。"
+      },
+      {
+        "id": "independent-n63-negative-command",
+        "context": "舞蹈排练需保持地板上的胶带位置，你直接提醒搭档别拿掉这条胶带。remove this tape表示拿掉这条胶带。",
+        "prompt": "不用主语，以Do not开头写remove this tape指令。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n63-must-prohibition",
+        "context": "封闭摄影棚的规则：我们不得打开侧门。open the side door表示打开侧门。",
+        "prompt": "用We、must not、open the side door写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n63-person-modal-contrast",
+        "context": "剪贴活动里女孩原话I do not use glue；用she报告她的习惯。glue表示胶水。",
+        "prompt": "用She、not、use glue，写普通动词否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n63-negative-command",
+        "context": "保留上一轮首答和订正。下面是另一情境：上一轮误把否定当肯定。新博物馆任务里直接叫人别写在这张照片上。write on this photo表示在这张照片上写字。",
+        "prompt": "不用主语，用Do not和write on this photo写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n63-must-prohibition",
+        "context": "保留上一轮首答和订正。下面是另一情境：新档案室明令：Ada不得借出这把钥匙。lend this key表示借出这把钥匙。",
+        "prompt": "以Ada开头，用must not、lend this key写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n63-person-modal-contrast",
+        "context": "保留上一轮首答和订正。下面是另一情境：新人介绍原话I cannot carry this box；你用he转述能力限制。carry this box表示搬这个箱子。",
+        "prompt": "用He、cannot、carry this box写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n63-negative-command",
+        "context": "音效录制开始，你直接提醒对方别关掉这个录音机。turn off this recorder表示关掉这个录音机。",
+        "prompt": "不用主语，用Do not和turn off this recorder写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n63-must-prohibition",
+        "context": "公园游戏规则：他们不得越过这条线。cross this line表示越过这条线。",
+        "prompt": "用They、must not、cross this line写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n63-person-modal-contrast",
+        "context": "摄影师原话I always clean the lens；你用she介绍她的日常习惯。clean the lens表示清洁镜头。",
+        "prompt": "用She、always、clean the lens写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n63-negative-command",
+        "context": "静物写生开始，你直接提醒朋友别移动那个椅子。move that chair表示移动那个椅子。",
+        "prompt": "不用主语，用Do not和move that chair写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n63-must-prohibition",
+        "context": "虚构短剧的合同规定：男主角不得离开房间。leave the room表示离开房间；用he转述。",
+        "prompt": "用He、must not、leave the room写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n63-person-modal-contrast",
+        "context": "一名男志愿者原话I do not collect tickets；你用he介绍其习惯。collect tickets表示收票。",
+        "prompt": "用He、not、collect tickets写普通动词否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-65",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n65-clock-obligation",
+        "context": "展馆签到通知要求我7:30到达。arrive表示到达。",
+        "prompt": "用I、must、arrive、at和half past的英文钟点写一句；钟点不用数字。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n65-in-at-from",
+        "context": "迁入登记只问来源：Omar来自Peru（秘鲁）。",
+        "prompt": "补全Omar comes ___ Peru. 仅写空缺介词，选in/at/from。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n65-enjoy-reflexive",
+        "context": "两名女孩自述每次游戏都玩得开心；用we指她们自己。",
+        "prompt": "用We、enjoy和对应反身代词写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n65-clock-obligation",
+        "context": "场馆规定Nina 8:15打开门；open the door表示打开门。",
+        "prompt": "以Nina开头，用must、open the door、at和a quarter past的钟点；不用数字。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先读钟点，再选past/to和整点；at前不漏必须做的动作。"
+      },
+      {
+        "id": "guided-n65-in-at-from",
+        "context": "本月展览安排在October（十月）。",
+        "prompt": "补全The show is ___ October. 仅写介词，选in/at/from。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：钟点at，月份/季节/上午in，来源from。"
+      },
+      {
+        "id": "guided-n65-enjoy-reflexive",
+        "context": "生日派对中一位男孩Leo每次都玩得开心。",
+        "prompt": "以Leo开头，用enjoy和对应反身代词写一般现在时陈述句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先看主语及人数，再选反身代词；he/she还需enjoys。"
+      },
+      {
+        "id": "independent-n65-clock-obligation",
+        "context": "合唱集合要求两位成员9:45见面；用they，meet表示见面。",
+        "prompt": "用They、must、meet、at和a quarter to的英文钟点，不用数字。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n65-in-at-from",
+        "context": "工作室的预约时间确切是noon（中午十二点），并非整个下午。",
+        "prompt": "补全The visit is ___ noon. 仅写介词，选in/at/from。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n65-enjoy-reflexive",
+        "context": "远足说明里，你对两位同行者说他们总会玩得开心；主语用you指两人。",
+        "prompt": "用You、always、enjoy和对应复数反身代词写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n65-clock-obligation",
+        "context": "保留上一轮首答和订正。下面是另一情境：上一轮差一刻读反。新的值班表规定我们11:45离开；leave表示离开。",
+        "prompt": "用We、must、leave、at和a quarter to的英文钟点，不用数字。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n65-in-at-from",
+        "context": "保留上一轮首答和订正。下面是另一情境：新植物观察日记说在summer（夏天）这里很温暖。",
+        "prompt": "补全It is warm ___ summer. 仅写介词，选in/at/from。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n65-enjoy-reflexive",
+        "context": "保留上一轮首答和订正。下面是另一情境：新故事里的女主角Mila喜欢参加集市，通常玩得开心。",
+        "prompt": "以Mila开头，用usually、enjoy和对应反身代词写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n65-clock-obligation",
+        "context": "设备培训规定：我2:00关闭屏幕，close the screen表示关闭屏幕。",
+        "prompt": "用I、must、close the screen、at和two o’clock写一句；不用数字。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n65-in-at-from",
+        "context": "邮政展区的地图仅说明物品现在位于Japan（日本），未说明来自哪里。",
+        "prompt": "补全The parcel is ___ Japan. 仅写介词，选in/at/from。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n65-enjoy-reflexive",
+        "context": "两位朋友向导游介绍第三方游客，他们总是玩得开心；用they。",
+        "prompt": "用They、always、enjoy和对应反身代词写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n65-clock-obligation",
+        "context": "乐队演出通知规定女鼓手6:30到场；用she，arrive表示到场。",
+        "prompt": "用She、must、arrive、at和half past的钟点，不用数字。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n65-in-at-from",
+        "context": "新预约记录写明会在the morning（上午）发生，没给具体钟点。",
+        "prompt": "补全The meeting is ___ the morning. 仅写介词，选in/at/from。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n65-enjoy-reflexive",
+        "context": "你只对一个新朋友说他会玩得开心，主语用you，未包含其他人。",
+        "prompt": "用You、enjoy和对应单数反身代词写一般现在时句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

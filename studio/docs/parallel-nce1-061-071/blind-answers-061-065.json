@@ -1,0 +1,489 @@
+[
+  {
+    "id": "diagnostic-n61-ask-condition",
+    "answer": "What is the matter with Owen?",
+    "variants": [
+      "What's the matter with Owen?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n61-describe-condition",
+    "answer": "He has an earache.",
+    "variants": [
+      "He has an earache",
+      "He has got an earache.",
+      "He's got an earache."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n61-must-base",
+    "answer": "We must turn off the lights now.",
+    "variants": [
+      "We must turn off the lights now",
+      "Now we must turn off the lights.",
+      "We must now turn off the lights."
+    ],
+    "issues": [
+      "now位置可变化，不改变规定情境或所给词汇。"
+    ]
+  },
+  {
+    "id": "guided-n61-ask-condition",
+    "answer": "What is the matter with her?",
+    "variants": [
+      "What's the matter with her?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n61-describe-condition",
+    "answer": "They feel tired.",
+    "variants": [
+      "They feel tired",
+      "They are feeling tired.",
+      "They're feeling tired."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n61-must-base",
+    "answer": "Lena must check the door.",
+    "variants": [
+      "Lena must check the door"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n61-ask-condition",
+    "answer": "What is the matter with them?",
+    "variants": [
+      "What's the matter with them?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n61-describe-condition",
+    "answer": "Mina looks pale.",
+    "variants": [
+      "Mina looks pale",
+      "Mina is looking pale.",
+      "Mina's looking pale."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n61-must-base",
+    "answer": "They must bring their tickets.",
+    "variants": [
+      "They must bring their tickets"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n61-ask-condition",
+    "answer": "What is the matter with you?",
+    "variants": [
+      "What's the matter with you?"
+    ],
+    "issues": [
+      "直接对人说What is the matter with you?可能带责备语气；虚构剧本情境可用，但不宜泛化为唯一友善关怀问法。"
+    ]
+  },
+  {
+    "id": "repair-n61-describe-condition",
+    "answer": "She has a toothache.",
+    "variants": [
+      "She has a toothache",
+      "She has got a toothache.",
+      "She's got a toothache."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n61-must-base",
+    "answer": "I must write the note.",
+    "variants": [
+      "I must write the note"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n61-ask-condition",
+    "answer": "What is the matter with Asha?",
+    "variants": [
+      "What's the matter with Asha?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n61-describe-condition",
+    "answer": "We have a bad cold.",
+    "variants": [
+      "We have a bad cold",
+      "We have got a bad cold.",
+      "We've got a bad cold."
+    ],
+    "issues": [
+      "复数主语搭配a bad cold可以表示各自感冒；表达自然，但a bad cold形式是题目限定，bad colds虽自然不满足该词组。"
+    ]
+  },
+  {
+    "id": "review-a-n61-must-base",
+    "answer": "Ravi must wait here now.",
+    "variants": [
+      "Ravi must wait here now",
+      "Ravi must now wait here."
+    ],
+    "issues": [
+      "以Ravi开头已排除Now Ravi...；must now wait here仍符合限制。"
+    ]
+  },
+  {
+    "id": "review-b-n61-ask-condition",
+    "answer": "What is the matter with him?",
+    "variants": [
+      "What's the matter with him?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n61-describe-condition",
+    "answer": "He feels ill.",
+    "variants": [
+      "He feels ill",
+      "He is feeling ill.",
+      "He's feeling ill."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n61-must-base",
+    "answer": "We must open the front door.",
+    "variants": [
+      "We must open the front door"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n63-negative-command",
+    "answer": "Do not move this card.",
+    "variants": [
+      "Do not move this card",
+      "Don't move this card."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n63-must-prohibition",
+    "answer": "Leo must not turn off this lamp.",
+    "variants": [
+      "Leo must not turn off this lamp",
+      "Leo mustn't turn off this lamp."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n63-person-modal-contrast",
+    "answer": "She often paints here.",
+    "variants": [
+      "She often paints here",
+      "She paints here often."
+    ],
+    "issues": [
+      "often在句末自然，仍描述习惯；题干未限定副词位置。"
+    ]
+  },
+  {
+    "id": "guided-n63-negative-command",
+    "answer": "Do not close this book.",
+    "variants": [
+      "Do not close this book",
+      "Don't close this book."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n63-must-prohibition",
+    "answer": "Visitors must not touch these models.",
+    "variants": [
+      "Visitors must not touch these models",
+      "Visitors mustn't touch these models."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n63-person-modal-contrast",
+    "answer": "He can use this desk.",
+    "variants": [
+      "He can use this desk"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n63-negative-command",
+    "answer": "Do not remove this tape.",
+    "variants": [
+      "Do not remove this tape",
+      "Don't remove this tape."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n63-must-prohibition",
+    "answer": "We must not open the side door.",
+    "variants": [
+      "We must not open the side door",
+      "We mustn't open the side door."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n63-person-modal-contrast",
+    "answer": "She does not use glue.",
+    "variants": [
+      "She does not use glue",
+      "She doesn't use glue."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n63-negative-command",
+    "answer": "Do not write on this photo.",
+    "variants": [
+      "Do not write on this photo",
+      "Don't write on this photo."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n63-must-prohibition",
+    "answer": "Ada must not lend this key.",
+    "variants": [
+      "Ada must not lend this key",
+      "Ada mustn't lend this key."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n63-person-modal-contrast",
+    "answer": "He cannot carry this box.",
+    "variants": [
+      "He cannot carry this box",
+      "He can't carry this box."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n63-negative-command",
+    "answer": "Do not turn off this recorder.",
+    "variants": [
+      "Do not turn off this recorder",
+      "Don't turn off this recorder."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n63-must-prohibition",
+    "answer": "They must not cross this line.",
+    "variants": [
+      "They must not cross this line",
+      "They mustn't cross this line."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n63-person-modal-contrast",
+    "answer": "She always cleans the lens.",
+    "variants": [
+      "She always cleans the lens"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n63-negative-command",
+    "answer": "Do not move that chair.",
+    "variants": [
+      "Do not move that chair",
+      "Don't move that chair."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n63-must-prohibition",
+    "answer": "He must not leave the room.",
+    "variants": [
+      "He must not leave the room",
+      "He mustn't leave the room."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n63-person-modal-contrast",
+    "answer": "He does not collect tickets.",
+    "variants": [
+      "He does not collect tickets",
+      "He doesn't collect tickets."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n65-clock-obligation",
+    "answer": "I must arrive at half past seven.",
+    "variants": [
+      "I must arrive at half past seven",
+      "At half past seven I must arrive."
+    ],
+    "issues": [
+      "没有限定以I开头，时间状语前置符合用词和情境。前置写法语法正确但普通语境更自然使用主答案。"
+    ]
+  },
+  {
+    "id": "diagnostic-n65-in-at-from",
+    "answer": "from",
+    "variants": [
+      "from."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n65-enjoy-reflexive",
+    "answer": "We enjoy ourselves.",
+    "variants": [
+      "We enjoy ourselves"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n65-clock-obligation",
+    "answer": "Nina must open the door at a quarter past eight.",
+    "variants": [
+      "Nina must open the door at a quarter past eight"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n65-in-at-from",
+    "answer": "in",
+    "variants": [
+      "in."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n65-enjoy-reflexive",
+    "answer": "Leo enjoys himself.",
+    "variants": [
+      "Leo enjoys himself"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n65-clock-obligation",
+    "answer": "They must meet at a quarter to ten.",
+    "variants": [
+      "They must meet at a quarter to ten",
+      "At a quarter to ten they must meet."
+    ],
+    "issues": [
+      "没有限定以They开头，时间状语前置符合限制；主答案语序更常见。"
+    ]
+  },
+  {
+    "id": "independent-n65-in-at-from",
+    "answer": "at",
+    "variants": [
+      "at."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n65-enjoy-reflexive",
+    "answer": "You always enjoy yourselves.",
+    "variants": [
+      "You always enjoy yourselves"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n65-clock-obligation",
+    "answer": "We must leave at a quarter to twelve.",
+    "variants": [
+      "We must leave at a quarter to twelve",
+      "At a quarter to twelve we must leave."
+    ],
+    "issues": [
+      "没有限定以We开头，时间状语前置符合限制；主答案语序更常见。"
+    ]
+  },
+  {
+    "id": "repair-n65-in-at-from",
+    "answer": "in",
+    "variants": [
+      "in."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n65-enjoy-reflexive",
+    "answer": "Mila usually enjoys herself.",
+    "variants": [
+      "Mila usually enjoys herself"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n65-clock-obligation",
+    "answer": "I must turn off the screen at two o'clock.",
+    "variants": [
+      "I must turn off the screen at two o'clock",
+      "At two o'clock I must turn off the screen.",
+      "I must turn off the screen at two o’clock."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n65-in-at-from",
+    "answer": "in",
+    "variants": [
+      "in."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n65-enjoy-reflexive",
+    "answer": "They always enjoy themselves.",
+    "variants": [
+      "They always enjoy themselves"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n65-clock-obligation",
+    "answer": "She must arrive at half past six.",
+    "variants": [
+      "She must arrive at half past six",
+      "At half past six she must arrive."
+    ],
+    "issues": [
+      "没有限定以She开头，时间状语前置符合限制；主答案语序更常见。"
+    ]
+  },
+  {
+    "id": "review-b-n65-in-at-from",
+    "answer": "in",
+    "variants": [
+      "in."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n65-enjoy-reflexive",
+    "answer": "You enjoy yourself.",
+    "variants": [
+      "You enjoy yourself"
+    ],
+    "issues": []
+  }
+]

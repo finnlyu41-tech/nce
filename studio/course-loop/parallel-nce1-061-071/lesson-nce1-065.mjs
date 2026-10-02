@@ -1,0 +1,35 @@
+import {author,metadata} from '../parallel-nce1-049-059/authoring.mjs';
+import {bindContent} from '../parallel-nce1-025-035/content-contract.mjs';
+const data=metadata(65,'88be2253edb3392ac5532684c52708447b42e96add0649abd3e4ab9e5a56c70b','把钟点、介词和人称说清','用at表达规定钟点，选择in/at/from表达时间、所在或来源，并用匹配主语的反身代词表达玩得开心。',['第61–64课must和情态动词；第51–60课月份、季节、时间表达；第11–12课物主与宾格。数字和场景词在题内提供。'],[
+ {target:'clock-obligation',title:'规定几点做事',explanation:'主语 + must + 原形 + at + 钟点。half past表示半点，a quarter past表示过一刻，a quarter to表示差一刻。to后是下一个整点；7:45为a quarter to eight。',example:'I must arrive at half past nine.',meaning:'我必须九点半到。',check:'先读钟点，再选past/to和整点；at前不漏必须做的动作。'},
+ {target:'in-at-from',title:'时间、地点与来源的介词',explanation:'具体钟点用at；月份、季节和in the morning用in；在某国也用in。come from问或说明来源。介词由意思决定，不是看哪个单词离空格最近。',example:'Nora comes from Spain.',meaning:'诺拉来自西班牙。',check:'钟点at，月份/季节/上午in，来源from。'},
+ {target:'enjoy-reflexive',title:'谁玩得开心就对应谁',explanation:'enjoy oneself表示玩得开心。I/myself，you/yourself（一个人）或yourselves（多人），he/himself，she/herself，we/ourselves，they/themselves。第三人称一般现在时enjoy加-s。',example:'The twins enjoy themselves.',meaning:'这对双胞胎玩得开心。',check:'先看主语及人数，再选反身代词；he/she还需enjoys。'}
+],[[30.19,34.87,'听at half past表达钟点'],[66.27,71.52,'听quarter past；介词in/from扩展参考66课练习'],[81.52,88.3,'听enjoy yourself与ourselves']], '给虚构活动做一份三句便条：一项must和英文钟点的集合要求，一句正确in/at/from的时间或来源信息，以及一位或一组参与者玩得开心。请伙伴核对钟面、来源和反身代词的人数。');
+const rows=[
+ ['展馆签到通知要求我7:30到达。arrive表示到达。','用I、must、arrive、at和half past的英文钟点写一句；钟点不用数字。','I must arrive at half past seven.',[['I must arrive at half past eight.','整点错误。'],['I must arrive at half to seven.','半点用past。'],['I must arrives at half past seven.','must后原形。'],['I must arrive in half past seven.','钟点用at。']],'7:30为half past seven。'],
+ ['迁入登记只问来源：Omar来自Peru（秘鲁）。','补全Omar comes ___ Peru. 仅写空缺介词，选in/at/from。','from',[['in','说明来源不是所在。'],['at','不是钟点/地点点位。'],['to','不是朝向。'],['of','不与comes构成来源。']],'来源用comes from。'],
+ ['两名女孩自述每次游戏都玩得开心；用we指她们自己。','用We、enjoy和对应反身代词写一句。','We enjoy ourselves.',[['We enjoy myself.','人数人称错。'],['We enjoys ourselves.','we不加-s。'],['We enjoy themselves.','第三人称替代we。'],['We enjoy ourself.','we对应复数ourselves。']],'we对应ourselves。'],
+ ['场馆规定Nina 8:15打开门；open the door表示打开门。','以Nina开头，用must、open the door、at和a quarter past的钟点；不用数字。','Nina must open the door at a quarter past eight.',[['Nina must open the door at a quarter to eight.','变成7:45。'],['Nina must opens the door at a quarter past eight.','must后原形。'],['Nina must open the door in a quarter past eight.','钟点用at。'],['Nina must close the door at a quarter past eight.','动作相反。']],'8:15是过八点一刻。'],
+ ['本月展览安排在October（十月）。','补全The show is ___ October. 仅写介词，选in/at/from。','in',[['at','月份用in。'],['from','题目未给开始至结束区间。'],['on','未给具体日期。'],['to','不是方向。']],'月份用in。'],
+ ['生日派对中一位男孩Leo每次都玩得开心。','以Leo开头，用enjoy和对应反身代词写一般现在时陈述句。','Leo enjoys himself.',[['Leo enjoy himself.','单数需enjoys。'],['Leo enjoys herself.','男孩用himself。'],['Leo enjoys themselves.','不是复数。'],['Leo enjoys him.','him不表示本人玩得开心。']],'单数-s与himself同时保留。'],
+ ['合唱集合要求两位成员9:45见面；用they，meet表示见面。','用They、must、meet、at和a quarter to的英文钟点，不用数字。','They must meet at a quarter to ten.',[['They must meet at a quarter to nine.','变成8:45。'],['They must meet at a quarter past ten.','变成10:15。'],['They must meets at a quarter to ten.','原形meet。'],['They must meet in a quarter to ten.','钟点用at。']],'差一刻到下一个整点ten。'],
+ ['工作室的预约时间确切是noon（中午十二点），并非整个下午。','补全The visit is ___ noon. 仅写介词，选in/at/from。','at',[['in','固定at noon。'],['from','没有起始区间语义。'],['on','不是日期。'],['to','不是方向。']],'noon表示具体时间点。'],
+ ['远足说明里，你对两位同行者说他们总会玩得开心；主语用you指两人。','用You、always、enjoy和对应复数反身代词写一句。','You always enjoy yourselves.',[['You always enjoy yourself.','题目明确两人。'],['You always enjoys yourselves.','you后原形。'],['You always enjoy themselves.','人称不同。'],['You always enjoy your.','your不是反身代词。']],'you复数需yourselves。'],
+ ['上一轮差一刻读反。新的值班表规定我们11:45离开；leave表示离开。','用We、must、leave、at和a quarter to的英文钟点，不用数字。','We must leave at a quarter to twelve.',[['We must leave at a quarter past twelve.','变成12:15。'],['We must leave at a quarter to eleven.','变成10:45。'],['We must leaves at a quarter to twelve.','原形leave。'],['We must leave from a quarter to twelve.','钟点用at。']],'11:45下一整点是twelve。'],
+ ['新植物观察日记说在summer（夏天）这里很温暖。','补全It is warm ___ summer. 仅写介词，选in/at/from。','in',[['at','季节用in。'],['from','不是从夏天起。'],['on','不是某一天。'],['to','不是方向。']],'季节和月份都可用in。'],
+ ['新故事里的女主角Mila喜欢参加集市，通常玩得开心。','以Mila开头，用usually、enjoy和对应反身代词写一句。','Mila usually enjoys herself.',[['Mila usually enjoy herself.','单数需enjoys。'],['Mila usually enjoys himself.','女性用herself。'],['Mila usually enjoys themselves.','人数不同。'],['Mila usually enjoys her.','her不是反身。']],'女主角与herself一致。'],
+ ['设备培训规定：我2:00关闭屏幕电源，turn off the screen表示关闭屏幕电源。','用I、must、turn off the screen、at和two o’clock写一句；不用数字。','I must turn off the screen at two o’clock.',[['I must turn off the screen at three o’clock.','钟点不同。'],['I must turns off the screen at two o’clock.','must后原形。'],['I must turn off the screen in two o’clock.','钟点用at。'],['I must turn on the screen at two o’clock.','动作反了。']],'整点用o’clock。'],
+ ['邮政展区的地图仅说明物品现在位于Japan（日本），未说明来自哪里。','补全The parcel is ___ Japan. 仅写介词，选in/at/from。','in',[['from','来自与位于不同。'],['at','国家所在用in。'],['to','没有移动方向。'],['of','不是所属。']],'位置和来源需按事实区分。'],
+ ['两位朋友向导游介绍第三方游客，他们总是玩得开心；用they。','用They、always、enjoy和对应反身代词写一句。','They always enjoy themselves.',[['They always enjoys themselves.','they后原形。'],['They always enjoy ourselves.','人称改变。'],['They always enjoy themself.','题目复数需themselves。'],['They always enjoy them.','不表示自己玩得开心。']],'they复数对应themselves。'],
+ ['乐队演出通知规定女鼓手6:30到场；用she，arrive表示到场。','用She、must、arrive、at和half past的钟点，不用数字。','She must arrive at half past six.',[['She must arrives at half past six.','must后原形。'],['She must arrive at half past seven.','钟点改变。'],['She must arrive at half to six.','半点用past。'],['She can arrive at half past six.','许可替代要求。']],'must与半点事实同时保留。'],
+ ['新预约记录写明会在the morning（上午）发生，没给具体钟点。','补全The meeting is ___ the morning. 仅写介词，选in/at/from。','in',[['at','整个上午用in。'],['from','不是上午起始。'],['on','未指定某天的上午。'],['to','不是方向。']],'in the morning对应一天中的时段。'],
+ ['你只对一个新朋友描述他平时玩得开心的情况，主语用you，未包含其他人。','用You、enjoy和对应单数反身代词写一般现在时句子，不另加频率词。','You enjoy yourself.',[['You enjoy yourselves.','题目限定一个人。'],['You enjoys yourself.','you不加-s。'],['You enjoy myself.','人称错。'],['You enjoy your.','不是反身代词。']],'you单数对应yourself。']
+];
+data.contentStatus='authored-blind-reviewed';
+const content=author(data,rows);
+for(const q of content.questions)for(const a of [...q.accepted]){
+ if(a.includes('a quarter '))q.accepted.push(a.replace('a quarter ','quarter '));
+ for(const adverb of ['always','usually'])if(a.includes(' '+adverb+' '))q.accepted.push(a.replace(' '+adverb+' ',' ').replace(/\.$/,' '+adverb+'.'));
+}
+for(const i of [0,6,9,12,15]){const q=content.questions[i];for(const a of [...q.accepted]){const m=a.match(/^(I|They|We|She) (.*) at (.*)\.$/);if(m)q.accepted.push('At '+m[3]+', '+m[1].toLowerCase().replace(/^i$/,'I')+' '+m[2]+'.','At '+m[3]+' '+m[1].toLowerCase().replace(/^i$/,'I')+' '+m[2]+'.');}}
+export const {lesson,questions,byId,questionsFor,matches}=bindContent(data,content.questions);

@@ -1,0 +1,167 @@
+{
+  "baseline": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "remoteHeads": "febb408a5777b0fef77ba5f0b5d8f7dd57e1902d",
+  "groups": [
+    {
+      "id": "nce1-61",
+      "sourceSha256": "787f2afbc7cd4b3ffa60fe3df1191c86959474755fbe9df542a3809dbc01a1ac",
+      "languageFileSha256": "8df24353130cd72d097fa46e2a1b68dca2b09a3336717bf582ef7b035e5af662",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "1019ab89ce8e96d780225afb0d0f4c742d47f7e1cc83167ec07fff288b9aeb8b",
+      "grammarEntry": {
+        "id": "NCE1-61",
+        "book": "NCE1",
+        "lesson": 61,
+        "lastLesson": 62,
+        "unit": null,
+        "title": "身体状况与 must",
+        "category": "modal",
+        "terms": "matter must",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 128
+          },
+          {
+            "section": "句型练习",
+            "page": 127
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 126
+          }
+        ],
+        "pages": [
+          126,
+          127,
+          128
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 126,
+          "sha256": "16a6ecb4eb23fd7f76b47f0acae85ae535720a97c90d185c4d35489f83680488"
+        },
+        {
+          "page": 127,
+          "sha256": "64fcda32e3aeb538131806adf37ec72e4159f0b570ae45d40f9ec0e2a2290c0a"
+        },
+        {
+          "page": 128,
+          "sha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-63",
+      "sourceSha256": "805f3cae023f2b7b4773ffb028d5e5ff7b23f6a04dca55845ce3981a4634e01b",
+      "languageFileSha256": "e5729a46629c43f6e5bcfdbaaa4fd43ee9f13240ff674c263c769d7e709cea7b",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "0dc89a2a1b137d8b4594248d241d345bdcc55e1ba376d007a50d07ab896b5a61",
+      "grammarEntry": {
+        "id": "NCE1-63",
+        "book": "NCE1",
+        "lesson": 63,
+        "lastLesson": 64,
+        "unit": null,
+        "title": "否定祈使句与 mustn't",
+        "category": "modal",
+        "terms": "don't mustn't",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 132
+          },
+          {
+            "section": "句型练习",
+            "page": 131
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 130
+          }
+        ],
+        "pages": [
+          130,
+          131,
+          132
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 130,
+          "sha256": "7571862f6b01588f8e7799008bc4ade2027f06d8c7daa515ec4d2b96efd4e398"
+        },
+        {
+          "page": 131,
+          "sha256": "7295f7b9a4131e412c80e7ac7122bfe4761b37b2faf1e4824a0614344a42a818"
+        },
+        {
+          "page": 132,
+          "sha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-65",
+      "sourceSha256": "88be2253edb3392ac5532684c52708447b42e96add0649abd3e4ab9e5a56c70b",
+      "languageFileSha256": "7855e07387300722e9a5d4363f968980a6471e4e03950ddc7874d4aaf9d089e8",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "1a019592739817e485804d3efdf000c37045dbb807b279e1a09a4e85a2e74d20",
+      "grammarEntry": {
+        "id": "NCE1-65",
+        "book": "NCE1",
+        "lesson": 65,
+        "lastLesson": 66,
+        "unit": null,
+        "title": "时间表达与 in / at / from",
+        "category": "modifier",
+        "terms": "time clock in at from",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 136
+          },
+          {
+            "section": "句型练习",
+            "page": 135
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 134
+          }
+        ],
+        "pages": [
+          134,
+          135,
+          136
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 134,
+          "sha256": "3831361cc10c987215dcbb3b29e874e236eced16b7c01089a696f59dee1271b1"
+        },
+        {
+          "page": 135,
+          "sha256": "73e8ef04e81367242a47bac52df14493cf80d8b85cab19c40ff05680bedcae73"
+        },
+        {
+          "page": 136,
+          "sha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}

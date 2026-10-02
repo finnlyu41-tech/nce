@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: nce1-61 real transcript LRC, source panel, comic and paired exercise pages
+ok 1 - nce1-61 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 8.713417
+  type: 'test'
+  ...
+# Subtest: nce1-63 real transcript LRC, source panel, comic and paired exercise pages
+ok 2 - nce1-63 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.239709
+  type: 'test'
+  ...
+# Subtest: nce1-65 real transcript LRC, source panel, comic and paired exercise pages
+ok 3 - nce1-65 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 3.675375
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 4 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 0.973542
+  type: 'test'
+  ...
+# Subtest: record verified source evidence
+ok 5 - record verified source evidence
+  ---
+  duration_ms: 0.975
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 281.395458
