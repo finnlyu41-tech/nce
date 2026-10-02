@@ -3,7 +3,8 @@ export type LocalAudio={key:string,name:string,type:string,blob:Blob};
 export type StateStorageSnapshot={mode:'db'|'legacy';raw:string|null};
 export type StateWriteGuard={expectedRaw:string|null;unchanged?:()=>boolean};
 const stateRaw=(value:unknown)=>value===undefined?null:JSON.stringify(value);
-const stateConflict=()=>Error('学习记录已更新，请重新核对后恢复。');
+export class StateStorageConflict extends Error {constructor(){super('学习记录已更新，请重新核对后恢复。')}}
+const stateConflict=()=>new StateStorageConflict();
 let connection:Promise<IDBDatabase>|undefined;
 function database(){if(!connection)connection=new Promise<IDBDatabase>((resolve,reject)=>{if(!('indexedDB' in window)){reject(Error('此浏览器不支持本地资料库'));return}const r=indexedDB.open('english-studio-offline',1);r.onupgradeneeded=()=>{r.result.createObjectStore('state');r.result.createObjectStore('audio',{keyPath:'key'})};r.onsuccess=()=>{r.result.onversionchange=()=>{r.result.close();connection=undefined};resolve(r.result)};r.onerror=()=>{connection=undefined;reject(r.error)};r.onblocked=()=>{connection=undefined;reject(Error('请关闭其他学习窗口后重试'))}});return connection}
 export async function readState():Promise<State|undefined>{const db=await database();return new Promise((resolve,reject)=>{const t=db.transaction('state'),r=t.objectStore('state').get('current');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}

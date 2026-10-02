@@ -28,6 +28,7 @@ import {FlashcardReview} from './flashcard-ui';
 import {enrollFlashcard,flashcardSummary,isFlashcardEnrolled,migrateFlashcards,prepareFlashcardRestore} from './flashcards';
 import {loadLessonLanguage,rowsToText,type LessonLanguage} from './language';
 import {readState,readStateSnapshot,writeState,writeLegacyState,restoreStateSnapshot,restoreLegacyStateSnapshot} from './offline-store';
+import {mergeProgressEdits,saveProgressEdits} from './progress-autosave';
 import {ProgressSave} from './progress-save';
 import type {ProgressRestoreCheckpoint,ProgressRestoreOptions} from './progress-file';
 import {ONLINE} from './runtime-mode';
@@ -59,8 +60,36 @@ function StudyWorkspace(){
  const materialStart=useMemo(()=>route.book&&route.lesson?{book:route.book,lesson:route.lesson}:null,[route.book,route.lesson]);
  const [persisted,setPersisted]=useState<State|null>(null);
  const [state,setState]=useState<State>(initial),[ready,setReady]=useState(false),[storageError,setStorageError]=useState(false),[storageBlocked,setStorageBlocked]=useState(false),[storageMode,setStorageMode]=useState('db'),[search,setSearch]=useState(''),[stage,setStage]=useState('all'),[customActive,setCustomActive]=useState(''),[,setReviewClock]=useState(0);const stateRef=useRef(state);stateRef.current=state;
- useEffect(()=>{let alive=true;(async()=>{try{let parsed:unknown;try{parsed=await readState()}catch{if(alive)setStorageMode('legacy')}if(parsed===undefined){const raw=localStorage.getItem(KEY);if(raw)parsed=JSON.parse(raw)}if(alive&&parsed!==undefined){if(validateState(parsed))setState(migrateFlashcards(parsed,courseWords));else{setStorageError(true);setStorageBlocked(true)}}}catch{if(alive){setStorageError(true);setStorageBlocked(true)}}finally{if(alive)setReady(true)}})();return()=>{alive=false}},[]);
- useEffect(()=>{if(!ready||storageBlocked||persisted===state)return;let alive=true;(async()=>{try{if(storageMode==='db')await writeState(state);else await writeLegacyState(state,KEY);if(alive){setStorageError(false);setPersisted(state)}}catch{if(alive)setStorageError(true)}})();return()=>{alive=false}},[state,ready,storageBlocked,storageMode,persisted]);
+ const editBase=useRef<State>(initial),saveQueue=useRef<Promise<void>>(Promise.resolve()),saveEpoch=useRef(0);
+ const [saveIssue,setSaveIssue]=useState(''),[saveRetry,setSaveRetry]=useState(0);
+ useEffect(()=>{let alive=true;(async()=>{try{let parsed:unknown,dbFailed=false;try{parsed=await readState()}catch{dbFailed=true;if(alive)setStorageMode('legacy')}const databaseValue=parsed;if(parsed===undefined){const raw=localStorage.getItem(KEY);if(raw)parsed=JSON.parse(raw)}if(alive&&parsed!==undefined){if(validateState(parsed)){editBase.current=dbFailed?parsed:validateState(databaseValue)?databaseValue:initial;setState(migrateFlashcards(parsed,courseWords))}else{setStorageError(true);setStorageBlocked(true)}}}catch{if(alive){setStorageError(true);setStorageBlocked(true)}}finally{if(alive)setReady(true)}})();return()=>{alive=false}},[]);
+ useEffect(()=>{
+  if(!ready||storageBlocked||persisted===state)return;
+  let alive=true;const base=editBase.current,epoch=saveEpoch.current,candidate=state;
+  const unchanged=()=>alive&&saveEpoch.current===epoch&&stateRef.current===candidate;
+  saveQueue.current=saveQueue.current.catch(()=>{}).then(async()=>{
+   if(!unchanged())return;
+   try{
+    const saved=await saveProgressEdits(base,candidate,storageMode,KEY,unchanged);
+    if(saveEpoch.current!==epoch)return;
+    const latest=stateRef.current,next=latest===candidate?saved:mergeProgressEdits(candidate,latest,saved);
+    editBase.current=saved;stateRef.current=next;setState(next);setPersisted(saved);setStorageError(false);setSaveIssue('');
+    window.dispatchEvent(new Event('english-studio-progress-saved'));
+   }catch(error){if(unchanged()){setStorageError(true);setSaveIssue(error instanceof Error?error.message:'本次输入尚未保存，请先备份。')}}
+  });
+  return()=>{alive=false};
+ },[state,ready,storageBlocked,storageMode,persisted,saveRetry]);
+ async function readLatestProgress(){
+  const epoch=++saveEpoch.current,expected=stateRef.current;let applied=false;
+  try{
+  await saveQueue.current;
+  const snapshot=storageMode==='db'?await readStateSnapshot():{raw:localStorage.getItem(KEY)};
+  const value=snapshot.raw===null?initial:JSON.parse(snapshot.raw);
+  if(!validateState(value))throw Error('已保存记录格式异常，原始内容仍保留。');
+  if(saveEpoch.current!==epoch||stateRef.current!==expected)throw Error('读取期间本页有新的输入或恢复，请先保留输入，再重新读取。');
+  editBase.current=value;stateRef.current=value;setState(value);setPersisted(value);setStorageError(false);setStorageBlocked(false);setSaveIssue('');applied=true;
+ }catch(error){if(saveEpoch.current===epoch){setStorageError(true);setSaveIssue(error instanceof Error?error.message:'最新记录暂时无法读取。')}}
+ finally{if(!applied&&saveEpoch.current===epoch)setSaveRetry(n=>n+1)}}
  useEffect(()=>{const tick=setInterval(()=>setReviewClock(Date.now()),30000);return()=>clearInterval(tick)},[]);
  async function captureProgressRestore():Promise<ProgressRestoreCheckpoint>{
   const expected=stateRef.current,persisted=storageMode==='db'?await readStateSnapshot():{mode:'legacy' as const,raw:localStorage.getItem(KEY)};
@@ -78,13 +107,19 @@ function StudyWorkspace(){
   if(options.persisted?.raw)try{const value=JSON.parse(options.persisted.raw);if(validateState(value))current=value}catch{}
   const next=options.exact?incoming:prepareFlashcardRestore(current,incoming,courseWords);
   const guard=options.persisted?{expectedRaw:options.persisted.raw,unchanged}:undefined;
+  const epoch=++saveEpoch.current;
+  try{
   if(options.rollbackTo){if(storageMode==='db')await restoreStateSnapshot(options.rollbackTo,guard!);else await restoreLegacyStateSnapshot(options.rollbackTo,KEY,guard!);}
   else if(storageMode==='db')await writeState(next,guard);else await writeLegacyState(next,KEY,guard);
+  }catch(error){if(saveEpoch.current===epoch){setStorageError(true);setSaveIssue(error instanceof Error?error.message:'恢复未保存，本次输入仍保留。');setSaveRetry(n=>n+1)}throw error;}
   options.onCommitted?.(next);
   if(!unchanged())throw Error('保存期间学习记录已更新，请保留当前输入并重新核对。');
   let validStored=true;
   if(options.rollbackTo?.raw!==undefined&&options.rollbackTo.raw!==null)try{validStored=validateState(JSON.parse(options.rollbackTo.raw))}catch{validStored=false}
-  stateRef.current=next;setState(next);setPersisted(next);setStorageError(!validStored);setStorageBlocked(!validStored);return next;
+  let storedBase=next;
+  if(options.rollbackTo){storedBase=initial;if(options.rollbackTo.raw!==null)try{const value=JSON.parse(options.rollbackTo.raw);if(validateState(value))storedBase=value}catch{}}
+  const absentRollback=options.rollbackTo?.raw===null;
+  editBase.current=storedBase;stateRef.current=next;setState(next);setPersisted(next);setStorageError(!validStored||absentRollback);setStorageBlocked(!validStored);setSaveIssue(absentRollback?'已回退到尚未保存的本机状态。当前页面内容仍可备份；继续编辑后会重新保存。':'');return next;
  }
  const saveStatus=!ready?'读取中':storageError||storageBlocked?'尚未自动保存':persisted===state?'本机已保存':'正在保存';
  function go(v:string){if(ONLINE&&v==='roadmap'){location.href=mapHref(mapState,route.book,route.lesson);return}navigate({view:v});setSearch('');setStage('all')}
@@ -103,7 +138,7 @@ function StudyWorkspace(){
  const streak=useMemo(()=>{let n=0;const d=new Date();if(!state.days.includes(d.toLocaleDateString('en-CA')))d.setDate(d.getDate()-1);while(state.days.includes(d.toLocaleDateString('en-CA'))){n++;d.setDate(d.getDate()-1)}return n},[state.days]);
 
  if(!lessons.length)return <main className="loading">正在准备课程…</main>;
- return <WordLookupProvider onAdd={addPersonalWord}><SidebarProvider>{!ONLINE&&<SideNav view={view} go={go} state={state}/>}<div className={"main-shell"+(ONLINE?" studio-classic":"")}>{ONLINE?<StudioHeader active={studioSection(view)} mapUrl={mapHref(mapState)} reference={route.book&&route.lesson?{book:route.book,lesson:route.lesson}:unitById(continueNode(mapState).id)||state.nceLast} actions={<ProgressSave state={state} ready={ready} status={saveStatus} captureRestore={captureProgressRestore} restore={restoreProgress}/>}/>:<header className="topbar"><div className="row"><SidebarTrigger className="mobile-menu" aria-label="打开导航菜单"/><span className="breadcrumb"><span className="breadcrumb-root">学习空间</span><ChevronRight size={14}/> {view==='nce'&&route.book&&route.lesson?<button className="text-btn topbar-route-location" aria-label="在路线图中查看当前位置" onClick={()=>navigate({view:'roadmap',book:route.book,lesson:route.lesson,goal:route.goal})}>第 {route.lesson} 课 · {roadmapSteps.find(s=>s.id===roadmapActiveStep(route,state))?.label}</button>:navs.find(n=>n[0]===view)?.[1]||({roadmap:'学习路线图',nce:'新概念课程',words:'教材词汇',grammar:'语法与句型',ielts:'雅思训练',progress:'学习记录',cloud:'新概念 · 整册资料',courses:'备用练习素材',lesson:'备用素材学习',quiz:'练习中心',materials:'我的课文'} as any)[view]}</span></div><div className="row"><span className="local-status" role="status"><span/>{saveStatus}</span><button className="text-btn learning-record-link" onClick={()=>go('progress')} aria-label="打开学习记录"><ChartNoAxesCombined size={17}/><span>记录</span></button><ProgressSave state={state} ready={ready} status={saveStatus} captureRestore={captureProgressRestore} restore={restoreProgress}/></div></header>}<main className="workspace" id="main">{storageMode==='legacy'&&<div className="notice">此浏览器暂不支持大容量本地资料库，当前仅保存文字记录。需要持久音频时，请使用本地版压缩包里的启动器打开。</div>}{storageError&&<div role="alert" className="notice">本机存储不可用或原记录需要检查。当前学习仍可继续，请用顶部「保存进度」保留当前页面的学习记录；当前更改尚未自动保存。</div>}{!ready&&<div className="notice">正在读取本机学习记录…</div>}
+ return <WordLookupProvider onAdd={addPersonalWord}><SidebarProvider>{!ONLINE&&<SideNav view={view} go={go} state={state}/>}<div className={"main-shell"+(ONLINE?" studio-classic":"")}>{ONLINE?<StudioHeader active={studioSection(view)} mapUrl={mapHref(mapState)} reference={route.book&&route.lesson?{book:route.book,lesson:route.lesson}:unitById(continueNode(mapState).id)||state.nceLast} actions={<ProgressSave state={state} ready={ready} status={saveStatus} captureRestore={captureProgressRestore} restore={restoreProgress}/>}/>:<header className="topbar"><div className="row"><SidebarTrigger className="mobile-menu" aria-label="打开导航菜单"/><span className="breadcrumb"><span className="breadcrumb-root">学习空间</span><ChevronRight size={14}/> {view==='nce'&&route.book&&route.lesson?<button className="text-btn topbar-route-location" aria-label="在路线图中查看当前位置" onClick={()=>navigate({view:'roadmap',book:route.book,lesson:route.lesson,goal:route.goal})}>第 {route.lesson} 课 · {roadmapSteps.find(s=>s.id===roadmapActiveStep(route,state))?.label}</button>:navs.find(n=>n[0]===view)?.[1]||({roadmap:'学习路线图',nce:'新概念课程',words:'教材词汇',grammar:'语法与句型',ielts:'雅思训练',progress:'学习记录',cloud:'新概念 · 整册资料',courses:'备用练习素材',lesson:'备用素材学习',quiz:'练习中心',materials:'我的课文'} as any)[view]}</span></div><div className="row"><span className="local-status" role="status"><span/>{saveStatus}</span><button className="text-btn learning-record-link" onClick={()=>go('progress')} aria-label="打开学习记录"><ChartNoAxesCombined size={17}/><span>记录</span></button><ProgressSave state={state} ready={ready} status={saveStatus} captureRestore={captureProgressRestore} restore={restoreProgress}/></div></header>}<main className="workspace" id="main">{storageMode==='legacy'&&<div className="notice">此浏览器暂不支持大容量本地资料库，当前仅保存文字记录。需要持久音频时，请使用本地版压缩包里的启动器打开。</div>}{storageError&&<div role="alert" className="notice">本机存储不可用或原记录需要检查。当前学习仍可继续，请用顶部「保存进度」保留当前页面的学习记录；当前更改尚未自动保存。</div>}{saveIssue&&<div className="notice" role="alert"><p>{saveIssue}</p><button className="btn secondary" onClick={()=>void readLatestProgress()}>已备份，读取最新保存记录</button></div>}{!ready&&<div className="notice">正在读取本机学习记录…</div>}
  {ready&&!ONLINE&&<BlueprintPosition state={state}/>}
  {ONLINE&&['nce','cloud','ielts','courses','materials'].includes(view)&&!(view==='ielts'&&route.tab==='course')&&<a className="studio-learning-back" href="/map/#/courses">← 学习 · 找课</a>}
  {ONLINE&&view==='nce'&&mapUnitId(route.book,route.lesson)&&<MapConnection view="course" book={route.book} lesson={route.lesson}/>}

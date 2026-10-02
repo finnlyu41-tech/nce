@@ -46,7 +46,7 @@ async function until(check, message) {
 }
 
 try {
-  await build({stdin:{contents:`import * as store from './app/offline-store';import {initial} from './app/model';window.store=store;window.fixture=note=>({...structuredClone(initial),drafts:{note}});`,resolveDir:fileURLToPath(root),sourcefile:'progress-store-browser.ts',loader:'ts'},bundle:true,platform:'browser',format:'esm',target:'chrome120',outfile:path.join(temporary,'store.js'),logLevel:'silent'});
+  await build({stdin:{contents:`import * as store from './app/offline-store';import * as autosave from './app/progress-autosave';import {initial} from './app/model';window.store=store;window.autosave=autosave;window.fixture=note=>({...structuredClone(initial),drafts:{note}});`,resolveDir:fileURLToPath(root),sourcefile:'progress-store-browser.ts',loader:'ts'},bundle:true,platform:'browser',format:'esm',target:'chrome120',outfile:path.join(temporary,'store.js'),logLevel:'silent'});
   const bundle=await readFile(path.join(temporary,'store.js'));
   server=createServer((request,response)=>{
     response.setHeader('Cache-Control','no-store');
@@ -71,6 +71,38 @@ try {
   const [a,b]=tabs;
   const reset=()=>evaluate(a,'store.writeState(undefined)');
   const note=()=>evaluate(a,'store.readState().then(value=>value?.drafts.note)');
+
+  test('ordinary autosave preserves independent namespace edits in two real tabs',async()=>{
+    await evaluate(a,"store.writeState(fixture('original'));window.base=fixture('original')");
+    await evaluate(b,"window.base=fixture('original');autosave.saveProgressEdits(base,{...base,drafts:{...base.drafts,ielts:'other answer'}},'db','english-studio-v1',()=>true)");
+    await evaluate(a,"autosave.saveProgressEdits(base,{...base,drafts:{...base.drafts,note:'my course draft'}},'db','english-studio-v1',()=>true)");
+    assert.deepEqual(await evaluate(a,'store.readState().then(s=>s.drafts)'),{note:'my course draft',ielts:'other answer'});
+  });
+  test('simultaneous independent autosaves retry guarded transactions without losing either entry',async()=>{
+    await evaluate(a,"store.writeState(fixture('common'));window.base=fixture('common')");
+    await evaluate(b,"window.base=fixture('common')");
+    await Promise.all([
+      evaluate(a,"autosave.saveProgressEdits(base,{...base,drafts:{...base.drafts,a:'A'}},'db','english-studio-v1',()=>true)"),
+      evaluate(b,"autosave.saveProgressEdits(base,{...base,drafts:{...base.drafts,b:'B'}},'db','english-studio-v1',()=>true)")
+    ]);
+    assert.deepEqual(await evaluate(a,'store.readState().then(s=>s.drafts)'),{note:'common',a:'A',b:'B'});
+  });
+  test('same namespace conflicts preserve stored originals and refuse superseded local input',async()=>{
+    await evaluate(a,"store.writeState(fixture('original'));window.base=fixture('original')");
+    await evaluate(b,"autosave.saveProgressEdits(fixture('original'),fixture('committed B original'),'db','english-studio-v1',()=>true)");
+    const result=await evaluate(a,"autosave.saveProgressEdits(base,fixture('pending A original'),'db','english-studio-v1',()=>true).then(()=>true,()=>false)");
+    assert.equal(result,false);assert.equal(await note(),'committed B original');
+    assert.equal(await evaluate(a,"autosave.saveProgressEdits(fixture('committed B original'),fixture('superseded input'),'db','english-studio-v1',()=>false).then(()=>true,()=>false)"),false);
+    assert.equal(await note(),'committed B original');
+  });
+  test('autosave never replaces a damaged stored snapshot or discards an absent-target legacy import',async()=>{
+    await reset();
+    await evaluate(a,"autosave.saveProgressEdits({...fixture(''),drafts:{}},fixture('legacy retained'),'db','english-studio-v1',()=>true)");
+    assert.equal(await note(),'legacy retained');
+    await evaluate(a,"store.writeState({damaged:'preserve raw'})");
+    assert.equal(await evaluate(a,"autosave.saveProgressEdits(fixture('legacy retained'),fixture('local candidate'),'db','english-studio-v1',()=>true).then(()=>true,()=>false)"),false);
+    assert.deepEqual(await evaluate(a,'store.readState()'),{damaged:'preserve raw'});
+  });
 
   test('an absent snapshot and normal guarded commit round-trip through real IndexedDB',async()=>{
     await reset();assert.deepEqual(await evaluate(a,'store.readStateSnapshot()'),{mode:'db',raw:null});
