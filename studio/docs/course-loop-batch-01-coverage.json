@@ -1,0 +1,50 @@
+{
+  "basis": "Baseline coverage retained without re-auditing all existing engines; explicit v30 CL00 + current two-group overlay only.",
+  "baseline": "0ae75f9decab83a2969fed6ca6e6838585c217b6",
+  "runtime": "0f347924d1ed114df83fa1cc6dd98ff5f3ae5d34",
+  "documentationHead": "53487c8614e24b95096989c25db22576dc0cfc82",
+  "counts": {
+    "textbookLessons": 348,
+    "teachingGroups": 276,
+    "inMap": 168,
+    "classicOutsideMap": 108,
+    "CL00IntegratedGroups": 1,
+    "newLocallyAuthoredGroups": 2,
+    "newLocallyAuthoredTextbookLessons": 4,
+    "newOriginalQuestions": 36,
+    "remainingGroupsWithoutNewLoopClaim": 273
+  },
+  "finiteRegistryProposal": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5"
+  ],
+  "queueStatus": {
+    "proposalBatches": 26,
+    "notUserConfirmedTotal": true,
+    "CL-00": "integrated by publisher",
+    "CL-01": "2 of 3 original proposed groups locally authored/tested; nce1-7 remains unassigned/unauthored by this line",
+    "otherBatches": "not authored by this line"
+  },
+  "stateSeparation": {
+    "courseLoop": "own event replay and dueAt; guarded host drafts pending per-course binding",
+    "map": "existing separate evidence/scheduler; a continue-route click cannot pass it",
+    "FSRS": "separate vocab evidence; no course-loop dueAt mirrored",
+    "unknownCourse": "fail closed; raw remains recoverable; no CL00 fallback"
+  },
+  "newContentStatus": {
+    "nce1-3": "authored/blind-reviewed/pure-model-tested/desktop-preview-tested; pending production integration",
+    "nce1-5": "authored/blind-reviewed/pure-model-tested/desktop-preview-tested; pending production integration"
+  },
+  "noClaims": [
+    "coverage CSV is not a content registry",
+    "all 276 groups have loops",
+    "all NCE lessons are in map",
+    "natural 24h retention",
+    "audio playback QA",
+    "phone QA",
+    "expert or learner scoring",
+    "learning gain or IELTS Band"
+  ],
+  "learnerValidation": "pending human expression and real delayed practice; no learning-gain promise"
+}

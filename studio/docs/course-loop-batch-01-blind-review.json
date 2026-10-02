@@ -1,0 +1,418 @@
+{
+  "status": "independent AI blind solve and language review; not learner or expert validation",
+  "reviewer": "/root/cl01_blind_review",
+  "method": {
+    "firstPass": "Only 36 context/prompt/options/kind/ID records, with keys/teaching/criterion/why withheld. No other files, writes or web.",
+    "recheck": "Only 9 revised context/introduction records; keys withheld.",
+    "firstQuestionSha256": "ba89a2830f4075d07c4622bae118356cdedb208e77ded921f26a59966a49a7dd",
+    "revisedQuestionSha256": "2b74488c862c57bc90efe70c15da3baed469a85d4662b2f758d5296f13abf872",
+    "nationalityRecheck": "Only six revised nationality-adjective records; keys withheld.",
+    "nationalityQuestionSha256": "b163d48319bb01dc8370fd74414c548cb0225e2320ee3459c8e4c6af378fb4b8"
+  },
+  "independentAnswers": [
+    {
+      "courseId": "nce1-3",
+      "id": "diagnostic-owner",
+      "answer": "your",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "diagnostic-reject",
+      "answer": "This is not my pen.",
+      "alternatives": [
+        "This isn't my pen."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "diagnostic-response",
+      "answer": "No, it isn't.",
+      "alternatives": [
+        "No, it is not.",
+        "No, it's not."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "guided-owner",
+      "answer": "my",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "guided-reject",
+      "answer": "This is not my coat.",
+      "alternatives": [
+        "This isn't my coat."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "guided-response",
+      "answer": "No, it isn't.",
+      "alternatives": [
+        "No, it is not.",
+        "No, it's not."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "independent-owner",
+      "answer": "your",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "independent-reject",
+      "answer": "This is not my phone.",
+      "alternatives": [
+        "This isn't my phone."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "independent-response",
+      "answer": "No, it isn't.",
+      "alternatives": [
+        "No, it is not.",
+        "No, it's not."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "repair-owner",
+      "answer": "my",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "repair-reject",
+      "answer": "This is not my book.",
+      "alternatives": [
+        "This isn't my book."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "repair-response",
+      "answer": "No, it isn't.",
+      "alternatives": [
+        "No, it is not.",
+        "No, it's not."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-a-owner",
+      "answer": "my",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-a-reject",
+      "answer": "This is not my ticket.",
+      "alternatives": [
+        "This isn't my ticket."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-a-response",
+      "answer": "No, it isn't.",
+      "alternatives": [
+        "No, it is not.",
+        "No, it's not."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-b-owner",
+      "answer": "your",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-b-reject",
+      "answer": "This is not my cup.",
+      "alternatives": [
+        "This isn't my cup."
+      ]
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-b-response",
+      "answer": "No, it isn't.",
+      "alternatives": [
+        "No, it is not.",
+        "No, it's not."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "diagnostic-introduce",
+      "answer": "This is Maya.",
+      "alternatives": [
+        "This is my friend Maya."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "diagnostic-reference",
+      "answer": "She",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "diagnostic-nationality",
+      "answer": "He is German.",
+      "alternatives": [
+        "He's German."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "guided-introduce",
+      "answer": "This is Leo.",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "guided-reference",
+      "answer": "He",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "guided-nationality",
+      "answer": "She is French.",
+      "alternatives": [
+        "She's French."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "independent-introduce",
+      "answer": "This is Mina.",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "independent-reference",
+      "answer": "He",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "independent-nationality",
+      "answer": "She is Korean.",
+      "alternatives": [
+        "She's Korean."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "repair-introduce",
+      "answer": "This is Sam.",
+      "alternatives": [
+        "This is my friend Sam."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "repair-reference",
+      "answer": "She",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "repair-nationality",
+      "answer": "He is Japanese.",
+      "alternatives": [
+        "He's Japanese."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "review-a-introduce",
+      "answer": "This is Nora.",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "review-a-reference",
+      "answer": "He",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "review-a-nationality",
+      "answer": "She is Chinese.",
+      "alternatives": [
+        "She's Chinese."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "review-b-introduce",
+      "answer": "This is Owen.",
+      "alternatives": [
+        "This is my friend Owen."
+      ]
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "review-b-reference",
+      "answer": "She",
+      "alternatives": []
+    },
+    {
+      "courseId": "nce1-5",
+      "id": "review-b-nationality",
+      "answer": "He is French.",
+      "alternatives": [
+        "He's French."
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "courseId": "nce1-3",
+      "id": "independent-reject",
+      "severity": "low",
+      "finding": "Not the serviced phone did not itself establish not owned.",
+      "resolution": "Explicitly belongs to another customer, not the speaker.",
+      "recheck": "resolved; no remaining issue"
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-a-reject",
+      "severity": "low",
+      "finding": "Different date might mean an incorrect print of own ticket.",
+      "resolution": "Name and date confirm another participant owns it.",
+      "recheck": "resolved; no remaining issue"
+    },
+    {
+      "courseId": "nce1-3",
+      "id": "review-b-response",
+      "severity": "low",
+      "finding": "Not leaving phone there does not establish ownership.",
+      "resolution": "Own phone remains in pocket; raised phone belongs to another person.",
+      "recheck": "resolved; no remaining issue"
+    }
+  ],
+  "introductionRecheck": {
+    "answers": [
+      {
+        "id": "diagnostic-introduce",
+        "answer": "This is Maya.",
+        "alternatives": [
+          "This is Maya, my friend."
+        ]
+      },
+      {
+        "id": "guided-introduce",
+        "answer": "This is Leo.",
+        "alternatives": []
+      },
+      {
+        "id": "independent-introduce",
+        "answer": "This is Mina.",
+        "alternatives": []
+      },
+      {
+        "id": "repair-introduce",
+        "answer": "This is Sam.",
+        "alternatives": [
+          "This is Sam, my friend."
+        ]
+      },
+      {
+        "id": "review-a-introduce",
+        "answer": "This is Nora.",
+        "alternatives": []
+      },
+      {
+        "id": "review-b-introduce",
+        "answer": "This is Owen.",
+        "alternatives": [
+          "This is Owen, my friend."
+        ]
+      }
+    ],
+    "findings": [
+      "This is my friend Maya is natural English.",
+      "This is Maya, my friend still follows the target structure.",
+      "Everyone, this is Maya also uses the structure; the prompt does not require starting at This."
+    ],
+    "resolution": "All six introductions accept Everyone prefix; the three explicitly known friends also accept both my-friend positions. Unmatched free introductions are outside finite matching, never a universal English correctness claim."
+  },
+  "newMaterialReview": {
+    "onlyOptionReordering": false,
+    "nce1-3": "Independent: returned coat/repair-shop phone/found ticket. Review A: workshop cup/printed ticket/misdelivered coat. Review B: stored ticket/packing cup/charging-area phone. Speaker ownership changes across banks.",
+    "nce1-5": "Independent: video call/new colleague/person-reported Korean fact. Review A: library/photo/team. Review B: visit/welcome event/later retelling. Names, referents and facts change.",
+    "limit": "New contexts for the same bounded language targets; not proof of broader structures, listening, speaking or open transfer."
+  },
+  "verificationLimit": [
+    "Not a human novice trial.",
+    "No natural 24-hour retention study.",
+    "No pronunciation/listening/audio-player verification.",
+    "No score or mastery inference."
+  ],
+  "blockers": [],
+  "nationalityRecheck": {
+    "answers": [
+      {
+        "courseId": "nce1-5",
+        "id": "diagnostic-nationality",
+        "answer": "He is German.",
+        "alternatives": [
+          "He's German."
+        ]
+      },
+      {
+        "courseId": "nce1-5",
+        "id": "guided-nationality",
+        "answer": "She is French.",
+        "alternatives": [
+          "She's French."
+        ]
+      },
+      {
+        "courseId": "nce1-5",
+        "id": "independent-nationality",
+        "answer": "She is Korean.",
+        "alternatives": [
+          "She's Korean."
+        ]
+      },
+      {
+        "courseId": "nce1-5",
+        "id": "repair-nationality",
+        "answer": "He is Japanese.",
+        "alternatives": [
+          "He's Japanese."
+        ]
+      },
+      {
+        "courseId": "nce1-5",
+        "id": "review-a-nationality",
+        "answer": "She is Chinese.",
+        "alternatives": [
+          "She's Chinese."
+        ]
+      },
+      {
+        "courseId": "nce1-5",
+        "id": "review-b-nationality",
+        "answer": "He is French.",
+        "alternatives": [
+          "He's French."
+        ]
+      }
+    ],
+    "finding": "Adjective constraint correctly distinguishes valid nationality nouns from this bounded task, but adjective words can occur in longer natural structures too.",
+    "resolution": "Final instructions explicitly restrict the response to subject + be + the provided nationality word, with no extra information; common contractions remain accepted. This final tightening is author-reviewed and tested, not an additional independent blind pass.",
+    "grammarBoundary": "A different natural noun/longer construction may be valid English outside this finite task. No claim to grade all English."
+  }
+}
