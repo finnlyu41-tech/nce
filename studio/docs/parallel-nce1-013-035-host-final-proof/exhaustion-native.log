@@ -1,0 +1,5 @@
+PASS fixed actual Today finite-pool tasks from native imported synthetic QA backup
+PASS nce1-13 actual waiting UI retains exhausted pool notice and original answers
+PASS nce1-25 actual waiting UI retains exhausted pool notice and original answers
+PASS native exhausted QA backup roundtrip retains all synthetic raw and no extra grading
+{"proof":"/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/work/parallel-nce1-013-035-host/native-b1N788","passed":4,"failed":0,"exceptions":0,"driverExitedWithError":false}

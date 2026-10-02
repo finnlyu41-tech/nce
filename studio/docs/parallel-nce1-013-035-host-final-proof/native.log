@@ -1,0 +1,26 @@
+PASS nine native selected courses keep independent draft keys through refresh
+PASS native Today has nine distinct pending links and no duplicate recommended task
+PASS ordinary native note survives selected course writes
+PASS actual downloaded backup includes all nine snapshots and sidecars
+PASS two native tabs save different course drafts without overwriting either or the note
+PASS nce1-13 original text/comic/real audio bind this selected lesson
+PASS nce1-25 original text/comic/real audio bind this selected lesson
+PASS nce1-35 original text/comic/real audio bind this selected lesson
+PASS nce1-1 native pipeline saves originals and follows pending priority to nce1-3
+PASS nce1-3 native pipeline saves originals and follows pending priority to nce1-5
+PASS nce1-5 native pipeline saves originals and follows pending priority to nce1-7
+PASS nce1-7 native pipeline saves originals and follows pending priority to nce1-9
+PASS nce1-9 native pipeline saves originals and follows pending priority to nce1-11
+PASS nce1-11 native pipeline saves originals and follows pending priority to nce1-13
+PASS nce1-13 native pipeline saves originals and follows pending priority to nce1-25
+PASS nce1-25 native pipeline saves originals and follows pending priority to nce1-35
+PASS nce1-35 native pipeline saves originals and follows pending priority to nce1-37
+PASS native imported pending backup restores nine course positions without deleting the ordinary note
+PASS native finished backup restore keeps nine original attempt sets and separate corrections
+PASS native restore retains future-content-version raw and blocks selected13
+PASS native restore retains foreign-course-envelope raw and blocks selected13
+PASS native restore retains foreign-correction-ID raw and blocks selected13
+PASS limited 320 CSS viewport selected13/25/35 and records avoid horizontal page overflow
+PASS limited 390 CSS viewport selected13/25/35 and records avoid horizontal page overflow
+PASS nine completed course receipts preserve map and FSRS grading boundaries
+{"proof":"/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/work/parallel-nce1-013-035-host/native-zeub4E","passed":25,"failed":0,"exceptions":0,"driverExitedWithError":false}

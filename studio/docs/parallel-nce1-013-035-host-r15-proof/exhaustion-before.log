@@ -67,9 +67,9 @@ not ok 5 - finite-pool repair allows later course continuation without repeated 
   failureType: 'testCodeFailure'
   error: |-
     The expression evaluated to a falsy value:
-    
+
       assert.ok(tasks.some(t=>t.id===`course-loop:${c.id}`&&t.kind==='repair'))
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: true

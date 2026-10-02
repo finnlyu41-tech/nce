@@ -58,9 +58,10 @@
     "exhaustion-fixed-nce1-25.png": "1c0da3ebb492500a737dc71911efe24992d623b355fa8cbb89f69aa353a07123",
     "review-native.log": "af793ce5109f3063a4676e20b2cfe566b3451bd42db78e86065b000dd5e08c4a",
     "exhaustion-native-after.log": "40eb7c655f6ccfeb4b56a1bccb77d8a187be9a0565ab1027be7e7da4083d6aef",
-    "exhaustion-before.log": "ebcc85c64acc87ceee83c0c2ce4deb4ccb0063af835ff581b0feb0f1d1005d01",
+    "exhaustion-before.log": "d61e61a38dffe98926127fd12f5408b8a561771612e211d0484e6eb298ed3edf",
     "synthetic-fixture-latest.json": "406b82db26bc962525c33359f513ca75deb735422f714de4644ac7f18e1bc444",
     "exhaustion-today-fixed.png": "640ee3d752c8d0f177cacd6557763f4f0c0d6fccc141f038b79546ed6b00d678",
     "exhaustion-today-baseline.png": "3ce5d363b768a5794e345116590380b452e982adf5dd0e6d86c3b245e8f0c045"
-  }
+  },
+  "diagnosticLogNormalization": "Only whitespace at line ends was removed from the expected-red exhaustion log; observed test outcomes unchanged."
 }

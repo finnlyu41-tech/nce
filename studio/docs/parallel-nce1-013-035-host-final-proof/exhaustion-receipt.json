@@ -1,0 +1,230 @@
+{
+  "scope": "Local actual built classic/map app; fresh synthetic QA records; no storage injection or clock/audio fabrication",
+  "base": "fb34b97c855c2c048faffe42cab3cf5cf94890c7",
+  "registeredCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35"
+  ],
+  "selectedNativeCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-25",
+    "nce1-35"
+  ],
+  "origin": "http://127.0.0.1:62094",
+  "proof": "/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/work/parallel-nce1-013-035-host/native-b1N788",
+  "checks": [
+    {
+      "name": "fixed actual Today finite-pool tasks from native imported synthetic QA backup",
+      "ok": true,
+      "elapsedMs": 251,
+      "detail": {
+        "nativeImportedSyntheticFixture": true,
+        "naturalRetention": "unverified",
+        "expectRepair": true,
+        "hrefs": [
+          "/map/#/learn/nce1-25?access=1",
+          "/map/#/learn/nce1-13?access=1",
+          "/map/#/learn/nce1-37?access=1"
+        ]
+      }
+    },
+    {
+      "name": "nce1-13 actual waiting UI retains exhausted pool notice and original answers",
+      "ok": true,
+      "elapsedMs": 645,
+      "detail": {
+        "rawUnchanged": true,
+        "attempts": 18,
+        "reviewIndependent": [
+          false,
+          false
+        ],
+        "waiting": true,
+        "noNewQuestion": true
+      }
+    },
+    {
+      "name": "nce1-25 actual waiting UI retains exhausted pool notice and original answers",
+      "ok": true,
+      "elapsedMs": 527,
+      "detail": {
+        "rawUnchanged": true,
+        "attempts": 18,
+        "reviewIndependent": [
+          true,
+          true
+        ],
+        "waiting": true,
+        "noNewQuestion": true
+      }
+    },
+    {
+      "name": "native exhausted QA backup roundtrip retains all synthetic raw and no extra grading",
+      "ok": true,
+      "elapsedMs": 748,
+      "detail": {
+        "sha256": "091adb8720ab3cd3f708769185e073853c9d11353980cf4d5faa710984c44634"
+      }
+    }
+  ],
+  "passed": 4,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "RuntimeExceptions": [],
+  "requests": [
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-1wdxvhZa.css",
+      "size": 83464
+    },
+    {
+      "path": "/map/assets/index-CTMe6162.js",
+      "size": 2423056
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-Binn7_G3.css",
+      "size": 324022
+    },
+    {
+      "path": "/assets/standalone-Bg5sPpF4.js",
+      "size": 3087979
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-1wdxvhZa.css",
+      "size": 83464
+    },
+    {
+      "path": "/map/assets/index-CTMe6162.js",
+      "size": 2423056
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-Binn7_G3.css",
+      "size": 324022
+    },
+    {
+      "path": "/assets/standalone-Bg5sPpF4.js",
+      "size": 3087979
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-1wdxvhZa.css",
+      "size": 83464
+    },
+    {
+      "path": "/map/assets/index-CTMe6162.js",
+      "size": 2423056
+    },
+    {
+      "path": "/language/NCE1/37.json",
+      "size": 1829
+    },
+    {
+      "path": "/lesson-pages/0d0b6470a3a2221374aece840830babae7af0c2dd160b6decf206324d32b26d4.jpg",
+      "size": 348366
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-Binn7_G3.css",
+      "size": 324022
+    },
+    {
+      "path": "/assets/standalone-Bg5sPpF4.js",
+      "size": 3087979
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-1wdxvhZa.css",
+      "size": 83464
+    },
+    {
+      "path": "/map/assets/index-CTMe6162.js",
+      "size": 2423056
+    },
+    {
+      "path": "/language/NCE1/37.json",
+      "size": 1829
+    },
+    {
+      "path": "/lesson-pages/0d0b6470a3a2221374aece840830babae7af0c2dd160b6decf206324d32b26d4.jpg",
+      "size": 348366
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-Binn7_G3.css",
+      "size": 324022
+    },
+    {
+      "path": "/assets/standalone-Bg5sPpF4.js",
+      "size": 3087979
+    }
+  ],
+  "sourceSha256": {
+    "course-loop/registry.mjs": "26abf32d62736750d0b6de1ab4f60808d82cc9d336903ca856b64f587baf701f",
+    "course-loop/host-contract.d.ts": "b329a6f67ef7fcb404141ee1198fa56564fe72d8ca1fda614bf841679b51cec1",
+    "app/course-loop-next.ts": "f524387ac24a3dbaec4a54072b598c57b8e0ef40b21d53c7e7caf8639097868f",
+    "app/course-loop-progress.ts": "3fb5edb5a9ffdb7396709fb29c7e9e883f0483e05c95bc1cbfc9ac27a0e9eb85",
+    "app/course-loop-ui.tsx": "d5cd8edd2d6d3bb66156032bd22e2e194868803f27aaa87ae0f81a2b30909dd4",
+    "app/today-practice.ts": "38cabaefb794cfba8c04b4a191cd2d16f1eb4d6d8f8bfa4521de889ea55a86be",
+    "app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028",
+    "app/progress-file.ts": "67ef85cd106c87faf762442304afcc91f5ec8fadab0ae968eb5a852455ce5d10",
+    "app/progress-save.tsx": "49951e975a9f6779ecc3d0b4ad6b31481d5ad50540e3dbfd20f842320ece237b"
+  },
+  "unverified": [
+    "published origin",
+    "natural24h/7d",
+    "physical phone",
+    "audibility",
+    "human expression",
+    "learning gain"
+  ],
+  "retries": []
+}

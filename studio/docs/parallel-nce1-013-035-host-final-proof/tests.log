@@ -1,0 +1,629 @@
+TAP version 13
+# Subtest: two explicitly authored groups have six complete three-target banks and objective criteria
+ok 1 - two explicitly authored groups have six complete three-target banks and objective criteria
+  ---
+  duration_ms: 2.701125
+  type: 'test'
+  ...
+# Subtest: new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+ok 2 - new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+  ---
+  duration_ms: 0.524833
+  type: 'test'
+  ...
+# Subtest: lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+ok 3 - lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+  ---
+  duration_ms: 0.245
+  type: 'test'
+  ...
+# Subtest: lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+ok 4 - lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+  ---
+  duration_ms: 0.734917
+  type: 'test'
+  ...
+# Subtest: lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+ok 5 - lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+  ---
+  duration_ms: 1.126667
+  type: 'test'
+  ...
+# Subtest: lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+ok 6 - lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+  ---
+  duration_ms: 0.966542
+  type: 'test'
+  ...
+# Subtest: media references reuse exact existing comic/LRC source identities and source-bound time ranges
+ok 7 - media references reuse exact existing comic/LRC source identities and source-bound time ranges
+  ---
+  duration_ms: 10.966875
+  type: 'test'
+  ...
+# Subtest: new groups contain no copied textbook body, audio blobs, storage access or fake score
+ok 8 - new groups contain no copied textbook body, audio blobs, storage access or fake score
+  ---
+  duration_ms: 4.793958
+  type: 'test'
+  ...
+# Subtest: all independent blind answers and reported natural variants fit final finite matching
+ok 9 - all independent blind answers and reported natural variants fit final finite matching
+  ---
+  duration_ms: 5.284125
+  type: 'test'
+  ...
+# Subtest: short nationality structure is explicit before submission, not a hidden grading rule
+ok 10 - short nationality structure is explicit before submission, not a hidden grading rule
+  ---
+  duration_ms: 1.352875
+  type: 'test'
+  ...
+# Subtest: coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+ok 11 - coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+  ---
+  duration_ms: 2.208792
+  type: 'test'
+  ...
+# Subtest: real registry exposes exactly eighteen courses and never reads coverage as registration
+ok 12 - real registry exposes exactly eighteen courses and never reads coverage as registration
+  ---
+  duration_ms: 3.347792
+  type: 'test'
+  ...
+# Subtest: production matcher keeps the nationality question guard, original text and help state
+ok 13 - production matcher keeps the nationality question guard, original text and help state
+  ---
+  duration_ms: 2.636167
+  type: 'test'
+  ...
+# Subtest: one recommendation advances 1 through 35 to existing 37 with access-only map starts
+ok 14 - one recommendation advances 1 through 35 to existing 37 with access-only map starts
+  ---
+  duration_ms: 233.662542
+  type: 'test'
+  ...
+# Subtest: advanced map route survives six waiting courses
+ok 15 - advanced map route survives six waiting courses
+  ---
+  duration_ms: 0.951958
+  type: 'test'
+  ...
+# Subtest: access reset condition link preserves v31 behavior with the old CL00-only backup
+ok 16 - access reset condition link preserves v31 behavior with the old CL00-only backup
+  ---
+  duration_ms: 0.839083
+  type: 'test'
+  ...
+# Subtest: pending selected courses resume before due work and agree with Today oldest pending order
+ok 17 - pending selected courses resume before due work and agree with Today oldest pending order
+  ---
+  duration_ms: 8.889709
+  type: 'test'
+  ...
+# Subtest: multiple waiting due courses choose earliest due and expose one Today task per course
+ok 18 - multiple waiting due courses choose earliest due and expose one Today task per course
+  ---
+  duration_ms: 8.402416
+  type: 'test'
+  ...
+# Subtest: every selected record summary stays in its own course and unknown raw remains unchanged
+ok 19 - every selected record summary stays in its own course and unknown raw remains unchanged
+  ---
+  duration_ms: 6.284792
+  type: 'test'
+  ...
+# Subtest: wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+ok 20 - wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+  ---
+  duration_ms: 24.509958
+  type: 'test'
+  ...
+# Subtest: course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+ok 21 - course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+  ---
+  duration_ms: 7.649833
+  type: 'test'
+  ...
+# Subtest: starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+ok 22 - starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+  ---
+  duration_ms: 0.841583
+  type: 'test'
+  ...
+# Subtest: production factory, registry and UI never import the historical preview or test adapter
+ok 23 - production factory, registry and UI never import the historical preview or test adapter
+  ---
+  duration_ms: 13.5935
+  type: 'test'
+  ...
+# Subtest: three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+ok 24 - three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+  ---
+  duration_ms: 2.471084
+  type: 'test'
+  ...
+# Subtest: all accepted keys and documented semantic counterexamples obey the final content matcher
+ok 25 - all accepted keys and documented semantic counterexamples obey the final content matcher
+  ---
+  duration_ms: 1.132583
+  type: 'test'
+  ...
+# Subtest: written question and statement marks cannot be swallowed into the other response type
+ok 26 - written question and statement marks cannot be swallowed into the other response type
+  ---
+  duration_ms: 1.842541
+  type: 'test'
+  ...
+# Subtest: normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+ok 27 - normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+  ---
+  duration_ms: 0.224667
+  type: 'test'
+  ...
+# Subtest: three source identities and time labels remain bound to existing matching textbook/comic groups
+ok 28 - three source identities and time labels remain bound to existing matching textbook/comic groups
+  ---
+  duration_ms: 11.334416
+  type: 'test'
+  ...
+# Subtest: independent blind solutions and final real-factory checker probes agree after any revision
+ok 29 - independent blind solutions and final real-factory checker probes agree after any revision
+  ---
+  duration_ms: 5.253333
+  type: 'test'
+  ...
+# Subtest: production factory source is the unchanged current integration base file, without source substitution or shadow reducer
+ok 30 - production factory source is the unchanged current integration base file, without source substitution or shadow reducer
+  ---
+  duration_ms: 47.142083
+  type: 'test'
+  ...
+# Subtest: nce1-7: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 31 - nce1-7: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 4.633083
+  type: 'test'
+  ...
+# Subtest: nce1-7: source/hint identities, originals and correction requirements survive repair retry
+ok 32 - nce1-7: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 8.1845
+  type: 'test'
+  ...
+# Subtest: nce1-7: text/audio/comic each count as help without inventing audio or map evidence
+ok 33 - nce1-7: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.551709
+  type: 'test'
+  ...
+# Subtest: nce1-7: partial input and corrections restore through the actual factory with original timestamps
+ok 34 - nce1-7: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 3.4795
+  type: 'test'
+  ...
+# Subtest: nce1-7: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 35 - nce1-7: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 14.78175
+  type: 'test'
+  ...
+# Subtest: nce1-9: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 36 - nce1-9: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 0.747458
+  type: 'test'
+  ...
+# Subtest: nce1-9: source/hint identities, originals and correction requirements survive repair retry
+ok 37 - nce1-9: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 5.309459
+  type: 'test'
+  ...
+# Subtest: nce1-9: text/audio/comic each count as help without inventing audio or map evidence
+ok 38 - nce1-9: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.932333
+  type: 'test'
+  ...
+# Subtest: nce1-9: partial input and corrections restore through the actual factory with original timestamps
+ok 39 - nce1-9: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 2.006708
+  type: 'test'
+  ...
+# Subtest: nce1-9: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 40 - nce1-9: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 12.111542
+  type: 'test'
+  ...
+# Subtest: nce1-11: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 41 - nce1-11: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 1.125333
+  type: 'test'
+  ...
+# Subtest: nce1-11: source/hint identities, originals and correction requirements survive repair retry
+ok 42 - nce1-11: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 5.007417
+  type: 'test'
+  ...
+# Subtest: nce1-11: text/audio/comic each count as help without inventing audio or map evidence
+ok 43 - nce1-11: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.495542
+  type: 'test'
+  ...
+# Subtest: nce1-11: partial input and corrections restore through the actual factory with original timestamps
+ok 44 - nce1-11: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 2.404542
+  type: 'test'
+  ...
+# Subtest: nce1-11: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 45 - nce1-11: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 12.966833
+  type: 'test'
+  ...
+# Subtest: new course envelopes and question IDs remain isolated; unsupported course/content versions keep raw
+ok 46 - new course envelopes and question IDs remain isolated; unsupported course/content versions keep raw
+  ---
+  duration_ms: 0.611625
+  type: 'test'
+  ...
+# Subtest: CL00 default exports remain equivalent to production factory binding and original key semantics
+ok 47 - CL00 default exports remain equivalent to production factory binding and original key semantics
+  ---
+  duration_ms: 1.865167
+  type: 'test'
+  ...
+# Subtest: eighteen real bindings preserve old defaults and distinct storage keys
+ok 48 - eighteen real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 5.537667
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all eighteen courses
+ok 49 - actual factory and registered model retain first answers and corrections for all eighteen courses
+  ---
+  duration_ms: 12.319
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 18 by 18 pairs
+ok 50 - every envelope and correction sidecar is accepted only by its exact course across 18 by 18 pairs
+  ---
+  duration_ms: 25.028542
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 51 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 34.277833
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 52 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 36.941375
+  type: 'test'
+  ...
+# Subtest: eighteen pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 53 - eighteen pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 32.859458
+  type: 'test'
+  ...
+# Subtest: eighteen due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 54 - eighteen due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 79.283125
+  type: 'test'
+  ...
+# Subtest: shared continuation advances every odd course through 35 to existing 37 with access intent only
+ok 55 - shared continuation advances every odd course through 35 to existing 37 with access intent only
+  ---
+  duration_ms: 127.07725
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 56 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 3.444166
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 57 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 27.906458
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all eighteen records, sidecars and original classic history
+ok 58 - actual progress backup and validator preserve all eighteen records, sidecars and original classic history
+  ---
+  duration_ms: 3.407
+  type: 'test'
+  ...
+# R15 exhaustion host observations: [{"id":"nce1-1","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-3","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-5","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-7","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-9","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-11","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-13","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-15","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-17","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-19","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-21","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-23","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-25","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-27","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-29","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-31","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-33","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-35","recommendation":"needs-new-material","taskKind":"repair"}]
+# Subtest: all eighteen actual factories retain distinct failed and helped answers in both finite banks
+ok 59 - all eighteen actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 4.101958
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 60 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 94.265666
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+ok 61 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 133.240042
+  type: 'test'
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+ok 62 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 8.039042
+  type: 'test'
+  ...
+# Subtest: finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+ok 63 - finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+  ---
+  duration_ms: 41.646791
+  type: 'test'
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 64 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.61675
+  type: 'test'
+  ...
+# Subtest: nce1-13: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 65 - nce1-13: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 10.407625
+  type: 'test'
+  ...
+# Subtest: nce1-15: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 66 - nce1-15: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 2.273958
+  type: 'test'
+  ...
+# Subtest: nce1-17: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 67 - nce1-17: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.623666
+  type: 'test'
+  ...
+# Subtest: nce1-19: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 68 - nce1-19: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 2.083334
+  type: 'test'
+  ...
+# Subtest: nce1-21: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 69 - nce1-21: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.485958
+  type: 'test'
+  ...
+# Subtest: nce1-23: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 70 - nce1-23: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 2.437333
+  type: 'test'
+  ...
+# Subtest: nce1-25: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 71 - nce1-25: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.742042
+  type: 'test'
+  ...
+# Subtest: nce1-27: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 72 - nce1-27: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.407125
+  type: 'test'
+  ...
+# Subtest: nce1-29: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 73 - nce1-29: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 3.104959
+  type: 'test'
+  ...
+# Subtest: nce1-31: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 74 - nce1-31: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 2.530667
+  type: 'test'
+  ...
+# Subtest: nce1-33: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 75 - nce1-33: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 2.819166
+  type: 'test'
+  ...
+# Subtest: nce1-35: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 76 - nce1-35: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.225208
+  type: 'test'
+  ...
+# Subtest: exact SourcePanel guard accepts only the matching source in all 12 by 12 pairs
+ok 77 - exact SourcePanel guard accepts only the matching source in all 12 by 12 pairs
+  ---
+  duration_ms: 0.507209
+  type: 'test'
+  ...
+# Subtest: exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitution and wrong book or lesson
+ok 78 - exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitution and wrong book or lesson
+  ---
+  duration_ms: 1.623041
+  type: 'test'
+  ...
+# Subtest: actual comic guard accepts only same-course source and body row count in all 12 by 12 pairs
+ok 79 - actual comic guard accepts only same-course source and body row count in all 12 by 12 pairs
+  ---
+  duration_ms: 2.078209
+  type: 'test'
+  ...
+# Subtest: audio clip intervals stay within the matching LRC timeline and use teaching targets from this course
+ok 80 - audio clip intervals stay within the matching LRC timeline and use teaching targets from this course
+  ---
+  duration_ms: 0.630417
+  type: 'test'
+  ...
+# Subtest: content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+ok 81 - content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+  ---
+  duration_ms: 2.627084
+  type: 'test'
+  ...
+# Subtest: bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+ok 82 - bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+  ---
+  duration_ms: 0.351625
+  type: 'test'
+  ...
+# Subtest: initial route exposes only first test item and cannot finish or bypass first attempts
+ok 83 - initial route exposes only first test item and cannot finish or bypass first attempts
+  ---
+  duration_ms: 1.147291
+  type: 'test'
+  ...
+# Subtest: diagnostic wrong answer selects targeted teaching first; original persists
+ok 84 - diagnostic wrong answer selects targeted teaching first; original persists
+  ---
+  duration_ms: 4.658333
+  type: 'test'
+  ...
+# Subtest: reading/audio/comic access recorded separately; active answer becomes assisted
+ok 85 - reading/audio/comic access recorded separately; active answer becomes assisted
+  ---
+  duration_ms: 0.792333
+  type: 'test'
+  ...
+# Subtest: study materials do not pre-expose independent or delayed banks
+ok 86 - study materials do not pre-expose independent or delayed banks
+  ---
+  duration_ms: 2.745875
+  type: 'test'
+  ...
+# Subtest: first answer cannot be overwritten; duplicate submit rejected
+ok 87 - first answer cannot be overwritten; duplicate submit rejected
+  ---
+  duration_ms: 0.275708
+  type: 'test'
+  ...
+# Subtest: guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+ok 88 - guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+  ---
+  duration_ms: 1.11075
+  type: 'test'
+  ...
+# Subtest: wrong independent answer requires correct separate correction plus note
+ok 89 - wrong independent answer requires correct separate correction plus note
+  ---
+  duration_ms: 4.873916
+  type: 'test'
+  ...
+# Subtest: hinted correct answer remains assisted and requires correction note
+ok 90 - hinted correct answer remains assisted and requires correction note
+  ---
+  duration_ms: 6.282833
+  type: 'test'
+  ...
+# Subtest: repair failure must retry; later pass keeps both attempts and makes no mastery claim
+ok 91 - repair failure must retry; later pass keeps both attempts and makes no mastery claim
+  ---
+  duration_ms: 5.4035
+  type: 'test'
+  ...
+# Subtest: one route returns resume then continue-route and only real due review
+ok 92 - one route returns resume then continue-route and only real due review
+  ---
+  duration_ms: 5.841708
+  type: 'test'
+  ...
+# Subtest: review entry/view alone does not create results or postpone due
+ok 93 - review entry/view alone does not create results or postpone due
+  ---
+  duration_ms: 7.1855
+  type: 'test'
+  ...
+# Subtest: actual complete unassisted new review schedules seven days from completion, not original due
+ok 94 - actual complete unassisted new review schedules seven days from completion, not original due
+  ---
+  duration_ms: 7.139875
+  type: 'test'
+  ...
+# Subtest: failed or helped review schedules one day, even with otherwise correct answers
+ok 95 - failed or helped review schedules one day, even with otherwise correct answers
+  ---
+  duration_ms: 13.720042
+  type: 'test'
+  ...
+# Subtest: two review banks exhaust honestly; opening prior material never replenishes bank
+ok 96 - two review banks exhaust honestly; opening prior material never replenishes bank
+  ---
+  duration_ms: 10.677667
+  type: 'test'
+  ...
+# Subtest: UTC elapsed interval unaffected by display timezone or missed days
+ok 97 - UTC elapsed interval unaffected by display timezone or missed days
+  ---
+  duration_ms: 28.211625
+  type: 'test'
+  ...
+# Subtest: JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+ok 98 - JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+  ---
+  duration_ms: 9.079458
+  type: 'test'
+  ...
+# Subtest: corrupt/future/unsupported snapshots preserve raw instead of resetting
+ok 99 - corrupt/future/unsupported snapshots preserve raw instead of resetting
+  ---
+  duration_ms: 0.1805
+  type: 'test'
+  ...
+# Subtest: out-of-order or injected future action rejected and state immutable
+ok 100 - out-of-order or injected future action rejected and state immutable
+  ---
+  duration_ms: 0.123417
+  type: 'test'
+  ...
+# Subtest: host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+ok 101 - host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+  ---
+  duration_ms: 17.257375
+  type: 'test'
+  ...
+# Subtest: typing drafts coalesce without dropping submitted originals or help events
+ok 102 - typing drafts coalesce without dropping submitted originals or help events
+  ---
+  duration_ms: 195.706458
+  type: 'test'
+  ...
+# Subtest: explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+ok 103 - explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+  ---
+  duration_ms: 0.797666
+  type: 'test'
+  ...
+1..103
+# tests 103
+# suites 0
+# pass 103
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1120.921

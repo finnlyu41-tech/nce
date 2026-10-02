@@ -1,0 +1,9 @@
+vite v8.0.13 building client environment for online...
+[2Ktransforming...✓ 2144 modules transformed.
+rendering chunks...
+computing gzip size...
+static-export/standalone.html                    1.12 kB │ gzip:   0.78 kB
+static-export/assets/style-Binn7_G3.css        324.02 kB │ gzip:  56.30 kB
+static-export/assets/standalone-Bg5sPpF4.js  3,087.97 kB │ gzip: 980.09 kB
+
+✓ built in 1.03s

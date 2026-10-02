@@ -1,0 +1,115 @@
+{
+  "base": "fb34b97c855c2c048faffe42cab3cf5cf94890c7",
+  "remoteHeadsAtFinalValidation": {
+    "codex/english-studio-online-20260926": "fb34b97c855c2c048faffe42cab3cf5cf94890c7",
+    "codex/ielts-map-20260930": "fb34b97c855c2c048faffe42cab3cf5cf94890c7"
+  },
+  "candidateBranch": "codex/nce1-013-035-host-candidate-20261002",
+  "preservedOldBaseBranch": "codex/nce1-013-035-host-c6b9-checkpoint-20261002",
+  "commitMappingAfterRebase": {
+    "48ce25f": "492556f",
+    "750b45d": "190e3c9",
+    "8c5f48c": "fbc4dbe",
+    "22d6cd9": "504e529",
+    "49db3ea": "18b1601",
+    "4a0e48b": "87891bb",
+    "6c799c2": "ab313f0"
+  },
+  "originalAuthorTreesPreserved": true,
+  "registeredIds": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35"
+  ],
+  "productionFilesChanged": [
+    "studio/course-loop/registry.mjs",
+    "studio/course-loop/host-contract.d.ts",
+    "studio/app/course-loop-next.ts"
+  ],
+  "currentRemoteFilesUnchanged": [
+    "course-loop/model.mjs",
+    "app/course-loop-ui.tsx",
+    "app/course-loop-progress.ts",
+    "app/today-practice.ts",
+    "app/today-practice-ui.tsx",
+    "app/offline-store.ts",
+    "app/progress-file.ts",
+    "app/progress-save.tsx",
+    "map/learning.tsx",
+    "map/current-route.tsx"
+  ],
+  "productionFactorySha256": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+  "sourceCorrectionOriginalCommit": "49db3ea",
+  "sourceCorrectionRebasedCommit": "18b1601",
+  "sourceHashContract": "JSON.sourceSha256 == lesson.source.languageSha256 == LRC manifest.sha256 == comic.sourceSha256; JSON byte SHA audited separately",
+  "nodeTests": {
+    "passed": 103,
+    "failed": 0,
+    "skipped": 0
+  },
+  "nativeCurrentBuild": {
+    "ordinary": 25,
+    "finitePoolFix": 4,
+    "twoReviewBanks": 2,
+    "failed": 0,
+    "runtimeExceptions": 0,
+    "syntheticQAOnly": true,
+    "clockMutation": false,
+    "natural24h7dEvidence": false
+  },
+  "authorSixSourcePanelEvidenceReuse": "All six25-35 real SourcePanels passed after49db3ea; component/factory/content/source bytes unchanged throughfb34b97 rebase. Final build retests13/25/35 text/comic/audio.",
+  "typecheck": true,
+  "classicBuild": true,
+  "mapBuild": true,
+  "publisherRequiredUIInterface": {
+    "path": "studio/map/learning.tsx:36",
+    "current": "lessonPlan(unitById(node.id)).goal",
+    "registeredCourseGoal": "getCourseBinding(node.id).lesson.goal",
+    "registeredCourseTitle": "getCourseBinding(node.id).lesson.title",
+    "instruction": "Use registered goal/title for registered courses and revalidate final publisher UI; candidate does not modify this file."
+  },
+  "publisherOptionalTodayInterface": {
+    "path": "studio/app/today-practice.ts:51",
+    "current": "repair uses existing generic nonreview method and priority1",
+    "suggestedMethod": "Check saved answers/corrections; obtain new material before a fresh independent check; open expression awaits human review.",
+    "suggestedPriority": 0,
+    "scope": "publisher-owned adapter; not changed in selector-only R15"
+  },
+  "historicalEvidence": "integration.json/r15.json describe c6b9 checkpoint; this final manifest binds currentfb34b97 acceptance.",
+  "evidenceSha256": {
+    "viewport-390-nce1-13.png": "80af3c865fae75f2896e5e137e9f68c98219ae27c80f207e1fafc943130087aa",
+    "exhaustion-fixed-nce1-13.png": "4cff8d86d6f145afc5fcef87ba3e01e49f27965906bbdf671fbebf4123a60f21",
+    "review-receipt.json": "0c68503f21b92035574928a1e9b8a505fbf365f52c48923222cddddac4166a0c",
+    "exhaustion-today-fixed-expanded.png": "ab1c0bafc6db18d68e861612db21747d582930439b556b0a02e4b4039bd9ac05",
+    "typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "map-build.log": "eb679a5051fa5d949507632c1cec590c2386220010bb9dc612632ae22017cadc",
+    "ordinary-receipt.json": "a43db6b7140c014d263c6a567c2d18761968b9076ed904405a76f9a41cd6decf",
+    "exhaustion-fixed-nce1-25.png": "1c0da3ebb492500a737dc71911efe24992d623b355fa8cbb89f69aa353a07123",
+    "native.log": "5aea94252ef151e579ea8f4f70fe50ea9a9b6949fa6a9d65366b4ca534f1d3f2",
+    "review-native.log": "dd8658631365f1fed3fc55e523642950b7a7dfb820be00fc0e6947844ae980b2",
+    "tests.log": "27cdfd7fd7683e8e1800acbb57f7a9f2ffeb71f7fc4edf1b37c315d0e9b5d142",
+    "viewport-320-records.png": "c26e54cd128134a45aae96e7a49b9f48c5dd6b84ec8d6d6912202c5d5ba063ca",
+    "viewport-390-nce1-35.png": "7b115c48076c0ad20a2d174b701f34417dc506e144b0e8aa3da09efc460cfa58",
+    "exhaustion-today-fixed.png": "ab1c0bafc6db18d68e861612db21747d582930439b556b0a02e4b4039bd9ac05",
+    "exhaustion-native.log": "a3bf834bc15c3fac4f40bcd7cea8ae1bbc3cd115fc8faa4ea5c43c25c9333757",
+    "exhaustion-receipt.json": "ec41e089e6a5361a0cca0202001d8a69ff30a14936235ef6234a7754deeccbc8",
+    "viewport-390-nce1-25.png": "4f03a0b89a5d90f4cded960b13715cb6d1a28d2028782eace902d960af17c977",
+    "classic-build.log": "981af4397287220b3c7268f7f7bbdb76b6f8cf5cbbda1eb255fd969d29a18d4d"
+  },
+  "driverSha256": "fc45bce391b93b984b78f2541916922ff51898f707b81b36ee3a8e2d94e3a46c"
+}
