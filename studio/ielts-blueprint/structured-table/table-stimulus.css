@@ -1,0 +1,103 @@
+.ielts-table-stimulus {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: inherit;
+  line-height: 1.5;
+  --ielts-table-row-width: 9rem;
+  --ielts-table-column-width: 12rem;
+}
+.ielts-table-stimulus__instruction {
+  margin: 0 0 0.75rem;
+  overflow-wrap: anywhere;
+}
+.ielts-table-stimulus__viewport {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border: 1px solid #b7c8cd;
+  border-radius: 0.5rem;
+  scroll-padding-inline: var(--ielts-table-row-width) 0.5rem;
+}
+.ielts-table-stimulus__table {
+  width: 100%;
+  min-width: calc(var(--ielts-table-row-width) + var(--ielts-table-data-columns, 2) * var(--ielts-table-column-width));
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.ielts-table-stimulus__table caption {
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+  background: #f3f7f8;
+}
+.ielts-table-stimulus__table th,
+.ielts-table-stimulus__table td {
+  padding: 0.8rem;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+  border-top: 1px solid #b7c8cd;
+  border-right: 1px solid #b7c8cd;
+  background: #fff;
+}
+.ielts-table-stimulus__table tr > :last-child {
+  border-right: 0;
+}
+.ielts-table-stimulus__table th[scope="col"] {
+  background: #edf3f4;
+}
+.ielts-table-stimulus__table th[scope="row"],
+.ielts-table-stimulus__corner {
+  position: sticky;
+  left: 0;
+  width: var(--ielts-table-row-width);
+  box-sizing: border-box;
+  z-index: 1;
+  background: #f3f7f8;
+}
+.ielts-table-stimulus__number {
+  display: block;
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.ielts-table-stimulus__answer {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 44px;
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  font: inherit;
+  font-size: 1rem;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #6a858e;
+  border-radius: 0.3rem;
+}
+.ielts-table-stimulus__answer[readonly] {
+  background: #f6f8f9;
+  cursor: text;
+}
+.ielts-table-stimulus__surrounding {
+  white-space: pre-wrap;
+}
+.ielts-table-stimulus__answer:focus-visible,
+.ielts-table-stimulus__viewport:focus-visible {
+  outline: 3px solid #205a82;
+  outline-offset: -3px;
+}
+@media (max-width: 420px) {
+  .ielts-table-stimulus {
+    --ielts-table-row-width: 6rem;
+    --ielts-table-column-width: 10rem;
+  }
+}
