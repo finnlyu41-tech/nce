@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {readdir, mkdtemp, rm} from 'node:fs/promises';
+import {readdir, readFile, mkdtemp, rm} from 'node:fs/promises';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 import path from 'node:path';
 import os from 'node:os';
@@ -71,6 +71,21 @@ try {
     plugins: [{
       name: 'ssr-recorder-boundary',
       setup(builder) {
+        // The real Today adapter imports mini media. Preserve each module's URL
+        // when this Node-only probe bundles that dependency into CommonJS.
+        builder.onLoad({filter: /mini-task\/content\.ts$/}, async args => {
+          let contents = await readFile(args.path, 'utf8');
+          const source = ts.createSourceFile(args.path, contents, ts.ScriptTarget.Latest, true), ranges=[];
+          function visit(node) {
+            if (ts.isPropertyAccessExpression(node) && node.name.text === 'url' &&
+                ts.isMetaProperty(node.expression) && node.expression.keywordToken === ts.SyntaxKind.ImportKeyword)
+              ranges.push([node.getStart(source), node.end]);
+            ts.forEachChild(node, visit);
+          }
+          visit(source);
+          for (const [start,end] of ranges.reverse()) contents=contents.slice(0,start)+JSON.stringify(pathToFileURL(args.path).href)+contents.slice(end);
+          return {contents,loader:'ts'};
+        });
         // These assertions cover text state and SSR. Audio capture and browser effects
         // belong to the existing recording tests and are not simulated as working here.
         builder.onResolve({filter: /^\./}, args => {
