@@ -66,7 +66,14 @@ function reduce(v,event){
   else return rejected('当前步骤不能跳过。');
  }else if(type==='correct'){
   const target=byId.get(event.id);
-  if(v.phase!=='feedback'||!affected(v).some(a=>a.id===event.id)||!target||typeof event.answer!=='string'||event.answer.length>1000||!matches(target,event.answer)||typeof event.note!=='string'||!event.note.trim()||event.note.length>1000)return rejected('请写出订正和一条具体原因；这不会覆盖首答。');
+  if(v.phase!=='feedback'||!affected(v).some(a=>a.id===event.id)||!target)return rejected('当前题目不能提交订正；首答仍保留。');
+  if(typeof event.answer!=='string'||!event.answer.trim())return rejected('请先写出本题的订正答案；这不会覆盖首答。');
+  if(event.answer.length>1000)return rejected('订正答案超过 1000 字，请缩短后再提交；首答仍保留。');
+  if(typeof event.note!=='string'||!event.note.trim())return rejected('请补充一条具体的订正原因；这不会覆盖首答。');
+  if(event.note.length>1000)return rejected('订正原因超过 1000 字，请缩短后再提交；首答仍保留。');
+  if(!matches(target,event.answer))return rejected(target.target==='nationality'
+   ?'订正答案与本题要求不符；请核对题目中的人称、be 动词、国籍信息和现在时肯定陈述句。首答仍保留。'
+   :'订正答案与本题要求不符；请对照本题要求重新核对。这不会覆盖首答。');
   v.corrections[event.id]={answer:event.answer,note:event.note,at};
  }else if(type==='own-draft'){
   if(v.phase!=='own'||typeof event.value!=='string'||event.value.length>2000)return rejected('开放草稿无效。');
