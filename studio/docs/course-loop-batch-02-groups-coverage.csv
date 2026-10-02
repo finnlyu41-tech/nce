@@ -1,0 +1,4 @@
+course_id,textbook_lessons,diagnostic,teaching_units,guided,independent,repair,delayed_a,delayed_b,open_expression_prompts,input_tasks,choice_tasks,implementation,integration,human_review
+nce1-7,7+8,3,3,3,3,3,3,3,1,14,4,local candidate,pending publisher registration,pending
+nce1-9,9+10,3,3,3,3,3,3,3,1,15,3,local candidate,pending publisher registration,pending
+nce1-11,11+12,3,3,3,3,3,3,3,1,16,2,local candidate,pending publisher registration,pending

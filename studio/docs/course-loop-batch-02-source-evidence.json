@@ -1,0 +1,88 @@
+{
+  "runtime": "7c1ec8402fdf895fe8e4dcd12344cbadc2cae479",
+  "documentationHead": "293c4d0dafcf1371eeb449fc2f9e45d468fe9688",
+  "groups": [
+    {
+      "group": "NCE1-7",
+      "book": "NCE1",
+      "lessons": [
+        7,
+        8
+      ],
+      "languagePath": "/language/NCE1/7.json",
+      "languageSha256": "59eac8b3a1bccae0ff68e636251e1aa32121bf08aae78ce83a998f5da996e178",
+      "comicKey": "NCE1-7",
+      "readOnlySourceFileSha256": "47d036cb431f8a43ed94d31543ba177ee4479199af8f9305b54b49f6745a9e7d",
+      "clipRanges": [
+        [
+          43.55,
+          46.12
+        ],
+        [
+          50.64,
+          54.18
+        ],
+        [
+          46.12,
+          48.45
+        ]
+      ],
+      "evidence": "Existing LRC row times and comic source hash agree; text/audio not copied or newly generated. Playback not checked."
+    },
+    {
+      "group": "NCE1-9",
+      "book": "NCE1",
+      "lessons": [
+        9,
+        10
+      ],
+      "languagePath": "/language/NCE1/9.json",
+      "languageSha256": "17df1add1730fae74dfbb70d3005c8273c4fe81f1abd1f7eb98934e625b75e0c",
+      "comicKey": "NCE1-9",
+      "readOnlySourceFileSha256": "d25c71394eab69a6ab04b8b74137536fd905987a87a35ddb9c61b4b5b0781eca",
+      "clipRanges": [
+        [
+          19.02,
+          21.69
+        ],
+        [
+          21.69,
+          24.28
+        ],
+        [
+          30.8,
+          33.36
+        ]
+      ],
+      "evidence": "Existing LRC row times and comic source hash agree; text/audio not copied or newly generated. Playback not checked."
+    },
+    {
+      "group": "NCE1-11",
+      "book": "NCE1",
+      "lessons": [
+        11,
+        12
+      ],
+      "languagePath": "/language/NCE1/11.json",
+      "languageSha256": "99ee73b49ce2b055d675616b8a2eb56db04fe44c5ef8970a994b98ef615345e0",
+      "comicKey": "NCE1-11",
+      "readOnlySourceFileSha256": "10a948a23cfe9423272ac0cee0226b81a4cb92b45960544d11ddcf3c82212d74",
+      "clipRanges": [
+        [
+          17.18,
+          20.08
+        ],
+        [
+          33.31,
+          36.52
+        ],
+        [
+          39.51,
+          42.22
+        ]
+      ],
+      "evidence": "Existing LRC row times and comic source hash agree; text/audio not copied or newly generated. Playback not checked."
+    }
+  ],
+  "scope": "Metadata validation only; no playback or production SourcePanel claim."
+}

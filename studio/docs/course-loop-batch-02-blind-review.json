@@ -1,0 +1,790 @@
+{
+  "schemaVersion": 1,
+  "runtime": "7c1ec8402fdf895fe8e4dcd12344cbadc2cae479",
+  "documentationBase": "293c4d0dafcf1371eeb449fc2f9e45d468fe9688",
+  "reviewKind": "independent AI content and final checker review; not learner or qualified teacher acceptance",
+  "totalFirstAnswers": 54,
+  "firstAnswersAccepted": 54,
+  "totalActualFactoryProbeCases": 1402,
+  "scope": "Grammar/person/polarity/tense/possession/distance and written question vs assertion boundaries; finite constrained expression tasks. Historical findings remain in full evidence. Changed prompts were re-reviewed using final semantics; matching code was unchanged during these wording corrections. Any later answer or matching-rule change requires a new corresponding final review.",
+  "checkerContractSha256": "03f234c306e276596e6e3d8275eba1721e6eb165906dcc92919b06c1e73a06ce",
+  "groups": [
+    {
+      "courseId": "nce1-7",
+      "reviewer": "cl02_blind_7",
+      "method": "Separate AI reviewer saw unkeyed question/context/options only, solved 18 tasks before probing, and evaluated independently proposed alternatives and semantic errors through unchanged production createCourseLoopModel. It did not read authored answer keys or checker internals. Synthetic event replay; no UI/storage/user records.",
+      "answers": [
+        {
+          "id": "diagnostic-n7-visitor-role-question",
+          "answer": "Are you a teacher?",
+          "acceptableWithinInstruction": [
+            "are you a teacher?",
+            "  Are you a teacher?  ",
+            "Are  you  a  teacher?",
+            "Are you a teacher？",
+            "Are you\ta teacher?",
+            "Are you a teacher ?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "diagnostic-n7-engineer-self-statement",
+          "answer": "I am an engineer.",
+          "acceptableWithinInstruction": [
+            "i am an engineer.",
+            "  I am an engineer.  ",
+            "I  am  an  engineer.",
+            "I am an engineer",
+            "I'm an engineer.",
+            "I'm an engineer",
+            "I’m an engineer.",
+            "I’m an engineer",
+            "I am an engineer!",
+            "I am an engineer。",
+            "I\tam an engineer."
+          ],
+          "issues": []
+        },
+        {
+          "id": "diagnostic-n7-wrong-nurse-short-reply",
+          "answer": "No, I'm not.",
+          "acceptableWithinInstruction": [
+            "no, i'm not.",
+            "  No, I'm not.  ",
+            "No,  I'm  not.",
+            "No, I’m not.",
+            "No,I'm not.",
+            "No ,  I'm not."
+          ],
+          "issues": []
+        },
+        {
+          "id": "guided-n7-interview-engineer-question",
+          "answer": "Are you an engineer?",
+          "acceptableWithinInstruction": [
+            "are you an engineer?",
+            "  Are you an engineer?  ",
+            "Are  you  an  engineer?",
+            "Are you an engineer？",
+            "Are you\tan engineer?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "guided-n7-nurse-not-hobby-statement",
+          "answer": "I am a nurse.",
+          "acceptableWithinInstruction": [
+            "i am a nurse.",
+            "  I am a nurse.  ",
+            "I  am  a  nurse.",
+            "I am a nurse",
+            "I'm a nurse.",
+            "I'm a nurse",
+            "I’m a nurse.",
+            "I’m a nurse",
+            "I am a nurse!",
+            "I am a nurse。",
+            "I\tam a nurse."
+          ],
+          "issues": []
+        },
+        {
+          "id": "guided-n7-mechanic-denies-taxi-driver",
+          "answer": "No, I am not.",
+          "acceptableWithinInstruction": [
+            "no, i am not.",
+            "  No, I am not.  ",
+            "No,  I  am  not.",
+            "No,I am not.",
+            "No ,  I am not.",
+            "No I am not.",
+            "No, I'm not.",
+            "No I'm not.",
+            "No, I am not",
+            "No I am not",
+            "No, I'm not",
+            "No I'm not",
+            "No, I’m not.",
+            "No I’m not.",
+            "No,I’m not.",
+            "No ,I am not.",
+            "No  I  am  not.",
+            "No，I am not.",
+            "No, I am not!",
+            "No, I am not。",
+            "No, I\tam not."
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n7-application-air-hostess-question",
+          "answer": "Are you an air hostess?",
+          "acceptableWithinInstruction": [
+            "are you an air hostess?",
+            "  Are you an air hostess?  ",
+            "Are  you  an  air  hostess?",
+            "Are you an air hostess？",
+            "Are you\tan air hostess?",
+            "Are you an air hostess ?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n7-current-taxi-driver-statement",
+          "answer": "I am a taxi driver.",
+          "acceptableWithinInstruction": [
+            "i am a taxi driver.",
+            "  I am a taxi driver.  ",
+            "I  am  a  taxi  driver.",
+            "I am a taxi driver",
+            "I'm a taxi driver.",
+            "I'm a taxi driver",
+            "I’m a taxi driver.",
+            "I’m a taxi driver",
+            "I am a taxi driver!",
+            "I am a taxi driver。",
+            "I\tam a taxi driver."
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n7-hairdresser-denies-printed-teacher",
+          "answer": "No, I am not.",
+          "acceptableWithinInstruction": [
+            "no, i am not.",
+            "  No, I am not.  ",
+            "No,  I  am  not.",
+            "No,I am not.",
+            "No ,  I am not.",
+            "No I am not.",
+            "No, I'm not.",
+            "No I'm not.",
+            "No, I am not",
+            "No I am not",
+            "No, I'm not",
+            "No I'm not",
+            "No, I’m not.",
+            "No I’m not.",
+            "No,I’m not.",
+            "No ,I am not.",
+            "No  I  am  not.",
+            "No，I am not.",
+            "No, I am not!",
+            "No, I am not。",
+            "No, I\tam not."
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n7-mechanic-question-rewrite",
+          "answer": "Are you a mechanic?",
+          "acceptableWithinInstruction": [
+            "are you a mechanic?",
+            "  Are you a mechanic?  ",
+            "Are  you  a  mechanic?",
+            "Are you a mechanic？",
+            "Are you\ta mechanic?",
+            "Are you a mechanic ?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n7-milkman-updated-self-statement",
+          "answer": "I'm a milkman.",
+          "acceptableWithinInstruction": [
+            "i'm a milkman.",
+            "  I'm a milkman.  ",
+            "I'm  a  milkman.",
+            "I’m a milkman."
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n7-postman-first-person-negative",
+          "answer": "No, I am not.",
+          "acceptableWithinInstruction": [
+            "no, i am not.",
+            "  No, I am not.  ",
+            "No,  I  am  not.",
+            "No,I am not.",
+            "No ,  I am not.",
+            "No I am not.",
+            "No, I'm not.",
+            "No I'm not.",
+            "No, I am not",
+            "No I am not",
+            "No, I'm not",
+            "No I'm not",
+            "No, I’m not.",
+            "No I’m not.",
+            "No,I’m not.",
+            "No ,I am not.",
+            "No  I  am  not.",
+            "No，I am not.",
+            "No, I am not!",
+            "No, I am not。",
+            "No, I\tam not."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n7-former-nurse-current-question",
+          "answer": "Are you a nurse?",
+          "acceptableWithinInstruction": [
+            "are you a nurse?",
+            "  Are you a nurse?  ",
+            "Are  you  a  nurse?",
+            "Are you a nurse？",
+            "Are you\ta nurse?",
+            "Are you a nurse ?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n7-air-hostess-not-future-engineer",
+          "answer": "I am an air hostess.",
+          "acceptableWithinInstruction": [
+            "i am an air hostess.",
+            "  I am an air hostess.  ",
+            "I  am  an  air  hostess.",
+            "I am an air hostess",
+            "I'm an air hostess.",
+            "I'm an air hostess",
+            "I’m an air hostess.",
+            "I’m an air hostess",
+            "I am an air hostess!",
+            "I am an air hostess。",
+            "I\tam an air hostess."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n7-mixed-row-negative-choice",
+          "answer": "No, I am not.",
+          "acceptableWithinInstruction": [
+            "no, i am not.",
+            "  No, I am not.  ",
+            "No,  I  am  not.",
+            "No,I am not.",
+            "No ,  I am not."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n7-sibling-role-question",
+          "answer": "Are you a hairdresser?",
+          "acceptableWithinInstruction": [
+            "are you a hairdresser?",
+            "  Are you a hairdresser?  ",
+            "Are  you  a  hairdresser?",
+            "Are you a hairdresser？",
+            "Are you\ta hairdresser?",
+            "Are you a hairdresser ?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n7-hairdresser-work-statement",
+          "answer": "I am a hairdresser.",
+          "acceptableWithinInstruction": [
+            "i am a hairdresser.",
+            "  I am a hairdresser.  ",
+            "I  am  a  hairdresser.",
+            "I am a hairdresser",
+            "I'm a hairdresser.",
+            "I'm a hairdresser",
+            "I’m a hairdresser.",
+            "I’m a hairdresser",
+            "I am a hairdresser!",
+            "I am a hairdresser。",
+            "I\tam a hairdresser."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n7-customer-denies-milkman",
+          "answer": "No, I am not.",
+          "acceptableWithinInstruction": [
+            "no, i am not.",
+            "  No, I am not.  ",
+            "No,  I  am  not.",
+            "No,I am not.",
+            "No ,  I am not.",
+            "No I am not.",
+            "No, I'm not.",
+            "No I'm not.",
+            "No, I am not",
+            "No I am not",
+            "No, I'm not",
+            "No I'm not",
+            "No, I’m not.",
+            "No I’m not.",
+            "No,I’m not.",
+            "No ,I am not.",
+            "No  I  am  not.",
+            "No，I am not.",
+            "No, I am not!",
+            "No, I am not。",
+            "No, I\tam not."
+          ],
+          "issues": []
+        }
+      ],
+      "actualFactoryProbeCases": 825,
+      "firstAnswersAccepted": 18,
+      "finalIssues": [],
+      "finalCheckerReviewComplete": true,
+      "resolvedFindings": [
+        {
+          "id": "F-format-choice",
+          "resolution": "Final one-question-mark choice instruction explicitly permits ? or ？; unchanged matcher rechecked in 9 cases."
+        }
+      ],
+      "reviewerFindings": {
+        "realAmbiguity": [],
+        "allowedEquivalentsMissed": [],
+        "falseAcceptance": [],
+        "formatIssues": [],
+        "newSituations": [
+          "application versus current employment",
+          "hobby teaching versus formal nurse occupation",
+          "past postman versus current taxi driver",
+          "future engineer plan versus current air hostess",
+          "sibling occupation versus interviewee occupation",
+          "evening student status versus hairdresser work",
+          "customer identity versus service worker occupation",
+          "misprinted or mixed registration rows",
+          "one-off mechanical help versus occupation",
+          "repair of first-person negative person reference"
+        ],
+        "bankAssessment": "Six stages with three target tasks per stage. Contexts change evidence source, time boundaries or referent, rather than only names/options. All occupation facts are explicit; question tasks confirm rather than infer. Repeated short-answer forms fit beginner targets and introduce no unreasonable difficulty."
+      },
+      "evidence": {
+        "path": "proof/review-nce1-7-probes.json",
+        "sha256": "342afe5d65b955d9303f74c50f5bdf0e335e91e55215ec5c5110020fd8587f9a",
+        "finalUnkeyedStimulusPath": "proof/blind-nce1-7.json",
+        "finalUnkeyedStimulusSha256": "d42295d8d6389619bdc60ddfa369c0fecc0739885138a9a70aeab2c83ca05fe2"
+      },
+      "contentSha256": "1016000d5cbc1f65c117299afd785ee374caea44c4573285e52892e7baa9b6df"
+    },
+    {
+      "courseId": "nce1-9",
+      "reviewer": "cl02_blind_9",
+      "method": "Separate AI reviewer saw unkeyed question/context/options only, solved 18 tasks before probing, and evaluated independently proposed alternatives and semantic errors through unchanged production createCourseLoopModel. It did not read authored answer keys or checker internals. Synthetic event replay; no UI/storage/user records.",
+      "answers": [
+        {
+          "id": "diagnostic-n9-ask-state",
+          "answer": "How are you?",
+          "acceptableWithinInstruction": [
+            "How're you?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "diagnostic-n9-own-state",
+          "answer": "I am cold.",
+          "acceptableWithinInstruction": [
+            "I'm cold."
+          ],
+          "issues": []
+        },
+        {
+          "id": "diagnostic-n9-report-state",
+          "answer": "He is hungry.",
+          "acceptableWithinInstruction": [],
+          "issues": []
+        },
+        {
+          "id": "guided-n9-ask-state",
+          "answer": "How is she?",
+          "acceptableWithinInstruction": [
+            "How's she?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "guided-n9-own-state",
+          "answer": "I'm thirsty.",
+          "acceptableWithinInstruction": [],
+          "issues": []
+        },
+        {
+          "id": "guided-n9-report-state",
+          "answer": "She is cold.",
+          "acceptableWithinInstruction": [
+            "She's cold."
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n9-ask-state",
+          "answer": "How is he?",
+          "acceptableWithinInstruction": [
+            "How's he?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n9-own-state",
+          "answer": "I am tired.",
+          "acceptableWithinInstruction": [
+            "I'm tired."
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n9-report-state",
+          "answer": "She is hot.",
+          "acceptableWithinInstruction": [
+            "She's hot."
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n9-ask-state",
+          "answer": "How are you?",
+          "acceptableWithinInstruction": [],
+          "issues": []
+        },
+        {
+          "id": "repair-n9-own-state",
+          "answer": "I am hungry.",
+          "acceptableWithinInstruction": [
+            "I'm hungry."
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n9-report-state",
+          "answer": "He is thirsty.",
+          "acceptableWithinInstruction": [
+            "He's thirsty."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n9-ask-state",
+          "answer": "How is Sana?",
+          "acceptableWithinInstruction": [
+            "How's Sana?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n9-own-state",
+          "answer": "I am hot.",
+          "acceptableWithinInstruction": [
+            "I'm hot."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n9-report-state",
+          "answer": "He is fine.",
+          "acceptableWithinInstruction": [
+            "He's fine."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n9-ask-state",
+          "answer": "How is Owen?",
+          "acceptableWithinInstruction": [
+            "How's Owen?"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n9-own-state",
+          "answer": "I am fine.",
+          "acceptableWithinInstruction": [
+            "I'm fine."
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n9-report-state",
+          "answer": "She is tired.",
+          "acceptableWithinInstruction": [
+            "She's tired."
+          ],
+          "issues": []
+        }
+      ],
+      "actualFactoryProbeCases": 193,
+      "firstAnswersAccepted": 18,
+      "finalIssues": [],
+      "finalCheckerReviewComplete": true,
+      "resolvedFindings": [
+        {
+          "id": "F01",
+          "severity": "low",
+          "description": "Original prompts required English ASCII ? while NFKC formatting normalization accepted fullwidth ？.",
+          "status": "resolved-by-final-prompt-revision"
+        }
+      ],
+      "reviewerFindings": {
+        "realAmbiguities": [],
+        "allowedAnswerMisses": [],
+        "unexpectedSemanticAcceptances": [],
+        "remainingFormatIssues": [],
+        "internalNovelty": "Six banks vary interlocutor/pronoun/name, six state adjectives, task kind, and fictional settings. Names do not mechanically repeat across items. There are three choice tasks and fifteen input tasks.",
+        "pedagogicalLimit": "The structures remain tightly scaffolded How + be + subject and subject + be + adjective. Context variation supports basic practice; independent recall and complex transfer demands are limited.",
+        "factInference": "No unsupported inference is required: gender identities and current self-reported states are explicit, and question situations state that the answer is unknown.",
+        "relativeOldBankNovelty": "Not assessed; old content and keys were not read.",
+        "format": "Case, whitespace, apostrophe, and statement ending normalization are ordinary format variants. Current question prompts explicitly permit ? and ？; missing, substituted, and multiple question marks are rejected."
+      },
+      "evidence": {
+        "path": "proof/review-nce1-9-probes.json",
+        "sha256": "5a690cd81d81c589fca13008b5b84e926b51305a21db447f41bf48d5b05e687e",
+        "finalUnkeyedStimulusPath": "proof/blind-nce1-9.json",
+        "finalUnkeyedStimulusSha256": "f673de4f3fcbdd1da781242a679e0c6f189a85e2a545ceffce6694c36d15f1ae"
+      },
+      "contentSha256": "7236d3dc512a045aa3122ebc60aa8290db9414a289e8625d7cdffb9748e5e688"
+    },
+    {
+      "courseId": "nce1-11",
+      "reviewer": "cl02_blind_11",
+      "method": "Separate AI reviewer saw unkeyed question/context/options only, solved 18 tasks before probing, and evaluated independently proposed alternatives and semantic errors through unchanged production createCourseLoopModel. It did not read authored answer keys or checker internals. Synthetic event replay; no UI/storage/user records.",
+      "answers": [
+        {
+          "id": "diagnostic-n11-owner-question",
+          "answer": "Whose shirt is that?",
+          "acceptableWithinInstruction": [
+            "Whose is that shirt?",
+            "Whose shirt's that?",
+            "Whose shirt is that？",
+            "Whose is that shirt？",
+            "Whose shirt's that？"
+          ],
+          "issues": []
+        },
+        {
+          "id": "diagnostic-n11-named-owner",
+          "answer": "This is Ava's bag.",
+          "acceptableWithinInstruction": [
+            "This is Ava's bag",
+            "This is Ava's bag!",
+            "This is Ava's bag。",
+            "This is Ava's bag！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "diagnostic-n11-owner-color",
+          "answer": "My tie is red.",
+          "acceptableWithinInstruction": [
+            "My tie's red.",
+            "My tie is red",
+            "My tie is red!",
+            "My tie is red。",
+            "My tie is red！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "guided-n11-owner-question",
+          "answer": "Whose cap is this?",
+          "acceptableWithinInstruction": [
+            "Whose is this cap?",
+            "Whose cap's this?",
+            "Whose cap is this？",
+            "Whose is this cap？",
+            "Whose cap's this？"
+          ],
+          "issues": []
+        },
+        {
+          "id": "guided-n11-named-owner",
+          "answer": "This is Leo's coat.",
+          "acceptableWithinInstruction": [],
+          "issues": []
+        },
+        {
+          "id": "guided-n11-owner-color",
+          "answer": "Mira's bag is green.",
+          "acceptableWithinInstruction": [
+            "Mira's bag's green.",
+            "Mira's bag is green",
+            "Mira's bag is green!",
+            "Mira's bag is green。",
+            "Mira's bag is green！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n11-owner-question",
+          "answer": "Whose umbrella is that?",
+          "acceptableWithinInstruction": [
+            "Whose is that umbrella?",
+            "Whose umbrella's that?",
+            "Whose umbrella is that？",
+            "Whose is that umbrella？",
+            "Whose umbrella's that？"
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n11-named-owner",
+          "answer": "This is Owen's shirt.",
+          "acceptableWithinInstruction": [
+            "This is Owen's shirt",
+            "This is Owen's shirt!",
+            "This is Owen's shirt。",
+            "This is Owen's shirt！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "independent-n11-owner-color",
+          "answer": "My coat is black.",
+          "acceptableWithinInstruction": [
+            "My coat's black.",
+            "My coat is black",
+            "My coat is black!",
+            "My coat is black。",
+            "My coat is black！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n11-owner-question",
+          "answer": "Whose dress is this?",
+          "acceptableWithinInstruction": [
+            "Whose is this dress?",
+            "Whose dress's this?",
+            "Whose dress is this？",
+            "Whose is this dress？",
+            "Whose dress's this？"
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n11-named-owner",
+          "answer": "This is Mia's tie.",
+          "acceptableWithinInstruction": [
+            "This is Mia's tie",
+            "This is Mia's tie!",
+            "This is Mia's tie。",
+            "This is Mia's tie！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "repair-n11-owner-color",
+          "answer": "Noah's shirt is white.",
+          "acceptableWithinInstruction": [
+            "Noah's shirt's white.",
+            "Noah's shirt is white",
+            "Noah's shirt is white!",
+            "Noah's shirt is white。",
+            "Noah's shirt is white！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n11-owner-question",
+          "answer": "Whose bag is this?",
+          "acceptableWithinInstruction": [
+            "Whose is this bag?",
+            "Whose bag's this?",
+            "Whose bag is this？",
+            "Whose is this bag？",
+            "Whose bag's this？"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-a-n11-named-owner",
+          "answer": "This is Nora's skirt.",
+          "acceptableWithinInstruction": [],
+          "issues": []
+        },
+        {
+          "id": "review-a-n11-owner-color",
+          "answer": "Evan's cap is yellow.",
+          "acceptableWithinInstruction": [
+            "Evan's cap's yellow.",
+            "Evan's cap is yellow",
+            "Evan's cap is yellow!",
+            "Evan's cap is yellow。",
+            "Evan's cap is yellow！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n11-owner-question",
+          "answer": "Whose coat is that?",
+          "acceptableWithinInstruction": [
+            "Whose is that coat?",
+            "Whose coat's that?",
+            "Whose coat is that？",
+            "Whose is that coat？",
+            "Whose coat's that？"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n11-named-owner",
+          "answer": "This is Ben's umbrella.",
+          "acceptableWithinInstruction": [
+            "This is Ben's umbrella",
+            "This is Ben's umbrella!",
+            "This is Ben's umbrella。",
+            "This is Ben's umbrella！"
+          ],
+          "issues": []
+        },
+        {
+          "id": "review-b-n11-owner-color",
+          "answer": "Rita's dress is brown.",
+          "acceptableWithinInstruction": [
+            "Rita's dress's brown.",
+            "Rita's dress is brown",
+            "Rita's dress is brown!",
+            "Rita's dress is brown。",
+            "Rita's dress is brown！"
+          ],
+          "issues": []
+        }
+      ],
+      "actualFactoryProbeCases": 384,
+      "firstAnswersAccepted": 18,
+      "finalIssues": [],
+      "finalCheckerReviewComplete": true,
+      "resolvedFindings": [
+        {
+          "id": "F1",
+          "finding": "Initial English-only question-mark wording disagreed with NFKC acceptance of fullwidth marks",
+          "resolution": "All six prompts explicitly allow ? or ？",
+          "status": "resolved",
+          "finalProbesPassed": 18
+        },
+        {
+          "id": "F2",
+          "finding": "Initial short-question wording did not explicitly exclude natural please/one extensions",
+          "resolution": "All six prompts explicitly restrict answers to four named components and forbid extra words",
+          "status": "resolved",
+          "finalProbesPassed": 12,
+          "note": "Rejected natural expansions are outside this exercise's instructions, not incorrect English"
+        }
+      ],
+      "reviewerFindings": [
+        "18 independent first answers and 18 original core equivalents all accepted.",
+        "No tested wrong distance, owner, person, item, colour, tense, polarity, possessive/is confusion, or agreement was falsely accepted.",
+        "Final core equivalents and both question-mark widths were accepted; please/one and period/exclamation/missing/double question marks were rejected as independently expected.",
+        "Contexts make ownership, colour and distance explicit.",
+        "Allowed noun+is contractions are conversational; complete is remains the preferred first answer.",
+        "Banks vary objects, colours, distances and contexts as well as names, but mainly demonstrate constrained structural retrieval rather than open transfer."
+      ],
+      "evidence": {
+        "path": "proof/review-nce1-11-probes.json",
+        "sha256": "23fd46836fe961192a89e2e19d471dfe72079c1374669e483000bd0f2957750f",
+        "finalUnkeyedStimulusPath": "proof/blind-nce1-11.json",
+        "finalUnkeyedStimulusSha256": "d5f56972f87f4433ee96ee3261f94eba32db27655c7d353e2268e7a55521174d"
+      },
+      "contentSha256": "45cc62942298540a6b0ecf2ab620e5d462e5d931c6268bff41f48c729968aec0"
+    }
+  ],
+  "humanValidation": "pending open expression, real learner response, natural 24h/7d, audible playback, physical phone and any learning outcome"
+}
