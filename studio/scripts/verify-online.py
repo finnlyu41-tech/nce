@@ -126,6 +126,7 @@ def verify(root):
         raw=(root/'lesson-pages'/name).read_bytes()
         assert raw[:2] == b'\xff\xd8' and len(raw)==info['bytes'] and hashlib.sha256(raw).hexdigest()==info['sha256']
         allowed.add('lesson-pages/'+name)
+    allowed.update(runpy.run_path(str(ROOT/'scripts/verify-source-review-r19.py'))['verify_pages'](root, pages))
     speaking=json.loads((root/'speaking/topics.json').read_text())
     assert speaking['version']==1 and len(speaking['topics'])==66
     assert sum(len(t['questions']) for t in speaking['topics'])==238
