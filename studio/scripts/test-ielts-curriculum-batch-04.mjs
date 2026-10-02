@@ -426,18 +426,18 @@ group('5. Combined catalog capacity round-trips twenty-four legal sessions witho
   let state = engine.emptySampleState();
   for (const variant of variants) {
     state = act(state, {type: 'select-variant', variant});
-    assert.equal(targetLessons(variant).length, 12);
+    assert.equal(targetLessons(variant).length, 14);
     for (const lesson of targetLessons(variant)) {
       state = act(state, {type: 'open-lesson', lessonId: lesson.id});
       state = act(state, {type: 'next'}); // Opening alone is read only; the model step creates its actual session/draft.
     }
   }
-  assert.equal(Object.keys(state.sessions).length, 24);
+  assert.equal(Object.keys(state.sessions).length, 28);
   const raw = progress.serializeSampleProgress(state, clock), corrupt = JSON.parse(raw);
   corrupt.value.sessions['academic:not-a-course'] = structuredClone(Object.values(state.sessions)[0]);
   assert.equal(progress.readSampleProgress(JSON.stringify(corrupt), clock).status, 'blocked');
   assert.equal(progress.readSampleProgress(raw, clock).raw, raw);
-  assert.equal(new Set(variants.flatMap(variant => targetLessons(variant).flatMap(materials).map(material => material.id))).size, 102);
+  assert.equal(new Set(variants.flatMap(variant => targetLessons(variant).flatMap(materials).map(material => material.id))).size, 120);
   assert.deepEqual(variants.map(variant => catalog.sampleLessonsFor(variant).length), catalogCountsBefore);
   assert.equal(readFileSync(file('ielts-blueprint/sample-sequence.ts'), 'utf8'), catalogRawBefore, 'The test does not write actual registration; owner may register this batch without duplicate injection');
 });
