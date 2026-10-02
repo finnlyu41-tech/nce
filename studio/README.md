@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## Current release v43 - Forty-two finite NCE1 course groups
+## Current release v44 - Finite placement, stage evidence and video notes
+
+Runtime `9d34b1f35aaf9ecfca3e534c5ecb953e46551a22`, [fixed deployment](https://bf2e0068.finn-english-studio.pages.dev). A finite text diagnosis offers an explicit trial; first-stage1-6 keeps original answers and awaits human review; source-bound video links and personal notes share existing guarded storage.13 formal package UI checks and76 public resources pass.
+
+[Scope and evidence](docs/placement-stage-video-v44.md).
+
+## Previously published v43 - Forty-two finite NCE1 course groups
 
 Runtime `bf6ea10567a379846dea7a6f40f68c8937889d7c`, [fixed deployment](https://942cd565.finn-english-studio.pages.dev). Forty-two registered paired groups cover NCE1 lessons1-84 with756 authored closed tasks;234 groups remain unregistered. Original answers, separate corrections, source bindings and guarded successor routes retain their existing storage and grading boundaries.
 
