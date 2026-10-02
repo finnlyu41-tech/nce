@@ -1,0 +1,32 @@
+{
+  "checks": 25,
+  "names": [
+    "fresh all-correct evidence permits only a reading trial, no global level or IELTS band",
+    "early difficulty stays conservative and does not expose harder questions",
+    "helped correct first answer is preserved separately and cannot pass the basic gate",
+    "self-reported familiar question is excluded despite a correct first answer",
+    "skip records no fabricated answer or independent success",
+    "pause and serialize/reload retain current exposure and unsubmitted input",
+    "correction draft survives interruption and never rewrites the original wrong first answer",
+    "duplicate submit, rewriting first answer, post-submit help and premature correction rejected",
+    "narrative gap gives one foundation trial plus a concrete repair",
+    "reading gap keeps bridge trial and does not infer unmeasured skills",
+    "early stop considers only submitted prerequisite pairs",
+    "only two distinct pools, no reset/reuse of exposed diagnostic items",
+    "active run cannot be restarted to discard difficulty",
+    "empty result cannot select a higher entry",
+    "unknown, malformed, future content and time data block, preserving exact raw",
+    "unknown extra fields and forged scores are rejected",
+    "bounded record rejects giant and excessive event data without resetting original",
+    "adapter changes only its own existing State.drafts entry, never progress/scores/completion",
+    "same-key compare-and-swap protects a newer writer or imported record",
+    "unknown stored placement does not get overwritten by new diagnosis",
+    "Today resumes persisted diagnosis, without inventing a completed course",
+    "Today receives a trial only after explicit selection and preserves original continuation",
+    "removing optional trial restores Today default without erasing diagnostic evidence",
+    "word-fill accepts casing/whitespace, rejects extra words and unlisted near errors",
+    "all repair/entry routes resolve to real classic production views"
+  ],
+  "scope": "pure reducer + actual State adapter + production route parser",
+  "limits": "No human difficulty calibration; UI tested separately."
+}

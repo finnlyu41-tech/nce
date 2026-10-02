@@ -1,0 +1,13 @@
+{
+  "baseline": "424efc1869e98cd7b19afd2c1ab7cab0e8380b4b",
+  "checks": [
+    "classic placement route round-trips and avoids existing online landing redirect",
+    "no diagnosis leaves production Today and default course exactly unchanged",
+    "unknown diagnosis preserves original Today queue and exact raw",
+    "paused diagnosis adds resume task while preserving real course continuation and map records",
+    "chosen finite reading trial is reachable and clearing preference restores the ordinary queue"
+  ],
+  "scope": "shared interface patch applied only to temporary git archive; production parser/redirect/Today functions",
+  "remaining": "publisher serial integration, full application browser acceptance and deployment",
+  "production_workspace_bundle": "esbuild compiled actual patched StudyApp successfully in temporary archive"
+}

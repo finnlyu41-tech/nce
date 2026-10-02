@@ -1,0 +1,381 @@
+{
+  "review_type": "independent_blind_prompt_review",
+  "source_read": "blind-prompts.json",
+  "scope": "仅依据题面独立解答，未读取实现、评分规则或答案文件。",
+  "items": [
+    {
+      "id": "a-1",
+      "answer": "听 Rina 说话的人的",
+      "reason": "Rina 的话中 Your bag 指向听话人的包；该包在椅子上。",
+      "ambiguity": "所给选项中答案明确；无需推断 Rina 的包在哪里。",
+      "reasonable_alternatives": [],
+      "local_ability": "在短书面引语中识别 my/your 的指代和所属关系。",
+      "limits": "文字题面，不能据此判断听力；单次选对也可能来自猜测。"
+    },
+    {
+      "id": "a-2",
+      "answer": "are",
+      "reason": "His friends 为复数，原文以 are 表述其现在所在位置。",
+      "ambiguity": "预期答案明确，但指令仅要求填一个词，未限定 be 动词；句法上仍可填 stay、remain 等动词。它们带入额外语义，不如 are 忠实重述原文。",
+      "reasonable_alternatives": [
+        {
+          "answer": "stay",
+          "status": "语法成立但语义不完全等同；若要求原文重述，应明确说明。"
+        },
+        {
+          "answer": "remain",
+          "status": "语法成立但增加继续停留的含义；不能当作与原文严格等价。"
+        }
+      ],
+      "local_ability": "在位置句中选择复数主语对应的现在时 be 动词。",
+      "limits": "完整答案在上文逐字出现，可直接抄写，无法区分理解语法与复制能力。建议明确要求填 be 的适当形式，并避免提供完全相同的已完成句。"
+    },
+    {
+      "id": "a-3",
+      "answer": "walked",
+      "reason": "Yesterday 对应过去事件；walk 的常规过去式为 walked。",
+      "ambiguity": "限定 walk 的适当形式并要求一个词，答案明确。",
+      "reasonable_alternatives": [],
+      "local_ability": "识别过去时间标记及规则动词过去式。",
+      "limits": "答案在上文逐字出现；不能证明能独立叙述过去经历或掌握更广泛的时态。"
+    },
+    {
+      "id": "a-4",
+      "answer": "预计会有大雨",
+      "reason": "because heavy rain was expected 明示带伞原因；最终未下雨与先前预期不同。",
+      "ambiguity": "所给选项中答案明确。",
+      "reasonable_alternatives": [],
+      "local_ability": "提取 because 标记的原因，区分事前预期和实际结果。",
+      "limits": "只检测短句理解，不能证明能组织叙事、口头解释原因或自由表达。"
+    },
+    {
+      "id": "a-5",
+      "answer": "True（有证据支持）",
+      "reason": "周二咖啡馆 10 a.m. 开门，博物馆 noon 开门，前者早于后者。",
+      "ambiguity": "按原文分别给出的开放时间作比较，答案明确；无需推断咖啡馆是否在博物馆建筑内部。",
+      "reasonable_alternatives": [],
+      "local_ability": "识别日期例外并跨句比较开放时间，理解 before。",
+      "limits": "只有几句文字，不能代表长篇阅读速度、复杂推理或整体阅读能力。"
+    },
+    {
+      "id": "a-6",
+      "answer": "Not given（原文未给）",
+      "reason": "原文只确认每人得到水，未描述其他供应品；未提及午餐不等于否定午餐。",
+      "ambiguity": "以题面规定的证据支持/矛盾/未给信息标准，答案明确。",
+      "reasonable_alternatives": [],
+      "local_ability": "区分未提供信息与明确否定，控制无依据推断。",
+      "limits": "末句直接提示未描述其他供应品，降低推理需求；可能反映题型规则熟悉度。"
+    },
+    {
+      "id": "b-1",
+      "answer": "绿色",
+      "reason": "Your cup 对应听 Milo 说话的人，颜色为 green。",
+      "ambiguity": "所给选项中答案明确。",
+      "reasonable_alternatives": [],
+      "local_ability": "识别引语中的人称所属关系并提取颜色。",
+      "limits": "与 a-1 的任务结构近似；文字中写了听话人并不构成听力测试。"
+    },
+    {
+      "id": "b-2",
+      "answer": "is",
+      "reason": "Their father 为单数；原文确认父亲现在在外面。",
+      "ambiguity": "预期答案明确，但未限定 be 动词。stays、remains 在句法上也成立，不过添加了原文未明确给出的持续或停留含义。",
+      "reasonable_alternatives": [
+        {
+          "answer": "stays",
+          "status": "语法成立但不是严格等价的原文重述。"
+        },
+        {
+          "answer": "remains",
+          "status": "语法成立但增加继续在外面的含义。"
+        }
+      ],
+      "local_ability": "在位置句中选择单数主语对应的现在时 be 动词。",
+      "limits": "原文已有 father is outside，可直接复制；建议明确限定 be，并去除完整答案提示。"
+    },
+    {
+      "id": "b-3",
+      "answer": "cleaned",
+      "reason": "Last night 表示过去时间；clean 的规则过去式为 cleaned。",
+      "ambiguity": "限定词根和单词数量，答案明确。",
+      "reasonable_alternatives": [],
+      "local_ability": "识别过去时间标记和规则过去式。",
+      "limits": "完整答案已出现，且与 a-3 同构；不足以证明过去时独立产出或叙事能力。"
+    },
+    {
+      "id": "b-4",
+      "answer": "预计堵车",
+      "reason": "because she expected traffic 说明提前出门的原因；道路实际很空是随后结果。",
+      "ambiguity": "给定选项中最佳答案唯一。traffic 本身也可以泛指车辆或交通，译为堵车略强于词面；此情境中提前出门使该解释自然。可将题面改为 expected heavy traffic，或将选项改为担心路上交通耽误时间，提高精确度。",
+      "reasonable_alternatives": [],
+      "local_ability": "提取明示原因并区分预期与结果。",
+      "limits": "与 a-4 的结构相同，不能证明自由解释、连贯叙述或表达灵活性。"
+    },
+    {
+      "id": "b-5",
+      "answer": "False（与原文矛盾）",
+      "reason": "周六图书馆 4 p.m. 关闭，自习室 6 p.m. 关闭；图书馆关闭更早，after 与原文相反。",
+      "ambiguity": "按分别给出的营业时间比较，答案明确；无需额外假定自习室一定随图书馆闭馆。",
+      "reasonable_alternatives": [],
+      "local_ability": "识别周六例外，跨句比较关闭时间，理解 after。",
+      "limits": "与 a-5 同类，只提供局部时间比较证据。"
+    },
+    {
+      "id": "b-6",
+      "answer": "Not given（原文未给）",
+      "reason": "去程乘火车已经给出，返程交通方式没有给出；不能以去程方式否定返程坐巴士。",
+      "ambiguity": "题面明确说未提供回家行程细节，答案明确。",
+      "reasonable_alternatives": [],
+      "local_ability": "区分去程与返程证据，识别信息缺失并避免外推。",
+      "limits": "末句提供强提示，与 a-6 同类；不能代表广泛阅读推理能力。"
+    }
+  ],
+  "overall": {
+    "independent_answers": {
+      "a-1": "听 Rina 说话的人的",
+      "a-2": "are",
+      "a-3": "walked",
+      "a-4": "预计会有大雨",
+      "a-5": "True",
+      "a-6": "Not given",
+      "b-1": "绿色",
+      "b-2": "is",
+      "b-3": "cleaned",
+      "b-4": "预计堵车",
+      "b-5": "False",
+      "b-6": "Not given"
+    },
+    "assessment": "所有题目均可得到明确的预期答案。a-2、b-2 的单词填空指令未限定词类，存在语法成立但语义不完全等同的补全；b-4 的中文堵车略强于 traffic 的词面。主要诊断问题是四道语法填空已在上下文直接给出答案。",
+    "supported_scope": "可用作少量短书面题的局部表现快照，覆盖人称所属关系、be 单复数对应、规则过去式、明示因果、时间比较和区分未给信息与矛盾。作答只能支持对本次这些题目表现的描述。",
+    "unsupported_claims": [
+      "不能证明听力能力：没有音频或听觉任务。",
+      "不能证明口语能力、发音、互动或流利度：没有语音产出。",
+      "不能证明自由表达或连贯写作：单词填空与选择判断没有开放式产出。",
+      "不能据此给出任何 IELTS band 或与 IELTS 分数建立可靠换算。",
+      "不能据此宣称任何 CEFR 等级或整体英语能力等级。"
+    ],
+    "sampling_and_calibration": "每池每阶段仅两题，且两池任务高度相似。单题失误或猜中会明显影响阶段结论；短题池不能稳定估计能力，也难区分词汇理解、题型策略、复制答案和真实语法掌握。题目难度未经过真人标定，两池难度等价、区分度及阈值可靠性均未建立。",
+    "recommended_product_language": "使用本次小测局部表现、建议练习方向和仍需验证的能力等措辞；避免把三类题目直接命名为全面基础能力、叙事能力或完整阅读水平。对听、说、自由表达及考试等级明确显示尚未评估。",
+    "priority_improvements": [
+      "在 be 填空题限定填 be 的适当形式。",
+      "移除语法题上下文中可逐字复制的完整答案，保留必要的语义和时间线索。",
+      "将 b-4 的 traffic 与中文选项调整为更精确对应。",
+      "若需判断独立语法产出或叙事能力，补充迁移题和开放式任务，并按明确标准审核。",
+      "在增加题目覆盖并完成真人标定前，仅报告局部题目表现和不确定性。"
+    ]
+  },
+  "first_round_record": {
+    "location": "原有 items 和 overall 字段完整保留为首轮历史审核记录。",
+    "status": "historical_before_prompt_repairs",
+    "caution": "首轮关于答案复制、be 指令不限定及 traffic 措辞的发现描述旧题面；当前有效结论见 re_review。"
+  },
+  "latest_review_reference": "re_review",
+  "final_prompt_sha256": "820821ebfb8784eccbab294b6ea6113c5322e10461055f0393c028a07ed95bae",
+  "re_review": {
+    "review_type": "independent_blind_prompt_re_review",
+    "source_read": "blind-prompts.json",
+    "source_sha256": "820821ebfb8784eccbab294b6ea6113c5322e10461055f0393c028a07ed95bae",
+    "scope": "只基于更新后的题面独立再解；未读取实现、评分规则或答案文件。保留并追加本人首轮审核文件。",
+    "items": [
+      {
+        "id": "a-1",
+        "answer": "听 Rina 说话的人的",
+        "reason": "Your bag 指听话人的包，该包在椅子上。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "短书面引语中的人称所属关系。",
+        "repair_review": "题面未改动；首轮关于局部能力与测量范围的限制仍适用。"
+      },
+      {
+        "id": "a-2",
+        "answer": "are",
+        "reason": "现在的位置句中，复数主语 His friends 对应 be 的现在时 are。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "复数主语与 be 现在时对应的受限单词产出。",
+        "repair_review": "已修复：题面明确限定 be 的现在时，stay、remain 等非 be 动词不再满足指令；中文情境不包含可复制的英语答案。"
+      },
+      {
+        "id": "a-3",
+        "answer": "walked",
+        "reason": "要求保留昨天已发生的时间意义，walk 的规则过去式为 walked。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "明确过去时间线索下的规则动词过去式单词产出。",
+        "repair_review": "已修复：上下文没有出现 walked，必须自行给出 walk 的过去式；过去时间意义已显式限定。"
+      },
+      {
+        "id": "a-4",
+        "answer": "预计会有大雨",
+        "reason": "because 明示预计大雨是带伞原因；最终没有下雨。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "提取明示原因并区分预期和结果。",
+        "repair_review": "题面未改动；首轮关于局部能力与测量范围的限制仍适用。"
+      },
+      {
+        "id": "a-5",
+        "answer": "True（有证据支持）",
+        "reason": "周二咖啡馆 10 a.m. 开门，博物馆 noon 开门，前者较早。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "日期例外识别与跨句时间比较。",
+        "repair_review": "题面未改动；首轮关于局部能力与测量范围的限制仍适用。"
+      },
+      {
+        "id": "a-6",
+        "answer": "Not given（原文未给）",
+        "reason": "只明确每人得到水，并未描述午餐；没有给出午餐不等于否定午餐。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "区分未给信息和明确矛盾。",
+        "repair_review": "题面未改动；首轮关于局部能力与测量范围的限制仍适用。"
+      },
+      {
+        "id": "b-1",
+        "answer": "绿色",
+        "reason": "Your cup 指听话人的杯子，颜色为 green。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "人称所属关系识别及颜色信息提取。",
+        "repair_review": "题面未改动；首轮关于局部能力与测量范围的限制仍适用。"
+      },
+      {
+        "id": "b-2",
+        "answer": "is",
+        "reason": "现在的位置句中，单数主语 Their father 对应 be 的现在时 is。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "单数主语与 be 现在时对应的受限单词产出。",
+        "repair_review": "已修复：题面明确限定 be 的现在时，stays、remains 等非 be 动词不再满足指令；中文情境不包含可复制的英语答案。"
+      },
+      {
+        "id": "b-3",
+        "answer": "cleaned",
+        "reason": "要求保留昨晚已发生的时间意义，clean 的规则过去式为 cleaned。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "明确过去时间线索下的规则动词过去式单词产出。",
+        "repair_review": "已修复：上下文没有出现 cleaned，必须自行给出 clean 的过去式；过去时间意义已显式限定。"
+      },
+      {
+        "id": "b-4",
+        "answer": "预计堵车",
+        "reason": "expected heavy traffic 明示预计交通拥挤，解释提前出门；路上实际很空是后续结果。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "提取明示原因并区分交通预期和实际结果。",
+        "repair_review": "已修复：heavy traffic 与此语境中的预计堵车对应自然、足够清晰，不再构成需要修改的选项措辞问题。"
+      },
+      {
+        "id": "b-5",
+        "answer": "False（与原文矛盾）",
+        "reason": "周六图书馆 4 p.m. 关闭，自习室 6 p.m. 关闭，图书馆较早而非较晚关闭。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "日期例外识别与关闭时间比较。",
+        "repair_review": "题面未改动；首轮关于局部能力与测量范围的限制仍适用。"
+      },
+      {
+        "id": "b-6",
+        "answer": "Not given（原文未给）",
+        "reason": "去程乘火车已经给出，但原文未描述返程，不能判断是否坐巴士回家。",
+        "ambiguity": "依据当前情境、指令和选项，没有发现影响作答的实质歧义。",
+        "reasonable_alternatives": [],
+        "local_ability": "区分去程与返程证据，避免无依据外推。",
+        "repair_review": "题面未改动；首轮关于局部能力与测量范围的限制仍适用。"
+      }
+    ],
+    "overall": {
+      "assessment": "12 道题均可独立得到明确预期答案，与首轮答案相同。四道填空的上下文复制答案问题已消除，a-2/b-2 的词类范围已明确，b-4 的选项语义对应问题已修复。",
+      "repair_complete_for_reported_prompt_issues": true,
+      "supported_scope": "可以描述此次少量短书面题的局部表现。填空现在提供受限语法单词产出的证据，仍无法代表自由表达、完整叙事能力或整体语言水平。中文情境明确给定语义和时间线索，因此填空主要检测目标形式的选择。",
+      "remaining_limits": [
+        "每池每阶段仅两题；单题失误或猜中会显著改变阶段表现，证据量有限。",
+        "两池任务高度同构，独立覆盖范围有限；不能假定两池难度等价或据其分数推断能力变化。",
+        "题目难度、区分度和诊断阈值未经过真人标定。",
+        "仅包含书面题，未测试听力、发音、口语互动或口语流利度。",
+        "没有开放式句段产出，不能证明自由表达、连贯写作或独立叙述经历。",
+        "Not given 题末句仍提供强提示，表现可能部分反映证据判断规则或题型熟悉度。",
+        "不能据此宣称任何 IELTS band、IELTS 分数换算或 CEFR 等级。"
+      ],
+      "recommended_product_language": "报告本次小测的局部题目表现、建议练习方向和证据不足之处；听说、自由表达及考试等级应标注为尚未评估。不要把 narrative 题组表现扩大解释为全面叙事能力。",
+      "blocking_prompt_defects": [],
+      "judgment_boundary": "本复审确认题面修复和可独立解答性，不确认实现中的答案键、评分、分流或用户界面是否正确。"
+    }
+  },
+  "implementation_review": {
+    "review_type": "authorized_read_only_implementation_review_after_blind_review_freeze",
+    "reviewed_files": [
+      "manifest.ts",
+      "content.ts",
+      "model.ts",
+      "adapter.ts",
+      "placement-ui.tsx"
+    ],
+    "frozen_blind_prompt_sha256": "820821ebfb8784eccbab294b6ea6113c5322e10461055f0393c028a07ed95bae",
+    "answer_keys": {
+      "items_checked": 12,
+      "all_match_independent_blind_answers": true,
+      "matching_behavior": "逐题 accepted 与独立复审答案相等；answerMatches 允许首尾空白和大小写变化。"
+    },
+    "method": "只读五个实施文件；使用 Node v22.23.2 的 stripTypeScriptTypes 在内存加载 manifest/content/model/adapter，实际运行断言。placement-ui.tsx 进行源码核查，未启动或操作产品 UI。除本审核文件追加记录外未写其他文件。",
+    "behavior_checks": [
+      {
+        "area": "独立首答及阶段推进",
+        "result": "通过",
+        "evidence": "dimensionPassed 要求该维度恰好两题且首答 matched、independent、fresh、未跳过全部为真。动态验证逐阶段两题正确才进入 foundation、bridge、reading-preview；每池最多六题。"
+      },
+      {
+        "area": "首答/帮助/熟题/订正分离",
+        "result": "通过",
+        "evidence": "helpAt 与 familiar 单独记录，首答生成后禁止再次提交/修改首答草稿/添加帮助或熟题操作。帮助或熟题即使正确也不能通过阶段。correct 只写 correction，不更改 first。动态验证错误首答订正为正确答案也不升级证据。"
+      },
+      {
+        "area": "跳过",
+        "result": "通过",
+        "evidence": "skip 生成 answer 为空、skipped 为真、matched 为假的首答，即使先前草稿正确也不计分；保留草稿和事件。阶段两题证据不足则结束，不进入下一维度。"
+      },
+      {
+        "area": "暂停和恢复",
+        "result": "通过",
+        "evidence": "暂停时禁止提交，resume 保留已保存输入、帮助、熟题、首次曝光时间和题目顺序，不重新发题。"
+      },
+      {
+        "area": "停测及题池耗尽",
+        "result": "通过",
+        "evidence": "只答一题后 stop 仍保留未通过状态与 starter 建议，不把不完整阶段当通过；第二轮分配 b 池。无论轮次是否提前停止，a/b 两池使用后禁止第三轮；不能通过 resume 复活已结束轮次。"
+      },
+      {
+        "area": "未知和异常记录保护",
+        "result": "通过",
+        "evidence": "实测 13 类输入：空串、破损 JSON、未知 envelope 版本、未知 contentVersion、多余 envelope 字段、未知操作、未来时间、倒序时间、活跃时重复 start、无值操作携带 value、超长答案、501 条事件、超容量原文。readPlacement 全部 blocked 且原样保留 raw；placementTransition 保留原文；applyPlacement 返回原 state；不生成 trial 或 Today 任务。"
+      },
+      {
+        "area": "选择试学与原路线保护",
+        "result": "通过",
+        "evidence": "活跃轮次不能 choose，结束轮次只能选当前证据对应的入口；仅明确选择后进入可选 Today 试学任务。applyPlacement 只写对应 drafts 项并要求 expectedRaw 匹配，陈旧快照不覆盖；撤选移除可选试学任务，其他 drafts 与 progress 保留。"
+      },
+      {
+        "area": "UI 中证据分离",
+        "result": "源码核查通过",
+        "evidence": "提示只在 help 事件后显示；参考答案和解释只在首答/跳过后显示；订正单独显示并说明不增加独立未见证据；熟题标记不可撤销。结束视图逐维度列出证据不足或本轮两题独立未见首答符合参考。"
+      },
+      {
+        "area": "能力与等级措辞",
+        "result": "源码核查通过",
+        "evidence": "manifest 和 UI 明示局部文字任务、题目难度待真人验证、听力/口语/自由写作/完整考试表现未测、不提供 IELTS band、不授予课程完成或解锁。narrative 的用户标签为时间、原因与句子连接，建议仅为试学与核对；IELTS 链接指向短阅读样例，无四科能力、整册掌握或 CEFR 等级认定。"
+      }
+    ],
+    "blocking_findings": [],
+    "minimal_counterexamples": [],
+    "conclusion": "本次授权范围内未发现实际阻断。12 个答案键与冻结盲审一致，实测记录分离及主要保护分支符合局部证据与保守试学约束。",
+    "remaining_limits": [
+      "每池每阶段仅两题，两池任务高度同构；独立覆盖有限，不能把两池通过或差异解释为稳定整体能力或能力变化。",
+      "题目难度、区分度、两池等价性和阶段阈值未经过真人标定。2/2 门槛属于编辑规则，不是经验证的能力尺度。",
+      "没有音频、语音、开放式句段产出或完整考试任务，不能证明听说、自由表达、全面叙事或任何 IELTS band/CEFR 等级。",
+      "实现复核仅覆盖指定五个文件；未核查外部 host 持久化、跨标签并发或实际浏览器渲染行为。"
+    ],
+    "unchanged_records": "题面和 final_prompt_sha256 未修改；首轮盲审与 re_review 原有记录完整保留。"
+  }
+}

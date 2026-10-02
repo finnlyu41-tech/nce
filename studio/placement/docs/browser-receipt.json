@@ -1,0 +1,19 @@
+{
+  "browser": "Chrome/154.0.8037.59",
+  "checks": [
+    "initial exposure is durably in existing State before first answer; no reference shown",
+    "help stays separate; correction draft survives browser reload; assisted correctness yields conservative fallback",
+    "second pool differs; skipped first answer prevents promotion; exhausted pools remain closed",
+    "six fresh first answers give optional reading trial; real IDB autosave preserves original scores/completion/other drafts",
+    "unknown record stays intact; component offers current-progress escape without reset"
+  ],
+  "scope": "actual React Placement + actual State adapter/reducer + production IDB guarded autosave; fresh isolated localhost origin",
+  "screenshots": [
+    "help-correction-320.png",
+    "fallback-390.png",
+    "reading-trial-1280.png",
+    "reading-trial-320.png",
+    "unknown-preserved-390.png"
+  ],
+  "limits": "Standalone component host; publisher integration and deployed website acceptance remain pending; no learner/human calibration."
+}

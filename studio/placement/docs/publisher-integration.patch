@@ -1,0 +1,58 @@
+--- a/studio/app/navigation.ts
++++ b/studio/app/navigation.ts
+@@ -3,7 +3,7 @@
+ 
+ export type StudioRoute={view:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;unit?:string;check?:true;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
+ const roadmapNodes=['baseline','starter','foundation','bridge','listening','reading','writing','speaking','mock','finish'];
+-const views=['roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
++const views=['placement','roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
+ const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','course','listening','reading','speaking','writing'],grammar:['path','book','topic','practice']};
+ export function parseRoute(hash:string):StudioRoute{
+  const [path,query='']=hash.replace(/^#\/?/,'').split('?'),parts=path.split('/');
+--- a/studio/app/study-app.tsx
++++ b/studio/app/study-app.tsx
+@@ -1,3 +1,4 @@
+ 'use client';
++import {Placement} from '../placement/placement-ui';
+ import {TodayPracticeQueue} from './today-practice-ui';
+ import {GrammarWorkspace} from './grammar-workspace';
+@@ -163,6 +164,7 @@
+  {ONLINE&&<SiteMaterials startAt={materialStart} visible={view==='cloud'} state={state} commitCollection={commitMaterialCollection} restore={incoming=>{setState(s=>prepareFlashcardRestore(s,incoming,courseWords));setStorageError(false);setStorageBlocked(false)}} openLesson={(book,lesson)=>navigate({view:'nce',book,lesson,tab:'listen'})}/>}
+  {(view==='nce'||view==='library')&&<>{view==='library'&&<nav className="course-resources" aria-label="课程资料与专项"><button onClick={()=>go('grammar')}>语法与句型检索</button><button onClick={()=>go('words')}>教材词汇索引</button><button onClick={()=>go('ielts')}>雅思专项</button><details className="course-more"><summary>更多资料</summary><button onClick={()=>go('courses')}>备用练习素材</button><button onClick={()=>go('cloud')}>整册资料与下载</button></details></nav>}<NceStudio commitCollection={commitMaterialCollection} goCloud={(book,lesson)=>navigate({view:'cloud',book,lesson})} state={state} update={setState} addWord={addPersonalWord} onAnswer={answer} goIELTS={()=>go('ielts')}/></>}
+  {view==='roadmap'&&ready&&<LearningRoadmap state={state} update={setState}/>}
++ {view==='placement'&&<Placement state={state} update={setState} ready={ready} error={storageError?saveIssue||'本机记录尚未安全保存，请先从顶部备份并核对。':''} continueHref={ONLINE?mapHref(mapState):'#/nce'}/>}
+  {(view==='today'||view==='review')&&<TodayPracticeQueue state={state} map={mapState} ready={ready} online={ONLINE} error={mapError}/> }
+ 
+  {view==='courses'&&<><PageTitle eyebrow="EXTRA PRACTICE" title="需要时，再来练一练。" text="36 个原创单元作为备用素材，不需要另学一套课程。听读优先使用新概念原声；这里的语音为设备合成。"/><div className="filter-bar"><Tabs value={stage} onValueChange={setStage}><TabsList>{['all','基础起步','表达进阶','雅思衔接'].map(v=><TabsTrigger key={v} value={v}>{v==='all'?'全部课程':v}</TabsTrigger>)}</TabsList></Tabs><SearchField value={search} onChange={setSearch} placeholder="搜索课程或语法"/></div><div className="course-grid">{filteredLessons.map(l=><button className="course-card" key={l.id} onClick={()=>openLesson(l.id)}><div className="section-top"><span className="unit-label">UNIT {String(l.id).padStart(2,'0')}</span>{state.completed.includes(l.id)?<span className="completed"><Check size={14}/>已完成</span>:<span className="muted small">{l.level}</span>}</div><h3>{l.title}</h3><p className="course-sub" lang="en">{l.subtitle}</p><p className="muted small">{l.grammar.title}</p><div className="course-bottom"><span>8 个词汇 · 8 道练习</span><ArrowRight size={17}/></div></button>)}</div>{!filteredLessons.length&&<div className="empty">没有找到相关课程，换个关键词试试。</div>}<div className="notice row spread"><p>沿着新概念主线继续学习，遇到卡点时再回来。</p><button className="btn secondary" onClick={()=>go('nce')}>返回新概念</button></div></>}
+--- a/studio/app/today-practice.ts
++++ b/studio/app/today-practice.ts
+@@ -1,3 +1,4 @@
++import {placementTasks} from '../placement/adapter';
+ import type {State} from './model';
+ import {routeHash} from './navigation';
+ import {grammarUnits} from './grammar-curriculum';
+@@ -41,7 +42,7 @@
+  * The classic State and map Progress must have passed their existing validators.
+  */
+ export function todayPractice(state:State,map:Progress,now=Date.now(),online=true):PracticeTask[]{
+- const tasks:PracticeTask[]=samplePracticeTasks(state,now,online);
++ const tasks:PracticeTask[]=[...samplePracticeTasks(state,now,online),...placementTasks(state,now,online)];
+  const to=(route:Parameters<typeof routeHash>[0])=>(online?'/':'')+routeHash(route);
+  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
+  const status=online?statusMap(map,now):{};
+--- a/studio/app/today-practice-ui.tsx
++++ b/studio/app/today-practice-ui.tsx
+@@ -1,3 +1,4 @@
++import {PlacementEntry} from '../placement/placement-ui';
+ import {useEffect,useMemo,useRef,useState} from 'react';
+ import {ArrowRight} from 'lucide-react';
+ import {todayPractice,type PracticeTask} from './today-practice';
+@@ -13,7 +14,7 @@
+  useEffect(()=>{setClock(Date.now())},[state,map]);
+  useEffect(()=>{let active=true;if(!ready)return;void readCapabilityPractice(clock,online).then(value=>{if(active)setCapability({...value,ready:true})});return()=>{active=false}},[clock,refresh,online,ready]);
+  const result=useMemo(()=>{try{return {tasks:ready?todayPractice(state,map,clock,online):[],error:''}}catch{return {tasks:[],error:'部分学习记录需要检查，暂时无法推荐下一步；原记录保留。'}}},[state,map,clock,online,ready]);
+- return <><TodayPractice tasks={includeCapabilityPractice(result.tasks,online?capability.tasks:[])} ready={ready&&(!online||capability.ready)} compact={compact} catalogueHref={online?'/map/#/courses':'#/library'} error={[error,result.error,online&&capability.error].filter(Boolean).join(' ')}/>{online&&capability.error&&<a href="/demos/yesterday/">检查句子练习的保存状态</a>}</>;
++ return <>{online&&ready&&!error&&<PlacementEntry/>}<TodayPractice tasks={includeCapabilityPractice(result.tasks,online?capability.tasks:[])} ready={ready&&(!online||capability.ready)} compact={compact} catalogueHref={online?'/map/#/courses':'#/library'} error={[error,result.error,online&&capability.error].filter(Boolean).join(' ')}/>{online&&capability.error&&<a href="/demos/yesterday/">检查句子练习的保存状态</a>}</>;
+ }
+ 
+ export function TodayPractice({tasks,ready=true,compact=false,error='',catalogueHref='/map/#/courses'}:{tasks:PracticeTask[];ready?:boolean;compact?:boolean;error?:string;catalogueHref?:string}){

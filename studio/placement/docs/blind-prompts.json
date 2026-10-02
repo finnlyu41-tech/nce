@@ -1,0 +1,114 @@
+[
+  {
+    "id": "a-1",
+    "dimension": "basic",
+    "context": "Rina says, “This is my bag. Your bag is on the chair.”",
+    "prompt": "谁的包在椅子上？",
+    "options": [
+      "Rina 的",
+      "听 Rina 说话的人的",
+      "两个人的"
+    ]
+  },
+  {
+    "id": "a-2",
+    "dimension": "basic",
+    "context": "情境：Kai 现在在家。他的几位朋友现在在车站。",
+    "prompt": "用 be 动词的现在时，只填一个词：His friends ___ at the station."
+  },
+  {
+    "id": "a-3",
+    "dimension": "narrative",
+    "context": "情境：Sora 昨天步行去市场。请保留昨天发生的时间意义。",
+    "prompt": "只填一个词：Yesterday, Sora ___ to the market.（walk 的适当形式）"
+  },
+  {
+    "id": "a-4",
+    "dimension": "narrative",
+    "context": "Leo carried an umbrella because heavy rain was expected. It did not rain in the end.",
+    "prompt": "Leo 带伞的原因是什么？",
+    "options": [
+      "已经淋湿了",
+      "预计会有大雨",
+      "最后真的下雨了"
+    ]
+  },
+  {
+    "id": "a-5",
+    "dimension": "reading",
+    "context": "The museum opens at 9 a.m. every day except Tuesday. On Tuesday it opens at noon. Its café opens at 10 a.m. every day.",
+    "prompt": "判断：On Tuesday, the café opens before the museum.",
+    "options": [
+      "True（有证据支持）",
+      "False（与原文矛盾）",
+      "Not given（原文未给）"
+    ]
+  },
+  {
+    "id": "a-6",
+    "dimension": "reading",
+    "context": "Twenty volunteers planted trees by the river on Saturday. Each volunteer received a bottle of water. The report does not describe any other supplies.",
+    "prompt": "判断：Every volunteer received a free lunch.",
+    "options": [
+      "True（有证据支持）",
+      "False（与原文矛盾）",
+      "Not given（原文未给）"
+    ]
+  },
+  {
+    "id": "b-1",
+    "dimension": "basic",
+    "context": "Milo says, “My cup is blue. Your cup is green.”",
+    "prompt": "听 Milo 说话的人的杯子是什么颜色？",
+    "options": [
+      "蓝色",
+      "绿色",
+      "没有给出"
+    ]
+  },
+  {
+    "id": "b-2",
+    "dimension": "basic",
+    "context": "情境：Nia 和妹妹现在在厨房。她们的父亲现在在屋外。",
+    "prompt": "用 be 动词的现在时，只填一个词：Their father ___ outside."
+  },
+  {
+    "id": "b-3",
+    "dimension": "narrative",
+    "context": "情境：Jo 昨晚清理了书桌。请保留昨晚发生的时间意义。",
+    "prompt": "只填一个词：Last night, Jo ___ her desk.（clean 的适当形式）"
+  },
+  {
+    "id": "b-4",
+    "dimension": "narrative",
+    "context": "Ada left early because she expected heavy traffic. The roads were quiet, so she arrived before everyone else.",
+    "prompt": "Ada 提前出门的原因是什么？",
+    "options": [
+      "预计堵车",
+      "路上已经很空",
+      "其他人已到了"
+    ]
+  },
+  {
+    "id": "b-5",
+    "dimension": "reading",
+    "context": "On weekdays, the library closes at 7 p.m. On Saturday it closes at 4 p.m. The study room closes at 6 p.m. every day.",
+    "prompt": "判断：On Saturday, the library closes after the study room.",
+    "options": [
+      "True（有证据支持）",
+      "False（与原文矛盾）",
+      "Not given（原文未给）"
+    ]
+  },
+  {
+    "id": "b-6",
+    "dimension": "reading",
+    "context": "Six students visited a farm on Friday. They travelled there by train. The report gives no details about their journey home.",
+    "prompt": "判断：The students returned home by bus.",
+    "options": [
+      "True（有证据支持）",
+      "False（与原文矛盾）",
+      "Not given（原文未给）"
+    ]
+  }
+]
