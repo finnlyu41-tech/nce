@@ -20,7 +20,7 @@ export function GuidedExpression({unit,state,save,next,onLeaveGuard}:{unit:Unit;
   const persist=async(value=local.current)=>{const ok=await save(s=>{own.current.add(signature(value.practice,value.note));return {...s,records:{...s.records,[unit.id]:{...(s.records[unit.id]||emptyRecord()),practice:value.practice,draft:{...s.records[unit.id]?.draft,note:value.note}}}}});if(!ok){blocked.current=true;setSaveError('尚未保存，表达输入保留在本页，请重试。')}else if(local.current===value){blocked.current=false;setSaveError('')}return ok};
   const patch=async(change:Partial<ExpressionPractice>)=>{const before=local.current,value={...before,practice:{...before.practice,...change}};edited.current=true;if(change.step!==undefined){if(blocked.current){setSaveError('请先重试保存当前表达，再切换步骤。');return}if(!await persist(value))return;if(local.current===before){local.current=value;setPractice(value.practice)}}else{local.current=value;setPractice(value.practice);if(!blocked.current)await persist(value)}};
   const writeNote=(value:string)=>{edited.current=true;const next={...local.current,note:value};local.current=next;setNote(value);if(!blocked.current)void persist(next)};
-  useEffect(()=>{onLeaveGuard?.(async()=>!blocked.current&&(!edited.current||await persist()));return()=>onLeaveGuard?.(null)},[unit.id]);
+  useEffect(()=>{onLeaveGuard?.(async()=>!blocked.current&&(!edited.current||await persist()));return()=>onLeaveGuard?.(null)},[unit.id,onLeaveGuard,persist]);
   useEffect(()=>{heading.current?.focus({preventScroll:true});window.scrollTo({top:0});setRecording(false)},[practice.step]);
   const move=(step:number)=>patch({step,hinted:practice.hinted||step===0&&!!practice.recall});
   const matched=normalize(practice.recall)===normalize(plan.recall.answer);
