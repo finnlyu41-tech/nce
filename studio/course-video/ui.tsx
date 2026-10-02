@@ -22,23 +22,23 @@ export function CourseVideoHelp({courseId,book,lessons,phase,manifest,recordHelp
  </div>;
 }
 function VideoNotePanel({source,courseId,visible,port,recordHelp,setGuard}:{source:VideoSource;courseId:string;visible:boolean;port:NotesPort;recordHelp:()=>Promise<boolean>;setGuard:(guard:Guard|null)=>void}){
- const [status,setStatus]=useState<NotesStatus>({text:'',ready:false,busy:false,dirty:false,error:''}),[player,setPlayer]=useState(false),[summary,setSummary]=useState(false),[mediaIssue,setMediaIssue]=useState(''),[pendingBackup,setPendingBackup]=useState<string|null>(null);
+ const [status,setStatus]=useState<NotesStatus>({text:'',ready:false,busy:false,dirty:false,error:''}),[player,setPlayer]=useState(false),[originalReady,setOriginalReady]=useState(false),[summary,setSummary]=useState(false),[mediaIssue,setMediaIssue]=useState(''),[pendingBackup,setPendingBackup]=useState<string|null>(null);
  const controller=useMemo(()=>new NotesController(port,courseId,source,setStatus),[port,courseId,source]);
  const timer=useRef<ReturnType<typeof setTimeout>|null>(null),visibleRef=useRef(visible);
  useLayoutEffect(()=>{visibleRef.current=visible},[visible]);
  useEffect(()=>{void controller.load();setGuard(()=>controller.flush());const unload=(e:BeforeUnloadEvent)=>{const s=controller.snapshot();if(s.dirty||s.busy){e.preventDefault();e.returnValue=''}},refresh=()=>void controller.refresh();window.addEventListener('beforeunload',unload);for(const name of ['focus','pageshow','english-studio-progress-restored','english-studio-progress-saved'])window.addEventListener(name,refresh);return()=>{if(timer.current)clearTimeout(timer.current);setGuard(null);controller.dispose();window.removeEventListener('beforeunload',unload);for(const name of ['focus','pageshow','english-studio-progress-restored','english-studio-progress-saved'])window.removeEventListener(name,refresh)}},[controller,setGuard]);
- useEffect(()=>{if(!visible)void Promise.resolve().then(()=>{setPlayer(false);setSummary(false)})},[visible]);
+ useEffect(()=>{if(!visible)void Promise.resolve().then(()=>{setPlayer(false);setOriginalReady(false);setSummary(false)})},[visible]);
  useEffect(()=>{if(!player)return;const timeout=setTimeout(()=>setMediaIssue('若播放器仍未显示，请打开原视频；可以继续记笔记和学习本课。'),12000);return()=>clearTimeout(timeout)},[player]);
  const src=playerUrl(source);
- async function openOriginal(e:React.MouseEvent<HTMLAnchorElement>){
-  e.preventDefault();const popup=window.open('about:blank','_blank');if(popup)popup.opener=null;
-  try{if(await controller.access('open-link',recordHelp)&&visibleRef.current){if(popup)popup.location.replace(source.sourceUrl);else setMediaIssue('浏览器未打开新窗口，请允许弹出窗口后再打开原视频。')}else {popup?.close();setMediaIssue('访问记录尚未保存，请重试；笔记文本仍保留。')}}catch{popup?.close();setMediaIssue('原视频暂未打开，请重试。')}
+ async function prepareOriginal(){
+  try{if(await controller.access('open-link',recordHelp)&&visibleRef.current){setOriginalReady(true);setMediaIssue('')}else setMediaIssue('视频链接暂未就绪，请先保存笔记后重试。')}
+  catch{setMediaIssue('视频链接暂未就绪，可以继续本课学习。')}
  }
  function backup(){const raw=controller.exportPending(),url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=`English-Studio-video-note-${source.id}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);setPendingBackup(raw)}
  if(!visible)return null;
  return <section className="course-video course-video-note" aria-label={`${source.title} · 笔记`}>
   <p className="course-video-byline">{source.book} · 第 {source.lessons.join('、')} 课 · <a href={source.author.url} target="_blank" rel="noopener noreferrer">{source.author.name}</a></p>
-  <div className="course-video-actions"><a href={source.sourceUrl} target="_blank" rel="noopener noreferrer" onClick={e=>void openOriginal(e)}>打开 B站原视频 ↗</a>{src&&<button type="button" disabled={!status.ready||status.busy||!!status.error} onClick={()=>{void(async()=>{try{if(await controller.access('load-player',recordHelp)&&visibleRef.current){setMediaIssue('');setPlayer(true)}}catch{setMediaIssue('播放器暂未打开，可以继续本课学习。')}})()}}>在本页播放</button>}</div>
+  <div className="course-video-actions">{originalReady?status.ready&&!status.busy&&!status.dirty&&!status.error?<a href={source.sourceUrl} target="_blank" rel="noopener noreferrer">打开 B站原视频 ↗</a>:<span className="course-video-muted">保存当前笔记后可继续打开原视频。</span>:<button type="button" data-prepare-original disabled={!status.ready||status.busy||!!status.error} onClick={()=>void prepareOriginal()}>查看 B站原视频链接</button>}{src&&<button type="button" disabled={!status.ready||status.busy||!!status.error} onClick={()=>{void(async()=>{try{if(await controller.access('load-player',recordHelp)&&visibleRef.current){setMediaIssue('');setPlayer(true)}}catch{setMediaIssue('播放器暂未打开，可以继续本课学习。')}})()}}>在本页播放</button>}</div>
   {src&&!player&&<p className="course-video-muted">点击播放将加载哔哩哔哩第三方服务。</p>}
   {player&&src&&<div className="course-video-player"><iframe src={src} title={source.title} allow="fullscreen" allowFullScreen sandbox="allow-scripts allow-same-origin allow-presentation" referrerPolicy="no-referrer" onError={()=>setMediaIssue('播放器加载失败，请打开原视频；笔记和课程可继续使用。')}/><button type="button" onClick={()=>setPlayer(false)}>收起播放器</button><p className="course-video-muted">播放受 B站可用性影响；未显示或不能播放时可打开原视频。</p></div>}
   {mediaIssue&&<p role="status">{mediaIssue}</p>}

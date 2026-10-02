@@ -1,0 +1,576 @@
+{
+  "scope": "actual built map/classic normal course + existing IDB guarded writer; native input/download/file restore; fresh synthetic isolated Chrome profile",
+  "base": "424efc1869e98cd7b19afd2c1ab7cab0e8380b4b",
+  "candidate": "post-v1 controlled original-link fix",
+  "externalRequests": [],
+  "browserEvents": [
+    {
+      "kind": "Page.frameStartedNavigating",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1",
+        "url": "http://127.0.0.1:60671/#/nce/NCE3/1?tab=practice",
+        "loaderId": "B91AC531C7C07D2C4F14CFA873E49062",
+        "navigationType": "differentDocument"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameNavigated",
+      "params": {
+        "frame": {
+          "id": "7FF6F85BD0EF92ABBAD5BA387E35F8D1",
+          "loaderId": "B91AC531C7C07D2C4F14CFA873E49062",
+          "url": "http://127.0.0.1:60671/",
+          "urlFragment": "#/nce/NCE3/1?tab=practice",
+          "domainAndRegistry": "",
+          "securityOrigin": "http://127.0.0.1:60671",
+          "securityOriginDetails": {
+            "isLocalhost": true
+          },
+          "mimeType": "text/html",
+          "adFrameStatus": {
+            "adFrameType": "none"
+          },
+          "secureContextType": "SecureLocalhost",
+          "crossOriginIsolatedContextType": "NotIsolated",
+          "gatedAPIFeatures": []
+        },
+        "type": "Navigation"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "kind": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameScheduledNavigation",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1",
+        "delay": 0,
+        "reason": "anchorClick",
+        "url": "https://www.bilibili.com/video/BV1zY4y187cK/?p=2"
+      }
+    },
+    {
+      "kind": "Page.frameRequestedNavigation",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1",
+        "reason": "anchorClick",
+        "url": "https://www.bilibili.com/video/BV1zY4y187cK/?p=2",
+        "disposition": "newTab"
+      }
+    },
+    {
+      "kind": "Page.frameClearedScheduledNavigation",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "kind": "Page.frameResized",
+      "params": {}
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStartedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    },
+    {
+      "kind": "Page.frameStoppedLoading",
+      "params": {
+        "frameId": "7FF6F85BD0EF92ABBAD5BA387E35F8D1"
+      }
+    }
+  ],
+  "contextMenu": "not exercised",
+  "origin": "http://127.0.0.1:60671",
+  "checks": [
+    {
+      "name": "unconfirmed source has accessible preparation button and no browser-actionable video href",
+      "ok": true,
+      "elapsedMs": 798
+    },
+    {
+      "name": "native keyboard preparation confirms pending hinted + exact provenance before exposing a real original link",
+      "ok": true,
+      "elapsedMs": 240
+    },
+    {
+      "name": "native left click keeps ordinary new-tab link semantics after confirmed access",
+      "ok": true,
+      "elapsedMs": 226,
+      "detail": {
+        "openedUrl": "https://www.bilibili.com/video/BV1zY4y187cK/?p=2",
+        "targetId": "3D8F846EB6495B9B82DFA1ABBB904971",
+        "receiptReadBeforeActivation": true,
+        "network": "Bilibili DNS and requests blocked; no main-document fetch or playback claim"
+      }
+    },
+    {
+      "name": "native middle click uses already-confirmed access and adds no duplicate event",
+      "ok": true,
+      "elapsedMs": 229,
+      "detail": {
+        "openedUrl": "https://www.bilibili.com/video/BV1zY4y187cK/?p=2",
+        "targetId": "110BE1D2CFA09B0F3137D4485F807AB0",
+        "receiptReadBeforeActivation": true,
+        "network": "Bilibili DNS and requests blocked; no main-document fetch or playback claim"
+      }
+    },
+    {
+      "name": "native Enter on the prepared link uses already-confirmed access and adds no duplicate event",
+      "ok": true,
+      "elapsedMs": 107,
+      "detail": {
+        "openedUrl": "https://www.bilibili.com/video/BV1zY4y187cK/?p=2",
+        "targetId": "77C75114F2E37C64010977B0FF438C5B",
+        "receiptReadBeforeActivation": true,
+        "network": "Bilibili DNS and requests blocked; no main-document fetch or playback claim"
+      }
+    },
+    {
+      "name": "save failure preserves typed note and exposes no video href or iframe/external request",
+      "ok": true,
+      "elapsedMs": 1631
+    }
+  ],
+  "passed": 6,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "RuntimeExceptions": [],
+  "requests": [
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-DKkaRFOT.js",
+      "size": 2830475
+    },
+    {
+      "path": "/map/assets/index-Bacr5wAF.css",
+      "size": 85049
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-D5WoIgwX.css",
+      "size": 325574
+    },
+    {
+      "path": "/assets/standalone-HOf9aDC_.js",
+      "size": 3497735
+    },
+    {
+      "path": "/language/NCE3/1.json",
+      "size": 3984
+    },
+    {
+      "path": "/lesson-pages/index.json",
+      "size": 442006
+    }
+  ],
+  "sourceSha256": {
+    "course-video/ui.tsx": "807b7d86de36287f93fb28bfc1056814a11122033824e6ffe1364765f65316e8",
+    "course-video/controller.ts": "8d219663f490d4df315a01a5631000b1bc783f4f16a826cfe5bff13efc19b4f1",
+    "course-video/adapter.ts": "2c4717a9681268f3b530181d46b3eb6db724aeb0bc63a32665aeb3d2c6b74ef9",
+    "course-video/manifest.ts": "7f8d739c241974eef77b1090ab06172797d88e24df8ce9ce04e97235503ad831",
+    "course-video/notes.ts": "dac01127a99aa1ef070e5e3dea4ecc6a39f16644c439a37066db0f05bd988f9a",
+    "course-video/sources.json": "12c318c867e20cf61f7e6c2beb89f75be1047c6d744611c4b6dcb6100a9f5ef4",
+    "app/course-loop-ui.tsx": "182fd45d6319f92057e4544881a5930c5aecab3cc888605332ea247d95e7a0d1",
+    "course-loop/model.mjs": "4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57",
+    "course-loop/host-contract.d.ts": "848f15ee2ba0c85c1f200b91331e5c66af1039b204305a54ad1ab3503f3b9fa3",
+    "app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028"
+  },
+  "unverified": [
+    "published origin",
+    "natural retention",
+    "physical phone",
+    "actual Bilibili playback/audio",
+    "video summaries",
+    "learning gain"
+  ],
+  "retries": []
+}

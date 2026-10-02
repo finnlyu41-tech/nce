@@ -1,0 +1,186 @@
+{
+  "kind": "task-17 independent reproduction of original keyboard timeout",
+  "scope": "unmodified original-author UI/checkpoint; corrected dependencies; isolated synthetic Chrome",
+  "observedAt": "2026-10-02T19:38:11.729Z",
+  "sourceUiSha256": "807b7d86de36287f93fb28bfc1056814a11122033824e6ffe1364765f65316e8",
+  "faultyDispatch": {
+    "type": "rawKeyDown",
+    "key": "Enter",
+    "code": "Enter",
+    "windowsVirtualKeyCode": 13
+  },
+  "observation": "Trusted Enter keydown and keyup reach the focused enabled preparation button; no keypress or click occurs. No UI or storage error.",
+  "active": "<button type=\"button\" data-prepare-original=\"true\">查看 B站原视频链接</button>",
+  "events": [
+    {
+      "kind": "keydown",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "Leo 老师讲解与我的笔记L001 单词讲解造句L001 文章L001 习惯用法及表达L001 练习NCE3 · 第 1",
+      "tag": "DIV",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "focusin",
+      "text": "L001 单词讲解造句",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keyup",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 单词讲解造句",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keydown",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 单词讲解造句",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "focusin",
+      "text": "L001 文章",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keyup",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 文章",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keydown",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 文章",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "focusin",
+      "text": "L001 习惯用法及表达",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keyup",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 习惯用法及表达",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keydown",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 习惯用法及表达",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "focusin",
+      "text": "L001 练习",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keyup",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 练习",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keydown",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "L001 练习",
+      "tag": "BUTTON",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "focusin",
+      "text": "胶学 · 刘羽Leo",
+      "tag": "A",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keyup",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "胶学 · 刘羽Leo",
+      "tag": "A",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "keydown",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "胶学 · 刘羽Leo",
+      "tag": "A",
+      "prepared": false,
+      "trusted": true
+    },
+    {
+      "kind": "focusin",
+      "text": "查看 B站原视频链接",
+      "tag": "BUTTON",
+      "prepared": true,
+      "trusted": true
+    },
+    {
+      "kind": "keyup",
+      "key": "Tab",
+      "code": "Tab",
+      "text": "查看 B站原视频链接",
+      "tag": "BUTTON",
+      "prepared": true,
+      "trusted": true
+    },
+    {
+      "kind": "keydown",
+      "key": "Enter",
+      "code": "Enter",
+      "text": "查看 B站原视频链接",
+      "tag": "BUTTON",
+      "prepared": true,
+      "trusted": true
+    },
+    {
+      "kind": "keyup",
+      "key": "Enter",
+      "code": "Enter",
+      "text": "查看 B站原视频链接",
+      "tag": "BUTTON",
+      "prepared": true,
+      "trusted": true
+    }
+  ],
+  "hasFocus": true,
+  "button": "<button type=\"button\" data-prepare-original=\"true\">查看 B站原视频链接</button>"
+}
