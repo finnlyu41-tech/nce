@@ -4,6 +4,7 @@ import {routeHash,type StudioRoute} from '../app/navigation';
 import {StudioHeader} from '../app/study-mode';
 import {MiniTaskWorkspace} from '../app/mini-task-ui';
 import {getMiniTask} from './content';
+import {ONLINE} from '../app/runtime-mode';
 
 /** Fence the rendered mini workspace while a requested hash/back navigation
  * waits for its actual save queue. The existing route/redirect logic remains
@@ -30,7 +31,7 @@ export function useMiniTaskHostRoute(){
  return {route,bindMiniLeaveGuard,beforeMiniLeave,miniNotice};
 }
 export function MiniTaskHost({taskId,onLeaveGuard,beforeLeave,notice}:{taskId:string;onLeaveGuard:(guard:(()=>Promise<boolean>)|null)=>void;beforeLeave:()=>Promise<boolean>;notice:string}){
- const task=getMiniTask(taskId),courseHref=`/map/#/learn/${task.courseId}`;
+ const task=getMiniTask(taskId),courseHref=ONLINE?`/map/#/learn/${task.courseId}`:routeHash({view:'nce',book:'NCE1',lesson:task.lessons[0],tab:'practice'}),todayHref=ONLINE?'/map/':routeHash({view:'today'});
  const leave=useCallback(async(href:string)=>{if(await beforeLeave())location.assign(href)},[beforeLeave]);
  useEffect(()=>{
   // Document exits (header/records/Today/course links) must wait for the same
@@ -39,14 +40,16 @@ export function MiniTaskHost({taskId,onLeaveGuard,beforeLeave,notice}:{taskId:st
    if(event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
    const anchor=event.target instanceof Element?event.target.closest<HTMLAnchorElement>('a[href]'):null;
    if(!anchor||anchor.download||anchor.target&&anchor.target!=='_self')return;
-   const destination=new URL(anchor.href,location.href);if(!['http:','https:'].includes(destination.protocol))return;
+   const destination=new URL(anchor.href,location.href);
+   if(location.protocol==='file:'&&anchor.getAttribute('href')?.startsWith('/#/')){destination.pathname=location.pathname;destination.search=location.search}
+   if(!['http:','https:','file:'].includes(destination.protocol))return;
    event.preventDefault();event.stopPropagation();void leave(destination.href);
   };
   document.addEventListener('click',click,true);return()=>document.removeEventListener('click',click,true);
  },[leave]);
  return <div className="mini-task-host" data-mini-host={taskId}>
-  <StudioHeader active="learn" mapUrl="/map/" reference={{book:'NCE1',lesson:task.lessons[0]}}/>
-  <main id="main"><nav aria-label="小任务返回" className="mini-task"><button type="button" onClick={()=>void leave(courseHref)}>回到本组课程</button><button type="button" onClick={()=>void leave('/map/')}>查看今天安排</button></nav>
+  <StudioHeader active="learn" mapUrl={todayHref} reference={{book:'NCE1',lesson:task.lessons[0]}}/>
+  <main id="main"><nav aria-label="小任务返回" className="mini-task"><button type="button" onClick={()=>void leave(courseHref)}>回到本组课程</button><button type="button" onClick={()=>void leave(todayHref)}>查看今天安排</button></nav>
    {notice&&<p className="mini-task" role="alert">{notice}</p>}
    <MiniTaskWorkspace key={taskId} taskId={taskId} onLeaveGuard={onLeaveGuard} onContinue={()=>void leave(courseHref)}/>
   </main>

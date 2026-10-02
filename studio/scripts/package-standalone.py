@@ -1,6 +1,6 @@
 """Inline the production Vite build into one portable HTML file."""
 from pathlib import Path
-import re, urllib.parse, sys, json, hashlib, shutil
+import re, urllib.parse, sys, json, hashlib, shutil, subprocess
 online = '--online' in sys.argv
 base = Path('static-export')
 s = (base / 'standalone.html').read_text()
@@ -54,4 +54,6 @@ if online:
     (out/'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     (out/'_headers').write_text('/*\n  Content-Security-Policy: '+csp+"; frame-ancestors 'none'\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Frame-Options: DENY\n  Cross-Origin-Opener-Policy: same-origin-allow-popups\n  Permissions-Policy: camera=(), microphone=(self), geolocation=()\n  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-cache\n")
     (out/'version.json').write_text(json.dumps({'version':'2026-10-01-grammar-coverage-v21','demo_assets':demo_assets,'html_sha256':hashlib.sha256(s.encode()).hexdigest(),'map_html_sha256':hashlib.sha256((map_out/'index.html').read_bytes()).hexdigest(),'map_assets':{file.relative_to(out).as_posix():hashlib.sha256(file.read_bytes()).hexdigest() for file in sorted((map_out/'assets').iterdir()) if file.is_file()},'manifest_sha256':hashlib.sha256((out/'materials/manifest.json').read_bytes()).hexdigest(),'materials_count':len(json.loads((out/'materials/manifest.json').read_text())['files']),'access':'public','grammar_sha256':hashlib.sha256((out/'grammar/index.json').read_bytes()).hexdigest(),'pages_sha256':hashlib.sha256((out/'lesson-pages/index.json').read_bytes()).hexdigest(),'speaking_sha256':hashlib.sha256((out/'speaking/topics.json').read_bytes()).hexdigest(),'language_sha256':hashlib.sha256((out/'language/index.json').read_bytes()).hexdigest()},indent=2)+'\n')
+# The mini-task batch owns this finite media packager; original asset rules stay intact.
+subprocess.run([sys.executable, 'mini-task/package-audio.py', *(['--online'] if online else [])], check=True)
 print('Created '+str(out/'index.html'))
