@@ -26,13 +26,20 @@ export function TableStimulusView({stimulus, answers, onAnswer, readOnly = false
   const rowId = (index: number) => `${prefix}-row-${index}`;
   const columnId = (index: number) => `${prefix}-column-${index}`;
   const keepFocusVisible = (event: FocusEvent<HTMLInputElement>) => {
-    const scroller = viewport.current;
+    const scroller = viewport.current, input = event.currentTarget;
     if (!scroller) return;
-    const bounds = scroller.getBoundingClientRect(), inputBounds = event.currentTarget.getBoundingClientRect();
-    const rowHeader = event.currentTarget.closest('tr')?.querySelector<HTMLTableCellElement>('th[scope="row"]');
-    const left = bounds.left + (rowHeader?.getBoundingClientRect().width || 0) + 8, right = bounds.right - 8;
-    if (inputBounds.left < left) scroller.scrollLeft += inputBounds.left - left;
-    else if (inputBounds.right > right) scroller.scrollLeft += inputBounds.right - right;
+    const reveal = () => {
+      if (!scroller.isConnected || document.activeElement !== input) return;
+      const bounds = scroller.getBoundingClientRect(), inputBounds = input.getBoundingClientRect();
+      const rowHeader = input.closest('tr')?.querySelector<HTMLTableCellElement>('th[scope="row"]');
+      const left = bounds.left + (rowHeader?.getBoundingClientRect().width || 0) + 2, right = bounds.right - 2;
+      if (inputBounds.left < left) scroller.scrollLeft += inputBounds.left - left;
+      else if (inputBounds.right > right) scroller.scrollLeft += inputBounds.right - right;
+    };
+    reveal();
+    // Native focus scrolling can run after onFocus. Recheck after that scroll,
+    // with margins that fit a full input beside the sticky row at 320px.
+    requestAnimationFrame(reveal);
   };
   const style = {'--ielts-table-data-columns': stimulus.columns.length} as CSSProperties;
   return <section className="ielts-table-stimulus" data-table-id={stimulus.id} aria-labelledby={captionId} style={style}>
