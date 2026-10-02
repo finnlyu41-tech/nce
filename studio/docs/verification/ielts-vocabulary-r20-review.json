@@ -1,0 +1,1797 @@
+{
+  "scope": "Original IELTS R20 finite batch: 48 additional senses; 12 seed payloads retained.",
+  "baseline": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+  "reviewer": "Independent agent /root/ielts_blind_review",
+  "method": "Stage 1 reviewer saw id/headword/prompt/en only, inferred Chinese meanings and full translations. Stage 2 compared all 48 author definitions, bilingual examples, collocations, contrast notes, uses and corrected prompts. Three further issues fixed and reread. This is model-assisted independent semantic review, not official IELTS or human expert certification.",
+  "contentSha256": "53a118e14b6b531541452c2e463e289266aa265e6197dbaccf819e09759026cc",
+  "seedSha256": "38bb659398774e234634819bdca645e13f97a736e20d7d0506888ea54967c8b8",
+  "blindExamples": [
+    {
+      "id": "r20-reservation",
+      "headword": "reservation",
+      "prompt": "reservation",
+      "en": "Please confirm your reservation by email before Friday."
+    },
+    {
+      "id": "r20-deposit",
+      "headword": "deposit",
+      "prompt": "deposit",
+      "en": "You will get the refundable deposit back if you return the keys and leave the room undamaged."
+    },
+    {
+      "id": "r20-charge-fee",
+      "headword": "charge",
+      "prompt": "charge for entry",
+      "en": "The museum charges for entry, but children under twelve can visit for free."
+    },
+    {
+      "id": "r20-charge-power",
+      "headword": "charge",
+      "prompt": "charge a phone",
+      "en": "You can charge your phone at the desk beside the waiting area."
+    },
+    {
+      "id": "r20-extension",
+      "headword": "extension",
+      "prompt": "extension",
+      "en": "If you need more time for the assignment, request an extension before the deadline."
+    },
+    {
+      "id": "r20-availability",
+      "headword": "availability",
+      "prompt": "availability",
+      "en": "Let me check availability for a single room on Saturday night."
+    },
+    {
+      "id": "r20-venue",
+      "headword": "venue",
+      "prompt": "venue",
+      "en": "There has been a change of venue: the workshop will now take place in the library."
+    },
+    {
+      "id": "r20-enrol",
+      "headword": "enrol",
+      "prompt": "enrol",
+      "en": "You can enrol on the evening course at reception until Monday."
+    },
+    {
+      "id": "r20-reschedule",
+      "headword": "reschedule",
+      "prompt": "reschedule",
+      "en": "We need to reschedule your appointment from Tuesday afternoon to Monday morning."
+    },
+    {
+      "id": "r20-fare",
+      "headword": "fare",
+      "prompt": "fare",
+      "en": "The return fare is eighteen pounds, and the ticket is valid until Sunday."
+    },
+    {
+      "id": "r20-platform",
+      "headword": "platform",
+      "prompt": "platform",
+      "en": "The train to the airport will leave from platform six at ten thirty."
+    },
+    {
+      "id": "r20-transfer",
+      "headword": "transfer",
+      "prompt": "transfer",
+      "en": "Transfer to another train at Central Station to reach the university."
+    },
+    {
+      "id": "r20-commute",
+      "headword": "commute",
+      "prompt": "commute",
+      "en": "I commute by train because the station is only a short walk from my flat."
+    },
+    {
+      "id": "r20-affordable",
+      "headword": "affordable",
+      "prompt": "affordable",
+      "en": "I would like to see more affordable housing near the city centre."
+    },
+    {
+      "id": "r20-convenient",
+      "headword": "convenient",
+      "prompt": "convenient",
+      "en": "The flat is in a convenient location because both my office and a supermarket are nearby."
+    },
+    {
+      "id": "r20-reliable",
+      "headword": "reliable",
+      "prompt": "reliable",
+      "en": "We have a reliable bus service, so I rarely arrive late for work."
+    },
+    {
+      "id": "r20-crowded",
+      "headword": "crowded",
+      "prompt": "crowded",
+      "en": "I sometimes wait for the next train to avoid a crowded carriage."
+    },
+    {
+      "id": "r20-drawback",
+      "headword": "drawback",
+      "prompt": "drawback",
+      "en": "The main drawback of living here is the long journey to my workplace."
+    },
+    {
+      "id": "r20-priority",
+      "headword": "priority",
+      "prompt": "priority",
+      "en": "Finding a place near my college is my top priority at the moment."
+    },
+    {
+      "id": "r20-adapt",
+      "headword": "adapt",
+      "prompt": "adapt",
+      "en": "It took me a few weeks to adapt to a new routine after I moved away from home."
+    },
+    {
+      "id": "r20-balance",
+      "headword": "balance",
+      "prompt": "balance work and study",
+      "en": "I plan my week in advance to balance work and study."
+    },
+    {
+      "id": "r20-commitment",
+      "headword": "commitment",
+      "prompt": "commitment",
+      "en": "Because of my family commitments, I prefer classes that finish before six."
+    },
+    {
+      "id": "r20-book-reserve",
+      "headword": "book",
+      "prompt": "book a place",
+      "en": "I booked a place on a weekend photography course with a friend."
+    },
+    {
+      "id": "r20-book-volume",
+      "headword": "book",
+      "prompt": "a reference book",
+      "en": "I keep a reference book on my desk and use it when I need a quick explanation."
+    },
+    {
+      "id": "r20-evidence",
+      "headword": "evidence",
+      "prompt": "evidence",
+      "en": "The article provides little evidence for the claim that longer working hours improve productivity."
+    },
+    {
+      "id": "r20-assumption",
+      "headword": "assumption",
+      "prompt": "assumption",
+      "en": "An underlying assumption of the model is that every household has access to the internet."
+    },
+    {
+      "id": "r20-bias",
+      "headword": "bias",
+      "prompt": "bias",
+      "en": "Sampling bias may occur if the survey includes only people who own a car."
+    },
+    {
+      "id": "r20-correlation",
+      "headword": "correlation",
+      "prompt": "correlation",
+      "en": "The study found a positive correlation between study time and test scores, but did not establish causation."
+    },
+    {
+      "id": "r20-consequence",
+      "headword": "consequence",
+      "prompt": "consequence",
+      "en": "An unintended consequence of the road closure was an increase in trade for nearby shops."
+    },
+    {
+      "id": "r20-indicator",
+      "headword": "indicator",
+      "prompt": "indicator",
+      "en": "Income is one indicator of living standards, but it does not capture every aspect of well-being."
+    },
+    {
+      "id": "r20-estimate",
+      "headword": "estimate",
+      "prompt": "estimate",
+      "en": "The researchers estimated the cost of restoring the wetland using data from three similar projects."
+    },
+    {
+      "id": "r20-figure-number",
+      "headword": "figure",
+      "prompt": "a sales figure",
+      "en": "The report gives a sales figure of two million pounds for the first quarter."
+    },
+    {
+      "id": "r20-figure-person",
+      "headword": "figure",
+      "prompt": "a public figure",
+      "en": "As a public figure, the author was often invited to discuss education on television."
+    },
+    {
+      "id": "r20-sustainable",
+      "headword": "sustainable",
+      "prompt": "sustainable",
+      "en": "The report calls for sustainable use of resources so that future generations can also benefit from them."
+    },
+    {
+      "id": "r20-demand",
+      "headword": "demand",
+      "prompt": "demand for housing",
+      "en": "Demand for housing increased as more people moved into the city."
+    },
+    {
+      "id": "r20-access",
+      "headword": "access",
+      "prompt": "access to services",
+      "en": "The new bus route improved access to services for residents of the village."
+    },
+    {
+      "id": "r20-account-for",
+      "headword": "account for",
+      "prompt": "account for a share",
+      "en": "Bus journeys accounted for forty per cent of all trips in the survey."
+    },
+    {
+      "id": "r20-whereas",
+      "headword": "whereas",
+      "prompt": "whereas",
+      "en": "Rail use increased, whereas car use fell over the same period."
+    },
+    {
+      "id": "r20-respectively",
+      "headword": "respectively",
+      "prompt": "respectively",
+      "en": "The populations of Eastford and Westhaven were twenty thousand and thirty thousand, respectively."
+    },
+    {
+      "id": "r20-outweigh",
+      "headword": "outweigh",
+      "prompt": "outweigh",
+      "en": "For this small town, the benefits of a regular bus service outweigh the costs of running it."
+    },
+    {
+      "id": "r20-allocate",
+      "headword": "allocate",
+      "prompt": "allocate",
+      "en": "The council should allocate more funds to maintaining existing parks."
+    },
+    {
+      "id": "r20-subsidise",
+      "headword": "subsidise",
+      "prompt": "subsidise",
+      "en": "The government could subsidise public transport to make fares more affordable."
+    },
+    {
+      "id": "r20-per-capita",
+      "headword": "per capita",
+      "prompt": "per capita",
+      "en": "Water use per capita fell even though the city's total water use increased."
+    },
+    {
+      "id": "r20-plateau",
+      "headword": "plateau",
+      "prompt": "plateau",
+      "en": "After rising for three years, annual visitor numbers plateaued at around fifty thousand."
+    },
+    {
+      "id": "r20-decline-fall",
+      "headword": "decline",
+      "prompt": "a decline in demand",
+      "en": "The company reported a decline in demand for printed maps."
+    },
+    {
+      "id": "r20-decline-refuse",
+      "headword": "decline",
+      "prompt": "decline to participate",
+      "en": "Several residents declined to participate in the survey, so their views were not recorded."
+    },
+    {
+      "id": "r20-in-contrast",
+      "headword": "in contrast",
+      "prompt": "in contrast",
+      "en": "In contrast to the city centre, the outer suburbs had very few cycle lanes."
+    },
+    {
+      "id": "r20-tend-to",
+      "headword": "tend to",
+      "prompt": "tend to",
+      "en": "People with flexible schedules tend to travel outside the busiest hours."
+    }
+  ],
+  "blindReview": [
+    {
+      "id": "r20-reservation",
+      "inferredMeaning": "预订；预订记录（具体对象未说明）",
+      "translation": "请在星期五之前通过电子邮件确认您的预订。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "reservation 单独可指预订，也可指保留意见；句中 confirm your reservation 明确指预订。建议题面改为 confirm a reservation。"
+        }
+      ],
+      "linguisticAssessment": "confirm a reservation / by email 自然；典型预订确认通知。"
+    },
+    {
+      "id": "r20-deposit",
+      "inferredMeaning": "押金；可退还的保证金",
+      "translation": "如果您归还钥匙且房间没有受损，您就能拿回这笔可退还的押金。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "deposit 单独可指押金、订金、银行存款或沉积物；例句通过 refundable、归还钥匙和房间完好限定为押金。建议题面改为 a refundable deposit。"
+        }
+      ],
+      "linguisticAssessment": "get the deposit back 自然；租住场景可信。refundable 与后面的退款条件不矛盾。"
+    },
+    {
+      "id": "r20-charge-fee",
+      "inferredMeaning": "收费；收取入场费",
+      "translation": "这家博物馆收取入场费，但十二岁以下的儿童可以免费参观。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "charge for entry 明确是动词收费义；与 free 对照自然，入场规则可信。"
+    },
+    {
+      "id": "r20-charge-power",
+      "inferredMeaning": "给……充电",
+      "translation": "您可以在等候区旁边的桌子处给手机充电。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "charge your phone 明确限定充电义；at the desk 指地点，等候区提供充电位置的场景自然。desk 不足以推出它一定是服务台；waiting area 也未限定为交通候车区。"
+    },
+    {
+      "id": "r20-extension",
+      "inferredMeaning": "延长的期限；延期（这里指作业提交期限）",
+      "translation": "如果您需要更多时间完成这份作业，请在截止日期之前申请延期。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "extension 裸词也常指扩建部分、电话分机或文件扩展名；例句只支持延期义。建议题面改为 request an extension。"
+        }
+      ],
+      "linguisticAssessment": "request an extension / before the deadline 是自然的作业延期表达。不要译成扩展。"
+    },
+    {
+      "id": "r20-availability",
+      "inferredMeaning": "可获得或可供使用的情况；这里指客房是否有空房",
+      "translation": "让我查一下星期六晚上是否还有单人间。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "check availability for a single room 属酒店预订常用语。词义本身较集中；中文宜按语境译为空房情况，而非机械译成可用性。"
+    },
+    {
+      "id": "r20-venue",
+      "inferredMeaning": "活动举行的地点；场地",
+      "translation": "活动地点有变：这次工作坊将改在图书馆举行。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "a change of venue / take place in 自然。workshop 可译工作坊或研讨活动，但仅凭此句无法确定具体活动形式。"
+    },
+    {
+      "id": "r20-enrol",
+      "inferredMeaning": "报名；注册参加（课程）",
+      "translation": "您可以到接待处报名参加晚间课程，报名开放至星期一。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "enrol on a course 是自然的英式搭配。until Monday 描述报名开放期限，不能据此补出星期一的具体截止时刻。"
+    },
+    {
+      "id": "r20-reschedule",
+      "inferredMeaning": "重新安排时间；改期",
+      "translation": "我们需要把您的预约从星期二下午改到星期一上午。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "reschedule ... from ... to ... 自然；改期也可以提前，不能只释为推迟。"
+    },
+    {
+      "id": "r20-fare",
+      "inferredMeaning": "交通票价；车费（此处为往返票价）",
+      "translation": "往返票价是十八英镑，车票有效至星期日。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "return fare 是英式往返票价表达；金额与车票有效期的并列符合售票场景。fare 也有饮食等较少见义，此例足以限定交通义。"
+    },
+    {
+      "id": "r20-platform",
+      "inferredMeaning": "铁路站台",
+      "translation": "开往机场的火车将于十点三十分从六号站台发车。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "platform 单独常指站台、平台、讲台或政纲；句中 train / leave from platform six 明确指铁路站台。建议题面改为 a train platform。"
+        }
+      ],
+      "linguisticAssessment": "leave from platform six 自然；十点三十分没有上午/晚上信息，译文不应补充。"
+    },
+    {
+      "id": "r20-transfer",
+      "inferredMeaning": "换乘；转乘",
+      "translation": "在中央车站换乘另一班火车，即可到达大学。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "transfer 裸词还常指转移、调动、转账及转学；句中 transfer to another train 明确换乘。建议题面改为 transfer to another train。"
+        }
+      ],
+      "linguisticAssessment": "transfer to another train 是可接受的交通英语；英式日常语境也常用 change trains。命令句用于路线说明自然。"
+    },
+    {
+      "id": "r20-commute",
+      "inferredMeaning": "通勤；往返于住所与工作或学习地点",
+      "translation": "我坐火车通勤，因为从我的公寓步行到车站只需很短一段路。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "commute by train / a short walk from my flat 自然。句中没有明确目的地，不能补成专指去公司或学校。"
+    },
+    {
+      "id": "r20-affordable",
+      "inferredMeaning": "价格能负担得起的",
+      "translation": "我希望市中心附近能有更多价格负担得起的住房。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "affordable housing 是自然的住房议题搭配。不能只释为廉价；是否负担得起涉及支付能力。"
+    },
+    {
+      "id": "r20-convenient",
+      "inferredMeaning": "便利的；位置方便的",
+      "translation": "这套公寓的位置很方便，因为我的办公室和一家超市都在附近。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "in a convenient location 自然；后面的两种附近设施明确解释便利所在。"
+    },
+    {
+      "id": "r20-reliable",
+      "inferredMeaning": "可靠的；稳定、值得信赖的",
+      "translation": "我们这里的公交服务很可靠，所以我上班很少迟到。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "reliable bus service 自然；很少迟到提供可靠性的实际结果，但可靠不只等于准时。"
+    },
+    {
+      "id": "r20-crowded",
+      "inferredMeaning": "拥挤的",
+      "translation": "为了避开拥挤的车厢，我有时会等下一班火车。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "a crowded carriage 是自然英式搭配；主动等下一班车是可信通勤行为。"
+    },
+    {
+      "id": "r20-drawback",
+      "inferredMeaning": "缺点；不利之处",
+      "translation": "住在这里的主要缺点是，上班的路途漫长。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "the main drawback of living ... 自然。long journey 可包括路程长或耗时长；译为通勤路程很长也合适。"
+    },
+    {
+      "id": "r20-priority",
+      "inferredMeaning": "优先考虑的事；首要任务",
+      "translation": "目前，我最优先考虑的是找一处靠近学院的住处。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "top priority 自然；finding a place 在这一居住语境最合理为找住处。college 不宜擅自特指大学或中学。"
+    },
+    {
+      "id": "r20-adapt",
+      "inferredMeaning": "适应",
+      "translation": "离家搬出去后，我花了几周时间才适应新的日常安排。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "adapt to a new routine 明确适应义；裸词也可指改编，但本例搭配有充分消歧。若题面要求单一义项，可用 adapt to a new routine。"
+    },
+    {
+      "id": "r20-balance",
+      "inferredMeaning": "兼顾；合理协调",
+      "translation": "我会提前安排一周的时间，以兼顾工作与学习。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "balance work and study 的动词结构把平衡/余额等义排除，周计划场景自然。"
+    },
+    {
+      "id": "r20-commitment",
+      "inferredMeaning": "必须履行的责任或事务；这里指家庭责任",
+      "translation": "由于要承担家庭责任，我更愿意选择六点前结束的课程。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "commitment 裸词可指承诺、投入或责任；family commitments 的复数形式在这里指需要投入时间的家庭责任/事务。建议题面改为 family commitments。"
+        }
+      ],
+      "linguisticAssessment": "because of my family commitments 自然；不能释为家庭承诺或投入程度。six 未明确上午或下午，译文保留六点。"
+    },
+    {
+      "id": "r20-book-reserve",
+      "inferredMeaning": "预订；报名占定（课程名额）",
+      "translation": "我和一位朋友一起预订了周末摄影课程的名额。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "book a place on a course 自然，题面有效限定预订义。英文未明确朋友的名额是否由说话者代订，译文不应补成我订了两个名额。"
+    },
+    {
+      "id": "r20-book-volume",
+      "inferredMeaning": "书；书籍",
+      "translation": "我在书桌上放了一本参考书，需要简明解释时就查阅它。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "a reference book 明确书籍义；keep ... on my desk / use it 自然。reference book 不必机械译作工具书，参考书也准确。"
+    },
+    {
+      "id": "r20-evidence",
+      "inferredMeaning": "证据；支持论点的依据",
+      "translation": "对于延长工作时间能提高生产率这一说法，这篇文章提供的证据很少。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "evidence for the claim ... 自然，evidence 为不可数名词；little 指数量少，不直接等于完全没有证据。"
+    },
+    {
+      "id": "r20-assumption",
+      "inferredMeaning": "假设；未经证实而作为前提的设定",
+      "translation": "这个模型的一个基本假设是，每个家庭都能接入互联网。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "an underlying assumption of the model 自然。每个家庭都有互联网接入是模型前提，句子没有声称其已经得到验证。"
+    },
+    {
+      "id": "r20-bias",
+      "inferredMeaning": "偏差；此处为抽样偏差",
+      "translation": "如果调查只纳入有车的人，就可能出现抽样偏差。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "bias 裸词既可指人的偏见，也可指统计偏差；此句采样范围限定为抽样偏差。建议题面改为 sampling bias。"
+        },
+        {
+          "category": "semantic_precision",
+          "severity": "minor",
+          "detail": "只调查车主是否导致抽样偏差取决于目标总体；may 使原句成立，但若加明调查面向所有居民，教学例证更清楚。"
+        }
+      ],
+      "linguisticAssessment": "Sampling bias may occur 的谨慎措辞正确：是否存在偏差仍取决于目标总体；若调查目标本来就是车主，限定车主本身不构成偏差。可加 a survey of all residents 使例证更严密。"
+    },
+    {
+      "id": "r20-correlation",
+      "inferredMeaning": "相关性；相关关系",
+      "translation": "研究发现，学习时间与考试成绩之间存在正相关关系，但并未证实二者存在因果关系。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "a positive correlation between ... and ... 自然；明确区分相关与因果，适合学术语境。"
+    },
+    {
+      "id": "r20-consequence",
+      "inferredMeaning": "后果；结果",
+      "translation": "道路封闭带来的一个意料之外的结果是，附近商店的生意增加了。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "an unintended consequence 自然；此处结果是有益的，因此不能把 consequence 限定为负面后果。trade 此处为商店生意而非国际贸易。"
+    },
+    {
+      "id": "r20-indicator",
+      "inferredMeaning": "指标；能反映某种情况的衡量因素",
+      "translation": "收入是衡量生活水平的一项指标，但它无法反映幸福与生活质量的每个方面。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "one indicator of living standards 自然。well-being 比心情愉快更广，译作福祉或身心与生活状况均可。indicator 裸词另有车辆转向灯义，若要求题面单义可用 an indicator of living standards。"
+    },
+    {
+      "id": "r20-estimate",
+      "inferredMeaning": "估算；估计（动词）",
+      "translation": "研究人员利用三个类似项目的数据，估算了修复这片湿地的成本。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "estimate 裸词既可作估算结果/报价的名词，也可作估算的动词；例句 estimated 明确为动词。若题面考词性或唯一答案，建议改为 estimate the cost。"
+        }
+      ],
+      "linguisticAssessment": "estimate the cost of restoring ... using data ... 自然，using 修饰研究人员估算的方法。"
+    },
+    {
+      "id": "r20-figure-number",
+      "inferredMeaning": "数字；金额数据（此处为销售额）",
+      "translation": "报告给出的第一季度销售额为两百万英镑。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "a sales figure 与金额一起把 figure 明确限定为数字/数据。two million pounds 对应销售额，不能译成销量两百万件。"
+    },
+    {
+      "id": "r20-figure-person",
+      "inferredMeaning": "人物；此处指公众人物",
+      "translation": "作为一位公众人物，这位作者经常受邀上电视讨论教育问题。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "a public figure 明确人物义；作者以公众人物身份参加电视讨论符合现实。"
+    },
+    {
+      "id": "r20-sustainable",
+      "inferredMeaning": "可持续的；能长期维持而不耗尽资源的",
+      "translation": "报告呼吁以可持续的方式利用资源，使子孙后代也能从中受益。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "sustainable use of resources 自然，未来世代受益明确环境资源意义。该句不支持直接等同零污染。"
+    },
+    {
+      "id": "r20-demand",
+      "inferredMeaning": "需求",
+      "translation": "随着越来越多的人迁入这座城市，住房需求增加了。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "demand for housing 明确经济需求义，避免要求/命令义。as 在此可读为随之或因为，中文随着保留原句表达。"
+    },
+    {
+      "id": "r20-access",
+      "inferredMeaning": "获得或使用某种服务的机会与便利；可及性",
+      "translation": "新开通的公交线路让村民更方便地获得各项服务。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "access to services 明确名词可及性义。公交改善到达服务设施的条件，不能误释为只提高了服务质量。"
+    },
+    {
+      "id": "r20-account-for",
+      "inferredMeaning": "占；占据某一比例",
+      "translation": "在这项调查中，乘公交的出行次数占全部出行次数的百分之四十。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "account for a share 的 share 可译份额/比例，例句 forty per cent 充分消歧。此处不支持解释原因的另一义项。比例分母为所有出行次数，不是受访人数。"
+    },
+    {
+      "id": "r20-whereas",
+      "inferredMeaning": "而；然而（连接两种情况作对比）",
+      "translation": "同一时期，铁路使用量增加了，而汽车使用量下降了。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "whereas 连接完整并列对比从句，语法和图表描述用途自然；不能简单释为时间意义的当……时。"
+    },
+    {
+      "id": "r20-respectively",
+      "inferredMeaning": "分别地；按此前列出的顺序一一对应",
+      "translation": "伊斯特福德和韦斯特黑文的人口分别为两万人和三万人。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "两地与两个人口值数量一致且顺序明确；Eastford 对应两万，Westhaven 对应三万。地名仅按音译，不声称为真实城市。"
+    },
+    {
+      "id": "r20-outweigh",
+      "inferredMeaning": "在重要性、价值或影响上超过；此处利大于成本",
+      "translation": "对这座小镇来说，定期开行公交服务带来的益处超过了运营成本。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "benefits outweigh costs 是自然论证搭配。regular 指定期开行/稳定有班次，不能仅据此确定高频率。"
+    },
+    {
+      "id": "r20-allocate",
+      "inferredMeaning": "分配；拨出（资金）",
+      "translation": "市议会应该拨出更多资金来维护现有公园。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "allocate funds to maintaining ... 自然，to 为介词后接动名词。council 的具体制度未说明，译作地方议会也合适。"
+    },
+    {
+      "id": "r20-subsidise",
+      "inferredMeaning": "补贴；给予资金补助",
+      "translation": "政府可以补贴公共交通，让人们更能负担得起票价。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "subsidise public transport 自然；could 表建议/可能的政策选择，不能译成政府已经补贴。"
+    },
+    {
+      "id": "r20-per-capita",
+      "inferredMeaning": "人均；按每个人计算",
+      "translation": "尽管这座城市的总用水量增加了，人均用水量却下降了。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "water use per capita 自然；总量上升与人均下降并不矛盾，可由人口增长解释。句子不提供具体人口数据。"
+    },
+    {
+      "id": "r20-plateau",
+      "inferredMeaning": "增长后趋于平稳；进入平台期（动词）",
+      "translation": "连续增长三年后，年游客人数稳定在五万人左右。",
+      "verdict": "revise_prompt",
+      "issues": [
+        {
+          "category": "prompt_disambiguation",
+          "severity": "moderate",
+          "detail": "plateau 裸词可指高原、平台期或趋于平稳的动词；例句 plateaued 明确是增长后不再明显变化。建议题面改为 visitor numbers plateau。"
+        }
+      ],
+      "linguisticAssessment": "plateau at around ... 是自然图表描述搭配；annual visitor numbers 表每年人数，不是三年累计人数。"
+    },
+    {
+      "id": "r20-decline-fall",
+      "inferredMeaning": "减少；下降（名词）",
+      "translation": "该公司报告称，对纸质地图的需求有所下降。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "a decline in demand 明确名词下降义，report a decline 自然；需求下降不等同销售额必定下降。"
+    },
+    {
+      "id": "r20-decline-refuse",
+      "inferredMeaning": "拒绝；婉拒（做某事）",
+      "translation": "几位居民拒绝参加调查，因此他们的看法没有被记录下来。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "decline to participate 明确拒绝义；decline 常带较礼貌或正式语气，但本句没有依据补出婉拒原因。"
+    },
+    {
+      "id": "r20-in-contrast",
+      "inferredMeaning": "相比之下；与……形成对比",
+      "translation": "与市中心相比，外围郊区的自行车道很少。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "in contrast to ... 自然。very few 表数量很少而非完全没有；cycle lanes 宜译自行车道。"
+    },
+    {
+      "id": "r20-tend-to",
+      "inferredMeaning": "往往会；通常倾向于",
+      "translation": "日程安排灵活的人往往会避开最繁忙的时段出行。",
+      "verdict": "pass",
+      "issues": [],
+      "linguisticAssessment": "tend to travel 明确常见趋势而非必然。outside the busiest hours 是避开繁忙时段，不必额外限定为工作日早晚高峰。"
+    }
+  ],
+  "answerReviewBeforeFixes": [
+    {
+      "id": "r20-reservation",
+      "verdict": "pass",
+      "definitionAssessment": "预订义及保留资源的解释与独立推断一致。",
+      "translationAssessment": "确认、电子邮件与周五之前均准确。",
+      "collocationAssessment": "confirm a reservation／确认预订自然。",
+      "promptAssessment": "confirm a reservation 已排除保留意见等主要竞争义。",
+      "contrastAndUseAssessment": "contrast 正确排除保留意见；预订确认适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-deposit",
+      "verdict": "pass",
+      "definitionAssessment": "押金、履约担保准确，不误当银行存款或全部租金。",
+      "translationAssessment": "退钥匙、房间完好与退款条件完整。",
+      "collocationAssessment": "a refundable deposit／可退还的押金自然。",
+      "promptAssessment": "a refundable deposit 已消除原裸词的主要歧义。",
+      "contrastAndUseAssessment": "contrast 对押金和租金、退款约定的区分正确；租房付款场景适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-charge-fee",
+      "verdict": "pass",
+      "definitionAssessment": "收费动词义与入场项目一致。",
+      "translationAssessment": "收费与十二岁以下免费条件准确，无年龄边界错置。",
+      "collocationAssessment": "charge for entry／收取入场费自然。",
+      "promptAssessment": "charge for entry 有效区别充电等义。",
+      "contrastAndUseAssessment": "contrast 对 charge for 后接收费项目的解释正确；参观费用适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-charge-power",
+      "verdict": "needs_revision",
+      "definitionAssessment": "充电动词义及电池储能解释准确。",
+      "translationAssessment": "需修订：waiting area 仅表示等候区，译为候车区擅自增加交通场景。",
+      "collocationAssessment": "charge a phone／给手机充电自然。",
+      "promptAssessment": "phone 作宾语有效限定充电义。",
+      "contrastAndUseAssessment": "contrast 正确指出 phone 为充电对象；询问充电处适合 listening，未限定一定在车站。",
+      "issues": [
+        {
+          "category": "translation",
+          "severity": "moderate",
+          "detail": "waiting area 未说明交通候车场景；候车区比英文等候区范围更窄。",
+          "suggestedChange": "将中文例句中的候车区改为等候区。"
+        }
+      ]
+    },
+    {
+      "id": "r20-extension",
+      "verdict": "pass",
+      "definitionAssessment": "延期及完成期限延长准确。",
+      "translationAssessment": "作业、申请时间和截止日期关系准确。",
+      "collocationAssessment": "request an extension／申请延期自然。",
+      "promptAssessment": "request an extension 已有效排除分机、扩建等义。",
+      "contrastAndUseAssessment": "contrast 正确；作业延期是可信 listening 服务场景。",
+      "issues": []
+    },
+    {
+      "id": "r20-availability",
+      "verdict": "pass",
+      "definitionAssessment": "可供使用或预订的情况准确，非可负担性。",
+      "translationAssessment": "周六晚上、单人间和空房查询关系准确。",
+      "collocationAssessment": "check availability／查询空位或余量可覆盖预订资源。",
+      "promptAssessment": "裸词没有像 charge 那样强烈竞争义；例句和场景充分限定客房空余情况。",
+      "contrastAndUseAssessment": "contrast 对 availability 与负担程度的区别正确；住宿查询适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-venue",
+      "verdict": "pass",
+      "definitionAssessment": "活动举办地点／会场准确。",
+      "translationAssessment": "地点变更和工作坊改到图书馆均准确。",
+      "collocationAssessment": "a change of venue／举办地点的变更自然。",
+      "promptAssessment": "venue 的主要普通义即活动场所，提示足够。",
+      "contrastAndUseAssessment": "contrast 不把场所当路线；活动地点变更适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-enrol",
+      "verdict": "needs_revision",
+      "definitionAssessment": "课程或机构报名义与独立推断一致。",
+      "translationAssessment": "需修订：until Monday 应保留开放截至周一的期限表达，周一之前改成更严格的 before Monday，不能从原句确定具体时刻或是否包括周一全天。",
+      "collocationAssessment": "enrol on a course 是正确英式搭配，译为报名参加课程准确。",
+      "promptAssessment": "enrol 提示主导报名义，例句明确是课程。",
+      "contrastAndUseAssessment": "contrast 对英美拼写和报名不等于完成正确；报名期限适合 listening。",
+      "issues": [
+        {
+          "category": "translation",
+          "severity": "moderate",
+          "detail": "until Monday 表示某状态持续到周一这一时间点；周一之前更接近 before Monday，加入明确的排除周一含义。原文也不足以保证周一全天仍可报名。",
+          "suggestedChange": "译为：您可以到接待处报名参加晚间课程，报名开放至周一。",
+          "source": "https://dictionary.cambridge.org/us/grammar/british-grammar/until"
+        }
+      ]
+    },
+    {
+      "id": "r20-reschedule",
+      "verdict": "pass",
+      "definitionAssessment": "重新安排日期或时间准确，未误释成只能延期。",
+      "translationAssessment": "从周二下午提前到周一上午的方向、日期和时段准确。",
+      "collocationAssessment": "reschedule an appointment／重新安排预约时间自然。",
+      "promptAssessment": "reschedule 提示重排时间义。",
+      "contrastAndUseAssessment": "contrast 正确区分提前、延后与取消；预约变更适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-fare",
+      "verdict": "pass",
+      "definitionAssessment": "交通票价义准确。",
+      "translationAssessment": "往返十八英镑与有效至周日均准确。",
+      "collocationAssessment": "a return fare／往返票价是自然英式表达。",
+      "promptAssessment": "fare 在交通场景主导票价义，搭配和例句足以明确。",
+      "contrastAndUseAssessment": "contrast 的 fare／fee 区别适合学习用途；售票 listening 场景自然。",
+      "issues": []
+    },
+    {
+      "id": "r20-platform",
+      "verdict": "pass",
+      "definitionAssessment": "铁路站台义准确。",
+      "translationAssessment": "机场方向、六号站台和十点半全部准确，没有补上午或下午。",
+      "collocationAssessment": "leave from platform six／从六号站台发车自然。",
+      "promptAssessment": "a train platform 已排除网络平台等竞争义。",
+      "contrastAndUseAssessment": "contrast 正确；站台广播适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-transfer",
+      "verdict": "pass",
+      "definitionAssessment": "途中换乘公共交通工具准确。",
+      "translationAssessment": "中央车站换乘另一班火车到大学的路线准确。",
+      "collocationAssessment": "transfer to another train／换乘另一班火车是可接受的自然用法。",
+      "promptAssessment": "transfer to another train 已明确换乘义，排除转账、调职。",
+      "contrastAndUseAssessment": "contrast 正确；路线说明适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-commute",
+      "verdict": "pass",
+      "definitionAssessment": "住所与工作或学习地点定期往返的定义准确。",
+      "translationAssessment": "公寓到车站步行只需短时间保留 short walk 的意义，未补目的地。",
+      "collocationAssessment": "commute by train／乘火车通勤自然。",
+      "promptAssessment": "commute 的日常主导义由交通方式和住处支持。",
+      "contrastAndUseAssessment": "contrast 正确强调经常往返；个人通勤描述适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-affordable",
+      "verdict": "pass",
+      "definitionAssessment": "负担得起、在支付能力内准确，不等同于廉价。",
+      "translationAssessment": "市中心附近及更多可负担住房的愿望准确。",
+      "collocationAssessment": "affordable housing／价格可负担的住房可接受。",
+      "promptAssessment": "affordable 意义集中，足够。",
+      "contrastAndUseAssessment": "contrast 的收入预算依赖关系准确；住房价格评价适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-convenient",
+      "verdict": "pass",
+      "definitionAssessment": "方便、省事的定义准确。",
+      "translationAssessment": "公寓位置便利的两个原因均保留。",
+      "collocationAssessment": "a convenient location／便利的地点准确。",
+      "promptAssessment": "convenient 主要义清楚，例句排除舒适感。",
+      "contrastAndUseAssessment": "contrast 对 convenient／comfortable 的区分准确；地点评价适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-reliable",
+      "verdict": "pass",
+      "definitionAssessment": "可靠、稳定按预期发挥作用准确。",
+      "translationAssessment": "公交服务可靠导致很少迟到的因果表达准确。",
+      "collocationAssessment": "a reliable bus service／可靠的公交服务自然。",
+      "promptAssessment": "reliable 提示可靠性，足够。",
+      "contrastAndUseAssessment": "contrast 不把可靠等同速度或班次频率，准确；公交评价适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-crowded",
+      "verdict": "pass",
+      "definitionAssessment": "拥挤、人多空间不足准确。",
+      "translationAssessment": "有时等下一班车以避开拥挤车厢准确。",
+      "collocationAssessment": "a crowded carriage／拥挤的车厢自然。",
+      "promptAssessment": "crowded 主导拥挤义明确。",
+      "contrastAndUseAssessment": "contrast 对 crowded／busy 的区分准确；车厢拥挤可用于 speaking 的出行描述。",
+      "issues": []
+    },
+    {
+      "id": "r20-drawback",
+      "verdict": "pass",
+      "definitionAssessment": "不利特点、缺点准确。",
+      "translationAssessment": "去工作地点路途很长与独立推断一致。",
+      "collocationAssessment": "the main drawback／主要缺点自然。",
+      "promptAssessment": "drawback 主导不利之处义明确。",
+      "contrastAndUseAssessment": "contrast 对不利特点和一般实施困难的说明可接受；居住权衡适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-priority",
+      "verdict": "pass",
+      "definitionAssessment": "优先考虑或处理的事情准确。",
+      "translationAssessment": "当前找靠近学院的住处这一优先事项准确。",
+      "collocationAssessment": "my top priority／我最优先考虑的事自然。",
+      "promptAssessment": "priority 主导优先事项义，由例句明确。",
+      "contrastAndUseAssessment": "contrast 不把优先事项等同个人最喜欢的事，准确；目标解释适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-adapt",
+      "verdict": "pass",
+      "definitionAssessment": "调整自身以适应新条件准确，符合 adapt to 的不及物用法。",
+      "translationAssessment": "离家后花几周适应新日常安排准确。",
+      "collocationAssessment": "adapt to a new routine／适应新的日常安排自然。",
+      "promptAssessment": "裸词可有改编义，但本卡的 adapt to 搭配与例句充分界定义项；未发现前次九项级别的问题。",
+      "contrastAndUseAssessment": "contrast 对 adapt／adopt 的区别准确；适应生活描述适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-balance",
+      "verdict": "pass",
+      "definitionAssessment": "兼顾工作学习与分配精力准确。",
+      "translationAssessment": "提前安排一周以兼顾工作学习，目的关系准确。",
+      "collocationAssessment": "balance work and study／兼顾工作与学习自然。",
+      "promptAssessment": "balance work and study 明确动词协调义。",
+      "contrastAndUseAssessment": "contrast 正确排除账户余额和身体平衡；时间安排适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-commitment",
+      "verdict": "pass",
+      "definitionAssessment": "已承担、需履行的责任或事务准确。",
+      "translationAssessment": "家庭事务限制课程时间的意思准确；没有补六点是上午还是下午。",
+      "collocationAssessment": "family commitments／家庭责任或事务准确。",
+      "promptAssessment": "family commitments 已明确责任事务义，解决投入程度等歧义。",
+      "contrastAndUseAssessment": "contrast 正确；个人时间限制适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-book-reserve",
+      "verdict": "pass",
+      "definitionAssessment": "预订名额或位置的动词义准确。",
+      "translationAssessment": "与朋友预订周末摄影课程名额准确，没有补订了两个名额。",
+      "collocationAssessment": "book a place／预订一个名额自然。",
+      "promptAssessment": "book a place 明确预订动词义。",
+      "contrastAndUseAssessment": "contrast 正确区分书籍名词；活动安排适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-book-volume",
+      "verdict": "pass",
+      "definitionAssessment": "此提示限定 reference book，供查阅信息的参考书释义准确。",
+      "translationAssessment": "书桌上放参考书、需要简明解释时查阅准确。",
+      "collocationAssessment": "a reference book／一本参考书自然。",
+      "promptAssessment": "a reference book 明确书籍名词义。",
+      "contrastAndUseAssessment": "contrast 正确；学习资源介绍适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-evidence",
+      "verdict": "pass",
+      "definitionAssessment": "支持判断或结论的信息／证据准确。",
+      "translationAssessment": "little evidence 的不足含义可自然译为几乎没有证据；仍未断言绝对零证据。",
+      "collocationAssessment": "evidence for a claim／支持主张的证据自然。",
+      "promptAssessment": "evidence 主导证据义，足够。",
+      "contrastAndUseAssessment": "contrast 通常不可数、论点与论据分开的说明准确；论证阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-assumption",
+      "verdict": "pass",
+      "definitionAssessment": "暂时视为成立的前提假定准确。",
+      "translationAssessment": "每个家庭都能上网作为模型前提保留，未当作已证事实。",
+      "collocationAssessment": "an underlying assumption／隐含前提假定是本模型语境可接受译法。",
+      "promptAssessment": "assumption 的前提假定义明确。",
+      "contrastAndUseAssessment": "contrast 正确说明未经证实；前提识别适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-bias",
+      "verdict": "needs_revision",
+      "definitionAssessment": "需修订：统计偏差是研究结果或估计对真实情况的系统性偏离／倾向，而不是导致这种偏离的因素；当前释义混淆偏差与偏差来源。",
+      "translationAssessment": "新增 intended to represent all residents 已译出，车主样本与全体居民目标的差异明确，第一阶段例证风险已解决。",
+      "collocationAssessment": "sampling bias／抽样偏差准确。",
+      "promptAssessment": "sampling bias 已排除个人偏见等竞争义。",
+      "contrastAndUseAssessment": "contrast 正确排除个人偏见；样本局限适合 reading，新英文例句语法自然。",
+      "issues": [
+        {
+          "category": "definition",
+          "severity": "moderate",
+          "detail": "bias 在此是系统性偏差或偏离倾向；使研究结果偏离的因素是偏差来源，不是偏差本身。",
+          "suggestedChange": "改为：n. 偏差；研究结果或估计系统性偏离真实情况的倾向。",
+          "source": "https://www.nist.gov/glossary-term/19181"
+        }
+      ]
+    },
+    {
+      "id": "r20-correlation",
+      "verdict": "pass",
+      "definitionAssessment": "变量共同变化的统计关系／相关性准确。",
+      "translationAssessment": "学习时间和测验分数正相关、不确立因果均准确。",
+      "collocationAssessment": "a positive correlation／正相关自然。",
+      "promptAssessment": "correlation 的统计关系义由例句明确。",
+      "contrastAndUseAssessment": "contrast 正确区分相关与因果；变量关系阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-consequence",
+      "verdict": "pass",
+      "definitionAssessment": "行为或情况带来的结果准确，未限定必然负面。",
+      "translationAssessment": "封路带来附近商店生意增加的非预期结果准确，trade 未误当国际贸易。",
+      "collocationAssessment": "an unintended consequence／非预期后果准确。",
+      "promptAssessment": "consequence 主导结果义明确。",
+      "contrastAndUseAssessment": "contrast 正确区分结果与原因及正负结果；因果链阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-indicator",
+      "verdict": "pass",
+      "definitionAssessment": "显示状态或变化的量或迹象／指标准确。",
+      "translationAssessment": "收入是一个生活水平指标、不能涵盖福祉全部方面准确。",
+      "collocationAssessment": "an indicator of living standards／生活水平的一个指标自然。",
+      "promptAssessment": "裸词另有转向灯义，但学术场景和搭配明确限定指标；当前提示未产生实际答案冲突。",
+      "contrastAndUseAssessment": "contrast 单一指标的局限正确；指标阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-estimate",
+      "verdict": "pass",
+      "definitionAssessment": "根据已有信息估算数量或大小准确，成本估算属于此义。",
+      "translationAssessment": "利用三个类似项目的数据估算湿地恢复成本准确。",
+      "collocationAssessment": "estimate the cost／估算成本自然。",
+      "promptAssessment": "estimate the cost 已明确动词，解决词性歧义。",
+      "contrastAndUseAssessment": "contrast 近似判断而非保证最终精确值正确；估算理解适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-figure-number",
+      "verdict": "pass",
+      "definitionAssessment": "销售数量或金额的数值准确，单位由语境决定。",
+      "translationAssessment": "英镑单位落实为第一季度销售额两百万，未译成件数。",
+      "collocationAssessment": "a sales figure／一个销售数值语义准确；英语搭配自然。",
+      "promptAssessment": "a sales figure 明确数字数据义。",
+      "contrastAndUseAssessment": "contrast 正确排除人物图示、提醒单位；报告读取适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-figure-person",
+      "verdict": "pass",
+      "definitionAssessment": "本提示 public figure 下，受到公众关注的知名人物准确。",
+      "translationAssessment": "作者／作家为公众人物，受邀在电视讨论教育准确。",
+      "collocationAssessment": "a public figure／一位公众人物自然。",
+      "promptAssessment": "a public figure 明确人物义。",
+      "contrastAndUseAssessment": "contrast 人物与数据区分正确；人物介绍阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-sustainable",
+      "verdict": "pass",
+      "definitionAssessment": "长期延续而不耗竭资源的可持续义准确。",
+      "translationAssessment": "资源可持续利用、后代受益的目的关系准确。",
+      "collocationAssessment": "sustainable use of resources／资源的可持续利用自然。",
+      "promptAssessment": "sustainable 主导可持续义，资源例句明确环境语境。",
+      "contrastAndUseAssessment": "contrast 不将环保标签等同可持续正确；公共议题适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-demand",
+      "verdict": "pass",
+      "definitionAssessment": "市场住房需求的名词义准确。",
+      "translationAssessment": "人口迁入增加住房需求的关系准确。",
+      "collocationAssessment": "demand for housing／住房需求自然。",
+      "promptAssessment": "demand for housing 明确市场需求义。",
+      "contrastAndUseAssessment": "contrast 正确排除强硬要求；需求阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-access",
+      "verdict": "pass",
+      "definitionAssessment": "获得或使用服务的机会能力／可及性准确。",
+      "translationAssessment": "公交线路改善村民获得服务的便利准确，未说服务质量必定改善。",
+      "collocationAssessment": "access to services／获得服务的机会准确。",
+      "promptAssessment": "access to services 明确名词可及性义。",
+      "contrastAndUseAssessment": "contrast 不把可及性等同已经使用正确；公共服务议题适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-account-for",
+      "verdict": "pass",
+      "definitionAssessment": "占整体一部分的短语动词义准确。",
+      "translationAssessment": "公交出行占所有出行次数四成准确，分母未变为人数。",
+      "collocationAssessment": "account for a share of the total／占总量的一部分自然。",
+      "promptAssessment": "account for a share 明确份额义。",
+      "contrastAndUseAssessment": "contrast 正确排除解释原因，提醒总量；图表比例适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-whereas",
+      "verdict": "pass",
+      "definitionAssessment": "对比事实的连接词而准确。",
+      "translationAssessment": "同一时期铁路增加、汽车减少准确。",
+      "collocationAssessment": "X increased, whereas Y decreased 是自然可迁移的对比句型，中译准确。",
+      "promptAssessment": "whereas 主导对比连接义，足够。",
+      "contrastAndUseAssessment": "contrast 不表示时间先后或因果正确；图表比较适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-respectively",
+      "verdict": "pass",
+      "definitionAssessment": "按列出顺序对应的分别地准确。",
+      "translationAssessment": "两地对应两万和三万，数值与顺序准确。",
+      "collocationAssessment": "X and Y were A and B, respectively 结构和译法准确。",
+      "promptAssessment": "respectively 的对应义集中，足够。",
+      "contrastAndUseAssessment": "contrast 正确强调顺序；成对数据描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-outweigh",
+      "verdict": "pass",
+      "definitionAssessment": "重要性或影响超过准确，不是数量更多。",
+      "translationAssessment": "定时公交的收益／益处超过运营成本准确；收益在此可广义理解为 benefit，不限定票款收入。",
+      "collocationAssessment": "the benefits outweigh the costs／收益超过成本可接受。",
+      "promptAssessment": "outweigh 主导权衡超过义，例句清楚。",
+      "contrastAndUseAssessment": "contrast 对重要性影响而非好处数量的说明正确；利弊论证适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-allocate",
+      "verdict": "pass",
+      "definitionAssessment": "为特定用途分配资源准确。",
+      "translationAssessment": "地方议会应给现有公园维护更多资金的建议准确。",
+      "collocationAssessment": "allocate funds to／向……分配资金正确；例句 to maintaining 接动名词合法。",
+      "promptAssessment": "allocate 主导分配资源义，足够。",
+      "contrastAndUseAssessment": "contrast 分配不等于资金已花完正确；公共预算论证适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-subsidise",
+      "verdict": "pass",
+      "definitionAssessment": "补贴部分成本、降低负担准确。",
+      "translationAssessment": "政府可以补贴公交使票价更可负担准确，could 未变成已经施行。",
+      "collocationAssessment": "subsidise public transport／补贴公共交通自然。",
+      "promptAssessment": "subsidise 主导财政补贴义明确。",
+      "contrastAndUseAssessment": "contrast 不必支付全部成本、英美拼写对应均正确；交通政策建议适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-per-capita",
+      "verdict": "pass",
+      "definitionAssessment": "按每个人计算／人均准确，此短语可作副词或形容词修饰。",
+      "translationAssessment": "总用水增加而人均用水下降的对照准确。",
+      "collocationAssessment": "water use per capita／人均用水量自然。",
+      "promptAssessment": "per capita 人均义明确。",
+      "contrastAndUseAssessment": "contrast 正确区分总量与人均；人均指标描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-plateau",
+      "verdict": "pass",
+      "definitionAssessment": "上升后趋稳的动词义准确，吻合本例所选用法。",
+      "translationAssessment": "三年增长后，年访客人数在约五万趋稳准确，未当作累计人数。",
+      "collocationAssessment": "plateau at a level／在某一水平趋稳自然。",
+      "promptAssessment": "visitor numbers plateau 已明确动词趋稳义，排除高原名词义。",
+      "contrastAndUseAssessment": "contrast 趋稳不等于下降正确；趋势图描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-decline-fall",
+      "verdict": "pass",
+      "definitionAssessment": "需求减少／下降的名词义准确。",
+      "translationAssessment": "纸质地图需求下降及公司报告这一信息来源准确。",
+      "collocationAssessment": "a decline in demand／需求的下降自然。",
+      "promptAssessment": "a decline in demand 明确名词下降义。",
+      "contrastAndUseAssessment": "contrast 与拒绝动词分开正确；需求趋势描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-decline-refuse",
+      "verdict": "pass",
+      "definitionAssessment": "拒绝参与、通常礼貌或正式的动词义准确。",
+      "translationAssessment": "几位居民拒绝调查，观点未记录的关系准确。",
+      "collocationAssessment": "decline to participate／拒绝参与自然。",
+      "promptAssessment": "decline to participate 明确拒绝义。",
+      "contrastAndUseAssessment": "contrast 对 to 后动词原形和非下降义的说明正确；研究参与说明适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-in-contrast",
+      "verdict": "pass",
+      "definitionAssessment": "引出不同事实的对比短语义准确；to 短语直接明确比较对象。",
+      "translationAssessment": "市中心与外围郊区自行车道数量的对照准确，very few 未改成完全没有。",
+      "collocationAssessment": "in contrast to／与……相比自然。",
+      "promptAssessment": "in contrast 的对比义清楚。",
+      "contrastAndUseAssessment": "contrast 明确比较对象及与 therefore 的差异正确；对照描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-tend-to",
+      "verdict": "pass",
+      "definitionAssessment": "往往会、通常倾向于的非绝对规律准确。",
+      "translationAssessment": "时间安排灵活者避开最忙时段的趋势准确，未补所有人或工作日限定。",
+      "collocationAssessment": "tend to do something／往往会做某事自然。",
+      "promptAssessment": "tend to 由动词原形搭配限定趋势义。",
+      "contrastAndUseAssessment": "contrast 正确排除 always；谨慎规律陈述适合 writing。",
+      "issues": []
+    }
+  ],
+  "answerReview": [
+    {
+      "id": "r20-reservation",
+      "verdict": "pass",
+      "definitionAssessment": "预订义及保留资源的解释与独立推断一致。",
+      "translationAssessment": "确认、电子邮件与周五之前均准确。",
+      "collocationAssessment": "confirm a reservation／确认预订自然。",
+      "promptAssessment": "confirm a reservation 已排除保留意见等主要竞争义。",
+      "contrastAndUseAssessment": "contrast 正确排除保留意见；预订确认适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-deposit",
+      "verdict": "pass",
+      "definitionAssessment": "押金、履约担保准确，不误当银行存款或全部租金。",
+      "translationAssessment": "退钥匙、房间完好与退款条件完整。",
+      "collocationAssessment": "a refundable deposit／可退还的押金自然。",
+      "promptAssessment": "a refundable deposit 已消除原裸词的主要歧义。",
+      "contrastAndUseAssessment": "contrast 对押金和租金、退款约定的区分正确；租房付款场景适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-charge-fee",
+      "verdict": "pass",
+      "definitionAssessment": "收费动词义与入场项目一致。",
+      "translationAssessment": "收费与十二岁以下免费条件准确，无年龄边界错置。",
+      "collocationAssessment": "charge for entry／收取入场费自然。",
+      "promptAssessment": "charge for entry 有效区别充电等义。",
+      "contrastAndUseAssessment": "contrast 对 charge for 后接收费项目的解释正确；参观费用适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-charge-power",
+      "verdict": "pass",
+      "definitionAssessment": "充电动词义及电池储能解释准确。",
+      "translationAssessment": "最终译文以等候区对应 waiting area，没有擅自限定为交通候车场景；充电地点、手机对象和桌子位置准确。",
+      "collocationAssessment": "charge a phone／给手机充电自然。",
+      "promptAssessment": "phone 作宾语有效限定充电义。",
+      "contrastAndUseAssessment": "contrast 正确指出 phone 为充电对象；询问充电处适合 listening，未限定一定在车站。",
+      "issues": [],
+      "resolution": {
+        "status": "resolved",
+        "originalIssue": "waiting area 被收窄译成候车区。",
+        "verifiedChange": "数据文件现为：您可以在等候区旁边的桌子处给手机充电。",
+        "assessment": "等候区保留英文场景范围，原翻译问题解决。"
+      }
+    },
+    {
+      "id": "r20-extension",
+      "verdict": "pass",
+      "definitionAssessment": "延期及完成期限延长准确。",
+      "translationAssessment": "作业、申请时间和截止日期关系准确。",
+      "collocationAssessment": "request an extension／申请延期自然。",
+      "promptAssessment": "request an extension 已有效排除分机、扩建等义。",
+      "contrastAndUseAssessment": "contrast 正确；作业延期是可信 listening 服务场景。",
+      "issues": []
+    },
+    {
+      "id": "r20-availability",
+      "verdict": "pass",
+      "definitionAssessment": "可供使用或预订的情况准确，非可负担性。",
+      "translationAssessment": "周六晚上、单人间和空房查询关系准确。",
+      "collocationAssessment": "check availability／查询空位或余量可覆盖预订资源。",
+      "promptAssessment": "裸词没有像 charge 那样强烈竞争义；例句和场景充分限定客房空余情况。",
+      "contrastAndUseAssessment": "contrast 对 availability 与负担程度的区别正确；住宿查询适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-venue",
+      "verdict": "pass",
+      "definitionAssessment": "活动举办地点／会场准确。",
+      "translationAssessment": "地点变更和工作坊改到图书馆均准确。",
+      "collocationAssessment": "a change of venue／举办地点的变更自然。",
+      "promptAssessment": "venue 的主要普通义即活动场所，提示足够。",
+      "contrastAndUseAssessment": "contrast 不把场所当路线；活动地点变更适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-enrol",
+      "verdict": "pass",
+      "definitionAssessment": "课程或机构报名义与独立推断一致。",
+      "translationAssessment": "最终译文将报名持续期限表达为开放至周一，保留 until Monday 的截至意义；晚间课程和接待处办理均准确，没有补出具体截止时刻或承诺周一全天开放。",
+      "collocationAssessment": "enrol on a course 是正确英式搭配，译为报名参加课程准确。",
+      "promptAssessment": "enrol 提示主导报名义，例句明确是课程。",
+      "contrastAndUseAssessment": "contrast 对英美拼写和报名不等于完成正确；报名期限适合 listening。",
+      "issues": [],
+      "resolution": {
+        "status": "resolved",
+        "originalIssue": "until Monday 被译为更严格的周一之前。",
+        "verifiedChange": "数据文件现为：晚间课程的报名开放至周一，您可在接待处办理。",
+        "assessment": "开放至周一保留原文期限表达，原问题解决。",
+        "source": "https://dictionary.cambridge.org/us/grammar/british-grammar/until"
+      }
+    },
+    {
+      "id": "r20-reschedule",
+      "verdict": "pass",
+      "definitionAssessment": "重新安排日期或时间准确，未误释成只能延期。",
+      "translationAssessment": "从周二下午提前到周一上午的方向、日期和时段准确。",
+      "collocationAssessment": "reschedule an appointment／重新安排预约时间自然。",
+      "promptAssessment": "reschedule 提示重排时间义。",
+      "contrastAndUseAssessment": "contrast 正确区分提前、延后与取消；预约变更适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-fare",
+      "verdict": "pass",
+      "definitionAssessment": "交通票价义准确。",
+      "translationAssessment": "往返十八英镑与有效至周日均准确。",
+      "collocationAssessment": "a return fare／往返票价是自然英式表达。",
+      "promptAssessment": "fare 在交通场景主导票价义，搭配和例句足以明确。",
+      "contrastAndUseAssessment": "contrast 的 fare／fee 区别适合学习用途；售票 listening 场景自然。",
+      "issues": []
+    },
+    {
+      "id": "r20-platform",
+      "verdict": "pass",
+      "definitionAssessment": "铁路站台义准确。",
+      "translationAssessment": "机场方向、六号站台和十点半全部准确，没有补上午或下午。",
+      "collocationAssessment": "leave from platform six／从六号站台发车自然。",
+      "promptAssessment": "a train platform 已排除网络平台等竞争义。",
+      "contrastAndUseAssessment": "contrast 正确；站台广播适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-transfer",
+      "verdict": "pass",
+      "definitionAssessment": "途中换乘公共交通工具准确。",
+      "translationAssessment": "中央车站换乘另一班火车到大学的路线准确。",
+      "collocationAssessment": "transfer to another train／换乘另一班火车是可接受的自然用法。",
+      "promptAssessment": "transfer to another train 已明确换乘义，排除转账、调职。",
+      "contrastAndUseAssessment": "contrast 正确；路线说明适合 listening。",
+      "issues": []
+    },
+    {
+      "id": "r20-commute",
+      "verdict": "pass",
+      "definitionAssessment": "住所与工作或学习地点定期往返的定义准确。",
+      "translationAssessment": "公寓到车站步行只需短时间保留 short walk 的意义，未补目的地。",
+      "collocationAssessment": "commute by train／乘火车通勤自然。",
+      "promptAssessment": "commute 的日常主导义由交通方式和住处支持。",
+      "contrastAndUseAssessment": "contrast 正确强调经常往返；个人通勤描述适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-affordable",
+      "verdict": "pass",
+      "definitionAssessment": "负担得起、在支付能力内准确，不等同于廉价。",
+      "translationAssessment": "市中心附近及更多可负担住房的愿望准确。",
+      "collocationAssessment": "affordable housing／价格可负担的住房可接受。",
+      "promptAssessment": "affordable 意义集中，足够。",
+      "contrastAndUseAssessment": "contrast 的收入预算依赖关系准确；住房价格评价适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-convenient",
+      "verdict": "pass",
+      "definitionAssessment": "方便、省事的定义准确。",
+      "translationAssessment": "公寓位置便利的两个原因均保留。",
+      "collocationAssessment": "a convenient location／便利的地点准确。",
+      "promptAssessment": "convenient 主要义清楚，例句排除舒适感。",
+      "contrastAndUseAssessment": "contrast 对 convenient／comfortable 的区分准确；地点评价适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-reliable",
+      "verdict": "pass",
+      "definitionAssessment": "可靠、稳定按预期发挥作用准确。",
+      "translationAssessment": "公交服务可靠导致很少迟到的因果表达准确。",
+      "collocationAssessment": "a reliable bus service／可靠的公交服务自然。",
+      "promptAssessment": "reliable 提示可靠性，足够。",
+      "contrastAndUseAssessment": "contrast 不把可靠等同速度或班次频率，准确；公交评价适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-crowded",
+      "verdict": "pass",
+      "definitionAssessment": "拥挤、人多空间不足准确。",
+      "translationAssessment": "有时等下一班车以避开拥挤车厢准确。",
+      "collocationAssessment": "a crowded carriage／拥挤的车厢自然。",
+      "promptAssessment": "crowded 主导拥挤义明确。",
+      "contrastAndUseAssessment": "contrast 对 crowded／busy 的区分准确；车厢拥挤可用于 speaking 的出行描述。",
+      "issues": []
+    },
+    {
+      "id": "r20-drawback",
+      "verdict": "pass",
+      "definitionAssessment": "不利特点、缺点准确。",
+      "translationAssessment": "去工作地点路途很长与独立推断一致。",
+      "collocationAssessment": "the main drawback／主要缺点自然。",
+      "promptAssessment": "drawback 主导不利之处义明确。",
+      "contrastAndUseAssessment": "contrast 对不利特点和一般实施困难的说明可接受；居住权衡适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-priority",
+      "verdict": "pass",
+      "definitionAssessment": "优先考虑或处理的事情准确。",
+      "translationAssessment": "当前找靠近学院的住处这一优先事项准确。",
+      "collocationAssessment": "my top priority／我最优先考虑的事自然。",
+      "promptAssessment": "priority 主导优先事项义，由例句明确。",
+      "contrastAndUseAssessment": "contrast 不把优先事项等同个人最喜欢的事，准确；目标解释适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-adapt",
+      "verdict": "pass",
+      "definitionAssessment": "调整自身以适应新条件准确，符合 adapt to 的不及物用法。",
+      "translationAssessment": "离家后花几周适应新日常安排准确。",
+      "collocationAssessment": "adapt to a new routine／适应新的日常安排自然。",
+      "promptAssessment": "裸词可有改编义，但本卡的 adapt to 搭配与例句充分界定义项；未发现前次九项级别的问题。",
+      "contrastAndUseAssessment": "contrast 对 adapt／adopt 的区别准确；适应生活描述适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-balance",
+      "verdict": "pass",
+      "definitionAssessment": "兼顾工作学习与分配精力准确。",
+      "translationAssessment": "提前安排一周以兼顾工作学习，目的关系准确。",
+      "collocationAssessment": "balance work and study／兼顾工作与学习自然。",
+      "promptAssessment": "balance work and study 明确动词协调义。",
+      "contrastAndUseAssessment": "contrast 正确排除账户余额和身体平衡；时间安排适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-commitment",
+      "verdict": "pass",
+      "definitionAssessment": "已承担、需履行的责任或事务准确。",
+      "translationAssessment": "家庭事务限制课程时间的意思准确；没有补六点是上午还是下午。",
+      "collocationAssessment": "family commitments／家庭责任或事务准确。",
+      "promptAssessment": "family commitments 已明确责任事务义，解决投入程度等歧义。",
+      "contrastAndUseAssessment": "contrast 正确；个人时间限制适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-book-reserve",
+      "verdict": "pass",
+      "definitionAssessment": "预订名额或位置的动词义准确。",
+      "translationAssessment": "与朋友预订周末摄影课程名额准确，没有补订了两个名额。",
+      "collocationAssessment": "book a place／预订一个名额自然。",
+      "promptAssessment": "book a place 明确预订动词义。",
+      "contrastAndUseAssessment": "contrast 正确区分书籍名词；活动安排适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-book-volume",
+      "verdict": "pass",
+      "definitionAssessment": "此提示限定 reference book，供查阅信息的参考书释义准确。",
+      "translationAssessment": "书桌上放参考书、需要简明解释时查阅准确。",
+      "collocationAssessment": "a reference book／一本参考书自然。",
+      "promptAssessment": "a reference book 明确书籍名词义。",
+      "contrastAndUseAssessment": "contrast 正确；学习资源介绍适合 speaking。",
+      "issues": []
+    },
+    {
+      "id": "r20-evidence",
+      "verdict": "pass",
+      "definitionAssessment": "支持判断或结论的信息／证据准确。",
+      "translationAssessment": "little evidence 的不足含义可自然译为几乎没有证据；仍未断言绝对零证据。",
+      "collocationAssessment": "evidence for a claim／支持主张的证据自然。",
+      "promptAssessment": "evidence 主导证据义，足够。",
+      "contrastAndUseAssessment": "contrast 通常不可数、论点与论据分开的说明准确；论证阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-assumption",
+      "verdict": "pass",
+      "definitionAssessment": "暂时视为成立的前提假定准确。",
+      "translationAssessment": "每个家庭都能上网作为模型前提保留，未当作已证事实。",
+      "collocationAssessment": "an underlying assumption／隐含前提假定是本模型语境可接受译法。",
+      "promptAssessment": "assumption 的前提假定义明确。",
+      "contrastAndUseAssessment": "contrast 正确说明未经证实；前提识别适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-bias",
+      "verdict": "pass",
+      "definitionAssessment": "最终释义将统计偏差定义为研究结果或估计系统性偏离真实情况的倾向，正确区分偏差本身与导致偏差的因素；与抽样偏差例句一致。",
+      "translationAssessment": "新增 intended to represent all residents 已译出，车主样本与全体居民目标的差异明确，第一阶段例证风险已解决。",
+      "collocationAssessment": "sampling bias／抽样偏差准确。",
+      "promptAssessment": "sampling bias 已排除个人偏见等竞争义。",
+      "contrastAndUseAssessment": "contrast 正确排除个人偏见；样本局限适合 reading，新英文例句语法自然。",
+      "issues": [],
+      "resolution": {
+        "status": "resolved",
+        "originalIssue": "偏差本身被定义成导致偏差的因素。",
+        "verifiedChange": "数据文件现为：n. 偏差；研究结果或估计系统性偏离真实情况的倾向。",
+        "assessment": "系统性偏离倾向与统计 bias 相符，原定义问题解决；全体居民目标与仅车主样本的例证也保持准确。",
+        "source": "https://www.nist.gov/glossary-term/19181"
+      }
+    },
+    {
+      "id": "r20-correlation",
+      "verdict": "pass",
+      "definitionAssessment": "变量共同变化的统计关系／相关性准确。",
+      "translationAssessment": "学习时间和测验分数正相关、不确立因果均准确。",
+      "collocationAssessment": "a positive correlation／正相关自然。",
+      "promptAssessment": "correlation 的统计关系义由例句明确。",
+      "contrastAndUseAssessment": "contrast 正确区分相关与因果；变量关系阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-consequence",
+      "verdict": "pass",
+      "definitionAssessment": "行为或情况带来的结果准确，未限定必然负面。",
+      "translationAssessment": "封路带来附近商店生意增加的非预期结果准确，trade 未误当国际贸易。",
+      "collocationAssessment": "an unintended consequence／非预期后果准确。",
+      "promptAssessment": "consequence 主导结果义明确。",
+      "contrastAndUseAssessment": "contrast 正确区分结果与原因及正负结果；因果链阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-indicator",
+      "verdict": "pass",
+      "definitionAssessment": "显示状态或变化的量或迹象／指标准确。",
+      "translationAssessment": "收入是一个生活水平指标、不能涵盖福祉全部方面准确。",
+      "collocationAssessment": "an indicator of living standards／生活水平的一个指标自然。",
+      "promptAssessment": "裸词另有转向灯义，但学术场景和搭配明确限定指标；当前提示未产生实际答案冲突。",
+      "contrastAndUseAssessment": "contrast 单一指标的局限正确；指标阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-estimate",
+      "verdict": "pass",
+      "definitionAssessment": "根据已有信息估算数量或大小准确，成本估算属于此义。",
+      "translationAssessment": "利用三个类似项目的数据估算湿地恢复成本准确。",
+      "collocationAssessment": "estimate the cost／估算成本自然。",
+      "promptAssessment": "estimate the cost 已明确动词，解决词性歧义。",
+      "contrastAndUseAssessment": "contrast 近似判断而非保证最终精确值正确；估算理解适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-figure-number",
+      "verdict": "pass",
+      "definitionAssessment": "销售数量或金额的数值准确，单位由语境决定。",
+      "translationAssessment": "英镑单位落实为第一季度销售额两百万，未译成件数。",
+      "collocationAssessment": "a sales figure／一个销售数值语义准确；英语搭配自然。",
+      "promptAssessment": "a sales figure 明确数字数据义。",
+      "contrastAndUseAssessment": "contrast 正确排除人物图示、提醒单位；报告读取适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-figure-person",
+      "verdict": "pass",
+      "definitionAssessment": "本提示 public figure 下，受到公众关注的知名人物准确。",
+      "translationAssessment": "作者／作家为公众人物，受邀在电视讨论教育准确。",
+      "collocationAssessment": "a public figure／一位公众人物自然。",
+      "promptAssessment": "a public figure 明确人物义。",
+      "contrastAndUseAssessment": "contrast 人物与数据区分正确；人物介绍阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-sustainable",
+      "verdict": "pass",
+      "definitionAssessment": "长期延续而不耗竭资源的可持续义准确。",
+      "translationAssessment": "资源可持续利用、后代受益的目的关系准确。",
+      "collocationAssessment": "sustainable use of resources／资源的可持续利用自然。",
+      "promptAssessment": "sustainable 主导可持续义，资源例句明确环境语境。",
+      "contrastAndUseAssessment": "contrast 不将环保标签等同可持续正确；公共议题适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-demand",
+      "verdict": "pass",
+      "definitionAssessment": "市场住房需求的名词义准确。",
+      "translationAssessment": "人口迁入增加住房需求的关系准确。",
+      "collocationAssessment": "demand for housing／住房需求自然。",
+      "promptAssessment": "demand for housing 明确市场需求义。",
+      "contrastAndUseAssessment": "contrast 正确排除强硬要求；需求阅读适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-access",
+      "verdict": "pass",
+      "definitionAssessment": "获得或使用服务的机会能力／可及性准确。",
+      "translationAssessment": "公交线路改善村民获得服务的便利准确，未说服务质量必定改善。",
+      "collocationAssessment": "access to services／获得服务的机会准确。",
+      "promptAssessment": "access to services 明确名词可及性义。",
+      "contrastAndUseAssessment": "contrast 不把可及性等同已经使用正确；公共服务议题适合 reading。",
+      "issues": []
+    },
+    {
+      "id": "r20-account-for",
+      "verdict": "pass",
+      "definitionAssessment": "占整体一部分的短语动词义准确。",
+      "translationAssessment": "公交出行占所有出行次数四成准确，分母未变为人数。",
+      "collocationAssessment": "account for a share of the total／占总量的一部分自然。",
+      "promptAssessment": "account for a share 明确份额义。",
+      "contrastAndUseAssessment": "contrast 正确排除解释原因，提醒总量；图表比例适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-whereas",
+      "verdict": "pass",
+      "definitionAssessment": "对比事实的连接词而准确。",
+      "translationAssessment": "同一时期铁路增加、汽车减少准确。",
+      "collocationAssessment": "X increased, whereas Y decreased 是自然可迁移的对比句型，中译准确。",
+      "promptAssessment": "whereas 主导对比连接义，足够。",
+      "contrastAndUseAssessment": "contrast 不表示时间先后或因果正确；图表比较适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-respectively",
+      "verdict": "pass",
+      "definitionAssessment": "按列出顺序对应的分别地准确。",
+      "translationAssessment": "两地对应两万和三万，数值与顺序准确。",
+      "collocationAssessment": "X and Y were A and B, respectively 结构和译法准确。",
+      "promptAssessment": "respectively 的对应义集中，足够。",
+      "contrastAndUseAssessment": "contrast 正确强调顺序；成对数据描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-outweigh",
+      "verdict": "pass",
+      "definitionAssessment": "重要性或影响超过准确，不是数量更多。",
+      "translationAssessment": "定时公交的收益／益处超过运营成本准确；收益在此可广义理解为 benefit，不限定票款收入。",
+      "collocationAssessment": "the benefits outweigh the costs／收益超过成本可接受。",
+      "promptAssessment": "outweigh 主导权衡超过义，例句清楚。",
+      "contrastAndUseAssessment": "contrast 对重要性影响而非好处数量的说明正确；利弊论证适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-allocate",
+      "verdict": "pass",
+      "definitionAssessment": "为特定用途分配资源准确。",
+      "translationAssessment": "地方议会应给现有公园维护更多资金的建议准确。",
+      "collocationAssessment": "allocate funds to／向……分配资金正确；例句 to maintaining 接动名词合法。",
+      "promptAssessment": "allocate 主导分配资源义，足够。",
+      "contrastAndUseAssessment": "contrast 分配不等于资金已花完正确；公共预算论证适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-subsidise",
+      "verdict": "pass",
+      "definitionAssessment": "补贴部分成本、降低负担准确。",
+      "translationAssessment": "政府可以补贴公交使票价更可负担准确，could 未变成已经施行。",
+      "collocationAssessment": "subsidise public transport／补贴公共交通自然。",
+      "promptAssessment": "subsidise 主导财政补贴义明确。",
+      "contrastAndUseAssessment": "contrast 不必支付全部成本、英美拼写对应均正确；交通政策建议适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-per-capita",
+      "verdict": "pass",
+      "definitionAssessment": "按每个人计算／人均准确，此短语可作副词或形容词修饰。",
+      "translationAssessment": "总用水增加而人均用水下降的对照准确。",
+      "collocationAssessment": "water use per capita／人均用水量自然。",
+      "promptAssessment": "per capita 人均义明确。",
+      "contrastAndUseAssessment": "contrast 正确区分总量与人均；人均指标描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-plateau",
+      "verdict": "pass",
+      "definitionAssessment": "上升后趋稳的动词义准确，吻合本例所选用法。",
+      "translationAssessment": "三年增长后，年访客人数在约五万趋稳准确，未当作累计人数。",
+      "collocationAssessment": "plateau at a level／在某一水平趋稳自然。",
+      "promptAssessment": "visitor numbers plateau 已明确动词趋稳义，排除高原名词义。",
+      "contrastAndUseAssessment": "contrast 趋稳不等于下降正确；趋势图描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-decline-fall",
+      "verdict": "pass",
+      "definitionAssessment": "需求减少／下降的名词义准确。",
+      "translationAssessment": "纸质地图需求下降及公司报告这一信息来源准确。",
+      "collocationAssessment": "a decline in demand／需求的下降自然。",
+      "promptAssessment": "a decline in demand 明确名词下降义。",
+      "contrastAndUseAssessment": "contrast 与拒绝动词分开正确；需求趋势描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-decline-refuse",
+      "verdict": "pass",
+      "definitionAssessment": "拒绝参与、通常礼貌或正式的动词义准确。",
+      "translationAssessment": "几位居民拒绝调查，观点未记录的关系准确。",
+      "collocationAssessment": "decline to participate／拒绝参与自然。",
+      "promptAssessment": "decline to participate 明确拒绝义。",
+      "contrastAndUseAssessment": "contrast 对 to 后动词原形和非下降义的说明正确；研究参与说明适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-in-contrast",
+      "verdict": "pass",
+      "definitionAssessment": "引出不同事实的对比短语义准确；to 短语直接明确比较对象。",
+      "translationAssessment": "市中心与外围郊区自行车道数量的对照准确，very few 未改成完全没有。",
+      "collocationAssessment": "in contrast to／与……相比自然。",
+      "promptAssessment": "in contrast 的对比义清楚。",
+      "contrastAndUseAssessment": "contrast 明确比较对象及与 therefore 的差异正确；对照描述适合 writing。",
+      "issues": []
+    },
+    {
+      "id": "r20-tend-to",
+      "verdict": "pass",
+      "definitionAssessment": "往往会、通常倾向于的非绝对规律准确。",
+      "translationAssessment": "时间安排灵活者避开最忙时段的趋势准确，未补所有人或工作日限定。",
+      "collocationAssessment": "tend to do something／往往会做某事自然。",
+      "promptAssessment": "tend to 由动词原形搭配限定趋势义。",
+      "contrastAndUseAssessment": "contrast 正确排除 always；谨慎规律陈述适合 writing。",
+      "issues": []
+    }
+  ],
+  "resolutions": {
+    "promptClarifications": [
+      "r20-reservation",
+      "r20-deposit",
+      "r20-extension",
+      "r20-platform",
+      "r20-transfer",
+      "r20-commitment",
+      "r20-bias",
+      "r20-estimate",
+      "r20-plateau"
+    ],
+    "samplingPopulation": "Explicitly specified all residents.",
+    "translationAndDefinitionFixes": [
+      "r20-charge-power: waiting area → 等候区",
+      "r20-enrol: until Monday → 报名开放至周一",
+      "r20-bias: factor causing deviation → tendency of systematic deviation"
+    ]
+  },
+  "references": [
+    {
+      "title": "Cambridge Grammar — Until",
+      "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/until"
+    },
+    {
+      "title": "NIST — Bias, Statistical",
+      "url": "https://www.nist.gov/glossary-term/19181"
+    }
+  ],
+  "verification": {
+    "typecheck": "pass: node node_modules/typescript/bin/tsc --noEmit",
+    "targetedLint": "pass: new content, adapter and new test",
+    "r20ContentAndComponents": "pass: 48 real flip callbacks; English/Chinese search; collocations; repeat add; seed content and previous FSRS/history preserved; review payload bound by SHA-256",
+    "flashcardRegression": "pass: 15 real FSRS model scenarios",
+    "sourceRegression": "pass: 275 canonical source-headword callback pairs plus word forms/lookup/withdraw behavior",
+    "onlineClientBuild": "pass: Vite online mode, 2131 modules; existing large-chunk warning remains",
+    "browser": "Real local IAB preview: clean local origin (0 initial cards), 60 bulk enrollment, charge a phone pre/post flip and bilingual collocation, Chinese search 公众人物, refresh retains revealed session. Final corrected card reviewed at 390×844; DOM clientWidth=scrollWidth=390. No production or user progress read. Temporary browser closed and viewport reset.",
+    "screenshots": [
+      "work/ielts-r20/desktop-flipped.jpg",
+      "work/ielts-r20/mobile-flipped.jpg"
+    ],
+    "notVerified": [
+      "Full release package/worker whitelist/deployment",
+      "Real mobile hardware",
+      "True offline reload and cross-device behavior"
+    ]
+  }
+}
