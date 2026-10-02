@@ -1,6 +1,6 @@
 /** Proposed interface only. Release owner chooses and implements shared wiring. */
 export type CourseId = 'nce1-1' | 'nce1-3' | 'nce1-5' | 'nce1-7' | 'nce1-9' | 'nce1-11' | 'nce1-13' | 'nce1-15' | 'nce1-17' | 'nce1-19' | 'nce1-21' | 'nce1-23' | 'nce1-25' | 'nce1-27' | 'nce1-29' | 'nce1-31' | 'nce1-33' | 'nce1-35' | 'nce1-37' | 'nce1-39' | 'nce1-41' | 'nce1-43' | 'nce1-45' | 'nce1-47' | 'nce1-49' | 'nce1-51' | 'nce1-53' | 'nce1-55' | 'nce1-57' | 'nce1-59' | 'nce1-61' | 'nce1-63' | 'nce1-65' | 'nce1-67' | 'nce1-69' | 'nce1-71' | 'nce1-73' | 'nce1-75' | 'nce1-77' | 'nce1-79' | 'nce1-81' | 'nce1-83';
-export type SourceKind = 'text' | 'audio' | 'comic';
+export type SourceKind = 'text' | 'audio' | 'comic' | 'video';
 export type Action =
  | {type:'draft'|'own-draft';value:string}
  | {type:'source';source:SourceKind}

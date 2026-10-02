@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowRight, ArrowUpRight, Check, CheckCircle2, ChevronLeft, Lightbulb, Lock, RotateCcw, X, Flag, BookOpen, ExternalLink } from 'lucide-react';
 import { nodes, unitNodes, unitById, originalSite, nodeById, questionsFor, courseUrl, resources, type MapNode } from './content';
 import {achieved, stable, nextReviewAt, unlockNode, startNode, learningLabel, manuallyUnlocked, isReady, changeStudyStep, restartQuiz, noteQuizHelp} from './model';
@@ -10,6 +10,9 @@ import {CourseLoopWorkspace} from '../app/course-loop-ui';
 import {CourseLoopHeadingSummary} from '../app/course-loop-summary-ui';
 import type {State} from '../app/model';
 import {SpeakingPractice} from './speaking';
+import {CourseVideoHelp} from '../course-video/ui';
+import {courseVideoManifest} from '../course-video/sources';
+import {classicNotesPort} from '../course-video/adapter';
 import { updateDraft, emptyRecord, statusMap, grade, passedQuiz, submitQuiz, criteriaFor, evidenceErrors, mockErrors, overallBand, officialReached, today, type Progress, type NodeRecord, type Evidence, type Mock } from './model';
 export type Save = (change: (s: Progress) => Progress) => Promise<boolean>;
 const blankEvidence = (): Evidence => ({ date: today(), material: '', work: '', reviewer: '', feedback: '', criteria: [false, false, false, false], unseen: false, timed: false, correct: '', total: '', dimensions:['','','',''], revision:'' });
@@ -26,21 +29,29 @@ export function LearningRoom({node,state,save,close,select,speaking,classicState
     const unit=node.kind==='unit',quiz=['unit','starter','lesson','checkpoint'].includes(node.kind);
     const [classic,setClassic]=useState(false),courseLoop=isRegisteredCourse(node.id)&&!classic&&!speaking;
     const leaveGuard=useRef<(()=>Promise<boolean>)|null>(null);
+    const videoGuard=useRef<(()=>Promise<boolean>)|null>(null);
+    const flushAll=useCallback(async()=> (!videoGuard.current||await videoGuard.current())&&(!leaveGuard.current||await leaveGuard.current()),[]);
+    const bindVideoGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{videoGuard.current=guard;onCourseLeaveGuard(flushAll)},[onCourseLeaveGuard,flushAll]);
+    const bindActiveGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{leaveGuard.current=guard;onCourseLeaveGuard(flushAll)},[onCourseLeaveGuard,flushAll]);
+    const videoPort=useMemo(()=>classicNotesPort(),[]);
+    const [videoNotice,setVideoNotice]=useState('');
     const assessment=['course','task','mock','finish'].includes(node.kind);
     const step=record.phase==='challenge'?3:record.studyStep||0;
     const questions=questionsFor(node,record.round,record.bank),index=Math.min(record.questionIndex||0,Math.max(0,questions.length-1));
     useEffect(()=>{if(!locked&&!courseLoop)save(s=>startNode(s,node.id))},[node.id,locked,courseLoop]);
     useEffect(()=>{if(speaking&&!locked&&record.phase==='challenge')save(s=>changeStudyStep(s,node.id,0))},[node.id,speaking,locked]);
     useEffect(()=>{window.scrollTo({top:0});(document.getElementById(`question-${index}`)||title.current)?.focus({preventScroll:true})},[node.id,step,index,speaking]);
-    const changeStep=async(next:number)=>{if(leaveGuard.current&&!await leaveGuard.current())return false;return await save(s=>next===3&&s.records[node.id]?.phase==='learn'&&s.records[node.id]?.attempts.at(-1)?.round===s.records[node.id]?.round&&s.records[node.id]?.attempts.at(-1)?.bank===s.records[node.id]?.bank?restartQuiz(s,node.id):changeStudyStep(s,node.id,next));};
+    const changeStep=async(next:number)=>{if(!await flushAll()){setVideoNotice('视频笔记尚未保存，请先重试或备份。');return false}setVideoNotice('');return await save(s=>next===3&&s.records[node.id]?.phase==='learn'&&s.records[node.id]?.attempts.at(-1)?.round===s.records[node.id]?.round&&s.records[node.id]?.attempts.at(-1)?.bank===s.records[node.id]?.bank?restartQuiz(s,node.id):changeStudyStep(s,node.id,next));};
     return <main className="focus-page"><header className="focus-header"><button className="back-button" onClick={close}><ChevronLeft size={17}/>学习</button><a className="focus-brand" href="#/courses">句句有进步<span>找课</span></a><span className="focus-saved">进度自动保留</span></header><AudioSpace controls={false}><div className="focus-content"><div className="focus-course-heading"><p>{node.subtitle}{unit&&speaking!=='review'&&<> · <span lang="en">{node.title}</span></>}</p><h1 ref={title} tabIndex={-1}>{courseLoop?getCourseBinding(node.id).lesson.goal:unit?lessonPlan(unitById(node.id)!).goal:node.title}</h1>{courseLoop?<CourseLoopHeadingSummary courseId={node.id} state={classicState} map={state} ready={classicReady} error={classicError} mapError={mapError}/>:<span>{manuallyUnlocked(node,state)?'手动解锁 · ':''}{learningLabel(node,state)}</span>}</div>
-    {locked?<section className="locked-room"><Lock size={28}/><h2>这一课还没有开放</h2><p>可以直接开始，也可以按地图顺序学习。解锁不会标记已完成。</p><button className="primary" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button></section>:courseLoop?<CourseLoopWorkspace courseId={node.id} map={state} continueRoute={continueCourse} onMiniTask={onMiniTask} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:speaking&&unit?<SpeakingPractice key={`${node.id}-${speaking}`} unit={unitById(node.id)!} state={state} save={save} review={speaking==='review'} close={()=>select(node.id)} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:quiz?<>
+    {locked?<section className="locked-room"><Lock size={28}/><h2>这一课还没有开放</h2><p>可以直接开始，也可以按地图顺序学习。解锁不会标记已完成。</p><button className="primary" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button></section>:courseLoop?<CourseLoopWorkspace courseId={node.id} map={state} continueRoute={continueCourse} onMiniTask={onMiniTask} onLeaveGuard={bindActiveGuard}/>:speaking&&unit?<SpeakingPractice key={`${node.id}-${speaking}`} unit={unitById(node.id)!} state={state} save={save} review={speaking==='review'} close={()=>select(node.id)} onLeaveGuard={bindActiveGuard}/>:quiz?<>
       <nav className="focus-steps" aria-label="本课学习步骤">{(unit?[[0,'听懂'],[1,'看懂'],[2,'自己用'],[3,'检验']]:[[0,'听与跟练'],[3,'自己试']]).map(([value,label],i)=><button key={value} aria-current={step===value?'step':undefined} onClick={()=>changeStep(Number(value))}><span>{i+1}</span>{label}</button>)}</nav><StopAudio key={`${step}-${index}`}/>
-      {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}
+      {videoNotice&&<p role="alert">{videoNotice}</p>}
+      {unit&&<CourseVideoHelp courseId={node.id} book={unitById(node.id)!.book} lessons={[unitById(node.id)!.lesson,unitById(node.id)!.lastLesson]} phase={step===3?'independent':'learn'} manifest={courseVideoManifest} port={videoPort} bindGuard={bindVideoGuard} recordHelp={async()=>{if(step===3)return false;return await Promise.resolve(save(s=>noteQuizHelp(s,node.id)))}}/>}
+      {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close} onLeaveGuard={bindActiveGuard}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)} onLeaveGuard={bindActiveGuard}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}
     </>:null}
     {assessment&&<div hidden={locked}>{node.kind==='course'?<CourseRoom node={node} state={state} save={save} select={select}/>:node.kind==='task'||node.kind==='mock'?<EvidenceForm key={node.id} node={node} state={state} save={save} close={close}/>:<FinishForm state={state} save={save}/>}</div>}
     {node.parent&&<div className="focus-chapter-link"><button className="text-button" onClick={()=>select(node.parent!)}>查看本章课次</button></div>}
-    {isRegisteredCourse(node.id)&&!locked&&!speaking&&<button className="text-button" onClick={()=>{void(async()=>{if(!leaveGuard.current||await leaveGuard.current())setClassic(!classic)})()}}>{classic?'回到连续练习':'查看原有听读与练习记录'}</button>}
+    {isRegisteredCourse(node.id)&&!locked&&!speaking&&<button className="text-button" onClick={()=>{void(async()=>{if(await flushAll())setClassic(!classic)})()}}>{classic?'回到连续练习':'查看原有听读与练习记录'}</button>}
     </div></AudioSpace></main>;
 }
 const answerSignature=(a:string[],h:number[])=>JSON.stringify([a,h]);

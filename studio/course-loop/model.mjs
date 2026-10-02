@@ -6,7 +6,7 @@ export function createCourseLoopModel(content){
  const {lesson,byId,questionsFor,matches}=content;
  if(!lesson?.id||!byId?.get||typeof questionsFor!=='function'||typeof matches!=='function'||questionsFor('diagnostic').length!==3)throw Error('Invalid course content binding');
 const stages=['diagnostic','guided','independent','repair','review-a','review-b'];
-const learningSources=['text','audio','comic'];
+const learningSources=['text','audio','comic','video'];
 const clone=value=>structuredClone(value);
 const validTime=n=>Number.isSafeInteger(n)&&n>0&&n<=8640000000000000;
 function initialState(at=Date.now()) {

@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- This component runs in the static map app; /#/progress opens its separate existing workspace. */
-import {useEffect,useLayoutEffect,useRef,useState} from 'react';
+import {useCallback,useEffect,useLayoutEffect,useRef,useState} from 'react';
 import {isRegisteredCourse} from '../course-loop/registry.mjs';
 import type {Action} from '../course-loop/host-contract';
 import {CourseRead,LoopInputs,LoopView,commitCourseLoop,courseLoopFor,parseCourseLoop,parseLoopInputs,readCourseLoop} from './course-loop-progress';
@@ -13,6 +13,9 @@ import type {Progress} from '../map/model';
 import {courseContinuation} from './course-loop-next';
 import {miniTaskForCourseExit} from '../mini-task/adapter';
 import './course-loop.css';
+import {CourseVideoHelp} from '../course-video/ui';
+import {courseVideoManifest} from '../course-video/sources';
+import {canShowVideo} from '../course-video/manifest';
 
 type Operation={action?:Action;input?:{id:string;field:'answer'|'note';value:string};resolve?:(saved:boolean)=>void};
 const labels:Record<string,string>={diagnostic:'1 · 先尝试',learn:'2 · 针对性学习',guided:'2 · 跟着试',independent:'3 · 收起示范，换情境',feedback:'4 · 保留首答，订正',repair:'4 · 换题再试',own:'4 · 用在自己身上',waiting:'5 · 等到期再回想','review-a':'5 · 到期的新题 A','review-b':'5 · 到期的新题 B','review-feedback':'5 · 本次复习反馈'};
@@ -36,6 +39,8 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
  const readRef=useRef<CourseRead|null>(null),viewRef=useRef<LoopView|null>(null),inputsRef=useRef<LoopInputs>(inputs),ops=useRef<Operation[]>([]),working=useRef(false),failed=useRef(false),alive=useRef(true),epoch=useRef(0);
  const draftRef=useRef(draft),ownRef=useRef(own),title=useRef<HTMLHeadingElement>(null),inputRevision=useRef(0),loading=useRef(false);
  const flushRef=useRef<()=>Promise<boolean>>(async()=>false);
+ const videoGuard=useRef<(()=>Promise<boolean>)|null>(null);
+ const bindVideoGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{videoGuard.current=guard},[]);
  useLayoutEffect(()=>{draftRef.current=draft;ownRef.current=own;inputsRef.current=inputs},[draft,own,inputs]);
  function apply(read:CourseRead,reset=false){
   if(read.raw===null)throw Error('本课尚未保存。');
@@ -64,7 +69,8 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
   }catch(cause){if(alive.current&&epoch.current===generation){failed.current=true;setError(cause instanceof Error?cause.message:'本次保存未完成，输入仍保留。');ops.current[0]?.resolve?.(false);setExported(false)}}
   finally{working.current=false;if(alive.current)setBusy(false)}
  }
- function send(action?:Action,input?:Operation['input']):Promise<boolean>{
+ async function send(action?:Action,input?:Operation['input']):Promise<boolean>{
+  if(action&&['next','finish','review'].includes(action.type)&&videoGuard.current&&!await videoGuard.current()){setNotice('视频笔记尚未保存，请先重试或备份笔记。');return false}
   inputRevision.current++;
   return new Promise(resolve=>{
    const edit=!!input||action?.type==='draft'||action?.type==='own-draft';
@@ -99,7 +105,8 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
    while(alive.current&&(working.current||ops.current.length)&&!failed.current&&Date.now()<deadline){if(!working.current)void drain();await new Promise(resolve=>setTimeout(resolve,20))}
    return !working.current&&!ops.current.length&&!failed.current&&!loading.current;
   }
-  flushRef.current=flush;onLeaveGuard(flush);
+  const flushAll=async()=> (!videoGuard.current||await videoGuard.current())&&await flush();
+  flushRef.current=flushAll;onLeaveGuard(flushAll);
   const unload=(event:BeforeUnloadEvent)=>{if(working.current||ops.current.length){event.preventDefault();event.returnValue=''}};
   window.addEventListener('beforeunload',unload);
   return()=>{alive.current=false;flushRef.current=async()=>false;onLeaveGuard(null);clearInterval(tick);window.removeEventListener('beforeunload',unload);window.removeEventListener('focus',focus);window.removeEventListener('pageshow',focus);window.removeEventListener('english-studio-progress-restored',focus)};
@@ -110,6 +117,7 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
  const identity=view?questionIdentity(view):'';
  const continuation=readRef.current?courseContinuation(readRef.current.state,map,courseId,clock):null;
  async function continueSavedCourse(openMini=false){
+  if(videoGuard.current&&!await videoGuard.current()){setNotice('视频笔记尚未保存，请先重试或备份笔记。');return}
   if(!await flushRef.current()){setError('本课输入还没有保存。请先保存未提交内容，再离开本课。');return}
   const expected=readRef.current,revision=inputRevision.current,generation=epoch.current;
   try{
@@ -155,6 +163,7 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
    {onMiniTask&&['own','waiting'].includes(view.phase)&&confirmedState&&miniTaskForCourseExit(confirmedState,courseId,clock)&&<button disabled={disabled} onClick={()=>void continueSavedCourse(true)}>本组适级雅思式小任务</button>}
    <aside className="course-loop-sources" aria-label="本课教材"><h3>回到原文、原声和漫画</h3><div className="course-loop-actions">{(['text','audio','comic'] as const).map((kind,i)=><button type="button" key={kind} disabled={disabled} aria-expanded={source===kind} onClick={()=>void showSource(kind)}>{['看原文','听本课原声','看本课漫画'][i]}</button>)}{view.phase==='learn'&&<><button disabled={disabled} onClick={()=>void showSource('reader')}>逐句听与看</button><button type="button" disabled={disabled} onClick={()=>void openSpeaking()}>跟读一句，练清楚发音</button></>}</div>{q&&!attempt&&<p className="course-loop-note">作答时查看教材会记为使用帮助。切换到下一题后会收起教材。</p>}{source&&<><button type="button" onClick={()=>setSource(null)}>收起教材</button><SourcePanel key={`${source}:${identity}`} kind={source} courseId={courseId}/></>}</aside>
    {!q&&view.attempts.length>0&&<details className="course-loop-history"><summary>回看原答与订正</summary>{view.attempts.map((a,i)=><Attempt courseId={courseId} key={`${a.id}-${i}`} attempt={a} view={view}/>)}</details>}
+   <CourseVideoHelp courseId={courseId} book={lesson.book} lessons={lesson.lessons} phase={view.phase} manifest={courseVideoManifest} bindGuard={bindVideoGuard} recordHelp={async()=>{const before=viewRef.current;if(!before||!canShowVideo(before.phase))return false;const identity=questionIdentity(before);if(!await send({type:'source',source:'video'}))return false;return !!viewRef.current&&canShowVideo(viewRef.current.phase)&&questionIdentity(viewRef.current)===identity}}/>
    <p className="course-loop-note">{lesson.scope} 本课记录的复习安排与词卡分别保存。</p><a className="course-loop-records" href="/#/progress" onClick={e=>{if(disabled){e.preventDefault();setError('请先等输入保存完成；如果保存失败，请先保存未提交内容。')}}}>打开学习记录与整站备份</a>
   </>}
  </section>;
