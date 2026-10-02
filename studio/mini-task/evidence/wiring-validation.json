@@ -1,0 +1,9 @@
+{
+  "patchApplies": true,
+  "changedSharedSourceFiles": 0,
+  "typescriptDiagnostics": 0,
+  "miniTaskCount": 6,
+  "readOnly": true,
+  "priorities": "existing repair/resume/review before new mini (3.5), new words after mini, default course last",
+  "routeStillPublisherOwned": true
+}

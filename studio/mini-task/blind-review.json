@@ -1,0 +1,655 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "blind-to-keys",
+  "reviewType": "independent-content-review",
+  "input": "studio/mini-task/blind-packet.json",
+  "inputScope": "仅读取 packet 的 material、prompt 与 task metadata；未读取 content.ts、model.ts 或任何 keys。",
+  "completedItemCount": 30,
+  "limitations": [
+    "由 AI 根据文字材料进行内容盲审，未实施真人学习者测试、难度校准、CEFR 标定或 IELTS band 映射。",
+    "两个 listening task 使用离线合成音频；本次只取得转写，未播放、试听或评估实际听辨、语速、音质、重音及说话人区分。",
+    "开放 speaking/writing 答案为独立参考表达；没有录音、学习者产出或评分实现，不能验证自动/人工评分是否接受等价表达。",
+    "只凭盲包不能验证版权来源、原创来源、音频呈现是否隐藏文字或是否存在参考答案泄露。",
+    "未进行 answer key 比对；若需要比对，由非盲审角色在本文件完成后独立进行。"
+  ],
+  "summary": {
+    "answerability": "30/30 可从给定材料独立作答，没有发现导致无解或明显互相矛盾的题目。",
+    "criticalBlockers": 0,
+    "concerns": [
+      "开放题不能按唯一参考字符串评分；介绍任务允许不同两句句式，职业留言允许缩写与自然补充。",
+      "状态题如仅接受音频原词，题面宜写明“写听到的状态词”，以免 fine 等同义答案的处理不一致。",
+      "mini-n1-07:repair 对顺序与直接问句的指示弱于同任务其他题；可补齐以保证单题自足。",
+      "所有权阅读的 This 共指同一物品是隐含场景，可用一句场景说明强化。",
+      "延迟 bank 仍含已有答案/核心词；其他 bank 多为同句型词项替换，适合受限微练习但不足以证明广泛迁移或平行难度。",
+      "common 和 general-training 标签需说明是基础微技能用途；未出现 Academic 专属材料，也没有完整 IELTS GT 写作要求。"
+    ],
+    "originalityAssessment": "材料使用极短、常见初学者句型，包内未见长篇来源文本；未核查外部出处，不能确认全局原创。bank 内的新颖性主要来自人物、物品、职业、国籍和状态词替换。",
+    "calibrationAssessment": "pre-A1–A1 为编写目标估计；否定、a/an、所有格、国籍发音和问答提取各有不同前提，未验证各题或 bank 的等难度。"
+  },
+  "items": [
+    {
+      "taskId": "mini-n1-01",
+      "itemId": "mini-n1-01:guided",
+      "answer": "book",
+      "review": {
+        "ambiguity": "单词目标明确；物主已在题面给出，不考所有者推断。",
+        "difficultyPrerequisites": "识别 book 及 This is my；编写目标 pre-A1–A1 合理，但文字不能验证听辨难度。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "若考听取原词，应以 book 为目标；大小写和首尾空白不宜影响评分。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "listening-unverified",
+          "details": "本次只读转写，未试听合成音频；音质、语速、重音及发音未验证。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-01",
+      "itemId": "mini-n1-01:independent",
+      "answer": "bag",
+      "review": {
+        "ambiguity": "目标明确，无显著内容歧义。",
+        "difficultyPrerequisites": "识别 bag；句型与 guided 相同，独立表现只涉及一个词替换。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "bag；词的拼写能力也会影响文字作答。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "near-transfer-only",
+          "details": "与 guided 的唯一区别是 book 换成 bag，不能单独证明更广泛迁移。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-01",
+      "itemId": "mini-n1-01:repair",
+      "answer": "pen",
+      "review": {
+        "ambiguity": "目标明确。",
+        "difficultyPrerequisites": "识别 pen；同句型可降低初学者负担。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "pen；内容审查无法判断 /p/、/e/、/n/ 的实际听辨负担。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "listening-unverified",
+          "details": "未验证真实音频或音素辨识。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-01",
+      "itemId": "mini-n1-01:delayed-a",
+      "answer": "book",
+      "review": {
+        "ambiguity": "问答明确确认物品，但问题未要求判断确认或所有者。",
+        "difficultyPrerequisites": "需从较长问答中提取 book；Is this your… 和 Yes, it is 为新增前提。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "问答框架不同，但答案 book 已在 guided 出现。",
+        "answerPolicy": "book。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "delayed-item-overlap",
+          "details": "核心物品及答案重现 guided；延迟表现可能含熟悉词记忆，不能视为全新材料。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-01",
+      "itemId": "mini-n1-01:delayed-b",
+      "answer": "pen",
+      "review": {
+        "ambiguity": "单词目标明确。",
+        "difficultyPrerequisites": "Excuse me 和确认问答增加材料长度；具体难度需实际试听及学习者验证。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "不同引入语；核心物品及答案 pen 已在 repair 出现。",
+        "answerPolicy": "pen。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "delayed-item-overlap",
+          "details": "与 repair 重复核心答案；延迟 bank 新颖性有限。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-03",
+      "itemId": "mini-n1-03:guided",
+      "answer": "Ava",
+      "review": {
+        "ambiguity": "Ava 明确说 coat 是自己的；无冲突。",
+        "difficultyPrerequisites": "识别人名、物品及 my；中文译问降低提问理解门槛。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "Ava；名字的大小写不宜成为核心内容评分条件。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-03",
+      "itemId": "mini-n1-03:independent",
+      "answer": "Leo",
+      "review": {
+        "ambiguity": "按对话通常共指同一本书，Leo 明确认领；两个 This 的共同指向未直接说明。",
+        "difficultyPrerequisites": "新增 not，需要处理否定并将 my 绑定说话者。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "Leo。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "shared-referent-implicit",
+          "details": "可以在场景补一句两人谈论同一本书，使共指前提明确；当前常规理解仍可唯一作答。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-03",
+      "itemId": "mini-n1-03:repair",
+      "answer": "Nora",
+      "review": {
+        "ambiguity": "Nora 明确认领；Sam 否认，按共指阅读无冲突。",
+        "difficultyPrerequisites": "识别 my/not my；目标信息在第一句。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "Nora。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "shared-referent-implicit",
+          "details": "两个 This 指同一支笔是合理但隐含的情境前提。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-03",
+      "itemId": "mini-n1-03:delayed-a",
+      "answer": "Dan",
+      "review": {
+        "ambiguity": "按谈论同一把钥匙理解，Dan 是唯一认领者。",
+        "difficultyPrerequisites": "key 及否定结构；目标在第二句，可检查顺序变化。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "改换人名和 key，目标句顺序与 independent 相同；仍是同一所有权框架。",
+        "answerPolicy": "Dan。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "shared-referent-implicit",
+          "details": "可明示两人谈论同一把钥匙。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-03",
+      "itemId": "mini-n1-03:delayed-b",
+      "answer": "Kim",
+      "review": {
+        "ambiguity": "Kim 明确认领，Jo 否认；共指前提合理。",
+        "difficultyPrerequisites": "bag 及第一句提取，否定位于干扰句。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "人名变换、bag 重现 guided；不是新的句法迁移场景。",
+        "answerPolicy": "Kim。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "shared-referent-implicit",
+          "details": "共同指向同一个包未明说，但不构成严重作答歧义。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-05",
+      "itemId": "mini-n1-05:guided",
+      "answer": "This is Ava. She is French.",
+      "review": {
+        "ambiguity": "要求介绍两句，但未规定必须使用 This is 或必须说 my friend；含名字和国籍的多种自然两句均应成立。",
+        "difficultyPrerequisites": "需掌握介绍句、明确给定的 she、be 及 French 的口头表达；国籍中文释义已提供。文字不能验证发音或流利度。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "本回答为一种参考，非唯一答案；如 “Ava is my friend. She is French.” 也满足题意。缩写自然表达应可接受。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "open-response-flexibility",
+          "details": "若评分要求唯一句式，会拒绝符合题意的自然回答；须按信息覆盖及语言质量评价。"
+        },
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "details": "没有学习者录音，未检查可理解度、发音、停顿或流利度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-05",
+      "itemId": "mini-n1-05:independent",
+      "answer": "This is Ken. He is Japanese.",
+      "review": {
+        "ambiguity": "要求介绍两句，但未规定必须使用 This is 或必须说 my friend；含名字和国籍的多种自然两句均应成立。",
+        "difficultyPrerequisites": "需掌握介绍句、明确给定的 he、be 及 Japanese 的口头表达；国籍中文释义已提供。文字不能验证发音或流利度。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "改换人物及国籍（Japanese）；句法与其他 bank 相同，形成受限的近迁移。",
+        "answerPolicy": "本回答为一种参考，非唯一答案；如 “Ken is my friend. He is Japanese.” 也满足题意。缩写自然表达应可接受。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "open-response-flexibility",
+          "details": "若评分要求唯一句式，会拒绝符合题意的自然回答；须按信息覆盖及语言质量评价。"
+        },
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "details": "没有学习者录音，未检查可理解度、发音、停顿或流利度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-05",
+      "itemId": "mini-n1-05:repair",
+      "answer": "This is Mia. She is Chinese.",
+      "review": {
+        "ambiguity": "要求介绍两句，但未规定必须使用 This is 或必须说 my friend；含名字和国籍的多种自然两句均应成立。",
+        "difficultyPrerequisites": "需掌握介绍句、明确给定的 she、be 及 Chinese 的口头表达；国籍中文释义已提供。文字不能验证发音或流利度。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "改换人物及国籍（Chinese）；句法与其他 bank 相同，形成受限的近迁移。",
+        "answerPolicy": "本回答为一种参考，非唯一答案；如 “Mia is my friend. She is Chinese.” 也满足题意。缩写自然表达应可接受。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "open-response-flexibility",
+          "details": "若评分要求唯一句式，会拒绝符合题意的自然回答；须按信息覆盖及语言质量评价。"
+        },
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "details": "没有学习者录音，未检查可理解度、发音、停顿或流利度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-05",
+      "itemId": "mini-n1-05:delayed-a",
+      "answer": "This is Ben. He is German.",
+      "review": {
+        "ambiguity": "要求介绍两句，但未规定必须使用 This is 或必须说 my friend；含名字和国籍的多种自然两句均应成立。",
+        "difficultyPrerequisites": "需掌握介绍句、明确给定的 he、be 及 German 的口头表达；国籍中文释义已提供。文字不能验证发音或流利度。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "改换人物及国籍（German）；句法与其他 bank 相同，形成受限的近迁移。",
+        "answerPolicy": "本回答为一种参考，非唯一答案；如 “Ben is my friend. He is German.” 也满足题意。缩写自然表达应可接受。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "open-response-flexibility",
+          "details": "若评分要求唯一句式，会拒绝符合题意的自然回答；须按信息覆盖及语言质量评价。"
+        },
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "details": "没有学习者录音，未检查可理解度、发音、停顿或流利度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-05",
+      "itemId": "mini-n1-05:delayed-b",
+      "answer": "This is Kim. She is Korean.",
+      "review": {
+        "ambiguity": "要求介绍两句，但未规定必须使用 This is 或必须说 my friend；含名字和国籍的多种自然两句均应成立。",
+        "difficultyPrerequisites": "需掌握介绍句、明确给定的 she、be 及 Korean 的口头表达；国籍中文释义已提供。文字不能验证发音或流利度。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "改换人物及国籍（Korean）；句法与其他 bank 相同，形成受限的近迁移。",
+        "answerPolicy": "本回答为一种参考，非唯一答案；如 “Kim is my friend. She is Korean.” 也满足题意。缩写自然表达应可接受。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "open-response-flexibility",
+          "details": "若评分要求唯一句式，会拒绝符合题意的自然回答；须按信息覆盖及语言质量评价。"
+        },
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "details": "没有学习者录音，未检查可理解度、发音、停顿或流利度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-07",
+      "itemId": "mini-n1-07:guided",
+      "answer": "I am a nurse. Are you a teacher?",
+      "review": {
+        "ambiguity": "要求两句且先陈述后直接询问；目标明确。",
+        "difficultyPrerequisites": "需 be 陈述与疑问语序、第一/第二人称及 a/an；职业词汇已在材料或本任务语境提供。 此为编写目标，未真人校准。",
+        "trackBoundary": "日常职业留言符合一般生活用途，可作 GT 前置微技能；两句话远不足以覆盖 IELTS GT Writing Task 1，不能推断 band。",
+        "materialNovelty": "用职业替换形成同框架练习；并非独立的长篇写作任务。",
+        "answerPolicy": "参考可写缩写 “I'm a nurse.”；直接问题 “Are you a teacher now?” 也符合题意。不能只按唯一字符串评判。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "details": "允许 am 的缩写、now 等不改变核心意图的表达；a/an 和疑问语序属于有意义的语言判断。"
+        },
+        {
+          "severity": "note",
+          "code": "gt-scope",
+          "details": "不是 IELTS GT Task 1，无法据两句话推断 band。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-07",
+      "itemId": "mini-n1-07:independent",
+      "answer": "I am a teacher. Are you an engineer?",
+      "review": {
+        "ambiguity": "要求两句且先陈述后直接询问；目标明确。",
+        "difficultyPrerequisites": "需 be 陈述与疑问语序、第一/第二人称及 a/an；engineer 需要 an，较 a 增加一项前提。 此为编写目标，未真人校准。",
+        "trackBoundary": "日常职业留言符合一般生活用途，可作 GT 前置微技能；两句话远不足以覆盖 IELTS GT Writing Task 1，不能推断 band。",
+        "materialNovelty": "用职业替换形成同框架练习；并非独立的长篇写作任务。",
+        "answerPolicy": "参考可写缩写 “I'm a teacher.”；直接问题 “Are you an engineer now?” 也符合题意。不能只按唯一字符串评判。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "details": "允许 am 的缩写、now 等不改变核心意图的表达；a/an 和疑问语序属于有意义的语言判断。"
+        },
+        {
+          "severity": "note",
+          "code": "gt-scope",
+          "details": "不是 IELTS GT Task 1，无法据两句话推断 band。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-07",
+      "itemId": "mini-n1-07:repair",
+      "answer": "I am an engineer. Are you a nurse?",
+      "review": {
+        "ambiguity": "角色材料说明两方职业意图；题面没有像其他 bank 一样重复“先说明自己，再直接问对方”，仍可从场景作答。",
+        "difficultyPrerequisites": "需 be 陈述与疑问语序、第一/第二人称及 a/an；engineer 需要 an，较 a 增加一项前提。 此为编写目标，未真人校准。",
+        "trackBoundary": "日常职业留言符合一般生活用途，可作 GT 前置微技能；两句话远不足以覆盖 IELTS GT Writing Task 1，不能推断 band。",
+        "materialNovelty": "用职业替换形成同框架练习；并非独立的长篇写作任务。",
+        "answerPolicy": "参考可写缩写 “I'm an engineer.”；直接问题 “Are you a nurse now?” 也符合题意。不能只按唯一字符串评判。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "instruction-consistency",
+          "details": "建议 repair 同样明确两句的顺序和直接问对方，避免仅凭该题无法知道预期格式。"
+        },
+        {
+          "severity": "note",
+          "code": "gt-scope",
+          "details": "general-training 标签应限于日常微技能，不应宣传为完整 GT 写作测量。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-07",
+      "itemId": "mini-n1-07:delayed-a",
+      "answer": "I am a mechanic. Are you a teacher?",
+      "review": {
+        "ambiguity": "要求两句且先陈述后直接询问；目标明确。",
+        "difficultyPrerequisites": "需 be 陈述与疑问语序、第一/第二人称及 a/an；mechanic 为新增职业，已附中文释义。 此为编写目标，未真人校准。",
+        "trackBoundary": "日常职业留言符合一般生活用途，可作 GT 前置微技能；两句话远不足以覆盖 IELTS GT Writing Task 1，不能推断 band。",
+        "materialNovelty": "用职业替换形成同框架练习；并非独立的长篇写作任务。",
+        "answerPolicy": "参考可写缩写 “I'm a mechanic.”；直接问题 “Are you a teacher now?” 也符合题意。不能只按唯一字符串评判。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "details": "允许 am 的缩写、now 等不改变核心意图的表达；a/an 和疑问语序属于有意义的语言判断。"
+        },
+        {
+          "severity": "note",
+          "code": "gt-scope",
+          "details": "不是 IELTS GT Task 1，无法据两句话推断 band。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-07",
+      "itemId": "mini-n1-07:delayed-b",
+      "answer": "I am a taxi driver. Are you a mechanic?",
+      "review": {
+        "ambiguity": "要求两句且先陈述后直接询问；目标明确。",
+        "difficultyPrerequisites": "需 be 陈述与疑问语序、第一/第二人称及 a/an；taxi driver 是新增双词职业。 此为编写目标，未真人校准。",
+        "trackBoundary": "日常职业留言符合一般生活用途，可作 GT 前置微技能；两句话远不足以覆盖 IELTS GT Writing Task 1，不能推断 band。",
+        "materialNovelty": "用职业替换形成双词名词扩展；并非独立的长篇写作任务。",
+        "answerPolicy": "参考可写缩写 “I'm a taxi driver.”；直接问题 “Are you a mechanic now?” 也符合题意。不能只按唯一字符串评判。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "details": "允许 am 的缩写、now 等不改变核心意图的表达；a/an 和疑问语序属于有意义的语言判断。"
+        },
+        {
+          "severity": "note",
+          "code": "gt-scope",
+          "details": "不是 IELTS GT Task 1，无法据两句话推断 band。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-09",
+      "itemId": "mini-n1-09:guided",
+      "answer": "well",
+      "review": {
+        "ambiguity": "语境中 well 指健康/状态良好；题面没明确要求照录原词，fine 等语义答案有评分歧义。",
+        "difficultyPrerequisites": "需识别 well 及 I am；未验证音频。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "若目标是听取原词，应明确“写听到的状态词”；否则 fine 的接受策略需说明。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "answer-policy",
+          "details": "“状态”题可能允许同义表达；目标原词与意义等价答案应在题面或评分中区分。"
+        },
+        {
+          "severity": "note",
+          "code": "listening-unverified",
+          "details": "本次未试听。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-09",
+      "itemId": "mini-n1-09:independent",
+      "answer": "tired",
+      "review": {
+        "ambiguity": "明确表达疲倦；单词目标可推导。",
+        "difficultyPrerequisites": "tired 发音和拼写比 well 复杂，是否同难度需音频及真人验证。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "tired；若按直接听取原词评分，宜写明。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "difficulty-not-equated",
+          "details": "只换词不等于难度平行；tired 的听辨与拼写负担不能从转写校准。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-09",
+      "itemId": "mini-n1-09:repair",
+      "answer": "cold",
+      "review": {
+        "ambiguity": "可读为感觉冷，也可读为态度冷淡；日常问候语境通常取感觉冷，不影响目标原词。",
+        "difficultyPrerequisites": "cold 词义及辅音结尾；未做实际听辨。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "常见初学者句型；该题与同任务其他 bank 主要以词项替换区分。仅凭包不能验证原创来源或证明迁移。",
+        "answerPolicy": "cold；原词目标清楚，若问意义可加“身体感觉”。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "sense-context",
+          "details": "补充身体状态情境可固定语义；现有一词抽取仍可答。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-09",
+      "itemId": "mini-n1-09:delayed-a",
+      "answer": "hot",
+      "review": {
+        "ambiguity": "明确要求回答者直接报告状态，排除了 How are you 的提问者；hot 的具体温度含义依赖日常语境。",
+        "difficultyPrerequisites": "需辨别问答角色并识别 hot；不是只听第一个说话人。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "新增问答框架和 hot；比同句型词替换略有结构变化。",
+        "answerPolicy": "hot；如评语义，可在材料注明感觉热。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "listening-unverified",
+          "details": "转写中角色关系清楚，实际音频是否区分说话人未验证。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-09",
+      "itemId": "mini-n1-09:delayed-b",
+      "answer": "well",
+      "review": {
+        "ambiguity": "明确要求回答者直接报告状态；与 guided 相同的 well，可能有 fine 等意义等价回答。",
+        "difficultyPrerequisites": "较长问答及 thank you；核心 well 已见过。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "新增问答和感谢语，状态词 well 重复 guided。",
+        "answerPolicy": "well；同义词策略同 guided。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "delayed-item-overlap",
+          "details": "延迟题复用 guided 的状态词，材料新颖性有限。"
+        },
+        {
+          "severity": "minor",
+          "code": "answer-policy",
+          "details": "建议明确照录状态词，避免同义答案的评价不一致。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-11",
+      "itemId": "mini-n1-11:guided",
+      "answer": "blue",
+      "review": {
+        "ambiguity": "Ava's bag 的颜色直接陈述，另一人物的颜色是明确干扰信息；无显著歧义。",
+        "difficultyPrerequisites": "名词所有格 ’s、bag 和 blue；目标在第一句。 中文译问降低英语提问理解需求；可支持 A1 基础阅读目标但未经校准。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "人物、物品和颜色替换；delayed 的颜色均已在 earlier bank 材料中出现，句法没有扩展。",
+        "answerPolicy": "blue；大小写及首尾空白应宽容，其他颜色不受材料支持。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "near-transfer-only",
+          "details": "主要检查受限句型的信息定位；两句短文表现不能代表整体阅读能力。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-11",
+      "itemId": "mini-n1-11:independent",
+      "answer": "black",
+      "review": {
+        "ambiguity": "Leo's bag 的颜色直接陈述，另一人物的颜色是明确干扰信息；无显著歧义。",
+        "difficultyPrerequisites": "所有格 ’s、bag 和 black；目标在第二句。 中文译问降低英语提问理解需求；可支持 A1 基础阅读目标但未经校准。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "人物、物品和颜色替换；delayed 的颜色均已在 earlier bank 材料中出现，句法没有扩展。",
+        "answerPolicy": "black；大小写及首尾空白应宽容，其他颜色不受材料支持。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "near-transfer-only",
+          "details": "主要检查受限句型的信息定位；两句短文表现不能代表整体阅读能力。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-11",
+      "itemId": "mini-n1-11:repair",
+      "answer": "red",
+      "review": {
+        "ambiguity": "Nora's pen 的颜色直接陈述，另一人物的颜色是明确干扰信息；无显著歧义。",
+        "difficultyPrerequisites": "所有格 ’s、pen 和 red；目标在第一句。 中文译问降低英语提问理解需求；可支持 A1 基础阅读目标但未经校准。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "人物、物品和颜色替换；delayed 的颜色均已在 earlier bank 材料中出现，句法没有扩展。",
+        "answerPolicy": "red；大小写及首尾空白应宽容，其他颜色不受材料支持。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "near-transfer-only",
+          "details": "主要检查受限句型的信息定位；两句短文表现不能代表整体阅读能力。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-11",
+      "itemId": "mini-n1-11:delayed-a",
+      "answer": "white",
+      "review": {
+        "ambiguity": "Tia's bag 的颜色直接陈述，另一人物的颜色是明确干扰信息；无显著歧义。",
+        "difficultyPrerequisites": "所有格 ’s、bag 和 white；目标在第二句。 中文译问降低英语提问理解需求；可支持 A1 基础阅读目标但未经校准。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "人物、物品和颜色替换；delayed 的颜色均已在 earlier bank 材料中出现，句法没有扩展。",
+        "answerPolicy": "white；大小写及首尾空白应宽容，其他颜色不受材料支持。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "near-transfer-only",
+          "details": "主要检查受限句型的信息定位；两句短文表现不能代表整体阅读能力。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-11",
+      "itemId": "mini-n1-11:delayed-b",
+      "answer": "green",
+      "review": {
+        "ambiguity": "Kim's coat 的颜色直接陈述，另一人物的颜色是明确干扰信息；无显著歧义。",
+        "difficultyPrerequisites": "所有格 ’s、coat 和 green；目标在第二句。 中文译问降低英语提问理解需求；可支持 A1 基础阅读目标但未经校准。",
+        "trackBoundary": "基础技能可用于 Academic 与 GT；此题不是任何一类 IELTS 真题，也不能据此推断 IELTS band。",
+        "materialNovelty": "人物、物品和颜色替换；delayed 的颜色均已在 earlier bank 材料中出现，句法没有扩展。",
+        "answerPolicy": "green；大小写及首尾空白应宽容，其他颜色不受材料支持。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "near-transfer-only",
+          "details": "主要检查受限句型的信息定位；两句短文表现不能代表整体阅读能力。"
+        }
+      ]
+    }
+  ]
+}

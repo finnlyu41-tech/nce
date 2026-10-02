@@ -1,0 +1,236 @@
+[
+  {
+    "id": "mini-n1-01",
+    "courseId": "nce1-1",
+    "skill": "listening",
+    "track": "common",
+    "level": "NCE1 初学者；编写目标约 pre-A1–A1",
+    "items": [
+      {
+        "id": "mini-n1-01:guided",
+        "bank": "guided",
+        "material": "Hello. This is my book.",
+        "prompt": "听完后补一格：物主 = 说话者；物品 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-01:independent",
+        "bank": "independent",
+        "material": "Hello. This is my bag.",
+        "prompt": "听完后补一格：物主 = 说话者；物品 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-01:repair",
+        "bank": "repair",
+        "material": "Hello. This is my pen.",
+        "prompt": "听完后补一格：物主 = 说话者；物品 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-01:delayed-a",
+        "bank": "delayed-a",
+        "material": "Good morning. Is this your book? Yes, it is.",
+        "prompt": "听完确认问答，物品 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-01:delayed-b",
+        "bank": "delayed-b",
+        "material": "Excuse me. Is this your pen? Yes, it is.",
+        "prompt": "听完确认问答，物品 = ____。只写一个英文词。"
+      }
+    ]
+  },
+  {
+    "id": "mini-n1-03",
+    "courseId": "nce1-3",
+    "skill": "reading",
+    "track": "common",
+    "level": "NCE1 初学者；编写目标约 pre-A1–A1",
+    "items": [
+      {
+        "id": "mini-n1-03:guided",
+        "bank": "guided",
+        "material": "Ava: This is my coat. Ben: This is my bag.",
+        "prompt": "Who owns the coat?（谁是外套的物主？）只写名字。"
+      },
+      {
+        "id": "mini-n1-03:independent",
+        "bank": "independent",
+        "material": "Mia: This is not my book. Leo: This is my book.",
+        "prompt": "Who owns the book?（谁是书的物主？）只写名字。"
+      },
+      {
+        "id": "mini-n1-03:repair",
+        "bank": "repair",
+        "material": "Nora: This is my pen. Sam: This is not my pen.",
+        "prompt": "Who owns the pen?（谁是笔的物主？）只写名字。"
+      },
+      {
+        "id": "mini-n1-03:delayed-a",
+        "bank": "delayed-a",
+        "material": "Tia: This is not my key. Dan: This is my key.",
+        "prompt": "Who owns the key?（谁是钥匙的物主？）只写名字。"
+      },
+      {
+        "id": "mini-n1-03:delayed-b",
+        "bank": "delayed-b",
+        "material": "Kim: This is my bag. Jo: This is not my bag.",
+        "prompt": "Who owns the bag?（谁是包的物主？）只写名字。"
+      }
+    ]
+  },
+  {
+    "id": "mini-n1-05",
+    "courseId": "nce1-5",
+    "skill": "speaking",
+    "track": "common",
+    "level": "NCE1 初学者；编写目标约 pre-A1–A1",
+    "items": [
+      {
+        "id": "mini-n1-05:guided",
+        "bank": "guided",
+        "material": "你的朋友 Ava 在身边；她明确使用 she；她是 French。",
+        "prompt": "口头介绍 Ava，说两句；French=法国的。"
+      },
+      {
+        "id": "mini-n1-05:independent",
+        "bank": "independent",
+        "material": "你的朋友 Ken 在身边；他明确使用 he；他是 Japanese。",
+        "prompt": "口头介绍 Ken，说两句；Japanese=日本的。"
+      },
+      {
+        "id": "mini-n1-05:repair",
+        "bank": "repair",
+        "material": "你的朋友 Mia 在身边；她明确使用 she；她是 Chinese。",
+        "prompt": "换一个人，口头介绍 Mia，说两句；Chinese=中国的。"
+      },
+      {
+        "id": "mini-n1-05:delayed-a",
+        "bank": "delayed-a",
+        "material": "你的朋友 Ben 在身边；他明确使用 he；他是 German。",
+        "prompt": "口头介绍 Ben，说两句；German=德国的。"
+      },
+      {
+        "id": "mini-n1-05:delayed-b",
+        "bank": "delayed-b",
+        "material": "你的朋友 Kim 在身边；她明确使用 she；她是 Korean。",
+        "prompt": "口头介绍 Kim，说两句；Korean=韩国的。"
+      }
+    ]
+  },
+  {
+    "id": "mini-n1-07",
+    "courseId": "nce1-7",
+    "skill": "writing",
+    "track": "general-training",
+    "level": "NCE1 初学者；编写目标约 pre-A1–A1",
+    "items": [
+      {
+        "id": "mini-n1-07:guided",
+        "bank": "guided",
+        "material": "角色：你现在是 nurse；想问收信人现在是否是 teacher。nurse=护士；teacher=教师。",
+        "prompt": "写两句：先说明自己的职业，再直接询问对方。"
+      },
+      {
+        "id": "mini-n1-07:independent",
+        "bank": "independent",
+        "material": "角色：你现在是 teacher；想问收信人现在是否是 engineer。engineer=工程师。",
+        "prompt": "写两句：先说明自己的职业，再直接询问对方。"
+      },
+      {
+        "id": "mini-n1-07:repair",
+        "bank": "repair",
+        "material": "角色：你现在是 engineer；想问收信人现在是否是 nurse。",
+        "prompt": "换一个角色，写两句职业留言。"
+      },
+      {
+        "id": "mini-n1-07:delayed-a",
+        "bank": "delayed-a",
+        "material": "角色：你现在是 mechanic；想问收信人现在是否是 teacher。mechanic=机械师。",
+        "prompt": "写两句职业留言：说明自己，再问对方。"
+      },
+      {
+        "id": "mini-n1-07:delayed-b",
+        "bank": "delayed-b",
+        "material": "角色：你现在是 taxi driver；想问收信人现在是否是 mechanic。taxi driver=出租车司机。",
+        "prompt": "写两句职业留言：说明自己，再问对方。"
+      }
+    ]
+  },
+  {
+    "id": "mini-n1-09",
+    "courseId": "nce1-9",
+    "skill": "listening",
+    "track": "common",
+    "level": "NCE1 初学者；编写目标约 pre-A1–A1",
+    "items": [
+      {
+        "id": "mini-n1-09:guided",
+        "bank": "guided",
+        "material": "Hello. I am well.",
+        "prompt": "说话者当前状态 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-09:independent",
+        "bank": "independent",
+        "material": "Good morning. I am tired.",
+        "prompt": "说话者当前状态 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-09:repair",
+        "bank": "repair",
+        "material": "Hello. I am cold.",
+        "prompt": "说话者当前状态 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-09:delayed-a",
+        "bank": "delayed-a",
+        "material": "How are you? I am hot.",
+        "prompt": "回答者直接报告的当前状态 = ____。只写一个英文词。"
+      },
+      {
+        "id": "mini-n1-09:delayed-b",
+        "bank": "delayed-b",
+        "material": "How are you? I am well, thank you.",
+        "prompt": "回答者直接报告的当前状态 = ____。只写一个英文词。"
+      }
+    ]
+  },
+  {
+    "id": "mini-n1-11",
+    "courseId": "nce1-11",
+    "skill": "reading",
+    "track": "common",
+    "level": "NCE1 初学者；编写目标约 pre-A1–A1",
+    "items": [
+      {
+        "id": "mini-n1-11:guided",
+        "bank": "guided",
+        "material": "Ava's bag is blue. Ben's coat is red.",
+        "prompt": "What colour is Ava's bag?（Ava 的包是什么颜色？）只写一个颜色词。"
+      },
+      {
+        "id": "mini-n1-11:independent",
+        "bank": "independent",
+        "material": "Mia's coat is green. Leo's bag is black.",
+        "prompt": "What colour is Leo's bag?（Leo 的包是什么颜色？）只写一个颜色词。"
+      },
+      {
+        "id": "mini-n1-11:repair",
+        "bank": "repair",
+        "material": "Nora's pen is red. Sam's key is white.",
+        "prompt": "What colour is Nora's pen?（Nora 的笔是什么颜色？）只写一个颜色词。"
+      },
+      {
+        "id": "mini-n1-11:delayed-a",
+        "bank": "delayed-a",
+        "material": "Dan's coat is blue. Tia's bag is white.",
+        "prompt": "What colour is Tia's bag?（Tia 的包是什么颜色？）只写一个颜色词。"
+      },
+      {
+        "id": "mini-n1-11:delayed-b",
+        "bank": "delayed-b",
+        "material": "Jo's bag is red. Kim's coat is green.",
+        "prompt": "What colour is Kim's coat?（Kim 的外套是什么颜色？）只写一个颜色词。"
+      }
+    ]
+  }
+]

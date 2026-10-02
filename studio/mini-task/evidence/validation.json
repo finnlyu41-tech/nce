@@ -1,0 +1,55 @@
+{
+  "baseHead": "1cb23fdd47a297b41ed9458ab386c5ff786386dc",
+  "scope": "R12 first-six paired groups; per-lesson partial-target bindings 1-12",
+  "blindReview": {
+    "items": 30,
+    "closedKeysMatched": 20,
+    "openUngraded": 10,
+    "AIOnly": true,
+    "resolutions": [
+      "explicit actual heard word",
+      "self-contained GT repair instructions",
+      "same-object ownership context"
+    ],
+    "unchangedLimitations": [
+      "near transfer only",
+      "no human calibration",
+      "no semantic audio audition"
+    ]
+  },
+  "checks": {
+    "modelGroups": 19,
+    "browserGroups": 9,
+    "typescript": "passed",
+    "newFileLint": "passed",
+    "productionPreviewBuild": "passed",
+    "publisherPatch": "applied only to temporary copies and both shared files typechecked",
+    "todayRegression": "49/49",
+    "courseLoopRegression": [
+      "CL00 model",
+      "CL01 content and real-factory compatibility",
+      "CL02 content and production model",
+      "CL host",
+      "CL UX"
+    ]
+  },
+  "sharedSourcesChanged": false,
+  "remoteHTTPRequests": 0,
+  "naturalDelayVerified": false,
+  "realLearnerSpeech": false,
+  "fullR12Or60RequirementsClosed": false,
+  "remainingIntegration": [
+    "publisher applies/rebases precise shared patch",
+    "publisher adds independent route and callback",
+    "publisher final production package/QA"
+  ],
+  "sourceHashes": {
+    "app/mini-task-ui.tsx": "0c13da97a6e2d9a762d3489a0379873badcda08d23361640aba9513353b657cf",
+    "app/mini-task.css": "e06ed26e16f7e59fa6146651007959d69f0673d3491e97837f4028843d94dd5a",
+    "mini-task/content.ts": "7a211a01e5302a07aad0f38b578e7911dfc80806507155f603bbf609f90c764e",
+    "mini-task/manifest.ts": "fd55a9e22f862c33578ec6aedf5bc137bd55a89170909c4e2dfee3c2a351e8f4",
+    "mini-task/model.ts": "f19dfbaefcd87121554ecc865e09c584864e64f60278b485746eb138142de08e",
+    "mini-task/adapter.ts": "bf957cd86445967be8c14dacaf6331f03606e1036b616b3834d3482be22d4be3",
+    "mini-task/route.ts": "8b08bdf9fd8a2fd1fb7d86e438abedf95e7f864f9a62bcbf540dc2646032c41a"
+  }
+}

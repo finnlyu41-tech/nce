@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-02T16:44:19.684Z",
+  "syntheticTimestamps": true,
+  "checks": [
+    "6 group identities and explicit 12 lesson bindings / partial-target gaps",
+    "graded prerequisites, no fixed hub index and one task per paired group",
+    "mini-n1-01 first answers/help/exposure/refresh/finite A-B",
+    "mini-n1-01 text modality and exact-envelope/future/corruption preserved",
+    "mini-n1-03 first answers/help/exposure/refresh/finite A-B",
+    "mini-n1-03 text modality and exact-envelope/future/corruption preserved",
+    "mini-n1-05 first answers/help/exposure/refresh/finite A-B",
+    "mini-n1-05 text modality and exact-envelope/future/corruption preserved",
+    "mini-n1-07 first answers/help/exposure/refresh/finite A-B",
+    "mini-n1-07 text modality and exact-envelope/future/corruption preserved",
+    "mini-n1-09 first answers/help/exposure/refresh/finite A-B",
+    "mini-n1-09 text modality and exact-envelope/future/corruption preserved",
+    "mini-n1-11 first answers/help/exposure/refresh/finite A-B",
+    "mini-n1-11 text modality and exact-envelope/future/corruption preserved",
+    "no CL, map, FSRS, score or completion mutation; finite pool omitted from Today",
+    "actual guarded legacy writer preserves concurrent unrelated State fields",
+    "stale same-task writes, mismatched targets and invalidated controller refused",
+    "adapter refuses first write without graded prerequisite",
+    "blind solutions match all 20 closed keys; 10 open responses stay ungraded"
+  ],
+  "groupCount": 6,
+  "explicitLessonBindings": 12,
+  "coverage": "partial-target",
+  "naturalDelayVerified": false
+}

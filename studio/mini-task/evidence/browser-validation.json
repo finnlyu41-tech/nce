@@ -1,0 +1,23 @@
+{
+  "checks": [
+    "mini-n1-01: real UI guided/independent, refresh original/correction drafts, isolated CL/map/FSRS",
+    "mini-n1-03: real UI guided/independent, refresh original/correction drafts, isolated CL/map/FSRS",
+    "mini-n1-05: real UI guided/independent, refresh original/correction drafts, isolated CL/map/FSRS",
+    "mini-n1-07: real UI guided/independent, refresh original/correction drafts, isolated CL/map/FSRS",
+    "mini-n1-09: real UI guided/independent, refresh original/correction drafts, isolated CL/map/FSRS",
+    "mini-n1-11: real UI guided/independent, refresh original/correction drafts, isolated CL/map/FSRS",
+    "no horizontal overflow 1280",
+    "no horizontal overflow 390",
+    "no horizontal overflow 320"
+  ],
+  "exceptions": 0,
+  "externalRequests": [],
+  "inlineOrLocalSchemes": [
+    "data",
+    "blob"
+  ],
+  "profile": "fresh synthetic QA only",
+  "actualPlayback": "HTMLAudioElement play/ended with bundled WAV",
+  "realLearnerSpeech": false,
+  "naturalDelayVerified": false
+}
