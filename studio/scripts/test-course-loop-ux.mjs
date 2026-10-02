@@ -39,8 +39,10 @@ assert.equal(normalContinuation.label,'继续后续课次');assert.equal(normalC
 const accessReset={...m.unlockNode(m.emptyProgress(),'nce1-1'),lastNode:'nce1-3'},resetBefore=JSON.stringify({full,map:accessReset});
 assert.equal(m.nextCourse(full,accessReset,now).id,'nce1-1','Reset access can legitimately recommend the current map course');
 const gatedContinuation=m.courseContinuation(full,accessReset,'nce1-1',now);
-assert.equal(gatedContinuation.label,'查看当前路线条件');assert.equal(gatedContinuation.href,'/map/#/map/nce1-1');assert.equal(gatedContinuation.currentRoute,true);
+assert.equal(gatedContinuation.label,'查看当前路线条件');assert.equal(gatedContinuation.href,'/map/#/map/nce1-1?conditions=1');assert.equal(gatedContinuation.currentRoute,true);
 assert(gatedContinuation.reason.includes('地图检验与解锁条件'));assert.equal(m.parseLearningRoute(gatedContinuation.href.slice(gatedContinuation.href.indexOf('#'))).learn,false);
+assert.equal(m.parseLearningRoute('#/map/nce1-1?conditions=1').conditions,true);
+for(const route of ['#/map/unknown?conditions=1','#/learn/nce1-1?conditions=1','#/courses?conditions=1','#/?conditions=1'])assert.equal(m.parseLearningRoute(route).conditions,undefined,route);
 assert.equal(JSON.stringify({full,map:accessReset}),resetBefore,'The route explanation grants no access, completion or saved course change');
 const aged=structuredClone(s);aged.createdAt-=2*86400000;for(const event of aged.events)event.at-=2*86400000;
 const reviewed=m.loopModel.transition(aged,{type:'review'},now);assert(reviewed.ok,reviewed.message);const reviewing={...full,drafts:{...full.drafts,[m.courseLoopKey]:JSON.stringify(reviewed.state)}};

@@ -36,7 +36,7 @@ export function courseDestination(state:State,map:Progress,now=Date.now()){
 export function courseContinuation(state:State,map:Progress,currentId:string,now=Date.now()){
  const destination=courseDestination(state,map,now),current=destination.node.id===currentId;
  return {...destination,
-  href:current?`/map/#/map/${currentId}`:destination.href,
+  href:current?`/map/#/map/${currentId}?conditions=1`:destination.href,
   label:current?'查看当前路线条件':'继续后续课次',
   reason:current?'当前路线仍推荐本课。继续后续课程前，请先查看地图检验与解锁条件。':'可以继续后续课次，到期时再回到本课。',
   currentRoute:current,
