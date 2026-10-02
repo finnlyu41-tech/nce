@@ -78,8 +78,8 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
   if(!usableHistory(progress.attempts,now)||progress.seenAt>now)continue;
   const repair=!!last&&(!last.passed||!last.independent),dueAt=grammarReviewAt(progress);
   if(progress.inRound||repair||dueAt>0&&dueAt<=now)add({id:'grammar:'+unit.id,title:unit.title,
-   reason:progress.inRound?'上次三步练习还没有结束，接着未完成的一题。':repair?'上轮与参考不同或用过提示，再换一组核对。':'已到延迟检验时间，换组回想这个用法。',
-   method:'一次一题：识别、改错、限定情境造句。',evidence:'无提示与使用帮助分别记录，自由表达仍待核对。',href:to({view:'grammar',tab:'path',unit:unit.id})+'&check=1',
+   reason:progress.inRound?'上次三步练习还没有结束，接着未完成的一题。':repair?'上轮与参考不同或用过提示，再换一组核对。':'已到复习时间，回想这个用法；是否未见材料按完整展示历史核对。',
+   method:'一次一题：识别、改错、限定情境造句。',evidence:'无提示与使用帮助分别记录；复用材料只算复习，材料用尽可继续学习其他单元，自由表达仍待核对。',href:to({view:'grammar',tab:'path',unit:unit.id})+'&check=1',
    priority:progress.inRound?priority.resume:repair?priority.repair:priority.review,at:progress.inRound||repair?last?.at||progress.seenAt||now:dueAt,kind:progress.inRound?'resume':repair?'repair':'review'});
  }
  const loopLessonKeys=new Set(courseLoopBindings.filter(course=>loopOwns.has(course.id)).map(course=>`${course.lesson.book}-${course.lesson.lessons[0]}`));

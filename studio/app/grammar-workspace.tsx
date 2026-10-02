@@ -14,7 +14,7 @@ import {updateGrammarProgress,revisitGrammarTheory,beginGrammarRound} from './gr
 export function GrammarWorkspace({state,update}:{state:State;update:(change:(s:State)=>State)=>void}) {
   const route=useRoute(),tab=route.tab||(route.book?'book':'path'),curriculum=tab==='path'||tab==='practice';
   const unit=route.unit?grammarUnitFor(route.unit):undefined;
-  useEffect(()=>{if(!route.check)return;if(unit)update(s=>updateGrammarProgress(s,unit.id,beginGrammarRound));navigate({...route,check:undefined},{replace:true,keepScroll:true})},[route.check,unit?.id]);
+  useEffect(()=>{if(!route.check)return;if(unit)update(s=>updateGrammarProgress(s,unit.id,p=>beginGrammarRound(p,unit)));navigate({...route,check:undefined},{replace:true,keepScroll:true})},[route.check,unit?.id]);
   const entry=route.book&&route.lesson?grammarEntryFor(route.book,route.lesson):undefined;
   const validPractice=!!entry&&!!route.goal&&guideBelongsToEntry(entry,route.goal)&&(!route.unit||!!unit&&unit.guideIds.includes(route.goal));
   const leaveUnit=()=>{if(unit)update(s=>updateGrammarProgress(s,unit.id,revisitGrammarTheory))};

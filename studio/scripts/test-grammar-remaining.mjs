@@ -236,7 +236,7 @@ try{
 
  const now=Date.parse('2026-10-01T12:00:00Z'),day=24*60*60*1000;
  function complete(unit,record,at,{wrong=false,hint=false}={}){
-  let next=progress.beginGrammarRound(record);const questions=progress.grammarRoundQuestions(unit,next.round);
+  let next=progress.beginGrammarRound(record,unit);const questions=progress.grammarRoundQuestions(unit,next.round);
   if(hint)next=progress.showGrammarHint(next,unit,questions[0].id);
   for(const [index,q] of questions.entries()){next=progress.setGrammarAnswer(next,unit,q.id,wrong&&index===0?'Wrong answer.':q.answer);next=progress.checkGrammarResponse(next,unit,q.id)}
   return progress.finishGrammarRound(next,unit,at);
@@ -318,15 +318,15 @@ try{
  let state=legacy;
  for(const unit of additions){
   const empty=progress.grammarProgressFor(legacy,unit);assert.deepEqual(empty,progress.emptyGrammarProgress());assert(!progress.delayedGrammarEvidence(empty,now+day));
-  for(const raw of [undefined,'{bad','null','[]','42','{"version":0}'])assert.deepEqual(progress.readGrammarProgress(raw,unit),progress.emptyGrammarProgress());
+  for(const raw of [undefined,'{bad','null','[]','42','{"version":0}'])assert.deepEqual(progress.readGrammarProgress(raw,unit),{...progress.emptyGrammarProgress(),materials:{complete:raw===undefined,firstShown:{}}});
   const seen=progress.markGrammarSeen(empty,now);assert.equal(seen.attempts.length,0);assert.equal(progress.grammarProgressStatus(seen,now),'已看过 · 尚未检验');
-  let round=progress.beginGrammarRound(seen);assert.equal(progress.finishGrammarRound(round,unit,now),round);
+  let round=progress.beginGrammarRound(seen,unit);assert.equal(progress.finishGrammarRound(round,unit,now),round);
   for(const q of progress.grammarRoundQuestions(unit,round.round))round=progress.setGrammarAnswer(round,unit,q.id,q.answer);
   assert.equal(progress.finishGrammarRound(round,unit,now),round,'Unconfirmed answers are not finished');
   for(const q of progress.grammarRoundQuestions(unit,round.round))round=progress.checkGrammarResponse(round,unit,q.id);
   const q=unit.practices[0],edited=progress.setGrammarAnswer(round,unit,q.id,'Wrong answer.');assert.equal(edited.responses[q.id].checkedValue,null);assert.equal(progress.finishGrammarRound(edited,unit,now),edited);
   const finished=progress.finishGrammarRound(round,unit,now);assert(finished.attempts[0].passed&&finished.attempts[0].independent);assert.equal(progress.finishGrammarRound(finished,unit,now+1),finished);
-  const redo=progress.beginGrammarRound(finished);assert.equal(redo.round,1);assert.deepEqual(redo.responses,{});assert.deepEqual(redo.attempts,finished.attempts);
+  const redo=progress.beginGrammarRound(finished,unit);assert.equal(redo.round,1);assert.deepEqual(redo.responses,{});assert.deepEqual(redo.attempts,finished.attempts);
   assert(!progress.delayedGrammarEvidence(complete(unit,finished,now+day-1),now+day));
   const delayed=complete(unit,finished,now+day);assert(progress.delayedGrammarEvidence(delayed,now+day));assert(!progress.delayedGrammarEvidence(delayed,now));
   assert(!progress.delayedGrammarEvidence(complete(unit,finished,now+day,{hint:true}),now+day));assert(!progress.delayedGrammarEvidence(complete(unit,delayed,now+2*day,{wrong:true}),now+2*day));
@@ -379,7 +379,7 @@ try{
     assert(target);target.props.onClick();const route=routes.at(-1);assert.deepEqual(route,{book:link.book,lesson:link.lesson,guideId,task:{unitId:unit.id,...unit.transfer}});routeEvents++;
    }
   }
-  button(tree,'开始三步练习').props.onClick();
+  button(tree,'开始练习').props.onClick();
   for(const variant of [0,1]){
    if(variant){tree=ui.renderUnit(unit,props,'NCE2');button(section(tree,'grammar-round-result'),'换一组题重做').props.onClick();tree=ui.renderUnit(unit,props,'NCE2');assert.deepEqual(progress.grammarProgressFor(saved,unit).responses,{});assert.equal(progress.grammarProgressFor(saved,unit).attempts.length,1);
     button(tree,'先给一点提示').props.onClick();tree=ui.renderUnit(unit,props,'NCE2');button(tree,'再给一点帮助').props.onClick();tree=ui.renderUnit(unit,props,'NCE2');assert(button(tree,'再给一点帮助').props.disabled);
@@ -387,15 +387,20 @@ try{
    }
    for(const [position,q] of progress.grammarRoundQuestions(unit,variant).entries()){
     tree=ui.renderUnit(unit,props,'NCE2');const exercise=section(tree,'grammar-progressive-practice');assert(exercise);assert(!section(tree,'grammar-round-result'));assert(textOf(exercise).includes(q.prompt));assert(!textOf(exercise).includes(q.explanation));assert(!textOf(exercise).includes('与参考一致')&&!textOf(exercise).includes('查看参考与解释'));
-    assert(button(exercise,position===2?'提交本轮':'记录这一题').props.disabled,'An empty current answer cannot be submitted');
+    assert(button(exercise,position===2?'提交本轮，核对三题':'记录这一题，下一步').props.disabled,'An empty current answer cannot be submitted');
     if(q.kind==='recognise'){const label=children(exercise).find(node=>node?.type==='label'&&textOf(node)===q.answer);assert(label);children(label).find(node=>node?.type==='input').props.onChange()}
     else{assert(!textOf(exercise).includes(q.answer));children(exercise).find(node=>node?.type==='textarea').props.onChange({target:{value:q.answer}})}
-    tree=ui.renderUnit(unit,props,'NCE2');button(tree,position===2?'提交本轮':'记录这一题').props.onClick();const record=progress.grammarProgressFor(saved,unit);assert.equal(record.responses[q.id].checkedValue,q.answer);assert.equal(record.attempts.length,variant+(position===2?1:0));uiEvents++;
+    tree=ui.renderUnit(unit,props,'NCE2');button(tree,position===2?'提交本轮，核对三题':'记录这一题，下一步').props.onClick();const record=progress.grammarProgressFor(saved,unit);assert.equal(record.responses[q.id].checkedValue,q.answer);assert.equal(record.attempts.length,variant+(position===2?1:0));uiEvents++;
    }
-   tree=ui.renderUnit(unit,props,'NCE2');const result=section(tree,'grammar-round-result');assert(result);for(const q of progress.grammarRoundQuestions(unit,variant))assert(textOf(result).includes(q.answer)&&textOf(result).includes(q.explanation));assert(progress.grammarProgressFor(saved,unit).attempts.at(-1).passed);assert.equal(progress.grammarProgressFor(saved,unit).attempts.at(-1).independent,variant===0);
+   tree=ui.renderUnit(unit,props,'NCE2');let result=section(tree,'grammar-round-result');assert(result);
+   for(const q of progress.grammarRoundQuestions(unit,variant)){
+    const item=children(result).find(node=>node?.type==='li'&&textOf(node).includes(q.prompt));
+    button(item,'查看参考与解释').props.onClick();tree=ui.renderUnit(unit,props,'NCE2');result=section(tree,'grammar-round-result');
+    assert(textOf(result).includes(q.answer)&&textOf(result).includes(q.explanation));
+   }assert(progress.grammarProgressFor(saved,unit).attempts.at(-1).passed);assert.equal(progress.grammarProgressFor(saved,unit).attempts.at(-1).independent,variant===0);
   }
   for(const [key,value] of Object.entries(legacy.drafts))assert.equal(saved.drafts[key],value);
-  const key=progress.grammarProgressKey(unit.id),futureRaw='{"version":2,"opaque":"Do not overwrite"}';saved={...saved,drafts:{...saved.drafts,[key]:futureRaw}};ui.resetHooks();tree=ui.renderUnit(unit,props,'NCE2');assert(button(tree,'开始三步练习').props.disabled);assert.equal(saved.drafts[key],futureRaw);
+  const key=progress.grammarProgressKey(unit.id),futureRaw='{"version":2,"opaque":"Do not overwrite"}';saved={...saved,drafts:{...saved.drafts,[key]:futureRaw}};ui.resetHooks();tree=ui.renderUnit(unit,props,'NCE2');assert(button(tree,'开始练习').props.disabled);assert.equal(saved.drafts[key],futureRaw);
  }
  assert.equal(uiEvents,60);
  assert.equal(routeEvents,additions.flatMap(unit=>unit.guideIds.flatMap(guideId=>Object.keys(model.bookCounts).filter(book=>sourceEntries(guideId).some(source=>source.book===book)))).length,'Every available guide/book pair has one actual component callback');
@@ -407,7 +412,7 @@ try{
   let tree=ui.renderUnit(sentenceUnit,failureProps),exercise=section(tree,'grammar-progressive-practice');
   if(q.kind==='recognise'){const label=children(exercise).find(node=>node?.type==='label'&&textOf(node)===q.answer);children(label).find(node=>node?.type==='input').props.onChange()}
   else children(exercise).find(node=>node?.type==='textarea').props.onChange({target:{value:q===sentenceQuestion?sentenceErrors[0]:q.answer}});
-  tree=ui.renderUnit(sentenceUnit,failureProps);button(tree,position===2?'提交本轮':'记录这一题').props.onClick();
+  tree=ui.renderUnit(sentenceUnit,failureProps);button(tree,position===2?'提交本轮，核对三题':'记录这一题，下一步').props.onClick();
  }
  const failedResult=section(ui.renderUnit(sentenceUnit,failureProps),'grammar-round-result');assert(failedResult&&textOf(failedResult).includes('与参考不同，待核对'));
  const failedRecord=progress.grammarProgressFor(failedState,sentenceUnit);assert.equal(failedRecord.attempts.length,1);assert(!failedRecord.attempts[0].passed);assert(!failedRecord.responses[sentenceQuestion.id].matched);
@@ -421,7 +426,7 @@ try{
    let tree=ui.renderUnit(unit,props),exercise=section(tree,'grammar-progressive-practice');
    if(q.kind==='recognise'){const label=children(exercise).find(node=>node?.type==='label'&&textOf(node)===q.answer);children(label).find(node=>node?.type==='input').props.onChange()}
    else children(exercise).find(node=>node?.type==='textarea').props.onChange({target:{value:q.id===target.id?answer:q.answer}});
-   tree=ui.renderUnit(unit,props);button(tree,position===2?'提交本轮':'记录这一题').props.onClick();newFailureEvents++;
+   tree=ui.renderUnit(unit,props);button(tree,position===2?'提交本轮，核对三题':'记录这一题，下一步').props.onClick();newFailureEvents++;
   }
   const record=progress.grammarProgressFor(saved,unit);assert.equal(record.attempts.length,1);assert(!record.attempts[0].passed);assert(!record.responses[target.id].matched);
   assert(textOf(section(ui.renderUnit(unit,props),'grammar-round-result')).includes('与参考不同，待核对'));
