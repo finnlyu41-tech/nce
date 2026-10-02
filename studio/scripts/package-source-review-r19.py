@@ -13,8 +13,8 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def package(images, pdfs, output):
-    rows = json.loads((ROOT / 'app/data/source-review-r19-pages.json').read_text())
+def package(images, pdfs, output, rows=None, manifest_name='review-r19-manifest.json'):
+    rows = rows if rows is not None else json.loads((ROOT / 'app/data/source-review-r19-pages.json').read_text())
     staged = []
     checked_books = {}
     for row in rows:
@@ -31,7 +31,7 @@ def package(images, pdfs, output):
         if path.exists() and path.read_bytes() != data:
             raise ValueError('Conflicting existing page asset: ' + path.name)
         staged.append((path, data))
-    manifest = {'schemaVersion': 1, 'scope': 'four exact supplemental source pages; raw index unchanged',
+    manifest = {'schemaVersion': 1, 'scope': 'four exact supplemental source pages; raw index unchanged' if len(rows) == 4 else 'supplemental source pages; raw index unchanged',
                 'sources': checked_books, 'pages': [
                     {key: row[key] for key in ['book', 'lesson', 'pdfPage', 'src', 'imageSha256', 'sourceBookSha256']}
                     for row in rows]}
@@ -42,7 +42,7 @@ def package(images, pdfs, output):
             continue
         path.parent.mkdir(parents=True, exist_ok=True)
         atomic_write(path, data)
-    atomic_write(output / 'lesson-pages/review-r19-manifest.json',
+    atomic_write(output / 'lesson-pages' / manifest_name,
                  (json.dumps(manifest, ensure_ascii=False, indent=2) + '\n').encode())
     return manifest
 

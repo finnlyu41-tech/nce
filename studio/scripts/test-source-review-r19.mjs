@@ -12,7 +12,7 @@ const contents="export * from './app/source-review-r19';export * from './app/sou
 async function bundle(name,baseline=false){
  const output=new URL(name+'.mjs',work);
  const helper=baseline?execFileSync('git',['show',proof.baseCommit+':studio/app/source-review-batch1.ts'],{cwd:fileURLToPath(root),encoding:'utf8'}):null;
- await build({stdin:{contents,resolveDir:fileURLToPath(root),loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',outfile:fileURLToPath(output),logLevel:'silent',plugins:helper?[{name:'actual-v37-helper',setup(b){b.onLoad({filter:/app\/source-review-batch1\.ts$/},()=>({contents:helper,loader:'ts'}));}}]:[]});return import(output);
+ await build({stdin:{contents,resolveDir:fileURLToPath(root),loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',outfile:fileURLToPath(output),logLevel:'silent',plugins:helper?[{name:'actual-v37-helper',setup(b){b.onLoad({filter:/app\/source-review-batch1\.ts$/},()=>({contents:"import {withR19TailPages} from './source-review-r19-tail';\n"+helper.replace('export function withReviewedSourceAssociations(index:PageIndex):PageIndex{','export function withReviewedSourceAssociations(index:PageIndex):PageIndex{\n index=withR19TailPages(index);'),loader:'ts'}));}}]:[]});return import(output);
 }
 const m=await bundle('candidate'),baseline=await bundle('v37',true);
 const indexBytes=await readFile(new URL('dist-online/lesson-pages/index.json',root)),dictionaryBytes=await readFile(new URL('dist-online/language/dictionary.json',root));
@@ -49,10 +49,10 @@ check('five identity links retain printed characters and existing canonical stri
  for(const r of rows){const l=projected.lessons[r.book+'-'+r.lesson],old=prior.lessons[r.book+'-'+r.lesson];assert.equal(l.vocabulary,old.vocabulary);assert.equal(l.vocabulary.words.filter(w=>w.word===r.word).length,1)}
  assert.equal(rows.find(r=>r.sourceWordId==='NCE2-86:waterski').printedPartOfSpeech,null);
 });
-check('four supplemental editorial pages append to their own lessons and keep uncertain PDF424 unlinked',()=>{
+check('four original R19 pages and historical PDF424 receipt stay unchanged by that batch',()=>{
  assert.equal(m.reviewedR19SupplementalPages.length,4);
  for(const r of m.reviewedR19SupplementalPages){const l=projected.lessons[r.book+'-'+r.lesson],page=l.pages.at(-1);assert.equal(page.page,r.pdfPage);assert.equal(page.sha256,r.imageSha256);assert.equal(page.src,r.src);assert(!l.vocabulary.pages.includes(r.pdfPage));assert(m.sourcePageClarification(projected,r.book,r.lesson,page).includes(r.text));assert.equal(m.sourcePageClarification(prior,r.book,r.lesson,page),undefined);assert.equal(m.sourcePageClarification(projected,r.book,r.lesson+1,page),undefined)}
- assert(!Object.entries(projected.lessons).some(([id,l])=>id.startsWith('NCE2-')&&l.pages.some(p=>p.page===424)));assert.equal(proof.unresolvedEditorial.inferenceAccepted,false);
+ assert.deepEqual(projected.lessons['NCE2-83'].pages,prior.lessons['NCE2-83'].pages);assert.equal(proof.unresolvedEditorial.inferenceAccepted,false);
  const legacy=projected.lessons['NCE2-34'].pages.find(p=>p.page===199);assert(m.sourcePageClarification(projected,'NCE2',34,legacy).includes('第 34 课'));
 });
 check('supplemental projection rejects wrong editions/anchor/duplicate/foreign placement before mutation',()=>{

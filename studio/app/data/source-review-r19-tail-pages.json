@@ -1,0 +1,29 @@
+[
+  {
+    "book": "NCE2",
+    "lesson": 83,
+    "sourceBookSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+    "pdfPage": 424,
+    "printedPage": 384,
+    "imageSha256": "044f3c7028a3e9e131f8b3d6dff84e2ba1fa2c239e735ea73f5c664634e0ed16",
+    "src": "/lesson-pages/044f3c7028a3e9e131f8b3d6dff84e2ba1fa2c239e735ea73f5c664634e0ed16.png",
+    "originalRenderFile": "NCE2-pdf424-full-2x.png",
+    "contextPages": [
+      {
+        "page": 422,
+        "src": "/lesson-pages/6f28c4179231bf549cecb4b068ffc655c6d03bc8942786b8a2003d6776c2f154.jpg",
+        "sha256": "6f28c4179231bf549cecb4b068ffc655c6d03bc8942786b8a2003d6776c2f154"
+      },
+      {
+        "page": 423,
+        "src": "/lesson-pages/35288dca4e0c0a1b1d70ba640da2ee74fc5155e9e9eed34cc36db19953b43b03.jpg",
+        "sha256": "35288dca4e0c0a1b1d70ba640da2ee74fc5155e9e9eed34cc36db19953b43b03"
+      }
+    ],
+    "printedLesson": 80,
+    "contentAssociationLesson": 83,
+    "associationBasis": "original body and exercise continuity; printed header retained",
+    "publisherErratumVerified": false,
+    "text": "原页印为 Unit 4 Lesson 80。按第83课正文与习题接续，本页在第83课下关联展示；原印课号保留。"
+  }
+]

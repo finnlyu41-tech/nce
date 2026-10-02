@@ -17,7 +17,7 @@ check('legacy two, SF01 two plus SF02 eight associations; raw bundle and all old
  const before=new Set(sourceIds(index)),after=new Set(sourceIds(projected));
  assert.deepEqual([...after].filter(id=>!before.has(id)).sort(),['NCE1-103:low','NCE1-51:snow','NCE3-58:balcony','NCE4-9:assail',...m.reviewedSF02Associations.map(r=>r.book+'-'+r.lesson+':'+r.word)].sort());
  assert([...before].every(id=>after.has(id)));assert.equal(m.withReviewedSourceAssociations(projected),projected);
- for(const [id,lesson] of Object.entries(index.lessons))if(!['NCE1-103','NCE1-51','NCE3-58','NCE4-9',...m.reviewedSF02Associations.map(r=>r.book+'-'+r.lesson),...m.reviewedR19SupplementalPages.map(r=>r.book+'-'+r.lesson)].includes(id))assert.equal(projected.lessons[id],lesson);
+ for(const [id,lesson] of Object.entries(index.lessons))if(!['NCE1-103','NCE1-51','NCE3-58','NCE4-9',...m.reviewedSF02Associations.map(r=>r.book+'-'+r.lesson),...m.reviewedR19SupplementalPages.map(r=>r.book+'-'+r.lesson),'NCE2-83'].includes(id))assert.equal(projected.lessons[id],lesson);
 });
 check('existing normalized words, forms and printed ordering',()=>{
  for(const repair of m.reviewedSourceAssociations){

@@ -1,6 +1,7 @@
 import type {NceBookId} from './model';
 import type {Page,PageIndex} from './lesson-context';
 import sourceNotes from './data/source-review-r19.json';
+import {withR19TailPages,r19TailPageNotes} from './source-review-r19-tail';
 import supplementalPages from './data/source-review-r19-pages.json';
 
 type SourceNote={sourceWordId:string;kind:'interpretation'|'identity';book:NceBookId;lesson:number;word:string;sourceBookSha256:string;pdfPage:number;imageSha256:string;printedEntryId:string;printedPartOfSpeech:string|null;printedGloss:string|null;target:string;boundary:string;text:string};
@@ -24,7 +25,7 @@ export function withR19SupplementalPages(index:PageIndex):PageIndex{
   if(!changed){lessons={...lessons};changed=true;}
   lessons[id]={...entry,pages:[...entry.pages,wanted]};
  }
- return changed?{...index,lessons}:index;
+ return withR19TailPages(changed?{...index,lessons}:index);
 }
 
 // Explanations are scoped to an edition, original full page and unique literal
@@ -36,5 +37,6 @@ export function r19SourcePageNotes(index:PageIndex,book:NceBookId,lesson:number,
  const notes=reviewedR19SourceNotes.filter(r=>r.book===book&&r.lesson===lesson&&index.sources?.[book]===r.sourceBookSha256&&page.page===r.pdfPage&&page.sha256===r.imageSha256&&page.src==='/lesson-pages/'+r.imageSha256+'.jpg'&&entry.vocabulary?.pages.includes(page.page)&&Array.isArray(words)&&words.filter(w=>w.word===r.word).length===1&&words.filter(w=>w.word.trim().toLowerCase().replace(/’/g,"'")===r.word.trim().toLowerCase().replace(/’/g,"'")).length===1).map(r=>r.text);
  const extra=reviewedR19SupplementalPages.find(r=>r.book===book&&r.lesson===lesson&&index.sources?.[book]===r.sourceBookSha256&&page.page===r.pdfPage&&page.sha256===r.imageSha256&&page.src===r.src&&entry.pages.filter(p=>p.page===r.anchorPage.page).length===1&&entry.pages.some(p=>samePage(p,r.anchorPage))&&!entry.vocabulary?.pages.includes(r.pdfPage));
  if(extra)notes.push(extra.text);
+ const tail=r19TailPageNotes(index,book,lesson,page);if(tail)notes.push(tail);
  return notes.length?notes.join('\n'):undefined;
 }
