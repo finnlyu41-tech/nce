@@ -37,6 +37,24 @@
   .studio-classic .vocabulary-tabs { margin-bottom: 12px; }
   .studio-classic .vocabulary-scope { font-size: 13px; line-height: 1.65; }
 
+  /* Reduce repeated vocabulary framing; keep the existing task controls. */
+  .studio-classic .workspace:has(> .vocabulary-tabs) .page-heading .eyebrow { display: none; }
+  .studio-classic .workspace:has(> .vocabulary-tabs) .page-heading { margin-bottom: 12px; }
+  .studio-classic .vocabulary-lesson-panel { padding: 16px; }
+  .studio-classic .vocabulary-scope { margin-bottom: 10px; }
+  .studio-classic .vocabulary-lesson-options > summary,
+  .studio-classic .flashcard-examples > summary { min-height: 44px; padding: 8px 0; cursor: pointer; }
+  .studio-classic .flashcard-studio { margin-top: 12px; }
+  .studio-classic .flashcard-overview { gap: 8px; margin-bottom: 12px; }
+  .studio-classic .flashcard-studio .flash-content { min-height: 0; padding: 12px 0; }
+  .studio-classic .flashcard-examples { width: 100%; text-align: left; }
+  .studio-classic .flashcard-examples:not([open]) { margin: 0; }
+  .studio-classic .flashcard-sources a,
+  .studio-classic .flashcard-options > summary,
+  .studio-classic .flashcard-library > summary,
+  .studio-classic .flashcard-originals > summary { min-height: 44px; }
+  .focus-page .focus-brand { display: inline-flex; align-items: center; min-height: 44px; }
+
   /* 16px editable controls avoid the small-text focus zoom used by mobile Safari. */
   :is(.studio-classic, .learning-home, .focus-content)
     :is(input:not([type="checkbox"]):not([type="radio"]), textarea, select) {
@@ -104,7 +122,10 @@
 }
 
 @media (max-width: 759px) and (max-height: 650px) {
-  .studio-classic .flash-content { padding: 12px 0; gap: 6px; }
+  .studio-classic .flashcard-studio { margin-top: 8px; }
+  .studio-classic .flashcard-overview { margin-bottom: 8px; }
+  .studio-classic .workspace:has(> .vocabulary-tabs) .page-heading p { display: none; }
+  .studio-classic .flashcard-studio .flash-content { padding: 8px 0; gap: 6px; }
   .focus-page .focus-content { padding-top: 14px; }
   .focus-page .focus-listen { padding: 12px 0; }
 }

@@ -41,6 +41,7 @@ const errorMessage=(e:unknown)=>e instanceof Error?e.message:'操作未完成，
 export function FlashcardReview({state,update,ready,onAdd,onSelectWords}:{state:State;update:Dispatch<SetStateAction<State>>;ready:boolean;onAdd:(word:Word)=>void|boolean;onSelectWords:()=>void}){
  const [clock,setClock]=useState(()=>Date.now()),[filter,setFilter]=useState<Filter>('all'),[query,setQuery]=useState(''),[error,setError]=useState(''),[receipt,setReceipt]=useState(''),[definitionEntry,setDefinitionEntry]=useState({key:'',value:''});
  const lastScored=useRef('');
+ const answerFocus=useRef<HTMLParagraphElement>(null),focusAfterReveal=useRef(false);
  useEffect(()=>{const tick=()=>setClock(Date.now());const timer=setInterval(tick,15000);window.addEventListener('focus',tick);document.addEventListener('visibilitychange',tick);return()=>{clearInterval(timer);window.removeEventListener('focus',tick);document.removeEventListener('visibilitychange',tick)}},[]);
  useEffect(()=>{setClock(Date.now())},[state.flashcards?.cards]);
  const queue=useMemo(()=>ready?getFlashcardQueue(state,clock,filter):[],[state,clock,filter,ready]);
@@ -49,6 +50,11 @@ export function FlashcardReview({state,update,ready,onAdd,onSelectWords}:{state:
  const token=current?{cardId:current.card.id,revision:current.card.revision}:undefined;
  const tokenKey=token?token.cardId+':'+token.revision:'';
  const flipped=!!(token&&session?.cardId===token.cardId&&session?.revision===token.revision&&session.revealed);
+ useEffect(()=>{if(flipped&&focusAfterReveal.current){
+  focusAfterReveal.current=false;const answer=answerFocus.current;answer?.focus({preventScroll:true});
+  const ratings=answer?.closest('.flashcard')?.querySelector('.flashcard-ratings')?.getBoundingClientRect();
+  if(ratings&&(ratings.bottom>innerHeight||ratings.top<0))answer?.closest('.flash-content')?.scrollIntoView({block:'start',behavior:'instant'});
+ }},[flipped,tokenKey]);
  const summary=flashcardSummary(state,clock);
  const definition=definitionEntry.key===tokenKey?definitionEntry.value:'';
  const notes=useMemo(()=>Object.values(state.flashcards?.notes||{}).filter(note=>(filter==='all'||note.sources.some(s=>s.kind===filter))&&(note.word+' '+note.meaning).toLowerCase().includes(query.trim().toLowerCase())).sort((a,b)=>a.word.localeCompare(b.word,'en')),[state.flashcards?.notes,filter,query]);
@@ -60,7 +66,7 @@ export function FlashcardReview({state,update,ready,onAdd,onSelectWords}:{state:
  }
  function reveal(expected:FlashcardToken){
   lastScored.current='';
-  apply(s=>revealFlashcard(selectFlashcard(s,expected.cardId),expected));
+  focusAfterReveal.current=apply(s=>revealFlashcard(selectFlashcard(s,expected.cardId),expected));
  }
  function onRate(rating:FlashcardRating,now:number){
   if(!token||lastScored.current===tokenKey)return;
@@ -93,10 +99,12 @@ export function FlashcardReview({state,update,ready,onAdd,onSelectWords}:{state:
     <div className="flash-content" aria-live="polite">
      <h2 lang={current.card.direction==='recognition'?'en':'zh-CN'}>{current.card.direction==='recognition'?current.note.word:current.note.meaning}</h2>
      {!flipped?<p className="muted">先试着回想，再翻开答案。</p>:<>
-      <p className="meaning" lang={current.card.direction==='recognition'?'zh-CN':'en'}>{current.card.direction==='recognition'?current.note.meaning:current.note.word}</p>
+      <p ref={answerFocus} tabIndex={-1} className="meaning" lang={current.card.direction==='recognition'?'zh-CN':'en'}>{current.card.direction==='recognition'?current.note.meaning:current.note.word}</p>
       {current.note.ipa&&<p className="ipa" lang="en">{current.note.ipa}</p>}
-      <VocabularyExamples examples={usageExamples(current.note.word,current.note.meaning,current.note.examples)}/>
-      <Sources sources={current.note.sources}/>
+      <details className="flashcard-examples"><summary>例句与来源</summary>
+       <VocabularyExamples examples={usageExamples(current.note.word,current.note.meaning,current.note.examples)}/>
+       <Sources sources={current.note.sources}/>
+      </details>
       {current.card.direction==='production'&&<button className="text-btn" onClick={()=>speak(current.note.word)}><Volume2 size={16}/>听英文</button>}
      </>}
     </div>

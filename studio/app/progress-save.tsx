@@ -25,6 +25,7 @@ export function ProgressSave({state, ready, status, captureRestore, restore}: Pr
   const [receipt, setReceipt] = useState('');
   const [standalone, setStandalone] = useState(false);
   const input = useRef<HTMLInputElement>(null);
+  const dialogTrigger = useRef<HTMLButtonElement>(null);
   const working = useRef(false);
   useEffect(() => {
     setStandalone(window.matchMedia('(display-mode: standalone)').matches ||
@@ -137,12 +138,12 @@ export function ProgressSave({state, ready, status, captureRestore, restore}: Pr
       <button className="btn secondary small progress-save-button" disabled={!ready || busy} onClick={() => save()} title="将当前学习进度保存为文件">
         <Download size={16}/><span>{busy ? '处理中…' : '保存进度'}</span>
       </button>
-      <button className="icon-btn progress-save-more" disabled={!ready || busy} onClick={() => setOpen(true)} aria-label="进度备份与恢复" aria-haspopup="dialog" aria-expanded={open} title="进度备份与恢复">
+      <button ref={dialogTrigger} className="icon-btn progress-save-more" disabled={!ready || busy} onClick={() => setOpen(true)} aria-label="进度备份与恢复" aria-haspopup="dialog" aria-expanded={open} title="进度备份与恢复">
         <ChevronDown size={16}/>
       </button>
     </div>
     <Dialog open={open} onOpenChange={value => { if (!busy) { setOpen(value); if (!value) { setPending(null); setPrepared(null); setCheckpoint(null); } } }}>
-      <DialogContent className="progress-save-dialog">
+      <DialogContent className="progress-save-dialog" onCloseAutoFocus={event => { const trigger = dialogTrigger.current; if (trigger?.isConnected && trigger.getClientRects().length) { event.preventDefault(); trigger.focus({preventScroll: true}); } }}>
         <DialogHeader><DialogTitle>{pending ? '恢复这份学习进度？' : '保存与恢复进度'}</DialogTitle>
           <DialogDescription>{pending ? !pending.state.flashcards&&state.flashcards ? '教材笔记和草稿将按文件恢复；当前闪卡记录会保留，并补入旧备份中缺失的词卡。请先保存当前进度。' : '教材笔记、词卡和文字练习将按文件恢复。请先保存当前进度，以便回退。' : '随时留一份进度文件，换设备时手动恢复继续学。'}</DialogDescription>
         </DialogHeader>

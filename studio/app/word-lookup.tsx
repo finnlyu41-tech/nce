@@ -14,17 +14,18 @@ import {loadPages} from './lesson-context';
 import {buildVocabularyCatalog} from './textbook-vocabulary';
 import {resolveReviewedLookupEntry,type ReviewedLookupEntry} from './reviewed-word-forms';
 type WordSelection={word:string;example:string;exampleTranslation?:string;exampleSource?:ExampleSource;sources?:Word['sources']};
-const Context=createContext<(selection:WordSelection)=>void>(()=>{});
+const Context=createContext<(selection:WordSelection,trigger?:HTMLElement)=>void>(()=>{});
 
 export function WordLookupProvider({children,onAdd}:{children:ReactNode;onAdd:(word:Word)=>void|boolean}){
  const route=useRoute();
- const [selection,setSelection]=useState<WordSelection|null>(null),[entry,setEntry]=useState<ReviewedLookupEntry>(),[loading,setLoading]=useState(false),[error,setError]=useState(''),[added,setAdded]=useState(false);const request=useRef(0);
+ const [selection,setSelection]=useState<WordSelection|null>(null),[entry,setEntry]=useState<ReviewedLookupEntry>(),[loading,setLoading]=useState(false),[error,setError]=useState(''),[added,setAdded]=useState(false);const request=useRef(0);const trigger=useRef<HTMLElement|null>(null);
  useEffect(()=>{request.current++;setSelection(null)},[route]);
  function teachingSourcesFor(selected:WordSelection){
   const sources=selected.sources?.flatMap(source=>source.kind==='nce'?[{book:source.book,lesson:source.lesson}]:[])||[];
   return sources.length?sources:route.book&&route.lesson&&validNceKey(`${route.book}-${route.lesson}`)?[{book:route.book,lesson:route.lesson}]:[];
  }
- async function open(selection:WordSelection){
+ async function open(selection:WordSelection,opener?:HTMLElement){
+  if(opener)trigger.current=opener;
   const {word}=selection;
   const id=++request.current;setSelection(selection);setEntry(undefined);setLoading(true);setError('');setAdded(false);
   try{const data=await loadDictionary();const found=await resolveReviewedLookupEntry(word,teachingSourcesFor(selection),data,async()=>{const index=await loadPages();try{return buildVocabularyCatalog(index)}catch{return buildVocabularyCatalog(await loadPages(true))}});if(request.current===id)setEntry(found)}catch(e){if(request.current===id)setError((e as Error).message)}finally{if(request.current===id)setLoading(false)}
@@ -39,7 +40,7 @@ export function WordLookupProvider({children,onAdd}:{children:ReactNode;onAdd:(w
  const savedExample=selection?.example?[{en:selection.example,zh:selection.exampleTranslation}]:[];
  const examples=selection?usageExamples(exampleWord,[reviewed,otherReviewed,entry?.meaning||''].filter(Boolean).join('\n'),savedExample,selection.exampleSource):[];
  const enrollmentExample=selection?usageExamples(exampleWord,reviewed||entry?.meaning||'',reviewed?[]:savedExample,reviewed?undefined:selection.exampleSource)[0]:undefined;
- return <Context.Provider value={open}>{children}<Dialog open={!!selection} onOpenChange={open=>{if(!open){request.current++;setSelection(null)}}}><DialogContent className="word-lookup"><DialogHeader><DialogTitle lang="en">{selection?.word}</DialogTitle><DialogDescription>{entry?.source==='textbook'?'教材词表释义':'词典释义'} · 结合原句选择合适的意思</DialogDescription></DialogHeader>{loading?<p role="status">正在查词…</p>:error?<><p role="alert">{error}</p><button className="btn secondary" onClick={()=>selection&&open(selection)}>重新查词</button></>:entry?<><div className="row wrap"><span className="lookup-ipa">{ipa?`/${ipa.replace(/^\/+|\/+$/g,'')}/`:'词典未提供此词的音标'}</span><button className="text-btn" onClick={()=>speak(reviewed?targetWord:selection?.word||entry.word)}><Volume2 size={17}/>听发音</button><PlaybackSpeed ariaLabel="查词发音语速"/></div>{exampleWord.toLowerCase()!==selection?.word.toLowerCase()&&<p className="muted small">词形对应：{exampleWord}</p>}<p className="lookup-meaning">{entry.meaning}</p></>:<p>词典暂未收录这个词。可在「我的词句」按原书补充释义。</p>}
+ return <Context.Provider value={open}>{children}<Dialog open={!!selection} onOpenChange={open=>{if(!open){request.current++;setSelection(null)}}}><DialogContent className="word-lookup" onCloseAutoFocus={event=>{const opener=trigger.current;trigger.current=null;if(opener?.isConnected&&opener.getClientRects().length){event.preventDefault();opener.focus({preventScroll:true})}}}><DialogHeader><DialogTitle lang="en">{selection?.word}</DialogTitle><DialogDescription>{entry?.source==='textbook'?'教材词表释义':'词典释义'} · 结合原句选择合适的意思</DialogDescription></DialogHeader>{loading?<p role="status">正在查词…</p>:error?<><p role="alert">{error}</p><button className="btn secondary" onClick={()=>selection&&open(selection)}>重新查词</button></>:entry?<><div className="row wrap"><span className="lookup-ipa">{ipa?`/${ipa.replace(/^\/+|\/+$/g,'')}/`:'词典未提供此词的音标'}</span><button className="text-btn" onClick={()=>speak(reviewed?targetWord:selection?.word||entry.word)}><Volume2 size={17}/>听发音</button><PlaybackSpeed ariaLabel="查词发音语速"/></div>{exampleWord.toLowerCase()!==selection?.word.toLowerCase()&&<p className="muted small">词形对应：{exampleWord}</p>}<p className="lookup-meaning">{entry.meaning}</p></>:<p>词典暂未收录这个词。可在「我的词句」按原书补充释义。</p>}
   {reviewed&&<p className="lookup-meaning"><strong>已核对关联词表义项</strong><br/>{reviewed}</p>}
   <VocabularyExamples examples={examples}/>
   {selection&&!examples.length&&!loading&&<p className="muted small">这个词义暂缺双语例句，可回到教材词表查看原句；不自动套用其他义项。</p>}
@@ -47,10 +48,10 @@ export function WordLookupProvider({children,onAdd}:{children:ReactNode;onAdd:(w
 }
 export function WordText({text,example=text,exampleTranslation,sources}:{text:string;example?:string;exampleTranslation?:string;sources?:Word['sources']}){
  const open=useContext(Context);
- return <span className="word-text" lang="en">{text.split(/([A-Za-z]+(?:['’][A-Za-z]+)*)/g).map((part,i)=>/^[A-Za-z]/.test(part)?<button key={i} type="button" className="lookup-word" aria-label={`查词 ${part}`} onClick={()=>open({word:part,example,exampleTranslation,sources})}>{part}</button>:part)}</span>;
+ return <span className="word-text" lang="en">{text.split(/([A-Za-z]+(?:['’][A-Za-z]+)*)/g).map((part,i)=>/^[A-Za-z]/.test(part)?<button key={i} type="button" className="lookup-word" aria-label={`查词 ${part}`} onClick={event=>open({word:part,example,exampleTranslation,sources},event?.currentTarget)}>{part}</button>:part)}</span>;
 }
 
 export function WordLookupButton({word,example='',exampleTranslation,exampleSource,sources,className=''}:{word:string;example?:string;exampleTranslation?:string;exampleSource?:ExampleSource;sources?:Word['sources'];className?:string}){
  const open=useContext(Context);
- return <button type="button" className={'lookup-word '+className} lang="en" aria-label={`查词 ${word}`} onClick={()=>open({word,example,exampleTranslation,sources,...(exampleSource?{exampleSource}:{})})}>{word}</button>;
+ return <button type="button" className={'lookup-word '+className} lang="en" aria-label={`查词 ${word}`} onClick={event=>open({word,example,exampleTranslation,sources,...(exampleSource?{exampleSource}:{})},event?.currentTarget)}>{word}</button>;
 }
