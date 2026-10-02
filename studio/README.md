@@ -1,6 +1,10 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v35 · 来源小批 SF01
+## 当前发布 v36 · CL02 第7／9／11课闭环
+
+版本 `2026-10-02-course-loop-batch02-v36`，运行源码 `d9c7c48a7d419c230be06bf81cc956d63b124649`，固定部署 [50785cd3](https://50785cd3.finn-english-studio.pages.dev)。第7–8、9–10、11–12课三组共54道受限文字题接入生产，六课独立记录保留；单一推荐1→3→5→7→9→11→旧13，旧键、国籍边界、存储守护和SF01来源不变。101课程／49Today检查通过，复用作者22+2原生UI与19存储验收；正式入口补10组烟测，双地址76项资源哈希一致。自然间隔、开放表达、真机与真实听感仍待核对。[发布接线与验证](docs/course-loop-batch-02-release-v36.md)。
+
+## 已发布 v35 · 来源小批 SF01
 
 版本 `2026-10-02-source-associations-sf01-v35`，运行源码 `533fdeef3302e04f224ea68ee7bdcb9509ba48e6`，固定部署 [82a68b41](https://82a68b41.finn-english-studio.pages.dev)。新增 [snow · NCE1 第51课](https://finn-english-studio.pages.dev/#/words/NCE1/51?tab=book) 和 [balcony · NCE3 第58课](https://finn-english-studio.pages.dev/#/words/NCE3/58?tab=book) 的原书词表关联，词典释义、旧卡 ID／排程和复习历史保留。目录3,618条关联／3,348个词；315原创词头、420例句和62未解决项不变。12新来源、8旧来源、15FSRS、275入卡回调检查通过；本机32组原生Chrome验收、正式入口8组烟测及双地址64项公开哈希一致；未改CL／IELTS沿用v34已验基线。其余8来源／5文字修订继续待核，CL02及表格独立推进。[接线与验证](docs/source-fixes-sf01-production-integration.md)。
 
