@@ -4,17 +4,62 @@
   "ownerWiringRequired": true,
   "productionRegistrationChanged": false,
   "firstBatch": {
-    "courseIds": ["nce1-61", "nce1-63", "nce1-65"],
-    "modulePaths": ["course-loop/parallel-nce1-061-071/lesson-nce1-061.mjs", "course-loop/parallel-nce1-061-071/lesson-nce1-063.mjs", "course-loop/parallel-nce1-061-071/lesson-nce1-065.mjs"],
-    "successors": {"nce1-61": "nce1-63", "nce1-63": "nce1-65", "nce1-65": "nce1-67"}
+    "courseIds": [
+      "nce1-61",
+      "nce1-63",
+      "nce1-65"
+    ],
+    "modulePaths": [
+      "course-loop/parallel-nce1-061-071/lesson-nce1-061.mjs",
+      "course-loop/parallel-nce1-061-071/lesson-nce1-063.mjs",
+      "course-loop/parallel-nce1-061-071/lesson-nce1-065.mjs"
+    ],
+    "successors": {
+      "nce1-61": "nce1-63",
+      "nce1-63": "nce1-65",
+      "nce1-65": "nce1-67"
+    }
   },
   "secondBatch": {
-    "courseIds": ["nce1-67", "nce1-69", "nce1-71"],
-    "modulePaths": ["course-loop/parallel-nce1-061-071/lesson-nce1-067.mjs", "course-loop/parallel-nce1-061-071/lesson-nce1-069.mjs", "course-loop/parallel-nce1-061-071/lesson-nce1-071.mjs"],
-    "successors": {"nce1-67": "nce1-69", "nce1-69": "nce1-71", "nce1-71": "nce1-73"},
-    "status": "pending-independent-validation"
+    "courseIds": [
+      "nce1-67",
+      "nce1-69",
+      "nce1-71"
+    ],
+    "modulePaths": [
+      "course-loop/parallel-nce1-061-071/lesson-nce1-067.mjs",
+      "course-loop/parallel-nce1-061-071/lesson-nce1-069.mjs",
+      "course-loop/parallel-nce1-061-071/lesson-nce1-071.mjs"
+    ],
+    "successors": {
+      "nce1-67": "nce1-69",
+      "nce1-69": "nce1-71",
+      "nce1-71": "nce1-73"
+    },
+    "status": "authored-independent-blind-and-factory-source-validated"
   },
-  "unionExtensions": ["CourseId", "showSource.lesson", "showSource.comicKey"],
-  "preserve": ["latest SourceKind including independently authored video", "single createCourseLoopModel", "module.matches", "existing guarded writer", "source guard", "unknown successor fallback", "latest owner registry entries"],
-  "unverified": ["production host wiring", "published origin", "physical phone/keyboard", "actual audibility", "natural24h/7d", "human open expression review", "pronunciation", "learning gains"]
+  "unionExtensions": [
+    "CourseId",
+    "showSource.lesson",
+    "showSource.comicKey"
+  ],
+  "preserve": [
+    "latest SourceKind including independently authored video",
+    "single createCourseLoopModel",
+    "module.matches",
+    "existing guarded writer",
+    "source guard",
+    "unknown successor fallback",
+    "latest owner registry entries"
+  ],
+  "unverified": [
+    "production host wiring",
+    "published origin",
+    "physical phone/keyboard",
+    "actual audibility",
+    "natural24h/7d",
+    "human open expression review",
+    "pronunciation",
+    "learning gains"
+  ]
 }

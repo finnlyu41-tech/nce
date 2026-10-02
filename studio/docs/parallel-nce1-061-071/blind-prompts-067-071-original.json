@@ -1,0 +1,290 @@
+[
+  {
+    "courseId": "nce1-67",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n67-past-be-statement",
+        "context": "昨天的博物馆值班表写着：一名导游很忙。",
+        "prompt": "用The guide、busy、yesterday写过去肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n67-past-be-question",
+        "context": "你问一个司机他昨天是否准备好了，尚不知道答案。",
+        "prompt": "用Were、you、ready、yesterday写一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n67-past-place-time",
+        "context": "周二孩子正常到校上课；她不是参观学校建筑。",
+        "prompt": "用She、school、on Tuesday写一句在校的过去陈述，选合适be、at和冠词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n67-past-be-statement",
+        "context": "活动结束后你和两位搭档回顾：我们昨晚不累。",
+        "prompt": "用We、not、tired、last night写过去否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：看过去时间，再看主语；单数was、you及复数were，否定在be后加not。"
+      },
+      {
+        "id": "guided-n67-past-be-question",
+        "context": "伙伴问你Was the room cold?，记录证实房间当时不冷。",
+        "prompt": "只用No和it作主语写过去be否定短答。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：提问把was/were提前；短答的人称、was/were及肯否定与事实一致。"
+      },
+      {
+        "id": "guided-n67-past-place-time",
+        "context": "周六你在家休息，没有外出。",
+        "prompt": "用I、home、on Saturday写过去地点陈述，选合适be、at和冠词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：按题意保留school/home/church的用途；office/country及商店限定词正确，星期on，yesterday不用on。"
+      },
+      {
+        "id": "independent-n67-past-be-statement",
+        "context": "海边救援站的回顾卡说明：两名志愿者昨天很早就准备好了。",
+        "prompt": "用The volunteers、ready、yesterday写过去肯定句，不写额外早晚信息。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n67-past-be-question",
+        "context": "你要核对一位叫Nora的演讲者上周是否缺席，消息尚未确认。",
+        "prompt": "用Was、Nora、absent、last week写一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n67-past-place-time",
+        "context": "你同伴周四到双方已知的办公室交材料，使用教材at表达活动地点。",
+        "prompt": "用He、office、on Thursday写过去地点陈述，选合适be、at和冠词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n67-past-be-statement",
+        "context": "保留上一轮首答和订正。下面是另一情境：新一轮回顾改为码头：昨天一名检查员不在这里。",
+        "prompt": "用The inspector、not、here、yesterday写过去否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n67-past-be-question",
+        "context": "保留上一轮首答和订正。下面是另一情境：一位记者问Were the two cooks busy?，记录证实两人当时忙。",
+        "prompt": "只用Yes和they作主语写过去be肯定短答。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n67-past-place-time",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨天一位顾客到那家面包店买早餐；shop可省略或补出。",
+        "prompt": "用She、the baker’s、yesterday写过去地点陈述，选合适be和at。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n67-past-be-statement",
+        "context": "周一晚的天文营日志证实：你和伙伴那时都很冷，用we回顾。",
+        "prompt": "用We、cold、on Monday写过去肯定状态句，不添加晚上信息。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n67-past-be-question",
+        "context": "同伴问Were you at the station?，你确认你一个人当时在那里。",
+        "prompt": "只用Yes和I作主语写过去be肯定短答。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n67-past-place-time",
+        "context": "周日一家人去参加礼拜，用they回顾用途而非参观教堂建筑。",
+        "prompt": "用They、church、on Sunday写过去地点陈述，选合适be、at和冠词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n67-past-be-statement",
+        "context": "上周一只救助猫身体不好，用it回顾。",
+        "prompt": "用It、not、well、last week写过去否定状态句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n67-past-be-question",
+        "context": "你要问参加营地的两名访客昨天是否在那里，尚不知道答案。",
+        "prompt": "用Were、they、there、yesterday写一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n67-past-place-time",
+        "context": "周五我们在乡下参加露营，并非某个国家；用教材短语country。",
+        "prompt": "用We、country、on Friday写过去地点陈述，选合适be、in和冠词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-69",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n69-past-existence",
+        "context": "昨晚社区大厅内只设置了一张登记桌。",
+        "prompt": "用There、a table、in the hall、last night写过去存在句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n69-past-be-polarity",
+        "context": "旅行日志说明：去年他们在意大利。",
+        "prompt": "用They、Italy、last year写过去肯定句，地点用in。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n69-past-when-question",
+        "context": "你知道搭档在那家图书馆值过班，只是不知道具体时间。",
+        "prompt": "用When、you、at the library写过去be问句，不补日期。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "guided-n69-past-existence",
+        "context": "昨天修理区内有三辆自行车。",
+        "prompt": "用There、three bicycles、in the workshop、yesterday写过去存在句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留There；单数或不可数was，复数were，地点、数量和过去时间不改。"
+      },
+      {
+        "id": "guided-n69-past-be-polarity",
+        "context": "值班签到表证实：Mia星期五没在车站。",
+        "prompt": "用Mia、not、at the station、on Friday写过去否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：已知人物作主语；人称和肯否定正确，按题目给定地点和时间选择at/on/in。"
+      },
+      {
+        "id": "guided-n69-past-when-question",
+        "context": "访客确认一位导游曾在那座博物馆，你不知道哪一天。",
+        "prompt": "用When、the guide、at the museum写过去be问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：缺时间用When，be在主语前；保留已知地点，不添加未知日期。"
+      },
+      {
+        "id": "independent-n69-past-existence",
+        "context": "陌生的木工营回顾板说：昨天湖边有一座小桥，桥不是在湖内。",
+        "prompt": "用There、a bridge、near the lake、yesterday写过去存在句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n69-past-be-polarity",
+        "context": "两名学生参与六月海外交流：他们当时在西班牙。",
+        "prompt": "用The students、Spain、June写过去肯定句，两个介词都需选择。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n69-past-when-question",
+        "context": "档案显示Leo和Ada曾在那个工作室；你仅缺他们在那里那次的时间。",
+        "prompt": "用When、Leo and Ada、at the studio写过去be问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n69-past-existence",
+        "context": "保留上一轮首答和订正。下面是另一情境：新修补情境是音乐活动：昨晚台上有四把椅子。",
+        "prompt": "用There、four chairs、on the stage、last night写过去存在句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n69-past-be-polarity",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一个项目组核对星期一行程：我们没有在那座展览馆。",
+        "prompt": "用We、not、at the gallery、on Monday写过去否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n69-past-when-question",
+        "context": "保留上一轮首答和订正。下面是另一情境：下一张独立访谈卡说明：你知道护士曾在那个诊所，不知道什么时候。",
+        "prompt": "用When、the nurse、at the clinic写过去be问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n69-past-existence",
+        "context": "旧露营清单明确：昨晚瓶内有一些未按份计的水。",
+        "prompt": "用There、some water、in the bottle、last night写过去存在句，water不可数。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n69-past-be-polarity",
+        "context": "档案定位了2008年：我们那一年在日本。",
+        "prompt": "用We、Japan、2008写过去肯定位置句，选择地点和年份介词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n69-past-when-question",
+        "context": "你知道那支队伍曾在那个机场等候，只需询问那次的时间。",
+        "prompt": "用When、the team（按整体可用was，按成员可用were）、at the airport写过去be问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n69-past-existence",
+        "context": "昨天小型花展入口附近有两棵树。",
+        "prompt": "用There、two trees、near the entrance、yesterday写过去存在句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n69-past-be-polarity",
+        "context": "一次虚构邮轮行程回顾：我三月不在葡萄牙。",
+        "prompt": "用I、not、Portugal、March写过去否定位置句，选地点和月份介词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n69-past-when-question",
+        "context": "你知道朋友们曾在那个营地；回顾问题不提供月份。",
+        "prompt": "用When、your friends、at the camp写过去be問句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-71",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n71-regular-past",
+        "context": "昨天社区维修员清理了那张桌子，动作已结束。",
+        "prompt": "用The worker、clean、the table、yesterday写肯定过去句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n71-did-question",
+        "context": "你询问一名活动负责人昨天是否打开了那扇门，尚不知道答案。",
+        "prompt": "用Did、you、open、the gate、yesterday写一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n71-did-negative-short",
+        "context": "团队日志确认：我们昨晚没有观看那段视频。",
+        "prompt": "用We、not、watch、the video、last night写过去否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n71-regular-past",
+        "context": "午餐活动记录证实：她昨天享用了那顿午餐。",
+        "prompt": "用She、enjoy、the lunch、yesterday写肯定过去句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：事实是过去肯定动作；规则动词加ed或以e结尾加d，不用现在三单或进行时。"
+      },
+      {
+        "id": "guided-n71-did-question",
+        "context": "你知道那位司机到达过，但不知道到达时间；不问地点。",
+        "prompt": "用When、the driver、arrive写过去动作问句，不补时间或地点。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：按未知信息选择Did/When/What；did后用原形，已知时间或对象保持，未知信息不先填入。"
+      },
+      {
+        "id": "guided-n71-did-negative-short",
+        "context": "同伴问Did you help the visitors yesterday?，你确认自己一个人帮助了他们。",
+        "prompt": "只用Yes、I和did写肯定短答。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：否定did not后动词原形；短答保持事实、人称和did，问you答自己用I。"
+      },
+      {
+        "id": "independent-n71-regular-past",
+        "context": "陌生的海边观测日志说明：他们昨天中午到达那个营地。",
+        "prompt": "用They、arrive、at the camp、yesterday写肯定过去句，不添加中午信息。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n71-did-question",
+        "context": "记录缺少她昨天下午做了什么；你不询问时间。",
+        "prompt": "用What、she、do、yesterday afternoon写过去动作问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n71-did-negative-short",
+        "context": "野外器材记录明确：两名志愿者昨天没有打开那个盒子。",
+        "prompt": "用The volunteers、not、open、the box、yesterday写过去否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n71-regular-past",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一个修补情境是社区棋社：孩子们上周玩了一场游戏。",
+        "prompt": "用The children、play、a game、last week写肯定过去句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n71-did-question",
+        "context": "保留上一轮首答和订正。下面是另一情境：新访谈只需确认他们昨晚有没有到那座桥，不知道答案。",
+        "prompt": "用Did、they、arrive、at the bridge、last night写一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n71-did-negative-short",
+        "context": "保留上一轮首答和订正。下面是另一情境：维修员问Did the printer work yesterday?，记录证实打印机没有正常工作。",
+        "prompt": "只用No、it和过去did否定写短答。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n71-regular-past",
+        "context": "回顾卡说明：我昨晚给那位协调员打了电话。",
+        "prompt": "用I、telephone（也可用同义phone）、the coordinator（协调员）、last night写肯定过去句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n71-did-question",
+        "context": "你知道他们清理了那个舞台，只缺那次的时间。",
+        "prompt": "用When、they、clean、the stage写过去动作问句，不加已知日期。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n71-did-negative-short",
+        "context": "露营日志确认：他昨晚没有待在家里。",
+        "prompt": "用He、not、stay、at home、last night写过去否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n71-regular-past",
+        "context": "上周末的公共花园回顾：她打开了那扇窗。",
+        "prompt": "用She、open、the window、last weekend写肯定过去句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n71-did-question",
+        "context": "你想确认那名护士昨天下午是否打了电话给医生，尚未得到答复。",
+        "prompt": "用Did、the nurse、telephone（也可用同义phone）、the doctor、yesterday afternoon写一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n71-did-negative-short",
+        "context": "主持人问Did Leo and Ada join the workshop last week?，签到记录确认两人都参加了。",
+        "prompt": "只用Yes、they和did写肯定短答。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

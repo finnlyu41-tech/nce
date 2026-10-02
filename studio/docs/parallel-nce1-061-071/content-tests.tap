@@ -1,0 +1,274 @@
+TAP version 13
+# Subtest: nce1-61 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce1-61 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 43.678916
+  type: 'test'
+  ...
+# Subtest: nce1-61 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce1-61 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 12.970583
+  type: 'test'
+  ...
+# Subtest: nce1-63 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce1-63 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 36.210041
+  type: 'test'
+  ...
+# Subtest: nce1-63 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce1-63 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 10.739833
+  type: 'test'
+  ...
+# Subtest: nce1-65 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce1-65 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 31.687625
+  type: 'test'
+  ...
+# Subtest: nce1-65 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce1-65 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 10.597542
+  type: 'test'
+  ...
+# Subtest: nce1-67 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 7 - nce1-67 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 45.3505
+  type: 'test'
+  ...
+# Subtest: nce1-67 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 8 - nce1-67 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 8.870958
+  type: 'test'
+  ...
+# Subtest: nce1-69 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 9 - nce1-69 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 43.263
+  type: 'test'
+  ...
+# Subtest: nce1-69 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 10 - nce1-69 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 9.941917
+  type: 'test'
+  ...
+# Subtest: nce1-71 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 11 - nce1-71 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 38.838333
+  type: 'test'
+  ...
+# Subtest: nce1-71 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 12 - nce1-71 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 8.714709
+  type: 'test'
+  ...
+# Subtest: nce1-61 rejects nce1-63 raw without overwriting
+ok 13 - nce1-61 rejects nce1-63 raw without overwriting
+  ---
+  duration_ms: 0.135375
+  type: 'test'
+  ...
+# Subtest: nce1-61 rejects nce1-65 raw without overwriting
+ok 14 - nce1-61 rejects nce1-65 raw without overwriting
+  ---
+  duration_ms: 0.059167
+  type: 'test'
+  ...
+# Subtest: nce1-61 rejects nce1-67 raw without overwriting
+ok 15 - nce1-61 rejects nce1-67 raw without overwriting
+  ---
+  duration_ms: 0.044792
+  type: 'test'
+  ...
+# Subtest: nce1-61 rejects nce1-69 raw without overwriting
+ok 16 - nce1-61 rejects nce1-69 raw without overwriting
+  ---
+  duration_ms: 0.036
+  type: 'test'
+  ...
+# Subtest: nce1-61 rejects nce1-71 raw without overwriting
+ok 17 - nce1-61 rejects nce1-71 raw without overwriting
+  ---
+  duration_ms: 0.034541
+  type: 'test'
+  ...
+# Subtest: nce1-63 rejects nce1-61 raw without overwriting
+ok 18 - nce1-63 rejects nce1-61 raw without overwriting
+  ---
+  duration_ms: 0.033708
+  type: 'test'
+  ...
+# Subtest: nce1-63 rejects nce1-65 raw without overwriting
+ok 19 - nce1-63 rejects nce1-65 raw without overwriting
+  ---
+  duration_ms: 0.032167
+  type: 'test'
+  ...
+# Subtest: nce1-63 rejects nce1-67 raw without overwriting
+ok 20 - nce1-63 rejects nce1-67 raw without overwriting
+  ---
+  duration_ms: 0.032083
+  type: 'test'
+  ...
+# Subtest: nce1-63 rejects nce1-69 raw without overwriting
+ok 21 - nce1-63 rejects nce1-69 raw without overwriting
+  ---
+  duration_ms: 0.034083
+  type: 'test'
+  ...
+# Subtest: nce1-63 rejects nce1-71 raw without overwriting
+ok 22 - nce1-63 rejects nce1-71 raw without overwriting
+  ---
+  duration_ms: 0.038042
+  type: 'test'
+  ...
+# Subtest: nce1-65 rejects nce1-61 raw without overwriting
+ok 23 - nce1-65 rejects nce1-61 raw without overwriting
+  ---
+  duration_ms: 0.033583
+  type: 'test'
+  ...
+# Subtest: nce1-65 rejects nce1-63 raw without overwriting
+ok 24 - nce1-65 rejects nce1-63 raw without overwriting
+  ---
+  duration_ms: 0.032
+  type: 'test'
+  ...
+# Subtest: nce1-65 rejects nce1-67 raw without overwriting
+ok 25 - nce1-65 rejects nce1-67 raw without overwriting
+  ---
+  duration_ms: 0.145875
+  type: 'test'
+  ...
+# Subtest: nce1-65 rejects nce1-69 raw without overwriting
+ok 26 - nce1-65 rejects nce1-69 raw without overwriting
+  ---
+  duration_ms: 0.047584
+  type: 'test'
+  ...
+# Subtest: nce1-65 rejects nce1-71 raw without overwriting
+ok 27 - nce1-65 rejects nce1-71 raw without overwriting
+  ---
+  duration_ms: 0.032334
+  type: 'test'
+  ...
+# Subtest: nce1-67 rejects nce1-61 raw without overwriting
+ok 28 - nce1-67 rejects nce1-61 raw without overwriting
+  ---
+  duration_ms: 0.034042
+  type: 'test'
+  ...
+# Subtest: nce1-67 rejects nce1-63 raw without overwriting
+ok 29 - nce1-67 rejects nce1-63 raw without overwriting
+  ---
+  duration_ms: 0.031667
+  type: 'test'
+  ...
+# Subtest: nce1-67 rejects nce1-65 raw without overwriting
+ok 30 - nce1-67 rejects nce1-65 raw without overwriting
+  ---
+  duration_ms: 0.032042
+  type: 'test'
+  ...
+# Subtest: nce1-67 rejects nce1-69 raw without overwriting
+ok 31 - nce1-67 rejects nce1-69 raw without overwriting
+  ---
+  duration_ms: 0.031833
+  type: 'test'
+  ...
+# Subtest: nce1-67 rejects nce1-71 raw without overwriting
+ok 32 - nce1-67 rejects nce1-71 raw without overwriting
+  ---
+  duration_ms: 0.035541
+  type: 'test'
+  ...
+# Subtest: nce1-69 rejects nce1-61 raw without overwriting
+ok 33 - nce1-69 rejects nce1-61 raw without overwriting
+  ---
+  duration_ms: 0.032209
+  type: 'test'
+  ...
+# Subtest: nce1-69 rejects nce1-63 raw without overwriting
+ok 34 - nce1-69 rejects nce1-63 raw without overwriting
+  ---
+  duration_ms: 0.031625
+  type: 'test'
+  ...
+# Subtest: nce1-69 rejects nce1-65 raw without overwriting
+ok 35 - nce1-69 rejects nce1-65 raw without overwriting
+  ---
+  duration_ms: 0.110084
+  type: 'test'
+  ...
+# Subtest: nce1-69 rejects nce1-67 raw without overwriting
+ok 36 - nce1-69 rejects nce1-67 raw without overwriting
+  ---
+  duration_ms: 0.037167
+  type: 'test'
+  ...
+# Subtest: nce1-69 rejects nce1-71 raw without overwriting
+ok 37 - nce1-69 rejects nce1-71 raw without overwriting
+  ---
+  duration_ms: 0.032041
+  type: 'test'
+  ...
+# Subtest: nce1-71 rejects nce1-61 raw without overwriting
+ok 38 - nce1-71 rejects nce1-61 raw without overwriting
+  ---
+  duration_ms: 0.031209
+  type: 'test'
+  ...
+# Subtest: nce1-71 rejects nce1-63 raw without overwriting
+ok 39 - nce1-71 rejects nce1-63 raw without overwriting
+  ---
+  duration_ms: 0.035833
+  type: 'test'
+  ...
+# Subtest: nce1-71 rejects nce1-65 raw without overwriting
+ok 40 - nce1-71 rejects nce1-65 raw without overwriting
+  ---
+  duration_ms: 0.03125
+  type: 'test'
+  ...
+# Subtest: nce1-71 rejects nce1-67 raw without overwriting
+ok 41 - nce1-71 rejects nce1-67 raw without overwriting
+  ---
+  duration_ms: 0.031125
+  type: 'test'
+  ...
+# Subtest: nce1-71 rejects nce1-69 raw without overwriting
+ok 42 - nce1-71 rejects nce1-69 raw without overwriting
+  ---
+  duration_ms: 0.030666
+  type: 'test'
+  ...
+# Subtest: external independent blind 061-065 covers eighteen tasks per course and every reasonable variant
+ok 43 - external independent blind 061-065 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 0.707125
+  type: 'test'
+  ...
+# Subtest: external independent blind 067-071 covers eighteen tasks per course and every reasonable variant
+ok 44 - external independent blind 067-071 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 0.558166
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 412.945084

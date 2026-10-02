@@ -1,0 +1,474 @@
+[
+  {
+    "id": "diagnostic-n67-past-be-statement",
+    "answer": "The guide was busy yesterday.",
+    "variants": [
+      "Yesterday, the guide was busy."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n67-past-be-question",
+    "answer": "Were you ready yesterday?",
+    "variants": [
+      "Yesterday, were you ready?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n67-past-place-time",
+    "answer": "She was at school on Tuesday.",
+    "variants": [
+      "On Tuesday, she was at school."
+    ],
+    "issues": [
+      "按上课用途选at school。at the school也可自然描述学生所在地点，并不必然表示参观建筑；本题作为限定短语练习可要求零冠词，但不宜把带the一概解释为语义错误。"
+    ]
+  },
+  {
+    "id": "guided-n67-past-be-statement",
+    "answer": "We were not tired last night.",
+    "variants": [
+      "We weren't tired last night.",
+      "Last night, we were not tired.",
+      "Last night, we weren't tired."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n67-past-be-question",
+    "answer": "No, it was not.",
+    "variants": [
+      "No, it wasn't."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n67-past-place-time",
+    "answer": "I was at home on Saturday.",
+    "variants": [
+      "On Saturday, I was at home."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n67-past-be-statement",
+    "answer": "The volunteers were ready yesterday.",
+    "variants": [
+      "Yesterday, the volunteers were ready."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n67-past-be-question",
+    "answer": "Was Nora absent last week?",
+    "variants": [
+      "Last week, was Nora absent?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n67-past-place-time",
+    "answer": "He was at the office on Thursday.",
+    "variants": [
+      "On Thursday, he was at the office."
+    ],
+    "issues": [
+      "双方已知办公室支持the office；题目明确at，故in the office虽然自然，属于本题限定之外。"
+    ]
+  },
+  {
+    "id": "repair-n67-past-be-statement",
+    "answer": "The inspector was not here yesterday.",
+    "variants": [
+      "The inspector wasn't here yesterday.",
+      "Yesterday, the inspector was not here.",
+      "Yesterday, the inspector wasn't here."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n67-past-be-question",
+    "answer": "Yes, they were.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n67-past-place-time",
+    "answer": "She was at the baker's yesterday.",
+    "variants": [
+      "She was at the baker's shop yesterday.",
+      "Yesterday, she was at the baker's.",
+      "Yesterday, she was at the baker's shop."
+    ],
+    "issues": [
+      "baker’s是店铺所有格省略shop；明确允许补出shop，二者应接纳。"
+    ]
+  },
+  {
+    "id": "review-a-n67-past-be-statement",
+    "answer": "We were cold on Monday.",
+    "variants": [
+      "On Monday, we were cold."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n67-past-be-question",
+    "answer": "Yes, I was.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n67-past-place-time",
+    "answer": "They were at church on Sunday.",
+    "variants": [
+      "On Sunday, they were at church."
+    ],
+    "issues": [
+      "礼拜用途支持at church。at the church也可能用于参加礼拜者的具体位置描述，并不必然是参观建筑；可按限定目标排除，但不能据此判为普遍错误。"
+    ]
+  },
+  {
+    "id": "review-b-n67-past-be-statement",
+    "answer": "It was not well last week.",
+    "variants": [
+      "It wasn't well last week.",
+      "Last week, it was not well.",
+      "Last week, it wasn't well."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n67-past-be-question",
+    "answer": "Were they there yesterday?",
+    "variants": [
+      "Yesterday, were they there?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n67-past-place-time",
+    "answer": "We were in the country on Friday.",
+    "variants": [
+      "On Friday, we were in the country."
+    ],
+    "issues": [
+      "country表示乡下时采用in the country；本题已排除某个国家，歧义已消解。"
+    ]
+  },
+  {
+    "id": "diagnostic-n69-past-existence",
+    "answer": "There was a table in the hall last night.",
+    "variants": [
+      "Last night, there was a table in the hall.",
+      "There was a table last night in the hall.",
+      "In the hall, there was a table last night."
+    ],
+    "issues": [
+      "情境中的只设置一张不要求在答句额外加入only；a table已经符合指定表达。"
+    ]
+  },
+  {
+    "id": "diagnostic-n69-past-be-polarity",
+    "answer": "They were in Italy last year.",
+    "variants": [
+      "Last year, they were in Italy."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n69-past-when-question",
+    "answer": "When were you at the library?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n69-past-existence",
+    "answer": "There were three bicycles in the workshop yesterday.",
+    "variants": [
+      "Yesterday, there were three bicycles in the workshop.",
+      "There were three bicycles yesterday in the workshop.",
+      "In the workshop, there were three bicycles yesterday."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n69-past-be-polarity",
+    "answer": "Mia was not at the station on Friday.",
+    "variants": [
+      "Mia wasn't at the station on Friday.",
+      "On Friday, Mia was not at the station.",
+      "On Friday, Mia wasn't at the station."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n69-past-when-question",
+    "answer": "When was the guide at the museum?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n69-past-existence",
+    "answer": "There was a bridge near the lake yesterday.",
+    "variants": [
+      "Yesterday, there was a bridge near the lake.",
+      "There was a bridge yesterday near the lake.",
+      "Near the lake, there was a bridge yesterday."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n69-past-be-polarity",
+    "answer": "The students were in Spain in June.",
+    "variants": [
+      "In June, the students were in Spain."
+    ],
+    "issues": [
+      "月份与国家都用in；句首月份或句末月份均自然，没有要求唯一时间位置。"
+    ]
+  },
+  {
+    "id": "independent-n69-past-when-question",
+    "answer": "When were Leo and Ada at the studio?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n69-past-existence",
+    "answer": "There were four chairs on the stage last night.",
+    "variants": [
+      "Last night, there were four chairs on the stage.",
+      "There were four chairs last night on the stage.",
+      "On the stage, there were four chairs last night."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n69-past-be-polarity",
+    "answer": "We were not at the gallery on Monday.",
+    "variants": [
+      "We weren't at the gallery on Monday.",
+      "On Monday, we were not at the gallery.",
+      "On Monday, we weren't at the gallery."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n69-past-when-question",
+    "answer": "When was the nurse at the clinic?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n69-past-existence",
+    "answer": "There was some water in the bottle last night.",
+    "variants": [
+      "Last night, there was some water in the bottle.",
+      "There was some water last night in the bottle.",
+      "In the bottle, there was some water last night."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n69-past-be-polarity",
+    "answer": "We were in Japan in 2008.",
+    "variants": [
+      "In 2008, we were in Japan."
+    ],
+    "issues": [
+      "年份与国家都用in；句首年份和句末年份均自然。"
+    ]
+  },
+  {
+    "id": "review-a-n69-past-when-question",
+    "answer": "When was the team at the airport?",
+    "variants": [
+      "When were the team at the airport?"
+    ],
+    "issues": [
+      "题干明确允许整体was及成员were两种解读；两者均应接纳，were尤其符合英式集合名词的成员读法。"
+    ]
+  },
+  {
+    "id": "review-b-n69-past-existence",
+    "answer": "There were two trees near the entrance yesterday.",
+    "variants": [
+      "Yesterday, there were two trees near the entrance.",
+      "There were two trees yesterday near the entrance.",
+      "Near the entrance, there were two trees yesterday."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n69-past-be-polarity",
+    "answer": "I was not in Portugal in March.",
+    "variants": [
+      "I wasn't in Portugal in March.",
+      "In March, I was not in Portugal.",
+      "In March, I wasn't in Portugal."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n69-past-when-question",
+    "answer": "When were your friends at the camp?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n71-regular-past",
+    "answer": "The worker cleaned the table yesterday.",
+    "variants": [
+      "Yesterday, the worker cleaned the table."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n71-did-question",
+    "answer": "Did you open the gate yesterday?",
+    "variants": [
+      "Yesterday, did you open the gate?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n71-did-negative-short",
+    "answer": "We did not watch the video last night.",
+    "variants": [
+      "We didn't watch the video last night.",
+      "Last night, we did not watch the video.",
+      "Last night, we didn't watch the video."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n71-regular-past",
+    "answer": "She enjoyed the lunch yesterday.",
+    "variants": [
+      "Yesterday, she enjoyed the lunch."
+    ],
+    "issues": [
+      "the lunch在特定活动午餐的语境中自然；泛指吃午饭常省the，但此题明确要求the lunch。enjoyed表达喜欢或享受，并非单纯已吃完；中文享用了可略弱于英文享受。"
+    ]
+  },
+  {
+    "id": "guided-n71-did-question",
+    "answer": "When did the driver arrive?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n71-did-negative-short",
+    "answer": "Yes, I did.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n71-regular-past",
+    "answer": "They arrived at the camp yesterday.",
+    "variants": [
+      "Yesterday, they arrived at the camp."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n71-did-question",
+    "answer": "What did she do yesterday afternoon?",
+    "variants": [
+      "Yesterday afternoon, what did she do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n71-did-negative-short",
+    "answer": "The volunteers did not open the box yesterday.",
+    "variants": [
+      "The volunteers didn't open the box yesterday.",
+      "Yesterday, the volunteers did not open the box.",
+      "Yesterday, the volunteers didn't open the box."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n71-regular-past",
+    "answer": "The children played a game last week.",
+    "variants": [
+      "Last week, the children played a game."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n71-did-question",
+    "answer": "Did they arrive at the bridge last night?",
+    "variants": [
+      "Last night, did they arrive at the bridge?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n71-did-negative-short",
+    "answer": "No, it did not.",
+    "variants": [
+      "No, it didn't."
+    ],
+    "issues": [
+      "没有正常工作符合work表示机器运转的常用含义，支持否定短答；严格说部分运转但不正常也可能回答限定说明，本题只允许短答，按设定否定处理。"
+    ]
+  },
+  {
+    "id": "review-a-n71-regular-past",
+    "answer": "I telephoned the coordinator last night.",
+    "variants": [
+      "Last night, I telephoned the coordinator.",
+      "I phoned the coordinator last night.",
+      "Last night, I phoned the coordinator."
+    ],
+    "issues": [
+      "telephone或phone均为及物动词，直接接the coordinator；肯定过去式为telephoned或phoned，不加to。题干已明确允许phone。"
+    ]
+  },
+  {
+    "id": "review-a-n71-did-question",
+    "answer": "When did they clean the stage?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n71-did-negative-short",
+    "answer": "He did not stay at home last night.",
+    "variants": [
+      "He didn't stay at home last night.",
+      "Last night, he did not stay at home.",
+      "Last night, he didn't stay at home."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n71-regular-past",
+    "answer": "She opened the window last weekend.",
+    "variants": [
+      "Last weekend, she opened the window."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n71-did-question",
+    "answer": "Did the nurse telephone the doctor yesterday afternoon?",
+    "variants": [
+      "Yesterday afternoon, did the nurse telephone the doctor?",
+      "Did the nurse phone the doctor yesterday afternoon?",
+      "Yesterday afternoon, did the nurse phone the doctor?"
+    ],
+    "issues": [
+      "题干明确允许phone同义替换；did后仍须为telephone或phone原形，不能用telephoned/phoned。"
+    ]
+  },
+  {
+    "id": "review-b-n71-did-negative-short",
+    "answer": "Yes, they did.",
+    "variants": [],
+    "issues": []
+  }
+]

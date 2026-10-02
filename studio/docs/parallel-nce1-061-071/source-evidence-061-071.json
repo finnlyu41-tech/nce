@@ -1,0 +1,326 @@
+{
+  "baseline": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "remoteHeads": "febb408a5777b0fef77ba5f0b5d8f7dd57e1902d",
+  "groups": [
+    {
+      "id": "nce1-61",
+      "sourceSha256": "787f2afbc7cd4b3ffa60fe3df1191c86959474755fbe9df542a3809dbc01a1ac",
+      "languageFileSha256": "8df24353130cd72d097fa46e2a1b68dca2b09a3336717bf582ef7b035e5af662",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "1019ab89ce8e96d780225afb0d0f4c742d47f7e1cc83167ec07fff288b9aeb8b",
+      "grammarEntry": {
+        "id": "NCE1-61",
+        "book": "NCE1",
+        "lesson": 61,
+        "lastLesson": 62,
+        "unit": null,
+        "title": "身体状况与 must",
+        "category": "modal",
+        "terms": "matter must",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 128
+          },
+          {
+            "section": "句型练习",
+            "page": 127
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 126
+          }
+        ],
+        "pages": [
+          126,
+          127,
+          128
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 126,
+          "sha256": "16a6ecb4eb23fd7f76b47f0acae85ae535720a97c90d185c4d35489f83680488"
+        },
+        {
+          "page": 127,
+          "sha256": "64fcda32e3aeb538131806adf37ec72e4159f0b570ae45d40f9ec0e2a2290c0a"
+        },
+        {
+          "page": 128,
+          "sha256": "90d2f901bc42fcda576f168c8054ff4b0dc888d1535031a09b571ce96b0da381"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-63",
+      "sourceSha256": "805f3cae023f2b7b4773ffb028d5e5ff7b23f6a04dca55845ce3981a4634e01b",
+      "languageFileSha256": "e5729a46629c43f6e5bcfdbaaa4fd43ee9f13240ff674c263c769d7e709cea7b",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "0dc89a2a1b137d8b4594248d241d345bdcc55e1ba376d007a50d07ab896b5a61",
+      "grammarEntry": {
+        "id": "NCE1-63",
+        "book": "NCE1",
+        "lesson": 63,
+        "lastLesson": 64,
+        "unit": null,
+        "title": "否定祈使句与 mustn't",
+        "category": "modal",
+        "terms": "don't mustn't",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 132
+          },
+          {
+            "section": "句型练习",
+            "page": 131
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 130
+          }
+        ],
+        "pages": [
+          130,
+          131,
+          132
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 130,
+          "sha256": "7571862f6b01588f8e7799008bc4ade2027f06d8c7daa515ec4d2b96efd4e398"
+        },
+        {
+          "page": 131,
+          "sha256": "7295f7b9a4131e412c80e7ac7122bfe4761b37b2faf1e4824a0614344a42a818"
+        },
+        {
+          "page": 132,
+          "sha256": "07e428c4c3560a9a2a8b5ebb74a8a945abc81013f589e3fabe9810ee96515059"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-65",
+      "sourceSha256": "88be2253edb3392ac5532684c52708447b42e96add0649abd3e4ab9e5a56c70b",
+      "languageFileSha256": "7855e07387300722e9a5d4363f968980a6471e4e03950ddc7874d4aaf9d089e8",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "1a019592739817e485804d3efdf000c37045dbb807b279e1a09a4e85a2e74d20",
+      "grammarEntry": {
+        "id": "NCE1-65",
+        "book": "NCE1",
+        "lesson": 65,
+        "lastLesson": 66,
+        "unit": null,
+        "title": "时间表达与 in / at / from",
+        "category": "modifier",
+        "terms": "time clock in at from",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 136
+          },
+          {
+            "section": "句型练习",
+            "page": 135
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 134
+          }
+        ],
+        "pages": [
+          134,
+          135,
+          136
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 134,
+          "sha256": "3831361cc10c987215dcbb3b29e874e236eced16b7c01089a696f59dee1271b1"
+        },
+        {
+          "page": 135,
+          "sha256": "73e8ef04e81367242a47bac52df14493cf80d8b85cab19c40ff05680bedcae73"
+        },
+        {
+          "page": 136,
+          "sha256": "10c1162a2a2f859eff4fd3935f30ac3009d9202b94c625b8440dde5007a9ad86"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-67",
+      "sourceSha256": "51f02f21ca5994883606571c82fe4d4d127a7e0a6d18e999be2193013f69f526",
+      "languageFileSha256": "0adb4808946348dff0880a3f1a9ea813e707734f19ebf5ddba1cf8dd337c1792",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "86c885d61fa57313844c1a9b686d0e216621c5a750231fcff563c345b753b5e2",
+      "grammarEntry": {
+        "id": "NCE1-67",
+        "book": "NCE1",
+        "lesson": 67,
+        "lastLesson": 68,
+        "unit": null,
+        "title": "过去时间、冠词与地点表达",
+        "category": "tense",
+        "terms": "time was were the at on",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 140
+          },
+          {
+            "section": "句型练习",
+            "page": 139
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 138
+          }
+        ],
+        "pages": [
+          138,
+          139,
+          140
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 138,
+          "sha256": "be06a734fba104e4e4d1fadc3d9fe0038375f41ffaadcead77e89604d64116a2"
+        },
+        {
+          "page": 139,
+          "sha256": "2e9bdfdafc877e944dd905506a33e89b242e8508e357e3e1a31735b53f20c64c"
+        },
+        {
+          "page": 140,
+          "sha256": "3db016bf885998134fe3b80c3e7810fc2ce929ea1508e2c9a781d90ba6079717"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-69",
+      "sourceSha256": "18b442ac2841e0474a777bda7c8f23699cf5d5a2b0f8c5109ff6e1d17347e325",
+      "languageFileSha256": "eb9778e5d523342e14b418d653ddaff5c5378633bceab341aa852ccd1c63368d",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "fc4ef751862f30c592a06d4baa911e4ec78794d7edf54caf51efd2b3ef480821",
+      "grammarEntry": {
+        "id": "NCE1-69",
+        "book": "NCE1",
+        "lesson": 69,
+        "lastLesson": 70,
+        "unit": null,
+        "title": "一般过去时：was / were",
+        "category": "tense",
+        "terms": "when were",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 144
+          },
+          {
+            "section": "句型练习",
+            "page": 143
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 142
+          }
+        ],
+        "pages": [
+          142,
+          143,
+          144
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 142,
+          "sha256": "7bacb0ad6959e6e72244d46044809efd6e08ffb2ccbb396bec73d85756fda7a7"
+        },
+        {
+          "page": 143,
+          "sha256": "2230188f1f4ca2543384b6b90f32931d86a54b4e5c92ec9b0b674b4ca82f9e34"
+        },
+        {
+          "page": 144,
+          "sha256": "c82ff4bb0241bf11c56bc88071315ea6bfd1d581aa8a55f41945484c8f1be2b2"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-71",
+      "sourceSha256": "4dd289c7a73a9d0627cb211e42134b707439494604450fae7d26a21c253664e9",
+      "languageFileSha256": "2b0957c19eced7ad575c84c46edf727483fdc051c59a82384b18e9228ce2e2d3",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "6ee1b7c83f2427c93ca75f5c7d2e89c516fb5fc09aec81ac97a401ef87c7b380",
+      "grammarEntry": {
+        "id": "NCE1-71",
+        "book": "NCE1",
+        "lesson": 71,
+        "lastLesson": 72,
+        "unit": null,
+        "title": "一般过去时：did 疑问句",
+        "category": "tense",
+        "terms": "when did",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 148
+          },
+          {
+            "section": "句型练习",
+            "page": 147
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 146
+          }
+        ],
+        "pages": [
+          146,
+          147,
+          148
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 146,
+          "sha256": "0f2001e00596ac6179926ef333f5b0c190e5a2cfe4ec30fce3f3a94cea86884f"
+        },
+        {
+          "page": 147,
+          "sha256": "542e79dbca9c20f60d4bb7c118aede37ce3780eab84aeebeb5ffc322721df09e"
+        },
+        {
+          "page": 148,
+          "sha256": "8568a49df87afe327387cd7440336f42cf812b6413f01107dc61928b0c1a5ba8"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}
