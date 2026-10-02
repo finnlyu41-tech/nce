@@ -11,6 +11,117 @@ const headers = {
 };
 const reply = (body, status, extra = {}) => new Response(body, {status, headers: {...headers, ...extra}});
 const demoPaths = new Set(['/demos/yesterday/', ...['index.html', 'styles.css', 'app.mjs', 'model.mjs', 'content.mjs', 'bootstrap.mjs', 'demo-store.mjs', 'review-adapter.mjs', 'review-content.mjs', 'review-controller.mjs', 'review-model.mjs'].map(name => '/demos/yesterday/'+name)]);
+// Exact finite assets from the published mini/R19 manifests; no generic asset wildcard.
+const supplementalAssetTypes = new Map([
+  [
+    "/assets/mini-n1-01-delayed-a-DasbtE01.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-01-delayed-b-9LV-hq9D.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-01-guided-DbZx4d_F.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-01-independent-DwalH_Cp.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-01-repair-C_pmpUrE.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-09-delayed-a-32d96Ls0.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-09-delayed-b-BdSpo7nO.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-09-guided-BLL7G-yC.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-09-independent-B_v42D4U.wav",
+    "audio/wav"
+  ],
+  [
+    "/assets/mini-n1-09-repair-1nc7dXyw.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-01-delayed-a-DasbtE01.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-01-delayed-b-9LV-hq9D.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-01-guided-DbZx4d_F.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-01-independent-DwalH_Cp.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-01-repair-C_pmpUrE.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-09-delayed-a-32d96Ls0.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-09-delayed-b-BdSpo7nO.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-09-guided-BLL7G-yC.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-09-independent-B_v42D4U.wav",
+    "audio/wav"
+  ],
+  [
+    "/map/assets/mini-n1-09-repair-1nc7dXyw.wav",
+    "audio/wav"
+  ],
+  [
+    "/lesson-pages/d763b8a8bb44b13f6e3c93602a09aab504abb2ed912182ef2ec24a8956d2ff9b.png",
+    "image/png"
+  ],
+  [
+    "/lesson-pages/66841fee1b411a3ec99fb83ebe26dd5915f9a98b127075950f6159c0650e9720.png",
+    "image/png"
+  ],
+  [
+    "/lesson-pages/cb7113725d521e51320b077905891b6445791425982079aecc5a609eb70002f0.png",
+    "image/png"
+  ],
+  [
+    "/lesson-pages/eb1f37d9a388bbd820a4eaa5467fb1a10e3c30273f3a1c03e5985f9361d656e1.png",
+    "image/png"
+  ],
+  [
+    "/lesson-pages/044f3c7028a3e9e131f8b3d6dff84e2ba1fa2c239e735ea73f5c664634e0ed16.png",
+    "image/png"
+  ],
+  [
+    "/lesson-pages/review-r19-manifest.json",
+    "application/json; charset=utf-8"
+  ],
+  [
+    "/lesson-pages/review-r19-tail-manifest.json",
+    "application/json; charset=utf-8"
+  ]
+]);
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -21,7 +132,7 @@ export default {
     if (!['GET', 'HEAD'].includes(request.method)) return reply('Method not allowed', 405, {Allow: 'GET, HEAD'});
     if (url.pathname === '/map') return reply(null, 308, {Location: '/map/' + url.search});
     if (['/demos/yesterday', '/demos/yesterday/index.html'].includes(url.pathname)) return reply(null, 308, {Location: '/demos/yesterday/' + url.search});
-    if (!demoPaths.has(url.pathname) && !['/', '/index.html', '/map/', '/map/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/map\/assets\/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)$/.test(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
+    if (!supplementalAssetTypes.has(url.pathname) && !demoPaths.has(url.pathname) && !['/', '/index.html', '/map/', '/map/index.html', '/version.json', '/robots.txt', '/manifest.webmanifest', '/icons/apple-touch-icon.png', '/icons/icon-192.png', '/icons/icon-512.png', '/materials/manifest.json', '/language/dictionary.json', '/language/index.json', '/lesson-pages/index.json', '/speaking/topics.json', '/grammar/index.json'].includes(url.pathname) && !/^\/map\/assets\/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)$/.test(url.pathname) && !/^\/materials\/[a-f0-9]{64}\/[0-9]{4}\.bin$/.test(url.pathname) && !/^\/(?:lesson-pages|grammar)\/[a-f0-9]{64}\.jpg$/.test(url.pathname) && !/^\/language\/NCE[1-4]\/[1-9]\d{0,2}\.json$/.test(url.pathname)) return reply('Not found', 404);
     try {
       // Old browsers may still send cached Basic credentials. Never forward them.
       const assetRequest = new Request(request);
@@ -31,6 +142,10 @@ export default {
       for (const [key, value] of Object.entries(headers)) result.headers.set(key, value);
       if (url.pathname === '/manifest.webmanifest' && response.ok) result.headers.set('Content-Type', 'application/manifest+json; charset=utf-8');
       if (/^\/(?:map\/assets\/|materials\/[a-f0-9]{64}\/|lesson-pages\/[a-f0-9]{64}\.jpg$)/.test(url.pathname) && response.ok) result.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+      if (response.ok && supplementalAssetTypes.has(url.pathname)) {
+        result.headers.set('Content-Type', supplementalAssetTypes.get(url.pathname));
+        if (!url.pathname.endsWith('.json')) result.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+      }
       result.headers.delete('WWW-Authenticate');result.headers.delete('Vary');
       return result;
     } catch { return reply('Materials temporarily unavailable.', 503); }
