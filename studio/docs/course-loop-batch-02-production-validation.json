@@ -1,0 +1,54 @@
+{
+  "releaseBase": "075af33819f2c09dcf840ee118d24ea207e7da3f",
+  "runtimeBase": "ff2cedbb7f315f00862e6f2151e8c18732571bac",
+  "frozenAuthor": "8470b6af2a45020d34e137acaf55d69f75d20c28",
+  "contentCommit": "8f0c4bf43134b9fedf8f9943fc25a341be39ac01",
+  "runtimeIntegrationCommit": "38af412090b198fd029d146ff44532cbf7703f24",
+  "runtimeFiles": [
+    "studio/course-loop/registry.mjs",
+    "studio/course-loop/host-contract.d.ts",
+    "studio/app/course-loop-next.ts"
+  ],
+  "registeredGroups": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11"
+  ],
+  "successor": "1 -> 3 -> 5 -> 7 -> 9 -> 11 -> existing 13",
+  "nodePassed": 101,
+  "TodayPassed": 49,
+  "storageBrowserPassed": 19,
+  "nativeReceipts": [
+    {
+      "label": "native-core",
+      "proofDirectory": "native-atOq0g",
+      "passed": 22,
+      "runtimeExceptions": 0,
+      "receiptSha256": "0b99028be54cc08706d51b333a1350aaa31935dd9f1277e403184e66a76641d9"
+    },
+    {
+      "label": "native-review",
+      "proofDirectory": "native-qDHEW3",
+      "passed": 2,
+      "runtimeExceptions": 0,
+      "receiptSha256": "c1324d798d98fee2233bff795b25e864f4059774acb0900a9235312aacf7620c"
+    }
+  ],
+  "TypeScript": "passed",
+  "classicOnlineBuild": "passed",
+  "mapOnlineBuild": "passed",
+  "priorHostGroups": 8,
+  "priorUxGroups": 9,
+  "FSRSBehaviorScenarios": 15,
+  "progressFileAndNavigation": "passed",
+  "contentAndMatcherByteEqualToFrozenAuthor": true,
+  "protectedHostStorageTodayMapAudioIELTSFSRS": "unchanged",
+  "newContentBlindReview": "reused 54 independent first answers and 1402 factory probes; no final semantic change",
+  "scope": "local source-bound host candidate; supplemental review uses explicitly backdated QA files and unchanged browser clock",
+  "published": false,
+  "humanEvidence": "pending natural time, expression, physical phone and audibility; no score promise",
+  "remainingProductBlockers": []
+}
