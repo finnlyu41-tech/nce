@@ -19,7 +19,7 @@ export const lesson = {
     "route": "/#/nce/NCE1/31?tab=listen",
     "mapRoute": "/map/#/learn/nce1-31",
     "languagePath": "/language/NCE1/31.json",
-    "languageSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634",
+    "languageSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
     "sourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
     "comicKey": "NCE1-31",
     "clips": [

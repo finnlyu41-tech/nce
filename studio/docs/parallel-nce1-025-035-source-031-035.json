@@ -10,7 +10,7 @@
       ],
       "languageSourcePath": "/Users/finnlyu/Projects/.worktrees/english-ielts-map-20260930/studio/dist-online/language/NCE1/31.json",
       "languagePath": "/language/NCE1/31.json",
-      "languageSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634",
+      "languageSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
       "sourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
       "grammarEntry": {
         "id": "NCE1-31",
@@ -97,7 +97,8 @@
         }
       ],
       "clipEndPolicy": "End timestamps use the next known row start. Source clips are references; original tasks use new scenarios.",
-      "sourceConsistency": true
+      "sourceConsistency": true,
+      "languageFileSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634"
     },
     {
       "groupId": "NCE1-33",
@@ -107,7 +108,7 @@
       ],
       "languageSourcePath": "/Users/finnlyu/Projects/.worktrees/english-ielts-map-20260930/studio/dist-online/language/NCE1/33.json",
       "languagePath": "/language/NCE1/33.json",
-      "languageSha256": "f2456985f96085333cbbca3c112500c5f08e9b77a4d938839514043f5ae2a82b",
+      "languageSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
       "sourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
       "grammarEntry": {
         "id": "NCE1-33",
@@ -191,7 +192,8 @@
         }
       ],
       "clipEndPolicy": "End timestamps use the next known row start. Source clips are references; original tasks use new scenarios.",
-      "sourceConsistency": true
+      "sourceConsistency": true,
+      "languageFileSha256": "f2456985f96085333cbbca3c112500c5f08e9b77a4d938839514043f5ae2a82b"
     },
     {
       "groupId": "NCE1-35",
@@ -201,7 +203,7 @@
       ],
       "languageSourcePath": "/Users/finnlyu/Projects/.worktrees/english-ielts-map-20260930/studio/dist-online/language/NCE1/35.json",
       "languagePath": "/language/NCE1/35.json",
-      "languageSha256": "6e73bd450b43f04513a33eaab88b16857e1dba49f27342e56846f024a0f0a66a",
+      "languageSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
       "sourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
       "grammarEntry": {
         "id": "NCE1-35",
@@ -301,7 +303,8 @@
         }
       ],
       "clipEndPolicy": "End timestamps use the next known row start. Source clips are references; original tasks use new scenarios.",
-      "sourceConsistency": true
+      "sourceConsistency": true,
+      "languageFileSha256": "6e73bd450b43f04513a33eaab88b16857e1dba49f27342e56846f024a0f0a66a"
     }
   ]
 }

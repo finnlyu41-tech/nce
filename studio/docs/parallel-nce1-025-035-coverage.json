@@ -29,7 +29,7 @@
         "route": "/#/nce/NCE1/25?tab=listen",
         "mapRoute": "/map/#/learn/nce1-25",
         "languagePath": "/language/NCE1/25.json",
-        "languageSha256": "15ddf5e1a8f598a178b264bd9932d319705b287779f08e20ebdbed2e2151fff5",
+        "languageSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
         "comicKey": "NCE1-25",
         "clips": [
           {
@@ -81,7 +81,7 @@
         "route": "/#/nce/NCE1/27?tab=listen",
         "mapRoute": "/map/#/learn/nce1-27",
         "languagePath": "/language/NCE1/27.json",
-        "languageSha256": "2410876d2bc4142c898548e9252f7faa0f66e2d8b86e966838e4e3f372f41e15",
+        "languageSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
         "comicKey": "NCE1-27",
         "clips": [
           {
@@ -133,7 +133,7 @@
         "route": "/#/nce/NCE1/29?tab=listen",
         "mapRoute": "/map/#/learn/nce1-29",
         "languagePath": "/language/NCE1/29.json",
-        "languageSha256": "15ea221a9497a68761363bd5b1966ab043eac4065c838f62437c8a629f55fe1a",
+        "languageSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
         "comicKey": "NCE1-29",
         "clips": [
           {
@@ -185,7 +185,7 @@
         "route": "/#/nce/NCE1/31?tab=listen",
         "mapRoute": "/map/#/learn/nce1-31",
         "languagePath": "/language/NCE1/31.json",
-        "languageSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634",
+        "languageSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
         "sourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
         "comicKey": "NCE1-31",
         "clips": [
@@ -238,7 +238,7 @@
         "route": "/#/nce/NCE1/33?tab=listen",
         "mapRoute": "/map/#/learn/nce1-33",
         "languagePath": "/language/NCE1/33.json",
-        "languageSha256": "f2456985f96085333cbbca3c112500c5f08e9b77a4d938839514043f5ae2a82b",
+        "languageSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
         "sourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
         "comicKey": "NCE1-33",
         "clips": [
@@ -291,7 +291,7 @@
         "route": "/#/nce/NCE1/35?tab=listen",
         "mapRoute": "/map/#/learn/nce1-35",
         "languagePath": "/language/NCE1/35.json",
-        "languageSha256": "6e73bd450b43f04513a33eaab88b16857e1dba49f27342e56846f024a0f0a66a",
+        "languageSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
         "sourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
         "comicKey": "NCE1-35",
         "clips": [

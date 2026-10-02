@@ -1,0 +1,72 @@
+{
+  "parent": "22d6cd999e0bec58d80bae8ebc1ce1039a906cdc",
+  "productionSourcePanelGuardUnchanged": true,
+  "sourceContract": "LessonLanguage.sourceSha256 is the original LRC SHA; lesson.source.languageSha256 must equal it. JSON byte SHA is recorded separately as languageFileSha256.",
+  "changes": [
+    {
+      "course": "nce1-25",
+      "path": "studio/course-loop/parallel-nce1-025-035/lesson-nce1-025.mjs",
+      "oldJsonFileSha256": "15ddf5e1a8f598a178b264bd9932d319705b287779f08e20ebdbed2e2151fff5",
+      "correctedLrcSourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+      "oldModuleSha256": "c2f6fcb2b955c3c3d6fbf1a3be0fe340947cc2be8361eef6a47fbdaca75e3b6e",
+      "newModuleSha256": "6688a900b5b8ec0fea783f1d9a1cfe6ee3029dadf890b475a6650246d5dbbf9d",
+      "onlySourceFieldChanged": true
+    },
+    {
+      "course": "nce1-27",
+      "path": "studio/course-loop/parallel-nce1-025-035/lesson-nce1-027.mjs",
+      "oldJsonFileSha256": "2410876d2bc4142c898548e9252f7faa0f66e2d8b86e966838e4e3f372f41e15",
+      "correctedLrcSourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+      "oldModuleSha256": "81e26aea7a1d72e8932600c7aa8369c718d639e6a222667cb3aa32f8bfe6b60d",
+      "newModuleSha256": "8bb9a5c3fe2d2d63f317abebba7d2949bbff04da6a11cdf3b3af36ba75e36041",
+      "onlySourceFieldChanged": true
+    },
+    {
+      "course": "nce1-29",
+      "path": "studio/course-loop/parallel-nce1-025-035/lesson-nce1-029.mjs",
+      "oldJsonFileSha256": "15ea221a9497a68761363bd5b1966ab043eac4065c838f62437c8a629f55fe1a",
+      "correctedLrcSourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+      "oldModuleSha256": "33eaa85975278784fa2ffea998aa2c2e9164cd383847706f9da7f851245c9b34",
+      "newModuleSha256": "0310d2c572df388817a33fc5ac5156d67e7a3dbebe9b043989c9f09b95e34c5e",
+      "onlySourceFieldChanged": true
+    },
+    {
+      "course": "nce1-31",
+      "path": "studio/course-loop/parallel-nce1-025-035/lesson-nce1-031.mjs",
+      "oldJsonFileSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634",
+      "correctedLrcSourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+      "oldModuleSha256": "130284de9c57c51c66b63c871ab4ad2145a1ddf150119dfe332a6a1894d2eacf",
+      "newModuleSha256": "df4244cb7823f5276e4159b042a92e4809f84122a013a39803f73954f0266617",
+      "onlySourceFieldChanged": true
+    },
+    {
+      "course": "nce1-33",
+      "path": "studio/course-loop/parallel-nce1-025-035/lesson-nce1-033.mjs",
+      "oldJsonFileSha256": "f2456985f96085333cbbca3c112500c5f08e9b77a4d938839514043f5ae2a82b",
+      "correctedLrcSourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+      "oldModuleSha256": "5ebd1d8455098e33f6c19d6ffb626fc1be1c17b5cc52975bdc9e3da12682f118",
+      "newModuleSha256": "eed29b43244efbfd62528ef7d049779af641cb9671104589e56e08e15b4362c5",
+      "onlySourceFieldChanged": true
+    },
+    {
+      "course": "nce1-35",
+      "path": "studio/course-loop/parallel-nce1-025-035/lesson-nce1-035.mjs",
+      "oldJsonFileSha256": "6e73bd450b43f04513a33eaab88b16857e1dba49f27342e56846f024a0f0a66a",
+      "correctedLrcSourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+      "oldModuleSha256": "15cd433be6fce074c5fa641d3f376274f03d7420a8112cfeb172bb4308ef7d2b",
+      "newModuleSha256": "f05869ac63601d80b598352bce4e7a7cf06c992036c39867513575240c9f89f0",
+      "onlySourceFieldChanged": true
+    }
+  ],
+  "questionsTeachingMatcherBytesChanged": false,
+  "openHumanTasksChanged": false,
+  "regression": {
+    "testsPassed": 65,
+    "testsFailed": 0,
+    "skipped": 0,
+    "blindProbeCases": 2489,
+    "log": "source-only-mandatory-tests.log",
+    "logSha256": "1f741a68d7df9eb47ec6617a6b4d72454ab840c835621570f7ab4e721d4b2d66"
+  },
+  "actualProductionSourcePanelBrowser": "Pending shared-host cherry-pick and build; prior isolated preview did not exercise production source guard."
+}

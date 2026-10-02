@@ -29,9 +29,9 @@
   ],
   "unchangedFinalPrompts031035": true,
   "reusedSemanticBindings": {
-    "nce1-31": "778fef01640d0adebb3ec70915808c66d86f7b44a9e1d9a4047d57cc20722ef8",
-    "nce1-33": "f6139d9f603651209d0d5df7f72c67df35c5e23274217753e483129c4c00520c",
-    "nce1-35": "b251c6b348d1cbc36464b7677f5d0da97ab90d78f931cf600017e6cd89f3ee53"
+    "nce1-31": "0b71d379e9c309a3436a72bf432eb15361c7dc4a074d306152b4cd0fbeb87ec1",
+    "nce1-33": "acdab50f79f2c99d8714318914d198bcf79796291216572ddb579ac21dd69267",
+    "nce1-35": "47b080a0e9ca37539fb2bb85073adf91c7b84c4cc3910e16e310473a03adf681"
   },
   "replayedFinalCases031035": 848,
   "replayedMismatches031035": 0,
@@ -50,5 +50,6 @@
     "physical phone",
     "audible playback",
     "human open expression"
-  ]
+  ],
+  "sourceOnlyRebinding": "source-only-correction.json; prior isolated preview did not exercise production source guard"
 }

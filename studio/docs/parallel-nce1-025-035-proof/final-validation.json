@@ -3,20 +3,20 @@
   "base": "d9c7c48a7d419c230be06bf81cc956d63b124649",
   "currentRemoteHeadAtResume": "94d38ab2a2bc42b803ddd951473b154f9c8a5bbd",
   "lessonSha256": {
-    "nce1-25": "c2f6fcb2b955c3c3d6fbf1a3be0fe340947cc2be8361eef6a47fbdaca75e3b6e",
-    "nce1-27": "81e26aea7a1d72e8932600c7aa8369c718d639e6a222667cb3aa32f8bfe6b60d",
-    "nce1-29": "33eaa85975278784fa2ffea998aa2c2e9164cd383847706f9da7f851245c9b34",
-    "nce1-31": "130284de9c57c51c66b63c871ab4ad2145a1ddf150119dfe332a6a1894d2eacf",
-    "nce1-33": "5ebd1d8455098e33f6c19d6ffb626fc1be1c17b5cc52975bdc9e3da12682f118",
-    "nce1-35": "15cd433be6fce074c5fa641d3f376274f03d7420a8112cfeb172bb4308ef7d2b"
+    "nce1-25": "6688a900b5b8ec0fea783f1d9a1cfe6ee3029dadf890b475a6650246d5dbbf9d",
+    "nce1-27": "8bb9a5c3fe2d2d63f317abebba7d2949bbff04da6a11cdf3b3af36ba75e36041",
+    "nce1-29": "0310d2c572df388817a33fc5ac5156d67e7a3dbebe9b043989c9f09b95e34c5e",
+    "nce1-31": "df4244cb7823f5276e4159b042a92e4809f84122a013a39803f73954f0266617",
+    "nce1-33": "eed29b43244efbfd62528ef7d049779af641cb9671104589e56e08e15b4362c5",
+    "nce1-35": "f05869ac63601d80b598352bce4e7a7cf06c992036c39867513575240c9f89f0"
   },
   "semanticSha256": {
-    "nce1-25": "2e35c0a702a789a95a2f66869aad87e2a198ef1ad288b4c4503fb8ca2f5b0d48",
-    "nce1-27": "e8c1ccad658980652a4bc3dac7b66eccf714695e191cb6a792a34357851d6e0e",
-    "nce1-29": "0acae92d9f85249e2eb24679ac2ac93f7a59209dc6e47a278676b458f1ffb441",
-    "nce1-31": "778fef01640d0adebb3ec70915808c66d86f7b44a9e1d9a4047d57cc20722ef8",
-    "nce1-33": "f6139d9f603651209d0d5df7f72c67df35c5e23274217753e483129c4c00520c",
-    "nce1-35": "b251c6b348d1cbc36464b7677f5d0da97ab90d78f931cf600017e6cd89f3ee53"
+    "nce1-25": "5a475f9fca99bcab77831c58fcbe581dc051d02a412a72bacb1cbdde430034f4",
+    "nce1-27": "e1a788f411e2601062cb655c08cba6956936ea9648a02a1a06ed26379d73a40e",
+    "nce1-29": "894531c9bcad077c125fdc454eca4ede86f5faec8842cd9316e2c9f251d2c6d9",
+    "nce1-31": "0b71d379e9c309a3436a72bf432eb15361c7dc4a074d306152b4cd0fbeb87ec1",
+    "nce1-33": "acdab50f79f2c99d8714318914d198bcf79796291216572ddb579ac21dd69267",
+    "nce1-35": "47b080a0e9ca37539fb2bb85073adf91c7b84c4cc3910e16e310473a03adf681"
   },
   "productionFactorySha256": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
   "factoryEqualsFrozenBase": true,
@@ -63,5 +63,14 @@
     "audible playback",
     "human open expression",
     "learning gains"
-  ]
+  ],
+  "sourceOnlyCorrection": "source-only-correction.json",
+  "sourceOnlyRegression": {
+    "testsPassed": 65,
+    "testsFailed": 0,
+    "skipped": 0,
+    "blindProbeCases": 2489,
+    "log": "source-only-mandatory-tests.log",
+    "logSha256": "1f741a68d7df9eb47ec6617a6b4d72454ab840c835621570f7ab4e721d4b2d66"
+  }
 }

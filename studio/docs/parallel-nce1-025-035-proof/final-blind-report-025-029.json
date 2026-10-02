@@ -2,9 +2,9 @@
   "status": "passed-after-reconnect-final-review",
   "base": "d9c7c48a7d419c230be06bf81cc956d63b124649",
   "semanticSha256": {
-    "nce1-25": "2e35c0a702a789a95a2f66869aad87e2a198ef1ad288b4c4503fb8ca2f5b0d48",
-    "nce1-27": "e8c1ccad658980652a4bc3dac7b66eccf714695e191cb6a792a34357851d6e0e",
-    "nce1-29": "0acae92d9f85249e2eb24679ac2ac93f7a59209dc6e47a278676b458f1ffb441"
+    "nce1-25": "5a475f9fca99bcab77831c58fcbe581dc051d02a412a72bacb1cbdde430034f4",
+    "nce1-27": "e1a788f411e2601062cb655c08cba6956936ea9648a02a1a06ed26379d73a40e",
+    "nce1-29": "894531c9bcad077c125fdc454eca4ede86f5faec8842cd9316e2c9f251d2c6d9"
   },
   "summary": {
     "questions": 54,
@@ -55,5 +55,6 @@
     "Natural alternatives outside task scope await human review.",
     "Synthetic review times, no natural24h/7d claim.",
     "Open expression, audibility, physical phone and production host integration not assessed."
-  ]
+  ],
+  "sourceOnlyRebinding": "source-only-correction.json (source metadata only; all reviewed questions and matcher unchanged)"
 }

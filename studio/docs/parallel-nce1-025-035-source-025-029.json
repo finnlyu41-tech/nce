@@ -36,7 +36,7 @@
       "references": []
     },
     "languagePath": "/language/NCE1/25.json",
-    "languageSha256": "15ddf5e1a8f598a178b264bd9932d319705b287779f08e20ebdbed2e2151fff5",
+    "languageSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
     "sourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
     "comicKey": "NCE1-25",
     "comicSourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
@@ -61,7 +61,8 @@
         "end": 51.54
       }
     ],
-    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified."
+    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified.",
+    "languageFileSha256": "15ddf5e1a8f598a178b264bd9932d319705b287779f08e20ebdbed2e2151fff5"
   },
   {
     "group": "NCE1-27",
@@ -100,7 +101,7 @@
       "references": []
     },
     "languagePath": "/language/NCE1/27.json",
-    "languageSha256": "2410876d2bc4142c898548e9252f7faa0f66e2d8b86e966838e4e3f372f41e15",
+    "languageSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
     "sourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
     "comicKey": "NCE1-27",
     "comicSourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
@@ -125,7 +126,8 @@
         "end": 53.31
       }
     ],
-    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified."
+    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified.",
+    "languageFileSha256": "2410876d2bc4142c898548e9252f7faa0f66e2d8b86e966838e4e3f372f41e15"
   },
   {
     "group": "NCE1-29",
@@ -164,7 +166,7 @@
       "references": []
     },
     "languagePath": "/language/NCE1/29.json",
-    "languageSha256": "15ea221a9497a68761363bd5b1966ab043eac4065c838f62437c8a629f55fe1a",
+    "languageSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
     "sourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
     "comicKey": "NCE1-29",
     "comicSourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
@@ -189,6 +191,7 @@
         "end": 34.92
       }
     ],
-    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified."
+    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified.",
+    "languageFileSha256": "15ea221a9497a68761363bd5b1966ab043eac4065c838f62437c8a629f55fe1a"
   }
 ]
