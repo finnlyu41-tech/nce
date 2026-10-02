@@ -1,6 +1,10 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v37 · 来源小批 SF02
+## 当前发布 v38 · 首页与路线可读性
+
+版本 `2026-10-02-home-route-ui-v38`，运行源码 `1cb23fdd47a297b41ed9458ab386c5ff786386dc`，固定部署 [991dcbca](https://991dcbca.finn-english-studio.pages.dev)。首页保留单一继续按钮，其他安排与当前位置直接可见；第2章12组显示第25–48课真实名称、目标与状态。24组本机定向检查、11组正式站检查和双地址24项资源哈希通过；进度、推荐及解锁算法未改。[发布验证](docs/home-route-ui-v38.md)。
+
+## 已发布 v37 · 来源小批 SF02
 
 版本 `2026-10-02-source-associations-sf02-v37`，运行源码 `94d38ab2a2bc42b803ddd951473b154f9c8a5bbd`，固定部署 [3b3631df](https://3b3631df.finn-english-studio.pages.dev)。新增8条教材来源关联和2个完整短语；目录3626／3356，原创315／420不变。正式入口13组检查通过，双地址84项资源哈希一致；CL02六课与IELTS文件保持原样。62个未决项关闭0，5项编辑注释仍独立。[发布接线与验证](docs/source-fixes-sf02-production-integration.md)。
 
