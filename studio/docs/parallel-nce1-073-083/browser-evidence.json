@@ -45,10 +45,77 @@
       },
       "retention": "natural 24h/7d not run",
       "audio": "not audited"
+    },
+    {
+      "id": "nce1-79",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 73→75→77→79→81→83→85 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-81",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 73→75→77→79→81→83→85 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-83",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 73→75→77→79→81→83→85 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
     }
   ],
   "runtimeErrors": [],
   "profile": "fresh QA; no user profile/data; removed after test",
   "productionRegistration": "not modified",
-  "naturalRetention": "not run"
+  "naturalRetention": "not run",
+  "provenance": {
+    "first3": "frozen0253b3b3d5d25bc725b8373ffc0ffa707da3d8c7; files byte unchanged",
+    "second3": [
+      {
+        "n": 79,
+        "path": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-079.mjs",
+        "sha256": "c1aeb0961ba2fde2bbcbb23e69b7eb2c1cd91628d577918feb12ea2fe0ebce21"
+      },
+      {
+        "n": 81,
+        "path": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-081.mjs",
+        "sha256": "7ef094c3c8077e3a627269f0636655778fe1de54b4512f5aafa8e11a193e4250"
+      },
+      {
+        "n": 83,
+        "path": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-083.mjs",
+        "sha256": "77ecff0b38f4718202ce67d6cfbfde77da47bdfc072968550c74fb90986b41d4"
+      }
+    ],
+    "priorRunWithEmbeddedAnswerCues": "excluded; rerun final refined prompts",
+    "viewports": "390 full native steps;320 waiting representative only; no physical phone"
+  }
 }

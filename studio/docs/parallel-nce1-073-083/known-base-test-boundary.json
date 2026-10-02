@@ -1,0 +1,17 @@
+{
+  "base": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "scope": "existing course-loop model and audit, separate from new content acceptance",
+  "model": {
+    "tests": 23,
+    "passed": 23
+  },
+  "audit": {
+    "tests": 4,
+    "passed": 3,
+    "failed": 1,
+    "error": "Stale audit: docs/course-loop-support-coverage.csv",
+    "independentExactBaseReproduction": true
+  },
+  "modifiedSharedFiles": [],
+  "action": "sole host owner may refresh its authoritative audit under separate ownership; authors did not delete assertion or change ledger to force success"
+}

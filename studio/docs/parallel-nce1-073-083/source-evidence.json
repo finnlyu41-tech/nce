@@ -160,6 +160,165 @@
       ],
       "sourcePanel": "actual unchanged guard accepts real source",
       "playback": "not-audited"
+    },
+    {
+      "id": "nce1-79",
+      "sourceSha256": "72956d0ab22980aa159f331e24d26431c8aed9011cacd180c8a37732a2a69a39",
+      "languageFileSha256": "210987e0419c485d121916460dcec899c5e771ddb3c9ca64e08dc36089175edd",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "9f634e10ebf9b658d2a6abcbceec33c2b22f051dcf1c1047eb0d6c6dbaae0b34",
+      "grammarEntry": {
+        "id": "NCE1-79",
+        "book": "NCE1",
+        "lesson": 79,
+        "lastLesson": 80,
+        "unit": null,
+        "title": "must go to 表示必须去某处",
+        "category": "modal",
+        "terms": "must go to",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 168
+          },
+          {
+            "section": "句型练习",
+            "page": 167
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 166
+          }
+        ],
+        "pages": [
+          166,
+          167,
+          168
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 166,
+          "sha256": "6796c4e0afc2cd2fdb4494d6ba385239dde1da380946d55cb0eacbbf9652505d"
+        },
+        {
+          "page": 167,
+          "sha256": "fe5f8354a64a3fe7d27f7a37a64fa5977309675864f4c28a13d7e45dd0489657"
+        },
+        {
+          "page": 168,
+          "sha256": "5c9dbaf80071733d7662c31e906235ec857d9c6666e261b1903ffd75fbf67a63"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-81",
+      "sourceSha256": "b82797b2d7868f294a997a229363cb8ce5a2fe860541a79d8dc5efcfb47b02bb",
+      "languageFileSha256": "482ed5e6dc355ee0856ee62f0dbcc58e805e81112121c86df9d4e1563da8142f",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "b69f4352efafb449fa06a5b671ede5df40a983249cff27263f937a5084df4ca9",
+      "grammarEntry": {
+        "id": "NCE1-81",
+        "book": "NCE1",
+        "lesson": 81,
+        "lastLesson": 82,
+        "unit": null,
+        "title": "have 的一般过去式",
+        "category": "tense",
+        "terms": "had",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 172
+          },
+          {
+            "section": "句型练习",
+            "page": 171
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 170
+          }
+        ],
+        "pages": [
+          170,
+          171,
+          172
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 170,
+          "sha256": "9b1bfc31f8362da3d48099b93a713ee276cad4a3362bb332a27456ce89b3ed8e"
+        },
+        {
+          "page": 171,
+          "sha256": "96ccf39fead343f9252dfd80d409726dfd49d054ddbe9e2c437c439376ec3325"
+        },
+        {
+          "page": 172,
+          "sha256": "c8ed504e2467dae5e23522c130504d10ebd1b25e8ee5571911b6a09b9e2cd490"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-83",
+      "sourceSha256": "fa135ee47799f0b347484be280cfffb8c721b639cc576e3c1e8c6af04d020169",
+      "languageFileSha256": "5e74751a2733ddde71228164b6bc6502d44e384b408f49d75cade430ede22fdd",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "890278d1c0d251747da5589a546392f5166c72e97763a64e85f176ae5704b141",
+      "grammarEntry": {
+        "id": "NCE1-83",
+        "book": "NCE1",
+        "lesson": 83,
+        "lastLesson": 84,
+        "unit": null,
+        "title": "现在完成时：Have you had…?",
+        "category": "tense",
+        "terms": "have had",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 176
+          },
+          {
+            "section": "句型练习",
+            "page": 175
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 174
+          }
+        ],
+        "pages": [
+          174,
+          175,
+          176
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 174,
+          "sha256": "bb21c391203328413172e40f5ba4454029c80a75b90e5561d3a5581ed666a73d"
+        },
+        {
+          "page": 175,
+          "sha256": "397b74fb031f85de974d1ceb004f782edf12215333aa045e4d44c6e5092926bb"
+        },
+        {
+          "page": 176,
+          "sha256": "715e7e489a0be2a52dfc0e6997f800f4561ac6d2722154156c4ebeb001bf19d9"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
     }
   ],
   "naturalRetention": "unverified",

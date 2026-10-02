@@ -1,0 +1,5 @@
+{
+  "error": "Error: Build failed with 1 error:\nstudio/map/curriculum.ts:1:17: ERROR: Could not resolve \"./curriculum.json\"",
+  "runtimeErrors": [],
+  "classification": "QA setup before prepare-curriculum; final browser passed on same source"
+}

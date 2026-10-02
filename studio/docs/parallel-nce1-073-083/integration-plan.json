@@ -1,0 +1,112 @@
+{
+  "base": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "owner": "root unified host author; publisher sole final integration",
+  "productionChangesInThisLine": [],
+  "readyFirstCommit": "0253b3b3d5d25bc725b8373ffc0ffa707da3d8c7",
+  "pendingSecondBatch": [],
+  "imports": [
+    {
+      "id": "nce1-73",
+      "module": "./parallel-nce1-073-083/lesson-nce1-073.mjs",
+      "key": "nce-course-loop-v1:NCE1-73",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-73",
+      "lessons": [
+        73,
+        74
+      ]
+    },
+    {
+      "id": "nce1-75",
+      "module": "./parallel-nce1-073-083/lesson-nce1-075.mjs",
+      "key": "nce-course-loop-v1:NCE1-75",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-75",
+      "lessons": [
+        75,
+        76
+      ]
+    },
+    {
+      "id": "nce1-77",
+      "module": "./parallel-nce1-073-083/lesson-nce1-077.mjs",
+      "key": "nce-course-loop-v1:NCE1-77",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-77",
+      "lessons": [
+        77,
+        78
+      ]
+    },
+    {
+      "id": "nce1-79",
+      "module": "./parallel-nce1-073-083/lesson-nce1-079.mjs",
+      "key": "nce-course-loop-v1:NCE1-79",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-79",
+      "lessons": [
+        79,
+        80
+      ]
+    },
+    {
+      "id": "nce1-81",
+      "module": "./parallel-nce1-073-083/lesson-nce1-081.mjs",
+      "key": "nce-course-loop-v1:NCE1-81",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-81",
+      "lessons": [
+        81,
+        82
+      ]
+    },
+    {
+      "id": "nce1-83",
+      "module": "./parallel-nce1-073-083/lesson-nce1-083.mjs",
+      "key": "nce-course-loop-v1:NCE1-83",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-83",
+      "lessons": [
+        83,
+        84
+      ]
+    }
+  ],
+  "hostAuthorEdits": [
+    {
+      "path": "studio/course-loop/registry.mjs",
+      "action": "import explicit content modules; append to existing registeredCourses input list; createCourseLoopModel(content) retains content.matches"
+    },
+    {
+      "path": "studio/course-loop/host-contract.d.ts",
+      "action": "append nce1-73,75,77,79,81,83 to CourseId; append odd lesson73,75,77,79,81,83 to showSource.lesson and NCE1-73,75,77,79,81,83 to showSource.comicKey; preserve SourceKind/action schema"
+    },
+    {
+      "path": "studio/app/course-loop-next.ts",
+      "action": "add only 71->73,73->75,75->77,77->79,79->81,81->83,83->85 successor entries; coordinate predecessor71 with 61-71 owner"
+    }
+  ],
+  "realHostQARequired": [
+    "71->73 entry and next/Today access intent after saved course",
+    "new6 registry/parser/sidecar/backup distinct namespaces, old keys and all writer/CAS protection",
+    "all intermediate successors and83->existing85; verify no map/FSRS completion award",
+    "SourcePanel actual packaged assets and internal LRC sourceSha256",
+    "final deployment package and exact deployed source binding"
+  ],
+  "candidateBoundary": "temporary bundler registry only; no real production integration/publish claimed",
+  "prohibitedHere": [
+    "registry",
+    "host-contract",
+    "next",
+    "Today",
+    "model",
+    "UI",
+    "storage",
+    "map",
+    "FSRS",
+    "video",
+    "personal records/recordings/credentials",
+    "13 natural-time archives",
+    "push/merge/deploy"
+  ],
+  "authoredSecondBatch": [
+    79,
+    81,
+    83
+  ],
+  "secondBatchStatus": "final prompt-only independent blind review, factory/source/native acceptance passed"
+}

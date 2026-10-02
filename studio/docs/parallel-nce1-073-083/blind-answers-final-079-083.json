@@ -1,0 +1,396 @@
+[
+  {
+    "id": "diagnostic-n79-must-go-purpose",
+    "answer": "I must go to the baker’s to get some bread.",
+    "variants": [
+      "I must go to the baker's to get some bread."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n79-much-many-stock",
+    "answer": "We have not got much water.",
+    "variants": [
+      "We haven't got much water."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n79-got-any",
+    "answer": "Have you got any envelopes?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "guided-n79-must-go-purpose",
+    "answer": "I must go to the greengrocer’s to get some peas.",
+    "variants": [
+      "I must go to the greengrocer's to get some peas."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n79-much-many-stock",
+    "answer": "We have not got many biscuits.",
+    "variants": [
+      "We haven't got many biscuits."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n79-got-any",
+    "answer": "We have not got any glue.",
+    "variants": [
+      "We haven't got any glue."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n79-must-go-purpose",
+    "answer": "You must go to the newsagent’s to get some writing paper.",
+    "variants": [
+      "You must go to the newsagent's to get some writing paper."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n79-much-many-stock",
+    "answer": "We have not got many cups and we have not got much milk.",
+    "variants": [
+      "We haven't got many cups and we haven't got much milk."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n79-got-any",
+    "answer": "Have we got any oranges?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "repair-n79-must-go-purpose",
+    "answer": "She must go to the grocer’s to get some butter.",
+    "variants": [
+      "She must go to the grocer's to get some butter."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n79-much-many-stock",
+    "answer": "They have not got many apples.",
+    "variants": [
+      "They haven't got many apples."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n79-got-any",
+    "answer": "She has not got any maps.",
+    "variants": [
+      "She hasn't got any maps."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n79-must-go-purpose",
+    "answer": "We must go to the butcher’s to get some chicken.",
+    "variants": [
+      "We must go to the butcher's to get some chicken."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n79-much-many-stock",
+    "answer": "I have not got much sand.",
+    "variants": [
+      "I haven't got much sand."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n79-got-any",
+    "answer": "Has she got any batteries?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-b-n79-must-go-purpose",
+    "answer": "They must go to the newsagent’s to get some magazines.",
+    "variants": [
+      "They must go to the newsagent's to get some magazines."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n79-much-many-stock",
+    "answer": "They have not got many balloons and they have not got much water.",
+    "variants": [
+      "They haven't got many balloons and they haven't got much water."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n79-got-any",
+    "answer": "We have not got any tapes.",
+    "variants": [
+      "We haven't got any tapes."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n81-past-have-event",
+    "answer": "I had a meal after the training.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n81-did-have",
+    "answer": "Did you have a swim yesterday?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n81-have-time-contrast",
+    "answer": "She is having lunch now.",
+    "variants": [
+      "She's having lunch now."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n81-past-have-event",
+    "answer": "We had a bath yesterday morning.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "guided-n81-did-have",
+    "answer": "He did not have a party last night.",
+    "variants": [
+      "He didn't have a party last night."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n81-have-time-contrast",
+    "answer": "I am going to have a haircut tomorrow.",
+    "variants": [
+      "I'm going to have a haircut tomorrow."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n81-past-have-event",
+    "answer": "Nora had a holiday last week.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "independent-n81-did-have",
+    "answer": "Did they have a lesson last Monday?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "independent-n81-have-time-contrast",
+    "answer": "We had dinner yesterday but we are having tea now.",
+    "variants": [
+      "We had dinner yesterday but we're having tea now."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n81-past-have-event",
+    "answer": "He had a haircut yesterday.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "repair-n81-did-have",
+    "answer": "We did not have breakfast yesterday.",
+    "variants": [
+      "We didn't have breakfast yesterday."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n81-have-time-contrast",
+    "answer": "Leo is having a bath now but he had a swim yesterday.",
+    "variants": [
+      "Leo's having a bath now but he had a swim yesterday."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n81-past-have-event",
+    "answer": "She had lunch yesterday.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-a-n81-did-have",
+    "answer": "Did you have a party yesterday?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-a-n81-have-time-contrast",
+    "answer": "They had a lesson yesterday but they are going to have a holiday tomorrow.",
+    "variants": [
+      "They had a lesson yesterday but they're going to have a holiday tomorrow."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n81-past-have-event",
+    "answer": "They had a party last Friday.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-b-n81-did-have",
+    "answer": "She did not have a holiday last week.",
+    "variants": [
+      "She didn't have a holiday last week."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n81-have-time-contrast",
+    "answer": "I am having dinner now but I am going to have a swim tomorrow.",
+    "variants": [
+      "I'm having dinner now but I'm going to have a swim tomorrow."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n83-perfect-completion",
+    "answer": "I have already had lunch.",
+    "variants": [
+      "I have had lunch already.",
+      "I've already had lunch."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n83-perfect-have-question",
+    "answer": "Have they had breakfast yet?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n83-past-or-current-completion",
+    "answer": "I had dinner yesterday.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "guided-n83-perfect-completion",
+    "answer": "She has just had a cup of tea.",
+    "variants": [
+      "She's just had a cup of tea."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n83-perfect-have-question",
+    "answer": "Has Leo had lunch yet?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "guided-n83-past-or-current-completion",
+    "answer": "She has already had dinner.",
+    "variants": [
+      "She has had dinner already.",
+      "She's already had dinner."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n83-perfect-completion",
+    "answer": "We have not had any milk yet.",
+    "variants": [
+      "We haven't had any milk yet."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n83-perfect-have-question",
+    "answer": "Have you had any fruit yet?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "independent-n83-past-or-current-completion",
+    "answer": "They had a lesson last Monday.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "repair-n83-perfect-completion",
+    "answer": "She has not had her holiday yet.",
+    "variants": [
+      "She hasn't had her holiday yet."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n83-perfect-have-question",
+    "answer": "Have they had any tea yet?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "repair-n83-past-or-current-completion",
+    "answer": "He has just had a swim.",
+    "variants": [
+      "He's just had a swim."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n83-perfect-completion",
+    "answer": "They have already had some oranges.",
+    "variants": [
+      "They have had some oranges already.",
+      "They've already had some oranges."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n83-perfect-have-question",
+    "answer": "Has Ada had a bath yet?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-a-n83-past-or-current-completion",
+    "answer": "We had a swim last Friday.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-b-n83-perfect-completion",
+    "answer": "I have just had a haircut.",
+    "variants": [
+      "I've just had a haircut."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n83-perfect-have-question",
+    "answer": "Has she had any vegetables yet?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-b-n83-past-or-current-completion",
+    "answer": "We have already had breakfast.",
+    "variants": [
+      "We have had breakfast already.",
+      "We've already had breakfast."
+    ],
+    "concern": null
+  }
+]

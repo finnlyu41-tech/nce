@@ -1,0 +1,187 @@
+{
+  "scope": "Author handoff only; independent blind review, production factory and browser evidence belong to parent.",
+  "groups": [
+    {
+      "id": "nce1-79",
+      "modulePath": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-079.mjs",
+      "moduleSha256": "c1aeb0961ba2fde2bbcbb23e69b7eb2c1cd91628d577918feb12ea2fe0ebce21",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "targetCount": 3,
+      "counterexamples": 72,
+      "sourcePath": "studio/dist-online/language/NCE1/79.json",
+      "lrcInternalSourceSha256": "72956d0ab22980aa159f331e24d26431c8aed9011cacd180c8a37732a2a69a39",
+      "jsonFileSha256": "210987e0419c485d121916460dcec899c5e771ddb3c9ca64e08dc36089175edd",
+      "selectedClips": [
+        {
+          "target": "must-go-purpose",
+          "label": "79课原声must go；to get目的结构见80课配套练习",
+          "start": 33.62,
+          "end": 37.25
+        },
+        {
+          "target": "much-many-stock",
+          "label": "79课原声not much与not many库存对照",
+          "start": 37.25,
+          "end": 61.5
+        },
+        {
+          "target": "got-any",
+          "label": "79课原声not any与Have we got any询问",
+          "start": 68.23,
+          "end": 79.77
+        }
+      ],
+      "comic": {
+        "path": "studio/dist-online/lesson-pages/9f634e10ebf9b658d2a6abcbceec33c2b22f051dcf1c1047eb0d6c6dbaae0b34.jpg",
+        "pageSha256": "9f634e10ebf9b658d2a6abcbceec33c2b22f051dcf1c1047eb0d6c6dbaae0b34",
+        "visuallyInspected": true,
+        "notes": "Existing illustrated dialogue reviewed for source semantic correspondence. No new source assets."
+      },
+      "pairedExercise": {
+        "pageKey": "NCE1-167",
+        "path": "studio/dist-online/lesson-pages/fe5f8354a64a3fe7d27f7a37a64fa5977309675864f4c28a13d7e45dd0489657.jpg",
+        "sha256": "fe5f8354a64a3fe7d27f7a37a64fa5977309675864f4c28a13d7e45dd0489657",
+        "visuallyInspected": true,
+        "notes": "80课to get与采购物品来自已核原教材练习页；不声明to get在79课原声中。"
+      }
+    },
+    {
+      "id": "nce1-81",
+      "modulePath": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-081.mjs",
+      "moduleSha256": "7ef094c3c8077e3a627269f0636655778fe1de54b4512f5aafa8e11a193e4250",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "targetCount": 3,
+      "counterexamples": 72,
+      "sourcePath": "studio/dist-online/language/NCE1/81.json",
+      "lrcInternalSourceSha256": "b82797b2d7868f294a997a229363cb8ce5a2fe860541a79d8dc5efcfb47b02bb",
+      "jsonFileSha256": "482ed5e6dc355ee0856ee62f0dbcc58e805e81112121c86df9d4e1563da8142f",
+      "selectedClips": [
+        {
+          "target": "past-have-event",
+          "label": "81课原声had lunch；82课配套扩展活动搭配",
+          "start": 54.8,
+          "end": 58.63
+        },
+        {
+          "target": "did-have",
+          "label": "81课原声What did you have；did否定由过去式规则迁移",
+          "start": 61.3,
+          "end": 63.42
+        },
+        {
+          "target": "have-time-contrast",
+          "label": "81课原声正在having a bath；将来going to have另见71.05秒原文",
+          "start": 22.39,
+          "end": 24.6
+        }
+      ],
+      "comic": {
+        "path": "studio/dist-online/lesson-pages/b69f4352efafb449fa06a5b671ede5df40a983249cff27263f937a5084df4ca9.jpg",
+        "pageSha256": "b69f4352efafb449fa06a5b671ede5df40a983249cff27263f937a5084df4ca9",
+        "visuallyInspected": true,
+        "notes": "Existing illustrated dialogue reviewed for source semantic correspondence. No new source assets."
+      },
+      "pairedExercise": {
+        "pageKey": "NCE1-171",
+        "path": "studio/dist-online/lesson-pages/96ccf39fead343f9252dfd80d409726dfd49d054ddbe9e2c437c439376ec3325.jpg",
+        "sha256": "96ccf39fead343f9252dfd80d409726dfd49d054ddbe9e2c437c439376ec3325",
+        "visuallyInspected": true,
+        "notes": "82课活动搭配来自已核原教材练习页；did not与时间对照为规则迁移，不声明每项都在选取的原声clip内。"
+      }
+    },
+    {
+      "id": "nce1-83",
+      "modulePath": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-083.mjs",
+      "moduleSha256": "77ecff0b38f4718202ce67d6cfbfde77da47bdfc072968550c74fb90986b41d4",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "targetCount": 3,
+      "counterexamples": 72,
+      "sourcePath": "studio/dist-online/language/NCE1/83.json",
+      "lrcInternalSourceSha256": "fa135ee47799f0b347484be280cfffb8c721b639cc576e3c1e8c6af04d020169",
+      "jsonFileSha256": "5e74751a2733ddde71228164b6bc6502d44e384b408f49d75cade430ede22fdd",
+      "selectedClips": [
+        {
+          "target": "perfect-completion",
+          "label": "83课原声already had对照确定过去时刻had",
+          "start": 33.18,
+          "end": 39.98
+        },
+        {
+          "target": "perfect-have-question",
+          "label": "83课原声just had；Have/Has…had疑问见84课配套练习",
+          "start": 42.93,
+          "end": 49.96
+        },
+        {
+          "target": "past-or-current-completion",
+          "label": "83课原声already had my holiday；确定过去时刻另见35.97秒原文",
+          "start": 83.46000000000001,
+          "end": 88.1
+        }
+      ],
+      "comic": {
+        "path": "studio/dist-online/lesson-pages/890278d1c0d251747da5589a546392f5166c72e97763a64e85f176ae5704b141.jpg",
+        "pageSha256": "890278d1c0d251747da5589a546392f5166c72e97763a64e85f176ae5704b141",
+        "visuallyInspected": true,
+        "notes": "Existing illustrated dialogue reviewed for source semantic correspondence. No new source assets."
+      },
+      "pairedExercise": {
+        "pageKey": "NCE1-175",
+        "path": "studio/dist-online/lesson-pages/397b74fb031f85de974d1ceb004f782edf12215333aa045e4d44c6e5092926bb.jpg",
+        "sha256": "397b74fb031f85de974d1ceb004f782edf12215333aa045e4d44c6e5092926bb",
+        "visuallyInspected": true,
+        "notes": "84课Have you had与食品词来自已核原教材练习页；has、否定yet为教学迁移，不声明每项都在83课原声中。"
+      }
+    }
+  ],
+  "promptOnly": {
+    "path": "studio/docs/parallel-nce1-073-083/blind-prompts-079-083.json",
+    "sha256": "b75bbd6d2cde04f1d48b8b4f57bb973582d87611a8691b8f007e79abec103ca9",
+    "tasks": 54,
+    "embeddedInflectedAnswerClauses": "removed during author self-review; use this final54-task bundle"
+  },
+  "verifiedHere": [
+    "Imports bind18 unique questions/3targets/6banks per group with4 near-miss boundaries each.",
+    "All clip starts exactly match LRC JSON timestamps.",
+    "languageSha256 is JSON-internal sourceSha256, differs from JSON file-byte SHA256.",
+    "Existing comic pages and paired practice pages were visually inspected and byte hashes verified."
+  ],
+  "pending": [
+    "Independent prompt-only blind solve and variant review by parent.",
+    "Actual production factory/harness and source guard tests by parent.",
+    "Representative native UI screenshots by parent.",
+    "Human open-output review, real audio listening/pronunciation, natural24h/7d retention remain unverified."
+  ],
+  "integrationBoundary": "No registry, host-contract, selector, model, UI, storage, map, FSRS or shared helper changes; no git commit, push, merge or deployment.",
+  "sourceNotes": [
+    "79 LRC spells greengroce’s while original scanned page spells greengrocer’s; authored transfer uses correct spelling, leaves existing source unmodified.",
+    "81 LRC spells dinnner while original page spells dinner; authored text uses dinner, existing source remains unchanged."
+  ]
+}

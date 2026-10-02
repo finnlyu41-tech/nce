@@ -1,0 +1,437 @@
+{
+  "scope": "Prompt-only independent review. No accepted answers, key, options, counterexamples or explanations.",
+  "tasks": [
+    {
+      "lesson": "nce1-79",
+      "id": "diagnostic-n79-must-go-purpose",
+      "stage": "diagnostic",
+      "target": "must-go-purpose",
+      "context": "学校义卖要给点心摊补货：我必须去面包店取些面包。",
+      "prompt": "以I开头，用must、go、the baker’s、get some bread，并表达此行获取物品的目的写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "diagnostic-n79-much-many-stock",
+      "stage": "diagnostic",
+      "target": "much-many-stock",
+      "context": "露营箱检查发现饮用水所剩不多；water指水而不是几瓶水。",
+      "prompt": "用We和have got的否定式描述water，选适合不可数物质的数量词表达不多。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "diagnostic-n79-got-any",
+      "stage": "diagnostic",
+      "target": "got-any",
+      "context": "美术社要核实你们有没有信封，尚不知道答案。",
+      "prompt": "用you、have got、any envelopes，询问当前有没有信封。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "guided-n79-must-go-purpose",
+      "stage": "guided",
+      "target": "must-go-purpose",
+      "context": "社区菜园派我采购；我要去蔬果店取些豌豆给周末的汤。",
+      "prompt": "以I开头，用must、go、the greengrocer’s、get some peas，并表达此行获取物品的目的写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留主语、must go、指定目的地及to get的物品。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "guided-n79-much-many-stock",
+      "stage": "guided",
+      "target": "much-many-stock",
+      "context": "桌游晚会的储物盒还有少数饼干；biscuits可以逐个数。",
+      "prompt": "用We和have got的否定式描述biscuits，选适合可数复数的数量词表达不多。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：many配可数复数，much配不可数；不把少量改为零。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "guided-n79-got-any",
+      "stage": "guided",
+      "target": "got-any",
+      "context": "装订工作马上开始，库管查明我们一瓶胶水也没有；glue指胶水本身。",
+      "prompt": "用We、have got、any glue写一句表达已确认的零库存。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：未知询问用Have/Has前置；零库存陈述用not any，保留正确人物。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "independent-n79-must-go-purpose",
+      "stage": "independent",
+      "target": "must-go-purpose",
+      "context": "陌生城市的排练现场缺海报用纸；你必须去报刊文具店取些写字纸。",
+      "prompt": "以You开头，用must、go、the newsagent’s、get some writing paper，并表达此行获取物品的目的写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "independent-n79-much-many-stock",
+      "stage": "independent",
+      "target": "much-many-stock",
+      "context": "合唱团茶歇：杯子没剩几个，牛奶也没有多少；两项都非完全没有。",
+      "prompt": "用We、have got的否定式和and描述cups与milk都不多，保留两个we，分别选择合适的数量词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "independent-n79-got-any",
+      "stage": "independent",
+      "target": "got-any",
+      "context": "列车野餐前你核实我们手上有没有橙子，不能假设有或没有。",
+      "prompt": "用we、have got、any oranges，询问当前有没有橙子。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "repair-n79-must-go-purpose",
+      "stage": "repair",
+      "target": "must-go-purpose",
+      "context": "保留上一轮首答和订正。下面是另一情境：维修班另派她采购；她必须去杂货店取些黄油供烘焙组使用。",
+      "prompt": "以She开头，用must、go、the grocer’s、get some butter，并表达此行获取物品的目的写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "repair-n79-much-many-stock",
+      "stage": "repair",
+      "target": "much-many-stock",
+      "context": "保留上一轮首答和订正。下面是另一情境：观鸟营地重新核库存：苹果只有少数；apples指一个个苹果。",
+      "prompt": "用They和have got的否定式描述apples，选合适的数量词表达不多。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "repair-n79-got-any",
+      "stage": "repair",
+      "target": "got-any",
+      "context": "保留上一轮首答和订正。下面是另一情境：修补另一条零库存消息：她的袋子里没有任何地图。",
+      "prompt": "用She、have got、any maps写一句表达已确认的零库存。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "review-a-n79-must-go-purpose",
+      "stage": "review-a",
+      "target": "must-go-purpose",
+      "context": "隔日收到剧场道具任务：我们必须去肉店取些鸡肉做工作人员的餐食。",
+      "prompt": "以We开头，用must、go、the butcher’s、get some chicken，并表达此行获取物品的目的写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "review-a-n79-much-many-stock",
+      "stage": "review-a",
+      "target": "much-many-stock",
+      "context": "第二天的沙画展记录：散装沙子所剩不多；sand并非沙袋。",
+      "prompt": "用I和have got的否定式描述sand，选合适的数量词表达不多。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "review-a-n79-got-any",
+      "stage": "review-a",
+      "target": "got-any",
+      "context": "志愿者分组后，你向库管询问负责照明的她有没有电池。",
+      "prompt": "用she、have got、any batteries，询问当前有没有电池。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "review-b-n79-must-go-purpose",
+      "stage": "review-b",
+      "target": "must-go-purpose",
+      "context": "下次回访新接到摄影展布置任务：他们必须去报刊文具店取些杂志。",
+      "prompt": "以They开头，用must、go、the newsagent’s、get some magazines，并表达此行获取物品的目的写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "review-b-n79-much-many-stock",
+      "stage": "review-b",
+      "target": "much-many-stock",
+      "context": "另一个学校活动的盒子没有多少气球，饮用水也所剩不多；两项仍有少量。",
+      "prompt": "用They、have got的否定式和and描述balloons与water都不多，保留两个they，分别选择合适的数量词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-79",
+      "id": "review-b-n79-got-any",
+      "stage": "review-b",
+      "target": "got-any",
+      "context": "电台录制班确认：我们没有任何空磁带，不是在提问。",
+      "prompt": "用We、have got、any tapes写一句表达已确认的零库存。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "diagnostic-n81-past-have-event",
+      "stage": "diagnostic",
+      "target": "past-have-event",
+      "context": "昨天社团日报：我在培训之后吃了一顿饭；a meal指一顿饭。",
+      "prompt": "以I开头，用have a meal、after the training写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "diagnostic-n81-did-have",
+      "stage": "diagnostic",
+      "target": "did-have",
+      "context": "操场日志只记了日期，你问对方昨天有没有游过泳。",
+      "prompt": "用you、have a swim、yesterday，询问那项已结束的活动是否发生。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "diagnostic-n81-have-time-contrast",
+      "stage": "diagnostic",
+      "target": "have-time-contrast",
+      "context": "直播字幕：她现在正在吃午饭；并未描述今晚安排。",
+      "prompt": "用She、have lunch、now写一句表达此刻正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "guided-n81-past-have-event",
+      "stage": "guided",
+      "target": "past-have-event",
+      "context": "海边活动昨天已结束：我们昨天上午洗过澡。",
+      "prompt": "用We、have a bath、yesterday morning写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：已结束事件用had，保留活动名词、人物与日期。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "guided-n81-did-have",
+      "stage": "guided",
+      "target": "did-have",
+      "context": "录音棚的记录显示昨晚他没有办派对；不是没有度假。",
+      "prompt": "用He、have a party、last night写一句否定过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：did后have回原形，分清未知询问与已知否定。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "guided-n81-have-time-contrast",
+      "stage": "guided",
+      "target": "have-time-contrast",
+      "context": "新开业理发店的预约簿：我打算明天理发，还未开始。",
+      "prompt": "用I、have a haircut、tomorrow写一句表达明确的将来打算。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：过去用had，当前进行用having，将来计划用going to have，各自时间不能互换。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "independent-n81-past-have-event",
+      "stage": "independent",
+      "target": "past-have-event",
+      "context": "陌生骑行队的活动记录：Nora上周过了一个假期。",
+      "prompt": "用Nora、have a holiday、last week写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "independent-n81-did-have",
+      "stage": "independent",
+      "target": "did-have",
+      "context": "培训教室出勤信息缺失，你向记录员问他们上周一有没有上一节课。",
+      "prompt": "用they、have a lesson、last Monday，询问那项已结束的活动是否发生。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "independent-n81-have-time-contrast",
+      "stage": "independent",
+      "target": "have-time-contrast",
+      "context": "旅行日志区分时间：我们昨天吃过晚饭，现在正在喝茶。",
+      "prompt": "以We开头，用have dinner、yesterday、but、we、have tea、now连接一句，按每项时间选择动词形式。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "repair-n81-past-have-event",
+      "stage": "repair",
+      "target": "past-have-event",
+      "context": "保留上一轮首答和订正。下面是另一情境：修补另一份场馆报告：他昨天理了发，时间并非明天。",
+      "prompt": "用He、have a haircut、yesterday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "repair-n81-did-have",
+      "stage": "repair",
+      "target": "did-have",
+      "context": "保留上一轮首答和订正。下面是另一情境：核对另一份早餐记录：我们昨天没有吃早餐。",
+      "prompt": "用We、have breakfast、yesterday写一句否定过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "repair-n81-have-time-contrast",
+      "stage": "repair",
+      "target": "have-time-contrast",
+      "context": "保留上一轮首答和订正。下面是另一情境：这次修补时间判断：Leo现在正在洗澡，昨天他游过泳。",
+      "prompt": "以Leo开头，用have a bath、now、but、he、have a swim、yesterday连接一句，按每项时间选择动词形式。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "review-a-n81-past-have-event",
+      "stage": "review-a",
+      "target": "past-have-event",
+      "context": "隔日博物馆志愿者回报：她昨天吃过午饭。",
+      "prompt": "用She、have lunch、yesterday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "review-a-n81-did-have",
+      "stage": "review-a",
+      "target": "did-have",
+      "context": "另一份夏令营安排已经结束，你问她昨天有没有举办过派对；直接向她提问。",
+      "prompt": "用you、have a party、yesterday，询问那项已结束的活动是否发生。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "review-a-n81-have-time-contrast",
+      "stage": "review-a",
+      "target": "have-time-contrast",
+      "context": "两队对照安排：他们昨天上过课，但明天打算度假。",
+      "prompt": "以They开头，用have a lesson、yesterday、but、they、have a holiday、tomorrow连接一句，表达已经发生与明确打算。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "review-b-n81-past-have-event",
+      "stage": "review-b",
+      "target": "past-have-event",
+      "context": "新一周读书会发来上周五记录：他们举行过一场派对。",
+      "prompt": "用They、have a party、last Friday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "review-b-n81-did-have",
+      "stage": "review-b",
+      "target": "did-have",
+      "context": "另一条课后回报明确写着她上周没有度假。",
+      "prompt": "用She、have a holiday、last week写一句否定过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-81",
+      "id": "review-b-n81-have-time-contrast",
+      "stage": "review-b",
+      "target": "have-time-contrast",
+      "context": "另一场音乐节直播：我现在正在吃晚饭，但明天打算游泳。",
+      "prompt": "以I开头，用have dinner、now、but、I、have a swim、tomorrow连接一句，表达正在进行与明确打算。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "diagnostic-n83-perfect-completion",
+      "stage": "diagnostic",
+      "target": "perfect-completion",
+      "context": "你刚到救援站，工作人员递来午餐。你已经吃过午饭，强调眼下无需再吃。",
+      "prompt": "用I、have lunch、already写一句表达当前已完成，不加具体过去时刻。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "diagnostic-n83-perfect-have-question",
+      "stage": "diagnostic",
+      "target": "perfect-have-question",
+      "context": "游泳班集合时，你核实他们到现在有没有吃早餐，结果还未知。",
+      "prompt": "用they、have breakfast、yet，询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "diagnostic-n83-past-or-current-completion",
+      "stage": "diagnostic",
+      "target": "past-or-current-completion",
+      "context": "剪辑员只要昨日活动时间：我昨天吃了晚饭，不是在报告到现在的完成状态。",
+      "prompt": "用I、have dinner、yesterday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "guided-n83-perfect-completion",
+      "stage": "guided",
+      "target": "perfect-completion",
+      "context": "咖啡讲座现场，她刚喝过一杯茶，现在不再领茶。",
+      "prompt": "用She、have a cup of tea、just写一句表达当前刚完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：have/has跟主语一致，后接had，already/just/yet保留完成状态。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "guided-n83-perfect-have-question",
+      "stage": "guided",
+      "target": "perfect-have-question",
+      "context": "徒步接驳站，你向负责人核实Leo截至现在有没有吃午饭。",
+      "prompt": "用Leo、have lunch、yet，询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：Have/Has前置、had保留，以yet询问当前完成状态并保留问号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "guided-n83-past-or-current-completion",
+      "stage": "guided",
+      "target": "past-or-current-completion",
+      "context": "航班候机室现在发晚餐券；她已经吃过晚饭，所以不需要。",
+      "prompt": "用She、have dinner、already写一句表达当前已完成，不加过去日期。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先读时间和当前后果：明确过去日期用had；当前完成用have/has had。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "independent-n83-perfect-completion",
+      "stage": "independent",
+      "target": "perfect-completion",
+      "context": "陌生的户外电影场正在发饮品：我们到现在还没喝过任何牛奶，等待领取。",
+      "prompt": "用We、have any milk、yet写一句表达截至当前尚未完成的否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "independent-n83-perfect-have-question",
+      "stage": "independent",
+      "target": "perfect-have-question",
+      "context": "社区比赛中，你直接询问对方到现在有没有吃过一些水果；any fruit指一些水果。",
+      "prompt": "用you、have any fruit、yet，询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "independent-n83-past-or-current-completion",
+      "stage": "independent",
+      "target": "past-or-current-completion",
+      "context": "博物馆值班册只记录上周一的一节课：他们那天上过课。",
+      "prompt": "用They、have a lesson、last Monday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "repair-n83-perfect-completion",
+      "stage": "repair",
+      "target": "perfect-completion",
+      "context": "保留上一轮首答和订正。下面是另一情境：修补完成状态时换一个情境：旅行社的她到现在还没有度过自己的假期。",
+      "prompt": "用She、have her holiday、yet写一句表达截至当前尚未完成的否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "repair-n83-perfect-have-question",
+      "stage": "repair",
+      "target": "perfect-have-question",
+      "context": "保留上一轮首答和订正。下面是另一情境：修补另一句未知询问：你问两位朋友到现在有没有喝过茶，向记录员而非朋友发问。",
+      "prompt": "用they、have any tea、yet，询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "repair-n83-past-or-current-completion",
+      "stage": "repair",
+      "target": "past-or-current-completion",
+      "context": "保留上一轮首答和订正。下面是另一情境：另一项时间判断：他刚游完泳，重点是眼下已完成，不给几点或哪天。",
+      "prompt": "用He、have a swim、just写一句表达当前刚完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "review-a-n83-perfect-completion",
+      "stage": "review-a",
+      "target": "perfect-completion",
+      "context": "隔日舞台排练新记录：他们已经吃过一些橙子，当前点心不再需要橙子。",
+      "prompt": "用They、have some oranges、already写一句表达当前已完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "review-a-n83-perfect-have-question",
+      "stage": "review-a",
+      "target": "perfect-have-question",
+      "context": "另一间休息室，你向同事核实Ada到现在有没有洗过澡。",
+      "prompt": "用Ada、have a bath、yet，询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "review-a-n83-past-or-current-completion",
+      "stage": "review-a",
+      "target": "past-or-current-completion",
+      "context": "新收到旧赛事报道：我们上周五游过泳，只需记录那个已结束的日期。",
+      "prompt": "用We、have a swim、last Friday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "review-b-n83-perfect-completion",
+      "stage": "review-b",
+      "target": "perfect-completion",
+      "context": "第二次回访新出现当前状态：我刚理完发，重点是刚完成而非日期。",
+      "prompt": "用I、have a haircut、just写一句表达当前刚完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "review-b-n83-perfect-have-question",
+      "stage": "review-b",
+      "target": "perfect-have-question",
+      "context": "另一份工作人员餐食情况尚不明，你向负责人问她到现在有没有吃过一些蔬菜。",
+      "prompt": "用she、have any vegetables、yet，询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+    },
+    {
+      "lesson": "nce1-83",
+      "id": "review-b-n83-past-or-current-completion",
+      "stage": "review-b",
+      "target": "past-or-current-completion",
+      "context": "最后一项接待情况：我们已经吃过早餐，现在不用再预留早餐；没有具体过去时间。",
+      "prompt": "用We、have breakfast、already写一句表达当前已完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+    }
+  ]
+}
