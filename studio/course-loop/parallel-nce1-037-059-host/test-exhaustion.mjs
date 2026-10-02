@@ -36,7 +36,8 @@ function snapshotFor(cases){return {...structuredClone(host.initial),drafts:Obje
 
 
 const IDS=Array.from({length:30},(_,i)=>`nce1-${2*i+1}`);
-assert.deepEqual(supportedCourseIds,IDS);assert.deepEqual(host.courseLoopBindings.map(c=>c.id),IDS);
+// Retain this delivery's original thirty-group coverage as later groups append.
+assert.deepEqual(supportedCourseIds.slice(0,IDS.length),IDS);assert.deepEqual(host.courseLoopBindings.slice(0,IDS.length).map(c=>c.id),IDS);
 const failed=await Promise.all(IDS.map(id=>exhaustionCase(id)));
 const passed=await Promise.all(IDS.map(id=>exhaustionCase(id,{mode:'independent'})));
 const loopTasks=(s,m,at)=>host.todayPractice(s,m,at).filter(t=>t.id.startsWith('course-loop:'));

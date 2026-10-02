@@ -8,7 +8,7 @@ import {productionHost,fixtureForId,supportedCourseIds} from './binding.mjs';
 const host=await productionHost();
 const IDS=Array.from({length:30},(_,i)=>`nce1-${i*2+1}`),OLD=IDS.slice(0,18),NEW=IDS.slice(18);
 const NOW=1791028800000,DAY=86400000;
-assert.deepEqual(supportedCourseIds,IDS,'production registry must expose the thirty authored groups');
+assert.deepEqual(supportedCourseIds.slice(0,IDS.length),IDS,'production registry must retain the thirty authored groups in order');
 const fixtures=Object.fromEntries(await Promise.all(IDS.map(async id=>[id,await fixtureForId(id)])));
 
 function complete(id,start=NOW,{wrong=true}={}){
@@ -36,14 +36,14 @@ const loopTasks=(state,map=host.emptyProgress(),at=NOW)=>host.todayPractice(stat
 function rejectRaw(value,id,at=NOW+10000){const raw=JSON.stringify(value),before=structuredClone(value),result=host.parseCourseLoop(raw,at,id);assert.equal(result.ok,false,`${id}: forged record accepted`);assert.equal(result.raw,raw);assert.deepEqual(value,before)}
 
 test('thirty real bindings preserve old defaults and distinct storage keys',()=>{
- assert.deepEqual(host.courseLoopBindings.map(c=>c.id),IDS);
- assert.equal(new Set(host.courseLoopBindings.flatMap(c=>[c.key,c.inputsKey])).size,60);
+ assert.deepEqual(host.courseLoopBindings.slice(0,IDS.length).map(c=>c.id),IDS);
+ assert.equal(new Set(host.courseLoopBindings.slice(0,IDS.length).flatMap(c=>[c.key,c.inputsKey])).size,60);
  assert.equal(host.courseLoopFor().id,'nce1-1');
  assert.equal(host.courseLoopKey,'nce-course-loop-v1:NCE1-1');assert.equal(host.courseLoopInputsKey,'nce-course-loop-inputs-v1:NCE1-1');
  for(const id of IDS){const b=host.courseLoopFor(id),number=Number(id.slice(5));assert.equal(b.key,`nce-course-loop-v1:NCE1-${number}`);assert.equal(b.inputsKey,`nce-course-loop-inputs-v1:NCE1-${number}`);assert.deepEqual(b.lesson.lessons,[number,number+1]);assert.equal(b.lesson.id,id)}
  const raw=JSON.stringify(completed['nce1-1'].state);assert.deepEqual(host.parseCourseLoop(raw,NOW+10000),host.parseCourseLoop(raw,NOW+10000,'nce1-1'));
  assert.deepEqual(host.parseLoopInputs(null),{version:1,corrections:{}});
- for(const id of ['nce1-61','nce1-2','nce1-013','NCE1-13','unknown','__proto__','constructor'])assert.throws(()=>host.courseLoopFor(id));
+ for(const id of ['nce1-85','nce1-2','nce1-013','NCE1-13','unknown','__proto__','constructor'])assert.throws(()=>host.courseLoopFor(id));
  assert.equal(host.nextCourse(host.initial,host.emptyProgress(),NOW).id,'first');
 });
 
@@ -89,7 +89,7 @@ test('future envelopes, unknown course or question IDs, forged event keys and un
   rejectRaw({...host.courseLoopFor(id).model.initialState(NOW),events:[{type:'draft',value:'future',at:NOW+20000}]},id);
   for(const inputs of [{version:2,corrections:{}},{version:1,corrections:{'independent-unknown':{answer:'a',note:'n'}}},{version:1,corrections:{[completed[id].correction.id]:{answer:'a',note:'n',forged:true}}},{version:1,corrections:{},forged:true}])assert.throws(()=>host.parseLoopInputs(JSON.stringify(inputs),id));
  }
- const raw=JSON.stringify(completed['nce1-13'].state);for(const id of ['nce1-61','unknown','__proto__']){const parsed=host.parseCourseLoop(raw,NOW+10000,id);assert.equal(parsed.ok,false);assert.equal(parsed.raw,raw);assert.throws(()=>host.parseLoopInputs(null,id))}
+ const raw=JSON.stringify(completed['nce1-13'].state);for(const id of ['nce1-85','unknown','__proto__']){const parsed=host.parseCourseLoop(raw,NOW+10000,id);assert.equal(parsed.ok,false);assert.equal(parsed.raw,raw);assert.throws(()=>host.parseLoopInputs(null,id))}
 });
 
 test('thirty pending courses produce distinct Today tasks and oldest pending wins without mutation',()=>{
@@ -155,7 +155,7 @@ test('actual guarded successor covers mapped boundaries and preserves known or s
  const fallback=host.nodeById('nce1-49');assert.ok(fallback);const before=JSON.stringify(fallback);
  for(const id of IDS){const want=`nce1-${Number(id.slice(5))+2}`,node=host.courseSuccessorNode(id,fallback);assert.ok(node,`${id} collapsed to undefined`);assert.strictEqual(node,host.nodeById(want));assert.notEqual(node.id,id);}
  for(const [id,want] of [['nce1-35','nce1-37'],['nce1-47','nce1-49'],['nce1-59','nce1-61']])assert.equal(host.courseSuccessorNode(id,fallback).id,want);
- const real61=host.nodeById('nce1-61');assert.ok(real61);assert.strictEqual(host.courseSuccessorNode('nce1-61',fallback),real61);
+ const real85=host.nodeById('nce1-85');assert.ok(real85);assert.strictEqual(host.courseSuccessorNode('nce1-85',fallback),real85);
  for(const id of ['unknown','nce1-999','nce1-037','__proto__','constructor','toString',''])assert.strictEqual(host.courseSuccessorNode(id,fallback),fallback,`${id}: unknown ID must preserve supplied current route`);
  assert.equal(JSON.stringify(fallback),before);
 });

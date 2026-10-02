@@ -28,7 +28,7 @@
     "registeredLoopTextbookCourseNumbers": 84,
     "registeredLoopQuestions": 756,
     "support": {
-      "ielts-mini": 28,
+      "ielts-mini": 29,
       "grammar-unit": 28,
       "backup-original": 36,
       "legacy-ielts-task": 11,
@@ -39,8 +39,8 @@
       "map-final-evidence": 3,
       "accepted-demo": 1
     },
-    "ieltsSessions": 28,
-    "ieltsUniqueMaterials": 120
+    "ieltsSessions": 29,
+    "ieltsUniqueMaterials": 126
   },
   "registration": {
     "courseIds": [
@@ -218,9 +218,13 @@
     "app/data/grammar-explanations.json": "c417b35cc8451716c567fda273d7a74b89a2c5061640b4a68871e5b4c8c6a0a3",
     "ielts-blueprint/sample-sequence.ts": "ef8997b877e9bb47bc2a4612c197b0aacdf8e422e633c19b5e72452b5192b2b0",
     "ielts-blueprint/types.ts": "f52898464454033b952ab3dfa8724be342c05455f2e621df4aadfdefb783c0df",
-    "ielts-blueprint/curriculum/registered.ts": "7a861e99d6e95f0c8bdbe9e1494f635d36361a81a203d01cef0fe40cfb7eec7c",
-    "ielts-blueprint/curriculum/batch-01.ts": "ceb8c6f6121a5f1386aca6cb1e310cedf24b1f6fd3f1161455597442772c9160",
+    "ielts-blueprint/curriculum/registered.ts": "7bd3bc344d1b4803e1c42833e6be9758cce13b4606288128685e78acf3fbfb55",
+    "ielts-blueprint/curriculum/table-completion.ts": "cbe187cad0aa56583f923537d3bc46e0952bbe6ec3657b010fccbc4e71fd5c73",
     "ielts-blueprint/curriculum/types.ts": "9b3bcb804cf1da292906e8576c20745b6eee561b375689e52867c531ebe7e945",
+    "ielts-blueprint/structured-table/types.ts": "a8fc9cc85db574432cdfa2c62fea4602d117d094afbcb322c3a5bf1fe76f8735",
+    "ielts-blueprint/curriculum/table-completion/reading-academic.ts": "f897c64e69601e815ec27cc51ea3df8153591bf501ddea9451ad0ea3be6ae8fc",
+    "ielts-blueprint/curriculum/table-completion/stimuli.ts": "55499e943f2ff46a145c966f8919c2e995833101a5d7198baa1ce10adc797960",
+    "ielts-blueprint/curriculum/batch-01.ts": "ceb8c6f6121a5f1386aca6cb1e310cedf24b1f6fd3f1161455597442772c9160",
     "ielts-blueprint/curriculum/listening-form.ts": "ce5cd9582dafcb62c77a179d72a565c3f732c731e379be778216ad0f6cc3e6a2",
     "ielts-blueprint/curriculum/reading-views.ts": "c4edba4f17a4b9766ccef8dc86309a5b157368442c8b3635a6d36b2826ccb33d",
     "ielts-blueprint/curriculum/batch-02.ts": "1ee46f5e18e9ebff093b52add895df8a99312ee3fef87737b88ce10f4a85f5d9",
@@ -242,8 +246,10 @@
     "ielts-blueprint/curriculum/batch-05/reading-headings-academic.ts": "2347df66eba8372ccdbe0e7827ba01d97f06d9ede2b22a4e4f063541de41746f",
     "ielts-blueprint/curriculum/batch-05/reading-headings-general.ts": "21203964800d50a5fef0fdb6d8fc5c393aa50eb82674916a1daf85eb18cefc0a",
     "app/ielts-blueprint.ts": "d4ccb3c1e92d92867d44f89e3a2fa6692f5ca681a7635b11ed035a12b2b76189",
-    "app/navigation.ts": "e90118660db01cda64149be2d60124ca87e64f2ad25ffe7348fd648583c0046f",
+    "app/navigation.ts": "59509d24b69401a1184a7542fdbcb5f73f82db501fe26bef020dee78bd72cd40",
     "app/ielts-sample-target.ts": "c7dac279b207ff8a275a89b3b236f20883b929a8af576875e86569667801d8cd",
+    "mini-task/route.ts": "8b08bdf9fd8a2fd1fb7d86e438abedf95e7f864f9a62bcbf540dc2646032c41a",
+    "mini-task/content.ts": "7a211a01e5302a07aad0f38b578e7911dfc80806507155f603bbf609f90c764e",
     "app/readiness.ts": "407f92284abb6a986e0a48896b1a84df80de3eda4653cdf9f9fceed5781dd64d",
     "app/ielts-journey-content.ts": "af18eb3a5a2c1ab1a30ebe8ae3444f0a37179ab97ce0655fad570278bda2c66b",
     "app/data/nce-illustrations.json": "9481fd016c92ec6d785cb76cf847e719ea7cce77cf6d103ef1df8c596a634083",

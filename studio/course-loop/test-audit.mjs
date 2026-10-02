@@ -55,9 +55,9 @@ test('IELTS support ledger enumerates current sample inventory and distinct mate
  const {sampleLessonsFor,sampleMaterials}=await loadTypeScript(fileURLToPath(new URL('ielts-blueprint/sample-sequence.ts',root)));
  const expected=['academic','general-training'].flatMap(variant=>sampleLessonsFor(variant).map(lesson=>({id:`${variant}:${lesson.id}`,materials:sampleMaterials(lesson).map(material=>material.id).join('|')})));
  const support=(await readCSV('docs/course-loop-support-coverage.csv')).filter(row=>row.kind==='ielts-mini'),audit=await read('docs/course-loop-audit.json');
- assert.equal(expected.length,28);assert.deepEqual(support.map(row=>({id:row.id,materials:row.materials})),expected);assert.equal(new Set(support.map(row=>row.id)).size,expected.length);
+ assert.equal(expected.length,29);assert.deepEqual(support.map(row=>({id:row.id,materials:row.materials})),expected);assert.equal(new Set(support.map(row=>row.id)).size,expected.length);
  assert.equal(audit.counts.ieltsSessions,expected.length);assert.equal(audit.counts.support['ielts-mini'],expected.length);
- const materials=new Set(expected.flatMap(row=>row.materials.split('|')));assert.equal(materials.size,120);assert.equal(audit.counts.ieltsUniqueMaterials,materials.size);
+ const materials=new Set(expected.flatMap(row=>row.materials.split('|')));assert.equal(materials.size,126);assert.equal(audit.counts.ieltsUniqueMaterials,materials.size);
 });
 test('source provenance includes real registry, each frozen lesson import and transitive inventory content',async()=>{
  const audit=await read('docs/course-loop-audit.json');

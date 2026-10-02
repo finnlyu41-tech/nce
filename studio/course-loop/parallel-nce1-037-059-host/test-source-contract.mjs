@@ -20,7 +20,7 @@ assert.equal(predicates.length,1,'find one exact production SourcePanel acceptan
 // This is the actual source expression, extracted rather than restated in tests.
 const accepts=new Function('result','lesson','first',`return (${predicates[0][1]});`);
 const IDS=Array.from({length:30},(_,i)=>`nce1-${1+2*i}`);
-assert.deepEqual(host.courseLoopBindings.map(course=>course.id),IDS,'actual production registry must contain the thirty selected groups');
+assert.deepEqual(host.courseLoopBindings.slice(0,IDS.length).map(course=>course.id),IDS,'actual production registry must retain the thirty selected groups in order');
 const sources=Object.fromEntries(await Promise.all(IDS.map(async id=>{
  const {lesson}=host.courseLoopFor(id),first=lesson.lessons[0],path=`language/${lesson.book}/${first}.json`,bytes=await readFile(new URL(path,assets)),language=JSON.parse(bytes);
  const lrc=manifest.files.filter(f=>f.book===lesson.book&&f.lesson===first&&f.textFormat==='lrc'&&f.sha256===language.sourceSha256);
