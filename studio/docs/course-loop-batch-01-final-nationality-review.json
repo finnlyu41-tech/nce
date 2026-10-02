@@ -1,0 +1,360 @@
+{
+  "status": "six-question independent blind review complete; minimum correction and focused tests passed, pending publisher integration",
+  "sourceCommit": "754258c8436e2f403522b31dfe3035ad2a5dd9eb",
+  "reviewer": "/root/cl01_final_nationality_review",
+  "reviewMethod": "Fresh independent reviewer received only the six frozen final questions; no author keys, teaching, criterion, why, prior reviews or full conversation. No web or writes. Revised six prompts sent for bounded follow-up without keys.",
+  "frozenContentSha256": "bfdbabd185012b96fe6cfe011bc2ed6862b2e83f0de3f914f13969aba542f705",
+  "frozenQuestionInputSha256": "0928d7de49f0bc2ef2b8658459b2dfc101c19cb03c705359de7110f09d75e9ba",
+  "revisedQuestionInputSha256": "59e326ae9d5cc98f7567265743fdb0be33540c6a4783dd7d905bbcfa426d7f6b",
+  "independentReview": {
+    "review_scope": "仅读取指定文件中的6道最终国籍题；未读取答案键或其他文件，未浏览，未修改文件。",
+    "shared_findings": {
+      "真实含义歧义": "未发现。人物身份、性别、国籍及肯定方向均明确。",
+      "结构边界": "主语 + is/’s + 指定国籍形容词可以明确界定本次有限表达。其他有效英文应标为不符合本次结构，而不是整体判为错误英文。",
+      "格式处理": [
+        "接受普通形式与正常缩写，包括直撇号和弯撇号。",
+        "首尾空格、重复词间空格、换行及普通句末句号或感叹号不改变答案含义。",
+        "大小写差异不构成含义或结构错误；标准书写仍应将句首及国籍形容词首字母大写。",
+        "问号不能一概作为无关标点忽略：它可能把已确认的信息转述变成疑问。"
+      ],
+      "be形式边界": "现在时中He/She所需的标准be形式是is，也可缩写为’s。was在纯词类层面同样属于be，但把断言放在过去，通常不满足完整任务所要求的当前国籍转述；它不必然表示现在已不具有该国籍。若必须排除这个边界，补充用一般现在时即可。",
+      "措辞问题": "国籍形容词（德国人/法国人等）是中文释义提示，不会使英文冠词或国籍名词结构成为合规答案。有限结构已足以排除这些表达。"
+    },
+    "questions": [
+      {
+        "id": "diagnostic-nationality",
+        "answer": "He is German.",
+        "common_equivalents_within_instructions": [
+          "He's German.",
+          "He’s German."
+        ],
+        "meaning_changes": [
+          {
+            "example": "She is German.",
+            "reason": "改变指定人物的性别指代。"
+          },
+          {
+            "example": "He is French.",
+            "reason": "改变国籍。"
+          },
+          {
+            "example": "He isn't German.",
+            "reason": "改变肯定方向。"
+          }
+        ],
+        "valid_english_outside_limited_structure": [
+          {
+            "example": "Ben is German.",
+            "reason": "在上下文中可指同一人，但未以He开头。"
+          },
+          {
+            "example": "He is a German.",
+            "reason": "含义等同，但German用作国籍名词并增加冠词。"
+          },
+          {
+            "example": "He is a German man.",
+            "reason": "German仍是形容词，但增加冠词和名词。"
+          },
+          {
+            "example": "He has German nationality.",
+            "reason": "含义等同，但不采用指定be结构。"
+          }
+        ]
+      },
+      {
+        "id": "guided-nationality",
+        "answer": "She is French.",
+        "common_equivalents_within_instructions": [
+          "She's French.",
+          "She’s French."
+        ],
+        "meaning_changes": [
+          {
+            "example": "He is French.",
+            "reason": "改变指定人物的性别指代。"
+          },
+          {
+            "example": "She is German.",
+            "reason": "改变国籍。"
+          },
+          {
+            "example": "She isn't French.",
+            "reason": "改变肯定方向。"
+          }
+        ],
+        "valid_english_outside_limited_structure": [
+          {
+            "example": "Anna is French.",
+            "reason": "在上下文中可指同一人，但未以She开头。"
+          },
+          {
+            "example": "She is a Frenchwoman.",
+            "reason": "含义等同，但使用国籍名词并增加冠词。"
+          },
+          {
+            "example": "She is a French person.",
+            "reason": "增加冠词和名词。"
+          },
+          {
+            "example": "She has French nationality.",
+            "reason": "含义等同，但不采用指定be结构。"
+          }
+        ],
+        "additional_boundary": "He/She is a French.不是这里表示法国人的普通有效英文。"
+      },
+      {
+        "id": "independent-nationality",
+        "answer": "She is Korean.",
+        "common_equivalents_within_instructions": [
+          "She's Korean.",
+          "She’s Korean."
+        ],
+        "meaning_changes": [
+          {
+            "example": "He is Korean.",
+            "reason": "改变指定人物的性别指代。"
+          },
+          {
+            "example": "She is Japanese.",
+            "reason": "改变国籍。"
+          },
+          {
+            "example": "She isn't Korean.",
+            "reason": "改变肯定方向。"
+          }
+        ],
+        "valid_english_outside_limited_structure": [
+          {
+            "example": "Yuna is Korean.",
+            "reason": "在上下文中可指同一人，但未以She开头。"
+          },
+          {
+            "example": "She is a Korean.",
+            "reason": "含义等同，但Korean用作国籍名词并增加冠词。"
+          },
+          {
+            "example": "She is a Korean woman.",
+            "reason": "增加冠词和名词。"
+          },
+          {
+            "example": "She has Korean nationality.",
+            "reason": "含义等同，但不采用指定be结构。"
+          }
+        ]
+      },
+      {
+        "id": "repair-nationality",
+        "answer": "He is Japanese.",
+        "common_equivalents_within_instructions": [
+          "He's Japanese.",
+          "He’s Japanese."
+        ],
+        "meaning_changes": [
+          {
+            "example": "She is Japanese.",
+            "reason": "改变指定人物的性别指代。"
+          },
+          {
+            "example": "He is Korean.",
+            "reason": "改变国籍。"
+          },
+          {
+            "example": "He isn't Japanese.",
+            "reason": "改变肯定方向。"
+          }
+        ],
+        "valid_english_outside_limited_structure": [
+          {
+            "example": "Ken is Japanese.",
+            "reason": "在上下文中可指同一人，但未以He开头。"
+          },
+          {
+            "example": "He is a Japanese person.",
+            "reason": "增加冠词和名词。"
+          },
+          {
+            "example": "He is a Japanese man.",
+            "reason": "增加冠词和名词。"
+          },
+          {
+            "example": "He has Japanese nationality.",
+            "reason": "含义等同，但不采用指定be结构。"
+          }
+        ]
+      },
+      {
+        "id": "review-a-nationality",
+        "answer": "She is Chinese.",
+        "common_equivalents_within_instructions": [
+          "She's Chinese.",
+          "She’s Chinese."
+        ],
+        "meaning_changes": [
+          {
+            "example": "He is Chinese.",
+            "reason": "改变指定人物的性别指代。"
+          },
+          {
+            "example": "She is French.",
+            "reason": "改变国籍。"
+          },
+          {
+            "example": "She isn't Chinese.",
+            "reason": "改变肯定方向。"
+          }
+        ],
+        "valid_english_outside_limited_structure": [
+          {
+            "example": "Lina is Chinese.",
+            "reason": "在上下文中可指同一人，但未以She开头。"
+          },
+          {
+            "example": "She is a Chinese person.",
+            "reason": "增加冠词和名词。"
+          },
+          {
+            "example": "She is a Chinese woman.",
+            "reason": "增加冠词和名词。"
+          },
+          {
+            "example": "She has Chinese nationality.",
+            "reason": "含义等同，但不采用指定be结构。"
+          }
+        ]
+      },
+      {
+        "id": "review-b-nationality",
+        "answer": "He is French.",
+        "common_equivalents_within_instructions": [
+          "He's French.",
+          "He’s French."
+        ],
+        "meaning_changes": [
+          {
+            "example": "She is French.",
+            "reason": "改变指定人物的性别指代。"
+          },
+          {
+            "example": "He is German.",
+            "reason": "改变国籍。"
+          },
+          {
+            "example": "He isn't French.",
+            "reason": "改变肯定方向。"
+          }
+        ],
+        "valid_english_outside_limited_structure": [
+          {
+            "example": "Mark is French.",
+            "reason": "在上下文中可指同一人，但未以He开头。"
+          },
+          {
+            "example": "He is a Frenchman.",
+            "reason": "含义等同，但使用国籍名词并增加冠词。"
+          },
+          {
+            "example": "He is a French person.",
+            "reason": "增加冠词和名词。"
+          },
+          {
+            "example": "He has French nationality.",
+            "reason": "含义等同，但不采用指定be结构。"
+          }
+        ],
+        "additional_boundary": "He/She is a French.不是这里表示法国人的普通有效英文。"
+      }
+    ],
+    "additional_boundary": "is from Germany/France/Korea/Japan/China违反这次结构，而且表达来源地，不必然等同于国籍，不应当作严格等义答案。"
+  },
+  "observedDifferences": [
+    {
+      "finding": "Question marks can change the affirmative assertion.",
+      "frozenBehavior": "All six accepted He/She is nationality? because shared batch normalizer strips ? at the end.",
+      "revisedBehavior": "Local nationality matches guard rejects question marks after NFKC; other tasks/CL00 normalization untouched."
+    },
+    {
+      "finding": "be alone does not explicitly limit present tense.",
+      "frozenBehavior": "Finite accepted keys reject was, but final prompt did not explicitly name tense.",
+      "revisedBehavior": "Six prompts explicitly require present-tense affirmative statement; ordinary is/’s remain accepted."
+    }
+  ],
+  "coverage": "Only six final nationality questions and their structure/semantic boundaries; not a new 36-question blind solve.",
+  "validationBoundary": [
+    "Independent AI review, not expert/human-learner validation.",
+    "No production storage, backup, route or deployment acceptance.",
+    "No audio/phone/natural delay/learning-gain claim."
+  ],
+  "revisedPromptRecheck": {
+    "method": "Same independent reviewer received only the six revised prompts with no author keys or implementation; no full 36-question re-solve.",
+    "questionInputSha256": "59e326ae9d5cc98f7567265743fdb0be33540c6a4783dd7d905bbcfa426d7f6b",
+    "answers": [
+      {
+        "id": "diagnostic-nationality",
+        "answer": "He is German.",
+        "commonEquivalents": [
+          "He's German.",
+          "He’s German."
+        ]
+      },
+      {
+        "id": "guided-nationality",
+        "answer": "She is French.",
+        "commonEquivalents": [
+          "She's French.",
+          "She’s French."
+        ]
+      },
+      {
+        "id": "independent-nationality",
+        "answer": "She is Korean.",
+        "commonEquivalents": [
+          "She's Korean.",
+          "She’s Korean."
+        ]
+      },
+      {
+        "id": "repair-nationality",
+        "answer": "He is Japanese.",
+        "commonEquivalents": [
+          "He's Japanese.",
+          "He’s Japanese."
+        ]
+      },
+      {
+        "id": "review-a-nationality",
+        "answer": "She is Chinese.",
+        "commonEquivalents": [
+          "She's Chinese.",
+          "She’s Chinese."
+        ]
+      },
+      {
+        "id": "review-b-nationality",
+        "answer": "He is French.",
+        "commonEquivalents": [
+          "He's French.",
+          "He’s French."
+        ]
+      }
+    ],
+    "result": "Six prompts explicitly restrict present tense and affirmative statements; original tense and question boundaries resolved. No further material prompt issue found.",
+    "boundaries": [
+      "was/has been/will be are outside present simple.",
+      "Question-mark expressions may be valid English questions, but violate this affirmative task.",
+      "Normal contractions still contain subject and be even with two written words.",
+      "Normal periods/exclamation/spaces and case should not be conflated with changed meaning.",
+      "Nationality nouns, name subjects and longer natural constructions are outside this bounded task, not universally wrong English."
+    ],
+    "implementationLimit": "Reviewer did not inspect matching code; narrow code scope is verified separately by tests."
+  },
+  "revisedContentSha256": "1fdc0a9f3f6e2c41a1bc85d790cff20ca70aef585a744cecd8cfda706fb3bc9b",
+  "validation": {
+    "newFocusedTests": 9,
+    "existingV30FixtureCompatibilityTests": 15,
+    "totalFocusedRun": 24,
+    "status": "passed: 24 tests, zero failures",
+    "priorFullReviewAndPreview": "754258c evidence retained; not re-run or relabeled as production acceptance",
+    "testLogSha256": "b0d1f855ebc6c29571a928ffc03a784fb69a624825f2fb8c80c36c38fe147d82"
+  },
+  "integrationBoundary": "Only local authored content is fixed. Production owner must apply before activation, or handle already activated version1 records through its content-version/original-raw preservation mechanism; changed matches affects replay. No storage/migration/version contract was changed here."
+}
