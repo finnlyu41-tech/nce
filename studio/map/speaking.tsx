@@ -10,6 +10,7 @@ import type {Save} from './learning';
 export function SpeakingPractice({unit,state,save,review,close}:{unit:Unit;state:Progress;save:Save;review:boolean;close:()=>void}) {
   const record=state.records[unit.id]?.speaking||emptySpeaking(unit),row=unit.rows[record.row];
   const player=useContext(PlayerContext),latest=useRef(record),revision=useRef<string|undefined>(undefined);
+  const pendingChange=useRef<{id:string;event:'recorded'|'assessed';next:SpeakingRecord}|null>(null);
   const [initial,setInitial]=useState<SavedTake[]|null>(null),[status,setStatus]=useState(''),[error,setError]=useState('');
   const [conceal,setConceal]=useState(review),help=useRef(!review),hidden=useRef(conceal);
   latest.current=record;hidden.current=conceal;
@@ -27,14 +28,19 @@ export function SpeakingPractice({unit,state,save,review,close}:{unit:Unit;state
   function reveal(){help.current=true;setConceal(false);patch({...latest.current,hintAt:Date.now()});}
   async function changed(takes:SavedTake[],event:'recorded'|'assessed'){
     setError('');setStatus('正在保存本句录音与反馈…');
-    let next=latest.current;
-    if(event==='recorded'){
-      next=recordedSpeaking(next,takes[0].id,review,help.current||!hidden.current);
-      setConceal(false);
-    }else if(takes[0].result)next=assessedSpeaking(next,takes[0].result,takes[1]?.result);
+    const pending=pendingChange.current;
+    let next=pending?.id===takes[0].id&&pending.event===event?pending.next:latest.current;
+    if(pending?.id!==takes[0].id||pending.event!==event){
+      if(event==='recorded'){
+        next=recordedSpeaking(next,takes[0].id,review,help.current||!hidden.current);
+        setConceal(false);
+      }else if(takes[0].result)next=assessedSpeaking(next,takes[0].result,takes[1]?.result);
+      pendingChange.current={id:takes[0].id,event,next};
+    }
     try{
       revision.current=await writeSpeechAudio(unit.id,revision.current,takes);
-      if(!patch(next))throw Error('音频已存入本机，但学习记录未保存成功。请先下载录音并导出进度，再重新打开本课。');
+      if(!patch(next))throw Error('音频已存入本机，但学习记录未保存成功。请先下载录音并导出进度，再重试保存。');
+      pendingChange.current=null;
       setStatus(event==='assessed'?'本句问题与重读比较已保存在本机。':next.recalledAt===next.takes[0]?.at?'已记录无提示重说；发音是否改善仍需回听或主动提交评估。':'已保存本次录音。回听后可以主动提交评估，再练一处。');
     }catch(e){setStatus('');throw e;}
   }

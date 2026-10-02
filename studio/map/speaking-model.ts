@@ -28,8 +28,9 @@ export function speakingDue(record?:SpeakingRecord,now=Date.now()) {
   const date=speakingReviewAt(record);return date!==undefined&&now>=date;
 }
 export function recordedSpeaking(record:SpeakingRecord,id:string,review:boolean,assisted:boolean,now=Date.now()):SpeakingRecord {
+  if(record.takes[0]?.id===id)return record;
   const independent=review&&!assisted&&speakingDue(record,now);
-  return {...record,takes:[{id,at:now,review,assisted},...record.takes].slice(0,2),comparison:[],recalledAt:independent?now:record.recalledAt};
+  return {...record,takes:[{id,at:now,review,assisted},...record.takes.filter(t=>t.id!==id)].slice(0,2),comparison:[],recalledAt:independent?now:record.recalledAt};
 }
 export function assessedSpeaking(record:SpeakingRecord,result:PronunciationResult,previous?:PronunciationResult,now=Date.now()):SpeakingRecord {
   const issues=practiceIssues(result);

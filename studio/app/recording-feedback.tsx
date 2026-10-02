@@ -12,6 +12,7 @@ import './recording-feedback.css';
 
 export type SavedTake={id:string;blob:Blob;result?:PronunciationResult};
 type Take=SavedTake & {url:string};
+type PendingSave={takes:SavedTake[];event:'recorded'|'assessed'};
 type DemoState=DemoStatus & {word:string};
 type Props={referenceText?:string;onListen?:()=>void;onBeforeRecord?:()=>void;stopSignal?:number;hideReference?:boolean;retentionLabel?:string;initialTakes?:SavedTake[];onTakesChange?:(takes:SavedTake[],event:'recorded'|'assessed')=>Promise<void>;conceal?:boolean;downloadPrefix?:string};
 export function Recorder({referenceText,...props}:Props){
@@ -23,6 +24,8 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
  const [recording,setRecording]=useState(false),[busy,setBusy]=useState(false),[finishing,setFinishing]=useState(false),[submitting,setSubmitting]=useState(false),[elapsed,setElapsed]=useState(0);
  const [consent,setConsent]=useState(false),[service,setService]=useState<'loading'|'ready'|'unavailable'|'failed'>('loading'),[serviceAttempt,setServiceAttempt]=useState(0),[error,setError]=useState('');
  const [copyStatus,setCopyStatus]=useState('');
+ const [pendingSave,setPendingSave]=useState<PendingSave|null>(null),[saving,setSaving]=useState(false);
+ const savePending=useRef<PendingSave|null>(null);
  const cancelled=useRef(false);
  const [demoState,setDemoState]=useState<DemoState|null>(null);
  const capture=useRef<RecordingCapture|null>(null),attempt=useRef(0),mounted=useRef(false),pending=useRef(false);
@@ -66,8 +69,25 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
    .catch(()=>{if(!abort.signal.aborted)setService('failed')}).finally(()=>clearTimeout(timeout));
   return()=>{clearTimeout(timeout);abort.abort()};
  },[reference,serviceAttempt]);
+ async function persist(takes:SavedTake[],event:PendingSave['event']){
+  if(!onTakesChange)return;
+  const payload={takes,event};savePending.current=payload;setPendingSave(payload);setSaving(true);
+  try{await onTakesChange(takes,event);if(mounted.current){savePending.current=null;setPendingSave(null)}}
+  finally{if(mounted.current)setSaving(false)}
+ }
+ async function retrySave(){
+  const payload=savePending.current;if(!payload||saving)return;
+  setError('');
+  try{await persist(payload.takes,payload.event)}
+  catch(error){if(mounted.current)setError(error instanceof Error?error.message:'保存失败，请先下载录音保留，再重试。')}
+ }
+ useEffect(()=>{
+  if(!pendingSave)return;
+  const warn=(event:BeforeUnloadEvent)=>{event.preventDefault();event.returnValue=''};
+  window.addEventListener('beforeunload',warn);return()=>window.removeEventListener('beforeunload',warn);
+ },[pendingSave]);
  async function start(){
-  if(pending.current||capture.current||submitting)return;
+  if(pending.current||capture.current||submitting||savePending.current)return;
   if(!navigator.mediaDevices?.getUserMedia||typeof MediaRecorder==='undefined'){setError('请在支持麦克风的安全网页环境中录音。');return;}
   const id=++attempt.current;
   pending.current=true;setBusy(true);setError('');pausePlayback();
@@ -85,37 +105,38 @@ function RecordingSession({reference,onListen,onBeforeRecord,stopSignal,hideRefe
    const next={id:`take-${crypto.randomUUID()}`,blob,url:URL.createObjectURL(blob)},old=clips.current[0]||null;
    clips.current.slice(1).forEach(c=>URL.revokeObjectURL(c.url));clips.current=[next,...(old?[old]:[])];
    setPrevious(old);setTake(next);
-   await onTakesChange?.(clips.current.map(({url,...saved})=>saved),'recorded');
+   await persist(clips.current.map(({url,...saved})=>saved),'recorded');
   }catch(error){if(mounted.current&&attempt.current===id)setError(error instanceof Error&&error.name==='Error'?error.message:'无法使用麦克风。请允许录音后重试。');}
   finally{if(attempt.current===id){stopTimer();capture.current=null;pending.current=false;if(mounted.current){setRecording(false);setBusy(false);setFinishing(false)}}}
  }
  async function submit(){
-  if(!take||!consent||submitting)return;
+  if(!take||!consent||submitting||savePending.current)return;
   setSubmitting(true);setError('');cancelled.current=false;const abort=new AbortController();request.current=abort;
   const deadline=setTimeout(()=>abort.abort(),45000);
   try{
    const audio=await assessmentAudio(take.blob);if(abort.signal.aborted)throw Error('Aborted');
    const result=await assessRecording(audio,reference,abort.signal);if(!mounted.current)return;
    const updated={...take,result};clips.current[0]=updated;setTake(updated);
-   await onTakesChange?.(clips.current.map(({url,...saved})=>saved),'assessed');
+   await persist(clips.current.map(({url,...saved})=>saved),'assessed');
   }catch(e){if(mounted.current)setError(abort.signal.aborted?(cancelled.current?'已停止等待结果，录音仍在。请求可能已到达评估服务；本站不会自动重试。':'评估超时，录音仍在，可以稍后重试。'):e instanceof Error?e.message:'评估失败，请稍后再试。');}
   finally{clearTimeout(deadline);if(mounted.current)setSubmitting(false)}
  }
  return <div className="record-box recording-feedback">
   {ONLINE&&<audio ref={demoAudio} hidden style={{display:'none'}} preload="none" aria-label="美音示范播放器"/>}
   {reference&&!conceal&&<div className="record-reference"><div className="row spread"><strong>跟读这一句</strong>{onListen&&<button className="text-btn" disabled={recording||busy} onClick={listen}><Volume2 size={16}/>听原句</button>}</div>{hideReference?<details className="practice-reference"><summary>听后看原句，再跟读</summary><p lang="en">{reference}</p></details>:<p lang="en">{reference}</p>}<span className="muted small">每次最多 30 秒，先听原声，等播放结束再录音。</span></div>}
-  <div className="row wrap"><button className={recording?'btn recording':'btn secondary'} disabled={busy||submitting} onClick={()=>recording?stop():void start()}>{recording?<Square size={16}/>:take?<RotateCcw size={16}/>:<Mic size={16}/>} {recording?`结束录音 · ${elapsed}秒`:finishing?'正在保存录音…':busy?'连接麦克风…':conceal?'先不看提示，说一遍':take?'再录一遍':'录一遍，听听自己'}</button><span className="muted small">{retentionLabel}</span>{busy&&!finishing&&<button className="text-btn" onClick={stop}>取消麦克风请求</button>}</div>
+  <div className="row wrap"><button className={recording?'btn recording':'btn secondary'} disabled={busy||submitting||!!pendingSave} onClick={()=>recording?stop():void start()}>{recording?<Square size={16}/>:take?<RotateCcw size={16}/>:<Mic size={16}/>} {recording?`结束录音 · ${elapsed}秒`:finishing?'正在保存录音…':busy?'连接麦克风…':conceal?'先不看提示，说一遍':take?'再录一遍':'录一遍，听听自己'}</button><span className="muted small">{retentionLabel}</span>{busy&&!finishing&&<button className="text-btn" onClick={stop}>取消麦克风请求</button>}</div>
   {take&&!conceal&&<div className="record-playback"><label>这一次<audio key={take.url} ref={currentAudio} controls src={take.url} aria-label="我的录音回放" onPlay={()=>{if(recording||busy){currentAudio.current?.pause();return;}previousAudio.current?.pause();stopDemo.current?.();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onPause={()=>{if(currentAudio.current?.paused)clipEnd.current=null}} onTimeUpdate={()=>{const audio=currentAudio.current;if(audio&&clipEnd.current!==null&&audio.currentTime>=clipEnd.current){audio.pause();clipEnd.current=null}}} onLoadedMetadata={()=>{if(currentAudio.current)currentAudio.current.playbackRate=Number(rate)}}/></label><PlaybackSpeed label="回放语速" ariaLabel="我的录音回放语速"/>{downloadPrefix&&<a className="text-btn" href={take.url} download={`${downloadPrefix}-current.wav`}>下载这一次录音</a>}</div>}
   {previous&&!conceal&&<details className="record-previous"><summary>与上一遍对比</summary><audio key={previous.url} ref={previousAudio} controls src={previous.url} aria-label="上一遍录音回放" onPlay={()=>{if(recording||busy){previousAudio.current?.pause();return;}currentAudio.current?.pause();stopDemo.current?.();window.speechSynthesis?.cancel();onBeforeRecord?.()}} onLoadedMetadata={()=>{if(previousAudio.current)previousAudio.current.playbackRate=Number(rate)}}/>{downloadPrefix&&<a className="text-btn" href={previous.url} download={`${downloadPrefix}-previous.wav`}>下载上一遍录音</a>}{previous.result&&take?.result&&<p className="small">发音准确度：{Math.round(previous.result.accuracy)} → {Math.round(take.result.accuracy)}；完整度：{Math.round(previous.result.completeness)} → {Math.round(take.result.completeness)}。以实际回听为准。</p>}</details>}
   {reference&&ONLINE&&!conceal&&<div className="record-assessment">
    {service==='loading'?<p className="small muted" role="status">正在检查评估服务…</p>:service==='ready'?<>
     <label className="record-consent"><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)}/><span>点击提交时，将本句英文和这段录音发送到微软 Azure 进行基础发音评估。</span></label>
-    <button className="btn full" disabled={!take||recording||busy||submitting||!consent||!!take.result} onClick={()=>void submit()}>{submitting?'正在评估…':take?.result?'已评估，试着重录一次':'提交评估'}</button>{submitting&&<button className="text-btn" onClick={()=>{cancelled.current=true;request.current?.abort()}}>停止等待评估</button>}
+    <button className="btn full" disabled={!take||recording||busy||submitting||!!pendingSave||!consent||!!take.result} onClick={()=>void submit()}>{submitting?'正在评估…':take?.result?'已评估，试着重录一次':'提交评估'}</button>{submitting&&<button className="text-btn" onClick={()=>{cancelled.current=true;request.current?.abort()}}>停止等待评估</button>}
    </>:service==='failed'?<><p className="notice" role="status">暂时无法连接评估服务，录音和回听仍可使用。</p><button className="text-btn" onClick={()=>setServiceAttempt(value=>value+1)}>重新检查评估服务</button></>:<p className="notice">站内自动评估尚未启用。你仍可回听、对照原声，或使用下面的免费朗读练习。</p>}
    <details className="record-coach"><summary>用免费的 Reading Coach 练这句话</summary><p className="small muted">复制下面的英文，在微软页面选择添加自己的文章并粘贴，再重新朗读。本站录音不会自动传过去。</p><textarea aria-label="用于 Reading Coach 的英文" readOnly value={reference} onFocus={e=>e.currentTarget.select()}/><div className="row wrap"><button className="btn secondary" onClick={()=>{if(!navigator.clipboard){setCopyStatus('请长按选中上方英文进行复制。');return;}void navigator.clipboard.writeText(reference).then(()=>setCopyStatus('已复制英文')).catch(()=>setCopyStatus('复制不可用，请长按选中上方英文。'))}}>复制英文</button><a className="btn secondary" href="https://coach.microsoft.com/" target="_blank" rel="noreferrer noopener">打开 Reading Coach<ExternalLink size={15}/></a></div>{copyStatus&&<p role="status" className="small">{copyStatus}</p>}</details>
   </div>}
+  {pendingSave&&!saving&&<div className="record-save-pending"><p role="status">本次录音与反馈尚未确认保存。先下载保留，再重试保存；不用重新录音或提交评估。</p><button className="btn secondary" disabled={busy||submitting} onClick={()=>void retrySave()}>重试保存本次录音与反馈</button></div>}
   {error&&<p className="record-error" role="alert">{error}</p>}
-  {take?.result&&!conceal&&<PronunciationFeedback result={take.result} previous={previous?.result} disabled={recording||busy||submitting} onListen={onListen?listen:undefined} onDemo={demo} demoState={demoState} onReplay={replay} onRetry={()=>void start()}/>}
+  {take?.result&&!conceal&&<PronunciationFeedback result={take.result} previous={previous?.result} disabled={recording||busy||submitting||!!pendingSave} onListen={onListen?listen:undefined} onDemo={demo} demoState={demoState} onReplay={replay} onRetry={()=>void start()}/>}
  </div>;
 }
 

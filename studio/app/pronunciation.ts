@@ -3,6 +3,16 @@ export type AssessedWord={word:string;accuracy:number|null;error:'None'|'Omissio
 export type PronunciationResult={text:string;accuracy:number;fluency:number;completeness:number;words:AssessedWord[]};
 export type PracticeIssue={word?:string;title:string;action:string;phoneme?:string;example?:string;clip?:{start:number;end:number}};
 
+// A transcript alone is never a pronunciation assessment. Validate again at the
+// browser boundary so a malformed success cannot become scores or saved feedback.
+export function validPronunciationResult(value:unknown):value is PronunciationResult {
+ const object=(x:unknown):x is Record<string,unknown>=>!!x&&typeof x==='object'&&!Array.isArray(x);
+ const text=(x:unknown,max:number)=>typeof x==='string'&&x.length<=max;
+ const score=(x:unknown)=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=100;
+ const seconds=(x:unknown)=>typeof x==='number'&&Number.isFinite(x)&&x>=0&&x<=30;
+ return object(value)&&text(value.text,4000)&&score(value.accuracy)&&score(value.fluency)&&score(value.completeness)&&Array.isArray(value.words)&&value.words.length<=200&&value.words.every(w=>object(w)&&text(w.word,100)&&(w.accuracy===null||score(w.accuracy))&&['None','Omission','Insertion','Mispronunciation'].includes(String(w.error))&&seconds(w.start)&&seconds(w.duration)&&(w.phonemes===undefined||Array.isArray(w.phonemes)&&w.phonemes.length<=100&&w.phonemes.every(p=>object(p)&&text(p.phoneme,100)&&(p.accuracy===null||score(p.accuracy)))));
+}
+
 // Brief practice cues, not a diagnosis of the learner's tongue or mouth position.
 // Articulation references: University of Groningen, An Introduction to American
 // English Phonetics, chapters on fricatives and the front vowels.
@@ -70,7 +80,9 @@ export async function assessRecording(audio:string,reference:string,signal:Abort
  const response=await fetch('/api/pronunciation',{method:'POST',signal,cache:'no-store',credentials:'omit',
   headers:{'Content-Type':'application/json'},
   body:JSON.stringify({audio,reference,consent:true})});
- const data=await response.json() as {error?:unknown}&PronunciationResult;
- if(!response.ok)throw Error(typeof data.error==='string'?data.error:'评估暂时不可用，请保留录音稍后再试。');
- return data as PronunciationResult;
+ let data:unknown;
+ try{data=await response.json()}catch{throw Error('评估结果无法读取，录音仍在，请稍后重试。')}
+ if(!response.ok){const message=data&&typeof data==='object'&&'error' in data?data.error:undefined;throw Error(typeof message==='string'?message:'评估暂时不可用，请保留录音稍后再试。')}
+ if(!validPronunciationResult(data))throw Error('评估结果不完整，不能作为发音反馈。录音仍在，请稍后重试。');
+ return data;
 }
