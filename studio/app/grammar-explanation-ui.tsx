@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useRef,useState} from 'react';
+import {useEffect,useId,useRef,useState} from 'react';
 import {Square,Volume2} from 'lucide-react';
 import {WordText} from './word-lookup';
 import {PlaybackSpeed} from './playback-speed';
@@ -17,7 +17,8 @@ function GrammarAudio({text,label}:{text:string;label:string}){
 }
 
 function GrammarConcept({guide}:{guide:GrammarGuide}){
- const [answerOpen,setAnswerOpen]=useState(false);
+ const [answerOpen,setAnswerOpen]=useState(false),[sourcesOpen,setSourcesOpen]=useState(false);
+ const regionId=useId();
  return <div className="grammar-concept">
   <h4>{guide.title}</h4>
   <p className="grammar-idea">{guide.idea}</p>
@@ -25,8 +26,8 @@ function GrammarConcept({guide}:{guide:GrammarGuide}){
   <div className="grammar-reason"><h5>怎么理解</h5>{guide.explain.map(text=><p key={text}>{text}</p>)}</div>
   <section className="grammar-examples" aria-label="讲解例句"><div className="grammar-subheading"><h5>看两个例子</h5><PlaybackSpeed ariaLabel="语法例句语速"/></div><ol>{guide.examples.map((example,i)=><li key={example.en}><div className="grammar-example-line"><p><WordText text={example.en} exampleTranslation={example.zh}/></p><GrammarAudio text={example.en} label={`例句 ${i+1}`}/></div><p className="grammar-translation">{example.zh}</p><p className="grammar-example-note">{example.note}</p></li>)}</ol></section>
   <aside className="grammar-pitfall"><h5>容易混淆的地方</h5><p>{guide.pitfall}</p></aside>
-  <section className="grammar-try" aria-label="本知识点随手练习"><h5>试一下</h5><p>{guide.practice.prompt}</p><button className="btn secondary" aria-expanded={answerOpen} onClick={()=>setAnswerOpen(!answerOpen)}>{answerOpen?'收起参考表达':'查看参考表达'}</button>{answerOpen?<div className="grammar-answer"><div className="grammar-example-line"><p><WordText text={guide.practice.answer}/></p><GrammarAudio text={guide.practice.answer} label="参考表达"/></div><p>{guide.practice.explanation}</p><p className="small muted">这是参考表达；说法可以不同，先核对意思和结构。</p></div>:<p className="small muted">先自己想一想或说一遍，再展开核对。</p>}</section>
-  {!!guide.sources.length&&<details className="grammar-usage-sources"><summary>用法参考</summary>{guide.sources.map(id=><a key={id} href={grammarGuideSources[id].url} target="_blank" rel="noreferrer">{grammarGuideSources[id].label}</a>)}</details>}
+  <section className="grammar-try" aria-label="本知识点随手练习"><h5>试一下</h5><p>{guide.practice.prompt}</p><button className="btn secondary" aria-expanded={answerOpen} aria-controls={`${regionId}-answer`} onClick={()=>setAnswerOpen(!answerOpen)}>{answerOpen?'收起参考表达':'查看参考表达'}</button>{answerOpen?<div id={`${regionId}-answer`} className="grammar-answer"><div className="grammar-example-line"><p><WordText text={guide.practice.answer}/></p><GrammarAudio text={guide.practice.answer} label="参考表达"/></div><p>{guide.practice.explanation}</p><p className="small muted">这是参考表达；说法可以不同，先核对意思和结构。</p></div>:<p className="small muted">先自己想一想或说一遍，再查看参考表达。</p>}</section>
+  {!!guide.sources.length&&<div className="grammar-usage-sources"><button className="btn secondary" aria-expanded={sourcesOpen} aria-controls={`${regionId}-sources`} onClick={()=>setSourcesOpen(!sourcesOpen)}>{sourcesOpen?'收起用法参考':'查看用法参考'}</button>{sourcesOpen&&<div id={`${regionId}-sources`}>{guide.sources.map(id=><a key={id} href={grammarGuideSources[id].url} target="_blank" rel="noreferrer">{grammarGuideSources[id].label}</a>)}</div>}</div>}
  </div>;
 }
 

@@ -7,7 +7,7 @@ export const catalogueGroups = [
   {id:'NCE1',title:'新概念第一册',caption:'日常表达',description:'从认识人和物开始，72 组课文与配套练习。'},
   {id:'NCE2',title:'新概念第二册',caption:'连成自己的话',description:'96 课，逐步练习叙述、理解与表达。'},
   {id:'ielts',title:'雅思训练与模考',caption:'走向 IELTS 6.5',description:'听读写说专项、完整模考和正式成绩记录。'},
-  {id:'extra',title:'补充选读',caption:'按需要补强',description:'新概念第三、四册的原有课程与笔记。'},
+  {id:'extra',title:'补充选读',caption:'按需要补强',description:'新概念第三、四册的课程与笔记。'},
 ] as const;
 export type CatalogueGroup=typeof catalogueGroups[number]['id'];
 export type LearningRoute={id:string;learn:boolean;catalogue?:CatalogueGroup;home?:true;query?:string;speaking?:'practice'|'review';review?:true};

@@ -2,3 +2,14 @@
 @media(max-width:720px){.grammar-curriculum-filters{grid-template-columns:1fr 1fr}.grammar-curriculum-search{grid-column:1/-1}.grammar-curriculum-stage li>button{padding:14px;gap:10px}.grammar-curriculum-stage strong{font-size:14px}.grammar-curriculum-stage small{font-size:11px}.grammar-unit-detail{padding:18px 14px}.grammar-unit-heading{display:grid}.grammar-unit-heading h1{font-size:22px}.grammar-status{max-width:none;justify-self:start}.grammar-unit-goal{font-size:15px}.grammar-contrast-pair{grid-template-columns:1fr}.grammar-contrast-pair>div+div{border-left:0;border-top:1px solid #e0e6ef}.grammar-exercise-start{display:grid}.grammar-exercise-start .btn{width:100%}.grammar-concept-index,.grammar-linked-lessons>div{grid-template-columns:1fr}.grammar-question-position{display:grid;gap:4px}.grammar-progressive-practice .row{display:grid}.grammar-progressive-practice .btn{width:100%}.grammar-unit-detail h3{font-size:17px}.grammar-form-list>div{padding:12px}.grammar-round-result{padding:14px}.grammar-transfer-links{display:grid}.grammar-curriculum-heading h1{font-size:28px}}
 
 .grammar-unit-heading h1{scroll-margin-top:90px}.learning-practice .section-top h1{font-size:24px;line-height:1.4;margin:0}
+.grammar-curriculum-heading h1,.grammar-unit-heading h1{scroll-margin-top:100px}
+.grammar-index-entry{min-height:44px;margin:0 0 20px;white-space:normal}
+.grammar-concept-index button{position:relative;padding-right:38px;background:var(--panel,#fff)}
+.grammar-concept-index button>svg{position:absolute;right:12px;top:50%;transform:translateY(-50%)}
+.grammar-concept-index button:hover{background:#f4f6fc}
+.grammar-unit-detail .grammar-exercise-start{border:1px solid #e0e6ef;border-radius:10px;background:#f5f8fc;padding:14px 16px;margin:18px 0 22px}
+.grammar-linked-lessons>button.btn{display:inline-flex;align-items:center;text-align:center;gap:8px}
+.grammar-result-reference{border-left:3px solid #bbc8e2;padding:6px 14px;margin-top:12px}
+.grammar-usage-sources>.btn{min-height:44px;margin:8px 0}
+.grammar-usage-sources>div{display:grid;gap:8px}
+@media(max-width:720px){.grammar-curriculum-heading h1{font-size:26px;line-height:1.5}.grammar-existing-detail{padding:18px}.grammar-unit-detail .grammar-exercise-start{flex-direction:column;align-items:stretch;gap:12px}.grammar-unit-detail .grammar-exercise-start>.btn{justify-content:center}.grammar-curriculum-back{white-space:normal;text-align:left}.grammar-curriculum .grammar-curriculum-filters{grid-template-columns:1fr 1fr}.grammar-curriculum .grammar-curriculum-search{grid-column:1/-1}.grammar-linked-lessons>div{grid-template-columns:1fr}}

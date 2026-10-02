@@ -334,7 +334,7 @@ for(const unit of units){
  const props={get state(){return state},update:change=>{state=change(state)},onPracticeGuide:(book,lesson,guideId)=>routes.push({book,lesson,guideId})};
  let tree=ui.renderUnit(unit,props);
  assert(section(tree,'grammar-unit-explanation'));assert.equal(progress.grammarProgressFor(state,unit).attempts.length,0);
- button(tree,'开始三步练习').props.onClick();
+ button(tree,'开始练习').props.onClick();
  for(const [index,question] of progress.grammarRoundQuestions(unit,0).entries()){
   tree=ui.renderUnit(unit,props);const practice=section(tree,'grammar-progressive-practice');
   assert(practice);assert(!section(tree,'grammar-round-result'));
@@ -355,8 +355,14 @@ for(const unit of units){
   assert.equal(record.attempts.length,index===2?1:0,'Intermediate answer recording cannot count a completed round');
   uiChecks++;
  }
- tree=ui.renderUnit(unit,props);const result=section(tree,'grammar-round-result');
+ tree=ui.renderUnit(unit,props);let result=section(tree,'grammar-round-result');
  assert(result);assert(!section(tree,'grammar-progressive-practice'));
+ assert(!children(result).some(node=>node?.props?.className==='grammar-result-reference'),'References stay hidden until explicitly requested after submission');
+ for(const question of progress.grammarRoundQuestions(unit,0)){
+  const item=children(result).find(node=>node?.type==='li'&&textOf(node).includes(question.prompt));
+  button(item,'查看参考与解释').props.onClick();
+  tree=ui.renderUnit(unit,props);result=section(tree,'grammar-round-result');
+ }
  for(const question of progress.grammarRoundQuestions(unit,0))assert(textOf(result).includes(question.answer)&&textOf(result).includes(question.explanation),'Feedback appears after the complete three-item submission');
  assert(progress.grammarProgressFor(state,unit).attempts[0].independent);
  const transfer=section(tree,'grammar-transfer-links');
