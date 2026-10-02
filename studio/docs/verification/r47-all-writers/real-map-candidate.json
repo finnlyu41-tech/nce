@@ -1,0 +1,31 @@
+{
+  "format": "wayfinder-ielts-map",
+  "version": 2,
+  "updatedAt": 1790960369231,
+  "records": {
+    "nce1-13": {
+      "round": 0,
+      "answers": [],
+      "assisted": false,
+      "phase": "learn",
+      "attempts": [],
+      "studyStep": 2,
+      "practice": {
+        "step": 2,
+        "guided": "",
+        "recall": "",
+        "hinted": false,
+        "checked": false
+      },
+      "draft": {
+        "note": "Synthetic expression original"
+      }
+    }
+  },
+  "minimum": "5.5",
+  "access": {
+    "all": true,
+    "nodes": []
+  },
+  "lastNode": "nce1-13"
+}
