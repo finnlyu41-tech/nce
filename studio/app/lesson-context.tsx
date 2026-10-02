@@ -10,6 +10,7 @@ import {speak} from './speech';
 import {PlaybackSpeed} from './playback-speed';
 import {ONLINE} from './runtime-mode';
 import {readJsonResource} from './network';
+import {withReviewedSourceAssociations,sourcePageClarification} from './source-review-batch1';
 
 export function LessonQuestion({lesson,answer,onChange}:{lesson:ReturnType<typeof splitLesson>;answer:string;onChange:(s:string)=>void}){
  if(!lesson.question.length)return null;
@@ -22,7 +23,7 @@ export type PageIndex={version:number;sources:Record<NceBookId,string>;lessons:R
 let cached:Promise<PageIndex>|undefined;
 export function loadPages(refresh=false){
  if(refresh)cached=undefined;
- if(!cached)cached=readJsonResource<PageIndex>('/lesson-pages/index.json').then(d=>{if(d.version!==1||!d.lessons)throw Error();return d}).catch(e=>{cached=undefined;throw e});
+ if(!cached)cached=readJsonResource<PageIndex>('/lesson-pages/index.json').then(d=>{if(d.version!==1||!d.lessons)throw Error();return withReviewedSourceAssociations(d)}).catch(e=>{cached=undefined;throw e});
  return cached;
 }
 export function LessonPages({book,lesson}:{book:NceBookId;lesson:number}){
@@ -30,7 +31,8 @@ export function LessonPages({book,lesson}:{book:NceBookId;lesson:number}){
  useEffect(()=>{let alive=true;setPosition(0);setError(false);if(ONLINE)loadPages().then(d=>{if(alive)setIndex(d)}).catch(()=>{if(alive)setError(true)});return()=>{alive=false}},[book,lesson]);
  if(!ONLINE)return null;
  const match=index?.lessons[`${book}-${lesson}`],page=match?.pages[position];
- return <section className="lesson-page-picture" aria-label="对应原书图片"><div className="section-top"><strong>第 {lesson} 课 · 原书图片</strong><span className="muted small">{page?`PDF 第 ${page.page} 页`:error?'暂时未能加载':'正在读取…'}</span></div>{page?<><a href={page.src} target="_blank" rel="noreferrer" aria-label="打开原书图片放大查看"><img src={page.src} alt={`第 ${lesson} 课 ${match?.title||''}，原书 PDF 第 ${page.page} 页`} loading="lazy" onLoad={()=>setError(false)} onError={()=>setError(true)}/></a>{error&&<p role="status">图片加载失败，请刷新重试或打开整册原书。</p>}<div className="row spread"><button className="icon-btn" aria-label="上一张原书图片" disabled={position===0} onClick={()=>setPosition(position-1)}><ChevronLeft size={18}/></button><span className="small muted">点图放大 · {position+1} / {match!.pages.length}</span><button className="icon-btn" aria-label="下一张原书图片" disabled={position===match!.pages.length-1} onClick={()=>setPosition(position+1)}><ChevronRight size={18}/></button></div></>:error?<p className="small muted">可以在配套练习中打开整册原书。</p>:null}</section>;
+ const clarification=index&&page?sourcePageClarification(index,book,lesson,page):undefined;
+ return <section className="lesson-page-picture" aria-label="对应原书图片"><div className="section-top"><strong>第 {lesson} 课 · 原书图片</strong><span className="muted small">{page?`PDF 第 ${page.page} 页`:error?'暂时未能加载':'正在读取…'}</span></div>{page?<>{clarification&&<p className="notice small" role="note" aria-label="原书页眉勘误">{clarification}</p>}<a href={page.src} target="_blank" rel="noreferrer" aria-label="打开原书图片放大查看"><img src={page.src} alt={`第 ${lesson} 课 ${match?.title||''}，原书 PDF 第 ${page.page} 页`} loading="lazy" onLoad={()=>setError(false)} onError={()=>setError(true)}/></a>{error&&<p role="status">图片加载失败，请刷新重试或打开整册原书。</p>}<div className="row spread"><button className="icon-btn" aria-label="上一张原书图片" disabled={position===0} onClick={()=>setPosition(position-1)}><ChevronLeft size={18}/></button><span className="small muted">点图放大 · {position+1} / {match!.pages.length}</span><button className="icon-btn" aria-label="下一张原书图片" disabled={position===match!.pages.length-1} onClick={()=>setPosition(position+1)}><ChevronRight size={18}/></button></div></>:error?<p className="small muted">可以在配套练习中打开整册原书。</p>:null}</section>;
 }
 
 export function TextbookVocabulary({book,lesson,text}:{book:NceBookId;lesson:number;text:string}){

@@ -31,6 +31,17 @@ export function courseDestination(state:State,map:Progress,now=Date.now()){
  const node=nextCourse(state,map,now);
  return {node,href:courseAccessHref(node.id,map,now),needsAccess:statusMap(map,now)[node.id]==='locked'};
 }
+/** A continuation must not advertise a later course when the shared selector
+ * points back to this course after access choices or route conditions change. */
+export function courseContinuation(state:State,map:Progress,currentId:string,now=Date.now()){
+ const destination=courseDestination(state,map,now),current=destination.node.id===currentId;
+ return {...destination,
+  href:current?`/map/#/map/${currentId}`:destination.href,
+  label:current?'查看当前路线条件':'继续后续课次',
+  reason:current?'当前路线仍推荐本课。继续后续课程前，请先查看地图检验与解锁条件。':'可以继续后续课次，到期时再回到本课。',
+  currentRoute:current,
+ };
+}
 export function courseLoopTask(state:State,now=Date.now()){
  const raw=state.drafts[courseLoopKey];if(raw===undefined)return null;
  const parsed=parseCourseLoop(raw,now);

@@ -34,8 +34,16 @@ for(const route of ['#/learn/unknown?access=1','#/map/nce1-3?access=1','#/course
 const heading=m.renderToStaticMarkup(m.createElement(m.CourseLoopHeadingSummary,{state:full,map})),records=m.renderToStaticMarkup(m.createElement(m.CourseLoopRecords,{state:full,map}));
 assert(heading.includes('本轮训练已完成 · 待复验'));assert(heading.includes('地图检验：尚未达标'));assert(records.includes('原始作答 12 次'));assert(records.includes('复验已记录 0 轮'));assert(records.includes('待人工核对'));
 assert.equal(JSON.stringify({full,map}),frozen);
+const normalContinuation=m.courseContinuation(full,map,'nce1-1',now);
+assert.equal(normalContinuation.label,'继续后续课次');assert.equal(normalContinuation.href,destination.href);assert.equal(normalContinuation.currentRoute,false);
+const accessReset={...m.unlockNode(m.emptyProgress(),'nce1-1'),lastNode:'nce1-3'},resetBefore=JSON.stringify({full,map:accessReset});
+assert.equal(m.nextCourse(full,accessReset,now).id,'nce1-1','Reset access can legitimately recommend the current map course');
+const gatedContinuation=m.courseContinuation(full,accessReset,'nce1-1',now);
+assert.equal(gatedContinuation.label,'查看当前路线条件');assert.equal(gatedContinuation.href,'/map/#/map/nce1-1');assert.equal(gatedContinuation.currentRoute,true);
+assert(gatedContinuation.reason.includes('地图检验与解锁条件'));assert.equal(m.parseLearningRoute(gatedContinuation.href.slice(gatedContinuation.href.indexOf('#'))).learn,false);
+assert.equal(JSON.stringify({full,map:accessReset}),resetBefore,'The route explanation grants no access, completion or saved course change');
 const aged=structuredClone(s);aged.createdAt-=2*86400000;for(const event of aged.events)event.at-=2*86400000;
 const reviewed=m.loopModel.transition(aged,{type:'review'},now);assert(reviewed.ok,reviewed.message);const reviewing={...full,drafts:{...full.drafts,[m.courseLoopKey]:JSON.stringify(reviewed.state)}};
 assert.equal(m.courseLoopSummary(reviewing,map,now).label,'到期复验进行中');
 const reviewingText=m.renderToStaticMarkup(m.createElement(m.CourseLoopRecords,{state:reviewing,map}));assert(reviewingText.includes('本次复验已开始，接着未提交题继续'));assert(!reviewingText.includes('到期前可以继续后续课次'));assert.equal(full.drafts[m.courseLoopKey],JSON.stringify(s));
-console.log('PASS 7 saved-summary states, blocked-record preservation, shared next access intent, readonly Today, explicit access-only map change, scoped route parsing, and separate CL/map/FSRS SSR groups (synthetic model timestamps).');
+console.log('PASS 9 saved-summary/continuation states, blocked-record preservation, shared next access intent, readonly Today, explicit access-only map change, scoped route parsing, and separate CL/map/FSRS SSR groups (synthetic model timestamps).');

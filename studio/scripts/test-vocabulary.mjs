@@ -8,13 +8,17 @@ const moduleUrl=source=>'data:text/javascript;base64,'+Buffer.from(source).toStr
 const model=moduleUrl(stripTypeScriptTypes(await read('app/model.ts')));
 const mapping=await read('app/data/nce-pages.json');
 const corrections=moduleUrl(stripTypeScriptTypes(await read('app/data/vocabulary-source-corrections.ts')));
-const source=(await read('app/textbook-vocabulary.ts')).replace("'./model'",JSON.stringify(model)).replace("'./data/vocabulary-source-corrections'",JSON.stringify(corrections)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
+const reviewData=moduleUrl(stripTypeScriptTypes(await read('app/data/source-review-batch1.ts')));
+const reviewSource=(await read('app/source-review-batch1.ts')).replace("'./data/source-review-batch1'",JSON.stringify(reviewData)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
+const review=moduleUrl(stripTypeScriptTypes(reviewSource));
+const {withReviewedSourceAssociations}=await import(review);
+const source=(await read('app/textbook-vocabulary.ts')).replace("'./model'",JSON.stringify(model)).replace("'./data/vocabulary-source-corrections'",JSON.stringify(corrections)).replace("'./source-review-batch1'",JSON.stringify(review)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
 const {buildVocabularyCatalog,searchVocabulary,vocabularyPage,vocabularyLetter}=await import(moduleUrl(stripTypeScriptTypes(source)));
 const index=JSON.parse(await read('dist-online/lesson-pages/index.json'));
 const dictionary=JSON.parse(await read('dist-online/language/dictionary.json')).words;
 const catalog=buildVocabularyCatalog(index);
 assert.equal(catalog.lessons.length,348);
-assert.equal(catalog.entries,3614);
+assert.equal(catalog.entries,3616);
 assert.equal(catalog.terms.length,3346);
 assert.equal(catalog.lessons.filter(l=>l.words.length).length,321);
 assert.equal(catalog.lessons.filter(l=>!l.words.length).length,27);
@@ -29,7 +33,7 @@ for(const term of catalog.terms){
   assert(source.pages.every(p=>index.lessons[`${source.book}-${source.lesson}`].vocabulary.pages.includes(p.page)));
  }
 }
-for(const [key,lesson] of Object.entries(index.lessons))for(const word of lesson.vocabulary.words){
+for(const [key,lesson] of Object.entries(withReviewedSourceAssociations(index).lessons))for(const word of lesson.vocabulary.words){
  if(key==='NCE3-19'&&word.word==='withdrawn')continue;
  expected.push(`${key}:${word.word.toLowerCase()}`);
 }
@@ -42,7 +46,7 @@ assert(index.lessons['NCE3-19'].vocabulary.words.some(word=>word.word==='withdra
 const alreadyCorrected=structuredClone(index);
 alreadyCorrected.lessons['NCE3-19'].vocabulary.words=alreadyCorrected.lessons['NCE3-19'].vocabulary.words.filter(word=>word.word!=='withdrawn');
 assert.deepEqual(buildVocabularyCatalog(alreadyCorrected),catalog,'An already corrected source remains idempotent');
-for(const [book,lessonCount,entryCount] of [['NCE1',144,904],['NCE2',96,861],['NCE3',60,1058],['NCE4',48,791]]){
+for(const [book,lessonCount,entryCount] of [['NCE1',144,905],['NCE2',96,861],['NCE3',60,1058],['NCE4',48,792]]){
  assert.equal(catalog.lessons.filter(l=>l.book===book).length,lessonCount);
  assert.equal(searchVocabulary(catalog.terms,{book}).reduce((n,w)=>n+w.sources.length,0),entryCount);
  assert(searchVocabulary(catalog.terms,{book}).every(w=>w.sources.every(s=>s.book===book)));
@@ -80,4 +84,4 @@ for(const mutate of [
 ]){
  const changed=structuredClone(index);mutate(changed);assert.throws(()=>buildVocabularyCatalog(changed));
 }
-console.log('Validated 348 lessons, 3,614 corrected source headwords, 3,346 indexed terms; raw 3,615 entries retained, one printed inflection removed; A–Z/Chinese filters, links, pagination and malformed data handling.');
+console.log('Validated 348 lessons, 3,616 corrected source associations, 3,346 indexed terms; raw 3,615 entries retained, one printed inflection removed and two verified existing-word sources added; A–Z/Chinese filters, links, pagination and malformed data handling.');

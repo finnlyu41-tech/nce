@@ -3,6 +3,7 @@ import pageMapping from './data/nce-pages.json';
 import type {Page,PageIndex} from './lesson-context';
 import type {DictionaryEntry} from './language';
 import {vocabularySourceCorrections} from './data/vocabulary-source-corrections';
+import {withReviewedSourceAssociations} from './source-review-batch1';
 
 export type VocabularySource={book:NceBookId;lesson:number;title:string;pages:Page[]};
 export type VocabularyLesson=VocabularySource&{key:string;words:{word:string;forms:string[]}[]};
@@ -15,6 +16,7 @@ export const vocabularyLetter=(word:string)=>searchable(word).match(/[a-z]/)?.[0
 // The existing, source-bound page bundle is the only textbook word-list input.
 // An empty list is a recorded textbook state, not missing data or a paired list.
 export function buildVocabularyCatalog(index:PageIndex):VocabularyCatalog{
+ index=withReviewedSourceAssociations(index);
  const lessons:VocabularyLesson[]=[],terms=new Map<string,VocabularyTerm>();
  let entries=0;
  for(const [book,count] of Object.entries(bookCounts) as [NceBookId,number][]){

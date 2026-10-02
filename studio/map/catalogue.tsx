@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {ArrowRight, BookOpen, Check, ChevronDown, Lock, Search} from 'lucide-react';
 import {nodes, nodeById, originalSite, type MapNode} from './content';
-import {achieved, learningLabel, manuallyUnlocked, statusMap, type Progress} from './model';
+import {achieved, manuallyUnlocked, statusMap, type Progress} from './model';
+import {mapEvidenceLabel} from './learning-label';
 import {catalogueGroups, catalogueItems, catalogueTitle, type CatalogueGroup} from './navigation';
 
 export function CourseCatalogue({group,query,state,current,browse,search,open,initialChapter}:{group:CatalogueGroup;query:string;state:Progress;current:string;browse:(group:CatalogueGroup)=>void;search:(query:string)=>void;open:(id:string)=>void;initialChapter?:string}) {
@@ -11,7 +12,7 @@ export function CourseCatalogue({group,query,state,current,browse,search,open,in
   function row(node:MapNode) {
     return <button key={node.id} data-catalogue-node={node.id} className={`catalogue-lesson ${statuses[node.id]}`} onClick={()=>open(node.id)}>
       <span className="catalogue-status" aria-hidden="true">{achieved(node,state)?<Check size={18}/>:statuses[node.id]==='locked'?<Lock size={17}/>:<BookOpen size={18}/>}</span>
-      <span><strong>{catalogueTitle(node)}</strong><small>{node.kind==='unit'?node.subtitle:node.kind==='starter'?'零基础起步':node.stage==='summit'?'模考与成绩':'雅思专项'}{node.kind==='unit'&&<> · <span lang="en">{node.title}</span></>}</small><small>{manuallyUnlocked(node,state)?'手动解锁 · ':''}{learningLabel(node,state)}{statuses[node.id]==='locked'?' · 待解锁':''}</small></span><ArrowRight size={16}/>
+      <span><strong>{catalogueTitle(node)}</strong><small>{node.kind==='unit'?node.subtitle:node.kind==='starter'?'零基础起步':node.stage==='summit'?'模考与成绩':'雅思专项'}{node.kind==='unit'&&<> · <span lang="en">{node.title}</span></>}</small><small>{manuallyUnlocked(node,state)?'已开放 · ':''}{mapEvidenceLabel(node,state)}{statuses[node.id]==='locked'?' · 待解锁':''}</small></span><ArrowRight size={16}/>
     </button>;
   }
   return <section className="course-catalogue" aria-label="在学习路线中找课">
