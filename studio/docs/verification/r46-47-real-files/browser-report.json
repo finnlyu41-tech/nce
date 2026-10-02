@@ -1,0 +1,104 @@
+{
+  "testedFiles": {
+    "map/main.tsx": "eb59c49ffcc651a574742bb94c93fae460c2b7393f7bef0d37396081cce6feb0",
+    "map/progress-file-restore.ts": "3544fb0bcce0991bd9b2a602ff74b8ae607436d7d1f8d3180375c60da6d35c30",
+    "scripts/test-progress-file-browser-r46-47.mjs": "2322cfb9f1a382251e22af916bbe16fe6e87bb2dc57cb2691fcb7aabd202888f"
+  },
+  "sourceHead": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+  "baseline": false,
+  "browser": "Chrome/154.0.8037.59",
+  "scope": "Actual built production apps; fresh isolated Chrome profile; actual downloaded JSON on disk then DOM file upload; synthetic records only; unchanged real browser clock",
+  "checks": [
+    "real textbook download is a version 2 file",
+    "real file preserves notes, word sources, flashcard reveal and course draft",
+    "real textbook file carries both capability stores",
+    "actual uploaded downloaded file restores textbook state",
+    "actual upload restores original answers, hints, seen IDs and exact due",
+    "repeat textbook restore does not duplicate plan or receipt",
+    "corrupt upload preserves original bytes",
+    "corrupt has no restore confirmation",
+    "future upload preserves original bytes",
+    "future has no restore confirmation",
+    "bad-capability upload preserves original bytes",
+    "bad-capability has no restore confirmation",
+    "older downloaded file retains newer live capability receipt and exact due",
+    "legacy v1 actual upload preserves capability stores",
+    "legacy plain State JSON upload preserves capability stores",
+    "textbook UI stale preview refuses other tab committed state",
+    "textbook UI exposes conflict and recheck",
+    "capability stale preview preserves both capability and main stores",
+    "native IndexedDB write rejection retains all original stores",
+    "capability native write rejection rolls back committed textbook state and preserves both local stores",
+    "actual map download preserves original draft and settings",
+    "map restore actually downloads recoverable prior state",
+    "actual map file upload restores map state",
+    "map stale preview refuses overwrite and preserves newer draft",
+    "map restore reports conflict",
+    "map-corrupt actual upload retains original map",
+    "map-corrupt rejects preview",
+    "map-old actual upload retains original map",
+    "map-old rejects preview",
+    "map-future actual upload retains original map",
+    "map-future rejects preview",
+    "map native quota rejection retains original bytes",
+    "map native rejection exposes failure without success",
+    "map explicit retry restores after storage write recovers",
+    "map repeated actual upload has one record",
+    "two actual map restore dialogs sharing a snapshot commit exactly one different candidate",
+    "map restore has no unsafe unlocked fallback",
+    "missing lock support is explained in the actual dialog failure",
+    "map restore/failures preserve separate textbook database"
+  ],
+  "artifacts": [
+    {
+      "file": "textbook-v2-original.json",
+      "suggestedName": "English-Studio-progress-2026-10-02T16-25-57-245Z.json",
+      "bytes": 2367,
+      "sha256": "3a740c67c06bad434f89ed22b8a723281060cd600b56c12d4f8c6656b81d0793"
+    },
+    {
+      "file": "map-v2-original.json",
+      "suggestedName": "wayfinder-progress-2026-10-02.json",
+      "bytes": 418,
+      "sha256": "30c48380802b54bf690161243c46b5fe07b43cb078df2b1b4fcbb97b1faad5d1"
+    },
+    {
+      "file": "map-before-restore.json",
+      "suggestedName": "wayfinder-before-restore.json",
+      "bytes": 85,
+      "sha256": "c59dd30737910072d0c018b601927d5e67d582829530b50dde592e8f2c97732a"
+    },
+    {
+      "file": "map-conflict-before-restore.json",
+      "suggestedName": "wayfinder-before-restore.json",
+      "bytes": 237,
+      "sha256": "f318c7211783ec5efc1ecff732d9129c7e97419ea5d4d0e9b2117509eafc67c8"
+    },
+    {
+      "file": "map-failure-rollback.json",
+      "suggestedName": "wayfinder-before-restore.json",
+      "bytes": 237,
+      "sha256": "f318c7211783ec5efc1ecff732d9129c7e97419ea5d4d0e9b2117509eafc67c8"
+    },
+    {
+      "file": "map-retry-rollback.json",
+      "suggestedName": "wayfinder-before-restore.json",
+      "bytes": 237,
+      "sha256": "f318c7211783ec5efc1ecff732d9129c7e97419ea5d4d0e9b2117509eafc67c8"
+    },
+    {
+      "file": "map-repeat-rollback.json",
+      "suggestedName": "wayfinder-before-restore.json",
+      "bytes": 283,
+      "sha256": "859b73fc70ee5219715615e37ea2c2ec505bda0743b4b7c0bfacae7161abba69"
+    }
+  ],
+  "unmeasured": [
+    "Safari/iOS/iCloud native picker and share-sheet",
+    "production deployment and personal records",
+    "natural elapsed-time scheduling",
+    "OS-wide power loss and disk exhaustion",
+    "atomicity against noncooperating synchronous legacy map writers in the check/set micro-window"
+  ],
+  "passed": 39
+}

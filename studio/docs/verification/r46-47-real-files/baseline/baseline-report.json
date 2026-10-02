@@ -1,0 +1,70 @@
+{
+  "testedFiles": {
+    "map/main.tsx": "0d042f3b1f5827997f3b86d2611f8994a0cf7dbf8694329b06753c78a850dabc",
+    "scripts/test-progress-file-browser-r46-47.mjs": "2322cfb9f1a382251e22af916bbe16fe6e87bb2dc57cb2691fcb7aabd202888f"
+  },
+  "sourceHead": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+  "baseline": true,
+  "browser": "Chrome/154.0.8037.59",
+  "scope": "Actual built production apps; fresh isolated Chrome profile; actual downloaded JSON on disk then DOM file upload; synthetic records only; unchanged real browser clock",
+  "checks": [
+    "real textbook download is a version 2 file",
+    "real file preserves notes, word sources, flashcard reveal and course draft",
+    "real textbook file carries both capability stores",
+    "actual uploaded downloaded file restores textbook state",
+    "actual upload restores original answers, hints, seen IDs and exact due",
+    "repeat textbook restore does not duplicate plan or receipt",
+    "corrupt upload preserves original bytes",
+    "corrupt has no restore confirmation",
+    "future upload preserves original bytes",
+    "future has no restore confirmation",
+    "bad-capability upload preserves original bytes",
+    "bad-capability has no restore confirmation",
+    "older downloaded file retains newer live capability receipt and exact due",
+    "legacy v1 actual upload preserves capability stores",
+    "legacy plain State JSON upload preserves capability stores",
+    "textbook UI stale preview refuses other tab committed state",
+    "textbook UI exposes conflict and recheck",
+    "capability stale preview preserves both capability and main stores",
+    "native IndexedDB write rejection retains all original stores",
+    "capability native write rejection rolls back committed textbook state and preserves both local stores",
+    "actual map download preserves original draft and settings",
+    "map restore actually downloads recoverable prior state",
+    "actual map file upload restores map state",
+    "BASELINE reproduced: map restore overwrites newer other-tab map draft"
+  ],
+  "artifacts": [
+    {
+      "file": "textbook-v2-original.json",
+      "suggestedName": "English-Studio-progress-2026-10-02T16-27-06-329Z.json",
+      "bytes": 2367,
+      "sha256": "b0c4cc6d5005cf1163021cc76525ae5b3ea65c4e361cab4009b7f9f1da03df03"
+    },
+    {
+      "file": "map-v2-original.json",
+      "suggestedName": "wayfinder-progress-2026-10-02.json",
+      "bytes": 418,
+      "sha256": "a254589dddd012d621cc48dc9e4d3e8111ba832e540bd74903b43dd1526c8338"
+    },
+    {
+      "file": "map-before-restore.json",
+      "suggestedName": "wayfinder-before-restore.json",
+      "bytes": 85,
+      "sha256": "c59dd30737910072d0c018b601927d5e67d582829530b50dde592e8f2c97732a"
+    },
+    {
+      "file": "map-conflict-before-restore.json",
+      "suggestedName": "wayfinder-before-restore.json",
+      "bytes": 237,
+      "sha256": "f318c7211783ec5efc1ecff732d9129c7e97419ea5d4d0e9b2117509eafc67c8"
+    }
+  ],
+  "unmeasured": [
+    "Safari/iOS/iCloud native picker and share-sheet",
+    "production deployment and personal records",
+    "natural elapsed-time scheduling",
+    "OS-wide power loss and disk exhaustion",
+    "atomicity against noncooperating synchronous legacy map writers in the check/set micro-window"
+  ],
+  "passed": 24
+}
