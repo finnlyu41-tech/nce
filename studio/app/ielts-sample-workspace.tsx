@@ -14,8 +14,8 @@ export function IELTSSampleWorkspace({state,update,ready,task,onTargetOpened}:{s
  const [retry,setRetry]=useState(0),[pending,setPending]=useState<Pending>(),[issue,setIssue]=useState('');
  const pendingRef=useRef<Pending|undefined>(undefined),written=useRef<string|undefined>(undefined);
  const read=useMemo(()=>readSampleProgress(raw),[raw,retry,ready]);
- const contextRead=useMemo(()=>readTableContext(contextRaw),[contextRaw,retry,ready]);
- const contextCheck=useMemo(()=>read.status==='blocked'?undefined:extendTableContext(read.value,contextRaw),[read,contextRaw,retry,ready]);
+ const contextRead=useMemo(()=>readTableContext(contextRaw),[contextRaw]);
+ const contextCheck=read.status==='blocked'?undefined:extendTableContext(read.value,contextRaw);
  const blocked=read.status==='blocked'||contextRead.status==='blocked'||contextCheck?.ok===false;
  const conflict=!!pending&&!((raw===pending.expected&&contextRaw===pending.expectedContext)||(raw===pending.raw&&contextRaw===pending.contextRaw));
  const restored=useMemo(()=>read.status==='blocked'?undefined:raw!==undefined&&raw===written.current?{value:read.value,interrupted:0}:recoverSamplePlayback(read.value),[read,raw]);

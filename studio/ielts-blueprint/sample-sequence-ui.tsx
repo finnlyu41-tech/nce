@@ -27,7 +27,8 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
   useLayoutEffect(() => {latestOnChange.current = onChange;}, [onChange]);
   const [issue, setIssue] = useState(''), [now, setNow] = useState(Date.now());
   const [pendingTableAnswers,setPendingTableAnswers]=useState<Record<string,string>>({});
-  const pendingTableRef=useRef(pendingTableAnswers);pendingTableRef.current=pendingTableAnswers;
+  const pendingTableRef=useRef(pendingTableAnswers);
+  useLayoutEffect(()=>{pendingTableRef.current=pendingTableAnswers;},[pendingTableAnswers]);
   // A controlled host must echo the exact raw input before we release the local
   // copy. An engine transition alone does not acknowledge host acceptance or disk.
   useLayoutEffect(()=>{
