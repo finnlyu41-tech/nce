@@ -4,7 +4,7 @@ export type ExpressionContext={source?:string;minimum?:number;extend?:boolean;ta
 const words=(text:string)=>text.match(/[a-z]+(?:['’][a-z]+)*/gi)||[];
 export const comparable=(text:string)=>words(text).join(' ').toLowerCase().replace(/’/g,"'");
 
-export function expressionFeedback(text:string,context:ExpressionContext={}):ExpressionIssue[]{
+function allExpressionIssues(text:string,context:ExpressionContext={}):ExpressionIssue[]{
  const input=text.slice(0,6000).replace(/[’‘]/g,"'"),issues:ExpressionIssue[]=[];
  const add=(id:string,pattern:RegExp,title:string,action:string,replace:(match:RegExpMatchArray)=>string)=>{
   const match=input.match(pattern);
@@ -23,7 +23,7 @@ export function expressionFeedback(text:string,context:ExpressionContext={}):Exp
  add('there-number',/\bthere\s+is\s+(two|three|four|five|many|several)\s+([a-z]+s)\b/i,'复数物品用 there are','这里说的是多个物品，把 is 改成 are。',m=>m[0].replace(/\bis\b/i,'are'));
  const ing:Record<string,string>={read:'reading',swim:'swimming',cook:'cooking',play:'playing',walk:'walking',learn:'learning',watch:'watching',work:'working'};
  add('enjoy-ing',/\benjoy(?:s)?\s+to\s+(read|swim|cook|play|walk|learn|watch|work)\b/i,'enjoy 后的动作使用 -ing','把这个动作改成 -ing 形式，连同 enjoy 一起练。',m=>m[0].replace(/to\s+[a-z]+$/i,ing[m[1].toLowerCase()]));
- if(issues.length)return issues.slice(0,2);
+ if(issues.length)return issues;
  const count=words(input).length;
  if(count<(context.minimum??3))return [{id:'short',kind:'practice',title:'先补成一个能听懂的句子',evidence:input.trim(),action:'先说清谁或什么，再补动作或状态。可以先用中文想好，再写一句英语。'}];
  if(context.source&&comparable(input)===comparable(context.source))return [{id:'copy',kind:'practice',title:'这还是原句，再换一个内容',evidence:input.trim(),action:'保留有用的句型，换成人物、物品、时间或自己的情况。不要只改标点。'}];
@@ -53,7 +53,11 @@ export function expressionFeedback(text:string,context:ExpressionContext={}):Exp
  return [];
 }
 
+export function expressionFeedback(text:string,context:ExpressionContext={}):ExpressionIssue[]{
+ return allExpressionIssues(text,context).slice(0,2);
+}
+
 export function compareExpression(before:string,after:string,context:ExpressionContext={}){
  const previous=expressionFeedback(before,context),current=expressionFeedback(after,context);
- return {changed:comparable(before)!==comparable(after),resolved:previous.filter(p=>!current.some(c=>c.id===p.id)),remaining:current};
+ return {changed:comparable(before)!==comparable(after),resolved:previous.filter(p=>!allExpressionIssues(after,context).some(c=>c.id===p.id)),remaining:current};
 }

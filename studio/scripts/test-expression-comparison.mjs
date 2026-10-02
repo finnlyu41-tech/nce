@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {stripTypeScriptTypes} from 'node:module';
+const source=stripTypeScriptTypes(await readFile(new URL('../app/expression-feedback.ts',import.meta.url),'utf8'));
+const {expressionFeedback,compareExpression}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const before='I is happy.';
+const hiddenOld='I can to swim. We must cooking. I is happy.';
+assert.deepEqual(expressionFeedback(hiddenOld).map(i=>i.id),['modal-to','modal-base'],'The panel still presents only two actionable issues');
+assert.deepEqual(compareExpression(before,hiddenOld).resolved,[],'A third issue hidden by the display limit is not repaired');
+assert.deepEqual(compareExpression(before,'I can to swim. We must cooking. I am happy.').resolved.map(i=>i.id),['i-be'],'Actually fixing the old issue remains visible while new errors exist');
+assert.deepEqual(compareExpression('I can to swim. I is happy.','I can swim. I am happy.').resolved.map(i=>i.id),['modal-to','i-be']);
+assert.deepEqual(compareExpression(before,'I is tired.').resolved,[],'Changed meaning with the same error is not repair');
+assert.equal(compareExpression('I am happy.','I am happy!').changed,false);
+assert.equal(compareExpression(before,'I am happy.').remaining.length,0);
+assert.equal(expressionFeedback('I can swim. She is happy. We must cook.').length,0);
+console.log('8 expression-comparison regression cases passed: unchanged errors, hidden old errors, new errors and actual repairs; display remains limited to two.');
