@@ -3,8 +3,10 @@ import {useCallback,useEffect,useRef,useState} from 'react';
 import {StudioHeader} from '../app/study-mode';
 import {useMapProgress} from '../app/map-connection';
 import {courseDestination} from '../app/course-loop-next';
+import {ONLINE} from '../app/runtime-mode';
 import {routeHash,type StudioRoute} from '../app/navigation';
 import {Placement} from './placement-ui';
+import {placementEntryHref} from './entry-access';
 import {placementKey} from './model';
 import {readPlacementCheckpoint,commitPlacementCheckpoint,type PlacementCheckpoint} from './host-progress';
 import type {State} from '../app/model';
@@ -85,6 +87,6 @@ export function PlacementHost({bind,beforeLeave,notice}:{bind:(guard:(()=>Promis
   {notice&&<p className="notice" role="alert">{notice}</p>}
   {issue&&<section className="panel placement" role="alert"><p>{issue} 当前输入仍保留，尚未离开或计入课程完成。</p><button className="btn" onClick={retry} disabled={busy}>重试保存当前输入</button><button className="btn secondary" onClick={backup}>备份未保存输入</button></section>}
   {busy&&<p className="notice" role="status">正在确认保存；确认后继续这一步。</p>}
-  {view?<fieldset disabled={busy||failed.current} style={{border:0,padding:0,margin:0}}><Placement state={view} update={update} ready={true} error={loadError||mapError} continueHref={continueHref}/></fieldset>:<p role={loadError?'alert':'status'}>{loadError||'正在读取现有学习记录…'}</p>}
+  {view?<fieldset disabled={busy||failed.current} style={{border:0,padding:0,margin:0}}><Placement state={view} update={update} ready={true} error={loadError||mapError} continueHref={continueHref} trialHref={placementEntryHref(view,map,Date.now(),ONLINE)||undefined}/></fieldset>:<p role={loadError?'alert':'status'}>{loadError||'正在读取现有学习记录…'}</p>}
  </main></div>;
 }

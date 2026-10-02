@@ -1,4 +1,4 @@
-import {placementTasks} from '../placement/adapter';
+import {placementHostTasks} from '../placement/entry-access';
 import type {State} from './model';
 import {routeHash} from './navigation';
 import {grammarUnits} from './grammar-curriculum';
@@ -43,7 +43,7 @@ function grammarReviewAt(progress:GrammarUnitProgress){
  * The classic State and map Progress must have passed their existing validators.
  */
 export function todayPractice(state:State,map:Progress,now=Date.now(),online=true):PracticeTask[]{
- const tasks:PracticeTask[]=[...samplePracticeTasks(state,now,online),...placementTasks(state,now,online)];
+ const tasks:PracticeTask[]=[...samplePracticeTasks(state,now,online),...placementHostTasks(state,map,now,online)];
  const to=(route:Parameters<typeof routeHash>[0])=>(online?'/':'')+routeHash(route);
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};

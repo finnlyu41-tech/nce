@@ -1,5 +1,7 @@
 # Placement：真实宿主接入候选
 
+> 稳定 bd5 后新增的推荐进入验收及单节点 access intent 修复见 [ENTRY-ACCESS.md](ENTRY-ACCESS.md)。该追加提交只给组件新增可选 trialHref 并接实际入口，先前冻结题库、判定和原提交不重写。
+
 已实施正常 Today 入口、真实路由、现有课程继续项、诊断持久化与导航保存护栏；publisher 只需审阅和串行合入本次独立提交。未 push、merge 或 deploy。旧 `publisher-integration.patch` 仅为第一轮历史材料，不应再应用。
 
 ## 基线与所有权

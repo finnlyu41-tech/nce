@@ -5,9 +5,9 @@ import {placementManifest} from './manifest';
 import {placementKey,readPlacement,placementTransition,placementRecommendation,currentEvidence,freshPoolAvailable,type PlacementAction} from './model';
 import {applyPlacement} from './adapter';
 import './placement.css';
-export type PlacementProps={state:State;update:(fn:(s:State)=>State)=>void;ready?:boolean;error?:string;continueHref:string};
+export type PlacementProps={state:State;update:(fn:(s:State)=>State)=>void;ready?:boolean;error?:string;continueHref:string;trialHref?:string};
 /** Host retains ownership of durable save status and navigation. */
-export function Placement({state,update,ready=true,error='',continueHref}:PlacementProps){
+export function Placement({state,update,ready=true,error='',continueHref,trialHref}:PlacementProps){
  const raw=state.drafts[placementKey],read=readPlacement(raw);
  const [issue,setIssue]=useState('');
  function act(action:PlacementAction){
@@ -29,7 +29,7 @@ export function Placement({state,update,ready=true,error='',continueHref}:Placem
    {result.repairs.length>0&&<><h3>先修补这些地方</h3><ul>{result.repairs.map(r=><li key={r.id}><strong>{r.reason}</strong><p>{r.repair}</p><a href={r.repairHref}>打开相关练习</a></li>)}</ul></>}
    <p>听力、口语、自由写作与完整考试表现仍待独立核对。三、四册为按需选读，不是进入专项训练的必修前置。</p>
    <button className="btn" disabled={!!run.chosen} onClick={()=>act({type:'choose',value:result.entry.id})}>{run.chosen?'已选择此试学起点':'选择这个试学起点'}</button>
-   {run.chosen&&<><a className="btn" href={result.entry.href}>打开建议的试学</a><button className="btn secondary" onClick={()=>act({type:'unchoose'})}>继续沿原路线推荐</button></>}{continuity}
+   {run.chosen&&<><a className="btn" href={trialHref||result.entry.href}>打开建议的试学</a><button className="btn secondary" onClick={()=>act({type:'unchoose'})}>继续沿原路线推荐</button></>}{continuity}
    {freshPoolAvailable(view)?<button className="btn secondary" onClick={start}>另用一组未见题核对</button>:<p>两个候选题池已使用，暂无新的诊断题。已见题可用于学习，不能再当独立未见证据。</p>}
   </>:q&&item?<>
    <p className="placement-progress" role="status">第 {run.index+1} 题 · 最多 6 题 · {placementManifest.dimensions.find(d=>d.id===q.dimension)!.label}</p>

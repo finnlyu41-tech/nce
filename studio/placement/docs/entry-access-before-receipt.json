@@ -1,0 +1,46 @@
+{
+  "base": "bd5d1f731dc4c2d7e1cf213485c75af903d47fa1",
+  "phase": "before",
+  "results": [
+    {
+      "entry": "foundation",
+      "advertisedHref": "/#/nce/NCE1/25?tab=grammar",
+      "classicReferenceRoute": "/#/nce/NCE1/25?tab=grammar",
+      "actualRoute": "/map/#/learn/nce1-25",
+      "blockedByRequires": true,
+      "content": "首次用a/an介绍一件物品，再用the或it问及说明其位置。",
+      "access": {
+        "all": false,
+        "nodes": [
+          "nce1-7"
+        ]
+      },
+      "originalScoresAndCompletionPreserved": true,
+      "noTargetCompletion": true,
+      "screenshot": "before-foundation-390.png"
+    },
+    {
+      "entry": "bridge",
+      "advertisedHref": "/#/nce/NCE2/1?tab=grammar",
+      "classicReferenceRoute": "/#/nce/NCE2/1?tab=grammar",
+      "actualRoute": "/map/#/learn/nce2-1",
+      "blockedByRequires": true,
+      "content": "按清楚的顺序说明谁做了什么",
+      "access": {
+        "all": false,
+        "nodes": [
+          "nce1-7"
+        ]
+      },
+      "originalScoresAndCompletionPreserved": true,
+      "noTargetCompletion": true,
+      "screenshot": "before-bridge-390.png"
+    }
+  ],
+  "exceptions": 0,
+  "externalRequests": [],
+  "scope": "real chosen recommendation button; real native map access/require behavior; fresh synthetic completed placement evidence; no all-unlock button or fake completion",
+  "humanCalibration": false,
+  "hearingSpeakingMeasured": false,
+  "deployed": false
+}

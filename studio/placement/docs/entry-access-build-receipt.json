@@ -1,0 +1,115 @@
+{
+  "entries": [
+    "standalone.tsx",
+    "map/main.tsx"
+  ],
+  "mode": "online",
+  "configLoader": "native (avoids writes to linked dependency owner)",
+  "assets": {
+    "assets/mini-n1-01-delayed-a-DasbtE01.wav": {
+      "bytes": 159788,
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    "assets/mini-n1-01-delayed-b-9LV-hq9D.wav": {
+      "bytes": 173828,
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    "assets/mini-n1-01-guided-DbZx4d_F.wav": {
+      "bytes": 92910,
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    "assets/mini-n1-01-independent-DwalH_Cp.wav": {
+      "bytes": 94446,
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    "assets/mini-n1-01-repair-C_pmpUrE.wav": {
+      "bytes": 96494,
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    "assets/mini-n1-09-delayed-a-32d96Ls0.wav": {
+      "bytes": 83694,
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    "assets/mini-n1-09-delayed-b-BdSpo7nO.wav": {
+      "bytes": 123118,
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    "assets/mini-n1-09-guided-BLL7G-yC.wav": {
+      "bytes": 81134,
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    "assets/mini-n1-09-independent-B_v42D4U.wav": {
+      "bytes": 97324,
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    "assets/mini-n1-09-repair-1nc7dXyw.wav": {
+      "bytes": 85230,
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    },
+    "assets/standalone-pKtmVkKb.js": {
+      "bytes": 3179421,
+      "sha256": "51c238cd90bf3a8ea8d672525c55901a06dc81d433ea1ecbc84c409630566cd1"
+    },
+    "assets/style-Bezagksi.css": {
+      "bytes": 329146,
+      "sha256": "92e67f242b2e9efad7581ffc1933066d1662e72b587826086c94b9d7c1b33dd0"
+    },
+    "map/assets/index-1wdxvhZa.css": {
+      "bytes": 83464,
+      "sha256": "cff7e19a5e0a31870dc82d0770a14ae1cd27efcda8e2e644b391d32a8a13a90d"
+    },
+    "map/assets/index-DhsS4EIs.js": {
+      "bytes": 2471074,
+      "sha256": "52ca6323ad2a690a84468e989b1d538ee0ffb316739d90e55f47e05630b002eb"
+    },
+    "map/assets/mini-n1-01-delayed-a-DasbtE01.wav": {
+      "bytes": 159788,
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    "map/assets/mini-n1-01-delayed-b-9LV-hq9D.wav": {
+      "bytes": 173828,
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    "map/assets/mini-n1-01-guided-DbZx4d_F.wav": {
+      "bytes": 92910,
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    "map/assets/mini-n1-01-independent-DwalH_Cp.wav": {
+      "bytes": 94446,
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    "map/assets/mini-n1-01-repair-C_pmpUrE.wav": {
+      "bytes": 96494,
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    "map/assets/mini-n1-09-delayed-a-32d96Ls0.wav": {
+      "bytes": 83694,
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    "map/assets/mini-n1-09-delayed-b-BdSpo7nO.wav": {
+      "bytes": 123118,
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    "map/assets/mini-n1-09-guided-BLL7G-yC.wav": {
+      "bytes": 81134,
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    "map/assets/mini-n1-09-independent-B_v42D4U.wav": {
+      "bytes": 97324,
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    "map/assets/mini-n1-09-repair-1nc7dXyw.wav": {
+      "bytes": 85230,
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    }
+  },
+  "deployed": false,
+  "source": "bd5d1f731dc4c2d7e1cf213485c75af903d47fa1 + isolated entry-access production delta",
+  "gitBase": "bd5d1f731dc4c2d7e1cf213485c75af903d47fa1",
+  "productionSha256": {
+    "studio/placement/entry-access.ts": "85227e1d98857372f6d407e7fb300aa23bfadd32470ce5ac4f750cb2510a9288",
+    "studio/placement/placement-ui.tsx": "5dd7dc69ba91617b92b48e3cc68ded2448484bcfd823bf54ecb7f29d89f1b7fa",
+    "studio/placement/host.tsx": "ab598dc56db56eb482dcb737d0c4f6cf46fd32895f85fe7a46272b764e99896d",
+    "studio/app/today-practice.ts": "fc4ce58552df488d89a353d412908891c4e7e31bb6a251adacac158c1199a3bc"
+  }
+}
