@@ -6,6 +6,8 @@ import {AudioSpace, StopAudio, Recorder} from './media';
 import {StarterTeaching, UnitTeaching, CourseRoom, QuestionAnswer} from './course';
 import {lessonPlan, questionSkills} from './lesson-plan';
 import {CourseLoopWorkspace} from '../app/course-loop-ui';
+import {CourseLoopHeadingSummary} from '../app/course-loop-summary-ui';
+import type {State} from '../app/model';
 import {SpeakingPractice} from './speaking';
 import { updateDraft, emptyRecord, statusMap, grade, passedQuiz, submitQuiz, criteriaFor, evidenceErrors, mockErrors, overallBand, officialReached, today, type Progress, type NodeRecord, type Evidence, type Mock } from './model';
 export type Save = (change: (s: Progress) => Progress) => boolean;
@@ -17,7 +19,7 @@ function Link({ href, children }: {
 function Errors({ errors }: {
     errors: string[];
 }) { return errors.length ? <div className="form-errors" role="alert"><strong>还需要完成</strong><ul>{errors.map(e => <li key={e}>{e}</li>)}</ul></div> : null; }
-export function LearningRoom({node,state,save,close,select,speaking,continueCourse,onCourseLeaveGuard}:{node:MapNode;state:Progress;save:Save;close:()=>void;select:(id:string)=>void;speaking?:'practice'|'review';continueCourse:()=>void;onCourseLeaveGuard:(guard:(()=>Promise<boolean>)|null)=>void}) {
+export function LearningRoom({node,state,save,close,select,speaking,classicState,classicReady,classicError,mapError,continueCourse,onCourseLeaveGuard}:{node:MapNode;state:Progress;save:Save;close:()=>void;select:(id:string)=>void;speaking?:'practice'|'review';classicState:State;classicReady:boolean;classicError:string;mapError:string;continueCourse:(confirmed:State)=>void;onCourseLeaveGuard:(guard:(()=>Promise<boolean>)|null)=>void}) {
     const title=useRef<HTMLHeadingElement>(null);
     const record=state.records[node.id]||emptyRecord(),statuses=statusMap(state),locked=statuses[node.id]==='locked';
     const unit=node.kind==='unit',quiz=['unit','starter','lesson','checkpoint'].includes(node.kind);
@@ -30,7 +32,7 @@ export function LearningRoom({node,state,save,close,select,speaking,continueCour
     useEffect(()=>{if(speaking&&!locked&&record.phase==='challenge')save(s=>changeStudyStep(s,node.id,0))},[node.id,speaking,locked]);
     useEffect(()=>{window.scrollTo({top:0});(document.getElementById(`question-${index}`)||title.current)?.focus({preventScroll:true})},[node.id,step,index,speaking]);
     const changeStep=(next:number)=>save(s=>next===3&&s.records[node.id]?.phase==='learn'&&s.records[node.id]?.attempts.at(-1)?.round===s.records[node.id]?.round&&s.records[node.id]?.attempts.at(-1)?.bank===s.records[node.id]?.bank?restartQuiz(s,node.id):changeStudyStep(s,node.id,next));
-    return <main className="focus-page"><header className="focus-header"><button className="back-button" onClick={close}><ChevronLeft size={17}/>学习</button><a className="focus-brand" href="#/courses">句句有进步<span>找课</span></a><span className="focus-saved">进度自动保留</span></header><AudioSpace controls={false}><div className="focus-content"><div className="focus-course-heading"><p>{node.subtitle}{unit&&speaking!=='review'&&<> · <span lang="en">{node.title}</span></>}</p><h1 ref={title} tabIndex={-1}>{unit?lessonPlan(unitById(node.id)!).goal:node.title}</h1><span>{manuallyUnlocked(node,state)?'手动解锁 · ':''}{learningLabel(node,state)}</span></div>
+    return <main className="focus-page"><header className="focus-header"><button className="back-button" onClick={close}><ChevronLeft size={17}/>学习</button><a className="focus-brand" href="#/courses">句句有进步<span>找课</span></a><span className="focus-saved">进度自动保留</span></header><AudioSpace controls={false}><div className="focus-content"><div className="focus-course-heading"><p>{node.subtitle}{unit&&speaking!=='review'&&<> · <span lang="en">{node.title}</span></>}</p><h1 ref={title} tabIndex={-1}>{unit?lessonPlan(unitById(node.id)!).goal:node.title}</h1>{courseLoop?<CourseLoopHeadingSummary state={classicState} map={state} ready={classicReady} error={classicError} mapError={mapError}/>:<span>{manuallyUnlocked(node,state)?'手动解锁 · ':''}{learningLabel(node,state)}</span>}</div>
     {locked?<section className="locked-room"><Lock size={28}/><h2>这一课还没有开放</h2><p>可以直接开始，也可以按地图顺序学习。解锁不会标记已完成。</p><button className="primary" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button></section>:courseLoop?<CourseLoopWorkspace continueRoute={continueCourse} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:speaking&&unit?<SpeakingPractice key={`${node.id}-${speaking}`} unit={unitById(node.id)!} state={state} save={save} review={speaking==='review'} close={()=>select(node.id)}/>:quiz?<>
       <nav className="focus-steps" aria-label="本课学习步骤">{(unit?[[0,'听懂'],[1,'看懂'],[2,'自己用'],[3,'检验']]:[[0,'听与跟练'],[3,'自己试']]).map(([value,label],i)=><button key={value} aria-current={step===value?'step':undefined} onClick={()=>changeStep(Number(value))}><span>{i+1}</span>{label}</button>)}</nav><StopAudio key={`${step}-${index}`}/>
       {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}

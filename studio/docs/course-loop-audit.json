@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "auditedSource": "0ae75f9decab83a2969fed6ca6e6838585c217b6",
+  "auditedSource": "content-hashed sources listed in sourceFiles",
   "scope": "source-level audit; production mapping requires release-owner verification",
   "counts": {
     "textbookCourses": 348,
@@ -24,7 +24,7 @@
     "grammarUnits": 28,
     "grammarQuestions": 168,
     "support": {
-      "ielts-mini": 16,
+      "ielts-mini": 20,
       "grammar-unit": 28,
       "backup-original": 36,
       "legacy-ielts-task": 11,
@@ -35,8 +35,8 @@
       "map-final-evidence": 3,
       "accepted-demo": 1
     },
-    "ieltsSessions": 16,
-    "ieltsUniqueMaterials": 66
+    "ieltsSessions": 20,
+    "ieltsUniqueMaterials": 84
   },
   "sourceFiles": {
     "app/data/textbook-grammar.json": "7522d9c78e29e9becc17c4bbf786b442a65fbb0fa9875b985d117d90a41c54ad",
@@ -51,8 +51,8 @@
     "map/model.ts": "0fbf5f3d5bd114927d04f34245256d002f5e7408dc520a45b28c3af2fd977cb5",
     "map/course.tsx": "8f636586f99a4fb36069d0c860e89e6afb7042a1cd9d7453b7133efc012ff277",
     "map/expression.tsx": "105c4f9e38fa944388a2573c083b3d886d5d10abdcbac17d88be93e2b29eee62",
-    "ielts-blueprint/sample-sequence.ts": "760d2ae849a3728ac456226325ea3823ceb145fd57f65aaac124e909abfc588d",
-    "ielts-blueprint/sample-sequence-model.ts": "199230f47b1d1535a536f4b304b0c8b5cf0bb6c7b699a240f9708d1bf8d707a3",
+    "ielts-blueprint/sample-sequence.ts": "1d8a0b6fff1f45e9c094f87d15471bbe6ee1030676f0705422f7dfb2032095bf",
+    "ielts-blueprint/sample-sequence-model.ts": "8d4c363e46aa535e199da35a33f18cf17658243baee1671a21729f855f15844f",
     "app/grammar-curriculum.ts": "ff786f00703f17f0d8c617c94bcaa6c8a22a5fc273a5ec12c6e5a54cdf724507",
     "app/data/lessons.json": "f98978cb0e5f336bfa9bd390f60f331fec4deb9bb688eb905e6422fcb6e727ea",
     "app/data/ielts.json": "9d2a383dd7489899b6a4e1c384f80639d3be2e66805d1d28db7e38e1c73d201d",

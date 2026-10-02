@@ -135,9 +135,14 @@ export function transitionSample(state: SampleState, action: SampleAction, at = 
     if (action.type !== 'save-correction') {
       session[action.type === 'correction-response' ? 'correctionResponse' : 'correctionNote'] = action.value.slice(0, 4000); session.correctedAt = 0; return result();
     }
+    const missing = lesson.timed.questions?.flatMap((q, index) => session.correctionAnswers[q.id]?.trim() ? [] : [index + 1]);
+    if (missing?.length) return reject(`第 ${missing.join('、')} 题还没有订正答案。请先补上这些题的回答；首答仍保留。`);
     if (session.correctionNote.trim().length < 8) return reject('留下具体的一处修正或待核验问题（至少 8 字）。');
     if (lesson.timed.questions) {
-      if (!answersMatch(lesson.timed, session.correctionAnswers)) return reject('先留下订正答案或修改后的短段落。长度只用于确认有作品，不用于评分。');
+      if (!answersMatch(lesson.timed, session.correctionAnswers)) {
+        const mismatched = lesson.timed.questions.flatMap((q, index) => q.accepted.some(a => normal(a) === normal(session.correctionAnswers[q.id] || '')) ? [] : [index + 1]);
+        return reject(`第 ${mismatched.join('、')} 题的订正与本轮材料不符。请对照已经开放的本轮原文或播放稿、题目和作答要求再核对；首答仍保留。`);
+      }
     } else {
       const issue = sampleResponseIssue(session.correctionResponse); if (issue) return reject(issue);
     }

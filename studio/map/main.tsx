@@ -9,7 +9,7 @@ import './style.css';
 import { StudioHeader } from '../app/study-mode';
 import {TodayPracticeQueue} from '../app/today-practice-ui';
 import {useClassicProgress} from '../app/use-classic-progress';
-import {nextCourse} from '../app/course-loop-next';
+import {nextCourse,courseDestination} from '../app/course-loop-next';
 import {prepareDueReview} from './review-route';
 import {CurrentRoute} from './current-route';
 import {CourseCatalogue} from './catalogue';
@@ -87,6 +87,21 @@ function App() {
         history.replaceState(history.state,'',hash);
         setRoute(parseLearningRoute(hash,route.id));
     },[route.id,route.learn,route.review,save]);
+    const routeLocked=statusMap(state)[route.id]==='locked';
+    useEffect(()=>{
+        if(!route.learn||!route.manualAccess||!classic.ready||classic.error)return;
+        const requested=location.hash;let cancelled=false;
+        void(async()=>{
+            if(courseLeaveGuard.current&&!await courseLeaveGuard.current()){setMessage('本课输入还没有保存，请先保留未提交内容。');return}
+            if(cancelled||location.hash!==requested)return;
+            if(statusMap(stateRef.current)[route.id]==='locked'&&!save(s=>unlockNode(s,route.id)))return;
+            // Access records only the learner's choice to enter. It creates no
+            // quiz pass, delayed review, or word-card grade.
+            const hash=`#/learn/${route.id}`;
+            history.replaceState(history.state,'',hash);setRoute(parseLearningRoute(hash,route.id));
+        })();
+        return()=>{cancelled=true};
+    },[route.id,route.learn,route.manualAccess,routeLocked,classic.ready,classic.error,save]);
     useEffect(() => { const storage = (event: StorageEvent) => { if (event.key === storageKey) {
         try {
             const incoming = event.newValue ? parseProgress(event.newValue) : emptyProgress();
@@ -131,8 +146,9 @@ function App() {
         if (importInput.current)
             importInput.current.value = '';
     } }
+    if(route.learn&&route.manualAccess&&!classic.ready)return <p className="today-loading" role="status">正在读取已保存记录，准备继续学习…</p>;
     if(route.learn&&route.review)return <p className="today-loading" role="status">正在准备这一轮回想…</p>;
-    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-saved-progress.json')}>导出已保存进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} speaking={route.speaking} node={selected} state={state} save={save} close={()=>{setOverview(false);if(catalogueReturn.current)location.hash=catalogueReturn.current;else navigate(current)}} select={id=>navigate(id,true)} continueCourse={()=>navigate(current,true)} onCourseLeaveGuard={bindCourseLeaveGuard}/></>;
+    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-saved-progress.json')}>导出已保存进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} speaking={route.speaking} node={selected} state={state} save={save} close={()=>{setOverview(false);if(catalogueReturn.current)location.hash=catalogueReturn.current;else navigate(current)}} select={id=>navigate(id,true)} classicState={classic.state} classicReady={classic.ready} classicError={classic.error} mapError={storageError} continueCourse={confirmed=>{const href=courseDestination(confirmed,stateRef.current).href;location.hash=href.slice(href.indexOf('#'))}} onCourseLeaveGuard={bindCourseLeaveGuard}/></>;
     return <><StudioHeader active="learn" classicRoot={originalSite} mapUrl="/map/" reference={unitById(current)} actions={<details className="map-settings"><summary><Settings2 size={17}/><span>学习设置</span></summary><div><strong>解锁方式</strong><p>解锁允许直接进入，完成状态仍由实际学习记录决定。</p>{state.access?.all?<p className="manual-note">全部节点已手动解锁</p>:<button onClick={()=>save(s=>({...s,access:{all:true,nodes:s.access?.nodes||[]}}))}><Unlock size={16}/>直接解锁全部节点</button>}{(state.access?.all||!!state.access?.nodes.length)&&<button onClick={()=>save(s=>({...s,access:{all:false,nodes:[]}}))}>恢复按路线解锁</button>}<small>恢复路线规则会保留所有学习记录。</small><hr/><strong>地图进度备份</strong><button onClick={()=>download(exportProgress(state),`wayfinder-progress-${new Date().toISOString().slice(0,10)}.json`)}><Download size={16}/>导出地图进度</button><button onClick={()=>importInput.current?.click()}><Upload size={16}/>恢复地图进度</button><small>教材笔记、生词的备份在「记录」页。录音需单独下载。</small></div></details>}/>
 
   <main className="app-main learning-home">{route.catalogue&&<a className="learning-back" href={`#/map/${current}`}>← 回到学习</a>}<section className="page-heading"><div><h1 tabIndex={-1}>{route.catalogue?'找课':'学习'}</h1><p>{route.catalogue?'按目标或教材找课，接着同一份进度学习。':overview?'从起步到 IELTS 6.5，查看各阶段与解锁条件。':'从今天最需要的一步继续。'}</p></div>{!route.catalogue&&<div className="learning-view-actions"><a className="secondary" href="#/courses"><BookOpen size={16}/>找课</a><button className="text-button map-view-toggle" onClick={()=>{setOverview(!overview);if(overview)navigate(current)}}>{overview?'回到当前学习':'完整路线'}<ArrowRight size={16}/></button></div>}</section>

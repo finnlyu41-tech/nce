@@ -11,7 +11,7 @@ const send=action=>{const r=loopModel.transition(s,action,++tick);assert(r.ok,r.
 const view=()=>{const r=parseCourseLoop(JSON.stringify(s),now);assert(r.ok,r.message);return r.view};
 const state=()=>({...structuredClone(initial),drafts:{[courseLoopKey]:JSON.stringify(s)}}),map=emptyProgress();
 assert.equal(nextCourse(initial,map,now).id,'first');assert.equal(nextCourse(state(),map,now).id,'nce1-1');
-assert.equal(todayPractice(state(),map,now).filter(t=>t.href==='/map/#/learn/nce1-1').length,1);
+assert.equal(todayPractice(state(),map,now).filter(t=>t.href.split('?')[0]==='/map/#/learn/nce1-1').length,1);
 assert.equal(view().exposures.length,1);assert.equal(view().attempts.length,0);
 assert.equal(parseCourseLoop('').ok,false);assert.equal(parseCourseLoop(JSON.stringify({...s,version:2})).ok,false);assert.equal(parseCourseLoop(JSON.stringify({...s,unexpected:'unknown'})).ok,false);assert.equal(parseCourseLoop(' '.repeat(2*1024*1024+1)).ok,false);
 assert.equal(parseCourseLoop(JSON.stringify({...s,createdAt:now+1}),now).ok,false);
@@ -30,7 +30,7 @@ for(const q of questionsFor('repair')){send({type:'draft',value:q.accepted[0]});
 send({type:'own-draft',value:'Is this your phone? Yes, it is.'});send({type:'finish'});
 const due=view().dueAt;assert.equal(due,tick+86400000);assert.equal(nextCourse(state(),map,due-1).id,'nce1-3');assert.equal(courseLoopTask(state(),due-1),null);assert.equal(loopModel.transition(s,{type:'review'},due-1).ok,false);
 assert.equal(nextCourse(state(),{...emptyProgress(),lastNode:'nce1-25',access:{all:true,nodes:[]}},due-1).id,'nce1-25','Waiting pilot never pins an advanced route back to lesson 3');
-assert.equal(nextCourse(state(),map,due).id,'nce1-1');assert.equal(todayPractice(state(),map,due).filter(t=>t.href==='/map/#/learn/nce1-1').length,1);
+assert.equal(nextCourse(state(),map,due).id,'nce1-1');assert.equal(todayPractice(state(),map,due).filter(t=>t.href.split('?')[0]==='/map/#/learn/nce1-1').length,1);
 tick=due;send({type:'review'});assert.equal(view().phase,'review-a');
 for(const q of questionsFor('review-a')){send({type:'draft',value:q.accepted[0]});send({type:'submit'});send({type:'next'})}
 assert.equal(view().reviewResults.at(-1).independent,true);assert.equal(view().dueAt,tick+604800000);assert.deepEqual(view().attempts.slice(0,originals.length),originals);

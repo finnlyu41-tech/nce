@@ -13,7 +13,7 @@ import {speakingDue,speakingReviewAt} from '../map/speaking-model';
 import {lessonPlan} from '../map/lesson-plan';
 import {samplePracticeTasks} from './ielts-sample-next';
 import {courseLoopKey} from './course-loop-progress';
-import {courseLoopTask,nextCourse} from './course-loop-next';
+import {courseLoopTask,courseDestination,courseAccessHref} from './course-loop-next';
 
 export type PracticeTask={id:string;title:string;reason:string;method:string;evidence:string;href:string;returnHref:string;priority:number;at:number;kind:'repair'|'review'|'resume'|'new'|'course'};
 const DAY=86_400_000;
@@ -46,7 +46,7 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};
  const loopOwns=state.drafts[courseLoopKey]!==undefined,loopTask=online?courseLoopTask(state,now):null;
- if(loopTask)add({id:'course-loop:nce1-1',title:'第 1–2 课 · 问清物品归属',reason:loopTask.reason,method:loopTask.kind==='review'?'收起教材，独立回答新情境。':'保留已保存的首答与订正，接着本题继续。',evidence:'记录原答、帮助和订正；听力、发音与自由表达另行核对。',href:'/map/#/learn/nce1-1',priority:loopTask.kind==='review'?priority.review:priority.resume,at:loopTask.at,kind:loopTask.kind});
+ if(loopTask)add({id:'course-loop:nce1-1',title:'第 1–2 课 · 问清物品归属',reason:loopTask.reason,method:loopTask.kind==='review'?'收起教材，独立回答新情境。':'保留已保存的首答与订正，接着本题继续。',evidence:'记录原答、帮助和订正；听力、发音与自由表达另行核对。',href:courseAccessHref('nce1-1',map,now),priority:loopTask.kind==='review'?priority.review:priority.resume,at:loopTask.at,kind:loopTask.kind});
  if(online)for(const node of [...nodes.filter(n=>n.kind!=='course'),...unitNodes]){
   if(loopOwns&&node.id==='nce1-1')continue;
   const record=map.records[node.id],last=record?.attempts.at(-1);
@@ -125,10 +125,10 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  }
  tasks.sort((a,b)=>a.priority-b.priority||a.at-b.at||a.id.localeCompare(b.id));
  if(online){
-  const current=nextCourse(state,map,now),unit=unitById(current.id);
+  const destination=courseDestination(state,map,now),current=destination.node,unit=unitById(current.id);
   if(!tasks.some(t=>t.id==='map:'+current.id||t.id==='course-loop:'+current.id))add({id:'course:'+current.id,title:unit?lessonPlan(unit).goal:current.title,
-   reason:'从已保存的位置继续，一次完成一个小目标。',method:'听懂、看懂、自己用，再独立检验。',evidence:'解锁、跟练、独立通过和延迟巩固分别记录。',
-   href:`/map/#/learn/${current.id}`,priority:priority.course,at:now,kind:'course'});
+   reason:destination.needsAccess?'继续会开放本课访问并直接进入学习；开放访问不代表完成或达标。':'从已保存的位置继续，一次完成一个小目标。',method:'听懂、看懂、自己用，再独立检验。',evidence:'开放访问、跟练、独立通过和延迟巩固分别记录。',
+   href:destination.href,priority:priority.course,at:now,kind:'course'});
  }else{
   const current=nextLearning(state,now),unit=studyUnit(current.book,current.lesson);
   if(!activeGoals.has(`${unit.key}:${current.goal}`))add({id:'course:'+unit.key,title:`继续${bookNames[current.book]} · ${unit.label}`,

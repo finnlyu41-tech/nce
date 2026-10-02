@@ -1,6 +1,6 @@
 import type {State} from './model';
 import {courseLoopKey,parseCourseLoop,loopModel} from './course-loop-progress';
-import {continueNode,type Progress} from '../map/model';
+import {continueNode,statusMap,type Progress} from '../map/model';
 import {nodeById,type MapNode} from '../map/content';
 
 /** One host selector for Today, the map and course continuation. It grants no
@@ -20,6 +20,16 @@ export function nextCourse(state:State,map:Progress,now=Date.now()):MapNode {
   return nodeById('nce1-3')!;
  }
  return continueNode(map,now);
+}
+/** A read-only destination. The one-shot access intent is consumed only after
+ * the learner clicks through and the existing guarded map save succeeds. */
+export function courseAccessHref(id:string,map:Progress,now=Date.now()){
+ if(!nodeById(id))throw new RangeError('Course destination does not exist.');
+ return `/map/#/learn/${id}${statusMap(map,now)[id]==='locked'?'?access=1':''}`;
+}
+export function courseDestination(state:State,map:Progress,now=Date.now()){
+ const node=nextCourse(state,map,now);
+ return {node,href:courseAccessHref(node.id,map,now),needsAccess:statusMap(map,now)[node.id]==='locked'};
 }
 export function courseLoopTask(state:State,now=Date.now()){
  const raw=state.drafts[courseLoopKey];if(raw===undefined)return null;
