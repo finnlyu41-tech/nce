@@ -41,3 +41,7 @@
  .flashcard-note-list article>span{max-width:none}
  .flashcard-studio .flash-content{min-height:160px}
 }
+
+.flashcard-starter{margin:12px auto 0;display:flex;max-width:100%;white-space:normal}
+.flashcard-attribution{margin-top:12px;font-size:12px;color:#68748a}
+.flashcard-attribution>summary,.flashcard-options>summary,.flashcard-library>summary,.flashcard-originals>summary{min-height:44px;padding:8px 0;cursor:pointer}

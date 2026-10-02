@@ -13,3 +13,10 @@
 .grammar-usage-sources>.btn{min-height:44px;margin:8px 0}
 .grammar-usage-sources>div{display:grid;gap:8px}
 @media(max-width:720px){.grammar-curriculum-heading h1{font-size:26px;line-height:1.5}.grammar-existing-detail{padding:18px}.grammar-unit-detail .grammar-exercise-start{flex-direction:column;align-items:stretch;gap:12px}.grammar-unit-detail .grammar-exercise-start>.btn{justify-content:center}.grammar-curriculum-back{white-space:normal;text-align:left}.grammar-curriculum .grammar-curriculum-filters{grid-template-columns:1fr 1fr}.grammar-curriculum .grammar-curriculum-search{grid-column:1/-1}.grammar-linked-lessons>div{grid-template-columns:1fr}}
+
+.grammar-curriculum .grammar-curriculum-filters{grid-template-columns:minmax(0,1fr);gap:10px}
+.grammar-extra-filters{min-width:0;font-size:13px}
+.grammar-extra-filters>summary{cursor:pointer;min-height:44px;padding:10px 0;color:#52617a}
+.grammar-filter-selects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:6px 0}
+.grammar-filter-selects>label{display:grid;gap:5px;font-size:12px;min-width:0}
+@media(max-width:720px){.grammar-filter-selects{grid-template-columns:1fr 1fr}.grammar-extra-filters{grid-column:1/-1}}
