@@ -1,6 +1,10 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v36 · CL02 第7／9／11课闭环
+## 当前发布 v37 · 来源小批 SF02
+
+版本 `2026-10-02-source-associations-sf02-v37`，运行源码 `94d38ab2a2bc42b803ddd951473b154f9c8a5bbd`，固定部署 [3b3631df](https://3b3631df.finn-english-studio.pages.dev)。新增8条教材来源关联和2个完整短语；目录3626／3356，原创315／420不变。正式入口13组检查通过，双地址84项资源哈希一致；CL02六课与IELTS文件保持原样。62个未决项关闭0，5项编辑注释仍独立。[发布接线与验证](docs/source-fixes-sf02-production-integration.md)。
+
+## 已发布 v36 · CL02 第7／9／11课闭环
 
 版本 `2026-10-02-course-loop-batch02-v36`，运行源码 `d9c7c48a7d419c230be06bf81cc956d63b124649`，固定部署 [50785cd3](https://50785cd3.finn-english-studio.pages.dev)。第7–8、9–10、11–12课三组共54道受限文字题接入生产，六课独立记录保留；单一推荐1→3→5→7→9→11→旧13，旧键、国籍边界、存储守护和SF01来源不变。101课程／49Today检查通过，复用作者22+2原生UI与19存储验收；正式入口补10组烟测，双地址76项资源哈希一致。自然间隔、开放表达、真机与真实听感仍待核对。[发布接线与验证](docs/course-loop-batch-02-release-v36.md)。
 
