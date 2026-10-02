@@ -132,7 +132,7 @@ try {
   await test('two same-event controlled updates keep their sequence without overwriting other state',()=>{let first=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),second=act(first,{type:'next'});const raw1=roundTrip(first),raw2=roundTrip(second);let host={...base(),drafts:{other:'untouched'}};host=p.replaceSampleProgress(host,undefined,raw1,clock);host=p.replaceSampleProgress(host,raw1,raw2,clock);assert.equal(host.drafts[p.sampleProgressKey],raw2);assert.equal(host.drafts.other,'untouched')});
   await test('blocked wrapper renders recovery guidance without mounting writable questions',()=>{for(const raw of ['{','{"version":2}']){const state={...base(),drafts:{[p.sampleProgressKey]:raw}},html=render(React.createElement(Workspace,{ready:true,state,update(){throw Error('Rendering must not write state')}}));assert.match(html,/原始内容仍在/);assert.match(html,/不会自动清空/);assert(!html.includes('先选择考试类别'));assert(!html.includes('记录原始作答'));assert.equal(state.drafts[p.sampleProgressKey],raw)}});
   await test('before host storage is ready the wrapper shows loading and creates no blank writable course',()=>{const html=render(React.createElement(Workspace,{ready:false,state:base(),update(){throw Error('Loading must not write state')}}));assert.match(html,/正在读取本机学习记录/);assert(!html.includes('先选择考试类别'));assert(!html.includes('课程学习次序'))});
-  await test('guided wrapper keeps category choice once and folds directories after selection',()=>{const unselected=render(React.createElement(Workspace,{ready:true,state:base(),update(){throw Error('Rendering must not write state')}}));assert.match(unselected,/先选择考试类别/);const state=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),raw=roundTrip(state),html=render(React.createElement(Workspace,{ready:true,state:{...base(),drafts:{[p.sampleProgressKey]:raw}},update(){throw Error('Rendering must not write state')}}));assert.match(html,/切换考试类别/);assert.match(html,/查看课程目录 · 8 课/);assert(!html.includes('<details>'));assert.match(html,/刷新可以继续/);assert.match(html,/备份不含录音/)});
+  await test('guided wrapper keeps category choice once and folds directories after selection',()=>{const unselected=render(React.createElement(Workspace,{ready:true,state:base(),update(){throw Error('Rendering must not write state')}}));assert.match(unselected,/先选择考试类别/);const state=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),raw=roundTrip(state),html=render(React.createElement(Workspace,{ready:true,state:{...base(),drafts:{[p.sampleProgressKey]:raw}},update(){throw Error('Rendering must not write state')}}));assert.match(html,/切换考试类别/);assert.match(html,/查看课程目录 · 10 课/);assert(!html.includes('<details>'));assert.match(html,/刷新可以继续/);assert.match(html,/备份不含录音/)});
   await test('after correction, guided UI offers the next lesson while an undued review stays unavailable',()=>{const state=closed('academic','hub-reading'),html=renderAt(React.createElement(Sequence,{value:state,guidedFlow:true}),clock);assert.match(html,/继续下一课/);assert(!html.includes('打开一份没接触过的复验题'))});
   await test('a due fresh review is the sole primary continuation instead of competing with the next lesson',()=>{const html=renderAt(React.createElement(Sequence,{value:fixture,guidedFlow:true}),m.sampleReviewDueAt(m.sampleSession(fixture)));assert.match(html,/打开一份没接触过的复验题/);assert(!html.includes('继续下一课'))});
   console.log(`${checks} adapter boundary checks and ${roundTrips} real-transition storage round trips passed`);
@@ -479,17 +479,18 @@ try {
   }
   function noReferencesInHistory(history, lesson) {
     for (const material of c.sampleMaterials(lesson)) {
-      for (const text of [material.context, material.script, material.model, ...(material.modelNotes || []), ...(material.questions || []).map(question => question.why)]) {
-        if (text) assert.ok(!history.includes(escapeHTML(text)), 'Only saved personal work appears in the history');
+      for (const text of [material.model, ...(material.modelNotes || []), ...(material.questions || []).map(question => question.why)]) {
+        if (text) assert.ok(!history.includes(escapeHTML(text)), 'Reference answers and explanations stay out of personal history');
       }
     }
     for (const material of lesson.reviews) {
       assert.ok(!history.includes(escapeHTML(material.title)), 'Unopened review materials remain hidden');
+      for (const text of [material.context, material.script]) if (text) assert.ok(!history.includes(escapeHTML(text)));
       for (const question of material.questions || []) assert.ok(!history.includes(escapeHTML(question.prompt)));
     }
     assert.ok(!history.includes('参考：'));
   }
-  await test('the 24-hour wait exposes actual saved answers, hints, correction and dates without revealing reference content', () => {
+  await test('the 24-hour wait exposes saved answers and their source context without revealing reference answers or future materials', () => {
     let value = start('academic', 'hub-reading');
     value = act(act(answer(value), {type: 'submit'}), {type: 'next'});
     value = act(value, {type: 'hint'});
@@ -512,6 +513,8 @@ try {
     for (const attempt of session.attempts) {
       const source = c.sampleMaterials(lesson).find(material => material.id === attempt.promptId);
       assert.ok(history.includes(escapeHTML(source.title)));
+      assert.ok(history.includes(escapeHTML(source.instruction)));
+      for (const text of [source.context, source.script]) if (text) assert.ok(history.includes(escapeHTML(text)));
       assert.ok(history.includes(`dateTime="${new Date(attempt.at).toISOString()}"`));
       for (const question of source.questions) {
         assert.ok(history.includes(escapeHTML(question.prompt)));
@@ -525,6 +528,36 @@ try {
     noReferencesInHistory(history, lesson);
     assert.equal(JSON.stringify(value), before);
     assert.equal(m.sampleReviewDueAt(m.sampleSession(value)), due);
+  });
+  await test('registered matching and sentence histories retain complete submitted stimuli and survive backup without exposing review banks', async () => {
+    for (const variant of ['academic', 'general-training']) for (const id of ['listening-matching', 'reading-sentence-completion']) {
+      const value = closed(variant, id), lesson = m.selectedSampleLesson(value), session = m.sampleSession(value);
+      const before = JSON.stringify(value), due = m.sampleReviewDueAt(session), history = historySection(renderReadOnly(value));
+      for (const attempt of session.attempts) {
+        const material = c.sampleMaterials(lesson).find(item => item.id === attempt.promptId);
+        assert.ok(history.includes(escapeHTML(material.instruction)));
+        for (const text of [material.context, material.script]) if (text) assert.ok(history.includes(escapeHTML(text)));
+        for (const question of material.questions) assert.ok(history.includes(escapeHTML(attempt.answers[question.id])));
+      }
+      noReferencesInHistory(history, lesson);
+      const restored = await backup.readProgressFile(backup.makeProgressFile(stored(value)));
+      const read = p.readSampleProgress(restored.state.drafts[p.sampleProgressKey], clock);
+      assert.equal(read.status, 'ready');
+      assert.equal(historySection(renderReadOnly(read.value)), history);
+      assert.equal(m.sampleReviewDueAt(m.sampleSession(read.value)), due);
+      assert.equal(JSON.stringify(value), before);
+    }
+  });
+  await test('an early imported correction draft never exposes unsubmitted timed material in history', () => {
+    for (const id of ['listening-matching', 'reading-sentence-completion']) {
+      const value = continueIn(m.emptySampleState(), 'academic', id), lesson = m.selectedSampleLesson(value);
+      m.sampleSession(value).correctionNote = 'Imported pending note without a timed attempt';
+      const read = p.readSampleProgress(roundTrip(value), clock);
+      assert.equal(read.status, 'ready');
+      const history = historySection(renderReadOnly(read.value));
+      for (const text of [lesson.timed.title, lesson.timed.instruction, lesson.timed.context, lesson.timed.script]) if (text) assert.ok(!history.includes(escapeHTML(text)));
+      assert.equal(m.sampleSession(read.value).correctionNote, m.sampleSession(value).correctionNote);
+    }
   });
   await test('personal text history and correction survive the real whole-site backup and refresh path in both categories', async () => {
     for (const variant of ['academic', 'general-training']) for (const skill of ['speaking', 'writing']) {
@@ -545,12 +578,12 @@ try {
   });
   console.log(`${checks - historyChecks} read-only history groups and ${roundTrips - historyRoundTrips} additional real-transition round trips passed`);
   const integrationChecks=checks,integrationRoundTrips=roundTrips;
-  await test('registered directory has eight lessons per category, sixteen legal sessions and sixty-six unique materials',()=>{
+  await test('registered directory has ten lessons per category, twenty legal sessions and eighty-four unique materials',()=>{
     const refs=['academic','general-training'].flatMap(variant=>c.sampleLessonsFor(variant).flatMap(c.sampleMaterials));
-    assert.equal(refs.length,96);assert.equal(new Set(refs.map(material=>material.id)).size,66);
+    assert.equal(refs.length,120);assert.equal(new Set(refs.map(material=>material.id)).size,84);
     let value=m.emptySampleState();
     for(const variant of ['academic','general-training'])for(const lesson of c.sampleLessonsFor(variant))value=continueIn(value,variant,lesson.id);
-    assert.equal(Object.keys(value.sessions).length,16);roundTrip(value);
+    assert.equal(Object.keys(value.sessions).length,20);roundTrip(value);
     for(const task of n.samplePracticeTasks(stored(value),clock,true)){
       const parsed=route.parseRoute(task.href.slice(1)),target=n.sampleTarget(parsed.task);
       assert.equal(task.id,`sample:${target.variant}:${target.lessonId}`);

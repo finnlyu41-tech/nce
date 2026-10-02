@@ -1,6 +1,7 @@
 import type { OfficialSource } from './types';
 import {batch01AdditionalSources} from './curriculum/batch-01';
 import {batch02AdditionalSources} from './curriculum/batch-02';
+import {batch03AdditionalSources} from './curriculum/batch-03';
 
 const checkedAt = '2026-10-01';
 const ielts = 'https://ielts.org';
@@ -41,7 +42,7 @@ const baseSources: readonly OfficialSource[] = [
 
 export const officialSources:readonly OfficialSource[]=(()=>{
   const byId=new Map<string,OfficialSource>();
-  for(const item of [...baseSources,...batch01AdditionalSources,...batch02AdditionalSources]){
+  for(const item of [...baseSources,...batch01AdditionalSources,...batch02AdditionalSources,...batch03AdditionalSources]){
     const previous=byId.get(item.id);
     if(previous&&JSON.stringify(previous)!==JSON.stringify(item))throw new Error('Conflicting source identity: '+item.id);
     byId.set(item.id,item);

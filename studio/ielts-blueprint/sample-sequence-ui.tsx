@@ -73,6 +73,10 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
     const native=nativeMaterial(m),text=native?(m.script?undefined:native.stimulus):m.context;
     return <>{text&&<blockquote className="sample-context" lang="en">{text}</blockquote>}{m.script&&showScript&&<blockquote className="sample-context" lang="en">{m.script}</blockquote>}</>;
   };
+  function historyContext(m: SampleMaterial) {
+    const native = nativeMaterial(m);
+    return <><p>原题要求：{m.instruction}</p>{context(m, true)}{native && <ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option => <li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>;
+  }
   const audio = material?.script && <div className="sample-audio">
     <p>设备合成英语 · 声音质量未人工核验。播放完成后，请确认自己实际听到了声音。</p>
     <div className="sample-row"><button type="button" disabled={busy || !!draft?.submittedAt || waitingForClock} onClick={playAudio}>{draft?.playbacks.length ? '再次播放（保留重播记录）' : '播放这段音频'}</button>{busy && <button type="button" onClick={() => stopAudio()}>停止播放</button>}</div>
@@ -143,12 +147,14 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
           return <section className="sample-feedback" key={`${attempt.promptId}-${attempt.at}-${index}`} aria-label={`第 ${index + 1} 次作答记录`}>
             <h4>{index + 1}. {stageNames[attempt.stage]} · {source?.title || '历史题目'}</h4>
             <p className="sample-note">作答时间：{recordTime(attempt.at)} · {attempt.hinted ? '曾用提示' : '未用提示'} · {attempt.fresh ? '当时确认为未见过的材料' : '没有新材料证据'}{lesson?.skill === 'listening' && ` · ${attempt.playbackCount} 次播放请求，${attempt.playbackFailures} 次失败`}{attempt.elapsedMs !== null && ` · 训练用时 ${Math.ceil(attempt.elapsedMs / 1000)} 秒`}</p>
-            {source?.questions ? <ol aria-label="原题与自己的作答">{source.questions.map(q => <li key={q.id}><p>{questionPrompt(source,q.id)}</p><p>我的原答：<span lang="en">{attempt.answers[q.id] || '未填写'}</span></p></li>)}</ol> : <>{source && <p>原题要求：{source.instruction}</p>}<p>我的原稿：</p><blockquote className="sample-context" lang="en">{attempt.response || '未填写'}</blockquote></>}
+            {source && historyContext(source)}
+            {source?.questions ? <ol aria-label="原题与自己的作答">{source.questions.map(q => <li key={q.id}><p>{questionPrompt(source,q.id)}</p><p>我的原答：<span lang="en">{attempt.answers[q.id] || '未填写'}</span></p></li>)}</ol> : <><p>我的原稿：</p><blockquote className="sample-context" lang="en">{attempt.response || '未填写'}</blockquote></>}
           </section>;
         })}
-        {lesson && (session.correctedAt || Object.keys(session.correctionAnswers).length || session.correctionResponse || session.correctionNote) ? <section className="sample-feedback" aria-label="自己的订正">
+        {lesson && session.attempts.some(attempt => attempt.stage === 'timed' && attempt.promptId === lesson.timed.id) && (session.correctedAt || Object.keys(session.correctionAnswers).length || session.correctionResponse || session.correctionNote) ? <section className="sample-feedback" aria-label="自己的订正">
           <h4>我的订正 · {lesson.timed.title}</h4><p className="sample-note">{session.correctedAt ? <>保存时间：{recordTime(session.correctedAt)}</> : '订正草稿 · 尚未保存'}</p>
-          {lesson.timed.questions ? <ol aria-label="原题与自己的订正">{lesson.timed.questions.map(q => <li key={q.id}><p>{questionPrompt(lesson.timed,q.id)}</p><p>我的订正：<span lang="en">{session.correctionAnswers[q.id] || '未填写'}</span></p></li>)}</ol> : <><p>原题要求：{lesson.timed.instruction}</p><blockquote className="sample-context" lang="en">{session.correctionResponse || '尚未留下订正文稿'}</blockquote></>}
+          {historyContext(lesson.timed)}
+          {lesson.timed.questions ? <ol aria-label="原题与自己的订正">{lesson.timed.questions.map(q => <li key={q.id}><p>{questionPrompt(lesson.timed,q.id)}</p><p>我的订正：<span lang="en">{session.correctionAnswers[q.id] || '未填写'}</span></p></li>)}</ol> : <blockquote className="sample-context" lang="en">{session.correctionResponse || '尚未留下订正文稿'}</blockquote>}
           {session.correctionNote && <p>我的修正说明：{session.correctionNote}</p>}
         </section> : null}
       </div></section>

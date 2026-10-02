@@ -1,6 +1,7 @@
 import type {Variant} from './types';
 import {batch01LessonsFor} from './curriculum/batch-01';
 import {batch02LessonsFor} from './curriculum/batch-02';
+import {batch03LessonsFor} from './curriculum/batch-03';
 
 /** Original, fictional teaching material. Times and lengths below are local mini-task suggestions. */
 export type SampleQuestion = {id: string; prompt: string; options?: string[]; accepted: string[]; why: string};
@@ -76,7 +77,7 @@ export const sampleSequence = {
 };
 export function sampleLessonsFor(variant: Variant): SampleLesson[]{
   if(variant!=='academic'&&variant!=='general-training')throw new RangeError('Choose an exam category before requesting course materials.');
-  return [listening,reading,speaking,writing(variant),...batch01LessonsFor(variant),...batch02LessonsFor(variant)];
+  return [listening,reading,speaking,writing(variant),...batch01LessonsFor(variant),...batch02LessonsFor(variant),...batch03LessonsFor(variant)];
 }
 export const sampleLessonById = (variant: Variant, id: string) => sampleLessonsFor(variant).find(lesson => lesson.id === id);
 export const sampleMaterials = (lesson: SampleLesson) => [lesson.model, lesson.guided, lesson.independent, lesson.timed, ...lesson.reviews];
