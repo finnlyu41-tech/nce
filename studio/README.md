@@ -1,11 +1,8 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v31 · 来源与路线边界
+## 当前发布 v32 · 相邻课程连续练习
 
-当前版本 `2026-10-02-source-associations-route-labels-v31`，运行源码 `b464dfe7636f75d95b2ef98753a915445cb8fee4`，固定部署 [11c79fa3](https://11c79fa3.finn-english-studio.pages.dev)，生产入口 [学习](https://finn-english-studio.pages.dev/map/)。仅补 low/assail 的两条原书课次来源及 PDF199 页眉说明；旧卡 ID、FSRS 和真实复习历史保留。目录和地图明确标注地图检验，重置路线后的课程按钮可进入本课条件详情。最终源码在本机和两个公开地址各通过70组原生Chrome验收及50项公开资源哈希核对。原书、词典、听读和315/420原创词汇资料未改。其余来源候选、字形/映射歧义和CL01内容没有混入此发布。精确范围与限制见[来源小批记录](docs/source-review-small-batch-20261002.md)。
-
-
-面向 IELTS Academic 6.5 的独立英语学习网站，新概念四册作为按需选用的课程与补漏材料。应用只在 `studio/` 内开发，仓库根目录原网站保持原样。支持在线教材阅读与听读，也保留完全本地版与 IndexedDB 学习记录。旧教材文件导入和 `.espack` 完整资料包工具已移除；学习进度可通过顶部专门的保存与恢复入口备份。原有学习记录、已保存课文与音频继续读取。
+当前版本 `2026-10-02-course-loop-batch01-v32`，运行源码 `7c1ec8402fdf895fe8e4dcd12344cbadc2cae479`，固定部署 [60c8b3bd](https://60c8b3bd.finn-english-studio.pages.dev)，生产入口 [学习](https://finn-english-studio.pages.dev/map/)。第 1–2、3–4、5–6 课使用各自的连续练习与保存键，单一课程推荐可接续至既有第 7 课；新两组共36道原创题，国籍肯定陈述题保留问号边界。教材面板绑定本课原文、漫画和原声。普通 NCE 课的路线条件现显示本组地图检验要求。整站备份、恢复、回退及多标签写入保留已验证；本机和两个公开地址各通过89组原生Chrome验收，54项公开资源哈希一致。273组仍没有新增连续练习完成声明；自然24小时/7天、真机、实际听感与自由表达人工核验尚未验证。IELTS第四/第五批没有混入此发布。范围与证据见[生产接线记录](docs/course-loop-batch-01-production-integration.md)。
 
 ## 学习、单词与句型语法
 
