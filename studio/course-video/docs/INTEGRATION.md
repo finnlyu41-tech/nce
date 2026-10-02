@@ -6,6 +6,20 @@
 
 `sources.json` 是经过 `parseManifest` 严格校验的703个有课号分段，覆盖287课：第一册144课、第二册96课、第三册1–47课。研究原目录共有710分P；前言、准备、回顾和转至下册等无对应课号的7段没有冒充课程。第三册48–60课和第四册不显示视频入口。组合段按实际课号显示，尤其P168是121、123课，不能写成121–123课。每课可有多个视频分段，同一组合段可被不同实际课程引用。
 
+703课内片段之外的7条均有明确类型，完整原始710条及provenance保存在研究目录；额外机器清单为 `non-course-parts.json`。没有未知解析被静默丢弃：
+
+| BV | 分P | 原目录题名 | 原分类 |
+| --- | --- | --- | --- |
+| BV1xa411J7jJ | 1 | 开篇 | introduction |
+| BV1xa411J7jJ | 2 | 课前准备｜教材 笔记 测试 | preparation |
+| BV1cu411r7pw | 1 | 开篇 | introduction |
+| BV1cu411r7pw | 2 | 课前准备｜教材·笔记·测试 | preparation |
+| BV1cu411r7pw | 177 | 去往新概念英语 第二册【下半册】 | navigation |
+| BV1XA4y1o72C | 1 | 1-48总结 | review，原记录明确回顾1–48 |
+| BV1zY4y187cK | 1 | 开篇 | introduction |
+
+以上原始 `lessonNumbers=[]`、`contentSummary=null`，不作为课内片段；链接和时长等原证据仍完整保留。加载iframe没有“听完”或播放完成状态，不以onLoad证明真实播放。
+
 研究文件在 `leo-nce-catalog.research.json` 和对应README；它核对的是目录题名、分P和作者信息。播放器参数另依据 https://player.bilibili.com/ 。没有完整视频听读或字幕内容证据，703段均没有summary字段，不展示“Leo视频总结”。已有教材讲解保留原有标注。以后只有明确 `video-content` 或 `transcript` 证据、原分P地址及核验范围才能增加summary；目录题名不能用作内容摘要证据。
 
 ## 最小宿主接口
