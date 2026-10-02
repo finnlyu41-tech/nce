@@ -7,7 +7,7 @@ import {emptySpeaking, recordedSpeaking, assessedSpeaking, speakingDue, speaking
 import {readSpeechAudio, writeSpeechAudio} from './speech-recordings';
 import type {Save} from './learning';
 
-export function SpeakingPractice({unit,state,save,review,close}:{unit:Unit;state:Progress;save:Save;review:boolean;close:()=>void}) {
+export function SpeakingPractice({unit,state,save,review,close,onLeaveGuard}:{unit:Unit;state:Progress;save:Save;review:boolean;close:()=>void;onLeaveGuard?:(guard:(()=>Promise<boolean>)|null)=>void}) {
   const record=state.records[unit.id]?.speaking||emptySpeaking(unit),row=unit.rows[record.row];
   const player=useContext(PlayerContext),latest=useRef(record),revision=useRef<string|undefined>(undefined);
   const pendingChange=useRef<{id:string;event:'recorded'|'assessed';next:SpeakingRecord}|null>(null);
@@ -25,6 +25,11 @@ export function SpeakingPractice({unit,state,save,review,close}:{unit:Unit;state
     latest.current=next;
     return await save(s=>({...s,records:{...s.records,[unit.id]:{...(s.records[unit.id]||emptyRecord()),speaking:next}}}));
   }
+  function canLeave(){
+    if(!pendingChange.current)return true;
+    setError('本次录音与反馈尚未确认保存。请先下载录音，再重试保存。');return false;
+  }
+  useEffect(()=>{onLeaveGuard?.(async()=>canLeave());return()=>onLeaveGuard?.(null)},[onLeaveGuard]);
   function reveal(){help.current=true;setConceal(false);patch({...latest.current,hintAt:Date.now()});}
   async function changed(takes:SavedTake[],event:'recorded'|'assessed'){
     setError('');setStatus('正在保存本句录音与反馈…');
@@ -47,7 +52,7 @@ export function SpeakingPractice({unit,state,save,review,close}:{unit:Unit;state
   const date=speakingReviewAt(record),due=speakingDue(record);
   return <section className="speaking-practice" aria-label={review?'错句重说':'逐句跟读'}>
     <StopAudio/>
-    <button className="text-button" onClick={close}>← 回到本课</button>
+    <button className="text-button" onClick={()=>{if(canLeave())close()}}>← 回到本课</button>
     <span className="mini-label">{review?'次日回想 · 先说，再对照':'跟读一句 · 每次修一处'}</span>
     <h2>{conceal?'先自己说一遍':'把这一句读清楚'}</h2>
     {conceal?<><p>用英文说：{row.zh}</p><p className="footnote">原句、以前的反馈和录音暂时收起。先录一遍，再打开对照。</p>{!due&&<p className="footnote">{date?`本次只是提前练习，${new Date(date).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} 起再做无提示回想。`:'本次只记重说练习，不代表发音已掌握。'}</p>}</>:<p>听原声，录下这一句。需要自动反馈时，确认发送后再提交；自由表达不按原句逐字评分。</p>}
