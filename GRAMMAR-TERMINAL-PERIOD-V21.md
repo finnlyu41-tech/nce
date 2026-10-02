@@ -60,4 +60,8 @@ node scripts/test-grammar-terminal-period-browser.mjs
 
 `GRAMMAR_PERIOD_PREVIEW_ORIGIN` and `GRAMMAR_PERIOD_DEBUG_ORIGIN` allow other local ports. The script seeds synthetic progress in the preview's separate storage key, not in a learner's live application. It resumes the actual third item and exercises real textarea input, submission, feedback and reload.
 
-No shared release tree edit, flashcard/recording change, global route/navigation change, push, PR, merge or deployment was performed. The local commit/patch is ready for the parent release owner to review and integrate.
+The original author handoff ended before publication. The release owner integrated and published this patch on 2026-10-02 after the separate P0 production acceptance; see the linked production record below.
+
+## Production integration
+
+Integrated runtime `3a6e89cf3faf2534087ef2e001743450f2289153`, published as v23 at [486c9ea6](https://486c9ea6.finn-english-studio.pages.dev/). The actual production domain passed 12 bounded target cases reached through 72 native submissions, using a fresh synthetic profile and no storage injection. All raw answers and attempt judgments persisted after reload; no runtime exceptions. Final integrated v1/v2 P0 preview races also passed. Full source gates and both builds passed; both deployed URLs matched 44 exact resource hashes. These do not establish natural 24-hour evidence, real-device/audio acceptance or every grammar expression. Full scope and local evidence paths are in [the existing restore/integration handoff](studio/docs/progress-restore-cas.md#2026-10-02-接管与生产验收).
