@@ -12,7 +12,7 @@ assert(builder);const {build}=await import(new URL(builder+'/node_modules/esbuil
 const temp=await mkdtemp(path.join(os.tmpdir(),'ielts-audio-callback-check-'));
 const mocks={
  'test:harness':'export const h={states:[],refs:[],cursor:0,refCursor:0};',
- react:`import {h} from 'test:harness';export const useEffect=()=>{},useLayoutEffect=f=>f();export function useRef(v){const i=h.refCursor++;return h.refs[i]||(h.refs[i]={current:v})}export function useState(v){const i=h.cursor++;if(!(i in h.states))h.states[i]=typeof v==='function'?v():v;return [h.states[i],next=>{h.states[i]=typeof next==='function'?next(h.states[i]):next}]}`,
+ react:`import {h} from 'test:harness';export const useEffect=()=>{},useLayoutEffect=f=>f(),useId=()=>'audio-callback-fixture';export function useRef(v){const i=h.refCursor++;return h.refs[i]||(h.refs[i]={current:v})}export function useState(v){const i=h.cursor++;if(!(i in h.states))h.states[i]=typeof v==='function'?v():v;return [h.states[i],next=>{h.states[i]=typeof next==='function'?next(h.states[i]):next}]}`,
  'react/jsx-runtime':"export const Fragment='Fragment';export const jsx=(type,props)=>({type,props:props||{}});export const jsxs=jsx;",
 };
 let currentUtterance;

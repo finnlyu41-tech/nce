@@ -1,4 +1,5 @@
 import type {Variant} from '../types';
+import {tableCompletionLessonsFor,tableCompletionCoverage,tableCompletionSources} from './table-completion';
 import {batch01LessonsFor,batch01Coverage,batch01AdditionalSources} from './batch-01';
 import {batch02LessonsFor,batch02Coverage,batch02AdditionalSources} from './batch-02';
 import {batch03LessonsFor,batch03Coverage,batch03AdditionalSources} from './batch-03';
@@ -13,6 +14,7 @@ export const registeredCurriculumBatches=[
  {id:'batch-03',lessonsFor:batch03LessonsFor,bindings:batch03Coverage,sources:batch03AdditionalSources},
  {id:'batch-04',lessonsFor:batch04LessonsFor,bindings:batch04Coverage,sources:batch04AdditionalSources},
  {id:'batch-05',lessonsFor:batch05LessonsFor,bindings:batch05Coverage,sources:batch05AdditionalSources},
+ {id:'table-completion',lessonsFor:tableCompletionLessonsFor,bindings:tableCompletionCoverage,sources:tableCompletionSources},
 ] as const;
 export const registeredCurriculumSources=registeredCurriculumBatches.flatMap(batch=>[...batch.sources]);
 export const registeredCurriculumBindings=registeredCurriculumBatches.flatMap(batch=>[...batch.bindings]);

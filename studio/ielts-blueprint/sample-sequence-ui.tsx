@@ -5,16 +5,20 @@ import type {LearningStage, Variant} from './types';
 import {sampleLessonsFor, sampleMaterials, sampleSequence, type SampleMaterial} from './sample-sequence';
 import {batch02NativeLessonsFor} from './curriculum/batch-02';
 import {SampleMultiSelectInput} from './sample-multi-select-ui';
+import {tableCompletionStimulusFor} from './curriculum/table-completion';
+import {TableStimulusView} from './structured-table/table-stimulus';
+import {adaptTableAnswerAction} from './structured-table/projection';
+import type {TableContextMaterial} from '../app/ielts-table-context';
 import {activeSampleDraft, activeSampleMaterial, emptySampleState, sampleLessonReceipt, sampleSession, sampleWordCount, selectedSampleLesson, transitionSample, type SampleAction, type SampleState} from './sample-sequence-model';
 
-export type SampleSequenceProps = {value?: SampleState; initialValue?: SampleState; onChange?: (state: SampleState) => void; guidedFlow?: boolean; persistenceNote?: string};
+export type SampleSequenceProps = {value?: SampleState; initialValue?: SampleState; onChange?: (state: SampleState) => void; guidedFlow?: boolean; persistenceNote?: string; tableContexts?: Record<string,TableContextMaterial>};
 const stageNames: Record<LearningStage, string> = {explain: '理解方法', model: '看一个示范', guided: '跟着试', independent: '撤提示 · 新题', timed: '训练用限时', feedback: '反馈与订正', review: '延迟 · 新题复验'};
 const stages = Object.keys(stageNames) as LearningStage[];
 const delayedNames = {'not-scheduled': '订正后安排复验', 'not-due': '尚未到 24 小时', 'awaiting-new-task': '可以用新题复验', 'needs-repair': '新题仍有错误，先修这一处', assisted: '这次有提示、重播或材料已见过，保留为练习', 'awaiting-human-review': '新题作品已保留，等待人工／音频核验', 'local-target-observed': '观察到本课局部目标的隔日独立表现'};
 const recordTime = (at: number) => <time dateTime={new Date(at).toISOString()}>{new Date(at).toLocaleString('zh-CN', {year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false})}</time>;
 
 /** Standalone teaching sample. Host owns persistence; no localStorage or app progress writes. */
-export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow = false, persistenceNote}: SampleSequenceProps) {
+export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow = false, persistenceNote, tableContexts}: SampleSequenceProps) {
   const [internal, setInternal] = useState<SampleState>(() => initialValue || emptySampleState());
   const state = value || internal, latest = useRef(state); latest.current = state;
   // Speech events can outlive the render that requested playback. Keep the
@@ -22,6 +26,21 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
   const latestOnChange = useRef(onChange);
   useLayoutEffect(() => {latestOnChange.current = onChange;}, [onChange]);
   const [issue, setIssue] = useState(''), [now, setNow] = useState(Date.now());
+  const [pendingTableAnswers,setPendingTableAnswers]=useState<Record<string,string>>({});
+  const pendingTableRef=useRef(pendingTableAnswers);pendingTableRef.current=pendingTableAnswers;
+  // A controlled host must echo the exact raw input before we release the local
+  // copy. An engine transition alone does not acknowledge host acceptance or disk.
+  useLayoutEffect(()=>{
+    if(!value)return;
+    const kept={...pendingTableRef.current};let changed=false;
+    for(const [key,raw] of Object.entries(kept)){
+      const [variant,lessonId,materialId,type,questionId]=JSON.parse(key) as [Variant,string,string,'answer'|'correction-answer',string];
+      const saved=value.sessions[`${variant}:${lessonId}`];
+      const echoed=type==='correction-answer'?saved?.correctionAnswers[questionId]:saved?.drafts[materialId]?.answers[questionId];
+      if(echoed===raw){delete kept[key];changed=true;}
+    }
+    if(changed){pendingTableRef.current=kept;setPendingTableAnswers(kept);}
+  },[value]);
   const [categoryOpen,setCategoryOpen]=useState(false),[catalogOpen,setCatalogOpen]=useState(!guidedFlow),[historyOpen,setHistoryOpen]=useState(false),[helpOpen,setHelpOpen]=useState(false);
   const playing = useRef<{id: string; promptId: string; watchdog: ReturnType<typeof setTimeout>} | null>(null);
   const lesson = selectedSampleLesson(state), session = sampleSession(state), material = activeSampleMaterial(state), draft = activeSampleDraft(state);
@@ -35,7 +54,12 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
   useEffect(()=>{stageHeading.current?.focus({preventScroll:true});stageHeading.current?.scrollIntoView({block:'start',behavior:'instant'})},[state.variant,state.lessonId,session.stage]);
   const canSubmit = !!draft && !draft.submittedAt && !waitingForClock;
   const dispatch = (action: SampleAction) => {
-    const result = transitionSample(latest.current, action, Date.now());
+    if(Object.keys(pendingTableRef.current).length&&!['answer','correction-answer'].includes(action.type)){const message='有表格输入尚未保存。请缩短或重试后继续，完整输入仍保留。';setIssue(message);return {state:latest.current,issue:message};}
+    // Academic-only lessons have no GT counterpart. Choose an existing entry
+    // before changing category so the host never receives an invalid selection.
+    const current=latest.current;
+    const base=action.type==='select-variant'&&!sampleLessonsFor(action.variant).some(item=>item.id===current.lessonId)?{...current,lessonId:sampleLessonsFor(action.variant)[0].id}:current;
+    const result = transitionSample(base, action, Date.now());
     setIssue(result.issue || '');
     if (result.state !== latest.current) {latest.current = result.state; if (!value) setInternal(result.state); latestOnChange.current?.(result.state);}
     setNow(Date.now()); return result;
@@ -69,13 +93,15 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
       window.speechSynthesis.speak(utterance);
     } catch {fail('无法播放合成语音，请检查设备。');}
   }
+  const tableFor=(id:string)=>tableContexts?.[id]?.table||tableCompletionStimulusFor(id);
   const context = (m: SampleMaterial, showScript = false) => {
-    const native=nativeMaterial(m),text=native?(m.script?undefined:native.stimulus):m.context;
+    const native=nativeMaterial(m),text=tableContexts?.[m.id]?.context??(native?(m.script?undefined:native.stimulus):m.context);
     return <>{text&&<blockquote className="sample-context" lang="en">{text}</blockquote>}{m.script&&showScript&&<blockquote className="sample-context" lang="en">{m.script}</blockquote>}</>;
   };
-  function historyContext(m: SampleMaterial) {
+  function historyContext(m: SampleMaterial, originalAnswers:Record<string,string>={}, instance='') {
     const native = nativeMaterial(m);
-    return <><p>原题要求：{m.instruction}</p>{context(m, true)}{native && <ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option => <li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>;
+    const table=tableFor(m.id);
+    return <><p>原题要求：{tableContexts?.[m.id]?.instruction||m.instruction}</p>{context(m, true)}{table&&<TableStimulusView stimulus={table} answers={originalAnswers} readOnly idPrefix={`${m.id}-history-${instance}`}/>} {native && <ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option => <li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>;
   }
   const audio = material?.script && <div className="sample-audio">
     <p>设备合成英语 · 声音质量未人工核验。播放完成后，请确认自己实际听到了声音。</p>
@@ -84,14 +110,32 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
     {lastPlayback?.status === 'ended' && !draft?.submittedAt && <div className="sample-row"><button type="button" disabled={lastPlayback.audible} onClick={() => dispatch({type: 'audio-confirm', playbackId: lastPlayback.id, promptId: material.id})}>我实际听到了声音</button><button type="button" onClick={() => dispatch({type: 'audio-fail', playbackId: lastPlayback.id, promptId: material.id, reason: '学习者报告没有声音。'})}>没有声音</button></div>}
   </div>;
   function answers(m: SampleMaterial, correction = false) {
+    const table=tableFor(m.id);
+    if(table){
+      const firstSaved=draft?.submittedAt?session.attempts.find(a=>a.materialId===m.id):undefined;
+      if(!correction&&draft?.submittedAt&&!firstSaved)return <p role="alert">未找到本材料已保存的首答，此处保持只读；请重新读取记录。</p>;
+      const type=correction?'correction-answer':'answer',base=correction?session.correctionAnswers:(firstSaved?.answers||draft?.answers||{}),shown={...base};
+      const scope={variant:state.variant,lessonId:state.lessonId};
+      const answerKey=(questionId:string)=>JSON.stringify([scope.variant,scope.lessonId,m.id,type,questionId]);
+      for(const q of m.questions||[]){const key=answerKey(q.id);if(Object.hasOwn(pendingTableAnswers,key))shown[q.id]=pendingTableAnswers[key];}
+      return <TableStimulusView stimulus={table} answers={shown} readOnly={!correction&&!!draft?.submittedAt} idPrefix={`${m.id}-${type}`} onAnswer={(questionId,raw)=>{
+        const key=answerKey(questionId),pending={...pendingTableRef.current,[key]:raw};pendingTableRef.current=pending;setPendingTableAnswers(pending);
+        const current=latest.current,currentMaterial=correction?selectedSampleLesson(current)?.timed:activeSampleMaterial(current);
+        if(current.variant!==scope.variant||current.lessonId!==scope.lessonId||currentMaterial?.id!==m.id||correction&&sampleSession(current).stage!=='feedback'){
+          setIssue('练习位置已更新，这次表格输入尚未交给工作区；完整输入仍保留。');return;
+        }
+        const adapted=adaptTableAnswerAction(table,{type,questionId,value:raw});if(!adapted.ok){setIssue('此格完整输入尚未交给工作区：'+adapted.reason);return;}
+        const result=dispatch(adapted.action);if(!value&&!result.issue){const kept={...pendingTableRef.current};delete kept[key];pendingTableRef.current=kept;setPendingTableAnswers(kept);}
+      }}/>;
+    }
     const native=nativeMaterial(m);
     if(native)return <SampleMultiSelectInput task={native.task} rawAnswer={(correction?session.correctionAnswers:draft?.answers)?.[native.task.id]||''} onChange={raw=>dispatch({type:correction?'correction-answer':'answer',questionId:native.task.id,value:raw})}/>;
     return m.questions?.map(q => <label className="sample-field" key={q.id}>{q.prompt}
       {q.options ? <select value={(correction ? session.correctionAnswers : draft?.answers)?.[q.id] || ''} onChange={event => dispatch({type: correction ? 'correction-answer' : 'answer', questionId: q.id, value: event.target.value})}><option value="">请选择</option>{q.options.map(option => <option key={option}>{option}</option>)}</select> : <input value={(correction ? session.correctionAnswers : draft?.answers)?.[q.id] || ''} autoComplete="off" autoCapitalize="off" maxLength={500} onChange={event => dispatch({type: correction ? 'correction-answer' : 'answer', questionId: q.id, value: event.target.value})}/>}
     </label>);
   }
-  function questionPrompt(m:SampleMaterial,id:string){return nativeMaterial(m)?.task.prompt||m.questions?.find(q=>q.id===id)?.prompt}
-  function modelQuestions(m:SampleMaterial){const native=nativeMaterial(m);return <><ol aria-label="示范题目">{m.questions?.map(q=><li key={q.id} id={`${m.id}-${q.id}`}>{questionPrompt(m,q.id)}</li>)}</ol>{native&&<ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option=><li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>}
+  function questionPrompt(m:SampleMaterial,id:string){return nativeMaterial(m)?.task.prompt||tableContexts?.[m.id]?.questions.find(q=>q.id===id)?.prompt||m.questions?.find(q=>q.id===id)?.prompt}
+  function modelQuestions(m:SampleMaterial){const native=nativeMaterial(m),table=tableFor(m.id);return <>{table&&<TableStimulusView stimulus={table} answers={Object.fromEntries((m.questions||[]).map(q=>[q.id,q.accepted[0]]))} readOnly idPrefix={`${m.id}-model`}/>}<ol aria-label="示范题目">{m.questions?.map(q=><li key={q.id} id={`${m.id}-${q.id}`}>{questionPrompt(m,q.id)}</li>)}</ol>{native&&<ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option=><li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>}
   function references(m:SampleMaterial){const native=nativeMaterial(m);return native?<><p>参考字母组：<strong lang="en">{m.questions?.[0].accepted[0]}</strong>。本站按完整字母组核对，不计算正式考试的部分得分，也不换算 IELTS Band。</p><ol className="sample-option-list">{native.task.options.map(option=><li key={option.id}><strong lang="en">{option.id}. {option.text}</strong><p>{option.reason}</p>{option.quotes.map(quote=><blockquote key={quote} lang="en">{quote}</blockquote>)}</li>)}</ol></>:<ol aria-label="示范答案与依据">{m.questions?.map(q=><li key={q.id} aria-describedby={`${m.id}-${q.id}`}><strong lang="en">{q.accepted[0]}</strong>：{q.why}</li>)}</ol>}
   const categoryChoice=<><div className="sample-row" aria-label="先选择考试类别">{(['academic','general-training'] as Variant[]).map(variant=><button type="button" key={variant} aria-pressed={state.variant===variant} onClick={()=>{setCategoryOpen(false);navigate({type:'select-variant',variant})}}>{variant==='academic'?'Academic':'General Training'}</button>)}</div><p className="sample-note">两类阅读与写作分别选材；切换类别会保留各自记录。</p></>;
   return <section className="ielts-sample-sequence" aria-label="雅思小任务练习">
@@ -126,7 +170,7 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
         {session.stage === 'feedback' && <><h4>对照原始作答，修一个问题</h4>{session.attempts.filter(a => a.stage === 'independent' || a.stage === 'timed').map((attempt, index) => {
           const source = attempt.stage === 'independent' ? lesson.independent : lesson.timed;
           return <section className="sample-feedback" key={`${attempt.at}-${index}`}><h5>{source.title}</h5><p>记录时间：{new Date(attempt.at).toLocaleString()} · {attempt.hinted ? '用过提示' : '未用提示'} · {attempt.fresh ? '本地首次材料，学习者确认未见过' : '没有新材料证据'}{lesson.skill === 'listening' && ` · ${attempt.playbackCount} 次播放请求`}{attempt.withinTrainingTime !== null && ` · ${attempt.withinTrainingTime ? '建议时间内提交' : '超出建议时间'}`}</p>
-            {context(source,true)}{source.questions?<><ol>{source.questions.map(q=><li key={q.id}><p>{questionPrompt(source,q.id)}</p><p>原答：<span lang="en">{attempt.answers[q.id]||'空白'}</span></p></li>)}</ol>{nativeMaterial(source)&&<p>{attempt.matched?'整组匹配':'整组未匹配'}</p>}{references(source)}</>: <><blockquote lang="en">{attempt.response}</blockquote><p>只有文本和自查；四维评分及人工核验尚未完成。{lesson.skill === 'speaking' && '真实声音、发音及互动评价仍待音频核验。'}</p></>}
+            {context(source,true)}{tableFor(source.id)&&<TableStimulusView stimulus={tableFor(source.id)!} answers={attempt.answers} readOnly idPrefix={`${source.id}-original-${index}`}/>} {source.questions?<><ol>{source.questions.map(q=><li key={q.id}><p>{questionPrompt(source,q.id)}</p><p>原答：<span lang="en">{attempt.answers[q.id]||'空白'}</span></p></li>)}</ol>{nativeMaterial(source)&&<p>{attempt.matched?'整组匹配':'整组未匹配'}</p>}{references(source)}</>: <><blockquote lang="en">{attempt.response}</blockquote><p>只有文本和自查；四维评分及人工核验尚未完成。{lesson.skill === 'speaking' && '真实声音、发音及互动评价仍待音频核验。'}</p></>}
 
           </section>;
         })}<ul>{lesson.timed.checklist.map(check => <li key={check}>{check}</li>)}</ul>
@@ -147,13 +191,13 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
           return <section className="sample-feedback" key={`${attempt.promptId}-${attempt.at}-${index}`} aria-label={`第 ${index + 1} 次作答记录`}>
             <h4>{index + 1}. {stageNames[attempt.stage]} · {source?.title || '历史题目'}</h4>
             <p className="sample-note">作答时间：{recordTime(attempt.at)} · {attempt.hinted ? '曾用提示' : '未用提示'} · {attempt.fresh ? '当时确认为未见过的材料' : '没有新材料证据'}{lesson?.skill === 'listening' && ` · ${attempt.playbackCount} 次播放请求，${attempt.playbackFailures} 次失败`}{attempt.elapsedMs !== null && ` · 训练用时 ${Math.ceil(attempt.elapsedMs / 1000)} 秒`}</p>
-            {source && historyContext(source)}
+            {source && historyContext(source,attempt.answers,`${attempt.at}-${index}`)}
             {source?.questions ? <ol aria-label="原题与自己的作答">{source.questions.map(q => <li key={q.id}><p>{questionPrompt(source,q.id)}</p><p>我的原答：<span lang="en">{attempt.answers[q.id] || '未填写'}</span></p></li>)}</ol> : <><p>我的原稿：</p><blockquote className="sample-context" lang="en">{attempt.response || '未填写'}</blockquote></>}
           </section>;
         })}
         {lesson && session.attempts.some(attempt => attempt.stage === 'timed' && attempt.promptId === lesson.timed.id) && (session.correctedAt || Object.keys(session.correctionAnswers).length || session.correctionResponse || session.correctionNote) ? <section className="sample-feedback" aria-label="自己的订正">
           <h4>我的订正 · {lesson.timed.title}</h4><p className="sample-note">{session.correctedAt ? <>保存时间：{recordTime(session.correctedAt)}</> : '订正草稿 · 尚未保存'}</p>
-          {historyContext(lesson.timed)}
+          {historyContext(lesson.timed,session.correctionAnswers,'correction')}
           {lesson.timed.questions ? <ol aria-label="原题与自己的订正">{lesson.timed.questions.map(q => <li key={q.id}><p>{questionPrompt(lesson.timed,q.id)}</p><p>我的订正：<span lang="en">{session.correctionAnswers[q.id] || '未填写'}</span></p></li>)}</ol> : <blockquote className="sample-context" lang="en">{session.correctionResponse || '尚未留下订正文稿'}</blockquote>}
           {session.correctionNote && <p>我的修正说明：{session.correctionNote}</p>}
         </section> : null}
