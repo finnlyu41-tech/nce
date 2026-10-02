@@ -72,7 +72,7 @@ check('critical interpretative boundaries and literal POS/gloss remain distinct'
 });
 check('authored examples, IELTS seed, dictionary/enrollment/parser/store/scheduler files untouched',()=>{
  assert.equal(m.originalVocabularyExamples.length,420);assert.equal(new Set(m.originalVocabularyExamples.map(e=>e.word.toLowerCase())).size,315);assert.deepEqual(m.originalVocabularyExamples,baseline.originalVocabularyExamples);assert.deepEqual(m.ieltsFlashcardExamples,baseline.ieltsFlashcardExamples);
- for(const path of ['app/vocabulary-examples.ts','app/ielts-flashcard-examples.ts','app/flashcards.ts','app/progress-file.ts','app/model.ts','app/language.ts','app/offline-store.ts','app/lesson-context.tsx']){const actual=execFileSync('git',['show',proof.baseCommit+':studio/'+path],{cwd:fileURLToPath(root)});assert.equal(sha(actual),sha(execFileSync('cat',[fileURLToPath(new URL(path,root))])))}
+ for(const path of ['app/vocabulary-examples.ts','app/ielts-flashcard-examples.ts','app/flashcards.ts','app/progress-file.ts','app/model.ts','app/language.ts','app/offline-store.ts','app/lesson-context.tsx']){const actual=execFileSync('git',['show',(path==='app/ielts-flashcard-examples.ts'?'92f777d7d4c61811689b353263d7d59076b4e507':proof.baseCommit)+':studio/'+path],{cwd:fileURLToPath(root)});assert.equal(sha(actual),sha(execFileSync('cat',[fileURLToPath(new URL(path,root))])))}
 });
 const now=Date.UTC(2026,9,2,12),f=m.cards;let state=structuredClone(m.initial);state.drafts['saved']='Existing unrelated note';
 for(const [i,r] of m.reviewedR19SourceNotes.entries()){

@@ -88,7 +88,7 @@ try{
   stdin:{contents:"import './map/main.tsx';export {LearningRoom} from './map/learning.tsx';export {CourseRoom,StarterTeaching} from './map/course.tsx';export * as model from './map/model.ts';export * as content from 'test:fixture';export {harness} from 'test:harness';",resolveDir:fileURLToPath(root),sourcefile:'save-test-entry.ts',loader:'ts'},
   bundle:true,platform:'node',format:'esm',target:'node22',jsx:'automatic',outfile:output,logLevel:'silent',
   plugins:[{name:'save-source-components',setup(build){
-   build.onResolve({filter:/.*/},args=>Object.hasOwn(mocks,args.path)?{path:args.path,namespace:'save-fixture'}:args.path.endsWith('.css')?{path:args.path,namespace:'empty-css'}:undefined);
+   build.onResolve({filter:/.*/},args=>args.path==='./content'&&!args.importer.includes('/map/')?undefined:Object.hasOwn(mocks,args.path)?{path:args.path,namespace:'save-fixture'}:args.path.endsWith('.css')?{path:args.path,namespace:'empty-css'}:undefined);
    build.onLoad({filter:/.*/,namespace:'save-fixture'},args=>({contents:mocks[args.path],loader:'js'}));
    build.onLoad({filter:/.*/,namespace:'empty-css'},()=>({contents:'',loader:'js'}));
    if(baseline)build.onLoad({filter:/\/map\/(main|learning|course)\.tsx$/},args=>({contents:execFileSync('git',['show',`97c85c5:studio/map/${args.path.split('/').at(-1)}`],{cwd:fileURLToPath(root),encoding:'utf8'}),loader:'tsx'}));
