@@ -10,7 +10,7 @@ export const catalogueGroups = [
   {id:'extra',title:'补充选读',caption:'按需要补强',description:'新概念第三、四册的课程与笔记。'},
 ] as const;
 export type CatalogueGroup=typeof catalogueGroups[number]['id'];
-export type LearningRoute={id:string;learn:boolean;catalogue?:CatalogueGroup;home?:true;query?:string;speaking?:'practice'|'review';review?:true;manualAccess?:true;conditions?:true};
+export type LearningRoute={id:string;learn:boolean;catalogue?:CatalogueGroup;home?:true;overview?:true;query?:string;speaking?:'practice'|'review';review?:true;manualAccess?:true;conditions?:true};
 export function parseLearningRoute(hash:string,fallback='first'):LearningRoute {
   const [path,params='']=hash.split('?');
   const course=path.match(/^#\/courses(?:\/([A-Za-z0-9]+))?$/);
@@ -19,6 +19,7 @@ export function parseLearningRoute(hash:string,fallback='first'):LearningRoute {
   const route:LearningRoute={id:match&&nodeById(match[2])?match[2]:nodeById(fallback)?fallback:'first',learn:!!match&&!!nodeById(match[2])&&match[1]==='learn'};
   if(['','#','#/','#/today'].includes(path))route.home=true;
   if(match?.[1]==='map'&&nodeById(match[2])&&new URLSearchParams(params).get('conditions')==='1')route.conditions=true;
+  if(match?.[1]==='map'&&nodeById(match[2])&&new URLSearchParams(params).get('view')==='route'&&!route.conditions)route.overview=true;
   const speaking=new URLSearchParams(params).get('speaking');
   if(route.learn&&nodeById(route.id)?.kind==='unit'&&(speaking==='practice'||speaking==='review'))route.speaking=speaking;
   if(route.learn&&!speaking&&new URLSearchParams(params).get('review')==='1')route.review=true;
