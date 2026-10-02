@@ -1,0 +1,104 @@
+{
+  "base": "92f777d7d4c61811689b353263d7d59076b4e507",
+  "formalRemoteAtStart": "424efc1869e98cd7b19afd2c1ab7cab0e8380b4b",
+  "contentCommits": {
+    "original": [
+      "1713614bd7b859fa503c46093a1138179cfddad8",
+      "374fb251f725d5db692ab4422edef1b6b8b89e38",
+      "ee34333bb530debe268ed203eb9bec338cb33736"
+    ],
+    "imported": [
+      "b4fd81a",
+      "0cc6a29",
+      "0554d4a13e170ca385fa97f2eadda620110fd0a0"
+    ]
+  },
+  "ownedProductionFiles": [
+    "studio/course-loop/registry.mjs",
+    "studio/course-loop/host-contract.d.ts",
+    "studio/app/course-loop-next.ts"
+  ],
+  "registeredOddCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35",
+    "nce1-37",
+    "nce1-39",
+    "nce1-41",
+    "nce1-43",
+    "nce1-45",
+    "nce1-47",
+    "nce1-49",
+    "nce1-51",
+    "nce1-53",
+    "nce1-55",
+    "nce1-57",
+    "nce1-59"
+  ],
+  "newContentTasks": 216,
+  "allRegisteredTasks": 540,
+  "SourceKind": "unchanged at immutable base; video owner must retain any subsequent video extension",
+  "route": "35\u219237\u219239\u219241\u219243\u219245\u219247\u219249\u219251\u219253\u219255\u219257\u219259\u219261",
+  "oldCandidatePreserved": "9310cb98a5d345f29bc345c6960aae0450effcc4",
+  "assets": "read-only symlink; no media copied",
+  "protectedFileSha256": {
+    "studio/course-loop/model.mjs": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+    "studio/app/course-loop-ui.tsx": "a3711e029417a03f1548db367364e677886abe8dfca3262d5e0e46cd868dd380",
+    "studio/app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028",
+    "studio/app/progress-save.tsx": "49951e975a9f6779ecc3d0b4ad6b31481d5ad50540e3dbfd20f842320ece237b",
+    "studio/app/progress-file.ts": "67ef85cd106c87faf762442304afcc91f5ec8fadab0ae968eb5a852455ce5d10",
+    "studio/app/today-practice.ts": "38cabaefb794cfba8c04b4a191cd2d16f1eb4d6d8f8bfa4521de889ea55a86be",
+    "studio/map/learning.tsx": "cd265968e3249a9ef38e60fed3e050c7c8535f0e958b8d3581c485a4f6fc47a4",
+    "studio/map/main.tsx": "0f8524eea57952074e76509590acf0e817fdb3ce7d36362088ad65d786cd8fea",
+    "studio/map/progress-write.ts": "8fda947ce84db5243e66cac21096e6260bec820adc666c1295a0ddc1317ef3de"
+  },
+  "validation": {
+    "productionNode": {
+      "pass": 52,
+      "fail": 0
+    },
+    "frozenContentAssertionsOnActualHost": {
+      "pass": 78,
+      "fail": 0
+    },
+    "native": {
+      "pass": 25,
+      "fail": 0,
+      "runtimeExceptions": 0,
+      "receipt": "native/receipt.json"
+    },
+    "delayedNative": {
+      "pass": 2,
+      "fail": 0,
+      "runtimeExceptions": 0,
+      "receipt": "delayed-native/receipt.json",
+      "syntheticBackdatedImport": true,
+      "browserClockUnchanged": true,
+      "naturalRetention": "unverified"
+    }
+  },
+  "scope": "Local candidate only; no push, merge or deploy; fresh synthetic QA only",
+  "unverified": [
+    "published origin",
+    "natural24h/7d",
+    "physical phone",
+    "audibility",
+    "human expression review",
+    "learning gains"
+  ]
+}

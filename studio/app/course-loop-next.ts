@@ -3,6 +3,13 @@ import {courseLoopFor,courseLoopBindings,parseCourseLoop} from './course-loop-pr
 import {continueNode,statusMap,type Progress} from '../map/model';
 import {nodeById,type MapNode} from '../map/content';
 
+/** A missing next-course mapping must retain a real destination. Unknown IDs
+ * use the supplied current route; selecting it creates no completion evidence. */
+export function courseSuccessorNode(id:string,fallback:MapNode):MapNode {
+ const successorIds:Record<string,string>={'nce1-1':'nce1-3','nce1-3':'nce1-5','nce1-5':'nce1-7','nce1-7':'nce1-9','nce1-9':'nce1-11','nce1-11':'nce1-13','nce1-13':'nce1-15','nce1-15':'nce1-17','nce1-17':'nce1-19','nce1-19':'nce1-21','nce1-21':'nce1-23','nce1-23':'nce1-25','nce1-25':'nce1-27','nce1-27':'nce1-29','nce1-29':'nce1-31','nce1-31':'nce1-33','nce1-33':'nce1-35','nce1-35':'nce1-37','nce1-37':'nce1-39','nce1-39':'nce1-41','nce1-41':'nce1-43','nce1-43':'nce1-45','nce1-45':'nce1-47','nce1-47':'nce1-49','nce1-49':'nce1-51','nce1-51':'nce1-53','nce1-53':'nce1-55','nce1-55':'nce1-57','nce1-57':'nce1-59','nce1-59':'nce1-61'};
+ return nodeById(successorIds[id])||nodeById(id)||fallback;
+}
+
 /** One host selector for Today, the map and course continuation. It grants no
  * completion/unlock and never copies the course interval into map or FSRS. */
 export function nextCourse(state:State,map:Progress,now=Date.now()):MapNode {
@@ -12,14 +19,13 @@ export function nextCourse(state:State,map:Progress,now=Date.now()):MapNode {
   return [{course,parsed,next:parsed.ok?course.model.recommendation(parsed.view,now):null}];
  });
  const unfinished=saved.filter(item=>!item.parsed.ok||item.next?.kind==='resume').sort((a,b)=>(a.parsed.ok?a.parsed.view.lastAt:now)-(b.parsed.ok?b.parsed.view.lastAt:now))[0];
- if(unfinished)return nodeById(unfinished.course.id)!;
+ if(unfinished)return nodeById(unfinished.course.id)||continueNode(map,now);
  const due=saved.filter(item=>item.next?.kind==='review').sort((a,b)=>(a.next?.dueAt||now)-(b.next?.dueAt||now))[0];
- if(due)return nodeById(due.course.id)!;
+ if(due)return nodeById(due.course.id)||continueNode(map,now);
  const finished=saved.filter(item=>item.next?.kind==='continue-route'||item.next?.kind==='needs-new-material');
  if(!finished.length)return continueNode(map,now);
- const successorIds:Record<string,string>={'nce1-1':'nce1-3','nce1-3':'nce1-5','nce1-5':'nce1-7','nce1-7':'nce1-9','nce1-9':'nce1-11','nce1-11':'nce1-13','nce1-13':'nce1-15','nce1-15':'nce1-17','nce1-17':'nce1-19','nce1-19':'nce1-21','nce1-21':'nce1-23','nce1-23':'nce1-25','nce1-25':'nce1-27','nce1-27':'nce1-29','nce1-29':'nce1-31','nce1-31':'nce1-33','nce1-33':'nce1-35','nce1-35':'nce1-37'};
- const successor=(id:string)=>nodeById(successorIds[id])!;
  const current=continueNode(map,now),last=map.lastNode?nodeById(map.lastNode):undefined;
+ const successor=(id:string)=>courseSuccessorNode(id,current);
  // Preserve advanced or reset map routes. A completed selected course can
  // move to its successor only when it is still the map's active course.
  if(last&&last.id!=='nce1-1'&&last.stage!=='starter'&&last.id!==nodeById('nce1-1')?.parent){

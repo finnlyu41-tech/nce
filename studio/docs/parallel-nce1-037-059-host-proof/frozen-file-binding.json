@@ -1,0 +1,41 @@
+{
+  "base": "92f777d7d4c61811689b353263d7d59076b4e507",
+  "protectedUnchanged": {
+    "studio/course-loop/model.mjs": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+    "studio/app/course-loop-ui.tsx": "a3711e029417a03f1548db367364e677886abe8dfca3262d5e0e46cd868dd380",
+    "studio/app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028",
+    "studio/app/progress-save.tsx": "49951e975a9f6779ecc3d0b4ad6b31481d5ad50540e3dbfd20f842320ece237b",
+    "studio/app/progress-file.ts": "67ef85cd106c87faf762442304afcc91f5ec8fadab0ae968eb5a852455ce5d10",
+    "studio/app/today-practice.ts": "38cabaefb794cfba8c04b4a191cd2d16f1eb4d6d8f8bfa4521de889ea55a86be",
+    "studio/map/learning.tsx": "cd265968e3249a9ef38e60fed3e050c7c8535f0e958b8d3581c485a4f6fc47a4",
+    "studio/map/main.tsx": "0f8524eea57952074e76509590acf0e817fdb3ce7d36362088ad65d786cd8fea",
+    "studio/map/progress-write.ts": "8fda947ce84db5243e66cac21096e6260bec820adc666c1295a0ddc1317ef3de"
+  },
+  "authoredContentUnchanged": {
+    "studio/course-loop/parallel-nce1-037-047/content-contract.mjs": "8951fa2cd32e117d1d20fb7ab6c85dd964e2ae7dfaad9e049d4bdf2e378e3d19",
+    "studio/course-loop/parallel-nce1-037-047/lesson-nce1-037.mjs": "329193ad7eaab42a0ca1eb01c938c1211eb75b1c79f7c8fe5b64135a96172c82",
+    "studio/course-loop/parallel-nce1-037-047/lesson-nce1-039.mjs": "9a158bb2fd16609d1b532335838bc91303db0f905d8b793ddfd71b4fab8e143c",
+    "studio/course-loop/parallel-nce1-037-047/lesson-nce1-041.mjs": "d7ce22e062d535f8384791c25230c0bf886afd2b34b410992092260efad6c27f",
+    "studio/course-loop/parallel-nce1-037-047/lesson-nce1-043.mjs": "c60264002f5af730af8a52a446fb6391c3143eefdbc0083d42fe47a74098a861",
+    "studio/course-loop/parallel-nce1-037-047/lesson-nce1-045.mjs": "19985f90540eb017d300872fa75baf0cbcd5efa957aa2b16d633c867b15bb7a2",
+    "studio/course-loop/parallel-nce1-037-047/lesson-nce1-047.mjs": "fdf4c7a57174cb6523b4a35cce34c169a335cb113b94aa80a2b5061deb4d221a",
+    "studio/course-loop/parallel-nce1-037-047/preview-production.mjs": "76b7a6f1d9ee2769416c3a46a5d7231b3a6acbab7e8d0262b02ea1b812a4efbe",
+    "studio/course-loop/parallel-nce1-037-047/test-binding.mjs": "191ca7dac535e61de90045051ebc0162fb693713f882efe458fb2db3d48cdf17",
+    "studio/course-loop/parallel-nce1-037-047/test-blind-review.mjs": "c18012e168d264138aeb946b773f63c80f19c226f15c9172753f57ccd4515baf",
+    "studio/course-loop/parallel-nce1-037-047/test-content.mjs": "324fbccfc82f7c0524416b97b8673d969fb04fe094be1241f328089ae617b766",
+    "studio/course-loop/parallel-nce1-037-047/test-preview.mjs": "0906ee43b9a30d8b985981c4ff716b3ece513387d0ccb047abbe17d43f40d0a5",
+    "studio/course-loop/parallel-nce1-049-059/authoring.mjs": "1790ee4841217107da3b18bbaa78c06ddfb3af329d2ca18c4f5da8b6a0bbf089",
+    "studio/course-loop/parallel-nce1-049-059/lesson-nce1-049.mjs": "224b1c799cb866f0eac869d5b9520c4ea0cfe9a0e45da0e40b47d6d5a332a966",
+    "studio/course-loop/parallel-nce1-049-059/lesson-nce1-051.mjs": "0fc6f009b3393c65ff70c8387657d7e3c5f399372df69f7f873888351c4eb454",
+    "studio/course-loop/parallel-nce1-049-059/lesson-nce1-053.mjs": "4c9a3ddaea3c07629f78617808dd6feddb66b3273321814dc2ba87d28add099a",
+    "studio/course-loop/parallel-nce1-049-059/lesson-nce1-055.mjs": "d5e1110a298bda49bbfcd6fa4916ab8baa3c963b2783c8f284fe2c0da124db3d",
+    "studio/course-loop/parallel-nce1-049-059/lesson-nce1-057.mjs": "7f8b7d91a36ba9dff7c078c17d4cc144480b3bba73189d8535432121f1f51dee",
+    "studio/course-loop/parallel-nce1-049-059/lesson-nce1-059.mjs": "75a34046daafaa8b8334dcd4d26f367f16874643ff7e90604e243ef4dad33339",
+    "studio/course-loop/parallel-nce1-049-059/preview-server.mjs": "8bd735f28b357edee5f31da5b36150610a167e3fa22d71c87f9ab15c9bfb8744",
+    "studio/course-loop/parallel-nce1-049-059/test-browser.mjs": "4e42b4c470d485b1672f5aa866466a7cfa3c651f6caccfa568c0e5bc38f3a7b2",
+    "studio/course-loop/parallel-nce1-049-059/test-content.mjs": "4ad182566918124f8376e787f6ccc1cae78765f193311aad2ea1b813c5c14edb",
+    "studio/course-loop/parallel-nce1-049-059/test-source-preview.mjs": "671cdfe9e4cca00b6e60e57abd2d4eb51159a8772b12a3eb391b0dfaf71bb281",
+    "studio/course-loop/parallel-nce1-049-059/test-source.mjs": "14e7bebd7efc713ec0cfb2561df99c211b9d44cf57d4f1d4d06badb2f5fa0d30"
+  },
+  "SourceKindUnchanged": true
+}

@@ -16,11 +16,23 @@ import * as parallel29 from './parallel-nce1-025-035/lesson-nce1-029.mjs';
 import * as parallel31 from './parallel-nce1-025-035/lesson-nce1-031.mjs';
 import * as parallel33 from './parallel-nce1-025-035/lesson-nce1-033.mjs';
 import * as parallel35 from './parallel-nce1-025-035/lesson-nce1-035.mjs';
+import * as parallel37 from './parallel-nce1-037-047/lesson-nce1-037.mjs';
+import * as parallel39 from './parallel-nce1-037-047/lesson-nce1-039.mjs';
+import * as parallel41 from './parallel-nce1-037-047/lesson-nce1-041.mjs';
+import * as parallel43 from './parallel-nce1-037-047/lesson-nce1-043.mjs';
+import * as parallel45 from './parallel-nce1-037-047/lesson-nce1-045.mjs';
+import * as parallel47 from './parallel-nce1-037-047/lesson-nce1-047.mjs';
+import * as parallel49 from './parallel-nce1-049-059/lesson-nce1-049.mjs';
+import * as parallel51 from './parallel-nce1-049-059/lesson-nce1-051.mjs';
+import * as parallel53 from './parallel-nce1-049-059/lesson-nce1-053.mjs';
+import * as parallel55 from './parallel-nce1-049-059/lesson-nce1-055.mjs';
+import * as parallel57 from './parallel-nce1-049-059/lesson-nce1-057.mjs';
+import * as parallel59 from './parallel-nce1-049-059/lesson-nce1-059.mjs';
 import {createCourseLoopModel} from './model.mjs';
 
 // Coverage files are records, never a registration source. Unlisted courses
 // continue through the existing textbook/map host.
-export const registeredCourses=Object.freeze([pilot,adjacent3,adjacent5,adjacent7,adjacent9,adjacent11,parallel13,parallel15,parallel17,parallel19,parallel21,parallel23,parallel25,parallel27,parallel29,parallel31,parallel33,parallel35].map(content=>Object.freeze({
+export const registeredCourses=Object.freeze([pilot,adjacent3,adjacent5,adjacent7,adjacent9,adjacent11,parallel13,parallel15,parallel17,parallel19,parallel21,parallel23,parallel25,parallel27,parallel29,parallel31,parallel33,parallel35,parallel37,parallel39,parallel41,parallel43,parallel45,parallel47,parallel49,parallel51,parallel53,parallel55,parallel57,parallel59].map(content=>Object.freeze({
  id:content.lesson.id,lesson:content.lesson,byId:content.byId,
  key:'nce-course-loop-v1:'+content.lesson.source.groupId,
  inputsKey:'nce-course-loop-inputs-v1:'+content.lesson.source.groupId,
