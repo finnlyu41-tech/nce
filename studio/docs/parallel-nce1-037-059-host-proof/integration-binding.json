@@ -1,5 +1,5 @@
 {
-  "base": "92f777d7d4c61811689b353263d7d59076b4e507",
+  "base": "febb408a5777b0fef77ba5f0b5d8f7dd57e1902d",
   "formalRemoteAtStart": "424efc1869e98cd7b19afd2c1ab7cab0e8380b4b",
   "contentCommits": {
     "original": [
@@ -8,9 +8,9 @@
       "ee34333bb530debe268ed203eb9bec338cb33736"
     ],
     "imported": [
-      "b4fd81a",
-      "0cc6a29",
-      "0554d4a13e170ca385fa97f2eadda620110fd0a0"
+      "a4228c044dc21d39c147dc2d4dc00ed546eb9299",
+      "4958fb287ee6b16c2b1a1773abb2783701dd818a",
+      "d79bf259af7d74d8043afb3f5bfbe48ea3a50a7c"
     ]
   },
   "ownedProductionFiles": [
@@ -90,7 +90,15 @@
       "syntheticBackdatedImport": true,
       "browserClockUnchanged": true,
       "naturalRetention": "unverified"
-    }
+    },
+    "legacyBatches": {
+      "pass": 78,
+      "fail": 0,
+      "evidence": "legacy-batch-regression.tap",
+      "separateTestOnlyFix": true
+    },
+    "totalNode": 208,
+    "totalNative": 27
   },
   "scope": "Local candidate only; no push, merge or deploy; fresh synthetic QA only",
   "unverified": [
@@ -100,5 +108,16 @@
     "audibility",
     "human expression review",
     "learning gains"
-  ]
+  ],
+  "testedCodeBase": "92f777d7d4c61811689b353263d7d59076b4e507",
+  "formalRemoteAtFinish": "febb408a5777b0fef77ba5f0b5d8f7dd57e1902d",
+  "docsOnlyRebase": {
+    "changedUpstreamFiles": [
+      "studio/README.md",
+      "studio/docs/ready-course-reliability-v40.md"
+    ],
+    "productionBytesIdentical": true,
+    "preservedTestedBranch": "codex/nce1-037-059-host-tested-92f777d"
+  },
+  "hostIntegrationCommit": "705e750fb90d79f421ad915e5e11d78325391754"
 }

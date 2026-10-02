@@ -1,6 +1,6 @@
 # NCE1 37–60 production host candidate
 
-Immutable base: `92f777d7d4c61811689b353263d7d59076b4e507` (publisher v40 local candidate). Both formal remote heads were `424efc1869e98cd7b19afd2c1ab7cab0e8380b4b` at start. The v40 bundle SHA256 was `2e003d701d97e866bfb2db60864f5bec1c7a004eb731ad6da45b1e8d04c3102f`. No main baseline or publisher checkout was changed.
+Final immutable base: `febb408a5777b0fef77ba5f0b5d8f7dd57e1902d` (both current formal release heads). Testing began on publisher v40 local candidate `92f777d7d4c61811689b353263d7d59076b4e507`; the final rebase adds only the publisher's two release documentation files, and all tested production bytes remain identical. The tested branch is retained as `codex/nce1-037-059-host-tested-92f777d`. Both formal remote heads were `424efc1869e98cd7b19afd2c1ab7cab0e8380b4b` at start. The v40 bundle SHA256 was `2e003d701d97e866bfb2db60864f5bec1c7a004eb731ad6da45b1e8d04c3102f`. No main baseline or publisher checkout was changed.
 
 Imported frozen author commits, in order: `1713614bd7b859fa503c46093a1138179cfddad8`, `374fb251f725d5db692ab4422edef1b6b8b89e38`, `ee34333bb530debe268ed203eb9bec338cb33736`. Their 24 source/content/test files remain byte-identical; see `frozen-file-binding.json`. This adds 12 groups and 216 tasks to the existing 18 groups, yielding 30 groups / 540 tasks.
 
