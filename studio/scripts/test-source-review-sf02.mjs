@@ -18,7 +18,7 @@ const contents="export * from './app/source-review-batch1';export * from './app/
 async function bundle(name,{helper,online=true}={}){
  const output=new URL(name+'.mjs',work);
  await build({stdin:{contents,resolveDir:fileURLToPath(root),loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',outfile:fileURLToPath(output),logLevel:'silent',plugins:[{name:'bounded-read-fixtures',setup(builder){
-  if(helper)builder.onLoad({filter:/app\/source-review-batch1\.ts$/},()=>({contents:helper,loader:'ts'}));
+  if(helper)builder.onLoad({filter:/app\/source-review-batch1\.ts$/},()=>({contents:"import {withR19SupplementalPages} from './source-review-r19';\n"+helper.replace('export function withReviewedSourceAssociations(index:PageIndex):PageIndex{','export function withReviewedSourceAssociations(index:PageIndex):PageIndex{\n index=withR19SupplementalPages(index);'),loader:'ts'}));
   builder.onResolve({filter:/^\.\/data\/source-review-sf01$/},()=>({path:'sf01',namespace:'audit-sf01'}));
   builder.onLoad({filter:/.*/,namespace:'audit-sf01'},()=>({contents:gitFile(sf01,'app/data/source-review-sf01.ts'),loader:'ts'}));
   builder.onResolve({filter:/^\.\/runtime-mode$/},()=>({path:'runtime',namespace:'audit-runtime'}));
@@ -51,7 +51,7 @@ check('exact eight additions; all old associations, raw input and page reference
  const oldIds=new Set(ids(before)),newIds=new Set(ids(after));assert.deepEqual([...newIds].filter(id=>!oldIds.has(id)).sort(),record.catalogCounts.addedAssociationIds);assert([...oldIds].every(id=>newIds.has(id)));
  const changed=Object.keys(prior.lessons).filter(id=>JSON.stringify(prior.lessons[id])!==JSON.stringify(projected.lessons[id]));
  assert.deepEqual(changed.sort(),m.reviewedSF02Associations.map(r=>r.book+'-'+r.lesson).sort());
- for(const id of changed){assert.equal(projected.lessons[id].pages,index.lessons[id].pages);assert.equal(projected.lessons[id].vocabulary.pages,index.lessons[id].vocabulary.pages);
+ for(const id of changed){assert.deepEqual(projected.lessons[id].pages,prior.lessons[id].pages);assert.equal(projected.lessons[id].vocabulary.pages,index.lessons[id].vocabulary.pages);
   const word=m.reviewedSF02Associations.find(r=>r.book+'-'+r.lesson===id).word;assert.deepEqual(projected.lessons[id].vocabulary.words.filter(w=>w.word!==word),prior.lessons[id].vocabulary.words);
  }assert.deepEqual(index,original);assert.equal(m.withReviewedSourceAssociations(projected),projected);
 });

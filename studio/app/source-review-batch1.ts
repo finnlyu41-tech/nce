@@ -4,6 +4,7 @@ import pageMapping from './data/nce-pages.json';
 import {reviewedSourceAssociations,reviewedPageClarifications} from './data/source-review-batch1';
 import {reviewedPrintedSourceAssociations} from './data/source-review-sf01';
 import {withReviewedSF02Associations} from './source-review-sf02';
+import {withR19SupplementalPages,r19SourcePageNotes} from './source-review-r19';
 
 const key=(word:string)=>word.trim().toLowerCase().replace(/’/g,"'");
 const mismatch=()=>new Error('已核对的原书来源与当前词表不一致，请重新加载教材。');
@@ -11,7 +12,7 @@ const mismatch=()=>new Error('已核对的原书来源与当前词表不一致�
 // Read-only projection: keep the raw bundle, dictionary, original lessons and
 // all learning State untouched. Reusing the existing forms keeps word identity.
 export function withReviewedSourceAssociations(index:PageIndex):PageIndex{
- index=withReviewedSF02Associations(index);
+ index=withR19SupplementalPages(withReviewedSF02Associations(index));
  let lessons=index.lessons,changed=false;
  for(const repair of reviewedSourceAssociations){
   const lessonId=repair.book+'-'+repair.lesson,entry=lessons?.[lessonId];
@@ -53,5 +54,6 @@ export function withReviewedSourceAssociations(index:PageIndex):PageIndex{
 }
 
 export function sourcePageClarification(index:PageIndex,book:NceBookId,lesson:number,page:Page):string|undefined{
- return reviewedPageClarifications.find(note=>note.book===book&&note.lesson===lesson&&index.sources?.[book]===note.sourceBookSha256&&page.page===note.sourcePDFPage&&page.sha256===note.sourcePageSha256&&page.src==='/lesson-pages/'+note.sourcePageSha256+'.jpg'&&index.lessons?.[book+'-'+lesson]?.pages.some(item=>item.page===page.page&&item.sha256===page.sha256&&item.src===page.src))?.text;
+ const legacy=reviewedPageClarifications.find(note=>note.book===book&&note.lesson===lesson&&index.sources?.[book]===note.sourceBookSha256&&page.page===note.sourcePDFPage&&page.sha256===note.sourcePageSha256&&page.src==='/lesson-pages/'+note.sourcePageSha256+'.jpg'&&index.lessons?.[book+'-'+lesson]?.pages.some(item=>item.page===page.page&&item.sha256===page.sha256&&item.src===page.src))?.text;
+ return [legacy,r19SourcePageNotes(index,book,lesson,page)].filter(Boolean).join('\n')||undefined;
 }

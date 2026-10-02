@@ -1,0 +1,66 @@
+[
+  {
+    "book": "NCE2",
+    "lesson": 27,
+    "sourceBookSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+    "pdfPage": 172,
+    "printedPage": 132,
+    "imageSha256": "d763b8a8bb44b13f6e3c93602a09aab504abb2ed912182ef2ec24a8956d2ff9b",
+    "src": "/lesson-pages/d763b8a8bb44b13f6e3c93602a09aab504abb2ed912182ef2ec24a8956d2ff9b.png",
+    "originalRenderFile": "NCE2-pdf172-full-2x.png",
+    "anchorPage": {
+      "page": 170,
+      "src": "/lesson-pages/946a6a492fadab1cd9fb10cb41a02a918c03dbb02fd2107114b6ba49ca537e75.jpg",
+      "sha256": "946a6a492fadab1cd9fb10cb41a02a918c03dbb02fd2107114b6ba49ca537e75"
+    },
+    "text": "中文练习提示中的 with 与英文及本页 put 练习不一致，请按带 put 的短语作答；扫描原文保留。"
+  },
+  {
+    "book": "NCE2",
+    "lesson": 34,
+    "sourceBookSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+    "pdfPage": 201,
+    "printedPage": 161,
+    "imageSha256": "66841fee1b411a3ec99fb83ebe26dd5915f9a98b127075950f6159c0650e9720",
+    "src": "/lesson-pages/66841fee1b411a3ec99fb83ebe26dd5915f9a98b127075950f6159c0650e9720.png",
+    "originalRenderFile": "NCE2-pdf201-full-2x.png",
+    "anchorPage": {
+      "page": 198,
+      "src": "/lesson-pages/a02d3c96e4bb884cb10b59f308bd43c9e83492fd0675a4e712877b4530ee6ad9.jpg",
+      "sha256": "a02d3c96e4bb884cb10b59f308bd43c9e83492fd0675a4e712877b4530ee6ad9"
+    },
+    "text": "本页印第 33 课，练习编号和内容接续第 34 课（上一页 PDF 200）。本课入口按该接续关系展示，印刷页眉保留。"
+  },
+  {
+    "book": "NCE2",
+    "lesson": 44,
+    "sourceBookSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+    "pdfPage": 241,
+    "printedPage": 201,
+    "imageSha256": "cb7113725d521e51320b077905891b6445791425982079aecc5a609eb70002f0",
+    "src": "/lesson-pages/cb7113725d521e51320b077905891b6445791425982079aecc5a609eb70002f0.png",
+    "originalRenderFile": "NCE2-pdf241-full-2x.png",
+    "anchorPage": {
+      "page": 238,
+      "src": "/lesson-pages/0bc38fc24d23d7b03584754bc646fa13a68e0b9cb6d953c311333e24309494c8.jpg",
+      "sha256": "0bc38fc24d23d7b03584754bc646fa13a68e0b9cb6d953c311333e24309494c8"
+    },
+    "text": "英文要求每个动词各造两个句子，与中文“各造一个”不一致；按英文要求练习，扫描原文保留。"
+  },
+  {
+    "book": "NCE4",
+    "lesson": 31,
+    "sourceBookSha256": "d7250bbdb39130c202a32520c49d0c0d9ad1e115fd1e14300e07c30f9719c804",
+    "pdfPage": 216,
+    "printedPage": 187,
+    "imageSha256": "eb1f37d9a388bbd820a4eaa5467fb1a10e3c30273f3a1c03e5985f9361d656e1",
+    "src": "/lesson-pages/eb1f37d9a388bbd820a4eaa5467fb1a10e3c30273f3a1c03e5985f9361d656e1.png",
+    "originalRenderFile": "NCE4-pdf216-full-2x.png",
+    "anchorPage": {
+      "page": 212,
+      "src": "/lesson-pages/b8f57854d4f86f58abbd0c5ae3d7c76e733e84ac83645c0b3892435f569f8fca.jpg",
+      "sha256": "b8f57854d4f86f58abbd0c5ae3d7c76e733e84ac83645c0b3892435f569f8fca"
+    },
+    "text": "第 3 题所印 scuptor 应作 sculptor（雕塑家）；第 4 题可交叉核对。扫描原文保留。"
+  }
+]
