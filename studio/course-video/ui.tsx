@@ -30,6 +30,10 @@ function VideoNotePanel({source,courseId,visible,port,recordHelp,setGuard}:{sour
  useEffect(()=>{if(!visible)void Promise.resolve().then(()=>{setPlayer(false);setOriginalReady(false);setSummary(false)})},[visible]);
  useEffect(()=>{if(!player)return;const timeout=setTimeout(()=>setMediaIssue('若播放器仍未显示，请打开原视频；可以继续记笔记和学习本课。'),12000);return()=>clearTimeout(timeout)},[player]);
  const src=playerUrl(source);
+ // The standalone package permits blob frames only. Keep its real source-link
+ // flow usable without presenting an inline player the package cannot load.
+ const policy=typeof document==='undefined'?null:document.querySelector<HTMLMetaElement>('meta[http-equiv="Content-Security-Policy"]')?.content;
+ const inlinePlayer=!!src&&!policy?.split(';').some(rule=>rule.trim()==='frame-src blob:');
  async function prepareOriginal(){
   try{if(await controller.access('open-link',recordHelp)&&visibleRef.current){setOriginalReady(true);setMediaIssue('')}else setMediaIssue('视频链接暂未就绪，请先保存笔记后重试。')}
   catch{setMediaIssue('视频链接暂未就绪，可以继续本课学习。')}
@@ -38,9 +42,10 @@ function VideoNotePanel({source,courseId,visible,port,recordHelp,setGuard}:{sour
  if(!visible)return null;
  return <section className="course-video course-video-note" aria-label={`${source.title} · 笔记`}>
   <p className="course-video-byline">{source.book} · 第 {source.lessons.join('、')} 课 · <a href={source.author.url} target="_blank" rel="noopener noreferrer">{source.author.name}</a></p>
-  <div className="course-video-actions">{originalReady?status.ready&&!status.busy&&!status.dirty&&!status.error?<a href={source.sourceUrl} target="_blank" rel="noopener noreferrer">打开 B站原视频 ↗</a>:<span className="course-video-muted">保存当前笔记后可继续打开原视频。</span>:<button type="button" data-prepare-original disabled={!status.ready||status.busy||!!status.error} onClick={()=>void prepareOriginal()}>查看 B站原视频链接</button>}{src&&<button type="button" disabled={!status.ready||status.busy||!!status.error} onClick={()=>{void(async()=>{try{if(await controller.access('load-player',recordHelp)&&visibleRef.current){setMediaIssue('');setPlayer(true)}}catch{setMediaIssue('播放器暂未打开，可以继续本课学习。')}})()}}>在本页播放</button>}</div>
-  {src&&!player&&<p className="course-video-muted">点击播放将加载哔哩哔哩第三方服务。</p>}
-  {player&&src&&<div className="course-video-player"><iframe src={src} title={source.title} allow="fullscreen" allowFullScreen sandbox="allow-scripts allow-same-origin allow-presentation" referrerPolicy="no-referrer" onError={()=>setMediaIssue('播放器加载失败，请打开原视频；笔记和课程可继续使用。')}/><button type="button" onClick={()=>setPlayer(false)}>收起播放器</button><p className="course-video-muted">播放受 B站可用性影响；未显示或不能播放时可打开原视频。</p></div>}
+  <div className="course-video-actions">{originalReady?status.ready&&!status.busy&&!status.dirty&&!status.error?<a href={source.sourceUrl} target="_blank" rel="noopener noreferrer">打开 B站原视频 ↗</a>:<span className="course-video-muted">保存当前笔记后可继续打开原视频。</span>:<button type="button" data-prepare-original disabled={!status.ready||status.busy||!!status.error} onClick={()=>void prepareOriginal()}>查看 B站原视频链接</button>}{inlinePlayer&&<button type="button" disabled={!status.ready||status.busy||!!status.error} onClick={()=>{void(async()=>{try{if(await controller.access('load-player',recordHelp)&&visibleRef.current){setMediaIssue('');setPlayer(true)}}catch{setMediaIssue('播放器暂未打开，可以继续本课学习。')}})()}}>在本页播放</button>}</div>
+  {inlinePlayer&&!player&&<p className="course-video-muted">点击播放将加载哔哩哔哩第三方服务。</p>}
+  {src&&!inlinePlayer&&<p className="course-video-muted">请打开原视频观看，个人笔记可继续在这里保存。</p>}
+  {player&&inlinePlayer&&<div className="course-video-player"><iframe src={src} title={source.title} allow="fullscreen" allowFullScreen sandbox="allow-scripts allow-same-origin allow-presentation" referrerPolicy="no-referrer" onError={()=>setMediaIssue('播放器加载失败，请打开原视频；笔记和课程可继续使用。')}/><button type="button" onClick={()=>setPlayer(false)}>收起播放器</button><p className="course-video-muted">播放受 B站可用性影响；未显示或不能播放时可打开原视频。</p></div>}
   {mediaIssue&&<p role="status">{mediaIssue}</p>}
   {source.summary&&<div><button type="button" disabled={!status.ready||!!status.error} onClick={()=>void(async()=>{if(await controller.access('open-summary',recordHelp))setSummary(true)})()}>查看视频要点</button>{summary&&<><h4>视频内容要点</h4><p className="course-video-summary">{source.summary.text}</p><a href={source.summary.evidence[0].url} target="_blank" rel="noopener noreferrer">内容来源 ↗</a></>}</div>}
   <label>我的学习笔记<textarea value={status.text} maxLength={12000} disabled={!status.ready} rows={6} placeholder="记下听到的要点、例句、疑问，以及下次想练的表达。" onChange={e=>{controller.edit(e.target.value);setPendingBackup(null);if(timer.current)clearTimeout(timer.current);timer.current=setTimeout(()=>void controller.flush(),450)}}/></label>

@@ -45,7 +45,7 @@ import {WordLookupProvider} from './word-lookup';
 import {PlaybackSpeed} from './playback-speed';
 import {navigate,type StudioRoute} from './navigation';
 import {useCourseVideoHostRoute} from '../course-video/route';
-import {useRoute,useRouteScroll} from './use-route';
+import {useRouteScroll} from './use-route';
 import nceAttribution from './data/nce-attribution.json';
 const lessons=lessonsData as Lesson[];
 const courseWords=Array.from(new Map(lessons.flatMap(l=>l.vocab).map(w=>[w.word.toLowerCase(),w])).values());

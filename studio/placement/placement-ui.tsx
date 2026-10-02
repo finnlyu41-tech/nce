@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable @next/next/no-html-link-for-pages -- Standalone document/hash routes use native navigation. */
 import {useState} from 'react';
 import type {State} from '../app/model';
 import {placementManifest} from './manifest';
