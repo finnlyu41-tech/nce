@@ -1,5 +1,7 @@
 # 第1–6课首阶段候选
 
+当前宿主接入、最小兼容增量及实际验收见 [FINAL-COMPAT.md](docs/FINAL-COMPAT.md)。以下保留初始独立候选的来源说明。
+
 本目录是独立首阶段组件，基于两个发布分支共同的 `fb34b97c855c2c048faffe42cab3cf5cf94890c7`。仅新增本目录，没有改首页、map、main、共享 route、IELTStable 宿主、mini-task、placement 或 course-loop registry/next。唯一 publisher 接共享路由、Today 与持久 writer；本任务不 push、merge 或 deploy。
 
 范围为 NCE1 第1–6课的九个目标：问归属、肯定短答、请求重说、my/your视角、否定归属、否定短答、介绍在场者、he/she指代、be+国籍。其他阶段未覆盖。

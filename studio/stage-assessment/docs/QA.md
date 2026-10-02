@@ -1,5 +1,7 @@
 # 首阶段工程验证记录
 
+后续独立 clone 的宿主与共享恢复验收见 [FINAL-COMPAT.md](FINAL-COMPAT.md)；本页保留原作者最初候选的验证来源和未测边界。
+
 基线：两个发布分支 `codex/english-studio-online-20260926` 和 `codex/ielts-map-20260930` 在读取时均为 `fb34b97c855c2c048faffe42cab3cf5cf94890c7`。没有仓库AGENTS.md；当前设备登记的Obsidian本机根不存在，连接器未定位到AGENTS，故没有替代库或回写。交付说明由本目录承担。
 
 ## 已验证

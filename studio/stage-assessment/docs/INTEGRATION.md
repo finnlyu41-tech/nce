@@ -1,5 +1,7 @@
 # 唯一 publisher 接入合同
 
+本合同为初始候选交接记录；已实现宿主接口与当前恢复语义以 [FINAL-COMPAT.md](FINAL-COMPAT.md) 为准。同档恢复保留原 raw，不无条件追加恢复来源事件。
+
 范围只限本目录。`stageTarget = 'stage-nce1-1-6'`，由 publisher 决定它在既有共享 route/Today 的位置。本实现没有写入共享宿主；请勿把本候选视为上线或全范围 R13 已通过。
 
 ## State.drafts 与 writer
