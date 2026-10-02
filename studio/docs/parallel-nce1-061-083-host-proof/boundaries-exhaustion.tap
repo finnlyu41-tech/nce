@@ -1,0 +1,119 @@
+TAP version 13
+# Subtest: forty-two real bindings preserve old defaults and distinct storage keys
+ok 1 - forty-two real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 3.510292
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all forty-two courses
+ok 2 - actual factory and registered model retain first answers and corrections for all forty-two courses
+  ---
+  duration_ms: 14.600542
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 42 by 42 pairs
+ok 3 - every envelope and correction sidecar is accepted only by its exact course across 42 by 42 pairs
+  ---
+  duration_ms: 72.908916
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 4 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 100.757916
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 5 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 54.245958
+  type: 'test'
+  ...
+# Subtest: forty-two pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 6 - forty-two pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 51.351
+  type: 'test'
+  ...
+# Subtest: forty-two due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 7 - forty-two due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 122.6095
+  type: 'test'
+  ...
+# Subtest: shared continuation advances every odd course through 83 to existing 85 with access intent only
+ok 8 - shared continuation advances every odd course through 83 to existing 85 with access intent only
+  ---
+  duration_ms: 367.0435
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 9 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 6.578042
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 10 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 51.370667
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all forty-two records, sidecars and original classic history
+ok 11 - actual progress backup and validator preserve all forty-two records, sidecars and original classic history
+  ---
+  duration_ms: 8.228917
+  type: 'test'
+  ...
+# Subtest: actual guarded successor covers mapped boundaries and preserves known or supplied fallback destinations
+ok 12 - actual guarded successor covers mapped boundaries and preserves known or supplied fallback destinations
+  ---
+  duration_ms: 0.465375
+  type: 'test'
+  ...
+# R15 actual host: {"courses":42,"finitePools":42,"repairTasks":42}
+# Subtest: all forty-two actual factories retain distinct failed and helped answers in both finite banks
+ok 13 - all forty-two actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 5.280375
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 14 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 121.826875
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+ok 15 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 516.862333
+  type: 'test'
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+ok 16 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 14.864666
+  type: 'test'
+  ...
+# Subtest: finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+ok 17 - finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+  ---
+  duration_ms: 82.592333
+  type: 'test'
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 18 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.290125
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1522.195958

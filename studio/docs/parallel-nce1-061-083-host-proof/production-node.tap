@@ -1,0 +1,395 @@
+TAP version 13
+# Subtest: forty-two real bindings preserve old defaults and distinct storage keys
+ok 1 - forty-two real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 4.082584
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all forty-two courses
+ok 2 - actual factory and registered model retain first answers and corrections for all forty-two courses
+  ---
+  duration_ms: 16.663
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 42 by 42 pairs
+ok 3 - every envelope and correction sidecar is accepted only by its exact course across 42 by 42 pairs
+  ---
+  duration_ms: 74.727375
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 4 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 102.383584
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 5 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 54.175208
+  type: 'test'
+  ...
+# Subtest: forty-two pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 6 - forty-two pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 30.727792
+  type: 'test'
+  ...
+# Subtest: forty-two due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 7 - forty-two due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 122.947125
+  type: 'test'
+  ...
+# Subtest: shared continuation advances every odd course through 83 to existing 85 with access intent only
+ok 8 - shared continuation advances every odd course through 83 to existing 85 with access intent only
+  ---
+  duration_ms: 373.354291
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 9 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 6.176791
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 10 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 51.389875
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all forty-two records, sidecars and original classic history
+ok 11 - actual progress backup and validator preserve all forty-two records, sidecars and original classic history
+  ---
+  duration_ms: 6.683584
+  type: 'test'
+  ...
+# Subtest: actual guarded successor covers mapped boundaries and preserves known or supplied fallback destinations
+ok 12 - actual guarded successor covers mapped boundaries and preserves known or supplied fallback destinations
+  ---
+  duration_ms: 0.461666
+  type: 'test'
+  ...
+# R15 actual host: {"courses":42,"finitePools":42,"repairTasks":42}
+# Subtest: all forty-two actual factories retain distinct failed and helped answers in both finite banks
+ok 13 - all forty-two actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 5.55975
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 14 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 121.411
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+ok 15 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 524.496375
+  type: 'test'
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+ok 16 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 15.351333
+  type: 'test'
+  ...
+# Subtest: finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+ok 17 - finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+  ---
+  duration_ms: 89.486292
+  type: 'test'
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 18 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.225541
+  type: 'test'
+  ...
+# Subtest: nce1-1: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 19 - nce1-1: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 6.992833
+  type: 'test'
+  ...
+# Subtest: nce1-3: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 20 - nce1-3: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.032542
+  type: 'test'
+  ...
+# Subtest: nce1-5: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 21 - nce1-5: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.188792
+  type: 'test'
+  ...
+# Subtest: nce1-7: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 22 - nce1-7: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.036458
+  type: 'test'
+  ...
+# Subtest: nce1-9: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 23 - nce1-9: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.936625
+  type: 'test'
+  ...
+# Subtest: nce1-11: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 24 - nce1-11: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.383292
+  type: 'test'
+  ...
+# Subtest: nce1-13: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 25 - nce1-13: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.008875
+  type: 'test'
+  ...
+# Subtest: nce1-15: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 26 - nce1-15: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.387417
+  type: 'test'
+  ...
+# Subtest: nce1-17: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 27 - nce1-17: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.830042
+  type: 'test'
+  ...
+# Subtest: nce1-19: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 28 - nce1-19: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.6465
+  type: 'test'
+  ...
+# Subtest: nce1-21: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 29 - nce1-21: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.050917
+  type: 'test'
+  ...
+# Subtest: nce1-23: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 30 - nce1-23: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.027
+  type: 'test'
+  ...
+# Subtest: nce1-25: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 31 - nce1-25: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.013916
+  type: 'test'
+  ...
+# Subtest: nce1-27: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 32 - nce1-27: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.111625
+  type: 'test'
+  ...
+# Subtest: nce1-29: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 33 - nce1-29: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.992958
+  type: 'test'
+  ...
+# Subtest: nce1-31: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 34 - nce1-31: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.100583
+  type: 'test'
+  ...
+# Subtest: nce1-33: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 35 - nce1-33: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.901209
+  type: 'test'
+  ...
+# Subtest: nce1-35: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 36 - nce1-35: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.9865
+  type: 'test'
+  ...
+# Subtest: nce1-37: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 37 - nce1-37: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.983
+  type: 'test'
+  ...
+# Subtest: nce1-39: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 38 - nce1-39: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.946708
+  type: 'test'
+  ...
+# Subtest: nce1-41: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 39 - nce1-41: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.013833
+  type: 'test'
+  ...
+# Subtest: nce1-43: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 40 - nce1-43: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.019708
+  type: 'test'
+  ...
+# Subtest: nce1-45: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 41 - nce1-45: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.929333
+  type: 'test'
+  ...
+# Subtest: nce1-47: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 42 - nce1-47: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.983542
+  type: 'test'
+  ...
+# Subtest: nce1-49: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 43 - nce1-49: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.906583
+  type: 'test'
+  ...
+# Subtest: nce1-51: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 44 - nce1-51: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.849459
+  type: 'test'
+  ...
+# Subtest: nce1-53: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 45 - nce1-53: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.184541
+  type: 'test'
+  ...
+# Subtest: nce1-55: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 46 - nce1-55: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.947583
+  type: 'test'
+  ...
+# Subtest: nce1-57: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 47 - nce1-57: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 1.073125
+  type: 'test'
+  ...
+# Subtest: nce1-59: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 48 - nce1-59: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 0.918416
+  type: 'test'
+  ...
+# Subtest: nce1-61: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 49 - nce1-61: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 3.771208
+  type: 'test'
+  ...
+# Subtest: nce1-63: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 50 - nce1-63: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.3095
+  type: 'test'
+  ...
+# Subtest: nce1-65: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 51 - nce1-65: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.678417
+  type: 'test'
+  ...
+# Subtest: nce1-67: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 52 - nce1-67: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.347208
+  type: 'test'
+  ...
+# Subtest: nce1-69: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 53 - nce1-69: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.479792
+  type: 'test'
+  ...
+# Subtest: nce1-71: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 54 - nce1-71: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 9.120958
+  type: 'test'
+  ...
+# Subtest: nce1-73: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 55 - nce1-73: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.642791
+  type: 'test'
+  ...
+# Subtest: nce1-75: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 56 - nce1-75: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.407167
+  type: 'test'
+  ...
+# Subtest: nce1-77: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 57 - nce1-77: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.395166
+  type: 'test'
+  ...
+# Subtest: nce1-79: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 58 - nce1-79: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 5.599
+  type: 'test'
+  ...
+# Subtest: nce1-81: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 59 - nce1-81: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.581917
+  type: 'test'
+  ...
+# Subtest: nce1-83: authored source agrees with JSON transcript, original LRC and comic metadata
+ok 60 - nce1-83: authored source agrees with JSON transcript, original LRC and comic metadata
+  ---
+  duration_ms: 4.294416
+  type: 'test'
+  ...
+# Subtest: exact SourcePanel guard accepts only the matching source in all 42 by 42 pairs
+ok 61 - exact SourcePanel guard accepts only the matching source in all 42 by 42 pairs
+  ---
+  duration_ms: 0.902167
+  type: 'test'
+  ...
+# Subtest: exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitution and wrong book or lesson
+ok 62 - exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitution and wrong book or lesson
+  ---
+  duration_ms: 3.263458
+  type: 'test'
+  ...
+# Subtest: actual comic guard accepts only same-course source and body row count in all 42 by 42 pairs
+ok 63 - actual comic guard accepts only same-course source and body row count in all 42 by 42 pairs
+  ---
+  duration_ms: 3.439667
+  type: 'test'
+  ...
+# Subtest: audio clip intervals stay within the matching LRC timeline and use teaching targets from this course
+ok 64 - audio clip intervals stay within the matching LRC timeline and use teaching targets from this course
+  ---
+  duration_ms: 0.619167
+  type: 'test'
+  ...
+1..64
+# tests 64
+# suites 0
+# pass 64
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1595.033916

@@ -1,0 +1,137 @@
+{
+  "base": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "publicRemoteObserved": "ae4a678bf0aac4dc1eef343d922d511a1dd8e52a",
+  "publicRegistrationNotInferred": true,
+  "originalAuthorCommits": [
+    "1d66ed0172573902c5c9a38138f8d9b0e90135f6",
+    "9f461dc833b89f410f552874f00b392a04d7bc25",
+    "0253b3b3d5d25bc725b8373ffc0ffa707da3d8c7",
+    "f74c617f8695a478ae8fedb0e3b1de89c6566474"
+  ],
+  "importedAuthorCommits": [
+    "d9f3ded4eeba553a31e8ea3d242dfbcbb03e7dda",
+    "94763a28056788ee3e23aa78224da9cfcea93e5b",
+    "7c965adf164d319b079c2ba133efdd49eac13026",
+    "bd46b6e8208d7f8ff92f0521270689cdf39d1f9c"
+  ],
+  "ownedProductionFiles": [
+    "studio/course-loop/registry.mjs",
+    "studio/course-loop/host-contract.d.ts",
+    "studio/app/course-loop-next.ts"
+  ],
+  "registeredOddCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35",
+    "nce1-37",
+    "nce1-39",
+    "nce1-41",
+    "nce1-43",
+    "nce1-45",
+    "nce1-47",
+    "nce1-49",
+    "nce1-51",
+    "nce1-53",
+    "nce1-55",
+    "nce1-57",
+    "nce1-59",
+    "nce1-61",
+    "nce1-63",
+    "nce1-65",
+    "nce1-67",
+    "nce1-69",
+    "nce1-71",
+    "nce1-73",
+    "nce1-75",
+    "nce1-77",
+    "nce1-79",
+    "nce1-81",
+    "nce1-83"
+  ],
+  "registeredGroups": 42,
+  "registeredTasks": 756,
+  "newContentTasks": 216,
+  "sourceKind": "unchanged; preserve the independent video-owner extension during combination",
+  "normalBridges": [
+    "59→61",
+    "71→73",
+    "83→85"
+  ],
+  "preservedCandidate": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "protectedFileSha256": {
+    "studio/course-loop/model.mjs": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+    "studio/app/course-loop-ui.tsx": "a3711e029417a03f1548db367364e677886abe8dfca3262d5e0e46cd868dd380",
+    "studio/app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028",
+    "studio/app/progress-save.tsx": "49951e975a9f6779ecc3d0b4ad6b31481d5ad50540e3dbfd20f842320ece237b",
+    "studio/app/progress-file.ts": "67ef85cd106c87faf762442304afcc91f5ec8fadab0ae968eb5a852455ce5d10",
+    "studio/app/today-practice.ts": "38cabaefb794cfba8c04b4a191cd2d16f1eb4d6d8f8bfa4521de889ea55a86be",
+    "studio/map/learning.tsx": "cd265968e3249a9ef38e60fed3e050c7c8535f0e958b8d3581c485a4f6fc47a4",
+    "studio/map/main.tsx": "0f8524eea57952074e76509590acf0e817fdb3ce7d36362088ad65d786cd8fea",
+    "studio/map/progress-write.ts": "8fda947ce84db5243e66cac21096e6260bec820adc666c1295a0ddc1317ef3de"
+  },
+  "frozenAuthorFiles": 147,
+  "validation": {
+    "productionNode": {
+      "pass": 64,
+      "fail": 0
+    },
+    "frozenContentRegression": {
+      "pass": 109,
+      "fail": 0
+    },
+    "legacyBatchRegression": {
+      "pass": 78,
+      "fail": 0
+    },
+    "native": {
+      "pass": 25,
+      "fail": 0,
+      "runtimeExceptions": 0
+    },
+    "delayedNative": {
+      "pass": 2,
+      "fail": 0,
+      "runtimeExceptions": 0,
+      "syntheticBackdatedNativeImport": true,
+      "browserClockUnchanged": true,
+      "naturalRetention": "unverified"
+    },
+    "coverageAudit": {
+      "pass": 7,
+      "fail": 0,
+      "baselinePass": 3,
+      "baselineFail": 1,
+      "inventoryGroups": 276,
+      "registeredGroups": 42,
+      "unregisteredGroups": 234,
+      "registeredTextbookNumbers": 84,
+      "registeredTasks": 756
+    },
+    "totalNode": 258,
+    "totalNative": 27
+  },
+  "scope": "Local unpublished host candidate; synthetic QA only; no push/merge/deploy",
+  "unverified": [
+    "published origin",
+    "natural24h/7d",
+    "physical phone",
+    "audibility",
+    "human expression",
+    "learning gains"
+  ]
+}

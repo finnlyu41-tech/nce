@@ -1,0 +1,103 @@
+{
+  "base": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "commands": [
+    "node ./node_modules/typescript/bin/tsc --noEmit",
+    "node ./node_modules/vite/bin/vite.js build --config vite.static.config.ts --configLoader runner --mode online",
+    "node ./node_modules/vite/bin/vite.js build --config map/vite.config.ts --configLoader runner --mode online"
+  ],
+  "allSucceeded": true,
+  "files": {
+    "static-export/assets/standalone-DNRlXeG7.js": {
+      "bytes": 3491875,
+      "sha256": "cff080820154cdc97edbcf2d9cdd1449e0ee9b431c32c72c534b7ff45ed2a1e7"
+    },
+    "static-export/assets/style-C09wcLQp.css": {
+      "bytes": 325574,
+      "sha256": "e5777d8bb6d4bbb2e1e46872395602730e893fbadac36663b538845d5e7ceb1a"
+    },
+    "static-export/demos/yesterday/app.mjs": {
+      "bytes": 16341,
+      "sha256": "0afeff470ddc2113c247868a92c36bbd65f8802ac4e7640e36affab7de4eb49e"
+    },
+    "static-export/demos/yesterday/bootstrap.mjs": {
+      "bytes": 68,
+      "sha256": "f1627ffcc1592a30a453e5a026fedaac1d3802a0b5294386578559ac758f2c81"
+    },
+    "static-export/demos/yesterday/content.mjs": {
+      "bytes": 3807,
+      "sha256": "0d258d706c7bbf90e3316c324fdb91bf20c80e5b278944f7510bfa5e87f0258e"
+    },
+    "static-export/demos/yesterday/demo-store.mjs": {
+      "bytes": 2734,
+      "sha256": "3175d6c4bb1be2d9cce8cc930e791904ba820cca02c23376d780784fb5276b45"
+    },
+    "static-export/demos/yesterday/index.html": {
+      "bytes": 1635,
+      "sha256": "7575b9722f678e247cd50abb4b18951135552e16d341b9b91814188aa1fc7647"
+    },
+    "static-export/demos/yesterday/model.mjs": {
+      "bytes": 7344,
+      "sha256": "52a8d55a2a572d0e6eaa905d850c0c6f82bfc06ce8851879683d9789988ad665"
+    },
+    "static-export/demos/yesterday/review-adapter.mjs": {
+      "bytes": 15755,
+      "sha256": "447abb1e9cb0dfe67831f6e8d67836daf3bdc27d613a4450f616c014ee668596"
+    },
+    "static-export/demos/yesterday/review-content.mjs": {
+      "bytes": 1311,
+      "sha256": "38c163af087ceb70e9c6346a559a289f26f879ff8851977b0daec6578b4c7cd2"
+    },
+    "static-export/demos/yesterday/review-controller.mjs": {
+      "bytes": 12717,
+      "sha256": "bbf91ef349a0c1328353cf46e5fb2f8e240fd937127718048151d34cee0298a0"
+    },
+    "static-export/demos/yesterday/review-model.mjs": {
+      "bytes": 3847,
+      "sha256": "457b432f6c09c22c423505282f83d1bae01b7b518515c37285c36e89a211691e"
+    },
+    "static-export/demos/yesterday/styles.css": {
+      "bytes": 7955,
+      "sha256": "916b2f49748d571ff405b6121d6375efc3d746b02e696e7baa541f30aef9012c"
+    },
+    "static-export/favicon.svg": {
+      "bytes": 182,
+      "sha256": "5455ec8119d49458eef5d4e6ddeaf5d2a84a855a268d3e9762a42fe4e86652a3"
+    },
+    "static-export/icons/apple-touch-icon.png": {
+      "bytes": 1712,
+      "sha256": "a44140a9011e6c85156222ba7ea06fa8dd010c416eea3fd106c5bb5fe3c1511d"
+    },
+    "static-export/icons/icon-192.png": {
+      "bytes": 1802,
+      "sha256": "6a0d11f027dbd891663ebebb81206b4f04bec0c1f4ea4756c44a8fb1c2295858"
+    },
+    "static-export/icons/icon-512.png": {
+      "bytes": 7898,
+      "sha256": "b665ba0c347327c7fbdb5a478f721b3548e833d4498c78a1e5499325e3ebaab3"
+    },
+    "static-export/manifest.webmanifest": {
+      "bytes": 524,
+      "sha256": "48de74a7f9de828f3e12ed5237d3f6c2bd799cbda7bfadb67d6a08cbbd282547"
+    },
+    "static-export/materials/manifest.json": {
+      "bytes": 25,
+      "sha256": "3b2ee661f11643a02e21cc62482cd127df55c4c91ec0aa821a5f987094e9bfb9"
+    },
+    "static-export/standalone.html": {
+      "bytes": 1127,
+      "sha256": "3f32f704678ac02618e48683b10fe9ba62f7547baebfc0f1432d541a8880720b"
+    },
+    "map/dist/assets/index-1wdxvhZa.css": {
+      "bytes": 83464,
+      "sha256": "cff7e19a5e0a31870dc82d0770a14ae1cd27efcda8e2e644b391d32a8a13a90d"
+    },
+    "map/dist/assets/index-t9XFLCe_.js": {
+      "bytes": 2808479,
+      "sha256": "579217208b5d10b8fc6a27b9f76b55e14cace576ca47e570c34edbd9a802977d"
+    },
+    "map/dist/index.html": {
+      "bytes": 542,
+      "sha256": "5715656639e5e8e9cc812b61874c0bdbe8e7dd23023edd88c8c462f8410f91f7"
+    }
+  }
+}
