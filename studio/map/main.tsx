@@ -13,6 +13,7 @@ import {TodayPracticeQueue} from '../app/today-practice-ui';
 import {useClassicProgress} from '../app/use-classic-progress';
 import {nextCourse,courseContinuation} from '../app/course-loop-next';
 import {prepareDueReview} from './review-route';
+import {previewMapRestore,commitMapRestore,type MapRestorePreview} from './progress-file-restore';
 import {CurrentRoute} from './current-route';
 import {CourseCatalogue} from './catalogue';
 import {parseLearningRoute, catalogueHash, type CatalogueGroup} from './navigation';
@@ -44,7 +45,10 @@ function App() {
     const [mobile, setMobile] = useState(window.innerWidth < 760);
     const graph = useRef<GraphHandle>(null);
     const importInput = useRef<HTMLInputElement>(null);
-    const [restore, setRestore] = useState<Progress | null>(null);
+    const [restore, setRestore] = useState<MapRestorePreview | null>(null);
+    const [restoring, setRestoring] = useState(false);
+    const [restoreError, setRestoreError] = useState('');
+    const restoreWorking = useRef(false);
     const restoreDialog = useRef<HTMLDialogElement>(null);
     useEffect(() => { try {
         const current = localStorage.getItem(storageKey);
@@ -141,7 +145,7 @@ function App() {
         return; try {
         if (file.size > 6000000)
             throw new Error('文件超过 6 MB。');
-        setRestore(parseProgress(await file.text()));
+        setRestore(previewMapRestore(await file.text()));setRestoreError('');
     }
     catch (e) {
         setMessage(`无法恢复：${e instanceof Error ? e.message : '格式不正确'}`);
@@ -165,19 +169,21 @@ function App() {
   </main>
   {message && <div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={() => setMessage('')}><X size={16}/></button></div>}
 
-  {restore && <dialog className="restore-dialog" ref={restoreDialog} onCancel={() => setRestore(null)} aria-labelledby="restore-title"><h2 id="restore-title">恢复地图进度</h2><p>备份中有 {Object.keys(restore.records).length} 个节点记录。确认后替换本地图进度；教材笔记、生词等原有记录会保留。</p><p>当前进度会先下载为一份回退备份。</p><div><button className="secondary" onClick={() => setRestore(null)}>取消</button><button className="primary" onClick={() => { download(raw.current || exportProgress(state), 'wayfinder-before-restore.json'); try {
-        const encoded = JSON.stringify(restore);
-        localStorage.setItem(storageKey, encoded);
-        raw.current = encoded;
-        stateRef.current = restore;
-        setState(restore);
+  {restore && <dialog className="restore-dialog" ref={restoreDialog} onCancel={event => {if(restoreWorking.current)event.preventDefault();else setRestore(null)}} aria-labelledby="restore-title"><h2 id="restore-title">恢复地图进度</h2><p>备份中有 {Object.keys(restore.progress.records).length} 个节点记录。确认后替换本地图进度；教材笔记、生词等原有记录会保留。</p><p>当前进度会先下载为一份回退备份。</p>{restoreError&&<p role="alert">{restoreError}</p>}<div><button className="secondary" disabled={restoring} onClick={() => setRestore(null)}>取消</button><button className="primary" disabled={restoring} onClick={async () => { if(restoreWorking.current)return;restoreWorking.current=true;setRestoring(true);try {
+        download(localStorage.getItem(storageKey) || exportProgress(state), 'wayfinder-before-restore.json');
+        const committed = await commitMapRestore(restore);
+        raw.current = committed.raw;
+        stateRef.current = committed.progress;
+        setState(committed.progress);
         setStorageError('');
         setMessage('已恢复并重新核验节点解锁条件。');
         setRestore(null);
     }
-    catch {
-        setStorageError('恢复失败：浏览器无法保存数据，原进度未替换。');
-    } }}>备份当前进度并恢复</button></div></dialog>}
+    catch (error) {
+        const reason=error instanceof Error ? error.message : '浏览器无法保存数据，原进度保留。';
+        setRestoreError(`恢复未完成。${reason}`);setStorageError(`恢复失败：${reason}`);setMessage(`恢复未完成。${reason}`);
+    }
+    finally {restoreWorking.current=false;setRestoring(false);} }}>备份当前进度并恢复</button></div></dialog>}
  </>;
 }
 function NodeDetails({ node, status, state, focus, start, current, unlock }: {
