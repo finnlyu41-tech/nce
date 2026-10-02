@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {ArrowRight} from 'lucide-react';
 import {type Unit} from './curriculum';
 import {lessonPlan} from './lesson-plan';
@@ -7,17 +7,18 @@ import {QuestionAnswer} from './course';
 import {Recorder} from './media';
 import type {Save} from './learning';
 
+const signature=(p:ExpressionPractice,n:string)=>JSON.stringify([p,n]);
+
 export function GuidedExpression({unit,state,save,next,onLeaveGuard}:{unit:Unit;state:Progress;save:Save;next:()=>void;onLeaveGuard?:(guard:(()=>Promise<boolean>)|null)=>void}){
   const plan=lessonPlan(unit),record=state.records[unit.id];
   const [practice,setPractice]=useState(record?.practice||emptyPractice()),[note,setNote]=useState(String(record?.draft?.note||''));
   const local=useRef({practice,note}),edited=useRef(false),blocked=useRef(false);
-  const signature=(p:ExpressionPractice,n:string)=>JSON.stringify([p,n]);
   const own=useRef(new Set([signature(practice,note)]));
   const [saveError,setSaveError]=useState('');
   useEffect(()=>{const p=record?.practice||emptyPractice(),n=String(record?.draft?.note||'');if(!edited.current){local.current={practice:p,note:n};setPractice(p);setNote(n);own.current.add(signature(p,n))}else if(!own.current.has(signature(p,n))){blocked.current=true;setSaveError('另一页面更改了表达记录。当前输入已保留，请核对后重试。')}},[record?.practice,record?.draft?.note]);
   const [recording,setRecording]=useState(false),[guidedChecked,setGuidedChecked]=useState(false);
   const heading=useRef<HTMLHeadingElement>(null);
-  const persist=async(value=local.current)=>{const ok=await save(s=>{own.current.add(signature(value.practice,value.note));return {...s,records:{...s.records,[unit.id]:{...(s.records[unit.id]||emptyRecord()),practice:value.practice,draft:{...s.records[unit.id]?.draft,note:value.note}}}}});if(!ok){blocked.current=true;setSaveError('尚未保存，表达输入保留在本页，请重试。')}else if(local.current===value){blocked.current=false;setSaveError('')}return ok};
+  const persist=useCallback(async(value=local.current)=>{const ok=await save(s=>{own.current.add(signature(value.practice,value.note));return {...s,records:{...s.records,[unit.id]:{...(s.records[unit.id]||emptyRecord()),practice:value.practice,draft:{...s.records[unit.id]?.draft,note:value.note}}}}});if(!ok){blocked.current=true;setSaveError('尚未保存，表达输入保留在本页，请重试。')}else if(local.current===value){blocked.current=false;setSaveError('')}return ok},[save,unit.id]);
   const patch=async(change:Partial<ExpressionPractice>)=>{const before=local.current,value={...before,practice:{...before.practice,...change}};edited.current=true;if(change.step!==undefined){if(blocked.current){setSaveError('请先重试保存当前表达，再切换步骤。');return}if(!await persist(value))return;if(local.current===before){local.current=value;setPractice(value.practice)}}else{local.current=value;setPractice(value.practice);if(!blocked.current)await persist(value)}};
   const writeNote=(value:string)=>{edited.current=true;const next={...local.current,note:value};local.current=next;setNote(value);if(!blocked.current)void persist(next)};
   useEffect(()=>{onLeaveGuard?.(async()=>!blocked.current&&(!edited.current||await persist()));return()=>onLeaveGuard?.(null)},[unit.id,onLeaveGuard,persist]);
