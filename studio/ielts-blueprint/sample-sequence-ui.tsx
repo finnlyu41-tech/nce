@@ -1,5 +1,5 @@
 'use client';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useLayoutEffect, useRef, useState} from 'react';
 import {Recorder} from '../app/recording-feedback';
 import type {LearningStage, Variant} from './types';
 import {sampleLessonsFor, sampleMaterials, sampleSequence, type SampleMaterial} from './sample-sequence';
@@ -17,6 +17,10 @@ const recordTime = (at: number) => <time dateTime={new Date(at).toISOString()}>{
 export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow = false, persistenceNote}: SampleSequenceProps) {
   const [internal, setInternal] = useState<SampleState>(() => initialValue || emptySampleState());
   const state = value || internal, latest = useRef(state); latest.current = state;
+  // Speech events can outlive the render that requested playback. Keep the
+  // host's current CAS callback alongside the current controlled value.
+  const latestOnChange = useRef(onChange);
+  useLayoutEffect(() => {latestOnChange.current = onChange;}, [onChange]);
   const [issue, setIssue] = useState(''), [now, setNow] = useState(Date.now());
   const [categoryOpen,setCategoryOpen]=useState(false),[catalogOpen,setCatalogOpen]=useState(!guidedFlow),[historyOpen,setHistoryOpen]=useState(false),[helpOpen,setHelpOpen]=useState(false);
   const playing = useRef<{id: string; promptId: string; watchdog: ReturnType<typeof setTimeout>} | null>(null);
@@ -33,7 +37,7 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
   const dispatch = (action: SampleAction) => {
     const result = transitionSample(latest.current, action, Date.now());
     setIssue(result.issue || '');
-    if (result.state !== latest.current) {latest.current = result.state; if (!value) setInternal(result.state); onChange?.(result.state);}
+    if (result.state !== latest.current) {latest.current = result.state; if (!value) setInternal(result.state); latestOnChange.current?.(result.state);}
     setNow(Date.now()); return result;
   };
   const stopAudio = (reason = '主动停止或切换步骤，未完整听完。') => {
