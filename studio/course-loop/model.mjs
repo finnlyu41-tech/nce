@@ -1,14 +1,20 @@
-import {lesson,byId,questionsFor,matches} from './lesson-nce1-001.mjs';
+import * as defaultContent from './lesson-nce1-001.mjs';
+
+// Bind the original event engine to explicit authored content. In particular,
+// keep the module's matcher so course-specific meaning guards are retained.
+export function createCourseLoopModel(content){
+ const {lesson,byId,questionsFor,matches}=content;
+ if(!lesson?.id||!byId?.get||typeof questionsFor!=='function'||typeof matches!=='function'||questionsFor('diagnostic').length!==3)throw Error('Invalid course content binding');
 const stages=['diagnostic','guided','independent','repair','review-a','review-b'];
 const learningSources=['text','audio','comic'];
 const clone=value=>structuredClone(value);
 const validTime=n=>Number.isSafeInteger(n)&&n>0&&n<=8640000000000000;
-export function initialState(at=Date.now()) {
+function initialState(at=Date.now()) {
  if(!validTime(at))throw Error('Invalid creation time');
  return {kind:'nce-course-loop-proposal',version:1,lessonId:lesson.id,contentVersion:lesson.version,createdAt:at,events:[]};
 }
-function base(state){return {phase:'diagnostic',index:0,draft:'',hinted:false,attempts:[],exposures:[{id:'diagnostic-ask',kind:'assessment',at:state.createdAt}],learning:[],corrections:{},ownDraft:'',ownFinal:null,dueAt:null,reviewResults:[],lastAt:state.createdAt};}
-export const currentQuestion=v=>stages.includes(v.phase)?questionsFor(v.phase)[v.index]:null;
+function base(state){return {phase:'diagnostic',index:0,draft:'',hinted:false,attempts:[],exposures:[{id:questionsFor('diagnostic')[0].id,kind:'assessment',at:state.createdAt}],learning:[],corrections:{},ownDraft:'',ownFinal:null,dueAt:null,reviewResults:[],lastAt:state.createdAt};}
+const currentQuestion=v=>stages.includes(v.phase)?questionsFor(v.phase)[v.index]:null;
 const exposureCount=(v,id)=>v.exposures.filter(x=>x.id===id).length;
 const activeAttempt=v=>{const q=currentQuestion(v);return q?v.attempts.find(a=>a.id===q.id&&a.exposure===exposureCount(v,q.id)):null};
 const rejected=message=>({ok:false,message});
@@ -28,7 +34,7 @@ function reduce(v,event){
   v.hinted=true;v.learning.push({id:`hint:${q.target}`,at});
  }else if(type==='source'){
   if(!learningSources.includes(event.source))return rejected('未知教材入口。');
-  v.learning.push({id:`nce1-1:${event.source}`,at});
+  v.learning.push({id:`${lesson.id}:${event.source}`,at});
   // Any source access while answering is assistance, including before the first answer.
   if(q&&!a)v.hinted=true;
  }else if(type==='not-yet'){
@@ -77,13 +83,13 @@ function reduce(v,event){
  }else return rejected('未知操作。');
  v.lastAt=at;return {ok:true,view:v};
 }
-export function inspect(state,now=Date.now()){
+function inspect(state,now=Date.now()){
  if(!state||state.kind!=='nce-course-loop-proposal'||state.version!==1||state.lessonId!==lesson.id||state.contentVersion!==lesson.version||!validTime(state.createdAt)||state.createdAt>now||!Array.isArray(state.events)||state.events.length>2000)return rejected('记录格式或版本不支持；保留原文，不重置。');
  let v=base(state);
  for(const event of state.events){if(!event||event.at>now)return rejected('记录包含未来时间。');const result=reduce(v,event);if(!result.ok)return result;v=result.view;}
  return {ok:true,view:v};
 }
-export function transition(state,action,at=Date.now()){
+function transition(state,action,at=Date.now()){
  const current=inspect(state,at);if(!current.ok)return {...current,state};
  if(!action||typeof action!=='object'||'at' in action)return {...rejected('时间由宿主提供。'),state};
  const coalesce=['draft','own-draft'].includes(action.type)&&state.events.at(-1)?.type===action.type;
@@ -91,21 +97,25 @@ export function transition(state,action,at=Date.now()){
  const event={...clone(action),at};const result=reduce(current.view,event);
  return result.ok?{ok:true,state:{...clone(state),events:[...clone(coalesce?state.events.slice(0,-1):state.events),event]},view:result.view}:{...result,state};
 }
-export function restore(raw,now=Date.now()){
+function restore(raw,now=Date.now()){
  try{const state=JSON.parse(raw);const result=inspect(state,now);return result.ok?{...result,state}:{...result,raw}}catch{return {...rejected('记录无法解析；保留原文。'),raw}}
 }
-export function teachingFor(view){return targetOrder(view).map(target=>lesson.teaching.find(t=>t.target===target));}
-export function receipt(view,now=Date.now()){
+function teachingFor(view){return targetOrder(view).map(target=>lesson.teaching.find(t=>t.target===target));}
+function receipt(view,now=Date.now()){
  const unseenBank=['review-a','review-b'].find(bank=>!view.exposures.some(x=>x.id.startsWith(bank+'-')));
  return {lessonId:lesson.id,phase:view.phase,dueAt:view.dueAt,due:!!view.dueAt&&now>=view.dueAt,unseenBank:unseenBank||null,
  independent: view.attempts.filter(a=>a.stage==='independent'&&!a.pending).map(a=>({id:a.id,correct:a.correct,assisted:a.hinted})),
  lastReview:view.reviewResults.at(-1)||null,openExpression:view.ownFinal?.status||'not-recorded',
  listening:'not-tested',pronunciation:'not-tested',mastery:'not-assessed',band:null};
 }
-export function recommendation(view,now=Date.now()){
+function recommendation(view,now=Date.now()){
  if(view.phase!=='waiting')return {kind:'resume',lessonId:lesson.id,phase:view.phase};
  const r=receipt(view,now);
  if(r.due&&r.unseenBank)return {kind:'review',lessonId:lesson.id,dueAt:r.dueAt};
  if(r.due&&!r.unseenBank)return {kind:'needs-new-material',lessonId:lesson.id,dueAt:r.dueAt};
  return {kind:'continue-route',lessonId:lesson.id,dueAt:r.dueAt};
 }
+ return {initialState,currentQuestion,inspect,transition,restore,teachingFor,receipt,recommendation};
+}
+const defaultModel=createCourseLoopModel(defaultContent);
+export const {initialState,currentQuestion,inspect,transition,restore,teachingFor,receipt,recommendation}=defaultModel;

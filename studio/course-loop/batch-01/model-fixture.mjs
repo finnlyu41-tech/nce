@@ -2,11 +2,13 @@
  * Publisher owns the production factory; this file never writes a model copy. */
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
 export const baseRuntime='0f347924d1ed114df83fa1cc6dd98ff5f3ae5d34';
-const coreURL=new URL('../model.mjs',import.meta.url);
+// This historical preview remains frozen after the publisher adds a real factory.
+const frozenFile=baseRuntime+':studio/course-loop/model.mjs';
 export async function fixtureSource(contentImport){
- let source=await readFile(coreURL,'utf8');
+ let source=execFileSync('git',['show',frozenFile],{encoding:'utf8',cwd:new URL('../../../',import.meta.url)});
  const sourceSha256=createHash('sha256').update(source).digest('hex');
  const replacements=[
   ["from './lesson-nce1-001.mjs'",`from '${contentImport}'`],

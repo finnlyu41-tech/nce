@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- This component runs in the static map app; /#/progress opens its separate existing workspace. */
 import {useEffect,useLayoutEffect,useRef,useState} from 'react';
-import {lesson,byId} from '../course-loop/lesson-nce1-001.mjs';
+import {isRegisteredCourse} from '../course-loop/registry.mjs';
 import type {Action} from '../course-loop/host-contract';
-import {CourseRead,LoopInputs,LoopView,commitCourseLoop,loopModel,parseCourseLoop,parseLoopInputs,readCourseLoop} from './course-loop-progress';
+import {CourseRead,LoopInputs,LoopView,commitCourseLoop,courseLoopFor,parseCourseLoop,parseLoopInputs,readCourseLoop} from './course-loop-progress';
 import {loadLessonLanguage,type LessonLanguage} from './language';
 import {splitLesson} from './lesson-structure';
 import {SentenceIllustration} from './sentence-illustration-ui';
@@ -20,7 +20,14 @@ const time=(at:number)=>new Date(at).toLocaleString('zh-CN');
 
 /** The pilot owns only two entries in the existing State.drafts. Its inputs
  * queue through the guarded writer; no new lesson appears before confirmation. */
-export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRoute:(confirmed:State)=>void;onLeaveGuard:(guard:(()=>Promise<boolean>)|null)=>void;map:Progress}){
+type WorkspaceProps={continueRoute:(confirmed:State)=>void;onLeaveGuard:(guard:(()=>Promise<boolean>)|null)=>void;map:Progress;courseId?:string};
+export function CourseLoopWorkspace(props:WorkspaceProps){
+ const courseId=props.courseId||'nce1-1';
+ if(!isRegisteredCourse(courseId))return <section role="alert"><p>课程尚未注册，原始记录保留。请先打开记录页备份核对。</p><a href="/#/progress">打开记录与整站备份</a></section>;
+ return <BoundCourseLoopWorkspace key={courseId} {...props} courseId={courseId}/>;
+}
+function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1-1'}:WorkspaceProps){
+ const {lesson,model:loopModel}=courseLoopFor(courseId);
  const [view,setView]=useState<LoopView|null>(null),[draft,setDraft]=useState(''),[own,setOwn]=useState('');
  const [inputs,setInputs]=useState<LoopInputs>({version:1,corrections:{}}),[busy,setBusy]=useState(false),[reading,setReading]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState(''),[blocked,setBlocked]=useState(false);
  const [source,setSource]=useState<'text'|'audio'|'comic'|'reader'|null>(null),[clock,setClock]=useState(()=>Date.now()),[exported,setExported]=useState(false);
@@ -30,10 +37,10 @@ export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRo
  useLayoutEffect(()=>{draftRef.current=draft;ownRef.current=own;inputsRef.current=inputs},[draft,own,inputs]);
  function apply(read:CourseRead,reset=false){
   if(read.raw===null)throw Error('本课尚未保存。');
-  const result=parseCourseLoop(read.raw);if(!result.ok)throw Error(result.message);
+  const result=parseCourseLoop(read.raw,Date.now(),courseId);if(!result.ok)throw Error(result.message);
   const changed=reset||!viewRef.current||questionIdentity(viewRef.current)!==questionIdentity(result.view);
   readRef.current=read;viewRef.current=result.view;setView(result.view);
-  if(reset){const restored=parseLoopInputs(read.inputsRaw);inputsRef.current=restored;setInputs(restored);setOwn(result.view.ownDraft)}
+  if(reset){const restored=parseLoopInputs(read.inputsRaw,courseId);inputsRef.current=restored;setInputs(restored);setOwn(result.view.ownDraft)}
   if(changed){setDraft(result.view.draft);setSource(null);requestAnimationFrame(()=>title.current?.focus({preventScroll:true}))}
  }
  async function drain(){
@@ -42,13 +49,13 @@ export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRo
   try{
    while(ops.current.length&&alive.current&&epoch.current===generation){
     const operation=ops.current[0],read=readRef.current;if(!read)throw Error('课程记录还没有读完。');
-    const restored=read.raw===null?{ok:true as const,state:loopModel.initialState(),view:null}:parseCourseLoop(read.raw);
+    const restored=read.raw===null?{ok:true as const,state:loopModel.initialState(),view:null}:parseCourseLoop(read.raw,Date.now(),courseId);
     if(!restored.ok)throw Error(restored.message);
     const next=operation.action?loopModel.transition(restored.state,operation.action):restored;
     if(!next.ok){ops.current.shift();operation.resolve?.(false);setNotice(next.message);continue}
-    let nextInputs=parseLoopInputs(read.inputsRaw);
+    let nextInputs=parseLoopInputs(read.inputsRaw,courseId);
     if(operation.input){const {id,field,value}=operation.input;nextInputs={version:1,corrections:{...nextInputs.corrections,[id]:{...(nextInputs.corrections[id]||{answer:'',note:''}),[field]:value}}}}
-    const confirmed=await commitCourseLoop(read,JSON.stringify(next.state),nextInputs,()=>alive.current&&epoch.current===generation);
+    const confirmed=await commitCourseLoop(read,JSON.stringify(next.state),nextInputs,()=>alive.current&&epoch.current===generation,courseId);
     if(!alive.current||epoch.current!==generation)return;
     apply(confirmed);ops.current.shift();operation.resolve?.(true);
    }
@@ -70,10 +77,10 @@ export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRo
  async function load(){
   const generation=++epoch.current,revision=inputRevision.current;loading.current=true;setReading(true);setBusy(true);setError('');setSource(null);
   try{
-   const read=await readCourseLoop();if(!alive.current||generation!==epoch.current)return;
+   const read=await readCourseLoop(courseId);if(!alive.current||generation!==epoch.current)return;
    if(inputRevision.current!==revision)throw Error('读取期间本页有新的输入，内容仍保留。先保存未提交内容，再重新读取。');
-   if(read.raw!==null){const parsed=parseCourseLoop(read.raw);if(!parsed.ok)throw Error(parsed.message);parseLoopInputs(read.inputsRaw);apply(read,true)}
-   else{parseLoopInputs(read.inputsRaw);readRef.current=read;ops.current.push({});failed.current=false;await drain();if(!failed.current&&readRef.current?.raw)apply(readRef.current,true)}
+   if(read.raw!==null){const parsed=parseCourseLoop(read.raw,Date.now(),courseId);if(!parsed.ok)throw Error(parsed.message);parseLoopInputs(read.inputsRaw,courseId);apply(read,true)}
+   else{parseLoopInputs(read.inputsRaw,courseId);readRef.current=read;ops.current.push({});failed.current=false;await drain();if(!failed.current&&readRef.current?.raw)apply(readRef.current,true)}
    setBlocked(false);
   }catch(cause){if(alive.current&&generation===epoch.current){setBlocked(true);failed.current=true;setError(cause instanceof Error?cause.message:'课程记录暂时不能读取。原文仍保留。')}}
   finally{loading.current=false;if(alive.current){setBusy(false);setReading(false)}}
@@ -82,7 +89,7 @@ export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRo
   // The mount read is an external-store synchronization, not derived render state.
   void Promise.resolve().then(load);const tick=setInterval(()=>setClock(Date.now()),30000);
   const focus=()=>{setClock(Date.now());if(!working.current&&!ops.current.length&&!failed.current&&!loading.current){const generation=epoch.current,expected=readRef.current,revision=inputRevision.current;
-   void readCourseLoop().then(read=>{if(alive.current&&epoch.current===generation&&readRef.current===expected&&inputRevision.current===revision&&!working.current&&!ops.current.length&&!failed.current&&!loading.current&&(read.raw!==expected?.raw||read.inputsRaw!==expected?.inputsRaw))apply(read,true)}).catch(cause=>{if(alive.current&&epoch.current===generation&&inputRevision.current===revision)setError(String(cause))})}};
+   void readCourseLoop(courseId).then(read=>{if(alive.current&&epoch.current===generation&&readRef.current===expected&&inputRevision.current===revision&&!working.current&&!ops.current.length&&!failed.current&&!loading.current){if(read.raw!==expected?.raw||read.inputsRaw!==expected?.inputsRaw)apply(read,true);else if(read.storage.raw!==expected?.storage.raw){readRef.current=read;setClock(Date.now())}}}).catch(cause=>{if(alive.current&&epoch.current===generation&&inputRevision.current===revision)setError(String(cause))})}};
   window.addEventListener('focus',focus);window.addEventListener('pageshow',focus);window.addEventListener('english-studio-progress-restored',focus);
   async function flush(){
    if(!viewRef.current&&!ops.current.length)return true;
@@ -99,10 +106,16 @@ export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRo
  // eslint-disable-next-line react-hooks/exhaustive-deps
  },[]);
  const identity=view?questionIdentity(view):'';
- const continuation=readRef.current?courseContinuation(readRef.current.state,map,'nce1-1',clock):null;
+ const continuation=readRef.current?courseContinuation(readRef.current.state,map,courseId,clock):null;
  async function continueSavedCourse(){
   if(!await flushRef.current()){setError('本课输入还没有保存。请先保存未提交内容，再离开本课。');return}
-  if(readRef.current)continueRoute(readRef.current.state);
+  const expected=readRef.current,revision=inputRevision.current,generation=epoch.current;
+  try{
+   const confirmed=await readCourseLoop(courseId);
+   if(!expected||!alive.current||epoch.current!==generation||inputRevision.current!==revision||working.current||ops.current.length||confirmed.raw!==expected.raw||confirmed.inputsRaw!==expected.inputsRaw){setError('本课记录已更新，请先核对最新记录再继续。');return}
+   readRef.current=confirmed;continueRoute(confirmed.state);
+  }catch(cause){setError(cause instanceof Error?cause.message:'本课记录暂时不能确认，请先备份核对。')}
+
  }
  function exportPending(){
   const payload={kind:'english-studio-unsaved-course-input',version:1,savedRaw:readRef.current?.raw??null,savedInputsRaw:readRef.current?.inputsRaw??null,draft:draftRef.current,ownDraft:ownRef.current,corrections:inputsRef.current,queued:ops.current.map(({action,input})=>({action,input}))};
@@ -117,7 +130,7 @@ export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRo
  const disabled=busy||!!error||blocked;
  const q=view?loopModel.currentQuestion(view):null;
  const attempt=q&&view?view.attempts.find(a=>a.id===q.id&&a.exposure===view.exposures.filter(e=>e.id===q.id).length):null;
- return <section className="course-loop" aria-label="第 1–2 课连续练习" data-phase={view?.phase||'loading'}>
+ return <section className="course-loop" aria-label={`第 ${lesson.lessons[0]}–${lesson.lessons[1]} 课连续练习`} data-course={courseId} data-phase={view?.phase||'loading'}>
   <div className="course-loop-status" role="status">{blocked?'已保留原始记录':busy?'正在保存本次输入…':error?'尚未保存，输入仍在本页':'本次课程记录已保存'}</div>
   {notice&&<p role="alert">{notice}</p>}
   {error&&<div className="course-loop-error" role="alert"><p>{error}</p><button type="button" onClick={exportPending}>保存未提交内容</button>{!blocked&&<button type="button" disabled={busy} onClick={()=>{failed.current=false;setError('');void drain()}}>重试保存</button>}<button type="button" disabled={busy||!exported&&!blocked} onClick={()=>{ops.current=[];failed.current=false;setExported(false);void load()}}>读取最新记录</button><a href="/#/progress">打开记录与整站备份</a></div>}
@@ -130,22 +143,23 @@ export function CourseLoopWorkspace({continueRoute,onLeaveGuard,map}:{continueRo
      {(view.phase==='guided'||view.hinted)&&<div className="course-loop-help">{lesson.teaching.filter(t=>t.target===q.target).map(t=><div key={t.target}><p>{t.check}</p><p lang="en">{t.example}</p><p>{t.explanation}</p></div>)}</div>}
      {q.kind==='choice'?<div className="course-loop-choices" role="group" aria-label="你的回答">{q.options?.map(option=><button type="button" key={option} aria-pressed={draft===option} disabled={!!attempt||!!error} onClick={()=>{setDraft(option);void send({type:'draft',value:option})}}>{option}</button>)}</div>:<label>你的英文回答<input value={draft} autoComplete="off" spellCheck={false} maxLength={1000} disabled={!!attempt||blocked||reading} onChange={e=>{setDraft(e.target.value);void send({type:'draft',value:e.target.value})}}/></label>}
      {attempt?<><p role="status">{['diagnostic','independent'].includes(view.phase)?'首答已保存。完成三题后一起看反馈。':`${attempt.correct?'本次与目标句一致。':'本次需要修补。'} 参考：${q.accepted[0]} ${q.why}`}</p><p className="course-loop-original">首答：{attempt.answer}</p>{!attempt.correct&&['guided','repair'].includes(view.phase)?<button className="primary" disabled={disabled} onClick={()=>void send({type:'retry'})}>对照后重试</button>:<button className="primary" disabled={disabled} onClick={()=>void send({type:'next'})}>{view.index<2?'下一题':view.phase==='diagnostic'?'看针对性讲解':view.phase==='guided'?'收起示范，自己试':view.phase==='independent'?'看首答与反馈':view.phase==='repair'?'换成自己的问答':'看本次复习记录'}</button>}</>:<div className="course-loop-actions"><button className="primary" disabled={disabled||!draft.trim()} onClick={()=>void send({type:'submit'})}>提交本题</button>{view.phase!=='guided'&&!view.hinted&&<button disabled={disabled} onClick={()=>void send({type:'help'})}>需要提示</button>}<button disabled={disabled} onClick={()=>void send({type:'not-yet'})}>暂时不会，先记下</button></div>}
-    </>:view.phase==='learn'?<><h2 ref={title} tabIndex={-1}>先补本次最需要的一处</h2>{loopModel.teachingFor(view).map(t=><article key={t.target}><h3>{t.title}</h3><p>{t.explanation}</p><p lang="en">{t.example}</p><p>{t.meaning}</p></article>)}<details><summary>回看刚才三题的首答</summary>{view.attempts.filter(a=>a.stage==='diagnostic').map(a=><Attempt key={a.id} attempt={a} view={view}/>)}</details><button className="primary" disabled={disabled} onClick={()=>void send({type:'next'})}>跟着换一句</button></>:view.phase==='feedback'?<><h2 ref={title} tabIndex={-1}>保留首答，再写订正和原因</h2>{view.attempts.filter(a=>a.stage==='independent').map(a=><article key={a.id}><Attempt attempt={a} view={view}/>{(!a.correct||a.hinted)&&!view.corrections[a.id]&&<><label>订正句子<input value={inputs.corrections[a.id]?.answer||''} maxLength={1000} disabled={blocked||reading} onChange={e=>{const value=e.target.value;setInputs(s=>({...s,corrections:{...s.corrections,[a.id]:{...(s.corrections[a.id]||{answer:'',note:''}),answer:value}}}));void send(undefined,{id:a.id,field:'answer',value})}}/></label><label>哪里需要改？写一条原因。<textarea value={inputs.corrections[a.id]?.note||''} maxLength={1000} disabled={blocked||reading} onChange={e=>{const value=e.target.value;setInputs(s=>({...s,corrections:{...s.corrections,[a.id]:{...(s.corrections[a.id]||{answer:'',note:''}),note:value}}}));void send(undefined,{id:a.id,field:'note',value})}}/></label><button disabled={disabled} onClick={()=>void send({type:'correct',id:a.id,answer:inputs.corrections[a.id]?.answer||'',note:inputs.corrections[a.id]?.note||''})}>保留这条订正</button></>}</article>)}<button className="primary" disabled={disabled||view.attempts.some(a=>a.stage==='independent'&&(!a.correct||a.hinted)&&!view.corrections[a.id])} onClick={()=>void send({type:'next'})}>换三个情境，再试一次</button></>:view.phase==='own'?<><h2 ref={title} tabIndex={-1}>写一段自己的问答</h2><p>{lesson.own.prompt}</p><label>自己的文字（可留待以后）<textarea maxLength={2000} disabled={blocked||reading} value={own} onChange={e=>{setOwn(e.target.value);void send({type:'own-draft',value:e.target.value})}}/></label><p>{lesson.own.reviewerPrompt}</p><button className="primary" disabled={disabled} onClick={()=>void send({type:'finish'})}>保留本次记录，安排复习</button></>:view.phase==='review-feedback'?<><h2 ref={title} tabIndex={-1}>{view.reviewResults.at(-1)?.independent?'本次新题独立完成':'本次仍需修补'}</h2>{view.attempts.filter(a=>a.stage===view.reviewResults.at(-1)?.bank).map(a=><Attempt key={a.id} attempt={a} view={view}/>)}<p>这次题目的记录已保存，听力与发音仍未评分。</p><button className="primary" disabled={disabled} onClick={()=>void send({type:'next'})}>查看下一次安排</button></>:<><h2 ref={title} tabIndex={-1}>本次记录已保存</h2><p>下一次回想：{view.dueAt?time(view.dueAt):'尚未安排'}。查看计划不算完成复习。</p>{loopModel.recommendation(view,clock).kind==='review'?<button className="primary" disabled={disabled} onClick={()=>void send({type:'review'})}>开始到期的新题</button>:loopModel.recommendation(view,clock).kind==='needs-new-material'?<p>本课两组新题已用完，需要补充材料；不会把旧题当作新的迁移。</p>:<p>还没有到期。{continuation?.reason}</p>}<button disabled={disabled} onClick={()=>void continueSavedCourse()}>{continuation?.label||'查看下一步'}</button><p>自己的表达：{view.ownFinal?.status==='awaiting-human-review'?'待人工核对':'未记录'}。</p></>}
+    </>:view.phase==='learn'?<><h2 ref={title} tabIndex={-1}>先补本次最需要的一处</h2>{loopModel.teachingFor(view).map(t=><article key={t.target}><h3>{t.title}</h3><p>{t.explanation}</p><p lang="en">{t.example}</p><p>{t.meaning}</p></article>)}<details><summary>回看刚才三题的首答</summary>{view.attempts.filter(a=>a.stage==='diagnostic').map(a=><Attempt courseId={courseId} key={a.id} attempt={a} view={view}/>)}</details><button className="primary" disabled={disabled} onClick={()=>void send({type:'next'})}>跟着换一句</button></>:view.phase==='feedback'?<><h2 ref={title} tabIndex={-1}>保留首答，再写订正和原因</h2>{view.attempts.filter(a=>a.stage==='independent').map(a=><article key={a.id}><Attempt courseId={courseId} attempt={a} view={view}/>{(!a.correct||a.hinted)&&!view.corrections[a.id]&&<><label>订正句子<input value={inputs.corrections[a.id]?.answer||''} maxLength={1000} disabled={blocked||reading} onChange={e=>{const value=e.target.value;setInputs(s=>({...s,corrections:{...s.corrections,[a.id]:{...(s.corrections[a.id]||{answer:'',note:''}),answer:value}}}));void send(undefined,{id:a.id,field:'answer',value})}}/></label><label>哪里需要改？写一条原因。<textarea value={inputs.corrections[a.id]?.note||''} maxLength={1000} disabled={blocked||reading} onChange={e=>{const value=e.target.value;setInputs(s=>({...s,corrections:{...s.corrections,[a.id]:{...(s.corrections[a.id]||{answer:'',note:''}),note:value}}}));void send(undefined,{id:a.id,field:'note',value})}}/></label><button disabled={disabled} onClick={()=>void send({type:'correct',id:a.id,answer:inputs.corrections[a.id]?.answer||'',note:inputs.corrections[a.id]?.note||''})}>保留这条订正</button></>}</article>)}<button className="primary" disabled={disabled||view.attempts.some(a=>a.stage==='independent'&&(!a.correct||a.hinted)&&!view.corrections[a.id])} onClick={()=>void send({type:'next'})}>换三个情境，再试一次</button></>:view.phase==='own'?<><h2 ref={title} tabIndex={-1}>写一段自己的问答</h2><p>{lesson.own.prompt}</p><label>自己的文字（可留待以后）<textarea maxLength={2000} disabled={blocked||reading} value={own} onChange={e=>{setOwn(e.target.value);void send({type:'own-draft',value:e.target.value})}}/></label><p>{lesson.own.reviewerPrompt}</p><button className="primary" disabled={disabled} onClick={()=>void send({type:'finish'})}>保留本次记录，安排复习</button></>:view.phase==='review-feedback'?<><h2 ref={title} tabIndex={-1}>{view.reviewResults.at(-1)?.independent?'本次新题独立完成':'本次仍需修补'}</h2>{view.attempts.filter(a=>a.stage===view.reviewResults.at(-1)?.bank).map(a=><Attempt courseId={courseId} key={a.id} attempt={a} view={view}/>)}<p>这次题目的记录已保存，听力与发音仍未评分。</p><button className="primary" disabled={disabled} onClick={()=>void send({type:'next'})}>查看下一次安排</button></>:<><h2 ref={title} tabIndex={-1}>本次记录已保存</h2><p>下一次回想：{view.dueAt?time(view.dueAt):'尚未安排'}。查看计划不算完成复习。</p>{loopModel.recommendation(view,clock).kind==='review'?<button className="primary" disabled={disabled} onClick={()=>void send({type:'review'})}>开始到期的新题</button>:loopModel.recommendation(view,clock).kind==='needs-new-material'?<p>本课两组新题已用完，需要补充材料；不会把旧题当作新的迁移。</p>:<p>还没有到期。{continuation?.reason}</p>}<button disabled={disabled} onClick={()=>void continueSavedCourse()}>{continuation?.label||'查看下一步'}</button><p>自己的表达：{view.ownFinal?.status==='awaiting-human-review'?'待人工核对':'未记录'}。</p></>}
    </section>
-   <aside className="course-loop-sources" aria-label="本课教材"><h3>回到原文、原声和漫画</h3><div className="course-loop-actions">{(['text','audio','comic'] as const).map((kind,i)=><button type="button" key={kind} disabled={disabled} aria-expanded={source===kind} onClick={()=>void showSource(kind)}>{['看原文','听本课原声','看本课漫画'][i]}</button>)}{view.phase==='learn'&&<button disabled={disabled} onClick={()=>void showSource('reader')}>逐句听与看</button>}</div>{q&&!attempt&&<p className="course-loop-note">作答时查看教材会记为使用帮助。切换到下一题后会收起教材。</p>}{source&&<><button type="button" onClick={()=>setSource(null)}>收起教材</button><SourcePanel key={`${source}:${identity}`} kind={source}/></>}</aside>
-   {!q&&view.attempts.length>0&&<details className="course-loop-history"><summary>回看原答与订正</summary>{view.attempts.map((a,i)=><Attempt key={`${a.id}-${i}`} attempt={a} view={view}/>)}</details>}
+   <aside className="course-loop-sources" aria-label="本课教材"><h3>回到原文、原声和漫画</h3><div className="course-loop-actions">{(['text','audio','comic'] as const).map((kind,i)=><button type="button" key={kind} disabled={disabled} aria-expanded={source===kind} onClick={()=>void showSource(kind)}>{['看原文','听本课原声','看本课漫画'][i]}</button>)}{view.phase==='learn'&&<button disabled={disabled} onClick={()=>void showSource('reader')}>逐句听与看</button>}</div>{q&&!attempt&&<p className="course-loop-note">作答时查看教材会记为使用帮助。切换到下一题后会收起教材。</p>}{source&&<><button type="button" onClick={()=>setSource(null)}>收起教材</button><SourcePanel key={`${source}:${identity}`} kind={source} courseId={courseId}/></>}</aside>
+   {!q&&view.attempts.length>0&&<details className="course-loop-history"><summary>回看原答与订正</summary>{view.attempts.map((a,i)=><Attempt courseId={courseId} key={`${a.id}-${i}`} attempt={a} view={view}/>)}</details>}
    <p className="course-loop-note">{lesson.scope} 本课记录的复习安排与词卡分别保存。</p><a className="course-loop-records" href="/#/progress" onClick={e=>{if(disabled){e.preventDefault();setError('请先等输入保存完成；如果保存失败，请先保存未提交内容。')}}}>打开学习记录与整站备份</a>
   </>}
  </section>;
 }
-function Attempt({attempt:a,view}:{attempt:LoopView['attempts'][number];view:LoopView}){const q=byId.get(a.id),c=view.corrections[a.id];return <div className="course-loop-attempt"><p>{q?.context}</p><p className="course-loop-original">原答：{a.answer}</p><p>{a.correct?'本题匹配':'本题需修补'} · {a.hinted?'使用帮助':'未用帮助'} · {a.fresh?'本记录首次曝光':'同题重试'}</p><p>参考：{q?.accepted[0]} {q?.why}</p>{c&&<p>订正：{c.answer}；原因：{c.note}（首答保留）</p>}</div>}
-function SourcePanel({kind}:{kind:'text'|'audio'|'comic'|'reader'}){
+function Attempt({attempt:a,view,courseId}:{attempt:LoopView['attempts'][number];view:LoopView;courseId:string}){const q=courseLoopFor(courseId).byId.get(a.id),c=view.corrections[a.id];return <div className="course-loop-attempt"><p>{q?.context}</p><p className="course-loop-original">原答：{a.answer}</p><p>{a.correct?'本题匹配':'本题需修补'} · {a.hinted?'使用帮助':'未用帮助'} · {a.fresh?'本记录首次曝光':'同题重试'}</p><p>参考：{q?.accepted[0]} {q?.why}</p>{c&&<p>订正：{c.answer}；原因：{c.note}（首答保留）</p>}</div>}
+function SourcePanel({kind,courseId}:{kind:'text'|'audio'|'comic'|'reader';courseId:string}){
+ const {lesson}=courseLoopFor(courseId),first=lesson.lessons[0];
  const [language,setLanguage]=useState<LessonLanguage|null>(null),[failed,setFailed]=useState(false),[retry,setRetry]=useState(0),[line,setLine]=useState(0);
- useEffect(()=>{let alive=true;void loadLessonLanguage('NCE1',1).then(result=>{if(alive){setLanguage(result);setFailed(!result)}});return()=>{alive=false}},[retry]);
+ useEffect(()=>{let alive=true;void loadLessonLanguage(lesson.book,first).then(result=>{if(alive){const valid=!!result&&result.book===lesson.book&&result.lesson===first&&result.sourceSha256===lesson.source.languageSha256;setLanguage(valid?result:null);setFailed(!valid)}});return()=>{alive=false}},[retry,courseId]);
  if(!language)return <p role="status">{failed?<>课文暂时未能加载。<button onClick={()=>setRetry(n=>n+1)}>重试课文</button></>:'正在读取本课教材…'}</p>;
  const rows=splitLesson(language.rows,language.book,true).body;
  if(kind==='reader')return <LessonReader language={language}/>;
  if(kind==='text')return <div className="course-loop-text" aria-label="本课原文">{rows.map((row,i)=><article key={i}><p lang="en">{row.en}</p><p>{row.zh}</p></article>)}</div>;
- if(kind==='audio')return <div className="course-loop-actions"><ClipButton clip={{book:'NCE1',lesson:1,start:rows[0]?.time||0,end:99999}} label="听完整课文"/>{lesson.source.clips.map(clip=><ClipButton key={clip.target} clip={{book:'NCE1',lesson:1,start:clip.start,end:clip.end}} label={clip.target==='ask'?'听询问物品':clip.target==='confirm'?'听确认物品':'听请求重说'}/>)}</div>;
- return <><SentenceIllustration book="NCE1" lesson={1} sourceSha256={language.sourceSha256} rowCount={rows.length} line={line}/><div className="course-loop-actions"><button disabled={line===0} onClick={()=>setLine(n=>n-1)}>上一幅</button><span>对应第 {line+1} / {rows.length} 句</span><button disabled={line===rows.length-1} onClick={()=>setLine(n=>n+1)}>下一幅</button></div></>;
+ if(kind==='audio')return <div className="course-loop-actions"><ClipButton clip={{book:lesson.book,lesson:first,start:rows[0]?.time||0,end:99999}} label="听完整课文"/>{lesson.source.clips.map(clip=><ClipButton key={clip.target} clip={{book:lesson.book,lesson:first,start:clip.start,end:clip.end}} label={clip.label|| (clip.target==='ask'?'听询问物品':clip.target==='confirm'?'听确认物品':'听请求重说')}/>)}</div>;
+ return <><SentenceIllustration book={lesson.book} lesson={first} sourceSha256={language.sourceSha256} rowCount={rows.length} line={line}/><div className="course-loop-actions"><button disabled={line===0} onClick={()=>setLine(n=>n-1)}>上一幅</button><span>对应第 {line+1} / {rows.length} 句</span><button disabled={line===rows.length-1} onClick={()=>setLine(n=>n+1)}>下一幅</button></div></>;
 }

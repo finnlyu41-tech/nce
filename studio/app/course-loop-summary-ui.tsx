@@ -1,22 +1,27 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Links connect the existing static map and workspace. */
 import type {State} from './model';
 import type {Progress} from '../map/model';
+import {courseLoopFor,courseLoopBindings} from './course-loop-progress';
 import {courseLoopSummary} from './course-loop-summary';
 import {courseAccessHref} from './course-loop-next';
 import './course-loop.css';
-type Props={state:State;map?:Progress;ready?:boolean;error?:string;mapError?:string};
-export function CourseLoopHeadingSummary({state,map,ready=true,error,mapError}:Props){
- const summary=courseLoopSummary(state,mapError?undefined:map);
+type Props={state:State;map?:Progress;ready?:boolean;error?:string;mapError?:string;courseId?:string};
+export function CourseLoopHeadingSummary({state,map,ready=true,error,mapError,courseId='nce1-1'}:Props){
+ const summary=courseLoopSummary(state,mapError?undefined:map,Date.now(),courseId);
  return <div className="course-loop-heading-summary" role="status">
   <strong>{!ready?'正在读取本轮训练记录…':error?'本轮训练记录暂时未能读取':summary.status==='ready'?summary.label:summary.status==='blocked'?'本课记录需要核对':'本轮训练尚未开始'}</strong>
   {ready&&!error&&summary.status==='ready'&&<span>{summary.currentHelp?'当前使用帮助':summary.helped?`${summary.helped} 次作答使用帮助，原答已保留`:'原答与帮助记录分别保留'}</span>}
   <span>{summary.mapLabel}</span>
  </div>;
 }
-export function CourseLoopRecords({state,map,error,mapError}:Props){
- const summary=courseLoopSummary(state,mapError?undefined:map);
+export function CourseLoopRecords(props:Props){
+ return props.courseId?<SingleCourseRecords {...props}/>:<>{courseLoopBindings.map(course=><SingleCourseRecords key={course.id} {...props} courseId={course.id}/>)}</>;
+}
+function SingleCourseRecords({state,map,error,mapError,courseId='nce1-1'}:Props){
+ const {lesson}=courseLoopFor(courseId),range=`第 ${lesson.lessons[0]}–${lesson.lessons[1]} 课连续练习`;
+ const summary=courseLoopSummary(state,mapError?undefined:map,Date.now(),courseId);
  if(summary.status==='none')return null;
- return <section className="panel course-loop-records-summary" aria-label="第 1–2 课连续练习记录"><h2>第 1–2 课连续练习</h2>
+ return <section className="panel course-loop-records-summary" data-course={courseId} aria-label={range+'记录'}><h2>{range}</h2>
   {summary.status==='blocked'?<p role="status">{summary.message}</p>:<>
    <p role="status"><strong>{summary.label}</strong>{summary.currentHelp&&' · 当前使用帮助'}</p>
    <p>原始作答 {summary.attempts} 次 · 其中 {summary.helped} 次使用帮助 · 已保留 {summary.corrections} 条订正。</p>
@@ -27,6 +32,6 @@ export function CourseLoopRecords({state,map,error,mapError}:Props){
   </>}
   <p>{summary.mapLabel}。连续练习的本轮记录、地图检验和词卡复习分别保存；本轮完成不代表整课已经掌握。</p>
   {(error||mapError)&&<p role="status">{error||mapError}</p>}
-  <a className="text-btn" href={map&&!mapError?courseAccessHref('nce1-1',map):'/map/#/learn/nce1-1'}>回到本课记录</a>
+  <a className="text-btn" href={map&&!mapError?courseAccessHref(courseId,map):`/map/#/learn/${courseId}`}>回到本课记录</a>
  </section>;
 }

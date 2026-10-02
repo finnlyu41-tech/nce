@@ -1,8 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import * as old from '../model.mjs';
+import {bindModelFixture} from './model-fixture.mjs';
+const {model:old}=await bindModelFixture(new URL('../lesson-nce1-001.mjs',import.meta.url));
 import * as oldContent from '../lesson-nce1-001.mjs';
-import {fixtureForId,hostParserFixture,draftKeysFor,supportedCourseIds} from './model-fixture.mjs';
+import {fixtureForId,hostParserFixture,draftKeysFor,supportedCourseIds} from './production-test-binding.mjs';
 const NOW=1790940000000,DAY=86400000;
 function runner(model,content){let state=model.initialState(NOW),at=NOW;return {get state(){return state},get now(){return at},get view(){return model.inspect(state,at).view},setAt(n){at=n},do(action){const r=model.transition(state,action,++at);assert.ok(r.ok,r.message);state=r.state;return r},reject(action){const raw=JSON.stringify(state),r=model.transition(state,action,++at);assert.equal(r.ok,false);assert.equal(JSON.stringify(r.state),raw);return r},answer(value){const q=model.currentQuestion(this.view);this.do({type:'draft',value:value??q.accepted[0]});this.do({type:'submit'})},stage(){const phase=this.view.phase;while(this.view.phase===phase){this.answer();this.do({type:'next'})}},independent(){this.stage();this.do({type:'next'});this.stage()},finish(){this.independent();this.stage();this.do({type:'next'});this.stage();this.do({type:'own-draft',value:'Own expression awaiting review.'});this.do({type:'finish'})}}}
 const fixtures=Object.fromEntries(await Promise.all(supportedCourseIds.map(async id=>[id,await fixtureForId(id)])));

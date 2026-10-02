@@ -1,3 +1,4 @@
+import {conditionGoal} from './condition-goal';
 import {mapEvidenceLabel} from './learning-label';
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -191,7 +192,7 @@ function NodeDetails({ node, status, state, focus, start, current, unlock }: {
     const Icon = node.kind === 'finish' ? Flag : node.kind === 'checkpoint' ? Milestone : skillIcon(node.lane);
     const index = nodes.indexOf(node) + 1;
     const required = node.requires.filter(id => statusMap(state)[id] !== 'passed');
-    const goal = node.kind === 'course' ? '完成本章 12 组学习、隔至少 24 小时换题巩固，并提交自己的口头与书面作品及评阅反馈。' : node.kind === 'starter' ? '先听懂和认形，通过点击作答完成起步检验。这里不要求先会打英文。' : node.kind === 'lesson' ? `在不看提示的情况下，独立完成 ${questionsFor(node).length} 道知识点检验。` : node.kind === 'checkpoint' ? '换一组混合题，全部独立答对，解锁下一段路线。' : node.kind === 'task' ? node.mission?.assignment?.check : node.kind === 'mock' ? '完成整套 Academic 新题，总分至少 6.5，并满足已确认的单项要求。' : '两套模考达到准备度参考；正式成绩单确认最终结果。';
+    const goal = conditionGoal(node);
     return <div className="node-details"><div className="selection-label"><span>{node.id === current ? '你的下一步' : '正在查看'}</span><span>站点 {String(index).padStart(2, '0')}</span></div><div className={`detail-icon ${status}`}><Icon size={28}/></div><div className={`status-badge ${status}`}>{status === 'locked' ? <Lock size={12}/> : status === 'passed' ? <Check size={12}/> : <span className="live-dot"/>}{status === 'locked' ? '等待解锁' : status === 'passed' ? node.kind === 'finish' ? officialReached(state) ? '正式成绩已登记' : '模考准备度已达标' : '已通过' : '已解锁 · 可以开始'}</div><h2>{node.title}</h2><p className="completion-label">{manuallyUnlocked(node,state)&&<span>已开放 · </span>}{mapEvidenceLabel(node,state)}</p><p className="detail-description">{node.subtitle}</p><div className="detail-meta">{node.minutes > 0 && <span><Clock3 size={14}/>{node.minutes} 分钟 / 本轮</span>}<span><BookOpen size={14}/>{node.kind === 'task' ? '实践 + 评阅' : node.kind === 'mock' ? '完整模考' : node.kind === 'finish' ? '终点' : '讲解 + 检验'}</span></div>
   {node.kind==='course'&&<div className="detail-course-progress"><span>{chapterProgress(node,state).learned} / 12 初次通过</span><span>{chapterProgress(node,state).stable} / 12 隔日巩固</span><small>{node.stage==='foundation'?`新概念一册 · 第 ${node.chapter!*24+1}–${(node.chapter!+1)*24} 课`:`新概念二册 · 第 ${(node.chapter!-6)*12+1}–${(node.chapter!-5)*12} 课`}</small></div>}
   <div className="unlock-goal"><div><Flag size={15}/><strong>这一站的目标</strong></div><p>{goal}</p></div>

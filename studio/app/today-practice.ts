@@ -12,7 +12,7 @@ import {statusMap,due,passedQuiz,type Progress} from '../map/model';
 import {speakingDue,speakingReviewAt} from '../map/speaking-model';
 import {lessonPlan} from '../map/lesson-plan';
 import {samplePracticeTasks} from './ielts-sample-next';
-import {courseLoopKey} from './course-loop-progress';
+import {courseLoopBindings} from './course-loop-progress';
 import {courseLoopTask,courseDestination,courseAccessHref} from './course-loop-next';
 
 export type PracticeTask={id:string;title:string;reason:string;method:string;evidence:string;href:string;returnHref:string;priority:number;at:number;kind:'repair'|'review'|'resume'|'new'|'course'};
@@ -45,10 +45,13 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  const to=(route:Parameters<typeof routeHash>[0])=>(online?'/':'')+routeHash(route);
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};
- const loopOwns=state.drafts[courseLoopKey]!==undefined,loopTask=online?courseLoopTask(state,now):null;
- if(loopTask)add({id:'course-loop:nce1-1',title:'第 1–2 课 · 问清物品归属',reason:loopTask.reason,method:loopTask.kind==='review'?'收起教材，独立回答新情境。':'保留已保存的首答与订正，接着本题继续。',evidence:'记录原答、帮助和订正；听力、发音与自由表达另行核对。',href:courseAccessHref('nce1-1',map,now),priority:loopTask.kind==='review'?priority.review:priority.resume,at:loopTask.at,kind:loopTask.kind});
+ const loopOwns=new Set(courseLoopBindings.filter(course=>state.drafts[course.key]!==undefined).map(course=>course.id));
+ if(online)for(const course of courseLoopBindings){
+  const loopTask=courseLoopTask(state,now,course.id);if(!loopTask)continue;
+  add({id:'course-loop:'+course.id,title:course.id==='nce1-1'?'第 1–2 课 · 问清物品归属':course.lesson.title,reason:loopTask.reason,method:loopTask.kind==='review'?'收起教材，独立回答新情境。':'保留已保存的首答与订正，接着本题继续。',evidence:'记录原答、帮助和订正；听力、发音与自由表达另行核对。',href:courseAccessHref(course.id,map,now),priority:loopTask.kind==='review'?priority.review:priority.resume,at:loopTask.at,kind:loopTask.kind});
+ }
  if(online)for(const node of [...nodes.filter(n=>n.kind!=='course'),...unitNodes]){
-  if(loopOwns&&node.id==='nce1-1')continue;
+  if(loopOwns.has(node.id as Parameters<typeof loopOwns.has>[0]))continue;
   const record=map.records[node.id],last=record?.attempts.at(-1);
   if(status[node.id]==='locked')continue;
   const unit=unitById(node.id),title=unit?lessonPlan(unit).goal:node.title;
@@ -76,10 +79,10 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
    method:'一次一题：识别、改错、限定情境造句。',evidence:'无提示与使用帮助分别记录，自由表达仍待核对。',href:to({view:'grammar',tab:'path',unit:unit.id})+'&check=1',
    priority:progress.inRound?priority.resume:repair?priority.repair:priority.review,at:progress.inRound||repair?last?.at||progress.seenAt||now:dueAt,kind:progress.inRound?'resume':repair?'repair':'review'});
  }
- const activeGoals=new Set<string>(),activeLessons=new Set<string>();
- if(loopOwns)activeLessons.add('NCE1-1');
+ const loopLessonKeys=new Set(courseLoopBindings.filter(course=>loopOwns.has(course.id)).map(course=>`${course.lesson.book}-${course.lesson.lessons[0]}`));
+ const activeGoals=new Set<string>(),activeLessons=new Set<string>(loopLessonKeys);
  for(const entry of grammarEntries){
-  if(loopOwns&&studyUnit(entry.book,entry.lesson).key==='NCE1-1')continue;
+  if(loopLessonKeys.has(studyUnit(entry.book,entry.lesson).key))continue;
   const record=learningFor(state,entry.book,entry.lesson);
   for(const guide of grammarGuidesFor(entry)){
    const goal=record.goals[guide.id];if(!goal||!usableHistory(goal.attempts,now))continue;

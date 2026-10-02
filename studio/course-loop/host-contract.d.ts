@@ -1,4 +1,5 @@
 /** Proposed interface only. Release owner chooses and implements shared wiring. */
+export type CourseId = 'nce1-1' | 'nce1-3' | 'nce1-5';
 export type SourceKind = 'text' | 'audio' | 'comic';
 export type Action =
  | {type:'draft'|'own-draft';value:string}
@@ -6,7 +7,7 @@ export type Action =
  | {type:'correct';id:string;answer:string;note:string}
  | {type:'help'|'not-yet'|'submit'|'retry'|'next'|'finish'|'review'};
 export type Snapshot = {
- kind:'nce-course-loop-proposal'; version:1; lessonId:'nce1-1'; contentVersion:1;
+ kind:'nce-course-loop-proposal'; version:1; lessonId:CourseId; contentVersion:1;
  createdAt:number; events:Array<Action & {at:number}>;
 };
 export type HostReceipt =
@@ -23,7 +24,7 @@ export interface CourseLoopHost {
  commit(input:{expectedRaw:string|null;expectedRevision:string;nextRaw:string}):Promise<HostReceipt>;
  /** Must record source access before showing source while a question is active.
   * These are learning actions, never question audio-proof or test completion. */
- showSource(input:{kind:SourceKind;book:'NCE1';lesson:1;comicKey:'NCE1-1';clip?:{start:number;end:number}}):Promise<{opened:boolean;error?:string}>;
+ showSource(input:{kind:SourceKind;book:'NCE1';lesson:1|3|5;comicKey:'NCE1-1'|'NCE1-3'|'NCE1-5';clip?:{start:number;end:number}}):Promise<{opened:boolean;error?:string}>;
  /** Uses host's one route selector. A click does not grant map completion. */
  continueRoute():void;
 }

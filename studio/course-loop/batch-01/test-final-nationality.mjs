@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {readFile} from 'node:fs/promises';
 import * as c from './lesson-nce1-005.mjs';
-import {fixtureForId} from './model-fixture.mjs';
+import {fixtureForId} from './production-test-binding.mjs';
 const original='754258c8436e2f403522b31dfe3035ad2a5dd9eb';
 // Evaluate frozen content with its original binding module, only in memory.
 const frozenSource=execFileSync('git',['show',`${original}:studio/course-loop/batch-01/lesson-nce1-005.mjs`],{encoding:'utf8'}).replace("from './content-contract.mjs'",`from '${new URL('./content-contract.mjs',import.meta.url).href}'`);
