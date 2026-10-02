@@ -46,7 +46,7 @@ async function until(check, message) {
 }
 
 try {
-  await build({stdin:{contents:`import * as store from './app/offline-store';import * as autosave from './app/progress-autosave';import {initial} from './app/model';window.store=store;window.autosave=autosave;window.fixture=note=>({...structuredClone(initial),drafts:{note}});`,resolveDir:fileURLToPath(root),sourcefile:'progress-store-browser.ts',loader:'ts'},bundle:true,platform:'browser',format:'esm',target:'chrome120',outfile:path.join(temporary,'store.js'),logLevel:'silent'});
+  await build({stdin:{contents:`import * as store from './app/offline-store';import * as autosave from './app/progress-autosave';import * as loop from './app/course-loop-progress';import {initial} from './app/model';window.store=store;window.autosave=autosave;window.loop=loop;window.fixture=note=>({...structuredClone(initial),drafts:{note}});`,resolveDir:fileURLToPath(root),sourcefile:'progress-store-browser.ts',loader:'ts'},bundle:true,platform:'browser',format:'esm',target:'chrome120',outfile:path.join(temporary,'store.js'),logLevel:'silent'});
   const bundle=await readFile(path.join(temporary,'store.js'));
   server=createServer((request,response)=>{
     response.setHeader('Cache-Control','no-store');
@@ -72,6 +72,41 @@ try {
   const reset=()=>evaluate(a,'store.writeState(undefined)');
   const note=()=>evaluate(a,'store.readState().then(value=>value?.drafts.note)');
 
+  test('course initial exposure commits before any answer and preserves other namespaces',async()=>{
+    await evaluate(a,"localStorage.removeItem('english-studio-v1');store.writeState(fixture('other module'))");
+    const result=await evaluate(a,"(async()=>{window.courseBefore=await loop.readCourseLoop();window.courseRaw=JSON.stringify(loop.loopModel.initialState());return loop.commitCourseLoop(courseBefore,courseRaw,{version:1,corrections:{}},()=>true)})()");
+    assert.equal(result.raw,await evaluate(a,'courseRaw'));assert.equal(result.state.drafts.note,'other module');
+    assert.equal(await evaluate(a,'loop.parseCourseLoop(courseRaw).view.exposures.length'),1);
+  });
+  test('course commit rebases onto a fresh independent writer without erasing it',async()=>{
+    await evaluate(a,'loop.readCourseLoop().then(v=>window.courseBefore=v)');
+    await evaluate(b,"(async()=>{const s=await store.readState();await autosave.saveProgressEdits(s,{...s,drafts:{...s.drafts,ielts:'new original'}},'db','english-studio-v1',()=>true)})()");
+    const result=await evaluate(a,"(async()=>{const next=loop.loopModel.transition(loop.parseCourseLoop(courseBefore.raw).state,{type:'draft',value:'Is this your book?'});return loop.commitCourseLoop(courseBefore,JSON.stringify(next.state),{version:1,corrections:{}},()=>true)})()");
+    assert.equal(result.state.drafts.ielts,'new original');assert.equal(await evaluate(a,'(async()=>loop.parseCourseLoop((await loop.readCourseLoop()).raw).view.draft)()'),'Is this your book?');
+  });
+  test('two same-course writers permit exactly one confirmed original',async()=>{
+    await evaluate(a,'loop.readCourseLoop().then(v=>window.courseBefore=v)');await evaluate(b,'loop.readCourseLoop().then(v=>window.courseBefore=v)');
+    const run=value=>`(async()=>{const next=loop.loopModel.transition(loop.parseCourseLoop(courseBefore.raw).state,{type:'draft',value:${JSON.stringify(value)}});try{await loop.commitCourseLoop(courseBefore,JSON.stringify(next.state),{version:1,corrections:{}},()=>true);return true}catch{return false}})()`;
+    const results=await Promise.all([evaluate(a,run('native store A')),evaluate(b,run('native store B'))]);assert.equal(results.filter(Boolean).length,1);
+    assert.equal(await evaluate(a,'(async()=>loop.parseCourseLoop((await loop.readCourseLoop()).raw).view.draft)()'),results[0]?'native store A':'native store B');
+  });
+  test('guarded media import retains the course and atomically refuses stale media',async()=>{
+    await evaluate(a,'(async()=>{window.importBase=await store.readState();window.importPreview=await store.readStateSnapshot()})()');
+    await evaluate(b,"(async()=>{const s=await store.readState();await autosave.saveProgressEdits(s,{...s,drafts:{...s.drafts,ielts:'later original'}},'db','english-studio-v1',()=>true)})()");
+    const rejected=await evaluate(a,"store.saveCollection(importBase,[{key:'unsafe-media',name:'unsafe',type:'audio/wav',blob:new Blob(['unsafe'])}],{expectedRaw:importPreview.raw}).then(()=>false,()=>true)");assert(rejected);assert.equal(await evaluate(a,"store.readAudio('unsafe-media').then(v=>v===undefined)"),true);
+    const imported=await evaluate(a,"autosave.saveProgressCollection(importBase,{...importBase,nce:{'NCE1-1':{title:'actual import',text:'text',notes:'',steps:[]}}},[{key:'safe-media',name:'safe',type:'audio/wav',blob:new Blob(['safe'])}],()=>true)");assert.equal(imported.drafts.ielts,'later original');assert.equal(imported.drafts[await evaluate(a,'loop.courseLoopKey')],await evaluate(a,'importBase.drafts[loop.courseLoopKey]'));assert.equal(await evaluate(a,"store.readAudio('safe-media').then(v=>v.blob.size)"),4);
+  });
+  test('course correction input stays in the existing backup State and conflicts independently',async()=>{
+    await evaluate(a,'loop.readCourseLoop().then(v=>window.courseBefore=v)');
+    const result=await evaluate(a,"loop.commitCourseLoop(courseBefore,courseBefore.raw,{version:1,corrections:{'independent-ask':{answer:'Is this your coat?',note:'pending reason preserved'}}},()=>true)");assert.match(result.inputsRaw,/pending reason preserved/);
+    assert.equal(await evaluate(a,"loop.commitCourseLoop(courseBefore,courseBefore.raw,{version:1,corrections:{}},()=>true).then(()=>false,()=>true)"),true);
+    const raw=await evaluate(a,'(async()=>(await store.readStateSnapshot()).raw)()');assert.match(raw,/pending reason preserved/);
+  });
+  test('unsupported empty course raw is preserved and never initialized over',async()=>{
+    await evaluate(a,"store.writeState({...fixture('retained'),drafts:{note:'retained',[loop.courseLoopKey]:''}})");
+    const before=await evaluate(a,'(async()=>(await store.readStateSnapshot()).raw)()');assert.equal(await evaluate(a,"(async()=>loop.parseCourseLoop((await loop.readCourseLoop()).raw).ok)()"),false);
+    assert.equal(await evaluate(a,"(async()=>loop.commitCourseLoop(await loop.readCourseLoop(),'',{version:1,corrections:{}},()=>true).then(()=>false,()=>true))()"),true);assert.equal(await evaluate(a,'(async()=>(await store.readStateSnapshot()).raw)()'),before);
+  });
   test('ordinary autosave preserves independent namespace edits in two real tabs',async()=>{
     await evaluate(a,"store.writeState(fixture('original'));window.base=fixture('original')");
     await evaluate(b,"window.base=fixture('original');autosave.saveProgressEdits(base,{...base,drafts:{...base.drafts,ielts:'other answer'}},'db','english-studio-v1',()=>true)");

@@ -27,8 +27,8 @@ import {TextbookVocabularyBrowser} from './textbook-vocabulary-ui';
 import {FlashcardReview} from './flashcard-ui';
 import {enrollFlashcard,flashcardSummary,isFlashcardEnrolled,migrateFlashcards,prepareFlashcardRestore} from './flashcards';
 import {loadLessonLanguage,rowsToText,type LessonLanguage} from './language';
-import {readState,readStateSnapshot,writeState,writeLegacyState,restoreStateSnapshot,restoreLegacyStateSnapshot} from './offline-store';
-import {mergeProgressEdits,saveProgressEdits} from './progress-autosave';
+import {readState,readStateSnapshot,writeState,writeLegacyState,restoreStateSnapshot,restoreLegacyStateSnapshot,type LocalAudio} from './offline-store';
+import {mergeProgressEdits,saveProgressEdits,saveProgressCollection} from './progress-autosave';
 import {ProgressSave} from './progress-save';
 import type {ProgressRestoreCheckpoint,ProgressRestoreOptions} from './progress-file';
 import {ONLINE} from './runtime-mode';
@@ -79,6 +79,23 @@ function StudyWorkspace(){
   });
   return()=>{alive=false};
  },[state,ready,storageBlocked,storageMode,persisted,saveRetry]);
+ async function commitMaterialCollection(expected:State,next:State,media:LocalAudio[]){
+  if(!ready||storageBlocked||storageMode!=='db')throw Error('当前不能安全保存课文资料。原记录仍保留，请先核对存储状态。');
+  const previous=saveQueue.current;await previous.catch(()=>{});
+  if(saveQueue.current!==previous||stateRef.current!==expected)throw Error('学习记录刚完成保存或出现新输入，请重试保存课文资料。');
+  const epoch=++saveEpoch.current;let applied=false;
+  const operation=Promise.resolve().then(async()=>{
+   const unchanged=()=>saveEpoch.current===epoch&&stateRef.current===expected;
+   if(!unchanged())throw Error('保存期间学习记录更新，请核对后重试。');
+   const saved=await saveProgressCollection(editBase.current,next,media,unchanged);
+   if(saveEpoch.current!==epoch)throw Error('本次课文资料已提交，随后发生了其他恢复，请重新核对当前记录。');
+   const latest=stateRef.current,published=latest===expected?saved:mergeProgressEdits(expected,latest,saved);
+   editBase.current=saved;stateRef.current=published;setState(published);setPersisted(saved);setStorageError(false);setSaveIssue('');applied=true;
+   window.dispatchEvent(new Event('english-studio-progress-saved'));
+  });
+  saveQueue.current=operation.then(()=>{},()=>{});
+  try{await operation}finally{if(!applied&&saveEpoch.current===epoch)setSaveRetry(n=>n+1)}
+ }
  async function readLatestProgress(){
   const epoch=++saveEpoch.current,expected=stateRef.current;let applied=false;
   try{
@@ -143,8 +160,8 @@ function StudyWorkspace(){
  {ONLINE&&['nce','cloud','ielts','courses','materials'].includes(view)&&!(view==='ielts'&&route.tab==='course')&&<a className="studio-learning-back" href="/map/#/courses">← 学习 · 找课</a>}
  {ONLINE&&view==='nce'&&mapUnitId(route.book,route.lesson)&&<MapConnection view="course" book={route.book} lesson={route.lesson}/>}
  {ONLINE&&view==='cloud'&&<button className="text-btn nce-back" onClick={()=>go('nce')}>返回新概念四册目录</button>}
- {ONLINE&&<SiteMaterials startAt={materialStart} visible={view==='cloud'} state={state} restore={incoming=>{setState(s=>prepareFlashcardRestore(s,incoming,courseWords));setStorageError(false);setStorageBlocked(false)}} openLesson={(book,lesson)=>navigate({view:'nce',book,lesson,tab:'listen'})}/>}
- {(view==='nce'||view==='library')&&<>{view==='library'&&<nav className="course-resources" aria-label="课程资料与专项"><button onClick={()=>go('grammar')}>语法与句型检索</button><button onClick={()=>go('words')}>教材词汇索引</button><button onClick={()=>go('ielts')}>雅思专项</button><details className="course-more"><summary>更多资料</summary><button onClick={()=>go('courses')}>备用练习素材</button><button onClick={()=>go('cloud')}>整册资料与下载</button></details></nav>}<NceStudio goCloud={(book,lesson)=>navigate({view:'cloud',book,lesson})} state={state} update={setState} addWord={addPersonalWord} onAnswer={answer} goIELTS={()=>go('ielts')}/></>}
+ {ONLINE&&<SiteMaterials startAt={materialStart} visible={view==='cloud'} state={state} commitCollection={commitMaterialCollection} restore={incoming=>{setState(s=>prepareFlashcardRestore(s,incoming,courseWords));setStorageError(false);setStorageBlocked(false)}} openLesson={(book,lesson)=>navigate({view:'nce',book,lesson,tab:'listen'})}/>}
+ {(view==='nce'||view==='library')&&<>{view==='library'&&<nav className="course-resources" aria-label="课程资料与专项"><button onClick={()=>go('grammar')}>语法与句型检索</button><button onClick={()=>go('words')}>教材词汇索引</button><button onClick={()=>go('ielts')}>雅思专项</button><details className="course-more"><summary>更多资料</summary><button onClick={()=>go('courses')}>备用练习素材</button><button onClick={()=>go('cloud')}>整册资料与下载</button></details></nav>}<NceStudio commitCollection={commitMaterialCollection} goCloud={(book,lesson)=>navigate({view:'cloud',book,lesson})} state={state} update={setState} addWord={addPersonalWord} onAnswer={answer} goIELTS={()=>go('ielts')}/></>}
  {view==='roadmap'&&ready&&<LearningRoadmap state={state} update={setState}/>}
  {(view==='today'||view==='review')&&<TodayPracticeQueue state={state} map={mapState} ready={ready} online={ONLINE} error={mapError}/> }
 

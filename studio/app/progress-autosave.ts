@@ -1,5 +1,5 @@
 import {initial,validateState,type State} from './model';
-import {readStateSnapshot,StateStorageConflict,writeLegacyState,writeState} from './offline-store';
+import {readStateSnapshot,saveCollection,StateStorageConflict,writeLegacyState,writeState,type LocalAudio} from './offline-store';
 
 // Histories and schedulers are indivisible. Only separate dictionary entries
 // can be rebased; simultaneous edits to one entry never win by timestamp.
@@ -49,6 +49,18 @@ export async function saveProgressEdits(base:State,edited:State,mode:string,key:
    if(mode==='db')await writeState(next,guard);else await writeLegacyState(next,key,guard);
    return next;
   }catch(error){if(!(error instanceof StateStorageConflict)||!unchanged()||attempt===3)throw error;}
+ }
+ throw new StateStorageConflict();
+}
+/** Importing media shares the same guarded writer; audio and State commit together. */
+export async function saveProgressCollection(base:State,edited:State,media:LocalAudio[],unchanged:()=>boolean):Promise<State>{
+ for(let attempt=0;attempt<4;attempt++){
+  if(!unchanged())throw new StateStorageConflict();
+  const snapshot=await readStateSnapshot(),fresh=snapshot.raw===null?initial:JSON.parse(snapshot.raw);
+  if(!validateState(fresh))throw Error('已保存记录需要检查，未覆盖原文。');
+  const next=mergeProgressEdits(base,edited,fresh);
+  try{await saveCollection(next,media,{expectedRaw:snapshot.raw,unchanged});return next}
+  catch(error){if(!(error instanceof StateStorageConflict)||!unchanged()||attempt===3)throw error}
  }
  throw new StateStorageConflict();
 }

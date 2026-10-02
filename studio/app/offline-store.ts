@@ -53,4 +53,13 @@ export async function restoreLegacyStateSnapshot(snapshot:StateStorageSnapshot,k
  return writeLegacyRaw(snapshot.raw,key,guard);
 }
 export async function readAudio(key:string):Promise<LocalAudio|undefined>{const db=await database();return new Promise((resolve,reject)=>{const r=db.transaction('audio').objectStore('audio').get(key);r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)})}
-export async function saveCollection(state:State,media:LocalAudio[]){const db=await database();return new Promise<void>((resolve,reject)=>{const t=db.transaction(['audio','state'],'readwrite');const a=t.objectStore('audio');for(const item of media)a.put(item);t.objectStore('state').put(state,'current');t.oncomplete=()=>resolve();t.onabort=()=>reject(t.error||Error('本地资料保存失败，原记录未改变'));t.onerror=()=>{}})}
+export async function saveCollection(state:State,media:LocalAudio[],guard:StateWriteGuard){
+ const db=await database();return new Promise<void>((resolve,reject)=>{
+  const t=db.transaction(['audio','state'],'readwrite'),store=t.objectStore('state'),r=store.get('current');let error:unknown;
+  r.onsuccess=()=>{try{
+   if(stateRaw(r.result)!==guard.expectedRaw||guard.unchanged&&!guard.unchanged()){error=stateConflict();t.abort();return}
+   const audio=t.objectStore('audio');for(const item of media)audio.put(item);store.put(state,'current');
+  }catch(cause){error=cause;t.abort()}};
+  t.oncomplete=()=>resolve();t.onabort=()=>reject(error||t.error||Error('本地资料保存失败，原记录未改变'));t.onerror=()=>{};
+ });
+}

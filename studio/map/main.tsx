@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { ArrowRight, Check, Lock, Flag, Clock3, BookOpen, Download, Upload, RotateCcw, ChevronRight, X, Milestone, Unlock, Settings2 } from 'lucide-react';
 import { nodes, nodeById, stages, originalSite, questionsFor, unitById, type MapNode } from './content';
@@ -9,6 +9,7 @@ import './style.css';
 import { StudioHeader } from '../app/study-mode';
 import {TodayPracticeQueue} from '../app/today-practice-ui';
 import {useClassicProgress} from '../app/use-classic-progress';
+import {nextCourse} from '../app/course-loop-next';
 import {prepareDueReview} from './review-route';
 import {CurrentRoute} from './current-route';
 import {CourseCatalogue} from './catalogue';
@@ -16,6 +17,9 @@ import {parseLearningRoute, catalogueHash, type CatalogueGroup} from './navigati
 import '../app/mobile-layout.css';
 function App() {
     const classic = useClassicProgress();
+    const classicRef=useRef(classic.state);useLayoutEffect(()=>{classicRef.current=classic.state},[classic.state]);
+    const courseLeaveGuard=useRef<(()=>Promise<boolean>)|null>(null);
+    const bindCourseLeaveGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{courseLeaveGuard.current=guard},[]);
     const raw = useRef<string | null>(null);
     const [message, setMessage] = useState('');
     const [storageError, setStorageError] = useState('');
@@ -46,7 +50,10 @@ function App() {
     catch {
         setStorageError('学习记录暂时无法读取。原始记录仍保留，请先导出原始记录或检查浏览器存储。');
     } }, []);
-    useEffect(() => { const hash = () => setRoute(parseLearningRoute(location.hash,continueNode(stateRef.current).id)), resize = () => setMobile(window.innerWidth < 760); window.addEventListener('hashchange', hash); window.addEventListener('resize', resize); return () => { window.removeEventListener('hashchange', hash); window.removeEventListener('resize', resize); }; }, []);
+    useEffect(() => { const hash = (event:HashChangeEvent) => {const requested=location.hash;void(async()=>{
+      if(courseLeaveGuard.current&&!await courseLeaveGuard.current()){history.replaceState(history.state,'',new URL(event.oldURL).hash||'#/');setMessage('本课输入还没有保存。请先保存未提交内容，再核对记录。');return}
+      if(location.hash===requested)setRoute(parseLearningRoute(requested,nextCourse(classicRef.current,stateRef.current).id));
+    })()}, resize = () => setMobile(window.innerWidth < 760); window.addEventListener('hashchange', hash); window.addEventListener('resize', resize); return () => { window.removeEventListener('hashchange', hash); window.removeEventListener('resize', resize); }; }, []);
     const save: Save = useCallback(change => { const next = { ...change(stateRef.current), updatedAt: Date.now() }; try {
         const latest = localStorage.getItem(storageKey);
         if (latest !== raw.current) {
@@ -100,11 +107,10 @@ function App() {
     const statuses = statusMap(state);
     const passed = nodes.filter(n => achieved(n,state)).length;
     const review = nodes.filter(n => due(n, state));
-    const current = continueNode(state).id;
-    const navigate = (id: string, learn = false) => { const next = `#/${learn ? 'learn' : 'map'}/${id}`; if (location.hash === next)
-        setRoute({ id, learn });
-    else
-        location.hash = next; };
+    const current = nextCourse(classic.state,state).id;
+    const navigate = (id: string, learn = false) => { const next = `#/${learn ? 'learn' : 'map'}/${id}`; if (location.hash === next){
+        void(async()=>{if(!courseLeaveGuard.current||await courseLeaveGuard.current())setRoute({id,learn});else setMessage('本课输入还没有保存，请先保留未提交内容。')})();
+    }else location.hash = next; };
     const browse = (group:CatalogueGroup='all',query=route.query||'',replace=false) => {
         const hash=catalogueHash(group,query);
         if(replace){history.replaceState(null,'',hash);setRoute(parseLearningRoute(hash,current));}
@@ -126,7 +132,7 @@ function App() {
             importInput.current.value = '';
     } }
     if(route.learn&&route.review)return <p className="today-loading" role="status">正在准备这一轮回想…</p>;
-    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-saved-progress.json')}>导出已保存进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} speaking={route.speaking} node={selected} state={state} save={save} close={()=>{setOverview(false);if(catalogueReturn.current)location.hash=catalogueReturn.current;else navigate(continueNode(state).id)}} select={id=>navigate(id,true)}/></>;
+    if(route.learn)return <>{storageError&&<div role="alert" className="storage-error">{storageError}<button onClick={()=>download(exportProgress(state),'wayfinder-saved-progress.json')}>导出已保存进度</button></div>}{message&&<div className="toast" role="status">{message}<button aria-label="关闭提示" onClick={()=>setMessage('')}><X size={16}/></button></div>}<LearningRoom key={selected.id} speaking={route.speaking} node={selected} state={state} save={save} close={()=>{setOverview(false);if(catalogueReturn.current)location.hash=catalogueReturn.current;else navigate(current)}} select={id=>navigate(id,true)} continueCourse={()=>navigate(current,true)} onCourseLeaveGuard={bindCourseLeaveGuard}/></>;
     return <><StudioHeader active="learn" classicRoot={originalSite} mapUrl="/map/" reference={unitById(current)} actions={<details className="map-settings"><summary><Settings2 size={17}/><span>学习设置</span></summary><div><strong>解锁方式</strong><p>解锁允许直接进入，完成状态仍由实际学习记录决定。</p>{state.access?.all?<p className="manual-note">全部节点已手动解锁</p>:<button onClick={()=>save(s=>({...s,access:{all:true,nodes:s.access?.nodes||[]}}))}><Unlock size={16}/>直接解锁全部节点</button>}{(state.access?.all||!!state.access?.nodes.length)&&<button onClick={()=>save(s=>({...s,access:{all:false,nodes:[]}}))}>恢复按路线解锁</button>}<small>恢复路线规则会保留所有学习记录。</small><hr/><strong>地图进度备份</strong><button onClick={()=>download(exportProgress(state),`wayfinder-progress-${new Date().toISOString().slice(0,10)}.json`)}><Download size={16}/>导出地图进度</button><button onClick={()=>importInput.current?.click()}><Upload size={16}/>恢复地图进度</button><small>教材笔记、生词的备份在「记录」页。录音需单独下载。</small></div></details>}/>
 
   <main className="app-main learning-home">{route.catalogue&&<a className="learning-back" href={`#/map/${current}`}>← 回到学习</a>}<section className="page-heading"><div><h1 tabIndex={-1}>{route.catalogue?'找课':'学习'}</h1><p>{route.catalogue?'按目标或教材找课，接着同一份进度学习。':overview?'从起步到 IELTS 6.5，查看各阶段与解锁条件。':'从今天最需要的一步继续。'}</p></div>{!route.catalogue&&<div className="learning-view-actions"><a className="secondary" href="#/courses"><BookOpen size={16}/>找课</a><button className="text-button map-view-toggle" onClick={()=>{setOverview(!overview);if(overview)navigate(current)}}>{overview?'回到当前学习':'完整路线'}<ArrowRight size={16}/></button></div>}</section>

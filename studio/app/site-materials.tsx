@@ -7,7 +7,7 @@ import {withNetworkTimeout} from './network';
 import {toast} from 'sonner';
 import {State,NceBookId,bookCounts} from './model';
 import {SiteMaterial,MaterialManifest,loadSiteMaterial,pairedMaterials,readMaterialManifest,materialLessonPage} from './site-material-utils';
-import {readAudio,saveCollection} from './offline-store';
+import {readAudio,type LocalAudio} from './offline-store';
 import {WordText} from './word-lookup';
 import {loadLessonLanguage,rowsToText,translatedRows} from './language';
 import {Recorder} from './learning';
@@ -27,8 +27,8 @@ const books=Object.keys(bookCounts) as NceBookId[];
 const accentLabel=(file:SiteMaterial)=>file.accent==='us'?'美音':file.accent==='uk'?'英音':'版本未标注';
 type Loaded={file:SiteMaterial;blob:Blob;url:string;text?:string};
 type Target={book:NceBookId;lesson:number};
-type Props={visible:boolean;state:State;restore:(s:State)=>void;openLesson:(book:NceBookId,no:number)=>void;startAt?:Target|null;embedded?:boolean;practiceMode?:boolean;pdfOnly?:boolean;viewPdf?:()=>void};
-export default function SiteMaterials({visible,state,restore,openLesson,startAt,embedded=false,practiceMode=false,pdfOnly=false,viewPdf}:Props){
+type Props={visible:boolean;state:State;restore:(s:State)=>void;commitCollection:(expected:State,next:State,media:LocalAudio[])=>Promise<void>;openLesson:(book:NceBookId,no:number)=>void;startAt?:Target|null;embedded?:boolean;practiceMode?:boolean;pdfOnly?:boolean;viewPdf?:()=>void};
+export default function SiteMaterials({visible,state,restore,commitCollection,openLesson,startAt,embedded=false,practiceMode=false,pdfOnly=false,viewPdf}:Props){
  const route=useRoute();
  const [manifest,setManifest]=useState<MaterialManifest|null>(null),[book,setBook]=useState<NceBookId>('NCE1'),[filter,setFilter]=useState('all'),[accent,setAccent]=useState('all'),[query,setQuery]=useState('');
  const rate=usePlaybackRate();
@@ -157,8 +157,8 @@ export default function SiteMaterials({visible,state,restore,openLesson,startAt,
    if(!replace&&((transcript&&old.text&&JSON.stringify(parseLessonText(old.text).map(r=>[r.en,r.time]))!==JSON.stringify(parseLessonText(transcript.text||'').map(r=>[r.en,r.time])))||audioChanged))throw Error('本课已有不同资料。请核对后勾选替换；原笔记和进度会保留。');
    if(current!==stateRef.current)throw Error('学习记录刚发生变化，请重试保存。');
    const next:State={...current,nceLast:{book:primary.file.book,lesson},nce:{...current.nce,[key]:{...old,title:old.title||(primary.file.title||primary.file.name).slice(0,120),text:transcript?.text??old.text}}};
-   await saveCollection(next,recording?[{key,name:recording.file.name,type:recording.file.type,blob:recording.blob}]:[]);
-   restore(next);window.dispatchEvent(new Event('english-studio-media-updated'));audio.current?.pause();
+   await commitCollection(current,next,recording?[{key,name:recording.file.name,type:recording.file.type,blob:recording.blob}]:[]);
+   window.dispatchEvent(new Event('english-studio-media-updated'));audio.current?.pause();
    openLesson(primary.file.book,lesson);
   }catch(e){setError(e instanceof Error?e.message:'保存未完成')}
   finally{setBusy('')}

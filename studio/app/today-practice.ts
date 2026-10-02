@@ -7,11 +7,13 @@ import {grammarEntries,grammarGuidesFor} from './textbook-grammar';
 import {dueUnits,bookNames,studyUnit} from './study-path';
 import {journeySnapshot,missionRoute} from './ielts-journey';
 import {getFlashcardQueue} from './flashcards';
-import {nodes,unitNodes,unitById,nodeById,type MapNode} from '../map/content';
-import {achieved,statusMap,due,passedQuiz,type Progress} from '../map/model';
+import {nodes,unitNodes,unitById} from '../map/content';
+import {statusMap,due,passedQuiz,type Progress} from '../map/model';
 import {speakingDue,speakingReviewAt} from '../map/speaking-model';
 import {lessonPlan} from '../map/lesson-plan';
 import {samplePracticeTasks} from './ielts-sample-next';
+import {courseLoopKey} from './course-loop-progress';
+import {courseLoopTask,nextCourse} from './course-loop-next';
 
 export type PracticeTask={id:string;title:string;reason:string;method:string;evidence:string;href:string;returnHref:string;priority:number;at:number;kind:'repair'|'review'|'resume'|'new'|'course'};
 const DAY=86_400_000;
@@ -33,16 +35,6 @@ function grammarReviewAt(progress:GrammarUnitProgress){
  return dueAt;
 }
 
-function currentCourse(map:Progress,now:number,status:ReturnType<typeof statusMap>){
- const reviewDue=(n:MapNode):boolean=>n.kind==='course'?(n.members||[]).some(id=>reviewDue(nodeById(id)!)):
-  usableHistory(map.records[n.id]?.attempts||[],now)&&due(n,map,now);
- const last=map.lastNode?nodeById(map.lastNode):undefined;
- if(last&&status[last.id]!=='locked'&&!achieved(last,map,now))return last;
- if(last){const next=[...nodes,...unitNodes].find(n=>n.requires.includes(last.id)&&status[n.id]==='available');if(next)return next}
- if(last?.parent){const siblings=(nodeById(last.parent)?.members||[]).map(id=>nodeById(id)!);const next=siblings.find(n=>status[n.id]!=='locked'&&reviewDue(n))||siblings.find(n=>status[n.id]==='available');if(next)return next}
- return nodes.find(n=>status[n.id]!=='locked'&&reviewDue(n))||nodes.find(n=>status[n.id]==='available')||nodeById('finish')!;
-}
-
 /** Reads existing evidence only. Recommending or skipping never marks work complete.
  * `course` is the last fallback when present; it is omitted when the same work is
  * already a repair/resume/review. The caller may hide IDs for this session only.
@@ -53,7 +45,10 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  const to=(route:Parameters<typeof routeHash>[0])=>(online?'/':'')+routeHash(route);
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};
+ const loopOwns=state.drafts[courseLoopKey]!==undefined,loopTask=online?courseLoopTask(state,now):null;
+ if(loopTask)add({id:'course-loop:nce1-1',title:'第 1–2 课 · 问清物品归属',reason:loopTask.reason,method:loopTask.kind==='review'?'收起教材，独立回答新情境。':'保留已保存的首答与订正，接着本题继续。',evidence:'记录原答、帮助和订正；听力、发音与自由表达另行核对。',href:'/map/#/learn/nce1-1',priority:loopTask.kind==='review'?priority.review:priority.resume,at:loopTask.at,kind:loopTask.kind});
  if(online)for(const node of [...nodes.filter(n=>n.kind!=='course'),...unitNodes]){
+  if(loopOwns&&node.id==='nce1-1')continue;
   const record=map.records[node.id],last=record?.attempts.at(-1);
   if(status[node.id]==='locked')continue;
   const unit=unitById(node.id),title=unit?lessonPlan(unit).goal:node.title;
@@ -82,7 +77,9 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
    priority:progress.inRound?priority.resume:repair?priority.repair:priority.review,at:progress.inRound||repair?last?.at||progress.seenAt||now:dueAt,kind:progress.inRound?'resume':repair?'repair':'review'});
  }
  const activeGoals=new Set<string>(),activeLessons=new Set<string>();
+ if(loopOwns)activeLessons.add('NCE1-1');
  for(const entry of grammarEntries){
+  if(loopOwns&&studyUnit(entry.book,entry.lesson).key==='NCE1-1')continue;
   const record=learningFor(state,entry.book,entry.lesson);
   for(const guide of grammarGuidesFor(entry)){
    const goal=record.goals[guide.id];if(!goal||!usableHistory(goal.attempts,now))continue;
@@ -128,8 +125,8 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  }
  tasks.sort((a,b)=>a.priority-b.priority||a.at-b.at||a.id.localeCompare(b.id));
  if(online){
-  const current=currentCourse(map,now,status),unit=unitById(current.id);
-  if(!tasks.some(t=>t.id==='map:'+current.id))add({id:'course:'+current.id,title:unit?lessonPlan(unit).goal:current.title,
+  const current=nextCourse(state,map,now),unit=unitById(current.id);
+  if(!tasks.some(t=>t.id==='map:'+current.id||t.id==='course-loop:'+current.id))add({id:'course:'+current.id,title:unit?lessonPlan(unit).goal:current.title,
    reason:'从已保存的位置继续，一次完成一个小目标。',method:'听懂、看懂、自己用，再独立检验。',evidence:'解锁、跟练、独立通过和延迟巩固分别记录。',
    href:`/map/#/learn/${current.id}`,priority:priority.course,at:now,kind:'course'});
  }else{
