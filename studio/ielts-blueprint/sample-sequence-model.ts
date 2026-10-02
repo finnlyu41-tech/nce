@@ -115,7 +115,7 @@ export function transitionSample(state: SampleState, action: SampleAction, at = 
     const target = {explain: 'model', model: 'guided', guided: 'independent', independent: 'timed', timed: 'feedback'}[session.stage as 'explain' | 'model' | 'guided' | 'independent' | 'timed'];
     if (!target) return reject('先保存订正，再等待新题复验。');
     if (['guided', 'independent', 'timed'].includes(session.stage) && !draft?.submittedAt) return reject('先留下这次真实作答。');
-    if (session.stage === 'guided' && material?.questions && !answersMatch(material, draft!.answers)) return reject('先按示范订正这两题，再撤掉提示。');
+    if (session.stage === 'guided' && material?.questions && !answersMatch(material, draft!.answers)) return reject('先按示范订正当前答案，再撤掉提示。');
     session.stage = target as LearningStage;
     const targetMaterial = activeSampleMaterial(next); if (targetMaterial) activate(session, targetMaterial, at, allExposures(next));
     return result();
@@ -178,7 +178,7 @@ export function transitionSample(state: SampleState, action: SampleAction, at = 
   if (action.type === 'submit') {
     if (draft.submittedAt) return reject('本版作答已记录；修改答案会保留原始记录并另记一次。');
     if (material.questions) {
-      if (material.questions.some(q => !draft.answers[q.id]?.trim())) return reject('先完成两个答案或留下短段落；这是作品存在检查，不是评分。');
+      if (material.questions.some(q => !draft.answers[q.id]?.trim())) return reject('先填写每一道题的答案，再记录作答。');
     } else {
       const issue = sampleResponseIssue(draft.response); if (issue) return reject(issue);
     }

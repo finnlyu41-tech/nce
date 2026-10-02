@@ -1,4 +1,6 @@
 import type {Variant} from './types';
+import {batch01LessonsFor} from './curriculum/batch-01';
+import {batch02LessonsFor} from './curriculum/batch-02';
 
 /** Original, fictional teaching material. Times and lengths below are local mini-task suggestions. */
 export type SampleQuestion = {id: string; prompt: string; options?: string[]; accepted: string[]; why: string};
@@ -68,10 +70,13 @@ function writing(variant: Variant): SampleLesson {
   };
 }
 export const sampleSequence = {
-  id: 'willow-hub-four-lessons', version: 1, title: '去社区学习中心 · 四课小循环',
+  id: 'willow-hub-four-lessons', version: 1, title: '雅思小任务',
   rights: 'original-fictional' as const, qa: 'model-and-contract-tested; content-not-expert-reviewed' as const,
-  notice: '每课一个小任务，四课合计听、读、说、写。练习记录与局部表现不等于掌握、Band 或正式成绩。',
+  notice: '每课练一个小目标：看示范、自己试、订正，再换新材料回想。短练习不替代完整模考，也不换算雅思分数。',
 };
-export const sampleLessonsFor = (variant: Variant): SampleLesson[] => [listening, reading, speaking, writing(variant)];
+export function sampleLessonsFor(variant: Variant): SampleLesson[]{
+  if(variant!=='academic'&&variant!=='general-training')throw new RangeError('Choose an exam category before requesting course materials.');
+  return [listening,reading,speaking,writing(variant),...batch01LessonsFor(variant),...batch02LessonsFor(variant)];
+}
 export const sampleLessonById = (variant: Variant, id: string) => sampleLessonsFor(variant).find(lesson => lesson.id === id);
 export const sampleMaterials = (lesson: SampleLesson) => [lesson.model, lesson.guided, lesson.independent, lesson.timed, ...lesson.reviews];

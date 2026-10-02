@@ -4,7 +4,7 @@ import type {State} from './model';
 import {IELTSSampleSequence} from '../ielts-blueprint/sample-sequence-ui';
 import type {SampleState} from '../ielts-blueprint/sample-sequence-model';
 import {readSampleProgress,recoverSamplePlayback,replaceSampleProgress,sampleProgressKey,serializeSampleProgress} from './ielts-sample-progress';
-import {sampleTarget} from './ielts-sample-next';
+import {sampleTarget} from './ielts-sample-target';
 
 type Pending={expected:string|undefined;raw:string;value:SampleState};
 export function IELTSSampleWorkspace({state,update,ready,task,onTargetOpened}:{state:State;update:(change:(current:State)=>State)=>void;ready:boolean;task?:string;onTargetOpened?:()=>void}){
@@ -33,7 +33,7 @@ export function IELTSSampleWorkspace({state,update,ready,task,onTargetOpened}:{s
  }
  if(!ready)return <section className="panel" aria-busy="true"><p role="status">正在读取本机学习记录…</p></section>;
  if(target&&read.status!=='blocked'&&!conflict)return <section className="panel" aria-busy="true"><p role="status">正在回到这次练习…</p></section>;
- return <section aria-label="四课样例工作区">
+ return <section aria-label="雅思小任务工作区">
   <a className="text-btn" href="#/today">← 返回今日学习</a>
   {read.status==='blocked'||conflict?<section className="panel" role="alert">
    <h1>先保留这段学习记录</h1>

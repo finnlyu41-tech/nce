@@ -5,6 +5,7 @@ import {emptySampleState,isStoredSampleResponse,type SampleState,type SampleSess
 
 export const sampleProgressKey='ielts-sample-sequence-v1';
 const MAX_RAW=2_000_000,MAX_ATTEMPTS=200,MAX_PLAYBACKS=100;
+const sessionKeys=new Set(variants.flatMap(variant=>sampleLessonsFor(variant).map(lesson=>`${variant}:${lesson.id}`)));
 type Envelope={version:1;contentVersion:number;sequenceId:string;value:SampleState};
 export type SampleProgressRead={status:'empty'|'ready';value:SampleState;raw:string|undefined}|{status:'blocked';reason:string;raw:string};
 const object=(value:unknown):value is Record<string,unknown>=>!!value&&typeof value==='object'&&!Array.isArray(value)&&[Object.prototype,null].includes(Object.getPrototypeOf(value));
@@ -63,7 +64,7 @@ function validate(value:unknown,now:number):asserts value is SampleState{
  exact(value,['version','variant','lessonId','sessions']);
  requireThat(value.version===1,'样例状态版本暂不支持；请使用支持该版本的网站。');
  requireThat(value.variant===null||variants.includes(value.variant as Variant),'考试类别不受支持。');
- requireThat(sampleLessonsFor('academic').some(l=>l.id===value.lessonId)&&object(value.sessions)&&Object.keys(value.sessions).length<=8,'当前课程或课程记录无效。');
+ requireThat((value.variant===null?value.lessonId==='hub-listening':!!sampleLessonById(value.variant as Variant,String(value.lessonId)))&&object(value.sessions)&&Object.keys(value.sessions).length<=sessionKeys.size&&Object.keys(value.sessions).every(key=>sessionKeys.has(key)),'当前课程或课程记录无效。');
  requireThat(value.variant!==null||Object.keys(value.sessions).length===0&&value.lessonId==='hub-listening','未选择类别的记录包含不明学习内容。');
  const allDrafts:{id:string;draft:SampleDraft}[]=[],allAttempts:SampleAttempt[]=[];
  for(const [key,rawSession] of Object.entries(value.sessions)){

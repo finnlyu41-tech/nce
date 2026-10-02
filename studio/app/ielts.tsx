@@ -27,7 +27,7 @@ export default function IELTS({data,drafts,saveDraft,onAnswer,onFinish}:{data:an
  useEffect(()=>()=>window.speechSynthesis?.cancel(),[]);
  if(!data.reading)return null;
  return <><div className="page-heading"><div><div className="eyebrow">THE NEXT CHAPTER</div><h1>走向雅思，先把能力练起来。</h1><p>原创衔接训练，覆盖听、说、读、写。短练习不是完整模拟考试。</p></div></div><Tabs value={tab} onValueChange={v=>{window.speechSynthesis?.cancel();setTab(v)}}><TabsList className="ielts-tabs"><TabsTrigger value="overview">训练概览</TabsTrigger><TabsTrigger value="listening"><Headphones size={15}/>听力</TabsTrigger><TabsTrigger value="reading"><BookOpen size={15}/>阅读</TabsTrigger><TabsTrigger value="speaking"><Mic size={15}/>口语</TabsTrigger><TabsTrigger value="writing"><PenLine size={15}/>写作</TabsTrigger></TabsList><TabsContent value="overview">
- <section className="panel"><h2>从四课小循环开始</h2><p>围绕社区学习中心练听、读、说、写，一次走完一个小目标。先看示范，再独立尝试、订正，之后换新材料回想。</p><a className="btn" href="#/ielts?tab=course">进入四课学习 <ArrowRight size={17}/></a><p className="muted small">原创衔接样例，包含在本站学习进度中；不替代教材和完整模考。</p></section>
+ <section className="panel"><h2>从一个小任务开始</h2><p>选择听、读、说、写的小目标。先看示范，再独立尝试、订正，之后换新材料回想。</p><a className="btn" href="#/ielts?tab=course">进入练习 <ArrowRight size={17}/></a><p className="muted small">原创练习，包含在本站学习进度中；不替代教材和完整模考。</p></section>
  <details className="panel reserve-materials"><summary>按专项选择其他练习</summary><div className="ielts-practice-grid" aria-label="选择雅思专项练习">{[
   {id:'listening',label:'听力练习',text:'听对话，抓住关键信息',Icon:Headphones},
   {id:'reading',label:'阅读练习',text:'读短文，练习定位与理解',Icon:BookOpen},

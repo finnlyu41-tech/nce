@@ -2,9 +2,8 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {stripTypeScriptTypes} from 'node:module';
 const moduleUrl=source=>'data:text/javascript;base64,'+Buffer.from(source).toString('base64');
-const model=moduleUrl(stripTypeScriptTypes(await readFile(new URL('../app/model.ts',import.meta.url),'utf8')));
-const source=(await readFile(new URL('../app/navigation.ts',import.meta.url),'utf8')).replace("'./model'",JSON.stringify(model));
-const {parseRoute,routeHash,navigate}=await import(moduleUrl(stripTypeScriptTypes(source)));
+const {moduleURL}=await import('./ielts-blueprint-loader.mjs');
+const {parseRoute,routeHash,navigate}=await import(await moduleURL(new URL('../app/navigation.ts',import.meta.url).pathname));
 const {learningRedirect,studioSection}=await import(moduleUrl(stripTypeScriptTypes(await readFile(new URL('../app/studio-navigation.ts',import.meta.url),'utf8'))));
 assert.equal(learningRedirect(parseRoute('')), '/map/');
 assert.equal(learningRedirect(parseRoute('#/review')), '/map/');
@@ -21,7 +20,7 @@ for(const route of [
  {view:'grammar',tab:'path',unit:'sentence-core'}, {view:'grammar',tab:'path',unit:'sentence-core',check:true}, {view:'grammar',book:'NCE1',lesson:1,tab:'practice',goal:'be',practice:'transfer',unit:'sentence-core'},
  {view:'grammar',book:'NCE1',lesson:59,tab:'topic',query:'some any',category:'noun',page:124}, {view:'grammar',book:'NCE3',lesson:47,tab:'book'},
  {view:'ielts',tab:'writing',task:'ielts-w3'}, {view:'ielts',tab:'speaking',task:'bank-3-25-5'}, {view:'cloud',book:'NCE2',file:'m_example'}, {view:'quiz',task:'mistakes'},
- {view:'ielts',tab:'course'}, {view:'ielts',tab:'course',task:'sample-academic-reading'}, {view:'ielts',tab:'course',task:'sample-general-training-writing'},
+ {view:'ielts',tab:'course',task:'sample-academic-listening-form'}, {view:'ielts',tab:'course',task:'sample-general-training-reading-multiple-answers'}, {view:'ielts',tab:'course'}, {view:'ielts',tab:'course',task:'sample-academic-reading'}, {view:'ielts',tab:'course',task:'sample-general-training-writing'},
 ])assert.deepEqual(parseRoute(routeHash(route)),route);
 assert.equal(parseRoute('#/words?tab=review&task=sample-academic-reading').task,undefined);
 assert.equal(parseRoute('#/ielts?tab=course&task=sample-academic-unknown').task,undefined);

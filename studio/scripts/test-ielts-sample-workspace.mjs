@@ -53,13 +53,16 @@ try {
         import * as m from './ielts-blueprint/sample-sequence-model';
         import * as c from './ielts-blueprint/sample-sequence';
         import * as n from './app/ielts-sample-next';
+        import * as route from './app/navigation';
+        import * as multi from './ielts-blueprint/curriculum/batch-02';
+        import {SampleMultiSelectInput as Selection} from './ielts-blueprint/sample-multi-select-ui';
         import * as classic from './app/model';
         import * as backup from './app/progress-file';
         import {IELTSSampleWorkspace as Workspace} from './app/ielts-sample-workspace';
         import {IELTSSampleSequence as Sequence} from './ielts-blueprint/sample-sequence-ui';
         import React from 'react';
         import {renderToStaticMarkup as render} from 'react-dom/server';
-        export {p,m,c,n,classic,backup,Workspace,Sequence,React,render};
+        export {p,m,c,n,route,multi,Selection,classic,backup,Workspace,Sequence,React,render};
       `,
       resolveDir: rootPath,
       sourcefile: 'sample-workspace-check-entry.ts',
@@ -90,7 +93,7 @@ try {
     outfile: output,
     logLevel: 'silent',
   });
-  const {p,m,c,n,classic,backup,Workspace,Sequence,React,render} =
+  const {p,m,c,n,route,multi,Selection,classic,backup,Workspace,Sequence,React,render} =
     (await import(pathToFileURL(output).href)).default;
   const DAY=86_400_000,START=Date.now()-60*DAY;let clock=START,checks=0,roundTrips=0;
   const test=async(name,run)=>{await run();checks++;console.log('PASS '+name)};
@@ -128,8 +131,8 @@ try {
   await test('compare-and-swap merges only this key and refuses restore/newer-format overwrite',()=>{const original={...base(),drafts:{other:'keep'}},raw=roundTrip(fixture),saved=p.replaceSampleProgress(original,undefined,raw,clock);assert.equal(saved.drafts.other,'keep');assert.equal(original.drafts[p.sampleProgressKey],undefined);const restored={...saved,drafts:{...saved.drafts,[p.sampleProgressKey]:'{"version":2}'}};assert.equal(p.replaceSampleProgress(restored,raw,raw,clock),restored);assert.equal(p.replaceSampleProgress(restored,restored.drafts[p.sampleProgressKey],raw,clock),restored);assert.equal(p.replaceSampleProgress(saved,raw,'invalid',clock),saved)});
   await test('two same-event controlled updates keep their sequence without overwriting other state',()=>{let first=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),second=act(first,{type:'next'});const raw1=roundTrip(first),raw2=roundTrip(second);let host={...base(),drafts:{other:'untouched'}};host=p.replaceSampleProgress(host,undefined,raw1,clock);host=p.replaceSampleProgress(host,raw1,raw2,clock);assert.equal(host.drafts[p.sampleProgressKey],raw2);assert.equal(host.drafts.other,'untouched')});
   await test('blocked wrapper renders recovery guidance without mounting writable questions',()=>{for(const raw of ['{','{"version":2}']){const state={...base(),drafts:{[p.sampleProgressKey]:raw}},html=render(React.createElement(Workspace,{ready:true,state,update(){throw Error('Rendering must not write state')}}));assert.match(html,/原始内容仍在/);assert.match(html,/不会自动清空/);assert(!html.includes('先选择考试类别'));assert(!html.includes('记录原始作答'));assert.equal(state.drafts[p.sampleProgressKey],raw)}});
-  await test('before host storage is ready the wrapper shows loading and creates no blank writable course',()=>{const html=render(React.createElement(Workspace,{ready:false,state:base(),update(){throw Error('Loading must not write state')}}));assert.match(html,/正在读取本机学习记录/);assert(!html.includes('先选择考试类别'));assert(!html.includes('四课学习次序'))});
-  await test('guided wrapper keeps category choice once and folds directories after selection',()=>{const unselected=render(React.createElement(Workspace,{ready:true,state:base(),update(){throw Error('Rendering must not write state')}}));assert.match(unselected,/先选择考试类别/);const state=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),raw=roundTrip(state),html=render(React.createElement(Workspace,{ready:true,state:{...base(),drafts:{[p.sampleProgressKey]:raw}},update(){throw Error('Rendering must not write state')}}));assert.match(html,/<details><summary>调整考试类别/);assert.match(html,/<details><summary>查看四课目录/);assert.match(html,/刷新可以继续/);assert.match(html,/备份不含录音/)});
+  await test('before host storage is ready the wrapper shows loading and creates no blank writable course',()=>{const html=render(React.createElement(Workspace,{ready:false,state:base(),update(){throw Error('Loading must not write state')}}));assert.match(html,/正在读取本机学习记录/);assert(!html.includes('先选择考试类别'));assert(!html.includes('课程学习次序'))});
+  await test('guided wrapper keeps category choice once and folds directories after selection',()=>{const unselected=render(React.createElement(Workspace,{ready:true,state:base(),update(){throw Error('Rendering must not write state')}}));assert.match(unselected,/先选择考试类别/);const state=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),raw=roundTrip(state),html=render(React.createElement(Workspace,{ready:true,state:{...base(),drafts:{[p.sampleProgressKey]:raw}},update(){throw Error('Rendering must not write state')}}));assert.match(html,/切换考试类别/);assert.match(html,/查看课程目录 · 8 课/);assert(!html.includes('<details>'));assert.match(html,/刷新可以继续/);assert.match(html,/备份不含录音/)});
   await test('after correction, guided UI offers the next lesson while an undued review stays unavailable',()=>{const state=closed('academic','hub-reading'),html=renderAt(React.createElement(Sequence,{value:state,guidedFlow:true}),clock);assert.match(html,/继续下一课/);assert(!html.includes('打开一份没接触过的复验题'))});
   await test('a due fresh review is the sole primary continuation instead of competing with the next lesson',()=>{const html=renderAt(React.createElement(Sequence,{value:fixture,guidedFlow:true}),m.sampleReviewDueAt(m.sampleSession(fixture)));assert.match(html,/打开一份没接触过的复验题/);assert(!html.includes('继续下一课'))});
   console.log(`${checks} adapter boundary checks and ${roundTrips} real-transition storage round trips passed`);
@@ -217,7 +220,7 @@ try {
       assert.equal(tasks.length, 8);
       assert.equal(new Set(tasks.map(task => task.id)).size, 8);
       for (const variant of variants) for (const skill of skills) {
-        const id = `sample:${variant}:hub-${skill}`, target = `sample-${variant}-${skill}`;
+        const id = `sample:${variant}:hub-${skill}`, target = `sample-${variant}-hub-${skill}`;
         const task = tasks.find(task => task.id === id);
         assert.ok(task, id);
         assert.equal(task.href, `${prefix}#/ielts?tab=course&task=${target}`);
@@ -256,7 +259,7 @@ try {
     }
   });
   await test('target parsing rejects incomplete, extra and malformed identifiers', () => {
-    for (const task of [undefined, '', 'academic-reading', 'sample-academic', 'sample-academic-hub-reading', 'sample-gt-reading', 'sample-academic-vocabulary', 'sample-Academic-reading', ' sample-academic-reading', 'sample-academic-reading ', 'sample-academic-reading\n', 'sample-academic-reading\r', 'sample-academic-reading/next', 'sample-academic-reading?next=1', 'sample-academic-reading#next', 'sample-%61cademic-reading']) {
+    for (const task of [undefined, '', 'academic-reading', 'sample-academic', 'sample-gt-reading', 'sample-academic-vocabulary', 'sample-Academic-reading', ' sample-academic-reading', 'sample-academic-reading ', 'sample-academic-reading\n', 'sample-academic-reading\r', 'sample-academic-reading/next', 'sample-academic-reading?next=1', 'sample-academic-reading#next', 'sample-%61cademic-reading']) {
       assert.equal(n.sampleTarget(task), undefined, JSON.stringify(task));
     }
   });
@@ -269,7 +272,7 @@ try {
     }));
     assert.match(html, /正在回到这次练习/);
     assert(!html.includes('记录原始作答'));
-    assert(!html.includes('四课学习次序'));
+    assert(!html.includes('课程学习次序'));
     assert.equal(JSON.stringify(state), before);
   });
   console.log(`${checks - adapterChecks} recommendation/target checks and ${roundTrips - adapterRoundTrips} additional real-transition round trips passed`);
@@ -469,9 +472,8 @@ try {
 
   const historyChecks = checks, historyRoundTrips = roundTrips;
   function historySection(html) {
-    const match = html.match(/<details aria-label="作答与订正记录">([\s\S]*?)<\/details>/);
-    assert.ok(match, 'Saved history is a native, initially closed disclosure');
-    assert.ok(match[1].startsWith('<summary>回看自己的作答与订正'));
+    const match = html.match(/<div id="sample-answer-history" hidden="">([\s\S]*?)<\/div><\/section>/);
+    assert.ok(match, 'Saved history stays hidden behind a named button until requested');
     assert.ok(!/<(?:button|input|select|textarea)\b/.test(match[1]), 'History has no mutation controls');
     return match[1];
   }
@@ -542,6 +544,62 @@ try {
     }
   });
   console.log(`${checks - historyChecks} read-only history groups and ${roundTrips - historyRoundTrips} additional real-transition round trips passed`);
+  const integrationChecks=checks,integrationRoundTrips=roundTrips;
+  await test('registered directory has eight lessons per category, sixteen legal sessions and sixty-six unique materials',()=>{
+    const refs=['academic','general-training'].flatMap(variant=>c.sampleLessonsFor(variant).flatMap(c.sampleMaterials));
+    assert.equal(refs.length,96);assert.equal(new Set(refs.map(material=>material.id)).size,66);
+    let value=m.emptySampleState();
+    for(const variant of ['academic','general-training'])for(const lesson of c.sampleLessonsFor(variant))value=continueIn(value,variant,lesson.id);
+    assert.equal(Object.keys(value.sessions).length,16);roundTrip(value);
+    for(const task of n.samplePracticeTasks(stored(value),clock,true)){
+      const parsed=route.parseRoute(task.href.slice(1)),target=n.sampleTarget(parsed.task);
+      assert.equal(task.id,`sample:${target.variant}:${target.lessonId}`);
+      assert(parsed.task.endsWith(target.lessonId));
+    }
+    for(const key of ['academic:unknown','academic:hub-reading:extra','gt:hub-reading'])blocked(mutate(value,x=>{x.value.sessions[key]={}}));
+    const raw=roundTrip(value),saved={...base(),drafts:{other:'unchanged',[p.sampleProgressKey]:raw}};
+    const restored=backup.readProgressFile(backup.makeProgressFile(saved));
+    return restored.then(result=>{assert.deepEqual(result.state,saved);assert.equal(p.readSampleProgress(result.state.drafts[p.sampleProgressKey],clock).status,'ready')});
+  });
+  await test('new complete-group responses preserve duplicate and malformed originals through the real save parser',()=>{
+    for(const variant of ['academic','general-training'])for(const raw of [' A A C ','A, C','Z A','A','A B C D']){
+      let value=start(variant,'reading-multiple-answers');const material=m.activeSampleMaterial(value),id=material.questions[0].id;
+      value=act(value,{type:'answer',questionId:id,value:raw});value=act(value,{type:'submit'});
+      const first=m.sampleSession(value).attempts[0];assert.equal(first.answers[id],raw);assert.equal(first.matched,false);assert.equal(first.correct,0);assert.equal(first.total,1);
+      value=act(value,{type:'answer',questionId:id,value:material.questions[0].accepted[0]});value=act(value,{type:'submit'});
+      assert.equal(m.sampleSession(value).attempts[0].answers[id],raw);assert.equal(m.sampleSession(value).attempts[1].matched,true);roundTrip(value);
+    }
+  });
+  await test('checkbox controls show raw strings without mount writes or duplicate repair, and edits use the existing scalar',()=>{
+    const task=multi.batch02NativeLessonsFor('academic')[1].guided.task;
+    const nodes=node=>[node,...(node&&typeof node==='object'?React.Children.toArray(node.props?.children).flatMap(nodes):[])];
+    for(const raw of [' A A C ','A, C','Z A','a b','']){
+      const writes=[],tree=Selection({task,rawAnswer:raw,onChange:value=>writes.push(value)}),html=render(tree);
+      assert.equal(writes.length,0);assert(html.includes(`value="${escapeHTML(raw)}"`));
+      const boxes=nodes(tree).filter(node=>node?.type==='input'&&node.props.type==='checkbox');assert.equal(boxes.length,task.options.length);
+      if([' A A C ','A, C','Z A'].includes(raw))assert(boxes.every(box=>box.props.disabled));
+      if(raw===''){boxes[0].props.onChange({target:{checked:true}});assert.deepEqual(writes,[task.options[0].id]);}
+    }
+  });
+  await test('new models show coach notes once while independent, timed-before-start and unexposed review content stay hidden',()=>{
+    for(const variant of ['academic','general-training'])for(const lesson of c.sampleLessonsFor(variant).slice(4)){
+      const value=modelStage(variant,lesson.id),html=renderReadOnly(value);
+      for(const note of lesson.model.modelNotes)assert.equal(html.split(escapeHTML(note)).length-1,1);
+      for(const later of [lesson.guided,lesson.independent,lesson.timed,...lesson.reviews])assert(!html.includes(escapeHTML(later.title)));
+      const independent=act(act(heardIfNeeded(answer(start(variant,lesson.id))),{type:'submit'}),{type:'next'});
+      const own=renderReadOnly(independent);for(const q of lesson.independent.questions)assert(!own.includes(escapeHTML(q.why)));
+      const timed=act(act(heardIfNeeded(answer(independent)),{type:'submit'}),{type:'next'});
+      const beforeStart=renderReadOnly(timed);assert.match(beforeStart,/开始训练计时/);
+      const native=multi.batch02NativeLessonsFor(variant).find(item=>item.id===lesson.id);
+      const stimulus=native?native.timed.stimulus:lesson.timed.context||lesson.timed.script;
+      assert(!beforeStart.includes(escapeHTML(stimulus)),'A timed stimulus remains hidden until the learner starts the timer');
+      assert(!beforeStart.includes('sample-multi-select"'),'Timed checkbox choices remain unmounted before the timer starts');
+      for(const q of lesson.timed.questions)assert(!beforeStart.includes(escapeHTML(q.why)));
+      for(const later of lesson.reviews)assert(!beforeStart.includes(escapeHTML(later.title)));
+    }
+  });
+  function heardIfNeeded(value){return m.activeSampleMaterial(value).script?heard(value):value}
+  console.log(`${checks-integrationChecks} integrated-directory/selection groups and ${roundTrips-integrationRoundTrips} additional real-transition round trips passed`);
 } finally {
   await rm(temp, {recursive: true, force: true});
 }

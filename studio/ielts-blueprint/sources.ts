@@ -1,4 +1,6 @@
 import type { OfficialSource } from './types';
+import {batch01AdditionalSources} from './curriculum/batch-01';
+import {batch02AdditionalSources} from './curriculum/batch-02';
 
 const checkedAt = '2026-10-01';
 const ielts = 'https://ielts.org';
@@ -8,7 +10,7 @@ const source = (id: string, title: string, url: string, scope: string, extra: Pa
 });
 
 /** Source access method is explicit: a delegated primary-source read is not a local full fetch. */
-export const officialSources: readonly OfficialSource[] = [
+const baseSources: readonly OfficialSource[] = [
   source('delivery-2026', 'IELTS：考试交付更新', `${ielts}/news-and-insights/updates-to-ielts-test-delivery`, '2026年中起按市场撤纸笔；部分市场可选Writing on Paper；构念与评分不变。', { verification: 'direct-open', publicationDate: '2026-03-05', caveat: '市场时间表不同；必须核对实际报考中心。' }),
   source('listening-format', 'IELTS：Listening format', `${format}/ielts-academic-test/ielts-academic-format-listening`, '四部分/40题/一遍播放/约30分钟；六组官方题型及作答限制。', { verification: 'direct-open' }),
   source('reading-academic', 'IELTS：Academic Reading format', `${format}/ielts-academic-test/ielts-academic-format-reading`, '三部分/60分钟/40题；Academic文本和11组分类、作答规则。', { verification: 'direct-open' }),
@@ -36,6 +38,16 @@ export const officialSources: readonly OfficialSource[] = [
   source('writing-demands', 'IELTS：Understand Task 2 prompts', `${ielts}/news-and-insights/ielts-writing-task-2-how-to-understand-ielts-question-prompts`, '按实际命令、范围、多问题及混合要求审题；不能套固定五类模板。', { publicationDate: '2023-02-01' }),
   source('writing-visuals-idp', 'IDP：Analyse Academic Task 1 visuals', 'https://ielts.idp.com/prepare/article-ielts-academic-writing-task-1-how-to-analyse-graphs', '线/柱/饼/表/组合/流程/地图教学覆盖标签。', { publisher: 'IDP', verification: 'partial-fetch', caveat: '委托研究核实官方搜索索引；整页可用性不稳定。' }),
 ];
+
+export const officialSources:readonly OfficialSource[]=(()=>{
+  const byId=new Map<string,OfficialSource>();
+  for(const item of [...baseSources,...batch01AdditionalSources,...batch02AdditionalSources]){
+    const previous=byId.get(item.id);
+    if(previous&&JSON.stringify(previous)!==JSON.stringify(item))throw new Error('Conflicting source identity: '+item.id);
+    byId.set(item.id,item);
+  }
+  return [...byId.values()];
+})();
 
 export const assessmentReference = {
   provenance: 'scoring',

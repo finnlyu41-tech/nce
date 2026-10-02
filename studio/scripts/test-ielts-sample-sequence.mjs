@@ -1,13 +1,9 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {stripTypeScriptTypes} from 'node:module';
-const root = new URL('../ielts-blueprint/', import.meta.url), cache = new Map();
-async function moduleURL(name) {
-  if (cache.has(name)) return cache.get(name);
-  let source = stripTypeScriptTypes(await readFile(new URL(name, root), 'utf8'));
-  for (const match of [...source.matchAll(/from ['"](.\/[^'"]+)['"]/g)]) source = source.replaceAll(match[0], `from '${await moduleURL(match[1].slice(2) + '.ts')}'`);
-  const url = 'data:text/javascript;base64,' + Buffer.from(source).toString('base64'); cache.set(name, url); return url;
-}
+import {moduleURL as resolveModule} from './ielts-blueprint-loader.mjs';
+const root=new URL('../ielts-blueprint/',import.meta.url);
+const moduleURL=name=>resolveModule(new URL(name,root).pathname);
 const m = await import(await moduleURL('sample-sequence-model.ts'));
 const c = await import(await moduleURL('sample-sequence.ts'));
 let checks = 0, clock = Date.UTC(2026, 9, 1, 8);
@@ -64,7 +60,7 @@ function review(state, extra = {}) {
 // Content audit: all original sets are distinct; shared skills are truly shared, writing is scoped.
 for (const variant of ['academic', 'general-training']) {
   const lessons = c.sampleLessonsFor(variant);
-  check(lessons.length === 4 && new Set(lessons.map(l => l.skill)).size === 4, 'Four lessons jointly cover four skills');
+  check(lessons.length === 8 && new Set(lessons.slice(0,4).map(l=>l.skill)).size === 4, 'Eight registered lessons preserve the original four skills');
   const sets = lessons.flatMap(c.sampleMaterials);
   check(new Set(sets.map(x => x.id)).size === sets.length, 'Unique material IDs within selected variant');
   check(new Set(sets.map(x => `${x.script || x.context || ''}|${x.instruction}`)).size === sets.length, 'Distinct actual stimuli, not reordered old answers');
