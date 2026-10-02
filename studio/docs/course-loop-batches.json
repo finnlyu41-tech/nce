@@ -1,0 +1,669 @@
+{
+  "status": "execution proposal; no user-confirmed total duration, lesson cap or workload",
+  "basis": "276 existing teaching groups; each listed once; no new invented lesson total",
+  "batches": [
+    {
+      "id": "CL-00",
+      "scope": "one pilot",
+      "groups": [
+        "NCE1-1"
+      ],
+      "status": "content/model/preview tested locally; host integration pending",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-01",
+      "scope": "finish first 4 groups",
+      "groups": [
+        "NCE1-3",
+        "NCE1-5",
+        "NCE1-7"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-02",
+      "scope": "next 4 groups",
+      "groups": [
+        "NCE1-9",
+        "NCE1-11",
+        "NCE1-13",
+        "NCE1-15"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-03",
+      "scope": "finish chapter 1",
+      "groups": [
+        "NCE1-17",
+        "NCE1-19",
+        "NCE1-21",
+        "NCE1-23"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N1-2",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE1-25",
+        "NCE1-27",
+        "NCE1-29",
+        "NCE1-31",
+        "NCE1-33",
+        "NCE1-35",
+        "NCE1-37",
+        "NCE1-39",
+        "NCE1-41",
+        "NCE1-43",
+        "NCE1-45",
+        "NCE1-47"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N1-3",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE1-49",
+        "NCE1-51",
+        "NCE1-53",
+        "NCE1-55",
+        "NCE1-57",
+        "NCE1-59",
+        "NCE1-61",
+        "NCE1-63",
+        "NCE1-65",
+        "NCE1-67",
+        "NCE1-69",
+        "NCE1-71"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N1-4",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE1-73",
+        "NCE1-75",
+        "NCE1-77",
+        "NCE1-79",
+        "NCE1-81",
+        "NCE1-83",
+        "NCE1-85",
+        "NCE1-87",
+        "NCE1-89",
+        "NCE1-91",
+        "NCE1-93",
+        "NCE1-95"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N1-5",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE1-97",
+        "NCE1-99",
+        "NCE1-101",
+        "NCE1-103",
+        "NCE1-105",
+        "NCE1-107",
+        "NCE1-109",
+        "NCE1-111",
+        "NCE1-113",
+        "NCE1-115",
+        "NCE1-117",
+        "NCE1-119"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N1-6",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE1-121",
+        "NCE1-123",
+        "NCE1-125",
+        "NCE1-127",
+        "NCE1-129",
+        "NCE1-131",
+        "NCE1-133",
+        "NCE1-135",
+        "NCE1-137",
+        "NCE1-139",
+        "NCE1-141",
+        "NCE1-143"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-1",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-1",
+        "NCE2-2",
+        "NCE2-3",
+        "NCE2-4",
+        "NCE2-5",
+        "NCE2-6",
+        "NCE2-7",
+        "NCE2-8",
+        "NCE2-9",
+        "NCE2-10",
+        "NCE2-11",
+        "NCE2-12"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-2",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-13",
+        "NCE2-14",
+        "NCE2-15",
+        "NCE2-16",
+        "NCE2-17",
+        "NCE2-18",
+        "NCE2-19",
+        "NCE2-20",
+        "NCE2-21",
+        "NCE2-22",
+        "NCE2-23",
+        "NCE2-24"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-3",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-25",
+        "NCE2-26",
+        "NCE2-27",
+        "NCE2-28",
+        "NCE2-29",
+        "NCE2-30",
+        "NCE2-31",
+        "NCE2-32",
+        "NCE2-33",
+        "NCE2-34",
+        "NCE2-35",
+        "NCE2-36"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-4",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-37",
+        "NCE2-38",
+        "NCE2-39",
+        "NCE2-40",
+        "NCE2-41",
+        "NCE2-42",
+        "NCE2-43",
+        "NCE2-44",
+        "NCE2-45",
+        "NCE2-46",
+        "NCE2-47",
+        "NCE2-48"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-5",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-49",
+        "NCE2-50",
+        "NCE2-51",
+        "NCE2-52",
+        "NCE2-53",
+        "NCE2-54",
+        "NCE2-55",
+        "NCE2-56",
+        "NCE2-57",
+        "NCE2-58",
+        "NCE2-59",
+        "NCE2-60"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-6",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-61",
+        "NCE2-62",
+        "NCE2-63",
+        "NCE2-64",
+        "NCE2-65",
+        "NCE2-66",
+        "NCE2-67",
+        "NCE2-68",
+        "NCE2-69",
+        "NCE2-70",
+        "NCE2-71",
+        "NCE2-72"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-7",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-73",
+        "NCE2-74",
+        "NCE2-75",
+        "NCE2-76",
+        "NCE2-77",
+        "NCE2-78",
+        "NCE2-79",
+        "NCE2-80",
+        "NCE2-81",
+        "NCE2-82",
+        "NCE2-83",
+        "NCE2-84"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-N2-8",
+      "scope": "next existing chapter",
+      "groups": [
+        "NCE2-85",
+        "NCE2-86",
+        "NCE2-87",
+        "NCE2-88",
+        "NCE2-89",
+        "NCE2-90",
+        "NCE2-91",
+        "NCE2-92",
+        "NCE2-93",
+        "NCE2-94",
+        "NCE2-95",
+        "NCE2-96"
+      ],
+      "status": "queued; no authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE3-1",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE3-1",
+        "NCE3-2",
+        "NCE3-3",
+        "NCE3-4",
+        "NCE3-5",
+        "NCE3-6",
+        "NCE3-7",
+        "NCE3-8",
+        "NCE3-9",
+        "NCE3-10",
+        "NCE3-11",
+        "NCE3-12"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE3-2",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE3-13",
+        "NCE3-14",
+        "NCE3-15",
+        "NCE3-16",
+        "NCE3-17",
+        "NCE3-18",
+        "NCE3-19",
+        "NCE3-20",
+        "NCE3-21",
+        "NCE3-22",
+        "NCE3-23",
+        "NCE3-24"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE3-3",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE3-25",
+        "NCE3-26",
+        "NCE3-27",
+        "NCE3-28",
+        "NCE3-29",
+        "NCE3-30",
+        "NCE3-31",
+        "NCE3-32",
+        "NCE3-33",
+        "NCE3-34",
+        "NCE3-35",
+        "NCE3-36"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE3-4",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE3-37",
+        "NCE3-38",
+        "NCE3-39",
+        "NCE3-40",
+        "NCE3-41",
+        "NCE3-42",
+        "NCE3-43",
+        "NCE3-44",
+        "NCE3-45",
+        "NCE3-46",
+        "NCE3-47",
+        "NCE3-48"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE3-5",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE3-49",
+        "NCE3-50",
+        "NCE3-51",
+        "NCE3-52",
+        "NCE3-53",
+        "NCE3-54",
+        "NCE3-55",
+        "NCE3-56",
+        "NCE3-57",
+        "NCE3-58",
+        "NCE3-59",
+        "NCE3-60"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE4-1",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE4-1",
+        "NCE4-2",
+        "NCE4-3",
+        "NCE4-4",
+        "NCE4-5",
+        "NCE4-6",
+        "NCE4-7",
+        "NCE4-8",
+        "NCE4-9",
+        "NCE4-10",
+        "NCE4-11",
+        "NCE4-12"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE4-2",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE4-13",
+        "NCE4-14",
+        "NCE4-15",
+        "NCE4-16",
+        "NCE4-17",
+        "NCE4-18",
+        "NCE4-19",
+        "NCE4-20",
+        "NCE4-21",
+        "NCE4-22",
+        "NCE4-23",
+        "NCE4-24"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE4-3",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE4-25",
+        "NCE4-26",
+        "NCE4-27",
+        "NCE4-28",
+        "NCE4-29",
+        "NCE4-30",
+        "NCE4-31",
+        "NCE4-32",
+        "NCE4-33",
+        "NCE4-34",
+        "NCE4-35",
+        "NCE4-36"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    },
+    {
+      "id": "CL-NCE4-4",
+      "scope": "supplemental material, selected only for demonstrated need",
+      "groups": [
+        "NCE4-37",
+        "NCE4-38",
+        "NCE4-39",
+        "NCE4-40",
+        "NCE4-41",
+        "NCE4-42",
+        "NCE4-43",
+        "NCE4-44",
+        "NCE4-45",
+        "NCE4-46",
+        "NCE4-47",
+        "NCE4-48"
+      ],
+      "status": "queue inventory; not a required route or authored tasks",
+      "acceptance": [
+        "each group: authored diagnostic, targeted study, unseen same-level response, preserved first answer/correction, two delayed banks",
+        "source text/audio/comic kept available with explicit help/exposure handling",
+        "single next action; no open draft or help converted to independent mastery",
+        "model failure/restoration/exposure tests; exact build UI and actual source media checks by owner",
+        "content reviewer checks task ambiguity and difficulty; natural delay remains separate learner evidence"
+      ]
+    }
+  ],
+  "routeProposal": {
+    "oneRecommendation": [
+      "resume unsaved/incomplete step without replacing input",
+      "repair an actual failed attempt",
+      "oldest due lesson with unused new material",
+      "next scheduled course/micro-task",
+      "checkpoint when its explicit evidence is ready"
+    ],
+    "ieltsRotation": {
+      "cadence": "one suitably graded mini-task after each 3 completed teaching groups",
+      "order": [
+        "listening",
+        "reading",
+        "speaking",
+        "writing"
+      ],
+      "status": "proposed insertion contract, NOT registered or authored here",
+      "existingReusable": "8 registered lessons per exam category; reuse only after prerequisites and media QA. No duplicate work on other author batches.",
+      "firstChapter": "After groups 3/6/9/12, build or choose a genuinely beginner-sized task; do not silently send a beginner to the harder hub/course material."
+    },
+    "checkpoint": "after each existing 12-group chapter: new same-level integrated task + separate delayed evidence; reuse existing project record but do not call a task instruction an authored test",
+    "supplements": "NCE3/4 remain accessible; choose targeted remediation through same route, never require all four books before IELTS"
+  }
+}

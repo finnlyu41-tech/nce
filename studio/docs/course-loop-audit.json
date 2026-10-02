@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "auditedSource": "0ae75f9decab83a2969fed6ca6e6838585c217b6",
+  "scope": "source-level audit; production mapping requires release-owner verification",
+  "counts": {
+    "textbookCourses": 348,
+    "textbookCoursesByBook": {
+      "NCE1": 144,
+      "NCE2": 96,
+      "NCE3": 60,
+      "NCE4": 48
+    },
+    "teachingGroups": 276,
+    "groupsByBook": {
+      "NCE1": 72,
+      "NCE2": 96,
+      "NCE3": 60,
+      "NCE4": 48
+    },
+    "mapGroups": 168,
+    "classicSupplementGroups": 108,
+    "comicGroups": 72,
+    "sharedGuides": 97,
+    "grammarUnits": 28,
+    "grammarQuestions": 168,
+    "support": {
+      "ielts-mini": 16,
+      "grammar-unit": 28,
+      "backup-original": 36,
+      "legacy-ielts-task": 11,
+      "starter": 3,
+      "chapter-checkpoint": 14,
+      "map-external-task": 12,
+      "legacy-route-node": 37,
+      "map-final-evidence": 3,
+      "accepted-demo": 1
+    },
+    "ieltsSessions": 16,
+    "ieltsUniqueMaterials": 66
+  },
+  "sourceFiles": {
+    "app/data/textbook-grammar.json": "7522d9c78e29e9becc17c4bbf786b442a65fbb0fa9875b985d117d90a41c54ad",
+    "app/data/grammar-explanations.json": "c417b35cc8451716c567fda273d7a74b89a2c5061640b4a68871e5b4c8c6a0a3",
+    "app/data/nce-pages.json": "a376eeb88cbf8a22b1810f5b95ff7b0f9c061c62b7426b73776a53637c3d7e96",
+    "app/data/nce-illustrations.json": "9481fd016c92ec6d785cb76cf847e719ea7cce77cf6d103ef1df8c596a634083",
+    "app/learning-plan.ts": "7104e5f11129c491ba71b6b8378d1d1bf94287a8e325c97cc215a1247ae16601",
+    "app/learning-transfer.ts": "2304388b4d265e7e1bf5df0e2f311d78012536bb6b657ecff7f7f940dc1b46f3",
+    "map/curriculum.ts": "4006708895fc5c15c8816f0fb2ad23efc51380895018ba8a5f3066a02f16b2a2",
+    "map/content.ts": "43189e8c7cf08e100948cfe88396a535acc3ef926bb2feb77becd6aaa7de33a4",
+    "map/lesson-plan.ts": "988c0d862a80a702554667cc3310ecb5d564c481c86b0f3d2b7fd5a997dd859d",
+    "map/model.ts": "0fbf5f3d5bd114927d04f34245256d002f5e7408dc520a45b28c3af2fd977cb5",
+    "map/course.tsx": "8f636586f99a4fb36069d0c860e89e6afb7042a1cd9d7453b7133efc012ff277",
+    "map/expression.tsx": "105c4f9e38fa944388a2573c083b3d886d5d10abdcbac17d88be93e2b29eee62",
+    "ielts-blueprint/sample-sequence.ts": "760d2ae849a3728ac456226325ea3823ceb145fd57f65aaac124e909abfc588d",
+    "ielts-blueprint/sample-sequence-model.ts": "199230f47b1d1535a536f4b304b0c8b5cf0bb6c7b699a240f9708d1bf8d707a3",
+    "app/grammar-curriculum.ts": "ff786f00703f17f0d8c617c94bcaa6c8a22a5fc273a5ec12c6e5a54cdf724507",
+    "app/data/lessons.json": "f98978cb0e5f336bfa9bd390f60f331fec4deb9bb688eb905e6422fcb6e727ea",
+    "app/data/ielts.json": "9d2a383dd7489899b6a4e1c384f80639d3be2e66805d1d28db7e38e1c73d201d",
+    "app/study-path.ts": "dca1c3bc05a5bf7f901e94e2c7185e8af2282eb5b15355b1b81fe47232053f9d",
+    "app/ielts-blueprint.ts": "d4ccb3c1e92d92867d44f89e3a2fa6692f5ca681a7635b11ed035a12b2b76189",
+    "app/ielts-journey-content.ts": "af18eb3a5a2c1ab1a30ebe8ae3444f0a37179ab97ce0655fad570278bda2c66b"
+  }
+}
