@@ -1,0 +1,144 @@
+{
+  "base": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "releaseRefs": "febb408a5777b0fef77ba5f0b5d8f7dd57e1902d",
+  "modules": [
+    {
+      "id": "nce1-73",
+      "path": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-073.mjs",
+      "sha256": "66c772069196b218af7919884d0ee2a6fff78b29c144e448b365ebc8d81b0539",
+      "source": {
+        "groupId": "NCE1-73",
+        "route": "/#/nce/NCE1/73?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-73",
+        "languagePath": "/language/NCE1/73.json",
+        "languageSha256": "33eeb0811738e72e672cf961bc3cc8f88d02ecad4c22fe152096122b0c171254",
+        "sourceSha256": "33eeb0811738e72e672cf961bc3cc8f88d02ecad4c22fe152096122b0c171254",
+        "comicKey": "NCE1-73",
+        "clips": [
+          {
+            "target": "past-event",
+            "label": "原声：先put再took out与found",
+            "start": 64.17,
+            "end": 76.8
+          },
+          {
+            "target": "past-manner",
+            "label": "原声：read slowly的方式",
+            "start": 76.8,
+            "end": 81.53999999999999
+          },
+          {
+            "target": "past-what-question",
+            "label": "原声过去事件；What did结构见74课配套练习",
+            "start": 18.73,
+            "end": 23.59
+          }
+        ],
+        "pairedExercise": {
+          "entryId": "NCE1-73",
+          "lessons": [
+            73,
+            74
+          ],
+          "note": "Odd lesson original transcript plus verified paired exercise pages; exercise practice has no separate original-audio claim."
+        }
+      },
+      "questions": 18,
+      "accepted": 29,
+      "counterexamples": 72
+    },
+    {
+      "id": "nce1-75",
+      "path": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-075.mjs",
+      "sha256": "d310f5091180f4d0a831a2502a67dbd690a35232b0ba738ebb73c07f76ceaaee",
+      "source": {
+        "groupId": "NCE1-75",
+        "route": "/#/nce/NCE1/75?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-75",
+        "languagePath": "/language/NCE1/75.json",
+        "languageSha256": "23782f20d41cfaeef29c7d1726e477917877cb3f3d3d3658c1d94903c7b4d0f3",
+        "sourceSha256": "23782f20d41cfaeef29c7d1726e477917877cb3f3d3d3658c1d94903c7b4d0f3",
+        "comicKey": "NCE1-75",
+        "clips": [
+          {
+            "target": "past-when",
+            "label": "原声Did she buy…；时间问法见76课",
+            "start": 37.52,
+            "end": 39.94
+          },
+          {
+            "target": "past-time",
+            "label": "原声last month；44.36句含a month ago",
+            "start": 32.85,
+            "end": 37.52
+          },
+          {
+            "target": "past-buy",
+            "label": "原声bought与前句did buy对照",
+            "start": 39.94,
+            "end": 44.36
+          }
+        ],
+        "pairedExercise": {
+          "entryId": "NCE1-75",
+          "lessons": [
+            75,
+            76
+          ],
+          "note": "Odd lesson original transcript plus verified paired exercise pages; exercise practice has no separate original-audio claim."
+        }
+      },
+      "questions": 18,
+      "accepted": 27,
+      "counterexamples": 72
+    },
+    {
+      "id": "nce1-77",
+      "path": "studio/course-loop/parallel-nce1-073-083/lesson-nce1-077.mjs",
+      "sha256": "5341ef6a8db49fe496502b96596571a6affcad1f01c98ea76cfe520303a04fde",
+      "source": {
+        "groupId": "NCE1-77",
+        "route": "/#/nce/NCE1/77?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-77",
+        "languagePath": "/language/NCE1/77.json",
+        "languageSha256": "4487d329f6122326a2c491d46a77e36bb8fbb8d06900ed739051a83dbdf108b9",
+        "sourceSha256": "4487d329f6122326a2c491d46a77e36bb8fbb8d06900ed739051a83dbdf108b9",
+        "comicKey": "NCE1-77",
+        "clips": [
+          {
+            "target": "past-clock",
+            "label": "原声at 2 p.m.；78课练习过去钟点",
+            "start": 67.34,
+            "end": 71.24
+          },
+          {
+            "target": "past-day",
+            "label": "原声at钟点+on星期日期；78课配套日期",
+            "start": 50.9,
+            "end": 57.5
+          },
+          {
+            "target": "past-period",
+            "label": "原声具体日期用on；78课配套月份年份用in",
+            "start": 50.9,
+            "end": 57.5
+          }
+        ],
+        "pairedExercise": {
+          "entryId": "NCE1-77",
+          "lessons": [
+            77,
+            78
+          ],
+          "note": "Odd lesson original transcript plus verified paired exercise pages; exercise practice has no separate original-audio claim."
+        }
+      },
+      "questions": 18,
+      "accepted": 53,
+      "counterexamples": 72
+    }
+  ],
+  "sourcePanel": "unchanged real guard; verified internal source hash",
+  "factory": "unchanged production createCourseLoopModel using module.matches",
+  "registration": "test-only; real production integration pending"
+}

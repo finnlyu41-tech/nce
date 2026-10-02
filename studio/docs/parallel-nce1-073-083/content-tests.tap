@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: nce1-73 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce1-73 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 42.662667
+  type: 'test'
+  ...
+# Subtest: nce1-73 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce1-73 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 13.924416
+  type: 'test'
+  ...
+# Subtest: nce1-75 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce1-75 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 30.828208
+  type: 'test'
+  ...
+# Subtest: nce1-75 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce1-75 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 10.365167
+  type: 'test'
+  ...
+# Subtest: nce1-77 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce1-77 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 40.365709
+  type: 'test'
+  ...
+# Subtest: nce1-77 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce1-77 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 10.024791
+  type: 'test'
+  ...
+# Subtest: nce1-73 rejects nce1-75 raw without overwriting
+ok 7 - nce1-73 rejects nce1-75 raw without overwriting
+  ---
+  duration_ms: 0.24
+  type: 'test'
+  ...
+# Subtest: nce1-73 rejects nce1-77 raw without overwriting
+ok 8 - nce1-73 rejects nce1-77 raw without overwriting
+  ---
+  duration_ms: 0.085375
+  type: 'test'
+  ...
+# Subtest: nce1-75 rejects nce1-73 raw without overwriting
+ok 9 - nce1-75 rejects nce1-73 raw without overwriting
+  ---
+  duration_ms: 0.530084
+  type: 'test'
+  ...
+# Subtest: nce1-75 rejects nce1-77 raw without overwriting
+ok 10 - nce1-75 rejects nce1-77 raw without overwriting
+  ---
+  duration_ms: 0.4925
+  type: 'test'
+  ...
+# Subtest: nce1-77 rejects nce1-73 raw without overwriting
+ok 11 - nce1-77 rejects nce1-73 raw without overwriting
+  ---
+  duration_ms: 0.144625
+  type: 'test'
+  ...
+# Subtest: nce1-77 rejects nce1-75 raw without overwriting
+ok 12 - nce1-77 rejects nce1-75 raw without overwriting
+  ---
+  duration_ms: 0.058667
+  type: 'test'
+  ...
+# Subtest: external independent blind 073-077 answers and reasonable variants match current authored contracts
+ok 13 - external independent blind 073-077 answers and reasonable variants match current authored contracts
+  ---
+  duration_ms: 0.591625
+  type: 'test'
+  ...
+# Subtest: independent and delayed tasks are distinct originals, not source recital or reordered banks
+ok 14 - independent and delayed tasks are distinct originals, not source recital or reordered banks
+  ---
+  duration_ms: 2.294125
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 267.0435

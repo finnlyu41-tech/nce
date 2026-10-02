@@ -1,0 +1,167 @@
+{
+  "baseline": "3b94546947e29befbcbf0de74ecacab521f64b2d",
+  "remoteHeads": "febb408a5777b0fef77ba5f0b5d8f7dd57e1902d",
+  "groups": [
+    {
+      "id": "nce1-73",
+      "sourceSha256": "33eeb0811738e72e672cf961bc3cc8f88d02ecad4c22fe152096122b0c171254",
+      "languageFileSha256": "1b890f8d5f54418333b54bde11a9af1276f47edd0d4295fa75231a6c0e9fe9b6",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "c4f838b4ea8a434c718310d23cea877898c39a9e7e8e4708490dd86d8d8c5edb",
+      "grammarEntry": {
+        "id": "NCE1-73",
+        "book": "NCE1",
+        "lesson": 73,
+        "lastLesson": 74,
+        "unit": null,
+        "title": "一般过去时：What did…?",
+        "category": "tense",
+        "terms": "what did do",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 156
+          },
+          {
+            "section": "句型练习",
+            "page": 155
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 154
+          }
+        ],
+        "pages": [
+          154,
+          155,
+          156
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 154,
+          "sha256": "aa444860531f216f56ce4e6d6ece051234ce38abd8358936ad6c7d1acc0c2be2"
+        },
+        {
+          "page": 155,
+          "sha256": "627601fdae8a97b5e9e04d5f64eac4b69e9bbda09e88ab7061492ab49de10a16"
+        },
+        {
+          "page": 156,
+          "sha256": "38b22d21154f7b91665f2af390289283df07cb6e15adef5304077b10d63beec3"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-75",
+      "sourceSha256": "23782f20d41cfaeef29c7d1726e477917877cb3f3d3d3658c1d94903c7b4d0f3",
+      "languageFileSha256": "70451d92452617fa81f74a95a31dd97cb2da6d9687c5e5590e7fd410df7ec143",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "3c904d3768624aae7c9b2aa4cb293b1b67ac333ab0675e69a33cb4127e6822a9",
+      "grammarEntry": {
+        "id": "NCE1-75",
+        "book": "NCE1",
+        "lesson": 75,
+        "lastLesson": 76,
+        "unit": null,
+        "title": "一般过去时的时间问答",
+        "category": "tense",
+        "terms": "when did",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 160
+          },
+          {
+            "section": "句型练习",
+            "page": 159
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 158
+          }
+        ],
+        "pages": [
+          158,
+          159,
+          160
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 158,
+          "sha256": "50cac45db697911264c611017ff2da46d0e38d63a44cb2f1f4cd14a146d4e002"
+        },
+        {
+          "page": 159,
+          "sha256": "fd4d1e60bef5e6f38b65fd5a2a28994e5a4e4209a95417afd9d042515b9ae95e"
+        },
+        {
+          "page": 160,
+          "sha256": "91ae05a7a7edfa654fa1bc90153eceb112ffd99e3ae0c88966b6bf5c474375c1"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-77",
+      "sourceSha256": "4487d329f6122326a2c491d46a77e36bb8fbb8d06900ed739051a83dbdf108b9",
+      "languageFileSha256": "4bb0def78e4e832e11d27a6c0385a5534ba38e7234ecb830b92c203017118fd4",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "826f0be979f8c50d265efa9a0acdabbb8d3a05adefaab76e8c17e63fb8512f65",
+      "grammarEntry": {
+        "id": "NCE1-77",
+        "book": "NCE1",
+        "lesson": 77,
+        "lastLesson": 78,
+        "unit": null,
+        "title": "一般过去时：过去动作的问答",
+        "category": "tense",
+        "terms": "when did",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 164
+          },
+          {
+            "section": "句型练习",
+            "page": 163
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 162
+          }
+        ],
+        "pages": [
+          162,
+          163,
+          164
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 162,
+          "sha256": "ac908b76be1b7af6a36fd689c528393d8d511bd04ed068d99caff62c2016521c"
+        },
+        {
+          "page": 163,
+          "sha256": "e3e2e32dfab2ff1021a52171275f063570784a879f70e56536dd0b50feb56e9f"
+        },
+        {
+          "page": 164,
+          "sha256": "516288f27494e0f22240dab46e12b19ea76d7153900b9b3f19594af86bf6b2b6"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}

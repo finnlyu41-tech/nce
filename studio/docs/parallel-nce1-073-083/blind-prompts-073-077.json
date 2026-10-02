@@ -1,0 +1,326 @@
+[
+  {
+    "id": "diagnostic-n73-past-event",
+    "context": "失物处昨天的记录：我找到一把钥匙，随后把它给了Ada。",
+    "prompt": "以I开头，用find a key、and、give it to Ada按顺序写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n73-past-manner",
+    "context": "搬运日志：她小心地打开了那只箱子，并没有匆忙打开。",
+    "prompt": "用She、open the box、carefully（小心地）写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n73-past-what-question",
+    "context": "你正问同事昨天的经历，只知道时间，不知道动作。",
+    "prompt": "用What、you、do、yesterday写一句询问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "guided-n73-past-event",
+    "context": "快递点已结束的记录：Leo拿走了那张便条，随后把它读了。",
+    "prompt": "以Leo开头，用take the note、and、read it写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先核事实和先后，再用每个动作的过去式。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n73-past-manner",
+    "context": "实验课已经结束：我们缓慢地移动了那张桌子，避免碰到设备。",
+    "prompt": "用We、move the table、slowly（缓慢地）写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对动作的过去式，再用副词保留题中方式。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n73-past-what-question",
+    "context": "午休结束后，你要问两位伙伴休息时做了什么。",
+    "prompt": "用What、they、do、during the break（休息期间）询问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：What + did + 主语 + do，保留题中时间，句末问号。",
+    "form": "question"
+  },
+  {
+    "id": "independent-n73-past-event",
+    "context": "雨停后的访客记录：他们去了公园，随后看见了一只狐狸。",
+    "prompt": "用They、go to the park、and、see a fox写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n73-past-manner",
+    "context": "社团活动已结束：Omar很流利地说了法语，记录不评价他的英语。",
+    "prompt": "用Omar、speak French、fluently（流利地）写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n73-past-what-question",
+    "context": "活动资料没有记下Nia课后的行动，你正在向别人询问。",
+    "prompt": "用What、Nia、do、after class询问那一次过去行动。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "repair-n73-past-event",
+    "context": "保留上一轮首答和订正。下面是另一情境：重新核对仓库交接：我把那本书放在桌上，然后离开了房间。",
+    "prompt": "以I开头，用put the book on the table、and、leave the room写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n73-past-manner",
+    "context": "保留上一轮首答和订正。下面是另一情境：修补另一种方式：两位队员轻声地关上了那扇门，并非大声关门。",
+    "prompt": "用They、close the door、quietly（轻声地）写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n73-past-what-question",
+    "context": "保留上一轮首答和订正。下面是另一情境：修补疑问句时换一个对象：你问老师那位男孩昨晚做了什么。",
+    "prompt": "用What、he、do、last night询问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-a-n73-past-event",
+    "context": "下一天收到远足回报：她先喝了水，然后坐下了。",
+    "prompt": "用She、drink some water、and、sit down按顺序写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n73-past-manner",
+    "context": "新收到昨日泳池练习记录：Mia游得很好，只需记录表现。",
+    "prompt": "用Mia、swim、well写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n73-past-what-question",
+    "context": "你只知道昨天会议结束了，想问我们会议后做了什么。",
+    "prompt": "用What、we、do、after the meeting发问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-b-n73-past-event",
+    "context": "第二次回访收到的车站记录：Ben先买了一张票，再乘了火车。",
+    "prompt": "用Ben、buy a ticket、and、take the train写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n73-past-manner",
+    "context": "新音乐节资料说我们热情地欢迎了客人，活动已结束。",
+    "prompt": "用We、greet the guests、warmly（热情地）写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n73-past-what-question",
+    "context": "另一份记录缺少两位志愿者今天上午已经结束的行动。",
+    "prompt": "用What、the volunteers、do、this morning询问过去行动。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "diagnostic-n75-past-when",
+    "context": "博物馆收到归还物，但日志缺少归还时间；你问两位志愿者。",
+    "prompt": "用When、they、return the map询问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "diagnostic-n75-past-time",
+    "context": "包裹记录：我们在两天前寄出了那个盒子。",
+    "prompt": "用We、post the box、two days ago写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n75-past-buy",
+    "context": "市场收据明确：我买了那盏灯，没有描述购物愿望。",
+    "prompt": "用I、buy the lamp写一句已发生的肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n75-past-when",
+    "context": "门票办公室知道Ada订了座位，但不知道何时。",
+    "prompt": "用When、Ada、book the seat询问时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：When问时间；did后动词原形。",
+    "form": "question"
+  },
+  {
+    "id": "guided-n75-past-time",
+    "context": "宿舍搬迁已结束：她上个月搬走了。",
+    "prompt": "用She、move、last month写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留时间含义，last前无介词，数量+单位+ago。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n75-past-buy",
+    "context": "库存核对确认两位朋友没有买那些手套。",
+    "prompt": "用They、not buy the gloves写过去否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：肯定bought，否定did not buy，核对购买的是哪件物品。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n75-past-when",
+    "context": "摄影社知道一位成员画了招贴；你用he问他人的记录。",
+    "prompt": "用When、he、paint the poster询问那一次时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "independent-n75-past-time",
+    "context": "维修台收到一个新的日期事实：我四小时前修好了自行车。",
+    "prompt": "用I、repair the bike、four hours ago写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n75-past-buy",
+    "context": "排练购物清单说Nia实际买了那支笛子，已经完成交易。",
+    "prompt": "用Nia、buy the flute（笛子）写过去肯定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n75-past-when",
+    "context": "保留上一轮首答和订正。下面是另一情境：订正后换一份新记录：团队收到了一封信，但你不知道我何时发信。",
+    "prompt": "用When、I、send the letter询问时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "repair-n75-past-time",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一份过期登记：他们前年参观了那座城堡。",
+    "prompt": "用They、visit the castle、the year before last写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n75-past-buy",
+    "context": "保留上一轮首答和订正。下面是另一情境：修补购买否定时换对象：Ben没有买那只手表，只买了别的东西；不需写别的东西。",
+    "prompt": "用Ben、not buy the watch写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n75-past-when",
+    "context": "新到的采访稿说明同伴清洗了设备，缺时间；你直接问对方。",
+    "prompt": "用When、you、clean the camera询问时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-a-n75-past-time",
+    "context": "第二天整理旧旅行日志：我们上周步行穿过了那座桥。",
+    "prompt": "用We、walk across the bridge、last week写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n75-past-buy",
+    "context": "新收据说明我们买了那张毯子，记录的是过去一次交易。",
+    "prompt": "用We、buy the blanket写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n75-past-when",
+    "context": "另一场回访：两位学生提交了报告，你要问他们何时提交。",
+    "prompt": "用When、the students、hand in the report询问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-b-n75-past-time",
+    "context": "新的救援档案记录：她一小时前给办公室打了电话。",
+    "prompt": "用She、call the office、an hour ago写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n75-past-buy",
+    "context": "后续核账：我没有买那些邮票，照片不能当收据。",
+    "prompt": "用I、not buy the stamps写一句过去否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n77-past-clock",
+    "context": "中心昨日记事：我在九点打了电话。",
+    "prompt": "用I、call、nine o’clock写一句过去陈述，补所需时间介词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n77-past-day",
+    "context": "展览登记：他们星期二到达了。",
+    "prompt": "用They、arrive、Tuesday写一句已结束行动。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n77-past-period",
+    "context": "协会旧记录：她在三月加入了这个俱乐部。",
+    "prompt": "用She、join the club、March写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n77-past-clock",
+    "context": "练习时间表回顾：我们在两点半开了门。",
+    "prompt": "用We、open the door、half past two写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先核动作已发生，再用at加指定钟点。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n77-past-day",
+    "context": "物流日期已确认：Ben在五月八日寄出了那封信；不需写年份。",
+    "prompt": "用Ben、post the letter、May 8th写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：具体星期/日期用on，保留原星期或日期。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n77-past-period",
+    "context": "工作档案：我在2023年开始了那份工作。",
+    "prompt": "用I、start the job、2023写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：in加月份或年份；动作与日期事实都保留。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n77-past-clock",
+    "context": "另一个已经结束的训练日：Nia在四点差一刻出发了。",
+    "prompt": "用Nia、leave、a quarter to four写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n77-past-day",
+    "context": "维修报告指过去那次行动：我们星期五修好了那张椅子。",
+    "prompt": "用We、repair the chair、Friday写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n77-past-period",
+    "context": "档案馆收到历史信息：他们在2018年建成了那座桥。",
+    "prompt": "用They、build the bridge、2018写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n77-past-clock",
+    "context": "保留上一轮首答和订正。下面是另一情境：修补钟点时换场景：我昨日在十点一刻见了Jo。",
+    "prompt": "用I、meet Jo、a quarter past ten写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n77-past-day",
+    "context": "保留上一轮首答和订正。下面是另一情境：订正后换新日期：她在十一月六日归还了那幅画。",
+    "prompt": "用She、return the painting、November 6th写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n77-past-period",
+    "context": "保留上一轮首答和订正。下面是另一情境：新资料是月份范围：我们八月住在那家旅馆，没有提供具体哪一天。",
+    "prompt": "用We、stay at the hotel、August写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n77-past-clock",
+    "context": "新摄影日记：他们在六点半结束了练习。",
+    "prompt": "用They、finish the practice、half past six写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n77-past-day",
+    "context": "下一次核对得到星期事实：我星期日清理了那间办公室。",
+    "prompt": "用I、clean the office、Sunday写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n77-past-period",
+    "context": "新来的学院档案：Ada在2021年学习了德语。",
+    "prompt": "用Ada、study German、2021写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n77-past-clock",
+    "context": "另一轮采样已经完成：她在七点差十分给办公室打了电话。",
+    "prompt": "用She、call the office、ten to seven写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n77-past-day",
+    "context": "另一份交接记录：他们在七月一日搬走了。",
+    "prompt": "用They、move、July 1st写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n77-past-period",
+    "context": "长时间后收到的历史记录：我在十月画了那扇门，只知道月份。",
+    "prompt": "用I、paint the door、October写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  }
+]

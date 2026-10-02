@@ -1,0 +1,403 @@
+[
+  {
+    "id": "diagnostic-n73-past-event",
+    "answer": "I found a key and gave it to Ada.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n73-past-manner",
+    "answer": "She opened the box carefully.",
+    "variants": [
+      "She carefully opened the box."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n73-past-what-question",
+    "answer": "What did you do yesterday?",
+    "variants": [
+      "Yesterday, what did you do?"
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n73-past-event",
+    "answer": "Leo took the note and read it.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "guided-n73-past-manner",
+    "answer": "We moved the table slowly.",
+    "variants": [
+      "We slowly moved the table."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n73-past-what-question",
+    "answer": "What did they do during the break?",
+    "variants": [
+      "During the break, what did they do?"
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n73-past-event",
+    "answer": "They went to the park and saw a fox.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "independent-n73-past-manner",
+    "answer": "Omar spoke French fluently.",
+    "variants": [
+      "Omar fluently spoke French."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n73-past-what-question",
+    "answer": "What did Nia do after class?",
+    "variants": [
+      "After class, what did Nia do?"
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n73-past-event",
+    "answer": "I put the book on the table and left the room.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "repair-n73-past-manner",
+    "answer": "They closed the door quietly.",
+    "variants": [
+      "They quietly closed the door."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n73-past-what-question",
+    "answer": "What did he do last night?",
+    "variants": [
+      "Last night, what did he do?"
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n73-past-event",
+    "answer": "She drank some water and sat down.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-a-n73-past-manner",
+    "answer": "Mia swam well.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-a-n73-past-what-question",
+    "answer": "What did we do after the meeting?",
+    "variants": [
+      "After the meeting, what did we do?"
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n73-past-event",
+    "answer": "Ben bought a ticket and took the train.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-b-n73-past-manner",
+    "answer": "We greeted the guests warmly.",
+    "variants": [
+      "We warmly greeted the guests."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n73-past-what-question",
+    "answer": "What did the volunteers do this morning?",
+    "variants": [
+      "This morning, what did the volunteers do?"
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n75-past-when",
+    "answer": "When did they return the map?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n75-past-time",
+    "answer": "We posted the box two days ago.",
+    "variants": [
+      "Two days ago, we posted the box."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n75-past-buy",
+    "answer": "I bought the lamp.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "guided-n75-past-when",
+    "answer": "When did Ada book the seat?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "guided-n75-past-time",
+    "answer": "She moved last month.",
+    "variants": [
+      "Last month, she moved."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n75-past-buy",
+    "answer": "They did not buy the gloves.",
+    "variants": [
+      "They didn't buy the gloves."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n75-past-when",
+    "answer": "When did he paint the poster?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "independent-n75-past-time",
+    "answer": "I repaired the bike four hours ago.",
+    "variants": [
+      "Four hours ago, I repaired the bike."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n75-past-buy",
+    "answer": "Nia bought the flute.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "repair-n75-past-when",
+    "answer": "When did I send the letter?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "repair-n75-past-time",
+    "answer": "They visited the castle the year before last.",
+    "variants": [
+      "The year before last, they visited the castle."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n75-past-buy",
+    "answer": "Ben did not buy the watch.",
+    "variants": [
+      "Ben didn't buy the watch."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n75-past-when",
+    "answer": "When did you clean the camera?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-a-n75-past-time",
+    "answer": "We walked across the bridge last week.",
+    "variants": [
+      "Last week, we walked across the bridge."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n75-past-buy",
+    "answer": "We bought the blanket.",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-b-n75-past-when",
+    "answer": "When did the students hand in the report?",
+    "variants": [],
+    "concern": null
+  },
+  {
+    "id": "review-b-n75-past-time",
+    "answer": "She called the office an hour ago.",
+    "variants": [
+      "An hour ago, she called the office."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n75-past-buy",
+    "answer": "I did not buy the stamps.",
+    "variants": [
+      "I didn't buy the stamps."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n77-past-clock",
+    "answer": "I called at nine o’clock.",
+    "variants": [
+      "At nine o’clock, I called.",
+      "I called at nine o'clock."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n77-past-day",
+    "answer": "They arrived on Tuesday.",
+    "variants": [
+      "On Tuesday, they arrived."
+    ],
+    "concern": null
+  },
+  {
+    "id": "diagnostic-n77-past-period",
+    "answer": "She joined the club in March.",
+    "variants": [
+      "In March, she joined the club."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n77-past-clock",
+    "answer": "We opened the door at half past two.",
+    "variants": [
+      "At half past two, we opened the door."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n77-past-day",
+    "answer": "Ben posted the letter on May 8th.",
+    "variants": [
+      "On May 8th, Ben posted the letter."
+    ],
+    "concern": null
+  },
+  {
+    "id": "guided-n77-past-period",
+    "answer": "I started the job in 2023.",
+    "variants": [
+      "In 2023, I started the job."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n77-past-clock",
+    "answer": "Nia left at a quarter to four.",
+    "variants": [
+      "At a quarter to four, Nia left."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n77-past-day",
+    "answer": "We repaired the chair on Friday.",
+    "variants": [
+      "On Friday, we repaired the chair."
+    ],
+    "concern": null
+  },
+  {
+    "id": "independent-n77-past-period",
+    "answer": "They built the bridge in 2018.",
+    "variants": [
+      "In 2018, they built the bridge."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n77-past-clock",
+    "answer": "I met Jo at a quarter past ten.",
+    "variants": [
+      "At a quarter past ten, I met Jo."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n77-past-day",
+    "answer": "She returned the painting on November 6th.",
+    "variants": [
+      "On November 6th, she returned the painting."
+    ],
+    "concern": null
+  },
+  {
+    "id": "repair-n77-past-period",
+    "answer": "We stayed at the hotel in August.",
+    "variants": [
+      "In August, we stayed at the hotel."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n77-past-clock",
+    "answer": "They finished the practice at half past six.",
+    "variants": [
+      "At half past six, they finished the practice."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n77-past-day",
+    "answer": "I cleaned the office on Sunday.",
+    "variants": [
+      "On Sunday, I cleaned the office."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-a-n77-past-period",
+    "answer": "Ada studied German in 2021.",
+    "variants": [
+      "In 2021, Ada studied German."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n77-past-clock",
+    "answer": "She called the office at ten to seven.",
+    "variants": [
+      "At ten to seven, she called the office."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n77-past-day",
+    "answer": "They moved on July 1st.",
+    "variants": [
+      "On July 1st, they moved."
+    ],
+    "concern": null
+  },
+  {
+    "id": "review-b-n77-past-period",
+    "answer": "I painted the door in October.",
+    "variants": [
+      "In October, I painted the door."
+    ],
+    "concern": null
+  }
+]
