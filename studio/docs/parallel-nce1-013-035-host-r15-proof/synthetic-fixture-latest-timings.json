@@ -1,0 +1,53 @@
+{
+  "label": "SYNTHETIC QA: factory simulations; not personal learning records, not natural delayed evidence.",
+  "capturedNow": 1790957974785,
+  "capturedISO": "2026-10-02T16:19:34.785Z",
+  "cases": [
+    {
+      "id": "nce1-13",
+      "mode": "failed-helped",
+      "banks": 2,
+      "lastEventAt": 1790785174848,
+      "dueAt": 1790871574847,
+      "dueISO": "2026-10-01T16:19:34.847Z",
+      "recommendation": {
+        "kind": "needs-new-material",
+        "lessonId": "nce1-13",
+        "dueAt": 1790871574847
+      },
+      "task": null
+    },
+    {
+      "id": "nce1-25",
+      "mode": "independent",
+      "banks": 2,
+      "lastEventAt": 1790180374846,
+      "dueAt": 1790785174845,
+      "dueISO": "2026-09-30T16:19:34.845Z",
+      "recommendation": {
+        "kind": "needs-new-material",
+        "lessonId": "nce1-25",
+        "dueAt": 1790785174845
+      },
+      "task": null
+    },
+    {
+      "id": "nce1-35",
+      "mode": "independent",
+      "banks": 0,
+      "lastEventAt": 1790954374825,
+      "dueAt": 1791040774825,
+      "dueISO": "2026-10-03T15:19:34.825Z",
+      "recommendation": {
+        "kind": "continue-route",
+        "lessonId": "nce1-35",
+        "dueAt": 1791040774825
+      },
+      "task": null
+    }
+  ],
+  "mapRecords": {},
+  "personalRecordsRead": false,
+  "naturalDelayClaim": false,
+  "serializer": "productionHost.makeProgressFile/readProgressFile"
+}

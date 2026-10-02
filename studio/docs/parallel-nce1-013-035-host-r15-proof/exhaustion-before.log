@@ -1,0 +1,102 @@
+TAP version 13
+# R15 exhaustion host observations: [{"id":"nce1-1","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-3","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-5","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-7","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-9","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-11","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-13","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-15","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-17","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-19","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-21","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-23","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-25","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-27","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-29","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-31","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-33","recommendation":"needs-new-material","taskKind":null},{"id":"nce1-35","recommendation":"needs-new-material","taskKind":null}]
+# Subtest: all eighteen actual factories retain distinct failed and helped answers in both finite banks
+ok 1 - all eighteen actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 6.249333
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 2 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 105.462708
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+not ok 3 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 1.507459
+  type: 'test'
+  location: '/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/course-loop/parallel-nce1-013-035-host/test-exhaustion.mjs:37:1'
+  failureType: 'testCodeFailure'
+  error: 'nce1-1: needs-new-material currently drops to null'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/course-loop/parallel-nce1-013-035-host/test-exhaustion.mjs:39:85)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+not ok 4 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 0.854875
+  type: 'test'
+  location: '/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/course-loop/parallel-nce1-013-035-host/test-exhaustion.mjs:45:1'
+  failureType: 'testCodeFailure'
+  error: 'nce1-1: completed finite pool also currently drops to null'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: ~
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/course-loop/parallel-nce1-013-035-host/test-exhaustion.mjs:51:61)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+not ok 5 - finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+  ---
+  duration_ms: 7.5925
+  type: 'test'
+  location: '/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/course-loop/parallel-nce1-013-035-host/test-exhaustion.mjs:57:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(tasks.some(t=>t.id===`course-loop:${c.id}`&&t.kind==='repair'))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-013-035-host/studio/course-loop/parallel-nce1-013-035-host/test-exhaustion.mjs:60:62)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 6 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.442625
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 3
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 790.215584

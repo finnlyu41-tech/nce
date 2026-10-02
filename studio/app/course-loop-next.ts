@@ -55,7 +55,11 @@ export function courseLoopTask(state:State,now=Date.now(),courseId:string='nce1-
  const parsed=parseCourseLoop(raw,now,courseId);
  if(!parsed.ok)return {kind:'resume' as const,at:now,reason:'已保存的本课记录需要核对，原文仍保留。'};
  const next=loopModel.recommendation(parsed.view,now);
- if(next.kind==='continue-route'||next.kind==='needs-new-material')return null;
+ if(next.kind==='continue-route')return null;
+ // Keep a finite-pool follow-up visible without inventing another unseen bank.
+ // Route continuation remains available independently of this honest task.
+ if(next.kind==='needs-new-material')return {kind:'repair' as const,at:next.dueAt||parsed.view.lastAt,
+  reason:'本课两组新题已用完；下一次独立检验需要补充材料。返回核对已有首答与订正，开放表达仍待人工核对。'};
  return {kind:next.kind==='review'?'review' as const:'resume' as const,at:next.dueAt||parsed.view.lastAt,
   reason:next.kind==='review'?`第 ${lesson.lessons[0]}–${lesson.lessons[1]} 课已到回想时间，换一组未看过的题。`:'接着已保存的本题、首答与订正继续。'};
 }

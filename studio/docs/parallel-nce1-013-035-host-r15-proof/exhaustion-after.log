@@ -1,0 +1,323 @@
+TAP version 13
+# Subtest: real registry exposes exactly eighteen courses and never reads coverage as registration
+ok 1 - real registry exposes exactly eighteen courses and never reads coverage as registration
+  ---
+  duration_ms: 2.008209
+  type: 'test'
+  ...
+# Subtest: production matcher keeps the nationality question guard, original text and help state
+ok 2 - production matcher keeps the nationality question guard, original text and help state
+  ---
+  duration_ms: 3.454042
+  type: 'test'
+  ...
+# Subtest: one recommendation advances 1 through 35 to existing 37 with access-only map starts
+ok 3 - one recommendation advances 1 through 35 to existing 37 with access-only map starts
+  ---
+  duration_ms: 205.392875
+  type: 'test'
+  ...
+# Subtest: advanced map route survives six waiting courses
+ok 4 - advanced map route survives six waiting courses
+  ---
+  duration_ms: 1.149
+  type: 'test'
+  ...
+# Subtest: access reset condition link preserves v31 behavior with the old CL00-only backup
+ok 5 - access reset condition link preserves v31 behavior with the old CL00-only backup
+  ---
+  duration_ms: 0.94875
+  type: 'test'
+  ...
+# Subtest: pending selected courses resume before due work and agree with Today oldest pending order
+ok 6 - pending selected courses resume before due work and agree with Today oldest pending order
+  ---
+  duration_ms: 7.335875
+  type: 'test'
+  ...
+# Subtest: multiple waiting due courses choose earliest due and expose one Today task per course
+ok 7 - multiple waiting due courses choose earliest due and expose one Today task per course
+  ---
+  duration_ms: 6.334042
+  type: 'test'
+  ...
+# Subtest: every selected record summary stays in its own course and unknown raw remains unchanged
+ok 8 - every selected record summary stays in its own course and unknown raw remains unchanged
+  ---
+  duration_ms: 4.215333
+  type: 'test'
+  ...
+# Subtest: wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+ok 9 - wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+  ---
+  duration_ms: 19.301
+  type: 'test'
+  ...
+# Subtest: course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+ok 10 - course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+  ---
+  duration_ms: 6.273625
+  type: 'test'
+  ...
+# Subtest: starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+ok 11 - starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+  ---
+  duration_ms: 0.67825
+  type: 'test'
+  ...
+# Subtest: production factory, registry and UI never import the historical preview or test adapter
+ok 12 - production factory, registry and UI never import the historical preview or test adapter
+  ---
+  duration_ms: 11.879458
+  type: 'test'
+  ...
+# Subtest: eighteen real bindings preserve old defaults and distinct storage keys
+ok 13 - eighteen real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 3.929458
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all eighteen courses
+ok 14 - actual factory and registered model retain first answers and corrections for all eighteen courses
+  ---
+  duration_ms: 9.013417
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 18 by 18 pairs
+ok 15 - every envelope and correction sidecar is accepted only by its exact course across 18 by 18 pairs
+  ---
+  duration_ms: 19.729875
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 16 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 33.781
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 17 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 32.33775
+  type: 'test'
+  ...
+# Subtest: eighteen pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 18 - eighteen pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 26.226917
+  type: 'test'
+  ...
+# Subtest: eighteen due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 19 - eighteen due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 73.249333
+  type: 'test'
+  ...
+# Subtest: shared continuation advances every odd course through 35 to existing 37 with access intent only
+ok 20 - shared continuation advances every odd course through 35 to existing 37 with access intent only
+  ---
+  duration_ms: 102.87425
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 21 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 3.207875
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 22 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 23.316291
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all eighteen records, sidecars and original classic history
+ok 23 - actual progress backup and validator preserve all eighteen records, sidecars and original classic history
+  ---
+  duration_ms: 3.759291
+  type: 'test'
+  ...
+# R15 exhaustion host observations: [{"id":"nce1-1","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-3","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-5","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-7","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-9","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-11","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-13","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-15","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-17","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-19","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-21","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-23","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-25","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-27","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-29","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-31","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-33","recommendation":"needs-new-material","taskKind":"repair"},{"id":"nce1-35","recommendation":"needs-new-material","taskKind":"repair"}]
+# Subtest: all eighteen actual factories retain distinct failed and helped answers in both finite banks
+ok 24 - all eighteen actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 3.739459
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 25 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 74.893
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+ok 26 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 114.37725
+  type: 'test'
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+ok 27 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 7.075667
+  type: 'test'
+  ...
+# Subtest: finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+ok 28 - finite-pool repair allows later course continuation without repeated reviews, map completion or FSRS claims
+  ---
+  duration_ms: 35.257834
+  type: 'test'
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 29 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.482208
+  type: 'test'
+  ...
+# Subtest: content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+ok 30 - content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+  ---
+  duration_ms: 2.676125
+  type: 'test'
+  ...
+# Subtest: bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+ok 31 - bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+  ---
+  duration_ms: 0.334959
+  type: 'test'
+  ...
+# Subtest: initial route exposes only first test item and cannot finish or bypass first attempts
+ok 32 - initial route exposes only first test item and cannot finish or bypass first attempts
+  ---
+  duration_ms: 1.0935
+  type: 'test'
+  ...
+# Subtest: diagnostic wrong answer selects targeted teaching first; original persists
+ok 33 - diagnostic wrong answer selects targeted teaching first; original persists
+  ---
+  duration_ms: 3.197833
+  type: 'test'
+  ...
+# Subtest: reading/audio/comic access recorded separately; active answer becomes assisted
+ok 34 - reading/audio/comic access recorded separately; active answer becomes assisted
+  ---
+  duration_ms: 0.846041
+  type: 'test'
+  ...
+# Subtest: study materials do not pre-expose independent or delayed banks
+ok 35 - study materials do not pre-expose independent or delayed banks
+  ---
+  duration_ms: 3.612917
+  type: 'test'
+  ...
+# Subtest: first answer cannot be overwritten; duplicate submit rejected
+ok 36 - first answer cannot be overwritten; duplicate submit rejected
+  ---
+  duration_ms: 0.399208
+  type: 'test'
+  ...
+# Subtest: guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+ok 37 - guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+  ---
+  duration_ms: 1.086083
+  type: 'test'
+  ...
+# Subtest: wrong independent answer requires correct separate correction plus note
+ok 38 - wrong independent answer requires correct separate correction plus note
+  ---
+  duration_ms: 4.867334
+  type: 'test'
+  ...
+# Subtest: hinted correct answer remains assisted and requires correction note
+ok 39 - hinted correct answer remains assisted and requires correction note
+  ---
+  duration_ms: 4.275625
+  type: 'test'
+  ...
+# Subtest: repair failure must retry; later pass keeps both attempts and makes no mastery claim
+ok 40 - repair failure must retry; later pass keeps both attempts and makes no mastery claim
+  ---
+  duration_ms: 5.778875
+  type: 'test'
+  ...
+# Subtest: one route returns resume then continue-route and only real due review
+ok 41 - one route returns resume then continue-route and only real due review
+  ---
+  duration_ms: 4.801708
+  type: 'test'
+  ...
+# Subtest: review entry/view alone does not create results or postpone due
+ok 42 - review entry/view alone does not create results or postpone due
+  ---
+  duration_ms: 4.96975
+  type: 'test'
+  ...
+# Subtest: actual complete unassisted new review schedules seven days from completion, not original due
+ok 43 - actual complete unassisted new review schedules seven days from completion, not original due
+  ---
+  duration_ms: 10.852792
+  type: 'test'
+  ...
+# Subtest: failed or helped review schedules one day, even with otherwise correct answers
+ok 44 - failed or helped review schedules one day, even with otherwise correct answers
+  ---
+  duration_ms: 18.882375
+  type: 'test'
+  ...
+# Subtest: two review banks exhaust honestly; opening prior material never replenishes bank
+ok 45 - two review banks exhaust honestly; opening prior material never replenishes bank
+  ---
+  duration_ms: 8.93375
+  type: 'test'
+  ...
+# Subtest: UTC elapsed interval unaffected by display timezone or missed days
+ok 46 - UTC elapsed interval unaffected by display timezone or missed days
+  ---
+  duration_ms: 26.609792
+  type: 'test'
+  ...
+# Subtest: JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+ok 47 - JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+  ---
+  duration_ms: 7.927084
+  type: 'test'
+  ...
+# Subtest: corrupt/future/unsupported snapshots preserve raw instead of resetting
+ok 48 - corrupt/future/unsupported snapshots preserve raw instead of resetting
+  ---
+  duration_ms: 0.221834
+  type: 'test'
+  ...
+# Subtest: out-of-order or injected future action rejected and state immutable
+ok 49 - out-of-order or injected future action rejected and state immutable
+  ---
+  duration_ms: 0.192334
+  type: 'test'
+  ...
+# Subtest: host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+ok 50 - host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+  ---
+  duration_ms: 18.024625
+  type: 'test'
+  ...
+# Subtest: typing drafts coalesce without dropping submitted originals or help events
+ok 51 - typing drafts coalesce without dropping submitted originals or help events
+  ---
+  duration_ms: 35.496833
+  type: 'test'
+  ...
+# Subtest: explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+ok 52 - explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+  ---
+  duration_ms: 0.390208
+  type: 'test'
+  ...
+1..52
+# tests 52
+# suites 0
+# pass 52
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 890.020709

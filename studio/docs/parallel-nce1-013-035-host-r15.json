@@ -1,0 +1,66 @@
+{
+  "base": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+  "integrationCheckpoint": "4a0e48b",
+  "scope": "R15 course-loop-next.ts task-only branch; no public model/store/Today adapter or UI edit",
+  "symptom": "Actual factory needs-new-material became null host task. Native file restore showed only37 and no13/25 repair links.",
+  "fix": "Explicit repair task at retained dueAt returning exact course; original first answers, corrections and finite-pool no-third-bank constraint retained; route continuation still offers later course.",
+  "typeFallback": "JS recommendation typing permits missing dueAt; host uses already parsed lastAt fallback. Actual valid exhausted fixtures assert unchanged true dueAt.",
+  "nodeRegression": {
+    "passed": 52,
+    "failed": 0,
+    "exhaustionComparisons": 6,
+    "eighteenCourses": true
+  },
+  "nativeBeforeReproduction": {
+    "checksPassed": 4,
+    "expectedSymptom": "13/25 missing Today links"
+  },
+  "nativeAfter": {
+    "checksPassed": 4,
+    "failed": 0,
+    "links": [
+      13,
+      25,
+      37
+    ],
+    "rawUnchanged": true
+  },
+  "nativeReviewBanks": {
+    "checksPassed": 2,
+    "courses": [
+      13,
+      25,
+      35
+    ],
+    "freshDistinctTasksPerCourse": 6,
+    "reviewAIndependent": true,
+    "reviewBAssisted": true,
+    "syntheticImportedTimestamps": true,
+    "browserClockUnchanged": true,
+    "naturalRetention": "unverified"
+  },
+  "publisherAdapterInterface": "Existing today-practice.ts uses generic nonreview method and resume priority1. Publisher may give repair tasks a materials/manual-review method and priority0; not edited in bounded selector scope.",
+  "sourceHash": "f524387ac24a3dbaec4a54072b598c57b8e0ef40b21d53c7e7caf8639097868f",
+  "evidenceSha256": {
+    "r15-classic-build.log": "ab807542935376d23b50018b94df1790f43fde784a0cfc39ff94701cba947c59",
+    "exhaustion-after.log": "e953029d941561becbc38bdadd8d0341a4fea2e6e1129aea379eb51a93da154d",
+    "r15-typecheck.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exhaustion-fixed-nce1-13.png": "4cff8d86d6f145afc5fcef87ba3e01e49f27965906bbdf671fbebf4123a60f21",
+    "exhaustion-today-fixed-expanded.png": "0a206a0c34dc42cb96434625ae59cc7176a17032de2a91457ad04ac6ce422dd4",
+    "native-review-receipt.json": "365fde0ec7c2bcc6a668dbeb0749552a5963b5c9816d2f651e6ed6ecf5ee6361",
+    "exhaustion-baseline-nce1-13.png": "4cff8d86d6f145afc5fcef87ba3e01e49f27965906bbdf671fbebf4123a60f21",
+    "r15-map-build.log": "b6881a92c4235ac405e42bca793a56787a7eef1ef01ed3d51a6d16f32ec88093",
+    "synthetic-fixture-latest-timings.json": "afd63752936628b6c0b54c65dfd1fc01cc50083a8bf6aad70cf9803447512b5a",
+    "native-after-receipt.json": "43bd318badd025eb94a4830741571d3f5dd2f57dd38d005353d72680fb7dc33f",
+    "exhaustion-native-before.log": "2118bf1e187775b76230cd156cb17727659cb54084231cfa5109bd5bfab6263e",
+    "native-before-receipt.json": "08db77b7ff02f569f29194af87ec5ff5edb200500c29e5647cb0903efd2e7d8c",
+    "exhaustion-baseline-nce1-25.png": "1c0da3ebb492500a737dc71911efe24992d623b355fa8cbb89f69aa353a07123",
+    "exhaustion-fixed-nce1-25.png": "1c0da3ebb492500a737dc71911efe24992d623b355fa8cbb89f69aa353a07123",
+    "review-native.log": "af793ce5109f3063a4676e20b2cfe566b3451bd42db78e86065b000dd5e08c4a",
+    "exhaustion-native-after.log": "40eb7c655f6ccfeb4b56a1bccb77d8a187be9a0565ab1027be7e7da4083d6aef",
+    "exhaustion-before.log": "ebcc85c64acc87ceee83c0c2ce4deb4ccb0063af835ff581b0feb0f1d1005d01",
+    "synthetic-fixture-latest.json": "406b82db26bc962525c33359f513ca75deb735422f714de4644ac7f18e1bc444",
+    "exhaustion-today-fixed.png": "640ee3d752c8d0f177cacd6557763f4f0c0d6fccc141f038b79546ed6b00d678",
+    "exhaustion-today-baseline.png": "3ce5d363b768a5794e345116590380b452e982adf5dd0e6d86c3b245e8f0c045"
+  }
+}
