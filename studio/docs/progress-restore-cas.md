@@ -166,3 +166,18 @@ U1 ASCII/中文末尾句号/弯引号正例，以及否定/时态/缺 be 反例�
 证据目录为 `/Users/finnlyu/Documents/Codex/2026-10-02/task/release-takeover-20261002`。其审计报告、截图、日志及维护说明
 均未加入发布白名单或渲染给学员。后续 IELTS 已完成内容包另批接线，词汇冻结链
 保持排队；本次验收不代表它们已在产品中可练。
+
+
+## Accepted v25 production checkpoint, 2026-10-02
+
+Runtime c64e3fa3a031b477a5c1cdf26172df9fd4206fcd, version 2026-10-02-ielts-completed-batches-v25. Immutable https://a62c9ce1.finn-english-studio.pages.dev/ and existing production https://finn-english-studio.pages.dev/ both match the tested package. Both existing remote release branches equal this runtime. Cloudflare Production/main source and 44 public hashes agree.
+
+Native IELTS acceptance: 35 local, 35 immutable and 35 production groups, zero Runtime exceptions. Eight courses per category, sixteen actual saved sessions, 96 material references and 66 unique materials. Native Today links/legacy alias, writer views, multiple selection, raw wrong originals, timing concealment, feedback/correction and real downloaded sixteen-session backup/restore/undo passed. Audio playback requests and the unconfirmed-audibility gate were tested; actual audibility was never fabricated. All seventeen authored files remain unchanged. Long new-course scope notes are available through a named help button; scoring limits remain beside feedback.
+
+Final same-source production P0: normal v2 restore plus v1/v2 preview races, 3/3 passed, zero exceptions. P0, grammar matcher/progress and map audio execution files equal their previously accepted versions. Online, map and offline builds, 1950-file whitelist and TypeScript passed. Model-only added-course evidence has five integration groups and 654 additional transition round trips; it does not prove natural time or audible audio.
+
+Evidence: /Users/finnlyu/Documents/Codex/2026-10-02/task/release-takeover-20261002/{ielts-ui-local-accepted,ielts-ui-immutable,ielts-ui-production,ielts-final-p0}/receipt.json; ielts-deploy-receipt.json; ielts-public-hashes.json.
+
+The UI-only independent audit endpoint is still https://f7ece0c2.finn-english-studio.pages.dev/, runtime d8eafef117889d2425415ab778cd5896113d5d68. Its 19 native groups on each origin, plus final 3 P0 and 12 grammar cases/72 submissions, remain in ui-production/receipt.json, ui-final-p0-final2/receipt.json and ui-final-grammar/receipt.json. Current production has moved to v25, so pin this immutable URL for the UI-only audit.
+
+Remaining: the exact frozen vocabulary handoff/commit order has not been received by this owner; no vocabulary changes were included. Other IELTS requirements, expert/learner review, actual audibility, microphone, real phone and natural 24-hour evidence retain their separate status. Original trees and thirteen sealed real-time profiles remain untouched. No deployment tool is waiting; every deployment and final browser driver exited 0.
