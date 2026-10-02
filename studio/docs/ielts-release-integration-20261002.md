@@ -6,6 +6,8 @@ The directory now has eight lessons in each explicit exam category. The existing
 
 Multiple-answer tasks use controlled checkbox choices plus a visible raw-letter field. A wrong, incomplete, duplicate or malformed nonempty answer may be submitted and retained. Mounting and restoration never repair it; only explicit learner edits change it. The existing complete-group engine awards 0 or 1 to the whole group, retains each original attempt separately from correction, and makes no IELTS partial-mark or Band claim.
 
+Narrow-viewport review moved each added lesson’s long scope note behind the named save/practice help button. The complete-group scoring limit remains beside model and feedback answers; the authored stimulus, keys and metadata are unchanged.
+
 The interface shows full stimulus and options at the relevant step, coach notes once, and options’ reasons after submission or in the model. Timed stimuli remain hidden until the learner starts. Delayed review still requires the existing 24-hour interval and fresh material. Listening still requires real playback completion and the learner’s actual audible confirmation. No simulated audio or clock advancement is production acceptance evidence.
 
 Source validation: both authored batches pass their six contract groups; the original sequence retains 125 checks; shared host, recovery, backup and Today regressions pass. Four added directory, selection, hidden-material and storage groups exercise 340 additional transition round trips. TypeScript and new-module lint pass; scoped legacy lint has no new findings. P0 restore, grammar matching and audio execution files equal UI v24.
