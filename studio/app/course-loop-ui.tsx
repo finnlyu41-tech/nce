@@ -123,7 +123,7 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
  }
  async function openSpeaking(){
   if(!await flushRef.current()){setError('本课输入还没有保存。请先保存未提交内容，再离开本课。');return}
-  location.assign(`#/learn/${courseId}?speaking=practice`);
+  location.assign(new URL(`#/learn/${courseId}?speaking=practice`,location.href).href);
  }
  async function showSource(kind:'text'|'audio'|'comic'|'reader'){
   const start=viewRef.current?questionIdentity(viewRef.current):'';
