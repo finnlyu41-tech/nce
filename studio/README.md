@@ -1,6 +1,10 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v38 · 首页与路线可读性
+## 当前发布 v39 · 表达比较修复
+
+版本 `2026-10-02-expression-repair-v39`，运行源码 `fb34b97c855c2c048faffe42cab3cf5cf94890c7`，固定部署 [f373c138](https://f373c138.finn-english-studio.pages.dev)。修改版仍有旧错误时不再误称“已避开”，真实修正仍可识别；展示仍最多两条。8反例与276旧课边界、实际本机／正式站各3项通过，双地址12资源哈希一致。v38首页与路线保持原样。[发布验证](docs/expression-repair-v39.md)。
+
+## 已发布 v38 · 首页与路线可读性
 
 版本 `2026-10-02-home-route-ui-v38`，运行源码 `1cb23fdd47a297b41ed9458ab386c5ff786386dc`，固定部署 [991dcbca](https://991dcbca.finn-english-studio.pages.dev)。首页保留单一继续按钮，其他安排与当前位置直接可见；第2章12组显示第25–48课真实名称、目标与状态。24组本机定向检查、11组正式站检查和双地址24项资源哈希通过；进度、推荐及解锁算法未改。[发布验证](docs/home-route-ui-v38.md)。
 
