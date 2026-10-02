@@ -1,5 +1,7 @@
 # R02–05 / R08：有限的能力起点候选
 
+> 后续真实宿主接入已完成，当前交付以 [HOST-INTEGRATION.md](HOST-INTEGRATION.md) 为准。本文下面保留首个有限候选的历史说明；`publisher-integration.patch` 与本文末尾临时接线步骤已被真实宿主提交取代，**不要再应用该旧补丁**。
+
 已实现局部文字诊断、保守试学建议、现有 State adapter 与真实 React 组件。所有已提交变更只在 `studio/placement/**`；共享路由、Today 入口与队列接线作为 `publisher-integration.patch` 单独交唯一 publisher 串行整合。未发布，不把这批算作全部四科分流完成。
 
 ## 基线与范围

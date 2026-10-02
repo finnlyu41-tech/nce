@@ -1,0 +1,27 @@
+{
+  "checks": [
+    "normal map Today optional entry reaches actual PlacementHost; original course remains first recommendation",
+    "first answer/exposure and partial input durably survive pause + actual page reload",
+    "one conservative recommendation after six fresh first answers; original entire State and map remain unchanged",
+    "selected recommendation opens existing real reading sample host",
+    "forced production readwrite failure retains input, durable original, no first answer/completion; document, hash and real browser-back departure blocked",
+    "retry commits same pending input once, then current original course remains reachable",
+    "mini owner route/guard host remains wired after placement composition",
+    "production host writer rebases unrelated edits, rejects same-key restore/writer conflict, refuses history replacement and unknown original without reset"
+  ],
+  "exceptions": 0,
+  "externalRequests": [],
+  "builtEntries": [
+    "Vite online standalone.tsx",
+    "Vite online map/main.tsx"
+  ],
+  "base": "mini host 97e76c9201ce661ceeb94f15e19c52c40f76e8d4 + frozen Placement content",
+  "scope": "actual normal map/classic routes + production guarded State writer; synthetic fresh profile; readonly pre-existing site materials",
+  "screenshots": [
+    "normal-result-1280.png",
+    "normal-result-320.png",
+    "save-failure-retained-390.png"
+  ],
+  "humanCalibration": false,
+  "deployed": false
+}

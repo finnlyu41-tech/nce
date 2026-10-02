@@ -1,0 +1,1 @@
+{"extends":"../../tsconfig.json","compilerOptions":{"allowJs":true,"incremental":false},"include":["../host.tsx","../host-progress.ts","../../app/navigation.ts","../../app/study-app.tsx","../../app/today-practice.ts"],"exclude":["../../node_modules"]}
