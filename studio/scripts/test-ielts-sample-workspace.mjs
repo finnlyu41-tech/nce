@@ -132,7 +132,7 @@ try {
   await test('two same-event controlled updates keep their sequence without overwriting other state',()=>{let first=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),second=act(first,{type:'next'});const raw1=roundTrip(first),raw2=roundTrip(second);let host={...base(),drafts:{other:'untouched'}};host=p.replaceSampleProgress(host,undefined,raw1,clock);host=p.replaceSampleProgress(host,raw1,raw2,clock);assert.equal(host.drafts[p.sampleProgressKey],raw2);assert.equal(host.drafts.other,'untouched')});
   await test('blocked wrapper renders recovery guidance without mounting writable questions',()=>{for(const raw of ['{','{"version":2}']){const state={...base(),drafts:{[p.sampleProgressKey]:raw}},html=render(React.createElement(Workspace,{ready:true,state,update(){throw Error('Rendering must not write state')}}));assert.match(html,/原始内容仍在/);assert.match(html,/不会自动清空/);assert(!html.includes('先选择考试类别'));assert(!html.includes('记录原始作答'));assert.equal(state.drafts[p.sampleProgressKey],raw)}});
   await test('before host storage is ready the wrapper shows loading and creates no blank writable course',()=>{const html=render(React.createElement(Workspace,{ready:false,state:base(),update(){throw Error('Loading must not write state')}}));assert.match(html,/正在读取本机学习记录/);assert(!html.includes('先选择考试类别'));assert(!html.includes('课程学习次序'))});
-  await test('guided wrapper keeps category choice once and folds directories after selection',()=>{const unselected=render(React.createElement(Workspace,{ready:true,state:base(),update(){throw Error('Rendering must not write state')}}));assert.match(unselected,/先选择考试类别/);const state=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),raw=roundTrip(state),html=render(React.createElement(Workspace,{ready:true,state:{...base(),drafts:{[p.sampleProgressKey]:raw}},update(){throw Error('Rendering must not write state')}}));assert.match(html,/切换考试类别/);assert.match(html,/查看课程目录 · 10 课/);assert(!html.includes('<details>'));assert.match(html,/刷新可以继续/);assert.match(html,/备份不含录音/)});
+  await test('guided wrapper keeps category choice once and folds directories after selection',()=>{const unselected=render(React.createElement(Workspace,{ready:true,state:base(),update(){throw Error('Rendering must not write state')}}));assert.match(unselected,/先选择考试类别/);const state=act(m.emptySampleState(),{type:'select-variant',variant:'academic'}),raw=roundTrip(state),html=render(React.createElement(Workspace,{ready:true,state:{...base(),drafts:{[p.sampleProgressKey]:raw}},update(){throw Error('Rendering must not write state')}}));assert.match(html,/切换考试类别/);assert.match(html,/查看课程目录 · 12 课/);assert(!html.includes('<details>'));assert.match(html,/刷新可以继续/);assert.match(html,/备份不含录音/)});
   await test('after correction, guided UI offers the next lesson while an undued review stays unavailable',()=>{const state=closed('academic','hub-reading'),html=renderAt(React.createElement(Sequence,{value:state,guidedFlow:true}),clock);assert.match(html,/继续下一课/);assert(!html.includes('打开一份没接触过的复验题'))});
   await test('a due fresh review is the sole primary continuation instead of competing with the next lesson',()=>{const html=renderAt(React.createElement(Sequence,{value:fixture,guidedFlow:true}),m.sampleReviewDueAt(m.sampleSession(fixture)));assert.match(html,/打开一份没接触过的复验题/);assert(!html.includes('继续下一课'))});
   console.log(`${checks} adapter boundary checks and ${roundTrips} real-transition storage round trips passed`);
@@ -578,12 +578,12 @@ try {
   });
   console.log(`${checks - historyChecks} read-only history groups and ${roundTrips - historyRoundTrips} additional real-transition round trips passed`);
   const integrationChecks=checks,integrationRoundTrips=roundTrips;
-  await test('registered directory has ten lessons per category, twenty legal sessions and eighty-four unique materials',()=>{
+  await test('registered directory has twelve lessons per category, twenty-four legal sessions and one hundred two unique materials',()=>{
     const refs=['academic','general-training'].flatMap(variant=>c.sampleLessonsFor(variant).flatMap(c.sampleMaterials));
-    assert.equal(refs.length,120);assert.equal(new Set(refs.map(material=>material.id)).size,84);
+    assert.equal(refs.length,144);assert.equal(new Set(refs.map(material=>material.id)).size,102);
     let value=m.emptySampleState();
     for(const variant of ['academic','general-training'])for(const lesson of c.sampleLessonsFor(variant))value=continueIn(value,variant,lesson.id);
-    assert.equal(Object.keys(value.sessions).length,20);roundTrip(value);
+    assert.equal(Object.keys(value.sessions).length,24);roundTrip(value);
     for(const task of n.samplePracticeTasks(stored(value),clock,true)){
       const parsed=route.parseRoute(task.href.slice(1)),target=n.sampleTarget(parsed.task);
       assert.equal(task.id,`sample:${target.variant}:${target.lessonId}`);

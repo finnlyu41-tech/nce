@@ -60,7 +60,7 @@ function review(state, extra = {}) {
 // Content audit: all original sets are distinct; shared skills are truly shared, writing is scoped.
 for (const variant of ['academic', 'general-training']) {
   const lessons = c.sampleLessonsFor(variant);
-  check(lessons.length === 10 && new Set(lessons.slice(0,4).map(l=>l.skill)).size === 4, 'Ten registered lessons preserve the original four skills');
+  check(lessons.length === 12 && new Set(lessons.slice(0,4).map(l=>l.skill)).size === 4, 'Twelve registered lessons preserve the original four skills');
   const sets = lessons.flatMap(c.sampleMaterials);
   check(new Set(sets.map(x => x.id)).size === sets.length, 'Unique material IDs within selected variant');
   check(new Set(sets.map(x => `${x.script || x.context || ''}|${x.instruction}`)).size === sets.length, 'Distinct actual stimuli, not reordered old answers');
