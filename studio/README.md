@@ -1,6 +1,10 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v39 · 表达比较修复
+## 当前发布 v40 · 课程与进度可靠性
+
+版本 `2026-10-02-ready-course-reliability-v40`，运行源码 `92f777d7d4c61811689b353263d7d59076b4e507`，固定部署 [v40](https://5426c91f.finn-english-studio.pages.dev)。地图普通保存与恢复共用锁，失败输入保留并重试；录音重试及离页保护，课程13–36生产接入，48新词义和21语法等义变体，实际路线返回与次级界面。本机／正式站各17组通过，最终包53写入检查、双地址22哈希一致。[范围与验证](docs/ready-course-reliability-v40.md)。
+
+## 已发布 v39 · 表达比较修复
 
 版本 `2026-10-02-expression-repair-v39`，运行源码 `fb34b97c855c2c048faffe42cab3cf5cf94890c7`，固定部署 [f373c138](https://f373c138.finn-english-studio.pages.dev)。修改版仍有旧错误时不再误称“已避开”，真实修正仍可识别；展示仍最多两条。8反例与276旧课边界、实际本机／正式站各3项通过，双地址12资源哈希一致。v38首页与路线保持原样。[发布验证](docs/expression-repair-v39.md)。
 
