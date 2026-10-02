@@ -26,8 +26,9 @@ try {
     export * as review from './public/demos/yesterday/review-adapter.mjs';
     export {initial, validateState} from './app/model';
     export * as flashcards from './app/flashcards';
+    export * as autosave from './app/progress-autosave';
   `, resolveDir: rootPath, sourcefile: 'progress-capability-ui-check.ts', loader: 'ts'}, bundle: true, platform: 'node', format: 'esm', target: 'node22', outfile: output, logLevel: 'silent'});
-  const {capability, files, offline, demo, review, initial, validateState, flashcards} = await import(pathToFileURL(output).href);
+  const {capability, files, offline, demo, review, initial, validateState, flashcards, autosave} = await import(pathToFileURL(output).href);
   const START = Date.now() - 3 * review.DAY_MS, NOW = START + 2 * review.DAY_MS;
   let completed = demo.initialState(START);
   completed = demo.showQuestion(completed, 'new-omar');
@@ -49,13 +50,13 @@ try {
   const callbacks = new Map(), autosaves = [];
   function visit(node) {
     if (ts.isFunctionDeclaration(node) && ['restoreProgress', 'captureProgressRestore'].includes(node.name?.text)) callbacks.set(node.name.text, node);
-    if (ts.isCallExpression(node) && node.expression.getText(hostAST) === 'useEffect' && node.arguments[0]?.getText(hostAST).includes('await writeState(state)')) autosaves.push(node.arguments[0]);
+    if (ts.isCallExpression(node) && node.expression.getText(hostAST) === 'useEffect' && node.arguments[0]?.getText(hostAST).includes('await saveProgressEdits(')) autosaves.push(node.arguments[0]);
     ts.forEachChild(node, visit);
   }
   visit(hostAST); assert.equal(callbacks.size, 2, 'Find the actual host capture and restore callbacks');
   assert.equal(autosaves.length, 1, 'Find the actual host autosave effect');
   const hostFactorySource = `export function createHostCallbacks(dependencies) {
-    const {stateRef, validateState, prepareFlashcardRestore, courseWords, storageMode, readStateSnapshot, writeState, writeLegacyState, restoreStateSnapshot, restoreLegacyStateSnapshot, localStorage, KEY, setState, setPersisted, setStorageError, setStorageBlocked, state, ready, storageBlocked, persisted} = dependencies;
+    const {stateRef, validateState, prepareFlashcardRestore, courseWords, storageMode, readStateSnapshot, writeState, writeLegacyState, restoreStateSnapshot, restoreLegacyStateSnapshot, localStorage, KEY, setState, setPersisted, setStorageError, setStorageBlocked, state, ready, storageBlocked, persisted, initial, editBase, saveEpoch, saveQueue, saveProgressEdits, mergeProgressEdits, setSaveIssue, setSaveRetry} = dependencies;
     ${callbacks.get('captureProgressRestore').getText(hostAST)}
     ${callbacks.get('restoreProgress').getText(hostAST)}
     return {restore:restoreProgress,capture:captureProgressRestore,autosave:()=>(${autosaves[0].getText(hostAST)})()};
@@ -65,7 +66,10 @@ try {
   const {createHostRestore, createHostCallbacks} = await import('data:text/javascript;base64,' + Buffer.from(hostFactoryCode).toString('base64'));
   function hostDependencies(state, write, options = {}) {
     const stateRef = {current: state}, setters = [], writes = [], database = {raw:JSON.stringify(state)};
-    return {stateRef, setters, writes, database, validateState, courseWords: [], storageMode: 'db', KEY: 'english-studio-v1', state, ready:true, storageBlocked:false, persisted:state,
+    const issues=[],retries=[];
+    const result={stateRef, setters, writes, database, validateState, courseWords: [], storageMode: 'db', KEY: 'english-studio-v1', state, ready:true, storageBlocked:false, persisted:state,
+      initial,editBase:{current:options.persisted||state},saveEpoch:{current:0},saveQueue:{current:Promise.resolve()},issues,retries,
+      mergeProgressEdits:autosave.mergeProgressEdits,setSaveIssue:value=>issues.push(value),setSaveRetry:value=>retries.push(value),
       prepareFlashcardRestore: flashcards.prepareFlashcardRestore,
       readStateSnapshot: async () => ({mode:'db',raw:database.raw}),
       writeState: async (next, guard) => {
@@ -84,6 +88,13 @@ try {
       setStorageError: value => setters.push(['error', value]), setStorageBlocked: value => setters.push(['blocked', value]),
       ...options,
     };
+    // Storage is the existing memory surface; production merge and the actual
+    // host effect execute unchanged. Real IDB concurrency has its own checks.
+    result.saveProgressEdits=async(base,edited,mode,key,unchanged)=>{
+      const next=autosave.mergeProgressEdits(base,edited,database.raw===null?initial:JSON.parse(database.raw));
+      await result.writeState(next,{expectedRaw:database.raw,unchanged});return next;
+    };
+    return result;
   }
 
   class MemoryStorage {
@@ -463,7 +474,7 @@ try {
       const callbacks=createHostCallbacks(host);assert.equal(callbacks.autosave(),undefined);await Promise.resolve();
       assert.deepEqual(host.writes,[]);assert.match(host.database.raw,/Other tab saved after restore commit/);
       const dirty=hostDependencies(next,async()=>{},{persisted:currentState()});createHostCallbacks(dirty).autosave();
-      for(let i=0;i<5;i++)await Promise.resolve();assert.equal(dirty.writes.length,1,'An ordinary unsaved edit still persists');
+      await dirty.saveQueue.current;assert.equal(dirty.writes.length,1,'An ordinary unsaved edit still persists');
     });
   });
   test('the actual host records a committed receipt before rejecting input changed during persistence', async () => {
@@ -514,7 +525,7 @@ try {
       assert.equal(host.writes.length, 1); assert.equal(host.stateRef.current, before); assert.deepEqual(host.setters, []);
       rejectWrite(Error('IndexedDB write denied'));
       await assert.rejects(saving, /IndexedDB write denied/);
-      assert.equal(host.stateRef.current, before); assert.deepEqual(host.setters, []);
+      assert.equal(host.stateRef.current, before); assert.deepEqual(host.setters, [['error',true]]);assert.match(host.issues.at(-1),/IndexedDB write denied/);assert.equal(host.retries.length,1);
     });
   });
   test('the actual host rejects expected-reference conflicts and invalid incoming State before any persistence', async () => {
@@ -544,7 +555,7 @@ try {
       env.storage.failWrite = () => true;
       const before = currentState(), host = hostDependencies(before, async () => {}, {storageMode: 'legacy'}), restore = createHostRestore(host);
       await assert.rejects(restore(incomingState(), {expected: before}), /write denied/);
-      assert.equal(host.stateRef.current, before); assert.deepEqual(host.setters, []); assert.deepEqual(host.writes, []);
+      assert.equal(host.stateRef.current, before); assert.deepEqual(host.setters, [['error',true]]); assert.deepEqual(host.writes, []);assert.equal(host.retries.length,1);
     });
   });
 

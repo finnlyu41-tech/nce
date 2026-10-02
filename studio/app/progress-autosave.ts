@@ -5,6 +5,7 @@ import {readStateSnapshot,StateStorageConflict,writeLegacyState,writeState} from
 // can be rebased; simultaneous edits to one entry never win by timestamp.
 const dictionaries=new Set(['drafts','nce','scores','mistakes','cards']);
 const same=(a:unknown,b:unknown)=>JSON.stringify(a)===JSON.stringify(b);
+const emptyCards=(value:State['flashcards'])=>value===undefined||Object.keys(value.notes).length===0&&Object.keys(value.cards).length===0&&value.reviews.length===0&&value.session===undefined&&value.undo===undefined;
 export class ProgressEditConflict extends Error {
  constructor(){super('另一页面更改了同一段记录。本次输入仍在当前页面，尚未覆盖已保存记录。请先保存进度备份，再读取最新记录。')}
 }
@@ -14,6 +15,7 @@ function mergeValue(base:unknown,edited:unknown,current:unknown):unknown {
  throw new ProgressEditConflict();
 }
 export function mergeProgressEdits(base:State,edited:State,current:State):State {
+ if(!validateState(base)||!validateState(edited)||!validateState(current))throw new ProgressEditConflict();
  const before=base as unknown as Record<string,unknown>,local=edited as unknown as Record<string,unknown>,fresh=current as unknown as Record<string,unknown>,next:Record<string,unknown>={};
  for(const key of new Set([...Object.keys(before),...Object.keys(local),...Object.keys(fresh)])){
   if(dictionaries.has(key)){
@@ -22,6 +24,11 @@ export function mergeProgressEdits(base:State,edited:State,current:State):State 
     const value=mergeValue(b[id],e[id],c[id]);if(value!==undefined)entries[id]=value;
    }
    if(key in before||key in local||key in fresh)next[key]=entries;
+  }else if(key==='flashcards'){
+   const b=base.flashcards,e=edited.flashcards,c=current.flashcards;
+   const value=mergeValue(emptyCards(b)?undefined:b,emptyCards(e)?undefined:e,emptyCards(c)?undefined:c);
+   const empty=[c,e,b].find(item=>item!==undefined&&emptyCards(item));
+   if(value!==undefined)next[key]=value;else if(empty!==undefined)next[key]=empty;
   }else {
    if(['attempts','correct'].includes(key)&&!same(local[key],before[key])&&!same(fresh[key],before[key]))throw new ProgressEditConflict();
    const value=mergeValue(before[key],local[key],fresh[key]);if(value!==undefined)next[key]=value;

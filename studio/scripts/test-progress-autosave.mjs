@@ -26,4 +26,9 @@ assert(mergeProgressEdits(initial,{...initial,drafts:{legacy:'retained'}},initia
 assert(validateState(saved));
 assert.throws(()=>mergeProgressEdits(initial,{...initial,attempts:1,correct:1,drafts:{a:'one answer'}},{...initial,attempts:1,correct:1,drafts:{b:'a distinct answer'}}),ProgressEditConflict,'Equal counter values from distinct actions are not acknowledgements');
 assert.throws(()=>mergeProgressEdits(initial,{...initial,attempts:1,correct:1},{...initial,attempts:1,correct:1}),ProgressEditConflict,'Identical counters without action identities also refuse concurrency');
-console.log('PASS 13 independent-entry, same-entry/counter conflicts, deletion, pending-input, validation and legacy-transfer checks');
+const empty={version:1,scheduler:'ts-fsrs@5.4.2/v1',notes:{},cards:{},reviews:[]};
+const first={...structuredClone(initial),flashcards:{...empty,notes:{one:{id:'one',word:'Fiat',meaning:'car brand',examples:[],sources:[{kind:'personal'}]}},cards:{one:{id:'one',noteId:'one',direction:'recognition',due:Date.now(),revision:0}}}};
+const initialized={...structuredClone(initial),flashcards:empty,drafts:{ielts:'other module'}};
+assert.deepEqual(mergeProgressEdits(initial,first,initialized),{...first,drafts:initialized.drafts},'An empty namespace created by hydration is equivalent to absence');
+assert.deepEqual(mergeProgressEdits(initial,initialized,first),{...first,drafts:initialized.drafts},'An empty initializer cannot erase an independently enrolled first card');
+console.log('PASS 14 independent-entry, same-entry/counter conflicts, deletion, pending-input, validation, legacy-transfer and empty-card initialization groups');
