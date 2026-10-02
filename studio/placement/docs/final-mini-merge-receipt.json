@@ -1,0 +1,16 @@
+{
+  "miniBase": "f716870258ca5e909f60092d11d18ad884667c50",
+  "publisherBase": "92f777d7d4c61811689b353263d7d59076b4e507",
+  "checks": [
+    "final-base normal Today optional entry keeps original current course; saved placement choice survives actual refresh",
+    "clean placement ↔ final keyed mini transitions + native history back + mini refresh preserve separate original inputs and evidence",
+    "failed placement save blocks mini document/hash/native-back exits, keeps input and saved records; retry commits draft without first answer before accepted mini switch",
+    "final mini failed queue blocks placement document/hash/native-back entry, preserves keyed workspace and input; retry saves then permits placement",
+    "switching distinct keyed mini IDs does not leak workspace state; missing real packaged audio retains zero listening exposure and still permits clean placement return",
+    "final Today exposes placement and mini resumes; chosen placement refresh keeps draft; all original State namespaces and map raw stay unchanged"
+  ],
+  "exceptions": 0,
+  "externalRequests": [],
+  "scope": "merge-only real Vite online map/classic routes and existing production IDB; fresh synthetic browser; prior 25 model and 8 full-host groups reused without unrelated rerun",
+  "deployed": false
+}

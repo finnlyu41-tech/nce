@@ -46,21 +46,21 @@
       "bytes": 85230,
       "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
     },
-    "assets/standalone-CXuBhIPb.js": {
-      "bytes": 3178898,
-      "sha256": "31fc27abf1566c3fe310d3c43307673712fb47c977dd288983574a7907971c68"
+    "assets/standalone-C_TBSIbi.js": {
+      "bytes": 3179032,
+      "sha256": "a68483ae14e66d3db7b3bd1fbc51d45c7b458fe9084b5b2a4eb72656832ae73d"
     },
     "assets/style-Bezagksi.css": {
       "bytes": 329146,
       "sha256": "92e67f242b2e9efad7581ffc1933066d1662e72b587826086c94b9d7c1b33dd0"
     },
-    "map/assets/index-0k1ygRKP.js": {
-      "bytes": 2463510,
-      "sha256": "f36d0d7eb78441dafb51e44f9c9001c511dd370640afea6eed84b51d02f88bf5"
-    },
     "map/assets/index-1wdxvhZa.css": {
       "bytes": 83464,
       "sha256": "cff7e19a5e0a31870dc82d0770a14ae1cd27efcda8e2e644b391d32a8a13a90d"
+    },
+    "map/assets/index-4V-0yx1G.js": {
+      "bytes": 2467805,
+      "sha256": "5cead873010eef3ee4fa27161362c61ec1c3d938da9fde2a4277fd24888637f4"
     },
     "map/assets/mini-n1-01-delayed-a-DasbtE01.wav": {
       "bytes": 159788,
@@ -104,5 +104,6 @@
     }
   },
   "deployed": false,
-  "source": "placement host after mini interface 97e76c9"
+  "source": "git:6d7da855ed755a05dccd04d1743d7762fe3c0acb",
+  "miniBase": "f716870258ca5e909f60092d11d18ad884667c50"
 }

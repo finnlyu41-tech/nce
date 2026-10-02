@@ -4,9 +4,9 @@
 
 ## 基线与所有权
 
-隔离分支 `codex/placement-host-after-mini-20261003` 从 mini 冻结宿主接口 `97e76c9201ce661ceeb94f15e19c52c40f76e8d4` 开始。该接口依赖 mini 内容 `40273eebea90fd5aa189b0facb96d24a402d3d62`，其 publisher 本机基线为 `605a6434612171a19666ff4a70c7f48d54be7914`；先前核验两发布分支均为 `424efc1869e98cd7b19afd2c1ab7cab0e8380b4b`。这不是已发布的宿主版本声明。
+当前隔离分支 `codex/placement-final-mini-20261003` 从最终 mini source HEAD `f716870258ca5e909f60092d11d18ad884667c50` 开始，其 publisher 基线为 `92f777d7d4c61811689b353263d7d59076b4e507`。mini 四提交依次为 `7b31a43c32723371705fd15d8c41b9eaa85f8693`、`500f4755dc2b33cfc9ad0a80942fabc53eb8de23`、`cf89a94b9b7e44f8668b9edac4065c7ae2e1c63d`、`f716870258ca5e909f60092d11d18ad884667c50`。旧宿主候选在 97e76c9/605a643 上的历史验收仍保留，但不再作为当前接入基线。这不是已发布的宿主版本声明。
 
-原 Placement 候选 `c2e5923fda1b85a2a79f73e4fafc9f280a4a00f7` 原样 cherry-pick 为 `420ef15f71001e1b0f86a8b975376f4224215a2b`。六个冻结文件 `content.ts`、`manifest.ts`、`model.ts`、`adapter.ts`、`placement-ui.tsx`、`placement.css` 与原候选逐字一致；题面 hash 和独立盲审仍见 `blind-review.json`。
+原 Placement 候选 `c2e5923fda1b85a2a79f73e4fafc9f280a4a00f7` 先前原样 cherry-pick 为 420ef15，当前最终接口上为 `32fd8b52010657f13323316239cb2d5b41648e35`。宿主实现 1a8e6ed 原样 cherry-pick 为 `e9092579b90729710e2e9942dbec06aa6e57e847`，原验证 d173558 为 `6d7da855ed755a05dccd04d1743d7762fe3c0acb`，均无合并冲突。六个冻结文件 `content.ts`、`manifest.ts`、`model.ts`、`adapter.ts`、`placement-ui.tsx`、`placement.css` 与原候选逐字一致；题面 hash 和独立盲审仍见 `blind-review.json`。
 
 本次共享生产文件只有 `app/navigation.ts`、`app/study-app.tsx`、`app/today-practice.ts`。新增宿主位于 `placement/host.tsx`、`host-progress.ts`、`host.css`。没有改 mini 源码、map 源码、course-loop/registry/next、首页源码或已存在的记录保存修复。mini → placement 接入顺序来自 mini 已冻结接口文档；通过只读材料核实，没有向 mini 作者发送协调消息。
 
@@ -21,11 +21,11 @@
 
 ## 验证证据
 
-`test-placement.mjs` 25 项全部通过；包括困难、帮助、跳过、熟题、暂停、订正与首答分离、池耗尽、未知/异常数据、CAS 及其他原记录保留。宿主 scoped strict TypeScript 通过。
+此前 `test-placement.mjs` 25 项全部通过，本次依要求复用，不重跑未变的判定题库；包括困难、帮助、跳过、熟题、暂停、订正与首答分离、池耗尽、未知/异常数据、CAS 及其他原记录保留。宿主 scoped strict TypeScript 通过。
 
 使用生产 `vite.static.config.ts` / `map/vite.config.ts` 的 native loader 构建真实 online `standalone.tsx` 与 `map/main.tsx`，避免向链接依赖所属树写 `.vite-temp`。构建成功；原有大 bundle 提示仍在，构建 hash 见 `host-build-receipt.json`。
 
-真实构建页面、全新本机 Chrome 配置、现有生产 IDB writer 的 8 组浏览器验收全部通过，见 `host-browser-receipt.json`：
+此前真实构建页面、全新本机 Chrome 配置、现有生产 IDB writer 的 8 组浏览器验收全部通过，见 `host-browser-receipt.json`（明确记录旧 97e76c9 基线，本次复用，不冒称在最终 mini 上重跑）：
 
 1. map Today 正常入口进入诊断，原课程仍在首位。
 2. 首答、曝光和部分输入经暂停与真实刷新后保持。
@@ -36,7 +36,11 @@
 7. mini 已知路由仍进入真实 mini workspace。
 8. 生产 writer 保留其他并发草稿，拒绝同键恢复、历史替换及未知原文覆盖。
 
-没有浏览器运行异常或外部请求。320/390/1280截图逐图检查，无横向溢出；保留三张图于 `host-evidence/`。故障图中的 `QA save failure` 来自合成测试注入。浏览器测试只读使用已有 standalone 资料目录作为未改变的课件 fallback，真实入口及 JS/CSS 均来自本次构建；并非新发布站点验收。
+旧完整验收没有浏览器运行异常或外部请求。320/390/1280截图逐图检查，无横向溢出；保留三张图于 `host-evidence/`。故障图中的 `QA save failure` 来自合成测试注入。浏览器测试只读使用已有 standalone 资料目录作为未改变的课件 fallback，真实入口及 JS/CSS 均来自本次构建；并非新发布站点验收。
+
+最终 mini 合并差异只做 6 组新验收，见 `final-mini-merge-receipt.json`：正常 Today 原课位和诊断入口/刷新；Placement ↔ keyed mini 干净往返、mini 刷新与原生历史返回；Placement 保存失败阻止 mini document/hash/native-back 切换；mini 保存失败对称阻止 Placement 切换；distinct mini ID 生命周期与缺声音频零曝光保护；Today 保留两类恢复项、重新进入与刷新，以及原 State 和 map 保留。全部通过，零运行异常、零外部请求。仅用生产构建和合成数据，没有重跑无关完整题库或音频验收。
+
+逐文件比较证明当前 mini 目录、`mini-task-ui.tsx`、`course-loop-ui.tsx`、map host、`use-route.ts`、offline-store 和 scripts 与最终 f716870 一致。其 keyedHost、accepted-route、native-back、缺声/offline guard、音频工具 hook、最新 Speaking/SavePromise 护栏均由最终基线保留，本批没有改写。宿主 strict TypeScript 与两个真实 Vite entry 在最终基线上重新构建通过。
 
 复核命令（需要已存在项目依赖、curriculum.json、Chrome 与本机端口权限）：
 
@@ -45,9 +49,11 @@ node studio/placement/tests/test-placement.mjs
 node studio/node_modules/typescript/bin/tsc --noEmit --project studio/placement/tests/tsconfig.host.json
 node studio/placement/tests/build-placement-host.mjs /tmp/placement-host-site
 PLACEMENT_TEST_MATERIALS=/path/to/existing/dist-online node studio/placement/tests/test-placement-host-browser.mjs /tmp/placement-host-site
+# 最终接口合并差异：
+PLACEMENT_TEST_MATERIALS=/path/to/existing/dist-online node studio/placement/tests/test-final-mini-merge-browser.mjs /tmp/placement-host-site
 ```
 
-最终 patch/bundle 的精确 commit 与校验和见工作目录 `placement-host-delivery.json`。publisher 如已拥有原候选 c2，可在 mini 接口之后只 cherry-pick 本次宿主与验证提交，避免重复接原内容。共享三文件若已继续变化，串行检查最小 diff，不覆盖其他作者修改。
+最终 patch/bundle 的精确 commit 与校验和见工作目录 `placement-final-mini-delivery.json`（旧 `placement-host-delivery.json` 为历史材料）。publisher 如已拥有原候选 c2，可在 mini 接口之后只 cherry-pick 本次宿主与验证提交，避免重复接原内容。共享三文件若已继续变化，串行检查最小 diff，不覆盖其他作者修改。
 
 ## 尚未完成
 
