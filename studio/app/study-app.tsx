@@ -1,4 +1,5 @@
 'use client';
+import {PlacementHost,usePlacementHostRoute} from '../placement/host';
 import {TodayPracticeQueue} from './today-practice-ui';
 import {MiniTaskHost,useMiniTaskHostRoute} from '../mini-task/host';
 import {GrammarWorkspace} from './grammar-workspace';
@@ -51,9 +52,9 @@ const navs=[['today','学习',LayoutDashboard],['library','课程',BookOpen],['r
 const activeNav=(view:string)=>(view==='today'||view==='roadmap')?'today':view==='review'?'review':'library';
 function SideNav({view,go,state}:{view:string,go:(v:string)=>void,state:State}){const {setOpenMobile}=useSidebar();return <Sidebar className="studio-sidebar"><SidebarHeader><a href="#/today" onClick={e=>{e.preventDefault();go('today');setOpenMobile(false)}} className="brand"><span className="brand-icon">E<span>.</span></span><span>句句有进步<small>ENGLISH STUDIO</small></span></a></SidebarHeader><SidebarContent><span className="nav-caption">你的英语学习空间</span><SidebarMenu>{navs.map(([id,label,Icon])=><SidebarMenuItem key={id}><SidebarMenuButton isActive={activeNav(view)===id} onClick={()=>{go(id);setOpenMobile(false)}}><Icon/><span>{label}</span>{id==='review'&&((Object.keys(state.flashcards?.cards||state.cards).length>0)||dueLearningGoals(state).length>0||journeySnapshot(state).due.length>0)&&<span className="nav-count">{flashcardSummary(state,Date.now()).due+dueLearningGoals(state).length+journeySnapshot(state).due.length}</span>}</SidebarMenuButton></SidebarMenuItem>)}</SidebarMenu><div className="sidebar-course"><span className="tiny-label">IELTS ACADEMIC · 6.5</span><p>按能力前进，按缺口补课。</p><button className="text-btn" onClick={()=>{go('roadmap');setOpenMobile(false)}}>我的学习路线<ArrowRight size={14}/></button></div></SidebarContent><SidebarFooter><button className="profile" onClick={()=>{go('progress');setOpenMobile(false)}}><span className="avatar">E</span><div><strong>学习记录</strong><small>草稿、检验与已保存的进度</small></div></button></SidebarFooter></Sidebar>}
 export default function StudyApp(){
- const {route,bindMiniLeaveGuard,beforeMiniLeave,miniNotice}=useMiniTaskHostRoute(),destination=ONLINE?learningRedirect(route):undefined;
+ const mini=useMiniTaskHostRoute(),placement=usePlacementHostRoute(mini.route),route=placement.route,{bindMiniLeaveGuard,beforeMiniLeave,miniNotice}=mini,destination=ONLINE?learningRedirect(route):undefined;
  useEffect(()=>{if(destination)location.replace(destination)},[destination]);
- return destination?<main className="loading" role="status">正在打开学习… <a href={destination}>进入学习</a></main>:route.view==='mini-task'&&route.miniTaskId?<MiniTaskHost key={route.miniTaskId} taskId={route.miniTaskId} onLeaveGuard={bindMiniLeaveGuard} beforeLeave={beforeMiniLeave} notice={miniNotice}/>:<StudyWorkspace/>;
+ return destination?<main className="loading" role="status">正在打开学习… <a href={destination}>进入学习</a></main>:route.view==='mini-task'&&route.miniTaskId?<MiniTaskHost key={route.miniTaskId} taskId={route.miniTaskId} onLeaveGuard={bindMiniLeaveGuard} beforeLeave={beforeMiniLeave} notice={miniNotice}/>:route.view==='placement'?<PlacementHost bind={placement.bind} beforeLeave={placement.beforeLeave} notice={placement.notice}/>:<StudyWorkspace/>;
 }
 function StudyWorkspace(){
  const {state:mapState,error:mapError}=useMapProgress(ONLINE);

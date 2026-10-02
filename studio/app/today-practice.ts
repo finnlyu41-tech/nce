@@ -1,3 +1,4 @@
+import {placementTasks} from '../placement/adapter';
 import type {State} from './model';
 import {routeHash} from './navigation';
 import {grammarUnits} from './grammar-curriculum';
@@ -42,7 +43,7 @@ function grammarReviewAt(progress:GrammarUnitProgress){
  * The classic State and map Progress must have passed their existing validators.
  */
 export function todayPractice(state:State,map:Progress,now=Date.now(),online=true):PracticeTask[]{
- const tasks:PracticeTask[]=samplePracticeTasks(state,now,online);
+ const tasks:PracticeTask[]=[...samplePracticeTasks(state,now,online),...placementTasks(state,now,online)];
  const to=(route:Parameters<typeof routeHash>[0])=>(online?'/':'')+routeHash(route);
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};
@@ -140,5 +141,6 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
    reason:'从已保存的教材位置继续，一次完成一个小目标。',method:'听懂、看懂、自己用，再独立检验。',evidence:'跟练、独立核对与自己的表达分别记录。',
    href:to({view:'nce',...current}),priority:priority.course,at:now,kind:'course'});
  }
+ if(online&&!tasks.some(task=>task.id==='placement:resume'))add({id:'placement:offer',title:'已有基础？做个短诊断',reason:'最多6题，给一个保守试学起点；原路线和完成记录保留。',method:'从短句开始，遇到困难可跳过或暂停。',evidence:'听说与自由写作仍待独立核对，不提供 IELTS band。',href:'/#/placement',priority:6,at:now,kind:'course'});
  return tasks;
 }

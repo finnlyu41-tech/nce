@@ -4,7 +4,7 @@ import {parseMiniTaskRoute} from '../mini-task/route';
 
 export type StudioRoute={view:string;miniTaskId?:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;unit?:string;check?:true;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
 const roadmapNodes=['baseline','starter','foundation','bridge','listening','reading','writing','speaking','mock','finish'];
-const views=['roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
+const views=['placement','roadmap','nce','today','library','review','courses','words','grammar','ielts','progress','lesson','quiz','materials','cloud'];
 const tabs:Record<string,string[]>={words:['book','index','review'],nce:['materials','listen','words','notes','practice','grammar'],lesson:['listen','words','grammar','practice'],ielts:['overview','course','listening','reading','speaking','writing'],grammar:['path','book','topic','practice']};
 export function parseRoute(hash:string):StudioRoute{
  const mini=parseMiniTaskRoute(hash);if(mini)return {view:mini.view,miniTaskId:mini.taskId};

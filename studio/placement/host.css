@@ -1,0 +1,5 @@
+/* Existing site .panel input rules size text fields; keep diagnostic choices compact. */
+[data-placement-host] .placement-option input[type=radio],
+[data-placement-host] .placement-option input[type=checkbox]{width:18px;height:18px;min-width:18px;min-height:18px;max-width:18px;flex:0 0 18px;padding:0;margin:4px 0 0;appearance:auto;display:inline-block}
+[data-placement-host] .placement-option{align-items:flex-start;overflow-wrap:anywhere}
+[data-placement-host] fieldset:disabled .placement{opacity:.85}
