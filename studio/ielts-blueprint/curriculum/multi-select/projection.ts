@@ -30,7 +30,7 @@ function projectMaterial(material: MultiSelectMaterial, listening: boolean, mode
     context: `${listening ? '' : `${material.stimulus}\n\n`}${task.prompt}\n${options}`,
     ...(listening ? {script: material.stimulus} : {}),
     // options intentionally absent: SampleQuestion.options currently renders a single-select.
-    questions: [{id: task.id, prompt: `${task.prompt} ${entryInstruction}`, accepted: answers, why: `${model ? `${(material.modelNotes || []).join('\n')}\n` : ''}完整参考集合：${answers[0]}。每个选项分别核验，恰好选择${task.selectionCount}项；只匹配完整组，不按官方逐答案计分。\n${explanation}`}],
+    questions: [{id: task.id, prompt: `${task.prompt} ${entryInstruction}`, accepted: answers, why: `${model ? `${(material.modelNotes || []).join('\n')}\n` : ''}参考答案：${answers[0]}。逐项对照依据，恰好选择${task.selectionCount}项；本站按完整答案组核对。\n${explanation}`}],
     hint: material.hint, checklist: [...material.checklist], seconds: material.seconds,
     ...(model ? {model: answers[0], modelNotes: [...(material.modelNotes || [])]} : {}),
   };
@@ -40,8 +40,8 @@ function projectMaterial(material: MultiSelectMaterial, listening: boolean, mode
 export function projectMultiSelectLesson(lesson: MultiSelectLesson): SampleLesson {
   return {
     id: lesson.id, skill: lesson.skill, title: lesson.title, goal: lesson.goal,
-    explanation: [...lesson.explanation, '本站把全部选中字母写在同一输入框，以空格分开。每个参考字符串都包含完整正确集合；不是从正确字母中任选一个。任意顺序可填写，少选、多选、重复或未列出的字母不会匹配，原答仍保留。', '本批原创练习每组选择2或3项，选项列表有5或6项；这不是官方题目固定数量，实际考试须重新读本题指令。GT本批接受任意顺序是原创练习规则，不声称本轮已核实全部官方GT多选答案表。'],
-    boundary: `${lesson.boundary} 本站使用完整字母组文本输入，尚无原生复选框或官方逐答案槽计分。现有correct/total按完整组核对，不计算部分答案的官方分数；输入错误也保留原答，不静默抽取或去重。`,
+    explanation: [...lesson.explanation, '在一个输入框中填写所有选中的字母，用空格隔开，顺序不限。每组必须恰好选出题干要求的不同字母；少选、多选、重复或填写范围外的字母，整组都会记为未匹配。你的首答会保留。', '本课每组从5或6个选项中选2或3项；实际考试的数量以题干为准。任意顺序输入和整组核对是本站练习规则，不能据此推断正式考试的填写或计分方式。'],
+    boundary: `${lesson.boundary} 本站按完整答案组核对，全部选择正确且符合输入要求时，才显示整组匹配。选对部分选项也会保留你的首答；本站不计算正式考试逐答案位置或部分得分，也不据此估算 Band。首答和订正分别保留。`,
     model: projectMaterial(lesson.model, lesson.skill === 'listening', true),
     guided: projectMaterial(lesson.guided, lesson.skill === 'listening'),
     independent: projectMaterial(lesson.independent, lesson.skill === 'listening'),
