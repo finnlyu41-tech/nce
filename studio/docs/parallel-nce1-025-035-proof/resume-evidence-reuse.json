@@ -1,0 +1,54 @@
+{
+  "browserOriginalReceiptSha256": "b884e88d6435064fd62aecc649e6d065fe03b295cb4494d7c89a95b5443cc111",
+  "browserOriginalPassed": true,
+  "initialScreens": [
+    {
+      "course": "nce1-25",
+      "sameInitialContextAndPrompt": true
+    },
+    {
+      "course": "nce1-27",
+      "sameInitialContextAndPrompt": true
+    },
+    {
+      "course": "nce1-29",
+      "sameInitialContextAndPrompt": true
+    },
+    {
+      "course": "nce1-31",
+      "sameInitialContextAndPrompt": true
+    },
+    {
+      "course": "nce1-33",
+      "sameInitialContextAndPrompt": true
+    },
+    {
+      "course": "nce1-35",
+      "sameInitialContextAndPrompt": true
+    }
+  ],
+  "unchangedFinalPrompts031035": true,
+  "reusedSemanticBindings": {
+    "nce1-31": "778fef01640d0adebb3ec70915808c66d86f7b44a9e1d9a4047d57cc20722ef8",
+    "nce1-33": "f6139d9f603651209d0d5df7f72c67df35c5e23274217753e483129c4c00520c",
+    "nce1-35": "b251c6b348d1cbc36464b7677f5d0da97ab90d78f931cf600017e6cd89f3ee53"
+  },
+  "replayedFinalCases031035": 848,
+  "replayedMismatches031035": 0,
+  "sourceMediaAudit": "../parallel-nce1-025-035-media-audit.json",
+  "codeSha256": {
+    "studio/course-loop/model.mjs": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+    "studio/course-loop/parallel-nce1-025-035/content-contract.mjs": "85e4b06780c4ec9fb047a962df8979fb55ca0d39e48c2783b9da01bb97463f45",
+    "studio/course-loop/parallel-nce1-025-035/preview.html": "d04147d9ea347775929d5399600c1085bbd65ecc232146bfe8f44cf34c1cf7bc",
+    "studio/course-loop/parallel-nce1-025-035/preview.mjs": "31c6ac4e81fc0ac65a90073878e1876390a2a4ff1e42cf1bf69a84d1582920c8",
+    "studio/tests/parallel-nce1-025-035-browser.mjs": "6279ea4c81fa1236f665947fed3ec94a7b89f626159f431c63cedda8e3cd2432"
+  },
+  "scope": "Original in-memory preview/source/viewport run reused with unchanged initial-screen text and matching source assets. Latest 25/27/29 matcher changes and withdrawn hints are validated separately by frozen prompt-only cases and factory regression, not claimed as a new integrated-host/browser acceptance.",
+  "unverified": [
+    "production registry/routes/store/CAS/Today integration",
+    "natural24h/7d",
+    "physical phone",
+    "audible playback",
+    "human open expression"
+  ]
+}

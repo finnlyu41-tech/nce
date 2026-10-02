@@ -1,0 +1,135 @@
+{
+  "base": "d9c7c48a7d419c230be06bf81cc956d63b124649",
+  "scope": "six candidate content modules in isolated in-memory preview using unchanged production factory; not integrated host",
+  "checks": [
+    {
+      "course": "nce1-25",
+      "viewport": 320,
+      "overflow": false
+    },
+    {
+      "course": "nce1-25",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "course": "nce1-25",
+      "completedBanks": 6,
+      "sourceText": true,
+      "comicLoaded": true,
+      "audioMetadata": true,
+      "audibility": "not-verified",
+      "storageEntries": 0,
+      "delays": "synthetic"
+    },
+    {
+      "course": "nce1-27",
+      "viewport": 320,
+      "overflow": false
+    },
+    {
+      "course": "nce1-27",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "course": "nce1-27",
+      "completedBanks": 6,
+      "sourceText": true,
+      "comicLoaded": true,
+      "audioMetadata": true,
+      "audibility": "not-verified",
+      "storageEntries": 0,
+      "delays": "synthetic"
+    },
+    {
+      "course": "nce1-29",
+      "viewport": 320,
+      "overflow": false
+    },
+    {
+      "course": "nce1-29",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "course": "nce1-29",
+      "completedBanks": 6,
+      "sourceText": true,
+      "comicLoaded": true,
+      "audioMetadata": true,
+      "audibility": "not-verified",
+      "storageEntries": 0,
+      "delays": "synthetic"
+    },
+    {
+      "course": "nce1-31",
+      "viewport": 320,
+      "overflow": false
+    },
+    {
+      "course": "nce1-31",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "course": "nce1-31",
+      "completedBanks": 6,
+      "sourceText": true,
+      "comicLoaded": true,
+      "audioMetadata": true,
+      "audibility": "not-verified",
+      "storageEntries": 0,
+      "delays": "synthetic"
+    },
+    {
+      "course": "nce1-33",
+      "viewport": 320,
+      "overflow": false
+    },
+    {
+      "course": "nce1-33",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "course": "nce1-33",
+      "completedBanks": 6,
+      "sourceText": true,
+      "comicLoaded": true,
+      "audioMetadata": true,
+      "audibility": "not-verified",
+      "storageEntries": 0,
+      "delays": "synthetic"
+    },
+    {
+      "course": "nce1-35",
+      "viewport": 320,
+      "overflow": false
+    },
+    {
+      "course": "nce1-35",
+      "viewport": 390,
+      "overflow": false
+    },
+    {
+      "course": "nce1-35",
+      "completedBanks": 6,
+      "sourceText": true,
+      "comicLoaded": true,
+      "audioMetadata": true,
+      "audibility": "not-verified",
+      "storageEntries": 0,
+      "delays": "synthetic"
+    }
+  ],
+  "runtimeExceptions": [],
+  "passed": true,
+  "unverified": [
+    "production registry/routes/store/CAS/Today integration",
+    "natural24h/7d",
+    "physical phone",
+    "audible playback",
+    "human open expression"
+  ]
+}

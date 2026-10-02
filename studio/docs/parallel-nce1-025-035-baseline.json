@@ -1,0 +1,38 @@
+{
+  "repository": "finnlyu41-tech/nce",
+  "verifiedRemoteHeads": {
+    "codex/english-studio-online-20260926": "d9c7c48a7d419c230be06bf81cc956d63b124649",
+    "codex/ielts-map-20260930": "d9c7c48a7d419c230be06bf81cc956d63b124649"
+  },
+  "base": "d9c7c48a7d419c230be06bf81cc956d63b124649",
+  "ownership": [
+    "studio/course-loop/parallel-nce1-025-035/",
+    "studio/tests/parallel-nce1-025-035*",
+    "studio/docs/parallel-nce1-025-035*"
+  ],
+  "rules": "No visible AGENTS.md or .agents/skills in checkout/ancestors; no shared production files modified.",
+  "sourceRootReadOnly": "/Users/finnlyu/Projects/.worktrees/english-ielts-map-20260930/studio/dist-online",
+  "targetMap": {
+    "25": "a/the; introduce one item; ask and give singular location",
+    "27": "some plural existence; ask and give plural location",
+    "29": "must obligation question; must instruction; imperative action",
+    "31": "singular present continuous question and action; movement/location",
+    "33": "plural present continuous question and action; singular/plural contrast",
+    "35": "Where location questions; static position; direction of current movement"
+  },
+  "registeredBaseline": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11
+  ],
+  "integrationOwner": "01a0fa39-c2a2-7239-87b4-b0a9c091f0ba",
+  "naturalDelayTested": false,
+  "resumeVerifiedRemoteHeads": {
+    "codex/english-studio-online-20260926": "94d38ab2a2bc42b803ddd951473b154f9c8a5bbd",
+    "codex/ielts-map-20260930": "94d38ab2a2bc42b803ddd951473b154f9c8a5bbd"
+  },
+  "resumePolicy": "Retained existing d9c7c48 candidate baseline; additive files only. Integration owner must revalidate on its newer remote head."
+}

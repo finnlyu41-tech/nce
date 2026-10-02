@@ -1,0 +1,400 @@
+TAP version 13
+# Subtest: content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+ok 1 - content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+  ---
+  duration_ms: 1.632375
+  type: 'test'
+  ...
+# Subtest: bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+ok 2 - bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+  ---
+  duration_ms: 0.227541
+  type: 'test'
+  ...
+# Subtest: initial route exposes only first test item and cannot finish or bypass first attempts
+ok 3 - initial route exposes only first test item and cannot finish or bypass first attempts
+  ---
+  duration_ms: 0.718333
+  type: 'test'
+  ...
+# Subtest: diagnostic wrong answer selects targeted teaching first; original persists
+ok 4 - diagnostic wrong answer selects targeted teaching first; original persists
+  ---
+  duration_ms: 2.023458
+  type: 'test'
+  ...
+# Subtest: reading/audio/comic access recorded separately; active answer becomes assisted
+ok 5 - reading/audio/comic access recorded separately; active answer becomes assisted
+  ---
+  duration_ms: 0.373167
+  type: 'test'
+  ...
+# Subtest: study materials do not pre-expose independent or delayed banks
+ok 6 - study materials do not pre-expose independent or delayed banks
+  ---
+  duration_ms: 1.511583
+  type: 'test'
+  ...
+# Subtest: first answer cannot be overwritten; duplicate submit rejected
+ok 7 - first answer cannot be overwritten; duplicate submit rejected
+  ---
+  duration_ms: 0.146667
+  type: 'test'
+  ...
+# Subtest: guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+ok 8 - guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+  ---
+  duration_ms: 0.817834
+  type: 'test'
+  ...
+# Subtest: wrong independent answer requires correct separate correction plus note
+ok 9 - wrong independent answer requires correct separate correction plus note
+  ---
+  duration_ms: 3.374333
+  type: 'test'
+  ...
+# Subtest: hinted correct answer remains assisted and requires correction note
+ok 10 - hinted correct answer remains assisted and requires correction note
+  ---
+  duration_ms: 2.832
+  type: 'test'
+  ...
+# Subtest: repair failure must retry; later pass keeps both attempts and makes no mastery claim
+ok 11 - repair failure must retry; later pass keeps both attempts and makes no mastery claim
+  ---
+  duration_ms: 3.7235
+  type: 'test'
+  ...
+# Subtest: one route returns resume then continue-route and only real due review
+ok 12 - one route returns resume then continue-route and only real due review
+  ---
+  duration_ms: 3.40175
+  type: 'test'
+  ...
+# Subtest: review entry/view alone does not create results or postpone due
+ok 13 - review entry/view alone does not create results or postpone due
+  ---
+  duration_ms: 2.78925
+  type: 'test'
+  ...
+# Subtest: actual complete unassisted new review schedules seven days from completion, not original due
+ok 14 - actual complete unassisted new review schedules seven days from completion, not original due
+  ---
+  duration_ms: 4.670208
+  type: 'test'
+  ...
+# Subtest: failed or helped review schedules one day, even with otherwise correct answers
+ok 15 - failed or helped review schedules one day, even with otherwise correct answers
+  ---
+  duration_ms: 8.9785
+  type: 'test'
+  ...
+# Subtest: two review banks exhaust honestly; opening prior material never replenishes bank
+ok 16 - two review banks exhaust honestly; opening prior material never replenishes bank
+  ---
+  duration_ms: 6.114375
+  type: 'test'
+  ...
+# Subtest: UTC elapsed interval unaffected by display timezone or missed days
+ok 17 - UTC elapsed interval unaffected by display timezone or missed days
+  ---
+  duration_ms: 17.602208
+  type: 'test'
+  ...
+# Subtest: JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+ok 18 - JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+  ---
+  duration_ms: 3.526916
+  type: 'test'
+  ...
+# Subtest: corrupt/future/unsupported snapshots preserve raw instead of resetting
+ok 19 - corrupt/future/unsupported snapshots preserve raw instead of resetting
+  ---
+  duration_ms: 0.122375
+  type: 'test'
+  ...
+# Subtest: out-of-order or injected future action rejected and state immutable
+ok 20 - out-of-order or injected future action rejected and state immutable
+  ---
+  duration_ms: 0.099541
+  type: 'test'
+  ...
+# Subtest: host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+ok 21 - host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+  ---
+  duration_ms: 7.9885
+  type: 'test'
+  ...
+# Subtest: typing drafts coalesce without dropping submitted originals or help events
+ok 22 - typing drafts coalesce without dropping submitted originals or help events
+  ---
+  duration_ms: 15.774791
+  type: 'test'
+  ...
+# Subtest: explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+ok 23 - explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+  ---
+  duration_ms: 0.276291
+  type: 'test'
+  ...
+# Subtest: final-blind-cases-025-029.json: every independent meaning/format judgement survives actual production factory submission
+ok 24 - final-blind-cases-025-029.json: every independent meaning/format judgement survives actual production factory submission
+  ---
+  duration_ms: 1809.149833
+  type: 'test'
+  ...
+# Subtest: resume-blind-cases-025-029.json: every independent meaning/format judgement survives actual production factory submission
+ok 25 - resume-blind-cases-025-029.json: every independent meaning/format judgement survives actual production factory submission
+  ---
+  duration_ms: 814.474708
+  type: 'test'
+  ...
+# Subtest: final-blind-cases-031-035.json: every independent meaning/format judgement survives actual production factory submission
+ok 26 - final-blind-cases-031-035.json: every independent meaning/format judgement survives actual production factory submission
+  ---
+  duration_ms: 1292.107583
+  type: 'test'
+  ...
+# Subtest: frozen six-course semantic hashes still bind questions, explanations and source metadata
+ok 27 - frozen six-course semantic hashes still bind questions, explanations and source metadata
+  ---
+  duration_ms: 14.353291
+  type: 'test'
+  ...
+# Subtest: NCE1-25: full six-bank coverage and original target-specific teaching
+ok 28 - NCE1-25: full six-bank coverage and original target-specific teaching
+  ---
+  duration_ms: 1.203833
+  type: 'test'
+  ...
+# Subtest: NCE1-25: optional read-only asset audit agrees with language/comic sources
+ok 29 - NCE1-25: optional read-only asset audit agrees with language/comic sources
+  ---
+  duration_ms: 10.82575
+  type: 'test'
+  ...
+# Subtest: NCE1-27: full six-bank coverage and original target-specific teaching
+ok 30 - NCE1-27: full six-bank coverage and original target-specific teaching
+  ---
+  duration_ms: 0.249625
+  type: 'test'
+  ...
+# Subtest: NCE1-27: optional read-only asset audit agrees with language/comic sources
+ok 31 - NCE1-27: optional read-only asset audit agrees with language/comic sources
+  ---
+  duration_ms: 0.820667
+  type: 'test'
+  ...
+# Subtest: NCE1-29: full six-bank coverage and original target-specific teaching
+ok 32 - NCE1-29: full six-bank coverage and original target-specific teaching
+  ---
+  duration_ms: 0.229041
+  type: 'test'
+  ...
+# Subtest: NCE1-29: optional read-only asset audit agrees with language/comic sources
+ok 33 - NCE1-29: optional read-only asset audit agrees with language/comic sources
+  ---
+  duration_ms: 0.598209
+  type: 'test'
+  ...
+# Subtest: NCE1-31: full six-bank coverage and original target-specific teaching
+ok 34 - NCE1-31: full six-bank coverage and original target-specific teaching
+  ---
+  duration_ms: 0.235833
+  type: 'test'
+  ...
+# Subtest: NCE1-31: optional read-only asset audit agrees with language/comic sources
+ok 35 - NCE1-31: optional read-only asset audit agrees with language/comic sources
+  ---
+  duration_ms: 0.485291
+  type: 'test'
+  ...
+# Subtest: NCE1-33: full six-bank coverage and original target-specific teaching
+ok 36 - NCE1-33: full six-bank coverage and original target-specific teaching
+  ---
+  duration_ms: 0.373167
+  type: 'test'
+  ...
+# Subtest: NCE1-33: optional read-only asset audit agrees with language/comic sources
+ok 37 - NCE1-33: optional read-only asset audit agrees with language/comic sources
+  ---
+  duration_ms: 0.966791
+  type: 'test'
+  ...
+# Subtest: NCE1-35: full six-bank coverage and original target-specific teaching
+ok 38 - NCE1-35: full six-bank coverage and original target-specific teaching
+  ---
+  duration_ms: 0.198042
+  type: 'test'
+  ...
+# Subtest: NCE1-35: optional read-only asset audit agrees with language/comic sources
+ok 39 - NCE1-35: optional read-only asset audit agrees with language/comic sources
+  ---
+  duration_ms: 0.519
+  type: 'test'
+  ...
+# Subtest: unchanged production factory bytes and registry excluded all six candidates
+ok 40 - unchanged production factory bytes and registry excluded all six candidates
+  ---
+  duration_ms: 23.816958
+  type: 'test'
+  ...
+# Subtest: nce1-25: first attempt, targeted teaching and local meaning boundaries use actual factory
+ok 41 - nce1-25: first attempt, targeted teaching and local meaning boundaries use actual factory
+  ---
+  duration_ms: 2.61925
+  type: 'test'
+  ...
+# Subtest: nce1-25: help/source cannot become fresh evidence; preserve original on correction/retry
+ok 42 - nce1-25: help/source cannot become fresh evidence; preserve original on correction/retry
+  ---
+  duration_ms: 5.203166
+  type: 'test'
+  ...
+# Subtest: nce1-25: exact raw drafts/events restore and foreign course raw rejected
+ok 43 - nce1-25: exact raw drafts/events restore and foreign course raw rejected
+  ---
+  duration_ms: 1.64125
+  type: 'test'
+  ...
+# Subtest: nce1-25: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+ok 44 - nce1-25: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+  ---
+  duration_ms: 9.010958
+  type: 'test'
+  ...
+# Subtest: nce1-27: first attempt, targeted teaching and local meaning boundaries use actual factory
+ok 45 - nce1-27: first attempt, targeted teaching and local meaning boundaries use actual factory
+  ---
+  duration_ms: 0.654875
+  type: 'test'
+  ...
+# Subtest: nce1-27: help/source cannot become fresh evidence; preserve original on correction/retry
+ok 46 - nce1-27: help/source cannot become fresh evidence; preserve original on correction/retry
+  ---
+  duration_ms: 3.27175
+  type: 'test'
+  ...
+# Subtest: nce1-27: exact raw drafts/events restore and foreign course raw rejected
+ok 47 - nce1-27: exact raw drafts/events restore and foreign course raw rejected
+  ---
+  duration_ms: 1.120084
+  type: 'test'
+  ...
+# Subtest: nce1-27: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+ok 48 - nce1-27: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+  ---
+  duration_ms: 8.26
+  type: 'test'
+  ...
+# Subtest: nce1-29: first attempt, targeted teaching and local meaning boundaries use actual factory
+ok 49 - nce1-29: first attempt, targeted teaching and local meaning boundaries use actual factory
+  ---
+  duration_ms: 0.876458
+  type: 'test'
+  ...
+# Subtest: nce1-29: help/source cannot become fresh evidence; preserve original on correction/retry
+ok 50 - nce1-29: help/source cannot become fresh evidence; preserve original on correction/retry
+  ---
+  duration_ms: 2.882917
+  type: 'test'
+  ...
+# Subtest: nce1-29: exact raw drafts/events restore and foreign course raw rejected
+ok 51 - nce1-29: exact raw drafts/events restore and foreign course raw rejected
+  ---
+  duration_ms: 0.905875
+  type: 'test'
+  ...
+# Subtest: nce1-29: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+ok 52 - nce1-29: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+  ---
+  duration_ms: 7.100958
+  type: 'test'
+  ...
+# Subtest: nce1-31: first attempt, targeted teaching and local meaning boundaries use actual factory
+ok 53 - nce1-31: first attempt, targeted teaching and local meaning boundaries use actual factory
+  ---
+  duration_ms: 0.419792
+  type: 'test'
+  ...
+# Subtest: nce1-31: help/source cannot become fresh evidence; preserve original on correction/retry
+ok 54 - nce1-31: help/source cannot become fresh evidence; preserve original on correction/retry
+  ---
+  duration_ms: 2.344083
+  type: 'test'
+  ...
+# Subtest: nce1-31: exact raw drafts/events restore and foreign course raw rejected
+ok 55 - nce1-31: exact raw drafts/events restore and foreign course raw rejected
+  ---
+  duration_ms: 1.026625
+  type: 'test'
+  ...
+# Subtest: nce1-31: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+ok 56 - nce1-31: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+  ---
+  duration_ms: 6.636083
+  type: 'test'
+  ...
+# Subtest: nce1-33: first attempt, targeted teaching and local meaning boundaries use actual factory
+ok 57 - nce1-33: first attempt, targeted teaching and local meaning boundaries use actual factory
+  ---
+  duration_ms: 0.411917
+  type: 'test'
+  ...
+# Subtest: nce1-33: help/source cannot become fresh evidence; preserve original on correction/retry
+ok 58 - nce1-33: help/source cannot become fresh evidence; preserve original on correction/retry
+  ---
+  duration_ms: 2.421583
+  type: 'test'
+  ...
+# Subtest: nce1-33: exact raw drafts/events restore and foreign course raw rejected
+ok 59 - nce1-33: exact raw drafts/events restore and foreign course raw rejected
+  ---
+  duration_ms: 0.830042
+  type: 'test'
+  ...
+# Subtest: nce1-33: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+ok 60 - nce1-33: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+  ---
+  duration_ms: 7.583833
+  type: 'test'
+  ...
+# Subtest: nce1-35: first attempt, targeted teaching and local meaning boundaries use actual factory
+ok 61 - nce1-35: first attempt, targeted teaching and local meaning boundaries use actual factory
+  ---
+  duration_ms: 0.545459
+  type: 'test'
+  ...
+# Subtest: nce1-35: help/source cannot become fresh evidence; preserve original on correction/retry
+ok 62 - nce1-35: help/source cannot become fresh evidence; preserve original on correction/retry
+  ---
+  duration_ms: 2.608625
+  type: 'test'
+  ...
+# Subtest: nce1-35: exact raw drafts/events restore and foreign course raw rejected
+ok 63 - nce1-35: exact raw drafts/events restore and foreign course raw rejected
+  ---
+  duration_ms: 0.898167
+  type: 'test'
+  ...
+# Subtest: nce1-35: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+ok 64 - nce1-35: synthetic 24h + 7d/1d gates, two distinct banks, finite exhaustion
+  ---
+  duration_ms: 6.086334
+  type: 'test'
+  ...
+# Subtest: all six independent envelope and content versions are isolated
+ok 65 - all six independent envelope and content versions are isolated
+  ---
+  duration_ms: 0.435458
+  type: 'test'
+  ...
+1..65
+# tests 65
+# suites 0
+# pass 65
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4414.523416

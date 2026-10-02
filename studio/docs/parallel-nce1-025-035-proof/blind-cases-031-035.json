@@ -1,0 +1,6066 @@
+[
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is she doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What's she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What’s she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "what is she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What was she doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is she not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is she doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is she doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "Where is she doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is she doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He's waiting.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He’s waiting.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "She is waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is not waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He was waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He are waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It's chasing a ball.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It’s chasing a ball.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "He is chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is not chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It was chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It are chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is he doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What's he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What’s he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "what is he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is you doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What was he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is he not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is he doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is he doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "Where is he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is he doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She's cutting paper.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She’s cutting paper.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "He is cutting paper.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is not cutting paper.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She was cutting paper.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She are cutting paper.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It's sleeping.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It’s sleeping.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "He is sleeping.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is not sleeping.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It was sleeping.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It are sleeping.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is she doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What's she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What’s she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "what is she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What was she doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is she not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is she doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is she doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "Where is she doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is she doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She's drawing a map.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She’s drawing a map.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "He is drawing a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is not drawing a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She was drawing a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She are drawing a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming across the river.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming across the river",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It's swimming across the river.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It’s swimming across the river.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "He is swimming across the river.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is not swimming across the river.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It was swimming across the river.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming across the river?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming across the river!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming across the river..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It are swimming across the river.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming along the river.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is he doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What's he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What’s he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "what is he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is you doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What was he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is he not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is he doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is he doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "Where is he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is he doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He's opening a box.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He’s opening a box.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "She is opening a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is not opening a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He was opening a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He are opening a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping over a box.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping over a box",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It's jumping over a box.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It’s jumping over a box.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "He is jumping over a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is not jumping over a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It was jumping over a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping over a box?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping over a box!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping over a box..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It are jumping over a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping into a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is he doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What's he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What’s he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "what is he doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is you doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What was he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is he not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is he doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is he doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "Where is he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is he doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She's washing a cup.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She’s washing a cup.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "He is washing a cup.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is not washing a cup.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She was washing a cup.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She are washing a cup.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It's climbing a wall.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It’s climbing a wall.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "He is climbing a wall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is not climbing a wall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It was climbing a wall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It are climbing a wall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is she doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What's she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What’s she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "what is she doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What was she doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is she not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is she doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is she doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "Where is she doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is she doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He's reading a book.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He’s reading a book.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "She is reading a book.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is not reading a book.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He was reading a book.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He are reading a book.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It's eating a leaf.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It’s eating a leaf.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "He is eating a leaf.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is not eating a leaf.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It was eating a leaf.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It are eating a leaf.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are they doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What're they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What’re they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "what are they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What were they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are they not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are they doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are they doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "Where are they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are they doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They're carrying a box.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They’re carrying a box.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "He is carrying a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are not carrying a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They were carrying a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They is carrying a box.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "the students are drawing.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "大小写输入变体，词序和语法完整。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The student is drawing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are not drawing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students were drawing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students is drawing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are they doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What're they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What’re they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "what are they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What were they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are they not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are they doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are they doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "Where are they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are they doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They're sitting.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They’re sitting.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "He is sitting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are not sitting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They were sitting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They is sitting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "the dogs are chasing a ball.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "大小写输入变体，词序和语法完整。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dog is chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are not chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs were chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs is chasing a ball.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are they doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What're they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What’re they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "what are they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What were they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are they not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are they doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are they doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "Where are they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are they doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding through the park.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding through the park",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They're riding through the park.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They’re riding through the park.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "He is riding through the park.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are not riding through the park.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They were riding through the park.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding through the park?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding through the park!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding through the park..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They is riding through the park.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding around the park.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "mia and leo are checking a map.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "大小写输入变体，词序和语法完整。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia is checking a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are not checking a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo were checking a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo is checking a map.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are they doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What're they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What’re they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "what are they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What were they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are they not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are they doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are they doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "Where are they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are they doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They're waiting.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They’re waiting.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "He is waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are not waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They were waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They is waiting.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "the nurses are opening boxes.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "大小写输入变体，词序和语法完整。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurse is opening boxes.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are not opening boxes.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses were opening boxes.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses is opening boxes.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are they doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What're they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What’re they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "what are they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What were they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are they not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are they doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are they doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "Where are they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are they doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They're hanging a picture.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They’re hanging a picture.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "He is hanging a picture.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are not hanging a picture.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They were hanging a picture.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They is hanging a picture.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying over the field.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying over the field",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "the drones are flying over the field.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "大小写输入变体，词序和语法完整。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drone is flying over the field.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are not flying over the field.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones were flying over the field.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying over the field?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying over the field!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying over the field..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones is flying over the field.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying under the field.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are they doing?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What're they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What’re they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "what are they doing?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are he doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What were they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are they not doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are they doing.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are they doing",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "Where are they doing?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are they doing??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They're looking at a ferry.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They’re looking at a ferry.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "He is looking at a ferry.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are not looking at a ferry.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They were looking at a ferry.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They is looking at a ferry.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry in the room.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文但额外地点超出指定动作及词汇输出；不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking along a path.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking along a path",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "ava and noah are walking along a path.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "大小写输入变体，词序和语法完整。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava is walking along a path.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are not walking along a path.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah were walking along a path.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking along a path?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking along a path!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking along a path..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah is walking along a path.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking across a path.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is the museum?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where's the museum?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where’s the museum?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "where is the museum?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is a museum?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where was the museum?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is not the museum?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is the museum.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is the museum",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "What is the museum?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is the museum??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is beside the station.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is beside the station",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe's beside the station.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe’s beside the station.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "A cafe is beside the station.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is not beside the station.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe was beside the station.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is beside the station?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is beside the station!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is beside the station..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe are beside the station.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is inside the station.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going into the gym.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going into the gym",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They're going into the gym.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They’re going into the gym.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "He is going into the gym.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are not going into the gym.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They were going into the gym.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going into the gym?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going into the gym!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going into the gym..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They is going into the gym.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going out of the gym.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the library?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where's the library?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where’s the library?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "where is the library?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the museum?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where was the library?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is not the library?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the library.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the library",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "What is the library?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the library??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is between two hills.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is between two hills",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower's between two hills.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower’s between two hills.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "A tower is between two hills.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is not between two hills.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower was between two hills.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is between two hills?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is between two hills!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is between two hills..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower are between two hills.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is behind two hills.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking along the bank.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking along the bank",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They're walking along the bank.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They’re walking along the bank.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "He is walking along the bank.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are not walking along the bank.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They were walking along the bank.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking along the bank?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking along the bank!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking along the bank..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They is walking along the bank.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking across the bank.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayaks?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where're the kayaks?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where’re the kayaks?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "where are the kayaks?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayak?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where were the kayaks?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are not the kayaks?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayaks.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayaks",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "What are the kayaks?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayaks??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is between two windows.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is between two windows",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit's between two windows.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit’s between two windows.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "A exit is between two windows.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is not between two windows.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit was between two windows.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is between two windows?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is between two windows!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is between two windows..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit are between two windows.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is beside two windows.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming out of the hall.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming out of the hall",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They're coming out of the hall.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They’re coming out of the hall.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "He is coming out of the hall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are not coming out of the hall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They were coming out of the hall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming out of the hall?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming out of the hall!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming out of the hall..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They is coming out of the hall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming into the hall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the ticket office?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where's the ticket office?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where’s the ticket office?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "where is the ticket office?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the office?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where was the ticket office?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is not the ticket office?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the ticket office.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the ticket office",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "What is the ticket office?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the ticket office??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is in a valley.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is in a valley",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse's in a valley.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse’s in a valley.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "A warehouse is in a valley.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is not in a valley.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse was in a valley.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is in a valley?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is in a valley!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is in a valley..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse are in a valley.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is above a valley.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking across the square.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking across the square",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They're walking across the square.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They’re walking across the square.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "He is walking across the square.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are not walking across the square.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They were walking across the square.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking across the square?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking across the square!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking across the square..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They is walking across the square.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking along the square.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the boxes?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where're the boxes?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where’re the boxes?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "where are the boxes?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the box?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where were the boxes?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are not the boxes?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the boxes.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the boxes",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "What are the boxes?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the boxes??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is beside the post office.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is beside the post office",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office's beside the post office.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office’s beside the post office.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "A office is beside the post office.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is not beside the post office.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office was beside the post office.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is beside the post office?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is beside the post office!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is beside the post office..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office are beside the post office.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is behind the post office.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going into the gallery.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going into the gallery",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They're going into the gallery.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They’re going into the gallery.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "He is going into the gallery.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are not going into the gallery.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They were going into the gallery.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going into the gallery?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going into the gallery!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going into the gallery..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They is going into the gallery.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going out of the gallery.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the kitchen?",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where's the kitchen?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "常用或口语中合理的疑问词与be缩写；撇号属于缩写内部，不改变句末问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where’s the kitchen?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号，语义和语法不变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "where is the kitchen?",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "输入大小写变体，保留完整词序和问号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the hall?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "人称、数量或指定询问对象改变，不满足题面。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where was the kitchen?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "询问过去，偏离当前观察/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is not the kitchen?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "加入否定改变问题范围，不再是指定普通动作/位置询问。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the kitchen.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文问句内容正确但用句号，违反题干明确要求的英文问号输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the kitchen",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文词序正确但缺失题干明确要求的末尾英文问号，不是英文内容错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "What is the kitchen?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "疑问词改变，询问动作与位置的功能不符。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the kitchen??",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "两个问号违反只用一个英文问号的明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is beside the school.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is beside the school",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park's beside the school.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park’s beside the school.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "A park is beside the school.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is not beside the school.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park was beside the school.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is beside the school?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is beside the school!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is beside the school..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park are beside the school.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "单数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is inside the school.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming across the lake.",
+    "expected": true,
+    "role": "first",
+    "reason": "依据题面独立首答，首次黑箱检验前固定。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming across the lake",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "题干明确允许省略陈述句末标点。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They're swimming across the lake.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "be的合理肯定缩写；包括名词后is缩写，不改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They’re swimming across the lake.",
+    "expected": true,
+    "role": "equivalent",
+    "reason": "合理缩写使用弯撇号。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "He is swimming across the lake.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "指定主语、人称、数量或限定词被改变。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are not swimming across the lake.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "题干要求肯定事实，否定改变意义。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They were swimming across the lake.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "过去时不报告当前动作/当前位置。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming across the lake?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "陈述词序使用问号，违反题干明确陈述标点限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming across the lake!",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文内容正确但使用感叹号，违反题干明确输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming across the lake..",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "重复句号违反只允许一个句号或不加末尾标点的输出限制。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They is swimming across the lake.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "复数主语be一致性错误。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming along the lake.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "位置关系或运动路线/方向改变。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is she doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What is she doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-action-question",
+    "answer": "What does she do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-person-action",
+    "answer": "He is waiting right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "diagnostic-n31-animal-action",
+    "answer": "It is chasing a ball right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is he doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What is he doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-action-question",
+    "answer": "What does he do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-person-action",
+    "answer": "She is cutting paper right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "guided-n31-animal-action",
+    "answer": "It is sleeping right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is she doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What is she doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-action-question",
+    "answer": "What does she do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-person-action",
+    "answer": "She is drawing a map right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming across the river now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming across the river right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "independent-n31-animal-action",
+    "answer": "It is swimming in the river.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "in只表达所在区域，不能替代从一侧到另一侧的横穿路线。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is he doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What is he doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-action-question",
+    "answer": "What does he do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-person-action",
+    "answer": "He is opening a box right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping over a box now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "repair-n31-animal-action",
+    "answer": "It is jumping over a box right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is he doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What is he doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-action-question",
+    "answer": "What does he do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-person-action",
+    "answer": "She is washing a cup right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-a-n31-animal-action",
+    "answer": "It is climbing a wall right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is she doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What is she doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-action-question",
+    "answer": "What does she do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-person-action",
+    "answer": "He is reading a book right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-31",
+    "id": "review-b-n31-animal-action",
+    "answer": "It is eating a leaf right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are they doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What are they doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-plural-question",
+    "answer": "What do they do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-they-action",
+    "answer": "They are carrying a box right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "diagnostic-n33-named-plural-action",
+    "answer": "The students are drawing right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are they doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What are they doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-plural-question",
+    "answer": "What do they do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-they-action",
+    "answer": "They are sitting right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "guided-n33-named-plural-action",
+    "answer": "The dogs are chasing a ball right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are they doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What are they doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-plural-question",
+    "answer": "What do they do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding through the park now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-they-action",
+    "answer": "They are riding through the park right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "independent-n33-named-plural-action",
+    "answer": "Mia and Leo are checking a map right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are they doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What are they doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-plural-question",
+    "answer": "What do they do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-they-action",
+    "answer": "They are waiting right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "repair-n33-named-plural-action",
+    "answer": "The nurses are opening boxes right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are they doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What are they doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-plural-question",
+    "answer": "What do they do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-they-action",
+    "answer": "They are hanging a picture right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying over the field now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-a-n33-named-plural-action",
+    "answer": "The drones are flying over the field right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are they doing now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What are they doing right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-plural-question",
+    "answer": "What do they do?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "一般现在时询问习惯/职业，偏离题面当前动作。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-they-action",
+    "answer": "They are looking at a ferry right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking along a path now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking along a path right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-33",
+    "id": "review-b-n33-named-plural-action",
+    "answer": "Ava and Noah are walking towards a path.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "towards只表达朝向，不能替代沿行路线。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is the museum now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is the museum right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-location-question",
+    "answer": "Where is the museum located?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文位置问句自然，但located是额外词汇/成分，超出仅基本词汇的明确输出限制；不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is beside the station now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-static-location",
+    "answer": "The cafe is beside the station right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going into the gym now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are going into the gym right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "diagnostic-n35-movement-direction",
+    "answer": "They are in the gym.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "只说静态位置，丢失正在走入的运动方向。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the library now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the library right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-location-question",
+    "answer": "Where is the library located?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文位置问句自然，但located是额外词汇/成分，超出仅基本词汇的明确输出限制；不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is between two hills now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-static-location",
+    "answer": "The tower is between two hills right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking along the bank now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking along the bank right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "guided-n35-movement-direction",
+    "answer": "They are walking towards the bank.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "towards只表达朝向，不能替代沿行路线。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayaks now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayaks right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-location-question",
+    "answer": "Where are the kayaks located?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文位置问句自然，但located是额外词汇/成分，超出仅基本词汇的明确输出限制；不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is between two windows now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-static-location",
+    "answer": "The exit is between two windows right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming out of the hall now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming out of the hall right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "independent-n35-movement-direction",
+    "answer": "They are coming outside the hall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "outside只给相对地点，未保留指定走出out of方向；不是同义路线。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the ticket office now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the ticket office right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-location-question",
+    "answer": "Where is the ticket office located?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文位置问句自然，但located是额外词汇/成分，超出仅基本词汇的明确输出限制；不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is in a valley now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-static-location",
+    "answer": "The warehouse is in a valley right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking across the square now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking across the square right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "repair-n35-movement-direction",
+    "answer": "They are walking in the square.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "in只表达所在区域，不能替代从一侧到另一侧的横穿路线。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the boxes now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the boxes right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-location-question",
+    "answer": "Where are the boxes located?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文位置问句自然，但located是额外词汇/成分，超出仅基本词汇的明确输出限制；不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is beside the post office now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-static-location",
+    "answer": "The office is beside the post office right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going into the gallery now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are going into the gallery right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-a-n35-movement-direction",
+    "answer": "They are in the gallery.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "只说静态位置，丢失正在走入的运动方向。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the kitchen now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the kitchen right now?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-location-question",
+    "answer": "Where is the kitchen located?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "英文位置问句自然，但located是额外词汇/成分，超出仅基本词汇的明确输出限制；不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is beside the school now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-static-location",
+    "answer": "The park is beside the school right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming across the lake now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming across the lake right now.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "自然英文当前时间副词，但最终题干明确禁止时间副词，不是错英文。"
+  },
+  {
+    "course": "nce1-35",
+    "id": "review-b-n35-movement-direction",
+    "answer": "They are swimming in the lake.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "in只表达所在区域，不能替代从一侧到另一侧的横穿路线。"
+  }
+]

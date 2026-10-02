@@ -1,0 +1,544 @@
+[
+  {
+    "group": "NCE1-25",
+    "media": [
+      {
+        "id": "m_b856977e535e0613f384349c26b507ed",
+        "name": "025&026－Mrs. Smith's Kitchen.lrc",
+        "type": "text/plain",
+        "book": "NCE1",
+        "lesson": 25,
+        "sourceLessons": [
+          25,
+          26
+        ],
+        "sha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+        "parts": [
+          {
+            "path": "/materials/3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091/0000.bin",
+            "size": 797
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 25 课，未提供偶数课独立字幕。",
+        "bytesVerified": 797,
+        "digestMatches": true
+      },
+      {
+        "id": "m_1f1ab8051aa5daa4622e4e7d72511d70",
+        "name": "025&026－Mrs. Smith's Kitchen.mp3",
+        "type": "audio/mpeg",
+        "book": "NCE1",
+        "lesson": 25,
+        "sourceLessons": [
+          25,
+          26
+        ],
+        "sha256": "b6cfd111a22c08fc8351658b8b34ad1e7a435999d36fb5820a52ec5b33a01410",
+        "parts": [
+          {
+            "path": "/materials/b6cfd111a22c08fc8351658b8b34ad1e7a435999d36fb5820a52ec5b33a01410/0000.bin",
+            "size": 1381683
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 25 课，未提供偶数课独立字幕。",
+        "bytesVerified": 1381683,
+        "digestMatches": true
+      }
+    ],
+    "comic": {
+      "sourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+      "pageSha256": "d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f",
+      "mode": "lesson",
+      "size": [
+        1500,
+        2123
+      ],
+      "boxes": [
+        [
+          0.09,
+          0.16156,
+          0.70533,
+          0.18653
+        ]
+      ],
+      "linePanels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "comicBytesVerified": 337109,
+    "audibility": "not-verified",
+    "evenLessonEvidence": "Paired sourceLessons metadata plus textbook grammar index; no independent even-lesson subtitle/audio assumed."
+  },
+  {
+    "group": "NCE1-27",
+    "media": [
+      {
+        "id": "m_db8cc7b1e5eabc955a6ced9f7299c092",
+        "name": "027&028－Mrs. Smith's Living Room.lrc",
+        "type": "text/plain",
+        "book": "NCE1",
+        "lesson": 27,
+        "sourceLessons": [
+          27,
+          28
+        ],
+        "sha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+        "parts": [
+          {
+            "path": "/materials/f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd/0000.bin",
+            "size": 905
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 27 课，未提供偶数课独立字幕。",
+        "bytesVerified": 905,
+        "digestMatches": true
+      },
+      {
+        "id": "m_21ce56e7e92c6b9ea0356187e5370428",
+        "name": "027&028－Mrs. Smith's Living Room.mp3",
+        "type": "audio/mpeg",
+        "book": "NCE1",
+        "lesson": 27,
+        "sourceLessons": [
+          27,
+          28
+        ],
+        "sha256": "e794222fa2566b32c35cb023937078840530314e86cb38d7ed9b3597f3b1acb1",
+        "parts": [
+          {
+            "path": "/materials/e794222fa2566b32c35cb023937078840530314e86cb38d7ed9b3597f3b1acb1/0000.bin",
+            "size": 1488022
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 27 课，未提供偶数课独立字幕。",
+        "bytesVerified": 1488022,
+        "digestMatches": true
+      }
+    ],
+    "comic": {
+      "sourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+      "pageSha256": "d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79",
+      "mode": "lesson",
+      "size": [
+        1500,
+        2123
+      ],
+      "boxes": [
+        [
+          0.08467,
+          0.14461,
+          0.74733,
+          0.29487
+        ]
+      ],
+      "linePanels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "comicBytesVerified": 372840,
+    "audibility": "not-verified",
+    "evenLessonEvidence": "Paired sourceLessons metadata plus textbook grammar index; no independent even-lesson subtitle/audio assumed."
+  },
+  {
+    "group": "NCE1-29",
+    "media": [
+      {
+        "id": "m_ebbfd873517a2c75625b6439170f23a1",
+        "name": "029&030－Come In, Amy..lrc",
+        "type": "text/plain",
+        "book": "NCE1",
+        "lesson": 29,
+        "sourceLessons": [
+          29,
+          30
+        ],
+        "sha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+        "parts": [
+          {
+            "path": "/materials/05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7/0000.bin",
+            "size": 627
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 29 课，未提供偶数课独立字幕。",
+        "bytesVerified": 627,
+        "digestMatches": true
+      },
+      {
+        "id": "m_2f9ae5debf63d30213820605ab285c5b",
+        "name": "029&030－Come In, Amy..mp3",
+        "type": "audio/mpeg",
+        "book": "NCE1",
+        "lesson": 29,
+        "sourceLessons": [
+          29,
+          30
+        ],
+        "sha256": "4c99a7ab13dc598649b48cbfe887c74e19c2c088d87d0d348f7cab1ba36f626e",
+        "parts": [
+          {
+            "path": "/materials/4c99a7ab13dc598649b48cbfe887c74e19c2c088d87d0d348f7cab1ba36f626e/0000.bin",
+            "size": 1094363
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 29 课，未提供偶数课独立字幕。",
+        "bytesVerified": 1094363,
+        "digestMatches": true
+      }
+    ],
+    "comic": {
+      "sourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+      "pageSha256": "9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49",
+      "mode": "panels",
+      "size": [
+        1500,
+        2123
+      ],
+      "boxes": [
+        [
+          0.64333,
+          0.15167,
+          0.25733,
+          0.09609
+        ],
+        [
+          0.64333,
+          0.24682,
+          0.25733,
+          0.09326
+        ],
+        [
+          0.64333,
+          0.3415,
+          0.25733,
+          0.09326
+        ],
+        [
+          0.64333,
+          0.43665,
+          0.25733,
+          0.09326
+        ],
+        [
+          0.64333,
+          0.53179,
+          0.25733,
+          0.09326
+        ],
+        [
+          0.64333,
+          0.62694,
+          0.25733,
+          0.09326
+        ],
+        [
+          0.64333,
+          0.72209,
+          0.25733,
+          0.09374
+        ],
+        [
+          0.64333,
+          0.81771,
+          0.25733,
+          0.09326
+        ]
+      ],
+      "linePanels": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "comicBytesVerified": 332479,
+    "audibility": "not-verified",
+    "evenLessonEvidence": "Paired sourceLessons metadata plus textbook grammar index; no independent even-lesson subtitle/audio assumed."
+  },
+  {
+    "group": "NCE1-31",
+    "media": [
+      {
+        "id": "m_ab29afbd5a37e13e003031760d652ca2",
+        "name": "031&032－Where's Sally.lrc",
+        "type": "text/plain",
+        "book": "NCE1",
+        "lesson": 31,
+        "sourceLessons": [
+          31,
+          32
+        ],
+        "sha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+        "parts": [
+          {
+            "path": "/materials/1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8/0000.bin",
+            "size": 769
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 31 课，未提供偶数课独立字幕。",
+        "bytesVerified": 769,
+        "digestMatches": true
+      },
+      {
+        "id": "m_ffbc86689ebb3552af86de95f97075de",
+        "name": "031&032－Where's Sally.mp3",
+        "type": "audio/mpeg",
+        "book": "NCE1",
+        "lesson": 31,
+        "sourceLessons": [
+          31,
+          32
+        ],
+        "sha256": "95257874f4524ee0d6a00c4dc8c295af64b515cf3e6d85ee48ad0e3b14aeab50",
+        "parts": [
+          {
+            "path": "/materials/95257874f4524ee0d6a00c4dc8c295af64b515cf3e6d85ee48ad0e3b14aeab50/0000.bin",
+            "size": 1169007
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 31 课，未提供偶数课独立字幕。",
+        "bytesVerified": 1169007,
+        "digestMatches": true
+      }
+    ],
+    "comic": {
+      "sourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+      "pageSha256": "ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177",
+      "mode": "lesson",
+      "size": [
+        1500,
+        2123
+      ],
+      "boxes": [
+        [
+          0.07,
+          0.18888,
+          0.75533,
+          0.28309
+        ]
+      ],
+      "linePanels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "comicBytesVerified": 376939,
+    "audibility": "not-verified",
+    "evenLessonEvidence": "Paired sourceLessons metadata plus textbook grammar index; no independent even-lesson subtitle/audio assumed."
+  },
+  {
+    "group": "NCE1-33",
+    "media": [
+      {
+        "id": "m_cea6cb9340d47c6b6aae09132182ec63",
+        "name": "033&034－A Fine Day.lrc",
+        "type": "text/plain",
+        "book": "NCE1",
+        "lesson": 33,
+        "sourceLessons": [
+          33,
+          34
+        ],
+        "sha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+        "parts": [
+          {
+            "path": "/materials/4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3/0000.bin",
+            "size": 772
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 33 课，未提供偶数课独立字幕。",
+        "bytesVerified": 772,
+        "digestMatches": true
+      },
+      {
+        "id": "m_48bcfa8da3d3e9f5a8a988417c3fe524",
+        "name": "033&034－A Fine Day.mp3",
+        "type": "audio/mpeg",
+        "book": "NCE1",
+        "lesson": 33,
+        "sourceLessons": [
+          33,
+          34
+        ],
+        "sha256": "87e8b774760bcd2488fb4f6bd9e3b9c8fc0b287a95f288bee9e0bda16c3b97dd",
+        "parts": [
+          {
+            "path": "/materials/87e8b774760bcd2488fb4f6bd9e3b9c8fc0b287a95f288bee9e0bda16c3b97dd/0000.bin",
+            "size": 1334135
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 33 课，未提供偶数课独立字幕。",
+        "bytesVerified": 1334135,
+        "digestMatches": true
+      }
+    ],
+    "comic": {
+      "sourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+      "pageSha256": "061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997",
+      "mode": "lesson",
+      "size": [
+        1500,
+        2123
+      ],
+      "boxes": [
+        [
+          0.096,
+          0.27885,
+          0.742,
+          0.17805
+        ]
+      ],
+      "linePanels": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "comicBytesVerified": 308331,
+    "audibility": "not-verified",
+    "evenLessonEvidence": "Paired sourceLessons metadata plus textbook grammar index; no independent even-lesson subtitle/audio assumed."
+  },
+  {
+    "group": "NCE1-35",
+    "media": [
+      {
+        "id": "m_659cded3692eb6e3eaa60fd933baf8ee",
+        "name": "035&036－Our Village.lrc",
+        "type": "text/plain",
+        "book": "NCE1",
+        "lesson": 35,
+        "sourceLessons": [
+          35,
+          36
+        ],
+        "sha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+        "parts": [
+          {
+            "path": "/materials/aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7/0000.bin",
+            "size": 970
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 35 课，未提供偶数课独立字幕。",
+        "bytesVerified": 970,
+        "digestMatches": true
+      },
+      {
+        "id": "m_a3a5ea1d1de4e1080e4279dc419b2a2b",
+        "name": "035&036－Our Village.mp3",
+        "type": "audio/mpeg",
+        "book": "NCE1",
+        "lesson": 35,
+        "sourceLessons": [
+          35,
+          36
+        ],
+        "sha256": "4707db85e0d4f41c4715f48a4cf3372e7c059eceef5ce61ff09402324c3e139b",
+        "parts": [
+          {
+            "path": "/materials/4707db85e0d4f41c4715f48a4cf3372e7c059eceef5ce61ff09402324c3e139b/0000.bin",
+            "size": 1598514
+          }
+        ],
+        "lessonNote": "文件名含合并课次；字幕仅标注第 35 课，未提供偶数课独立字幕。",
+        "bytesVerified": 1598514,
+        "digestMatches": true
+      }
+    ],
+    "comic": {
+      "sourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+      "pageSha256": "563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45",
+      "mode": "panels",
+      "size": [
+        1500,
+        2123
+      ],
+      "boxes": [
+        [
+          0.642,
+          0.16675,
+          0.26467,
+          0.09797
+        ],
+        [
+          0.64267,
+          0.3415,
+          0.266,
+          0.09986
+        ],
+        [
+          0.644,
+          0.51625,
+          0.266,
+          0.09797
+        ]
+      ],
+      "linePanels": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "comicBytesVerified": 255245,
+    "audibility": "not-verified",
+    "evenLessonEvidence": "Paired sourceLessons metadata plus textbook grammar index; no independent even-lesson subtitle/audio assumed."
+  }
+]

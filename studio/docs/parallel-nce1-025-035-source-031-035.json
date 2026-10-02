@@ -1,0 +1,307 @@
+{
+  "baseline": "d9c7c48a7d419c230be06bf81cc956d63b124649",
+  "authoring": "Original bounded tasks; no source dialogue copied into new scenarios. Language, grammar, and illustration metadata read without copying media.",
+  "groups": [
+    {
+      "groupId": "NCE1-31",
+      "lessons": [
+        31,
+        32
+      ],
+      "languageSourcePath": "/Users/finnlyu/Projects/.worktrees/english-ielts-map-20260930/studio/dist-online/language/NCE1/31.json",
+      "languagePath": "/language/NCE1/31.json",
+      "languageSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634",
+      "sourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+      "grammarEntry": {
+        "id": "NCE1-31",
+        "book": "NCE1",
+        "lesson": 31,
+        "lastLesson": 32,
+        "unit": null,
+        "title": "现在进行时：单数主语",
+        "category": "tense",
+        "terms": "what is doing present continuous",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 68
+          },
+          {
+            "section": "句型练习",
+            "page": 67
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 66
+          }
+        ],
+        "pages": [
+          66,
+          67,
+          68
+        ],
+        "references": []
+      },
+      "comicKey": "NCE1-31",
+      "comic": {
+        "sourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+        "pageSha256": "ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177",
+        "mode": "lesson",
+        "size": [
+          1500,
+          2123
+        ],
+        "boxes": [
+          [
+            0.07,
+            0.18888,
+            0.75533,
+            0.28309
+          ]
+        ],
+        "linePanels": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "targetMapping": [
+        {
+          "target": "action-question",
+          "label": "听单数What动作疑问",
+          "start": 21.45,
+          "end": 23.47
+        },
+        {
+          "target": "person-action",
+          "label": "听单个人的坐与攀爬动作",
+          "start": 23.47,
+          "end": 34.68
+        },
+        {
+          "target": "animal-action",
+          "label": "听单只动物当前动作和横穿路线",
+          "start": 46.89,
+          "end": 50.02
+        }
+      ],
+      "clipEndPolicy": "End timestamps use the next known row start. Source clips are references; original tasks use new scenarios.",
+      "sourceConsistency": true
+    },
+    {
+      "groupId": "NCE1-33",
+      "lessons": [
+        33,
+        34
+      ],
+      "languageSourcePath": "/Users/finnlyu/Projects/.worktrees/english-ielts-map-20260930/studio/dist-online/language/NCE1/33.json",
+      "languagePath": "/language/NCE1/33.json",
+      "languageSha256": "f2456985f96085333cbbca3c112500c5f08e9b77a4d938839514043f5ae2a82b",
+      "sourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+      "grammarEntry": {
+        "id": "NCE1-33",
+        "book": "NCE1",
+        "lesson": 33,
+        "lastLesson": 34,
+        "unit": null,
+        "title": "现在进行时：复数主语",
+        "category": "tense",
+        "terms": "what are they doing",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 72
+          },
+          {
+            "section": "句型练习",
+            "page": 71
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 70
+          }
+        ],
+        "pages": [
+          70,
+          71,
+          72
+        ],
+        "references": []
+      },
+      "comicKey": "NCE1-33",
+      "comic": {
+        "sourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+        "pageSha256": "061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997",
+        "mode": "lesson",
+        "size": [
+          1500,
+          2123
+        ],
+        "boxes": [
+          [
+            0.096,
+            0.27885,
+            0.742,
+            0.17805
+          ]
+        ],
+        "linePanels": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "targetMapping": [
+        {
+          "target": "plural-question",
+          "label": "听复数当前动作陈述；结合第71–72页迁移为What动作疑问",
+          "start": 31.78,
+          "end": 35.83
+        },
+        {
+          "target": "they-action",
+          "label": "听They are说明一组人的当前行走动作",
+          "start": 31.78,
+          "end": 35.83
+        },
+        {
+          "target": "named-plural-action",
+          "label": "听and连接的两个人作当前动作主语",
+          "start": 39.86,
+          "end": 45.73
+        }
+      ],
+      "clipEndPolicy": "End timestamps use the next known row start. Source clips are references; original tasks use new scenarios.",
+      "sourceConsistency": true
+    },
+    {
+      "groupId": "NCE1-35",
+      "lessons": [
+        35,
+        36
+      ],
+      "languageSourcePath": "/Users/finnlyu/Projects/.worktrees/english-ielts-map-20260930/studio/dist-online/language/NCE1/35.json",
+      "languagePath": "/language/NCE1/35.json",
+      "languageSha256": "6e73bd450b43f04513a33eaab88b16857e1dba49f27342e56846f024a0f0a66a",
+      "sourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+      "grammarEntry": {
+        "id": "NCE1-35",
+        "book": "NCE1",
+        "lesson": 35,
+        "lastLesson": 36,
+        "unit": null,
+        "title": "地点疑问句：Where…?",
+        "category": "question",
+        "terms": "where",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 76
+          },
+          {
+            "section": "句型练习",
+            "page": 75
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 74
+          }
+        ],
+        "pages": [
+          74,
+          75,
+          76
+        ],
+        "references": []
+      },
+      "comicKey": "NCE1-35",
+      "comic": {
+        "sourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+        "pageSha256": "563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45",
+        "mode": "panels",
+        "size": [
+          1500,
+          2123
+        ],
+        "boxes": [
+          [
+            0.642,
+            0.16675,
+            0.26467,
+            0.09797
+          ],
+          [
+            0.64267,
+            0.3415,
+            0.266,
+            0.09986
+          ],
+          [
+            0.644,
+            0.51625,
+            0.266,
+            0.09797
+          ]
+        ],
+        "linePanels": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "targetMapping": [
+        {
+          "target": "location-question",
+          "label": "听村庄位置事实；结合第75–76页Where句型练习转换为位置疑问",
+          "start": 23.5,
+          "end": 30.24
+        },
+        {
+          "target": "static-location",
+          "label": "听in与between说明静态位置",
+          "start": 23.5,
+          "end": 30.24
+        },
+        {
+          "target": "movement-direction",
+          "label": "听一组孩子当前从建筑内部向外移动",
+          "start": 71.52,
+          "end": 75.99
+        }
+      ],
+      "clipEndPolicy": "End timestamps use the next known row start. Source clips are references; original tasks use new scenarios.",
+      "sourceConsistency": true
+    }
+  ]
+}
