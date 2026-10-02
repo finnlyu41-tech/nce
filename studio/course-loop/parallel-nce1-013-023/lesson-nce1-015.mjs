@@ -8,7 +8,7 @@ export const lesson = {
     16
   ],
   "title": "第 15–16 课 · 从一个人到一群人",
-  "goal": "区分a/an单数职业名词、复数Are问句，并按说话者身份以we/they回答。",
+  "goal": "区分a/an单数职业名词、复数Are问句，按说话者身份以we/they回答，并用our说明一组人共同的物品。",
   "scope": "本课核对有限文字任务；未匹配仅表示未完成本题限定要求。自然自由表达由伙伴核对，不从文字记录推断听力、发音或长期掌握。",
   "prerequisites": [
     "已接触单数与复数、be及人称代词；所需词义和事实在题内给出。"
@@ -35,9 +35,9 @@ export const lesson = {
       },
       {
         "target": "plural-response",
-        "label": "听we否定短答",
-        "start": 21.4,
-        "end": 23.94
+        "label": "听they否定短答与our说明共同物品",
+        "start": 43.15,
+        "end": 53.07
       }
     ],
     "grammarPages": [
@@ -68,10 +68,10 @@ export const lesson = {
     {
       "target": "plural-response",
       "title": "回答的人决定we/they",
-      "explanation": "代表自己所在的一群人用we，报告另一群人用they。肯定短答Yes, we/they are不能把句末are缩成're；否定可用are not、aren't或we're/they're not。",
+      "explanation": "代表自己所在的一群人用we，报告另一群人用they。肯定短答Yes, we/they are不能把句末are缩成're；否定可用are not、aren't或we're/they're not。 our表示“我们的”，修饰所属物品，不作主语：Our cases are brown说明我们的多个箱子是棕色的。",
       "example": "No, we are not. / No, we aren't. / No, we're not.",
       "meaning": "不，我们不是。",
-      "check": "事实决定Yes/No，说话者是否包含在群体中决定we/they。",
+      "check": "事实决定Yes/No，说话者是否包含在群体中决定we/they。 说明共同物品时，our后接物品名词，复数物品用are。",
       "source": "plural-response"
     }
   ],
@@ -519,38 +519,37 @@ export const questions = [
     "novelty": "你问伙伴关于另外两位新邻居的国籍；他们不在对话中，国籍尚未知。"
   },
   {
-    "context": "你与同伴在酒店居住，但都不是工作人员。接待员问Are you employees?你代表两人否定。",
-    "prompt": "只写No加we和be的否定短答，不重复employees。使用本题指定的英文词，不另换同义词；使用be的一般现在时或其缩写。只写所要求的一句当前事实，不添加其他信息。可省略末尾标点或使用一个句号、感叹号（中英文均可）；不用问号。",
+    "context": "行李转盘旁，你与同伴已共同确认自己一方的多个行李箱是棕色，旁边别人的箱子是黑色。你向工作人员说明自己一方的箱子颜色。",
+    "prompt": "用our说“我们的行李箱是棕色的”。case=行李箱，brown=棕色的；保留复数物品。以Our cases起句，用be连接状态词。使用本题指定的英文词，不另换同义词；使用be的一般现在时。只写这一句肯定事实，可省略末尾标点或使用一个句号、感叹号（中英文均可），不用问号。",
     "accepted": [
-      "No, we are not.",
-      "No, we aren't.",
-      "No, we're not.",
-      "No we are not.",
-      "No we aren't.",
-      "No we're not."
+      "Our cases are brown."
     ],
     "counterexamples": [
       {
-        "answer": "No, they are not.",
-        "reason": "你回答自己和同伴。"
+        "answer": "We cases are brown.",
+        "reason": "修饰物品要用our，不用主语we。"
       },
       {
-        "answer": "Yes, we are.",
-        "reason": "住宿不表示受雇。"
+        "answer": "Our case is brown.",
+        "reason": "单件没有保留题目多个箱子。"
       },
       {
-        "answer": "No, we is not.",
-        "reason": "we必须用are。"
+        "answer": "Their cases are brown.",
+        "reason": "their把物主改成别人一方。"
+      },
+      {
+        "answer": "Our cases are black.",
+        "reason": "black是别人的箱子颜色。"
       }
     ],
-    "why": "居住地点不能推出职业；明确事实决定No。",
+    "why": "our是“我们的”，修饰复数cases；物品作为主语用are，brown对应己方已确认的颜色。",
     "form": "statement",
     "id": "review-a-n15-plural-response",
     "stage": "review-a",
     "target": "plural-response",
     "kind": "input",
-    "criterion": "只写No加we和be的否定短答，不重复employees。使用本题指定的英文词，不另换同义词；使用be的一般现在时或其缩写。只写所要求的一句当前事实，不添加其他信息。可省略末尾标点或使用一个句号、感叹号（中英文均可）；不用问号。",
-    "novelty": "你与同伴在酒店居住，但都不是工作人员。接待员问Are you employees?你代表两人否定。"
+    "criterion": "Our + cases + are + brown，明确共同所属的复数物品。",
+    "novelty": "在行李转盘以共同所属和颜色区分己方多个箱子与别人的箱子。"
   },
   {
     "context": "项目会议：Mia明确以she指代，现在是一位办公室助理。你只介绍这一职业。",

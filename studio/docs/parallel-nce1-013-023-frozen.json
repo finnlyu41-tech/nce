@@ -1,0 +1,479 @@
+{
+  "status": "frozen-six-local-candidates",
+  "createdAtUtc": "2026-10-02T15:45:59.739Z",
+  "repository": "finnlyu41-tech/nce",
+  "branch": "codex/parallel-nce1-013-023-20261002",
+  "frozenBase": "d9c7c48a7d419c230be06bf81cc956d63b124649",
+  "historicalCheckpoint": "48ce25f",
+  "observedRemoteHeads": {
+    "codex/english-studio-online-20260926": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+    "codex/ielts-map-20260930": "c6b9b0182317fba09d1957b9844d6edc63f51ac4"
+  },
+  "factory": {
+    "path": "studio/course-loop/model.mjs",
+    "sha256": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+    "byteIdenticalToObservedRemote": true,
+    "method": "direct import createCourseLoopModel(content); no model transformation"
+  },
+  "owner": "studio/course-loop/parallel-nce1-013-023/ and studio/docs/parallel-nce1-013-023-* only",
+  "publisher": "01a0fa39-c2a2-7239-87b4-b0a9c091f0ba",
+  "courses": [
+    {
+      "courseId": "nce1-13",
+      "lessons": [
+        13,
+        14
+      ],
+      "goal": "询问一件物品的颜色，使用his/her说明明确物主，并以it回答已确认的颜色。",
+      "questions": 18,
+      "teaching": 3,
+      "ownStatus": "awaiting-human-review",
+      "source": {
+        "groupId": "NCE1-13",
+        "route": "/#/nce/NCE1/13?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-13",
+        "languagePath": "/language/NCE1/13.json",
+        "languageSha256": "6a7c5c324a0a891c2fb0b7dc430ed2f38a3c99d3cc6ba526adbbc49e780dc0a7",
+        "comicKey": "NCE1-13",
+        "clips": [
+          {
+            "target": "colour-question",
+            "label": "听单件物品的颜色问句",
+            "start": 16.67,
+            "end": 20.46
+          },
+          {
+            "target": "possessive-colour",
+            "label": "听my说明自己的物品（his/her练习见14课）",
+            "start": 36.16,
+            "end": 39.22
+          },
+          {
+            "target": "it-colour",
+            "label": "听it回答颜色",
+            "start": 44.18,
+            "end": 47.12
+          }
+        ],
+        "grammarPages": [
+          30,
+          31,
+          32
+        ]
+      },
+      "comicPageSha256": "ab70c14637ab1766e5b746e12ed306ebea66ec241ad19d7d0b30216f4ffa69cd",
+      "file": "studio/course-loop/parallel-nce1-013-023/lesson-nce1-013.mjs"
+    },
+    {
+      "courseId": "nce1-15",
+      "lessons": [
+        15,
+        16
+      ],
+      "goal": "区分a/an单数职业名词、复数Are问句，按说话者身份以we/they回答，并用our说明一组人共同的物品。",
+      "questions": 18,
+      "teaching": 3,
+      "ownStatus": "awaiting-human-review",
+      "source": {
+        "groupId": "NCE1-15",
+        "route": "/#/nce/NCE1/15?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-15",
+        "languagePath": "/language/NCE1/15.json",
+        "languageSha256": "79644833a41795f8673516bd65dfdb8cb5094809c94ab711d6040bcfc7e23323",
+        "comicKey": "NCE1-15",
+        "clips": [
+          {
+            "target": "singular-article",
+            "label": "听复数游客职业（单数a/an练习见16课）",
+            "start": 56.09,
+            "end": 58.86
+          },
+          {
+            "target": "plural-question",
+            "label": "听Are you询问两人的国籍",
+            "start": 18.83,
+            "end": 21.4
+          },
+          {
+            "target": "plural-response",
+            "label": "听they否定短答与our说明共同物品",
+            "start": 43.15,
+            "end": 53.07
+          }
+        ],
+        "grammarPages": [
+          34,
+          35,
+          36
+        ]
+      },
+      "comicPageSha256": "0cab573bace98b04c1608d6c108fea47a36bc9563f37feeeb6c393ba1d633ab9",
+      "file": "studio/course-loop/parallel-nce1-013-023/lesson-nce1-015.mjs"
+    },
+    {
+      "courseId": "nce1-17",
+      "lessons": [
+        17,
+        18
+      ],
+      "goal": "询问已指明两人的职业，用they are加复数职业回答，并按已确认事实描述一群人的当前状态。",
+      "questions": 18,
+      "teaching": 3,
+      "ownStatus": "awaiting-human-review",
+      "source": {
+        "groupId": "NCE1-17",
+        "route": "/#/nce/NCE1/17?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-17",
+        "languagePath": "/language/NCE1/17.json",
+        "languageSha256": "c8a555bfd99eb9a4b382b8a79d6d27d5cf8fce22164ae77bb95bff4a29c42a87",
+        "comicKey": "NCE1-17",
+        "clips": [
+          {
+            "target": "jobs-question",
+            "label": "听their jobs询问多人的职业",
+            "start": 43.18,
+            "end": 46.6
+          },
+          {
+            "target": "plural-occupation",
+            "label": "听they are和复数职业",
+            "start": 46.6,
+            "end": 50.9
+          },
+          {
+            "target": "group-description",
+            "label": "听they否定当前状态",
+            "start": 60.67,
+            "end": 63.8
+          }
+        ],
+        "grammarPages": [
+          38,
+          39,
+          40
+        ]
+      },
+      "comicPageSha256": "ce531ae3188386c34e94e83121caa849a7b3b1348d851811aa63963995fbe5de",
+      "file": "studio/course-loop/parallel-nce1-013-023/lesson-nce1-017.mjs"
+    },
+    {
+      "courseId": "nce1-19",
+      "lessons": [
+        19,
+        20
+      ],
+      "goal": "用am/is/are说明当前状态；用him、her、us、them说明递物对象；询问当前状态并按事实作简短答复。",
+      "questions": 18,
+      "teaching": 3,
+      "ownStatus": "awaiting-human-review",
+      "source": {
+        "groupId": "NCE1-19",
+        "route": "/#/nce/NCE1/19?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-19",
+        "languagePath": "/language/NCE1/19.json",
+        "languageSha256": "253d96dfc107ca2447b8aa7e912f8b7f3869bcbd546f82883da1b8518f6abfe4",
+        "languageFileSha256": "4c78cafba77dabde17207843c0636dcb572c1a9d3a1ff69287dd7dc4a5c24ae8",
+        "comicKey": "NCE1-19",
+        "comicSha256": "9481fd016c92ec6d785cb76cf847e719ea7cce77cf6d103ef1df8c596a634083",
+        "comicPageSha256": "6f010f9ee53d667fd140a0411f9a7d74e71e82c7f9ae52403dc74ccb99b3d63d",
+        "grammarPages": [
+          42,
+          43,
+          44
+        ],
+        "clips": [
+          {
+            "target": "current-state",
+            "label": "听we are的状态陈述与缩写",
+            "start": 20.85,
+            "end": 25.26
+          },
+          {
+            "target": "recipient-request",
+            "label": "听递物情境；宾格请求见第20课练习",
+            "start": 36.94,
+            "end": 43.66,
+            "supportNote": "此片段只提供递物语境；Give him/her/us/them来自第20课句型和书面练习，不宣称课文录音直接示范四个宾格。"
+          },
+          {
+            "target": "status-exchange",
+            "label": "听状态问句与否定简答",
+            "start": 27.82,
+            "end": 32.52
+          }
+        ]
+      },
+      "comicPageSha256": "6f010f9ee53d667fd140a0411f9a7d74e71e82c7f9ae52403dc74ccb99b3d63d",
+      "file": "studio/course-loop/parallel-nce1-013-023/lesson-nce1-019.mjs"
+    },
+    {
+      "courseId": "nce1-21",
+      "lessons": [
+        21,
+        22
+      ],
+      "goal": "依据明确事实用his、her、our、their说明物主；请求给自己一件物品；用Which询问并用颜色加one选定单件物品。",
+      "questions": 18,
+      "teaching": 3,
+      "ownStatus": "awaiting-human-review",
+      "source": {
+        "groupId": "NCE1-21",
+        "route": "/#/nce/NCE1/21?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-21",
+        "languagePath": "/language/NCE1/21.json",
+        "languageSha256": "3f47339168baa47c8c88641e5476a72978b534aa8c35c7c14b65584ce16729ca",
+        "languageFileSha256": "016629990c2f51ec0d1291fd9cf82eb2299fa26c13bac20d77ff24de1c76c4d8",
+        "comicKey": "NCE1-21",
+        "comicSha256": "9481fd016c92ec6d785cb76cf847e719ea7cce77cf6d103ef1df8c596a634083",
+        "comicPageSha256": "980c4279acdf859479aa1c1e0a483c5e9a49dd17554e5dde53de57bbd5c3f2ad",
+        "grammarPages": [
+          46,
+          47,
+          48
+        ],
+        "clips": [
+          {
+            "target": "possessive-owner",
+            "label": "听单件物品的指示语境；物主限定词见第22课练习",
+            "start": 21.83,
+            "end": 24.33,
+            "supportNote": "片段示范指向单件物品，不示范his/her/our/their；这些物主限定词对应第22课句型与书面练习。"
+          },
+          {
+            "target": "single-request",
+            "label": "听Give me的单件请求",
+            "start": 16.7,
+            "end": 20.22
+          },
+          {
+            "target": "item-selection",
+            "label": "听Which询问与颜色加one选择",
+            "start": 20.22,
+            "end": 29.44
+          }
+        ]
+      },
+      "comicPageSha256": "980c4279acdf859479aa1c1e0a483c5e9a49dd17554e5dde53de57bbd5c3f2ad",
+      "file": "studio/course-loop/parallel-nce1-013-023/lesson-nce1-021.mjs"
+    },
+    {
+      "courseId": "nce1-23",
+      "lessons": [
+        23,
+        24
+      ],
+      "goal": "用Give + 宾格 + some + 复数物品说明给谁多件东西；用Which + 复数物品或Which ones询问；用位置加ones选定一组。",
+      "questions": 18,
+      "teaching": 3,
+      "ownStatus": "awaiting-human-review",
+      "source": {
+        "groupId": "NCE1-23",
+        "route": "/#/nce/NCE1/23?tab=listen",
+        "mapRoute": "/map/#/learn/nce1-23",
+        "languagePath": "/language/NCE1/23.json",
+        "languageSha256": "e81c6aee4443fc3580b423bd1d0e5469d59f70ea8e2148baa8f6def654a624c7",
+        "languageFileSha256": "0074a4dee0b5ac390322804fd353351a0b1e750830636b8d5d814781d07de5c3",
+        "comicKey": "NCE1-23",
+        "comicSha256": "9481fd016c92ec6d785cb76cf847e719ea7cce77cf6d103ef1df8c596a634083",
+        "comicPageSha256": "ab5c88b22213cec8fd6370aade1c086b83c7f2222f96fc1742d29c570dc14997",
+        "grammarPages": [
+          50,
+          51,
+          52
+        ],
+        "clips": [
+          {
+            "target": "plural-request",
+            "label": "听some加复数的递物请求；扩展宾格见第24课练习",
+            "start": 17.14,
+            "end": 21.18,
+            "supportNote": "录音示范Give me some glasses；him/her/us/them接收者变换来自第24课句型与书面练习。"
+          },
+          {
+            "target": "plural-question",
+            "label": "听Which加复数物品询问",
+            "start": 21.18,
+            "end": 25.83
+          },
+          {
+            "target": "location-selection",
+            "label": "听ones加on位置选择",
+            "start": 28.58,
+            "end": 31.4
+          }
+        ]
+      },
+      "comicPageSha256": "ab5c88b22213cec8fd6370aade1c086b83c7f2222f96fc1742d29c570dc14997",
+      "file": "studio/course-loop/parallel-nce1-013-023/lesson-nce1-023.mjs"
+    }
+  ],
+  "totals": {
+    "groups": 6,
+    "textbookLessons": 12,
+    "tasks": 108,
+    "teachingEntries": 18,
+    "openExpressions": 6
+  },
+  "blindReview": {
+    "method": "two independent prompt-only AI reviewers; original first responses stored before Boolean actual-factory probes; final altered rows explicitly re-reviewed",
+    "currentFirstAnswers": 108,
+    "currentFirstAnswersMatched": 108,
+    "totalProbes": 2092,
+    "positiveProbes": 616,
+    "negativeProbes": 1476,
+    "mismatches": 0,
+    "unresolved": 0,
+    "reviews": [
+      {
+        "courses": [
+          13,
+          15,
+          17
+        ],
+        "promptSha256": "b1c09ecaf7613b74797693da03857d69e5d27a36afbf366b1e7c5ec6596428a2",
+        "summary": {
+          "questionsReviewed": 54,
+          "unchangedPromptRowsConfirmed": 53,
+          "replacementPromptRowsReviewed": 1,
+          "firstAnswersAccepted": 54,
+          "totalProbes": 792,
+          "positiveProbes": 262,
+          "negativeProbes": 530,
+          "mismatches": 0,
+          "replacementProbes": 24,
+          "unresolvedFindings": []
+        },
+        "resolvedFindings": [
+          {
+            "issue": "n13 natural of/possessive/colour-is-contraction questions",
+            "resolution": "Retained natural valid variants; final production probes all accepted."
+          },
+          {
+            "issue": "n17 What're their jobs?",
+            "resolution": "Final production probes accepted."
+          },
+          {
+            "issue": "Natural vocabulary synonyms, works-as occupations, feel physical states exceed unstated original exercise scope",
+            "resolution": "Final prompt explicitly requires given English vocabulary and present be or contractions. These are now excluded by stated exercise scope, not classified as bad English."
+          },
+          {
+            "issue": "Replacement shared ownership our question could otherwise permit colour-of/possessive-colour paraphrases while targeting Our cases are brown.",
+            "resolution": "Final prompt explicitly begins Our cases and joins state with present be. Natural The colour of our cases is brown./Our cases' colour is brown. are now outside stated exercise frame; production correctly rejects both."
+          }
+        ]
+      },
+      {
+        "courses": [
+          19,
+          21,
+          23
+        ],
+        "promptSha256": "5bb606abbd284188ce8e25797821f9a9572246516702bf25ef138b0e011253bd",
+        "probes": 1300,
+        "positives": 354,
+        "negatives": 946,
+        "newSheRow": {
+          "id": "review-b-n19-current-state",
+          "independentAnswer": "She is all right.",
+          "independentSolvedBeforeProbe": true,
+          "removedObsoleteOldRowCases": 25,
+          "replacementProbeCount": 38,
+          "positiveCount": 9,
+          "negativeCount": 29,
+          "mismatchCount": 0,
+          "currentGoalFit": "Adds singular third-person is to am/is/are goal"
+        },
+        "resolvedScopeIssues": [
+          {
+            "family": "Give object order",
+            "originalAffectedCount": 15,
+            "finalResolution": "All18 Give prompts require recipient before object and prohibit to structure"
+          },
+          {
+            "family": "state feel alternative",
+            "originalAffectedCount": 5,
+            "finalResolution": "All6 current-state prompts explicitly require present be or contraction"
+          },
+          {
+            "family": "question feel alternative",
+            "originalAffectedCount": 3,
+            "finalResolution": "All3 status questions require present be before subject"
+          },
+          {
+            "family": "full Which question alternative",
+            "originalAffectedCount": 9,
+            "finalResolution": "All9 Which questions explicitly restrict to two words Which plus named noun or one/ones"
+          },
+          {
+            "family": "relative location clause alternative",
+            "originalAffectedCount": 5,
+            "finalResolution": "All6 location answers explicitly restrict to The ones,on,and named location phrase"
+          },
+          {
+            "family": "repair scenario wording",
+            "originalAffectedCount": 9,
+            "finalResolution": "New repair scenarios no longer direct the learner to rewrite an old answer as the new scenario"
+          },
+          {
+            "family": "new she item current-time adverb",
+            "originalAffectedCount": 1,
+            "finalResolution": "New row explicitly prohibits now and other extra words; canonical and contractions pass; internal/final now variants reject"
+          }
+        ]
+      }
+    ],
+    "historicalEvidence": "Old checkpoint/report and original first answers preserved separately; obsolete old task variants removed from frozen probe sets."
+  },
+  "tests": {
+    "node": {
+      "tests": 62,
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0,
+      "components": {
+        "ownedContentAndFactory": 33,
+        "sourceAssets": 6,
+        "originalCL00Model": 23
+      },
+      "logSha256": "3de766795947904ee2e1dd5954f0da8d3e628b4cee80a615e1d982bf9da07487"
+    },
+    "preview": {
+      "allSixOriginalRun": {
+        "checks": 36,
+        "exceptions": 0,
+        "receiptSha256": "dfa56f10e9dee3b82f05e2dec3796d249c47b9de55b5e3d70df4b0f419029c49"
+      },
+      "changed15and19FinalRun": {
+        "checks": 12,
+        "exceptions": 0,
+        "receiptSha256": "a72b45c346921624b5c59fd2e878ab2451278abce82f5401ab518fd42d7819a8"
+      },
+      "viewports": [
+        320,
+        390
+      ],
+      "scope": "native clicks/input; fresh temporary Chrome profiles; memory only; shared read-only corresponding text/comic; 15/19 rerun after actual changes",
+      "delayedQuestions": "verified with direct factory and synthetic due-time probes; no natural24h claim"
+    }
+  },
+  "limits": [
+    "unregistered in frozen/current host; publisher integrates registry/types/route and verifies official host/CAS/Today",
+    "open expression awaiting a human; no audible audio/physical phone/natural24h or7d/learning outcome claim"
+  ],
+  "sha256": {
+    "studio/course-loop/parallel-nce1-013-023/content-contract.mjs": "c80f22ce4f4f69e7b159a16d5930540a7eb158e1af3075f2290097bf6fec0870",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-013.mjs": "be867044ba334c5e228bdea2d17cec9df10a6efaadfc89cc24bf714775b23d72",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-015.mjs": "f7fe9d2a6512045351e9df71607479751855d16cb929d684ca7e5a767ba6f380",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-017.mjs": "c53f06cb1f59b477de9b6472e57e3a4b558b90f26c80cd1e4ff5e14b2d321914",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-019.mjs": "c71bc30c74d9dc5afebf39f096999e9718624c1e8fbfed90e74d1bfa73414961",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-021.mjs": "ea8b204285e175bd44bead98c988d024f37026fcaba5fe92e010336f092c2d37",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-023.mjs": "6fc43ba93835e9e1a79cba32c329840e83cc26aa059f5a4c2e406e46cbd9d5f5",
+    "studio/course-loop/parallel-nce1-013-023/test-content.mjs": "51b92d577f73a72bf7db7ef64baeb3328e8334fdd7dc5952c0f0f74c2cc26f13",
+    "studio/course-loop/parallel-nce1-013-023/test-source.mjs": "94cd8e4d786a638f41fa8a134deea3c299459dc17c6947131c590cef6910c775",
+    "studio/course-loop/parallel-nce1-013-023/probe-checker.mjs": "2969b86d9f3e8f3b1e8630a8c7ad25b6201c5959b9cff6b31a12609a9ced6859",
+    "studio/course-loop/parallel-nce1-013-023/preview.mjs": "b99a0fc0cc83c3994644f40d87fd3d9b77c741d4e218ee78df16bbb95080fa75",
+    "studio/course-loop/parallel-nce1-013-023/preview.html": "4862ae3d6c02d421d0f87baf14c57c080206dc2f352527f09d3d5f8b3c431585",
+    "studio/course-loop/parallel-nce1-013-023/preview-server.mjs": "e1ef0db61dad965075eb0eb33f427d905f77a577de8fed1138d7447cf5bca42a",
+    "studio/course-loop/parallel-nce1-013-023/test-preview.mjs": "6497905f337d122c6ed269048759a7ccf6b059692013a1dba248561762200109"
+  }
+}
