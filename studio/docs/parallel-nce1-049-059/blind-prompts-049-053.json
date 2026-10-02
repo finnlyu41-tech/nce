@@ -1,0 +1,272 @@
+[
+  {
+    "id": "diagnostic-n49-preference-statement",
+    "context": "野餐报名表明确：Lena喜欢桃子，不喜欢梨。",
+    "prompt": "以Lena开头，用like、peaches（桃子）、but she、not like、pears（梨）写一句喜好对照。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n49-preference-question",
+    "context": "音乐活动午餐需确认一个男孩的口味；用he指他。",
+    "prompt": "用he和like询问他是否喜欢bananas（香蕉）。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "diagnostic-n49-contrast-ellipsis",
+    "context": "游泳课分组：Noah会游泳，但我不会。只需补出but后的省略部分。",
+    "prompt": "补全Noah can swim, but I ___. 仅写空缺否定部分。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "guided-n49-preference-statement",
+    "context": "为茶歇选水果：我们喜欢葡萄，不喜欢苹果。",
+    "prompt": "以We开头，用like、grapes（葡萄）、but we、not like、apples（苹果）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先核对每个分句的人，再选like/likes或do not/does not like。"
+  },
+  {
+    "id": "guided-n49-preference-question",
+    "context": "一位朋友要为两位志愿者采购；用they询问其口味。",
+    "prompt": "用they和like询问他们是否喜欢oranges（橙子）。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：Do/Does置于句首，后面的like用原形。"
+  },
+  {
+    "id": "guided-n49-contrast-ellipsis",
+    "context": "画室里，她正在画画，但两位孩子没有；用they指孩子。",
+    "prompt": "补全She is painting, but they ___. 仅写空缺否定部分。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先分普通动词、be还是can，再匹配but后的主语。"
+  },
+  {
+    "id": "independent-n49-preference-statement",
+    "context": "为远足准备零食：Omar喜欢苹果，不喜欢香蕉；你转述他的喜好。",
+    "prompt": "以Omar开头，用like、apples（苹果）、but he、not like、bananas（香蕉）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n49-preference-question",
+    "context": "同桌准备分享水果，但不清楚你的口味。你用you问对方喜好。",
+    "prompt": "用you和like询问对方是否喜欢grapes（葡萄）。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "independent-n49-contrast-ellipsis",
+    "context": "在图书角，I指我，Eva指同伴：我喜欢漫画，但她不喜欢。",
+    "prompt": "补全I like comics, but Eva ___. 仅写空缺否定部分。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n49-preference-statement",
+    "context": "保留上一轮首答和订正。下面是另一情境：上一轮混淆了喜欢与想要。新表格只写喜好：他们喜欢梨，不喜欢桃子。",
+    "prompt": "以They开头，用like、pears（梨）、but they、not like、peaches（桃子）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n49-preference-question",
+    "context": "保留上一轮首答和订正。下面是另一情境：新的生日餐安排需要先问一位女士的口味；用she指她。",
+    "prompt": "用she和like询问她是否喜欢tea（茶）。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "repair-n49-contrast-ellipsis",
+    "context": "保留上一轮首答和订正。下面是另一情境：合唱排练：Ben现在正在唱歌，而我现在没有唱。",
+    "prompt": "补全Ben is singing, but I ___. 仅写空缺否定部分。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n49-preference-statement",
+    "context": "社区早餐记录：我喜欢橙子，不喜欢葡萄。",
+    "prompt": "以I开头，用like、oranges（橙子）、but I、not like、grapes（葡萄）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n49-preference-question",
+    "context": "新来的厨师要为Nora选食材，你先询问她的喜好。",
+    "prompt": "主语用Nora，动词like，询问她是否喜欢potatoes（土豆）。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-a-n49-contrast-ellipsis",
+    "context": "两位同学都喜欢戏剧，而我们不喜欢；省略重复内容。",
+    "prompt": "补全They like drama, but we ___. 仅写空缺否定部分。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n49-preference-statement",
+    "context": "露营食物调查：Suri喜欢豆类，不喜欢卷心菜。",
+    "prompt": "以Suri开头，用like、beans（豆类）、but she、not like、cabbage（卷心菜）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n49-preference-question",
+    "context": "两位搭档要为团队订餐，但尚不清楚集体口味；用we。",
+    "prompt": "用we和like询问我们是否喜欢rice（米饭）。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-b-n49-contrast-ellipsis",
+    "context": "技能登记表明确：两位技师会打字，但Luca不会。",
+    "prompt": "补全They can type, but Luca ___. 仅写空缺否定部分。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n51-origin-statement",
+    "context": "国际棋社登记：Nina的来源地点是Italy，不询问国籍。",
+    "prompt": "用Nina、come from、Italy（意大利）写现在时肯定来源句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n51-origin-question",
+    "context": "你想知道一位男嘉宾来自哪里；用he指他。",
+    "prompt": "以Where开头，用he、come from写一个来源问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "diagnostic-n51-climate-description",
+    "context": "虚构的海港气候记录：秋季经常刮风。",
+    "prompt": "用It、often（经常）、windy（多风的）、in autumn（在秋季）写一句记录，often放在is后。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "guided-n51-origin-statement",
+    "context": "科学夏令营两位队员来自Norway；用they。",
+    "prompt": "用They、come from、Norway（挪威）写肯定来源句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：from后接指定地点；单个人肯定comes，复数come。"
+  },
+  {
+    "id": "guided-n51-origin-question",
+    "context": "摄影团队的来源尚未登记；用they询问。",
+    "prompt": "以Where开头，用they、come from写来源问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：Where + do/does + 主语 + come from?。"
+  },
+  {
+    "id": "guided-n51-climate-description",
+    "context": "虚构山城的统计说明：六月有时下雨。",
+    "prompt": "用It、sometimes（有时）、rain（下雨）、in June（在六月）写一句；sometimes可置句首、中位或句尾。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：区分is + 天气形容词和rains/snows；保留频率及in + 时段。"
+  },
+  {
+    "id": "independent-n51-origin-statement",
+    "context": "青年论坛确认：Kai来自Brazil；你需要转述来源而非护照国籍。",
+    "prompt": "用Kai、come from、Brazil（巴西）写肯定来源句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n51-origin-question",
+    "context": "你正在认识一位新室友，用you直接问其来源。",
+    "prompt": "以Where开头，用you、come from写来源问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "independent-n51-climate-description",
+    "context": "虚构的高地镇记录：冬季有时下雪。",
+    "prompt": "用It、sometimes（有时）、snow（下雪）、in winter（在冬季）写一句；sometimes可置句首、中位或句尾。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n51-origin-statement",
+    "context": "保留上一轮首答和订正。下面是另一情境：新来源卡澄清：我们来自France，之前记录错了；用we。",
+    "prompt": "用We、come from、France（法国）写肯定来源句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n51-origin-question",
+    "context": "保留上一轮首答和订正。下面是另一情境：新采访对象Maya的来源未知。",
+    "prompt": "以Where开头，用Maya、come from写来源问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "repair-n51-climate-description",
+    "context": "保留上一轮首答和订正。下面是另一情境：虚构的内陆盆地记录：七月总是炎热。",
+    "prompt": "用It、always（总是）、hot（炎热的）、in July（在七月）写一句，always放在is后。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n51-origin-statement",
+    "context": "合奏团来源信息：Elena来自Spain。",
+    "prompt": "用Elena、come from、Spain（西班牙）写肯定来源句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n51-origin-question",
+    "context": "轮到你在采访中询问一位女教练来源；用she。",
+    "prompt": "以Where开头，用she、come from写来源问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-a-n51-climate-description",
+    "context": "虚构海岛报告：三月经常寒冷。",
+    "prompt": "用It、often（经常）、cold（寒冷的）、in March（在三月）写一句，often放在is后。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n51-origin-statement",
+    "context": "两位客人确认自己来自Sweden；用they转述。",
+    "prompt": "用They、come from、Sweden（瑞典）写肯定来源句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n51-origin-question",
+    "context": "文件写明一位新志愿者叫Leo，但没有来源资料。",
+    "prompt": "以Where开头，用Leo、come from写来源问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-b-n51-climate-description",
+    "context": "虚构农场天气日志总结：四月有时下雨。",
+    "prompt": "用It、sometimes（有时）、rain（下雨）、in April（在四月）写一句；sometimes可置句首、中位或句尾。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n53-third-person-positive",
+    "context": "社区花园每天由一位园丁开门，时间很早。",
+    "prompt": "以The gardener（园丁）开头，用open、the gate（门）、early（早）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n53-third-person-question",
+    "context": "你不知道咖啡馆是否每天很早营业，需要询问。",
+    "prompt": "以Does开头，用the cafe（咖啡馆）、open（营业）、early（早）写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "diagnostic-n53-third-person-negative",
+    "context": "值班记录只确认：Leo不很晚到达；不确定他是不是早到。",
+    "prompt": "用Leo、not arrive（到达）、late（晚）写规律否定句，不推断early。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "guided-n53-third-person-positive",
+    "context": "博物馆接待员每天很晚离开。",
+    "prompt": "用The receptionist（接待员）、leave（离开）、late（晚）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：单数肯定给动词-s/-es；保留early/late的事实。"
+  },
+  {
+    "id": "guided-n53-third-person-question",
+    "context": "一名经理作息未核实，你要问他是否早到。",
+    "prompt": "用Does、the manager（经理）、arrive（到达）、early（早）写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：Does置首；动词原形；只问指定的规律。"
+  },
+  {
+    "id": "guided-n53-third-person-negative",
+    "context": "新公寓规定：Nora并不很早睡觉，具体睡觉时间未知。",
+    "prompt": "用Nora、not go to bed（睡觉）、early（早）写规律否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：does not后原形；保留否定，不擅自推断相反时段。"
+  },
+  {
+    "id": "independent-n53-third-person-positive",
+    "context": "图书馆里一位保安每天很早查看大门。",
+    "prompt": "用The guard（保安）、check（查看）、the door（门）、early（早）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n53-third-person-question",
+    "context": "合租室友需要确认一位女住户的日常习惯；用she。",
+    "prompt": "用Does、she、watch television（看电视）、at night（在夜间）写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "independent-n53-third-person-negative",
+    "context": "志愿司机说明：Ben不很晚出发；出发是否很早还未知。",
+    "prompt": "用Ben、not leave（出发/离开）、late（晚）写规律否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n53-third-person-positive",
+    "context": "保留上一轮首答和订正。下面是另一情境：新的资料卡：Mira每天夜间看电视。",
+    "prompt": "用Mira、watch television（看电视）、at night（夜间）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n53-third-person-question",
+    "context": "保留上一轮首答和订正。下面是另一情境：新调度员想确认一辆校车是否日常早到，不看当下画面。",
+    "prompt": "用Does、the bus（公交车）、arrive（到达）、early（早）写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "repair-n53-third-person-negative",
+    "context": "保留上一轮首答和订正。下面是另一情境：新整理的工作记录确认：店员夜间不看电视。",
+    "prompt": "用The clerk（店员）、not watch television（看电视）、at night（夜间）写规律否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n53-third-person-positive",
+    "context": "宠物照看卡确认：这只猫很晚回家。",
+    "prompt": "用The cat（这只猫）、come home（回家）、late（晚）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n53-third-person-question",
+    "context": "你要确认餐厅厨房是否很晚关门；尚无肯定信息。",
+    "prompt": "用Does、the kitchen（厨房）、close（关闭）、late（晚）写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-a-n53-third-person-negative",
+    "context": "新来的教练说：Ava不很早到；具体时间还未说。",
+    "prompt": "用Ava、not arrive（到达）、early（早）写规律否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n53-third-person-positive",
+    "context": "一位摄影师每天很早工作。",
+    "prompt": "用The photographer（摄影师）、work（工作）、early（早）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n53-third-person-question",
+    "context": "你想知道Luca是否日常很早离开。",
+    "prompt": "用Does、Luca、leave（离开）、early（早）写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-b-n53-third-person-negative",
+    "context": "夜班规章确认：一位门卫不很晚关大门；不推断关门很早。",
+    "prompt": "用The porter（门卫）、not close（关闭）、the gate（大门）、late（晚）写规律否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  }
+]

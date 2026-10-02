@@ -1,0 +1,570 @@
+[
+  {
+    "id": "diagnostic-n49-preference-statement",
+    "answer": "Lena likes peaches, but she does not like pears.",
+    "variants": [
+      "Lena likes peaches, but she doesn't like pears.",
+      "Lena likes peaches but she does not like pears.",
+      "Lena likes peaches but she doesn't like pears.",
+      "Lena likes peaches, but she does not like pears",
+      "Lena likes peaches, but she doesn't like pears",
+      "Lena likes peaches but she does not like pears",
+      "Lena likes peaches but she doesn't like pears"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n49-preference-question",
+    "answer": "Does he like bananas?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n49-contrast-ellipsis",
+    "answer": "cannot",
+    "variants": [
+      "can't",
+      "cannot.",
+      "can't."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n49-preference-statement",
+    "answer": "We like grapes, but we do not like apples.",
+    "variants": [
+      "We like grapes, but we don't like apples.",
+      "We like grapes but we do not like apples.",
+      "We like grapes but we don't like apples.",
+      "We like grapes, but we do not like apples",
+      "We like grapes, but we don't like apples",
+      "We like grapes but we do not like apples",
+      "We like grapes but we don't like apples"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n49-preference-question",
+    "answer": "Do they like oranges?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n49-contrast-ellipsis",
+    "answer": "are not",
+    "variants": [
+      "aren't",
+      "are not.",
+      "aren't."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n49-preference-statement",
+    "answer": "Omar likes apples, but he does not like bananas.",
+    "variants": [
+      "Omar likes apples, but he doesn't like bananas.",
+      "Omar likes apples but he does not like bananas.",
+      "Omar likes apples but he doesn't like bananas.",
+      "Omar likes apples, but he does not like bananas",
+      "Omar likes apples, but he doesn't like bananas",
+      "Omar likes apples but he does not like bananas",
+      "Omar likes apples but he doesn't like bananas"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n49-preference-question",
+    "answer": "Do you like grapes?",
+    "variants": [],
+    "issues": [
+      "情境先说同桌不清楚你的口味，随后要求你问对方喜好，提问角色发生切换；按明确题干仍可用you作答。"
+    ]
+  },
+  {
+    "id": "independent-n49-contrast-ellipsis",
+    "answer": "does not",
+    "variants": [
+      "doesn't",
+      "does not.",
+      "doesn't."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n49-preference-statement",
+    "answer": "They like pears, but they do not like peaches.",
+    "variants": [
+      "They like pears, but they don't like peaches.",
+      "They like pears but they do not like peaches.",
+      "They like pears but they don't like peaches.",
+      "They like pears, but they do not like peaches",
+      "They like pears, but they don't like peaches",
+      "They like pears but they do not like peaches",
+      "They like pears but they don't like peaches"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n49-preference-question",
+    "answer": "Does she like tea?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n49-contrast-ellipsis",
+    "answer": "am not",
+    "variants": [
+      "am not."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n49-preference-statement",
+    "answer": "I like oranges, but I do not like grapes.",
+    "variants": [
+      "I like oranges, but I don't like grapes.",
+      "I like oranges but I do not like grapes.",
+      "I like oranges but I don't like grapes.",
+      "I like oranges, but I do not like grapes",
+      "I like oranges, but I don't like grapes",
+      "I like oranges but I do not like grapes",
+      "I like oranges but I don't like grapes"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n49-preference-question",
+    "answer": "Does Nora like potatoes?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n49-contrast-ellipsis",
+    "answer": "do not",
+    "variants": [
+      "don't",
+      "do not.",
+      "don't."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n49-preference-statement",
+    "answer": "Suri likes beans, but she does not like cabbage.",
+    "variants": [
+      "Suri likes beans, but she doesn't like cabbage.",
+      "Suri likes beans but she does not like cabbage.",
+      "Suri likes beans but she doesn't like cabbage.",
+      "Suri likes beans, but she does not like cabbage",
+      "Suri likes beans, but she doesn't like cabbage",
+      "Suri likes beans but she does not like cabbage",
+      "Suri likes beans but she doesn't like cabbage"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n49-preference-question",
+    "answer": "Do we like rice?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n49-contrast-ellipsis",
+    "answer": "cannot",
+    "variants": [
+      "can't",
+      "cannot.",
+      "can't."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n51-origin-statement",
+    "answer": "Nina comes from Italy.",
+    "variants": [
+      "Nina comes from Italy"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n51-origin-question",
+    "answer": "Where does he come from?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n51-climate-description",
+    "answer": "It is often windy in autumn.",
+    "variants": [
+      "It's often windy in autumn.",
+      "In autumn, it is often windy.",
+      "In autumn, it's often windy.",
+      "It is often windy in autumn",
+      "It's often windy in autumn",
+      "In autumn, it is often windy",
+      "In autumn, it's often windy",
+      "In autumn it is often windy.",
+      "In autumn it's often windy.",
+      "In autumn it is often windy",
+      "In autumn it's often windy"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n51-origin-statement",
+    "answer": "They come from Norway.",
+    "variants": [
+      "They come from Norway"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n51-origin-question",
+    "answer": "Where do they come from?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n51-climate-description",
+    "answer": "It sometimes rains in June.",
+    "variants": [
+      "Sometimes it rains in June.",
+      "Sometimes, it rains in June.",
+      "It rains sometimes in June.",
+      "It rains in June sometimes.",
+      "In June, it sometimes rains.",
+      "In June, sometimes it rains.",
+      "It sometimes rains in June",
+      "Sometimes it rains in June",
+      "Sometimes, it rains in June",
+      "It rains sometimes in June",
+      "It rains in June sometimes",
+      "In June, it sometimes rains",
+      "In June, sometimes it rains",
+      "In June it sometimes rains.",
+      "In June sometimes it rains.",
+      "In June it sometimes rains",
+      "In June sometimes it rains"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n51-origin-statement",
+    "answer": "Kai comes from Brazil.",
+    "variants": [
+      "Kai comes from Brazil"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n51-origin-question",
+    "answer": "Where do you come from?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n51-climate-description",
+    "answer": "It sometimes snows in winter.",
+    "variants": [
+      "Sometimes it snows in winter.",
+      "Sometimes, it snows in winter.",
+      "It snows sometimes in winter.",
+      "It snows in winter sometimes.",
+      "In winter, it sometimes snows.",
+      "In winter, sometimes it snows.",
+      "It sometimes snows in winter",
+      "Sometimes it snows in winter",
+      "Sometimes, it snows in winter",
+      "It snows sometimes in winter",
+      "It snows in winter sometimes",
+      "In winter, it sometimes snows",
+      "In winter, sometimes it snows",
+      "In winter it sometimes snows.",
+      "In winter sometimes it snows.",
+      "In winter it sometimes snows",
+      "In winter sometimes it snows"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n51-origin-statement",
+    "answer": "We come from France.",
+    "variants": [
+      "We come from France"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n51-origin-question",
+    "answer": "Where does Maya come from?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n51-climate-description",
+    "answer": "It is always hot in July.",
+    "variants": [
+      "It's always hot in July.",
+      "In July, it is always hot.",
+      "In July, it's always hot.",
+      "It is always hot in July",
+      "It's always hot in July",
+      "In July, it is always hot",
+      "In July, it's always hot",
+      "In July it is always hot.",
+      "In July it's always hot.",
+      "In July it is always hot",
+      "In July it's always hot"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n51-origin-statement",
+    "answer": "Elena comes from Spain.",
+    "variants": [
+      "Elena comes from Spain"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n51-origin-question",
+    "answer": "Where does she come from?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n51-climate-description",
+    "answer": "It is often cold in March.",
+    "variants": [
+      "It's often cold in March.",
+      "In March, it is often cold.",
+      "In March, it's often cold.",
+      "It is often cold in March",
+      "It's often cold in March",
+      "In March, it is often cold",
+      "In March, it's often cold",
+      "In March it is often cold.",
+      "In March it's often cold.",
+      "In March it is often cold",
+      "In March it's often cold"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n51-origin-statement",
+    "answer": "They come from Sweden.",
+    "variants": [
+      "They come from Sweden"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n51-origin-question",
+    "answer": "Where does Leo come from?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n51-climate-description",
+    "answer": "It sometimes rains in April.",
+    "variants": [
+      "Sometimes it rains in April.",
+      "Sometimes, it rains in April.",
+      "It rains sometimes in April.",
+      "It rains in April sometimes.",
+      "In April, it sometimes rains.",
+      "In April, sometimes it rains.",
+      "It sometimes rains in April",
+      "Sometimes it rains in April",
+      "Sometimes, it rains in April",
+      "It rains sometimes in April",
+      "It rains in April sometimes",
+      "In April, it sometimes rains",
+      "In April, sometimes it rains",
+      "In April it sometimes rains.",
+      "In April sometimes it rains.",
+      "In April it sometimes rains",
+      "In April sometimes it rains"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n53-third-person-positive",
+    "answer": "The gardener opens the gate early.",
+    "variants": [
+      "The gardener opens the gate early"
+    ],
+    "issues": [
+      "情境写“很早/很晚”，题干只指定early/late；按题干作答不表达“很”的程度，建议统一中文程度。"
+    ]
+  },
+  {
+    "id": "diagnostic-n53-third-person-question",
+    "answer": "Does the cafe open early?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n53-third-person-negative",
+    "answer": "Leo does not arrive late.",
+    "variants": [
+      "Leo doesn't arrive late.",
+      "Leo does not arrive late",
+      "Leo doesn't arrive late"
+    ],
+    "issues": [
+      "情境中的“不很早/不很晚”可理解为not very early/late，比题干指定的not ... early/late弱；答案按指定词作答，建议情境改为“不早/不晚”以避免程度与否定范围歧义。"
+    ]
+  },
+  {
+    "id": "guided-n53-third-person-positive",
+    "answer": "The receptionist leaves late.",
+    "variants": [
+      "The receptionist leaves late"
+    ],
+    "issues": [
+      "情境写“很早/很晚”，题干只指定early/late；按题干作答不表达“很”的程度，建议统一中文程度。"
+    ]
+  },
+  {
+    "id": "guided-n53-third-person-question",
+    "answer": "Does the manager arrive early?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n53-third-person-negative",
+    "answer": "Nora does not go to bed early.",
+    "variants": [
+      "Nora doesn't go to bed early.",
+      "Nora does not go to bed early",
+      "Nora doesn't go to bed early"
+    ],
+    "issues": [
+      "情境中的“不很早/不很晚”可理解为not very early/late，比题干指定的not ... early/late弱；答案按指定词作答，建议情境改为“不早/不晚”以避免程度与否定范围歧义。"
+    ]
+  },
+  {
+    "id": "independent-n53-third-person-positive",
+    "answer": "The guard checks the door early.",
+    "variants": [
+      "The guard checks the door early"
+    ],
+    "issues": [
+      "情境写“很早/很晚”，题干只指定early/late；按题干作答不表达“很”的程度，建议统一中文程度。"
+    ]
+  },
+  {
+    "id": "independent-n53-third-person-question",
+    "answer": "Does she watch television at night?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n53-third-person-negative",
+    "answer": "Ben does not leave late.",
+    "variants": [
+      "Ben doesn't leave late.",
+      "Ben does not leave late",
+      "Ben doesn't leave late"
+    ],
+    "issues": [
+      "情境中的“不很早/不很晚”可理解为not very early/late，比题干指定的not ... early/late弱；答案按指定词作答，建议情境改为“不早/不晚”以避免程度与否定范围歧义。"
+    ]
+  },
+  {
+    "id": "repair-n53-third-person-positive",
+    "answer": "Mira watches television at night.",
+    "variants": [
+      "At night, Mira watches television.",
+      "At night Mira watches television.",
+      "Mira watches television at night",
+      "At night, Mira watches television",
+      "At night Mira watches television"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n53-third-person-question",
+    "answer": "Does the bus arrive early?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n53-third-person-negative",
+    "answer": "The clerk does not watch television at night.",
+    "variants": [
+      "The clerk doesn't watch television at night.",
+      "At night, the clerk does not watch television.",
+      "At night, the clerk doesn't watch television.",
+      "At night the clerk does not watch television.",
+      "At night the clerk doesn't watch television.",
+      "The clerk does not watch television at night",
+      "The clerk doesn't watch television at night",
+      "At night, the clerk does not watch television",
+      "At night, the clerk doesn't watch television",
+      "At night the clerk does not watch television",
+      "At night the clerk doesn't watch television"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n53-third-person-positive",
+    "answer": "The cat comes home late.",
+    "variants": [
+      "The cat comes home late"
+    ],
+    "issues": [
+      "情境写“很早/很晚”，题干只指定early/late；按题干作答不表达“很”的程度，建议统一中文程度。"
+    ]
+  },
+  {
+    "id": "review-a-n53-third-person-question",
+    "answer": "Does the kitchen close late?",
+    "variants": [],
+    "issues": [
+      "情境问“很晚关门”，指定词为close、late，按题干作答不表达“很”的程度；若意在测试late，中文宜改为“晚关门”。"
+    ]
+  },
+  {
+    "id": "review-a-n53-third-person-negative",
+    "answer": "Ava does not arrive early.",
+    "variants": [
+      "Ava doesn't arrive early.",
+      "Ava does not arrive early",
+      "Ava doesn't arrive early"
+    ],
+    "issues": [
+      "情境中的“不很早/不很晚”可理解为not very early/late，比题干指定的not ... early/late弱；答案按指定词作答，建议情境改为“不早/不晚”以避免程度与否定范围歧义。"
+    ]
+  },
+  {
+    "id": "review-b-n53-third-person-positive",
+    "answer": "The photographer works early.",
+    "variants": [
+      "The photographer works early"
+    ],
+    "issues": [
+      "情境写“很早/很晚”，题干只指定early/late；按题干作答不表达“很”的程度，建议统一中文程度。"
+    ]
+  },
+  {
+    "id": "review-b-n53-third-person-question",
+    "answer": "Does Luca leave early?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n53-third-person-negative",
+    "answer": "The porter does not close the gate late.",
+    "variants": [
+      "The porter doesn't close the gate late.",
+      "The porter does not close the gate late",
+      "The porter doesn't close the gate late"
+    ],
+    "issues": [
+      "情境中的“不很早/不很晚”可理解为not very early/late，比题干指定的not ... early/late弱；答案按指定词作答，建议情境改为“不早/不晚”以避免程度与否定范围歧义。"
+    ]
+  }
+]

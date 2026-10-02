@@ -1,0 +1,26 @@
+# Frozen content delivery: NCE1 49–54
+
+Baseline `9310cb98a5d345f29bc345c6960aae0450effcc4`. Remote online and IELTS-map heads were read-only verified as `424efc1869e98cd7b19afd2c1ab7cab0e8380b4b`. Worktree: `/Users/finnlyu/Documents/Codex/2026-10-03/task-11/nce1-049-059`; branch `codex/nce1-049-059-20261003`. No push, merge or deployment.
+
+Three authored modules (IDs `nce1-49`, `nce1-51`, `nce1-53`) contain 54 original bounded tasks: diagnostic, guided, independent, repair and two disjoint delayed banks, three targets each. Teaching, prerequisites, free expression, original-answer correction and real source metadata are present. Independent tasks change roles and factual situations; repair and reviews change subject, object, time or grammatical case rather than shuffling one prompt. The source references reuse exact packaged textbook/LRC/comic bindings; no media was created or copied into the content directory.
+
+## Exact minimum owner registration interface
+
+Each `course-loop/parallel-nce1-049-059/lesson-nce1-0NN.mjs` exports `lesson`, `questions`, `byId`, `questionsFor`, `matches`. Import the complete module into the existing registry; create its binding with the **existing** `createCourseLoopModel(content)`. Keep `content.matches` as supplied. Keys remain `nce-course-loop-v1:NCE1-NN` and `nce-course-loop-inputs-v1:NCE1-NN` in existing `State.drafts`.
+
+Owner adds IDs 49/51/53 to `CourseId`, source lesson unions and comic-key unions in the shared host contract. Owner extends the existing successor lookup as `49→51`, `51→53`, `53→55` (55 may remain the existing textbook route until its module is delivered). For the full line the lookup is `49→51→53→55→57→59→61`. No new map, FSRS, Today, storage or model is proposed.
+
+Important observed integration boundary: baseline `nextCourse` has successors only through `35→37`. Test-only registration of 49 plus an empty map reaches `waiting` in the real factory but then the unchanged UI cannot render its continuation because the successor is undefined. This was reported to the coordinator. The successful native preview uses the unchanged selector's existing preserved advanced-route branch with test prop `lastNode: nce1-37`; it proves content/UI/source/correction/reload compatibility, **not** the missing new-course continuation. The publisher must implement and validate that minimum shared lookup before claiming integrated release.
+
+## Evidence and commands
+
+- `node --test studio/course-loop/parallel-nce1-049-059/test-content.mjs`: first batch alone has 13 tests, all passed before the remaining modules were authored. Later combined run reconfirmed the same contracts. It binds real production factory, enumerated reasonable variants, 216 near misses, assisted evidence, preserved incorrect originals, semantic correction guard, retry not-fresh status, raw retention for unknown/cross-course records and two finite delayed banks.
+- `NCE_WRITE_SOURCE_EVIDENCE=1 node --test studio/course-loop/parallel-nce1-049-059/test-source.mjs`: first batch alone has 5 tests, all passed. The test executes the **extracted actual unchanged SourcePanel predicate**, production comic guard and hashes exact LRC parts and textbook exercise-page assets. `languageSha256` equals JSON-internal `sourceSha256`, not the JSON byte hash.
+- `NCE_PREVIEW_IDS=49,51,53 node studio/course-loop/parallel-nce1-049-059/test-browser.mjs`: all three passed in fresh isolated headless Chrome QA profiles. Native input/clicks used the unchanged production workspace/writer/source panel with a test-only bundler registry override; no production registry edit. Actual text and comic displayed, wrong first answer persisted through correct/repair/finish/reload, expression stayed awaiting-human-review. 390 CSS-pixel desktop emulation had no horizontal page overflow; it is not a physical-phone test.
+- `blind-prompts-049-053.json` is the original key-free input to a separate agent. `blind-answers-049-053.json` preserves its actual answers, variants and issues. All 54 answers and every listed allowed variant now match. Nine guided items remain guided tasks; this authoring review is not learner mastery evidence.
+- Blind issues resolved: room-mate preference roles; `很早/很晚` degree and negation-scope mismatch removed; time-phrase fronting, sometimes positions, contracted auxiliaries and optional but commas accepted. The original blind files are not rewritten to hide issues.
+- `source-evidence-049-053.json`, `browser-evidence-049-053.json` and selected screenshots are reproducible supporting evidence. No repeated whole-site build was run; only the real preview component and source parser test bundle were built.
+
+QA content event times in model tests are synthetic. Natural 24h/7d retention has not run. Original audio playback was not audited. No listening, pronunciation, mastery or IELTS band is claimed. Free expression is awaiting-human-review. No user records or recordings were read or uploaded. Obsidian AGENTS was unavailable at both known local locations and the connector path; no alternate handover store was made.
+
+Remaining 55/57/59 modules are a separate subsequent frozen commit; the first three modules and helper are complete and cherry-pickable now.
