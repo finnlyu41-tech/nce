@@ -39,7 +39,7 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
   if(read.raw===null)throw Error('本课尚未保存。');
   const result=parseCourseLoop(read.raw,Date.now(),courseId);if(!result.ok)throw Error(result.message);
   const changed=reset||!viewRef.current||questionIdentity(viewRef.current)!==questionIdentity(result.view);
-  readRef.current=read;viewRef.current=result.view;setView(result.view);
+  readRef.current=read;viewRef.current=result.view;setView(result.view);setClock(Date.now());
   if(reset){const restored=parseLoopInputs(read.inputsRaw,courseId);inputsRef.current=restored;setInputs(restored);setOwn(result.view.ownDraft)}
   if(changed){setDraft(result.view.draft);setSource(null);requestAnimationFrame(()=>title.current?.focus({preventScroll:true}))}
  }
