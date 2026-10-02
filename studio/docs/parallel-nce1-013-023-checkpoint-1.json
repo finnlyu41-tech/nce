@@ -1,0 +1,69 @@
+{
+  "base": "d9c7c48a7d419c230be06bf81cc956d63b124649",
+  "branch": "codex/parallel-nce1-013-023-20261002",
+  "courses": [
+    "nce1-13",
+    "nce1-15",
+    "nce1-17"
+  ],
+  "tasks": 54,
+  "factoryTests": {
+    "tests": 41,
+    "passed": 41,
+    "failed": 0,
+    "scope": "unmodified production factory and CL00 regressions; synthetic time only"
+  },
+  "blindReview": {
+    "reviewRole": "independent blind content reviewer",
+    "reviewBoundary": "Read only supplied initial/final prompt JSON and own Boolean production-probe results; no course source, accepted answers, tests, or author answer keys read.",
+    "promptSha256": "b0bf059b4b0f2556ebe5f2221fc7055159685a0a4374062fc23fe3daa9d90d3b",
+    "firstAnswersPath": "/tmp/nce013-017-blind-first.json",
+    "finalPromptPath": "/tmp/nce013-017-blind-final-prompts.json",
+    "summary": {
+      "questionsReviewed": 54,
+      "originalFirstAnswersAccepted": 54,
+      "totalProbes": 783,
+      "positiveProbes": 262,
+      "negativeProbes": 521,
+      "mismatches": 0,
+      "unresolvedFindings": []
+    },
+    "resolvedFindings": [
+      {
+        "issue": "n13 natural of/possessive/colour-is-contraction questions",
+        "resolution": "Retained natural valid variants; final production probes all accepted."
+      },
+      {
+        "issue": "n17 What're their jobs?",
+        "resolution": "Final production probes accepted."
+      },
+      {
+        "issue": "Natural vocabulary synonyms, works-as occupations, feel physical states exceed unstated original exercise scope",
+        "resolution": "Final prompt explicitly requires given English vocabulary and present be or contractions. These are now excluded by stated exercise scope, not classified as bad English."
+      }
+    ],
+    "pedagogicalAssessment": "Ownership, person, subject number, present tense, positive/negative fact, response identity, deixis, and required supplied vocabulary are explicit. a/an exercise includes engineer, university student, nurse, actor, honest teacher, office assistant; consonant/vowel-sound contrasts are clear. Contexts avoid inferring ownership, nationality, pronouns, or status from names/appearance. No remaining material ambiguity found.",
+    "humanAcceptance": "Not assessed or claimed.",
+    "evidence": "Full prompt-only inputs, first answers, historical findings and final probes in handoff evidence archive."
+  },
+  "sha256": {
+    "studio/course-loop/model.mjs": "c6afb5d61fd46dd2fc351d8d01f039c21d2b2084eb0dd93a283ebe0ba6012a2c",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-013.mjs": "be867044ba334c5e228bdea2d17cec9df10a6efaadfc89cc24bf714775b23d72",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-015.mjs": "e5de0048d0dee7559b3faad8ca09ad503511597a96c8f5894e430fd2d62d12ed",
+    "studio/course-loop/parallel-nce1-013-023/lesson-nce1-017.mjs": "c53f06cb1f59b477de9b6472e57e3a4b558b90f26c80cd1e4ff5e14b2d321914",
+    "studio/course-loop/parallel-nce1-013-023/content-contract.mjs": "c80f22ce4f4f69e7b159a16d5930540a7eb158e1af3075f2290097bf6fec0870"
+  },
+  "status": "local-candidate-not-registered",
+  "publisher": "01a0fa39-c2a2-7239-87b4-b0a9c091f0ba",
+  "preview": {
+    "checks": 18,
+    "passed": 18,
+    "runtimeExceptions": 0,
+    "source": "actual corresponding original text/comic; original asset tree shared read-only",
+    "viewports": [
+      320,
+      390
+    ],
+    "scope": "memory-only preview, fresh temporary Chrome profile, actual production factory; not host or natural-time acceptance"
+  }
+}
