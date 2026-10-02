@@ -13,6 +13,7 @@ import {speakingDue,speakingReviewAt} from '../map/speaking-model';
 import {lessonPlan} from '../map/lesson-plan';
 import {samplePracticeTasks} from './ielts-sample-next';
 import {courseLoopBindings} from './course-loop-progress';
+import {miniPracticeTasks} from '../mini-task/adapter';
 import {courseLoopTask,courseDestination,courseAccessHref} from './course-loop-next';
 
 export type PracticeTask={id:string;title:string;reason:string;method:string;evidence:string;href:string;returnHref:string;priority:number;at:number;kind:'repair'|'review'|'resume'|'new'|'course'};
@@ -126,6 +127,7 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
    evidence:'沿用原记录，不把自录、得分或勾选当成新的掌握证明。',href:to(missionRoute(mission)),priority:resume?priority.resume:repair?priority.repair:priority.legacy,
    at:resume||repair?last?.at||record.startedAt||now:record.dueAt,kind:resume?'resume':repair?'repair':'review'});
  }
+ for(const task of miniPracticeTasks(state,now,online))add(task);
  tasks.sort((a,b)=>a.priority-b.priority||a.at-b.at||a.id.localeCompare(b.id));
  if(online){
   const destination=courseDestination(state,map,now),current=destination.node,unit=unitById(current.id);
