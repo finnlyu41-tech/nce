@@ -1,0 +1,90 @@
+{
+  "baseline": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "checks": [
+    {
+      "id": "nce1-85",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "QA map nce1-85; unchanged nextCourse lacks new successors and preserves current route; production wiring remains owner work",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "viewport320": {
+        "width": 320,
+        "scroll": 320
+      },
+      "retention": "natural 24h/7d not run",
+      "audioPlayback": [
+        {
+          "currentTime": 31.66,
+          "duration": 76.493313,
+          "readyState": 1,
+          "paused": false
+        }
+      ],
+      "audibility": "not audited"
+    },
+    {
+      "id": "nce1-87",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "QA map nce1-85; unchanged nextCourse lacks new successors and preserves current route; production wiring remains owner work",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "viewport320": {
+        "width": 320,
+        "scroll": 320
+      },
+      "retention": "natural 24h/7d not run",
+      "audioPlayback": [
+        {
+          "currentTime": 42.95,
+          "duration": 87.700189,
+          "readyState": 4,
+          "paused": false
+        }
+      ],
+      "audibility": "not audited"
+    },
+    {
+      "id": "nce1-89",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "QA map nce1-85; unchanged nextCourse lacks new successors and preserves current route; production wiring remains owner work",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "viewport320": {
+        "width": 320,
+        "scroll": 320
+      },
+      "retention": "natural 24h/7d not run",
+      "audioPlayback": [
+        {
+          "currentTime": 31.651193,
+          "duration": 92.756313,
+          "readyState": 4,
+          "paused": false
+        }
+      ],
+      "audibility": "not audited"
+    }
+  ],
+  "runtimeErrors": [],
+  "profile": "fresh QA; no user profile/data; removed after test",
+  "productionRegistration": "not modified",
+  "naturalRetention": "not run"
+}

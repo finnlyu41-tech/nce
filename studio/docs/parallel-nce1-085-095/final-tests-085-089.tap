@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: nce1-85 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce1-85 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 57.855667
+  type: 'test'
+  ...
+# Subtest: nce1-85 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce1-85 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 14.535667
+  type: 'test'
+  ...
+# Subtest: nce1-87 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce1-87 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 62.434083
+  type: 'test'
+  ...
+# Subtest: nce1-87 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce1-87 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 12.613209
+  type: 'test'
+  ...
+# Subtest: nce1-89 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce1-89 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 65.748292
+  type: 'test'
+  ...
+# Subtest: nce1-89 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce1-89 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 9.82175
+  type: 'test'
+  ...
+# Subtest: nce1-85 rejects nce1-87 raw without overwriting
+ok 7 - nce1-85 rejects nce1-87 raw without overwriting
+  ---
+  duration_ms: 0.235416
+  type: 'test'
+  ...
+# Subtest: nce1-85 rejects nce1-89 raw without overwriting
+ok 8 - nce1-85 rejects nce1-89 raw without overwriting
+  ---
+  duration_ms: 0.085291
+  type: 'test'
+  ...
+# Subtest: nce1-87 rejects nce1-85 raw without overwriting
+ok 9 - nce1-87 rejects nce1-85 raw without overwriting
+  ---
+  duration_ms: 0.412125
+  type: 'test'
+  ...
+# Subtest: nce1-87 rejects nce1-89 raw without overwriting
+ok 10 - nce1-87 rejects nce1-89 raw without overwriting
+  ---
+  duration_ms: 0.42975
+  type: 'test'
+  ...
+# Subtest: nce1-89 rejects nce1-85 raw without overwriting
+ok 11 - nce1-89 rejects nce1-85 raw without overwriting
+  ---
+  duration_ms: 0.141834
+  type: 'test'
+  ...
+# Subtest: nce1-89 rejects nce1-87 raw without overwriting
+ok 12 - nce1-89 rejects nce1-87 raw without overwriting
+  ---
+  duration_ms: 0.054042
+  type: 'test'
+  ...
+# Subtest: external independent blind 085-089 covers eighteen tasks per course and every reasonable variant
+ok 13 - external independent blind 085-089 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 1.191041
+  type: 'test'
+  ...
+# Subtest: blind stems 085-089 remain identical to reviewed final tasks
+ok 14 - blind stems 085-089 remain identical to reviewed final tasks
+  ---
+  duration_ms: 2.738458
+  type: 'test'
+  ...
+# Subtest: shared production implementations and source guard are byte identical to exact frozen baseline
+ok 15 - shared production implementations and source guard are byte identical to exact frozen baseline
+  ---
+  duration_ms: 217.403792
+  type: 'test'
+  ...
+# Subtest: all tracked diff and untracked delivery files stay in this content/test/docs ownership
+ok 16 - all tracked diff and untracked delivery files stay in this content/test/docs ownership
+  ---
+  duration_ms: 39.289125
+  type: 'test'
+  ...
+# Subtest: new task contexts are distinct, target banks include real first/repair/delayed material
+ok 17 - new task contexts are distinct, target banks include real first/repair/delayed material
+  ---
+  duration_ms: 7.970125
+  type: 'test'
+  ...
+# Subtest: unwired successors keep the real current route; QA registration is not production integration
+ok 18 - unwired successors keep the real current route; QA registration is not production integration
+  ---
+  duration_ms: 147.627042
+  type: 'test'
+  ...
+# Subtest: nce1-85 real transcript LRC, source panel, comic and paired exercise pages
+ok 19 - nce1-85 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 8.592541
+  type: 'test'
+  ...
+# Subtest: nce1-87 real transcript LRC, source panel, comic and paired exercise pages
+ok 20 - nce1-87 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.336625
+  type: 'test'
+  ...
+# Subtest: nce1-89 real transcript LRC, source panel, comic and paired exercise pages
+ok 21 - nce1-89 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.308167
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 22 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 1.003917
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 548.6165

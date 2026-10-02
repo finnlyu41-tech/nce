@@ -1,0 +1,505 @@
+[
+  {
+    "id": "diagnostic-n85-completed-now",
+    "answer": "I have already seen that film.",
+    "variants": [
+      "I've already seen that film.",
+      "I have seen that film already.",
+      "I've seen that film already."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n85-visit-experience",
+    "answer": "Have you ever been to Paris?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n85-definite-past",
+    "answer": "I saw that film on television last year.",
+    "variants": [
+      "Last year I saw that film on television.",
+      "I saw that film last year on television."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n85-completed-now",
+    "answer": "She has already cleaned her shoes.",
+    "variants": [
+      "She's already cleaned her shoes.",
+      "She has cleaned her shoes already.",
+      "She's cleaned her shoes already."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n85-visit-experience",
+    "answer": "I have never been to London.",
+    "variants": [
+      "I've never been to London."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n85-definite-past",
+    "answer": "He opened the window an hour ago.",
+    "variants": [
+      "An hour ago he opened the window."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n85-completed-now",
+    "answer": "I have just washed my hands.",
+    "variants": [
+      "I've just washed my hands."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n85-visit-experience",
+    "answer": "Have they ever been to London?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n85-definite-past",
+    "answer": "They painted that bookcase yesterday.",
+    "variants": [
+      "Yesterday they painted that bookcase."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n85-completed-now",
+    "answer": "We have just dusted that cupboard.",
+    "variants": [
+      "We've just dusted that cupboard."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n85-visit-experience",
+    "answer": "She has never been there.",
+    "variants": [
+      "She's never been there."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n85-definite-past",
+    "answer": "I turned on the television yesterday.",
+    "variants": [
+      "Yesterday I turned on the television.",
+      "I turned the television on yesterday.",
+      "Yesterday I turned the television on."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n85-completed-now",
+    "answer": "He has already sharpened that pencil.",
+    "variants": [
+      "He's already sharpened that pencil.",
+      "He has sharpened that pencil already.",
+      "He's sharpened that pencil already."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n85-visit-experience",
+    "answer": "Have they ever been to the cinema?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n85-definite-past",
+    "answer": "She asked a question two minutes ago.",
+    "variants": [
+      "Two minutes ago she asked a question."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n85-completed-now",
+    "answer": "I have already emptied that basket.",
+    "variants": [
+      "I've already emptied that basket.",
+      "I have emptied that basket already.",
+      "I've emptied that basket already."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n85-visit-experience",
+    "answer": "Has he just been to the cinema?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n85-definite-past",
+    "answer": "We typed that letter last Friday.",
+    "variants": [
+      "Last Friday we typed that letter."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n87-completion-check",
+    "answer": "Have your mechanics finished yet?",
+    "variants": [
+      "Have your mechanics yet finished?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n87-past-followup",
+    "answer": "When did you bring it here?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n87-unfinished-state",
+    "answer": "She has not swept the floor yet.",
+    "variants": [
+      "She hasn't swept the floor yet.",
+      "She has not yet swept the floor.",
+      "She hasn't yet swept the floor.",
+      "She's not swept the floor yet.",
+      "She's not yet swept the floor."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n87-completion-check",
+    "answer": "Has he sent that letter yet?",
+    "variants": [
+      "Has he yet sent that letter?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n87-past-followup",
+    "answer": "When did the boss leave?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n87-unfinished-state",
+    "answer": "They are still working on it.",
+    "variants": [
+      "They're still working on it.",
+      "They are working on it still.",
+      "They're working on it still."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n87-completion-check",
+    "answer": "Have you had breakfast yet?",
+    "variants": [
+      "Have you yet had breakfast?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n87-past-followup",
+    "answer": "When did she find her pen?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n87-unfinished-state",
+    "answer": "I have not sent that letter yet.",
+    "variants": [
+      "I haven't sent that letter yet.",
+      "I have not yet sent that letter.",
+      "I haven't yet sent that letter.",
+      "I've not sent that letter yet.",
+      "I've not yet sent that letter."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n87-completion-check",
+    "answer": "Have they bought a new house yet?",
+    "variants": [
+      "Have they yet bought a new house?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n87-past-followup",
+    "answer": "When did you meet her?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n87-unfinished-state",
+    "answer": "She is still trying to repair it.",
+    "variants": [
+      "She's still trying to repair it.",
+      "She is trying to repair it still.",
+      "She's trying to repair it still."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n87-completion-check",
+    "answer": "Has she heard the news yet?",
+    "variants": [
+      "Has she yet heard the news?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n87-past-followup",
+    "answer": "When did they buy that television?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n87-unfinished-state",
+    "answer": "He has not made the bed yet.",
+    "variants": [
+      "He hasn't made the bed yet.",
+      "He has not yet made the bed.",
+      "He hasn't yet made the bed.",
+      "He's not made the bed yet.",
+      "He's not yet made the bed."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n87-completion-check",
+    "answer": "Have you found your pen yet?",
+    "variants": [
+      "Have you yet found your pen?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n87-past-followup",
+    "answer": "When did she bring it here?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n87-unfinished-state",
+    "answer": "They have not repaired it yet, but they are still trying.",
+    "variants": [
+      "They haven't repaired it yet, but they are still trying.",
+      "They have not repaired it yet, but they're still trying.",
+      "They haven't repaired it yet, but they're still trying.",
+      "They've not repaired it yet, but they are still trying.",
+      "They've not repaired it yet, but they're still trying.",
+      "They have not yet repaired it, but they are still trying.",
+      "They haven't yet repaired it, but they are still trying.",
+      "They have not yet repaired it, but they're still trying.",
+      "They haven't yet repaired it, but they're still trying.",
+      "They've not yet repaired it, but they are still trying.",
+      "They've not yet repaired it, but they're still trying."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n89-ongoing-duration-question",
+    "answer": "How long have you lived here?",
+    "variants": [
+      "How long have you been living here?"
+    ],
+    "issues": [
+      "The prompt does not require the simple present perfect. The perfect progressive is also natural for continuing residence."
+    ]
+  },
+  {
+    "id": "diagnostic-n89-duration-or-start",
+    "answer": "I have lived here for five years.",
+    "variants": [
+      "I've lived here for five years.",
+      "For five years I have lived here.",
+      "For five years I've lived here.",
+      "I have been living here for five years.",
+      "I've been living here for five years."
+    ],
+    "issues": [
+      "Continuing residence allows either lived or been living; no prompt restriction excludes the progressive."
+    ]
+  },
+  {
+    "id": "diagnostic-n89-not-completed-yet",
+    "answer": "He has not done his homework yet.",
+    "variants": [
+      "He hasn't done his homework yet.",
+      "He has not yet done his homework.",
+      "He hasn't yet done his homework.",
+      "He's not done his homework yet.",
+      "He's not yet done his homework."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n89-ongoing-duration-question",
+    "answer": "How long has she worked here?",
+    "variants": [],
+    "issues": [
+      "The explicit worked requirement excludes the otherwise natural been working alternative from this constrained task."
+    ]
+  },
+  {
+    "id": "guided-n89-duration-or-start",
+    "answer": "They have lived here since 2018.",
+    "variants": [
+      "They've lived here since 2018.",
+      "Since 2018 they have lived here.",
+      "Since 2018 they've lived here.",
+      "They have been living here since 2018.",
+      "They've been living here since 2018."
+    ],
+    "issues": [
+      "The general have/has plus participle hint does not expressly demand lived rather than been living. Both report the stated continuing residence and starting year."
+    ]
+  },
+  {
+    "id": "guided-n89-not-completed-yet",
+    "answer": "She has not spoken to him yet.",
+    "variants": [
+      "She hasn't spoken to him yet.",
+      "She has not yet spoken to him.",
+      "She hasn't yet spoken to him.",
+      "She's not spoken to him yet.",
+      "She's not yet spoken to him."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n89-ongoing-duration-question",
+    "answer": "How long have they been here?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n89-duration-or-start",
+    "answer": "I have been here since Monday.",
+    "variants": [
+      "I've been here since Monday.",
+      "Since Monday I have been here.",
+      "Since Monday I've been here."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n89-not-completed-yet",
+    "answer": "He has not gone yet.",
+    "variants": [
+      "He hasn't gone yet.",
+      "He has not yet gone.",
+      "He hasn't yet gone.",
+      "He's not gone yet.",
+      "He's not yet gone."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n89-ongoing-duration-question",
+    "answer": "How long have you worked here?",
+    "variants": [],
+    "issues": [
+      "The explicit worked requirement excludes the otherwise natural been working alternative from this constrained task."
+    ]
+  },
+  {
+    "id": "repair-n89-duration-or-start",
+    "answer": "She has been here for three months.",
+    "variants": [
+      "She's been here for three months.",
+      "For three months she has been here.",
+      "For three months she's been here."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n89-not-completed-yet",
+    "answer": "I have not taken off my shoes yet.",
+    "variants": [
+      "I haven't taken off my shoes yet.",
+      "I have not yet taken off my shoes.",
+      "I haven't yet taken off my shoes.",
+      "I've not taken off my shoes yet.",
+      "I've not yet taken off my shoes.",
+      "I have not taken my shoes off yet.",
+      "I haven't taken my shoes off yet.",
+      "I have not yet taken my shoes off.",
+      "I haven't yet taken my shoes off."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n89-ongoing-duration-question",
+    "answer": "How long has he lived in London?",
+    "variants": [
+      "How long has he been living in London?"
+    ],
+    "issues": [
+      "The unrestricted live prompt allows the perfect progressive as well as the simple perfect."
+    ]
+  },
+  {
+    "id": "review-a-n89-duration-or-start",
+    "answer": "We have been here since 2020.",
+    "variants": [
+      "We've been here since 2020.",
+      "Since 2020 we have been here.",
+      "Since 2020 we've been here."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n89-not-completed-yet",
+    "answer": "They have not read this book yet.",
+    "variants": [
+      "They haven't read this book yet.",
+      "They have not yet read this book.",
+      "They haven't yet read this book.",
+      "They've not read this book yet.",
+      "They've not yet read this book."
+    ],
+    "issues": [
+      "The context says they have not finished reading. The required read sentence conventionally means no completed reading, but does not explicitly distinguish partial reading from never starting. The constraint disallows adding finished."
+    ]
+  },
+  {
+    "id": "review-b-n89-ongoing-duration-question",
+    "answer": "How long have we been here?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n89-duration-or-start",
+    "answer": "He has lived here for ten years.",
+    "variants": [
+      "He's lived here for ten years.",
+      "For ten years he has lived here.",
+      "For ten years he's lived here.",
+      "He has been living here for ten years.",
+      "He's been living here for ten years."
+    ],
+    "issues": [
+      "Continuing residence allows lived or been living; no prompt restriction excludes the progressive."
+    ]
+  },
+  {
+    "id": "review-b-n89-not-completed-yet",
+    "answer": "We have not seen that film yet.",
+    "variants": [
+      "We haven't seen that film yet.",
+      "We have not yet seen that film.",
+      "We haven't yet seen that film.",
+      "We've not seen that film yet.",
+      "We've not yet seen that film."
+    ],
+    "issues": []
+  }
+]

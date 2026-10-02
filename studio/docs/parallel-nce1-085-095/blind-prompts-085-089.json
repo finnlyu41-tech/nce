@@ -1,0 +1,290 @@
+[
+  {
+    "courseId": "nce1-85",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n85-completed-now",
+        "context": "放映会给你留了重看片的位置；你已看过那部电影，现在说明不必为你留位。",
+        "prompt": "用I、see that film、already写当前完成陈述，不给过去日期。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n85-visit-experience",
+        "context": "交换生报名表需要确认对方是否有巴黎到访经历；答案未知，不问具体时间。",
+        "prompt": "用you、ever、been to Paris写经历疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n85-definite-past",
+        "context": "档案员只整理去年电视播映记录：我去年在电视上看了那部电影。",
+        "prompt": "用I、see that film、on television、last year写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n85-completed-now",
+        "context": "展厅鞋具检查已结束；她的鞋已经清洁好，现在可以进场。",
+        "prompt": "用She、clean her shoes、already写当前完成陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：按主语选have/has，保留题干指定的already或just，不能互换，动词用过去分词，不补过去日期。"
+      },
+      {
+        "id": "guided-n85-visit-experience",
+        "context": "你从未到访伦敦；朋友问你能否凭亲身经历推荐路线，你说明经历空白。",
+        "prompt": "用I、never、been to London写一句，不说未来计划。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：未知经历用Have/Has…ever been，未知刚返回的到访用just been；从未去过用never been；地点名配to，there不配to。"
+      },
+      {
+        "id": "guided-n85-definite-past",
+        "context": "监控记录显示窗户在一小时前打开；你只向调查员报告该已结束时间。",
+        "prompt": "用He、open the window、an hour ago写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：只报告题目规定的过去日期，用过去式，不加have/has；保留事件与时间。"
+      },
+      {
+        "id": "independent-n85-completed-now",
+        "context": "急需干净双手才能接手模型；我刚洗过手，眼下可以接手，未记录时刻。",
+        "prompt": "用I、wash my hands、just写当前刚完成陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n85-visit-experience",
+        "context": "两名导览志愿者的伦敦经验未明；你向领队核实他们是否曾到访伦敦。",
+        "prompt": "用they、ever、been to London写经历疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n85-definite-past",
+        "context": "旧家具修复报告只需昨天的动作：他们昨天给那个书柜上漆了。",
+        "prompt": "用They、paint that bookcase、yesterday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n85-completed-now",
+        "context": "保留上一轮首答和订正。下面是另一情境：交接时负责人还在安排除尘；我们刚给那个橱柜除完尘，可取消这一项。",
+        "prompt": "用We、dust that cupboard、just写当前刚完成陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n85-visit-experience",
+        "context": "保留上一轮首答和订正。下面是另一情境：旅行照片指着一个地点，大家都用there指它；她从未去过那儿，不能认出街道。",
+        "prompt": "用She、never、been there写经历否定，地点用there。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n85-definite-past",
+        "context": "保留上一轮首答和订正。下面是另一情境：广播设备日志要查明昨日开机记录：我昨天打开了电视。",
+        "prompt": "用I、turn on the television、yesterday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n85-completed-now",
+        "context": "第二天材料借用有新条件：他已经给那支铅笔削好了，现在无需再拿削笔器。",
+        "prompt": "用He、sharpen that pencil、already写当前完成陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n85-visit-experience",
+        "context": "你为一对夫妇登记体验偏好；不是问他们正在何处，而是问他们是否曾去过电影院。",
+        "prompt": "用they、ever、been to the cinema写经历疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n85-definite-past",
+        "context": "刚整理的访谈日志：她两分钟前问过一个问题，仅报告过去事件。",
+        "prompt": "用She、ask a question、two minutes ago写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n85-completed-now",
+        "context": "一周后的再访换了待办：我已经倒空那个篮子，配送员现在可以拿走它。",
+        "prompt": "用I、empty that basket、already写当前完成陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n85-visit-experience",
+        "context": "一周后同事刚回到办公室；你不知他是否刚从电影院回来，向接待员核实这一次近期到访，不问一生的经历。",
+        "prompt": "用he、just、been to the cinema询问是否刚去过且已返回。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n85-definite-past",
+        "context": "审计员追踪上周信件，记录我们上周五打好了那封信，不作当前待办报告。",
+        "prompt": "用We、type that letter、last Friday写过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-87",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n87-completion-check",
+        "context": "午后交接只有空白完成栏；你问修理工们到现在是否完工，不能凭车在场就判断。",
+        "prompt": "用your mechanics、finish、yet询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n87-past-followup",
+        "context": "送修已经确认；收件员缺发生时间，直接问对方何时把它带到这里。",
+        "prompt": "用you、bring it here、When询问过去发生时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n87-unfinished-state",
+        "context": "开门前清单显示地面尚未扫完；无人说明清洁员现在在做什么。",
+        "prompt": "用She、sweep the floor、yet报告尚未完成，不推断她正在扫。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n87-completion-check",
+        "context": "寄信登记尚未更新；负责人不知道他是否把那封信寄出了，需要核实当前结果。",
+        "prompt": "用he、send that letter、yet写完成疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：用Have/Has前置，保留分词与yet；对象和所属须符合情境。"
+      },
+      {
+        "id": "guided-n87-past-followup",
+        "context": "公司已确认老板离开；门卫只缺离开时刻，你向门卫追问老板何时离开。",
+        "prompt": "用the boss、leave、When写过去时间疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：已知发生才追问When；did后用原形，不重复已知的日期也不改问是否完成。"
+      },
+      {
+        "id": "guided-n87-unfinished-state",
+        "context": "接待员亲眼看到两位工人仍在处理机器，尚未停工；机器用it指代。",
+        "prompt": "用They、still、work on it写当前进行陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：读证据决定not…yet还是be still -ing；不能从未完成推断正在做，或把进行变已完成。"
+      },
+      {
+        "id": "independent-n87-completion-check",
+        "context": "茶点是否够分要看来宾是否已吃早餐；你向两位来宾询问，答案未知。",
+        "prompt": "用you、have breakfast、yet询问截至当前是否完成。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n87-past-followup",
+        "context": "失物工作人员已确认她找到自己的钢笔；你只缺找到时间，向工作人员问她。",
+        "prompt": "用she、find her pen、When追问过去时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n87-unfinished-state",
+        "context": "邮寄服务停机；记录明确我到现在还没有寄出那封信，无法判断我是否正在尝试。",
+        "prompt": "用I、send that letter、yet报告当前未完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n87-completion-check",
+        "context": "保留上一轮首答和订正。下面是另一情境：入住手续需要核实两人是否已购买新房，购房结果尚未确定；你问他们的代理人。",
+        "prompt": "用they、buy a new house、yet写完成疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n87-past-followup",
+        "context": "保留上一轮首答和订正。下面是另一情境：你们已经见过那位新同事，访客记录缺时间；别人询问你们何时见到她。",
+        "prompt": "替提问者用you、meet her、When写过去时间疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n87-unfinished-state",
+        "context": "保留上一轮首答和订正。下面是另一情境：直播看得到她仍在设法修好它，但还没有成功结果；用it指设备。",
+        "prompt": "用She、still、try to repair it报告眼下尝试。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n87-completion-check",
+        "context": "隔日广播交接：她是否已经听到那条消息不明，你向同事核实，不能假设她知道。",
+        "prompt": "用she、hear the news、yet写完成疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n87-past-followup",
+        "context": "新采访已经确认他们买了那台电视；你要购买时间，向采访助手问他们。",
+        "prompt": "用they、buy that television、When写过去时间疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n87-unfinished-state",
+        "context": "房间检查发现他到现在还没有整理好那张床；没有他正在工作的证据。",
+        "prompt": "用He、make the bed、yet写当前未完成陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n87-completion-check",
+        "context": "一周后新失物单：负责人未收到找到钢笔的结果；你向她核实自己的钢笔是否已找到。",
+        "prompt": "用you、find your pen、yet写完成疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n87-past-followup",
+        "context": "展览搬运档案确认她昨天确实带来过它；现在问具体何时带到这里，不重述昨天。",
+        "prompt": "用she、bring it here、When写过去时间疑问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n87-unfinished-state",
+        "context": "一周后现场交接有两项证据：他们尚未修好这台机器，而且摄像头显示他们仍在尝试；维修失败的最终结论也未成立。需要同时报告未完成结果和继续努力，机器用it。",
+        "prompt": "用They、not repair it yet、but、still try写两个相连分句，报告当前未完成及仍在尝试。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-89",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n89-ongoing-duration-question",
+        "context": "房主现在仍住在这里；访客知道起居地点，却不知道这一持续状态有多久，直接询问房主。",
+        "prompt": "用you、live here、How long询问持续到现在的居住时长。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n89-duration-or-start",
+        "context": "社区档案给出我在这里已住五年，现仍在住；只有长度，没有入住年份。",
+        "prompt": "用I、live here、five years报告持续至今的时长，不编造起点。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n89-not-completed-yet",
+        "context": "老师现在等他的作业；记录显示他到现在还没做完，而非只缺昨天那一次。",
+        "prompt": "用He、do his homework、yet报告尚未完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n89-ongoing-duration-question",
+        "context": "值班负责人仍在这家图书馆任职；你向同事询问她在这里的任职时长，信息未知。",
+        "prompt": "用she、work here、How long询问持续到现在的时长，用worked结构。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：先确认仍在持续，再用How long + have/has + 主语 + 分词；不擅自给未知时长。"
+      },
+      {
+        "id": "guided-n89-duration-or-start",
+        "context": "入住登记只给出2018年这个起点：他们从那年起住在这里，目前仍在住。",
+        "prompt": "用They、live here、2018报告持续至今的起点，不计算年数。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：仍持续的状态用have/has+分词；长度选for，起点选since，不丢给定信息。"
+      },
+      {
+        "id": "guided-n89-not-completed-yet",
+        "context": "会面要求她先跟那位男同事谈过；她到现在还没有与他交谈，不能进入下一步。",
+        "prompt": "用She、speak to him、yet报告尚未完成。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：用have/has not+分词+yet，保留人物、所属与尚未完成；不改成确定过去的否定。"
+      },
+      {
+        "id": "independent-n89-ongoing-duration-question",
+        "context": "临时接待站的两位访客仍在场；另一个人的离场时间已经记清。你要补齐仍在场两人的停留长度，不能把他人的离场时间当作他们的时长。",
+        "prompt": "用they、be here、How long询问持续至今的在场时长。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n89-duration-or-start",
+        "context": "我自星期一起一直在这里，当前仍在场；只提供起点Monday，不要求算天数。",
+        "prompt": "用I、be here、Monday报告持续至今的起点。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n89-not-completed-yet",
+        "context": "会议室预订者尚未离开，系统到现在没有他的离场完成记录；只报告还没有走。",
+        "prompt": "用He、go、yet写当前未完成否定，不给目的地。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n89-ongoing-duration-question",
+        "context": "保留上一轮首答和订正。下面是另一情境：新项目你仍在这里任职；访问员要你的持续任职长度，不是聘任日期。",
+        "prompt": "替访问员用you、work here、How long询问持续至今时长，用worked结构。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n89-duration-or-start",
+        "context": "保留上一轮首答和订正。下面是另一情境：登记显示她连续在这里三个月，现在还在；未给来到的日历日期。",
+        "prompt": "用She、be here、three months报告持续至今时长。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n89-not-completed-yet",
+        "context": "保留上一轮首答和订正。下面是另一情境：室内场地只允许脱鞋者入内；我到现在还未脱掉自己的鞋，不能说已经符合条件。",
+        "prompt": "用I、take off my shoes、yet写当前未完成否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n89-ongoing-duration-question",
+        "context": "隔日口述历史有两条不同记录：她曾住伦敦但已搬走；他目前仍住伦敦。你要向档案员补齐仍持续的那段居住长度，不能问成到访经历或已结束居住。",
+        "prompt": "用he、live in London、How long询问持续至今居住时长。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n89-duration-or-start",
+        "context": "书面材料仅确认我们从2020年起一直在这里，当前仍在；不要自算长度。",
+        "prompt": "用We、be here、2020写持续起点陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n89-not-completed-yet",
+        "context": "读书讨论开始前调查发现他们到现在都还没看完这本书，需要保留阅读名额。",
+        "prompt": "用They、read this book、yet报告当前尚未完成阅读。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n89-ongoing-duration-question",
+        "context": "一周后救援站交接：我们仍在这里，离场时间还不存在；别组已经离场。日志缺我们这一组从来到现在的总停留长度，你作为其中一人向负责人核实，不替别组发问。",
+        "prompt": "用we、be here、How long询问这段持续至今的在场时长。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n89-duration-or-start",
+        "context": "租住证明写明他在这里已住十年，当前仍住；没有精确入住年份。",
+        "prompt": "用He、live here、ten years报告持续至今时长，不补年份。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n89-not-completed-yet",
+        "context": "新放映计划说明我们到现在还没看过那部电影，所以需要观看名额；不是记录昨天。",
+        "prompt": "用We、see that film、yet报告截至当前尚未完成观看。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+# First freeze: NCE1 85–90
+
+85/87/89: 54 original constrained tasks, full three-target loops and human-pending open expression. Exact baseline 6b1faad2840bee06f9b824e72d5c551bb9acd273; published runtime bf6ea10567a379846dea7a6f40f68c8937889d7c reported by root. Fresh refs resolved to baseline. This is local authored content, not a new published host.
+
+Independent reviewer read only stems and produced 54 answers plus bounded variants. First review and original stems/answers are retained. Final review covers the tightened guided hint, coherent furniture/interview contexts and a new two-evidence final87 report. Reasonable comma-free time placement, formal medial yet, emphatic final still and continuing-residence progressive variants were individually reviewed and accepted through existing bindContent, without a second matcher. 89 progressive acceptance is a linguistic boundary, not a claim to teach the full progressive system.
+
+Final suite: 22/22 factory/content/blind/stem/source/scope tests, zero failures. Separate source evidence write: 5/5. Real unchanged Workspace/AudioSpace native QA: all three diagnostic → teaching → guided → independent first error → correction → repair → own placeholder → waiting → reload flows, widths390/320, zero runtime errors. Original first answer and separate correction verified. SourcePanel accepts the internalLRC sha and rejects transport sha/wrong course; actual raw LRC parts, comics and paired pages hashed. Audio evidence is decoding/seek/play only.
+
+Register exported modules via their own matches, add narrow CourseId/showSource unions, preserve existing83→85 and append85→87→89; 89→91 is a planned successor once91 is registered. Preserve latest host factory/guard/writer/Today/video/source kinds. The QA registry override is never production integration. Author-scope tests expect an unwired host and need separate owner integration checks after wiring.
+
+Scaffolded prompts provide lexical/structure cues. They verify bounded construction and morphology rather than spontaneous tense selection or free transfer. Natural24h/7d, audibility, physical phone/keyboard, human own review, pronunciation, four skills and learning gains remain unverified. No personal learner data, push, merge or deployment.

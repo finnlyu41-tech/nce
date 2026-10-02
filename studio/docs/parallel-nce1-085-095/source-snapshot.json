@@ -1,0 +1,15 @@
+{
+  "note": "Copied immutable source resource snapshot only; application code and registry are from fresh exact v43 clone. Source hash/guard verification remains mandatory. No old app build is run.",
+  "applicationBase": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "sha256": {
+    "materials/manifest.json": "a9661a1a000654ffebb1eac3612ea6503b538d91332cde3c5cba159f43fa3730",
+    "language/index.json": "e7629188211afab2798ed393b93f604b23342434cc63648bff783943f23997d1",
+    "grammar/index.json": "743c6993a7c624604aa8b7a78982f84f4344754485e0b5e4bec08444419ec6c2",
+    "language/NCE1/85.json": "2e884b88c8f09b5500c53014207248f433dde94ccc4a6e805ff214a3b518c1a8",
+    "language/NCE1/87.json": "014e88b4d922c100af184b327cd1aaeb24094f0e548c9d283d5a6cc53a4b5e9f",
+    "language/NCE1/89.json": "0a1eedc9d68102d09d9430ed756f5f6631ca2fa51f87ec962eac5b986377a737",
+    "language/NCE1/91.json": "83651b0eb2fee3095ea02806c78b017f6cdc56f144725ac70191ff35ec2e52ba",
+    "language/NCE1/93.json": "6d4e62afb9c67daf64d572a4980d411c3e39ecddee83547d64d9ef5d43e953e6",
+    "language/NCE1/95.json": "8dbcbd88966701fdc81fa0d78d62d519891462ed573f4ebdec840b223a989f56"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "baseline": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "publishedRuntimeReportedByRoot": "bf6ea10567a379846dea7a6f40f68c8937889d7c",
+  "remoteRefsFreshlyVerified": [
+    "codex/english-studio-online-20260926",
+    "codex/ielts-map-20260930"
+  ],
+  "productionRegistrationChanged": false,
+  "ownerWiringRequired": true,
+  "firstBatch": {
+    "courseIds": [
+      "nce1-85",
+      "nce1-87",
+      "nce1-89"
+    ],
+    "imports": [
+      "./parallel-nce1-085-095/lesson-nce1-085.mjs",
+      "./parallel-nce1-085-095/lesson-nce1-087.mjs",
+      "./parallel-nce1-085-095/lesson-nce1-089.mjs"
+    ],
+    "successors": {
+      "nce1-85": "nce1-87",
+      "nce1-87": "nce1-89",
+      "nce1-89": "nce1-91"
+    },
+    "status": "validated-local-freeze",
+    "tasks": 54,
+    "nodeTestsPassed": 22,
+    "browserCoursesPassed": 3
+  },
+  "secondBatch": {
+    "courseIds": [
+      "nce1-91",
+      "nce1-93",
+      "nce1-95"
+    ],
+    "imports": [
+      "./parallel-nce1-085-095/lesson-nce1-091.mjs",
+      "./parallel-nce1-085-095/lesson-nce1-093.mjs",
+      "./parallel-nce1-085-095/lesson-nce1-095.mjs"
+    ],
+    "successors": {
+      "nce1-91": "nce1-93",
+      "nce1-93": "nce1-95",
+      "nce1-95": "nce1-97"
+    },
+    "status": "authoring"
+  },
+  "existingBoundaryToPreserve": {
+    "nce1-83": "nce1-85"
+  },
+  "unionExtensions": [
+    "CourseId",
+    "showSource.lesson",
+    "showSource.comicKey"
+  ],
+  "preserve": [
+    "all latest registry entries",
+    "single production createCourseLoopModel",
+    "each module.matches",
+    "latest SourceKind including independent video integration",
+    "SourcePanel source guard",
+    "single successor selector and unknown fallback",
+    "guarded serialized writer",
+    "Today and existing learning drafts"
+  ],
+  "unverified": [
+    "production host registration and route continuation",
+    "published new content",
+    "natural24h/7d",
+    "actual audibility",
+    "physical phone or keyboard",
+    "human open-expression review",
+    "pronunciation",
+    "all four skills",
+    "learning gain"
+  ]
+}
