@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v41 · 小任务与原书来源说明
+## Current release v42 - Academic table reading
+
+Runtime `0bfe71704a54d2db58a1b66b2510b1efd4d503ba`, [fixed deployment](https://5503b796.finn-english-studio.pages.dev). One finite lesson with six original materials; original answers, separate corrections and displayed public task context transfer through the real whole-site backup. Formal52/47/1 native checks and76 public resources pass.
+
+[Scope and evidence](docs/ielts-table-v42.md).
+
+## 已发布 v41 · 小任务与原书来源说明
 
 版本 `2026-10-02-mini-task-source-notes-v41`，运行源码 `2e1eff97bf86d98913211dd96563f8f262618669`，固定部署 [v41](https://3b082da9.finn-english-studio.pages.dev)。首12课六组部分目标小任务已接入Today／本课返回，十条合成音频完整在线与桌面离线打包；五张补充原页与来源限定说明可核对。原答、失败输入和旧词卡排程保留。本机／正式各13组、最终包8宿主组、双地址76哈希通过。[范围与验证](docs/mini-task-source-notes-v41.md)。
 
