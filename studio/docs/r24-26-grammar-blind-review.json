@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "baseline": "c6b9b0182317fba09d1957b9844d6edc63f51ac4",
+  "reviewerTask": "/root/blind_grammar_batch",
+  "blindMethod": "Reviewer received four prompts only, without repository answers, accepted forms or implementation; no repository files read during blind turn.",
+  "prompts": [
+    "time-perspective-v0-produce",
+    "linked-vocabulary-v1-produce",
+    "giving-directions-v0-produce",
+    "time-perspective-v1-produce"
+  ],
+  "findings": [
+    {
+      "topic": "yet",
+      "acceptedMeaning": "Sentence-final yet and not yet + participle retain present-perfect negative progress.",
+      "reject": [
+        "past simple instead of requested present perfect",
+        "missing negative",
+        "bare infinitive",
+        "sentence-initial yet meaning however"
+      ],
+      "manualBoundary": "as yet variants were not added to the finite accepted set."
+    },
+    {
+      "topic": "exclusion",
+      "acceptedMeaning": "Except (for) after predicate or next to Everyone; but/other than and contextually excluding apart from; fronted except for; given party-end perspective also permits had turned up.",
+      "reject": [
+        "besides/includes photographer",
+        "negates other arrivals",
+        "present perfect with ended yesterday frame",
+        "past progressive alone fails completed arrival fact"
+      ],
+      "manualBoundary": "save, save for, photographer excepted are reasonable low-frequency forms for manual review."
+    },
+    {
+      "topic": "directions",
+      "acceptedMeaning": "in and into; do not/dont; sentence-initial or final please retains instruction.",
+      "reject": [
+        "on/onto surface",
+        "out of direction",
+        "do + ing",
+        "modal prohibition instead of imperative"
+      ],
+      "manualBoundary": "Emphatic Dont you remains outside the finite set."
+    },
+    {
+      "topic": "time-reference",
+      "acceptedMeaning": "Had repaired; two days before or earlier relative to cabin arrival.",
+      "reject": [
+        "has repaired",
+        "had repair",
+        "two days ago/later",
+        "had been repairing does not assert completed roof repair"
+      ],
+      "manualBoundary": "already emphasis may warrant manual review."
+    }
+  ],
+  "implementationDecision": "21 finite accepted additions over three original questions; preserve all canonical answers and honest unmatched/manual boundary.",
+  "limits": [
+    "No learner-effect claim",
+    "No IELTS band claim",
+    "No browser or natural-time evidence from this review"
+  ],
+  "implementationReview": {
+    "result": "No false acceptance or blocker found in the target accepted sets; reviewer independently executed new variant suite successfully.",
+    "editorialIssuesResolved": [
+      "Changed yet hint from required final position to final or after not.",
+      "Removed into-only explanation and hints; in and into both explicitly supported.",
+      "Clarified inherited repair prompt permits expanding Dont to Do not, matching its unchanged accepted form."
+    ],
+    "productionScope": "Same three existing data files, no shared matcher/UI/storage change."
+  }
+}

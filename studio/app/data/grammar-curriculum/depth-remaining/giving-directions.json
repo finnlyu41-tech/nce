@@ -27,7 +27,8 @@
     "祈使句通常省略you，动词原形开头；否定用Don't + 原形，be也一样，如Don't be impatient。please能缓和语气，但场合、关系与语调仍决定请求是否合适。Let's + 原形提出包含说话者的一起行动建议；Let's not…提出一起不做。直接指示、请求与共同建议不是同一种参与关系。",
     "时间定位通常用at + 钟点，on + 日期/星期/特定一天的早晚，in + 月份/年份/季节或泛指早中晚。this/next/last/every + 时间通常不加这些介词。at night是常见搭配，特定某天早晨用on。weekend的介词有地区差异，本轮不把另一地区的自然表达判错。",
     "by noon给完成的截止点：不晚于正午；until noon把状态或活动延伸到正午。The desk is open until six说开放持续，The desk must open by six说最迟几点开始，两者不能机械替换。not…until还可以说直到那个时候才发生，另需上下文；本轮先区分肯定截止与持续。结合指示时，选择真实任务的时间关系，不用关键词替代意义判断。",
-    "本轮输入give…to、buy…for和否定祈使，识别地点路径和by/until。多数地点、时间介词还有依名词、地区和搭配改变的用法，不是背完四条规则就掌握。写自己的真实安排需明确接收者、位置/路径和时间，同时保留待核对状态。"
+    "本轮输入give…to、buy…for和否定祈使，识别地点路径和by/until。多数地点、时间介词还有依名词、地区和搭配改变的用法，不是背完四条规则就掌握。写自己的真实安排需明确接收者、位置/路径和时间，同时保留待核对状态。",
+    "put 等动作中，in 可以说明动作结束后的内部位置，into 可以突出进入过程；本单元的门票指示允许这两种视角。并非所有方向介词都等价：on 指表面，out of 指从内部离开，需要按真实目的地判断。"
   ],
   "forms": [
     {
@@ -293,15 +294,21 @@
       "id": "giving-directions-v0-produce",
       "kind": "produce",
       "variant": 0,
-      "prompt": "新情境：活动门票尚待清点，你提醒帮手不要把门票放进回收箱。用put / the tickets / the recycling box造一个否定祈使句，自行选句首形式；本题用into突出进入路径（put…in也自然，可说明结果位置）。",
+      "prompt": "新情境：活动门票尚待清点，你提醒帮手不要把门票放进回收箱。用put / the tickets / the recycling box造一个否定祈使句，自行选句首形式；可以用into说明进入路径，或in说明最终位置，保留其余信息。",
       "answer": "Don't put the tickets into the recycling box.",
       "accepted": [
-        "Do not put the tickets into the recycling box."
+        "Do not put the tickets into the recycling box.",
+        "Don't put the tickets in the recycling box.",
+        "Do not put the tickets in the recycling box.",
+        "Please don't put the tickets into the recycling box.",
+        "Please don't put the tickets in the recycling box.",
+        "Don't put the tickets into the recycling box, please.",
+        "Don't put the tickets in the recycling box, please."
       ],
-      "explanation": "Don't后接原形put，不加to；into表放进内部的路径。本题指定该路径表达，以便同练否定祈使与位置/变化的选择。",
+      "explanation": "Don't后接原形put，不加to；into表放进内部的路径。本题同练否定祈使与位置/变化的选择，允许路径与结果位置两种视角。 put…in 在这里强调放置后的内部位置，put…into 强调进入，两者均满足不要放入回收箱的指示。Don't 与 Do not 均可；on 表示箱体表面，会改变目标位置，不能作为同一答案。 句首或句末的 please 只增加礼貌语气，不改变指示内容，本题也接受；You mustn't 虽能表达禁止，却不属于本题要求的否定祈使句。",
       "hints": [
-        "先选对方不做事的句首形式，再确定进入内部的路径词。",
-        "Don't + 原形put + 物品，再用into引出回收箱；不加主语you或to。"
+        "先选要求对方不做事的句首形式，再确定进入内部或最终内部位置的介词。",
+        "Don't + 原形put + 物品，再用in或into引出回收箱；可增加please表达礼貌，不加多余的to。"
       ]
     },
     {
@@ -326,7 +333,7 @@
       "id": "giving-directions-v1-repair",
       "kind": "repair",
       "variant": 1,
-      "prompt": "只删去一个多余词，不换其他内容：Don't to move the display.",
+      "prompt": "只删去一个多余词，保留原来的指示与其余词序；Don't 可展开为 Do not：Don't to move the display.",
       "answer": "Don't move the display.",
       "accepted": [
         "Do not move the display."
@@ -351,12 +358,13 @@
     }
   ],
   "transfer": {
-    "prompt": "为一次真实活动写4–6句安排：告诉接收者拿什么、放到哪里或去哪里，至少一个否定提醒，再说明截止或持续时间。可以加一条Let's共同建议。核对give/buy等动词的接收者结构、静态/路径和by/until的真实时间关系；你的安排保存为待核对，不自动评成绩。",
+    "prompt": "IELTS 迁移练习（原创练习，非真题）：先为访客写4—6句自然指示，说明谁接收物品、放到哪里、何时处理。再把其中两步改写成 IELTS Academic Writing Task 1 流程说明的两句局部练习：自行设计并标注一个简单流程，用陈述句说明先后与目的地，必要时使用被动；不把给人的命令直接当成完整流程报告。选自己的物品和步骤，不沿用门票或回收箱，未发生的流程注明为设想。",
     "criteria": [
       "接收者/受益者明确，所选动词允许该结构。",
       "位置与进入/到达路径区分，不把自然的put in/on一概判错。",
       "否定指示使用Don't+原形，语气适合实际关系。",
-      "时间时点/日期/期间以及截止/持续意义清楚，未把读过规则算掌握。"
+      "时间时点/日期/期间以及截止/持续意义清楚，未把读过规则算掌握。",
+      "IELTS Task 1 局部迁移先核对流程主体、步骤与目的地是否清楚，报告形式用陈述句而非一串祈使句。有限自动匹配只检查本组限定句；这两句不构成完整报告，开放流程稿需人工核对，不自动给 IELTS 分数或记为掌握。"
     ]
   }
 }
