@@ -1,0 +1,272 @@
+[
+  {
+    "id": "diagnostic-n55-routine-agreement",
+    "context": "社区司机每天去工作地点；用he指他。",
+    "prompt": "用He、go to work（去上班）、every day（每天）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n55-routine-frequency",
+    "context": "一位女队员经常在下午阅读；用she指她。",
+    "prompt": "主语She，动词read（阅读），频率often（经常）紧接主语，时段in the afternoon（在下午）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n55-routine-question",
+    "context": "你要问两位维修工日常晚上做什么；用they。",
+    "prompt": "用What、they、do（做）、in the evening（在晚上）写日常活动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "guided-n55-routine-agreement",
+    "context": "两位店员每天打扫房间；用they。",
+    "prompt": "用They、clean the room（打扫房间）、every day（每天）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对主语单复数及动词-s/-es；时间与动作完整。"
+  },
+  {
+    "id": "guided-n55-routine-frequency",
+    "context": "一位男营员通常中午吃午餐；用he。",
+    "prompt": "主语He，eat lunch（吃午餐），频率usually（通常）紧接主语，时段at noon（在中午）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：频率词按题意放在主语后、动作前；in/at与时段相配。"
+  },
+  {
+    "id": "guided-n55-routine-question",
+    "context": "你想知道一位女摄影师上午做什么；用she。",
+    "prompt": "用What、she、do（做）、in the morning（在上午）写规律问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：What + do/does + 主语 + do + 时段?；不能丢掉后面的do。"
+  },
+  {
+    "id": "independent-n55-routine-agreement",
+    "context": "一位仓库工人每天洗杯子；用she。",
+    "prompt": "用She、wash the cups（洗这些杯子）、every day（每天）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n55-routine-frequency",
+    "context": "两位合奏者有时夜间听音乐；用they。",
+    "prompt": "主语They，listen to music（听音乐），频率sometimes（有时）紧接主语，时段at night（在夜间）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n55-routine-question",
+    "context": "你问新室友每天惯常做什么；直接用you。",
+    "prompt": "用What、you、do（做）、every day（每天）写规律活动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "repair-n55-routine-agreement",
+    "context": "保留上一轮首答和订正。下面是另一情境：新情况表确认：一位男助手每天做家务；用he。",
+    "prompt": "用He、do the housework（做家务）、every day（每天）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n55-routine-frequency",
+    "context": "保留上一轮首答和订正。下面是另一情境：新值班规律：我们经常晚上检查门。",
+    "prompt": "主语We，check the door（检查门），频率often（经常）紧接主语，时段in the evening（在晚上）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n55-routine-question",
+    "context": "保留上一轮首答和订正。下面是另一情境：新采访对象是一位司机，未知其下午的日常活动。",
+    "prompt": "用What、the driver（司机）、do（做）、in the afternoon（在下午）写规律问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-a-n55-routine-agreement",
+    "context": "两位学生每天走回家；用they。",
+    "prompt": "用They、walk home（走回家）、every day（每天）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n55-routine-frequency",
+    "context": "一位女管理员总是上午打开窗户；用she。",
+    "prompt": "主语She，open the windows（打开这些窗户），频率always（总是）紧接主语，时段in the morning（在上午）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n55-routine-question",
+    "context": "你问一位男艺术家日常夜间做什么；用he。",
+    "prompt": "用What、he、do（做）、at night（在夜间）写规律问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-b-n55-routine-agreement",
+    "context": "一位编辑每天看电视；用she。",
+    "prompt": "用She、watch television（看电视）、every day（每天）写规律肯定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n55-routine-frequency",
+    "context": "我们通常下午给植物浇水。",
+    "prompt": "主语We，water the plants（给这些植物浇水），频率usually（通常）紧接主语，时段in the afternoon（在下午）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n55-routine-question",
+    "context": "早餐工作分配尚未登记，你问两位厨师中午惯常做什么。",
+    "prompt": "用What、the cooks（这些厨师）、do（做）、at noon（在中午）写规律问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "diagnostic-n57-habit-or-current",
+    "context": "一位快递员平常每天骑车，今天此刻画面中正在步行；只报告日常规律，用he。",
+    "prompt": "仅用He、ride a bike（骑一辆自行车）、every day（每天）写规律句，不写今天画面。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n57-current-negative",
+    "context": "两位清洁员此刻没有洗窗户，正在整理工具；用they，只写未进行的动作。",
+    "prompt": "用They、not wash the windows（洗这些窗户）、now（现在）写当下否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n57-activity-question",
+    "context": "你知道一位女士平常上午有固定活动，但不知道活动内容；用she。",
+    "prompt": "用What、she、usually（通常）、do（做）、in the morning（上午）询问惯常活动；usually紧接she。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "guided-n57-habit-or-current",
+    "context": "一位男访客平常乘公交，此刻监控画面显示他正在走去公园。只报告现在画面。",
+    "prompt": "用He、walk to the park（走去公园）、now（现在）写正在动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：规律用原形或-s；明确此刻正在进行用be + -ing，不凭today猜。"
+  },
+  {
+    "id": "guided-n57-current-negative",
+    "context": "一位女画家此刻没有画画，正在看展览；用she，只写未做的动作。",
+    "prompt": "用She、not paint（画画）、now（现在）写当下否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：主语与be一致；not与-ing完整；保留now表示当下否定。"
+  },
+  {
+    "id": "guided-n57-activity-question",
+    "context": "当前直播中一位男教练正在活动，但画面动作尚看不清；问他此刻在做什么。",
+    "prompt": "用What、he、doing（正在做）、now（现在）写当下活动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：先看问规律还是此刻，再选do/does…do或am/is/are…doing。"
+  },
+  {
+    "id": "independent-n57-habit-or-current",
+    "context": "两位实验员每晚通常读书；今晚此刻正在清洗器材。只报告通常习惯，用they。",
+    "prompt": "用They、usually（通常）紧接主语、read（阅读）、at night（夜间）写规律句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n57-current-negative",
+    "context": "我此刻没在打字，正在听来访者讲述。只写没在进行的动作。",
+    "prompt": "用I、not type（打字）、now（现在）写当下否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n57-activity-question",
+    "context": "你在视频电话中看到两位朋友忙着做一项活动，想问此刻动作；用they。",
+    "prompt": "用What、they、doing（正在做）、now（现在）写当下活动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "repair-n57-habit-or-current",
+    "context": "保留上一轮首答和订正。下面是另一情境：新画面：我每天通常写信，但此刻我正在读一本书。只报告现在。",
+    "prompt": "用I、read a book（读一本书）、now（现在）写正在动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n57-current-negative",
+    "context": "保留上一轮首答和订正。下面是另一情境：新视频中我们此刻没在做饭，正在整理餐桌。",
+    "prompt": "用We、not cook（做饭）、now（现在）写当下否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n57-activity-question",
+    "context": "保留上一轮首答和订正。下面是另一情境：新访谈要问两位园艺师通常晚上做什么，而非当前画面；用they。",
+    "prompt": "用What、they、usually（通常）紧接they、do（做）、in the evening（晚上）写惯常活动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-a-n57-habit-or-current",
+    "context": "小店女店主每天步行去上班；今天此刻乘车。只说日常规律，用she。",
+    "prompt": "用She、walk to work（步行上班）、every day（每天）写规律句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n57-current-negative",
+    "context": "一位男学生此刻没有读书，正在看一幅图；用he。",
+    "prompt": "用He、not read（阅读）、now（现在）写当下否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n57-activity-question",
+    "context": "伙伴正在忙，你直接问对方现在在做什么。",
+    "prompt": "用What、you、doing（正在做）、now（现在）写当下问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-b-n57-habit-or-current",
+    "context": "两位游客平常走路，此刻正乘公交去酒店；用they，只报告当下。",
+    "prompt": "用They、take the bus（乘公交）、to the hotel（去酒店）、now（现在）写当前正在动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n57-current-negative",
+    "context": "两位志愿者此刻没在开窗，正在铺桌布；用they。",
+    "prompt": "用They、not open the windows（开这些窗）、now（现在）写当下否定句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n57-activity-question",
+    "context": "你问一位男厨师通常下午做什么，还不知道他的日常安排；用he。",
+    "prompt": "用What、he、usually（通常）紧接he、do（做）、in the afternoon（下午）写惯常活动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "diagnostic-n59-stock-question",
+    "context": "手工课采购员向仓库工作人员询问是否有铅笔，库存未知；用you。",
+    "prompt": "用Do、you、have any、pencil（可数铅笔，一批用复数）写库存问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "diagnostic-n59-stock-countability",
+    "context": "午餐备料记录确认：我们有一些未分份的米。",
+    "prompt": "用We、have some、rice（未分份的米，不可数）写肯定库存句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "diagnostic-n59-stock-alternative",
+    "context": "校园画室盘点：他们没有刷子，但有一些未分份的颜料；用they。",
+    "prompt": "用They、do not have any、brush（可数刷子，一批用复数）、but they have some、paint（未分份颜料，不可数）写一句库存对照。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "guided-n59-stock-question",
+    "context": "你和伙伴核对自己的团队是否还有未分份的胶水，用we问团队库存。",
+    "prompt": "用Do、we、have any、glue（未分份胶水，不可数）写库存问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：Do + 主语 + have any；可数物品复数，不可数物质保持原形。"
+  },
+  {
+    "id": "guided-n59-stock-countability",
+    "context": "活动物资表确认：我有一批文件夹。",
+    "prompt": "用I、have some、folder（可数文件夹，一批用复数）写肯定库存句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：some后保留指定的一批物品复数或未分份物质原形。"
+  },
+  {
+    "id": "guided-n59-stock-alternative",
+    "context": "捐赠点确认：我们没有未分份的糖，但有一批饼干。",
+    "prompt": "用We、do not have any、sugar（未分份糖，不可数）、but we have some、biscuit（可数饼干，一批用复数）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：否定any、肯定some；两项库存不反转，各名词保持正确数量形式。"
+  },
+  {
+    "id": "independent-n59-stock-question",
+    "context": "新开设的摄影课需确认主办方的夹子库存，你向同伴问他们是否有；用they。",
+    "prompt": "用Do、they、have any、clip（可数夹子，一批用复数）写库存问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "independent-n59-stock-countability",
+    "context": "流动茶站已确认：他们有一些未分份的牛奶。",
+    "prompt": "用They、have some、milk（未分份牛奶，不可数）写肯定库存句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "independent-n59-stock-alternative",
+    "context": "你准备工具箱：我没有一批螺钉，但有一些未分份胶水。",
+    "prompt": "用I、do not have any、screw（可数螺钉，一批用复数）、but I have some、glue（未分份胶水，不可数）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n59-stock-question",
+    "context": "保留上一轮首答和订正。下面是另一情境：新盘点流程需要先问库房是否有未分份颜料；用you问工作人员。",
+    "prompt": "用Do、you、have any、paint（未分份颜料，不可数）写库存问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "repair-n59-stock-countability",
+    "context": "保留上一轮首答和订正。下面是另一情境：新的野餐物资卡确认：我们有一批杯子。",
+    "prompt": "用We、have some、cup（可数杯子，一批用复数）写肯定库存句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "repair-n59-stock-alternative",
+    "context": "保留上一轮首答和订正。下面是另一情境：新备料卡确认：他们没有一批土豆，但有一些未分份的米。",
+    "prompt": "用They、do not have any、potato（可数土豆，一批用复数）、but they have some、rice（未分份米，不可数）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n59-stock-question",
+    "context": "去器材室前，你和搭档想确认己方是否有一批箱子；用we。",
+    "prompt": "用Do、we、have any、box（可数箱子，一批用复数）写库存问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-a-n59-stock-countability",
+    "context": "演示厨房确认：我有一些未分份的黄油。",
+    "prompt": "用I、have some、butter（未分份黄油，不可数）写肯定库存句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-a-n59-stock-alternative",
+    "context": "园艺站盘点：我们没有一批袋子，但有一批箱子。",
+    "prompt": "用We、do not have any、bag（可数袋子，一批用复数）、but we have some、box（可数箱子，一批用复数）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n59-stock-question",
+    "context": "修补活动需要确认对方团队有没有未分份的墨水；你直接问you。",
+    "prompt": "用Do、you、have any、ink（未分份墨水，不可数）写库存问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+  },
+  {
+    "id": "review-b-n59-stock-countability",
+    "context": "节日接待点确认：他们有一批桃子。",
+    "prompt": "用They、have some、peach（可数桃子，一批用复数）写肯定库存句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  },
+  {
+    "id": "review-b-n59-stock-alternative",
+    "context": "画室补给清单确认：我没有未分份墨水，但有未分份颜料。",
+    "prompt": "用I、do not have any、ink（未分份墨水，不可数）、but I have some、paint（未分份颜料，不可数）写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+  }
+]

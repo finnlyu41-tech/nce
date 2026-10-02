@@ -1,0 +1,54 @@
+{
+  "baseline": "9310cb98a5d345f29bc345c6960aae0450effcc4",
+  "checks": [
+    {
+      "id": "nce1-55",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; new-course successor integration remains owner work",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-57",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; new-course successor integration remains owner work",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-59",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; new-course successor integration remains owner work",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    }
+  ],
+  "runtimeErrors": [],
+  "profile": "fresh QA; no user profile/data; removed after test",
+  "productionRegistration": "not modified",
+  "naturalRetention": "not run"
+}

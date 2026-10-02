@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: nce1-49 real transcript LRC, source panel, comic and paired exercise pages
+ok 1 - nce1-49 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 11.896833
+  type: 'test'
+  ...
+# Subtest: nce1-51 real transcript LRC, source panel, comic and paired exercise pages
+ok 2 - nce1-51 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.90075
+  type: 'test'
+  ...
+# Subtest: nce1-53 real transcript LRC, source panel, comic and paired exercise pages
+ok 3 - nce1-53 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.407917
+  type: 'test'
+  ...
+# Subtest: nce1-55 real transcript LRC, source panel, comic and paired exercise pages
+ok 4 - nce1-55 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.590875
+  type: 'test'
+  ...
+# Subtest: nce1-57 real transcript LRC, source panel, comic and paired exercise pages
+ok 5 - nce1-57 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.217666
+  type: 'test'
+  ...
+# Subtest: nce1-59 real transcript LRC, source panel, comic and paired exercise pages
+ok 6 - nce1-59 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.055791
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 7 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 1.283416
+  type: 'test'
+  ...
+# Subtest: record verified source evidence
+ok 8 - record verified source evidence
+  ---
+  duration_ms: 1.094084
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 292.418167

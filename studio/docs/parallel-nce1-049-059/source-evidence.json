@@ -1,0 +1,326 @@
+{
+  "baseline": "9310cb98a5d345f29bc345c6960aae0450effcc4",
+  "remoteHeads": "424efc1869e98cd7b19afd2c1ab7cab0e8380b4b",
+  "groups": [
+    {
+      "id": "nce1-49",
+      "sourceSha256": "4fbdf5f0aecf7dabaf937dc08750c2951a551e0deb9003a0ea5d349674d8715f",
+      "languageFileSha256": "5352d100762a45a7fb4bf591b4da776bcf9f887b4d9a94aaef6a201b1b37428a",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "bd788fe90b69f60041b78eb1e2c39621514f90b560552632cfe0fe2537c2657d",
+      "grammarEntry": {
+        "id": "NCE1-49",
+        "book": "NCE1",
+        "lesson": 49,
+        "lastLesson": 50,
+        "unit": null,
+        "title": "一般现在时：第三人称单数",
+        "category": "tense",
+        "terms": "likes doesn't like",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 104
+          },
+          {
+            "section": "句型练习",
+            "page": 103
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 102
+          }
+        ],
+        "pages": [
+          102,
+          103,
+          104
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 102,
+          "sha256": "cafdbb20679e82fc88351ee190255b76595fe1c84f2a22d8f31d70d714933a10"
+        },
+        {
+          "page": 103,
+          "sha256": "58cdf92b8907522a499c8ee1216bd44134af5bfbd36d9ab5cbaea6fc5481be0f"
+        },
+        {
+          "page": 104,
+          "sha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-51",
+      "sourceSha256": "00290123d5a13c96460668aeaa202e4c200bba39762a5c26a9e2392230285cf1",
+      "languageFileSha256": "1b621305de4c07c834a0b18da3377a6d4c27e421af1e53e43b3d71c95ace934d",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "0b189b85a26a88c5d6cc90552c4716ced72e2916fa8a86cc45d7d6188834048f",
+      "grammarEntry": {
+        "id": "NCE1-51",
+        "book": "NCE1",
+        "lesson": 51,
+        "lastLesson": 52,
+        "unit": null,
+        "title": "国籍与来源：come from",
+        "category": "question",
+        "terms": "nationality come from",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 108
+          },
+          {
+            "section": "句型练习",
+            "page": 107
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 106
+          }
+        ],
+        "pages": [
+          106,
+          107,
+          108
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 106,
+          "sha256": "9ec4c74672a7410e93aa802a73d198f3cb88633aa207a43d0e12b2add0306a0e"
+        },
+        {
+          "page": 107,
+          "sha256": "e1095ea74275f7ebac4893d3b7c252698b7c10376d45f32c6c3f5aaacde2e947"
+        },
+        {
+          "page": 108,
+          "sha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-53",
+      "sourceSha256": "85296eb09a3667e1c243843884b23db94f9673f7f7c096d5d7060016445daaaa",
+      "languageFileSha256": "9b72be7af8fcb6199367372273f3d85a15df563e275f324141d3d9cf1a955ce4",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "e71a1c1a8831fcc1f8162458f642e554fef75dad5fb1507ac8281ceec1d0a760",
+      "grammarEntry": {
+        "id": "NCE1-53",
+        "book": "NCE1",
+        "lesson": 53,
+        "lastLesson": 54,
+        "unit": null,
+        "title": "国籍与来源的问答",
+        "category": "question",
+        "terms": "nationality come from",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 112
+          },
+          {
+            "section": "句型练习",
+            "page": 111
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 110
+          }
+        ],
+        "pages": [
+          110,
+          111,
+          112
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 110,
+          "sha256": "63dcd195303149fbeef185b7ca33a0e3a70e7afa83a9ce70d0f97f53a356362b"
+        },
+        {
+          "page": 111,
+          "sha256": "d72bb19d78ecc3a0a65cd6263c020d646246320e7be671287fd4b8d399abfa77"
+        },
+        {
+          "page": 112,
+          "sha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-55",
+      "sourceSha256": "cbc459a1cf8a40b30b6d030f6a9e526b9964745731140e3140d3edb987f9fbd5",
+      "languageFileSha256": "9e70a1d241bc2ce2d90198214afc693c555129c17b81203a99328ab2626b0914",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "da124755413797bb1a1e1a1552e5dcb6734d02c00d247d2979181a3f53256086",
+      "grammarEntry": {
+        "id": "NCE1-55",
+        "book": "NCE1",
+        "lesson": 55,
+        "lastLesson": 56,
+        "unit": null,
+        "title": "一般现在时与日常习惯",
+        "category": "tense",
+        "terms": "usually do",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 116
+          },
+          {
+            "section": "句型练习",
+            "page": 115
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 114
+          }
+        ],
+        "pages": [
+          114,
+          115,
+          116
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 114,
+          "sha256": "30efb13ed3a454e25192a0cbce2c31375a9abacf81ff2e46aab002dcce5009b1"
+        },
+        {
+          "page": 115,
+          "sha256": "1eb9c1b07b2bdd612ef1319c0bd92428b025d0e795eb83eac79853784f0887f3"
+        },
+        {
+          "page": 116,
+          "sha256": "36dcb44a332102bee2f88fdb0eb3f3cf3774d3f619c3ccfe09d31ad31348e2fd"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-57",
+      "sourceSha256": "f99358c152cbda88d1fe93fc1143c06e075c1eb7224246c25d820c99c8fa9bce",
+      "languageFileSha256": "cd5c62d965dcf4ac0c115f25340c8adc04dbbbed864e8c299f37c6bbc20d3655",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "47c456ed8eddb2a7d9de1707aaba6593770371469ba63fffab67556dda605cb4",
+      "grammarEntry": {
+        "id": "NCE1-57",
+        "book": "NCE1",
+        "lesson": 57,
+        "lastLesson": 58,
+        "unit": null,
+        "title": "一般现在时与现在进行时对比",
+        "category": "tense",
+        "terms": "usually doing time",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 120
+          },
+          {
+            "section": "句型练习",
+            "page": 119
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 118
+          }
+        ],
+        "pages": [
+          118,
+          119,
+          120
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 118,
+          "sha256": "8ca3a8081cb13e7d235bfb10f3fcb75277df11eda9351098237656fca8b0a7a7"
+        },
+        {
+          "page": 119,
+          "sha256": "2f9dc47b5262e892b675bef3f7251ca2e36f2a14aa028209ced8781e41bd8730"
+        },
+        {
+          "page": 120,
+          "sha256": "9bf22ed5969e8a4e268a29c7466dcfc40b61887b80fa9c75550977e31adb061b"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-59",
+      "sourceSha256": "f09610214baa987ae52340d60dbe5b248aa23d5187c608bc1077ea9f1a2dcb8a",
+      "languageFileSha256": "5e2a049fa52c48b3eec460be75c778695ed398f5aa8f34ad021e1db416442f57",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "ef7bf376da0f0c1bd24438e045de66897b66c4b9c62a2dce7f65cfa347ec264f",
+      "grammarEntry": {
+        "id": "NCE1-59",
+        "book": "NCE1",
+        "lesson": 59,
+        "lastLesson": 60,
+        "unit": null,
+        "title": "名词复数、some 与 any",
+        "category": "noun",
+        "terms": "plural some any time",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 124
+          },
+          {
+            "section": "句型练习",
+            "page": 123
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 122
+          }
+        ],
+        "pages": [
+          122,
+          123,
+          124
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 122,
+          "sha256": "d199cc2093210ce4f7825304eeb75d1a315bc96d617068f631bf6b8bc5e6a3bb"
+        },
+        {
+          "page": 123,
+          "sha256": "3c457380b2197514a52efd80d397434beecca91da98526a39975bd090bfddcc7"
+        },
+        {
+          "page": 124,
+          "sha256": "d3e0dcdf857cb591b82d77d2757936e22a25bdf5bd9cf782a006578ede5c2fd1"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}

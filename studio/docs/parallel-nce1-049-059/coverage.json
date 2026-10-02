@@ -1,0 +1,177 @@
+{
+  "base": "9310cb98a5d345f29bc345c6960aae0450effcc4",
+  "firstFrozenCommit": "374fb251f725d5db692ab4422edef1b6b8b89e38",
+  "totalGroups": 6,
+  "totalTasks": 108,
+  "totalCounterexamples": 432,
+  "groups": [
+    {
+      "id": "nce1-49",
+      "lessons": [
+        49,
+        50
+      ],
+      "targets": [
+        "preference-statement",
+        "preference-question",
+        "contrast-ellipsis"
+      ],
+      "tasks": 18,
+      "reasonableAcceptedForms": 41,
+      "counterexamples": 72,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "sourceSha256": "4fbdf5f0aecf7dabaf937dc08750c2951a551e0deb9003a0ea5d349674d8715f",
+      "moduleSha256": "224b1c799cb866f0eac869d5b9520c4ea0cfe9a0e45da0e40b47d6d5a332a966",
+      "freeExpression": "awaiting-human-review",
+      "contentStatus": "authored-blind-reviewed"
+    },
+    {
+      "id": "nce1-51",
+      "lessons": [
+        51,
+        52
+      ],
+      "targets": [
+        "origin-statement",
+        "origin-question",
+        "climate-description"
+      ],
+      "tasks": 18,
+      "reasonableAcceptedForms": 69,
+      "counterexamples": 72,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "sourceSha256": "00290123d5a13c96460668aeaa202e4c200bba39762a5c26a9e2392230285cf1",
+      "moduleSha256": "0fc6f009b3393c65ff70c8387657d7e3c5f399372df69f7f873888351c4eb454",
+      "freeExpression": "awaiting-human-review",
+      "contentStatus": "authored-blind-reviewed"
+    },
+    {
+      "id": "nce1-53",
+      "lessons": [
+        53,
+        54
+      ],
+      "targets": [
+        "third-person-positive",
+        "third-person-question",
+        "third-person-negative"
+      ],
+      "tasks": 18,
+      "reasonableAcceptedForms": 32,
+      "counterexamples": 72,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "sourceSha256": "85296eb09a3667e1c243843884b23db94f9673f7f7c096d5d7060016445daaaa",
+      "moduleSha256": "4c9a3ddaea3c07629f78617808dd6feddb66b3273321814dc2ba87d28add099a",
+      "freeExpression": "awaiting-human-review",
+      "contentStatus": "authored-blind-reviewed"
+    },
+    {
+      "id": "nce1-55",
+      "lessons": [
+        55,
+        56
+      ],
+      "targets": [
+        "routine-agreement",
+        "routine-frequency",
+        "routine-question"
+      ],
+      "tasks": 18,
+      "reasonableAcceptedForms": 54,
+      "counterexamples": 72,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "sourceSha256": "cbc459a1cf8a40b30b6d030f6a9e526b9964745731140e3140d3edb987f9fbd5",
+      "moduleSha256": "d5e1110a298bda49bbfcd6fa4916ab8baa3c963b2783c8f284fe2c0da124db3d",
+      "freeExpression": "awaiting-human-review",
+      "contentStatus": "authored-blind-reviewed"
+    },
+    {
+      "id": "nce1-57",
+      "lessons": [
+        57,
+        58
+      ],
+      "targets": [
+        "habit-or-current",
+        "current-negative",
+        "activity-question"
+      ],
+      "tasks": 18,
+      "reasonableAcceptedForms": 134,
+      "counterexamples": 72,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "sourceSha256": "f99358c152cbda88d1fe93fc1143c06e075c1eb7224246c25d820c99c8fa9bce",
+      "moduleSha256": "7f8b7d91a36ba9dff7c078c17d4cc144480b3bba73189d8535432121f1f51dee",
+      "freeExpression": "awaiting-human-review",
+      "contentStatus": "authored-blind-reviewed"
+    },
+    {
+      "id": "nce1-59",
+      "lessons": [
+        59,
+        60
+      ],
+      "targets": [
+        "stock-question",
+        "stock-countability",
+        "stock-alternative"
+      ],
+      "tasks": 18,
+      "reasonableAcceptedForms": 36,
+      "counterexamples": 72,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "sourceSha256": "f09610214baa987ae52340d60dbe5b248aa23d5187c608bc1077ea9f1a2dcb8a",
+      "moduleSha256": "75a34046daafaa8b8334dcd4d26f367f16874643ff7e90604e243ef4dad33339",
+      "freeExpression": "awaiting-human-review",
+      "contentStatus": "authored-blind-reviewed"
+    }
+  ],
+  "retention": "natural 24h/7d not run",
+  "audioPlayback": "not-audited",
+  "listening": "not-tested",
+  "pronunciation": "not-tested",
+  "mastery": "not-assessed",
+  "band": null
+}

@@ -1,0 +1,717 @@
+[
+  {
+    "id": "diagnostic-n55-routine-agreement",
+    "answer": "He goes to work every day.",
+    "variants": [
+      "Every day, he goes to work.",
+      "Every day he goes to work.",
+      "He goes to work every day",
+      "Every day, he goes to work",
+      "Every day he goes to work"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n55-routine-frequency",
+    "answer": "She often reads in the afternoon.",
+    "variants": [
+      "In the afternoon, she often reads.",
+      "In the afternoon she often reads.",
+      "She often reads in the afternoon",
+      "In the afternoon, she often reads",
+      "In the afternoon she often reads"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n55-routine-question",
+    "answer": "What do they do in the evening?",
+    "variants": [
+      "In the evening, what do they do?",
+      "In the evening what do they do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n55-routine-agreement",
+    "answer": "They clean the room every day.",
+    "variants": [
+      "Every day, they clean the room.",
+      "Every day they clean the room.",
+      "They clean the room every day",
+      "Every day, they clean the room",
+      "Every day they clean the room"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n55-routine-frequency",
+    "answer": "He usually eats lunch at noon.",
+    "variants": [
+      "At noon, he usually eats lunch.",
+      "At noon he usually eats lunch.",
+      "He usually eats lunch at noon",
+      "At noon, he usually eats lunch",
+      "At noon he usually eats lunch"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n55-routine-question",
+    "answer": "What does she do in the morning?",
+    "variants": [
+      "In the morning, what does she do?",
+      "In the morning what does she do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n55-routine-agreement",
+    "answer": "She washes the cups every day.",
+    "variants": [
+      "Every day, she washes the cups.",
+      "Every day she washes the cups.",
+      "She washes the cups every day",
+      "Every day, she washes the cups",
+      "Every day she washes the cups"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n55-routine-frequency",
+    "answer": "They sometimes listen to music at night.",
+    "variants": [
+      "At night, they sometimes listen to music.",
+      "At night they sometimes listen to music.",
+      "They sometimes listen to music at night",
+      "At night, they sometimes listen to music",
+      "At night they sometimes listen to music"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n55-routine-question",
+    "answer": "What do you do every day?",
+    "variants": [
+      "Every day, what do you do?",
+      "Every day what do you do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n55-routine-agreement",
+    "answer": "He does the housework every day.",
+    "variants": [
+      "Every day, he does the housework.",
+      "Every day he does the housework.",
+      "He does the housework every day",
+      "Every day, he does the housework",
+      "Every day he does the housework"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n55-routine-frequency",
+    "answer": "We often check the door in the evening.",
+    "variants": [
+      "In the evening, we often check the door.",
+      "In the evening we often check the door.",
+      "We often check the door in the evening",
+      "In the evening, we often check the door",
+      "In the evening we often check the door"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n55-routine-question",
+    "answer": "What does the driver do in the afternoon?",
+    "variants": [
+      "In the afternoon, what does the driver do?",
+      "In the afternoon what does the driver do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n55-routine-agreement",
+    "answer": "They walk home every day.",
+    "variants": [
+      "Every day, they walk home.",
+      "Every day they walk home.",
+      "They walk home every day",
+      "Every day, they walk home",
+      "Every day they walk home"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n55-routine-frequency",
+    "answer": "She always opens the windows in the morning.",
+    "variants": [
+      "In the morning, she always opens the windows.",
+      "In the morning she always opens the windows.",
+      "She always opens the windows in the morning",
+      "In the morning, she always opens the windows",
+      "In the morning she always opens the windows"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n55-routine-question",
+    "answer": "What does he do at night?",
+    "variants": [
+      "At night, what does he do?",
+      "At night what does he do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n55-routine-agreement",
+    "answer": "She watches television every day.",
+    "variants": [
+      "Every day, she watches television.",
+      "Every day she watches television.",
+      "She watches television every day",
+      "Every day, she watches television",
+      "Every day she watches television"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n55-routine-frequency",
+    "answer": "We usually water the plants in the afternoon.",
+    "variants": [
+      "In the afternoon, we usually water the plants.",
+      "In the afternoon we usually water the plants.",
+      "We usually water the plants in the afternoon",
+      "In the afternoon, we usually water the plants",
+      "In the afternoon we usually water the plants"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n55-routine-question",
+    "answer": "What do the cooks do at noon?",
+    "variants": [
+      "At noon, what do the cooks do?",
+      "At noon what do the cooks do?"
+    ],
+    "issues": [
+      "情境以早餐工作分配未登记为询问动机，却指定问中午的惯常活动；时段衔接不自然，按题干at noon作答。"
+    ]
+  },
+  {
+    "id": "diagnostic-n57-habit-or-current",
+    "answer": "He rides a bike every day.",
+    "variants": [
+      "Every day, he rides a bike.",
+      "Every day he rides a bike.",
+      "He rides a bike every day",
+      "Every day, he rides a bike",
+      "Every day he rides a bike"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n57-current-negative",
+    "answer": "They are not washing the windows now.",
+    "variants": [
+      "Now, they are not washing the windows.",
+      "Now they are not washing the windows.",
+      "They are not now washing the windows.",
+      "They're not washing the windows now.",
+      "They aren't washing the windows now.",
+      "Now, they're not washing the windows.",
+      "Now, they aren't washing the windows.",
+      "Now they're not washing the windows.",
+      "Now they aren't washing the windows.",
+      "They're not now washing the windows.",
+      "They aren't now washing the windows.",
+      "They are not washing the windows now",
+      "Now, they are not washing the windows",
+      "Now they are not washing the windows",
+      "They are not now washing the windows",
+      "They're not washing the windows now",
+      "They aren't washing the windows now",
+      "Now, they're not washing the windows",
+      "Now, they aren't washing the windows",
+      "Now they're not washing the windows",
+      "Now they aren't washing the windows",
+      "They're not now washing the windows",
+      "They aren't now washing the windows"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n57-activity-question",
+    "answer": "What does she usually do in the morning?",
+    "variants": [
+      "In the morning, what does she usually do?",
+      "In the morning what does she usually do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n57-habit-or-current",
+    "answer": "He is walking to the park now.",
+    "variants": [
+      "Now, he is walking to the park.",
+      "Now he is walking to the park.",
+      "He is now walking to the park.",
+      "He's walking to the park now.",
+      "Now, he's walking to the park.",
+      "Now he's walking to the park.",
+      "He's now walking to the park.",
+      "He is walking to the park now",
+      "Now, he is walking to the park",
+      "Now he is walking to the park",
+      "He is now walking to the park",
+      "He's walking to the park now",
+      "Now, he's walking to the park",
+      "Now he's walking to the park",
+      "He's now walking to the park"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n57-current-negative",
+    "answer": "She is not painting now.",
+    "variants": [
+      "Now, she is not painting.",
+      "Now she is not painting.",
+      "She is not now painting.",
+      "She's not painting now.",
+      "She isn't painting now.",
+      "Now, she's not painting.",
+      "Now, she isn't painting.",
+      "Now she's not painting.",
+      "Now she isn't painting.",
+      "She's not now painting.",
+      "She isn't now painting.",
+      "She is not painting now",
+      "Now, she is not painting",
+      "Now she is not painting",
+      "She is not now painting",
+      "She's not painting now",
+      "She isn't painting now",
+      "Now, she's not painting",
+      "Now, she isn't painting",
+      "Now she's not painting",
+      "Now she isn't painting",
+      "She's not now painting",
+      "She isn't now painting"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n57-activity-question",
+    "answer": "What is he doing now?",
+    "variants": [
+      "Now, what is he doing?",
+      "Now what is he doing?",
+      "What is he now doing?",
+      "What's he doing now?",
+      "Now, what's he doing?",
+      "Now what's he doing?",
+      "What's he now doing?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n57-habit-or-current",
+    "answer": "They usually read at night.",
+    "variants": [
+      "At night, they usually read.",
+      "At night they usually read.",
+      "They usually read at night",
+      "At night, they usually read",
+      "At night they usually read"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n57-current-negative",
+    "answer": "I am not typing now.",
+    "variants": [
+      "Now, I am not typing.",
+      "Now I am not typing.",
+      "I am not now typing.",
+      "I'm not typing now.",
+      "Now, I'm not typing.",
+      "Now I'm not typing.",
+      "I'm not now typing.",
+      "I am not typing now",
+      "Now, I am not typing",
+      "Now I am not typing",
+      "I am not now typing",
+      "I'm not typing now",
+      "Now, I'm not typing",
+      "Now I'm not typing",
+      "I'm not now typing"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n57-activity-question",
+    "answer": "What are they doing now?",
+    "variants": [
+      "Now, what are they doing?",
+      "Now what are they doing?",
+      "What are they now doing?",
+      "What're they doing now?",
+      "Now, what're they doing?",
+      "Now what're they doing?",
+      "What're they now doing?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n57-habit-or-current",
+    "answer": "I am reading a book now.",
+    "variants": [
+      "Now, I am reading a book.",
+      "Now I am reading a book.",
+      "I am now reading a book.",
+      "I'm reading a book now.",
+      "Now, I'm reading a book.",
+      "Now I'm reading a book.",
+      "I'm now reading a book.",
+      "I am reading a book now",
+      "Now, I am reading a book",
+      "Now I am reading a book",
+      "I am now reading a book",
+      "I'm reading a book now",
+      "Now, I'm reading a book",
+      "Now I'm reading a book",
+      "I'm now reading a book"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n57-current-negative",
+    "answer": "We are not cooking now.",
+    "variants": [
+      "Now, we are not cooking.",
+      "Now we are not cooking.",
+      "We are not now cooking.",
+      "We're not cooking now.",
+      "We aren't cooking now.",
+      "Now, we're not cooking.",
+      "Now, we aren't cooking.",
+      "Now we're not cooking.",
+      "Now we aren't cooking.",
+      "We're not now cooking.",
+      "We aren't now cooking.",
+      "We are not cooking now",
+      "Now, we are not cooking",
+      "Now we are not cooking",
+      "We are not now cooking",
+      "We're not cooking now",
+      "We aren't cooking now",
+      "Now, we're not cooking",
+      "Now, we aren't cooking",
+      "Now we're not cooking",
+      "Now we aren't cooking",
+      "We're not now cooking",
+      "We aren't now cooking"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n57-activity-question",
+    "answer": "What do they usually do in the evening?",
+    "variants": [
+      "In the evening, what do they usually do?",
+      "In the evening what do they usually do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n57-habit-or-current",
+    "answer": "She walks to work every day.",
+    "variants": [
+      "Every day, she walks to work.",
+      "Every day she walks to work.",
+      "She walks to work every day",
+      "Every day, she walks to work",
+      "Every day she walks to work"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n57-current-negative",
+    "answer": "He is not reading now.",
+    "variants": [
+      "Now, he is not reading.",
+      "Now he is not reading.",
+      "He is not now reading.",
+      "He's not reading now.",
+      "He isn't reading now.",
+      "Now, he's not reading.",
+      "Now, he isn't reading.",
+      "Now he's not reading.",
+      "Now he isn't reading.",
+      "He's not now reading.",
+      "He isn't now reading.",
+      "He is not reading now",
+      "Now, he is not reading",
+      "Now he is not reading",
+      "He is not now reading",
+      "He's not reading now",
+      "He isn't reading now",
+      "Now, he's not reading",
+      "Now, he isn't reading",
+      "Now he's not reading",
+      "Now he isn't reading",
+      "He's not now reading",
+      "He isn't now reading"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n57-activity-question",
+    "answer": "What are you doing now?",
+    "variants": [
+      "Now, what are you doing?",
+      "Now what are you doing?",
+      "What are you now doing?",
+      "What're you doing now?",
+      "Now, what're you doing?",
+      "Now what're you doing?",
+      "What're you now doing?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n57-habit-or-current",
+    "answer": "They are taking the bus to the hotel now.",
+    "variants": [
+      "Now, they are taking the bus to the hotel.",
+      "Now they are taking the bus to the hotel.",
+      "They are now taking the bus to the hotel.",
+      "They're taking the bus to the hotel now.",
+      "Now, they're taking the bus to the hotel.",
+      "Now they're taking the bus to the hotel.",
+      "They're now taking the bus to the hotel.",
+      "They are taking the bus to the hotel now",
+      "Now, they are taking the bus to the hotel",
+      "Now they are taking the bus to the hotel",
+      "They are now taking the bus to the hotel",
+      "They're taking the bus to the hotel now",
+      "Now, they're taking the bus to the hotel",
+      "Now they're taking the bus to the hotel",
+      "They're now taking the bus to the hotel"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n57-current-negative",
+    "answer": "They are not opening the windows now.",
+    "variants": [
+      "Now, they are not opening the windows.",
+      "Now they are not opening the windows.",
+      "They are not now opening the windows.",
+      "They're not opening the windows now.",
+      "They aren't opening the windows now.",
+      "Now, they're not opening the windows.",
+      "Now, they aren't opening the windows.",
+      "Now they're not opening the windows.",
+      "Now they aren't opening the windows.",
+      "They're not now opening the windows.",
+      "They aren't now opening the windows.",
+      "They are not opening the windows now",
+      "Now, they are not opening the windows",
+      "Now they are not opening the windows",
+      "They are not now opening the windows",
+      "They're not opening the windows now",
+      "They aren't opening the windows now",
+      "Now, they're not opening the windows",
+      "Now, they aren't opening the windows",
+      "Now they're not opening the windows",
+      "Now they aren't opening the windows",
+      "They're not now opening the windows",
+      "They aren't now opening the windows"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n57-activity-question",
+    "answer": "What does he usually do in the afternoon?",
+    "variants": [
+      "In the afternoon, what does he usually do?",
+      "In the afternoon what does he usually do?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n59-stock-question",
+    "answer": "Do you have any pencils?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n59-stock-countability",
+    "answer": "We have some rice.",
+    "variants": [
+      "We have some rice"
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n59-stock-alternative",
+    "answer": "They do not have any brushes, but they have some paint.",
+    "variants": [
+      "They don't have any brushes, but they have some paint.",
+      "They do not have any brushes but they have some paint.",
+      "They don't have any brushes but they have some paint.",
+      "They do not have any brushes, but they have some paint",
+      "They don't have any brushes, but they have some paint",
+      "They do not have any brushes but they have some paint",
+      "They don't have any brushes but they have some paint"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n59-stock-question",
+    "answer": "Do we have any glue?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n59-stock-countability",
+    "answer": "I have some folders.",
+    "variants": [
+      "I have some folders"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n59-stock-alternative",
+    "answer": "We do not have any sugar, but we have some biscuits.",
+    "variants": [
+      "We don't have any sugar, but we have some biscuits.",
+      "We do not have any sugar but we have some biscuits.",
+      "We don't have any sugar but we have some biscuits.",
+      "We do not have any sugar, but we have some biscuits",
+      "We don't have any sugar, but we have some biscuits",
+      "We do not have any sugar but we have some biscuits",
+      "We don't have any sugar but we have some biscuits"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n59-stock-question",
+    "answer": "Do they have any clips?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n59-stock-countability",
+    "answer": "They have some milk.",
+    "variants": [
+      "They have some milk"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n59-stock-alternative",
+    "answer": "I do not have any screws, but I have some glue.",
+    "variants": [
+      "I don't have any screws, but I have some glue.",
+      "I do not have any screws but I have some glue.",
+      "I don't have any screws but I have some glue.",
+      "I do not have any screws, but I have some glue",
+      "I don't have any screws, but I have some glue",
+      "I do not have any screws but I have some glue",
+      "I don't have any screws but I have some glue"
+    ],
+    "issues": [
+      "“没有一批螺钉”可能仅否定一批的数量，仍可能有少量；do not have any要求完全没有螺钉。中文宜改为“没有螺钉”。"
+    ]
+  },
+  {
+    "id": "repair-n59-stock-question",
+    "answer": "Do you have any paint?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n59-stock-countability",
+    "answer": "We have some cups.",
+    "variants": [
+      "We have some cups"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n59-stock-alternative",
+    "answer": "They do not have any potatoes, but they have some rice.",
+    "variants": [
+      "They don't have any potatoes, but they have some rice.",
+      "They do not have any potatoes but they have some rice.",
+      "They don't have any potatoes but they have some rice.",
+      "They do not have any potatoes, but they have some rice",
+      "They don't have any potatoes, but they have some rice",
+      "They do not have any potatoes but they have some rice",
+      "They don't have any potatoes but they have some rice"
+    ],
+    "issues": [
+      "“没有一批土豆”可能仅否定一批的数量，仍可能有少量；do not have any要求完全没有土豆。中文宜改为“没有土豆”。"
+    ]
+  },
+  {
+    "id": "review-a-n59-stock-question",
+    "answer": "Do we have any boxes?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n59-stock-countability",
+    "answer": "I have some butter.",
+    "variants": [
+      "I have some butter"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n59-stock-alternative",
+    "answer": "We do not have any bags, but we have some boxes.",
+    "variants": [
+      "We don't have any bags, but we have some boxes.",
+      "We do not have any bags but we have some boxes.",
+      "We don't have any bags but we have some boxes.",
+      "We do not have any bags, but we have some boxes",
+      "We don't have any bags, but we have some boxes",
+      "We do not have any bags but we have some boxes",
+      "We don't have any bags but we have some boxes"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n59-stock-question",
+    "answer": "Do you have any ink?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n59-stock-countability",
+    "answer": "They have some peaches.",
+    "variants": [
+      "They have some peaches"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n59-stock-alternative",
+    "answer": "I do not have any ink, but I have some paint.",
+    "variants": [
+      "I don't have any ink, but I have some paint.",
+      "I do not have any ink but I have some paint.",
+      "I don't have any ink but I have some paint.",
+      "I do not have any ink, but I have some paint",
+      "I don't have any ink, but I have some paint",
+      "I do not have any ink but I have some paint",
+      "I don't have any ink but I have some paint"
+    ],
+    "issues": []
+  }
+]
