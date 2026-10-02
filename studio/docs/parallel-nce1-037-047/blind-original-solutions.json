@@ -1,0 +1,756 @@
+[
+  {
+    "id": "diagnostic-n37-current-action",
+    "answer": "I am sorting the labels.",
+    "reasonableVariants": [
+      "I'm sorting the labels."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n37-future-intent",
+    "answer": "She is going to repair the gate.",
+    "reasonableVariants": [
+      "She's going to repair the gate."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n37-ask-plan",
+    "answer": "What are they going to do?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n37-current-action",
+    "answer": "We are packing the bags.",
+    "reasonableVariants": [
+      "We're packing the bags."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n37-future-intent",
+    "answer": "He is going to water the plants.",
+    "reasonableVariants": [
+      "He's going to water the plants."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n37-ask-plan",
+    "answer": "What are you going to do?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n37-current-action",
+    "answer": "They are checking the cards.",
+    "reasonableVariants": [
+      "They're checking the cards."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "independent-n37-future-intent",
+    "answer": "I am going to clean the tent.",
+    "reasonableVariants": [
+      "I'm going to clean the tent."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "independent-n37-ask-plan",
+    "answer": "What is she going to do?",
+    "reasonableVariants": [
+      "What's she going to do?"
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n37-current-action",
+    "answer": "She is printing the maps.",
+    "reasonableVariants": [
+      "She's printing the maps."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n37-future-intent",
+    "answer": "We are going to interview the guide.",
+    "reasonableVariants": [
+      "We're going to interview the guide."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n37-ask-plan",
+    "answer": "What is he going to do?",
+    "reasonableVariants": [
+      "What's he going to do?"
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n37-current-action",
+    "answer": "I am numbering the posters.",
+    "reasonableVariants": [
+      "I'm numbering the posters."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n37-future-intent",
+    "answer": "They are going to collect the keys.",
+    "reasonableVariants": [
+      "They're going to collect the keys."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n37-ask-plan",
+    "answer": "What are you going to do?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n37-current-action",
+    "answer": "We are measuring the rope.",
+    "reasonableVariants": [
+      "We're measuring the rope."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n37-future-intent",
+    "answer": "She is going to translate the notice.",
+    "reasonableVariants": [
+      "She's going to translate the notice."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n37-ask-plan",
+    "answer": "What are they going to do?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n39-ask-disposal",
+    "answer": "What are you going to do with that rope?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n39-planned-transfer",
+    "answer": "I am going to put it on the bench.",
+    "reasonableVariants": [
+      "I'm going to put it on the bench."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n39-negative-command",
+    "answer": "Do not fold it.",
+    "reasonableVariants": [
+      "Don't fold it."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n39-ask-disposal",
+    "answer": "What are you going to do with those posters?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n39-planned-transfer",
+    "answer": "I am going to show it to the captain.",
+    "reasonableVariants": [
+      "I'm going to show it to the captain.",
+      "I am going to show the captain it."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n39-negative-command",
+    "answer": "Do not turn it on.",
+    "reasonableVariants": [
+      "Don't turn it on."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "independent-n39-ask-disposal",
+    "answer": "What are you going to do with those crates?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n39-planned-transfer",
+    "answer": "We are going to send them to our cousin.",
+    "reasonableVariants": [
+      "We're going to send them to our cousin.",
+      "We are going to send our cousin them."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "independent-n39-negative-command",
+    "answer": "Do not push that door.",
+    "reasonableVariants": [
+      "Don't push that door."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n39-ask-disposal",
+    "answer": "What are you going to do with it?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n39-planned-transfer",
+    "answer": "I am going to put them in the locker.",
+    "reasonableVariants": [
+      "I'm going to put them in the locker."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n39-negative-command",
+    "answer": "Do not open that box.",
+    "reasonableVariants": [
+      "Don't open that box."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n39-ask-disposal",
+    "answer": "What are you going to do with that helmet?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n39-planned-transfer",
+    "answer": "We are going to give it to our mentor.",
+    "reasonableVariants": [
+      "We're going to give it to our mentor.",
+      "We are going to give our mentor it."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n39-negative-command",
+    "answer": "Do not touch it.",
+    "reasonableVariants": [
+      "Don't touch it."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n39-ask-disposal",
+    "answer": "What are you going to do with them?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n39-planned-transfer",
+    "answer": "I am going to show it to the visitors.",
+    "reasonableVariants": [
+      "I'm going to show it to the visitors.",
+      "I am going to show the visitors it."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n39-negative-command",
+    "answer": "Do not turn it off.",
+    "reasonableVariants": [
+      "Don't turn it off."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n41-quantity-unit",
+    "answer": "a bottle of water",
+    "reasonableVariants": [
+      "one bottle of water"
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n41-singular-existence",
+    "answer": "Is there a brush in that box?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n41-mass-existence",
+    "answer": "Is there any rice in that bag?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n41-quantity-unit",
+    "answer": "two bars of soap",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n41-singular-existence",
+    "answer": "Is there an umbrella in that locker?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n41-mass-existence",
+    "answer": "Is there any soup in that bowl?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n41-quantity-unit",
+    "answer": "three bottles of juice",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n41-singular-existence",
+    "answer": "Is there a wrench in that drawer?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n41-mass-existence",
+    "answer": "Is there any glue in that jar?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n41-quantity-unit",
+    "answer": "a loaf of bread",
+    "reasonableVariants": [
+      "one loaf of bread"
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n41-singular-existence",
+    "answer": "Is there a cup on that table?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n41-mass-existence",
+    "answer": "Is there any ink in that bottle?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n41-quantity-unit",
+    "answer": "two bottles of milk",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n41-singular-existence",
+    "answer": "Is there an envelope on that chair?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n41-mass-existence",
+    "answer": "Is there any cheese on that plate?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n41-quantity-unit",
+    "answer": "a bar of chocolate",
+    "reasonableVariants": [
+      "one bar of chocolate"
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n41-singular-existence",
+    "answer": "Is there a bird in that tree?",
+    "reasonableVariants": [],
+    "issue": "Finding a rope anchor does not naturally motivate asking whether a bird is in a tree; scene motivation feels superficial."
+  },
+  {
+    "id": "review-b-n41-mass-existence",
+    "answer": "Is there any sugar in that tin?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n43-stock-question",
+    "answer": "Are there any towels in the cupboard?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n43-positive-stock",
+    "answer": "There is some flour in the bowl.",
+    "reasonableVariants": [
+      "There's some flour in the bowl."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n43-zero-stock",
+    "answer": "There are no plates in the crate.",
+    "reasonableVariants": [
+      "There are not any plates in the crate.",
+      "There aren't any plates in the crate."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n43-stock-question",
+    "answer": "Are there any screws in the bag?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n43-positive-stock",
+    "answer": "There is some water in the bucket.",
+    "reasonableVariants": [
+      "There's some water in the bucket."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n43-zero-stock",
+    "answer": "There are no batteries in the box.",
+    "reasonableVariants": [
+      "There are not any batteries in the box.",
+      "There aren't any batteries in the box."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "independent-n43-stock-question",
+    "answer": "Are there any apples in the backpack?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n43-positive-stock",
+    "answer": "There are some blankets in the basket.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n43-zero-stock",
+    "answer": "There is no honey in the jar.",
+    "reasonableVariants": [
+      "There's no honey in the jar.",
+      "There is not any honey in the jar.",
+      "There isn't any honey in the jar."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n43-stock-question",
+    "answer": "Is there any water in the tank?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n43-positive-stock",
+    "answer": "There are some pencils in the drawer.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n43-zero-stock",
+    "answer": "There are no nails on the bench.",
+    "reasonableVariants": [
+      "There are not any nails on the bench.",
+      "There aren't any nails on the bench."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n43-stock-question",
+    "answer": "Are there any envelopes on the shelf?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n43-positive-stock",
+    "answer": "There is some water in the bottle.",
+    "reasonableVariants": [
+      "There's some water in the bottle."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n43-zero-stock",
+    "answer": "There are no socks in the cupboard.",
+    "reasonableVariants": [
+      "There are not any socks in the cupboard.",
+      "There aren't any socks in the cupboard."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n43-stock-question",
+    "answer": "Is there any butter in the box?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n43-positive-stock",
+    "answer": "There are some tokens in the bag.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n43-zero-stock",
+    "answer": "There is no ink in that bottle.",
+    "reasonableVariants": [
+      "There's no ink in that bottle.",
+      "There is not any ink in that bottle.",
+      "There isn't any ink in that bottle."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n45-ability-question",
+    "answer": "Can she carry this crate?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n45-can-do",
+    "answer": "They can repair this lamp.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n45-cannot-do",
+    "answer": "I cannot read that sign.",
+    "reasonableVariants": [
+      "I can't read that sign."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n45-ability-question",
+    "answer": "Can he swim?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n45-can-do",
+    "answer": "I can pump this tyre.",
+    "reasonableVariants": [],
+    "issue": "pump this tyre is intelligible but pump up this tyre is the usual collocation for inflation; given on-prompt verb pump constrains a less natural answer."
+  },
+  {
+    "id": "guided-n45-cannot-do",
+    "answer": "She cannot lift that suitcase.",
+    "reasonableVariants": [
+      "She can't lift that suitcase."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "independent-n45-ability-question",
+    "answer": "Can you translate this notice?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n45-can-do",
+    "answer": "They can tune this guitar.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n45-cannot-do",
+    "answer": "He cannot open this jar.",
+    "reasonableVariants": [
+      "He can't open this jar."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n45-ability-question",
+    "answer": "Can they assemble this tent?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n45-can-do",
+    "answer": "I can read this map.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n45-cannot-do",
+    "answer": "They cannot spell that word.",
+    "reasonableVariants": [
+      "They can't spell that word."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n45-ability-question",
+    "answer": "Can she scan this code?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n45-can-do",
+    "answer": "We can repair this zip.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n45-cannot-do",
+    "answer": "I cannot open that lock.",
+    "reasonableVariants": [
+      "I can't open that lock."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n45-ability-question",
+    "answer": "Can he lift this bucket?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n45-can-do",
+    "answer": "She can identify this bird.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n45-cannot-do",
+    "answer": "They cannot repair that car.",
+    "reasonableVariants": [
+      "They can't repair that car."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n47-ask-preference",
+    "answer": "Do you like yogurt?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n47-ask-want",
+    "answer": "Do you want a sandwich?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "diagnostic-n47-state-preference",
+    "answer": "I do not like cold soup.",
+    "reasonableVariants": [
+      "I don't like cold soup."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "guided-n47-ask-preference",
+    "answer": "Do you like carrots?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n47-ask-want",
+    "answer": "Do you want an egg?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "guided-n47-state-preference",
+    "answer": "I like hot tea.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n47-ask-preference",
+    "answer": "Do you like pears?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n47-ask-want",
+    "answer": "Do you want a glass of water?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "independent-n47-state-preference",
+    "answer": "I do not like cooked onions.",
+    "reasonableVariants": [
+      "I don't like cooked onions."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "repair-n47-ask-preference",
+    "answer": "Do you like honey?",
+    "reasonableVariants": [],
+    "issue": "If the uneaten food is honey, asking established honey preference is incoherent; context should say which other food is uneaten or remove that clause."
+  },
+  {
+    "id": "repair-n47-ask-want",
+    "answer": "Do you want an apple?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "repair-n47-state-preference",
+    "answer": "I like crusty bread.",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n47-ask-preference",
+    "answer": "Do you like peaches?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-a-n47-ask-want",
+    "answer": "Do you want any juice?",
+    "reasonableVariants": [],
+    "issue": "Do you want any juice? is grammatical neutral inquiry; a tea-table offer more naturally uses some, but prompt explicitly mandates any and avoids presumed affirmative answer."
+  },
+  {
+    "id": "review-a-n47-state-preference",
+    "answer": "I do not like salted butter.",
+    "reasonableVariants": [
+      "I don't like salted butter."
+    ],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n47-ask-preference",
+    "answer": "Do you like porridge?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n47-ask-want",
+    "answer": "Do you want a bread roll?",
+    "reasonableVariants": [],
+    "issue": ""
+  },
+  {
+    "id": "review-b-n47-state-preference",
+    "answer": "I like fresh fruit.",
+    "reasonableVariants": [],
+    "issue": ""
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "base": "9310cb98a5d345f29bc345c6960aae0450effcc4",
+  "groups": [
+    {
+      "id": "nce1-37",
+      "lessons": [
+        37,
+        38
+      ],
+      "questions": 18,
+      "targets": [
+        "current-action",
+        "future-intent",
+        "ask-plan"
+      ],
+      "sourceLanguageSha256": "9c809290e12e66d091ea22cb8886817bdfd56899cefb90376ebb0814913ff281",
+      "moduleSha256": "329193ad7eaab42a0ca1eb01c938c1211eb75b1c79f7c8fe5b64135a96172c82",
+      "openExpression": "awaiting-human-review"
+    },
+    {
+      "id": "nce1-39",
+      "lessons": [
+        39,
+        40
+      ],
+      "questions": 18,
+      "targets": [
+        "ask-disposal",
+        "planned-transfer",
+        "negative-command"
+      ],
+      "sourceLanguageSha256": "7663f4778d846c82e1094926e259d0d589bce091f834a39b488fa5994d8c342b",
+      "moduleSha256": "9a158bb2fd16609d1b532335838bc91303db0f905d8b793ddfd71b4fab8e143c",
+      "openExpression": "awaiting-human-review"
+    },
+    {
+      "id": "nce1-41",
+      "lessons": [
+        41,
+        42
+      ],
+      "questions": 18,
+      "targets": [
+        "quantity-unit",
+        "singular-existence",
+        "mass-existence"
+      ],
+      "sourceLanguageSha256": "c33622a6e91ee105a92be30deaa1c16cf7f5f646c2ae9612237c2dc3b29f24d2",
+      "moduleSha256": "d7ce22e062d535f8384791c25230c0bf886afd2b34b410992092260efad6c27f",
+      "openExpression": "awaiting-human-review"
+    },
+    {
+      "id": "nce1-43",
+      "lessons": [
+        43,
+        44
+      ],
+      "questions": 18,
+      "targets": [
+        "stock-question",
+        "positive-stock",
+        "zero-stock"
+      ],
+      "sourceLanguageSha256": "cee661fac2f21ef8c9ae9e19b81be3c3b207e48fdc2e082801eaeffe2da6c27a",
+      "moduleSha256": "c60264002f5af730af8a52a446fb6391c3143eefdbc0083d42fe47a74098a861",
+      "openExpression": "awaiting-human-review"
+    },
+    {
+      "id": "nce1-45",
+      "lessons": [
+        45,
+        46
+      ],
+      "questions": 18,
+      "targets": [
+        "ability-question",
+        "can-do",
+        "cannot-do"
+      ],
+      "sourceLanguageSha256": "64d424a548d931919ed83acb12cc346aba778056f026036727eae4276e17aabd",
+      "moduleSha256": "19985f90540eb017d300872fa75baf0cbcd5efa957aa2b16d633c867b15bb7a2",
+      "openExpression": "awaiting-human-review"
+    },
+    {
+      "id": "nce1-47",
+      "lessons": [
+        47,
+        48
+      ],
+      "questions": 18,
+      "targets": [
+        "ask-preference",
+        "ask-want",
+        "state-preference"
+      ],
+      "sourceLanguageSha256": "46817aa3ce7a008fe5960750ab061a6f56ffff2245c961fc259873df3f47d3da",
+      "moduleSha256": "fdf4c7a57174cb6523b4a35cce34c169a335cb113b94aa80a2b5061deb4d221a",
+      "openExpression": "awaiting-human-review"
+    }
+  ],
+  "totalQuestions": 108,
+  "testsPassed": 27,
+  "natural24h": "not run",
+  "natural7d": "not run",
+  "productionRegistration": "delegated to root/publisher"
+}

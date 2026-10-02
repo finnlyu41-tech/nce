@@ -1,0 +1,172 @@
+TAP version 13
+# Subtest: 108 independently written blind solutions match final content (8 revised prompts freshly re-solved)
+ok 1 - 108 independently written blind solutions match final content (8 revised prompts freshly re-solved)
+  ---
+  duration_ms: 1.550125
+  type: 'test'
+  ...
+# Subtest: reviewer-discovered natural boundaries stay accepted
+ok 2 - reviewer-discovered natural boundaries stay accepted
+  ---
+  duration_ms: 0.168417
+  type: 'test'
+  ...
+# Subtest: nce1-37 complete distinct banks, meaningful variants and near misses
+ok 3 - nce1-37 complete distinct banks, meaningful variants and near misses
+  ---
+  duration_ms: 2.464333
+  type: 'test'
+  ...
+# Subtest: nce1-37 actual SourcePanel guard, LRC bytes, index hash and comic identity
+ok 4 - nce1-37 actual SourcePanel guard, LRC bytes, index hash and comic identity
+  ---
+  duration_ms: 8.21625
+  type: 'test'
+  ...
+# Subtest: nce1-37 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+ok 5 - nce1-37 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+  ---
+  duration_ms: 18.387208
+  type: 'test'
+  ...
+# Subtest: nce1-37 exact module matcher controls submit and correction
+ok 6 - nce1-37 exact module matcher controls submit and correction
+  ---
+  duration_ms: 0.4005
+  type: 'test'
+  ...
+# Subtest: nce1-39 complete distinct banks, meaningful variants and near misses
+ok 7 - nce1-39 complete distinct banks, meaningful variants and near misses
+  ---
+  duration_ms: 0.937458
+  type: 'test'
+  ...
+# Subtest: nce1-39 actual SourcePanel guard, LRC bytes, index hash and comic identity
+ok 8 - nce1-39 actual SourcePanel guard, LRC bytes, index hash and comic identity
+  ---
+  duration_ms: 4.326583
+  type: 'test'
+  ...
+# Subtest: nce1-39 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+ok 9 - nce1-39 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+  ---
+  duration_ms: 10.726375
+  type: 'test'
+  ...
+# Subtest: nce1-39 exact module matcher controls submit and correction
+ok 10 - nce1-39 exact module matcher controls submit and correction
+  ---
+  duration_ms: 0.324917
+  type: 'test'
+  ...
+# Subtest: nce1-41 complete distinct banks, meaningful variants and near misses
+ok 11 - nce1-41 complete distinct banks, meaningful variants and near misses
+  ---
+  duration_ms: 0.874042
+  type: 'test'
+  ...
+# Subtest: nce1-41 actual SourcePanel guard, LRC bytes, index hash and comic identity
+ok 12 - nce1-41 actual SourcePanel guard, LRC bytes, index hash and comic identity
+  ---
+  duration_ms: 4.132417
+  type: 'test'
+  ...
+# Subtest: nce1-41 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+ok 13 - nce1-41 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+  ---
+  duration_ms: 9.093416
+  type: 'test'
+  ...
+# Subtest: nce1-41 exact module matcher controls submit and correction
+ok 14 - nce1-41 exact module matcher controls submit and correction
+  ---
+  duration_ms: 0.128459
+  type: 'test'
+  ...
+# Subtest: nce1-43 complete distinct banks, meaningful variants and near misses
+ok 15 - nce1-43 complete distinct banks, meaningful variants and near misses
+  ---
+  duration_ms: 0.489709
+  type: 'test'
+  ...
+# Subtest: nce1-43 actual SourcePanel guard, LRC bytes, index hash and comic identity
+ok 16 - nce1-43 actual SourcePanel guard, LRC bytes, index hash and comic identity
+  ---
+  duration_ms: 4.668
+  type: 'test'
+  ...
+# Subtest: nce1-43 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+ok 17 - nce1-43 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+  ---
+  duration_ms: 8.742791
+  type: 'test'
+  ...
+# Subtest: nce1-43 exact module matcher controls submit and correction
+ok 18 - nce1-43 exact module matcher controls submit and correction
+  ---
+  duration_ms: 0.109584
+  type: 'test'
+  ...
+# Subtest: nce1-45 complete distinct banks, meaningful variants and near misses
+ok 19 - nce1-45 complete distinct banks, meaningful variants and near misses
+  ---
+  duration_ms: 0.343625
+  type: 'test'
+  ...
+# Subtest: nce1-45 actual SourcePanel guard, LRC bytes, index hash and comic identity
+ok 20 - nce1-45 actual SourcePanel guard, LRC bytes, index hash and comic identity
+  ---
+  duration_ms: 3.4135
+  type: 'test'
+  ...
+# Subtest: nce1-45 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+ok 21 - nce1-45 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+  ---
+  duration_ms: 8.4745
+  type: 'test'
+  ...
+# Subtest: nce1-45 exact module matcher controls submit and correction
+ok 22 - nce1-45 exact module matcher controls submit and correction
+  ---
+  duration_ms: 0.12
+  type: 'test'
+  ...
+# Subtest: nce1-47 complete distinct banks, meaningful variants and near misses
+ok 23 - nce1-47 complete distinct banks, meaningful variants and near misses
+  ---
+  duration_ms: 0.544959
+  type: 'test'
+  ...
+# Subtest: nce1-47 actual SourcePanel guard, LRC bytes, index hash and comic identity
+ok 24 - nce1-47 actual SourcePanel guard, LRC bytes, index hash and comic identity
+  ---
+  duration_ms: 4.566166
+  type: 'test'
+  ...
+# Subtest: nce1-47 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+ok 25 - nce1-47 production factory preserves matcher, originals, assistance, correction and simulated delayed banks
+  ---
+  duration_ms: 8.070917
+  type: 'test'
+  ...
+# Subtest: nce1-47 exact module matcher controls submit and correction
+ok 26 - nce1-47 exact module matcher controls submit and correction
+  ---
+  duration_ms: 0.093083
+  type: 'test'
+  ...
+# Subtest: unknown production course rejects without reset; malformed raw is returned verbatim
+ok 27 - unknown production course rejects without reset; malformed raw is returned verbatim
+  ---
+  duration_ms: 0.158875
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 328.781125

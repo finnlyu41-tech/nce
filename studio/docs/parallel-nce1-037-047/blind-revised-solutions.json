@@ -1,0 +1,10 @@
+[
+  {"id":"independent-n37-ask-plan","answer":"What is she going to pack?","reasonableVariants":["What's she going to pack?"],"issue":null},
+  {"id":"repair-n37-ask-plan","answer":"What is he going to do?","reasonableVariants":["What's he going to do?"],"issue":"The context asks about an intended next action, but the prompt does not explicitly prescribe be going to. What will he do? is a grammatical future question with a slightly different focus."},
+  {"id":"review-a-n37-ask-plan","answer":"What colour are you going to paint the fence?","reasonableVariants":["What colour are you going to paint the fence?"],"issue":"What color are you going to paint the fence? is standard US English, but the prompt explicitly prescribes What colour."},
+  {"id":"review-b-n37-ask-plan","answer":"Where are they going to put the chairs?","reasonableVariants":["Where are they going to put the chairs?"],"issue":null},
+  {"id":"review-b-n41-singular-existence","answer":"Is there a bird in that tree?","reasonableVariants":["Is there a bird in that tree?"],"issue":null},
+  {"id":"guided-n45-can-do","answer":"I can pump up this tyre.","reasonableVariants":["I can pump up this tyre","I can pump this tyre up.","I can pump this tyre up"],"issue":"Pump up is separable, so both positions of the object are natural and satisfy the supplied vocabulary."},
+  {"id":"repair-n47-ask-preference","answer":"Do you like honey?","reasonableVariants":["Do you like honey?"],"issue":null},
+  {"id":"review-a-n47-ask-want","answer":"Do you want any juice?","reasonableVariants":["Do you want any juice?"],"issue":null}
+]

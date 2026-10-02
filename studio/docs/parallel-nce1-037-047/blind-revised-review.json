@@ -1,0 +1,22 @@
+{
+  "result": "8 of 8 blind canonical answers accepted; all 10 listed variant submissions accepted; all 8 boundary probes match expected constrained grading.",
+  "deliverables": [
+    "/tmp/nce37-revised-solutions.json",
+    "/tmp/nce37-revised-match-results.json",
+    "/tmp/nce37-revised-boundary-probes.json"
+  ],
+  "falseRejectionsWithinDeclaredConstraints": [],
+  "informationGapTransfer": {
+    "verdict": "Good controlled information-gap transfer",
+    "detail": "The three revised transfer prompts establish the known action and isolate a different missing slot: packed object, paint colour, and chair destination. They require different structures rather than three repetitions of What ... going to do. Each explicitly supplies the interrogative opening, so they assess controlled completion rather than independently choosing the question word."
+  },
+  "remainingIssues": [
+    {
+      "severity": "low",
+      "location": "lesson-nce1-037.mjs teaching.ask-plan.explanation and the three transfer question first counterexample reasons",
+      "detail": "Present progressive can express a future arrangement. Not yet started does not alone make What colour are you painting the fence? or Where are they putting the chairs? current-action questions. The scope explicitly requires be going to, making rejection valid for this exercise; feedback should cite that form restriction instead of claiming progressive necessarily asks about action happening now.",
+      "suggestion": "Explain: 本题限定使用be going to；该回答未使用指定计划句型。现在进行时也可表示已安排的将来事项，在自由表达中按情境核对。"
+    }
+  ],
+  "blockers": []
+}

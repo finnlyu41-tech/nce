@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "course": "nce1-37",
+      "sourceGuard": "real SourcePanel loaded",
+      "textRows": 18,
+      "comic": true,
+      "originalAudio": [
+        {
+          "duration": 76.1545,
+          "time": 20.72,
+          "readyState": 1
+        }
+      ],
+      "audibility": "not asserted",
+      "savedOriginalRestored": true
+    },
+    {
+      "course": "nce1-41",
+      "sourceGuard": "real SourcePanel loaded",
+      "textRows": 16,
+      "comic": true,
+      "originalAudio": [
+        {
+          "duration": 72.036625,
+          "time": 29.279771,
+          "readyState": 4
+        }
+      ],
+      "audibility": "not asserted",
+      "savedOriginalRestored": true
+    },
+    {
+      "course": "nce1-47",
+      "sourceGuard": "real SourcePanel loaded",
+      "textRows": 14,
+      "comic": true,
+      "originalAudio": [
+        {
+          "duration": 63.879067,
+          "time": 17.150544,
+          "readyState": 4
+        }
+      ],
+      "audibility": "not asserted",
+      "savedOriginalRestored": true
+    },
+    {
+      "course": "nce1-47",
+      "fullNativePipeline": true,
+      "wrongOriginalAndCorrectionPreserved": true,
+      "openExpression": "awaiting-human-review",
+      "naturalDelayedReview": "not run; no due control",
+      "clockChanged": false
+    }
+  ],
+  "errors": [],
+  "productionSource": "unchanged CourseLoopWorkspace, SourcePanel, host writer; test registry in memory only",
+  "qaOrigin": "http://127.0.0.1:4397",
+  "proof": "/Users/finnlyu/Documents/Codex/2026-10-03/task-10/nce1-037-047/studio/work/nce1-037-047/browser-fYHoAA"
+}

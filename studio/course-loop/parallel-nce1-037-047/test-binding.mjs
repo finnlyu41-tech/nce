@@ -1,0 +1,9 @@
+// TEST ONLY: inject this batch into registry in memory, never modify production files.
+import {readFile,readdir,mkdir} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+export const root=new URL('../../',import.meta.url);
+export const ids=[37,39,41,43,45,47];
+export const contents=await Promise.all(ids.map(n=>import(`./lesson-nce1-${String(n).padStart(3,'0')}.mjs`)));
+export async function esbuild(){const versions=(await readdir(new URL('node_modules/.pnpm/',root))).filter(n=>/^esbuild@\d+\.\d+\.\d+$/.test(n)).sort((a,b)=>b.localeCompare(a,undefined,{numeric:true}));return import(new URL(`node_modules/.pnpm/${versions[0]}/node_modules/esbuild/lib/main.js`,root))}
+export const testRegistry={name:'test-only-six-content-bindings',setup(build){build.onLoad({filter:/course-loop\/registry\.mjs$/},async args=>{let code=await readFile(args.path,'utf8');const point='parallel33,parallel35].map';if(!code.includes(point))throw Error('Registry changed; reassess test-only injection');code=ids.map(n=>`import * as test${n} from './parallel-nce1-037-047/lesson-nce1-${String(n).padStart(3,'0')}.mjs';`).join('\n')+'\n'+code.replace(point,`parallel33,parallel35,${ids.map(n=>'test'+n).join(',')}].map`);return {contents:code,loader:'js'}})}};
+export async function host(){const {build}=await esbuild(),out=new URL('work/nce1-037-047/host.mjs',root);await mkdir(new URL('.',out),{recursive:true});await build({stdin:{contents:`export * from './app/course-loop-progress';export {lessonIllustration} from './app/sentence-illustration';export {splitLesson} from './app/lesson-structure';export {getCourseBinding,isRegisteredCourse,registeredCourseIds} from './course-loop/registry.mjs';`,resolveDir:fileURLToPath(root),loader:'ts'},plugins:[testRegistry],bundle:true,platform:'node',format:'esm',target:'node22',outfile:fileURLToPath(out),logLevel:'silent'});return import(out)}

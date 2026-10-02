@@ -1,0 +1,399 @@
+[
+  {
+    "id": "independent-n37-ask-plan",
+    "answer": "What is she going to pack?",
+    "reasonableVariants": [
+      "What's she going to pack?"
+    ],
+    "issue": null,
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "What's she going to pack?",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "independent-n37-ask-plan",
+      "stage": "independent",
+      "target": "ask-plan",
+      "kind": "input",
+      "form": "question",
+      "context": "活动队友已决定她要打包某样东西，还未开始。你知道是打包计划，只缺具体物品信息，向协调员询问。",
+      "prompt": "以What开头，主语she，pack（打包）；只问她准备打包什么，不泛问她准备做什么。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。只写一个完整问句，以一个英文问号结束。",
+      "accepted": [
+        "What is she going to pack?",
+        "What's she going to pack?"
+      ],
+      "criterion": "疑问词对应所缺信息；保留going to及原形，be对应主语。 句末一个英文问号。",
+      "why": "本题要求：疑问词对应所缺信息；保留going to及原形，be对应主语。 易错边界：问成当前正打包什么，未问未开始的计划。",
+      "novelty": "活动队友已决定她要打包某样东西，还未开始。你知道是打包计划，只缺具体物品信息，向协调员询问。",
+      "counterexamples": [
+        {
+          "answer": "What is she packing?",
+          "reason": "问成当前正打包什么，未问未开始的计划。"
+        },
+        {
+          "answer": "What is she going to pack.",
+          "reason": "本题要求完整问句的一个英文问号。"
+        },
+        {
+          "answer": "What is she going to pack??",
+          "reason": "本题句末只允许一个英文问号。"
+        },
+        {
+          "answer": "What is she going pack?",
+          "reason": "计划结构缺少to。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "repair-n37-ask-plan",
+    "answer": "What is he going to do?",
+    "reasonableVariants": [
+      "What's he going to do?"
+    ],
+    "issue": "The context asks about an intended next action, but the prompt does not explicitly prescribe be going to. What will he do? is a grammatical future question with a slightly different focus.",
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "What's he going to do?",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "repair-n37-ask-plan",
+      "stage": "repair",
+      "target": "ask-plan",
+      "kind": "input",
+      "form": "question",
+      "context": "你向协调员询问一位男学生接下来准备做什么；你不是直接对这位学生发问。",
+      "prompt": "用he指学生，以What问下一步准备做什么。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。只写一个完整问句，以一个英文问号结束。",
+      "accepted": [
+        "What is he going to do?",
+        "What's he going to do?"
+      ],
+      "criterion": "问的是计划；保留going to do和疑问语序。 只写一个完整问句，以一个英文问号结束。",
+      "why": "本题要求：疑问词对应所缺信息；保留going to及原形，be对应主语。 易错边界：计划与当前动作问句不同。",
+      "novelty": "你向协调员询问一位男学生接下来准备做什么；你不是直接对这位学生发问。",
+      "counterexamples": [
+        {
+          "answer": "What is he doing?",
+          "reason": "计划与当前动作问句不同。"
+        },
+        {
+          "answer": "What is he going to do.",
+          "reason": "本题要求一个英文问号结束的完整问句。"
+        },
+        {
+          "answer": "What is he going to do??",
+          "reason": "本题限定句末恰有一个问号。"
+        },
+        {
+          "answer": "What are he going to do?",
+          "reason": "疑问结构、主谓对应或动词形式不符合本题。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "review-a-n37-ask-plan",
+    "answer": "What colour are you going to paint the fence?",
+    "reasonableVariants": [
+      "What colour are you going to paint the fence?"
+    ],
+    "issue": "What color are you going to paint the fence? is standard US English, but the prompt explicitly prescribes What colour.",
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "What colour are you going to paint the fence?",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "review-a-n37-ask-plan",
+      "stage": "review-a",
+      "target": "ask-plan",
+      "kind": "input",
+      "form": "question",
+      "context": "队友已决定之后给围栏刷漆，油漆尚未开罐。你已知活动与对象，只缺计划颜色，直接问队友。",
+      "prompt": "主语you，paint（刷漆），the fence（围栏）；以What colour询问准备刷成什么颜色。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。只写一个完整问句，以一个英文问号结束。",
+      "accepted": [
+        "What colour are you going to paint the fence?"
+      ],
+      "criterion": "疑问词对应所缺信息；保留going to及原形，be对应主语。 句末一个英文问号。",
+      "why": "本题要求：疑问词对应所缺信息；保留going to及原形，be对应主语。 易错边界：刷漆尚未开始；当前动作问句未表达准备刷成什么颜色。",
+      "novelty": "队友已决定之后给围栏刷漆，油漆尚未开罐。你已知活动与对象，只缺计划颜色，直接问队友。",
+      "counterexamples": [
+        {
+          "answer": "What colour are you painting the fence?",
+          "reason": "刷漆尚未开始；当前动作问句未表达准备刷成什么颜色。"
+        },
+        {
+          "answer": "What colour are you going to paint the fence.",
+          "reason": "本题要求完整问句的一个英文问号。"
+        },
+        {
+          "answer": "What colour are you going to paint the fence??",
+          "reason": "本题句末只允许一个英文问号。"
+        },
+        {
+          "answer": "What colour are you going paint the fence?",
+          "reason": "计划结构缺少to。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "review-b-n37-ask-plan",
+    "answer": "Where are they going to put the chairs?",
+    "reasonableVariants": [
+      "Where are they going to put the chairs?"
+    ],
+    "issue": null,
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "Where are they going to put the chairs?",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "review-b-n37-ask-plan",
+      "stage": "review-b",
+      "target": "ask-plan",
+      "kind": "input",
+      "form": "question",
+      "context": "学生已决定之后把椅子移到某个位置，现在还在听安排。你已知活动和对象，只缺计划目的位置，向老师询问。",
+      "prompt": "主语they，put（放），the chairs（这些椅子）；以Where询问准备把椅子放在哪里。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。只写一个完整问句，以一个英文问号结束。",
+      "accepted": [
+        "Where are they going to put the chairs?"
+      ],
+      "criterion": "疑问词对应所缺信息；保留going to及原形，be对应主语。 句末一个英文问号。",
+      "why": "本题要求：疑问词对应所缺信息；保留going to及原形，be对应主语。 易错边界：尚未移动，当前动作询问未问出准备放的位置。",
+      "novelty": "学生已决定之后把椅子移到某个位置，现在还在听安排。你已知活动和对象，只缺计划目的位置，向老师询问。",
+      "counterexamples": [
+        {
+          "answer": "Where are they putting the chairs?",
+          "reason": "尚未移动，当前动作询问未问出准备放的位置。"
+        },
+        {
+          "answer": "Where are they going to put the chairs.",
+          "reason": "本题要求完整问句的一个英文问号。"
+        },
+        {
+          "answer": "Where are they going to put the chairs??",
+          "reason": "本题句末只允许一个英文问号。"
+        },
+        {
+          "answer": "Where are they going put the chairs?",
+          "reason": "计划结构缺少to。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "review-b-n41-singular-existence",
+    "answer": "Is there a bird in that tree?",
+    "reasonableVariants": [
+      "Is there a bird in that tree?"
+    ],
+    "issue": null,
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "Is there a bird in that tree?",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "review-b-n41-singular-existence",
+      "stage": "review-b",
+      "target": "singular-existence",
+      "kind": "input",
+      "form": "question",
+      "context": "你在营地准备把吊床固定在一棵树旁，想避免打扰鸟类。你不知道那棵树上是否有一只鸟，先向同伴确认。",
+      "prompt": "以Is there开头，bird（鸟）、in that tree（那棵树上），问单个物品存在。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。只写一个完整问句，以一个英文问号结束。",
+      "accepted": [
+        "Is there a bird in that tree?"
+      ],
+      "criterion": "is在there之前；单数可数物保留a/an与位置。 只写一个完整问句，以一个英文问号结束。",
+      "why": "本题要求：is在there之前；单数可数物保留a/an与位置。 易错边界：树上与树下不是同一个位置。",
+      "novelty": "你在营地准备把吊床固定在一棵树旁，想避免打扰鸟类。你不知道那棵树上是否有一只鸟，先向同伴确认。",
+      "counterexamples": [
+        {
+          "answer": "Is there a bird under that tree?",
+          "reason": "树上与树下不是同一个位置。"
+        },
+        {
+          "answer": "Is there a bird in that tree.",
+          "reason": "本题要求一个英文问号结束的完整问句。"
+        },
+        {
+          "answer": "Is there a bird in that tree??",
+          "reason": "本题限定句末恰有一个问号。"
+        },
+        {
+          "answer": "There is a bird in that tree?",
+          "reason": "疑问结构、主谓对应或动词形式不符合本题。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "guided-n45-can-do",
+    "answer": "I can pump up this tyre.",
+    "reasonableVariants": [
+      "I can pump up this tyre",
+      "I can pump this tyre up.",
+      "I can pump this tyre up"
+    ],
+    "issue": "Pump up is separable, so both positions of the object are natural and satisfy the supplied vocabulary.",
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "I can pump up this tyre",
+        "accepted": true
+      },
+      {
+        "answer": "I can pump this tyre up.",
+        "accepted": true
+      },
+      {
+        "answer": "I can pump this tyre up",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "guided-n45-can-do",
+      "stage": "guided",
+      "target": "can-do",
+      "kind": "input",
+      "form": "statement",
+      "context": "伙伴核实过你会给轮胎充气，你说明自己的能力。",
+      "prompt": "主语I，pump up（充气）、this tyre（这个轮胎）。提示：I + can + 动词原形 + 对象。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。可省略末尾标点或用一个英文句号；不用问号或感叹号。",
+      "accepted": [
+        "I can pump up this tyre.",
+        "I can pump this tyre up."
+      ],
+      "criterion": "主语与能力事实正确，can后用原形。 可省略末尾标点或用一个英文句号；不用问号或感叹号。",
+      "why": "本题要求：主语与能力事实正确，can后用原形。 易错边界：打算做不等于会做。",
+      "novelty": "伙伴核实过你会给轮胎充气，你说明自己的能力。",
+      "counterexamples": [
+        {
+          "answer": "I am going to pump up this tyre.",
+          "reason": "打算做不等于会做。"
+        },
+        {
+          "answer": "I can pump up this tyre?",
+          "reason": "本题要求陈述或数量短语或命令，问号改变输出任务。"
+        },
+        {
+          "answer": "I can pump up this tyre..",
+          "reason": "本题至多允许一个末尾英文句号。"
+        },
+        {
+          "answer": "I can to pump up this tyre.",
+          "reason": "未保持所练句型的基本成分、单位结构或主谓对应。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "repair-n47-ask-preference",
+    "answer": "Do you like honey?",
+    "reasonableVariants": [
+      "Do you like honey?"
+    ],
+    "issue": null,
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "Do you like honey?",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "repair-n47-ask-preference",
+      "stage": "repair",
+      "target": "ask-preference",
+      "kind": "input",
+      "form": "question",
+      "context": "你在筹备点心偏好调查，想了解朋友通常是否喜欢蜂蜜；这次不询问是否当场要一份。",
+      "prompt": "主语you，like（喜欢）、honey（蜂蜜），只写喜好问句。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。只写一个完整问句，以一个英文问号结束。",
+      "accepted": [
+        "Do you like honey?"
+      ],
+      "criterion": "问的是长期喜好；do引出问句，like后对象不变。 只写一个完整问句，以一个英文问号结束。",
+      "why": "本题要求：问的是长期喜好；do引出问句，like后对象不变。 易错边界：honey在本题按物质不可数。",
+      "novelty": "你在筹备点心偏好调查，想了解朋友通常是否喜欢蜂蜜；这次不询问是否当场要一份。",
+      "counterexamples": [
+        {
+          "answer": "Do you like a honey?",
+          "reason": "honey在本题按物质不可数。"
+        },
+        {
+          "answer": "Do you like honey.",
+          "reason": "本题要求一个英文问号结束的完整问句。"
+        },
+        {
+          "answer": "Do you like honey??",
+          "reason": "本题限定句末恰有一个问号。"
+        },
+        {
+          "answer": "Do you to like honey?",
+          "reason": "疑问结构、主谓对应或动词形式不符合本题。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "review-a-n47-ask-want",
+    "answer": "Do you want any juice?",
+    "reasonableVariants": [
+      "Do you want any juice?"
+    ],
+    "issue": null,
+    "canonicalAccepted": true,
+    "variantResults": [
+      {
+        "answer": "Do you want any juice?",
+        "accepted": true
+      }
+    ],
+    "authored": {
+      "id": "review-a-n47-ask-want",
+      "stage": "review-a",
+      "target": "ask-want",
+      "kind": "input",
+      "form": "question",
+      "context": "茶点登记表要核对这一轮饮品需求。你询问朋友现在是否想要一些果汁，不预设对方会要；不是在礼貌劝他接受一杯。",
+      "prompt": "主语you，want（想要）、any juice（一些果汁）；本题规定中性询问的any。 不加称呼、时间副词或题目未给的修饰；保留指定词汇与完成基本结构所需成分。只写一个完整问句，以一个英文问号结束。",
+      "accepted": [
+        "Do you want any juice?"
+      ],
+      "criterion": "当前需求与通常喜好分开；保留份数和限定词。 只写一个完整问句，以一个英文问号结束。",
+      "why": "本题要求：当前需求与通常喜好分开；保留份数和限定词。 易错边界：本题按物质并指定any，不指一份果汁。",
+      "novelty": "茶点登记表要核对这一轮饮品需求。你询问朋友现在是否想要一些果汁，不预设对方会要；不是在礼貌劝他接受一杯。",
+      "counterexamples": [
+        {
+          "answer": "Do you want a juice?",
+          "reason": "本题按物质并指定any，不指一份果汁。"
+        },
+        {
+          "answer": "Do you want any juice.",
+          "reason": "本题要求一个英文问号结束的完整问句。"
+        },
+        {
+          "answer": "Do you want any juice??",
+          "reason": "本题限定句末恰有一个问号。"
+        },
+        {
+          "answer": "Do you to want any juice?",
+          "reason": "疑问结构、主谓对应或动词形式不符合本题。"
+        }
+      ]
+    }
+  }
+]
