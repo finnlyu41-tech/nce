@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## Current release v42 - Academic table reading
+## Current release v43 - Forty-two finite NCE1 course groups
+
+Runtime `bf6ea10567a379846dea7a6f40f68c8937889d7c`, [fixed deployment](https://942cd565.finn-english-studio.pages.dev). Forty-two registered paired groups cover NCE1 lessons1-84 with756 authored closed tasks;234 groups remain unregistered. Original answers, separate corrections, source bindings and guarded successor routes retain their existing storage and grading boundaries.
+
+[Scope and evidence](docs/course-42-v43.md).
+
+## Previously published v42 - Academic table reading
 
 Runtime `0bfe71704a54d2db58a1b66b2510b1efd4d503ba`, [fixed deployment](https://5503b796.finn-english-studio.pages.dev). One finite lesson with six original materials; original answers, separate corrections and displayed public task context transfer through the real whole-site backup. Formal52/47/1 native checks and76 public resources pass.
 
