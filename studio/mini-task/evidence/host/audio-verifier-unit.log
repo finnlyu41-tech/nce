@@ -1,0 +1,9 @@
+PASS strict audio verifier valid
+PASS strict audio verifier unknown-ledger
+PASS strict audio verifier missing
+PASS strict audio verifier hash
+PASS strict audio verifier corrupt
+PASS strict audio verifier unknown-map
+PASS strict audio verifier missing-map-ref
+PASS strict audio verifier missing-html-ref
+PASS 8 finite audio whitelist/hash/reference negative groups

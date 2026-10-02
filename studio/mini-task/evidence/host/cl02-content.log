@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+ok 1 - three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+  ---
+  duration_ms: 1.682833
+  type: 'test'
+  ...
+# Subtest: all accepted keys and documented semantic counterexamples obey the final content matcher
+ok 2 - all accepted keys and documented semantic counterexamples obey the final content matcher
+  ---
+  duration_ms: 0.950875
+  type: 'test'
+  ...
+# Subtest: written question and statement marks cannot be swallowed into the other response type
+ok 3 - written question and statement marks cannot be swallowed into the other response type
+  ---
+  duration_ms: 0.532958
+  type: 'test'
+  ...
+# Subtest: normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+ok 4 - normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+  ---
+  duration_ms: 0.116333
+  type: 'test'
+  ...
+# Subtest: three source identities and time labels remain bound to existing matching textbook/comic groups
+ok 5 - three source identities and time labels remain bound to existing matching textbook/comic groups
+  ---
+  duration_ms: 6.157208
+  type: 'test'
+  ...
+# Subtest: independent blind solutions and final real-factory checker probes agree after any revision
+ok 6 - independent blind solutions and final real-factory checker probes agree after any revision
+  ---
+  duration_ms: 2.16
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 16.362666

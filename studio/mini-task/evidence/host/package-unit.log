@@ -1,0 +1,6 @@
+PASS finite packaging online
+PASS finite packaging offline
+PASS finite packaging missing
+PASS finite packaging corrupt
+PASS finite packaging unreferenced
+PASS 5 owned finite packaging/negative fixture groups

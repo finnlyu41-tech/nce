@@ -1,0 +1,82 @@
+{
+  "checks": [
+    "normal map Today → host → saved CL return → CL mini callback → Today resume → original answer",
+    "actual IDB quota failure retains input/saved raw across Today/course/header/records/hash/native same-document back exits; retry + reload saves original independent answer",
+    "mini waiting return → original course continuation nce1-3; CL original/map mastery/cards/scores unchanged",
+    "synthetic due A route; actual HTTP missing audio cannot earn exposure; restored audio play/ended confirms exposure; all 10 HTTP/MIME/hash verified",
+    "actual host no horizontal overflow 1280",
+    "actual host no horizontal overflow 390",
+    "actual host no horizontal overflow 320",
+    "actual file offline package embedded WAV play/ended + local saved draft reload + submitted original"
+  ],
+  "media": [
+    {
+      "file": "mini-n1-01-delayed-a-DasbtE01.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    {
+      "file": "mini-n1-01-delayed-b-9LV-hq9D.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    {
+      "file": "mini-n1-01-guided-DbZx4d_F.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    {
+      "file": "mini-n1-01-independent-DwalH_Cp.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    {
+      "file": "mini-n1-01-repair-C_pmpUrE.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    {
+      "file": "mini-n1-09-delayed-a-32d96Ls0.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    {
+      "file": "mini-n1-09-delayed-b-BdSpo7nO.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    {
+      "file": "mini-n1-09-guided-BLL7G-yC.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    {
+      "file": "mini-n1-09-independent-B_v42D4U.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    {
+      "file": "mini-n1-09-repair-1nc7dXyw.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    }
+  ],
+  "exceptions": 0,
+  "externalHTTP": [],
+  "profile": "fresh synthetic QA only",
+  "actualPlayback": "HTMLAudioElement play/ended in actual dist-online and file dist",
+  "realLearnerSpeech": false,
+  "humanAcousticAudit": false,
+  "naturalDelayVerified": false,
+  "offlineTested": "Chrome desktop file; direct mini route only"
+}

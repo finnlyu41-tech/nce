@@ -1,0 +1,25 @@
+vite v8.0.13 building client environment for production...
+[2K
+transforming...✓ 2153 modules transformed.
+rendering chunks...
+computing gzip size...
+static-export/standalone.html                                 1.12 kB │ gzip:   0.79 kB
+static-export/assets/mini-n1-09-guided-BLL7G-yC.wav          81.13 kB
+static-export/assets/mini-n1-09-delayed-a-32d96Ls0.wav       83.69 kB
+static-export/assets/mini-n1-09-repair-1nc7dXyw.wav          85.23 kB
+static-export/assets/mini-n1-01-guided-DbZx4d_F.wav          92.91 kB
+static-export/assets/mini-n1-01-independent-DwalH_Cp.wav     94.44 kB
+static-export/assets/mini-n1-01-repair-C_pmpUrE.wav          96.49 kB
+static-export/assets/mini-n1-09-independent-B_v42D4U.wav     97.32 kB
+static-export/assets/mini-n1-09-delayed-b-BdSpo7nO.wav      123.11 kB
+static-export/assets/mini-n1-01-delayed-a-DasbtE01.wav      159.78 kB
+static-export/assets/mini-n1-01-delayed-b-9LV-hq9D.wav      173.82 kB
+static-export/assets/style-BPLOAydY.css                     326.96 kB │ gzip:  56.91 kB
+static-export/assets/standalone-CvEgNHZI.js               3,066.74 kB │ gzip: 972.98 kB
+
+✓ built in 1.09s
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

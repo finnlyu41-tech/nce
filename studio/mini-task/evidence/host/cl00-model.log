@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+ok 1 - content: 18 unique complete tasks; six disjoint contexts; source-bound first lesson
+  ---
+  duration_ms: 2.217541
+  type: 'test'
+  ...
+# Subtest: bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+ok 2 - bounded matcher accepts case, whitespace and terminal Chinese punctuation; rejects wrong grammar and extra claims
+  ---
+  duration_ms: 0.873
+  type: 'test'
+  ...
+# Subtest: initial route exposes only first test item and cannot finish or bypass first attempts
+ok 3 - initial route exposes only first test item and cannot finish or bypass first attempts
+  ---
+  duration_ms: 1.012625
+  type: 'test'
+  ...
+# Subtest: diagnostic wrong answer selects targeted teaching first; original persists
+ok 4 - diagnostic wrong answer selects targeted teaching first; original persists
+  ---
+  duration_ms: 2.700542
+  type: 'test'
+  ...
+# Subtest: reading/audio/comic access recorded separately; active answer becomes assisted
+ok 5 - reading/audio/comic access recorded separately; active answer becomes assisted
+  ---
+  duration_ms: 0.441958
+  type: 'test'
+  ...
+# Subtest: study materials do not pre-expose independent or delayed banks
+ok 6 - study materials do not pre-expose independent or delayed banks
+  ---
+  duration_ms: 1.8825
+  type: 'test'
+  ...
+# Subtest: first answer cannot be overwritten; duplicate submit rejected
+ok 7 - first answer cannot be overwritten; duplicate submit rejected
+  ---
+  duration_ms: 0.197958
+  type: 'test'
+  ...
+# Subtest: guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+ok 8 - guided failure: feedback then retry preserves wrong original and is not fresh independent evidence
+  ---
+  duration_ms: 0.8755
+  type: 'test'
+  ...
+# Subtest: wrong independent answer requires correct separate correction plus note
+ok 9 - wrong independent answer requires correct separate correction plus note
+  ---
+  duration_ms: 4.50125
+  type: 'test'
+  ...
+# Subtest: hinted correct answer remains assisted and requires correction note
+ok 10 - hinted correct answer remains assisted and requires correction note
+  ---
+  duration_ms: 2.732166
+  type: 'test'
+  ...
+# Subtest: repair failure must retry; later pass keeps both attempts and makes no mastery claim
+ok 11 - repair failure must retry; later pass keeps both attempts and makes no mastery claim
+  ---
+  duration_ms: 4.833833
+  type: 'test'
+  ...
+# Subtest: one route returns resume then continue-route and only real due review
+ok 12 - one route returns resume then continue-route and only real due review
+  ---
+  duration_ms: 4.025041
+  type: 'test'
+  ...
+# Subtest: review entry/view alone does not create results or postpone due
+ok 13 - review entry/view alone does not create results or postpone due
+  ---
+  duration_ms: 3.599
+  type: 'test'
+  ...
+# Subtest: actual complete unassisted new review schedules seven days from completion, not original due
+ok 14 - actual complete unassisted new review schedules seven days from completion, not original due
+  ---
+  duration_ms: 7.305042
+  type: 'test'
+  ...
+# Subtest: failed or helped review schedules one day, even with otherwise correct answers
+ok 15 - failed or helped review schedules one day, even with otherwise correct answers
+  ---
+  duration_ms: 10.518209
+  type: 'test'
+  ...
+# Subtest: two review banks exhaust honestly; opening prior material never replenishes bank
+ok 16 - two review banks exhaust honestly; opening prior material never replenishes bank
+  ---
+  duration_ms: 7.175167
+  type: 'test'
+  ...
+# Subtest: UTC elapsed interval unaffected by display timezone or missed days
+ok 17 - UTC elapsed interval unaffected by display timezone or missed days
+  ---
+  duration_ms: 20.767542
+  type: 'test'
+  ...
+# Subtest: JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+ok 18 - JSON replays all originals, corrections, drafts, hints, exposures, position and due without migration
+  ---
+  duration_ms: 4.96225
+  type: 'test'
+  ...
+# Subtest: corrupt/future/unsupported snapshots preserve raw instead of resetting
+ok 19 - corrupt/future/unsupported snapshots preserve raw instead of resetting
+  ---
+  duration_ms: 0.17475
+  type: 'test'
+  ...
+# Subtest: out-of-order or injected future action rejected and state immutable
+ok 20 - out-of-order or injected future action rejected and state immutable
+  ---
+  duration_ms: 0.12
+  type: 'test'
+  ...
+# Subtest: host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+ok 21 - host may acknowledge persistence separately: pure model does not touch storage, navigation, audio, or map
+  ---
+  duration_ms: 9.70325
+  type: 'test'
+  ...
+# Subtest: typing drafts coalesce without dropping submitted originals or help events
+ok 22 - typing drafts coalesce without dropping submitted originals or help events
+  ---
+  duration_ms: 18.700875
+  type: 'test'
+  ...
+# Subtest: explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+ok 23 - explicit not-yet response lets a beginner reach teaching without fabricating success or silently skipping
+  ---
+  duration_ms: 0.406833
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 125.851125

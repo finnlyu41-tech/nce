@@ -1,0 +1,57 @@
+{
+  "mode": "offline",
+  "files": [
+    {
+      "file": "mini-n1-01-delayed-a-DasbtE01.wav",
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c",
+      "bytes": 159788
+    },
+    {
+      "file": "mini-n1-01-delayed-b-9LV-hq9D.wav",
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4",
+      "bytes": 173828
+    },
+    {
+      "file": "mini-n1-01-guided-DbZx4d_F.wav",
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06",
+      "bytes": 92910
+    },
+    {
+      "file": "mini-n1-01-independent-DwalH_Cp.wav",
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041",
+      "bytes": 94446
+    },
+    {
+      "file": "mini-n1-01-repair-C_pmpUrE.wav",
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c",
+      "bytes": 96494
+    },
+    {
+      "file": "mini-n1-09-delayed-a-32d96Ls0.wav",
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba",
+      "bytes": 83694
+    },
+    {
+      "file": "mini-n1-09-delayed-b-BdSpo7nO.wav",
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185",
+      "bytes": 123118
+    },
+    {
+      "file": "mini-n1-09-guided-BLL7G-yC.wav",
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c",
+      "bytes": 81134
+    },
+    {
+      "file": "mini-n1-09-independent-B_v42D4U.wav",
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7",
+      "bytes": 97324
+    },
+    {
+      "file": "mini-n1-09-repair-1nc7dXyw.wav",
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c",
+      "bytes": 85230
+    }
+  ],
+  "count": 10,
+  "learnerDataRead": false
+}

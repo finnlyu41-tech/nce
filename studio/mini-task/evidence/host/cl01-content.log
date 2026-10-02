@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: two explicitly authored groups have six complete three-target banks and objective criteria
+ok 1 - two explicitly authored groups have six complete three-target banks and objective criteria
+  ---
+  duration_ms: 2.997791
+  type: 'test'
+  ...
+# Subtest: new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+ok 2 - new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+  ---
+  duration_ms: 0.633
+  type: 'test'
+  ...
+# Subtest: lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+ok 3 - lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+  ---
+  duration_ms: 0.28175
+  type: 'test'
+  ...
+# Subtest: lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+ok 4 - lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+  ---
+  duration_ms: 0.437083
+  type: 'test'
+  ...
+# Subtest: lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+ok 5 - lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+  ---
+  duration_ms: 0.981292
+  type: 'test'
+  ...
+# Subtest: lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+ok 6 - lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+  ---
+  duration_ms: 0.334833
+  type: 'test'
+  ...
+# Subtest: media references reuse exact existing comic/LRC source identities and source-bound time ranges
+ok 7 - media references reuse exact existing comic/LRC source identities and source-bound time ranges
+  ---
+  duration_ms: 6.48675
+  type: 'test'
+  ...
+# Subtest: new groups contain no copied textbook body, audio blobs, storage access or fake score
+ok 8 - new groups contain no copied textbook body, audio blobs, storage access or fake score
+  ---
+  duration_ms: 1.782375
+  type: 'test'
+  ...
+# Subtest: all independent blind answers and reported natural variants fit final finite matching
+ok 9 - all independent blind answers and reported natural variants fit final finite matching
+  ---
+  duration_ms: 1.517167
+  type: 'test'
+  ...
+# Subtest: short nationality structure is explicit before submission, not a hidden grading rule
+ok 10 - short nationality structure is explicit before submission, not a hidden grading rule
+  ---
+  duration_ms: 0.718875
+  type: 'test'
+  ...
+# Subtest: coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+ok 11 - coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+  ---
+  duration_ms: 1.201667
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 22.916208
