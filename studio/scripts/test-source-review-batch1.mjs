@@ -11,13 +11,13 @@ const index=JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.js
 const dictionary=JSON.parse(await readFile(new URL('dist-online/language/dictionary.json',root),'utf8')).words;
 const original=structuredClone(index),projected=m.withReviewedSourceAssociations(index),catalog=m.buildVocabularyCatalog(index),groups=[];
 function check(name,fn){fn();groups.push(name)}
-check('only two associations; raw bundle and all old rows preserved',()=>{
- assert.deepEqual(index,original);assert.equal(catalog.entries,3616);assert.equal(catalog.terms.length,3346);
+check('two existing-word and two recovered-head associations; raw bundle and all old rows preserved',()=>{
+ assert.deepEqual(index,original);assert.equal(catalog.entries,3618);assert.equal(catalog.terms.length,3348);
  const sourceIds=x=>Object.entries(x.lessons).flatMap(([id,l])=>l.vocabulary.words.map(w=>id+':'+w.word.toLowerCase()));
  const before=new Set(sourceIds(index)),after=new Set(sourceIds(projected));
- assert.deepEqual([...after].filter(id=>!before.has(id)).sort(),['NCE1-103:low','NCE4-9:assail']);
+ assert.deepEqual([...after].filter(id=>!before.has(id)).sort(),['NCE1-103:low','NCE1-51:snow','NCE3-58:balcony','NCE4-9:assail']);
  assert([...before].every(id=>after.has(id)));assert.equal(m.withReviewedSourceAssociations(projected),projected);
- for(const [id,lesson] of Object.entries(index.lessons))if(!['NCE1-103','NCE4-9'].includes(id))assert.equal(projected.lessons[id],lesson);
+ for(const [id,lesson] of Object.entries(index.lessons))if(!['NCE1-103','NCE1-51','NCE3-58','NCE4-9'].includes(id))assert.equal(projected.lessons[id],lesson);
 });
 check('existing normalized words, forms and printed ordering',()=>{
  for(const repair of m.reviewedSourceAssociations){
@@ -74,4 +74,4 @@ for(const [label,snapshot] of [['old',old],['source-enriched',state]]){
  assert.deepEqual(decoded.state,snapshot);groups.push(label+' backup roundtrip preserves card IDs, schedules, sources and unrelated notes');
 }
 assert.deepEqual(index,original);
-console.log(JSON.stringify({passed:groups.length,groups,sourceAssociations:2,newNormalizedWords:0,newAuthoredExamples:0,naturalTimeEvidence:false,realBrowserEvidence:false}));
+console.log(JSON.stringify({passed:groups.length,groups,legacyExistingWordAssociations:2,recoveredPrintedHeadAssociations:2,netNewCatalogTerms:2,newAuthoredExamples:0,naturalTimeEvidence:false,realBrowserEvidence:false}));

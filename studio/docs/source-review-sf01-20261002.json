@@ -1,0 +1,380 @@
+{
+  "schemaVersion": 1,
+  "batch": "SF01",
+  "scope": "Exactly two readable missing printed source associations. No new authored examples, dictionary override, source-page mapping or saved-state migration.",
+  "baseCommit": "075af33819f2c09dcf840ee118d24ea207e7da3f",
+  "baseRelease": "2026-10-02-ielts-curriculum-batch05-v34",
+  "baseRuntimeCommit": "ff2cedbb7f315f00862e6f2151e8c18732571bac",
+  "sourceAuditCommit": "652449357d6403a66f4206664184042741116ff5",
+  "sourceAuditProofSha256": "a35c3ac3652f5112ffe1dda6c2e77a47da9b5b53aca5c0871c8394d418f9c02f",
+  "publicBaseline": {
+    "immutableURL": "https://8b353d9b.finn-english-studio.pages.dev",
+    "formalAndImmutableVersionsEqual": true,
+    "versionSha256": "97d8863545105573bcb9ba4901d8124fca7b7a5ab3617795918bb8d41da1fa18",
+    "indexSha256": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596",
+    "dictionarySha256": "41d983d5f8017035719842fad2275f949d39e348cdc6f50bf00ae0a9a9cee209"
+  },
+  "originalWholePageRechecks": {
+    "count": 4,
+    "method": "tools.view_image(detail=original)",
+    "viewer": "/root",
+    "pages": [
+      {
+        "book": "NCE1",
+        "pdfPage": 105
+      },
+      {
+        "book": "NCE1",
+        "pdfPage": 106
+      },
+      {
+        "book": "NCE3",
+        "pdfPage": 286
+      },
+      {
+        "book": "NCE3",
+        "pdfPage": 287
+      }
+    ],
+    "newWholeBookAuditPerformed": false,
+    "humanReview": false
+  },
+  "candidates": [
+    {
+      "associationId": "NCE1-51:snow",
+      "book": "NCE1",
+      "lesson": 51,
+      "word": "snow",
+      "sourceBookSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "sourcePDFPage": 106,
+      "printedPage": 102,
+      "sourcePageSha256": "9ec4c74672a7410e93aa802a73d198f3cb88633aa207a43d0e12b2add0306a0e",
+      "printedPartOfSpeech": "v.",
+      "printedGloss": "下雪",
+      "literalLocation": "right glossary column row 1",
+      "proposalPath": "docs/source-word-corrections-proposed-wave07-20261002.json",
+      "proposalFileSha256": "7c9ec4436ba4387c2753b5247daf477ea1f0c1dfae38df5a4bd962b6438d3eae",
+      "targetReview": {
+        "printedMeaningReadable": true,
+        "lessonIdentityVerifiedOnPageAndAdjacentText": true,
+        "contextSense": "天气中的下雪动词",
+        "contextPDFPage": 105,
+        "contextPageSha256": "0b189b85a26a88c5d6cc90552c4716ced72e2916fa8a86cc45d7d6188834048f",
+        "originalInflectionsInPrintedGlossary": [],
+        "inferredInflectionsAdded": []
+      },
+      "dictionaryEntry": {
+        "word": "snow",
+        "ipa": "snəʊ",
+        "meaning": "n. 雪, 积雪, 下雪, 雪花形干扰\nvi. 下雪, 似雪般落下\nvt. 使雪白, 用雪覆盖, 使像雪般落下"
+      },
+      "dictionaryEntryChanged": false,
+      "dictionarySenseIsNotClaimedToBePrintedGloss": true,
+      "rawNCEAssociationsForNormalizedHead": [],
+      "sourceProjectionForms": [],
+      "status": "implemented-in-local-candidate; unpublished",
+      "humanReview": false
+    },
+    {
+      "associationId": "NCE3-58:balcony",
+      "book": "NCE3",
+      "lesson": 58,
+      "word": "balcony",
+      "sourceBookSha256": "9c3a876dbd813261b164356b97bcc6ca8b1c2653109e9b4f3e2cb3a198f90d97",
+      "sourcePDFPage": 287,
+      "printedPage": 261,
+      "sourcePageSha256": "ba0ae2f040eb8a66d792dc6471a4086145391d55df79e5f0ecb17f904127bf44",
+      "printedPartOfSpeech": "n.",
+      "printedGloss": "阳台",
+      "literalLocation": "right glossary column row 5; text line reference 24",
+      "proposalPath": "docs/source-word-corrections-proposed-wave08-20261002.json",
+      "proposalFileSha256": "408628fea21b687dcab22e5e50a5bd5b1c5501451388facd7ff3e129eb25711d",
+      "targetReview": {
+        "printedMeaningReadable": true,
+        "lessonIdentityVerifiedOnPageAndAdjacentText": true,
+        "contextSense": "公寓阳台名词",
+        "contextPDFPage": 286,
+        "contextPageSha256": "fe30291f96d4be1bee52bffd53aec44efadcc8b071edb488219c91dd496e52d4",
+        "originalInflectionsInPrintedGlossary": [],
+        "inferredInflectionsAdded": []
+      },
+      "dictionaryEntry": {
+        "word": "balcony",
+        "ipa": "ˈbælkənɪ",
+        "meaning": "n. 阳台, 戏院楼厅"
+      },
+      "dictionaryEntryChanged": false,
+      "dictionarySenseIsNotClaimedToBePrintedGloss": true,
+      "rawNCEAssociationsForNormalizedHead": [],
+      "sourceProjectionForms": [],
+      "status": "implemented-in-local-candidate; unpublished",
+      "humanReview": false
+    }
+  ],
+  "catalogCounts": {
+    "base": {
+      "associations": 3616,
+      "uniqueTerms": 3346
+    },
+    "localCandidate": {
+      "associations": 3618,
+      "uniqueTerms": 3348
+    },
+    "addedAssociationIds": [
+      "NCE1-51:snow",
+      "NCE3-58:balcony"
+    ],
+    "oldAssociationsRemoved": []
+  },
+  "alreadyAdoptedV31": [
+    "NCE1-103:low",
+    "NCE4-9:assail",
+    "NCE2:PDF199-clarification"
+  ],
+  "heldMissingAssociationIds": [
+    "NCE3-29:hobble",
+    "NCE4-3:solitary",
+    "NCE2-27:heavily",
+    "NCE3-34:bargain hunter",
+    "NCE4-37:virtual",
+    "NCE1-109:a little",
+    "NCE3-58:fussy",
+    "NCE1-65:enjoy"
+  ],
+  "associationStatus": {
+    "publishedMissingProposalsAtBase": 10,
+    "implementedInThisLocalCandidate": 2,
+    "heldAfterThisCandidate": 8,
+    "candidatePublished": false
+  },
+  "heldMissingAssociationsReason": "Outside this two-association batch. Bargain hunter and a little also lack current dictionary entries; the other proposals retain their source-specific target review before enrollment changes.",
+  "remainingEditorialProposals": [
+    {
+      "book": "NCE2",
+      "pdfPage": 201,
+      "kind": "printed-header-conflict",
+      "printedLesson": 33,
+      "inferredLesson": 34,
+      "runtimePageIndexed": false,
+      "status": "held",
+      "missingForRuntimeApplication": "No runtime page entry exposes this original exercise. Page association wiring is outside SF01."
+    },
+    {
+      "book": "NCE2",
+      "pdfPage": 424,
+      "kind": "printed-header-conflict",
+      "printedLesson": 80,
+      "inferredLesson": 83,
+      "runtimePageIndexed": false,
+      "status": "unresolved",
+      "missingForResolution": "Printed 80 and inferred 83 remain distinct; contextual names and continuity do not authorise replacing the printed lesson number."
+    },
+    {
+      "book": "NCE2",
+      "pdfPage": 172,
+      "kind": "put-with-instruction-conflict",
+      "runtimePageIndexed": false,
+      "status": "held",
+      "missingForRuntimeApplication": "No runtime exercise exposes the page; the source discrepancy does not choose the intended instruction."
+    },
+    {
+      "book": "NCE2",
+      "pdfPage": 241,
+      "kind": "two-one-sentence-instruction-conflict",
+      "runtimePageIndexed": false,
+      "status": "held",
+      "missingForRuntimeApplication": "No runtime exercise exposes the page; the source discrepancy does not choose the intended task length."
+    },
+    {
+      "book": "NCE4",
+      "pdfPage": 216,
+      "kind": "scuptor-sculptor-spelling-conflict",
+      "runtimePageIndexed": false,
+      "status": "held",
+      "missingForRuntimeApplication": "The comprehension page is outside the runtime index; its original spelling is preserved."
+    }
+  ],
+  "editorialAppliedByThisBatch": [],
+  "unresolvedSourceWordIds": {
+    "sourceQueuePath": "docs/source-word-review-queue-indexed-20261002.json",
+    "sourceQueueSha256": "37743c13210601c5716feda3dd0bd392a5baa5bd1eea6902435d1381aff7db9d",
+    "uniqueBefore": 62,
+    "resolvedByThisBatch": [],
+    "uniqueAfter": 62,
+    "unchangedSortedIds": [
+      "NCE1-135:future",
+      "NCE1-142:regularly",
+      "NCE1-143:throw",
+      "NCE1-15:danish",
+      "NCE1-15:norwegian",
+      "NCE1-16:dutch",
+      "NCE1-16:russian",
+      "NCE1-25:electric",
+      "NCE1-31:grass",
+      "NCE1-37:pink",
+      "NCE1-42:any",
+      "NCE1-48:wine",
+      "NCE1-5:chinese",
+      "NCE1-5:french",
+      "NCE1-5:german",
+      "NCE1-5:japanese",
+      "NCE1-5:korean",
+      "NCE1-81:ready",
+      "NCE2-10:jazz",
+      "NCE2-11:deserve",
+      "NCE2-14:amusing",
+      "NCE2-17:appear",
+      "NCE2-19:sadly",
+      "NCE2-20:fisherman",
+      "NCE2-26:curtain",
+      "NCE2-28:ancient",
+      "NCE2-2:aunt",
+      "NCE2-33:rock",
+      "NCE2-36:solid",
+      "NCE2-3:single",
+      "NCE2-4:receive",
+      "NCE2-5:service",
+      "NCE2-66:lancaster",
+      "NCE2-73:lorry",
+      "NCE2-82:creature",
+      "NCE2-83:ex",
+      "NCE2-84:pressure",
+      "NCE2-86:waterski",
+      "NCE2-95:heaven",
+      "NCE3-13:metre",
+      "NCE3-18:oddly",
+      "NCE3-31:invariably",
+      "NCE3-34:dealer",
+      "NCE3-38:phase",
+      "NCE3-38:tusk",
+      "NCE3-46:fuse",
+      "NCE3-56:stoutly",
+      "NCE3-59:constructively",
+      "NCE3-60:rural",
+      "NCE3-8:rashly",
+      "NCE4-11:oppress",
+      "NCE4-16:dimension",
+      "NCE4-1:fossil man",
+      "NCE4-26:vole",
+      "NCE4-31:visualize",
+      "NCE4-35:chasm",
+      "NCE4-38:carbonated",
+      "NCE4-41:tame",
+      "NCE4-45:envision",
+      "NCE4-47:maître d'hôtel",
+      "NCE4-4:lotto",
+      "NCE4-5:presumptuous"
+    ],
+    "unchangedSortedIdsSha256": "c6ebeb9563d9af8f2915e09a96d5a3de6fab4e1435b6591b02b1e9ed9013be81",
+    "rowCountsBeforeAndAfter": {
+      "literalUnknownRows": 5,
+      "identityMappingRows": 5,
+      "sourceWordInterpretationRows": 57
+    },
+    "queuesOverlap": true
+  },
+  "registeredAuthoredContent": {
+    "headwords": 315,
+    "examples": 420,
+    "newAuthoredHeadwords": 0,
+    "newAuthoredExamples": 0
+  },
+  "printedPOSAndGlossAreEvidenceOnly": true,
+  "dictionaryAndEnrollmentMeaningUnchanged": true,
+  "existingNoteCardIdsSchedulesAndReviewHistoryMustBePreserved": true,
+  "personalLearningStorageAccessed": false,
+  "wholePrintedMeaningDenominator": null,
+  "humanReview": false,
+  "publisher": "01a0fa39-c2a2-7239-87b4-b0a9c091f0ba",
+  "pushMergeDeployAuthorisedToThisThread": false,
+  "verificationCommand": "node scripts/test-source-review-sf01.mjs",
+  "verificationStatus": "passed",
+  "verification": {
+    "sf01SourceGroups": 12,
+    "legacySourceGroups": 8,
+    "existingFSRSScenarios": 15,
+    "registeredCanonicalSourceTargetCallbacks": 275,
+    "catalogAndExampleRegressionsPassed": true,
+    "changedCodeLintPassed": true,
+    "typeCheck": {
+      "argv": [
+        "node",
+        "node_modules/typescript/bin/tsc",
+        "--noEmit"
+      ],
+      "exitCodeConfirmedByTool": 0,
+      "toolSessionId": 24309
+    },
+    "checks": {
+      "sf01": {
+        "argv": [
+          "node",
+          "scripts/test-source-review-sf01.mjs"
+        ],
+        "exitCode": 0,
+        "log": "work/source-fixes-sf01/verification/sf01.log",
+        "logSha256": "bbed4ec2316c7e3c721670abdb9b1d15379bb5767c6d80764b0bb4654bfdf78f"
+      },
+      "source-batch1": {
+        "argv": [
+          "node",
+          "scripts/test-source-review-batch1.mjs"
+        ],
+        "exitCode": 0,
+        "log": "work/source-fixes-sf01/verification/source-batch1.log",
+        "logSha256": "e5b92843088944832b11241b44b2fe778df5c7da22cf3eaddda46a0874fd1382"
+      },
+      "vocabulary": {
+        "argv": [
+          "node",
+          "scripts/test-vocabulary.mjs"
+        ],
+        "exitCode": 0,
+        "log": "work/source-fixes-sf01/verification/vocabulary.log",
+        "logSha256": "e503822a7ee1c935d468990434fe4a3ff3562f22e49c5b6646c50d2a8ec42537"
+      },
+      "flashcard-sources": {
+        "argv": [
+          "node",
+          "scripts/test-flashcard-sources.mjs"
+        ],
+        "exitCode": 0,
+        "log": "work/source-fixes-sf01/verification/flashcard-sources.log",
+        "logSha256": "3bd149c782d962af703fbd5248ea2af788baa6b0e0f253e74584ad26e2aa440b"
+      },
+      "fsrs": {
+        "argv": [
+          "node",
+          "scripts/test-flashcards.mjs"
+        ],
+        "exitCode": 0,
+        "log": "work/source-fixes-sf01/verification/fsrs.log",
+        "logSha256": "62133001bdaae0ab2e96115d3f6f4775264fd96216caa96b226d92cfae85a557"
+      },
+      "vocabulary-examples": {
+        "argv": [
+          "node",
+          "scripts/test-vocabulary-examples.mjs"
+        ],
+        "exitCode": 0,
+        "log": "work/source-fixes-sf01/verification/vocabulary-examples.log",
+        "logSha256": "35d600ba0075a118009cee62524f5529bd7d39ed3a14bbd34d7eafb2a3483d65"
+      },
+      "changed-file-lint": {
+        "argv": [
+          "node",
+          "node_modules/eslint/bin/eslint.js",
+          "app/data/source-review-sf01.ts",
+          "app/source-review-batch1.ts",
+          "scripts/test-source-review-sf01.mjs",
+          "scripts/test-source-review-batch1.mjs",
+          "scripts/test-vocabulary.mjs"
+        ],
+        "exitCode": 0,
+        "log": "work/source-fixes-sf01/verification/changed-file-lint.log",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "productionBrowserAndNaturalRetentionEvidence": false
+  }
+}
