@@ -1,6 +1,10 @@
 # 句句有进步 · English Studio
 
-## 当前发布 v34 · IELTS 第05小批
+## 当前发布 v35 · 来源小批 SF01
+
+版本 `2026-10-02-source-associations-sf01-v35`，运行源码 `533fdeef3302e04f224ea68ee7bdcb9509ba48e6`，固定部署 [82a68b41](https://82a68b41.finn-english-studio.pages.dev)。新增 [snow · NCE1 第51课](https://finn-english-studio.pages.dev/#/words/NCE1/51?tab=book) 和 [balcony · NCE3 第58课](https://finn-english-studio.pages.dev/#/words/NCE3/58?tab=book) 的原书词表关联，词典释义、旧卡 ID／排程和复习历史保留。目录3,618条关联／3,348个词；315原创词头、420例句和62未解决项不变。12新来源、8旧来源、15FSRS、275入卡回调检查通过；本机32组原生Chrome验收、正式入口8组烟测及双地址64项公开哈希一致；未改CL／IELTS沿用v34已验基线。其余8来源／5文字修订继续待核，CL02及表格独立推进。[接线与验证](docs/source-fixes-sf01-production-integration.md)。
+
+## 已发布 v34 · IELTS 第05小批
 
 版本 `2026-10-02-ielts-curriculum-batch05-v34`，运行源码 `ff2cedbb7f315f00862e6f2151e8c18732571bac`，固定部署 [8b353d9b](https://8b353d9b.finn-english-studio.pages.dev)，入口 [课程](https://finn-english-studio.pages.dev/#/ielts?tab=course)。新增 L01 single-answer multiple choice / R06 main-idea heading matching；共用听力与两类独立阅读共18份原创材料/54题（含示范与引导），每类目录现有14课。原答、订正、帮助、类别隔离、刷新、实际备份恢复/回退和 Today 已通过生产绑定验证；本机及两个线上地址各51组原生Chrome验收、54项公开哈希一致。CL01原键和国籍疑问边界继续保留。真实听感、自然24小时/7天、真机与人工评分仍待核验，不换算Band。[接线与验证](docs/ielts-curriculum-batch-05-production-integration.md)。
 
