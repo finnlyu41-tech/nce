@@ -1,0 +1,141 @@
+{
+  "scope": "actual built map/classic normal course + existing IDB guarded writer; native input/download/file restore; fresh synthetic isolated Chrome profile",
+  "base": "bd5d1f731dc4c2d7e1cf213485c75af903d47fa1",
+  "origin": "http://127.0.0.1:63729",
+  "checks": [
+    {
+      "name": "actual older NCE2 map teaching and classic NCE3 grammar receive exact verified source and independent notes",
+      "ok": true,
+      "elapsedMs": 1883
+    },
+    {
+      "name": "native classic recall draft survives interleaved video note writes and remains in same-page backup",
+      "ok": true,
+      "elapsedMs": 1224
+    },
+    {
+      "name": "same-page actual ProgressSave downloads confirmed video draft alongside unrelated second-course note",
+      "ok": true,
+      "elapsedMs": 622,
+      "detail": {
+        "bytes": 1164,
+        "sha256": "f22a0d4e4ce44109913c808cdf2c6f5ef6f8b6c2df777960663bdf30ac0770eb"
+      }
+    },
+    {
+      "name": "normal classic tab switch waits for unsaved note, practice renders no video notes",
+      "ok": true,
+      "elapsedMs": 396
+    },
+    {
+      "name": "video notes to actual mini and placement routes save before leaving; module guards remain active",
+      "ok": true,
+      "elapsedMs": 602
+    },
+    {
+      "name": "synthetic writer failure blocks actual mini/placement and native Back while keeping current text/hash",
+      "ok": true,
+      "elapsedMs": 1040,
+      "detail": {
+        "failure": "injected only into isolated synthetic QA IDB put; not a real quota claim"
+      }
+    },
+    {
+      "name": "successful native Back and next lesson preserve saved notes and isolate course identity",
+      "ok": true,
+      "elapsedMs": 601
+    },
+    {
+      "name": "no verified videos for NCE3 lesson48 or NCE4; original teaching continues",
+      "ok": true,
+      "elapsedMs": 91
+    }
+  ],
+  "passed": 8,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "RuntimeExceptions": [],
+  "requests": [
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-Bacr5wAF.css",
+      "size": 85049
+    },
+    {
+      "path": "/map/assets/index-C5tf_VKV.js",
+      "size": 3200445
+    },
+    {
+      "path": "/language/NCE2/1.json",
+      "size": 1752
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-Dl5wUya9.css",
+      "size": 330731
+    },
+    {
+      "path": "/assets/standalone-Dc1fNFvY.js",
+      "size": 3914167
+    },
+    {
+      "path": "/lesson-pages/index.json",
+      "size": 442006
+    },
+    {
+      "path": "/language/NCE3/1.json",
+      "size": 3984
+    },
+    {
+      "path": "/materials/manifest.json",
+      "size": 391151
+    },
+    {
+      "path": "/language/NCE3/2.json",
+      "size": 3557
+    },
+    {
+      "path": "/materials/19fee6b16911c436f990f12ebe97b2868319c9eaf5c49f5c1b76477fc0428cbb/0000.bin",
+      "size": 1859
+    },
+    {
+      "path": "/materials/d418dd3bb15807846973c9570a256e000818551a2a358b913fc382cef1b4f163/0000.bin",
+      "size": 2186790
+    },
+    {
+      "path": "/language/NCE3/48.json",
+      "size": 7127
+    },
+    {
+      "path": "/language/NCE4/1.json",
+      "size": 3288
+    }
+  ],
+  "sourceSha256": {
+    "course-video/ui.tsx": "075e1b0067fb8e0c1e476cd8bb6b65d7d1439e98c0fe04aee05600d055b2babe",
+    "course-video/controller.ts": "8d219663f490d4df315a01a5631000b1bc783f4f16a826cfe5bff13efc19b4f1",
+    "course-video/adapter.ts": "2c4717a9681268f3b530181d46b3eb6db724aeb0bc63a32665aeb3d2c6b74ef9",
+    "course-video/manifest.ts": "7f8d739c241974eef77b1090ab06172797d88e24df8ce9ce04e97235503ad831",
+    "course-video/notes.ts": "dac01127a99aa1ef070e5e3dea4ecc6a39f16644c439a37066db0f05bd988f9a",
+    "course-video/sources.json": "12c318c867e20cf61f7e6c2beb89f75be1047c6d744611c4b6dcb6100a9f5ef4",
+    "app/course-loop-ui.tsx": "9387f48be1c5c4ab3bd966d1b10c9dfce7eda3fddcd10907a01c9d42826fdfe5",
+    "course-loop/model.mjs": "4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57",
+    "course-loop/host-contract.d.ts": "9ba4f74c15bfbe256ba68e582136947b4aef58c8fc3e89c8327d2b8c7a497a65",
+    "app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028"
+  },
+  "unverified": [
+    "published origin",
+    "natural retention",
+    "physical phone",
+    "actual Bilibili playback/audio",
+    "video summaries",
+    "learning gain"
+  ],
+  "retries": []
+}

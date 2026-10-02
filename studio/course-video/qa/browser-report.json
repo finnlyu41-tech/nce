@@ -1,0 +1,201 @@
+{
+  "scope": "actual built map/classic normal course + existing IDB guarded writer; native input/download/file restore; fresh synthetic isolated Chrome profile",
+  "base": "424efc1869e98cd7b19afd2c1ab7cab0e8380b4b",
+  "origin": "http://127.0.0.1:61553",
+  "checks": [
+    {
+      "name": "real normal course diagnostic hides video/notes and loads no third-party player",
+      "ok": true,
+      "elapsedMs": 138
+    },
+    {
+      "name": "native learn entry exposes exact multi-part links with no automatic iframe or summary",
+      "ok": true,
+      "elapsedMs": 829
+    },
+    {
+      "name": "actual production IDB writer saves personal text and refresh restores it",
+      "ok": true,
+      "elapsedMs": 907
+    },
+    {
+      "name": "native part selection isolates P4 and P5 then restores P3",
+      "ok": true,
+      "elapsedMs": 1093
+    },
+    {
+      "name": "click loads official non-autoplay iframe only after saved video assistance/provenance; fallback survives",
+      "ok": true,
+      "elapsedMs": 920,
+      "detail": {
+        "iframeSrc": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=3&autoplay=0&danmaku=0&refer=0",
+        "network": "intentionally blocked public player URL; no playback claim"
+      }
+    },
+    {
+      "name": "course notes are isolated by actual course and later course restores independently",
+      "ok": true,
+      "elapsedMs": 1474
+    },
+    {
+      "name": "real two-tab CAS refuses stale same-video note and leaves losing text visible",
+      "ok": true,
+      "elapsedMs": 1302
+    },
+    {
+      "name": "failed note blocks host next until explicit backup/reload; original text is downloadable",
+      "ok": true,
+      "elapsedMs": 420
+    },
+    {
+      "name": "native full progress download includes exact note text, access and course source events",
+      "ok": true,
+      "elapsedMs": 0,
+      "detail": {
+        "sha256": "30440cc9f54322015a16fb91d14cf3d2b7e5a6b1eff726dfc0100a3e5363969b",
+        "bytes": 2499
+      }
+    },
+    {
+      "name": "native unchanged actual backup restore retains notes/access and refreshed normal course",
+      "ok": true,
+      "elapsedMs": 926
+    },
+    {
+      "name": "native guided-to-independent transition flushes note and removes player/notes from assessment",
+      "ok": true,
+      "elapsedMs": 1699
+    },
+    {
+      "name": "320/390 CSS viewports have readable note/link layout without horizontal page overflow",
+      "ok": true,
+      "elapsedMs": 170,
+      "detail": {
+        "sizes": [
+          {
+            "width": 320,
+            "scroll": 320,
+            "textarea": 258
+          },
+          {
+            "width": 390,
+            "scroll": 390,
+            "textarea": 328
+          }
+        ],
+        "scope": "desktop CSS emulation; physical-phone playback unverified"
+      }
+    }
+  ],
+  "passed": 12,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "RuntimeExceptions": [],
+  "requests": [
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-Bacr5wAF.css",
+      "size": 85049
+    },
+    {
+      "path": "/map/assets/index-kh7dSsCo.js",
+      "size": 2830350
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-kh7dSsCo.js",
+      "size": 2830350
+    },
+    {
+      "path": "/map/assets/index-Bacr5wAF.css",
+      "size": 85049
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-Bacr5wAF.css",
+      "size": 85049
+    },
+    {
+      "path": "/map/assets/index-kh7dSsCo.js",
+      "size": 2830350
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-D5WoIgwX.css",
+      "size": 325574
+    },
+    {
+      "path": "/assets/standalone-C_RHPgPL.js",
+      "size": 3497610
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-Bacr5wAF.css",
+      "size": 85049
+    },
+    {
+      "path": "/map/assets/index-kh7dSsCo.js",
+      "size": 2830350
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-D5WoIgwX.css",
+      "size": 325574
+    },
+    {
+      "path": "/assets/standalone-C_RHPgPL.js",
+      "size": 3497610
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-Bacr5wAF.css",
+      "size": 85049
+    },
+    {
+      "path": "/map/assets/index-kh7dSsCo.js",
+      "size": 2830350
+    }
+  ],
+  "sourceSha256": {
+    "course-video/ui.tsx": "075e1b0067fb8e0c1e476cd8bb6b65d7d1439e98c0fe04aee05600d055b2babe",
+    "course-video/controller.ts": "8d219663f490d4df315a01a5631000b1bc783f4f16a826cfe5bff13efc19b4f1",
+    "course-video/adapter.ts": "2c4717a9681268f3b530181d46b3eb6db724aeb0bc63a32665aeb3d2c6b74ef9",
+    "course-video/manifest.ts": "7f8d739c241974eef77b1090ab06172797d88e24df8ce9ce04e97235503ad831",
+    "course-video/notes.ts": "dac01127a99aa1ef070e5e3dea4ecc6a39f16644c439a37066db0f05bd988f9a",
+    "course-video/sources.json": "12c318c867e20cf61f7e6c2beb89f75be1047c6d744611c4b6dcb6100a9f5ef4",
+    "app/course-loop-ui.tsx": "182fd45d6319f92057e4544881a5930c5aecab3cc888605332ea247d95e7a0d1",
+    "course-loop/model.mjs": "4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57",
+    "course-loop/host-contract.d.ts": "848f15ee2ba0c85c1f200b91331e5c66af1039b204305a54ad1ab3503f3b9fa3",
+    "app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028"
+  },
+  "unverified": [
+    "published origin",
+    "natural retention",
+    "physical phone",
+    "actual Bilibili playback/audio",
+    "video summaries",
+    "learning gain"
+  ],
+  "retries": []
+}

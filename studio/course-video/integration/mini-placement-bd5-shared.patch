@@ -1,0 +1,228 @@
+diff --git a/studio/app/course-loop-ui.tsx b/studio/app/course-loop-ui.tsx
+index b31ee00..595a8c0 100644
+--- a/studio/app/course-loop-ui.tsx
++++ b/studio/app/course-loop-ui.tsx
+@@ -1,5 +1,5 @@
+ /* eslint-disable @next/next/no-html-link-for-pages -- This component runs in the static map app; /#/progress opens its separate existing workspace. */
+-import {useEffect,useLayoutEffect,useRef,useState} from 'react';
++import {useCallback,useEffect,useLayoutEffect,useRef,useState} from 'react';
+ import {isRegisteredCourse} from '../course-loop/registry.mjs';
+ import type {Action} from '../course-loop/host-contract';
+ import {CourseRead,LoopInputs,LoopView,commitCourseLoop,courseLoopFor,parseCourseLoop,parseLoopInputs,readCourseLoop} from './course-loop-progress';
+@@ -13,6 +13,9 @@ import type {Progress} from '../map/model';
+ import {courseContinuation} from './course-loop-next';
+ import {miniTaskForCourseExit} from '../mini-task/adapter';
+ import './course-loop.css';
++import {CourseVideoHelp} from '../course-video/ui';
++import {courseVideoManifest} from '../course-video/sources';
++import {canShowVideo} from '../course-video/manifest';
+ 
+ type Operation={action?:Action;input?:{id:string;field:'answer'|'note';value:string};resolve?:(saved:boolean)=>void};
+ const labels:Record<string,string>={diagnostic:'1 · 先尝试',learn:'2 · 针对性学习',guided:'2 · 跟着试',independent:'3 · 收起示范，换情境',feedback:'4 · 保留首答，订正',repair:'4 · 换题再试',own:'4 · 用在自己身上',waiting:'5 · 等到期再回想','review-a':'5 · 到期的新题 A','review-b':'5 · 到期的新题 B','review-feedback':'5 · 本次复习反馈'};
+@@ -35,6 +38,8 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
+  const readRef=useRef<CourseRead|null>(null),viewRef=useRef<LoopView|null>(null),inputsRef=useRef<LoopInputs>(inputs),ops=useRef<Operation[]>([]),working=useRef(false),failed=useRef(false),alive=useRef(true),epoch=useRef(0);
+  const draftRef=useRef(draft),ownRef=useRef(own),title=useRef<HTMLHeadingElement>(null),inputRevision=useRef(0),loading=useRef(false);
+  const flushRef=useRef<()=>Promise<boolean>>(async()=>false);
++ const videoGuard=useRef<(()=>Promise<boolean>)|null>(null);
++ const bindVideoGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{videoGuard.current=guard},[]);
+  useLayoutEffect(()=>{draftRef.current=draft;ownRef.current=own;inputsRef.current=inputs},[draft,own,inputs]);
+  function apply(read:CourseRead,reset=false){
+   if(read.raw===null)throw Error('本课尚未保存。');
+@@ -63,7 +68,8 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
+   }catch(cause){if(alive.current&&epoch.current===generation){failed.current=true;setError(cause instanceof Error?cause.message:'本次保存未完成，输入仍保留。');ops.current[0]?.resolve?.(false);setExported(false)}}
+   finally{working.current=false;if(alive.current)setBusy(false)}
+  }
+- function send(action?:Action,input?:Operation['input']):Promise<boolean>{
++ async function send(action?:Action,input?:Operation['input']):Promise<boolean>{
++  if(action&&['next','finish','review'].includes(action.type)&&videoGuard.current&&!await videoGuard.current()){setNotice('视频笔记尚未保存，请先重试或备份笔记。');return false}
+   inputRevision.current++;
+   return new Promise(resolve=>{
+    const edit=!!input||action?.type==='draft'||action?.type==='own-draft';
+@@ -98,7 +104,8 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
+    while(alive.current&&(working.current||ops.current.length)&&!failed.current&&Date.now()<deadline){if(!working.current)void drain();await new Promise(resolve=>setTimeout(resolve,20))}
+    return !working.current&&!ops.current.length&&!failed.current&&!loading.current;
+   }
+-  flushRef.current=flush;onLeaveGuard(flush);
++  const flushAll=async()=> (!videoGuard.current||await videoGuard.current())&&await flush();
++  flushRef.current=flushAll;onLeaveGuard(flushAll);
+   const unload=(event:BeforeUnloadEvent)=>{if(working.current||ops.current.length){event.preventDefault();event.returnValue=''}};
+   window.addEventListener('beforeunload',unload);
+   return()=>{alive.current=false;flushRef.current=async()=>false;onLeaveGuard(null);clearInterval(tick);window.removeEventListener('beforeunload',unload);window.removeEventListener('focus',focus);window.removeEventListener('pageshow',focus);window.removeEventListener('english-studio-progress-restored',focus)};
+@@ -109,6 +116,7 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
+  const identity=view?questionIdentity(view):'';
+  const continuation=readRef.current?courseContinuation(readRef.current.state,map,courseId,clock):null;
+  async function continueSavedCourse(openMini=false){
++  if(videoGuard.current&&!await videoGuard.current()){setNotice('视频笔记尚未保存，请先重试或备份笔记。');return}
+   if(!await flushRef.current()){setError('本课输入还没有保存。请先保存未提交内容，再离开本课。');return}
+   const expected=readRef.current,revision=inputRevision.current,generation=epoch.current;
+   try{
+@@ -154,6 +162,7 @@ function BoundCourseLoopWorkspace({continueRoute,onLeaveGuard,map,courseId='nce1
+    {onMiniTask&&['own','waiting'].includes(view.phase)&&readRef.current&&miniTaskForCourseExit(readRef.current.state,courseId,clock)&&<button disabled={disabled} onClick={()=>void continueSavedCourse(true)}>本组适级雅思式小任务</button>}
+    <aside className="course-loop-sources" aria-label="本课教材"><h3>回到原文、原声和漫画</h3><div className="course-loop-actions">{(['text','audio','comic'] as const).map((kind,i)=><button type="button" key={kind} disabled={disabled} aria-expanded={source===kind} onClick={()=>void showSource(kind)}>{['看原文','听本课原声','看本课漫画'][i]}</button>)}{view.phase==='learn'&&<><button disabled={disabled} onClick={()=>void showSource('reader')}>逐句听与看</button><button type="button" disabled={disabled} onClick={()=>void openSpeaking()}>跟读一句，练清楚发音</button></>}</div>{q&&!attempt&&<p className="course-loop-note">作答时查看教材会记为使用帮助。切换到下一题后会收起教材。</p>}{source&&<><button type="button" onClick={()=>setSource(null)}>收起教材</button><SourcePanel key={`${source}:${identity}`} kind={source} courseId={courseId}/></>}</aside>
+    {!q&&view.attempts.length>0&&<details className="course-loop-history"><summary>回看原答与订正</summary>{view.attempts.map((a,i)=><Attempt courseId={courseId} key={`${a.id}-${i}`} attempt={a} view={view}/>)}</details>}
++   <CourseVideoHelp courseId={courseId} book={lesson.book} lessons={lesson.lessons} phase={view.phase} manifest={courseVideoManifest} bindGuard={bindVideoGuard} recordHelp={async()=>{const before=viewRef.current;if(!before||!canShowVideo(before.phase))return false;const identity=questionIdentity(before);if(!await send({type:'source',source:'video'}))return false;return !!viewRef.current&&canShowVideo(viewRef.current.phase)&&questionIdentity(viewRef.current)===identity}}/>
+    <p className="course-loop-note">{lesson.scope} 本课记录的复习安排与词卡分别保存。</p><a className="course-loop-records" href="/#/progress" onClick={e=>{if(disabled){e.preventDefault();setError('请先等输入保存完成；如果保存失败，请先保存未提交内容。')}}}>打开学习记录与整站备份</a>
+   </>}
+  </section>;
+diff --git a/studio/app/nce.tsx b/studio/app/nce.tsx
+index 93f852d..8055176 100644
+--- a/studio/app/nce.tsx
++++ b/studio/app/nce.tsx
+@@ -16,7 +16,8 @@ import {parseLessonText} from './nce-utils';
+ import {ONLINE} from './runtime-mode';
+ import {WordText} from './word-lookup';
+ import {loadLessonLanguage,translatedRows,rowsToText,type LessonLanguage} from './language';
+-import {navigate} from './navigation';
++import {navigate,type StudioRoute} from './navigation';
++import {ClassicCourseVideoHelp} from '../course-video/classic';
+ import {PlaybackSpeed,usePlaybackRate} from './playback-speed';
+ import {useRoute} from './use-route';
+ import SiteMaterials from './site-materials';
+@@ -50,15 +51,15 @@ const steps=[['listen','理解与听读'],['words','整理词句'],['retell','
+ const blank:NceEntry={title:'',text:'',notes:'',steps:[]};
+ 
+ export function nceCompleted(state:State){return (Object.keys(bookCounts) as NceBookId[]).reduce((sum,book)=>sum+Array.from({length:book==='NCE1'?72:bookCounts[book]},(_,i)=>book==='NCE1'?i*2+1:i+1).filter(n=>unitTrained(state,book,n)||learningSummary(state,book,n).practiced).length,0);}
+-type Props={state:State,update:(fn:(state:State)=>State)=>void,commitCollection:(expected:State,next:State,media:import('./offline-store').LocalAudio[])=>Promise<void>,addWord:(w:Word)=>void,onAnswer:(q:Question,ok:boolean)=>void,goIELTS:()=>void,goCloud?:(book?:NceBookId,lesson?:number)=>void,startAt?:{book:NceBookId,lesson:number}|null};
+-export default function NceStudio({state,update,commitCollection,addWord,onAnswer,goIELTS,goCloud,startAt}:Props){
++type Props={state:State,update:(fn:(state:State)=>State)=>void,commitCollection:(expected:State,next:State,media:import('./offline-store').LocalAudio[])=>Promise<void>,addWord:(w:Word)=>void,onAnswer:(q:Question,ok:boolean)=>void,goIELTS:()=>void,goCloud?:(book?:NceBookId,lesson?:number)=>void,startAt?:{book:NceBookId,lesson:number}|null;acceptedRoute?:StudioRoute;onVideoLeaveGuard?:(guard:(()=>Promise<boolean>)|null)=>void};
++export default function NceStudio({state,update,commitCollection,addWord,onAnswer,goIELTS,goCloud,startAt,acceptedRoute,onVideoLeaveGuard}:Props){
+  const {state:mapProgress}=useMapProgress(ONLINE);
+  const mapBook=(id:NceBookId)=>ONLINE&&(id==='NCE1'||id==='NCE2');
+  const lessonNode=(id:NceBookId,no:number)=>nodeById(mapUnitId(id,no)||'');
+  const lessonGoal=(id:NceBookId,no:number)=>{const u=unitById(mapUnitId(id,no)||'');return u?lessonPlan(u).goal:''};
+  const doneLesson=(id:NceBookId,no:number)=>mapBook(id)?achieved(lessonNode(id,no)!,mapProgress):unitTrained(state,id,no)||learningSummary(state,id,no).practiced;
+  const activeLesson=(id:NceBookId,no:number)=>{const r=mapProgress.records[mapUnitId(id,no)||''];return !!r&&(!!r.startedAt||!!r.draft||r.attempts.length>0)};
+- const route=useRoute(),mode=route.book?(route.lesson?'lesson':'book'):'home',bookId=route.book||state.nceLast?.book||'NCE1',lessonNo=route.lesson||state.nceLast?.lesson||1,tab=!route.tab||route.tab==='materials'?'listen':route.tab==='words'?'grammar':route.tab==='notes'?'practice':route.tab;
++ const requestedRoute=useRoute(),route=acceptedRoute||requestedRoute,mode=route.book?(route.lesson?'lesson':'book'):'home',bookId=route.book||state.nceLast?.book||'NCE1',lessonNo=route.lesson||state.nceLast?.lesson||1,tab=!route.tab||route.tab==='materials'?'listen':route.tab==='words'?'grammar':route.tab==='notes'?'practice':route.tab;
+  const [jump,setJump]=useState(''),[originalOpen,setOriginalOpen]=useState(false);const filter=route.filter||'all',search=route.query||'';
+  const setFilter=(filter:string)=>navigate({...route,filter},{replace:true,keepScroll:true});
+  const setSearch=(query:string)=>navigate({...route,query},{replace:true,keepScroll:true});
+@@ -113,7 +114,7 @@ export default function NceStudio({state,update,commitCollection,addWord,onAnswe
+   {ONLINE?<details className="lesson-context-details"><summary>本课步骤与知识索引</summary><LessonPosition book={bookId} lesson={lessonNo} state={state} update={update}/></details>:<LessonPosition book={bookId} lesson={lessonNo} state={state} update={update}/>}
+   <LessonGoals book={bookId} lesson={lessonNo} state={state}/><Tabs key={key} value={tab} onValueChange={v=>{window.speechSynthesis?.cancel();setTab(v)}}><TabsList className="lesson-tabs"><TabsTrigger value="listen" aria-label="课文">1 课文</TabsTrigger><TabsTrigger value="grammar" aria-label="讲解">2 讲解</TabsTrigger><TabsTrigger value="practice" aria-label="练习">3 练习</TabsTrigger></TabsList>
+   <TabsContent value="listen">{!route.mode&&<div className="learning-understanding"><strong>先听一遍，带着问题理解课文</strong><p className="small muted">先抓住大意，再点不清楚的句子反复听。词语可直接点开查义。</p>{!exerciseLesson&&<details className="learning-listening-question"><summary>{splitLesson(recallRows,bookId,trusted).question.map(r=>r.en).join(' ')||'听后写下我理解的大意'}</summary><LessonQuestion lesson={splitLesson(recallRows,bookId,trusted)} answer={state.drafts[`listen-answer-${key}`]||''} onChange={value=>update(s=>({...s,drafts:{...s.drafts,[`listen-answer-${key}`]:value}}))}/></details>}</div>}{ONLINE&&(!entry.text||exerciseLesson)?<SiteMaterials commitCollection={commitCollection} key={key} embedded viewPdf={()=>{setOriginalOpen(true);setTab('practice')}} practiceMode startAt={materialTarget} visible={tab==='listen'} state={state} restore={s=>update(()=>s)} openLesson={(book,no)=>openLesson(book,no,'listen')}/>:<SavedLesson key={key} entry={{...entry,text:rowsToText(translatedRows(entry.text,language))}} lessonKey={key} trusted={trusted} sourceSha256={trusted?language?.sourceSha256:undefined} questionAnswer={state.drafts[`listen-answer-${key}`]||''} saveQuestion={value=>update(s=>({...s,drafts:{...s.drafts,[`listen-answer-${key}`]:value}}))}/>}<ListeningNext book={bookId} lesson={lessonNo} state={state} update={update}/></TabsContent>
+-  <TabsContent value="practice">{route.tab!=='notes'&&<LearningPractice key={unit.key} book={bookId} lesson={lessonNo} state={state} update={update}/>}<details className="panel section-space"><summary>再用课文原句做填空（可选）</summary><LessonPractice key={unit.key} rows={recallRows} lessonKey={unit.key} label={unit.label} state={state} update={update} listen={()=>openLesson(bookId,unit.first)} notes={()=>setTab('practice')}/></details><details className="panel section-space legacy-learning" open={route.tab==='notes'}><summary>笔记与以前的表达练习、自查记录</summary><details><summary>以前的表达练习</summary><GuidedExpression key={unit.key} book={bookId} lesson={unit.first} rows={bodyRows} state={state} update={update} listen={()=>openLesson(bookId,unit.first)} sourceSha256={trusted&&JSON.stringify(recallRows.map(r=>r.time))===JSON.stringify(language?.rows.map(r=>r.time))?language?.sourceSha256:undefined}/></details><details className="panel section-space expression-free-notes" open={route.tab==='notes'}><summary>自由笔记与课文标题</summary><label className="field">课文标题（自定义）<input maxLength={120} value={entry.title} onChange={e=>patch({title:e.target.value})} placeholder="给这一课起一个容易找到的标题"/></label><label className="field">我的复述 / 句型 / 疑问<textarea rows={9} maxLength={12000} value={entry.notes} onChange={e=>patch({notes:e.target.value})} placeholder={"关键词或句型：\n换成自己的内容：\n我听不清或说不出的地方：\n下一次先练什么："}/></label><p className="muted small">自动保存在当前浏览器。</p></details><details className="lesson-extra-review"><summary>整课自查与复习记录（可选）</summary><UnitReview key={unit.key} book={bookId} lesson={lessonNo} state={state} update={update} open={(no,tab)=>openLesson(bookId,no,tab)}/></details></details><details className="panel lesson-original" open={originalOpen} onToggle={event=>setOriginalOpen(event.currentTarget.open)}><summary><BookOpen size={19}/><span>{bookId==='NCE1'?`需要时核对第 ${unit.last} 课原书`:'需要时核对本课原书'}</span><ChevronRight size={17}/></summary><p className="muted small">{bookId==='NCE1'?`本组以第 ${unit.first} 课原句理解和表达为主，第 ${unit.last} 课原书用于核对句型与习题。`:'可在原书中核对本课的例句、栏目和习题。'}把需要核对或反复出错的地方记入笔记。</p>{ONLINE&&originalOpen&&<SiteMaterials commitCollection={commitCollection} key={key+'-practice'} embedded pdfOnly startAt={exerciseTarget} visible={tab==='practice'} state={state} restore={s=>update(()=>s)} openLesson={(book,no)=>openLesson(book,no)}/>}</details><p className="muted small lesson-grammar-link">句型反复用错？<button className="text-btn" onClick={()=>setTab('grammar')}>查看本课教材语法<ArrowRight size={14}/></button></p></TabsContent><TabsContent value="grammar"><LearningTeaching book={bookId} lesson={lessonNo}/><details className="panel section-space" open={route.tab==='words'}><summary>本课生词与我的词句</summary><WordCollector key={key} book={bookId} lesson={lessonNo} text={rowsToText(bodyRows)} state={state} addWord={addWord}/></details></TabsContent></Tabs></div>
++  <TabsContent value="practice">{route.tab!=='notes'&&<LearningPractice key={unit.key} book={bookId} lesson={lessonNo} state={state} update={update}/>}<details className="panel section-space"><summary>再用课文原句做填空（可选）</summary><LessonPractice key={unit.key} rows={recallRows} lessonKey={unit.key} label={unit.label} state={state} update={update} listen={()=>openLesson(bookId,unit.first)} notes={()=>setTab('practice')}/></details><details className="panel section-space legacy-learning" open={route.tab==='notes'}><summary>笔记与以前的表达练习、自查记录</summary><details><summary>以前的表达练习</summary><GuidedExpression key={unit.key} book={bookId} lesson={unit.first} rows={bodyRows} state={state} update={update} listen={()=>openLesson(bookId,unit.first)} sourceSha256={trusted&&JSON.stringify(recallRows.map(r=>r.time))===JSON.stringify(language?.rows.map(r=>r.time))?language?.sourceSha256:undefined}/></details><details className="panel section-space expression-free-notes" open={route.tab==='notes'}><summary>自由笔记与课文标题</summary><label className="field">课文标题（自定义）<input maxLength={120} value={entry.title} onChange={e=>patch({title:e.target.value})} placeholder="给这一课起一个容易找到的标题"/></label><label className="field">我的复述 / 句型 / 疑问<textarea rows={9} maxLength={12000} value={entry.notes} onChange={e=>patch({notes:e.target.value})} placeholder={"关键词或句型：\n换成自己的内容：\n我听不清或说不出的地方：\n下一次先练什么："}/></label><p className="muted small">自动保存在当前浏览器。</p></details><details className="lesson-extra-review"><summary>整课自查与复习记录（可选）</summary><UnitReview key={unit.key} book={bookId} lesson={lessonNo} state={state} update={update} open={(no,tab)=>openLesson(bookId,no,tab)}/></details></details><details className="panel lesson-original" open={originalOpen} onToggle={event=>setOriginalOpen(event.currentTarget.open)}><summary><BookOpen size={19}/><span>{bookId==='NCE1'?`需要时核对第 ${unit.last} 课原书`:'需要时核对本课原书'}</span><ChevronRight size={17}/></summary><p className="muted small">{bookId==='NCE1'?`本组以第 ${unit.first} 课原句理解和表达为主，第 ${unit.last} 课原书用于核对句型与习题。`:'可在原书中核对本课的例句、栏目和习题。'}把需要核对或反复出错的地方记入笔记。</p>{ONLINE&&originalOpen&&<SiteMaterials commitCollection={commitCollection} key={key+'-practice'} embedded pdfOnly startAt={exerciseTarget} visible={tab==='practice'} state={state} restore={s=>update(()=>s)} openLesson={(book,no)=>openLesson(book,no)}/>}</details><p className="muted small lesson-grammar-link">句型反复用错？<button className="text-btn" onClick={()=>setTab('grammar')}>查看本课教材语法<ArrowRight size={14}/></button></p></TabsContent><TabsContent value="grammar"><ClassicCourseVideoHelp key={key} book={bookId} lesson={lessonNo} update={update} bindGuard={onVideoLeaveGuard||(()=>{})}/><LearningTeaching book={bookId} lesson={lessonNo}/><details className="panel section-space" open={route.tab==='words'}><summary>本课生词与我的词句</summary><WordCollector key={key} book={bookId} lesson={lessonNo} text={rowsToText(bodyRows)} state={state} addWord={addWord}/></details></TabsContent></Tabs></div>
+   {completionRecord}
+   {bookId==='NCE1'&&<p className="lesson-pair-link"><button className="text-btn" onClick={()=>openLesson(bookId,exerciseLesson?unit.first:unit.last)}>{exerciseLesson?`回听第 ${unit.first} 课课文`:`配套第 ${unit.last} 课句型练习`} <ArrowRight size={14}/></button></p>}
+   {tab!=='practice'&&<p className="small muted section-space"><button className="text-btn" onClick={()=>setTab('practice')}>用本课表达，说一句自己的话 <ArrowRight size={14}/></button></p>}
+diff --git a/studio/app/study-app.tsx b/studio/app/study-app.tsx
+index 10a079e..300e473 100644
+--- a/studio/app/study-app.tsx
++++ b/studio/app/study-app.tsx
+@@ -42,7 +42,8 @@ import {MapConnection,useMapProgress,mapHref,mapUnitId} from './map-connection';
+ import SiteMaterials from './site-materials';
+ import {WordLookupProvider} from './word-lookup';
+ import {PlaybackSpeed} from './playback-speed';
+-import {navigate} from './navigation';
++import {navigate,type StudioRoute} from './navigation';
++import {useCourseVideoHostRoute} from '../course-video/route';
+ import {useRoute,useRouteScroll} from './use-route';
+ import nceAttribution from './data/nce-attribution.json';
+ const lessons=lessonsData as Lesson[];
+@@ -52,13 +53,13 @@ const navs=[['today','学习',LayoutDashboard],['library','课程',BookOpen],['r
+ const activeNav=(view:string)=>(view==='today'||view==='roadmap')?'today':view==='review'?'review':'library';
+ function SideNav({view,go,state}:{view:string,go:(v:string)=>void,state:State}){const {setOpenMobile}=useSidebar();return <Sidebar className="studio-sidebar"><SidebarHeader><a href="#/today" onClick={e=>{e.preventDefault();go('today');setOpenMobile(false)}} className="brand"><span className="brand-icon">E<span>.</span></span><span>句句有进步<small>ENGLISH STUDIO</small></span></a></SidebarHeader><SidebarContent><span className="nav-caption">你的英语学习空间</span><SidebarMenu>{navs.map(([id,label,Icon])=><SidebarMenuItem key={id}><SidebarMenuButton isActive={activeNav(view)===id} onClick={()=>{go(id);setOpenMobile(false)}}><Icon/><span>{label}</span>{id==='review'&&((Object.keys(state.flashcards?.cards||state.cards).length>0)||dueLearningGoals(state).length>0||journeySnapshot(state).due.length>0)&&<span className="nav-count">{flashcardSummary(state,Date.now()).due+dueLearningGoals(state).length+journeySnapshot(state).due.length}</span>}</SidebarMenuButton></SidebarMenuItem>)}</SidebarMenu><div className="sidebar-course"><span className="tiny-label">IELTS ACADEMIC · 6.5</span><p>按能力前进，按缺口补课。</p><button className="text-btn" onClick={()=>{go('roadmap');setOpenMobile(false)}}>我的学习路线<ArrowRight size={14}/></button></div></SidebarContent><SidebarFooter><button className="profile" onClick={()=>{go('progress');setOpenMobile(false)}}><span className="avatar">E</span><div><strong>学习记录</strong><small>草稿、检验与已保存的进度</small></div></button></SidebarFooter></Sidebar>}
+ export default function StudyApp(){
+- const mini=useMiniTaskHostRoute(),placement=usePlacementHostRoute(mini.route),route=placement.route,{bindMiniLeaveGuard,beforeMiniLeave,miniNotice}=mini,destination=ONLINE?learningRedirect(route):undefined;
++ const mini=useMiniTaskHostRoute(),placement=usePlacementHostRoute(mini.route),video=useCourseVideoHostRoute(placement.route),route=video.route,{bindMiniLeaveGuard,beforeMiniLeave,miniNotice}=mini,destination=ONLINE?learningRedirect(route):undefined;
+  useEffect(()=>{if(destination)location.replace(destination)},[destination]);
+- return destination?<main className="loading" role="status">正在打开学习… <a href={destination}>进入学习</a></main>:route.view==='mini-task'&&route.miniTaskId?<MiniTaskHost key={route.miniTaskId} taskId={route.miniTaskId} onLeaveGuard={bindMiniLeaveGuard} beforeLeave={beforeMiniLeave} notice={miniNotice}/>:route.view==='placement'?<PlacementHost bind={placement.bind} beforeLeave={placement.beforeLeave} notice={placement.notice}/>:<StudyWorkspace/>;
++ return destination?<main className="loading" role="status">正在打开学习… <a href={destination}>进入学习</a></main>:route.view==='mini-task'&&route.miniTaskId?<MiniTaskHost key={route.miniTaskId} taskId={route.miniTaskId} onLeaveGuard={bindMiniLeaveGuard} beforeLeave={beforeMiniLeave} notice={miniNotice}/>:route.view==='placement'?<PlacementHost bind={placement.bind} beforeLeave={placement.beforeLeave} notice={placement.notice}/>:<>{video.videoNotice&&<p role="alert">{video.videoNotice}</p>}<StudyWorkspace acceptedRoute={route} onVideoLeaveGuard={video.bindVideoLeaveGuard}/></>;
+ }
+-function StudyWorkspace(){
++function StudyWorkspace({acceptedRoute,onVideoLeaveGuard}:{acceptedRoute:StudioRoute;onVideoLeaveGuard:(guard:(()=>Promise<boolean>)|null)=>void}){
+  const {state:mapState,error:mapError}=useMapProgress(ONLINE);
+- const route=useRoute();useRouteScroll();const view=route.view,lessonId=route.lesson||1;
++ const route=acceptedRoute;useRouteScroll();const view=route.view,lessonId=route.lesson||1;
+  const materialStart=useMemo(()=>route.book&&route.lesson?{book:route.book,lesson:route.lesson}:null,[route.book,route.lesson]);
+  const [persisted,setPersisted]=useState<State|null>(null);
+  const [state,setState]=useState<State>(initial),[ready,setReady]=useState(false),[storageError,setStorageError]=useState(false),[storageBlocked,setStorageBlocked]=useState(false),[storageMode,setStorageMode]=useState('db'),[search,setSearch]=useState(''),[stage,setStage]=useState('all'),[customActive,setCustomActive]=useState(''),[,setReviewClock]=useState(0);const stateRef=useRef(state);stateRef.current=state;
+@@ -163,7 +164,7 @@ function StudyWorkspace(){
+  {ONLINE&&view==='nce'&&mapUnitId(route.book,route.lesson)&&<MapConnection view="course" book={route.book} lesson={route.lesson}/>}
+  {ONLINE&&view==='cloud'&&<button className="text-btn nce-back" onClick={()=>go('nce')}>返回新概念四册目录</button>}
+  {ONLINE&&<SiteMaterials startAt={materialStart} visible={view==='cloud'} state={state} commitCollection={commitMaterialCollection} restore={incoming=>{setState(s=>prepareFlashcardRestore(s,incoming,courseWords));setStorageError(false);setStorageBlocked(false)}} openLesson={(book,lesson)=>navigate({view:'nce',book,lesson,tab:'listen'})}/>}
+- {(view==='nce'||view==='library')&&<>{view==='library'&&<nav className="course-resources" aria-label="课程资料与专项"><button onClick={()=>go('grammar')}>语法与句型检索</button><button onClick={()=>go('words')}>教材词汇索引</button><button onClick={()=>go('ielts')}>雅思专项</button><details className="course-more"><summary>更多资料</summary><button onClick={()=>go('courses')}>备用练习素材</button><button onClick={()=>go('cloud')}>整册资料与下载</button></details></nav>}<NceStudio commitCollection={commitMaterialCollection} goCloud={(book,lesson)=>navigate({view:'cloud',book,lesson})} state={state} update={setState} addWord={addPersonalWord} onAnswer={answer} goIELTS={()=>go('ielts')}/></>}
++ {(view==='nce'||view==='library')&&<>{view==='library'&&<nav className="course-resources" aria-label="课程资料与专项"><button onClick={()=>go('grammar')}>语法与句型检索</button><button onClick={()=>go('words')}>教材词汇索引</button><button onClick={()=>go('ielts')}>雅思专项</button><details className="course-more"><summary>更多资料</summary><button onClick={()=>go('courses')}>备用练习素材</button><button onClick={()=>go('cloud')}>整册资料与下载</button></details></nav>}<NceStudio acceptedRoute={acceptedRoute} onVideoLeaveGuard={onVideoLeaveGuard} commitCollection={commitMaterialCollection} goCloud={(book,lesson)=>navigate({view:'cloud',book,lesson})} state={state} update={setState} addWord={addPersonalWord} onAnswer={answer} goIELTS={()=>go('ielts')}/></>}
+  {view==='roadmap'&&ready&&<LearningRoadmap state={state} update={setState}/>}
+  {(view==='today'||view==='review')&&<TodayPracticeQueue state={state} map={mapState} ready={ready} online={ONLINE} error={mapError}/> }
+ 
+diff --git a/studio/course-loop/host-contract.d.ts b/studio/course-loop/host-contract.d.ts
+index 10ac1df..447928c 100644
+--- a/studio/course-loop/host-contract.d.ts
++++ b/studio/course-loop/host-contract.d.ts
+@@ -1,6 +1,6 @@
+ /** Proposed interface only. Release owner chooses and implements shared wiring. */
+ export type CourseId = 'nce1-1' | 'nce1-3' | 'nce1-5' | 'nce1-7' | 'nce1-9' | 'nce1-11' | 'nce1-13' | 'nce1-15' | 'nce1-17' | 'nce1-19' | 'nce1-21' | 'nce1-23' | 'nce1-25' | 'nce1-27' | 'nce1-29' | 'nce1-31' | 'nce1-33' | 'nce1-35';
+-export type SourceKind = 'text' | 'audio' | 'comic';
++export type SourceKind = 'text' | 'audio' | 'comic' | 'video';
+ export type Action =
+  | {type:'draft'|'own-draft';value:string}
+  | {type:'source';source:SourceKind}
+diff --git a/studio/course-loop/model.mjs b/studio/course-loop/model.mjs
+index 4160be0..ed6dc47 100644
+--- a/studio/course-loop/model.mjs
++++ b/studio/course-loop/model.mjs
+@@ -6,7 +6,7 @@ export function createCourseLoopModel(content){
+  const {lesson,byId,questionsFor,matches}=content;
+  if(!lesson?.id||!byId?.get||typeof questionsFor!=='function'||typeof matches!=='function'||questionsFor('diagnostic').length!==3)throw Error('Invalid course content binding');
+ const stages=['diagnostic','guided','independent','repair','review-a','review-b'];
+-const learningSources=['text','audio','comic'];
++const learningSources=['text','audio','comic','video'];
+ const clone=value=>structuredClone(value);
+ const validTime=n=>Number.isSafeInteger(n)&&n>0&&n<=8640000000000000;
+ function initialState(at=Date.now()) {
+diff --git a/studio/map/learning.tsx b/studio/map/learning.tsx
+index 5c46169..43b0de0 100644
+--- a/studio/map/learning.tsx
++++ b/studio/map/learning.tsx
+@@ -1,4 +1,4 @@
+-import React, { useCallback, useEffect, useRef, useState } from 'react';
++import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+ import { ArrowRight, ArrowUpRight, Check, CheckCircle2, ChevronLeft, Lightbulb, Lock, RotateCcw, X, Flag, BookOpen, ExternalLink } from 'lucide-react';
+ import { nodes, unitNodes, unitById, originalSite, nodeById, questionsFor, courseUrl, resources, type MapNode } from './content';
+ import {achieved, stable, nextReviewAt, unlockNode, startNode, learningLabel, manuallyUnlocked, isReady, changeStudyStep, restartQuiz, noteQuizHelp} from './model';
+@@ -10,6 +10,9 @@ import {CourseLoopWorkspace} from '../app/course-loop-ui';
+ import {CourseLoopHeadingSummary} from '../app/course-loop-summary-ui';
+ import type {State} from '../app/model';
+ import {SpeakingPractice} from './speaking';
++import {CourseVideoHelp} from '../course-video/ui';
++import {courseVideoManifest} from '../course-video/sources';
++import {classicNotesPort} from '../course-video/adapter';
+ import { updateDraft, emptyRecord, statusMap, grade, passedQuiz, submitQuiz, criteriaFor, evidenceErrors, mockErrors, overallBand, officialReached, today, type Progress, type NodeRecord, type Evidence, type Mock } from './model';
+ export type Save = (change: (s: Progress) => Progress) => Promise<boolean>;
+ const blankEvidence = (): Evidence => ({ date: today(), material: '', work: '', reviewer: '', feedback: '', criteria: [false, false, false, false], unseen: false, timed: false, correct: '', total: '', dimensions:['','','',''], revision:'' });
+@@ -26,21 +29,29 @@ export function LearningRoom({node,state,save,close,select,speaking,classicState
+     const unit=node.kind==='unit',quiz=['unit','starter','lesson','checkpoint'].includes(node.kind);
+     const [classic,setClassic]=useState(false),courseLoop=isRegisteredCourse(node.id)&&!classic&&!speaking;
+     const leaveGuard=useRef<(()=>Promise<boolean>)|null>(null);
++    const videoGuard=useRef<(()=>Promise<boolean>)|null>(null);
++    const flushAll=useCallback(async()=> (!videoGuard.current||await videoGuard.current())&&(!leaveGuard.current||await leaveGuard.current()),[]);
++    const bindVideoGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{videoGuard.current=guard;onCourseLeaveGuard(flushAll)},[onCourseLeaveGuard,flushAll]);
++    const bindActiveGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{leaveGuard.current=guard;onCourseLeaveGuard(flushAll)},[onCourseLeaveGuard,flushAll]);
++    const videoPort=useMemo(()=>classicNotesPort(),[]);
++    const [videoNotice,setVideoNotice]=useState('');
+     const assessment=['course','task','mock','finish'].includes(node.kind);
+     const step=record.phase==='challenge'?3:record.studyStep||0;
+     const questions=questionsFor(node,record.round,record.bank),index=Math.min(record.questionIndex||0,Math.max(0,questions.length-1));
+     useEffect(()=>{if(!locked&&!courseLoop)save(s=>startNode(s,node.id))},[node.id,locked,courseLoop]);
+     useEffect(()=>{if(speaking&&!locked&&record.phase==='challenge')save(s=>changeStudyStep(s,node.id,0))},[node.id,speaking,locked]);
+     useEffect(()=>{window.scrollTo({top:0});(document.getElementById(`question-${index}`)||title.current)?.focus({preventScroll:true})},[node.id,step,index,speaking]);
+-    const changeStep=async(next:number)=>{if(leaveGuard.current&&!await leaveGuard.current())return false;return await save(s=>next===3&&s.records[node.id]?.phase==='learn'&&s.records[node.id]?.attempts.at(-1)?.round===s.records[node.id]?.round&&s.records[node.id]?.attempts.at(-1)?.bank===s.records[node.id]?.bank?restartQuiz(s,node.id):changeStudyStep(s,node.id,next));};
++    const changeStep=async(next:number)=>{if(!await flushAll()){setVideoNotice('视频笔记尚未保存，请先重试或备份。');return false}setVideoNotice('');return await save(s=>next===3&&s.records[node.id]?.phase==='learn'&&s.records[node.id]?.attempts.at(-1)?.round===s.records[node.id]?.round&&s.records[node.id]?.attempts.at(-1)?.bank===s.records[node.id]?.bank?restartQuiz(s,node.id):changeStudyStep(s,node.id,next));};
+     return <main className="focus-page"><header className="focus-header"><button className="back-button" onClick={close}><ChevronLeft size={17}/>学习</button><a className="focus-brand" href="#/courses">句句有进步<span>找课</span></a><span className="focus-saved">进度自动保留</span></header><AudioSpace controls={false}><div className="focus-content"><div className="focus-course-heading"><p>{node.subtitle}{unit&&speaking!=='review'&&<> · <span lang="en">{node.title}</span></>}</p><h1 ref={title} tabIndex={-1}>{courseLoop?getCourseBinding(node.id).lesson.goal:unit?lessonPlan(unitById(node.id)!).goal:node.title}</h1>{courseLoop?<CourseLoopHeadingSummary courseId={node.id} state={classicState} map={state} ready={classicReady} error={classicError} mapError={mapError}/>:<span>{manuallyUnlocked(node,state)?'手动解锁 · ':''}{learningLabel(node,state)}</span>}</div>
+-    {locked?<section className="locked-room"><Lock size={28}/><h2>这一课还没有开放</h2><p>可以直接开始，也可以按地图顺序学习。解锁不会标记已完成。</p><button className="primary" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button></section>:courseLoop?<CourseLoopWorkspace courseId={node.id} map={state} continueRoute={continueCourse} onMiniTask={onMiniTask} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:speaking&&unit?<SpeakingPractice key={`${node.id}-${speaking}`} unit={unitById(node.id)!} state={state} save={save} review={speaking==='review'} close={()=>select(node.id)} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:quiz?<>
++    {locked?<section className="locked-room"><Lock size={28}/><h2>这一课还没有开放</h2><p>可以直接开始，也可以按地图顺序学习。解锁不会标记已完成。</p><button className="primary" onClick={()=>save(s=>unlockNode(s,node.id))}>直接解锁并学习<ArrowRight size={17}/></button></section>:courseLoop?<CourseLoopWorkspace courseId={node.id} map={state} continueRoute={continueCourse} onMiniTask={onMiniTask} onLeaveGuard={bindActiveGuard}/>:speaking&&unit?<SpeakingPractice key={`${node.id}-${speaking}`} unit={unitById(node.id)!} state={state} save={save} review={speaking==='review'} close={()=>select(node.id)} onLeaveGuard={bindActiveGuard}/>:quiz?<>
+       <nav className="focus-steps" aria-label="本课学习步骤">{(unit?[[0,'听懂'],[1,'看懂'],[2,'自己用'],[3,'检验']]:[[0,'听与跟练'],[3,'自己试']]).map(([value,label],i)=><button key={value} aria-current={step===value?'step':undefined} onClick={()=>changeStep(Number(value))}><span>{i+1}</span>{label}</button>)}</nav><StopAudio key={`${step}-${index}`}/>
+-      {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)} onLeaveGuard={guard=>{leaveGuard.current=guard;onCourseLeaveGuard(guard)}}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}
++      {videoNotice&&<p role="alert">{videoNotice}</p>}
++      {unit&&<CourseVideoHelp courseId={node.id} book={unitById(node.id)!.book} lessons={[unitById(node.id)!.lesson,unitById(node.id)!.lastLesson]} phase={step===3?'independent':'learn'} manifest={courseVideoManifest} port={videoPort} bindGuard={bindVideoGuard} recordHelp={async()=>{if(step===3)return false;return await Promise.resolve(save(s=>noteQuizHelp(s,node.id)))}}/>}
++      {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close} onLeaveGuard={bindActiveGuard}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)} onLeaveGuard={bindActiveGuard}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}
+     </>:null}
+     {assessment&&<div hidden={locked}>{node.kind==='course'?<CourseRoom node={node} state={state} save={save} select={select}/>:node.kind==='task'||node.kind==='mock'?<EvidenceForm key={node.id} node={node} state={state} save={save} close={close}/>:<FinishForm state={state} save={save}/>}</div>}
+     {node.parent&&<div className="focus-chapter-link"><button className="text-button" onClick={()=>select(node.parent!)}>查看本章课次</button></div>}
+-    {isRegisteredCourse(node.id)&&!locked&&!speaking&&<button className="text-button" onClick={()=>{void(async()=>{if(!leaveGuard.current||await leaveGuard.current())setClassic(!classic)})()}}>{classic?'回到连续练习':'查看原有听读与练习记录'}</button>}
++    {isRegisteredCourse(node.id)&&!locked&&!speaking&&<button className="text-button" onClick={()=>{void(async()=>{if(await flushAll())setClassic(!classic)})()}}>{classic?'回到连续练习':'查看原有听读与练习记录'}</button>}
+     </div></AudioSpace></main>;
+ }
+ const answerSignature=(a:string[],h:number[])=>JSON.stringify([a,h]);

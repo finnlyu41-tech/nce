@@ -1,0 +1,318 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-10-02T17:17:00Z",
+  "scope": "NCE book 1 lessons 1–12; catalog metadata only",
+  "author": {
+    "teacher": "刘羽Leo",
+    "uploader": "胶学",
+    "bilibiliUid": "1078480983",
+    "profileUrl": "https://space.bilibili.com/1078480983/",
+    "verification": "Original Bilibili video page links to this uploader; course title names 刘羽Leo. User identity confirmation relayed 2026-10-02."
+  },
+  "course": {
+    "book": 1,
+    "bvid": "BV1xa411J7jJ",
+    "title": "新概念英语 第一册｜胶学 x 刘羽Leo",
+    "sourceUrl": "https://www.bilibili.com/video/BV1xa411J7jJ/",
+    "totalPartsObserved": 199,
+    "partMetadataMethod": "Read current rendered official video playlist in dot cloud browser; read part 3 page and clicked part 18 to verify indexing."
+  },
+  "parts": [
+    {
+      "p": 1,
+      "title": "开篇",
+      "duration": "19:33",
+      "lessonNumbers": [],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=1",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=1&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 2,
+      "title": "课前准备｜教材 笔记 测试",
+      "duration": "06:09",
+      "lessonNumbers": [],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=2",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=2&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 3,
+      "title": "001 单词",
+      "duration": "21:13",
+      "lessonNumbers": [
+        1
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=3",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=3&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 4,
+      "title": "001 语法 文章",
+      "duration": "14:10",
+      "lessonNumbers": [
+        1
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=4",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=4&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 5,
+      "title": "002 单词 练习",
+      "duration": "14:04",
+      "lessonNumbers": [
+        2
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=5",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=5&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 6,
+      "title": "003 单词",
+      "duration": "13:25",
+      "lessonNumbers": [
+        3
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=6",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=6&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 7,
+      "title": "003 语法 文章",
+      "duration": "11:46",
+      "lessonNumbers": [
+        3
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=7",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=7&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 8,
+      "title": "004 单词 练习",
+      "duration": "10:33",
+      "lessonNumbers": [
+        4
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=8",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=8&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 9,
+      "title": "005 单词",
+      "duration": "23:53",
+      "lessonNumbers": [
+        5
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=9",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=9&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 10,
+      "title": "005 语法 文章",
+      "duration": "16:53",
+      "lessonNumbers": [
+        5
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=10",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=10&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 11,
+      "title": "006 单词 练习",
+      "duration": "10:43",
+      "lessonNumbers": [
+        6
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=11",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=11&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 12,
+      "title": "007 单词",
+      "duration": "12:25",
+      "lessonNumbers": [
+        7
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=12",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=12&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 13,
+      "title": "007 语法 文章",
+      "duration": "19:55",
+      "lessonNumbers": [
+        7
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=13",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=13&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 14,
+      "title": "008 单词 练习",
+      "duration": "09:30",
+      "lessonNumbers": [
+        8
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=14",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=14&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 15,
+      "title": "009 单词 语法 文章",
+      "duration": "17:00",
+      "lessonNumbers": [
+        9
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=15",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=15&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 16,
+      "title": "010 单词 练习",
+      "duration": "11:26",
+      "lessonNumbers": [
+        10
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=16",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=16&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 17,
+      "title": "011 单词 语法 文章",
+      "duration": "20:17",
+      "lessonNumbers": [
+        11
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=17",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=17&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    },
+    {
+      "p": 18,
+      "title": "012 单词 练习",
+      "duration": "16:23",
+      "lessonNumbers": [
+        12
+      ],
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=18",
+      "embedUrl": "https://player.bilibili.com/player.html?bvid=BV1xa411J7jJ&p=18&autoplay=0&danmaku=0",
+      "urlMethod": "official URL pattern + observed ordered playlist",
+      "contentSummary": null,
+      "contentSummaryStatus": "not-reviewed"
+    }
+  ],
+  "player": {
+    "officialDocumentation": "https://player.bilibili.com/",
+    "endpoint": "https://player.bilibili.com/player.html",
+    "confirmedParameters": {
+      "bvid": "video ID; use bvid or aid",
+      "p": "1-based part number; ignored when cid is supplied",
+      "autoplay": "boolean 0/1",
+      "danmaku": "0 disables danmaku",
+      "poster": "boolean",
+      "muted": "boolean",
+      "t": "initial seconds"
+    },
+    "recommended": {
+      "clickToLoad": true,
+      "autoplay": 0,
+      "danmaku": 0,
+      "alwaysShowOfficialExternalLink": true
+    },
+    "limitations": [
+      "Official docs do not guarantee playback for every video, geography, browser, mobile OS or signed-out session.",
+      "No mobile-device playback test performed. Responsive iframe layout is an implementation recommendation, not verified mobile playback.",
+      "An initial playlist player reported Unable to play media; later a direct part page visually rendered the course intro. This does not establish full playable-content review.",
+      "Do not download/rehost videos or bypass login, paid access, security screening or author restrictions.",
+      "Official page says unauthorized reposting is prohibited. Embedding references Bilibili's player; it is not a license to copy video/course materials."
+    ]
+  },
+  "notes": {
+    "videoSummary": {
+      "status": "not-reviewed",
+      "text": null,
+      "reason": "No full video/audio or transcript was actually reviewed; do not infer teaching statements from playlist labels."
+    },
+    "originalLearningNotes": {
+      "mustLabel": "原创学习笔记",
+      "mustNotImpersonate": "Do not present as Leo老师视频总结",
+      "sourceRequirements": "Use separately verified lesson material, user-provided content or original teaching examples."
+    },
+    "userNotes": {
+      "recommendedFields": [
+        "lessonId",
+        "videoPart",
+        "timestampSeconds",
+        "noteText",
+        "createdAt",
+        "updatedAt"
+      ],
+      "privacy": "Keep private to user; do not send note content to Bilibili."
+    }
+  },
+  "evidence": [
+    {
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=3",
+      "kind": "live original page",
+      "observation": "001 单词; video list 3/199; uploader 胶学 -> UID 1078480983"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1xa411J7jJ/?p=18&spm_id_from=333.788.videopod.episodes",
+      "kind": "live clicked destination",
+      "observation": "012 单词 练习; video list 18/199"
+    },
+    {
+      "url": "https://player.bilibili.com/",
+      "kind": "official documentation",
+      "observation": "bvid,p,autoplay,danmaku documented"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "scope": "synthetic data only; model, controller, guarded-port and actual existing progress-file roundtrip",
+  "passed": 19,
+  "checks": [
+    "verified full catalog retains 703 mapped segments, explicit combinations and first12 exact multi-part mapping",
+    "every lesson exactly matches researched index including missing coverage and noncontiguous combination",
+    "reject unverified part/source and title-only content summary",
+    "official click-only URL has one-based p, autoplay/danmaku/refer off; no cid",
+    "assessment phases hide every video, summary and personal note; allowed learning phases only",
+    "identity isolates course, actual lesson, BV and part; unsupported raw is never reset",
+    "production adapter full-State compare preserves unrelated drafts and grading fields",
+    "same-identity newer tab rejects stale edit and keeps newer persisted note",
+    "full-State race retries unrelated edits inside writer CAS without overwrite",
+    "controller quota failure preserves text, blocks help and can retry successfully",
+    "delayed save drains later input and never clears or falsely confirms newer text",
+    "controller conflict keeps losing tab text; explicit backup guards reload",
+    "failed readback retains text and does not issue confirmed-save notification",
+    "access records precise provenance only after help confirmation; edits add no exposure",
+    "video is a semantic source and marks assisted answers without test or mastery credit",
+    "legacy text/audio/comic event bytes and replay unchanged; video backup roundtrip complete",
+    "progress refresh during help transaction cannot lose provenance or permit early leave",
+    "background focus read preserves input entered while it awaits storage",
+    "classic video help preserves original attempts and marks only current pending answer hinted"
+  ]
+}
