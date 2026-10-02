@@ -1,4 +1,5 @@
 import {placementHostTasks} from '../placement/entry-access';
+import {stageTodayTasks} from '../stage-assessment/adapter';
 import type {State} from './model';
 import {routeHash} from './navigation';
 import {grammarUnits} from './grammar-curriculum';
@@ -129,6 +130,7 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
    at:resume||repair?last?.at||record.startedAt||now:record.dueAt,kind:resume?'resume':repair?'repair':'review'});
  }
  for(const task of miniPracticeTasks(state,now,online))add(task);
+ for(const task of stageTodayTasks(state,now,to({view:'stage-assessment'}),to({view:'today'})))add(task);
  tasks.sort((a,b)=>a.priority-b.priority||a.at-b.at||a.id.localeCompare(b.id));
  if(online){
   const destination=courseDestination(state,map,now),current=destination.node,unit=unitById(current.id);

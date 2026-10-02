@@ -1,4 +1,5 @@
 'use client';
+import {prepareStageBackupRestore} from '../stage-assessment/host-progress';
 import {useEffect, useRef, useState} from 'react';
 import {ChevronDown, Cloud, Download, FolderOpen} from 'lucide-react';
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from '@/components/ui/dialog';
@@ -97,6 +98,7 @@ export function ProgressSave({state, ready, status, captureRestore, restore}: Pr
     working.current = true;
     setBusy(true);
     try {
+      const restoredState = prepareStageBackupRestore(checkpoint.state, pending.state);
       const captured = captureCapabilityReviewBackup();
       if (!captured.ok && pending.capability !== undefined) throw Error(captured.message || '无法保留恢复前的句子练习记录。');
       const before: ProgressSnapshot = {state: checkpoint.state, savedAt: new Date().toISOString(), ...(captured.ok ? {capability: captured.backup} : {})};
@@ -104,7 +106,7 @@ export function ProgressSave({state, ready, status, captureRestore, restore}: Pr
       let applyError: unknown;
       const result = await executeCapabilityReviewRestore(prepared.prepared, {
         apply: async () => {
-          try { await restore(pending.state, {expected: checkpoint.expected, persisted: checkpoint.persisted, onCommitted: next => {applied = next;}}); }
+          try { await restore(restoredState, {expected: checkpoint.expected, persisted: checkpoint.persisted, onCommitted: next => {applied = next;}}); }
           catch (error) { applyError = error; throw error; }
         },
         rollback: async () => {

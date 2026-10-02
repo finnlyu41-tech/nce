@@ -1,3 +1,4 @@
+import {StageEntry} from '../stage-assessment/host';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrowRight} from 'lucide-react';
 import {todayPractice,type PracticeTask} from './today-practice';
@@ -13,7 +14,7 @@ export function TodayPracticeQueue({state,map,ready=true,online=true,compact=fal
  useEffect(()=>{setClock(Date.now())},[state,map]);
  useEffect(()=>{let active=true;if(!ready)return;void readCapabilityPractice(clock,online).then(value=>{if(active)setCapability({...value,ready:true})});return()=>{active=false}},[clock,refresh,online,ready]);
  const result=useMemo(()=>{try{return {tasks:ready?todayPractice(state,map,clock,online):[],error:''}}catch{return {tasks:[],error:'部分学习记录需要检查，暂时无法推荐下一步；原记录保留。'}}},[state,map,clock,online,ready]);
- return <><TodayPractice tasks={includeCapabilityPractice(result.tasks,online?capability.tasks:[])} ready={ready&&(!online||capability.ready)} compact={compact} catalogueHref={online?'/map/#/courses':'#/library'} error={[error,result.error,online&&capability.error].filter(Boolean).join(' ')}/>{online&&capability.error&&<a href="/demos/yesterday/">检查句子练习的保存状态</a>}</>;
+ return <><TodayPractice tasks={includeCapabilityPractice(result.tasks,online?capability.tasks:[])} ready={ready&&(!online||capability.ready)} compact={compact} catalogueHref={online?'/map/#/courses':'#/library'} error={[error,result.error,online&&capability.error].filter(Boolean).join(' ')}/>{online&&capability.error&&<a href="/demos/yesterday/">检查句子练习的保存状态</a>}<StageEntry/></>;
 }
 
 export function TodayPractice({tasks,ready=true,compact=false,error='',catalogueHref='/map/#/courses'}:{tasks:PracticeTask[];ready?:boolean;compact?:boolean;error?:string;catalogueHref?:string}){

@@ -1,0 +1,3 @@
+import {defineConfig} from 'vite';
+import {fileURLToPath} from 'node:url';
+export default defineConfig({root:fileURLToPath(new URL('..',import.meta.url)),plugins:[{name:'fixture-only-root',configureServer(server){server.middlewares.use((req,_res,next)=>{if(req.url==='/'||req.url?.startsWith('/?'))req.url='/host-fixture.html';next();});}}],define:{__STUDIO_ONLINE__:'true'},resolve:{alias:{'@':fileURLToPath(new URL('../..',import.meta.url))},dedupe:['react','react-dom']},server:{host:'127.0.0.1',port:5187,fs:{allow:[fileURLToPath(new URL('../..',import.meta.url))]}},build:{outDir:'host-preview',emptyOutDir:true,rollupOptions:{input:fileURLToPath(new URL('../host-fixture.html',import.meta.url))}}});
