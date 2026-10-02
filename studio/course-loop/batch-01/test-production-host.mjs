@@ -17,8 +17,8 @@ function complete(id,start=NOW){
 const completed=Object.fromEntries(supportedCourseIds.map(id=>[id,complete(id)]));
 const stateWith=entries=>({...structuredClone(host.initial),drafts:Object.fromEntries(entries.map(([id,state])=>[fixtures[id].keys.snapshot,JSON.stringify(state)]))});
 const entries=ids=>ids.map(id=>[id,completed[id].state]);
-test('real registry exposes exactly three courses and never reads coverage as registration',()=>{
- assert.deepEqual(host.courseLoopBindings.map(c=>c.id),['nce1-1','nce1-3','nce1-5']);assert.throws(()=>host.courseLoopFor('nce1-7'));
+test('real registry exposes exactly six courses and never reads coverage as registration',()=>{
+ assert.deepEqual(host.courseLoopBindings.map(c=>c.id),['nce1-1','nce1-3','nce1-5','nce1-7','nce1-9','nce1-11']);assert.throws(()=>host.courseLoopFor('nce1-13'));
  for(const id of supportedCourseIds){const b=host.courseLoopFor(id);assert.equal(b.key,fixtures[id].keys.snapshot);assert.equal(b.inputsKey,fixtures[id].keys.inputs);assert.equal(b.lesson.id,id)}
 });
 test('production matcher keeps the nationality question guard, original text and help state',()=>{
@@ -26,15 +26,15 @@ test('production matcher keeps the nationality question guard, original text and
  for(const q of fixtures['nce1-5'].content.questionsFor('diagnostic')){for(const action of [{type:'draft',value:q.target==='nationality'?'He is German?':q.accepted[0]},{type:'submit'},{type:'next'}]){const r=m.transition(state,action,++at);assert.ok(r.ok,r.message);state=r.state}}
  const parsed=host.parseCourseLoop(JSON.stringify(state),at,'nce1-5');assert.ok(parsed.ok);const original=parsed.view.attempts.at(-1);assert.equal(original.answer,'He is German?');assert.equal(original.correct,false);assert.equal(original.hinted,false);assert.equal(m.teachingFor(parsed.view)[0].target,'nationality');
 });
-test('one recommendation advances 1 to 3 to 5 to existing 7 with access-only map starts',()=>{
+test('one recommendation advances 1 to 3 to 5 to 7 to 9 to 11 to existing 13 with access-only map starts',()=>{
  let map=host.emptyProgress();const at=NOW+1000;
- for(const [ids,last,want] of [[['nce1-1'],'nce1-1','nce1-3'],[['nce1-1','nce1-3'],'nce1-3','nce1-5'],[supportedCourseIds,'nce1-5','nce1-7']]){
+ for(const [ids,last,want] of supportedCourseIds.map((id,i)=>[supportedCourseIds.slice(0,i+1),id,supportedCourseIds[i+1]||'nce1-13'])){
   map=host.startNode(host.unlockNode(map,last),last,at);const state=stateWith(entries(ids)),before=JSON.stringify({state,map});
   const d=host.courseDestination(state,map,at);assert.equal(d.node.id,want);assert.equal(host.courseContinuation(state,map,last,at).href,d.href);assert.equal(host.todayPractice(state,map,at).filter(t=>t.kind==='course').length,1);assert.equal(host.todayPractice(state,map,at).find(t=>t.kind==='course').href,d.href);
   assert.equal(JSON.stringify({state,map}),before);assert.equal(host.achieved(host.nodeById(last),map,at),false);
  }
 });
-test('advanced map route survives three waiting courses',()=>{
+test('advanced map route survives six waiting courses',()=>{
  const state=stateWith(entries(supportedCourseIds)),map={...host.emptyProgress(),lastNode:'nce1-25',access:{all:true,nodes:[]}};
  assert.equal(host.nextCourse(state,map,NOW+1000).id,'nce1-25');
 });
@@ -57,7 +57,7 @@ test('every selected record summary stays in its own course and unknown raw rema
 });
 test('wrong target, unknown record and foreign correction sidecar never silently bind to CL00',()=>{
  for(const id of supportedCourseIds){for(const other of supportedCourseIds.filter(x=>x!==id)){const raw=JSON.stringify(completed[other].state),r=host.parseCourseLoop(raw,NOW+1000,id);assert.equal(r.ok,false);assert.equal(r.raw,raw);const q=fixtures[other].content.questionsFor('independent')[0];assert.throws(()=>host.parseLoopInputs(JSON.stringify({version:1,corrections:{[q.id]:{answer:'foreign original',note:'foreign reason'}}}),id))}}
- const raw=JSON.stringify(completed['nce1-5'].state);assert.equal(host.parseCourseLoop(raw,NOW+1000,'nce1-7').raw,raw);
+ const raw=JSON.stringify(completed['nce1-5'].state);assert.equal(host.parseCourseLoop(raw,NOW+1000,'nce1-13').raw,raw);
 });
 test('course completion does not create map passes, flashcard grades, listening scores or free-expression judgments',()=>{
  const state=stateWith(entries(supportedCourseIds)),map=host.emptyProgress();const before=JSON.stringify({state,map});host.todayPractice(state,map,NOW+1000);for(const id of supportedCourseIds){const {model}=fixtures[id],r=model.receipt(completed[id].view,NOW+1000);assert.equal(r.listening,'not-tested');assert.equal(r.pronunciation,'not-tested');assert.equal(r.mastery,'not-assessed');assert.equal(r.band,null);assert.equal(r.openExpression,'awaiting-human-review')}

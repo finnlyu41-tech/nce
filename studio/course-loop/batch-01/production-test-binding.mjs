@@ -7,7 +7,8 @@ export const supportedCourseIds=registeredCourseIds;
 export function draftKeysFor(id){const binding=getCourseBinding(id);return {snapshot:binding.key,inputs:binding.inputsKey}}
 export async function fixtureForId(id){
  const binding=getCourseBinding(id);
- const content=await import(id==='nce1-1'?'../lesson-nce1-001.mjs':id==='nce1-3'?'./lesson-nce1-003.mjs':'./lesson-nce1-005.mjs');
+ const paths={'nce1-1':'../lesson-nce1-001.mjs','nce1-3':'./lesson-nce1-003.mjs','nce1-5':'./lesson-nce1-005.mjs','nce1-7':'../batch-02/lesson-nce1-007.mjs','nce1-9':'../batch-02/lesson-nce1-009.mjs','nce1-11':'../batch-02/lesson-nce1-011.mjs'};
+ const content=await import(paths[id]);
  return {model:binding.model,content,keys:draftKeysFor(id),provenance:{binding:'production registry; exported content matcher'}};
 }
 let parsers;

@@ -17,7 +17,8 @@ export function nextCourse(state:State,map:Progress,now=Date.now()):MapNode {
  if(due)return nodeById(due.course.id)!;
  const finished=saved.filter(item=>item.next?.kind==='continue-route'||item.next?.kind==='needs-new-material');
  if(!finished.length)return continueNode(map,now);
- const successor=(id:string)=>nodeById(id==='nce1-1'?'nce1-3':id==='nce1-3'?'nce1-5':'nce1-7')!;
+ const successorIds:Record<string,string>={'nce1-1':'nce1-3','nce1-3':'nce1-5','nce1-5':'nce1-7','nce1-7':'nce1-9','nce1-9':'nce1-11','nce1-11':'nce1-13'};
+ const successor=(id:string)=>nodeById(successorIds[id])!;
  const current=continueNode(map,now),last=map.lastNode?nodeById(map.lastNode):undefined;
  // Preserve advanced or reset map routes. A completed selected course can
  // move to its successor only when it is still the map's active course.
