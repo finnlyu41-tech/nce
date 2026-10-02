@@ -3,6 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import re
+import runpy
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -80,10 +81,12 @@ def verify(root):
     assert version['map_html_sha256'] == hashlib.sha256(map_html).hexdigest(), 'Map HTML hash mismatch'
     allowed.add('map/index.html')
     map_refs = {'map/'+path.removeprefix('./') for path in re.findall(r'(?:src|href)="(\./assets/[^"?]+)"', map_html.decode())}
-    assert map_refs == set(version['map_assets']) and len(map_refs) >= 2, 'Map bundle references incomplete'
+    mini_allowed, mini_map = runpy.run_path(str(ROOT/'mini-task/verify-audio.py'))['verify_audio'](root, version, html, map_refs)
+    allowed.update(mini_allowed)
+    assert map_refs | mini_map == set(version['map_assets']) and len(map_refs) >= 2, 'Map bundle references incomplete'
     assert all(label in html for label in ['学习空间导航','学习地图','课程','复习','记录']) and '/map/' in html, 'Shared learning navigation is incomplete'
     for path, digest in version['map_assets'].items():
-        assert re.fullmatch(r'map/assets/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)', path), 'Unexpected map asset'
+        assert re.fullmatch(r'map/assets/[a-zA-Z0-9_-]+-[a-zA-Z0-9_-]{8,}\.(?:js|css)', path) or path in mini_map, 'Unexpected map asset'
         assert hashlib.sha256((root/path).read_bytes()).hexdigest() == digest, 'Map asset hash mismatch'
         allowed.add(path)
     assert version['html_sha256'] == hashlib.sha256((root/'index.html').read_bytes()).hexdigest(), 'HTML hash mismatch'
