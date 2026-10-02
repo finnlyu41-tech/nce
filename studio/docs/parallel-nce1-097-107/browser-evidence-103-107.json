@@ -1,0 +1,54 @@
+{
+  "baseline": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "checks": [
+    {
+      "id": "nce1-103",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 97→99→101→103→105→107→109 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-105",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 97→99→101→103→105→107→109 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-107",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 97→99→101→103→105→107→109 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    }
+  ],
+  "runtimeErrors": [],
+  "profile": "fresh QA; no user profile/data; removed after test",
+  "productionRegistration": "not modified",
+  "naturalRetention": "not run"
+}

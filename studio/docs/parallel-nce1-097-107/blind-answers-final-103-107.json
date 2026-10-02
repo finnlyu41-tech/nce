@@ -1,0 +1,384 @@
+[
+  {
+    "id": "diagnostic-n103-degree-boundary",
+    "answer": "The music was very loud.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n103-enough-for-person",
+    "answer": "The print is not large enough for me.",
+    "variants": [
+      "The print isn't large enough for me."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n103-past-ability",
+    "answer": "He could hear the announcement.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n103-degree-boundary",
+    "answer": "The box is too wide for this shelf.",
+    "variants": [
+      "The box's too wide for this shelf."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n103-enough-for-person",
+    "answer": "The sign is clear enough for us to read.",
+    "variants": [
+      "The sign is clear enough for us to read it."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n103-past-ability",
+    "answer": "I could not open the box.",
+    "variants": [
+      "I couldn't open the box."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n103-degree-boundary",
+    "answer": "Her voice was very sweet.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n103-enough-for-person",
+    "answer": "The box was not light enough for us.",
+    "variants": [
+      "The box wasn't light enough for us."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n103-past-ability",
+    "answer": "They could enter the room.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n103-degree-boundary",
+    "answer": "The wind was too strong for me.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n103-enough-for-person",
+    "answer": "The radio is loud enough for them to hear.",
+    "variants": [
+      "The radio is loud enough for them to hear it."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n103-past-ability",
+    "answer": "She could not read the note.",
+    "variants": [
+      "She couldn't read the note."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n103-degree-boundary",
+    "answer": "The coat is too small for him.",
+    "variants": [
+      "The coat's too small for him."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n103-enough-for-person",
+    "answer": "The book was easy enough for her.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n103-past-ability",
+    "answer": "He could reach the station.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n103-degree-boundary",
+    "answer": "The colours were very bright.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n103-enough-for-person",
+    "answer": "The car is not cheap enough for us.",
+    "variants": [
+      "The car isn't cheap enough for us."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n103-past-ability",
+    "answer": "He could not eat the pear.",
+    "variants": [
+      "He couldn't eat the pear."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n105-own-want",
+    "answer": "I want to read the letter.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n105-want-object",
+    "answer": "I want him to move the table.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n105-tell-object",
+    "answer": "Tell her to close the door at once.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n105-own-want",
+    "answer": "She wants to try on the hat.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n105-want-object",
+    "answer": "We want you to keep the ticket.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n105-tell-object",
+    "answer": "Tell them not to miss the opening.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n105-own-want",
+    "answer": "He does not want to drive the car.",
+    "variants": [
+      "He doesn't want to drive the car."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n105-want-object",
+    "answer": "I do not want her to change the title.",
+    "variants": [
+      "I don't want her to change the title."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n105-tell-object",
+    "answer": "Tell him to finish the homework.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n105-own-want",
+    "answer": "We want to listen to the recording.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n105-want-object",
+    "answer": "She wants them to describe the picture.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n105-tell-object",
+    "answer": "Tell him not to move the box.",
+    "variants": [
+      "Tell him to not move the box."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n105-own-want",
+    "answer": "She does not want to buy a map.",
+    "variants": [
+      "She doesn't want to buy a map."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n105-want-object",
+    "answer": "We do not want you to lose the key.",
+    "variants": [
+      "We don't want you to lose the key."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n105-tell-object",
+    "answer": "Tell her not to break the model.",
+    "variants": [
+      "Tell her to not break the model."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n105-own-want",
+    "answer": "I do not want to carry the suitcase.",
+    "variants": [
+      "I don't want to carry the suitcase."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n105-want-object",
+    "answer": "He wants us to correct the mistake.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n105-tell-object",
+    "answer": "Tell them to keep the cards.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n107-comparative-form",
+    "answer": "This rope is longer than that rope.",
+    "variants": [
+      "This rope's longer than that rope."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n107-than-one",
+    "answer": "The red suitcase is heavier than the black one.",
+    "variants": [
+      "The red suitcase's heavier than the black one."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n107-compare-report",
+    "answer": "Is the blue suitcase heavier than the brown one?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n107-comparative-form",
+    "answer": "The late session was hotter than the early session.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n107-than-one",
+    "answer": "The red coat is shorter than the blue one.",
+    "variants": [
+      "The red coat's shorter than the blue one."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n107-compare-report",
+    "answer": "It was hotter yesterday.",
+    "variants": [
+      "Yesterday it was hotter."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n107-comparative-form",
+    "answer": "Mina is taller than Jo.",
+    "variants": [
+      "Mina's taller than Jo."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n107-than-one",
+    "answer": "The blue book is cheaper than the green one.",
+    "variants": [
+      "The blue book's cheaper than the green one."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n107-compare-report",
+    "answer": "Is this street cleaner than that one?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n107-comparative-form",
+    "answer": "Monday was wetter than Tuesday.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n107-than-one",
+    "answer": "The silver frame is prettier than the gold one.",
+    "variants": [
+      "The silver frame's prettier than the gold one."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n107-compare-report",
+    "answer": "The last test was easier.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n107-comparative-form",
+    "answer": "This bag is heavier than that bag.",
+    "variants": [
+      "This bag's heavier than that bag."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n107-than-one",
+    "answer": "The orange route is longer than the purple one.",
+    "variants": [
+      "The orange route's longer than the purple one."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n107-compare-report",
+    "answer": "Is this box larger than that one?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n107-comparative-form",
+    "answer": "Cloth A is nicer than cloth B.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n107-than-one",
+    "answer": "The front room is colder than the back one.",
+    "variants": [
+      "The front room's colder than the back one."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n107-compare-report",
+    "answer": "The crowd is larger this year.",
+    "variants": [
+      "This year the crowd is larger.",
+      "The crowd's larger this year.",
+      "This year the crowd's larger."
+    ],
+    "concern": ""
+  }
+]

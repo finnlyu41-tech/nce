@@ -1,0 +1,46 @@
+{
+  "groups": [
+    {
+      "id": "nce1-97",
+      "tasks": 18,
+      "accepted": 24,
+      "nearMisses": 72,
+      "sourceSha256": "f9205b34f0122e25d849e2865af9e4f2934c7012f795f826853cbef3049fdeab"
+    },
+    {
+      "id": "nce1-99",
+      "tasks": 18,
+      "accepted": 90,
+      "nearMisses": 72,
+      "sourceSha256": "41d7de8ed63c30f8067ee413a53a383b9817d04cc8150b7022f231b207e7154d"
+    },
+    {
+      "id": "nce1-101",
+      "tasks": 18,
+      "accepted": 110,
+      "nearMisses": 72,
+      "sourceSha256": "ffd4549443446e47b6c72ddf9f4e4e15276378c7e57398411e363150cf3b5c4b"
+    },
+    {
+      "id": "nce1-103",
+      "tasks": 18,
+      "accepted": 34,
+      "nearMisses": 72,
+      "sourceSha256": "ef16222ed76c2f48f014d3e8964e29ada24ce363b569415df2fd629111d68e46"
+    },
+    {
+      "id": "nce1-105",
+      "tasks": 18,
+      "accepted": 26,
+      "nearMisses": 72,
+      "sourceSha256": "a07b1d2d11dd4203d6fcec77df50d3fea95cafffa2ab889f12b1f36dd8356205"
+    },
+    {
+      "id": "nce1-107",
+      "tasks": 18,
+      "accepted": 35,
+      "nearMisses": 72,
+      "sourceSha256": "c85ad01114e44f142125f6c4f0bf2cd48964985e88a8b37c0db8d5bf3beed42b"
+    }
+  ]
+}

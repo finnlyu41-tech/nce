@@ -34,13 +34,39 @@
         101,
         102
       ]
+    },
+    {
+      "id": "nce1-103",
+      "module": "./parallel-nce1-097-107/lesson-nce1-103.mjs",
+      "key": "nce-course-loop-v1:NCE1-103",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-103",
+      "lessons": [
+        103,
+        104
+      ]
+    },
+    {
+      "id": "nce1-105",
+      "module": "./parallel-nce1-097-107/lesson-nce1-105.mjs",
+      "key": "nce-course-loop-v1:NCE1-105",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-105",
+      "lessons": [
+        105,
+        106
+      ]
+    },
+    {
+      "id": "nce1-107",
+      "module": "./parallel-nce1-097-107/lesson-nce1-107.mjs",
+      "key": "nce-course-loop-v1:NCE1-107",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-107",
+      "lessons": [
+        107,
+        108
+      ]
     }
   ],
-  "pendingSecondBatch": [
-    103,
-    105,
-    107
-  ],
+  "pendingSecondBatch": [],
   "hostAuthorEdits": [
     {
       "path": "studio/course-loop/registry.mjs",
@@ -48,11 +74,11 @@
     },
     {
       "path": "studio/course-loop/host-contract.d.ts",
-      "action": "Append nce1-97,99,101 to CourseId; append odd lesson IDs to showSource.lesson and corresponding NCE1 comicKey literals; preserve schemas."
+      "action": "Append nce1-97,99,101,103,105,107 to CourseId; append odd lesson IDs to showSource.lesson and corresponding NCE1 comicKey literals; preserve schemas."
     },
     {
       "path": "studio/app/course-loop-next.ts",
-      "action": "Coordinate predecessor95 with 85–95 owner; add95->97,97->99,99->101,101->103. 103 remains existing textbook/map until separately ready."
+      "action": "Coordinate predecessor95 with85–95 owner; add95->97,97->99,99->101,101->103,103->105,105->107,107->109.109 remains ordinary existing textbook/map until separately ready."
     }
   ],
   "realHostQARequired": [
@@ -69,5 +95,7 @@
     "No four-skill/learning-gain/Band claim",
     "Open expression awaiting-human-review",
     "No push/merge/deploy"
-  ]
+  ],
+  "readyFirstCommit": "b08805670d0a2fc5e7ec5d0210db98dd99f44cbd",
+  "finalAcceptance": "Both key-free blind batches and actual factory/source/host boundaries/native Workspace validated; see freeze-final-binding.json."
 }

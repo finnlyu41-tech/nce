@@ -160,6 +160,165 @@
       ],
       "sourcePanel": "actual unchanged guard accepts real source",
       "playback": "not-audited"
+    },
+    {
+      "id": "nce1-103",
+      "sourceSha256": "ef16222ed76c2f48f014d3e8964e29ada24ce363b569415df2fd629111d68e46",
+      "languageFileSha256": "8c333b190954e972feb8bfd55e90270039e8ca3b7dba1380b409f4cd6f72bf90",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "841b537d81a88eabd1cad55c1db662e4970cf378301264148e68faeaec6dcf2f",
+      "grammarEntry": {
+        "id": "NCE1-103",
+        "book": "NCE1",
+        "lesson": 103,
+        "lastLesson": 104,
+        "unit": null,
+        "title": "程度表达：too / very / enough",
+        "category": "modifier",
+        "terms": "too very enough",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 216
+          },
+          {
+            "section": "句型练习",
+            "page": 215
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 214
+          }
+        ],
+        "pages": [
+          214,
+          215,
+          216
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 214,
+          "sha256": "dc8204c6ac7bad60fb6724b69337d432f6c8d0c1342bd46e0ea39f901c16625b"
+        },
+        {
+          "page": 215,
+          "sha256": "9bbfc3f78fee2281b5e52ee097723c36be6fd4f7b63475a1faa3bb5c4fd0330b"
+        },
+        {
+          "page": 216,
+          "sha256": "a212521a947c30e2c63b59c10c21a79bb4b9eb0b262d53438c9cee62737c57ac"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-105",
+      "sourceSha256": "a07b1d2d11dd4203d6fcec77df50d3fea95cafffa2ab889f12b1f36dd8356205",
+      "languageFileSha256": "fe7e2ae6d59c6735c934cdb09856ae22ceb81c2858354a3e4178864be7ad74cf",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "cd24e54eea79cb4c0a2867d84163369e5e3d9c4dbf98925dda6d54ebce633307",
+      "grammarEntry": {
+        "id": "NCE1-105",
+        "book": "NCE1",
+        "lesson": 105,
+        "lastLesson": 106,
+        "unit": null,
+        "title": "want / tell + 宾语 + to do",
+        "category": "nonfinite",
+        "terms": "want tell to",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 220
+          },
+          {
+            "section": "句型练习",
+            "page": 219
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 218
+          }
+        ],
+        "pages": [
+          218,
+          219,
+          220
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 218,
+          "sha256": "b2e472815d09471ea7b3ca8c148dde556242e1f87ff08c32356e4876132143c5"
+        },
+        {
+          "page": 219,
+          "sha256": "3ebdc29f52c18e5ef5e482d57989b38a7f3863d2541aea8b6c8c4e810597c1e3"
+        },
+        {
+          "page": 220,
+          "sha256": "8f15c916844ed54958d23a1145da36c6c5e9d0317f421a2f41130ea33b42ddda"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-107",
+      "sourceSha256": "c85ad01114e44f142125f6c4f0bf2cd48964985e88a8b37c0db8d5bf3beed42b",
+      "languageFileSha256": "2028d38e56d019bff7c992ff65f9d9bd0beaa41d32396142e29efc792c700c74",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "f99932d361f9e95c33a32d16c8e55a71b9177d743218c6fd1e4ac18abe7374da",
+      "grammarEntry": {
+        "id": "NCE1-107",
+        "book": "NCE1",
+        "lesson": 107,
+        "lastLesson": 108,
+        "unit": null,
+        "title": "比较级",
+        "category": "modifier",
+        "terms": "compare comparative",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 224
+          },
+          {
+            "section": "句型练习",
+            "page": 223
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 222
+          }
+        ],
+        "pages": [
+          222,
+          223,
+          224
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 222,
+          "sha256": "bcdabf25c889dca583b130c93b9743af042ac8bff37150bde293c075e77dbfa9"
+        },
+        {
+          "page": 223,
+          "sha256": "e4e6bb3dfd24c548a554b6fcee0fb005fb8124a39b6a3f4a2c62b626cdec04ac"
+        },
+        {
+          "page": 224,
+          "sha256": "670917c082f9475d3a0265bc9603b82d423de898cb2eecf0bdf0a3b3ea26472a"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
     }
   ],
   "naturalRetention": "unverified",

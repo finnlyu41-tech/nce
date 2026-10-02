@@ -1,0 +1,326 @@
+[
+  {
+    "id": "diagnostic-n103-degree-boundary",
+    "context": "昨日录音测试：那段音乐音量很大，但没有超过设备允许的界限；此句只强调音量很大。",
+    "prompt": "用The music、be、loud和very或too写一句过去程度陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n103-enough-for-person",
+    "context": "现在的阅读测试：我看不清屏幕上的字，字体还没有达到我需要的大小。",
+    "prompt": "用The print、be、large、enough、for me表达不够；写一句现在陈述，不补动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n103-past-ability",
+    "context": "昨天在车站，他听力正常，广播清楚；当时他能听见通知。",
+    "prompt": "用He、hear the announcement（听见通知）写一句过去能力肯定陈述。 本题限定使用情态动词could，肯否定按事实判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n103-degree-boundary",
+    "context": "此刻储物架每格只容纳20厘米宽物件，这只箱子宽30厘米，超出本格的可用界限。",
+    "prompt": "用The box、be、wide、for this shelf（对这个架子）和very或too写一句现在程度陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：区分单纯很与超出界限；核对题内人物与过去或现在。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n103-enough-for-person",
+    "context": "我们正在试读路牌；字样清晰，我们都能读。要说明清晰度足够我们阅读。",
+    "prompt": "用The sign、be、clear、enough、we和read写一句现在陈述，保留对谁及阅读目的。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：enough在形容词后；for后的人与够不够必须符合事实。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n103-past-ability",
+    "context": "上周的手工课，那时我无法打开这只盒子，因为盒盖卡住；这是做不到，并非不愿意做。",
+    "prompt": "用I、open the box写一句过去能力否定陈述。 本题限定使用情态动词could，肯否定按事实判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留过去能力的肯否定；情态动词后用原形。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n103-degree-boundary",
+    "context": "昨天排练，我们都认为那位歌手的声音很甜美，没有人认为过于甜美；只报告高度赞赏。",
+    "prompt": "用Her voice、be、sweet（甜美的）和very或too写一句过去程度陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n103-enough-for-person",
+    "context": "刚才我们两人试搬那只箱子，都搬不动。箱子太重，不能说它已经轻到适合我们。",
+    "prompt": "用The box、be、light、enough、for us表达刚才不够轻；不补动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n103-past-ability",
+    "context": "星期一的游戏记录：门没有锁，两位玩家当时能够进入房间。",
+    "prompt": "用They、enter the room写一句过去能力肯定陈述。 本题限定使用情态动词could，肯否定按事实判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n103-degree-boundary",
+    "context": "保留上一轮首答和订正。下面是另一情境：上次摄影活动，我无法在那条路上正常步行，因为风已强到超出我的承受程度。",
+    "prompt": "用The wind、be、strong、for me和very或too写一句过去程度陈述，不写步行动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n103-enough-for-person",
+    "context": "保留上一轮首答和订正。下面是另一情境：今天双人听音测试：音量已经足够大，两位测试者都听得见；你向记录员报告他们的条件。",
+    "prompt": "用The radio、be、loud、enough、they和hear写一句现在陈述，说明他们能听。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n103-past-ability",
+    "context": "保留上一轮首答和订正。下面是另一情境：昨日辨字活动，她努力查看，但镜片模糊使她不能读那张便条。",
+    "prompt": "用She、read the note写一句过去能力否定陈述。 本题限定使用情态动词could，肯否定按事实判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n103-degree-boundary",
+    "context": "现在试衣：这件外套使他手臂无法自由活动；尺寸小到不适合他。",
+    "prompt": "用The coat、be、small、for him和very或too写一句现在程度陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n103-enough-for-person",
+    "context": "昨日图书活动：这本书难度适合她，她能看懂。报告它对她足够容易，不补阅读动作。",
+    "prompt": "用The book、be、easy、enough、for her写一句过去肯定程度陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n103-past-ability",
+    "context": "昨夜同伴赶上了末班车：那时路线很短，他能够到达车站。此句只报告当时的能力，不报告已经到达。",
+    "prompt": "用He、reach the station写一句过去能力肯定陈述。 本题限定使用情态动词could，肯否定按事实判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n103-degree-boundary",
+    "context": "昨天的展览，画中颜色非常明亮，馆方说完全符合设计，并未过于明亮；只强调程度。",
+    "prompt": "用The colours、be、bright和very或too写一句过去陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n103-enough-for-person",
+    "context": "现时采购，我们预算很小，标价超出预算；要用cheap表达价格还不够低到适合我们。",
+    "prompt": "用The car、be、cheap、enough、for us写一句现在否定程度陈述，不写buy。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n103-past-ability",
+    "context": "上次厨房试验只是虚构故事：梨坚硬到他当时咬不动；此处不作饮食建议。",
+    "prompt": "用He、eat the pear写一句过去能力否定陈述。 本题限定使用情态动词could，肯否定按事实判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n105-own-want",
+    "context": "此刻我对图书管理员说：我要亲自读那封信，没有要别人替我读。",
+    "prompt": "用I、want、read the letter写一句现在肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n105-want-object",
+    "context": "我对助手说：希望那位男同事搬动桌子；那位同事不在场，用代词指他。",
+    "prompt": "用I、want、he、move the table写一句现在肯定陈述，不用姓名。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n105-tell-object",
+    "context": "馆长对信使说：请转告那位女志愿者立即关门。女志愿者不在场，指令交给她。",
+    "prompt": "以Tell开头，用she、close the door、at once写一句肯定转述指令；不用please。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "imperative"
+  },
+  {
+    "id": "guided-n105-own-want",
+    "context": "Nora向同事介绍自己的愿望：她想亲自试戴帽子。你现在向店员报告她的愿望，用She指Nora。",
+    "prompt": "用She、want、try on the hat写一句现在肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先确定动作执行者就是主语，再处理现在时的数和否定。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n105-want-object",
+    "context": "两位组织者想让你保留那张票；他们直接对你说话。用We表达组织者。",
+    "prompt": "用We、want、you、keep the ticket写一句现在肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：明确谁希望谁做；宾语用宾格，后续动作用原形。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n105-tell-object",
+    "context": "导演对助理说：请转告两位演员不要错过开场。两位演员不在场，用代词指他们。",
+    "prompt": "以Tell开头，用they、miss the opening写一句否定转述指令；不用please。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：tell后保留接收指令的人；否定指向动作，用not to。",
+    "form": "imperative"
+  },
+  {
+    "id": "independent-n105-own-want",
+    "context": "目前那位男职员明确说自己不想驾驶这辆车。你向同事报告，用He指他。",
+    "prompt": "用He、want、drive the car写一句现在否定陈述，表达他自己的意愿。 将want所在主句写成否定，保留题内动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n105-want-object",
+    "context": "我向协调员说明自己的意愿：我没有想让那位女编辑改动标题的意愿。女编辑不在场，她不是当前听者。",
+    "prompt": "用I、want、she、change the title写一句现在否定陈述，用代词指女编辑。 将want所在主句写成否定，保留题内动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n105-tell-object",
+    "context": "老师对班长说：请转告那位男同学完成作业。他不在场，需要班长传话。",
+    "prompt": "以Tell开头，用he、finish the homework写一句肯定转述指令；不用please。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "imperative"
+  },
+  {
+    "id": "repair-n105-own-want",
+    "context": "保留上一轮首答和订正。下面是另一情境：在当前录音安排中，我们两人想亲自听这段录音，没有让别人代听。",
+    "prompt": "用We、want、listen to the recording写一句现在肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n105-want-object",
+    "context": "保留上一轮首答和订正。下面是另一情境：那位女设计师告诉协调员：她希望两位助手描述那幅画。你向记录员报告，用She指设计师、代词指两位助手。",
+    "prompt": "用She、want、they、describe the picture写一句现在肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n105-tell-object",
+    "context": "保留上一轮首答和订正。下面是另一情境：仓库经理对信使说：请转告那位男助手不要搬动箱子；助手不在场。",
+    "prompt": "以Tell开头，用he、move the box写一句否定转述指令；不用please。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "imperative"
+  },
+  {
+    "id": "review-a-n105-own-want",
+    "context": "那位女游客目前不想买地图，她说的是自己的动作。你向售货员报告，用She指她。",
+    "prompt": "用She、want、buy a map写一句现在否定陈述。 将want所在主句写成否定，保留题内动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n105-want-object",
+    "context": "两位馆员直接对你说明自己的意愿：他们没有想让你弄丢钥匙的意愿。用We表达馆员。",
+    "prompt": "用We、want、you、lose the key写一句现在否定陈述。 将want所在主句写成否定，保留题内动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n105-tell-object",
+    "context": "母亲对信使说：请转告那位女儿不要弄坏模型；女儿不在场。这是虚构传话练习。",
+    "prompt": "以Tell开头，用she、break the model写一句否定转述指令；不用please。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "imperative"
+  },
+  {
+    "id": "review-b-n105-own-want",
+    "context": "此刻我对朋友说，我不想亲自搬这个行李箱。我在描述意愿，未判断能否搬动。",
+    "prompt": "用I、want、carry the suitcase写一句现在否定陈述。 将want所在主句写成否定，保留题内动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n105-want-object",
+    "context": "那位男教师希望我们纠正这项错误。你作为其中一人向另一位同学报告；用He指教师。",
+    "prompt": "用He、want、we、correct the mistake写一句现在肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n105-tell-object",
+    "context": "展览负责人对信使说：请转告两位志愿者保留这些卡片，两人不在场。",
+    "prompt": "以Tell开头，用they、keep the cards写一句肯定转述指令；不用please。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "imperative"
+  },
+  {
+    "id": "diagnostic-n107-comparative-form",
+    "context": "现在测量两条绳子：这条4米，那条2米。用long报告这条相对那条的长度。",
+    "prompt": "用This rope、be、long、than、that rope写一句现在肯定比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n107-than-one",
+    "context": "现在称重：红行李箱8千克，黑行李箱5千克。要写红箱更重，避免第二次重复suitcase。",
+    "prompt": "以The red suitcase作主语，用be、heavy、than、the black及one写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n107-compare-report",
+    "context": "你向保管员询问两只箱子的重量，尚未知道答案。蓝箱与棕箱都已指出；要问蓝箱是否更重。",
+    "prompt": "用the blue suitcase、be、heavy、than、the brown one写一句现在一般比较疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "guided-n107-comparative-form",
+    "context": "昨日活动两场温度记录：早场28度，晚场32度。报告晚场比早场更热。",
+    "prompt": "用The late session、be、hot、than、the early session写一句过去比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：根据指定原级形成比较级，be与主语和时间一致；不另加more。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n107-than-one",
+    "context": "试衣时红外套衣长60厘米，蓝外套70厘米，当前事实已确认。报告红外套更短，第二次不用coat。",
+    "prompt": "以The red coat作主语，用be、short、than、the blue及one写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先核谁更怎样；than后保留对照对象，用one避免重复单数名词。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n107-compare-report",
+    "context": "记录员已说今天很热；昨日温度更高。对照的今天已知，只补充昨日更热这一事实。",
+    "prompt": "用It、be、hot、yesterday写一句过去程度比较报告，不重述今天或使用than。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对问句或陈述、过去或现在，以及语境已明确的比较对象。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n107-comparative-form",
+    "context": "今日测量两位演员的身高：Mina170厘米，Jo160厘米。只陈述身高比较，不评判能力。",
+    "prompt": "用Mina、be、tall、than、Jo写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n107-than-one",
+    "context": "书店当前标价：蓝书9元，绿书12元。报告蓝书更便宜，第二次不重复book。",
+    "prompt": "以The blue book作主语，用be、cheap、than、the green及one写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n107-compare-report",
+    "context": "你询问两条已指出的街道：这条是否比那条更干净？尚未得到清洁记录。",
+    "prompt": "用this street、be、clean、than、that one写一句现在一般比较疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "repair-n107-comparative-form",
+    "context": "保留上一轮首答和订正。下面是另一情境：上周两天的天气记录：星期一持续下雨，路面一直湿透；星期二雨停，路面稍干。这里用wet描述雨水造成的潮湿。报告星期一比星期二更湿。",
+    "prompt": "用Monday、be、wet、than、Tuesday写一句过去比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n107-than-one",
+    "context": "保留上一轮首答和订正。下面是另一情境：艺术课堂已确认银色框比金色框更漂亮，只比较这两只框。避免第二次重复frame。",
+    "prompt": "以The silver frame作主语，用be、pretty、than、the gold及one写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n107-compare-report",
+    "context": "保留上一轮首答和订正。下面是另一情境：老师已经说明这次测试很容易；上次测试更加容易。只报告上次的比较程度，对照这次已明确。",
+    "prompt": "用The last test、be、easy写一句过去比较报告，不用than也不重复这次测试。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n107-comparative-form",
+    "context": "目前两件行李称重：这个包6千克，那个包4千克。报告这个包更重。",
+    "prompt": "用This bag、be、heavy、than、that bag写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n107-than-one",
+    "context": "地图显示橙线全长40千米，紫线30千米。当前报告橙线更长，第二次不重复route。",
+    "prompt": "以The orange route作主语，用be、long、than、the purple及one写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n107-compare-report",
+    "context": "你向同事询问两只箱子能否放入柜子，尺寸尚未测量。要问这只是否比那只更大。",
+    "prompt": "用this box、be、large、than、that one写一句现在一般比较疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-b-n107-comparative-form",
+    "context": "当前两种布料触感测试：大家认为A布比B布更舒服好看，题内以nice表达这一综合印象。",
+    "prompt": "用Cloth A、be、nice、than、cloth B写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n107-than-one",
+    "context": "现在室温测量：前厅18度，后厅22度。报告前厅更冷，第二次不重复room。",
+    "prompt": "以The front room作主语，用be、cold、than、the back及one写一句现在比较陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n107-compare-report",
+    "context": "主持人已说明去年的观众很多；今年人数进一步增加。只报告今年观众数量的比较程度。",
+    "prompt": "用The crowd、be、large、this year写一句现在比较报告，不写than或重述去年。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "baseline": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "contentStatus": "authored-pending-independent-blind-review",
+  "author": "author_103_107",
+  "taskCount": 54,
+  "manualOriginalContexts": true,
+  "sources": {
+    "103": {
+      "internalSourceSha256": "ef16222ed76c2f48f014d3e8964e29ada24ce363b569415df2fd629111d68e46",
+      "languageSha256UsesInternalSourceHash": true,
+      "comic": {
+        "pageSha256": "841b537d81a88eabd1cad55c1db662e4970cf378301264148e68faeaec6dcf2f",
+        "sourceSha256": "ef16222ed76c2f48f014d3e8964e29ada24ce363b569415df2fd629111d68e46",
+        "mode": "lesson",
+        "visualVerified": true,
+        "visualSummary": "Two pupils outside examination room, single lesson image."
+      },
+      "grammarPages": [
+        {
+          "key": "NCE1-215",
+          "src": "/lesson-pages/9bbfc3f78fee2281b5e52ee097723c36be6fd4f7b63475a1faa3bb5c4fd0330b.jpg",
+          "sha256": "9bbfc3f78fee2281b5e52ee097723c36be6fd4f7b63475a1faa3bb5c4fd0330b",
+          "visualVerified": true
+        }
+      ],
+      "moduleSha256": "f2f0b132913eedebb20de4ac943628b5089efe026e3a47f23d88ac8ddc185212",
+      "module": "studio/course-loop/parallel-nce1-097-107/lesson-nce1-103.mjs"
+    },
+    "105": {
+      "internalSourceSha256": "a07b1d2d11dd4203d6fcec77df50d3fea95cafffa2ab889f12b1f36dd8356205",
+      "languageSha256UsesInternalSourceHash": true,
+      "comic": {
+        "pageSha256": "cd24e54eea79cb4c0a2867d84163369e5e3d9c4dbf98925dda6d54ebce633307",
+        "sourceSha256": "a07b1d2d11dd4203d6fcec77df50d3fea95cafffa2ab889f12b1f36dd8356205",
+        "mode": "panels",
+        "visualVerified": true,
+        "visualSummary": "Four office panels: summons, spelling, retyping letter, dictionary gift."
+      },
+      "grammarPages": [
+        {
+          "key": "NCE1-219",
+          "src": "/lesson-pages/3ebdc29f52c18e5ef5e482d57989b38a7f3863d2541aea8b6c8c4e810597c1e3.jpg",
+          "sha256": "3ebdc29f52c18e5ef5e482d57989b38a7f3863d2541aea8b6c8c4e810597c1e3",
+          "visualVerified": true
+        }
+      ],
+      "moduleSha256": "0624cdd0d259cf1d78ac3185cfe71014a5f5896f75dc69672722841a39f1f804",
+      "module": "studio/course-loop/parallel-nce1-097-107/lesson-nce1-105.mjs"
+    },
+    "107": {
+      "internalSourceSha256": "c85ad01114e44f142125f6c4f0bf2cd48964985e88a8b37c0db8d5bf3beed42b",
+      "languageSha256UsesInternalSourceHash": true,
+      "comic": {
+        "pageSha256": "f99932d361f9e95c33a32d16c8e55a71b9177d743218c6fd1e4ac18abe7374da",
+        "sourceSha256": "c85ad01114e44f142125f6c4f0bf2cd48964985e88a8b37c0db8d5bf3beed42b",
+        "mode": "panels",
+        "visualVerified": true,
+        "visualSummary": "Six dress-shop panels: fit, green/blue comparison, request and size limit."
+      },
+      "grammarPages": [
+        {
+          "key": "NCE1-222",
+          "src": "/lesson-pages/bcdabf25c889dca583b130c93b9743af042ac8bff37150bde293c075e77dbfa9.jpg",
+          "sha256": "bcdabf25c889dca583b130c93b9743af042ac8bff37150bde293c075e77dbfa9",
+          "visualVerified": true
+        },
+        {
+          "key": "NCE1-223",
+          "src": "/lesson-pages/e4e6bb3dfd24c548a554b6fcee0fb005fb8124a39b6a3f4a2c62b626cdec04ac.jpg",
+          "sha256": "e4e6bb3dfd24c548a554b6fcee0fb005fb8124a39b6a3f4a2c62b626cdec04ac",
+          "visualVerified": true
+        },
+        {
+          "key": "NCE1-224",
+          "src": "/lesson-pages/670917c082f9475d3a0265bc9603b82d423de898cb2eecf0bdf0a3b3ea26472a.jpg",
+          "sha256": "670917c082f9475d3a0265bc9603b82d423de898cb2eecf0bdf0a3b3ea26472a",
+          "visualVerified": true
+        }
+      ],
+      "moduleSha256": "ccdea560e58a3da9c1f9e7270ffe2423a86d4914ad2684645218d5f69c3b87ff",
+      "module": "studio/course-loop/parallel-nce1-097-107/lesson-nce1-107.mjs"
+    }
+  },
+  "verification": {
+    "readGlobalRules": true,
+    "localAgentsPresent": false,
+    "transcriptsRead": [
+      103,
+      105,
+      107
+    ],
+    "pairedPagesViewed": [
+      215,
+      219,
+      223,
+      224
+    ],
+    "notesPagesViewed": [
+      222
+    ],
+    "comicsViewed": [
+      103,
+      105,
+      107
+    ],
+    "importSanity": "pass",
+    "contentContract": "54 tasks, 6 banks of 3 for each module, 4 counterexamples each; import bindContent passed",
+    "productionModel": "createCourseLoopModel reached all 18 tasks per group; all finite accepted variants and counterexamples checked through production submit",
+    "blindReview": "Initial independent blind concerns addressed; prompt-only re-review pending original reviewer.",
+    "uiTests": "not run; parent owns",
+    "hearingPronunciation": "not tested",
+    "natural24h7d": "not observed; model traversal used simulated time",
+    "fourSkillsOrGain": "unverified",
+    "ownExpression": "awaiting-human-review",
+    "productionAcceptedVariants": 95,
+    "productionRejectedCounterexamples": 216,
+    "sourceClipStarts": "All nine clip starts equal an original transcript row timestamp."
+  },
+  "limitations": [
+    "Finite matching covers specified vocabulary and forms only.",
+    "107–108 group intentionally covers rule-based comparative forms/direction/one and restricted questions or degree reports; not an exhaustive chapter claim, no irregular/more/superlative coverage.",
+    "Paired exercises extend practice, not a separate original-audio claim.",
+    "No commit, push, deploy or changes to host/model/storage/source assets."
+  ],
+  "blindPromptsSha256": "ec95d72ed4f800a793daa61d23c8a82c5a7a980ecd83e2ddceda1040050ebe44",
+  "revisionsAfterInitialBlind": [
+    "Six 103 ability prompts explicitly require modal could, avoiding unconstrained was able to variants.",
+    "Finite read/hear with it accepted, along with explicit noun/name is contractions.",
+    "105 hat action changed to try on; five negative want prompts explicitly negate the want main clause.",
+    "Finite tell object not to and to not alternatives retained.",
+    "107 early/late sessions clarified; wet evidence changed from humidity to rain and wet road; fronted time variants accepted."
+  ]
+}
