@@ -29,11 +29,13 @@ export function TodayPractice({tasks,ready=true,compact=false,error='',catalogue
    <span className="today-eyebrow">{task.kind==='repair'?'先修补这一处':task.kind==='resume'?'接着刚才继续':task.kind==='review'?'今天先回想':task.kind==='new'?'把新词记住':'你的下一步'}</span>
    <h2 ref={heading} tabIndex={-1}>{task.title}</h2>
    <p className="today-reason">{task.reason}</p>
-   <p>{task.method}</p>
+   {task.kind!=='resume'&&<p className="today-method">{task.method}</p>}
+   <p className="today-evidence">{task.evidence}</p>
+   <div className="today-actions">
    <a className="today-start" href={task.href}>继续今日学习<ArrowRight size={18}/></a>
    {task.kind!=='course'&&<button className="today-skip" onClick={()=>setSkipped(s=>[...s,task.id])}>这项稍后再做</button>}
-   <details className="today-evidence"><summary>这一步会留下什么记录</summary><p>{task.evidence}</p><p>这是按当前记录给出的建议；打开或跳过都不会增加完成数量。</p></details>
+   </div>
   </article>
-  {(others.length>0||skipped.length>0)&&<details className="today-plan"><summary>查看其余安排{others.length?` · ${others.length} 项`:''}</summary><p>默认先补薄弱处，再回想到期内容，最后继续课程。也可以直接调整这一次要做的内容。</p>{others.map(item=><a href={item.href} key={item.id}><span><strong>{item.title}</strong><small>{skipped.includes(item.id)?'本次暂缓 · ':''}{item.reason}</small></span><ArrowRight size={16}/></a>)}{skipped.length>0&&<button className="today-skip" onClick={()=>setSkipped([])}>恢复推荐顺序</button>}</details>}
+  {(others.length>0||skipped.length>0)&&<section className="today-plan" aria-label="其他学习安排"><h3>其他安排{others.length?` · ${others.length} 项`:''}</h3>{others.map(item=><a href={item.href} key={item.id}><span><strong>{item.title}</strong><small>{skipped.includes(item.id)?'本次暂缓 · ':''}{item.reason}</small></span><ArrowRight size={16}/></a>)}{skipped.length>0&&<button className="today-skip" onClick={()=>setSkipped([])}>恢复推荐顺序</button>}</section>}
  </section>;
 }
