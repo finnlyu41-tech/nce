@@ -5,19 +5,19 @@ const root=new URL('../',import.meta.url),pnpm=new URL('node_modules/.pnpm/',roo
 const versions=(await readdir(pnpm)).filter(n=>/^esbuild@\d+\.\d+\.\d+$/.test(n)).sort((a,b)=>b.localeCompare(a,undefined,{numeric:true}));
 const {build}=await import(new URL(versions[0]+'/node_modules/esbuild/lib/main.js',pnpm));
 const output=new URL('work/source-review-batch1/model.mjs',root);await mkdir(new URL('.',output),{recursive:true});
-await build({stdin:{contents:`export * from './app/source-review-batch1';export * from './app/data/source-review-batch1';export * from './app/textbook-vocabulary';export * as cards from './app/flashcards';export * as progress from './app/progress-file';export {initial} from './app/model';`,resolveDir:fileURLToPath(root),loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',outfile:fileURLToPath(output),logLevel:'silent'});
+await build({stdin:{contents:`export * from './app/source-review-batch1';export * from './app/data/source-review-batch1';export {reviewedSF02Associations} from './app/data/source-review-sf02';export * from './app/textbook-vocabulary';export * as cards from './app/flashcards';export * as progress from './app/progress-file';export {initial} from './app/model';`,resolveDir:fileURLToPath(root),loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',outfile:fileURLToPath(output),logLevel:'silent'});
 const m=await import(output),f=m.cards,p=m.progress;
 const index=JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.json',root),'utf8'));
 const dictionary=JSON.parse(await readFile(new URL('dist-online/language/dictionary.json',root),'utf8')).words;
 const original=structuredClone(index),projected=m.withReviewedSourceAssociations(index),catalog=m.buildVocabularyCatalog(index),groups=[];
 function check(name,fn){fn();groups.push(name)}
-check('two existing-word and two recovered-head associations; raw bundle and all old rows preserved',()=>{
- assert.deepEqual(index,original);assert.equal(catalog.entries,3618);assert.equal(catalog.terms.length,3348);
+check('legacy two, SF01 two plus SF02 eight associations; raw bundle and all old rows preserved',()=>{
+ assert.deepEqual(index,original);assert.equal(catalog.entries,3626);assert.equal(catalog.terms.length,3356);
  const sourceIds=x=>Object.entries(x.lessons).flatMap(([id,l])=>l.vocabulary.words.map(w=>id+':'+w.word.toLowerCase()));
  const before=new Set(sourceIds(index)),after=new Set(sourceIds(projected));
- assert.deepEqual([...after].filter(id=>!before.has(id)).sort(),['NCE1-103:low','NCE1-51:snow','NCE3-58:balcony','NCE4-9:assail']);
+ assert.deepEqual([...after].filter(id=>!before.has(id)).sort(),['NCE1-103:low','NCE1-51:snow','NCE3-58:balcony','NCE4-9:assail',...m.reviewedSF02Associations.map(r=>r.book+'-'+r.lesson+':'+r.word)].sort());
  assert([...before].every(id=>after.has(id)));assert.equal(m.withReviewedSourceAssociations(projected),projected);
- for(const [id,lesson] of Object.entries(index.lessons))if(!['NCE1-103','NCE1-51','NCE3-58','NCE4-9'].includes(id))assert.equal(projected.lessons[id],lesson);
+ for(const [id,lesson] of Object.entries(index.lessons))if(!['NCE1-103','NCE1-51','NCE3-58','NCE4-9',...m.reviewedSF02Associations.map(r=>r.book+'-'+r.lesson)].includes(id))assert.equal(projected.lessons[id],lesson);
 });
 check('existing normalized words, forms and printed ordering',()=>{
  for(const repair of m.reviewedSourceAssociations){
@@ -74,4 +74,4 @@ for(const [label,snapshot] of [['old',old],['source-enriched',state]]){
  assert.deepEqual(decoded.state,snapshot);groups.push(label+' backup roundtrip preserves card IDs, schedules, sources and unrelated notes');
 }
 assert.deepEqual(index,original);
-console.log(JSON.stringify({passed:groups.length,groups,legacyExistingWordAssociations:2,recoveredPrintedHeadAssociations:2,netNewCatalogTerms:2,newAuthoredExamples:0,naturalTimeEvidence:false,realBrowserEvidence:false}));
+console.log(JSON.stringify({passed:groups.length,groups,legacySourceAssociations:2,sf01SourceAssociations:2,sf02SourceAssociations:8,newNormalizedWordsSinceRaw:10,newDictionaryEntries:2,newAuthoredExamples:0,naturalTimeEvidence:false,realBrowserEvidence:false}));

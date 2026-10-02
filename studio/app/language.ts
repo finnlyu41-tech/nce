@@ -3,6 +3,7 @@ import {parseLessonText} from './nce-utils';
 import originalLessons from './data/lessons.json';
 import {ONLINE} from './runtime-mode';
 import {readJsonResource} from './network';
+import {withReviewedSF02Dictionary} from './source-review-sf02';
 
 export type LanguageRow={en:string;zh:string;time?:number};
 export type LessonLanguage={version:1;book:NceBookId;lesson:number;sourceSha256:string;rows:LanguageRow[]};
@@ -28,9 +29,9 @@ export function translatedRows(text:string,language:LessonLanguage|null){
 export function rowsToText(rows:LanguageRow[]){return rows.map(r=>`${r.time===undefined?'':`[${String(Math.floor(r.time/60)).padStart(2,'0')}:${(r.time%60).toFixed(3).padStart(6,'0')}]`}${r.en}${r.zh?' | '+r.zh:''}`).join('\n')}
 let dictionary:Promise<Record<string,DictionaryEntry>>|undefined;
 export async function loadDictionary(){
- if(!ONLINE)return Object.fromEntries(originalLessons.flatMap(l=>l.vocab).map(w=>[w.word.toLowerCase(),{word:w.word,ipa:w.ipa||'',meaning:w.meaning}]));
+ if(!ONLINE)return withReviewedSF02Dictionary(Object.fromEntries(originalLessons.flatMap(l=>l.vocab).map(w=>[w.word.toLowerCase(),{word:w.word,ipa:w.ipa||'',meaning:w.meaning}])));
  if(!dictionary)dictionary=(async()=>{
-  try{const data=await readJsonResource<{version:number;words:Record<string,DictionaryEntry>}>('/language/dictionary.json');if(data.version!==1||!data.words||typeof data.words!=='object'||Object.keys(data.words).length>20000||!Object.values(data.words).every(w=>typeof w.word==='string'&&typeof w.meaning==='string'&&typeof w.ipa==='string'))throw Error();return data.words as Record<string,DictionaryEntry>}
+  try{const data=await readJsonResource<{version:number;words:Record<string,DictionaryEntry>}>('/language/dictionary.json');if(data.version!==1||!data.words||typeof data.words!=='object'||Object.keys(data.words).length>20000||!Object.values(data.words).every(w=>typeof w.word==='string'&&typeof w.meaning==='string'&&typeof w.ipa==='string'))throw Error();return withReviewedSF02Dictionary(data.words as Record<string,DictionaryEntry>)}
   catch{dictionary=undefined;throw Error('词典暂时未加载成功，请重试。')}
  })();
  return dictionary;

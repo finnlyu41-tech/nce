@@ -10,7 +10,7 @@ const versions=(await readdir(pnpm)).filter(n=>/^esbuild@\d+\.\d+\.\d+$/.test(n)
 const {build}=await import(new URL(versions[0]+'/node_modules/esbuild/lib/main.js',pnpm));
 const work=new URL('work/source-fixes-sf01/tests/',root);await mkdir(work,{recursive:true});
 const contents=`export * from './app/source-review-batch1';export * from './app/data/source-review-sf01';export * from './app/textbook-vocabulary';export * as cards from './app/flashcards';export * as progress from './app/progress-file';export {initial} from './app/model';export {originalVocabularyExamples} from './app/vocabulary-examples';export {ieltsFlashcardExamples} from './app/ielts-flashcard-examples';`;
-const baselineHelper=execFileSync('git',['show',record.baseCommit+':studio/app/source-review-batch1.ts'],{cwd:fileURLToPath(root),encoding:'utf8'});
+const baselineHelper="import {withReviewedSF02Associations} from './source-review-sf02';\n"+execFileSync('git',['show',record.baseCommit+':studio/app/source-review-batch1.ts'],{cwd:fileURLToPath(root),encoding:'utf8'}).replace('export function withReviewedSourceAssociations(index:PageIndex):PageIndex{','export function withReviewedSourceAssociations(index:PageIndex):PageIndex{\n index=withReviewedSF02Associations(index);');
 async function bundle(name,baseline=false){
  const output=new URL(name+'.mjs',work);
  await build({stdin:{contents,resolveDir:fileURLToPath(root),loader:'ts'},bundle:true,platform:'node',format:'esm',target:'node22',outfile:fileURLToPath(output),logLevel:'silent',plugins:baseline?[{name:'actual-v34-helper',setup(builder){builder.onLoad({filter:/app\/source-review-batch1\.ts$/},()=>({contents:baselineHelper,loader:'ts'}));}}]:[]});
@@ -36,7 +36,7 @@ check('exact v34 public index and dictionary; evidence agrees with compiled sour
  }
 });
 check('exactly two catalog associations added; every prior source and raw byte object retained',()=>{
- assert.equal(before.entries,3616);assert.equal(before.terms.length,3346);assert.equal(after.entries,3618);assert.equal(after.terms.length,3348);
+ assert.equal(before.entries,3624);assert.equal(before.terms.length,3354);assert.equal(after.entries,3626);assert.equal(after.terms.length,3356);
  const oldIds=new Set(sourceIds(before)),newIds=new Set(sourceIds(after));
  assert.deepEqual([...newIds].filter(id=>!oldIds.has(id)).sort(),record.catalogCounts.addedAssociationIds);
  assert([...oldIds].every(id=>newIds.has(id)));assert.deepEqual(index,original);
@@ -46,7 +46,7 @@ check('exactly two catalog associations added; every prior source and raw byte o
   assert.equal(projected.lessons[id].pages,index.lessons[id].pages);
   assert.equal(projected.lessons[id].vocabulary.pages,index.lessons[id].vocabulary.pages);
   const word=id==='NCE1-51'?'snow':'balcony';
-  assert.deepEqual(projected.lessons[id].vocabulary.words.filter(w=>w.word!==word),index.lessons[id].vocabulary.words);
+  assert.deepEqual(projected.lessons[id].vocabulary.words.filter(w=>w.word!==word),prior.lessons[id].vocabulary.words);
  }
  assert(after.terms.find(t=>t.key==='low').sources.some(s=>s.book==='NCE1'&&s.lesson===103));
  assert(after.terms.find(t=>t.key==='assail').sources.some(s=>s.book==='NCE4'&&s.lesson===9));

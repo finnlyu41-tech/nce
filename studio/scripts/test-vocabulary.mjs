@@ -10,17 +10,20 @@ const mapping=await read('app/data/nce-pages.json');
 const corrections=moduleUrl(stripTypeScriptTypes(await read('app/data/vocabulary-source-corrections.ts')));
 const reviewData=moduleUrl(stripTypeScriptTypes(await read('app/data/source-review-batch1.ts')));
 const printedReviewData=moduleUrl(stripTypeScriptTypes(await read('app/data/source-review-sf01.ts')));
-const reviewSource=(await read('app/source-review-batch1.ts')).replace("'./data/source-review-batch1'",JSON.stringify(reviewData)).replace("'./data/source-review-sf01'",JSON.stringify(printedReviewData)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
+const sf02Data=moduleUrl(stripTypeScriptTypes(await read('app/data/source-review-sf02.ts')));
+const sf02=moduleUrl(stripTypeScriptTypes((await read('app/source-review-sf02.ts')).replace("'./data/source-review-sf02'",JSON.stringify(sf02Data)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`)));
+const {withReviewedSF02Dictionary}=await import(sf02);
+const reviewSource=(await read('app/source-review-batch1.ts')).replace("'./data/source-review-batch1'",JSON.stringify(reviewData)).replace("'./data/source-review-sf01'",JSON.stringify(printedReviewData)).replace("'./source-review-sf02'",JSON.stringify(sf02)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
 const review=moduleUrl(stripTypeScriptTypes(reviewSource));
 const {withReviewedSourceAssociations}=await import(review);
 const source=(await read('app/textbook-vocabulary.ts')).replace("'./model'",JSON.stringify(model)).replace("'./data/vocabulary-source-corrections'",JSON.stringify(corrections)).replace("'./source-review-batch1'",JSON.stringify(review)).replace("import pageMapping from './data/nce-pages.json';",`const pageMapping=${mapping};`);
 const {buildVocabularyCatalog,searchVocabulary,vocabularyPage,vocabularyLetter}=await import(moduleUrl(stripTypeScriptTypes(source)));
 const index=JSON.parse(await read('dist-online/lesson-pages/index.json'));
-const dictionary=JSON.parse(await read('dist-online/language/dictionary.json')).words;
+const dictionary=withReviewedSF02Dictionary(JSON.parse(await read('dist-online/language/dictionary.json')).words);
 const catalog=buildVocabularyCatalog(index);
 assert.equal(catalog.lessons.length,348);
-assert.equal(catalog.entries,3618);
-assert.equal(catalog.terms.length,3348);
+assert.equal(catalog.entries,3626);
+assert.equal(catalog.terms.length,3356);
 assert.equal(catalog.lessons.filter(l=>l.words.length).length,321);
 assert.equal(catalog.lessons.filter(l=>!l.words.length).length,27);
 assert.equal(catalog.lessons.find(l=>l.key==='NCE1-2').words.length,10,'Even lessons keep their own word lists');
@@ -47,7 +50,7 @@ assert(index.lessons['NCE3-19'].vocabulary.words.some(word=>word.word==='withdra
 const alreadyCorrected=structuredClone(index);
 alreadyCorrected.lessons['NCE3-19'].vocabulary.words=alreadyCorrected.lessons['NCE3-19'].vocabulary.words.filter(word=>word.word!=='withdrawn');
 assert.deepEqual(buildVocabularyCatalog(alreadyCorrected),catalog,'An already corrected source remains idempotent');
-for(const [book,lessonCount,entryCount] of [['NCE1',144,906],['NCE2',96,861],['NCE3',60,1059],['NCE4',48,792]]){
+for(const [book,lessonCount,entryCount] of [['NCE1',144,908],['NCE2',96,862],['NCE3',60,1062],['NCE4',48,794]]){
  assert.equal(catalog.lessons.filter(l=>l.book===book).length,lessonCount);
  assert.equal(searchVocabulary(catalog.terms,{book}).reduce((n,w)=>n+w.sources.length,0),entryCount);
  assert(searchVocabulary(catalog.terms,{book}).every(w=>w.sources.every(s=>s.book===book)));
@@ -64,10 +67,10 @@ const alphabetResults='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').flatMap(letter=>sea
 assert.deepEqual(alphabetResults.map(w=>w.key).sort(),catalog.terms.map(w=>w.key).sort(),'A–Z covers every term once');
 const firstPage=vocabularyPage(catalog.terms);
 assert.equal(firstPage.items.length,50);
-assert.equal(firstPage.pages,67);
+assert.equal(firstPage.pages,68);
 const allPages=Array.from({length:firstPage.pages},(_,i)=>vocabularyPage(catalog.terms,i+1).items).flat();
 assert.deepEqual(allPages,catalog.terms,'Pagination neither drops nor repeats terms');
-assert.equal(vocabularyPage(catalog.terms,9999).page,67);
+assert.equal(vocabularyPage(catalog.terms,9999).page,68);
 assert.equal(vocabularyPage(catalog.terms,-1).page,1);
 assert.equal(vocabularyPage(catalog.terms,NaN).page,1);
 assert.deepEqual(vocabularyPage([],99),{page:1,pages:1,items:[]});
@@ -85,4 +88,4 @@ for(const mutate of [
 ]){
  const changed=structuredClone(index);mutate(changed);assert.throws(()=>buildVocabularyCatalog(changed));
 }
-console.log(`Validated ${catalog.lessons.length} lessons, ${catalog.entries} corrected source associations, ${catalog.terms.length} indexed terms; raw 3,615 entries retained, one printed inflection removed, two existing-word sources and two readable printed heads added; A–Z/Chinese filters, links, pagination and malformed data handling.`);
+console.log('Validated 348 lessons, 3,626 source associations, 3,356 indexed terms; raw 3,615 rows retained, one printed inflection removed, legacy two, SF01 two and SF02 eight sources added; two whole-phrase dictionary entries, A–Z/Chinese filters, links, pagination and malformed data handling.');

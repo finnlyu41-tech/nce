@@ -30,7 +30,7 @@ const mocks={
 const output=new URL('work/flashcards/source-components-test.mjs',root);
 await mkdir(new URL('work/flashcards/',root),{recursive:true});
 await build({
- stdin:{contents:"export {TextbookVocabularyBrowser} from './app/textbook-vocabulary-ui.tsx';export {WordLookupProvider,WordLookupButton,WordText} from './app/word-lookup.tsx';export {initial} from './app/model.ts';export {ieltsFlashcardExamples,ieltsFlashcardDescription} from './app/ielts-flashcard-examples.ts';export {findWord as actualFindWord} from './app/language';export {reviewedHeadwordForForm,resolveReviewedLookupEntry} from './app/reviewed-word-forms';export {buildVocabularyCatalog} from './app/textbook-vocabulary';export {enrollFlashcard as actualEnrollFlashcard} from './app/flashcards';export {originalVocabularyExamples,examplesForMeaning,reviewedTeachingDefinition,reviewedTeachingSources} from './app/vocabulary-examples';export {harness} from 'test:harness';",resolveDir:fileURLToPath(root),sourcefile:'source-test-entry.ts',loader:'ts'},
+ stdin:{contents:"export {TextbookVocabularyBrowser} from './app/textbook-vocabulary-ui.tsx';export {WordLookupProvider,WordLookupButton,WordText} from './app/word-lookup.tsx';export {initial} from './app/model.ts';export {ieltsFlashcardExamples,ieltsFlashcardDescription} from './app/ielts-flashcard-examples.ts';export {findWord as actualFindWord} from './app/language';export {reviewedHeadwordForForm,resolveReviewedLookupEntry} from './app/reviewed-word-forms';export {withReviewedSF02Dictionary} from './app/source-review-sf02';export {buildVocabularyCatalog} from './app/textbook-vocabulary';export {enrollFlashcard as actualEnrollFlashcard} from './app/flashcards';export {originalVocabularyExamples,examplesForMeaning,reviewedTeachingDefinition,reviewedTeachingSources} from './app/vocabulary-examples';export {harness} from 'test:harness';",resolveDir:fileURLToPath(root),sourcefile:'source-test-entry.ts',loader:'ts'},
  bundle:true,platform:'node',format:'esm',target:'node22',jsx:'automatic',outfile:fileURLToPath(output),logLevel:'silent',
  plugins:[{name:'source-component-harness',setup(build){
   build.onResolve({filter:/.*/},args=>Object.hasOwn(mocks,args.path)?{path:args.path,namespace:'source-check'}:args.path.endsWith('.css')?{path:args.path,namespace:'empty-css'}:undefined);
@@ -38,7 +38,7 @@ await build({
   build.onLoad({filter:/.*/,namespace:'empty-css'},()=>({contents:'',loader:'js'}));
  }}],
 });
-const {TextbookVocabularyBrowser,WordLookupProvider,WordLookupButton,WordText,initial,ieltsFlashcardExamples,ieltsFlashcardDescription,actualFindWord,reviewedHeadwordForForm,resolveReviewedLookupEntry,buildVocabularyCatalog,actualEnrollFlashcard,originalVocabularyExamples,examplesForMeaning,reviewedTeachingDefinition,reviewedTeachingSources,harness:h}=await import(output.href);
+const {TextbookVocabularyBrowser,WordLookupProvider,WordLookupButton,WordText,initial,ieltsFlashcardExamples,ieltsFlashcardDescription,actualFindWord,reviewedHeadwordForForm,resolveReviewedLookupEntry,withReviewedSF02Dictionary,buildVocabularyCatalog,actualEnrollFlashcard,originalVocabularyExamples,examplesForMeaning,reviewedTeachingDefinition,reviewedTeachingSources,harness:h}=await import(output.href);
 const reset=(states,route)=>Object.assign(h,{states,cursor:0,refs:[],refCursor:0,writes:[],route,enrolledChecks:[],speechCalls:[],loadPages:undefined,loadDictionary:undefined,findWord:actualFindWord,open:()=>{}});
 function elements(node){if(!node||typeof node!=='object')return [];if(Array.isArray(node))return node.flatMap(elements);return [node,...elements(node.props?.children)]}
 const find=(tree,predicate)=>{const item=elements(tree).find(predicate);assert(item,'Expected component element missing');return item};
@@ -236,7 +236,7 @@ assert.equal(ieltsFlashcardExamples.length,12);assert(ieltsFlashcardDescription.
 
 // Use the real packaged dictionary and validated source index. In particular,
 // carpets has no dictionary entry; cases and dogs have coarse plural entries.
-const realDictionary=JSON.parse(await readFile(new URL('dist-online/language/dictionary.json',root),'utf8')).words;
+const realDictionary=withReviewedSF02Dictionary(JSON.parse(await readFile(new URL('dist-online/language/dictionary.json',root),'utf8')).words);
 const realPages=JSON.parse(await readFile(new URL('dist-online/lesson-pages/index.json',root),'utf8'));
 const realCatalog=buildVocabularyCatalog(realPages),source14={book:'NCE1',lesson:14};
 assert.equal(actualFindWord(realDictionary,'carpets'),undefined);
@@ -248,6 +248,22 @@ async function openRealLookup(selected,onAdd,route={}){
  h.loadDictionary=async()=>realDictionary;h.loadPages=async()=>realPages;
  await renderLookup(onAdd).props.value(selected);
  return renderLookup(onAdd);
+}
+// SF02 needs no template/UI rewrite: existing full-phrase rows and lookup
+// callbacks accept literal meanings and intentionally empty IPA.
+for(const [word,book,lesson] of [['bargain hunter','NCE3',34],['a little','NCE1',109]]){
+ const entry=realDictionary[word],sources=[{kind:'nce',book,lesson}];assert(entry);assert.equal(entry.ipa,'');
+ for(const tab of ['book','index']){
+  reset([realCatalog,'',0,realDictionary,false,false,0,null],{view:'words',book,lesson:tab==='book'?lesson:undefined,query:tab==='index'?word:undefined,tab});h.enrolled=false;
+  let added;const tree=TextbookVocabularyBrowser({state,onAdd:record=>{added=record}});
+  const row=find(tree,node=>typeof node.type==='function'&&node.type.name==='VocabularyRow'&&node.props.word===word);
+  const rendered=row.type(row.props);assert(!elements(rendered).some(node=>node.props?.className==='vocabulary-ipa'));
+  const button=find(rendered,node=>node.type==='button'&&node.props.className?.includes('vocabulary-enroll'));
+  assert.equal(button.props.disabled,false);button.props.onClick();assert.equal(added.word,word);assert.equal(added.meaning,entry.meaning);assert.deepEqual(added.sources,sources);
+ }
+ let added;const lookup=await openRealLookup({word,example:'',sources},record=>{added=record});
+ find(lookup,node=>node.type==='button'&&node.props.className==='btn').props.onClick();assert.equal(added.word,word);assert.equal(added.meaning,entry.meaning);assert.deepEqual(added.sources,sources);
+ assert.equal(actualFindWord(realDictionary,word.toUpperCase()),entry);
 }
 // Every registered source target, including explicitly recorded grammar and
 // editorial normalizations, must work through both real component add callbacks. Source
