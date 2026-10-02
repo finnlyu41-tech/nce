@@ -1,0 +1,398 @@
+[
+  {
+    "course": "nce1-25",
+    "goal": "首次用a/an介绍一件物品，再用the或it问及说明其位置。",
+    "questions": [
+      {
+        "id": "diagnostic-n25-introduce-item",
+        "stage": "diagnostic",
+        "context": "临时摄影间刚布置好，你向尚未见过房间的伙伴首次介绍：房间内有一台相机。camera 相机；room 房间。",
+        "prompt": "说“房间里有一台相机”，用There起句，提到a/an与in the room。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "diagnostic-n25-ask-location",
+        "stage": "diagnostic",
+        "context": "借用的那台相机已确定是哪一台，但你不知道现在放在哪里。直接向保管员询问。camera 相机。",
+        "prompt": "问“那台相机在哪里”，用the camera指该物。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "diagnostic-n25-singular-location",
+        "stage": "diagnostic",
+        "context": "那台相机已放好并由保管员确认：在桌子表面上。用the camera指这台相机。camera 相机；table 桌子。",
+        "prompt": "说“那台相机在桌子上”，用the camera作主语。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n25-introduce-item",
+        "stage": "guided",
+        "context": "合租书房里只有一盏灯。伙伴还没进书房，你首次说明桌面上有这盏灯。lamp 灯；desk 书桌；on 在表面上。",
+        "prompt": "按There is + a/an +物品+位置写“书桌上有一盏灯”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n25-ask-location",
+        "stage": "guided",
+        "context": "你和伙伴都知道正在找同一盏灯。你尚不知位置，在这一句用it指这盏灯。it 它。",
+        "prompt": "按Where + is + it询问“它在哪里”。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n25-singular-location",
+        "stage": "guided",
+        "context": "刚提到的灯已确认在房间右边，本句用it指这盏灯。on the right 在右边。",
+        "prompt": "按It is +位置说明“它在右边”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n25-introduce-item",
+        "stage": "independent",
+        "context": "道具管理员问储物间是否还有容器。你刚检查：房间里有一个空盒子，之前对方不知道这个盒子。empty 空的；box 盒子；room 房间。",
+        "prompt": "首次向对方介绍“房间里有一个空盒子”，以There起句；用empty描述box，位置用in the room。写一个现在时肯定陈述，不加其他信息；可用缩写。句末可无标点或只有一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n25-ask-location",
+        "stage": "independent",
+        "context": "活动室只有一把双方已知道的扶手椅；你从走廊直接问伙伴它现在的位置，不猜答案。armchair 扶手椅。",
+        "prompt": "询问“那把扶手椅在哪里”，用the armchair指该物。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n25-singular-location",
+        "stage": "independent",
+        "context": "刚介绍过的空盒子现在被放在书桌下方，不接触桌面；用the box指同一个盒子。box 盒子；desk 书桌；under 在下方。",
+        "prompt": "说“那个盒子在书桌下面”，用the box作主语。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n25-introduce-item",
+        "stage": "repair",
+        "context": "展览小组首次向访客说明新的休息角：窗边有一把扶手椅。armchair 扶手椅；near the window 窗边。",
+        "prompt": "用There起句介绍“窗边有一把扶手椅”，不增加数量词或其他位置。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n25-ask-location",
+        "stage": "repair",
+        "context": "录音间的那个架子已由双方指定；你要问现在在哪里，因为房间重新布置过。shelf 架子。",
+        "prompt": "问“那个架子在哪里”，用the shelf指双方已指定的架子。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n25-singular-location",
+        "stage": "repair",
+        "context": "双方已确认的扶手椅就在窗边，没在门边；本句用it指这把椅子。near the window 窗边；near the door 门边。",
+        "prompt": "用It作主语说明“它在窗边”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n25-introduce-item",
+        "stage": "review-a",
+        "context": "维修接待间里新增了一个架子，伙伴尚不知道这项布置。你首次说明门边有一个架子。shelf 架子；near the door 门边。",
+        "prompt": "用There起句说“门边有一个架子”，只介绍这一件新物品。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n25-ask-location",
+        "stage": "review-a",
+        "context": "你和搭档正在找已确认的唯一一个瓶子。现在不知道位置，在本句只用it指瓶子，不写名词。",
+        "prompt": "直接问“它在哪里”，只用Where、be和it。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n25-singular-location",
+        "stage": "review-a",
+        "context": "你刚摆好那张桌子并确认它在房间正中间，不在左边或右边。table 桌子；in the middle of the room 在房间中间。",
+        "prompt": "用the table作主语说明“那张桌子在房间中间”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n25-introduce-item",
+        "stage": "review-b",
+        "context": "收拾手工材料时，你第一次向搭档提到桌面上有一把小刀。knife 小刀；table 桌子；on 在表面上。本题只陈述布置，不要求使用小刀。",
+        "prompt": "用There起句首次说明“桌子上有一把小刀”。只用knife和on the table。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n25-ask-location",
+        "stage": "review-b",
+        "context": "比赛用的那只杯子已经贴好专属编号，双方知道是哪只。你问志愿者现在放在哪里。cup 杯子。",
+        "prompt": "询问“那只杯子在哪里”，明确用the cup，不补其他信息。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n25-singular-location",
+        "stage": "review-b",
+        "context": "已编号的那个杯子在橱柜内部的储物格中；本句it只指该杯子。in the cupboard表示在橱柜里面。",
+        "prompt": "用It作主语说明“它在橱柜里面”，只用in the cupboard作位置。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      }
+    ]
+  },
+  {
+    "course": "nce1-27",
+    "goal": "用There are some首次介绍几件物品；用Where are询问已知复数组，并用the/they说明位置。",
+    "questions": [
+      {
+        "id": "diagnostic-n27-plural-existence",
+        "stage": "diagnostic",
+        "context": "社区画室新开了收纳区，你首次向来帮忙的人说明架子表面上有一些杯子。cups 杯子（复数）；shelf 架子。",
+        "prompt": "用There起句，首次说“架子上有一些杯子”，用some，不写数量。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "diagnostic-n27-plural-question",
+        "stage": "diagnostic",
+        "context": "那套杯子已归活动组所有，双方都知道是哪套；你不知道当前放在哪儿。cups 杯子（复数）。",
+        "prompt": "用the cups指题设已确定的这组物品，询问它们现在在哪里；以Where开头。只写一个以英文问号?结尾的直接位置问句，不加please、时间副词、称呼、其他信息或回答；本题be写完整形式，不使用缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "diagnostic-n27-plural-location",
+        "stage": "diagnostic",
+        "context": "已指定的那套杯子确实在架子表面上；不要说桌子。cups 杯子（复数）；on the shelf 在架子上。",
+        "prompt": "用the cups作主语说“那些杯子在架子上”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n27-plural-existence",
+        "stage": "guided",
+        "context": "旅行策划室里新增几幅地图，伙伴尚不知道。墙面上有一些地图。maps 地图（复数）；wall 墙。",
+        "prompt": "按There are + some +复数物品+位置，首次说明“墙上有一些地图”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n27-plural-question",
+        "stage": "guided",
+        "context": "已确认的一套地图刚被重新收好。你不知道位置，用they指这些地图。",
+        "prompt": "用they指题设已确定的这组物品，询问它们现在在哪里；以Where开头。提示：Where + are + they。只写一个以英文问号?结尾的直接位置问句，不加please、时间副词、称呼、其他信息或回答；本题be写完整形式，不使用缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n27-plural-location",
+        "stage": "guided",
+        "context": "已知的那套地图确认在墙上，本句they只指这些地图。on the wall 在墙上。",
+        "prompt": "按They are +位置说明“它们在墙上”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n27-plural-existence",
+        "stage": "independent",
+        "context": "手工课前你首次报告桌子下面有一些空盒子。boxes 盒子（复数）；table 桌子；under 在下面。",
+        "prompt": "用There起句首次介绍“桌子下面有一些盒子”，只用some boxes，不加empty。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n27-plural-question",
+        "stage": "independent",
+        "context": "双方知道是哪批工具；你在电话里向负责人问这批工具现在放在哪里。tools 工具（复数）。",
+        "prompt": "用the tools指题设已确定的这组物品，询问它们现在在哪里；以Where开头。只写一个以英文问号?结尾的直接位置问句，不加please、时间副词、称呼、其他信息或回答；本题be写完整形式，不使用缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n27-plural-location",
+        "stage": "independent",
+        "context": "维修小组刚确认那批工具在门边，本句the tools指这批工具。near the door 门边。",
+        "prompt": "用the tools作主语说明“那些工具在门边”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n27-plural-existence",
+        "stage": "repair",
+        "context": "小组第一次参观修复工作室，你介绍门边有一些工具。tools 工具（复数）；near the door 门边。",
+        "prompt": "用There起句首次说明“门边有一些工具”，只用some tools。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n27-plural-question",
+        "stage": "repair",
+        "context": "那批空盒子都已编号，但你还没见到放置位置。boxes 盒子（复数）。",
+        "prompt": "用the boxes指题设已确定的这组物品，询问它们现在在哪里；以Where开头。只写一个以英文问号?结尾的直接位置问句，不加please、时间副词、称呼、其他信息或回答；本题be写完整形式，不使用缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n27-plural-location",
+        "stage": "repair",
+        "context": "已编号的那批盒子在桌子下面。用they指这些盒子。under the table 桌子下面。",
+        "prompt": "用They作主语说明“它们在桌子下面”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n27-plural-existence",
+        "stage": "review-a",
+        "context": "你刚收到志愿活动的布置清单，首次向同事介绍橱柜里面有一些瓶子。bottles 瓶子（复数）；in the cupboard 橱柜里面。",
+        "prompt": "用There起句首次说“橱柜里面有一些瓶子”，只用some bottles。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n27-plural-question",
+        "stage": "review-a",
+        "context": "归还的那几把椅子已经指定；你问新值班的伙伴位置，当前不知道答案。本句they只指这些椅子。",
+        "prompt": "用they指题设已确定的这组物品，询问它们现在在哪里；以Where开头。只写一个以英文问号?结尾的直接位置问句，不加please、时间副词、称呼、其他信息或回答；本题be写完整形式，不使用缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n27-plural-location",
+        "stage": "review-a",
+        "context": "那套椅子确认在窗边，用the chairs指该套椅子。near the window 窗边。",
+        "prompt": "用the chairs作主语说明“那些椅子在窗边”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n27-plural-existence",
+        "stage": "review-b",
+        "context": "新借用的休息室里，窗边放有几把椅子。你向未看过房间的搭档首次介绍。chairs 椅子（复数）；near the window 窗边。",
+        "prompt": "用There起句首次说明“窗边有一些椅子”，不写具体数量，只用some chairs。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n27-plural-question",
+        "stage": "review-b",
+        "context": "你和伙伴说的是同一套编号瓶子，需知道现在存放的地方。bottles 瓶子（复数）。",
+        "prompt": "用the bottles指题设已确定的这组物品，询问它们现在在哪里；以Where开头。只写一个以英文问号?结尾的直接位置问句，不加please、时间副词、称呼、其他信息或回答；本题be写完整形式，不使用缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n27-plural-location",
+        "stage": "review-b",
+        "context": "伙伴确认那组瓶子全在橱柜里面；本句they指这些瓶子。in the cupboard 橱柜里面。",
+        "prompt": "用They作主语说明“它们在橱柜里面”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      }
+    ]
+  },
+  {
+    "course": "nce1-29",
+    "goal": "用What must…do?问必须完成的任务；用must加原形说明义务；用动词原形给出明确指令。",
+    "questions": [
+      {
+        "id": "diagnostic-n29-must-question",
+        "stage": "diagnostic",
+        "context": "排练负责人已宣布你必须做一个准备任务，但没说任务内容。你直接询问自己必须做什么。I 我。",
+        "prompt": "用I作主语问“我必须做什么”；只用what、must、I和do。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "diagnostic-n29-must-action",
+        "stage": "diagnostic",
+        "context": "手工活动规定：你必须打开那个盒子，才能核对材料；本题you指听话者。open 打开；box 盒子。",
+        "prompt": "用You作主语说“你必须打开那个盒子”，保留must，对象用the box。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "diagnostic-n29-imperative-action",
+        "stage": "diagnostic",
+        "context": "伙伴正在材料桌旁等指令。你直接要求对方打开那个盒子，不是描述他正在开，也不询问。open 打开；box 盒子。",
+        "prompt": "以动词原形起句发出“打开那个盒子”的直接指令；只用open the box，不加主语、must或please。只写规定的直接指令。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n29-must-question",
+        "stage": "guided",
+        "context": "共同整理活动已规定我们必须完成任务，但内容还没说明。we指你与伙伴这一组。",
+        "prompt": "按What + must + we + do问“我们必须做什么”。只写一个以英文问号?结尾的直接问句，不加please、其他信息或回答；允许保持相同意思的缩写。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n29-must-action",
+        "stage": "guided",
+        "context": "规则规定男性助手必须关闭那扇窗；he只指助手。shut 关闭；window 窗。",
+        "prompt": "按He + must +动词原形+对象说“他必须关闭那扇窗”。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "guided-n29-imperative-action",
+        "stage": "guided",
+        "context": "伙伴准备离开整理区。你要直接要求他把那扇门关上；不是开门。shut 关闭；door 门。",
+        "prompt": "按Shut + the door写直接指令；不加主语、must或please。只写规定的直接指令。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n29-must-question",
+        "stage": "independent",
+        "context": "负责布展的男性同事已被分配强制任务，但你尚不知道内容；he明确只指这位同事。",
+        "prompt": "用he指题设人物，询问这个人物必须做什么。保留must表达明确的义务，问的是任务内容；不询问当前动作，也不猜任务。只写一个以英文问号?结尾的直接问句，不加时间副词、称呼、please、其他信息或回答。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n29-must-action",
+        "stage": "independent",
+        "context": "你与伙伴这一组被明确要求把那些书放到架子上；we指这一组。put 放；books 书（复数）；on the shelf 架子上。",
+        "prompt": "用We作主语说明“我们必须把那些书放到架子上”，保留must，用the books。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "independent-n29-imperative-action",
+        "stage": "independent",
+        "context": "搭档等你指定下一步：将那些衣服放进橱柜里面。put 放；clothes 衣服（复数）；in the cupboard 橱柜里面。",
+        "prompt": "以动词原形起句发出“把那些衣服放进橱柜”的直接指令；用the clothes和in the cupboard，不加主语、must或please。只写规定的直接指令。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n29-must-question",
+        "stage": "repair",
+        "context": "两名志愿者必须完成一项任务，但内容尚未通知你；they只指那两名志愿者。",
+        "prompt": "用they指题设人物，询问这个人物必须做什么。保留must表达明确的义务，问的是任务内容；不询问当前动作，也不猜任务。只写一个以英文问号?结尾的直接问句，不加时间副词、称呼、please、其他信息或回答。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n29-must-action",
+        "stage": "repair",
+        "context": "女志愿者已被明确要求清扫那片地板；she只指该志愿者。sweep 扫；floor 地板。",
+        "prompt": "用She作主语说“她必须扫地板”，保留must，宾语用the floor。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "repair-n29-imperative-action",
+        "stage": "repair",
+        "context": "伙伴刚完成擦桌子。下一步必须扫地板。你直接给出下一步指令，明确保留“然后”。then 然后；sweep 扫；floor 地板。",
+        "prompt": "以Then起句发出“然后扫地板”的直接指令；只用Then、sweep和the floor，不加主语、must或please。只写规定的直接指令。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n29-must-question",
+        "stage": "review-a",
+        "context": "伙伴Nora明确以女性身份介绍，她有必须完成的任务，但你不知道任务是什么；本句she只指Nora。",
+        "prompt": "用she指题设人物，询问这个人物必须做什么。保留must表达明确的义务，问的是任务内容；不询问当前动作，也不猜任务。只写一个以英文问号?结尾的直接问句，不加时间副词、称呼、please、其他信息或回答。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n29-must-action",
+        "stage": "review-a",
+        "context": "这一对工作人员必须把那些空盒子放到桌子下面；they只指两位工作人员。put 放；boxes 盒子（复数）；under the table 桌子下面。",
+        "prompt": "用They作主语陈述“他们必须把那些盒子放到桌子下面”，保留must，用the boxes，不加empty。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-a-n29-imperative-action",
+        "stage": "review-a",
+        "context": "搬运安排已经确定：先打开那扇门，然后把那些盒子放到桌子上。open 打开；put 放；boxes 盒子（复数）；door 门；table 桌子。",
+        "prompt": "用两个动词原形指令，以and then连接，按给定次序写“打开那扇门，然后把那些盒子放到桌子上”。用the door、the boxes、on the table；不加主语、must或please。只写规定的直接指令。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n29-must-question",
+        "stage": "review-b",
+        "context": "你直接向搭档询问对方被规则要求做的任务内容。不是问你自己的任务，也不知道答案。you 你。",
+        "prompt": "用you指题设人物，询问这个人物必须做什么。保留must表达明确的义务，问的是任务内容；不询问当前动作，也不猜任务。只写一个以英文问号?结尾的直接问句，不加时间副词、称呼、please、其他信息或回答。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n29-must-action",
+        "stage": "review-b",
+        "context": "你扮演被分配准备任务的人；规则明确要求你本人必须铺好那张床。make 铺好（床）；bed 床；I 我。",
+        "prompt": "用I作主语说“我必须铺床”，保留must，只用make the bed作为动作。写一个现在时肯定陈述；不补其他信息，可用明确对应的缩写。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      },
+      {
+        "id": "review-b-n29-imperative-action",
+        "stage": "review-b",
+        "context": "共享卧室的虚构任务：你直接要求搭档铺好那张床，礼貌表达本题保留please。make 铺好（床）；bed 床。",
+        "prompt": "发出“请铺床”的直接指令；用please、make和the bed。please可置句首，或置句尾并在前面保留逗号；不加主语或must。只写规定的直接指令。句末可不写标点或只写一个英文句号.，不用问号或感叹号。",
+        "kind": "input"
+      }
+    ]
+  }
+]

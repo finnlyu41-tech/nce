@@ -1,0 +1,5470 @@
+{
+  "review_type": "independent_final_prompt_only_blind_review",
+  "conclusion": "修复后原470用例全匹配；六道n27首次复数存在题另加24个局部反例后494/494全匹配。54首答未改，101合理等义均支持，339反例均拒绝。本次有限句型范围内无剩余黑箱不匹配。",
+  "blind_protocol": {
+    "allowed_source": "studio/docs/parallel-nce1-025-035-proof/blind-prompts-final-025-029.json",
+    "forbidden_sources_read": false,
+    "first_answers_frozen_before_challenges_and_probe": true,
+    "first_answer_count": 54,
+    "probe_source_read": false,
+    "lesson_contract_old_cases_reports_or_answer_keys_read": false,
+    "user_records_recordings_credentials_accessed": false,
+    "source_edits_commit_push_performed": false
+  },
+  "cases_path": "studio/docs/parallel-nce1-025-035-proof/resume-blind-cases-025-029.json",
+  "cases_sha256": "b52e09a532697bf33a01f7a98bca09694c470efe167e976ebe3aecdd75f0584c",
+  "probe_command": "node studio/tests/parallel-nce1-025-035-probe.mjs studio/docs/parallel-nce1-025-035-proof/resume-blind-cases-025-029.json",
+  "initial_run": {
+    "summary": {
+      "total": 420,
+      "matched": 418,
+      "mismatches": 2,
+      "by_role": {
+        "first": {
+          "total": 54,
+          "matched": 54
+        },
+        "equivalent": {
+          "total": 84,
+          "matched": 82
+        },
+        "counterexample": {
+          "total": 282,
+          "matched": 282
+        }
+      }
+    },
+    "mismatches": [
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There are some chairs by the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "窗边自然表达by；满足some与物品限制。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There are some tools by the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "門边自然表达by；题面只限定some tools，未限定near。",
+        "correct": false
+      }
+    ]
+  },
+  "expanded_run": {
+    "summary": {
+      "total": 470,
+      "matched": 454,
+      "mismatches": 16,
+      "by_role": {
+        "first": {
+          "total": 54,
+          "matched": 54
+        },
+        "equivalent": {
+          "total": 101,
+          "matched": 85
+        },
+        "counterexample": {
+          "total": 315,
+          "matched": 315
+        }
+      }
+    },
+    "mismatches": [
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There are some chairs by the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "窗边自然表达by；满足some与物品限制。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There are some tools by the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "門边自然表达by；题面只限定some tools，未限定near。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There're some tools by the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写与自然门边表达组合；若书面支持有限应说明边界，不直接称自然英语错误。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There're some chairs by the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写与自然窗边表达组合；题面承诺明确对应缩写。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There're some tools near the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写；near保持题面所给位置词。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There're some chairs near the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写；near保持题面所给位置词。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "diagnostic-n27-plural-existence",
+        "answer": "There're some cups on the shelf.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "diagnostic-n27-plural-existence",
+        "answer": "There’re some cups on the shelf.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "guided-n27-plural-existence",
+        "answer": "There're some maps on the wall.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "guided-n27-plural-existence",
+        "answer": "There’re some maps on the wall.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "independent-n27-plural-existence",
+        "answer": "There're some boxes under the table.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "independent-n27-plural-existence",
+        "answer": "There’re some boxes under the table.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There’re some tools near the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-a-n27-plural-existence",
+        "answer": "There're some bottles in the cupboard.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-a-n27-plural-existence",
+        "answer": "There’re some bottles in the cupboard.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": false
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There’re some chairs near the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": false
+      }
+    ]
+  },
+  "per_question": [
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "frozen_first_answer": "There is a camera in the room.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "frozen_first_answer": "Where is the camera?",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "frozen_first_answer": "The camera is on the table.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "frozen_first_answer": "There is a lamp on the desk.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "frozen_first_answer": "Where is it?",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "frozen_first_answer": "It is on the right.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "frozen_first_answer": "There is an empty box in the room.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "frozen_first_answer": "Where is the armchair?",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "frozen_first_answer": "The box is under the desk.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "frozen_first_answer": "There is an armchair near the window.",
+      "first_accepted": true,
+      "equivalent_count": 4,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "frozen_first_answer": "Where is the shelf?",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "frozen_first_answer": "It is near the window.",
+      "first_accepted": true,
+      "equivalent_count": 3,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "frozen_first_answer": "There is a shelf near the door.",
+      "first_accepted": true,
+      "equivalent_count": 3,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "frozen_first_answer": "Where is it?",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "frozen_first_answer": "The table is in the middle of the room.",
+      "first_accepted": true,
+      "equivalent_count": 5,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "frozen_first_answer": "There is a knife on the table.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "frozen_first_answer": "Where is the cup?",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "frozen_first_answer": "It is in the cupboard.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "frozen_first_answer": "There are some cups on the shelf.",
+      "first_accepted": true,
+      "equivalent_count": 3,
+      "counterexample_count": 14,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "frozen_first_answer": "Where are the cups?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "frozen_first_answer": "The cups are on the shelf.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "frozen_first_answer": "There are some maps on the wall.",
+      "first_accepted": true,
+      "equivalent_count": 3,
+      "counterexample_count": 14,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "frozen_first_answer": "Where are they?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "frozen_first_answer": "They are on the wall.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "frozen_first_answer": "There are some boxes under the table.",
+      "first_accepted": true,
+      "equivalent_count": 3,
+      "counterexample_count": 14,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "frozen_first_answer": "Where are the tools?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "frozen_first_answer": "The tools are near the door.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "frozen_first_answer": "There are some tools near the door.",
+      "first_accepted": true,
+      "equivalent_count": 5,
+      "counterexample_count": 14,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "frozen_first_answer": "Where are the boxes?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "frozen_first_answer": "They are under the table.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "frozen_first_answer": "There are some bottles in the cupboard.",
+      "first_accepted": true,
+      "equivalent_count": 3,
+      "counterexample_count": 14,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "frozen_first_answer": "Where are they?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "frozen_first_answer": "The chairs are near the window.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "frozen_first_answer": "There are some chairs near the window.",
+      "first_accepted": true,
+      "equivalent_count": 5,
+      "counterexample_count": 14,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "frozen_first_answer": "Where are the bottles?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "frozen_first_answer": "They are in the cupboard.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "frozen_first_answer": "What must I do?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "frozen_first_answer": "You must open the box.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "frozen_first_answer": "Open the box.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "frozen_first_answer": "What must we do?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "frozen_first_answer": "He must shut the window.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "frozen_first_answer": "Shut the door.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "frozen_first_answer": "What must he do?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "frozen_first_answer": "We must put the books on the shelf.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "frozen_first_answer": "Put the clothes in the cupboard.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "frozen_first_answer": "What must they do?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "frozen_first_answer": "She must sweep the floor.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "frozen_first_answer": "Then sweep the floor.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "frozen_first_answer": "What must she do?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "frozen_first_answer": "They must put the boxes under the table.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "frozen_first_answer": "Open the door and then put the boxes on the table.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "frozen_first_answer": "What must you do?",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 6,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "frozen_first_answer": "I must make the bed.",
+      "first_accepted": true,
+      "equivalent_count": 1,
+      "counterexample_count": 5,
+      "mismatches": []
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "frozen_first_answer": "Please make the bed.",
+      "first_accepted": true,
+      "equivalent_count": 2,
+      "counterexample_count": 5,
+      "mismatches": []
+    }
+  ],
+  "ambiguities_and_support_boundaries": [
+    {
+      "severity": "resolved_by_black_box_recheck",
+      "type": "natural_position_equivalence",
+      "questions": [
+        "repair-n27-plural-existence",
+        "review-b-n27-plural-existence"
+      ],
+      "finding": "There are some tools by the door. 和 There are some chairs by the window. 表达题设门边/窗边且满足some及物品限制，当前不支持。题面未要求near为唯一词汇，不能据此直接称自然英文错误。",
+      "previous_severity": "requires_resolution",
+      "resolution": "修复后的相同用例均支持，并且新增24个针对缩写组合的否定/单数be/错误位置/问号反例全部拒绝。旧失败证据保留。"
+    },
+    {
+      "severity": "resolved_by_black_box_recheck",
+      "type": "contraction_promise",
+      "questions": [
+        "diagnostic-n27-plural-existence",
+        "guided-n27-plural-existence",
+        "independent-n27-plural-existence",
+        "repair-n27-plural-existence",
+        "review-a-n27-plural-existence",
+        "review-b-n27-plural-existence"
+      ],
+      "finding": "六道首次复数存在介绍均承诺明确对应缩写，但There're与There’re两种引号形式均未支持。There’re用于口语表达且正式书面较少见，产品可支持或明确要求全写；不可将未支持直接等同于自然英语错误。缩写与by组合亦有两个失败。",
+      "previous_severity": "requires_resolution",
+      "resolution": "修复后的相同用例均支持，并且新增24个针对缩写组合的否定/单数be/错误位置/问号反例全部拒绝。旧失败证据保留。"
+    },
+    {
+      "severity": "scope_limit",
+      "type": "lexical_constraints",
+      "finding": "some boxes不加empty、the boxes不加empty、must保留、指定名词/代词及指定介词短语在题面明确；自然英语改写如不同代词、过去时、感叹号可自然成立但违反本题目标约束。拒绝只能解释为本题未满足条件。"
+    },
+    {
+      "severity": "scope_limit",
+      "type": "faded_scaffolding",
+      "finding": "independent/repair/review一般没有完整There is/are或What must ... do?模板；但撤提示仍给定主语、must、动作/位置词。repair-n29-imperative-action按顺序提供Then、sweep、the floor并要求Then起句，review-a-n29-imperative-action给两个动作、宾语、and then和次序，review-b-n29-imperative-action给please/make/the bed及位置许可：属于受限重组，不能当自由生成证据。diagnostic-n29-imperative-action的“只用open the box”本身完整给出目标动作句，诊断独立性有限。"
+    },
+    {
+      "severity": "informational",
+      "type": "supported_natural_combinations",
+      "finding": "There's an armchair by the window.、It's by the window.、There's a shelf by the door.以及the table's/in the centre/center of the room均通过，说明自然等义支持并非完全缺失。"
+    },
+    {
+      "severity": "scope_limit",
+      "type": "coverage_quality",
+      "finding": "许多问句在明确词汇、指称及must限制下没有额外词汇同义空间，逐题等义包含大小写或可省句号。另已加自然缩写/位置同义。基础反例有少数同时带语法错误或拼写连接错误，扩展用例加入自然否定、clothes on the cupboard及outside the room，结论不依赖这些较弱样本。"
+    }
+  ],
+  "remaining_blockers": [],
+  "validity_limits": [
+    "有意限定句型迁移；开放表达需要人工判断。",
+    "本次仅题面与合成输入黑箱审查，不证明真实听说能力、自由表达掌握或长期学习效果。",
+    "review时间只能视为合成测试阶段标识，不是真实间隔学习的效果证据。"
+  ],
+  "full_results": [
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There is a camera in the room.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "Where is the camera?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera is on the table.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There is a lamp on the desk.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "Where is it?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It is on the right.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There is an empty box in the room.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "Where is the armchair?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box is under the desk.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There is an armchair near the window.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "Where is the shelf?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It is near the window.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There is a shelf near the door.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "Where is it?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table is in the middle of the room.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There is a knife on the table.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "Where is the cup?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It is in the cupboard.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There are some cups on the shelf.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "Where are the cups?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "answer": "The cups are on the shelf.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There are some maps on the wall.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "Where are they?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They are on the wall.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There are some boxes under the table.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "Where are the tools?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools are near the door.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There are some tools near the door.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "Where are the boxes?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They are under the table.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There are some bottles in the cupboard.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "Where are they?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs are near the window.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There are some chairs near the window.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "Where are the bottles?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They are in the cupboard.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "What must I do?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "answer": "You must open the box.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "answer": "Open the box.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "What must we do?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "answer": "He must shut the window.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "answer": "Shut the door.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "What must he do?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "answer": "We must put the books on the shelf.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "Put the clothes in the cupboard.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "What must they do?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "answer": "She must sweep the floor.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "answer": "Then sweep the floor.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "What must she do?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "answer": "They must put the boxes under the table.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "Open the door and then put the boxes on the table.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "What must you do?",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "answer": "I must make the bed.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "Please make the bed.",
+      "expected": true,
+      "role": "first",
+      "reason": "仅由最终题面独立推导；首答冻结，未参考任何答案键。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There is a camera in the room",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There's a camera in the room.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；There’s为There is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There is not a camera in the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与肯定事实相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There was a camera in the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合当前事实陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There are a camera in the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "复数be与单数新物品不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There is a camera in the room?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述不得以问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There is a camera on the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "物品位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "where is the camera?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "Where's the camera?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面明确允许同义缩写；Where’s为Where is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "Where is the camera.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以英文问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "Where was the camera?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去位置而非现在位置。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "Where are the camera?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "are与单数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "Where is it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面限定的指称形式，指称或数发生改变。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-ask-location",
+      "answer": "Where is not the camera?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变所问内容。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera is on the table",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera's on the table.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；主语后的’s对应is，位置语义不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera is not on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera was on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera are on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera is on the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-singular-location",
+      "answer": "The camera is under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There is a lamp on the desk",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There's a lamp on the desk.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；There’s为There is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There is not a lamp on the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与肯定事实相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There was a lamp on the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合当前事实陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There are a lamp on the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "复数be与单数新物品不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There is a lamp on the desk?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述不得以问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-introduce-item",
+      "answer": "There is a lamp under the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "物品位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "where is it?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "Where's it?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面明确允许同义缩写；Where’s为Where is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "Where is it.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以英文问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "Where was it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去位置而非现在位置。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "Where are it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "are与单数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "Where is they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面限定的指称形式，指称或数发生改变。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-ask-location",
+      "answer": "Where is not it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变所问内容。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It is on the right",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It's on the right.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；主语后的’s对应is，位置语义不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It is not on the right.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It was on the right.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It are on the right.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It is on the right?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "guided-n25-singular-location",
+      "answer": "It is under the right.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There is an empty box in the room",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There's an empty box in the room.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；There’s为There is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There is not an empty box in the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与肯定事实相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There was an empty box in the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合当前事实陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There are an empty box in the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "复数be与单数新物品不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There is an empty box in the room?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述不得以问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-introduce-item",
+      "answer": "There is an empty box on the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "物品位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "where is the armchair?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "Where's the armchair?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面明确允许同义缩写；Where’s为Where is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "Where is the armchair.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以英文问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "Where was the armchair?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去位置而非现在位置。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "Where are the armchair?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "are与单数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "Where is it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面限定的指称形式，指称或数发生改变。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-ask-location",
+      "answer": "Where is not the armchair?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变所问内容。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box is under the desk",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box's under the desk.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；主语后的’s对应is，位置语义不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box is not under the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box was under the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box are under the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box is under the desk?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "independent-n25-singular-location",
+      "answer": "The box is on the desk.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There is an armchair near the window",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There's an armchair near the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；There’s为There is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There is not an armchair near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与肯定事实相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There was an armchair near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合当前事实陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There are an armchair near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "复数be与单数新物品不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There is an armchair near the window?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述不得以问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There is an armchair under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "物品位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "where is the shelf?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "Where's the shelf?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面明确允许同义缩写；Where’s为Where is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "Where is the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以英文问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "Where was the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去位置而非现在位置。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "Where are the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "are与单数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "Where is it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面限定的指称形式，指称或数发生改变。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-ask-location",
+      "answer": "Where is not the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变所问内容。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It is near the window",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It's near the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；主语后的’s对应is，位置语义不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It is not near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It was near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It are near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It is near the window?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It is under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There is a shelf near the door",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There's a shelf near the door.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；There’s为There is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There is not a shelf near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与肯定事实相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There was a shelf near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合当前事实陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There are a shelf near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "复数be与单数新物品不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There is a shelf near the door?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述不得以问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There is a shelf under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "物品位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "where is it?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "Where's it?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面明确允许同义缩写；Where’s为Where is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "Where is it.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以英文问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "Where was it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去位置而非现在位置。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "Where are it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "are与单数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "Where is they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面限定的指称形式，指称或数发生改变。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-ask-location",
+      "answer": "Where is not it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变所问内容。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table is in the middle of the room",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table's in the middle of the room.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；主语后的’s对应is，位置语义不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table is not in the middle of the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table was in the middle of the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table are in the middle of the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table is in the middle of the room?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table is on the middle of the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There is a knife on the table",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There's a knife on the table.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；There’s为There is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There is not a knife on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与肯定事实相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There was a knife on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合当前事实陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There are a knife on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "复数be与单数新物品不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There is a knife on the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述不得以问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-introduce-item",
+      "answer": "There is a knife under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "物品位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "where is the cup?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "Where's the cup?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面明确允许同义缩写；Where’s为Where is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "Where is the cup.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以英文问号结尾。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "Where was the cup?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去位置而非现在位置。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "Where are the cup?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "are与单数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "Where is it?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面限定的指称形式，指称或数发生改变。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-ask-location",
+      "answer": "Where is not the cup?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变所问内容。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It is in the cupboard",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It's in the cupboard.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；主语后的’s对应is，位置语义不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It is not in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It was in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It are in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It is in the cupboard?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-b-n25-singular-location",
+      "answer": "It is on the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There are some cups on the shelf",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There are not some cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定改变物品存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There were some cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There is some cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There are some cups on the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There are some cups under the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There are the cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "首次存在介绍明确要求some。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "where are the cups?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "Where are the cups.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "Where were the cups?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时改变所问时间。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "Where is the cups?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "Where are they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面指定的指称形式。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "Where are not the cups?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变问题。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-question",
+      "answer": "Where're the cups?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面明确要求完整be形式；自然缩写违反本题形式限制，非判定其自然英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "answer": "The cups are on the shelf",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "answer": "The cups are not on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "answer": "The cups were on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "answer": "The cups is on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "answer": "The cups are on the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-location",
+      "answer": "The cups are under the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There are some maps on the wall",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There are not some maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定改变物品存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There were some maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There is some maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There are some maps on the wall?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There are some maps under the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There are the maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "首次存在介绍明确要求some。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "where are they?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "Where are they.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "Where were they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时改变所问时间。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "Where is they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "Where are the cups?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面指定的指称形式。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "Where are not they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变问题。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-question",
+      "answer": "Where're they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面明确要求完整be形式；自然缩写违反本题形式限制，非判定其自然英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They are on the wall",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They're on the wall.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；They’re为They are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They are not on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They were on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They is on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They are on the wall?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-location",
+      "answer": "They are under the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There are some boxes under the table",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There are not some boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定改变物品存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There were some boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There is some boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There are some boxes under the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There are some boxes on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There are the boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "首次存在介绍明确要求some。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "where are the tools?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "Where are the tools.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "Where were the tools?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时改变所问时间。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "Where is the tools?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "Where are they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面指定的指称形式。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "Where are not the tools?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变问题。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-question",
+      "answer": "Where're the tools?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面明确要求完整be形式；自然缩写违反本题形式限制，非判定其自然英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools are near the door",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools are not near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools were near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools is near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools are near the door?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools are under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There are some tools near the door",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There are not some tools near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定改变物品存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There were some tools near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There is some tools near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There are some tools near the door?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There are some tools under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There are the tools near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "首次存在介绍明确要求some。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "where are the boxes?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "Where are the boxes.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "Where were the boxes?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时改变所问时间。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "Where is the boxes?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "Where are they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面指定的指称形式。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "Where are not the boxes?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变问题。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-question",
+      "answer": "Where're the boxes?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面明确要求完整be形式；自然缩写违反本题形式限制，非判定其自然英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They are under the table",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They're under the table.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；They’re为They are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They are not under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They were under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They is under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They are under the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-location",
+      "answer": "They are on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There are some bottles in the cupboard",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There are not some bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定改变物品存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There were some bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There is some bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There are some bottles in the cupboard?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There are some bottles on the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There are the bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "首次存在介绍明确要求some。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "where are they?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "Where are they.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "Where were they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时改变所问时间。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "Where is they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "Where are the cups?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面指定的指称形式。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "Where are not they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变问题。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-question",
+      "answer": "Where're they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面明确要求完整be形式；自然缩写违反本题形式限制，非判定其自然英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs are near the window",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs are not near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs were near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs is near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs are near the window?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs are under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There are some chairs near the window",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There are not some chairs near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定改变物品存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There were some chairs near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There is some chairs near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There are some chairs near the window?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There are some chairs under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There are the chairs near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "首次存在介绍明确要求some。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "where are the bottles?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "Where are the bottles.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "Where were the bottles?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时改变所问时间。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "Where is the bottles?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "is与复数主语不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "Where are they?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "未使用题面指定的指称形式。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "Where are not the bottles?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "负面位置问法改变问题。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-question",
+      "answer": "Where're the bottles?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面明确要求完整be形式；自然缩写违反本题形式限制，非判定其自然英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They are in the cupboard",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They're in the cupboard.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许明确对应缩写；They’re为They are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They are not in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定与确认位置相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They were in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去时不符合现在陈述。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They is in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "be数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They are in the cupboard?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-location",
+      "answer": "They are on the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "位置与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "what must I do?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "What must I do.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "What must not I do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问禁止事项而非必须完成任务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "What must you do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "任务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "What did I do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去动作而非义务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "What must I doing?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "must后要求动词原形；doing不合题型。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "answer": "You must open the box",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "answer": "You must not open the box.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定义务变成禁止。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "answer": "You had to open the box.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去义务不符合现在表达且未保留must。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "answer": "I must open the box.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "义务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "answer": "You must open the box?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-action",
+      "answer": "You must shut the box.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作或目的位置不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "answer": "Open the box",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "answer": "Do not open the box.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定指令与肯定任务相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "answer": "You open the box.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止增加主语。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "answer": "Open the box?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "answer": "Open the box!",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止感叹号，非一般英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-imperative-action",
+      "answer": "Shut the box.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作、位置或动作顺序与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "what must we do?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "What must we do.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "What must not we do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问禁止事项而非必须完成任务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "What must you do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "任务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "What did we do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去动作而非义务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "What must we doing?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "must后要求动词原形；doing不合题型。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "answer": "He must shut the window",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "answer": "He must not shut the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定义务变成禁止。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "answer": "He had to shut the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去义务不符合现在表达且未保留must。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "answer": "You must shut the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "义务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "answer": "He must shut the window?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-action",
+      "answer": "He must open the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作或目的位置不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "answer": "Shut the door",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "answer": "Do not shut the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定指令与肯定任务相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "answer": "You shut the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止增加主语。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "answer": "Shut the door?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "answer": "Shut the door!",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止感叹号，非一般英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-imperative-action",
+      "answer": "Open the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作、位置或动作顺序与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "what must he do?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "What must he do.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "What must not he do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问禁止事项而非必须完成任务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "What must you do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "任务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "What did he do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去动作而非义务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "What must he doing?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "must后要求动词原形；doing不合题型。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "answer": "We must put the books on the shelf",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "answer": "We must not put the books on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定义务变成禁止。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "answer": "We had to put the books on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去义务不符合现在表达且未保留must。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "answer": "You must put the books on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "义务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "answer": "We must put the books on the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-action",
+      "answer": "We must put the books under the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作或目的位置不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "Put the clothes in the cupboard",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "Do not put the clothes in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定指令与肯定任务相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "You put the clothes in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止增加主语。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "Put the clothes in the cupboard?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "Put the clothes in the cupboard!",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止感叹号，非一般英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "Put the clotheson the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作、位置或动作顺序与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "what must they do?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "What must they do.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "What must not they do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问禁止事项而非必须完成任务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "What must you do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "任务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "What did they do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去动作而非义务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "What must they doing?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "must后要求动词原形；doing不合题型。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "answer": "She must sweep the floor",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "answer": "She must not sweep the floor.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定义务变成禁止。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "answer": "She had to sweep the floor.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去义务不符合现在表达且未保留must。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "answer": "You must sweep the floor.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "义务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "answer": "She must sweep the floor?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-action",
+      "answer": "She must wash the floor.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作或目的位置不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "answer": "Then sweep the floor",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "answer": "Then do not sweep the floor.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定指令与肯定任务相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "answer": "You then sweep the floor.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止增加主语。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "answer": "Then sweep the floor?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "answer": "Then sweep the floor!",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止感叹号，非一般英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-imperative-action",
+      "answer": "Then open the floor.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作、位置或动作顺序与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "what must she do?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "What must she do.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "What must not she do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问禁止事项而非必须完成任务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "What must you do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "任务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "What did she do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去动作而非义务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "What must she doing?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "must后要求动词原形；doing不合题型。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "answer": "They must put the boxes under the table",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "answer": "They must not put the boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定义务变成禁止。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "answer": "They had to put the boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去义务不符合现在表达且未保留must。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "answer": "You must put the boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "义务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "answer": "They must put the boxes under the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-action",
+      "answer": "They must put the boxes on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作或目的位置不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "Open the door and then put the boxes on the table",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "Do not open the door and then put the boxes on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定指令与肯定任务相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "You open the door and then put the boxes on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止增加主语。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "Open the door and then put the boxes on the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "Open the door and then put the boxes on the table!",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止感叹号，非一般英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "Put the boxes on the table and then open the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作、位置或动作顺序与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "what must you do?",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "What must you do.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接问句必须以问号结束。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "What must not you do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问禁止事项而非必须完成任务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "What must I do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "任务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "What did you do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "询问过去动作而非义务。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "What must you doing?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "must后要求动词原形；doing不合题型。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "answer": "I must make the bed",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "answer": "I must not make the bed.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定义务变成禁止。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "answer": "I had to make the bed.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "过去义务不符合现在表达且未保留must。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "answer": "You must make the bed.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "义务主体人称不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "answer": "I must make the bed?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "陈述禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-action",
+      "answer": "I must sweep the bed.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作或目的位置不符。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "Please make the bed",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面允许陈述省略句号；问句仅改变句首大小写，语义与结构不变。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "Make the bed, please.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "题面明确允许please句尾并保留逗号。",
+      "correct": true
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "Please do not make the bed.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "否定指令与肯定任务相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "You please make the bed.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止增加主语。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "Please make the bed?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "Please make the bed!",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "直接指令题明确禁止感叹号，非一般英语错误。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-imperative-action",
+      "answer": "Please sweep the bed.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "动作、位置或动作顺序与题设不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There is an armchair by the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "窗边自然表达by the window；题面未明确限定near，存在支持边界。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-singular-location",
+      "answer": "It's by the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "窗边自然表达by；缩写明确对应is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-introduce-item",
+      "answer": "There's a shelf by the door.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "门边自然表达by；缩写明确对应is。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-location",
+      "answer": "The chairs are by the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "窗边自然表达by；题面没有明确只用near。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There are some chairs by the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "窗边自然表达by；满足some与物品限制。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-location",
+      "answer": "The tools are by the door.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "门边自然表达by；题面没有明确只用near。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There are some tools by the door.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "門边自然表达by；题面只限定some tools，未限定near。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table's in the middle of the room.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "单数名词加’s明确缩写is，属于已承诺同义缩写。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "repair-n25-introduce-item",
+      "answer": "There's an armchair by the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "首次介绍、a/an与by窗边自然表达叠加明确缩写。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There're some tools by the door.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "口语对应There are的缩写与自然门边表达组合；若书面支持有限应说明边界，不直接称自然英语错误。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There're some chairs by the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "口语对应There are的缩写与自然窗边表达组合；题面承诺明确对应缩写。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There're some tools near the door.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "口语对应There are的缩写；near保持题面所给位置词。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There're some chairs near the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "口语对应There are的缩写；near保持题面所给位置词。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table is in the centre of the room.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "centre英式拼写；in the centre of对应房间中间，题面未限定middle。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "review-a-n25-singular-location",
+      "answer": "The table is in the center of the room.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "center美式拼写；in the center of对应房间中间，题面未限定middle。",
+      "correct": true
+    },
+    {
+      "course": "nce1-25",
+      "id": "diagnostic-n25-introduce-item",
+      "answer": "There is a camera outside the room.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然且语法成立的位置反例；房间外与房间里相反。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-imperative-action",
+      "answer": "Put the clothes on the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然且语法成立的位置反例；放在橱柜表面不同于放进内部。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-imperative-action",
+      "answer": "Open the door and put the boxes on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "省略明确要求的and then，未保留任务的显式次序标记；英语可成立但违反本题词汇形式限制。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "diagnostic-n29-must-question",
+      "answer": "What must I not do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然否定问句询问不可做什么，与强制任务内容不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "guided-n29-must-question",
+      "answer": "What must we not do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然否定问句询问不可做什么，与强制任务内容不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "independent-n29-must-question",
+      "answer": "What must he not do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然否定问句询问不可做什么，与强制任务内容不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "repair-n29-must-question",
+      "answer": "What must they not do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然否定问句询问不可做什么，与强制任务内容不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-a-n29-must-question",
+      "answer": "What must she not do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然否定问句询问不可做什么，与强制任务内容不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-29",
+      "id": "review-b-n29-must-question",
+      "answer": "What must you not do?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "自然否定问句询问不可做什么，与强制任务内容不同。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There're some cups on the shelf.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There’re some cups on the shelf.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "弯引号形式仍明确对应There are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There're not some cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "缩写否定改变首次介绍的肯定存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There're some cups on the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "存在陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There's some cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "受限标准句型中is与复数组不一致；口语可能出现但本题练习are。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There're some cup on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面指定可数名词复数组，改为可数单数导致some和are数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There're some maps on the wall.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There’re some maps on the wall.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "弯引号形式仍明确对应There are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There're not some maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "缩写否定改变首次介绍的肯定存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There're some maps on the wall?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "存在陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There's some maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "受限标准句型中is与复数组不一致；口语可能出现但本题练习are。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There're some map on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面指定可数名词复数组，改为可数单数导致some和are数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There're some boxes under the table.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There’re some boxes under the table.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "弯引号形式仍明确对应There are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There're not some boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "缩写否定改变首次介绍的肯定存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There're some boxes under the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "存在陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There's some boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "受限标准句型中is与复数组不一致；口语可能出现但本题练习are。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There're some box under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面指定可数名词复数组，改为可数单数导致some和are数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There’re some tools near the door.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "弯引号形式仍明确对应There are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There're not some tools near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "缩写否定改变首次介绍的肯定存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There're some tools near the door?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "存在陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There's some tools near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "受限标准句型中is与复数组不一致；口语可能出现但本题练习are。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There're some tool near the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面指定可数名词复数组，改为可数单数导致some和are数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There're some bottles in the cupboard.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There’re some bottles in the cupboard.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "弯引号形式仍明确对应There are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There're not some bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "缩写否定改变首次介绍的肯定存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There're some bottles in the cupboard?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "存在陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There's some bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "受限标准句型中is与复数组不一致；口语可能出现但本题练习are。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There're some bottle in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面指定可数名词复数组，改为可数单数导致some和are数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There’re some chairs near the window.",
+      "expected": true,
+      "role": "equivalent",
+      "reason": "弯引号形式仍明确对应There are。",
+      "correct": true
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There're not some chairs near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "缩写否定改变首次介绍的肯定存在事实。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There're some chairs near the window?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "存在陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There's some chairs near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "受限标准句型中is与复数组不一致；口语可能出现但本题练习are。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There're some chair near the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "题面指定可数名词复数组，改为可数单数导致some和are数不一致。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There’re not some cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There’s some cups on the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后单数be反例；明确练习are与可数名词复数。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There’re some cups under the shelf.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "diagnostic-n27-plural-existence",
+      "answer": "There’re some cups on the shelf?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There’re not some maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There’s some maps on the wall.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后单数be反例；明确练习are与可数名词复数。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There’re some maps under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "guided-n27-plural-existence",
+      "answer": "There’re some maps on the wall?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There’re not some boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There’s some boxes under the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后单数be反例；明确练习are与可数名词复数。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There’re some boxes on the table.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "independent-n27-plural-existence",
+      "answer": "There’re some boxes under the table?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There’re not some tools by the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There’s some tools by the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后单数be反例；明确练习are与可数名词复数。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There’re some tools on the door.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "repair-n27-plural-existence",
+      "answer": "There’re some tools by the door?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There’re not some bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There’s some bottles in the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后单数be反例；明确练习are与可数名词复数。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There’re some bottles on the cupboard.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-a-n27-plural-existence",
+      "answer": "There’re some bottles in the cupboard?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There’re not some chairs by the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There’s some chairs by the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后单数be反例；明确练习are与可数名词复数。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There’re some chairs under the window.",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。",
+      "correct": false
+    },
+    {
+      "course": "nce1-27",
+      "id": "review-b-n27-plural-existence",
+      "answer": "There’re some chairs by the window?",
+      "expected": false,
+      "role": "counterexample",
+      "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。",
+      "correct": false
+    }
+  ],
+  "preserved_failure_evidence": {
+    "report_path": "studio/docs/parallel-nce1-025-035-proof/resume-blind-report-025-029-before-repair.json",
+    "cases_path": "studio/docs/parallel-nce1-025-035-proof/resume-blind-cases-025-029-before-repair.json",
+    "initial_run_420": {
+      "total": 420,
+      "matched": 418,
+      "mismatches": 2,
+      "by_role": {
+        "first": {
+          "total": 54,
+          "matched": 54
+        },
+        "equivalent": {
+          "total": 84,
+          "matched": 82
+        },
+        "counterexample": {
+          "total": 282,
+          "matched": 282
+        }
+      }
+    },
+    "expanded_run_470": {
+      "total": 470,
+      "matched": 454,
+      "mismatches": 16,
+      "by_role": {
+        "first": {
+          "total": 54,
+          "matched": 54
+        },
+        "equivalent": {
+          "total": 101,
+          "matched": 85
+        },
+        "counterexample": {
+          "total": 315,
+          "matched": 315
+        }
+      }
+    },
+    "old_mismatch_count": 16,
+    "old_failed_report_not_rewritten": true
+  },
+  "repair_recheck": {
+    "reexported_prompt_source": "studio/docs/parallel-nce1-025-035-proof/blind-prompts-final-025-029.json",
+    "first_answers_identical": true,
+    "prompt_semantics_reinspected_for_six_plural_existence_questions": true,
+    "answers_keys_or_source_read": false,
+    "all_prior_470_summary": {
+      "total": 470,
+      "matched": 470,
+      "mismatches": 0,
+      "by_role": {
+        "first": {
+          "total": 54,
+          "matched": 54
+        },
+        "equivalent": {
+          "total": 101,
+          "matched": 101
+        },
+        "counterexample": {
+          "total": 315,
+          "matched": 315
+        }
+      }
+    },
+    "focused_new_24_summary": {
+      "total": 24,
+      "matched": 24,
+      "mismatches": 0,
+      "by_role": {
+        "first": {
+          "total": 0,
+          "matched": 0
+        },
+        "equivalent": {
+          "total": 0,
+          "matched": 0
+        },
+        "counterexample": {
+          "total": 24,
+          "matched": 24
+        }
+      }
+    },
+    "final_494_summary": {
+      "total": 494,
+      "matched": 494,
+      "mismatches": 0,
+      "by_role": {
+        "first": {
+          "total": 54,
+          "matched": 54
+        },
+        "equivalent": {
+          "total": 101,
+          "matched": 101
+        },
+        "counterexample": {
+          "total": 339,
+          "matched": 339
+        }
+      }
+    },
+    "mismatches": [],
+    "new_challenge_path": "studio/docs/parallel-nce1-025-035-proof/resume-blind-repair-challenges-025-029.json",
+    "resolved_original_mismatches": [
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There are some chairs by the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "窗边自然表达by；满足some与物品限制。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There are some tools by the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "門边自然表达by；题面只限定some tools，未限定near。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There're some tools by the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写与自然门边表达组合；若书面支持有限应说明边界，不直接称自然英语错误。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There're some chairs by the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写与自然窗边表达组合；题面承诺明确对应缩写。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There're some tools near the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写；near保持题面所给位置词。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There're some chairs near the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "口语对应There are的缩写；near保持题面所给位置词。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "diagnostic-n27-plural-existence",
+        "answer": "There're some cups on the shelf.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "diagnostic-n27-plural-existence",
+        "answer": "There’re some cups on the shelf.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "guided-n27-plural-existence",
+        "answer": "There're some maps on the wall.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "guided-n27-plural-existence",
+        "answer": "There’re some maps on the wall.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "independent-n27-plural-existence",
+        "answer": "There're some boxes under the table.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "independent-n27-plural-existence",
+        "answer": "There’re some boxes under the table.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "repair-n27-plural-existence",
+        "answer": "There’re some tools near the door.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-a-n27-plural-existence",
+        "answer": "There're some bottles in the cupboard.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "There’re是There are的口语缩写；虽较少见于正式书面语，题面允许明确对应缩写，需验证支持边界。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-a-n27-plural-existence",
+        "answer": "There’re some bottles in the cupboard.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": true
+      },
+      {
+        "course": "nce1-27",
+        "id": "review-b-n27-plural-existence",
+        "answer": "There’re some chairs near the window.",
+        "expected": true,
+        "role": "equivalent",
+        "reason": "弯引号形式仍明确对应There are。",
+        "correct": true
+      }
+    ]
+  }
+}

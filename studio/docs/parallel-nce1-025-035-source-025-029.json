@@ -1,0 +1,194 @@
+[
+  {
+    "group": "NCE1-25",
+    "lessons": [
+      25,
+      26
+    ],
+    "grammar": {
+      "id": "NCE1-25",
+      "book": "NCE1",
+      "lesson": 25,
+      "lastLesson": 26,
+      "unit": null,
+      "title": "冠词 a / the 与位置表达",
+      "category": "noun",
+      "terms": "a the where in on",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 56
+        },
+        {
+          "section": "句型练习",
+          "page": 55
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 54
+        }
+      ],
+      "pages": [
+        54,
+        55,
+        56
+      ],
+      "references": []
+    },
+    "languagePath": "/language/NCE1/25.json",
+    "languageSha256": "15ddf5e1a8f598a178b264bd9932d319705b287779f08e20ebdbed2e2151fff5",
+    "sourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+    "comicKey": "NCE1-25",
+    "comicSourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+    "comicPageSha256": "d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f",
+    "clips": [
+      {
+        "target": "introduce-item",
+        "label": "听首次介绍一件厨房物品",
+        "start": 23.12,
+        "end": 27.71
+      },
+      {
+        "target": "ask-location",
+        "label": "听已确定物品的位置，为位置问答提供情境",
+        "start": 31.62,
+        "end": 35.03
+      },
+      {
+        "target": "singular-location",
+        "label": "听房间中间的位置陈述",
+        "start": 46.22,
+        "end": 51.54
+      }
+    ],
+    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified."
+  },
+  {
+    "group": "NCE1-27",
+    "lessons": [
+      27,
+      28
+    ],
+    "grammar": {
+      "id": "NCE1-27",
+      "book": "NCE1",
+      "lesson": 27,
+      "lastLesson": 28,
+      "unit": null,
+      "title": "复数物品的位置",
+      "category": "modifier",
+      "terms": "where are they",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 60
+        },
+        {
+          "section": "句型练习",
+          "page": 59
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 58
+        }
+      ],
+      "pages": [
+        58,
+        59,
+        60
+      ],
+      "references": []
+    },
+    "languagePath": "/language/NCE1/27.json",
+    "languageSha256": "2410876d2bc4142c898548e9252f7faa0f66e2d8b86e966838e4e3f372f41e15",
+    "sourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+    "comicKey": "NCE1-27",
+    "comicSourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+    "comicPageSha256": "d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79",
+    "clips": [
+      {
+        "target": "plural-existence",
+        "label": "听首次介绍若干杂志",
+        "start": 31.28,
+        "end": 36.45
+      },
+      {
+        "target": "plural-question",
+        "label": "听询问书的位置",
+        "start": 12.77,
+        "end": 16.76
+      },
+      {
+        "target": "plural-location",
+        "label": "听复数物品的位置陈述",
+        "start": 49.27,
+        "end": 53.31
+      }
+    ],
+    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified."
+  },
+  {
+    "group": "NCE1-29",
+    "lessons": [
+      29,
+      30
+    ],
+    "grammar": {
+      "id": "NCE1-29",
+      "book": "NCE1",
+      "lesson": 29,
+      "lastLesson": 30,
+      "unit": null,
+      "title": "must 与祈使句",
+      "category": "modal",
+      "terms": "what must I do",
+      "sections": [
+        {
+          "section": "Written exercises · 书面练习",
+          "page": 64
+        },
+        {
+          "section": "句型练习",
+          "page": 63
+        },
+        {
+          "section": "Notes on the text · 课文注释",
+          "page": 62
+        }
+      ],
+      "pages": [
+        62,
+        63,
+        64
+      ],
+      "references": []
+    },
+    "languagePath": "/language/NCE1/29.json",
+    "languageSha256": "15ea221a9497a68761363bd5b1966ab043eac4065c838f62437c8a629f55fe1a",
+    "sourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+    "comicKey": "NCE1-29",
+    "comicSourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+    "comicPageSha256": "9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49",
+    "clips": [
+      {
+        "target": "must-question",
+        "label": "听询问必须完成的任务",
+        "start": 26.83,
+        "end": 30.53
+      },
+      {
+        "target": "must-action",
+        "label": "听规定动作，练习用must转述义务",
+        "start": 39.69,
+        "end": 42.81
+      },
+      {
+        "target": "imperative-action",
+        "label": "听两个动作的直接指令",
+        "start": 30.53,
+        "end": 34.92
+      }
+    ],
+    "evidence": "Read existing aligned LRC row times and matching comic metadata; no new media or long source text copied. Playback not yet verified."
+  }
+]

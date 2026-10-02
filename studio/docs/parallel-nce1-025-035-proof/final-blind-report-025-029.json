@@ -1,0 +1,59 @@
+{
+  "status": "passed-after-reconnect-final-review",
+  "base": "d9c7c48a7d419c230be06bf81cc956d63b124649",
+  "semanticSha256": {
+    "nce1-25": "2e35c0a702a789a95a2f66869aad87e2a198ef1ad288b4c4503fb8ca2f5b0d48",
+    "nce1-27": "e8c1ccad658980652a4bc3dac7b66eccf714695e191cb6a792a34357851d6e0e",
+    "nce1-29": "0acae92d9f85249e2eb24679ac2ac93f7a59209dc6e47a278676b458f1ffb441"
+  },
+  "summary": {
+    "questions": 54,
+    "originalFirstAnswersRetainedVerbatim": true,
+    "originalFirstAccepted": 54,
+    "originalFinalCases": 1147,
+    "originalFinalCasesMatched": 1147,
+    "newIndependentFirstAnswers": 54,
+    "newIndependentCases": 494,
+    "totalProbeCases": 1641,
+    "falseNegatives": 0,
+    "falsePositives": 0,
+    "unresolvedGradingAmbiguities": 0
+  },
+  "evidence": {
+    "historicalReport": "prereconnect-final-blind-report-025-029.json",
+    "historicalSummary": {
+      "questions": 54,
+      "cases": 1147,
+      "first_count": 54,
+      "first_accepted": 54,
+      "expected_true": 229,
+      "expected_false": 918,
+      "false_negatives": 3,
+      "false_positives": 0,
+      "original_cases_mismatches": 0,
+      "new_cases_mismatches": 3
+    },
+    "retainedHistoricalCases": "final-blind-cases-025-029.json",
+    "historicalReplay": "resume-original-1147-results.json",
+    "newIndependentCases": "resume-blind-cases-025-029.json",
+    "newIndependentReport": "resume-blind-report-025-029.json",
+    "newReviewerPreRepairEvidence": "resume-blind-report-025-029-before-repair.json",
+    "finalPromptOnlyPacket": "blind-prompts-final-025-029.json"
+  },
+  "method": "Historical independent judgements and first answers remain unchanged. A new reviewer read only the final prompt packet, froze new first answers and judgements before black-box probes, and retained pre-repair failures. Probes submit through unchanged production createCourseLoopModel(content).",
+  "resolvedFindings": [
+    "Last three contracted spatial equivalents confirmed on disk and original 1147 judgements now all match.",
+    "Eleven prompts remove article/are and ordered must-question construction hints; final prompt packet regenerated and independently reviewed.",
+    "Two n27 by-location equivalents and corresponding contractions accepted explicitly.",
+    "All six n27 plural-existence tasks honor the existing contraction allowance with finite explicit alternatives.",
+    "Each changed n27 existence task received additional negative/person-number/location/question-mark probes."
+  ],
+  "remainingFindings": [],
+  "limitations": [
+    "Finite supplied-vocabulary pattern transfer, not free-expression mastery.",
+    "Diagnostic/guided lexical support and exact output constraints remain explicit.",
+    "Natural alternatives outside task scope await human review.",
+    "Synthetic review times, no natural24h/7d claim.",
+    "Open expression, audibility, physical phone and production host integration not assessed."
+  ]
+}

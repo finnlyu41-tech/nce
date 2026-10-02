@@ -1,0 +1,194 @@
+[
+  {
+    "course": "nce1-27",
+    "id": "diagnostic-n27-plural-existence",
+    "answer": "There’re not some cups on the shelf.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "diagnostic-n27-plural-existence",
+    "answer": "There’s some cups on the shelf.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后单数be反例；明确练习are与可数名词复数。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "diagnostic-n27-plural-existence",
+    "answer": "There’re some cups under the shelf.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "diagnostic-n27-plural-existence",
+    "answer": "There’re some cups on the shelf?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "guided-n27-plural-existence",
+    "answer": "There’re not some maps on the wall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "guided-n27-plural-existence",
+    "answer": "There’s some maps on the wall.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后单数be反例；明确练习are与可数名词复数。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "guided-n27-plural-existence",
+    "answer": "There’re some maps under the table.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "guided-n27-plural-existence",
+    "answer": "There’re some maps on the wall?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "independent-n27-plural-existence",
+    "answer": "There’re not some boxes under the table.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "independent-n27-plural-existence",
+    "answer": "There’s some boxes under the table.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后单数be反例；明确练习are与可数名词复数。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "independent-n27-plural-existence",
+    "answer": "There’re some boxes on the table.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "independent-n27-plural-existence",
+    "answer": "There’re some boxes under the table?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "repair-n27-plural-existence",
+    "answer": "There’re not some tools by the door.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "repair-n27-plural-existence",
+    "answer": "There’s some tools by the door.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后单数be反例；明确练习are与可数名词复数。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "repair-n27-plural-existence",
+    "answer": "There’re some tools on the door.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "repair-n27-plural-existence",
+    "answer": "There’re some tools by the door?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-a-n27-plural-existence",
+    "answer": "There’re not some bottles in the cupboard.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-a-n27-plural-existence",
+    "answer": "There’s some bottles in the cupboard.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后单数be反例；明确练习are与可数名词复数。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-a-n27-plural-existence",
+    "answer": "There’re some bottles on the cupboard.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-a-n27-plural-existence",
+    "answer": "There’re some bottles in the cupboard?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-b-n27-plural-existence",
+    "answer": "There’re not some chairs by the window.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的否定反例；不允许把否定识别为肯定存在。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-b-n27-plural-existence",
+    "answer": "There’s some chairs by the window.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后单数be反例；明确练习are与可数名词复数。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-b-n27-plural-existence",
+    "answer": "There’re some chairs under the window.",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的错误介词位置反例；改变表面/内部/下方等关系。"
+  },
+  {
+    "course": "nce1-27",
+    "id": "review-b-n27-plural-existence",
+    "answer": "There’re some chairs by the window?",
+    "expected": false,
+    "role": "counterexample",
+    "reason": "修复后缩写组合的问号反例；陈述明确禁止问号。"
+  }
+]
