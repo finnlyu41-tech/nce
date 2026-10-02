@@ -1,0 +1,73 @@
+{
+  "base": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "remoteHeadsVerified": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "baseRuntimeDocumented": "bf6ea10567a379846dea7a6f40f68c8937889d7c",
+  "owner": "root unified host author; sole publisher performs final integration",
+  "productionChangesInThisLine": [],
+  "imports": [
+    {
+      "id": "nce1-97",
+      "module": "./parallel-nce1-097-107/lesson-nce1-097.mjs",
+      "key": "nce-course-loop-v1:NCE1-97",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-97",
+      "lessons": [
+        97,
+        98
+      ]
+    },
+    {
+      "id": "nce1-99",
+      "module": "./parallel-nce1-097-107/lesson-nce1-099.mjs",
+      "key": "nce-course-loop-v1:NCE1-99",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-99",
+      "lessons": [
+        99,
+        100
+      ]
+    },
+    {
+      "id": "nce1-101",
+      "module": "./parallel-nce1-097-107/lesson-nce1-101.mjs",
+      "key": "nce-course-loop-v1:NCE1-101",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-101",
+      "lessons": [
+        101,
+        102
+      ]
+    }
+  ],
+  "pendingSecondBatch": [
+    103,
+    105,
+    107
+  ],
+  "hostAuthorEdits": [
+    {
+      "path": "studio/course-loop/registry.mjs",
+      "action": "Import explicit modules and append them to existing content list; retain createCourseLoopModel(content) with exported matches."
+    },
+    {
+      "path": "studio/course-loop/host-contract.d.ts",
+      "action": "Append nce1-97,99,101 to CourseId; append odd lesson IDs to showSource.lesson and corresponding NCE1 comicKey literals; preserve schemas."
+    },
+    {
+      "path": "studio/app/course-loop-next.ts",
+      "action": "Coordinate predecessor95 with 85–95 owner; add95->97,97->99,99->101,101->103. 103 remains existing textbook/map until separately ready."
+    }
+  ],
+  "realHostQARequired": [
+    "Real predecessor95 entry and registry/parser/sidecar/backup namespace validation",
+    "Successors/Today/route access with actual shared selector",
+    "CAS/writer protection; no map/FSRS completion award",
+    "Final packaged source and SourcePanel binding"
+  ],
+  "candidateBoundary": "Temporary bundler registry only; absent successors remain unchanged; harness uses existing advanced nce1-37 route.",
+  "limitations": [
+    "No natural24h/7d",
+    "No human audio playback/hearing or speaking score",
+    "No actual iPhone/Safari keyboard",
+    "No four-skill/learning-gain/Band claim",
+    "Open expression awaiting-human-review",
+    "No push/merge/deploy"
+  ]
+}

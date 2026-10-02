@@ -1,0 +1,11 @@
+{
+  "baseline": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "files": {
+    "course-loop/parallel-nce1-097-107/lesson-nce1-097.mjs": "40a5dd6ae0344ef207835f9b3231b36cdee8eabaae434a8b11c9c661a51cee73",
+    "course-loop/parallel-nce1-097-107/lesson-nce1-099.mjs": "6fcf588bcf7ebbd340faa695788341026aa679785b483eb7337fb83462375203",
+    "course-loop/parallel-nce1-097-107/lesson-nce1-101.mjs": "c316035e97eb7c7b12e2bc34ebca2557589e41e338881413af16874dbcc32913",
+    "docs/parallel-nce1-097-107/blind-prompts-097-101.json": "bab496841c1d46866d2635ce6b416c6bbcf188e744cab14702666410b16c148f",
+    "docs/parallel-nce1-097-107/blind-answers-final-097-101.json": "34d6c8b6053285457c674f48d64739533f80aeb80f3a365c31ab5e3235a9f3e8",
+    "docs/parallel-nce1-097-107/author-review-097-101.json": "8dee6ff729f7adc8938b2201d55d99d004a7f2ddafa6c2b507e0e74e79b9b55e"
+  }
+}

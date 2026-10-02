@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: nce1-97 real transcript LRC, source panel, comic and paired exercise pages
+ok 1 - nce1-97 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 9.551458
+  type: 'test'
+  ...
+# Subtest: nce1-99 real transcript LRC, source panel, comic and paired exercise pages
+ok 2 - nce1-99 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.35175
+  type: 'test'
+  ...
+# Subtest: nce1-101 real transcript LRC, source panel, comic and paired exercise pages
+ok 3 - nce1-101 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.2315
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 4 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 0.864833
+  type: 'test'
+  ...
+# Subtest: record verified source evidence
+ok 5 - record verified source evidence
+  ---
+  duration_ms: 1.011333
+  type: 'test'
+  ...
+# Subtest: nce1-97 existing original audio parts match manifest (integrity, not hearing)
+ok 6 - nce1-97 existing original audio parts match manifest (integrity, not hearing)
+  ---
+  duration_ms: 3.369125
+  type: 'test'
+  ...
+# Subtest: nce1-99 existing original audio parts match manifest (integrity, not hearing)
+ok 7 - nce1-99 existing original audio parts match manifest (integrity, not hearing)
+  ---
+  duration_ms: 2.949834
+  type: 'test'
+  ...
+# Subtest: nce1-101 existing original audio parts match manifest (integrity, not hearing)
+ok 8 - nce1-101 existing original audio parts match manifest (integrity, not hearing)
+  ---
+  duration_ms: 3.784583
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 348.42975

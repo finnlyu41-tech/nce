@@ -1,0 +1,326 @@
+[
+  {
+    "id": "diagnostic-n97-possessive-pronoun",
+    "context": "你向图书馆管理员说明：这本地图册是你个人的，馆藏书不是它。管理员已指着它。",
+    "prompt": "用This atlas（地图册）开头，独立物主代词结尾，写一句说明归属。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n97-whose-owner",
+    "context": "剧场衣帽间有一把未登记的伞。你向工作人员问它的主人，而非问放在哪里。",
+    "prompt": "用whose、umbrella（伞）、this，写一个归属问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "diagnostic-n97-belong-to",
+    "context": "社区工具架上这把锤子是Jo的。你对同伴明确说明它不属于你。",
+    "prompt": "用This hammer（锤子）开头，使用belong to写否定归属。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n97-possessive-pronoun",
+    "context": "排练结束，你代表自己和另一位演员告诉道具师：这两张票归你们两人共同拥有。",
+    "prompt": "用These tickets开头，以独立物主代词表达共同归属。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先核对谁说话、谁拥有，再选独立物主代词；其后不再加名词。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n97-whose-owner",
+    "context": "摄影室有两台无标签相机。你问负责人这些相机属于谁，不预设某个人。",
+    "prompt": "用whose、these cameras（相机）写一个问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：询问主人而非位置；保留物件或指定代词，be与物件单复数一致。",
+    "form": "question"
+  },
+  {
+    "id": "guided-n97-belong-to",
+    "context": "游戏桌这副卡牌可能是对面那位玩家的，你尚未确认。你正向她本人发问。",
+    "prompt": "以Does开头，用this pack of cards（这副卡牌）、belong to询问归属。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：核对单复数、肯否与归属对象；to后不用hers/mine/ours。",
+    "form": "question"
+  },
+  {
+    "id": "independent-n97-possessive-pronoun",
+    "context": "你给客人分配座位后指着靠窗的椅子，对客人说明该椅子属于他。",
+    "prompt": "以That chair开头，用独立物主代词写归属句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n97-whose-owner",
+    "context": "客人寄存了一只小盒子，标签掉了。你询问工作人员主人是谁；只指着盒子，不重复物件名。",
+    "prompt": "用whose和this写一个简短问句，不写box。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "independent-n97-belong-to",
+    "context": "美术室这两把画刷属于她，另一位女同学只是借过。你把确定归属告诉管理员。",
+    "prompt": "以These brushes（画刷）开头，用belong to和her说明归属。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n97-possessive-pronoun",
+    "context": "保留上一轮首答和订正。下面是另一情境：一位女修复师自己的围巾落在椅上。你向另一位访客指着围巾，说明那是修复师的。",
+    "prompt": "用That scarf（围巾）开头，以独立物主代词指那位女修复师。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n97-whose-owner",
+    "context": "保留上一轮首答和订正。下面是另一情境：清洁员拾到几把钥匙，你向值班人员询问它们主人。你指着钥匙，不重复名词。",
+    "prompt": "用whose和these写问句，不写keys。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "repair-n97-belong-to",
+    "context": "保留上一轮首答和订正。下面是另一情境：赛艇码头这条小船属于你和妹妹。你向看管员说我们拥有它；不是他拥有。",
+    "prompt": "以This boat开头，用belong to说明我们共同的归属。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n97-possessive-pronoun",
+    "context": "植物交换会里两个陌生参展者带来一些种子。你对志愿者指着这些种子，说明属于那两位参展者。",
+    "prompt": "以These seeds（种子）开头，用独立物主代词指那两位参展者。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n97-whose-owner",
+    "context": "民宿共用书架上有一本词典，老板不知道主人。你替老板向住客询问归属。",
+    "prompt": "用whose、dictionary（词典）、that写问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-a-n97-belong-to",
+    "context": "展览结束，讲解员问这几张照片是否属于场馆。你知道它们不属于那两位摄影师，正向另一位工作人员说明这一点。",
+    "prompt": "用These photographs（照片）开头，belong to否定它们属于them；只写这一事实。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n97-possessive-pronoun",
+    "context": "午餐盒混在一起，你向同伴指着自己的那个，强调这是你自己的，不是他的。只用代词替代已经指明的午餐盒。",
+    "prompt": "以This开头，用独立物主代词写一句，不再写lunch box。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n97-whose-owner",
+    "context": "社区音乐室留下两把小提琴，无人认领。你向房间管理员开放询问主人，而非猜是否他的。",
+    "prompt": "用whose、those violins（小提琴）写归属问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-b-n97-belong-to",
+    "context": "维修咖啡馆里你发现一台收音机。你向一起服务的志愿者询问是否属于你们共同的工具组，包括自己。",
+    "prompt": "以Does开头，用this radio、belong to，询问是否属于us。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "diagnostic-n99-think-clause",
+    "context": "你看到商店灯亮着但还没有问店员。你向朋友说自己的判断：商店目前开着。",
+    "prompt": "用I和think表达判断；从句词汇shop、open、the。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n99-sure-clause",
+    "context": "你刚测试过Nia的钥匙，确定她能够打开那只盒子。你直接对Nia说这件事。",
+    "prompt": "用I、be sure、you、can、open the box写一句确定表达。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n99-says-clause",
+    "context": "男快递员此刻告诉你，他会带一张地图来。你立即对前台转述他的打算，不是你的打算。",
+    "prompt": "用He和say报告，消息词汇bring a map、will；从句用第三人称指快递员。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n99-think-clause",
+    "context": "航模展示前，你看见一个空座位，猜想他们现在需要一把椅子；并没有直接向他们核实。你向负责人说判断。",
+    "prompt": "用I、think，把they和need a chair连接成一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留推测的think；从句主语和动词按事实确定，that可有可无。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n99-sure-clause",
+    "context": "场馆管理员向你确认这扇门没有上锁。你对朋友说明自己确定：门未上锁。",
+    "prompt": "用I、be sure，door、locked、the写一句；保留否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：说话者用I am sure；核对确定的肯否和对象，不把确定改成猜测。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n99-says-clause",
+    "context": "一位女售票员现在告诉你，她需要一支笔。你向同事转述她的当前需求。",
+    "prompt": "用She和say报告；消息词汇need a pen，从句人称指女售票员。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先确定原说话者；主句单复数决定says/say，保留消息的时间和人称。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n99-think-clause",
+    "context": "你找不到自己的门票，尚未核实放在哪里。你向朋友说：我想我把门票丢了。丢失影响现在。",
+    "prompt": "用I、think和lose my ticket表示现在的判断；消息用现在完成时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n99-sure-clause",
+    "context": "音响测试已通过：远处的两位工作人员明确听到了声音。你向主持人确认他们能听见我们。",
+    "prompt": "用I、be sure、they、can、hear us连接成一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n99-says-clause",
+    "context": "两位园艺志愿者此刻共同告诉你，他们能够修好这扇门。你向负责人转述他们的能力。",
+    "prompt": "以They开头，用say报告，消息用can和repair the gate（修门）。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n99-think-clause",
+    "context": "保留上一轮首答和订正。下面是另一情境：雨还在下，你估计比赛将明天开始；主办方没有最终确认。你向邻居说自己的判断。",
+    "prompt": "用I、think，消息词汇the match、start、tomorrow、will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n99-sure-clause",
+    "context": "保留上一轮首答和订正。下面是另一情境：你拿到了店主已确认的时间表：商店明天营业。你向客人肯定说明此事。",
+    "prompt": "用I、be sure，消息词汇the shop、be open、tomorrow、will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n99-says-clause",
+    "context": "保留上一轮首答和订正。下面是另一情境：男场务刚对你报告他目前拿着钥匙。你立刻告诉导演他的报告；这不是你的钥匙。",
+    "prompt": "用He和say报告；消息用have a key，不用got。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n99-think-clause",
+    "context": "你看见女同事在看地图，猜测她想去公园，但尚未问她。你向另一人表达判断。",
+    "prompt": "用I、think，消息用she和want to go to the park。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n99-sure-clause",
+    "context": "对方刚清楚地重复了集合地点，你知道他现在明白计划。你直接对他说自己确定他理解。",
+    "prompt": "用I、be sure、you和understand the plan连接一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n99-says-clause",
+    "context": "女演员现在告诉你，她不能留下来。你向制片人转述她的限制，不替她改成愿意。",
+    "prompt": "用She和say报告；消息词汇can、stay，保留否定。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n99-think-clause",
+    "context": "你听到大厅里有欢呼声，猜想他们正在等待获奖者；你没有看见他们。你向同伴说这个判断。",
+    "prompt": "用I、think，消息用they、wait for the winner（获奖者），表述正在进行。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n99-sure-clause",
+    "context": "你查看收据确认这两张车票都有效。你向旅伴表达确定事实。",
+    "prompt": "用I、be sure，消息用these tickets、valid（有效）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n99-says-clause",
+    "context": "两位讲解员此刻告诉你，他们会在这里等。你立即向活动负责人转述，位置仍是同一处。",
+    "prompt": "以They开头，用say报告；消息词汇will、wait here。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n101-report-present",
+    "context": "男摄影师当前给你发来消息：他现在正住在河边的一家旅馆。你立刻向编辑报告他的消息。",
+    "prompt": "用He和say转述，消息词汇stay at a hotel、by the river（河边）；保留正在进行。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n101-report-just",
+    "context": "一位女模型制作者现在告诉你：她刚完成那座桥的模型。你马上向评委报告她这件事。",
+    "prompt": "用She和say转述；消息词汇just、finish the model bridge（桥模型），用现在完成时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n101-report-plan",
+    "context": "两名志愿者此刻共同告诉你：他们会明天带他们自己的地图来。你向协调员转述此计划。",
+    "prompt": "以They开头，用say报告；消息词汇bring、their maps、tomorrow、will。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n101-report-present",
+    "context": "女店长此刻对你说明：她正与她姐姐待在一起。你向同事转述她的情况。",
+    "prompt": "用She和say报告；消息词汇stay with、her sister；保留进行时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：画清原说话者、原听者、转述者；当前be或进行时保留，物主也随人物改变。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n101-report-just",
+    "context": "两位旅行者刚到车站，立即共同给你消息。你向接站员报告他们刚抵达这里。你和接站员就在该车站。",
+    "prompt": "以They开头，用say转述；消息词汇just、arrive here，用现在完成时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：谁刚完成、完成什么不改变；have/has按转述从句主语确定。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n101-report-plan",
+    "context": "男技术员此刻告诉你：他会今晚给你打电话。你现在正向经理转述他的许诺；接电话者是你本人。",
+    "prompt": "用He和say转述，消息词汇phone、tonight、will；用代词指接电话的你本人。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留未来will、时间与动作；核对谁行动及谁拥有物件。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n101-report-present",
+    "context": "两位徒步者此刻共同告诉你，他们现在正在山脚等候。你立即向领队转述，不包括你自己。",
+    "prompt": "以They开头，用say报告；消息词汇wait、at the foot of the hill（山脚），用进行时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n101-report-just",
+    "context": "男书店店员此刻告诉你：他刚找到你的书。你现在向另一人转述，书属于你这个转述者。",
+    "prompt": "用He和say报告；消息词汇just、find、my book，用现在完成时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n101-report-plan",
+    "context": "女策展人此刻告诉你：她会很快寄出她自己的照片。你向编辑转述这一计划。",
+    "prompt": "用She和say报告；消息词汇send、her photographs、soon、will。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n101-report-present",
+    "context": "保留上一轮首答和订正。下面是另一情境：女导演此刻对你和另一位演员说明：你们现在需要一张地图。你代表两位演员向道具师转述导演的话。",
+    "prompt": "用She和say报告；从句用we和need a map，表述现在需求。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n101-report-just",
+    "context": "保留上一轮首答和订正。下面是另一情境：女陶艺师此刻告诉你：她刚把她的碗放在架子上。你向买家转述已完成的摆放。",
+    "prompt": "用She和say报告；消息词汇just、put、her bowl、on the shelf，使用现在完成时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n101-report-plan",
+    "context": "保留上一轮首答和订正。下面是另一情境：两名组织者现在对你和你的搭档许诺：他们会带你们两位的箱子。你代表自己和搭档向老师转述。",
+    "prompt": "以They开头，用say报告；消息词汇carry、our boxes、will，不添加时间。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n101-report-present",
+    "context": "男门卫此刻告诉你：他现在看不见你的车。你立即向同行朋友转述；车是你自己的。",
+    "prompt": "用He和say报告；消息词汇see、my car、can，保留否定。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n101-report-just",
+    "context": "两名学生此刻一起告诉你：他们刚读完那张便条。你立即向老师转述，不把你自己包含进去。",
+    "prompt": "以They开头，用say报告；消息词汇just、read the note，用现在完成时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n101-report-plan",
+    "context": "男厨师现在告诉你：他会明天修好那扇门。你立刻向餐厅负责人转述他的计划。",
+    "prompt": "用He和say报告；消息词汇repair the door、tomorrow、will。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n101-report-present",
+    "context": "两位画师共同在语音消息中告诉你：他们现在很忙。你立刻向访客转述他们当前状态。",
+    "prompt": "以They开头，用say转述，消息词汇busy（忙），不用进行时动作。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n101-report-just",
+    "context": "男邮局职员此刻告诉你：他刚打开那只盒子。你向主管马上报告这条结果。",
+    "prompt": "用He和say报告；消息词汇just、open the box，用现在完成时。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n101-report-plan",
+    "context": "女领队现在对你承诺：她会很快给你寄一封信。你立刻向另一人转述；收信人是你本人。",
+    "prompt": "用She和say报告；消息词汇send、a letter、to me、soon、will。 主句用一般现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  }
+]

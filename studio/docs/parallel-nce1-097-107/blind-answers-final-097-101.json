@@ -1,0 +1,471 @@
+[
+  {
+    "id": "diagnostic-n97-possessive-pronoun",
+    "answer": "This atlas is mine.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n97-whose-owner",
+    "answer": "Whose umbrella is this?",
+    "variants": [
+      "Whose is this umbrella?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n97-belong-to",
+    "answer": "This hammer does not belong to me.",
+    "variants": [
+      "This hammer doesn't belong to me."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n97-possessive-pronoun",
+    "answer": "These tickets are ours.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n97-whose-owner",
+    "answer": "Whose are these cameras?",
+    "variants": [
+      "Whose cameras are these?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n97-belong-to",
+    "answer": "Does this pack of cards belong to you?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n97-possessive-pronoun",
+    "answer": "That chair is yours.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n97-whose-owner",
+    "answer": "Whose is this?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n97-belong-to",
+    "answer": "These brushes belong to her.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n97-possessive-pronoun",
+    "answer": "That scarf is hers.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n97-whose-owner",
+    "answer": "Whose are these?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n97-belong-to",
+    "answer": "This boat belongs to us.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n97-possessive-pronoun",
+    "answer": "These seeds are theirs.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n97-whose-owner",
+    "answer": "Whose dictionary is that?",
+    "variants": [
+      "Whose is that dictionary?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n97-belong-to",
+    "answer": "These photographs do not belong to them.",
+    "variants": [
+      "These photographs don't belong to them."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n97-possessive-pronoun",
+    "answer": "This is mine.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n97-whose-owner",
+    "answer": "Whose are those violins?",
+    "variants": [
+      "Whose violins are those?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n97-belong-to",
+    "answer": "Does this radio belong to us?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n99-think-clause",
+    "answer": "I think the shop is open.",
+    "variants": [
+      "I think that the shop is open."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n99-sure-clause",
+    "answer": "I am sure you can open the box.",
+    "variants": [
+      "I am sure that you can open the box.",
+      "I'm sure you can open the box.",
+      "I'm sure that you can open the box."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n99-says-clause",
+    "answer": "He says he will bring a map.",
+    "variants": [
+      "He says that he will bring a map.",
+      "He says he'll bring a map."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n99-think-clause",
+    "answer": "I think they need a chair.",
+    "variants": [
+      "I think that they need a chair.",
+      "They need a chair, I think."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n99-sure-clause",
+    "answer": "I am sure the door is not locked.",
+    "variants": [
+      "I am sure that the door is not locked.",
+      "I'm sure the door isn't locked.",
+      "I am sure the door isn't locked.",
+      "I'm sure that the door isn't locked."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n99-says-clause",
+    "answer": "She says she needs a pen.",
+    "variants": [
+      "She says that she needs a pen."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n99-think-clause",
+    "answer": "I think I have lost my ticket.",
+    "variants": [
+      "I think that I have lost my ticket.",
+      "I think I've lost my ticket.",
+      "I think that I've lost my ticket.",
+      "I have lost my ticket, I think."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n99-sure-clause",
+    "answer": "I am sure they can hear us.",
+    "variants": [
+      "I am sure that they can hear us.",
+      "I'm sure they can hear us.",
+      "I'm sure that they can hear us."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n99-says-clause",
+    "answer": "They say they can repair the gate.",
+    "variants": [
+      "They say that they can repair the gate."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n99-think-clause",
+    "answer": "I think the match will start tomorrow.",
+    "variants": [
+      "I think that the match will start tomorrow.",
+      "The match will start tomorrow, I think.",
+      "I think that tomorrow the match will start."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n99-sure-clause",
+    "answer": "I am sure the shop will be open tomorrow.",
+    "variants": [
+      "I am sure that the shop will be open tomorrow.",
+      "I'm sure the shop will be open tomorrow.",
+      "I'm sure that the shop will be open tomorrow.",
+      "I am sure that tomorrow the shop will be open."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n99-says-clause",
+    "answer": "He says he has a key.",
+    "variants": [
+      "He says that he has a key."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n99-think-clause",
+    "answer": "I think she wants to go to the park.",
+    "variants": [
+      "I think that she wants to go to the park.",
+      "She wants to go to the park, I think."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n99-sure-clause",
+    "answer": "I am sure you understand the plan.",
+    "variants": [
+      "I am sure that you understand the plan.",
+      "I'm sure you understand the plan.",
+      "I'm sure that you understand the plan."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n99-says-clause",
+    "answer": "She says she cannot stay.",
+    "variants": [
+      "She says that she cannot stay.",
+      "She says she can't stay.",
+      "She says that she can't stay."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n99-think-clause",
+    "answer": "I think they are waiting for the winner.",
+    "variants": [
+      "I think that they are waiting for the winner.",
+      "I think they're waiting for the winner.",
+      "I think that they're waiting for the winner.",
+      "They are waiting for the winner, I think."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n99-sure-clause",
+    "answer": "I am sure these tickets are valid.",
+    "variants": [
+      "I am sure that these tickets are valid.",
+      "I'm sure these tickets are valid.",
+      "I'm sure that these tickets are valid."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n99-says-clause",
+    "answer": "They say they will wait here.",
+    "variants": [
+      "They say that they will wait here.",
+      "They say they'll wait here."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n101-report-present",
+    "answer": "He says he is staying at a hotel by the river.",
+    "variants": [
+      "He says that he is staying at a hotel by the river.",
+      "He says he's staying at a hotel by the river.",
+      "He says that he's staying at a hotel by the river."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n101-report-just",
+    "answer": "She says she has just finished the model bridge.",
+    "variants": [
+      "She says that she has just finished the model bridge.",
+      "She says she's just finished the model bridge.",
+      "She says that she's just finished the model bridge."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n101-report-plan",
+    "answer": "They say they will bring their maps tomorrow.",
+    "variants": [
+      "They say that they will bring their maps tomorrow.",
+      "They say they'll bring their maps tomorrow.",
+      "They say that tomorrow they will bring their maps."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n101-report-present",
+    "answer": "She says she is staying with her sister.",
+    "variants": [
+      "She says that she is staying with her sister.",
+      "She says she's staying with her sister.",
+      "She says that she's staying with her sister."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n101-report-just",
+    "answer": "They say they have just arrived here.",
+    "variants": [
+      "They say that they have just arrived here.",
+      "They say they've just arrived here.",
+      "They say that they've just arrived here."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n101-report-plan",
+    "answer": "He says he will phone me tonight.",
+    "variants": [
+      "He says that he will phone me tonight.",
+      "He says he'll phone me tonight.",
+      "He says that tonight he will phone me."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n101-report-present",
+    "answer": "They say they are waiting at the foot of the hill.",
+    "variants": [
+      "They say that they are waiting at the foot of the hill.",
+      "They say they're waiting at the foot of the hill.",
+      "They say that they're waiting at the foot of the hill."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n101-report-just",
+    "answer": "He says he has just found my book.",
+    "variants": [
+      "He says that he has just found my book.",
+      "He says he's just found my book.",
+      "He says that he's just found my book."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n101-report-plan",
+    "answer": "She says she will send her photographs soon.",
+    "variants": [
+      "She says that she will send her photographs soon.",
+      "She says she'll send her photographs soon.",
+      "She says she will soon send her photographs."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n101-report-present",
+    "answer": "She says we need a map.",
+    "variants": [
+      "She says that we need a map."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n101-report-just",
+    "answer": "She says she has just put her bowl on the shelf.",
+    "variants": [
+      "She says that she has just put her bowl on the shelf.",
+      "She says she's just put her bowl on the shelf.",
+      "She says that she's just put her bowl on the shelf."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n101-report-plan",
+    "answer": "They say they will carry our boxes.",
+    "variants": [
+      "They say that they will carry our boxes.",
+      "They say they'll carry our boxes."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n101-report-present",
+    "answer": "He says he cannot see my car.",
+    "variants": [
+      "He says that he cannot see my car.",
+      "He says he can't see my car.",
+      "He says that he can't see my car."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n101-report-just",
+    "answer": "They say they have just read the note.",
+    "variants": [
+      "They say that they have just read the note.",
+      "They say they've just read the note.",
+      "They say that they've just read the note."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n101-report-plan",
+    "answer": "He says he will repair the door tomorrow.",
+    "variants": [
+      "He says that he will repair the door tomorrow.",
+      "He says he'll repair the door tomorrow.",
+      "He says that tomorrow he will repair the door."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n101-report-present",
+    "answer": "They say they are busy.",
+    "variants": [
+      "They say that they are busy.",
+      "They say they're busy.",
+      "They say that they're busy."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n101-report-just",
+    "answer": "He says he has just opened the box.",
+    "variants": [
+      "He says that he has just opened the box.",
+      "He says he's just opened the box.",
+      "He says that he's just opened the box."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n101-report-plan",
+    "answer": "She says she will send a letter to me soon.",
+    "variants": [
+      "She says that she will send a letter to me soon.",
+      "She says she'll send a letter to me soon.",
+      "She says she will soon send a letter to me."
+    ],
+    "concern": ""
+  }
+]

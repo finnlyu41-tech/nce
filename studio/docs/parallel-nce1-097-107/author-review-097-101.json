@@ -1,0 +1,1066 @@
+{
+  "schema": 1,
+  "reviewKind": "author-self-review-and-source-binding",
+  "independentReviewStatus": "pending; parent binds actual independent reviews after freeze",
+  "baselineCommit": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "scope": {
+    "ownedModules": [
+      "studio/course-loop/parallel-nce1-097-107/lesson-nce1-097.mjs",
+      "studio/course-loop/parallel-nce1-097-107/lesson-nce1-099.mjs",
+      "studio/course-loop/parallel-nce1-097-107/lesson-nce1-101.mjs"
+    ],
+    "promptOnlyPath": "studio/docs/parallel-nce1-097-107/blind-prompts-097-101.json",
+    "noCommit": true,
+    "noUiOrSharedRuntimeChanges": true
+  },
+  "promptOnly": {
+    "path": "studio/docs/parallel-nce1-097-107/blind-prompts-097-101.json",
+    "sha256": "bab496841c1d46866d2635ce6b416c6bbcf188e744cab14702666410b16c148f",
+    "count": 54,
+    "fields": [
+      "id",
+      "context",
+      "prompt",
+      "form"
+    ],
+    "noKeysOrAnswersOrAcceptedOrOptions": true
+  },
+  "sourceCatalogs": [
+    {
+      "path": "studio/dist-online/lesson-pages/index.json",
+      "sha256": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596"
+    },
+    {
+      "path": "studio/dist-online/grammar/index.json",
+      "sha256": "743c6993a7c624604aa8b7a78982f84f4344754485e0b5e4bec08444419ec6c2"
+    },
+    {
+      "path": "studio/app/data/textbook-grammar.json",
+      "sha256": "7522d9c78e29e9becc17c4bbf786b442a65fbb0fa9875b985d117d90a41c54ad"
+    }
+  ],
+  "visualInspection": {
+    "performed": true,
+    "method": "view_image on original local JPEGs; no browser/UI changes",
+    "inspected": [
+      {
+        "catalogPage": 201,
+        "originalPrintedPage": 197,
+        "lesson": 97,
+        "observation": "Lost-property comic:small blue case,yours/not mine,and final does not belong to me."
+      },
+      {
+        "catalogPage": 203,
+        "originalPrintedPage": 199,
+        "lesson": 98,
+        "observation": "Whose is it?/Whose are they? heading;belong-to versus possessive-pronoun questions and singular/plural object illustrations."
+      },
+      {
+        "catalogPage": 205,
+        "originalPrintedPage": 201,
+        "lesson": 99,
+        "observation": "Ow dialogue comic:think/sure/says-that lines visually present; real-world medical actions not taught by these authored tasks."
+      },
+      {
+        "catalogPage": 207,
+        "originalPrintedPage": 203,
+        "lesson": 100,
+        "observation": "He/She/They says/say that heading; current clause-state/needs/can/will frame."
+      },
+      {
+        "catalogPage": 209,
+        "originalPrintedPage": 205,
+        "lesson": 101,
+        "observation": "Jimmy-card comic and current says reports:has just arrived,is staying,will write,hopes we are well."
+      },
+      {
+        "catalogPage": 211,
+        "originalPrintedPage": 207,
+        "lesson": 102,
+        "observation": "He says he/She says she/They say they heading and current is/needs/can/will frame;that omitted."
+      }
+    ]
+  },
+  "authorChecks": {
+    "originalHandAuthoredTasks": 54,
+    "meaningAndPersonDirection": "reviewed in each task with explicit speaker/listener ownership and report addressees",
+    "promptConstruction": "facts and base vocabulary; no full inflected answer provided as a prompt chunk",
+    "semanticContrasts": "possessive versus adjective+noun,unknown owner versus location,positive/negative ownership;guess versus confirmation versus attributable report;current/just-complete/planned reports with actual pronoun and possessive shifts",
+    "naturalVariants": "Explicit that/no-that and finite contractions;whose alternate placement;dative send-me versus send-to-me;postposed I think;embedded tomorrow/tonight before subordinate subject;soon between will and verb. No variants move tomorrow/tonight before the report main clause.",
+    "backshift": "excluded; current says/say preserves the source time",
+    "medicalContent": "daily nonmedical scenarios only; source text does not constitute real guidance",
+    "taskIdentifiersUnique": true,
+    "allAcceptedMatch": true,
+    "allFourNearMissesPerTaskRejected": true,
+    "reportMainTense": "All24 reporting tasks explicitly constrain the main clause to general present;said/is saying are natural beyond the stated finite output scope and are not taught as equivalent here."
+  },
+  "lessons": [
+    {
+      "lesson": 97,
+      "modulePath": "studio/course-loop/parallel-nce1-097-107/lesson-nce1-097.mjs",
+      "moduleSha256": "40a5dd6ae0344ef207835f9b3231b36cdee8eabaae434a8b11c9c661a51cee73",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "targets": [
+        "possessive-pronoun",
+        "whose-owner",
+        "belong-to"
+      ],
+      "stages": [
+        {
+          "stage": "diagnostic",
+          "count": 3
+        },
+        {
+          "stage": "guided",
+          "count": 3
+        },
+        {
+          "stage": "independent",
+          "count": 3
+        },
+        {
+          "stage": "repair",
+          "count": 3
+        },
+        {
+          "stage": "review-a",
+          "count": 3
+        },
+        {
+          "stage": "review-b",
+          "count": 3
+        }
+      ],
+      "source": {
+        "languagePath": "studio/dist-online/language/NCE1/97.json",
+        "internalSourceSha256": "f9205b34f0122e25d849e2865af9e4f2934c7012f795f826853cbef3049fdeab",
+        "moduleInternalHashMatches": true,
+        "comicKey": "NCE1-97",
+        "comicDeclarationMatchesIndex": true,
+        "pairedExercise": {
+          "entryId": "NCE1-97",
+          "lessons": [
+            97,
+            98
+          ],
+          "page": 203,
+          "path": "/lesson-pages/8c74be4b3d58e7b0f0bb0afa87c81bb026dd4ffefca50b3da7b382944ffad615.jpg",
+          "sha256": "8c74be4b3d58e7b0f0bb0afa87c81bb026dd4ffefca50b3da7b382944ffad615",
+          "note": "原页98课标题Whose is it?/Whose are they?；框中Does/Do ... belong to ...?与Is/Are ... mine/yours/hers/ours/theirs?对照。whose询问与独立物主代词来自配套练习，不虚称97原声有whose。"
+        },
+        "pairedExerciseDeclarationMatchesIndex": true,
+        "grammarCatalogEntry": {
+          "id": "NCE1-97",
+          "book": "NCE1",
+          "lesson": 97,
+          "lastLesson": 98,
+          "unit": null,
+          "title": "名词性物主代词与 whose",
+          "category": "noun",
+          "terms": "whose mine yours",
+          "sections": [
+            {
+              "section": "Written exercises · 书面练习",
+              "page": 204
+            },
+            {
+              "section": "句型练习",
+              "page": 203
+            },
+            {
+              "section": "Notes on the text · 课文注释",
+              "page": 202
+            }
+          ],
+          "pages": [
+            202,
+            203,
+            204
+          ],
+          "references": []
+        },
+        "files": [
+          {
+            "page": 201,
+            "path": "studio/dist-online/lesson-pages/f0c970151c08bf5375f65c0d88e1b0bff4d04da6ef8235b901f83d6f27056255.jpg",
+            "declaredSha256": "f0c970151c08bf5375f65c0d88e1b0bff4d04da6ef8235b901f83d6f27056255",
+            "actualSha256": "f0c970151c08bf5375f65c0d88e1b0bff4d04da6ef8235b901f83d6f27056255",
+            "matches": true
+          },
+          {
+            "page": 202,
+            "path": "studio/dist-online/lesson-pages/2cfa0472e170bdca1736635b69209f4624b056c8c046c8e5f3fb1cdcfcee51f2.jpg",
+            "declaredSha256": "2cfa0472e170bdca1736635b69209f4624b056c8c046c8e5f3fb1cdcfcee51f2",
+            "actualSha256": "2cfa0472e170bdca1736635b69209f4624b056c8c046c8e5f3fb1cdcfcee51f2",
+            "matches": true
+          },
+          {
+            "page": 203,
+            "path": "studio/dist-online/lesson-pages/8c74be4b3d58e7b0f0bb0afa87c81bb026dd4ffefca50b3da7b382944ffad615.jpg",
+            "declaredSha256": "8c74be4b3d58e7b0f0bb0afa87c81bb026dd4ffefca50b3da7b382944ffad615",
+            "actualSha256": "8c74be4b3d58e7b0f0bb0afa87c81bb026dd4ffefca50b3da7b382944ffad615",
+            "matches": true
+          }
+        ],
+        "clips": [
+          {
+            "target": "possessive-pronoun",
+            "label": "原声：yours与not mine对照",
+            "start": 40.41,
+            "end": 45.83,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          },
+          {
+            "target": "whose-owner",
+            "label": "原声询问归属；whose句型来自98课配套原页",
+            "start": 40.41,
+            "end": 43.14,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          },
+          {
+            "target": "belong-to",
+            "label": "原声：does not belong to me",
+            "start": 80.09,
+            "end": 84.56,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          }
+        ]
+      },
+      "binding": {
+        "usesSharedAuthor": "../parallel-nce1-049-059/authoring.mjs",
+        "usesSharedMatcher": "../parallel-nce1-025-035/content-contract.mjs",
+        "usesExistingModel": "../model.mjs",
+        "factoryInstantiation": true,
+        "initialStateLessonBinding": true,
+        "eventOrBrowserTesting": false
+      },
+      "tasks": [
+        {
+          "id": "diagnostic-n97-possessive-pronoun",
+          "target": "possessive-pronoun",
+          "stage": "diagnostic",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "diagnostic-n97-whose-owner",
+          "target": "whose-owner",
+          "stage": "diagnostic",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "diagnostic-n97-belong-to",
+          "target": "belong-to",
+          "stage": "diagnostic",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n97-possessive-pronoun",
+          "target": "possessive-pronoun",
+          "stage": "guided",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n97-whose-owner",
+          "target": "whose-owner",
+          "stage": "guided",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n97-belong-to",
+          "target": "belong-to",
+          "stage": "guided",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n97-possessive-pronoun",
+          "target": "possessive-pronoun",
+          "stage": "independent",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n97-whose-owner",
+          "target": "whose-owner",
+          "stage": "independent",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n97-belong-to",
+          "target": "belong-to",
+          "stage": "independent",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n97-possessive-pronoun",
+          "target": "possessive-pronoun",
+          "stage": "repair",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n97-whose-owner",
+          "target": "whose-owner",
+          "stage": "repair",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n97-belong-to",
+          "target": "belong-to",
+          "stage": "repair",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n97-possessive-pronoun",
+          "target": "possessive-pronoun",
+          "stage": "review-a",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n97-whose-owner",
+          "target": "whose-owner",
+          "stage": "review-a",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n97-belong-to",
+          "target": "belong-to",
+          "stage": "review-a",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n97-possessive-pronoun",
+          "target": "possessive-pronoun",
+          "stage": "review-b",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n97-whose-owner",
+          "target": "whose-owner",
+          "stage": "review-b",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n97-belong-to",
+          "target": "belong-to",
+          "stage": "review-b",
+          "acceptedCount": 1,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        }
+      ]
+    },
+    {
+      "lesson": 99,
+      "modulePath": "studio/course-loop/parallel-nce1-097-107/lesson-nce1-099.mjs",
+      "moduleSha256": "6fcf588bcf7ebbd340faa695788341026aa679785b483eb7337fb83462375203",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "targets": [
+        "think-clause",
+        "sure-clause",
+        "says-clause"
+      ],
+      "stages": [
+        {
+          "stage": "diagnostic",
+          "count": 3
+        },
+        {
+          "stage": "guided",
+          "count": 3
+        },
+        {
+          "stage": "independent",
+          "count": 3
+        },
+        {
+          "stage": "repair",
+          "count": 3
+        },
+        {
+          "stage": "review-a",
+          "count": 3
+        },
+        {
+          "stage": "review-b",
+          "count": 3
+        }
+      ],
+      "source": {
+        "languagePath": "studio/dist-online/language/NCE1/99.json",
+        "internalSourceSha256": "41d7de8ed63c30f8067ee413a53a383b9817d04cc8150b7022f231b207e7154d",
+        "moduleInternalHashMatches": true,
+        "comicKey": "NCE1-99",
+        "comicDeclarationMatchesIndex": true,
+        "pairedExercise": {
+          "entryId": "NCE1-99",
+          "lessons": [
+            99,
+            100
+          ],
+          "page": 207,
+          "path": "/lesson-pages/9dd05fb085f68e1c690987336df10cd9970e7f32ce376206360bb46b638d3eba.jpg",
+          "sha256": "9dd05fb085f68e1c690987336df10cd9970e7f32ce376206360bb46b638d3eba",
+          "note": "100课原页列He says/thinks/.../is sure that he is/needs/can/will…及She/They标题；此组改为日常消息场景，不照原页医疗词给现实建议。that省略是自然变体并在101–102课继续练习。"
+        },
+        "pairedExerciseDeclarationMatchesIndex": true,
+        "grammarCatalogEntry": {
+          "id": "NCE1-99",
+          "book": "NCE1",
+          "lesson": 99,
+          "lastLesson": 100,
+          "unit": null,
+          "title": "宾语从句：He says that…",
+          "category": "clause",
+          "terms": "says that",
+          "sections": [
+            {
+              "section": "Written exercises · 书面练习",
+              "page": 208
+            },
+            {
+              "section": "句型练习",
+              "page": 207
+            },
+            {
+              "section": "Notes on the text · 课文注释",
+              "page": 206
+            }
+          ],
+          "pages": [
+            206,
+            207,
+            208
+          ],
+          "references": []
+        },
+        "files": [
+          {
+            "page": 205,
+            "path": "studio/dist-online/lesson-pages/c8c37448a318630d5f1c65725ee4b87dc68fe2eecfeb0998fd352e858372d57d.jpg",
+            "declaredSha256": "c8c37448a318630d5f1c65725ee4b87dc68fe2eecfeb0998fd352e858372d57d",
+            "actualSha256": "c8c37448a318630d5f1c65725ee4b87dc68fe2eecfeb0998fd352e858372d57d",
+            "matches": true
+          },
+          {
+            "page": 206,
+            "path": "studio/dist-online/lesson-pages/e80eab87cf8c528b8594bff5ea1bf7c1398297d5d83953745359fdc9c3d07f33.jpg",
+            "declaredSha256": "e80eab87cf8c528b8594bff5ea1bf7c1398297d5d83953745359fdc9c3d07f33",
+            "actualSha256": "e80eab87cf8c528b8594bff5ea1bf7c1398297d5d83953745359fdc9c3d07f33",
+            "matches": true
+          },
+          {
+            "page": 207,
+            "path": "studio/dist-online/lesson-pages/9dd05fb085f68e1c690987336df10cd9970e7f32ce376206360bb46b638d3eba.jpg",
+            "declaredSha256": "9dd05fb085f68e1c690987336df10cd9970e7f32ce376206360bb46b638d3eba",
+            "actualSha256": "9dd05fb085f68e1c690987336df10cd9970e7f32ce376206360bb46b638d3eba",
+            "matches": true
+          }
+        ],
+        "clips": [
+          {
+            "target": "think-clause",
+            "label": "原声：I think that…",
+            "start": 28.48,
+            "end": 32.54,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          },
+          {
+            "target": "sure-clause",
+            "label": "原声：I am sure that…；最后一句结束窗口",
+            "start": 61.83,
+            "end": 66.83,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": false,
+            "audibilityVerified": false,
+            "endNote": "Last transcript row has no next timestamp;66.83 is a five-second selection window, not a verified audio ending."
+          },
+          {
+            "target": "says-clause",
+            "label": "原声：The doctor says that he will…",
+            "start": 56.97,
+            "end": 61.83,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          }
+        ]
+      },
+      "binding": {
+        "usesSharedAuthor": "../parallel-nce1-049-059/authoring.mjs",
+        "usesSharedMatcher": "../parallel-nce1-025-035/content-contract.mjs",
+        "usesExistingModel": "../model.mjs",
+        "factoryInstantiation": true,
+        "initialStateLessonBinding": true,
+        "eventOrBrowserTesting": false
+      },
+      "tasks": [
+        {
+          "id": "diagnostic-n99-think-clause",
+          "target": "think-clause",
+          "stage": "diagnostic",
+          "acceptedCount": 6,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "diagnostic-n99-sure-clause",
+          "target": "sure-clause",
+          "stage": "diagnostic",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "diagnostic-n99-says-clause",
+          "target": "says-clause",
+          "stage": "diagnostic",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n99-think-clause",
+          "target": "think-clause",
+          "stage": "guided",
+          "acceptedCount": 3,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n99-sure-clause",
+          "target": "sure-clause",
+          "stage": "guided",
+          "acceptedCount": 12,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n99-says-clause",
+          "target": "says-clause",
+          "stage": "guided",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n99-think-clause",
+          "target": "think-clause",
+          "stage": "independent",
+          "acceptedCount": 6,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n99-sure-clause",
+          "target": "sure-clause",
+          "stage": "independent",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n99-says-clause",
+          "target": "says-clause",
+          "stage": "independent",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n99-think-clause",
+          "target": "think-clause",
+          "stage": "repair",
+          "acceptedCount": 8,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n99-sure-clause",
+          "target": "sure-clause",
+          "stage": "repair",
+          "acceptedCount": 12,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n99-says-clause",
+          "target": "says-clause",
+          "stage": "repair",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n99-think-clause",
+          "target": "think-clause",
+          "stage": "review-a",
+          "acceptedCount": 3,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n99-sure-clause",
+          "target": "sure-clause",
+          "stage": "review-a",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n99-says-clause",
+          "target": "says-clause",
+          "stage": "review-a",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n99-think-clause",
+          "target": "think-clause",
+          "stage": "review-b",
+          "acceptedCount": 6,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n99-sure-clause",
+          "target": "sure-clause",
+          "stage": "review-b",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n99-says-clause",
+          "target": "says-clause",
+          "stage": "review-b",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        }
+      ]
+    },
+    {
+      "lesson": 101,
+      "modulePath": "studio/course-loop/parallel-nce1-097-107/lesson-nce1-101.mjs",
+      "moduleSha256": "c316035e97eb7c7b12e2bc34ebca2557589e41e338881413af16874dbcc32913",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "targets": [
+        "report-present",
+        "report-just",
+        "report-plan"
+      ],
+      "stages": [
+        {
+          "stage": "diagnostic",
+          "count": 3
+        },
+        {
+          "stage": "guided",
+          "count": 3
+        },
+        {
+          "stage": "independent",
+          "count": 3
+        },
+        {
+          "stage": "repair",
+          "count": 3
+        },
+        {
+          "stage": "review-a",
+          "count": 3
+        },
+        {
+          "stage": "review-b",
+          "count": 3
+        }
+      ],
+      "source": {
+        "languagePath": "studio/dist-online/language/NCE1/101.json",
+        "internalSourceSha256": "ffd4549443446e47b6c72ddf9f4e4e15276378c7e57398411e363150cf3b5c4b",
+        "moduleInternalHashMatches": true,
+        "comicKey": "NCE1-101",
+        "comicDeclarationMatchesIndex": true,
+        "pairedExercise": {
+          "entryId": "NCE1-101",
+          "lessons": [
+            101,
+            102
+          ],
+          "page": 211,
+          "path": "/lesson-pages/d5c64b3bc8f72f3ffe44229b54849ea79d66ee2aeba4e321c30ef0077d166217.jpg",
+          "sha256": "d5c64b3bc8f72f3ffe44229b54849ea79d66ee2aeba4e321c30ef0077d166217",
+          "note": "102课原页He says he…/She says she…/They say they…及hope/is sure/can/will框体现that可省略；101原文另外展示has just、is staying与will的当前报告。不教没有来源依据的过去报告后移。"
+        },
+        "pairedExerciseDeclarationMatchesIndex": true,
+        "grammarCatalogEntry": {
+          "id": "NCE1-101",
+          "book": "NCE1",
+          "lesson": 101,
+          "lastLesson": 102,
+          "unit": null,
+          "title": "宾语从句：省略 that",
+          "category": "clause",
+          "terms": "says she they",
+          "sections": [
+            {
+              "section": "Written exercises · 书面练习",
+              "page": 212
+            },
+            {
+              "section": "句型练习",
+              "page": 211
+            },
+            {
+              "section": "Notes on the text · 课文注释",
+              "page": 210
+            }
+          ],
+          "pages": [
+            210,
+            211,
+            212
+          ],
+          "references": []
+        },
+        "files": [
+          {
+            "page": 209,
+            "path": "studio/dist-online/lesson-pages/19fdb7a17bb5d43fb859b820d48d1becdd4c774ed79723bfcc3eef9c85cf0f42.jpg",
+            "declaredSha256": "19fdb7a17bb5d43fb859b820d48d1becdd4c774ed79723bfcc3eef9c85cf0f42",
+            "actualSha256": "19fdb7a17bb5d43fb859b820d48d1becdd4c774ed79723bfcc3eef9c85cf0f42",
+            "matches": true
+          },
+          {
+            "page": 210,
+            "path": "studio/dist-online/lesson-pages/e8fb6155a3b21d82e47ca61c1a58888943a43c1eb364117a513a15720b91dc4b.jpg",
+            "declaredSha256": "e8fb6155a3b21d82e47ca61c1a58888943a43c1eb364117a513a15720b91dc4b",
+            "actualSha256": "e8fb6155a3b21d82e47ca61c1a58888943a43c1eb364117a513a15720b91dc4b",
+            "matches": true
+          },
+          {
+            "page": 211,
+            "path": "studio/dist-online/lesson-pages/d5c64b3bc8f72f3ffe44229b54849ea79d66ee2aeba4e321c30ef0077d166217.jpg",
+            "declaredSha256": "d5c64b3bc8f72f3ffe44229b54849ea79d66ee2aeba4e321c30ef0077d166217",
+            "actualSha256": "d5c64b3bc8f72f3ffe44229b54849ea79d66ee2aeba4e321c30ef0077d166217",
+            "matches": true
+          }
+        ],
+        "clips": [
+          {
+            "target": "report-present",
+            "label": "原声：He says he is staying…",
+            "start": 44.04,
+            "end": 49.41,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          },
+          {
+            "target": "report-just",
+            "label": "原声：He says he has just arrived…",
+            "start": 38.97,
+            "end": 44.04,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          },
+          {
+            "target": "report-plan",
+            "label": "原声：He says he will write…",
+            "start": 84.2,
+            "end": 88.45,
+            "startIsExactOriginalTimestamp": true,
+            "endIsNextOriginalTimestamp": true,
+            "audibilityVerified": false
+          }
+        ]
+      },
+      "binding": {
+        "usesSharedAuthor": "../parallel-nce1-049-059/authoring.mjs",
+        "usesSharedMatcher": "../parallel-nce1-025-035/content-contract.mjs",
+        "usesExistingModel": "../model.mjs",
+        "factoryInstantiation": true,
+        "initialStateLessonBinding": true,
+        "eventOrBrowserTesting": false
+      },
+      "tasks": [
+        {
+          "id": "diagnostic-n101-report-present",
+          "target": "report-present",
+          "stage": "diagnostic",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "diagnostic-n101-report-just",
+          "target": "report-just",
+          "stage": "diagnostic",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "diagnostic-n101-report-plan",
+          "target": "report-plan",
+          "stage": "diagnostic",
+          "acceptedCount": 12,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n101-report-present",
+          "target": "report-present",
+          "stage": "guided",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n101-report-just",
+          "target": "report-just",
+          "stage": "guided",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "guided-n101-report-plan",
+          "target": "report-plan",
+          "stage": "guided",
+          "acceptedCount": 12,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n101-report-present",
+          "target": "report-present",
+          "stage": "independent",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n101-report-just",
+          "target": "report-just",
+          "stage": "independent",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "independent-n101-report-plan",
+          "target": "report-plan",
+          "stage": "independent",
+          "acceptedCount": 8,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n101-report-present",
+          "target": "report-present",
+          "stage": "repair",
+          "acceptedCount": 2,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n101-report-just",
+          "target": "report-just",
+          "stage": "repair",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "repair-n101-report-plan",
+          "target": "report-plan",
+          "stage": "repair",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n101-report-present",
+          "target": "report-present",
+          "stage": "review-a",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n101-report-just",
+          "target": "report-just",
+          "stage": "review-a",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-a-n101-report-plan",
+          "target": "report-plan",
+          "stage": "review-a",
+          "acceptedCount": 12,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n101-report-present",
+          "target": "report-present",
+          "stage": "review-b",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n101-report-just",
+          "target": "report-just",
+          "stage": "review-b",
+          "acceptedCount": 4,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        },
+        {
+          "id": "review-b-n101-report-plan",
+          "target": "report-plan",
+          "stage": "review-b",
+          "acceptedCount": 16,
+          "nearMissCount": 4,
+          "acceptedMatch": true,
+          "nearMissRejected": true
+        }
+      ]
+    }
+  ],
+  "remainingLimits": {
+    "independentBlindReview": "pending",
+    "humanOwnExpression": "pending",
+    "actualListening": "unverified",
+    "pronunciation": "unverified",
+    "natural24HourRetention": "unverified",
+    "natural7DayRetention": "unverified",
+    "learningGains": "unverified",
+    "sourceVideoAndUI": "unchanged; parent owns actual host/source UI QA"
+  },
+  "revisions": [
+    {
+      "reason": "Independent blind review found report prompts insufficiently explicit about main-clause tense, especially repair-n99-says-clause.",
+      "change": "Added 主句用一般现在时 to all6 n99 says-clause prompts and all18 n101 report prompts. No answer keys/matcher or other modules changed.",
+      "scope": "Constraint clarification; keeps current reports within original source tense scope."
+    },
+    {
+      "reason": "Independent blind variants exposed unnecessary word-order exclusions.",
+      "change": "Supplemented finite accepted strings for postposed I think in all6 n99 think tasks,embedded tomorrow in n99 think/sure,embedded tomorrow/tonight in n101 plans,and medial soon in n101 plans,including that/no-that and reasonable contraction/comma combinations. No tense/person/fact broadened.",
+      "scope": "Natural finite word-order variants only; all report main-clause general-present constraints remain."
+    }
+  ],
+  "blindVariantComparison": {
+    "path": "studio/docs/parallel-nce1-097-107/blind-answers-final-097-101.json",
+    "sha256": "34d6c8b6053285457c674f48d64739533f80aeb80f3a365c31ab5e3235a9f3e8",
+    "authorComparedOnly": true,
+    "answersAndListedVariantsMatched": 157,
+    "naturalTenseAlternativesExcludedByRevisedPrompt": [
+      "said",
+      "is saying"
+    ],
+    "independentAcceptanceClaim": false
+  }
+}

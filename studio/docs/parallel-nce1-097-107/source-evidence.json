@@ -1,0 +1,167 @@
+{
+  "baseline": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "remoteHeads": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "groups": [
+    {
+      "id": "nce1-97",
+      "sourceSha256": "f9205b34f0122e25d849e2865af9e4f2934c7012f795f826853cbef3049fdeab",
+      "languageFileSha256": "bd6e8618dcb12dd29d2d1f0394537d8a0f6a97d73abb7f84011fb321b9bf670b",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "f0c970151c08bf5375f65c0d88e1b0bff4d04da6ef8235b901f83d6f27056255",
+      "grammarEntry": {
+        "id": "NCE1-97",
+        "book": "NCE1",
+        "lesson": 97,
+        "lastLesson": 98,
+        "unit": null,
+        "title": "名词性物主代词与 whose",
+        "category": "noun",
+        "terms": "whose mine yours",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 204
+          },
+          {
+            "section": "句型练习",
+            "page": 203
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 202
+          }
+        ],
+        "pages": [
+          202,
+          203,
+          204
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 202,
+          "sha256": "2cfa0472e170bdca1736635b69209f4624b056c8c046c8e5f3fb1cdcfcee51f2"
+        },
+        {
+          "page": 203,
+          "sha256": "8c74be4b3d58e7b0f0bb0afa87c81bb026dd4ffefca50b3da7b382944ffad615"
+        },
+        {
+          "page": 204,
+          "sha256": "a4ed59ccf0c770da6047beaf3794a4d9d708d17c63746848bc066fc69850b651"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-99",
+      "sourceSha256": "41d7de8ed63c30f8067ee413a53a383b9817d04cc8150b7022f231b207e7154d",
+      "languageFileSha256": "f33f239bffde895408c76faa5c7181d19f20ab180aef66f2af41766b45b5f9a5",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "c8c37448a318630d5f1c65725ee4b87dc68fe2eecfeb0998fd352e858372d57d",
+      "grammarEntry": {
+        "id": "NCE1-99",
+        "book": "NCE1",
+        "lesson": 99,
+        "lastLesson": 100,
+        "unit": null,
+        "title": "宾语从句：He says that…",
+        "category": "clause",
+        "terms": "says that",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 208
+          },
+          {
+            "section": "句型练习",
+            "page": 207
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 206
+          }
+        ],
+        "pages": [
+          206,
+          207,
+          208
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 206,
+          "sha256": "e80eab87cf8c528b8594bff5ea1bf7c1398297d5d83953745359fdc9c3d07f33"
+        },
+        {
+          "page": 207,
+          "sha256": "9dd05fb085f68e1c690987336df10cd9970e7f32ce376206360bb46b638d3eba"
+        },
+        {
+          "page": 208,
+          "sha256": "0310f15d7113169317e559e49e58b43b7c53d085525a1f3d89417fe4840f0cc0"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-101",
+      "sourceSha256": "ffd4549443446e47b6c72ddf9f4e4e15276378c7e57398411e363150cf3b5c4b",
+      "languageFileSha256": "9aaf3592a731f4027476af0df16fee07bd56f287320c4f9b27c9295c71b7efc4",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "19fdb7a17bb5d43fb859b820d48d1becdd4c774ed79723bfcc3eef9c85cf0f42",
+      "grammarEntry": {
+        "id": "NCE1-101",
+        "book": "NCE1",
+        "lesson": 101,
+        "lastLesson": 102,
+        "unit": null,
+        "title": "宾语从句：省略 that",
+        "category": "clause",
+        "terms": "says she they",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 212
+          },
+          {
+            "section": "句型练习",
+            "page": 211
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 210
+          }
+        ],
+        "pages": [
+          210,
+          211,
+          212
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 210,
+          "sha256": "e8fb6155a3b21d82e47ca61c1a58888943a43c1eb364117a513a15720b91dc4b"
+        },
+        {
+          "page": 211,
+          "sha256": "d5c64b3bc8f72f3ffe44229b54849ea79d66ee2aeba4e321c30ef0077d166217"
+        },
+        {
+          "page": 212,
+          "sha256": "1fe44726cb0783fb2a911a4df61318a987e66d237ace1058cf1e399356a9a69d"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}
