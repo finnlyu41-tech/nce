@@ -1,0 +1,7 @@
+/** Tests use exact current registry/factory; pending modules have no binding. */
+import {getCourseBinding,registeredCourseIds} from '../registry.mjs';
+import {fixtureForId as existingFixture,productionHost} from '../parallel-nce1-061-083-host/binding.mjs';
+export {productionHost};export const supportedCourseIds=registeredCourseIds;
+export const baseIds=Object.freeze(Array.from({length:42},(_,i)=>'nce1-'+(i*2+1)));export const newIds=Object.freeze(['nce1-85','nce1-87','nce1-89','nce1-97','nce1-99','nce1-101','nce1-103','nce1-105','nce1-107']);
+const paths={"nce1-103":"../parallel-nce1-097-107/lesson-nce1-103.mjs","nce1-105":"../parallel-nce1-097-107/lesson-nce1-105.mjs","nce1-107":"../parallel-nce1-097-107/lesson-nce1-107.mjs","nce1-85":"../parallel-nce1-085-095/lesson-nce1-085.mjs","nce1-87":"../parallel-nce1-085-095/lesson-nce1-087.mjs","nce1-89":"../parallel-nce1-085-095/lesson-nce1-089.mjs","nce1-97": "../parallel-nce1-097-107/lesson-nce1-097.mjs", "nce1-99": "../parallel-nce1-097-107/lesson-nce1-099.mjs", "nce1-101": "../parallel-nce1-097-107/lesson-nce1-101.mjs"};
+export async function fixtureForId(id){const binding=getCourseBinding(id);if(baseIds.includes(id))return existingFixture(id);if(!paths[id])throw Error('No test fixture for registered course: '+id);const content=await import(paths[id]);return {model:binding.model,content,keys:{snapshot:binding.key,inputs:binding.inputsKey},provenance:{binding:'actual latest production registry and factory'}};}

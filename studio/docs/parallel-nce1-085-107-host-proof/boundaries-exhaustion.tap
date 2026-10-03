@@ -1,0 +1,144 @@
+TAP version 13
+# Subtest: fifty-one real bindings preserve old defaults and distinct storage keys
+ok 1 - fifty-one real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 3.543916
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all fifty-one courses
+ok 2 - actual factory and registered model retain first answers and corrections for all fifty-one courses
+  ---
+  duration_ms: 18.028208
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 51 by 51 pairs
+ok 3 - every envelope and correction sidecar is accepted only by its exact course across 51 by 51 pairs
+  ---
+  duration_ms: 107.212125
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 4 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 149.430292
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 5 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 64.88425
+  type: 'test'
+  ...
+# Subtest: fifty-one pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 6 - fifty-one pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 34.125333
+  type: 'test'
+  ...
+# Subtest: fifty-one due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 7 - fifty-one due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 149.677625
+  type: 'test'
+  ...
+# Subtest: registered subchains advance independently by n+2 and 89 safely holds its real current node
+ok 8 - registered subchains advance independently by n+2 and 89 safely holds its real current node
+  ---
+  duration_ms: 545.572458
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 9 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 7.436208
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 10 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 47.848459
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all fifty-one records, sidecars and original classic history
+ok 11 - actual progress backup and validator preserve all fifty-one records, sidecars and original classic history
+  ---
+  duration_ms: 7.786167
+  type: 'test'
+  ...
+# Subtest: actual successor guards the two subchains, 89 hold and original 109 route without routing into pending groups
+ok 12 - actual successor guards the two subchains, 89 hold and original 109 route without routing into pending groups
+  ---
+  duration_ms: 0.449333
+  type: 'test'
+  ...
+# Subtest: pending 91/93/95 have no registered model, keys, sidecars, envelopes or automatic predecessors
+ok 13 - pending 91/93/95 have no registered model, keys, sidecars, envelopes or automatic predecessors
+  ---
+  duration_ms: 0.766708
+  type: 'test'
+  ...
+# Current production factory SHA256: 4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57
+# Subtest: factory is the current video-capable production file and SourceKind includes video
+ok 14 - factory is the current video-capable production file and SourceKind includes video
+  ---
+  duration_ms: 6.628084
+  type: 'test'
+  ...
+# Subtest: video source events before answers persist assistance and after answers preserve the unassisted original
+ok 15 - video source events before answers persist assistance and after answers preserve the unassisted original
+  ---
+  duration_ms: 10.8785
+  type: 'test'
+  ...
+# Subtest: video-assisted independent correct originals still require correction and retain scoped help through repair and backup
+ok 16 - video-assisted independent correct originals still require correction and retain scoped help through repair and backup
+  ---
+  duration_ms: 128.591375
+  type: 'test'
+  ...
+# R15 actual host: {"courses":51,"finitePools":51,"repairTasks":51}
+# Subtest: all fifty-one actual factories retain distinct failed and helped answers in both finite banks
+ok 17 - all fifty-one actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 7.3605
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 18 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 144.835333
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+ok 19 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 786.698916
+  type: 'test'
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+ok 20 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 17.854375
+  type: 'test'
+  ...
+# Subtest: finite-pool familiar repair allows mapped continuation and safe hold at 89 without repeated fresh review claims
+ok 21 - finite-pool familiar repair allows mapped continuation and safe hold at 89 without repeated fresh review claims
+  ---
+  duration_ms: 120.899375
+  type: 'test'
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 22 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.299583
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2000.588458
