@@ -1,0 +1,122 @@
+{
+  "publishedBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "bothRemoteHeads": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "publisherLocalAtStart": "8d7f0d10578e110fba96a0f2c40b7d29d5a27b01",
+  "evidence": [
+    {
+      "courseId": "nce1-13",
+      "lessons": [
+        13,
+        14
+      ],
+      "title": "第 13–14 课 · 问颜色，分清他的和她的",
+      "teachingTargets": [
+        "colour-question",
+        "possessive-colour",
+        "it-colour"
+      ],
+      "originalSourceSha256": "6a7c5c324a0a891c2fb0b7dc430ed2f38a3c99d3cc6ba526adbbc49e780dc0a7",
+      "languageFileSha256": "403b3a7ac71b8ea353683535a3d16737472ca0707cbb102f9a9cd96283b86c6b",
+      "courseModuleSha256": "be867044ba334c5e228bdea2d17cec9df10a6efaadfc89cc24bf714775b23d72",
+      "evenExerciseGrammarPage": 31,
+      "evenExerciseImageSha256": "8ee8f41c47a05cb6625aee688ea7cb875d74ae6cd72ca4ba383fffdbf8181569",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher video/audio downloaded"
+    },
+    {
+      "courseId": "nce1-15",
+      "lessons": [
+        15,
+        16
+      ],
+      "title": "第 15–16 课 · 从一个人到一群人",
+      "teachingTargets": [
+        "singular-article",
+        "plural-question",
+        "plural-response"
+      ],
+      "originalSourceSha256": "79644833a41795f8673516bd65dfdb8cb5094809c94ab711d6040bcfc7e23323",
+      "languageFileSha256": "12c24e9e2a5875dd58d16747184822d64698aafad3ad5c9ee45f015a29f666b0",
+      "courseModuleSha256": "f7fe9d2a6512045351e9df71607479751855d16cb929d684ca7e5a767ba6f380",
+      "evenExerciseGrammarPage": 35,
+      "evenExerciseImageSha256": "49173910e6d6e6fae7d38fca23e5192ec6d9741e8caa74aa07c71fe8577e7af9",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher video/audio downloaded"
+    },
+    {
+      "courseId": "nce1-17",
+      "lessons": [
+        17,
+        18
+      ],
+      "title": "第 17–18 课 · 问职业，说明多人的角色",
+      "teachingTargets": [
+        "jobs-question",
+        "plural-occupation",
+        "group-description"
+      ],
+      "originalSourceSha256": "c8a555bfd99eb9a4b382b8a79d6d27d5cf8fce22164ae77bb95bff4a29c42a87",
+      "languageFileSha256": "8ebef72fe892053c9d9699bbfa1db9c16a286285b865ed411b533e2e76ea5087",
+      "courseModuleSha256": "c53f06cb1f59b477de9b6472e57e3a4b558b90f26c80cd1e4ff5e14b2d321914",
+      "evenExerciseGrammarPage": 39,
+      "evenExerciseImageSha256": "a4881fbb449d30a742636eb0eb35a9b8b1d5b8fbb7719c686a9f2052f5708e97",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher video/audio downloaded"
+    },
+    {
+      "courseId": "nce1-19",
+      "lessons": [
+        19,
+        20
+      ],
+      "title": "第 19–20 课 · 说明状态，把东西交给谁",
+      "teachingTargets": [
+        "current-state",
+        "recipient-request",
+        "status-exchange"
+      ],
+      "originalSourceSha256": "253d96dfc107ca2447b8aa7e912f8b7f3869bcbd546f82883da1b8518f6abfe4",
+      "languageFileSha256": "4c78cafba77dabde17207843c0636dcb572c1a9d3a1ff69287dd7dc4a5c24ae8",
+      "courseModuleSha256": "c71bc30c74d9dc5afebf39f096999e9718624c1e8fbfed90e74d1bfa73414961",
+      "evenExerciseGrammarPage": 43,
+      "evenExerciseImageSha256": "f38144a9f150018e50dacf268013bdb0bfb876769477b718d5aab1e7d89e2d8f",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher video/audio downloaded"
+    },
+    {
+      "courseId": "nce1-21",
+      "lessons": [
+        21,
+        22
+      ],
+      "title": "第 21–22 课 · 说明物主，选对单件物品",
+      "teachingTargets": [
+        "possessive-owner",
+        "single-request",
+        "item-selection"
+      ],
+      "originalSourceSha256": "3f47339168baa47c8c88641e5476a72978b534aa8c35c7c14b65584ce16729ca",
+      "languageFileSha256": "016629990c2f51ec0d1291fd9cf82eb2299fa26c13bac20d77ff24de1c76c4d8",
+      "courseModuleSha256": "ea8b204285e175bd44bead98c988d024f37026fcaba5fe92e010336f092c2d37",
+      "evenExerciseGrammarPage": 47,
+      "evenExerciseImageSha256": "a5455a0d0c321c56ca23d88c1e5bf69781b01605e1cb68df5463e0427595984f",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher video/audio downloaded"
+    },
+    {
+      "courseId": "nce1-23",
+      "lessons": [
+        23,
+        24
+      ],
+      "title": "第 23–24 课 · 请求多件物品，问清是哪一组",
+      "teachingTargets": [
+        "plural-request",
+        "plural-question",
+        "location-selection"
+      ],
+      "originalSourceSha256": "e81c6aee4443fc3580b423bd1d0e5469d59f70ea8e2148baa8f6def654a624c7",
+      "languageFileSha256": "0074a4dee0b5ac390322804fd353351a0b1e750830636b8d5d814781d07de5c3",
+      "courseModuleSha256": "6fc43ba93835e9e1a79cba32c329840e83cc26aa059f5a4c2e406e46cbd9d5f5",
+      "evenExerciseGrammarPage": 51,
+      "evenExerciseImageSha256": "61e71245f0b00e8dc3721279ae68c807f5cdeca5186d2bcabc8872e6eb4204ba",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher video/audio downloaded"
+    }
+  ],
+  "calibration": false
+}

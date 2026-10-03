@@ -1,0 +1,21 @@
+# R12 mini batch02 first-three production candidate
+
+Fixed published base: both release heads `7b7c1283d12f0c6d784478cda8353080598f6980`. Publisher local `8d7f0d1` was separately observed, containing unpushed later CL author work; this candidate uses the actual published source. Independent clone/branch `mini-task-batch02-worktree` / `codex/r12-mini-batch02-20261003`. No publisher tree, personal record or natural lesson13 archive is touched. No push/deploy.
+
+Ownership: new `mini-task/batch-02/` content, manifest, WAVs, native tests, docs/evidence, plus new explicit `mini-task/audio-batches.json`. Only four existing mini files change: `content.ts` adds one batch import/spread; `manifest.ts` adds bindings and honest combined coverage; `package-audio.py` and `verify-audio.py` read a finite inventory. Navigation/Today/CL/UI/CAS/guards/State.drafts schema remain the published implementation. Original six tasks' data are unchanged, and original ten WAVs are byte-identical to frozen `2c90a04`.
+
+13–14: listen for a specified owner's colour, including two speakers, same-colour reference, a rejected suggested colour, and an explicit two-colour record. Repair now repeats the same-colour mechanism with new facts.
+
+15–16: read original paired traveller messages to select group identity, affirmed nationality/role, or the group's plural belongings. We/Our, negation and adjacent-group distractors carry the facts; this is reading comprehension, not a disguised sentence-construction score.
+
+17–18: convey two colleagues' names, common plural occupation and current positive/negative state orally to a visitor. Repair preserves the negation mechanism. Open speaking quality is awaiting human review; a local synthetic WAV is used only as the QA file-selection fixture, not real learner speech evidence. No audio bytes or filename are saved in State; metadata only, file re-selection required after refresh; no uploads. Text fallback cannot earn independent oral evidence.
+
+All six source lesson pairs were verified against actual odd source rows and six inspected even exercise-page images. Source/hash binding is in `../evidence/source-bindings.json`. Each authored task uses five finite different materials: hinted first attempt/feedback, new independent attempt, repair, due A/B. Shared wording or vocabulary does not become broad transfer or equal difficulty evidence. Explicit lesson bindings remain partial-target with uncovered goals.
+
+Blind review: first packet15/15 answerable; original alignment findings and original packet retained. Two changed tasks were independently re-reviewed without keys; closed10 keys match independently returned answers; open5 stay ungraded. Text review does not audit acoustic quality, difficulty or real learner repair effectiveness.
+
+Actual final packages: native Chrome normal map Today → known mini → first answer/feedback → new independent material. Paired CL mini callback, Today saved resume, actual IDB quota failure with UI/hash departure refusal, retry/refresh, immutable originals/correction drafts, old mini/CL/map/FSRS/cards/scores isolation all passed. Existing UI backup download and confirmed file restore preserve all original drafts/cards. Fifteen known WAVs each return HTTP200 audio/x-wav with exact hash at root and map URLs; real missing WAV produces honest fallback and no exposure. Actual file offline package's13 audio play/ended and save/refresh/submit passed. 320/390 representative views have no overflow. Zero runtime exceptions or external HTTP. Fresh synthetic profiles only.
+
+Strict TypeScript/scoped lint, original-six+new-three model11 groups, finite media15 positive/negative groups and whole upload1987 files/556 original materials hash verification pass. One rejected stale WAV from the unfrozen initial13 repair build was removed by its exact owned output path after review; failure/cleanup receipt is retained. No whitelist was relaxed. Evidence in `../evidence/first-three/` binds actual package hashes and media receipts.
+
+Remaining targets include active colour question/complete possessive production, single a/an jobs, free nationality/occupation questions and speech quality. Later19–24 are not authored by this freeze. No Band/full-skill mastery, calibrated difficulty, human acoustic audit, natural-delay or R12 completion is claimed.

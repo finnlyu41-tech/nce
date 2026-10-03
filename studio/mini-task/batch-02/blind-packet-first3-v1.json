@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "inputScope": "No hints, references, accepted keys or model supplied. Text only; no human acoustic audit.",
+  "items": [
+    {
+      "id": "mini-n1-13:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        13,
+        14
+      ],
+      "material": "Ava: My coat is white. Ben: My coat is black.",
+      "prompt": "登记 Ben 的 coat（外套）颜色：____。只写一个英文颜色词。"
+    },
+    {
+      "id": "mini-n1-13:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        13,
+        14
+      ],
+      "material": "Mia: Her dress is yellow. Her hat is the same colour.",
+      "prompt": "这里 her 明确指同一位朋友。登记她的 hat（帽子）颜色：____。只写一个英文颜色词。"
+    },
+    {
+      "id": "mini-n1-13:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        13,
+        14
+      ],
+      "material": "Leo: His shirt is white. His tie is orange.",
+      "prompt": "这里 his 明确指同一位朋友。登记他的 tie（领带）颜色：____。只写一个英文颜色词。"
+    },
+    {
+      "id": "mini-n1-13:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        13,
+        14
+      ],
+      "material": "Nora: Is your umbrella red? Sam: No. My umbrella is blue.",
+      "prompt": "登记 Sam 的 umbrella（伞）最后确认的颜色：____。只写一个英文颜色词。"
+    },
+    {
+      "id": "mini-n1-13:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        13,
+        14
+      ],
+      "material": "Tia: My hat is grey and black. Jo: My coat is green.",
+      "prompt": "登记 Tia 的 hat 两种颜色：____。按说出的顺序写“颜色 and 颜色”，共3个英文词；grey/gray均可。"
+    },
+    {
+      "id": "mini-n1-15:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        15,
+        16
+      ],
+      "material": "Ava and Ben: We are tourists. Our cases are brown.\nMia and Leo: Our cases are green.",
+      "prompt": "哪一组的 cases（箱子）是 brown？照抄该组标头，写“名字 and 名字”，共3个英文词。"
+    },
+    {
+      "id": "mini-n1-15:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        15,
+        16
+      ],
+      "material": "Nora and Sam: We are not Swedish. We are Norwegian.\nTia and Jo: We are Swedish.",
+      "prompt": "Nora 和 Sam 实际说明的国籍是 ____。照抄一个英文国籍词；不要填被否认的国籍。"
+    },
+    {
+      "id": "mini-n1-15:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        15,
+        16
+      ],
+      "material": "Ken and Kim: These are not our cases. Our cases are blue.\nDan and Eva: Our cases are red.",
+      "prompt": "Ken 和 Kim 自己的 cases 颜色是 ____。只写一个英文颜色词。"
+    },
+    {
+      "id": "mini-n1-15:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        15,
+        16
+      ],
+      "material": "Amy and Max: We are not teachers. We are tourists.\nIvy and Tom: We are teachers.",
+      "prompt": "Amy 和 Max 在留言里确认的身份是 ____。照抄一个英文词，保留多人词尾。"
+    },
+    {
+      "id": "mini-n1-15:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        15,
+        16
+      ],
+      "material": "Rae and Kai: Our passports are green. Our tickets are yellow.\nMay and Joe: Our passports are blue.",
+      "prompt": "Rae 和 Kai 的哪种物品是 yellow？照抄一个英文复数物品词。"
+    },
+    {
+      "id": "mini-n1-17:guided",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        17,
+        18
+      ],
+      "material": "来访者面前是两位同事 Ava 和 Ben。他们共同的职业是 teachers（教师），现在 busy（忙）。",
+      "prompt": "口头说3句：用名字介绍这两人，说明共同职业，再说明当前状态。"
+    },
+    {
+      "id": "mini-n1-17:independent",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        17,
+        18
+      ],
+      "material": "两位同事 Mia 和 Leo 现在在你身边。两人共同的职业是 engineers（工程师），他们现在并不 busy。",
+      "prompt": "口头说3句：介绍两人，说明职业，纠正“他们现在很忙”的说法。不编造原因。"
+    },
+    {
+      "id": "mini-n1-17:repair",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        17,
+        18
+      ],
+      "material": "两位同事 Nora 和 Sam 刚来到来访者面前。他们共同的职业是 keyboard operators（键盘操作员），两人现在 tired（累）。",
+      "prompt": "换两位同事，口头介绍名字、职业和当前状态，共3句。"
+    },
+    {
+      "id": "mini-n1-17:delayed-a",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        17,
+        18
+      ],
+      "material": "两位同事 Tia 和 Jo 在你身边。他们共同的职业是 sales reps（销售代表），两人现在并不 tired。",
+      "prompt": "口头介绍名字和共同职业，再说明两人“不累”，共3句。不把否定改成肯定。"
+    },
+    {
+      "id": "mini-n1-17:delayed-b",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        17,
+        18
+      ],
+      "material": "两位同事 Ken 和 Kim 已来到来访者面前。他们共同的职业是 mechanics（机械师），两人现在 busy。",
+      "prompt": "口头介绍两位同事，说明共同职业和当前状态，共3句。自然等义表达可留待人工核对。"
+    }
+  ]
+}

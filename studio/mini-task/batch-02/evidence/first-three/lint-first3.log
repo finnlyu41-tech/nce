@@ -1,0 +1,9 @@
+
+/Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/mini-task/batch-02/test-model.mjs
+  2:9  warning  'readFile' is defined but never used  @typescript-eslint/no-unused-vars
+
+/Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/mini-task/batch-02/test-native.mjs
+  21:160  warning  'now' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+✖ 2 problems (0 errors, 2 warnings)
+

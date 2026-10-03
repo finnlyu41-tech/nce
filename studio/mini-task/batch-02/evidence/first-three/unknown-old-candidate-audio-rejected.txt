@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/scripts/verify-online.py", line 172, in <module>
+    verify(ROOT/'dist-online')
+  File "/Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/scripts/verify-online.py", line 164, in verify
+    assert relative in allowed, 'Unexpected upload file: ' + relative
+AssertionError: Unexpected upload file: assets/mini-n1-13-repair--KzHOKYv.wav

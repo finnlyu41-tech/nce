@@ -1,3 +1,4 @@
+import {batch02Tasks} from './batch-02/content';
 export type Bank = 'guided'|'independent'|'repair'|'delayed-a'|'delayed-b';
 export type MiniItem = {id:string;bank:Bank;material:string;prompt:string;hint:string;reference:string;accepted:string[];audio?:string};
 export type MiniTask = {id:string;courseId:string;groupId:string;lessons:number[];skill:'listening'|'reading'|'speaking'|'writing';track:'common'|'general-training';title:string;level:string;calibration:'uncalibrated';teaching:string;items:MiniItem[]};
@@ -48,6 +49,7 @@ export const miniTasks:readonly MiniTask[]=[
   {material:"Dan's coat is blue. Tia's bag is white.",prompt:"What colour is Tia's bag?（Tia 的包是什么颜色？）只写一个颜色词。",hint:'找到 Tia 与 bag 同时出现的一句。',reference:'white',accepted:['white']},
   {material:"Jo's bag is red. Kim's coat is green.",prompt:"What colour is Kim's coat?（Kim 的外套是什么颜色？）只写一个颜色词。",hint:'找到 Kim 与 coat 同时出现的一句。',reference:'green',accepted:['green']},
  ]),
+ ...batch02Tasks,
 ];
 export const miniTaskForCourse=(courseId:string)=>miniTasks.find(task=>task.courseId===courseId);
 export function getMiniTask(id:string){const task=miniTasks.find(task=>task.id===id);if(!task)throw Error('小任务尚未编写，原记录保留。');return task}

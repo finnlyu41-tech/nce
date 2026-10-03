@@ -1,0 +1,202 @@
+{
+  "checks": [
+    "13 quota failure/route guard/retry/refresh/paired CL callback/Today resume",
+    "mini-n1-13 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "mini-n1-15 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "mini-n1-17 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "actual existing JSON backup download/file preview/confirmed native restore preserves all mini and CL originals plus cards",
+    "root/map all finite WAV HTTP200/MIME/hash; actual404 earns no exposure; restored real playback; synthetic due route",
+    "mini-n1-13 actual file offline embedded real play/ended+save/refresh/submit"
+  ],
+  "media": [
+    {
+      "path": "assets/mini-n1-01-delayed-a-DasbtE01.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    {
+      "path": "map/assets/mini-n1-01-delayed-a-DasbtE01.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    {
+      "path": "assets/mini-n1-01-delayed-b-9LV-hq9D.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    {
+      "path": "map/assets/mini-n1-01-delayed-b-9LV-hq9D.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    {
+      "path": "assets/mini-n1-01-guided-DbZx4d_F.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    {
+      "path": "map/assets/mini-n1-01-guided-DbZx4d_F.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    {
+      "path": "assets/mini-n1-01-independent-DwalH_Cp.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    {
+      "path": "map/assets/mini-n1-01-independent-DwalH_Cp.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    {
+      "path": "assets/mini-n1-01-repair-C_pmpUrE.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    {
+      "path": "map/assets/mini-n1-01-repair-C_pmpUrE.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    {
+      "path": "assets/mini-n1-09-delayed-a-32d96Ls0.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    {
+      "path": "map/assets/mini-n1-09-delayed-a-32d96Ls0.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    {
+      "path": "assets/mini-n1-09-delayed-b-BdSpo7nO.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    {
+      "path": "map/assets/mini-n1-09-delayed-b-BdSpo7nO.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    {
+      "path": "assets/mini-n1-09-guided-BLL7G-yC.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    {
+      "path": "map/assets/mini-n1-09-guided-BLL7G-yC.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    {
+      "path": "assets/mini-n1-09-independent-B_v42D4U.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    {
+      "path": "map/assets/mini-n1-09-independent-B_v42D4U.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    {
+      "path": "assets/mini-n1-09-repair-1nc7dXyw.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    },
+    {
+      "path": "map/assets/mini-n1-09-repair-1nc7dXyw.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    },
+    {
+      "path": "assets/mini-n1-13-delayed-a-DYHoDgGg.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "5d7179b27609df356076d8ed5e2cb885b090e960f5f4973ee302b57b09df7abe"
+    },
+    {
+      "path": "map/assets/mini-n1-13-delayed-a-DYHoDgGg.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "5d7179b27609df356076d8ed5e2cb885b090e960f5f4973ee302b57b09df7abe"
+    },
+    {
+      "path": "assets/mini-n1-13-delayed-b-o0tqzcmx.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "8008e4bfcacb7add5402289e1ac1024392fc4309fbeeb8fd8898b91e834cbc63"
+    },
+    {
+      "path": "map/assets/mini-n1-13-delayed-b-o0tqzcmx.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "8008e4bfcacb7add5402289e1ac1024392fc4309fbeeb8fd8898b91e834cbc63"
+    },
+    {
+      "path": "assets/mini-n1-13-guided-ByKHd3et.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "8ea219e167bd741f921765dea6ffbfc6c8e1b30ac1e6844f4ded90a45e4e1ec7"
+    },
+    {
+      "path": "map/assets/mini-n1-13-guided-ByKHd3et.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "8ea219e167bd741f921765dea6ffbfc6c8e1b30ac1e6844f4ded90a45e4e1ec7"
+    },
+    {
+      "path": "assets/mini-n1-13-independent-DI54ei6w.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "8a8d8e904164b954779593bfc8b8f7c7752157e99a7a031f14c368fc24e0152d"
+    },
+    {
+      "path": "map/assets/mini-n1-13-independent-DI54ei6w.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "8a8d8e904164b954779593bfc8b8f7c7752157e99a7a031f14c368fc24e0152d"
+    },
+    {
+      "path": "assets/mini-n1-13-repair-CRIE55uo.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e"
+    },
+    {
+      "path": "map/assets/mini-n1-13-repair-CRIE55uo.wav",
+      "status": 200,
+      "mime": "audio/x-wav",
+      "sha256": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e"
+    }
+  ],
+  "exceptions": 0,
+  "externalHTTP": [],
+  "profile": "fresh synthetic QA, no user records/profile or natural lesson13 archive read",
+  "actualPackages": true,
+  "realLearnerSpeech": false,
+  "humanAcousticAudit": false,
+  "naturalDelayVerified": false,
+  "offlineTested": "Chrome desktop file direct mini route",
+  "backup": "actual existing UI download and file restore; no audio bytes persisted"
+}

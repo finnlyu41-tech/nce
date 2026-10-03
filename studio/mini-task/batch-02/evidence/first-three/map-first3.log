@@ -1,0 +1,30 @@
+vite v8.0.13 building client environment for online...
+[2K
+transforming...✓ 2123 modules transformed.
+rendering chunks...
+computing gzip size...
+map/dist/index.html                                      0.54 kB │ gzip:   0.40 kB
+map/dist/assets/mini-n1-09-guided-BLL7G-yC.wav          81.13 kB
+map/dist/assets/mini-n1-09-delayed-a-32d96Ls0.wav       83.69 kB
+map/dist/assets/mini-n1-09-repair-1nc7dXyw.wav          85.23 kB
+map/dist/assets/mini-n1-01-guided-DbZx4d_F.wav          92.91 kB
+map/dist/assets/mini-n1-01-independent-DwalH_Cp.wav     94.44 kB
+map/dist/assets/mini-n1-01-repair-C_pmpUrE.wav          96.49 kB
+map/dist/assets/mini-n1-09-independent-B_v42D4U.wav     97.32 kB
+map/dist/assets/mini-n1-09-delayed-b-BdSpo7nO.wav      123.11 kB
+map/dist/assets/mini-n1-01-delayed-a-DasbtE01.wav      159.78 kB
+map/dist/assets/mini-n1-13-repair-CRIE55uo.wav         169.50 kB
+map/dist/assets/mini-n1-13-independent-DI54ei6w.wav    169.55 kB
+map/dist/assets/mini-n1-01-delayed-b-9LV-hq9D.wav      173.82 kB
+map/dist/assets/mini-n1-13-guided-ByKHd3et.wav         177.93 kB
+map/dist/assets/mini-n1-13-delayed-b-o0tqzcmx.wav      196.95 kB
+map/dist/assets/mini-n1-13-delayed-a-DYHoDgGg.wav      228.55 kB
+map/dist/assets/index-BShJ_BNn.css                      89.89 kB │ gzip:  18.60 kB
+map/dist/assets/index-CjE8qGig.js                    3,630.49 kB │ gzip: 913.57 kB
+
+✓ built in 512ms
+[plugin builtin:vite-reporter]
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

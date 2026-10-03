@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "blind-to-keys",
+  "reviewType": "independent-text-only-content-recheck",
+  "input": "studio/mini-task/batch-02/blind-packet.json",
+  "inputScope": "本次复核仅读当前指定 blind-packet.json；未读取 keys、作者实现、manifest、hint 或音频。历史审查输出仅更新 input 与 inputScope 溯源字段，保留首轮评价。",
+  "previousReview": "studio/mini-task/batch-02/blind-review-first3.json",
+  "completedItemCount": 15,
+  "limitations": [
+    "仅文字内容盲审，未播放或试听音频，未评价听感、音质、语速、重音或说话人区分。",
+    "未进行真人难度校准、等难度验证、CEFR 标定、学习者修复效果验证或 IELTS band 映射。",
+    "口语为独立参考表达，未取得学习者录音，不评价发音、停顿或流利度。",
+    "未读参考答案或评分实现；未做 key 比对；未验证评分的等义表达容错。",
+    "素材差异评估仅限盲包内部；未核查外部来源、版权或全局原创。"
+  ],
+  "revisionChecks": [
+    {
+      "itemId": "mini-n1-13:repair",
+      "status": "resolved-in-text-task-mechanism",
+      "independentAnswer": "white",
+      "assessment": "repair 已通过 same colour 由 shirt 的 white 推出 tie 颜色，与 independent 的同色关联目标对齐；未验证真人效果或音频等难。"
+    },
+    {
+      "itemId": "mini-n1-17:repair",
+      "status": "resolved-in-text-task-mechanism",
+      "independentAnswer": "These are Nora and Sam. They are keyboard operators. They are not tired.",
+      "assessment": "repair 已明确否定 tired 并要求纠正很累的说法，与 independent 的否定纠正目标对齐；未验证实际口头难度或修复效果。"
+    }
+  ],
+  "summary": {
+    "answerability": "15/15 可从当前盲包独立作答；未发现无解或关键矛盾。",
+    "criticalBlockers": 0,
+    "revisionOutcome": "两道指定修订题的原文字任务对齐问题均已解决。",
+    "remainingNotes": [
+      "bank 仍有同色关联、否定修正、双颜色顺序、多种输出目标的负担差异，不能宣称等难。",
+      "mini-n1-15 repair 可检查否定与所有者绑定，但未直接重检国籍词。",
+      "口语应按信息覆盖和语言质量核对自然等义表达。",
+      "部分核心词/状态在延迟题中重现，未重复整段题目；不能称所有目标材料完全未见。",
+      "音频和真人表现仍未验证，不构成此次文字审查能够解决的证据。"
+    ]
+  },
+  "items": [
+    {
+      "taskId": "mini-n1-13",
+      "itemId": "mini-n1-13:guided",
+      "answer": "black",
+      "review": {
+        "taskLanguageClarity": "Ben 的 coat 为 black；人物、物品和一词输出明确。",
+        "difficultyPrerequisites": "将 my 绑定 Ben，从两位说话者中提取指定颜色。",
+        "materialDifference": "人物同物品异颜色直接提取；white 为干扰信息。",
+        "answerPolicy": "black；大小写和首尾空白应与内容判断分开。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "文字中的人物标签明确，未试听音频以核查 Ben 如何被识别。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-13",
+      "itemId": "mini-n1-13:independent",
+      "answer": "yellow",
+      "review": {
+        "taskLanguageClarity": "两处 her 的共同指向已说明；hat 的 same colour 回指 dress 的 yellow，答案唯一。",
+        "difficultyPrerequisites": "理解 same colour，跨句将颜色由 dress 关联到 hat。",
+        "materialDifference": "与 guided 相比新增同色推断；与修订后的 repair 同机制、不同物品。",
+        "answerPolicy": "yellow。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "difficulty-not-equated",
+          "detail": "结构机制与 repair 已对齐；不能据此判定词汇听辨或整体难度相同。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-13",
+      "itemId": "mini-n1-13:repair",
+      "answer": "white",
+      "review": {
+        "taskLanguageClarity": "his 同指一个朋友已说明；tie 与 shirt 同色，shirt 是 white，任务清楚。",
+        "difficultyPrerequisites": "理解 same colour，跨句将 shirt 的 white 关联到 tie。",
+        "materialDifference": "改为与 independent 相同的同色关系；更换物品、代词及颜色，white 亦出现在 guided。",
+        "answerPolicy": "white。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "resolved",
+          "code": "repair-alignment",
+          "detail": "首轮指出的“独立题考 same colour，而 repair 只直接提取”已在文字任务机制上解决；仍未验证真人修复效果或音频等难。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-13",
+      "itemId": "mini-n1-13:delayed-a",
+      "answer": "blue",
+      "review": {
+        "taskLanguageClarity": "Sam 否认 red 并确认 blue；最后确认的颜色及一词输出明确。",
+        "difficultyPrerequisites": "跟踪话轮并保留否定后的颜色修正。",
+        "materialDifference": "新增问答修正，与同色关系题机制不同。",
+        "answerPolicy": "blue。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "未试听以确认话轮、否定词或说话者区分。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-13",
+      "itemId": "mini-n1-13:delayed-b",
+      "answer": "grey and black",
+      "review": {
+        "taskLanguageClarity": "Tia 的 hat 两色、顺序、and、三词及 grey/gray 变体均清楚。",
+        "difficultyPrerequisites": "识别并按顺序保持两个颜色，输出三词。",
+        "materialDifference": "双颜色并列与其他一词颜色题不同；black 已在 guided 出现。",
+        "answerPolicy": "grey and black；gray and black 同样满足题面。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "different-output-load",
+          "detail": "多一个颜色及三词输出的负担，不能当作已验证的等难延迟题。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-15",
+      "itemId": "mini-n1-15:guided",
+      "answer": "Ava and Ben",
+      "review": {
+        "taskLanguageClarity": "brown 的 cases 属 Ava and Ben；照抄组标头及三词输出明确。",
+        "difficultyPrerequisites": "将 our 绑定标头组，再由颜色定位人物组。",
+        "materialDifference": "从颜色回查组，tourists 是额外信息。",
+        "answerPolicy": "Ava and Ben。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-15",
+      "itemId": "mini-n1-15:independent",
+      "answer": "Norwegian",
+      "review": {
+        "taskLanguageClarity": "Nora 和 Sam 明确否认 Swedish、说明 Norwegian；照抄目标清楚。",
+        "difficultyPrerequisites": "识别否定与肯定，保留实际声明的国籍词。",
+        "materialDifference": "国籍的否定后确认，区别于 guided 的颜色定位。",
+        "answerPolicy": "Norwegian。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-15",
+      "itemId": "mini-n1-15:repair",
+      "answer": "blue",
+      "review": {
+        "taskLanguageClarity": "Ken/Kim 的 Our cases are blue 直接给目标；These 的具体对象不影响解答。",
+        "difficultyPrerequisites": "辨别 not our cases 与真正 our cases 所属信息。",
+        "materialDifference": "加入所有者否定；与 independent 同有否定处理，但没有国籍词目标。",
+        "answerPolicy": "blue。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "limited-repair-coverage",
+          "detail": "可检查否定与所有者绑定；不能据此证明 independent 的国籍词困难已经修复。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-15",
+      "itemId": "mini-n1-15:delayed-a",
+      "answer": "tourists",
+      "review": {
+        "taskLanguageClarity": "Amy/Max 否认 teachers、确认 tourists；保留多人词尾的要求明确。",
+        "difficultyPrerequisites": "识别肯否并复制复数身份词。",
+        "materialDifference": "复用 independent 的否定后确认框架，改为身份；tourists 在 guided 材料已出现。",
+        "answerPolicy": "tourists；tourist 不满足明确的复数要求。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "lexical-overlap",
+          "detail": "延迟材料含 guided 出现过的 tourists；不能描述为所有目标词均未见。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-15",
+      "itemId": "mini-n1-15:delayed-b",
+      "answer": "tickets",
+      "review": {
+        "taskLanguageClarity": "yellow 对应 Rae/Kai 的 tickets，问题指定复数物品词，目标清楚。",
+        "difficultyPrerequisites": "从颜色回查物品并保留复数，与 passports 的 green 区分。",
+        "materialDifference": "改为同组两物品的信息绑定，输出目标从颜色/身份变为物品。",
+        "answerPolicy": "tickets；ticket 不满足复数要求。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "different-output-target",
+          "detail": "与其他 bank 的细分信息定位和输出类别不同，未证明各 bank 等难。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-17",
+      "itemId": "mini-n1-17:guided",
+      "answer": "These are Ava and Ben. They are teachers. They are busy.",
+      "review": {
+        "taskLanguageClarity": "明确要求三句、名字、共同职业和状态，材料支持全部内容。",
+        "difficultyPrerequisites": "两人介绍、they are、职业复数和肯定状态。",
+        "materialDifference": "三句框架；busy 在 delayed-b 重现。",
+        "answerPolicy": "参考非唯一；Meet Ava and Ben. They work as teachers. They're busy. 也覆盖信息。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "可接受自然等义介绍和缩写，不能把一套参考句作为唯一字符串答案。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-17",
+      "itemId": "mini-n1-17:independent",
+      "answer": "These are Mia and Leo. They are engineers. They are not busy.",
+      "review": {
+        "taskLanguageClarity": "三句、职业和纠正忙的说法明确，材料给两人名字；不得编造原因。",
+        "difficultyPrerequisites": "三句信息组织、职业复数与否定状态纠正。",
+        "materialDifference": "把肯定状态改成否定纠正，与修订 repair 的机制一致。",
+        "answerPolicy": "自然介绍、work as engineers、aren't busy 都可成立；必须保留不忙且不编原因。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "detail": "仅文本参考，未评价真实口头流利度、发音或表现。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-17",
+      "itemId": "mini-n1-17:repair",
+      "answer": "These are Nora and Sam. They are keyboard operators. They are not tired.",
+      "review": {
+        "taskLanguageClarity": "材料明确并不 tired，题面要求纠正很累的说法；三句及信息目标清楚。",
+        "difficultyPrerequisites": "三句介绍、双词复数职业与否定状态纠正。",
+        "materialDifference": "已保留 independent 的否定纠正，状态改为 tired、职业改为 keyboard operators。",
+        "answerPolicy": "可用 Meet Nora and Sam. They work as keyboard operators. They aren't tired. 等自然表达，不能改成很累。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "resolved",
+          "code": "repair-alignment",
+          "detail": "首轮指出的“独立题否定纠正，而 repair 肯定状态”已在文字任务机制上解决；不等于真人修复或等难度验证。"
+        },
+        {
+          "severity": "note",
+          "code": "additional-lexical-load",
+          "detail": "keyboard operators 为双词职业，口头先备与发音负担仍需另行验证。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-17",
+      "itemId": "mini-n1-17:delayed-a",
+      "answer": "These are Tia and Jo. They are sales reps. They are not tired.",
+      "review": {
+        "taskLanguageClarity": "介绍名字、共同职业、不累及三句均明确，题面强调保留否定。",
+        "difficultyPrerequisites": "双词职业 sales reps、职业复数及否定状态。",
+        "materialDifference": "不同人物与职业，但与修订 repair 同为 not tired，延迟题的状态极性和状态词已有前序暴露。",
+        "answerPolicy": "自然等义介绍、work as sales reps、aren't tired 可接受；不能漏掉否定。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "lexical-overlap",
+          "detail": "not tired 的核心状态内容已在修订 repair 出现，不能描述成全新状态表达。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-17",
+      "itemId": "mini-n1-17:delayed-b",
+      "answer": "These are Ken and Kim. They are mechanics. They are busy.",
+      "review": {
+        "taskLanguageClarity": "三句、名字、共同职业和状态清楚，直接允许等义表达人工核对。",
+        "difficultyPrerequisites": "职业复数 mechanics 与肯定状态。",
+        "materialDifference": "人物职业改变；busy 重现 guided，仍是相同三句信息框架。",
+        "answerPolicy": "自然等义介绍、work as mechanics、They're busy 可接受。",
+        "academicGtBoundary": "common 基础微技能；可供 Academic/GT 学习者练习，但不是 Academic 专属材料、完整 IELTS 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "detail": "未取得学习者录音，不能据参考句判断实际口头表现或难度。"
+        }
+      ]
+    }
+  ]
+}

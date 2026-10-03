@@ -1,13 +1,12 @@
 """Strict owned finite audio whitelist; reject unknown names, bytes and refs."""
 from pathlib import Path
-import hashlib, io, json, mimetypes, re, wave
+import hashlib, io, json, mimetypes, re, wave, runpy
 
 def verify_audio(root, version, html, map_refs):
     source=Path(__file__).resolve().parent
-    authored=json.loads((source/'audio/provenance.json').read_text())['files']
-    assert len(authored)==10 and len({row['file'] for row in authored})==10
+    authored=runpy.run_path(str(source/'batch-02/audio_inventory.py'))['authored_audio'](source)
     ledger=version.get('mini_audio_assets',{})
-    assert len(ledger)==10, 'Mini audio ledger incomplete'
+    assert len(ledger)==len(authored), 'Mini audio ledger incomplete'
     root_paths=set();map_paths=set()
     map_js='\n'.join((root/p).read_text() for p in map_refs if p.endswith('.js'))
     for row in authored:
@@ -17,7 +16,7 @@ def verify_audio(root, version, html, map_refs):
         path=paths[0];digest=row['sha256']
         assert ledger[path]==digest and '/'+path in html, 'Mini audio hash/reference mismatch'
         assert mimetypes.guess_type(path)[0] in ['audio/wav','audio/x-wav'], 'Mini audio MIME mismatch'
-        raw=(root/path).read_bytes();original=(source/'audio'/row['file']).read_bytes()
+        raw=(root/path).read_bytes();original=(source/row['file']).read_bytes()
         assert raw==original and hashlib.sha256(raw).hexdigest()==digest, 'Mini audio bytes mismatch'
         with wave.open(io.BytesIO(raw)) as audio:
             assert audio.getnchannels()==row['channels'] and audio.getframerate()==row['sampleRate']

@@ -1,0 +1,16 @@
+PASS finite packaging online
+PASS finite packaging offline
+PASS finite packaging missing
+PASS finite packaging corrupt
+PASS finite packaging unreferenced
+PASS finite packaging unknown-provenance
+PASS finite packaging count-mismatch
+PASS strict finite verifier valid
+PASS strict finite verifier unknown-ledger
+PASS strict finite verifier missing
+PASS strict finite verifier hash
+PASS strict finite verifier corrupt
+PASS strict finite verifier unknown-map
+PASS strict finite verifier missing-map-ref
+PASS strict finite verifier missing-html-ref
+PASS 15 finite media packaging/whitelist groups; authored WAV count=15

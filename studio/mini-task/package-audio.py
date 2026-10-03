@@ -10,30 +10,31 @@ import hashlib
 import json
 import shutil
 import sys
+import runpy
 
 online = '--online' in sys.argv
 source = Path('static-export/assets')
 output = Path('dist-online' if online else 'dist')
 html_path = output / 'index.html'
 html = html_path.read_text()
-provenance = json.loads(Path('mini-task/audio/provenance.json').read_text())
+authored = runpy.run_path('mini-task/batch-02/audio_inventory.py')['authored_audio'](Path('mini-task'))
 rows = []
-for authored in provenance['files']:
-    stem = Path(authored['file']).stem
+for item in authored:
+    stem = Path(item['file']).stem
     candidates = list(source.glob(stem + '-*.wav'))
     if len(candidates) != 1:
         raise RuntimeError('Missing/ambiguous emitted mini audio: ' + stem)
     asset = candidates[0]
     data = asset.read_bytes()
     digest = hashlib.sha256(data).hexdigest()
-    if digest != authored['sha256']:
+    if digest != item['sha256']:
         raise RuntimeError('Mini audio source mismatch: ' + stem)
     url = '/assets/' + asset.name
     if url not in html:
         raise RuntimeError('Classic HTML does not reference mini audio: ' + stem)
     rows.append((asset, data, url, digest))
-if len(rows) != 10:
-    raise RuntimeError('This batch must package exactly ten original WAVs')
+if len(rows) != len(authored):
+    raise RuntimeError('The finite authored mini audio batch is incomplete')
 
 for asset, data, url, digest in rows:
     if online:
@@ -60,4 +61,4 @@ receipt = {'mode': 'online' if online else 'offline', 'files': [
 evidence = Path('work/r12-host')
 evidence.mkdir(parents=True, exist_ok=True)
 (evidence / ('package-audio-' + receipt['mode'] + '.json')).write_text(json.dumps(receipt, indent=2) + '\n')
-print('Packaged 10 verified mini-task WAVs (' + receipt['mode'] + ')')
+print('Packaged '+str(len(rows))+' verified mini-task WAVs (' + receipt['mode'] + ')')
