@@ -1,0 +1,376 @@
+[
+  {
+    "id": "diagnostic-n109-small-quantity",
+    "answer": "many",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n109-quantity-comparison",
+    "answer": "I have got less coffee than you have",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n109-quantity-extreme",
+    "answer": "fewest",
+    "variants": [
+      "least"
+    ],
+    "issues": [
+      "正式教学首选fewest；备选least与复数books搭配在口语中可见。题干未明确要求正式规范，单凭当前scope不能把least一概判为不合理英文。"
+    ]
+  },
+  {
+    "id": "guided-n109-small-quantity",
+    "answer": "much",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n109-quantity-comparison",
+    "answer": "I have got fewer books than you have",
+    "variants": [
+      "I have got less books than you have"
+    ],
+    "issues": [
+      "正式教学首选fewer；less books是实际口语中可见的数量比较，且less就在备选中。若只收fewer，应在题干明确规范语域。"
+    ]
+  },
+  {
+    "id": "guided-n109-quantity-extreme",
+    "answer": "least",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n109-small-quantity",
+    "answer": "few",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n109-quantity-comparison",
+    "answer": "I have got more oranges than you have",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n109-quantity-extreme",
+    "answer": "most",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n109-small-quantity",
+    "answer": "little",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n109-quantity-comparison",
+    "answer": "I have got more pencils than you have",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n109-quantity-extreme",
+    "answer": "least",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n109-small-quantity",
+    "answer": "much",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n109-quantity-comparison",
+    "answer": "We have got less butter than you have",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n109-quantity-extreme",
+    "answer": "fewest",
+    "variants": [
+      "least"
+    ],
+    "issues": [
+      "正式教学首选fewest；the least mistakes在口语中可见，least亦在备选。应区分课程规范答案与实际口语变体。"
+    ]
+  },
+  {
+    "id": "review-b-n109-small-quantity",
+    "answer": "many",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n109-quantity-comparison",
+    "answer": "This jar has got more jam than that jar",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n109-quantity-extreme",
+    "answer": "least",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n111-degree-comparison",
+    "answer": "This model is less expensive than that one",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n111-degree-equality",
+    "answer": "This pencil is as sharp as that one",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n111-degree-extreme",
+    "answer": "most",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n111-degree-comparison",
+    "answer": "This book is cheaper than that one",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n111-degree-equality",
+    "answer": "The blue car is not as clean as the red car",
+    "variants": [
+      "The blue car isn't as clean as the red car"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n111-degree-extreme",
+    "answer": "least",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n111-degree-comparison",
+    "answer": "This book is more difficult than that one",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n111-degree-equality",
+    "answer": "Is the boy as tall as the girl?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n111-degree-extreme",
+    "answer": "A — the most interesting",
+    "variants": [
+      "A - the most interesting",
+      "A: the most interesting",
+      "A the most interesting"
+    ],
+    "issues": [
+      "题干要求字母加短语，破折号仅为示例，没有明确分隔符规则；空格、ASCII连字符和冒号均可表示相同限定输出。"
+    ]
+  },
+  {
+    "id": "repair-n111-degree-comparison",
+    "answer": "This question is more difficult than that one",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n111-degree-equality",
+    "answer": "This model is not as good as that one",
+    "variants": [
+      "This model isn't as good as that one"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n111-degree-extreme",
+    "answer": "C — the least expensive",
+    "variants": [
+      "C - the least expensive",
+      "C: the least expensive",
+      "C the least expensive"
+    ],
+    "issues": [
+      "题干要求字母加短语，破折号仅为示例，没有明确分隔符规则；空格、ASCII连字符和冒号均可表示相同限定输出。"
+    ]
+  },
+  {
+    "id": "review-a-n111-degree-comparison",
+    "answer": "This book is more interesting than that one",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n111-degree-equality",
+    "answer": "The woman is not as tall as the man",
+    "variants": [
+      "The woman isn't as tall as the man"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n111-degree-extreme",
+    "answer": "A — the least difficult",
+    "variants": [
+      "A - the least difficult",
+      "A: the least difficult",
+      "A the least difficult"
+    ],
+    "issues": [
+      "题干要求字母加短语，破折号仅为示例，没有明确分隔符规则；空格、ASCII连字符和冒号均可表示相同限定输出。"
+    ]
+  },
+  {
+    "id": "review-b-n111-degree-comparison",
+    "answer": "This model is less expensive than that one, but that model is not as good as this one",
+    "variants": [
+      "This model is less expensive than that one but that model is not as good as this one",
+      "This model is less expensive than that one, but that model isn't as good as this one",
+      "This model is less expensive than that one but that model isn't as good as this one"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n111-degree-equality",
+    "answer": "The red bag is as new as the blue bag",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n111-degree-extreme",
+    "answer": "B — the most expensive",
+    "variants": [
+      "B - the most expensive",
+      "B: the most expensive",
+      "B the most expensive"
+    ],
+    "issues": [
+      "题干要求字母加短语，破折号仅为示例，没有明确分隔符规则；空格、ASCII连字符和冒号均可表示相同限定输出。"
+    ]
+  },
+  {
+    "id": "diagnostic-n113-zero-reference",
+    "answer": "no",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n113-possession-response",
+    "answer": "So have I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n113-auxiliary-response",
+    "answer": "Neither can I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n113-zero-reference",
+    "answer": "none",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n113-possession-response",
+    "answer": "Neither have I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n113-auxiliary-response",
+    "answer": "So am I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n113-zero-reference",
+    "answer": "None",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n113-possession-response",
+    "answer": "Neither have I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n113-auxiliary-response",
+    "answer": "So did I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n113-zero-reference",
+    "answer": "no",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n113-possession-response",
+    "answer": "I have not got any either",
+    "variants": [
+      "I haven't got any either"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n113-auxiliary-response",
+    "answer": "Neither do I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n113-zero-reference",
+    "answer": "none",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n113-possession-response",
+    "answer": "I have got none",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n113-auxiliary-response",
+    "answer": "Neither was I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n113-zero-reference",
+    "answer": "Some",
+    "variants": [],
+    "issues": [
+      "只有1名乘客能换钞，Some在限定选项中成立，但实际回复One of our passengers更精确；后者不属于本题允许答案，不作为变体。可改成2名能换钞以减少some常引出的复数语用暗示。"
+    ]
+  },
+  {
+    "id": "review-b-n113-possession-response",
+    "answer": "So have I",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n113-auxiliary-response",
+    "answer": "So can I",
+    "variants": [],
+    "issues": []
+  }
+]

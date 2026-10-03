@@ -1,0 +1,15 @@
+# Frozen content handoff: NCE1 109–114
+
+Exact application base7b7c1283d12f0c6d784478cda8353080598f6980. Freshly verified both publication refs at this SHA; source baseline is not deployment evidence. Three modules109/111/113,54 original tasks,216 reasoned near-wrongs, three teaching goals/prerequisites per course, six finite banks and open expression awaiting human review. Existing author/binder and unchanged production createCourseLoopModel plus module.matches only.
+
+Final22 Node checks pass with no draft flag. Separate5 source evidence checks pass. Key-free review54 final stems/answers is retained alongside original review; exact final stem equality passes. Root resolved formal count-noun norms, space-only letter separators, partial-passenger pragmatics and strengthened109 independent extrema with opposite apple/banana columns. The final blind report's remaining111 separator questions are addressed by finite accepted data, including plain space; no second matcher.
+
+Three actual UI flows pass: native initial answers, one independent error, preserved original, separate correction/note, repair, own QA placeholder, waiting, guarded save and reload. Zero runtime exceptions;390/320 viewport checks pass. Screenshots show real SourcePanel text, original comic, teaching, corrections and waiting. Lesson111 received an additional full UI run after accepting isn't. Both underlying3-course report and111-final report are retained. Representative screenshots were viewed, not just emitted.
+
+Internal sourceSha256 from each real LRC JSON is used for languageSha256, distinct from JSON transport digest. Manifest material bytes, comic row/source binding, original image hashes, paired110/112/114 pages and both real source-row clip endpoints pass.113 final So have I has no next source timestamp: text/paired114 only, no guessed audio endpoint.
+
+Author-owned files only: course-loop/parallel-nce1-109-119 and matching docs. No registry, host-contract, next, UI, Today, map, model, storage, writer, FSRS or video changes. Baseline registry42 and missing107→109/new successor mappings are genuine author-scope boundaries; QA overrides are test-only. Owner must wire exact imports/unions and107→109→111→113→115 against the newest unified host, requiring actual successor presence. Do not reinterpret selector retention as new-course integration. Preserve prior entries and current video/reader support.
+
+Finite blank/letter choice and specified sentence construction are bounded evidence; scaffold drills remain ordinary practice. Natural24h/7d, actual audibility, physical phone/keyboard, human own review, pronunciation, all-four-skills and learning gains remain unverified. Original audio decoding/seek/play evidence is not listening assessment. No personal profiles,13 natural archives, credentials/costs, push/merge/deploy. Earlier61–72 and85–96 freezes remain intact.
+
+AGENTS lookup found none in the repository/ancestors. Capture-obsidian-insights skill was read; both authorized known vault paths absent, so no alternate vault or handover store was created. This scoped handoff records the milestone.

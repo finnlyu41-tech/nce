@@ -1,0 +1,290 @@
+[
+  {
+    "courseId": "nce1-109",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n109-small-quantity",
+        "context": "餐点箱记录：我有2块饼干，通常一箱有20块。这里问饼干个数。",
+        "prompt": "补完整句的空白，只写一个词：I have not got ___ biscuits. 可选much / many / less / fewer / most。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n109-quantity-comparison",
+        "context": "你我各自的未分份咖啡记录：我100毫升，你250毫升。",
+        "prompt": "用I have got、coffee、than you have写一句比较；在more / less / fewer中依据记录选择。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n109-quantity-extreme",
+        "context": "三人书本记录：我2本，Lee 4本，Sam 6本。三人就是全部比较范围。",
+        "prompt": "用Of the three, I have got the ___ books补完整句，只写一个词；可选most / least / fewest / fewer / many。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n109-small-quantity",
+        "context": "准备茶点：我的未分份牛奶只有20毫升，通常需要200毫升。",
+        "prompt": "补空白，只写一个词：I have not got ___ milk. 可选much / many / fewer / most / few。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先辨所指是物质量还是物品个数，再用much/little或many/few。"
+      },
+      {
+        "id": "guided-n109-quantity-comparison",
+        "context": "借阅核对：我有3本书，你有8本书。",
+        "prompt": "用I have got、books、than you have写一句数量比较；可选more / less / fewer。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：读数值和说话者；more/less/fewer不能把比较方向反过来。"
+      },
+      {
+        "id": "guided-n109-quantity-extreme",
+        "context": "三壶未分份茶：this pot 100毫升，that pot 200毫升，the blue pot 300毫升。",
+        "prompt": "补空白，只写一个词：Of the three, this pot has got the ___ tea. 可选least / fewest / most / less / many。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先确认比较范围和最大/最小，再按物质或个数选择极值词。"
+      },
+      {
+        "id": "independent-n109-small-quantity",
+        "context": "野餐采购卡同时列出bread 50克与eggs 2个；同伴问Have you got any eggs?。你有蛋，但这批通常要20个。",
+        "prompt": "回答所问物品，补空白只写一个词：I have got very ___ eggs. 可选little / few / much / fewer / least。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n109-quantity-comparison",
+        "context": "你是甲，乙向你展示两份数量表：甲有6个橙子、50克果酱；乙有4个橙子、100克果酱。现在只谈橙子。",
+        "prompt": "用I have got、oranges、than you have写一句比较；在more / less / fewer中选择。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n109-quantity-extreme",
+        "context": "班级准备三份物资箱，标签说明已列出所有箱子：A有3个苹果，B有9个苹果，C有5个苹果。你负责B箱。",
+        "prompt": "用Box B has got the ___ apples补空白，只写一个词；可选most / least / fewest / more / many。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n109-small-quantity",
+        "context": "保留上一轮首答和订正。下面是另一情境：烘焙记录：我有一点未分份面粉，只有30克，平常要300克。不是一袋袋面粉。",
+        "prompt": "补空白只写一个词：I have got very ___ flour. 可选little / few / many / fewer / least。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n109-quantity-comparison",
+        "context": "保留上一轮首答和订正。下面是另一情境：用品卡：我有12支铅笔，你有5支；没有比较其他人。",
+        "prompt": "用I have got、pencils、than you have写比较；可选more / less / fewer。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n109-quantity-extreme",
+        "context": "保留上一轮首答和订正。下面是另一情境：三瓶未分份果汁：red bottle 400毫升、blue bottle 150毫升、green bottle 300毫升。",
+        "prompt": "补空白只写一个词：The blue bottle has got the ___ juice of the three. 可选least / fewest / most / less / little。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n109-small-quantity",
+        "context": "仓库余量分别为paint 15毫升、brushes 12把；工作人员问的是paint，常用量150毫升。题中paint指未分份颜料。",
+        "prompt": "补空白只写一个词：We have not got ___ paint. 可选much / many / fewer / few / most。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n109-quantity-comparison",
+        "context": "你代表小组A答复小组B；A未分份黄油120克、杯子8个，B黄油200克、杯子4个。回复内容只比较黄油。",
+        "prompt": "用We have got、butter、than you have写一句；可选more / less / fewer。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n109-quantity-extreme",
+        "context": "三组错误统计已齐全：A 7处、B 1处、C 4处。你是B组发言人；人数多少与本题无关。",
+        "prompt": "补空白只写一个词：Of the three groups, we have made the ___ mistakes. 可选fewest / least / most / fewer / little。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n109-small-quantity",
+        "context": "值班表记录：我有2个信封和500克纸；同伴问的是envelopes，平常一次需20个。",
+        "prompt": "补空白只写一个词：I have not got ___ envelopes. 可选many / much / less / little / most。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n109-quantity-comparison",
+        "context": "你负责this jar，伙伴负责that jar；this jar果酱300克、饼干2块，that jar果酱100克、饼干6块。讨论的是未分份果酱。",
+        "prompt": "用This jar has got、jam、than that jar写一句；可选more / less / fewer。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n109-quantity-extreme",
+        "context": "完整的三位领取者记录：我得到100克奶酪及8个番茄，Pat得到300克奶酪及3个番茄，Kim得到200克奶酪及6个番茄。比较只涉及奶酪。",
+        "prompt": "补空白只写一个词：Of the three, I have got the ___ cheese. 可选least / most / fewest / less / many。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-111",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n111-degree-comparison",
+        "context": "商店两台电视：this model £240，that model £400；这题只比较价格。",
+        "prompt": "用This model is、expensive、than that one写一句；在more / less中选择。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n111-degree-equality",
+        "context": "两支铅笔的锋利度检查相同；this pencil和that pencil都评为4级。sharp意为锋利的。",
+        "prompt": "用This pencil is、sharp、that one写as…as结构的一句，根据记录决定肯定或否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n111-degree-extreme",
+        "context": "完整三台型号售价：A £200、B £700、C £450。店内就这三台。",
+        "prompt": "补空白只写一个词：Model B is the ___ expensive model in the shop. 可选most / least / more / less / much。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n111-degree-comparison",
+        "context": "两本书：this book £5，that book £9；cheap意为便宜的。",
+        "prompt": "用This book is、cheap、than that one写一句，cheap用-er形式。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对主语、比较对象和同一属性，再选more/less或题目限定的-er形式。"
+      },
+      {
+        "id": "guided-n111-degree-equality",
+        "context": "清洁检查：the blue car得2分，the red car得5分。clean意为干净的；分高表示更干净。",
+        "prompt": "用The blue car is、clean、the red car写as…as结构的一句，决定肯定或否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：用给定属性比较；同等保留肯定as…as，不及使用not as…as；中间用原形。"
+      },
+      {
+        "id": "guided-n111-degree-extreme",
+        "context": "三本书的兴趣评价是同一读者给出的：A 2分、B 8分、C 5分；分高越有趣。",
+        "prompt": "补空白只写一个词：Book A is the ___ interesting book of the three. 可选least / most / less / more / fewest。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：限定完整范围，读属性最大/最小；the most/least后保留形容词原形。"
+      },
+      {
+        "id": "independent-n111-degree-comparison",
+        "context": "你在比较同一读者的两本书评分：this book兴趣3分、难度8分；that book兴趣7分、难度4分。现在向伙伴报告难度，difficult意为难的，分高更难。",
+        "prompt": "用This book is、difficult、than that one写一句；在more / less中选择。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n111-degree-equality",
+        "context": "合作队身高测量表：the boy 140厘米、the girl 140厘米；年龄分别10岁与12岁。本次只回答身高问题，tall意为高的。",
+        "prompt": "用Is、the boy、tall、the girl写as…as结构的核对问句；仍保留记录中的两个人。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n111-degree-extreme",
+        "context": "同一读者给三本书评分：A兴趣9/难度3，B兴趣4/难度9，C兴趣6/难度6。全组就是这三本。你要推荐兴趣评分最高的书。",
+        "prompt": "补空白，写字母加短语，例如C — the least difficult；只用A/B/C和the most / the least interesting。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n111-degree-comparison",
+        "context": "保留上一轮首答和订正。下面是另一情境：两道题按同一学生完成时间比较难度：this question用10分钟、that question用3分钟；题内约定用时长表示难度高。",
+        "prompt": "用This question is、difficult、than that one写一句；可选more / less。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n111-degree-equality",
+        "context": "保留上一轮首答和订正。下面是另一情境：两台机器独立品质测试：this model 3分、that model 8分；售价分别£900与£500。good意为质量好的，品质分高越好。",
+        "prompt": "用This model is、good、that one写as…as结构的一句，决定肯定或否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n111-degree-extreme",
+        "context": "保留上一轮首答和订正。下面是另一情境：三台收音机完整售价表：A £80、B £120、C £60。你要先查看售价最低的那台。",
+        "prompt": "写字母加短语，例如B — the most expensive；只用A/B/C和the most / the least expensive。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n111-degree-comparison",
+        "context": "旅行读书卡由同一读者评分：this book兴趣8、难度2；that book兴趣5、难度6。伙伴想知道this book的趣味程度相对that book如何。",
+        "prompt": "用This book is、interesting、than that one写一句；可选more / less。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n111-degree-equality",
+        "context": "校服组身高：the woman 170厘米、the man 180厘米；两人年龄相同。只报告woman相对man的高矮，tall意为高的。",
+        "prompt": "用The woman is、tall、the man写as…as结构的一句，决定肯定或否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n111-degree-extreme",
+        "context": "三个测试的难度记录与趣味记录：A难度2/趣味8、B难度7/趣味3、C难度5/趣味6。你要选其中难度最低者。",
+        "prompt": "补空白，写字母加短语，例如B — the most difficult；只用A/B/C和the most / the least difficult。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n111-degree-comparison",
+        "context": "购物报告两件物品：this model价格£600、质量6分；that model价格£900、质量4分。质量分高越好。伙伴需要同时核对价格和质量是否同方向。",
+        "prompt": "写一个由but连接的合句：先用This model is、expensive、than that one报告价格（选more或less）；再用that model is、good、this one的as…as形式报告质量（决定肯定或否定）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n111-degree-equality",
+        "context": "两个背包newness记录均为本月新购、未使用；重量the red bag 1公斤、the blue bag 2公斤。题内new意为购入及使用状态一样新，不比较重量。",
+        "prompt": "用The red bag is、new、the blue bag写as…as结构的一句，决定肯定或否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n111-degree-extreme",
+        "context": "工作室全部三个型号：A价格£400/质量9，B价格£800/质量5，C价格£600/质量7。现只问哪个售价最高；不能按质量推断。",
+        "prompt": "补空白，写字母加短语，例如A — the least expensive；只用A/B/C和the most / the least expensive。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-113",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n113-zero-reference",
+        "context": "有人问你Have you got any envelopes?，你确认信封为0个。",
+        "prompt": "用I have got ___ envelopes补空白，只写一个词；可选no / none / any / some / neither。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n113-possession-response",
+        "context": "Pat说I have got some cake；你的盘子里也有蛋糕。两人说的是同一份茶点物品。",
+        "prompt": "用So或Neither开头，以倒装的三词短句回复；按双方事实与原句助动词选择。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n113-auxiliary-response",
+        "context": "Lee说I cannot swim；你也不会游泳。",
+        "prompt": "用So或Neither开头，以倒装的三词短句回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n113-zero-reference",
+        "context": "同伴问的是未分份牛奶，已明确话题；你没有牛奶，但还有2个杯子。",
+        "prompt": "用I have got ___补空白，只写一个词；可选none / no / some / any / neither。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：看零事实与指代范围；no后接名词，none代替已知项，none of引出限定群体。"
+      },
+      {
+        "id": "guided-n113-possession-response",
+        "context": "Kim说I have not got any biscuits；你也没饼干。",
+        "prompt": "用So或Neither开头，以倒装的三词短句回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先核对双方同一物品是否都有或都无；have got同向回复用have倒装，事实相反不能用so/neither附和。"
+      },
+      {
+        "id": "guided-n113-auxiliary-response",
+        "context": "同伴说I am tired；你刚值完班也累。tired意为累的。",
+        "prompt": "用So或Neither开头，以倒装的三词短句回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：读双方事实、肯否定和时间；so/neither后助动词在I之前，不能总用have或can。"
+      },
+      {
+        "id": "independent-n113-zero-reference",
+        "context": "你负责核对三名helper的能力表：A不能换钞、B不能换钞、C不能换钞；旁边另一名顾客可以，但不属于our helpers。",
+        "prompt": "补空白，只写一个词：___ of our helpers can change this note. 可选None / Some / No / Neither / Every。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n113-possession-response",
+        "context": "一张发放表：Pat有3个信封、0本杂志；你有2个信封、0本杂志。Pat说I have got no magazines。",
+        "prompt": "按所谈物品和双方事实，用So或Neither开头写倒装的三词回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n113-auxiliary-response",
+        "context": "记录列出两件事：你和Pat都昨天见了Alex；你们都不会游泳。Pat现在说I met Alex yesterday。",
+        "prompt": "对当前这句话用So或Neither开头，写倒装三词回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n113-zero-reference",
+        "context": "保留上一轮首答和订正。下面是另一情境：茶点瓶标签：the bottle中的milk为0毫升，旁边jug有200毫升；你只汇报bottle。",
+        "prompt": "用There is ___ milk in the bottle补空白，只写一个词；可选no / none / some / any / neither。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n113-possession-response",
+        "context": "保留上一轮首答和订正。下面是另一情境：Sam说I have not got any small change；你的钱包也只有纸币没有零钱。",
+        "prompt": "不用倒装，写I have not got any并在句末加一个词，表示相同否定事实；省略重复small change。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n113-auxiliary-response",
+        "context": "保留上一轮首答和订正。下面是另一情境：Pat说I do not like ice cream；你也不喜欢冰淇淋。",
+        "prompt": "用So或Neither开头，以倒装三词短句回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n113-zero-reference",
+        "context": "领物表：你有0本杂志和4本书，问话Have you got any magazines?已明确只问杂志。",
+        "prompt": "用I have got ___补空白，只写一个词；可选none / no / some / any / neither。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n113-possession-response",
+        "context": "同伴说I have got some chocolate；你的记录是chocolate 0克、cake 100克。你只能依据实际所谈物品回复。",
+        "prompt": "从So have I / Neither have I / I have got some / I have got none中选一个，写出所选回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n113-auxiliary-response",
+        "context": "你和Lee的出席表：昨天两人都在library，都不在church；Lee现在说I was not at church yesterday。",
+        "prompt": "对当前陈述用So或Neither开头写倒装三词回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n113-zero-reference",
+        "context": "全组是三名our passengers：A不能换钞，B能换钞，C不能换钞。不要扩大到其他人。",
+        "prompt": "补空白只写一个词：___ of our passengers can change this note. 可选None / Some / No / Neither / Every。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n113-possession-response",
+        "context": "两张个人记录：Lee有2个杯子、0克糖；你有3个杯子、0克糖。Lee说I have got some cups。",
+        "prompt": "按当前话题与双方事实，用So或Neither开头写倒装三词回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n113-auxiliary-response",
+        "context": "能力卡：你与Sam都会游泳，均不会开车；Sam现在说I can swim。",
+        "prompt": "对所说的话用So或Neither开头，写倒装三词回复。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

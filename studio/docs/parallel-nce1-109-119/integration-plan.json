@@ -1,0 +1,77 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "productionRegistrationChanged": false,
+  "ownerWiringRequired": true,
+  "baselineRegisteredCourseCount": 42,
+  "existingBoundaryProved": {
+    "nce1-83": "nce1-85"
+  },
+  "currentMissingBoundary": {
+    "nce1-107": "retains nce1-107"
+  },
+  "firstBatch": {
+    "courseIds": [
+      "nce1-109",
+      "nce1-111",
+      "nce1-113"
+    ],
+    "imports": [
+      "./parallel-nce1-109-119/lesson-nce1-109.mjs",
+      "./parallel-nce1-109-119/lesson-nce1-111.mjs",
+      "./parallel-nce1-109-119/lesson-nce1-113.mjs"
+    ],
+    "successors": {
+      "nce1-107": "nce1-109",
+      "nce1-109": "nce1-111",
+      "nce1-111": "nce1-113",
+      "nce1-113": "nce1-115"
+    },
+    "status": "ready-frozen-content-awaiting-owner-wiring",
+    "tasks": 54,
+    "nodePassed": 22,
+    "browserPassed": 3
+  },
+  "secondBatch": {
+    "courseIds": [
+      "nce1-115",
+      "nce1-117",
+      "nce1-119"
+    ],
+    "imports": [
+      "./parallel-nce1-109-119/lesson-nce1-115.mjs",
+      "./parallel-nce1-109-119/lesson-nce1-117.mjs",
+      "./parallel-nce1-109-119/lesson-nce1-119.mjs"
+    ],
+    "successors": {
+      "nce1-115": "nce1-117",
+      "nce1-117": "nce1-119",
+      "nce1-119": "nce1-121"
+    },
+    "status": "authored-separate-freeze-not-in-this-first-commit"
+  },
+  "unionExtensions": [
+    "CourseId",
+    "showSource.lesson",
+    "showSource.comicKey"
+  ],
+  "preserve": [
+    "latest host registry entries and predecessor integrations",
+    "single production createCourseLoopModel with each module.matches",
+    "SourcePanel internalLRC hash guard",
+    "latest video and reader source kinds",
+    "serialized guarded writer",
+    "Today, map selector and storage",
+    "FSRS and independent assessments"
+  ],
+  "unverified": [
+    "production registration",
+    "new deployed content",
+    "natural24h/7d",
+    "actual audibility",
+    "physical phone/keyboard",
+    "human own review",
+    "pronunciation",
+    "all four skills",
+    "learning gain"
+  ]
+}
