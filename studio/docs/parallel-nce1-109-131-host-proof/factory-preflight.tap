@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: exact unchanged actual factory, existing 54 bindings, and no invented pending registration
+ok 1 - exact unchanged actual factory, existing 54 bindings, and no invented pending registration
+  ---
+  duration_ms: 5.932834
+  type: 'test'
+  ...
+# Subtest: nce1-109 submits every listed variant and semantic counterexample through real factory
+ok 2 - nce1-109 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 25.031667
+  type: 'test'
+  ...
+# Subtest: nce1-111 submits every listed variant and semantic counterexample through real factory
+ok 3 - nce1-111 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 33.348542
+  type: 'test'
+  ...
+# Subtest: nce1-113 submits every listed variant and semantic counterexample through real factory
+ok 4 - nce1-113 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 17.541083
+  type: 'test'
+  ...
+# Subtest: nce1-121 submits every listed variant and semantic counterexample through real factory
+ok 5 - nce1-121 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 30.030167
+  type: 'test'
+  ...
+# Subtest: nce1-123 submits every listed variant and semantic counterexample through real factory
+ok 6 - nce1-123 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 36.368125
+  type: 'test'
+  ...
+# Subtest: nce1-125 submits every listed variant and semantic counterexample through real factory
+ok 7 - nce1-125 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 24.103209
+  type: 'test'
+  ...
+# Subtest: candidate and old54 raw envelopes reject every foreign course without changing original bytes
+ok 8 - candidate and old54 raw envelopes reject every foreign course without changing original bytes
+  ---
+  duration_ms: 4.462958
+  type: 'test'
+  ...
+# Subtest: future-version and foreign event records retain raw under candidate factory
+ok 9 - future-version and foreign event records retain raw under candidate factory
+  ---
+  duration_ms: 1.105875
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5202.878458

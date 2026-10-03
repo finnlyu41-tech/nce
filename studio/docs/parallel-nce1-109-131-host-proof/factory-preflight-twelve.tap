@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: exact unchanged actual factory, existing 54 bindings, and no invented pending registration
+ok 1 - exact unchanged actual factory, existing 54 bindings, and no invented pending registration
+  ---
+  duration_ms: 5.897375
+  type: 'test'
+  ...
+# Subtest: nce1-109 submits every listed variant and semantic counterexample through real factory
+ok 2 - nce1-109 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 24.954667
+  type: 'test'
+  ...
+# Subtest: nce1-111 submits every listed variant and semantic counterexample through real factory
+ok 3 - nce1-111 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 33.687709
+  type: 'test'
+  ...
+# Subtest: nce1-113 submits every listed variant and semantic counterexample through real factory
+ok 4 - nce1-113 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 17.862917
+  type: 'test'
+  ...
+# Subtest: nce1-115 submits every listed variant and semantic counterexample through real factory
+ok 5 - nce1-115 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 33.034542
+  type: 'test'
+  ...
+# Subtest: nce1-117 submits every listed variant and semantic counterexample through real factory
+ok 6 - nce1-117 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 43.110708
+  type: 'test'
+  ...
+# Subtest: nce1-119 submits every listed variant and semantic counterexample through real factory
+ok 7 - nce1-119 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 39.302375
+  type: 'test'
+  ...
+# Subtest: nce1-121 submits every listed variant and semantic counterexample through real factory
+ok 8 - nce1-121 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 31.270208
+  type: 'test'
+  ...
+# Subtest: nce1-123 submits every listed variant and semantic counterexample through real factory
+ok 9 - nce1-123 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 36.878167
+  type: 'test'
+  ...
+# Subtest: nce1-125 submits every listed variant and semantic counterexample through real factory
+ok 10 - nce1-125 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 24.67225
+  type: 'test'
+  ...
+# Subtest: nce1-127 submits every listed variant and semantic counterexample through real factory
+ok 11 - nce1-127 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 22.137292
+  type: 'test'
+  ...
+# Subtest: nce1-129 submits every listed variant and semantic counterexample through real factory
+ok 12 - nce1-129 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 25.47475
+  type: 'test'
+  ...
+# Subtest: nce1-131 submits every listed variant and semantic counterexample through real factory
+ok 13 - nce1-131 submits every listed variant and semantic counterexample through real factory
+  ---
+  duration_ms: 39.298
+  type: 'test'
+  ...
+# Subtest: candidate and old54 raw envelopes reject every foreign course without changing original bytes
+ok 14 - candidate and old54 raw envelopes reject every foreign course without changing original bytes
+  ---
+  duration_ms: 5.291292
+  type: 'test'
+  ...
+# Subtest: future-version and foreign-course envelopes retain raw under candidate factory
+ok 15 - future-version and foreign-course envelopes retain raw under candidate factory
+  ---
+  duration_ms: 1.257875
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5438.498667

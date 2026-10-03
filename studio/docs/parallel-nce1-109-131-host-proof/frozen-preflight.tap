@@ -1,0 +1,337 @@
+TAP version 13
+# Subtest: nce1-109 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce1-109 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 48.429375
+  type: 'test'
+  ...
+# Subtest: nce1-109 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce1-109 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 19.719917
+  type: 'test'
+  ...
+# Subtest: nce1-111 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce1-111 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 76.440125
+  type: 'test'
+  ...
+# Subtest: nce1-111 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce1-111 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 15.789417
+  type: 'test'
+  ...
+# Subtest: nce1-113 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce1-113 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 48.164583
+  type: 'test'
+  ...
+# Subtest: nce1-113 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce1-113 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 37.283042
+  type: 'test'
+  ...
+# Subtest: nce1-109 rejects nce1-111 raw without overwriting
+ok 7 - nce1-109 rejects nce1-111 raw without overwriting
+  ---
+  duration_ms: 0.284917
+  type: 'test'
+  ...
+# Subtest: nce1-109 rejects nce1-113 raw without overwriting
+ok 8 - nce1-109 rejects nce1-113 raw without overwriting
+  ---
+  duration_ms: 0.090583
+  type: 'test'
+  ...
+# Subtest: nce1-111 rejects nce1-109 raw without overwriting
+ok 9 - nce1-111 rejects nce1-109 raw without overwriting
+  ---
+  duration_ms: 0.4285
+  type: 'test'
+  ...
+# Subtest: nce1-111 rejects nce1-113 raw without overwriting
+ok 10 - nce1-111 rejects nce1-113 raw without overwriting
+  ---
+  duration_ms: 0.506916
+  type: 'test'
+  ...
+# Subtest: nce1-113 rejects nce1-109 raw without overwriting
+ok 11 - nce1-113 rejects nce1-109 raw without overwriting
+  ---
+  duration_ms: 0.139083
+  type: 'test'
+  ...
+# Subtest: nce1-113 rejects nce1-111 raw without overwriting
+ok 12 - nce1-113 rejects nce1-111 raw without overwriting
+  ---
+  duration_ms: 0.051042
+  type: 'test'
+  ...
+# Subtest: external independent blind 109-113 covers eighteen tasks per course and every reasonable variant
+ok 13 - external independent blind 109-113 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 0.592
+  type: 'test'
+  ...
+# Subtest: blind stems 109-113 remain identical to reviewed final tasks
+ok 14 - blind stems 109-113 remain identical to reviewed final tasks
+  ---
+  duration_ms: 3.273458
+  type: 'test'
+  ...
+# Subtest: shared production implementations and source guard are byte identical to exact frozen baseline
+not ok 15 - shared production implementations and source guard are byte identical to exact frozen baseline
+  ---
+  duration_ms: 79.822125
+  type: 'test'
+  location: '/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-109-131-host/studio/course-loop/parallel-nce1-109-119/test-scope.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    studio/course-loop/registry.mjs
+    + actual - expected
+    
+    + '3477a554f8a496ebc83084d067c73e6b1a220f0ee675a20c5d99d011a5b7272f'
+    - 'c23a8d632dcb3c93cecfb1e690b40d237f55006a7b4b6d695521b5ea8680af8b'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'c23a8d632dcb3c93cecfb1e690b40d237f55006a7b4b6d695521b5ea8680af8b'
+  actual: '3477a554f8a496ebc83084d067c73e6b1a220f0ee675a20c5d99d011a5b7272f'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-109-131-host/studio/course-loop/parallel-nce1-109-119/test-scope.mjs:15:83)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: all tracked diff and untracked delivery files stay in this content/test/docs ownership
+not ok 16 - all tracked diff and untracked delivery files stay in this content/test/docs ownership
+  ---
+  duration_ms: 115.872417
+  type: 'test'
+  location: '/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-109-131-host/studio/course-loop/parallel-nce1-109-119/test-scope.mjs:18:1'
+  failureType: 'testCodeFailure'
+  error: 'studio/app/course-loop-next.ts'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-109-131-host/studio/course-loop/parallel-nce1-109-119/test-scope.mjs:21:53)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: new task contexts are distinct, target banks include real first/repair/delayed material
+ok 17 - new task contexts are distinct, target banks include real first/repair/delayed material
+  ---
+  duration_ms: 11.147
+  type: 'test'
+  ...
+# Subtest: unwired successors keep the real current route; QA registration is not production integration
+not ok 18 - unwired successors keep the real current route; QA registration is not production integration
+  ---
+  duration_ms: 3022.858125
+  type: 'test'
+  location: '/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-109-131-host/studio/course-loop/parallel-nce1-109-119/test-scope.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    54 !== 42
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 42
+  actual: 54
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-109-131-host/studio/course-loop/parallel-nce1-109-119/test-scope.mjs:32:9)
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: nce1-109 real transcript LRC, source panel, comic and paired exercise pages
+ok 19 - nce1-109 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 9.198208
+  type: 'test'
+  ...
+# Subtest: nce1-111 real transcript LRC, source panel, comic and paired exercise pages
+ok 20 - nce1-111 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 5.2875
+  type: 'test'
+  ...
+# Subtest: nce1-113 real transcript LRC, source panel, comic and paired exercise pages
+ok 21 - nce1-113 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 6.190792
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 22 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 1.4235
+  type: 'test'
+  ...
+# Subtest: nce1-121 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 23 - nce1-121 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 90.657208
+  type: 'test'
+  ...
+# Subtest: nce1-121 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 24 - nce1-121 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 17.043084
+  type: 'test'
+  ...
+# Subtest: nce1-123 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 25 - nce1-123 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 79.61025
+  type: 'test'
+  ...
+# Subtest: nce1-123 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 26 - nce1-123 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 14.852917
+  type: 'test'
+  ...
+# Subtest: nce1-125 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 27 - nce1-125 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 49.502667
+  type: 'test'
+  ...
+# Subtest: nce1-125 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 28 - nce1-125 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 14.669709
+  type: 'test'
+  ...
+# Subtest: nce1-121 rejects nce1-123 raw without overwriting
+ok 29 - nce1-121 rejects nce1-123 raw without overwriting
+  ---
+  duration_ms: 0.3645
+  type: 'test'
+  ...
+# Subtest: nce1-121 rejects nce1-125 raw without overwriting
+ok 30 - nce1-121 rejects nce1-125 raw without overwriting
+  ---
+  duration_ms: 0.123208
+  type: 'test'
+  ...
+# Subtest: nce1-123 rejects nce1-121 raw without overwriting
+ok 31 - nce1-123 rejects nce1-121 raw without overwriting
+  ---
+  duration_ms: 0.517625
+  type: 'test'
+  ...
+# Subtest: nce1-123 rejects nce1-125 raw without overwriting
+ok 32 - nce1-123 rejects nce1-125 raw without overwriting
+  ---
+  duration_ms: 0.707292
+  type: 'test'
+  ...
+# Subtest: nce1-125 rejects nce1-121 raw without overwriting
+ok 33 - nce1-125 rejects nce1-121 raw without overwriting
+  ---
+  duration_ms: 0.240041
+  type: 'test'
+  ...
+# Subtest: nce1-125 rejects nce1-123 raw without overwriting
+ok 34 - nce1-125 rejects nce1-123 raw without overwriting
+  ---
+  duration_ms: 0.078375
+  type: 'test'
+  ...
+# Subtest: external independent blind 121-125 answers and reasonable variants match current authored contracts
+ok 35 - external independent blind 121-125 answers and reasonable variants match current authored contracts
+  ---
+  duration_ms: 3.587958
+  type: 'test'
+  ...
+# Subtest: independent and delayed tasks are distinct originals, not source recital or reordered banks
+ok 36 - independent and delayed tasks are distinct originals, not source recital or reordered banks
+  ---
+  duration_ms: 3.377292
+  type: 'test'
+  ...
+# Subtest: nce1-121 declares actual registry and successor boundary honestly
+ok 37 - nce1-121 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 2.1335
+  type: 'test'
+  ...
+# Subtest: nce1-123 declares actual registry and successor boundary honestly
+ok 38 - nce1-123 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 0.186542
+  type: 'test'
+  ...
+# Subtest: nce1-125 declares actual registry and successor boundary honestly
+ok 39 - nce1-125 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 0.138292
+  type: 'test'
+  ...
+# Subtest: nce1-121 real transcript LRC, source panel, comic and paired exercise pages
+ok 40 - nce1-121 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 13.746792
+  type: 'test'
+  ...
+# Subtest: nce1-123 real transcript LRC, source panel, comic and paired exercise pages
+ok 41 - nce1-123 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 5.448
+  type: 'test'
+  ...
+# Subtest: nce1-125 real transcript LRC, source panel, comic and paired exercise pages
+ok 42 - nce1-125 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.827834
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 43 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 0.9965
+  type: 'test'
+  ...
+# Subtest: nce1-121 existing original audio parts match manifest (integrity, not hearing)
+ok 44 - nce1-121 existing original audio parts match manifest (integrity, not hearing)
+  ---
+  duration_ms: 3.203291
+  type: 'test'
+  ...
+# Subtest: nce1-123 existing original audio parts match manifest (integrity, not hearing)
+ok 45 - nce1-123 existing original audio parts match manifest (integrity, not hearing)
+  ---
+  duration_ms: 2.945292
+  type: 'test'
+  ...
+# Subtest: nce1-125 existing original audio parts match manifest (integrity, not hearing)
+ok 46 - nce1-125 existing original audio parts match manifest (integrity, not hearing)
+  ---
+  duration_ms: 3.302375
+  type: 'test'
+  ...
+1..46
+# tests 46
+# suites 0
+# pass 43
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6243.639334
