@@ -13,7 +13,7 @@ export function chosenMainEntry(state:State,now=Date.now()){
 }
 /** A destination only. Opening it must first confirm the host's access save. */
 export function mainEntryAfterWarmup(state:State,current:MapNode,now=Date.now()){
- const chosen=chosenMainEntry(state,now);if(chosen)return chosen;
+ const chosen=chosenMainEntry(state,now);if(chosen&&(isWarmupNode(current.id)||chosen.node?.id===current.id))return chosen;
  const node=isWarmupNode(current.id)?nodeById('nce1-1')!:current;
  return {node,href:`/map/#/learn/${node.id}`,label:node.id==='nce1-1'?'进入第 1–2 课，开始正式学习':`继续本课 · ${node.title}`};
 }

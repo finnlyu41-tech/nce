@@ -50,6 +50,10 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};
  const loopOwns=new Set(courseLoopBindings.filter(course=>state.drafts[course.key]!==undefined).map(course=>course.id));
+ const chosen=chosenMainEntry(state,now);
+ if(chosen?.node&&loopOwns.has(chosen.node.id as Parameters<typeof loopOwns.has>[0])){
+  const trial=tasks.findIndex(task=>task.id==='placement:trial');if(trial>=0)tasks.splice(trial,1);
+ }
  const mainSelected=!!chosenMainEntry(state,now)||loopOwns.size>0||!!map.lastNode&&!isWarmupNode(map.lastNode)&&!!unitById(map.lastNode);
  if(online)for(const course of courseLoopBindings){
   const loopTask=courseLoopTask(state,now,course.id);if(!loopTask)continue;
