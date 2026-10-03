@@ -1,7 +1,8 @@
 import type {State} from '../app/model';
-import {append,draftKey,emptyRecord,openReason,readRecord,result} from './model';
+import {createStageModel} from './model';
+import {firstStageDefinition,stageDefinitions,type StageDefinition} from './protocol';
 import {skills,type Command,type Delivery,type Review,type Skill} from './types';
-export const stageTarget = 'stage-nce1-1-6';
+export const stageTarget=firstStageDefinition.target;
 type LearnerCommand = Exclude<Command,{type:'review'}|{type:'delivery'}|{type:'restore'}>;
 export type Host = {
  /** Read the host's latest State. No separate stage store. */
@@ -12,26 +13,29 @@ export type Host = {
  courseVersion:string;
 };
 const id=()=>crypto.randomUUID();
-export const stateWithStageDraft=(state:State,expectedRaw:string|undefined,nextRaw:string):State=>{
+export const stateWithStageDraft=(state:State,expectedRaw:string|undefined,nextRaw:string,definition:StageDefinition=firstStageDefinition):State=>{
+ const draftKey=definition.draftKey,{readRecord}=createStageModel(definition);
  if(state.drafts[draftKey]!==expectedRaw)throw Error('保存冲突；先重新读取，当前输入保留。');
  if(readRecord(nextRaw).status!=='ready')throw Error('新证据不能通过校验。');
  return {...state,drafts:{...state.drafts,[draftKey]:nextRaw}};
 };
-export function hasPriorLearning(state:State){
- if([1,2,3,4,5,6].some(n=>!!state.nce?.[`NCE1-${n}`]?.steps.length))return true;
- return Object.keys(state.drafts).some(k=>/^nce-course-loop-v\d+:NCE1-(1|3|5)$/.test(k));
+export function hasPriorLearning(state:State,definition:StageDefinition=firstStageDefinition){
+ if(definition.lessons.some(n=>!!state.nce?.[`NCE1-${n}`]?.steps.length))return true;
+ return definition.loopLessons.some(n=>Object.keys(state.drafts).some(k=>new RegExp('^nce-course-loop-v\\d+:NCE1-'+n+'$').test(k)));
 }
 /** Operations serialize within this adapter, while commit's CAS handles other tabs. */
-export function createStageAdapter(host:Host){
+export function createStageAdapter(host:Host,definition:StageDefinition=firstStageDefinition){
+ const draftKey=definition.draftKey,{append,emptyRecord,readRecord}=createStageModel(definition);
  let queue:Promise<unknown>=Promise.resolve();
  const serial=<T>(fn:()=>Promise<T>):Promise<T>=>{const task=queue.then(fn);queue=task.catch(()=>undefined);return task;};
  async function load(){const state=await host.read();return readRecord(state.drafts[draftKey]);}
- async function run(command:Command,actor:'learner'|'examiner'){
+ async function run(command:Command,actor:'learner'|'examiner',unchanged?:(read:ReturnType<typeof readRecord>)=>boolean){
   if(actor==='learner'&&['review','delivery','restore'].includes(command.type))throw Error('此操作需要宿主绑定的合格外评入口。');
   const state=await host.read(),raw=state.drafts[draftKey],read=readRecord(raw),at=Date.now();
   if(read.status==='blocked')throw Error(read.reason);
-  const record=read.status==='empty'?emptyRecord(host.courseVersion,hasPriorLearning(state)):read.record;
-  if(command.type==='open'&&command.phase==='T0'&&hasPriorLearning(state))throw Error('宿主已有相关学习记录，不能补造基线。');
+  if(unchanged&&!unchanged(read))throw Error('另一页面修改了同一当前稿；原输入保留，未覆盖已保存稿。');
+  const record=read.status==='empty'?emptyRecord(host.courseVersion,hasPriorLearning(state,definition)):read.record;
+  if(command.type==='open'&&command.phase==='T0'&&hasPriorLearning(state,definition))throw Error('宿主已有相关学习记录，不能补造基线。');
   const next=append(record,{id:id(),at,command},at),nextRaw=JSON.stringify(next);
   if(!await host.commit(raw,nextRaw))throw Error('保存未确认，不能打开新题或点亮结果。请重试；输入保留。');
   const confirmed=await host.read();if(confirmed.drafts[draftKey]!==nextRaw)throw Error('持久保存回读未确认，重新读取后继续。');
@@ -42,7 +46,7 @@ export function createStageAdapter(host:Host){
   /** Compatibility name: marks restored provenance only. It never deletes
    * answers/drafts, rewrites historical scores, or resets original anchor/due. */
   invalidateRestoredIntervals:()=>serial(()=>run({type:'restore'},'examiner')),
-  learner:(command:LearnerCommand)=>serial(()=>run(command,'learner')),
+  learner:(command:LearnerCommand,unchanged?:(read:ReturnType<typeof readRecord>)=>boolean)=>serial(()=>run(command,'learner',unchanged)),
   /** Only bind this port to an authorized external reviewer workflow. Never
    * expose it as learner self-rating or infer it from a transcript/AI output. */
   examiner:{
@@ -74,14 +78,17 @@ export function createStageAdapter(host:Host){
 export type StageAdapter=ReturnType<typeof createStageAdapter>;
 export type LearnerPort=Pick<StageAdapter,'load'|'learner'|'exportEvidence'|'restoreEvidence'>;
 /** Proposed Today interface: caller owns route generation; no host route changes. */
-export function stageTodayTasks(state:State,now:number,href:string,returnHref:string){
+export function stageTodayTasks(state:State,now:number,href:string,returnHref:string,definition:StageDefinition=firstStageDefinition){
+ const draftKey=definition.draftKey,stageTarget=definition.target,{readRecord,result,openReason}=createStageModel(definition);
  const read=readRecord(state.drafts[draftKey],now);if(read.status==='blocked')return [{id:stageTarget,title:'核对阶段原始证据',reason:read.reason,method:'打开阶段页面，下载原始记录供核对；不重置。',evidence:'格式/时间异常待核验，不当作自然到期。',href,returnHref,priority:0,at:now,kind:'resume' as const}];if(read.status==='empty')return [];
  const active=read.view.attempts.find(a=>!a.submittedAt&&!a.interruption);
- if(active)return [{id:stageTarget,title:'第1–6课阶段观察',reason:'继续已保存的首答；限时按实际时间继续。',method:'一次完成本科技能，保存首答。',evidence:'功能候选；真人学习效果待验。',href,returnHref,priority:1,at:active.openedAt,kind:'resume' as const}];
+ if(active)return [{id:stageTarget,title:definition.label+'阶段观察',reason:'继续已保存的首答；限时按实际时间继续。',method:'一次完成本科技能，保存首答。',evidence:'功能候选；真人学习效果待验。',href,returnHref,priority:1,at:active.openedAt,kind:'resume' as const}];
  const failures=skills.map(s=>read.view.attempts.filter(a=>a.skill===s).at(-1)).filter(a=>a&&a.phase!=='T0'&&a.submittedAt&&['failed','invalid','insufficient'].includes(result(a).status));
- if(failures.length)return [{id:stageTarget,title:'第1–6课分科修补',reason:'保留失败，从对应技能的一项目标修补。',method:'先记录专项修补，再用尚未见的备用题。',evidence:'订正不覆盖首答；其他科原观察保留。',href,returnHref,priority:0,at:failures.at(-1)!.submittedAt!,kind:'repair' as const}];
+ if(failures.length)return [{id:stageTarget,title:definition.label+'分科修补',reason:'保留失败，从对应技能的一项目标修补。',method:'先记录专项修补，再用尚未见的备用题。',evidence:'订正不覆盖首答；其他科原观察保留。',href,returnHref,priority:0,at:failures.at(-1)!.submittedAt!,kind:'repair' as const}];
  const due=skills.some(s=>(['T2','T3'] as const).some(p=>openReason(read.view,s,p,now)===null));
- if(due)return [{id:stageTarget,title:'第1–6课自然到期复验',reason:'实际间隔已到，有尚未见的题。',method:'先测，再反馈；四科分别保留结果。',evidence:'待合格外评，不转换为IELTS分数。',href,returnHref,priority:2,at:now,kind:'review' as const}];
+ if(due)return [{id:stageTarget,title:definition.label+'自然到期复验',reason:'实际间隔已到，有尚未见的题。',method:'先测，再反馈；四科分别保留结果。',evidence:'待合格外评，不转换为IELTS分数。',href,returnHref,priority:2,at:now,kind:'review' as const}];
+ if(definition.hasCurrentDraft?.(read))return [{id:stageTarget,title:definition.label+'当前新稿',reason:'继续已确认保存的实际练习或订正稿。',method:'打开原稿续写，另存修订保留首答。',evidence:'当前稿不代表独立通过；人工和自然间隔待验。',href,returnHref,priority:1,at:read.view.learning.at(-1)?.at??now,kind:'resume' as const}];
  return [];
 }
-export function stageRouteTarget(task:unknown){return task===stageTarget?{scope:'NCE1-1-6' as const}:null;}
+export function stageRouteTarget(task:unknown){const stage=stageDefinitions.find(s=>s.target===task);return stage?{scope:stage.scope}:null;}
+export function registeredStageTodayTasks(state:State,now:number,href:(target:string)=>string,returnHref:string){return stageDefinitions.map(stage=>stageTodayTasks(state,now,href(stage.target),returnHref,stage)).flat();}

@@ -1,0 +1,89 @@
+{
+  "scope": "new synthetic learning audio; not human stage-delivery evidence",
+  "files": [
+    {
+      "file": "listening-a.wav",
+      "sha256": "3dfd118ecff9542ef1df7afde07118694a867dfb3ecde7062841b5568c127f7b",
+      "bytes": 843166,
+      "durationSeconds": 19.026530612244898,
+      "pcmRms": 4942.342838826174,
+      "sourceScriptSha256": "d96259437bc35b7e1be98dee3c277afc54aa6c2683181f2d98de2f8dfb5e72d8",
+      "voice": "Samantha (English (US))",
+      "method": "installed macOS offline synthesis",
+      "humanVoice": false,
+      "humanListenReviewVerified": false
+    },
+    {
+      "file": "listening-b.wav",
+      "sha256": "2b21190133dcbada8db7922ea30e6e19b3c7a13e1729e7cbf95f05f90c69f18e",
+      "bytes": 839070,
+      "durationSeconds": 18.933650793650795,
+      "pcmRms": 5021.038731153806,
+      "sourceScriptSha256": "c41e659fcd20c43e6673cbaefc3abb55cfff9a546c5d97459b76bef24c001fb0",
+      "voice": "Samantha (English (US))",
+      "method": "installed macOS offline synthesis",
+      "humanVoice": false,
+      "humanListenReviewVerified": false
+    },
+    {
+      "file": "listening-c.wav",
+      "sha256": "55579bb42e947175b8af1886c0189843b14aba7fc9f455c6e8bad7cb1b962654",
+      "bytes": 847262,
+      "durationSeconds": 19.119410430839004,
+      "pcmRms": 5018.7459935959205,
+      "sourceScriptSha256": "f1dfc09f373ec45ff165dcde62ad5f8d44e647bdde8bb58e59194d562cfd3199",
+      "voice": "Samantha (English (US))",
+      "method": "installed macOS offline synthesis",
+      "humanVoice": false,
+      "humanListenReviewVerified": false
+    },
+    {
+      "file": "listening-d.wav",
+      "sha256": "a08ada34fc65f0c0bc122e26427b0b2cbdea241e3e118190003f2d6d991bc3ae",
+      "bytes": 846238,
+      "durationSeconds": 19.096190476190475,
+      "pcmRms": 5018.556101353885,
+      "sourceScriptSha256": "a9b003e538e743f04edf6a1113332c934207ab66891215321b22467994113f9a",
+      "voice": "Samantha (English (US))",
+      "method": "installed macOS offline synthesis",
+      "humanVoice": false,
+      "humanListenReviewVerified": false
+    },
+    {
+      "file": "listening-e.wav",
+      "sha256": "5233697d94e9b0b94805161b8ce98af508df4f68ba9c9190f7566b8e4d890924",
+      "bytes": 867742,
+      "durationSeconds": 19.583809523809524,
+      "pcmRms": 5067.754901059649,
+      "sourceScriptSha256": "9530f1944c5251c37208b4309acabcdff491b005e949cd60c2cb03280a0e4d8c",
+      "voice": "Samantha (English (US))",
+      "method": "installed macOS offline synthesis",
+      "humanVoice": false,
+      "humanListenReviewVerified": false
+    },
+    {
+      "file": "listening-f.wav",
+      "sha256": "8c51933a3b3ae7612f7cb80fe293cba5eb74c456fe64b0c84be36292f68513ca",
+      "bytes": 874398,
+      "durationSeconds": 19.734739229024942,
+      "pcmRms": 4990.887369116433,
+      "sourceScriptSha256": "8891d8119d1a3a1f73079bb5d4b9125e24a187f646d9c6a3935d1c9ee47a2eb2",
+      "voice": "Samantha (English (US))",
+      "method": "installed macOS offline synthesis",
+      "humanVoice": false,
+      "humanListenReviewVerified": false
+    },
+    {
+      "file": "practice-listening.wav",
+      "sha256": "2548b8d394d8051dc7bdffeb6d839954c86c1b16bd2d2dcc796dab11150f2dff",
+      "bytes": 812270,
+      "durationSeconds": 18.3259410430839,
+      "pcmRms": 5115.096119819893,
+      "sourceScriptSha256": "f837b3e2a5510bf57dc5ad66b43408c49be3a6f42c99c3d57a529dbb864f51ca",
+      "voice": "Samantha (English (US))",
+      "method": "installed macOS offline synthesis",
+      "humanVoice": false,
+      "humanListenReviewVerified": false
+    }
+  ]
+}

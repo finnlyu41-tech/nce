@@ -1,6 +1,8 @@
 import {skills,phases,minutes,type Skill,type Phase,type Pack,type Attempt,type RecordState,type View,type Command,type Event,type Review,type Result} from './types';
-export const draftKey = 'stage-assessment-v1:NCE1-1-6';
+import {firstStageDefinition,type StageDefinition} from './protocol';
+export const draftKey=firstStageDefinition.draftKey;
 export const DAY = 86_400_000;
+export function createStageModel(definition:StageDefinition){
 const packs:Pack[] = ['A','B','C','D','E','F'];
 const preferred:Record<Phase,Pack> = {T0:'A',T1:'B',T2:'C',T3:'D',repair:'E'};
 const requireThat: (ok:unknown,message:string)=>asserts ok = (ok,message) => {if(!ok)throw Error(message);};
@@ -28,6 +30,7 @@ function commandShape(c:Command){
  if('id' in c)requireThat(nonempty(c.id,128),'作答标识缺失。');
  if('answers' in c)requireThat(Array.isArray(c.answers)&&c.answers.length<=6&&c.answers.every(x=>text(x,12000)),'答案字段无效。');
  if(c.type==='learning')requireThat(list(c.skills,skills)&&['complete','practice','repair','interval-start','unknown'].includes(c.kind)&&text(c.note),'学习范围或时间依据缺失。');
+ if(c.type==='learning')definition.validateLearningNote?.(c.note);
  if(c.type==='expose')requireThat(packs.includes(c.pack),'题包不支持。');
  if(c.type==='open')requireThat(skills.includes(c.skill)&&phases.includes(c.phase)&&typeof c.unseen==='boolean','测评条件缺失。');
  if(c.type==='help')requireThat(['neutral-repeat','english-prompt','reference','answer-seen','translator'].includes(c.help),'帮助来源无效。');
@@ -35,11 +38,11 @@ function commandShape(c:Command){
  if(c.type==='interrupt')requireThat(nonempty(c.reason),'中断原因缺失。');
  if(c.type==='revise')requireThat(nonempty(c.note),'订正说明缺失。');
 }
-export function emptyRecord(courseVersion:string,priorLearning:boolean):RecordState{
+function emptyRecord(courseVersion:string,priorLearning:boolean):RecordState{
  requireThat(nonempty(courseVersion,128)&&typeof priorLearning==='boolean','须冻结课程版本与学习前条件。');
- return {version:1,scope:'NCE1-1-6',protocol:'candidate-v1-2026-10-02',courseVersion,packVersion:'candidate-v1-2026-10-02',priorLearning,events:[]};
+ return {version:1,scope:definition.scope,protocol:definition.protocol,courseVersion,packVersion:definition.packVersion,priorLearning,events:[]};
 }
-export function result(a:Attempt):Result{
+function result(a:Attempt):Result{
  if(!a.submittedAt)return {status:'pending',reason:a.interruption?'本次中断，题目已曝光；换未见题。':'首答尚未提交。'};
  if(a.interruption)return {status:'invalid',reason:'中断/设备异常，保留首答但不记零分或通过。'};
  if(!a.unseen||a.help.some(h=>h!=='neutral-repeat')||a.help.filter(h=>h==='neutral-repeat').length>1||a.skill!=='speaking'&&a.help.length>0)return {status:'invalid',reason:'材料已见或获得帮助，本次不计独立通过。'};
@@ -56,7 +59,7 @@ export function result(a:Attempt):Result{
  return {...data,status:'candidate',reason:'本任务达到待真人试测的产品候选门槛。'};
 }
 const passed=(a:Attempt)=>['candidate','provisional'].includes(result(a).status);
-export function interval(view:View,skill:Skill,phase:'T2'|'T3',now:number){
+function interval(view:View,skill:Skill,phase:'T2'|'T3',now:number){
  const relevant=view.learning.filter(l=>l.skills.includes(skill));
  const last=relevant.at(-1);
  const known=!!last&&last.kind!=='unknown';
@@ -71,24 +74,24 @@ export function interval(view:View,skill:Skill,phase:'T2'|'T3',now:number){
  const restore=view.restorations.at(-1),verification=restore&&(!last||last.order<restore.order)?'restored-time-unverified' as const:'recorded' as const;
  return {known,anchor,dueAt,hours:anchor?(now-anchor)/3_600_000:0,verification,ready:dueAt>0&&dueAt<=now&&verification==='recorded'};
 }
-export function availablePack(view:View,skill:Skill,phase:Phase):Pack|undefined{
+function availablePack(view:View,skill:Skill,phase:Phase):Pack|undefined{
  const consumed=new Set([...view.exposed,...view.attempts.filter(a=>a.skill===skill).map(a=>a.pack)]);
  const candidates=phase==='repair'?['E','F'] as Pack[]:[preferred[phase],'E','F'] as Pack[];
  return candidates.find(p=>!consumed.has(p));
 }
-export function openReason(view:View,skill:Skill,phase:Phase,now:number):string|null{
+function openReason(view:View,skill:Skill,phase:Phase,now:number):string|null{
  if(view.attempts.some(a=>!a.submittedAt&&!a.interruption))return '先结束或记录当前科目中断，再打开新题。';
  if(phase==='T0'&&(view.priorLearning||view.learning.length||view.attempts.some(a=>a.skill===skill&&a.phase!=='T0')))return '已学过或已开始学习，不能补造学习前基线。';
  const same=view.attempts.filter(a=>a.skill===skill&&a.phase===phase).at(-1);
  if(same?.submittedAt&&result(same).status==='pending')return '这份首答仍待合格人工外评，先保留并核对。';
  if(phase==='T0'&&same?.submittedAt&&!['invalid','insufficient'].includes(result(same).status))return '本科技能已有基线，不重复刷分。';
- if(phase==='T1'&&!view.learning.some(l=>l.kind==='complete'&&l.skills.includes(skill)))return '先记录第1–6课相关学习完成；声明与人工验证分别保留。';
+ if(phase==='T1'&&!view.learning.some(l=>l.kind==='complete'&&l.skills.includes(skill)))return `先记录${definition.label}相关学习完成；声明与人工验证分别保留。`;
  if(phase==='T1'&&same?.submittedAt&&result(same).status==='failed')return '学后首测失败已保留；先针对性修补，再进入修补后新题。';
  if(phase==='T1'&&view.attempts.some(a=>a.skill===skill&&a.phase==='T1'&&passed(a)))return '已有学后观察，请进入真实延迟。';
  if(phase==='repair'){
   const a=view.attempts.filter(a=>a.skill===skill&&a.submittedAt).at(-1);
   if(!a||passed(a)||result(a).status==='pending')return '修补需要已评阅的失败/无效首测。';
-  if(a.phase==='T0'||!view.learning.some(l=>l.skills.includes(skill)&&l.kind==='complete'))return '基线之后先完成正常第1–6课学习，再做学后首测。';
+  if(a.phase==='T0'||!view.learning.some(l=>l.skills.includes(skill)&&l.kind==='complete'))return `基线之后先完成正常${definition.label}学习，再做学后首测。`;
   if(!view.learning.some(l=>l.skills.includes(skill)&&l.kind==='repair'&&l.order>(a.submittedOrder||a.openOrder)))return '先记录本科技能修补，再换备用新题。';
  }
  if(phase==='T2'||phase==='T3'){
@@ -140,26 +143,26 @@ function applyToView(view:View,event:Event):View{
  }
  return v;
 }
-export function project(record:RecordState):View{
+function project(record:RecordState):View{
  let view:View={sequence:0,priorLearning:record.priorLearning,attempts:[],learning:[],exposed:[],restorations:[]};
  for(const event of record.events)view=applyToView(view,event);
  return view;
 }
-export function readRecord(raw:string|undefined,now=Date.now()):{status:'empty'}|{status:'ready';record:RecordState;view:View}|{status:'blocked';reason:string}{
+function readRecord(raw:string|undefined,now=Date.now()):{status:'empty'}|{status:'ready';record:RecordState;view:View}|{status:'blocked';reason:string}{
  if(raw===undefined)return {status:'empty'};
  try{
   requireThat(raw.length<=2_000_000,'记录超出上限，保留原文件。');const r=JSON.parse(raw) as RecordState;
   shape(r,['version','scope','protocol','courseVersion','packVersion','priorLearning','events']);
-  requireThat(r.version===1&&r.scope==='NCE1-1-6'&&r.protocol==='candidate-v1-2026-10-02'&&r.packVersion==='candidate-v1-2026-10-02'&&nonempty(r.courseVersion,128)&&typeof r.priorLearning==='boolean'&&Array.isArray(r.events)&&r.events.length<=10000,'版本或范围不支持，不能初始化覆盖。');
+  requireThat(r.version===1&&r.scope===definition.scope&&r.protocol===definition.protocol&&r.packVersion===definition.packVersion&&nonempty(r.courseVersion,128)&&typeof r.priorLearning==='boolean'&&Array.isArray(r.events)&&r.events.length<=10000,'版本或范围不支持，不能初始化覆盖。');
   let last=0;const ids=new Set<string>();
   for(const e of r.events){shape(e,['id','at','command']);requireThat(nonempty(e.id,128)&&!ids.has(e.id)&&time(e.at)&&e.at>=last&&e.at<=now,'时间逆序/未来记录或重复标识，不能作为自然间隔证据。');ids.add(e.id);last=e.at;}
   return {status:'ready',record:r,view:project(r)};
  }catch(e){return {status:'blocked',reason:e instanceof Error?e.message:'原始证据读取失败。'};}
 }
-export function append(record:RecordState,event:Event,now:number):RecordState{
+function append(record:RecordState,event:Event,now:number):RecordState{
  const next={...record,events:[...record.events,event]};const read=readRecord(JSON.stringify(next),now);requireThat(read.status==='ready',read.status==='blocked'?read.reason:'操作失败。');return next;
 }
-export function skillResults(view:View,skill:Skill,now:number){
+function skillResults(view:View,skill:Skill,now:number){
  return (['T0','T1','T2','T3'] as const).map(phase=>{
   const a=view.attempts.filter(a=>a.skill===skill&&a.phase===phase).at(-1);
   let value:Result=a?result(a):{status:'pending',reason:phase==='T0'&&view.priorLearning?'缺真实基线，不能归因学习收益。':'尚未测评。'};
@@ -167,3 +170,7 @@ export function skillResults(view:View,skill:Skill,now:number){
   return {phase,attempt:a,result:value,restoredTimeUnverified:!!view.restorations.length&&!view.learning.some(l=>l.skills.includes(skill)&&l.order>view.restorations.at(-1)!.order),interval:phase==='T2'||phase==='T3'?a?.observedInterval??interval(view,skill,phase,now):undefined};
  });
 }
+
+return {emptyRecord,result,interval,availablePack,openReason,project,readRecord,append,skillResults};
+}
+export const {emptyRecord,result,interval,availablePack,openReason,project,readRecord,append,skillResults}=createStageModel(firstStageDefinition);

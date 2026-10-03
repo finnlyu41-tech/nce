@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib, io, json, mimetypes, re, wave, runpy
 
-def verify_audio(root, version, html, map_refs):
+def verify_audio(root, version, html, map_refs, other_verified_map_paths=frozenset()):
     source=Path(__file__).resolve().parent
     inventory=source/'audio-inventory.py'
     if not inventory.exists(): inventory=source/'batch-02/audio_inventory.py'
@@ -28,5 +28,5 @@ def verify_audio(root, version, html, map_refs):
         assert version['map_assets'].get(map_path)==digest and (root/map_path).read_bytes()==raw, 'Map finite audio bytes mismatch'
         root_paths.add(path);map_paths.add(map_path)
     assert root_paths==set(ledger), 'Unknown mini audio ledger entry'
-    assert {p for p in version['map_assets'] if p.endswith('.wav')}==map_paths, 'Unknown map audio entry'
+    assert {p for p in version['map_assets'] if p.endswith('.wav')}==map_paths | set(other_verified_map_paths), 'Unknown map audio entry'
     return root_paths,map_paths
