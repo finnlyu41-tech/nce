@@ -61,7 +61,6 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  }
  if(online)for(const node of [...nodes.filter(n=>n.kind!=='course'),...unitNodes]){
   if(mainSelected&&isWarmupNode(node.id))continue;
-  if(loopOwns.has(node.id as Parameters<typeof loopOwns.has>[0]))continue;
   const record=map.records[node.id],last=record?.attempts.at(-1);
   if(status[node.id]==='locked')continue;
   const unit=unitById(node.id),title=unit?lessonPlan(unit).goal:node.title;
@@ -70,7 +69,8 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
   const resume=validTime&&quizNode&&record?.phase==='challenge'&&(last?.round!==record.round||last?.bank!==record.bank);
   const repair=validTime&&quizNode&&!!last&&!passedQuiz(node,last,now);
   const review=validTime&&quizNode&&due(node,map,now);
-  if(resume||repair||review)add({id:'map:'+node.id,title,
+  // CL replaces the map comprehension check, not independent speech correction.
+  if(!loopOwns.has(node.id as Parameters<typeof loopOwns.has>[0])&&(resume||repair||review))add({id:'map:'+node.id,title,
    reason:resume?'上次独立练习还没有结束，接着已保存的一题。':repair?'上轮还需要帮助或有题未通过，先补这一处。':'已到回想时间，先检验学过的内容。',
    method:resume?'保留当前题目、答案与提示记录，继续这一轮。':repair?'从上次结果找到薄弱项，补练后换题。':'收起课文，换一组题独立回想。',
    evidence:'记录本轮作答与提示；通过后仍按间隔安排检验。',href:`/map/#/learn/${node.id}${!resume&&!repair?'?review=1':''}`,
