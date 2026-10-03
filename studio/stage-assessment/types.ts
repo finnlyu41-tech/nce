@@ -13,7 +13,8 @@ export type Reviewer = {role:'teacher'|'calibrated-reviewer';qualified:true;cali
 export type Review = {reviewer:Reviewer;judgments?:('correct'|'wrong'|'unfinished')[];criticalReversed?:boolean;dimensions?:number[];purposes?:boolean[];actualHeard?:boolean;targetElicited:boolean;disputed:boolean;secondReview:boolean;basis:string};
 export type Attempt = {id:string;skill:Skill;phase:Phase;pack:Pack;openedAt:number;openOrder:number;deadline:number;unseen:boolean;answers:string[];help:Help[];observedInterval?:{known:boolean;anchor:number;dueAt:number;hours:number;ready:boolean};delivery?:Delivery;submittedAt?:number;submittedOrder?:number;first?:string[];revisions:{at:number;answers:string[];note:string}[];interruption?:string;reviews:{at:number;value:Review}[]};
 export type Learning = {at:number;order:number;skills:Skill[];kind:'complete'|'practice'|'repair'|'interval-start'|'unknown';note:string};
-export type RecordState = {version:1;scope:'NCE1-1-6';protocol:'candidate-v1-2026-10-02';courseVersion:string;packVersion:'candidate-v1-2026-10-02';priorLearning:boolean;events:Event[]};
+export type StageScope='NCE1-1-6'|'NCE1-7-12';
+export type RecordState = {version:1;scope:StageScope;protocol:string;courseVersion:string;packVersion:string;priorLearning:boolean;events:Event[]};
 export type View = {sequence:number;priorLearning:boolean;attempts:Attempt[];learning:Learning[];exposed:Pack[];restorations:{at:number;order:number}[]};
 export type Command =
  | {type:'restore'}
@@ -29,4 +30,5 @@ export type Command =
  | {type:'revise';id:string;answers:string[];note:string}
  | {type:'review';id:string;review:Review};
 export type Event = {id:string;at:number;command:Command};
+export type ReadStage={status:"empty"}|{status:"ready";record:RecordState;view:View}|{status:"blocked";reason:string};
 export type Result = {status:'pending'|'invalid'|'insufficient'|'failed'|'provisional'|'candidate';reason:string;score?:number;max?:number;dimensions?:number[]};

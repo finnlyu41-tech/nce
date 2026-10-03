@@ -1,0 +1,149 @@
+{
+  "scope": "private authoring and test reference, never imported by learner UI; no examiner permission",
+  "forms": {
+    "A": {
+      "listening": [
+        "student",
+        "no",
+        "tired",
+        "Vera",
+        "no",
+        "the owner of the other coat"
+      ],
+      "reading": [
+        "nurse",
+        "no",
+        "well",
+        "Rosa",
+        "red",
+        "no"
+      ],
+      "criticalFacts": [
+        "current occupation and negative occupation",
+        "named owner",
+        "negative ownership"
+      ],
+      "scope": "authoring reference only; no automatic assessment or authorized reviewer"
+    },
+    "B": {
+      "listening": [
+        "teacher",
+        "no",
+        "well",
+        "Cora",
+        "no",
+        "the owner of the other coat"
+      ],
+      "reading": [
+        "engineer",
+        "no",
+        "busy",
+        "Eli",
+        "yellow",
+        "no"
+      ],
+      "criticalFacts": [
+        "current occupation and negative occupation",
+        "named owner",
+        "negative ownership"
+      ],
+      "scope": "authoring reference only; no automatic assessment or authorized reviewer"
+    },
+    "C": {
+      "listening": [
+        "mechanic",
+        "no",
+        "busy",
+        "Oren",
+        "no",
+        "the owner of the other coat"
+      ],
+      "reading": [
+        "student",
+        "no",
+        "tired",
+        "Bela",
+        "brown",
+        "no"
+      ],
+      "criticalFacts": [
+        "current occupation and negative occupation",
+        "named owner",
+        "negative ownership"
+      ],
+      "scope": "authoring reference only; no automatic assessment or authorized reviewer"
+    },
+    "D": {
+      "listening": [
+        "nurse",
+        "no",
+        "well",
+        "Zuri",
+        "no",
+        "the owner of the other coat"
+      ],
+      "reading": [
+        "taxi driver",
+        "no",
+        "fine",
+        "Sora",
+        "black",
+        "no"
+      ],
+      "criticalFacts": [
+        "current occupation and negative occupation",
+        "named owner",
+        "negative ownership"
+      ],
+      "scope": "authoring reference only; no automatic assessment or authorized reviewer"
+    },
+    "E": {
+      "listening": [
+        "engineer",
+        "no",
+        "tired",
+        "Lina",
+        "no",
+        "the owner of the other coat"
+      ],
+      "reading": [
+        "hairdresser",
+        "no",
+        "busy",
+        "Nila",
+        "green",
+        "no"
+      ],
+      "criticalFacts": [
+        "current occupation and negative occupation",
+        "named owner",
+        "negative ownership"
+      ],
+      "scope": "authoring reference only; no automatic assessment or authorized reviewer"
+    },
+    "F": {
+      "listening": [
+        "taxi driver",
+        "no",
+        "fine",
+        "Kori",
+        "no",
+        "the owner of the other coat"
+      ],
+      "reading": [
+        "mechanic",
+        "no",
+        "well",
+        "Taro",
+        "white",
+        "no"
+      ],
+      "criticalFacts": [
+        "current occupation and negative occupation",
+        "named owner",
+        "negative ownership"
+      ],
+      "scope": "authoring reference only; no automatic assessment or authorized reviewer"
+    }
+  }
+}

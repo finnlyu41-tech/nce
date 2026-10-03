@@ -1,0 +1,12 @@
+{
+  "scope": "offline synthesized authoring inputs only; never imported by learner components",
+  "scripts": {
+    "listening-a": "Hello. I am Faye. I am a student. I am not a nurse. How are you today? I am tired, thank you. Now, look at the coat. This is not my coat. It is Vera's coat. Vera's coat is green. There is another coat near the door. We do not know the owner. Whose coat is that?",
+    "listening-b": "Hello. I am Remi. I am a teacher. I am not an engineer. How are you today? I am well, thank you. Now, look at the coat. This is not my coat. It is Cora's coat. Cora's coat is white. There is another coat near the door. We do not know the owner. Whose coat is that?",
+    "listening-c": "Hello. I am Iris. I am a mechanic. I am not a student. How are you today? I am busy, thank you. Now, look at the coat. This is not my coat. It is Oren's coat. Oren's coat is red. There is another coat near the door. We do not know the owner. Whose coat is that?",
+    "listening-d": "Hello. I am Nico. I am a nurse. I am not a teacher. How are you today? I am well, thank you. Now, look at the coat. This is not my coat. It is Zuri's coat. Zuri's coat is brown. There is another coat near the door. We do not know the owner. Whose coat is that?",
+    "listening-e": "Hello. I am Miro. I am an engineer. I am not a hairdresser. How are you today? I am tired, thank you. Now, look at the coat. This is not my coat. It is Lina's coat. Lina's coat is black. There is another coat near the door. We do not know the owner. Whose coat is that?",
+    "listening-f": "Hello. I am Esme. I am a taxi driver. I am not a mechanic. How are you today? I am fine, thank you. Now, look at the coat. This is not my coat. It is Kori's coat. Kori's coat is yellow. There is another coat near the door. We do not know the owner. Whose coat is that?",
+    "practice-listening": "Hello. I am Mara. Are you a teacher? No, I am not. I am an engineer. How are you today? I am busy, thank you. Whose coat is that? It is Suri's coat. Suri's coat is yellow. The black coat is not Suri's. We do not know the owner of the black coat."
+  }
+}
