@@ -13,7 +13,7 @@ const prefix='studio/course-loop/parallel-nce1-085-095/',docs='studio/docs/paral
 const baseline='7b7c1283d12f0c6d784478cda8353080598f6980';
 // Use the byte-identical cherry-picked ancestors so a fresh release clone also
 // has every Git object required by these guards.
-const integrated='401208ac9943abf615d6d03fb8e13efa8239d92a';
+const integrated='9a6378f40f982a5c11d990a0b5679e22d21c8343';
 const integratedCount=72;
 const localRecords='9fbda71620e13d4fda80b39eda150d1fa79693b5';
 const wired=new Set(['studio/course-loop/registry.mjs','studio/course-loop/host-contract.d.ts','studio/app/course-loop-next.ts']);
