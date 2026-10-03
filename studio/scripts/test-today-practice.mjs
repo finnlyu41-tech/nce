@@ -59,11 +59,15 @@ function mapState(node,attempts=[],patch={}){
  return {...map.emptyProgress(),lastNode:node.id,access:{all:true,nodes:[]},records:{[node.id]:{...map.emptyRecord(),round:attempts.at(-1)?.round||0,attempts,...patch}}};
 }
 function grammarState(attempts=[],patch={}){
- const progress={...g.emptyGrammarProgress(),round:attempts.at(-1)?.round||0,attempts,...patch};
+ const round=patch.round??attempts.at(-1)?.round??0,firstShown={};
+ for(let r=0;r<=Math.min(round,1);r++)for(const key of g.grammarMaterialKeys(grammarUnit,r))firstShown[key]??=r;
+ const progress={...g.emptyGrammarProgress(),round,attempts,materials:{complete:true,firstShown},...patch};
  return {...base(),drafts:{[g.grammarProgressKey(grammarUnit.id)]:JSON.stringify(progress)}};
 }
-const attempt=(at,round=0,passed=true,independent=true)=>({at,round,variant:round%2,passed,independent});
+const attempt=(at,round=0,passed=true,independent=true)=>({at,round,variant:round%2,passed,independent,material:g.grammarMaterialId(grammarUnit,round)});
 const find=(tasks,id)=>tasks.find(t=>t.id===id);
+// Optional placement is a read-only offer, not a textbook fallback or progress queue.
+const textbookTasks=tasks=>tasks.filter(task=>task.id!=='placement:offer');
 const select=(state,mapState=map.emptyProgress(),now=NOW)=>recommend(state,mapState,now);
 function deepFreeze(value){Object.freeze(value);for(const v of Object.values(value))if(v&&typeof v==='object'&&!Object.isFrozen(v))deepFreeze(v);return value;}
 const entry=textbook.grammarEntries.find(e=>e.book==='NCE1'&&e.lesson===1);
@@ -79,14 +83,15 @@ const word=n=>({word:n,meaning:'释义 '+n,example:'This is '+n+'.'});
 function enroll(state,n,at){return cards.enrollFlashcard(state,word(n),[],at);}
 function rate(state,n,rating,at){const note=Object.values(state.flashcards.notes).find(x=>x.word===n),card=Object.values(state.flashcards.cards).find(x=>x.noteId===note.id),token={cardId:card.id,revision:card.revision};return cards.rateFlashcard(cards.revealFlashcard(cards.selectFlashcard(state,card.id),token),token,rating,at);}
 
-test('empty state recommends only the first course and never seeds optional queues',()=>{
+test('empty state keeps one first-course fallback and a read-only optional placement offer',()=>{
  const state=base(),progress=map.emptyProgress(),out=select(state,progress);
- assert.equal(out.length,1);assert.equal(out[0].id,'course:first');assert.equal(out[0].href,'/map/#/learn/first');
+ const courses=textbookTasks(out);assert.equal(courses.length,1);assert.equal(courses[0].id,'course:first');assert.equal(courses[0].href,'/map/#/learn/first');
+ assert.equal(out.filter(t=>t.id==='placement:offer').length,1);assert.match(find(out,'placement:offer').href,/placement/);assert.deepEqual(progress,map.emptyProgress());
  assert.equal(state.flashcards,undefined);assert.equal(Object.keys(state.drafts).length,0);
 });
 test('manual unlock is access only; it adds no completion, review or repair',()=>{
  const progress={...map.emptyProgress(),access:{all:true,nodes:['letters']}};
- assert.deepEqual(select(base(),progress).map(t=>t.kind),['course']);
+ assert.deepEqual(textbookTasks(select(base(),progress)).map(t=>t.kind),['course']);assert.deepEqual(progress.records,{});
 });
 test('map first failed check immediately recommends repair, once',()=>{
  const progress=mapState(first,[proof(first,NOW-1000,0,false)]),out=select(base(),progress);
@@ -112,7 +117,7 @@ test('a future map attempt never turns an older pass into a due task',()=>{
 });
 test('future-only map proof cannot advance the current course using wall-clock time',()=>{
  const historical=NOW-100*DAY,progress=mapState(first,[proof(first,historical+DAY)]);
- assert.equal(select(base(),progress,historical).at(-1).id,'course:first');
+ assert.equal(textbookTasks(select(base(),progress,historical)).at(-1).id,'course:first');assert.equal(progress.lastNode,'first');
 });
 test('unfinished map check resumes without producing a second review or course entry',()=>{
  const progress=mapState(first,[proof(first,NOW-2*DAY)],{round:1,phase:'challenge',answers:['unfinished'],questionIndex:1});
@@ -192,6 +197,8 @@ test('a delayed different grammar bank waits seven days before the next check',(
  const state=grammarState([attempt(NOW-8*DAY),attempt(NOW-7*DAY,1)]);
  assert.equal(find(select(state,map.emptyProgress(),NOW-1),grammarId),undefined);
  assert.equal(find(select(state),grammarId)?.kind,'review');
+ const legacy=structuredClone(state),raw=JSON.parse(legacy.drafts[g.grammarProgressKey(grammarUnit.id)]);delete raw.materials;raw.attempts.forEach(a=>delete a.material);legacy.drafts[g.grammarProgressKey(grammarUnit.id)]=JSON.stringify(raw);const before=JSON.stringify(legacy);
+ assert.equal(g.delayedGrammarEvidence(g.grammarProgressFor(legacy,grammarUnit),NOW),false,'Old metadata cannot become unseen delayed evidence.');assert.equal(find(select(legacy,map.emptyProgress(),NOW-1),grammarId)?.kind,'review');assert.equal(JSON.stringify(legacy),before);
 });
 test('an early grammar repeat does not postpone an established weekly check',()=>{
  const state=grammarState([attempt(NOW-8*DAY),attempt(NOW-7*DAY,1),attempt(NOW-6*DAY,2)]);
@@ -307,7 +314,8 @@ test('recommending, reordering or locally skipping does not change any saved evi
 test('course fallback is last when present and never required when it would repeat the only task',()=>{
  const withCourse=select(grammarState([attempt(NOW-DAY)]));
  assert.equal(withCourse.at(-1).kind,'course');
- const onlyRepair=select(base(),mapState(first,[proof(first,NOW-1,0,false)]));
+ const all=select(base(),mapState(first,[proof(first,NOW-1,0,false)])),onlyRepair=textbookTasks(all);
+ assert.equal(all.filter(t=>t.id==='placement:offer').length,1);
  assert.equal(onlyRepair.length,1);assert.equal(onlyRepair[0].kind,'repair');
  const skipped=new Set([onlyRepair[0].id]);assert.deepEqual(onlyRepair.filter(t=>!skipped.has(t.id)),[]);
 });
@@ -351,9 +359,11 @@ const ui=await import('data:text/javascript;base64,'+Buffer.from(uiCode).toStrin
 const children=node=>typeof node==='object'&&node?node.props?.children||[]:[];
 const text=node=>typeof node==='string'?node:children(node).map(text).join('');
 const elements=node=>typeof node==='object'&&node?[node,...children(node).flatMap(elements)]:[];
-test('all skipped recommendations expose an honest paused state and can restore',()=>{
- ui.reset();const tasks=select(base(),mapState(first,[proof(first,NOW-1,0,false)]));
- let tree=ui.render({tasks});const skip=elements(tree).find(n=>n.type==='button'&&text(n)==='这项稍后再做');assert(skip);skip.props.onClick();
+test('all skippable recommendations expose paused state and restore; course offers have no skip control',()=>{
+ const all=select(base(),mapState(first,[proof(first,NOW-1,0,false)])),offers=all.filter(t=>t.kind==='course'),tasks=all.filter(t=>t.kind!=='course');assert(tasks.length);assert.equal(offers.filter(t=>t.id==='placement:offer').length,1);
+ ui.reset();assert(!elements(ui.render({tasks:offers})).some(n=>n.type==='button'&&text(n)==='这项稍后再做'));
+ ui.reset();
+ let tree=ui.render({tasks});for(let i=0;i<tasks.length;i++){const skip=elements(tree).find(n=>n.type==='button'&&text(n)==='这项稍后再做');assert(skip);skip.props.onClick();tree=ui.render({tasks});}
  tree=ui.render({tasks});assert.match(text(tree),/本次安排已暂缓/);assert.doesNotMatch(text(tree),/继续今日学习|全部完成/);
  assert.equal(elements(tree).filter(n=>n.type==='a').length,1);
  elements(tree).find(n=>n.type==='button'&&text(n)==='恢复推荐顺序').props.onClick();
