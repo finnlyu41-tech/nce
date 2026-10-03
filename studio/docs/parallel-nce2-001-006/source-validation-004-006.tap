@@ -1,0 +1,40 @@
+TAP version 13
+# Subtest: nce2-4 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 1 - nce2-4 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 40.512125
+  type: 'test'
+  ...
+# Subtest: nce2-5 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 2 - nce2-5 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 43.963125
+  type: 'test'
+  ...
+# Subtest: nce2-6 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 3 - nce2-6 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 15.834625
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 4 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 1.079459
+  type: 'test'
+  ...
+# Subtest: record verified source evidence
+ok 5 - record verified source evidence
+  ---
+  duration_ms: 14.620917
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5923.487417

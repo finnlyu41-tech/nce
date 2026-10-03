@@ -1,0 +1,320 @@
+[
+  {
+    "courseId": "nce2-4",
+    "scope": "按题目情境、指代和词汇作答；这些是有限受控表达或明确标出的选择识别任务。大小写、空白、直弯撇号可变；陈述句可有一个英文句号或省略，直接问句保留一个问号；选择题只选所给完整选项。不匹配不代表其他自然英语错误。开放表达待人工核对。",
+    "questions": [
+      {
+        "id": "diagnostic-nce2-004-present-result",
+        "context": "文件上传日志：全部文件刚刚上传成功，现在可以关闭窗口。",
+        "prompt": "用We、just、upload、all the files写完成情况。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-004-experience-location",
+        "context": "Lena去过Madrid，已乘返程车回家；现在与你在家交谈。",
+        "prompt": "用Lena、be to、Madrid写一句已经去过的经历，不加日期。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-004-continuing-duration",
+        "context": "我们从三月入住这间公寓，到现在一直住着；没有搬走。",
+        "prompt": "用We、live here、since、March写一句持续状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-nce2-004-present-result",
+        "context": "厨房计时器已响；Noah刚刚把面包烤好，现在面包在架上冷却。",
+        "prompt": "用Noah、just、bake、the bread写完成情况。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先判断完成/未完成，再核对have/has、过去分词和just/already/not yet；理由不能倒置。"
+      },
+      {
+        "id": "guided-nce2-004-experience-location",
+        "context": "志愿者需要知道对方是否有到过Oslo的经历，答案未知；当面用you问。",
+        "prompt": "用ever、be to、Oslo写一个经历问题。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：先核对是否去过与是否回来；been there for与been to不是同一条位置证据。"
+      },
+      {
+        "id": "guided-nce2-004-continuing-duration",
+        "context": "Arun已在这所学校学习两年，现在仍是该校学生；入学月份未给。",
+        "prompt": "用Arun、study at this school、for、two years写持续记录。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：确认现在仍持续；for + 时长，since + 起点，不能把已结束记录说成仍持续。"
+      },
+      {
+        "id": "independent-nce2-004-present-result",
+        "context": "项目交接记录：表格已提交，但报告还缺最后一页。接手人要判断报告能否归档；不要把表格完成当成报告完成。",
+        "prompt": "以We开头，从finish/not finish、the report/the form、already/yet选与记录相符的项目，用because one page is missing连接证据，写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-004-experience-location",
+        "context": "出差看板：Mila周一去了Lyon；刚发来消息“我还在Lyon，明天才回”；她现在不在办公室。",
+        "prompt": "选择符合去向及当前位置证据的一整句。 只选所给完整选项，不改写。",
+        "options": [
+          "Mila has been to Lyon and is back in the office.",
+          "Mila has gone to Lyon and is still there.",
+          "Mila has never been to Lyon.",
+          "Mila is going to Lyon tomorrow."
+        ]
+      },
+      {
+        "id": "independent-nce2-004-continuing-duration",
+        "context": "会员档案写“joined in April”，今天仍有效；没有给今天日期，不能算出几个月。客服需确认持续有效的起点。",
+        "prompt": "用Her membership作主语，从be active/end、for/since、April/six months选符合档案且未杜撰的信息，写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-004-present-result",
+        "context": "保留上一轮首答和订正。下面是另一情境：打印任务出现两个记录：海报已完成；票券任务还在打印，队列未清。你向入口管理员报告票券不能交付的原因。",
+        "prompt": "用The printer作主语，从finish/not finish、the tickets/the poster、already/yet选正确的状态报告，用because the queue is not empty连接证据。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-004-experience-location",
+        "context": "保留上一轮首答和订正。下面是另一情境：Nora的旅行凭证包括去Dublin的票和回程票；她已经回家。同行的Omar仍在Dublin。你只报告Nora，不能套用同行者去向。",
+        "prompt": "用Nora作首分句主语、she作第二分句主语；从be to/go to、Dublin、be back home now/be still there选相符信息，用but连接一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-004-continuing-duration",
+        "context": "保留上一轮首答和订正。下面是另一情境：旧任职已结束；新的值班记录显示Ezra从星期一开始负责此门岗，今天仍值班。只报告当前持续的值班。",
+        "prompt": "用Ezra作主语，从be on duty here/go home、for/since、Monday/five years选当前持续记录中的信息，写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-004-present-result",
+        "context": "展览开放前检查：墙上的作品都已挂好，不需要再挂；只是门还没打开。管理员问是否还要挂画。",
+        "prompt": "用We作主语，从hang/open、all the pictures/the door、already/yet选已核验项目，再从need to hang them/not need to hang them选下一步，用so连接一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-004-experience-location",
+        "context": "家族旅行表：Tess从未访问任何外国；下一次出国是计划，还未发生。",
+        "prompt": "以Tess开头，从never/already、be abroad/go abroad、before选可由旅行表支持的截至现在经历，写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-004-continuing-duration",
+        "context": "寄养猫的交接记录：这只猫在我们家连续住了三周，今天仍在这里；寄养结束日尚未知。",
+        "prompt": "用The cat、stay with us，从for/since、three weeks/three days选符合交接记录的当前持续表达，写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-004-present-result",
+        "context": "维修状态：所有灯刚刚测完，都能亮；电工可以停止测试。墙面油漆尚未完成，与灯的测试无关。",
+        "prompt": "首分句用The electrician，从just/already/yet、test/paint、all the lights/all the walls选刚完成项目；第二分句用the testing，从be complete/be incomplete选状态，以so连接一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-004-experience-location",
+        "context": "团队定位板：Kai已从Bern旅行回来，现在在本地开会；Sol去Bern后尚未回来。要给来电者报告Sol当前去向。",
+        "prompt": "选择能说明Sol去了并仍未返回的一整句。 只选所给完整选项，不改写。",
+        "options": [
+          "Sol has been to Bern and is back here now.",
+          "Sol will go to Bern next week.",
+          "Sol has gone to Bern and has not returned yet.",
+          "Sol has never been to Bern."
+        ]
+      },
+      {
+        "id": "review-b-nce2-004-continuing-duration",
+        "context": "服务看板：网络从星期五恢复后一直正常，到现在没有中断；之前停机不计入正常期。",
+        "prompt": "用The connection作主语，从be stable/fail again、for/since、Friday/last year选看板支持的当前连续记录，写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce2-5",
+    "scope": "按题目情境、指代和词汇作答；这些是有限受控表达或明确标出的选择识别任务。大小写、空白、直弯撇号可变；陈述句可有一个英文句号或省略，直接问句保留一个问号；选择题只选所给完整选项。不匹配不代表其他自然英语错误。开放表达待人工核对。",
+    "questions": [
+      {
+        "id": "diagnostic-nce2-005-closed-past",
+        "context": "昨天闭馆前，管理员把门锁上了；现在只登记昨天那次动作。",
+        "prompt": "用The manager、lock、the door、yesterday写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-005-up-to-now",
+        "context": "今天的核对任务仍进行；截至现在有四个房间已检查，其余未完成。",
+        "prompt": "用Up to now、we、check、four rooms写累计已完成数。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-005-time-ledger",
+        "context": "昨天活动记录有两次投递；活动开始至现在累计三次，包含昨天两次。",
+        "prompt": "用We、make、two deliveries yesterday、and、three deliveries so far写一句，两个分句都保留we。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-nce2-005-closed-past",
+        "context": "档案显示Sara上周寄出邀请函；你要问她具体何时寄出，不问是否曾寄过。",
+        "prompt": "用When、you、send、the invitation向Sara问具体时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：核对是否报告一个已封闭的过去事件；肯定用过去式，did问句用原形。"
+      },
+      {
+        "id": "guided-nce2-005-up-to-now",
+        "context": "货架收货状态刚更新：所有箱子均已到达，现在可以开始整理；不报告某个日期。",
+        "prompt": "用All the boxes、just、arrive写当前结果。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：确定累计截至现在还是旧账期已关；have/has + 过去分词，数量必须来自已完成记录。"
+      },
+      {
+        "id": "guided-nce2-005-time-ledger",
+        "context": "昨晚关门前Leo卖出一幅画；自展览开幕到现在共卖出三幅，包含昨晚那幅。",
+        "prompt": "用Leo、sell、one painting last night、and、he、three paintings up to now写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：逐分句核对人物、动作、已结束事件与到现在的累计；不把部分数量当总数，不把未完成项入账。"
+      },
+      {
+        "id": "independent-nce2-005-closed-past",
+        "context": "现在是下午。保安只问已经结束的今天上午发生什么：十点Nina把钥匙交给前台，之后没有其他交钥匙记录。",
+        "prompt": "用Nina作主语，从give the key to reception/receive the key from reception、this morning/this afternoon选符合封闭班次的信息，自行选时态写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-005-up-to-now",
+        "context": "维修台账截至现在：红车和蓝车各修好一辆；绿车仍拆着，未完成。主管需要当前已修好数量，不能把在修项计入。",
+        "prompt": "用We作首分句主语，从repair、two bikes/three bikes、yesterday/so far选台账支持的记录；用but连接the green bike的ready/not ready状态，分别自行选时态写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-005-time-ledger",
+        "context": "图书馆去年借阅活动已结项，共购书八本；今年新活动仍开放，截至现在购书五本。只选同时正确区分两个账期的一句。",
+        "prompt": "选择符合两个活动时间边界和数量的记录。 只选所给完整选项，不改写。",
+        "options": [
+          "We bought five books last year, and we have bought eight books so far this year.",
+          "We bought eight books last year, and we have bought five books so far this year.",
+          "We have bought eight books last year, and we bought five books so far this year.",
+          "We bought eight books last year, and we have bought thirteen books so far this year."
+        ]
+      },
+      {
+        "id": "repair-nce2-005-closed-past",
+        "context": "保留上一轮首答和订正。下面是另一情境：事故档案：Ivo上个月丢失了证件，今天虽仍没找到，这一条只登记丢失的过去日期。",
+        "prompt": "以Ivo开头，从lose/find、his card、last month/next month选事故档案的事件信息，按该栏时间边界选时态写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-005-up-to-now",
+        "context": "保留上一轮首答和订正。下面是另一情境：工具借出清单仍开放：锤子已归还，钻机尚未归还；当前要报告钻机，不能复制锤子的结果。",
+        "prompt": "以借用者We为主语，从return/not return、the drill/the hammer、already/yet选当前清单支持的信息，自行选时态写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-005-time-ledger",
+        "context": "保留上一轮首答和订正。下面是另一情境：清洁记录：上周五只清理了楼下两间；这个仍进行的周期到现在清理了五间，包含楼下两间。你要给接班人比较单日与累计。",
+        "prompt": "以We开头，词库clean、two/five/seven rooms、last Friday/up to now；先报告单日再报告当前周期累计，用and连接，自行配时态和数量。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-005-closed-past",
+        "context": "会议纪要记录：昨天主持人取消了会议；今日查询的是取消发生在何时，取消的当前影响另作记录。",
+        "prompt": "用The host作主语，从cancel/hold、the meeting、yesterday/tomorrow选纪要支持的信息，自行选时态写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-005-up-to-now",
+        "context": "提交系统显示：两份申请已成功送达，一份仅存草稿；当前申报期未结束。要报告截至现在真正提交的数量。",
+        "prompt": "以I开头，词库submit、two/three applications、last year/so far；先报告真正送达的累计数，再以but连接the third one的still a draft/complete状态，自行选时态写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-005-time-ledger",
+        "context": "筹款旧账：去年已经结束的义卖筹到四百元；本次募款还在进行，到现在筹到二百元，旧账不并入。",
+        "prompt": "选择两份账目同时正确的整句。 只选所给完整选项，不改写。",
+        "options": [
+          "We raised four hundred yuan last year, and we have raised six hundred yuan up to now.",
+          "We have raised four hundred yuan last year, and we raised two hundred yuan up to now.",
+          "We raised four hundred yuan last year, and we have raised two hundred yuan up to now.",
+          "We raised two hundred yuan last year, and we have raised four hundred yuan up to now."
+        ]
+      },
+      {
+        "id": "review-b-nce2-005-closed-past",
+        "context": "上午的交货班次已在中午结束，现在下午三点；Ben在上午送达了药品。只填这次班次的已发生事件。",
+        "prompt": "用Ben作主语，从deliver/collect、the medicine、this morning/this evening选已关闭交货班次的信息，自行选时态写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-005-up-to-now",
+        "context": "运行看板：所有测试刚通过，现在可以发布；昨晚那一轮失败。主管问当前最新结果，不是昨晚报告。",
+        "prompt": "以All the tests开头，从just/last night、pass/fail选择最新记录，自行选时态；再用so连接we can/cannot release the update的正确结论。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-005-time-ledger",
+        "context": "培训档案：上个月的结项班毕业六人；当前另一班仍在学习，仅两人已毕业，其他人尚未毕业。两班人数分开报告。",
+        "prompt": "词库two/six/eight students、graduate、last month/so far in this class；先报告旧班再报告当前班，用and连接，自行匹配两班人数、时间与时态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce2-6",
+    "scope": "按题目情境、指代和词汇作答；这些是有限受控表达或明确标出的选择识别任务。大小写、空白、直弯撇号可变；陈述句可有一个英文句号或省略，直接问句保留一个问号；选择题只选所给完整选项。不匹配不代表其他自然英语错误。开放表达待人工核对。",
+    "questions": [
+      {
+        "id": "diagnostic-nce2-006-reference-chain",
+        "context": "你向朋友首次报告在公园捡到一枚徽章；对方此前不知道是哪枚。随后仍描述同一枚徽章，没有第二枚。",
+        "prompt": "用I、found、badge、and、badge、was blue写一句；两处badge分别补a/the。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-006-quantity-unit",
+        "context": "首次报告一笔采购：一个碗，以及未说明重量的米；没提供装米的袋或别的容器。",
+        "prompt": "用I、bought、bowl、and、rice写一句；为数量明写a或some。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-006-general-names",
+        "context": "科普标题讨论所有猫的通常需求，不是眼前这几只猫，也不是某一些猫。",
+        "prompt": "用Cats、need、water写整个类别的泛指句，不另加限定词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-nce2-006-reference-chain",
+        "context": "共同讨论一段昨天发生的故事：首次出现一个陌生访客，对方此前不知道他；下一分句仍说这同一个访客。",
+        "prompt": "用A visitor、arrived、and、visitor、asked for directions写一句，回指时补冠词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先确认双方能否识别同一对象；不能把新对象与已经提到的另一件混同。"
+      },
+      {
+        "id": "guided-nce2-006-quantity-unit",
+        "context": "采购单第一次告诉同伴：几支未定具体数量的蜡烛，加一杯牛奶；牛奶杯数确定为一，蜡烛未逐支计数。",
+        "prompt": "用We、bought、candles、and、glass of milk写一句，分别补some/a。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先按证据选一个单位、若干复数或一些材料，再选a/some；不要猜未给数量或容器。"
+      },
+      {
+        "id": "guided-nce2-006-general-names",
+        "context": "联系人卡：名字是Mina，住所城市是Bristol；二者是普通人名与城市名，不是名为“the Mina”的船等。",
+        "prompt": "用Mina、lives、in Bristol写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对是整个类别、某份已知物品还是给定普通名字；此处不泛化到所有专名。"
+      },
+      {
+        "id": "independent-nce2-006-reference-chain",
+        "context": "失物接待：你和接待员已经共同指认那只桌上的绿色包；红包属于别人。接待员问绿色包里有什么，你发现首次提到的一把钥匙。",
+        "prompt": "用I、found、key、in、bag写一句；冠词从a/the选，包指共同指认的绿包，钥匙首次引入。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-006-quantity-unit",
+        "context": "你首次向此前不知这些物品的同伴报告，没有共同已知或现场可指认的特定物。野餐交接有两份物资：本人实际带了一把勺子和一些汤，另一个同伴带若干勺子和一个杯子。只报告本人；汤未按容器计量。",
+        "prompt": "以I brought开头，从spoon/spoons、soup/cup选本人两类物资，用and连接，并为不定数量明写a/some。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-006-general-names",
+        "context": "编辑要一个讲所有纸通常可以回收的科普标题；“桌上这一叠纸”和“某些纸”都是本题排除的窄范围。",
+        "prompt": "从Paper/The paper/Some paper选择范围正确的主语，再用can be recycled写标题句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-006-reference-chain",
+        "context": "保留上一轮首答和订正。下面是另一情境：演出故事首次引入一名不认识的鼓手；他拿的是双方已经在前一句讨论过的那面鼓，另一面鼓尚未使用。",
+        "prompt": "用I、saw、drummer、with、drum写一句，从a/the选各自限定词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-006-quantity-unit",
+        "context": "保留上一轮首答和订正。下面是另一情境：你首次向此前不知这些物品的同伴报告，没有共同已知或现场可指认的特定物。补给核验：仓库实际交出若干绳子和一个罐头；纸上另一行“一根绳子和一些豆子”被撤销。罐头在此按tin of beans计一个单位。",
+        "prompt": "用We received开头，从rope/ropes、beans/tin of beans选实际物资，用and连接；数量明写a/some。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-006-general-names",
+        "context": "保留上一轮首答和订正。下面是另一情境：通讯录两行：普通联系人Nora住在Leeds，Omar住在York。来电要Nora的城市；不谈某个同名者或带冠词的机构名称。",
+        "prompt": "以选对的联系人作主语，词库Nora/Omar、lives in、Leeds/York；按实际配对写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-006-reference-chain",
+        "context": "两人共同确认货架上那本唯一的地图册；你打开它，第一次看到其中一张未曾讨论的便条。旁边故事书与这次发现无关。",
+        "prompt": "用I、found、note、inside、atlas写一句，按已知容器/新发现物选冠词a/an/the。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-006-quantity-unit",
+        "context": "你首次向此前不知这些物品的同伴报告，没有共同已知或现场可指认的特定物。烘焙实领单：一些糖和一个盘子；“一袋糖和若干盘子”只是待确认的采购计划，未领取。糖实领时未按袋记录。",
+        "prompt": "用I collected开头，从sugar/bag of sugar、plate/plates选实领物，用and连接；按要求明写a/some。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-006-general-names",
+        "context": "本次通知明确指双方刚刚倒入水壶里的那份水，水已烧开；不讲所有水的普遍性质。",
+        "prompt": "选择范围和现状都符合通知的一整句。 只选所给完整选项，不改写。",
+        "options": [
+          "Water is always hot.",
+          "Some water is hot.",
+          "The water in the kettle is hot.",
+          "The water in the kettle is cold."
+        ]
+      },
+      {
+        "id": "review-b-nce2-006-reference-chain",
+        "context": "咖啡店交接首次讲一个陌生顾客；她买走的是双方此前已点名的那块最后剩下的蛋糕。另一块蛋糕并不在这次售卖中。",
+        "prompt": "用customer、bought、cake写一句；从a/the按陌生人物与已知商品选冠词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-006-quantity-unit",
+        "context": "你首次向此前不知这些物品的同伴报告，没有共同已知或现场可指认的特定物。清点两箱物品：你实际打开的一箱有一个刷子和一些油；另一箱有若干刷子和一个瓶子。只报告你打开的箱子，油没有瓶数记录。",
+        "prompt": "用I found开头，从brush/brushes、oil/bottle选你这一箱物品，用and连接；明写a/some。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-006-general-names",
+        "context": "校刊栏目讲所有树的通常生长需要，不能缩成校园眼前这些树；普通联系人Ravi与这一栏目无关。",
+        "prompt": "从Trees/The trees/Some trees/Ravi选适合该栏目范围的主语，用need sunlight写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

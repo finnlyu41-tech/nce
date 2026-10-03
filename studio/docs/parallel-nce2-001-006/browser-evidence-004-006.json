@@ -1,0 +1,99 @@
+{
+  "baseline": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "checks": [
+    {
+      "id": "nce2-4",
+      "singleLessonAriaLabel": "第 4–undefined 课连续练习",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "NCE2 absent from existing illustration catalog; unchanged UI shows controls without image; coverage gap recorded",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "QA empty chapter evidence with selected NCE2 unit; callback no-op; no map gates completed; production wiring remains owner work",
+      "choiceTasks": 2,
+      "inputTasks": 16,
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "viewport320": {
+        "width": 320,
+        "scroll": 320
+      },
+      "retention": "natural 24h/7d not run",
+      "audioPlayback": [
+        {
+          "currentTime": 15.95,
+          "duration": 66.228378,
+          "readyState": 1,
+          "paused": false
+        }
+      ],
+      "audibility": "not audited"
+    },
+    {
+      "id": "nce2-5",
+      "singleLessonAriaLabel": "第 5–undefined 课连续练习",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "NCE2 absent from existing illustration catalog; unchanged UI shows controls without image; coverage gap recorded",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "QA empty chapter evidence with selected NCE2 unit; callback no-op; no map gates completed; production wiring remains owner work",
+      "choiceTasks": 2,
+      "inputTasks": 16,
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "viewport320": {
+        "width": 320,
+        "scroll": 320
+      },
+      "retention": "natural 24h/7d not run",
+      "audioPlayback": [
+        {
+          "currentTime": 38.96,
+          "duration": 74.744313,
+          "readyState": 4,
+          "paused": false
+        }
+      ],
+      "audibility": "not audited"
+    },
+    {
+      "id": "nce2-6",
+      "singleLessonAriaLabel": "第 6–undefined 课连续练习",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "NCE2 absent from existing illustration catalog; unchanged UI shows controls without image; coverage gap recorded",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "QA empty chapter evidence with selected NCE2 unit; callback no-op; no map gates completed; production wiring remains owner work",
+      "choiceTasks": 1,
+      "inputTasks": 17,
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "viewport320": {
+        "width": 320,
+        "scroll": 320
+      },
+      "retention": "natural 24h/7d not run",
+      "audioPlayback": [
+        {
+          "currentTime": 18.760544,
+          "duration": 65.1835,
+          "readyState": 4,
+          "paused": false
+        }
+      ],
+      "audibility": "not audited"
+    }
+  ],
+  "runtimeErrors": [],
+  "profile": "fresh QA; no user profile/data; removed after test",
+  "productionRegistration": "not modified",
+  "naturalRetention": "not run"
+}

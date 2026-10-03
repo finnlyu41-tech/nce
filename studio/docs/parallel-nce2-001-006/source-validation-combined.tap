@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: nce2-1 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 1 - nce2-1 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 13.7905
+  type: 'test'
+  ...
+# Subtest: nce2-2 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 2 - nce2-2 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 3.16825
+  type: 'test'
+  ...
+# Subtest: nce2-3 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 3 - nce2-3 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 3.277583
+  type: 'test'
+  ...
+# Subtest: nce2-4 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 4 - nce2-4 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 3.136667
+  type: 'test'
+  ...
+# Subtest: nce2-5 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 5 - nce2-5 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 3.164375
+  type: 'test'
+  ...
+# Subtest: nce2-6 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 6 - nce2-6 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 3.142875
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 7 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 0.986292
+  type: 'test'
+  ...
+# Subtest: record verified source evidence
+ok 8 - record verified source evidence
+  ---
+  duration_ms: 15.274834
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5433.234458

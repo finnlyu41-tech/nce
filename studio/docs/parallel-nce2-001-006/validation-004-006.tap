@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: nce2-4 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce2-4 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 77.111292
+  type: 'test'
+  ...
+# Subtest: nce2-4 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce2-4 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 18.15125
+  type: 'test'
+  ...
+# Subtest: nce2-5 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce2-5 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 59.622084
+  type: 'test'
+  ...
+# Subtest: nce2-5 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce2-5 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 14.733958
+  type: 'test'
+  ...
+# Subtest: nce2-6 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce2-6 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 38.227916
+  type: 'test'
+  ...
+# Subtest: nce2-6 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce2-6 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 13.419875
+  type: 'test'
+  ...
+# Subtest: nce2-4 rejects nce2-5 raw without overwriting
+ok 7 - nce2-4 rejects nce2-5 raw without overwriting
+  ---
+  duration_ms: 0.308417
+  type: 'test'
+  ...
+# Subtest: nce2-4 rejects nce2-6 raw without overwriting
+ok 8 - nce2-4 rejects nce2-6 raw without overwriting
+  ---
+  duration_ms: 0.078542
+  type: 'test'
+  ...
+# Subtest: nce2-5 rejects nce2-4 raw without overwriting
+ok 9 - nce2-5 rejects nce2-4 raw without overwriting
+  ---
+  duration_ms: 0.374334
+  type: 'test'
+  ...
+# Subtest: nce2-5 rejects nce2-6 raw without overwriting
+ok 10 - nce2-5 rejects nce2-6 raw without overwriting
+  ---
+  duration_ms: 0.6225
+  type: 'test'
+  ...
+# Subtest: nce2-6 rejects nce2-4 raw without overwriting
+ok 11 - nce2-6 rejects nce2-4 raw without overwriting
+  ---
+  duration_ms: 0.174417
+  type: 'test'
+  ...
+# Subtest: nce2-6 rejects nce2-5 raw without overwriting
+ok 12 - nce2-6 rejects nce2-5 raw without overwriting
+  ---
+  duration_ms: 0.053834
+  type: 'test'
+  ...
+# Subtest: external independent blind 004-006 covers eighteen tasks per course and every reasonable variant
+ok 13 - external independent blind 004-006 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 1.213291
+  type: 'test'
+  ...
+# Subtest: blind stems 004-006 remain identical to reviewed final tasks
+ok 14 - blind stems 004-006 remain identical to reviewed final tasks
+  ---
+  duration_ms: 4.010292
+  type: 'test'
+  ...
+# Subtest: shared production implementations and source guard are byte identical to exact frozen baseline
+ok 15 - shared production implementations and source guard are byte identical to exact frozen baseline
+  ---
+  duration_ms: 354.654458
+  type: 'test'
+  ...
+# Subtest: all tracked diff and untracked delivery files stay in this content/test/docs ownership
+ok 16 - all tracked diff and untracked delivery files stay in this content/test/docs ownership
+  ---
+  duration_ms: 72.960792
+  type: 'test'
+  ...
+# Subtest: new task contexts are distinct, target banks include real first/repair/delayed material
+ok 17 - new task contexts are distinct, target banks include real first/repair/delayed material
+  ---
+  duration_ms: 8.255541
+  type: 'test'
+  ...
+# Subtest: six real NCE2 units remain unwired; no bypass from completed book one
+ok 18 - six real NCE2 units remain unwired; no bypass from completed book one
+  ---
+  duration_ms: 3382.891916
+  type: 'test'
+  ...
+# Subtest: nce2-4 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 19 - nce2-4 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 12.902167
+  type: 'test'
+  ...
+# Subtest: nce2-5 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 20 - nce2-5 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 6.977084
+  type: 'test'
+  ...
+# Subtest: nce2-6 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+ok 21 - nce2-6 real single-lesson LRC, SourcePanel, scanned textbook and exercise pages
+  ---
+  duration_ms: 7.139375
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 22 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 1.11275
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6718.729084

@@ -1,0 +1,94 @@
+{
+  "base": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "firstCommit": "e58aa09336290454aba5adf08f633e9f86571277",
+  "node": {
+    "validation-001-003.tap": {
+      "passed": 22,
+      "failed": 0
+    },
+    "source-validation-001-003.tap": {
+      "passed": 5,
+      "failed": 0
+    },
+    "validation-004-006.tap": {
+      "passed": 22,
+      "failed": 0
+    },
+    "source-validation-004-006.tap": {
+      "passed": 5,
+      "failed": 0
+    },
+    "validation-combined.tap": {
+      "passed": 57,
+      "failed": 0
+    },
+    "source-validation-combined.tap": {
+      "passed": 8,
+      "failed": 0
+    }
+  },
+  "tasks": 108,
+  "inputTasks": 102,
+  "choiceTasks": 6,
+  "independentNoKeyPrimary": 108,
+  "independentFiniteVariants": 215,
+  "finiteAcceptedStrings": 345,
+  "reasonedNearMisses": 432,
+  "sourceSha256": "internal LRC sourceSha256; transport digest kept distinct",
+  "pdf": {
+    "sha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+    "bytes": 19876069,
+    "pages": 480,
+    "editionIndexesMatch": true
+  },
+  "browserCases": 6,
+  "browserRuntimeExceptions": 0,
+  "freshSaveReload": true,
+  "viewports": [
+    390,
+    320
+  ],
+  "representativeScreenshotsManuallyInspected": [
+    "source-1.png",
+    "independent-2.png",
+    "comic-unavailable-3.png",
+    "independent-4.png",
+    "correction-5.png",
+    "comic-unavailable-6.png",
+    "waiting-320-6.png"
+  ],
+  "productionRegistration": "unwired; test-only preview override",
+  "sharedFilesChanged": [],
+  "knownOwnerGaps": [
+    {
+      "file": "app/course-loop-progress.ts",
+      "issue": "CourseBinding.lesson.book is NCE1-only type; NCE2 has runtime source support but union needs owner widening."
+    },
+    {
+      "file": "course-loop/host-contract.d.ts",
+      "issue": "CourseId and showSource book/lesson/comicKey types are NCE1-only. Add exact six IDs and book-discriminated NCE2 source union; preserve existing NCE1 contracts."
+    },
+    {
+      "file": "app/course-loop-ui.tsx",
+      "issue": "aria-label and successor text read lessons[1]; single NCE2 lesson gives undefined. Owner needs single-lesson formatting."
+    },
+    {
+      "file": "app/course-loop-next.ts",
+      "issue": "courseLoopTask due reason directly reads lessons[1]; owner needs single-lesson wording and exact successor edges."
+    },
+    {
+      "file": "app/data/nce-illustrations.json and app/course-loop-ui.tsx",
+      "issue": "No book-two catalog entries. Actual comic SourcePanel returns SentenceIllustration null plus cursor controls, without an explanatory no-image message; preserve honest proof, owner separately handles source coverage/UI."
+    }
+  ],
+  "unverified": [
+    "production registration and deployed new modules",
+    "actual hearing",
+    "natural24h/7d",
+    "human open response",
+    "physical devices",
+    "pronunciation",
+    "autonomous transfer",
+    "learning gain"
+  ]
+}

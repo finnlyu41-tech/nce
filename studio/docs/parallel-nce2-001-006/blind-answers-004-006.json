@@ -1,0 +1,537 @@
+[
+  {
+    "id": "diagnostic-nce2-004-present-result",
+    "answer": "We have just uploaded all the files.",
+    "variants": [
+      "We've just uploaded all the files."
+    ],
+    "issues": [
+      "近错：have upload 缺过去分词；not uploaded 与全部上传成功相反。美式简单过去 We just uploaded all the files 自然，但此受控完成表达应与语言错误区分。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-004-experience-location",
+    "answer": "Lena has been to Madrid.",
+    "variants": [
+      "Lena's been to Madrid."
+    ],
+    "issues": [
+      "近错：has gone to Madrid 通常报告去了尚未返回，不能覆盖已回家证据；has been in Madrid 不能单凭该表达证明到访后已返回。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-004-continuing-duration",
+    "answer": "We have lived here since March.",
+    "variants": [
+      "We've lived here since March.",
+      "We have been living here since March.",
+      "We've been living here since March."
+    ],
+    "issues": [
+      "完成进行式也可自然表达仍持续的居住；for March 将起点当时长；lived here since March 的简单过去会遗漏当前持续。"
+    ]
+  },
+  {
+    "id": "guided-nce2-004-present-result",
+    "answer": "Noah has just baked the bread.",
+    "variants": [
+      "Noah's just baked the bread."
+    ],
+    "issues": [
+      "近错：has bake 形态错误；has not baked 与已烤好相反；has been baking 不单独保证面包已完成。"
+    ]
+  },
+  {
+    "id": "guided-nce2-004-experience-location",
+    "answer": "Have you ever been to Oslo?",
+    "variants": [],
+    "issues": [
+      "近错：Have you ever gone to Oslo? 在某些英语用法中可以问经历，但题目明写 be to；Have you ever been in Oslo? 更换了指定结构；ever 并非频率为 always。"
+    ]
+  },
+  {
+    "id": "guided-nce2-004-continuing-duration",
+    "answer": "Arun has studied at this school for two years.",
+    "variants": [
+      "Arun's studied at this school for two years.",
+      "Arun has been studying at this school for two years.",
+      "Arun's been studying at this school for two years."
+    ],
+    "issues": [
+      "完成进行式自然且符合仍就读；since two years 把时长当起点；studied 的简单过去不完整表达当前持续。"
+    ]
+  },
+  {
+    "id": "independent-nce2-004-present-result",
+    "answer": "We have not finished the report yet because one page is missing.",
+    "variants": [
+      "We haven't finished the report yet because one page is missing.",
+      "We've not finished the report yet because one page is missing."
+    ],
+    "issues": [
+      "近错：finished the form 是另一项目；have already finished the report 与缺页证据相反；have not finished the report already 在此不如 yet 中性。"
+    ]
+  },
+  {
+    "id": "independent-nce2-004-experience-location",
+    "answer": "Mila has gone to Lyon and is still there.",
+    "variants": [],
+    "issues": [
+      "选择识别：选项二；已在Lyon且尚未回，不能移植返程/从未/明天出发的信息。variants 按要求留空。"
+    ]
+  },
+  {
+    "id": "independent-nce2-004-continuing-duration",
+    "answer": "Her membership has been active since April.",
+    "variants": [],
+    "issues": [
+      "近错：for six months 需要未知的今天日期才能计算，属于未证实数量；has ended 与仍有效相反；since April 仅承诺起点。"
+    ]
+  },
+  {
+    "id": "repair-nce2-004-present-result",
+    "answer": "The printer has not finished the tickets yet because the queue is not empty.",
+    "variants": [
+      "The printer hasn't finished the tickets yet because the queue is not empty.",
+      "The printer's not finished the tickets yet because the queue is not empty."
+    ],
+    "issues": [
+      "近错：the poster 移植已完成的另一个任务；has already finished 与票券仍打印相反。printer finish the tickets 是本题给定的任务完成用法，不据设备名判定语法错误。"
+    ]
+  },
+  {
+    "id": "repair-nce2-004-experience-location",
+    "answer": "Nora has been to Dublin, but she is back home now.",
+    "variants": [
+      "Nora has been to Dublin but she is back home now.",
+      "Nora's been to Dublin, but she is back home now.",
+      "Nora has been to Dublin, but she's back home now.",
+      "Nora's been to Dublin, but she's back home now.",
+      "Nora's been to Dublin but she is back home now.",
+      "Nora has been to Dublin but she's back home now.",
+      "Nora's been to Dublin but she's back home now."
+    ],
+    "issues": [
+      "but 前逗号可省；Nora 的 has 与 she 的 is 可分别收缩。近错：has gone / is still there 把Omar的去向移到Nora。but 的对比略弱，却是题目指定连接词，并无矛盾。"
+    ]
+  },
+  {
+    "id": "repair-nce2-004-continuing-duration",
+    "answer": "Ezra has been on duty here since Monday.",
+    "variants": [
+      "Ezra's been on duty here since Monday."
+    ],
+    "issues": [
+      "近错：for five years 杜撰时长并混入旧任职；has gone home 与当前仍在门岗相反。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-004-present-result",
+    "answer": "We have already hung all the pictures, so we do not need to hang them.",
+    "variants": [
+      "We have already hung all the pictures so we do not need to hang them.",
+      "We've already hung all the pictures, so we do not need to hang them.",
+      "We have already hung all the pictures, so we don't need to hang them.",
+      "We've already hung all the pictures, so we don't need to hang them.",
+      "We've already hung all the pictures so we don't need to hang them."
+    ],
+    "issues": [
+      "近错：have hanged pictures 不适用挂画的常用过去分词 hung；open the door 是未完成的另一项目；need to hang them 颠倒下一步。so前逗号可省；两处助动词可分别收缩。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-004-experience-location",
+    "answer": "Tess has never been abroad before.",
+    "variants": [
+      "Tess's never been abroad before.",
+      "Tess has never gone abroad before.",
+      "Tess's never gone abroad before."
+    ],
+    "issues": [
+      "歧义/自然变体：never gone abroad before 也自然表示截至现在从未出国，不能将肯定 has gone 的尚未返回解释机械套在否定经历上；题目词库同时提供 be abroad/go abroad。近错：already 与从未相反；未来计划不是已发生经历。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-004-continuing-duration",
+    "answer": "The cat has stayed with us for three weeks.",
+    "variants": [
+      "The cat's stayed with us for three weeks.",
+      "The cat has been staying with us for three weeks.",
+      "The cat's been staying with us for three weeks."
+    ],
+    "issues": [
+      "完成进行式符合当前仍寄养；since three weeks 不是规范起点表达；three days 改变已给时长；简单过去不保证仍持续。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-004-present-result",
+    "answer": "The electrician has just tested all the lights, so the testing is complete.",
+    "variants": [
+      "The electrician has just tested all the lights so the testing is complete.",
+      "The electrician's just tested all the lights, so the testing is complete.",
+      "The electrician's just tested all the lights so the testing is complete."
+    ],
+    "issues": [
+      "近错：paint all the walls 混入尚未完成的墙面；incomplete 颠倒已测完结论。already 可说明已完成，但不保留 just 的刚刚时间信息，属受控词选择边界。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-004-experience-location",
+    "answer": "Sol has gone to Bern and has not returned yet.",
+    "variants": [],
+    "issues": [
+      "选择识别：选项三；对象是Sol而非已回来的Kai。variants 按要求留空。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-004-continuing-duration",
+    "answer": "The connection has been stable since Friday.",
+    "variants": [
+      "The connection's been stable since Friday."
+    ],
+    "issues": [
+      "近错：for Friday 将起点当时长；last year 混入之前停机且无正常起点证据；has failed again 与未中断相反。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-005-closed-past",
+    "answer": "The manager locked the door yesterday.",
+    "variants": [
+      "Yesterday, the manager locked the door.",
+      "Yesterday the manager locked the door."
+    ],
+    "issues": [
+      "近错：has locked ... yesterday 把封闭过去日期并入现在完成时；lock 缺过去式；当前门是否仍锁着不影响昨天动作时态。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-005-up-to-now",
+    "answer": "Up to now, we have checked four rooms.",
+    "variants": [
+      "Up to now we have checked four rooms.",
+      "Up to now, we've checked four rooms.",
+      "Up to now we've checked four rooms.",
+      "We have checked four rooms up to now.",
+      "We've checked four rooms up to now."
+    ],
+    "issues": [
+      "近错：four rooms 是已完成累计，不包括未完成项；check 或 had checked 不符合截至现在。up to now 可在句首或句末。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-005-time-ledger",
+    "answer": "We made two deliveries yesterday, and we have made three deliveries so far.",
+    "variants": [
+      "We made two deliveries yesterday and we have made three deliveries so far.",
+      "We made two deliveries yesterday, and we've made three deliveries so far.",
+      "We made two deliveries yesterday and we've made three deliveries so far."
+    ],
+    "issues": [
+      "近错：累计不是five，三次包含昨天两次；have made ... yesterday 越过封闭时间边界。题目明确两个分句保留we，不列省略第二个we的变体。"
+    ]
+  },
+  {
+    "id": "guided-nce2-005-closed-past",
+    "answer": "When did you send the invitation?",
+    "variants": [],
+    "issues": [
+      "近错：did you sent 是did后重复过去形态；When have you sent ...? 不对应询问上周那个已发送事件具体时间；不能擅加未知日期。"
+    ]
+  },
+  {
+    "id": "guided-nce2-005-up-to-now",
+    "answer": "All the boxes have just arrived.",
+    "variants": [],
+    "issues": [
+      "近错：boxes has 主谓不一致；have arrive 缺过去分词；have been arriving 不保证所有箱子均已到达。"
+    ]
+  },
+  {
+    "id": "guided-nce2-005-time-ledger",
+    "answer": "Leo sold one painting last night, and he has sold three paintings up to now.",
+    "variants": [
+      "Leo sold one painting last night and he has sold three paintings up to now.",
+      "Leo sold one painting last night, and he's sold three paintings up to now.",
+      "Leo sold one painting last night and he's sold three paintings up to now."
+    ],
+    "issues": [
+      "近错：累计不是four，三幅包含昨晚一幅；has sold ... last night 时间边界错误；首分句Leo、第二分句he都按题保留。"
+    ]
+  },
+  {
+    "id": "independent-nce2-005-closed-past",
+    "answer": "Nina gave the key to reception this morning.",
+    "variants": [],
+    "issues": [
+      "近错：received the key from reception 颠倒交接方向；this afternoon 不是档案事件时间；虽同为today，上午已结束，不能只据今天判断为现在完成时。"
+    ]
+  },
+  {
+    "id": "independent-nce2-005-up-to-now",
+    "answer": "We have repaired two bikes so far, but the green bike is not ready.",
+    "variants": [
+      "We have repaired two bikes so far but the green bike is not ready.",
+      "We've repaired two bikes so far, but the green bike is not ready.",
+      "We have repaired two bikes so far, but the green bike isn't ready.",
+      "We have repaired two bikes so far, but the green bike's not ready.",
+      "We've repaired two bikes so far, but the green bike isn't ready.",
+      "We've repaired two bikes so far, but the green bike's not ready.",
+      "We've repaired two bikes so far but the green bike isn't ready.",
+      "We've repaired two bikes so far but the green bike's not ready."
+    ],
+    "issues": [
+      "近错：three bikes 把在修绿车入账；yesterday 未给证据；green bike was not ready 仅说过去，无法报告当前状态。but前逗号可省，have和be可独立收缩。"
+    ]
+  },
+  {
+    "id": "independent-nce2-005-time-ledger",
+    "answer": "We bought eight books last year, and we have bought five books so far this year.",
+    "variants": [],
+    "issues": [
+      "选择识别：选项二；旧八/新五分账，新账不能累计成thirteen。variants 按要求留空。"
+    ]
+  },
+  {
+    "id": "repair-nce2-005-closed-past",
+    "answer": "Ivo lost his card last month.",
+    "variants": [],
+    "issues": [
+      "近错：has lost ... last month 不符合指定过去日期栏；find 和 next month 与事故档案相反。今天未找到不把过去丢失日期改为开放账期。"
+    ]
+  },
+  {
+    "id": "repair-nce2-005-up-to-now",
+    "answer": "We have not returned the drill yet.",
+    "variants": [
+      "We haven't returned the drill yet.",
+      "We've not returned the drill yet."
+    ],
+    "issues": [
+      "近错：the hammer 复制另一工具的已还结果；have already returned the drill 与尚未归还相反。"
+    ]
+  },
+  {
+    "id": "repair-nce2-005-time-ledger",
+    "answer": "We cleaned two rooms last Friday, and we have cleaned five rooms up to now.",
+    "variants": [
+      "We cleaned two rooms last Friday and we have cleaned five rooms up to now.",
+      "We cleaned two rooms last Friday, and we've cleaned five rooms up to now.",
+      "We cleaned two rooms last Friday and we've cleaned five rooms up to now.",
+      "We cleaned two rooms last Friday and have cleaned five rooms up to now."
+    ],
+    "issues": [
+      "近错：seven rooms 重复计算包含在累计中的两间；五间不是单日数量。第二分句省略同一主语We也自然，题目只指定以We开头，没有要求重复主语。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-005-closed-past",
+    "answer": "The host cancelled the meeting yesterday.",
+    "variants": [
+      "The host canceled the meeting yesterday.",
+      "Yesterday, the host cancelled the meeting.",
+      "Yesterday the host canceled the meeting."
+    ],
+    "issues": [
+      "cancelled/canceled 是英美拼写变体；近错：has cancelled ... yesterday 越界；held 或 tomorrow 与取消纪要相反。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-005-up-to-now",
+    "answer": "I have submitted two applications so far, but the third one is still a draft.",
+    "variants": [
+      "I have submitted two applications so far but the third one is still a draft.",
+      "I've submitted two applications so far, but the third one is still a draft.",
+      "I have submitted two applications so far, but the third one's still a draft.",
+      "I've submitted two applications so far, but the third one's still a draft.",
+      "I've submitted two applications so far but the third one's still a draft."
+    ],
+    "issues": [
+      "近错：three 把草稿算入提交数量；last year 未给证据；complete 与第三份仍草稿相反。but前逗号可省，have与is可独立收缩。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-005-time-ledger",
+    "answer": "We raised four hundred yuan last year, and we have raised two hundred yuan up to now.",
+    "variants": [],
+    "issues": [
+      "选择识别：选项三；当前二百不能并入旧四百得到六百。variants 按要求留空。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-005-closed-past",
+    "answer": "Ben delivered the medicine this morning.",
+    "variants": [],
+    "issues": [
+      "近错：has delivered ... this morning 与题目已关闭班次不匹配；collected 颠倒动作；this evening 尚未发生。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-005-up-to-now",
+    "answer": "All the tests have just passed, so we can release the update.",
+    "variants": [
+      "All the tests have just passed so we can release the update."
+    ],
+    "issues": [
+      "近错：failed last night 复制旧轮结果；cannot release 与当前全部通过结论相反；tests have passed 用法成立。so前逗号可省。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-005-time-ledger",
+    "answer": "Six students graduated last month, and two students have graduated so far in this class.",
+    "variants": [
+      "Six students graduated last month and two students have graduated so far in this class.",
+      "Six students graduated last month, and two students have so far graduated in this class."
+    ],
+    "issues": [
+      "近错：eight 合并不同班；have graduated ... last month 旧班时间边界错误；仅两人已毕业，不能将仍学习的其他人入账。当前班时间范围修饰已毕业人数，不改写成习惯。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-006-reference-chain",
+    "answer": "I found a badge, and the badge was blue.",
+    "variants": [
+      "I found a badge and the badge was blue."
+    ],
+    "issues": [
+      "近错：首次 the badge 假定对方已能识别；第二次 a badge 易引入另一个徽章；本题只有同一枚。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-006-quantity-unit",
+    "answer": "I bought a bowl and some rice.",
+    "variants": [],
+    "issues": [
+      "近错：a rice 不能在未指定品种/份量时把材料直接当单位；a bag of rice 杜撰容器；the bowl/the rice 无共同指认依据。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-006-general-names",
+    "answer": "Cats need water.",
+    "variants": [],
+    "issues": [
+      "近错：The cats 缩为已知那几只；Some cats 缩为某些；a water 增加未给计量单位。一般现在时保留整个类别通常需求。"
+    ]
+  },
+  {
+    "id": "guided-nce2-006-reference-chain",
+    "answer": "A visitor arrived, and the visitor asked for directions.",
+    "variants": [
+      "A visitor arrived and the visitor asked for directions."
+    ],
+    "issues": [
+      "近错：第二处 a visitor 可变成另一访客；The visitor 首次指认没有证据；过去故事两动作均用过去时。"
+    ]
+  },
+  {
+    "id": "guided-nce2-006-quantity-unit",
+    "answer": "We bought some candles and a glass of milk.",
+    "variants": [],
+    "issues": [
+      "近错：a candles 与复数不合；some glasses of milk 改成未给多杯；some milk 省去题目要求的一杯计量，虽自然却不完整报告指定单位。"
+    ]
+  },
+  {
+    "id": "guided-nce2-006-general-names",
+    "answer": "Mina lives in Bristol.",
+    "variants": [],
+    "issues": [
+      "近错：The Mina/The Bristol 不适用于给定普通人名/城市；Mina live 主谓不一致。此边界不能泛化为所有专名都不用the。"
+    ]
+  },
+  {
+    "id": "independent-nce2-006-reference-chain",
+    "answer": "I found a key in the bag.",
+    "variants": [],
+    "issues": [
+      "近错：the key 首次引入无共同识别依据；a bag 将共同指认的绿包重新当作不定对象；语境已锁定绿包，不要求增加green。"
+    ]
+  },
+  {
+    "id": "independent-nce2-006-quantity-unit",
+    "answer": "I brought a spoon and some soup.",
+    "variants": [],
+    "issues": [
+      "近错：some spoons/a cup 复制另一同伴物资；a soup 在此会猜测份量/种类；the spoon/the soup 无共同已知依据；未给汤容器。"
+    ]
+  },
+  {
+    "id": "independent-nce2-006-general-names",
+    "answer": "Paper can be recycled.",
+    "variants": [],
+    "issues": [
+      "近错：The paper 指已知纸堆，Some paper 指某部分，均缩窄题目泛指范围。事实边界：日常并非每类涂层或污染纸都实际可回收，题目给定概括在受控语言任务中可答，但不宜当作已核实科普事实。"
+    ]
+  },
+  {
+    "id": "repair-nce2-006-reference-chain",
+    "answer": "I saw a drummer with the drum.",
+    "variants": [],
+    "issues": [
+      "近错：the drummer 首次不认识无识别依据；a drum 丢失前文讨论的同一鼓的回指；with未必只表示持有，但本题给定情境支持。"
+    ]
+  },
+  {
+    "id": "repair-nce2-006-quantity-unit",
+    "answer": "We received some ropes and a tin of beans.",
+    "variants": [],
+    "issues": [
+      "近错：a rope/some beans 复制被撤销行；the ropes/the tin 没有共同特定物依据；a tin of beans 正确按一个罐头计数，beans不另加a。"
+    ]
+  },
+  {
+    "id": "repair-nce2-006-general-names",
+    "answer": "Nora lives in Leeds.",
+    "variants": [],
+    "issues": [
+      "近错：Omar/York 复制另一联系人配对；Nora in York 配对错；陌生名字只是词汇替换，不能据此宣称自由迁移。普通名字不用冠词。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-006-reference-chain",
+    "answer": "I found a note inside the atlas.",
+    "variants": [],
+    "issues": [
+      "近错：the note 首次发现无已知指代；an atlas 将已共同确认唯一地图册当新对象；若新引入atlas才用an，此题必须the。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-006-quantity-unit",
+    "answer": "I collected some sugar and a plate.",
+    "variants": [],
+    "issues": [
+      "近错：a bag of sugar/some plates 把待确认计划当实领；the sugar/the plate 缺共同识别依据；a sugar 猜测份量或品种。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-006-general-names",
+    "answer": "The water in the kettle is hot.",
+    "variants": [],
+    "issues": [
+      "选择识别：选项三；本次水已明确指认且已烧开，不是所有水always hot，也不是仅some water。variants 按要求留空。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-006-reference-chain",
+    "answer": "A customer bought the cake.",
+    "variants": [],
+    "issues": [
+      "近错：The customer 首次陌生人物无识别依据；a cake 将双方点名的最后那块改为新对象；cake可按已知物品整体指称，不能据另一块存在推翻the的情境唯一性。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-006-quantity-unit",
+    "answer": "I found a brush and some oil.",
+    "variants": [],
+    "issues": [
+      "近错：some brushes/a bottle 复制另一箱；a bottle of oil 杜撰油瓶数；the brush/the oil 缺共同识别依据；a oil 有冠词音形与不可数双重问题。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-006-general-names",
+    "answer": "Trees need sunlight.",
+    "variants": [],
+    "issues": [
+      "近错：The trees/Some trees 都缩窄整个类别；Ravi是不相干联系人。泛指时间不须增加always；个人名字替换与真实迁移能力无必然关系。"
+    ]
+  }
+]

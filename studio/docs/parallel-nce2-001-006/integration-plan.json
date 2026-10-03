@@ -15,7 +15,12 @@
       "./parallel-nce2-001-006/lesson-nce2-002.mjs",
       "./parallel-nce2-001-006/lesson-nce2-003.mjs"
     ],
-    "status": "verified content-only batch; local freeze ready"
+    "status": "locally frozen content-only candidate",
+    "commit": "e58aa09336290454aba5adf08f633e9f86571277",
+    "successorAdditions": {
+      "nce2-1": "nce2-2",
+      "nce2-2": "nce2-3"
+    }
   },
   "secondBatch": {
     "ids": [
@@ -28,7 +33,12 @@
       "./parallel-nce2-001-006/lesson-nce2-005.mjs",
       "./parallel-nce2-001-006/lesson-nce2-006.mjs"
     ],
-    "status": "independently reviewed; excluded from first freeze"
+    "status": "verified content-only batch; local freeze ready",
+    "successorAdditions": {
+      "nce2-3": "nce2-4",
+      "nce2-4": "nce2-5",
+      "nce2-5": "nce2-6"
+    }
   },
   "ownerInterface": {
     "courseIdAdditions": [
@@ -77,5 +87,6 @@
     "pronunciation",
     "autonomous transfer",
     "learning gain"
-  ]
+  ],
+  "blockedFutureEdge": "No nce2-6→nce2-7 until7 actually integrated; retain real missing-successor fallback."
 }

@@ -1,0 +1,516 @@
+{
+  "baseline": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "remoteHeads": "9fbda71620e13d4fda80b39eda150d1fa79693b5",
+  "pdf": {
+    "sha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+    "bytes": 19876069,
+    "pages": 480,
+    "editionIndexesMatch": true
+  },
+  "groups": [
+    {
+      "id": "nce2-1",
+      "sourceSha256": "49cee60b2fc13bf58afeece005626a32c94a187cfba2cbceb90db3b3d5235a08",
+      "languageFileSha256": "d781ee1348bec6bc42dfefcd5fd9e6f4ae18b9b83286420a498fbdc273c8cd85",
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "comicCatalog": "absent; unchanged SourcePanel shows cursor controls and no image/no explanatory message",
+      "printedPages": [
+        {
+          "page": 52,
+          "src": "/lesson-pages/2b85c293e3eea80575c316aa1d48ce0ed043e5e7c92224e175ce5e5dd287ce31.jpg",
+          "sha256": "2b85c293e3eea80575c316aa1d48ce0ed043e5e7c92224e175ce5e5dd287ce31"
+        },
+        {
+          "page": 53,
+          "src": "/lesson-pages/a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106.jpg",
+          "sha256": "a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106"
+        }
+      ],
+      "grammarEntry": {
+        "id": "NCE2-1",
+        "book": "NCE2",
+        "lesson": 1,
+        "lastLesson": 1,
+        "unit": 1,
+        "title": "简单陈述句的语序",
+        "category": "sentence",
+        "terms": "word order simple statements",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 53
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 55
+          }
+        ],
+        "pages": [
+          53,
+          54,
+          55
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 53,
+          "sha256": "a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106"
+        },
+        {
+          "page": 54,
+          "sha256": "76da29a9ae4503dace8e016362d48be80202447c7a76ef46b26b70d1b56392ca"
+        },
+        {
+          "page": 55,
+          "sha256": "8e43d4c257027dcf5873955c1fefccf37082a97f344dea03ef8cb05c99cc98af"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "statement-order",
+          "label": "完整字幕行：拥有座位的简单陈述",
+          "start": 19.39,
+          "end": 22.07
+        },
+        {
+          "target": "actor-object",
+          "label": "完整字幕行：看的人与被看的人",
+          "start": 42.8,
+          "end": 47.27
+        },
+        {
+          "target": "manner-place-time",
+          "label": "完整字幕行：动作后方式；地点/时间排列另见扫描54页，属文字扩展",
+          "start": 31.96,
+          "end": 34.59
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce2-2",
+      "sourceSha256": "4a8888bf4cc68102e12072e9e4cd7e67ada68f4086c27e007216b779761f8b33",
+      "languageFileSha256": "d4edf4a0110bb9e49d2c0dac2b920c7f093ea9a3c4c9ec505428df1b3182429e",
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "comicCatalog": "absent; unchanged SourcePanel shows cursor controls and no image/no explanatory message",
+      "printedPages": [
+        {
+          "page": 56,
+          "src": "/lesson-pages/c50a1f133a0970a8147fee5fe2c1059ff3847bd79da157c887e89374ef4bb212.jpg",
+          "sha256": "c50a1f133a0970a8147fee5fe2c1059ff3847bd79da157c887e89374ef4bb212"
+        },
+        {
+          "page": 57,
+          "src": "/lesson-pages/3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76.jpg",
+          "sha256": "3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76"
+        }
+      ],
+      "grammarEntry": {
+        "id": "NCE2-2",
+        "book": "NCE2",
+        "lesson": 2,
+        "lastLesson": 2,
+        "unit": 1,
+        "title": "一般现在时与现在进行时",
+        "category": "tense",
+        "terms": "now often always",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 57
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 58
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 59
+          }
+        ],
+        "pages": [
+          57,
+          58,
+          59
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 57,
+          "sha256": "3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76"
+        },
+        {
+          "page": 58,
+          "sha256": "aefd1815b9cb498f5ad8e2e7e681f1a463a16c0545cdcf29de1737c95f5497cd"
+        },
+        {
+          "page": 59,
+          "sha256": "9c1bd7341defe7d253e60514ea124263811f3e8bd28f9c7d35c1fb9212638aff"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "habit-now",
+          "label": "完整字幕行：当前正在下雨",
+          "start": 39.6,
+          "end": 42.61
+        },
+        {
+          "target": "frequency",
+          "label": "完整字幕行：never和on Sundays的范围",
+          "start": 17.99,
+          "end": 22.03
+        },
+        {
+          "target": "question-negative",
+          "label": "完整字幕行：正在动作问句；do问句另见70.4–73.39与扫描57页",
+          "start": 60.54,
+          "end": 63.84
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce2-3",
+      "sourceSha256": "1f1ead0cde31d51f2f982c7435450269f5994ce424a16bb5f99e5ae2f7018198",
+      "languageFileSha256": "ba31528c57f1da363ef6296a947b5e52537da26215f7b8766858e5414d0a6c55",
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "comicCatalog": "absent; unchanged SourcePanel shows cursor controls and no image/no explanatory message",
+      "printedPages": [
+        {
+          "page": 60,
+          "src": "/lesson-pages/ab12885bc676a3967c433c933a2f7b66de878bae133bac194074bc837a33c4dd.jpg",
+          "sha256": "ab12885bc676a3967c433c933a2f7b66de878bae133bac194074bc837a33c4dd"
+        },
+        {
+          "page": 61,
+          "src": "/lesson-pages/4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855.jpg",
+          "sha256": "4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855"
+        }
+      ],
+      "grammarEntry": {
+        "id": "NCE2-3",
+        "book": "NCE2",
+        "lesson": 3,
+        "lastLesson": 3,
+        "unit": 1,
+        "title": "一般过去时",
+        "category": "tense",
+        "terms": "what happened simple past",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 61
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 62
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 63
+          }
+        ],
+        "pages": [
+          61,
+          62,
+          63
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 61,
+          "sha256": "4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855"
+        },
+        {
+          "page": 62,
+          "sha256": "e58d3e077a2b62a2c1d6e0fe8150bbd68e9c9e918bd29b27b2b4bd42c5ffa42e"
+        },
+        {
+          "page": 63,
+          "sha256": "f714275a7b364ca4d86ef3c10dc85e9c258fe4411d3ae3900793903f452c53d3"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "dated-sequence",
+          "label": "完整字幕行：Last summer的已结束过去",
+          "start": 21.01,
+          "end": 24.26
+        },
+        {
+          "target": "actual-intended",
+          "label": "完整字幕行：实际未寄卡，不能从计划推出完成",
+          "start": 48.84,
+          "end": 52.98
+        },
+        {
+          "target": "recipient-links",
+          "label": "完整字幕行：teach的人与物；to/for换位由扫描62页文字扩展",
+          "start": 28.95,
+          "end": 33.45
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce2-4",
+      "sourceSha256": "561741b3b5cbd7dc4189f5778bdd685e999ef73783e5fcb74dfe042c11fd925e",
+      "languageFileSha256": "80ede7b620918d07a867cd192cb52a6de137f0e6e10096e750b33f86b30b2792",
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "comicCatalog": "absent; unchanged SourcePanel shows cursor controls and no image/no explanatory message",
+      "printedPages": [
+        {
+          "page": 64,
+          "src": "/lesson-pages/cb3d27e67e7a64d00309b3b9b3406a6ad144e2936b45fd60325da696e1a59d70.jpg",
+          "sha256": "cb3d27e67e7a64d00309b3b9b3406a6ad144e2936b45fd60325da696e1a59d70"
+        },
+        {
+          "page": 65,
+          "src": "/lesson-pages/dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f.jpg",
+          "sha256": "dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f"
+        }
+      ],
+      "grammarEntry": {
+        "id": "NCE2-4",
+        "book": "NCE2",
+        "lesson": 4,
+        "lastLesson": 4,
+        "unit": 1,
+        "title": "现在完成时",
+        "category": "tense",
+        "terms": "what has happened present perfect",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 65
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 66
+          }
+        ],
+        "pages": [
+          65,
+          66,
+          67
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 65,
+          "sha256": "dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f"
+        },
+        {
+          "page": 66,
+          "sha256": "be3b5acc4f4fe5dc6ef8397ae4103e28fdeba2e4188583ded20e13c32ab82165"
+        },
+        {
+          "page": 67,
+          "sha256": "fbc2728c28bad4d7882521ffb7800bdb6cba5a7f407f0ce096affc21dd98891c"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "present-result",
+          "label": "LRC原行：just received；already/not yet见原页65–66文字",
+          "start": 15.95,
+          "end": 20.73
+        },
+        {
+          "target": "experience-location",
+          "label": "LRC原行：never been abroad before；返回/gone比较为文字派生",
+          "start": 53.81,
+          "end": 57.13
+        },
+        {
+          "target": "continuing-duration",
+          "label": "LRC原行：been there for six months；since见原页67文字",
+          "start": 23.12,
+          "end": 26.5
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce2-5",
+      "sourceSha256": "26b0b571d7f6158888130d13f1e3023adde25bd51f7a67fd6b612dbb7a728794",
+      "languageFileSha256": "f6dd289408fc836355fae43c7cf74fb58986bf47e33b6ffe41ec3a3524129466",
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "comicCatalog": "absent; unchanged SourcePanel shows cursor controls and no image/no explanatory message",
+      "printedPages": [
+        {
+          "page": 68,
+          "src": "/lesson-pages/b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36.jpg",
+          "sha256": "b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36"
+        },
+        {
+          "page": 69,
+          "src": "/lesson-pages/0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2.jpg",
+          "sha256": "0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2"
+        }
+      ],
+      "grammarEntry": {
+        "id": "NCE2-5",
+        "book": "NCE2",
+        "lesson": 5,
+        "lastLesson": 5,
+        "unit": 1,
+        "title": "一般过去时与现在完成时",
+        "category": "tense",
+        "terms": "happened has happened",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 69
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 70
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 71
+          }
+        ],
+        "pages": [
+          69,
+          70,
+          71
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 69,
+          "sha256": "0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2"
+        },
+        {
+          "page": 70,
+          "sha256": "85394bf8f48781f91133ca098d78e3f22db1b14846f0332fbbdbd1ed86d8838d"
+        },
+        {
+          "page": 71,
+          "sha256": "52c0570d1d68c7e46f987a29a3cf90968d1ca7df53e8e2561a306ea32fcacf00"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "closed-past",
+          "label": "LRC原行：Yesterday carried",
+          "start": 38.96,
+          "end": 45.61
+        },
+        {
+          "target": "up-to-now",
+          "label": "LRC原行：has sent；up to now在49.3的前行",
+          "start": 50.86,
+          "end": 56.05
+        },
+        {
+          "target": "time-ledger",
+          "label": "LRC原行：covered；与原页68–69截至现在记录作文字比较",
+          "start": 45.61,
+          "end": 49.3
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce2-6",
+      "sourceSha256": "e042b7f0d7d624b6e5f3b350c95d3ec6addb24a0a8fbf07bbb64415910a5b662",
+      "languageFileSha256": "3f7d6951dc21426e8da11eb734daac5efa2d9aaca0e56f73c18a657d563eb2d9",
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "comicCatalog": "absent; unchanged SourcePanel shows cursor controls and no image/no explanatory message",
+      "printedPages": [
+        {
+          "page": 72,
+          "src": "/lesson-pages/9df072b547efb5a9c1a43841b2c94e5cb36b710bdad25121f68007c9acbb5d45.jpg",
+          "sha256": "9df072b547efb5a9c1a43841b2c94e5cb36b710bdad25121f68007c9acbb5d45"
+        },
+        {
+          "page": 73,
+          "src": "/lesson-pages/6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018.jpg",
+          "sha256": "6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018"
+        }
+      ],
+      "grammarEntry": {
+        "id": "NCE2-6",
+        "book": "NCE2",
+        "lesson": 6,
+        "lastLesson": 6,
+        "unit": 1,
+        "title": "冠词与 some",
+        "category": "noun",
+        "terms": "a the some",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 73
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 74
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 75
+          }
+        ],
+        "pages": [
+          73,
+          74,
+          75
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 73,
+          "sha256": "6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018"
+        },
+        {
+          "page": 74,
+          "sha256": "c66b74c702c62fc12f32dce05e3f90504b550830fd6dd13433419015adf9b305"
+        },
+        {
+          "page": 75,
+          "sha256": "58071a097468106de8a245a8ee92fc68e307abdfcbe0e910f2f64a9755d068b8"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "reference-chain",
+          "label": "LRC原行：a beggar；the回指另见28.41原行/扫描页",
+          "start": 18.76,
+          "end": 22.36
+        },
+        {
+          "target": "quantity-unit",
+          "label": "LRC原行：a meal and a glass of beer；some比较见原页73文字",
+          "start": 22.36,
+          "end": 26.54
+        },
+        {
+          "target": "general-names",
+          "label": "LRC原行：Percy Buttons姓名；泛指比较见原页73文字",
+          "start": 48.63,
+          "end": 51.37
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}
