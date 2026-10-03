@@ -1,6 +1,15 @@
 # 句句有进步 · English Studio
 
-## Current release v50 — saved help, independent speech review and84 original senses
+## Current release v51 — original GT option tables
+
+Runtime `ff020e6b331b1b2f99823e301db70e9ae1c375ab`, [fixed deployment](https://c31241de.finn-english-studio.pages.dev).
+
+Six original GT-scene texts add18 option-table blanks and108 specific feedback entries through the existing workspace.53 actual production GT checks plus6 adjacent speaking/Today/vocabulary groups pass; current originals, independent corrections and complete displayed options survive refresh. Full2037-file online/offline packages and both origins match. This is an original专项, not a verified official GT option-table subtype, Band or natural-delay claim.
+
+
+[Scope and verification](docs/gt-original-table-v51.md).
+
+## Previously published v50 — saved help, independent speech review and84 original senses
 
 Runtime `cecc2ec996c7f4da2a27d45bee406e5c66d7694c`, [fixed deployment](https://4b9dbf46.finn-english-studio.pages.dev). Hint-save failure/retry preserves help and take identity; Today keeps one independent due-speech link beside a course draft.24 original senses bring the finite collection to84 without changing FSRS.51 Today cases,3 save-component cases,6 native production combination groups and10 new-user/main/F6 groups pass with0 Runtime exceptions. Full2037-file online/offline packages and both public origins verified. Synthetic recording and due fixtures establish reliability only; human speech, natural delay, calibration and all61 requirements remain open.
 

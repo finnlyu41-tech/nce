@@ -1,0 +1,17 @@
+# V51 — original GT-scene option-table practice
+
+Runtime `ff020e6b331b1b2f99823e301db70e9ae1c375ab`. [Production](https://finn-english-studio.pages.dev/#/ielts?tab=course), [fixed deployment](https://c31241de.finn-english-studio.pages.dev/#/ielts?tab=course).
+
+Two frozen author commits6e454e7d and80eabe85 add six original scenario texts,18 letter-select blanks and108 evidence-based feedback entries. The registered General Training course is explicitly original practice. Official general instructions/references do not establish that a letter-option table is an official GT subtype; that coverage remains unverified. No Band/mastery score is invented.
+
+The current sample workspace stores the displayed passage, caption, row/column labels, all options and requirements beside the original sample event and Academic contexts. Its triple-entry CAS rejects stale writes. Timed text/options stay hidden until start. Independent corrections retain wrong raw first answers. Both Academic and GT context preservation and unsupported current raw refusal are covered by finite tests.
+
+## Final validation
+
+Six content groups,11 GT context groups,125 sequence checks,4 workspace groups/725 extra actual transition round trips,12 Academic context groups,11 source/SSR groups/48 real-parser round trips,51 Today cases and3 hint-save component cases pass. Full TypeScript and online/map/offline standalone packages pass;2037 files match frozen size/SHA256. The Worker, F6/Today, speaking, vocabulary/FSRS and mini/course registry are unchanged. New GT files have no lint diagnostics; existing shared files retain7 baseline React errors and4 baseline warnings, explicitly compared rather than claimed globally green.
+
+Publisher removed an unused workspace import and three unused test bindings/expressions, then expanded the Node-only probe's AST import.meta.url preservation to every explicit mini batch directory. The initial current mini04 URL probe failure is retained; all assertions pass after this test-only adapter correction. Author content and14 of17 author paths remain byte-exact. No test assertion or old archive was removed.
+
+Local actual Worker and production each pass53 native GT checks and6 current adjacent speaking/Today/vocabulary groups with zero Runtime exceptions. Real native select choices, original wrong letters, per-option feedback, independent corrections, fresh timed material, current input saving/refresh, complete context snapshot restoration and existing catalogue return pass. Today retains its current NCE-first priority; GT is resumed through the existing course catalogue, not a new scheduler.320/390 native select screenshots show no horizontal overflow. The inherited favicon.ico404 is separately retained and does not identify a failed course asset. Both public origins match runtime/shell resources and80 WAV hashes/MIME plus80 HEAD, finite unknown-path denials and R19 resources.
+
+Natural24h/7d, physical phones, expert subtype confirmation, difficulty calibration and real learning gains are unverified. All61 completion is not established. No new API/cost/security/credentials or store was introduced. Evidence: release-takeover-20261002/V51-GT-TABLE-20261003 with frozen online/offline/source bundle, current exact manifests, Node and native receipts, provider/atomic push/readback. The following two-file record commit changes documentation only and does not redeploy runtime.
