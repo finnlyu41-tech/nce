@@ -1,7 +1,7 @@
 import {bookCounts, type NceBookId} from './model';
 import {sampleTarget} from './ielts-sample-target';
 import {parseMiniTaskRoute} from '../mini-task/route';
-import {parseStageRoute,stageHash} from '../stage-assessment/route';
+import {parseStageRoute,stageHashForTarget} from '../stage-assessment/route';
 
 export type StudioRoute={view:string;miniTaskId?:string;book?:NceBookId;lesson?:number;tab?:string;step?:number;task?:string;filter?:string;query?:string;file?:string;category?:string;letter?:string;page?:number;node?:string;mission?:string;unit?:string;check?:true;mode?:'recall'|'dictation';goal?:string;practice?:'model'|'independent'|'transfer'|'review'};
 const roadmapNodes=['baseline','starter','foundation','bridge','listening','reading','writing','speaking','mock','finish'];
@@ -40,7 +40,7 @@ export function parseRoute(hash:string):StudioRoute{
  return route;
 }
 export function routeHash(route:StudioRoute){
- if(route.view==='stage-assessment')return stageHash;
+ if(route.view==='stage-assessment')return stageHashForTarget(route.task)||'#/today';
  if(route.view==='mini-task'){const hash='#/mini-task/'+encodeURIComponent(route.miniTaskId||'');return parseMiniTaskRoute(hash)?hash:'#/today'}
  let path='#/'+route.view;if(route.book)path+='/'+route.book;if(route.lesson)path+='/'+route.lesson;
  const params=new URLSearchParams();for(const [key,value] of Object.entries({tab:route.tab,task:route.task,filter:route.filter,q:route.query,file:route.file,category:route.category,letter:route.view==='words'&&route.tab==='index'?route.letter:undefined}))if(value)params.set(key,value);
