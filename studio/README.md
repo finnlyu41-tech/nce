@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## Current release v48 — Today can defer the optional diagnosis
+## Current release v49 — finite mini tasks for lessons37–48
+
+Runtime `46ad498c87414a0372969c845d32db27047de3e9`, [fixed deployment](https://65c29962.finn-english-studio.pages.dev). Six new paired groups add30 finite materials and10 synthetic WAVs. Mini partial targets now cover1–48; open speaking/writing remain ungraded and await human review.26 model/15 audio cases, actual saved drafts/failed-save guard/file backup/exhaustion/offline playback,10 production online mini groups and10 formal main/F6 groups pass with0 Runtime exceptions. Both origins match80 WAV hashes and80 HEAD each. Natural delay, real learners, human acoustics and all61 requirements remain open.
+
+[Scope and verification](docs/mini37-48-v49.md).
+
+## Previously published v48 — Today can defer the optional diagnosis
 
 Runtime `03427c50a26499a3661ab5143dc50c5e94cf13b8`, [fixed deployment](https://f1cc4cfd.finn-english-studio.pages.dev). Optional diagnosis is clearly optional and deferrable. Deferring the complete queue returns directly to the current course; saved drafts and paused diagnosis choices persist, while reentry restores real recommendation priority.50 related checks and10 local/10 production Chrome groups pass with0 Runtime exceptions; due-review priority selectors are unchanged. NCE1/mini coverage remains the finite V47 scope.
 
