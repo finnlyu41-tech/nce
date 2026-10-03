@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## Current release v44 - Finite placement, stage evidence and video notes
+## Current release v45 - Conservative grammar material exposure
+
+Runtime `7b7c1283d12f0c6d784478cda8353080598f6980`, [fixed deployment](https://64ce5c8b.finn-english-studio.pages.dev). Complete displayed-material identity survives the bounded twelve-attempt tail; old missing histories remain unknown and repeated banks count only as familiar review.420 material boundaries,672 evidence checks and13 formal package UI checks pass; original168 canonical answers remain unchanged.
+
+[Scope and evidence](docs/grammar-material-exposure-v45.md).
+
+## Previously published v44 - Finite placement, stage evidence and video notes
 
 Runtime `9d34b1f35aaf9ecfca3e534c5ecb953e46551a22`, [fixed deployment](https://bf2e0068.finn-english-studio.pages.dev). A finite text diagnosis offers an explicit trial; first-stage1-6 keeps original answers and awaits human review; source-bound video links and personal notes share existing guarded storage.13 formal package UI checks and76 public resources pass.
 
