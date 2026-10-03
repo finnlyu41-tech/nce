@@ -17,7 +17,7 @@ export function CourseLoopRecords(props:Props){
  return props.courseId?<SingleCourseRecords {...props}/>:<>{courseLoopBindings.map(course=><SingleCourseRecords key={course.id} {...props} courseId={course.id}/>)}</>;
 }
 function SingleCourseRecords({state,map,error,mapError,courseId='nce1-1'}:Props){
- const {lesson}=courseLoopFor(courseId),range=`第 ${lesson.lessons[0]}–${lesson.lessons[1]} 课连续练习`;
+ const {lesson}=courseLoopFor(courseId),range=`第 ${lesson.lessons.join('–')} 课连续练习`;
  const summary=courseLoopSummary(state,mapError?undefined:map,Date.now(),courseId);
  if(summary.status==='none')return null;
  return <section className="panel course-loop-records-summary" data-course={courseId} aria-label={range+'记录'}><h2>{range}</h2>

@@ -20,7 +20,7 @@ export type LoopModel={
  recommendation:(view:LoopView,now?:number)=>{kind:string;lessonId:string;dueAt?:number};
 };
 export const loopModel=core as unknown as LoopModel;
-export type CourseBinding={id:CourseId;key:string;inputsKey:string;byId:Map<string,Question>;model:LoopModel;lesson:{id:CourseId;version:1;book:'NCE1';lessons:number[];title:string;goal:string;scope:string;teaching:{target:string;check:string;example:string;explanation:string}[];own:{prompt:string;reviewerPrompt:string};source:{languageSha256:string;comicKey:string;clips:{target:string;label?:string;start:number;end:number}[]}}};
+export type CourseBinding={id:CourseId;key:string;inputsKey:string;byId:Map<string,Question>;model:LoopModel;lesson:{id:CourseId;version:1;book:'NCE1'|'NCE2';lessons:number[];title:string;goal:string;scope:string;teaching:{target:string;check:string;example:string;explanation:string}[];own:{prompt:string;reviewerPrompt:string};source:{languageSha256:string;comicKey:string;clips:{target:string;label?:string;start:number;end:number}[]}}};
 export function courseLoopFor(courseId:string='nce1-1'):CourseBinding{return getCourseBinding(courseId) as unknown as CourseBinding}
 export const courseLoopBindings=registeredCourses as unknown as readonly CourseBinding[];
 export type LoopInputs={version:1;corrections:Record<string,{answer:string;note:string}>};

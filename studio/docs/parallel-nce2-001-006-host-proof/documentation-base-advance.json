@@ -1,0 +1,11 @@
+{
+  "testedStartBase": "46ad498c87414a0372969c845d32db27047de3e9",
+  "finalBase": "ba6eeed71de8390e1ed4f76801cc0a7fe22bef1b",
+  "changes": [
+    "studio/README.md",
+    "studio/docs/mini37-48-v49.md"
+  ],
+  "productionRuntimeDiff": [],
+  "fullNativeSourceHashesMatchFinal": true,
+  "runtimeRerunUnnecessary": "only documentary base files changed; no source or built runtime bytes changed"
+}

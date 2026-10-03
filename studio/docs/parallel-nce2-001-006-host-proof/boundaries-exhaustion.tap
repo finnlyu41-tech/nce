@@ -1,0 +1,181 @@
+TAP version 13
+# Subtest: seventy-eight real bindings preserve old defaults and distinct storage keys
+ok 1 - seventy-eight real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 4.815625
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all seventy-eight courses
+ok 2 - actual factory and registered model retain first answers and corrections for all seventy-eight courses
+  ---
+  duration_ms: 24.500917
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 78 by 78 pairs
+ok 3 - every envelope and correction sidecar is accepted only by its exact course across 78 by 78 pairs
+  ---
+  duration_ms: 250.29425
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 4 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 357.008875
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 5 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 101.084458
+  type: 'test'
+  ...
+# Subtest: seventy-eight pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 6 - seventy-eight pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 41.045583
+  type: 'test'
+  ...
+# Subtest: seventy-eight due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 7 - seventy-eight due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 234.376834
+  type: 'test'
+  ...
+# Subtest: registered NCE1 pairs advance by two with chapter-6 endpoint; NCE2 single lessons advance by one to existing lesson 7
+ok 8 - registered NCE1 pairs advance by two with chapter-6 endpoint; NCE2 single lessons advance by one to existing lesson 7
+  ---
+  duration_ms: 1316.069208
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 9 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 10.251458
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 10 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 54.372458
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all seventy-eight records, sidecars and original classic history
+ok 11 - actual progress backup and validator preserve all seventy-eight records, sidecars and original classic history
+  ---
+  duration_ms: 11.398542
+  type: 'test'
+  ...
+# Subtest: actual successor guards both books, existing NCE2 lesson 7 and the NCE1 chapter-6 endpoint with unknown fallback
+ok 12 - actual successor guards both books, existing NCE2 lesson 7 and the NCE1 chapter-6 endpoint with unknown fallback
+  ---
+  duration_ms: 0.557459
+  type: 'test'
+  ...
+# Subtest: 145, 147 and stable unknown have no registered course-loop model, keys, sidecars or envelopes
+ok 13 - 145, 147 and stable unknown have no registered course-loop model, keys, sidecars or envelopes
+  ---
+  duration_ms: 1.449166
+  type: 'test'
+  ...
+# Current production factory SHA256: 4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57
+# New-course constrained matcher replay: {"courses":6,"questions":108,"choiceQuestions":6,"accepted":345,"semanticNegatives":432,"punctuationNegatives":108,"widthNegatives":108,"spontaneousTransfer":"not-assessed"}
+# Subtest: factory is the current video-capable production file and SourceKind includes video
+ok 14 - factory is the current video-capable production file and SourceKind includes video
+  ---
+  duration_ms: 7.83375
+  type: 'test'
+  ...
+# Subtest: video source events before answers persist assistance and after answers preserve the unassisted original
+ok 15 - video source events before answers persist assistance and after answers preserve the unassisted original
+  ---
+  duration_ms: 17.208916
+  type: 'test'
+  ...
+# Subtest: video-assisted independent correct originals still require correction and retain scoped help through repair and backup
+ok 16 - video-assisted independent correct originals still require correction and retain scoped help through repair and backup
+  ---
+  duration_ms: 203.894417
+  type: 'test'
+  ...
+# Subtest: all six new courses preserve constrained accepted forms and semantic negatives through actual factory replay
+ok 17 - all six new courses preserve constrained accepted forms and semantic negatives through actual factory replay
+  ---
+  duration_ms: 364.775666
+  type: 'test'
+  ...
+# Subtest: NCE1 ends at 143 and chapter-6 access opens its existing CourseRoom without granting gates
+ok 18 - NCE1 ends at 143 and chapter-6 access opens its existing CourseRoom without granting gates
+  ---
+  duration_ms: 67.619709
+  type: 'test'
+  ...
+# Subtest: synthetic real-map proofs retain chapter-6 and chapter-7 project plus twelve-member gates
+ok 19 - synthetic real-map proofs retain chapter-6 and chapter-7 project plus twelve-member gates
+  ---
+  duration_ms: 304.843417
+  type: 'test'
+  ...
+# Subtest: 143 unfinished or due overrides chapter endpoint; returning through 143 and unknown fallback has a real reachable href
+ok 20 - 143 unfinished or due overrides chapter endpoint; returning through 143 and unknown fallback has a real reachable href
+  ---
+  duration_ms: 77.249625
+  type: 'test'
+  ...
+# Subtest: NCE2 bindings use individual lessons and book-specific sources; unregistered lesson 7 retains the real textbook route
+ok 21 - NCE2 bindings use individual lessons and book-specific sources; unregistered lesson 7 retains the real textbook route
+  ---
+  duration_ms: 15.944416
+  type: 'test'
+  ...
+# Subtest: NCE2 pending and due records take priority without bypassing chapter gates, overwriting another book or granting map and card grades
+ok 22 - NCE2 pending and due records take priority without bypassing chapter gates, overwriting another book or granting map and card grades
+  ---
+  duration_ms: 408.769625
+  type: 'test'
+  ...
+# R15 actual host: {"courses":78,"finitePools":78,"repairTasks":78}
+# Subtest: all seventy-eight actual factories retain distinct failed and helped answers in both finite banks
+ok 23 - all seventy-eight actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 9.913708
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 24 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 218.151083
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+ok 25 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 2026.220667
+  type: 'test'
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+ok 26 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 28.972666
+  type: 'test'
+  ...
+# Subtest: finite-pool familiar repair permits each book’s correct continuation without repeated fresh review claims
+ok 27 - finite-pool familiar repair permits each book’s correct continuation without repeated fresh review claims
+  ---
+  duration_ms: 165.901667
+  type: 'test'
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 28 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.68625
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9281.549458

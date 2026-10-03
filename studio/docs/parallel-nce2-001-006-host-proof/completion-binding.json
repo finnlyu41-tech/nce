@@ -1,0 +1,48 @@
+{
+  "base": "ba6eeed71de8390e1ed4f76801cc0a7fe22bef1b",
+  "registeredGroups": 78,
+  "finiteTasks": 1404,
+  "newNce2Groups": 6,
+  "newTasks": 108,
+  "node": {
+    "production-node.tap": {
+      "pass": 115,
+      "fail": 0
+    },
+    "frozen-content-source.tap": {
+      "pass": 53,
+      "fail": 0
+    },
+    "legacy-batch-regression.tap": {
+      "pass": 78,
+      "fail": 0
+    },
+    "audit-regression.tap": {
+      "pass": 7,
+      "fail": 0
+    }
+  },
+  "native": {
+    "native": {
+      "passed": 33,
+      "failed": 0,
+      "exceptions": 0,
+      "actualTestedBase": "46ad498c87414a0372969c845d32db27047de3e9"
+    },
+    "delayed-native": {
+      "passed": 2,
+      "failed": 0,
+      "exceptions": 0,
+      "actualTestedBase": "ba6eeed71de8390e1ed4f76801cc0a7fe22bef1b"
+    }
+  },
+  "sourceHashesMatchFinalFiles": true,
+  "singleLessonLabels": "no undefined in workspace/continuation/due/records",
+  "bookTwoSuccessor": "1\u21922\u21923\u21924\u21925\u21926\u2192existing7",
+  "bookOne143ToChapter6Preserved": true,
+  "chapterMemberProjectGatesPreserved": true,
+  "comic": "six real catalog gaps; explanatory UI; no foreign images",
+  "natural24h7d": "unverified",
+  "humanExpression": "awaiting-human-review",
+  "noPushMergeDeploy": true
+}

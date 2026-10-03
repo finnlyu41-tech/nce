@@ -1,0 +1,2970 @@
+{
+  "actualTreeHead": "ebacec8e08d1370ac42fb879ddb8c95db85a6a61",
+  "productionRegistrySha256": "1a5b53fda41758690df4c65e40e267ab6a3d2e681ba64a7d2e3e6db52cad2fc6",
+  "testBindingSha256": "710769620395f3bf6e106566494ba060af2e44e3b968dae353dfa77754a7ffe7",
+  "registeredIds": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35",
+    "nce1-37",
+    "nce1-39",
+    "nce1-41",
+    "nce1-43",
+    "nce1-45",
+    "nce1-47",
+    "nce1-49",
+    "nce1-51",
+    "nce1-53",
+    "nce1-55",
+    "nce1-57",
+    "nce1-59",
+    "nce1-61",
+    "nce1-63",
+    "nce1-65",
+    "nce1-67",
+    "nce1-69",
+    "nce1-71",
+    "nce1-73",
+    "nce1-75",
+    "nce1-77",
+    "nce1-79",
+    "nce1-81",
+    "nce1-83",
+    "nce1-85",
+    "nce1-87",
+    "nce1-89",
+    "nce1-91",
+    "nce1-93",
+    "nce1-95",
+    "nce1-97",
+    "nce1-99",
+    "nce1-101",
+    "nce1-103",
+    "nce1-105",
+    "nce1-107",
+    "nce1-109",
+    "nce1-111",
+    "nce1-113",
+    "nce1-115",
+    "nce1-117",
+    "nce1-119",
+    "nce1-121",
+    "nce1-123",
+    "nce1-125",
+    "nce1-127",
+    "nce1-129",
+    "nce1-131",
+    "nce1-133",
+    "nce1-135",
+    "nce1-137",
+    "nce1-139",
+    "nce1-141",
+    "nce1-143",
+    "nce2-1",
+    "nce2-2",
+    "nce2-3",
+    "nce2-4",
+    "nce2-5",
+    "nce2-6"
+  ],
+  "registeredCount": 78,
+  "newIds": [
+    "nce2-1",
+    "nce2-2",
+    "nce2-3",
+    "nce2-4",
+    "nce2-5",
+    "nce2-6"
+  ],
+  "sourcePanelPredicateSha256": "d466a8e4764f425b62575ac06a6172632613ede67893c758e090aa91182097e5",
+  "sourcePanelFileSha256": "257b429b9da9c519ac32e9a78220eeb8c3f88423ec2da70f17322ad67e53fdf0",
+  "testFileSha256": "936010adecf1da130f3f56104cf2423880eb8c91cfc48951abae2931cffbb4fd",
+  "preservedBookOneSourceContractReceiptSha256": "f625dc36799957a0f36e682c8fba2a5dc8ba7978d179935c7f0fa65ed9f6b0af",
+  "checks": [
+    {
+      "name": "actual production has seventy-eight exact bindings and distinct keys while prior seventy-two book-one sources remain intact",
+      "passed": true
+    },
+    {
+      "name": "nce1-1: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-3: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-5: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-7: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-9: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-11: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-13: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-15: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-17: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-19: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-21: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-23: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-25: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-27: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-29: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-31: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-33: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-35: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-37: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-39: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-41: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-43: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-45: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-47: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-49: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-51: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-53: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-55: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-57: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-59: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-61: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-63: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-65: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-67: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-69: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-71: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-73: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-75: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-77: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-79: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-81: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-83: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-85: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-87: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-89: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-91: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-93: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-95: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-97: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-99: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-101: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-103: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-105: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-107: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-109: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-111: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-113: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-115: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-117: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-119: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-121: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-123: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-125: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-127: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-129: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-131: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-133: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-135: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-137: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-139: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-141: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce1-143: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce2-1: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce2-2: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce2-3: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce2-4: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce2-5: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "nce2-6: authored source agrees with JSON transcript, original LRC and comic metadata",
+      "passed": true
+    },
+    {
+      "name": "exact SourcePanel guard accepts only the matching source in all 78 by 78 pairs",
+      "passed": true
+    },
+    {
+      "name": "exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitution and wrong book or lesson",
+      "passed": true
+    },
+    {
+      "name": "actual comic guard accepts only same-course source and body row count in all 78 by 78 pairs",
+      "passed": true
+    },
+    {
+      "name": "audio clips have finite ordered windows, matching source starts and selected teaching targets",
+      "passed": true
+    },
+    {
+      "name": "both original textbook PDFs and book-two print/grammar indexes share the actual edition bytes",
+      "passed": true
+    },
+    {
+      "name": "actual host has an explanatory null-comic branch without counting unavailable book-two images as mapped",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "sources": [
+    {
+      "id": "nce1-1",
+      "languageSha256": "6a07bc9eb1a5f030a63536970daefbc79c2bf7e6696fe0f383b4579d2291762a",
+      "languageFileSha256": "a62187f2e2b606cb74aad0feab032feb47b8b343647aa97a1db4eb2f40ec49bd",
+      "lrcSha256": "6a07bc9eb1a5f030a63536970daefbc79c2bf7e6696fe0f383b4579d2291762a",
+      "lrcSize": 456,
+      "audio": [
+        {
+          "sha256": "670f88e3f64ed1ec205fd20596679f2d8cb955f8ef5b63c0a6f3962f4d1d34ea",
+          "size": 819138,
+          "pairId": "p_e8be43454c379b706f2061bbd26508a1"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "6fe5eace228010fc21bc22933d43b6e12b3074842d4675b425ecf6c92217891e",
+      "bodyRows": 7,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 5,
+          "src": "/lesson-pages/6fe5eace228010fc21bc22933d43b6e12b3074842d4675b425ecf6c92217891e.jpg",
+          "sha256": "6fe5eace228010fc21bc22933d43b6e12b3074842d4675b425ecf6c92217891e"
+        },
+        {
+          "page": 6,
+          "src": "/lesson-pages/f37e05e0b16936a9c4d586e7746f460429131796997549ec014c12acbaedb773.jpg",
+          "sha256": "f37e05e0b16936a9c4d586e7746f460429131796997549ec014c12acbaedb773"
+        }
+      ]
+    },
+    {
+      "id": "nce1-3",
+      "languageSha256": "83b94c8bdb3bc463856aa465fc3510c43461ea343318e57586ca98759373f8a1",
+      "languageFileSha256": "422e93492af5e0c9b07115a9489602049a01e20379f2331b7e77b8b6e00f1986",
+      "lrcSha256": "83b94c8bdb3bc463856aa465fc3510c43461ea343318e57586ca98759373f8a1",
+      "lrcSize": 658,
+      "audio": [
+        {
+          "sha256": "b1f3dc757cda97a19960bf52e1df661ad93645b9f3f35dbf7fca0e1551050e94",
+          "size": 1189435,
+          "pairId": "p_f2e5cae849f272f90d86a99acf403c2f"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "78b7fa75e74dcb7fb0c01460f802c5c9113aee418cd842e19b9128ec98551455",
+      "bodyRows": 12,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 9,
+          "src": "/lesson-pages/78b7fa75e74dcb7fb0c01460f802c5c9113aee418cd842e19b9128ec98551455.jpg",
+          "sha256": "78b7fa75e74dcb7fb0c01460f802c5c9113aee418cd842e19b9128ec98551455"
+        },
+        {
+          "page": 10,
+          "src": "/lesson-pages/d75073336b25245d790137d046029a35451ea329582625dd37ee355c8f537919.jpg",
+          "sha256": "d75073336b25245d790137d046029a35451ea329582625dd37ee355c8f537919"
+        }
+      ]
+    },
+    {
+      "id": "nce1-5",
+      "languageSha256": "583b4623ebba86ac0f68a08831b55fb8fafc56e9168b48ce392c7a9da531c6ab",
+      "languageFileSha256": "caf2aa85474eb60050c1b1c6207b7eb066432b17442ede3f400e63b6cded42b1",
+      "lrcSha256": "583b4623ebba86ac0f68a08831b55fb8fafc56e9168b48ce392c7a9da531c6ab",
+      "lrcSize": 891,
+      "audio": [
+        {
+          "sha256": "d7d3d6b926c74b9774a4baaf7c936851ba5c5b7286b7214c9ae81966b5b7c63f",
+          "size": 1374185,
+          "pairId": "p_1ee7141f18620af24bbf0be28636adf1"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "01fd7502e5d252171b174bb483af8946371ddc8fc95282f28e40e46f02e32954",
+      "bodyRows": 20,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 13,
+          "src": "/lesson-pages/01fd7502e5d252171b174bb483af8946371ddc8fc95282f28e40e46f02e32954.jpg",
+          "sha256": "01fd7502e5d252171b174bb483af8946371ddc8fc95282f28e40e46f02e32954"
+        },
+        {
+          "page": 14,
+          "src": "/lesson-pages/b16fcc6f083b77ff15bf9bce915473a75c88a62720cc12ada31697d897e2f453.jpg",
+          "sha256": "b16fcc6f083b77ff15bf9bce915473a75c88a62720cc12ada31697d897e2f453"
+        }
+      ]
+    },
+    {
+      "id": "nce1-7",
+      "languageSha256": "59eac8b3a1bccae0ff68e636251e1aa32121bf08aae78ce83a998f5da996e178",
+      "languageFileSha256": "47d036cb431f8a43ed94d31543ba177ee4479199af8f9305b54b49f6745a9e7d",
+      "lrcSha256": "59eac8b3a1bccae0ff68e636251e1aa32121bf08aae78ce83a998f5da996e178",
+      "lrcSize": 750,
+      "audio": [
+        {
+          "sha256": "3fef964b413d7a0a0383330f8e079ba6b629cdb7034ca0983dfb565e060e4aae",
+          "size": 1254494,
+          "pairId": "p_5043bf847d8d853839beb14725a7e6e6"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "824dbd90a47675d5e72e6a4e22294a076dbc8ab0bc419a89c447eee6b6191aae",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 17,
+          "src": "/lesson-pages/824dbd90a47675d5e72e6a4e22294a076dbc8ab0bc419a89c447eee6b6191aae.jpg",
+          "sha256": "824dbd90a47675d5e72e6a4e22294a076dbc8ab0bc419a89c447eee6b6191aae"
+        },
+        {
+          "page": 18,
+          "src": "/lesson-pages/44722d5fb2f81174fda412de4343671f2ff35286ba93ec97b4cd97a84e7563ad.jpg",
+          "sha256": "44722d5fb2f81174fda412de4343671f2ff35286ba93ec97b4cd97a84e7563ad"
+        }
+      ]
+    },
+    {
+      "id": "nce1-9",
+      "languageSha256": "17df1add1730fae74dfbb70d3005c8273c4fe81f1abd1f7eb98934e625b75e0c",
+      "languageFileSha256": "d25c71394eab69a6ab04b8b74137536fd905987a87a35ddb9c61b4b5b0781eca",
+      "lrcSha256": "17df1add1730fae74dfbb70d3005c8273c4fe81f1abd1f7eb98934e625b75e0c",
+      "lrcSize": 674,
+      "audio": [
+        {
+          "sha256": "23199ab378e21cf2bc200a785ca90b01f5df87687d21bd52ae18bcd74db0d20b",
+          "size": 1083107,
+          "pairId": "p_f595ec4560c45be49d0a4f62aac05001"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "02371f68c402564eaea05f77ded866d41a59270716f16beb4e51a23436c7d095",
+      "bodyRows": 14,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 21,
+          "src": "/lesson-pages/02371f68c402564eaea05f77ded866d41a59270716f16beb4e51a23436c7d095.jpg",
+          "sha256": "02371f68c402564eaea05f77ded866d41a59270716f16beb4e51a23436c7d095"
+        },
+        {
+          "page": 22,
+          "src": "/lesson-pages/264b6d73b0dfcae7c103b6f9dec842d521d6a5499f075e908a443bca41fb8d98.jpg",
+          "sha256": "264b6d73b0dfcae7c103b6f9dec842d521d6a5499f075e908a443bca41fb8d98"
+        }
+      ]
+    },
+    {
+      "id": "nce1-11",
+      "languageSha256": "99ee73b49ce2b055d675616b8a2eb56db04fe44c5ef8970a994b98ef615345e0",
+      "languageFileSha256": "10a948a23cfe9423272ac0cee0226b81a4cb92b45960544d11ddcf3c82212d74",
+      "lrcSha256": "99ee73b49ce2b055d675616b8a2eb56db04fe44c5ef8970a994b98ef615345e0",
+      "lrcSize": 724,
+      "audio": [
+        {
+          "sha256": "a261dd768a1a309affe20759e0b026c8b7ac1c64b1fb3293565d1629344f79b4",
+          "size": 1173182,
+          "pairId": "p_a30c47fc2d035d0445b11d45f52cf3cf"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "dd46d7d6a57879033529c7b98a7166a9a911bf0a5da4810f2c4ca06f8e0a4973",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 25,
+          "src": "/lesson-pages/dd46d7d6a57879033529c7b98a7166a9a911bf0a5da4810f2c4ca06f8e0a4973.jpg",
+          "sha256": "dd46d7d6a57879033529c7b98a7166a9a911bf0a5da4810f2c4ca06f8e0a4973"
+        },
+        {
+          "page": 26,
+          "src": "/lesson-pages/ead1c5824cad7537a05208319ad5bbf3904166b6b747ee9e7925228661bfc1e6.jpg",
+          "sha256": "ead1c5824cad7537a05208319ad5bbf3904166b6b747ee9e7925228661bfc1e6"
+        }
+      ]
+    },
+    {
+      "id": "nce1-13",
+      "languageSha256": "6a7c5c324a0a891c2fb0b7dc430ed2f38a3c99d3cc6ba526adbbc49e780dc0a7",
+      "languageFileSha256": "403b3a7ac71b8ea353683535a3d16737472ca0707cbb102f9a9cd96283b86c6b",
+      "lrcSha256": "6a7c5c324a0a891c2fb0b7dc430ed2f38a3c99d3cc6ba526adbbc49e780dc0a7",
+      "lrcSize": 664,
+      "audio": [
+        {
+          "sha256": "f5cdec23ea3c185a10b2ee10201f063e3f7ae28c999cedffb70a5e0bbc909508",
+          "size": 1123134,
+          "pairId": "p_602a3415a9cbc9f889e0a0e4700a7758"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "ab70c14637ab1766e5b746e12ed306ebea66ec241ad19d7d0b30216f4ffa69cd",
+      "bodyRows": 13,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 29,
+          "src": "/lesson-pages/ab70c14637ab1766e5b746e12ed306ebea66ec241ad19d7d0b30216f4ffa69cd.jpg",
+          "sha256": "ab70c14637ab1766e5b746e12ed306ebea66ec241ad19d7d0b30216f4ffa69cd"
+        },
+        {
+          "page": 30,
+          "src": "/lesson-pages/ca67949f8c3ecc1f15fab26bc3b5c5162dcc099efd64f694dd97769fb788bb25.jpg",
+          "sha256": "ca67949f8c3ecc1f15fab26bc3b5c5162dcc099efd64f694dd97769fb788bb25"
+        }
+      ]
+    },
+    {
+      "id": "nce1-15",
+      "languageSha256": "79644833a41795f8673516bd65dfdb8cb5094809c94ab711d6040bcfc7e23323",
+      "languageFileSha256": "12c24e9e2a5875dd58d16747184822d64698aafad3ad5c9ee45f015a29f666b0",
+      "lrcSha256": "79644833a41795f8673516bd65dfdb8cb5094809c94ab711d6040bcfc7e23323",
+      "lrcSize": 861,
+      "audio": [
+        {
+          "sha256": "a30568c366527f9764d0069d61987d1bd6156da59f117e99328c6457760d7c84",
+          "size": 1488855,
+          "pairId": "p_71b886521a3262db71908e5cfca0dd87"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "0cab573bace98b04c1608d6c108fea47a36bc9563f37feeeb6c393ba1d633ab9",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 33,
+          "src": "/lesson-pages/0cab573bace98b04c1608d6c108fea47a36bc9563f37feeeb6c393ba1d633ab9.jpg",
+          "sha256": "0cab573bace98b04c1608d6c108fea47a36bc9563f37feeeb6c393ba1d633ab9"
+        },
+        {
+          "page": 34,
+          "src": "/lesson-pages/34c132447bb75035e69dbbdc0596f3c9631b3842054a747ab409ba2d5965a099.jpg",
+          "sha256": "34c132447bb75035e69dbbdc0596f3c9631b3842054a747ab409ba2d5965a099"
+        }
+      ]
+    },
+    {
+      "id": "nce1-17",
+      "languageSha256": "c8a555bfd99eb9a4b382b8a79d6d27d5cf8fce22164ae77bb95bff4a29c42a87",
+      "languageFileSha256": "8ebef72fe892053c9d9699bbfa1db9c16a286285b865ed411b533e2e76ea5087",
+      "lrcSha256": "c8a555bfd99eb9a4b382b8a79d6d27d5cf8fce22164ae77bb95bff4a29c42a87",
+      "lrcSize": 932,
+      "audio": [
+        {
+          "sha256": "4b1671b6ee2694ae9532e5b5b4001ecb9f73f7c4083793a6b83e9ed0439536b8",
+          "size": 1631460,
+          "pairId": "p_19f6fbf873930a820012a8e8e81d559e"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "ce531ae3188386c34e94e83121caa849a7b3b1348d851811aa63963995fbe5de",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 37,
+          "src": "/lesson-pages/ce531ae3188386c34e94e83121caa849a7b3b1348d851811aa63963995fbe5de.jpg",
+          "sha256": "ce531ae3188386c34e94e83121caa849a7b3b1348d851811aa63963995fbe5de"
+        },
+        {
+          "page": 38,
+          "src": "/lesson-pages/1834a32da6e1c7362b71b9397bea85fad0837c13d3d9d3d408044b3ea9d29334.jpg",
+          "sha256": "1834a32da6e1c7362b71b9397bea85fad0837c13d3d9d3d408044b3ea9d29334"
+        }
+      ]
+    },
+    {
+      "id": "nce1-19",
+      "languageSha256": "253d96dfc107ca2447b8aa7e912f8b7f3869bcbd546f82883da1b8518f6abfe4",
+      "languageFileSha256": "4c78cafba77dabde17207843c0636dcb572c1a9d3a1ff69287dd7dc4a5c24ae8",
+      "lrcSha256": "253d96dfc107ca2447b8aa7e912f8b7f3869bcbd546f82883da1b8518f6abfe4",
+      "lrcSize": 746,
+      "audio": [
+        {
+          "sha256": "ca721b445d49b5d65799e7197959dbd5500b2f99d1619526628fafdc21bce2ea",
+          "size": 1223220,
+          "pairId": "p_6b67820685b04c0f885dea83a769e237"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "6f010f9ee53d667fd140a0411f9a7d74e71e82c7f9ae52403dc74ccb99b3d63d",
+      "bodyRows": 14,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 41,
+          "src": "/lesson-pages/6f010f9ee53d667fd140a0411f9a7d74e71e82c7f9ae52403dc74ccb99b3d63d.jpg",
+          "sha256": "6f010f9ee53d667fd140a0411f9a7d74e71e82c7f9ae52403dc74ccb99b3d63d"
+        },
+        {
+          "page": 42,
+          "src": "/lesson-pages/8ebb1a7e9fbc016aed7dc7e12d544bb9cfba3c663cdde1198b6f3f5bdb407434.jpg",
+          "sha256": "8ebb1a7e9fbc016aed7dc7e12d544bb9cfba3c663cdde1198b6f3f5bdb407434"
+        }
+      ]
+    },
+    {
+      "id": "nce1-21",
+      "languageSha256": "3f47339168baa47c8c88641e5476a72978b534aa8c35c7c14b65584ce16729ca",
+      "languageFileSha256": "016629990c2f51ec0d1291fd9cf82eb2299fa26c13bac20d77ff24de1c76c4d8",
+      "lrcSha256": "3f47339168baa47c8c88641e5476a72978b534aa8c35c7c14b65584ce16729ca",
+      "lrcSize": 509,
+      "audio": [
+        {
+          "sha256": "69a4d06c2a1abe2e7e2d72c4c64c68b735270352b20e890f602162faded1dc90",
+          "size": 889197,
+          "pairId": "p_e241a234603b465b5ba6b522ddd865db"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "980c4279acdf859479aa1c1e0a483c5e9a49dd17554e5dde53de57bbd5c3f2ad",
+      "bodyRows": 8,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 45,
+          "src": "/lesson-pages/980c4279acdf859479aa1c1e0a483c5e9a49dd17554e5dde53de57bbd5c3f2ad.jpg",
+          "sha256": "980c4279acdf859479aa1c1e0a483c5e9a49dd17554e5dde53de57bbd5c3f2ad"
+        },
+        {
+          "page": 46,
+          "src": "/lesson-pages/652a0df13ae65deb01cbdc6766bd905bcb49b87e9c9b481505c42b58246e64f1.jpg",
+          "sha256": "652a0df13ae65deb01cbdc6766bd905bcb49b87e9c9b481505c42b58246e64f1"
+        }
+      ]
+    },
+    {
+      "id": "nce1-23",
+      "languageSha256": "e81c6aee4443fc3580b423bd1d0e5469d59f70ea8e2148baa8f6def654a624c7",
+      "languageFileSha256": "0074a4dee0b5ac390322804fd353351a0b1e750830636b8d5d814781d07de5c3",
+      "lrcSha256": "e81c6aee4443fc3580b423bd1d0e5469d59f70ea8e2148baa8f6def654a624c7",
+      "lrcSize": 544,
+      "audio": [
+        {
+          "sha256": "b470b1e502a96c66f4ad36cdbe15a902122180ee5e36f06dbe750b99881102b7",
+          "size": 934653,
+          "pairId": "p_6e5525a4749b01ab52a094bb9927aaa2"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "ab5c88b22213cec8fd6370aade1c086b83c7f2222f96fc1742d29c570dc14997",
+      "bodyRows": 9,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 49,
+          "src": "/lesson-pages/ab5c88b22213cec8fd6370aade1c086b83c7f2222f96fc1742d29c570dc14997.jpg",
+          "sha256": "ab5c88b22213cec8fd6370aade1c086b83c7f2222f96fc1742d29c570dc14997"
+        },
+        {
+          "page": 50,
+          "src": "/lesson-pages/34c3c47c1272658de8c7440d550a6c79463cca8851cddb4fae6b124497621299.jpg",
+          "sha256": "34c3c47c1272658de8c7440d550a6c79463cca8851cddb4fae6b124497621299"
+        }
+      ]
+    },
+    {
+      "id": "nce1-25",
+      "languageSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+      "languageFileSha256": "15ddf5e1a8f598a178b264bd9932d319705b287779f08e20ebdbed2e2151fff5",
+      "lrcSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+      "lrcSize": 797,
+      "audio": [
+        {
+          "sha256": "b6cfd111a22c08fc8351658b8b34ad1e7a435999d36fb5820a52ec5b33a01410",
+          "size": 1381683,
+          "pairId": "p_2c57ee2b28c3fd37ef0d4e4ff180f14e"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f",
+      "bodyRows": 12,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 53,
+          "src": "/lesson-pages/d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f.jpg",
+          "sha256": "d23c747e20e7b6618901eed0a93f5f31097d61d2a3c7ebf5b9ebffded23b775f"
+        },
+        {
+          "page": 54,
+          "src": "/lesson-pages/8551059b8c1bd6071aad666aeb7503201aee9cf13a6600b71c7e550aab82de7a.jpg",
+          "sha256": "8551059b8c1bd6071aad666aeb7503201aee9cf13a6600b71c7e550aab82de7a"
+        }
+      ]
+    },
+    {
+      "id": "nce1-27",
+      "languageSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+      "languageFileSha256": "2410876d2bc4142c898548e9252f7faa0f66e2d8b86e966838e4e3f372f41e15",
+      "lrcSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+      "lrcSize": 905,
+      "audio": [
+        {
+          "sha256": "e794222fa2566b32c35cb023937078840530314e86cb38d7ed9b3597f3b1acb1",
+          "size": 1488022,
+          "pairId": "p_2693bb335ba291db2cafb58b97012307"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79",
+      "bodyRows": 13,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 57,
+          "src": "/lesson-pages/d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79.jpg",
+          "sha256": "d4f6a56a9718877fa799c75599ca3b3c5ed03ec855c509dfb8312954251faf79"
+        },
+        {
+          "page": 58,
+          "src": "/lesson-pages/223bfab70e4044ebe2d2a8e31789fb1c881e17a210a00880f8bf01aa4ea9b5dd.jpg",
+          "sha256": "223bfab70e4044ebe2d2a8e31789fb1c881e17a210a00880f8bf01aa4ea9b5dd"
+        }
+      ]
+    },
+    {
+      "id": "nce1-29",
+      "languageSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+      "languageFileSha256": "15ea221a9497a68761363bd5b1966ab043eac4065c838f62437c8a629f55fe1a",
+      "lrcSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+      "lrcSize": 627,
+      "audio": [
+        {
+          "sha256": "4c99a7ab13dc598649b48cbfe887c74e19c2c088d87d0d348f7cab1ba36f626e",
+          "size": 1094363,
+          "pairId": "p_bccef10cd2292efc8dd4bbeb46a16de3"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49",
+      "bodyRows": 9,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 61,
+          "src": "/lesson-pages/9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49.jpg",
+          "sha256": "9e5503e9746b55a7dbcd3d4f8d32373cadd8cde81ebe988247efcbce0e51ba49"
+        },
+        {
+          "page": 62,
+          "src": "/lesson-pages/79bbd382cbcc9116b35d6ef5172b48e271628d1cdcf3bc47b76c766b57444b66.jpg",
+          "sha256": "79bbd382cbcc9116b35d6ef5172b48e271628d1cdcf3bc47b76c766b57444b66"
+        }
+      ]
+    },
+    {
+      "id": "nce1-31",
+      "languageSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+      "languageFileSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634",
+      "lrcSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+      "lrcSize": 769,
+      "audio": [
+        {
+          "sha256": "95257874f4524ee0d6a00c4dc8c295af64b515cf3e6d85ee48ad0e3b14aeab50",
+          "size": 1169007,
+          "pairId": "p_eb4ef241ceb9bb6bdba5f2a043b353d9"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177",
+      "bodyRows": 14,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 65,
+          "src": "/lesson-pages/ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177.jpg",
+          "sha256": "ea390de028884e06509fabca1c84e0f89ae532e4723cd5274375c503724c2177"
+        },
+        {
+          "page": 66,
+          "src": "/lesson-pages/ac8cb146e1f3e58950366ed0e5757acf4ab77e6d7b91729ce2388f1fb513083d.jpg",
+          "sha256": "ac8cb146e1f3e58950366ed0e5757acf4ab77e6d7b91729ce2388f1fb513083d"
+        }
+      ]
+    },
+    {
+      "id": "nce1-33",
+      "languageSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+      "languageFileSha256": "f2456985f96085333cbbca3c112500c5f08e9b77a4d938839514043f5ae2a82b",
+      "lrcSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+      "lrcSize": 772,
+      "audio": [
+        {
+          "sha256": "87e8b774760bcd2488fb4f6bd9e3b9c8fc0b287a95f288bee9e0bda16c3b97dd",
+          "size": 1334135,
+          "pairId": "p_350fd671736256bcf3e90ace97087068"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997",
+      "bodyRows": 11,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 69,
+          "src": "/lesson-pages/061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997.jpg",
+          "sha256": "061c1d821c520bf4e03e7044104b6c6b160c18cc4fe844380dbc6ad17ec0f997"
+        },
+        {
+          "page": 70,
+          "src": "/lesson-pages/b12c23e6bea40739d22513c28af624d343d172b2f6a93a10366e9f0e2fd5a58d.jpg",
+          "sha256": "b12c23e6bea40739d22513c28af624d343d172b2f6a93a10366e9f0e2fd5a58d"
+        }
+      ]
+    },
+    {
+      "id": "nce1-35",
+      "languageSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+      "languageFileSha256": "6e73bd450b43f04513a33eaab88b16857e1dba49f27342e56846f024a0f0a66a",
+      "lrcSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+      "lrcSize": 970,
+      "audio": [
+        {
+          "sha256": "4707db85e0d4f41c4715f48a4cf3372e7c059eceef5ce61ff09402324c3e139b",
+          "size": 1598514,
+          "pairId": "p_611aa6dd29f3b57b14d9c8c091de158d"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45",
+      "bodyRows": 15,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 73,
+          "src": "/lesson-pages/563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45.jpg",
+          "sha256": "563d91eef22fc5fcc297a60b3da83d8a4a733e9a61b03315c9cb6db69a168c45"
+        },
+        {
+          "page": 74,
+          "src": "/lesson-pages/ee2c11ef99749245bbc3e3928d39590600d4cdd7642f501eeca814af1e7866b2.jpg",
+          "sha256": "ee2c11ef99749245bbc3e3928d39590600d4cdd7642f501eeca814af1e7866b2"
+        }
+      ]
+    },
+    {
+      "id": "nce1-37",
+      "languageSha256": "9c809290e12e66d091ea22cb8886817bdfd56899cefb90376ebb0814913ff281",
+      "languageFileSha256": "45f7c30cd96bb9f9498a606abfbdf4af57fb105ba3d3174be4de18cd75f883a4",
+      "lrcSha256": "9c809290e12e66d091ea22cb8886817bdfd56899cefb90376ebb0814913ff281",
+      "lrcSize": 912,
+      "audio": [
+        {
+          "sha256": "f892f13422527f2af7b19d2bcf14a4e656102f0b29b890f7e7c515a28b1f7382",
+          "size": 1445481,
+          "pairId": "p_803675fdb578481e3e9cef71a74e90f9"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "0d0b6470a3a2221374aece840830babae7af0c2dd160b6decf206324d32b26d4",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 77,
+          "src": "/lesson-pages/0d0b6470a3a2221374aece840830babae7af0c2dd160b6decf206324d32b26d4.jpg",
+          "sha256": "0d0b6470a3a2221374aece840830babae7af0c2dd160b6decf206324d32b26d4"
+        },
+        {
+          "page": 78,
+          "src": "/lesson-pages/9299603c1a7ed6bf2b5666b23127b7e39d189944d7d9c3ac3ebe00f0fcdd48e2.jpg",
+          "sha256": "9299603c1a7ed6bf2b5666b23127b7e39d189944d7d9c3ac3ebe00f0fcdd48e2"
+        }
+      ]
+    },
+    {
+      "id": "nce1-39",
+      "languageSha256": "7663f4778d846c82e1094926e259d0d589bce091f834a39b488fa5994d8c342b",
+      "languageFileSha256": "0136714f1026cc6813086244717b9431cd8df68a0409ebf30bed9acef817ab08",
+      "lrcSha256": "7663f4778d846c82e1094926e259d0d589bce091f834a39b488fa5994d8c342b",
+      "lrcSize": 786,
+      "audio": [
+        {
+          "sha256": "732d3983ee9498a98a5633a76e5025a6feb6f9309de5e2aa846cb26e9ab12202",
+          "size": 1337892,
+          "pairId": "p_560545b5a36a16aa95a294bc2f1c3f41"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "5e7da06c83254cbebbd8f0338d80e7b3abc67e880b8add34e6d0a076e4692951",
+      "bodyRows": 12,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 81,
+          "src": "/lesson-pages/5e7da06c83254cbebbd8f0338d80e7b3abc67e880b8add34e6d0a076e4692951.jpg",
+          "sha256": "5e7da06c83254cbebbd8f0338d80e7b3abc67e880b8add34e6d0a076e4692951"
+        },
+        {
+          "page": 82,
+          "src": "/lesson-pages/2bd10abcee830c8a2e11530b759487f665cfac1c718d7073d5c9b99a4c4a6a96.jpg",
+          "sha256": "2bd10abcee830c8a2e11530b759487f665cfac1c718d7073d5c9b99a4c4a6a96"
+        }
+      ]
+    },
+    {
+      "id": "nce1-41",
+      "languageSha256": "c33622a6e91ee105a92be30deaa1c16cf7f5f646c2ae9612237c2dc3b29f24d2",
+      "languageFileSha256": "373186e71fcae7bfd30f52a4cfcc8157d7b1af8809a811dd3fb4606332e74b0a",
+      "lrcSha256": "c33622a6e91ee105a92be30deaa1c16cf7f5f646c2ae9612237c2dc3b29f24d2",
+      "lrcSize": 792,
+      "audio": [
+        {
+          "sha256": "c9509e4bc2a4508d7873ca69b075af853452da82f3c7005b0141d4ba5350a165",
+          "size": 1379589,
+          "pairId": "p_2378c9c7613849a595116077691ddd62"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "22b46b15717f2cbde22841d46d34ed8f31c9f2d6a282f49a78c01c132cc88892",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 85,
+          "src": "/lesson-pages/22b46b15717f2cbde22841d46d34ed8f31c9f2d6a282f49a78c01c132cc88892.jpg",
+          "sha256": "22b46b15717f2cbde22841d46d34ed8f31c9f2d6a282f49a78c01c132cc88892"
+        },
+        {
+          "page": 86,
+          "src": "/lesson-pages/ef9554e56f509e392b4b887fa165a0b5a47c48030aeb064b40cb5901ab1c6036.jpg",
+          "sha256": "ef9554e56f509e392b4b887fa165a0b5a47c48030aeb064b40cb5901ab1c6036"
+        }
+      ]
+    },
+    {
+      "id": "nce1-43",
+      "languageSha256": "cee661fac2f21ef8c9ae9e19b81be3c3b207e48fdc2e082801eaeffe2da6c27a",
+      "languageFileSha256": "67d61e64765ef6600f9fe147e5f24f8c2769623f22e9ef23ce623adaa4c78a79",
+      "lrcSha256": "cee661fac2f21ef8c9ae9e19b81be3c3b207e48fdc2e082801eaeffe2da6c27a",
+      "lrcSize": 908,
+      "audio": [
+        {
+          "sha256": "2bb983a90da49aeca15235abb734a35701d89f84b1e0ad7593d4cdbe37663f95",
+          "size": 1486339,
+          "pairId": "p_f78323ad6b4f44f021192be7baae958f"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "f2409fa96d4402fc376d394e54c5629394e893be2583ca788168a2a759f50d7b",
+      "bodyRows": 17,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 89,
+          "src": "/lesson-pages/f2409fa96d4402fc376d394e54c5629394e893be2583ca788168a2a759f50d7b.jpg",
+          "sha256": "f2409fa96d4402fc376d394e54c5629394e893be2583ca788168a2a759f50d7b"
+        },
+        {
+          "page": 90,
+          "src": "/lesson-pages/4f1013f52a1c8ee62d5adeec87b44c8c8f3234c685d6ae46842addc3caaf6bbf.jpg",
+          "sha256": "4f1013f52a1c8ee62d5adeec87b44c8c8f3234c685d6ae46842addc3caaf6bbf"
+        }
+      ]
+    },
+    {
+      "id": "nce1-45",
+      "languageSha256": "64d424a548d931919ed83acb12cc346aba778056f026036727eae4276e17aabd",
+      "languageFileSha256": "479a622a97a71d5f0f4f7b92d340ad5dd4d77182a3047593d34f9c67a00d65bd",
+      "lrcSha256": "64d424a548d931919ed83acb12cc346aba778056f026036727eae4276e17aabd",
+      "lrcSize": 887,
+      "audio": [
+        {
+          "sha256": "69c1244de1080f0e674b874db1673ef5199a53a83f3b8e820e3584d0d55d177c",
+          "size": 1370838,
+          "pairId": "p_088569f3cd500b884cb89f91fece6989"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "ec8232c5ca7a8e3ed28e30161753e7b00839e1216619dd32d75a53920962f0ba",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 93,
+          "src": "/lesson-pages/ec8232c5ca7a8e3ed28e30161753e7b00839e1216619dd32d75a53920962f0ba.jpg",
+          "sha256": "ec8232c5ca7a8e3ed28e30161753e7b00839e1216619dd32d75a53920962f0ba"
+        },
+        {
+          "page": 94,
+          "src": "/lesson-pages/ffe5f413a783d1fb5e09280c36f33829a8bbdcb877ac2584e5afbd08f22cdc92.jpg",
+          "sha256": "ffe5f413a783d1fb5e09280c36f33829a8bbdcb877ac2584e5afbd08f22cdc92"
+        }
+      ]
+    },
+    {
+      "id": "nce1-47",
+      "languageSha256": "46817aa3ce7a008fe5960750ab061a6f56ffff2245c961fc259873df3f47d3da",
+      "languageFileSha256": "e6f02e8d24f9f76c49e67788c86d867a98accce379a353b8d368e5c1b56fcad5",
+      "lrcSha256": "46817aa3ce7a008fe5960750ab061a6f56ffff2245c961fc259873df3f47d3da",
+      "lrcSize": 721,
+      "audio": [
+        {
+          "sha256": "d864d792bd3018c18ecaa4709e5b798a8c58a2e1f7373a102f0222f617d0ccf5",
+          "size": 1249072,
+          "pairId": "p_4da52fea60726dc249327ba0652de51c"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "2cb9269594ff4b49243cf87fc0e4968478c2ed5153a0210a9da12296c25b3c06",
+      "bodyRows": 14,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 97,
+          "src": "/lesson-pages/2cb9269594ff4b49243cf87fc0e4968478c2ed5153a0210a9da12296c25b3c06.jpg",
+          "sha256": "2cb9269594ff4b49243cf87fc0e4968478c2ed5153a0210a9da12296c25b3c06"
+        },
+        {
+          "page": 98,
+          "src": "/lesson-pages/ab53510faf224e4da980bbd943ad3cada0bdbc3f444cfc3e4b561e0a5b0c62b9.jpg",
+          "sha256": "ab53510faf224e4da980bbd943ad3cada0bdbc3f444cfc3e4b561e0a5b0c62b9"
+        }
+      ]
+    },
+    {
+      "id": "nce1-49",
+      "languageSha256": "4fbdf5f0aecf7dabaf937dc08750c2951a551e0deb9003a0ea5d349674d8715f",
+      "languageFileSha256": "5352d100762a45a7fb4bf591b4da776bcf9f887b4d9a94aaef6a201b1b37428a",
+      "lrcSha256": "4fbdf5f0aecf7dabaf937dc08750c2951a551e0deb9003a0ea5d349674d8715f",
+      "lrcSize": 919,
+      "audio": [
+        {
+          "sha256": "537147890a64d2864a129d79d8baa12753929a5d8c7126d33f0613f3eda0cb93",
+          "size": 1541390,
+          "pairId": "p_156cc15d6c6cd826b55321ceb8fda0d4"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "bd788fe90b69f60041b78eb1e2c39621514f90b560552632cfe0fe2537c2657d",
+      "bodyRows": 17,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 101,
+          "src": "/lesson-pages/bd788fe90b69f60041b78eb1e2c39621514f90b560552632cfe0fe2537c2657d.jpg",
+          "sha256": "bd788fe90b69f60041b78eb1e2c39621514f90b560552632cfe0fe2537c2657d"
+        },
+        {
+          "page": 102,
+          "src": "/lesson-pages/cafdbb20679e82fc88351ee190255b76595fe1c84f2a22d8f31d70d714933a10.jpg",
+          "sha256": "cafdbb20679e82fc88351ee190255b76595fe1c84f2a22d8f31d70d714933a10"
+        }
+      ]
+    },
+    {
+      "id": "nce1-51",
+      "languageSha256": "00290123d5a13c96460668aeaa202e4c200bba39762a5c26a9e2392230285cf1",
+      "languageFileSha256": "1b621305de4c07c834a0b18da3377a6d4c27e421af1e53e43b3d71c95ace934d",
+      "lrcSha256": "00290123d5a13c96460668aeaa202e4c200bba39762a5c26a9e2392230285cf1",
+      "lrcSize": 1023,
+      "audio": [
+        {
+          "sha256": "dbc288a5c99aa5e962ddfab49856c2e41d40a7f98a67709f3c8e2a0666388f91",
+          "size": 1688593,
+          "pairId": "p_be6a028bd8fa846a129e5caa2bb1f5a4"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "0b189b85a26a88c5d6cc90552c4716ced72e2916fa8a86cc45d7d6188834048f",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 105,
+          "src": "/lesson-pages/0b189b85a26a88c5d6cc90552c4716ced72e2916fa8a86cc45d7d6188834048f.jpg",
+          "sha256": "0b189b85a26a88c5d6cc90552c4716ced72e2916fa8a86cc45d7d6188834048f"
+        },
+        {
+          "page": 106,
+          "src": "/lesson-pages/9ec4c74672a7410e93aa802a73d198f3cb88633aa207a43d0e12b2add0306a0e.jpg",
+          "sha256": "9ec4c74672a7410e93aa802a73d198f3cb88633aa207a43d0e12b2add0306a0e"
+        }
+      ]
+    },
+    {
+      "id": "nce1-53",
+      "languageSha256": "85296eb09a3667e1c243843884b23db94f9673f7f7c096d5d7060016445daaaa",
+      "languageFileSha256": "9b72be7af8fcb6199367372273f3d85a15df563e275f324141d3d9cf1a955ce4",
+      "lrcSha256": "85296eb09a3667e1c243843884b23db94f9673f7f7c096d5d7060016445daaaa",
+      "lrcSize": 1108,
+      "audio": [
+        {
+          "sha256": "bf4a520775a4af220a0280697c4aada763b389df8c82db4558c0392e7d7cb710",
+          "size": 1890842,
+          "pairId": "p_f411e8bdb62d6bd8e50d30c887b6693a"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "e71a1c1a8831fcc1f8162458f642e554fef75dad5fb1507ac8281ceec1d0a760",
+      "bodyRows": 15,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 109,
+          "src": "/lesson-pages/e71a1c1a8831fcc1f8162458f642e554fef75dad5fb1507ac8281ceec1d0a760.jpg",
+          "sha256": "e71a1c1a8831fcc1f8162458f642e554fef75dad5fb1507ac8281ceec1d0a760"
+        },
+        {
+          "page": 110,
+          "src": "/lesson-pages/63dcd195303149fbeef185b7ca33a0e3a70e7afa83a9ce70d0f97f53a356362b.jpg",
+          "sha256": "63dcd195303149fbeef185b7ca33a0e3a70e7afa83a9ce70d0f97f53a356362b"
+        }
+      ]
+    },
+    {
+      "id": "nce1-55",
+      "languageSha256": "cbc459a1cf8a40b30b6d030f6a9e526b9964745731140e3140d3edb987f9fbd5",
+      "languageFileSha256": "9e70a1d241bc2ce2d90198214afc693c555129c17b81203a99328ab2626b0914",
+      "lrcSha256": "cbc459a1cf8a40b30b6d030f6a9e526b9964745731140e3140d3edb987f9fbd5",
+      "lrcSize": 1094,
+      "audio": [
+        {
+          "sha256": "9470265d4e3f5414c1d6a86b707ccbbb2ff0c43c1c254d6fa35dfcee990fce03",
+          "size": 1729875,
+          "pairId": "p_3997079b9ee9af986a0a3376ec7937cb"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "da124755413797bb1a1e1a1552e5dcb6734d02c00d247d2979181a3f53256086",
+      "bodyRows": 15,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 113,
+          "src": "/lesson-pages/da124755413797bb1a1e1a1552e5dcb6734d02c00d247d2979181a3f53256086.jpg",
+          "sha256": "da124755413797bb1a1e1a1552e5dcb6734d02c00d247d2979181a3f53256086"
+        },
+        {
+          "page": 114,
+          "src": "/lesson-pages/30efb13ed3a454e25192a0cbce2c31375a9abacf81ff2e46aab002dcce5009b1.jpg",
+          "sha256": "30efb13ed3a454e25192a0cbce2c31375a9abacf81ff2e46aab002dcce5009b1"
+        }
+      ]
+    },
+    {
+      "id": "nce1-57",
+      "languageSha256": "f99358c152cbda88d1fe93fc1143c06e075c1eb7224246c25d820c99c8fa9bce",
+      "languageFileSha256": "cd5c62d965dcf4ac0c115f25340c8adc04dbbbed864e8c299f37c6bbc20d3655",
+      "lrcSha256": "f99358c152cbda88d1fe93fc1143c06e075c1eb7224246c25d820c99c8fa9bce",
+      "lrcSize": 1193,
+      "audio": [
+        {
+          "sha256": "8a091a762b91a7e6f1eb6736b361e884a79fc27eaf3bad56f347510443199a91",
+          "size": 1877073,
+          "pairId": "p_ed4e71310a86eaa759eb190b7b4759e0"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "47c456ed8eddb2a7d9de1707aaba6593770371469ba63fffab67556dda605cb4",
+      "bodyRows": 17,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 117,
+          "src": "/lesson-pages/47c456ed8eddb2a7d9de1707aaba6593770371469ba63fffab67556dda605cb4.jpg",
+          "sha256": "47c456ed8eddb2a7d9de1707aaba6593770371469ba63fffab67556dda605cb4"
+        },
+        {
+          "page": 118,
+          "src": "/lesson-pages/8ca3a8081cb13e7d235bfb10f3fcb75277df11eda9351098237656fca8b0a7a7.jpg",
+          "sha256": "8ca3a8081cb13e7d235bfb10f3fcb75277df11eda9351098237656fca8b0a7a7"
+        }
+      ]
+    },
+    {
+      "id": "nce1-59",
+      "languageSha256": "f09610214baa987ae52340d60dbe5b248aa23d5187c608bc1077ea9f1a2dcb8a",
+      "languageFileSha256": "5e2a049fa52c48b3eec460be75c778695ed398f5aa8f34ad021e1db416442f57",
+      "lrcSha256": "f09610214baa987ae52340d60dbe5b248aa23d5187c608bc1077ea9f1a2dcb8a",
+      "lrcSize": 942,
+      "audio": [
+        {
+          "sha256": "718b2bc2e029fa329177c2ff9a9f9a31db1382d698ede9553789db7ba6570225",
+          "size": 1514281,
+          "pairId": "p_426db9f843750233c5e1e4ec37793349"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "ef7bf376da0f0c1bd24438e045de66897b66c4b9c62a2dce7f65cfa347ec264f",
+      "bodyRows": 19,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 121,
+          "src": "/lesson-pages/ef7bf376da0f0c1bd24438e045de66897b66c4b9c62a2dce7f65cfa347ec264f.jpg",
+          "sha256": "ef7bf376da0f0c1bd24438e045de66897b66c4b9c62a2dce7f65cfa347ec264f"
+        },
+        {
+          "page": 122,
+          "src": "/lesson-pages/d199cc2093210ce4f7825304eeb75d1a315bc96d617068f631bf6b8bc5e6a3bb.jpg",
+          "sha256": "d199cc2093210ce4f7825304eeb75d1a315bc96d617068f631bf6b8bc5e6a3bb"
+        }
+      ]
+    },
+    {
+      "id": "nce1-61",
+      "languageSha256": "787f2afbc7cd4b3ffa60fe3df1191c86959474755fbe9df542a3809dbc01a1ac",
+      "languageFileSha256": "8df24353130cd72d097fa46e2a1b68dca2b09a3336717bf582ef7b035e5af662",
+      "lrcSha256": "787f2afbc7cd4b3ffa60fe3df1191c86959474755fbe9df542a3809dbc01a1ac",
+      "lrcSize": 888,
+      "audio": [
+        {
+          "sha256": "b29e3818a3f3c81b871aad8efc8b2d56973769cdc6388f15edf0fe38fe450614",
+          "size": 1533044,
+          "pairId": "p_d9b3bf2386a0fc28f971eee763851325"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "1019ab89ce8e96d780225afb0d0f4c742d47f7e1cc83167ec07fff288b9aeb8b",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 125,
+          "src": "/lesson-pages/1019ab89ce8e96d780225afb0d0f4c742d47f7e1cc83167ec07fff288b9aeb8b.jpg",
+          "sha256": "1019ab89ce8e96d780225afb0d0f4c742d47f7e1cc83167ec07fff288b9aeb8b"
+        },
+        {
+          "page": 126,
+          "src": "/lesson-pages/16a6ecb4eb23fd7f76b47f0acae85ae535720a97c90d185c4d35489f83680488.jpg",
+          "sha256": "16a6ecb4eb23fd7f76b47f0acae85ae535720a97c90d185c4d35489f83680488"
+        }
+      ]
+    },
+    {
+      "id": "nce1-63",
+      "languageSha256": "805f3cae023f2b7b4773ffb028d5e5ff7b23f6a04dca55845ce3981a4634e01b",
+      "languageFileSha256": "e5729a46629c43f6e5bcfdbaaa4fd43ee9f13240ff674c263c769d7e709cea7b",
+      "lrcSha256": "805f3cae023f2b7b4773ffb028d5e5ff7b23f6a04dca55845ce3981a4634e01b",
+      "lrcSize": 1143,
+      "audio": [
+        {
+          "sha256": "bb62e41271585586cde90e88e73bcb0cceaccfff2f1c56ba87f966f38f41bd92",
+          "size": 1873741,
+          "pairId": "p_06851c4441867f120ca8fb0a7850951d"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "0dc89a2a1b137d8b4594248d241d345bdcc55e1ba376d007a50d07ab896b5a61",
+      "bodyRows": 20,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 129,
+          "src": "/lesson-pages/0dc89a2a1b137d8b4594248d241d345bdcc55e1ba376d007a50d07ab896b5a61.jpg",
+          "sha256": "0dc89a2a1b137d8b4594248d241d345bdcc55e1ba376d007a50d07ab896b5a61"
+        },
+        {
+          "page": 130,
+          "src": "/lesson-pages/7571862f6b01588f8e7799008bc4ade2027f06d8c7daa515ec4d2b96efd4e398.jpg",
+          "sha256": "7571862f6b01588f8e7799008bc4ade2027f06d8c7daa515ec4d2b96efd4e398"
+        }
+      ]
+    },
+    {
+      "id": "nce1-65",
+      "languageSha256": "88be2253edb3392ac5532684c52708447b42e96add0649abd3e4ab9e5a56c70b",
+      "languageFileSha256": "7855e07387300722e9a5d4363f968980a6471e4e03950ddc7874d4aaf9d089e8",
+      "lrcSha256": "88be2253edb3392ac5532684c52708447b42e96add0649abd3e4ab9e5a56c70b",
+      "lrcSize": 1082,
+      "audio": [
+        {
+          "sha256": "0c16b9f54701c2cbb56d5970722d57d626fae8a9b05f3d1f437d8a476b9901e4",
+          "size": 1749884,
+          "pairId": "p_117b3526d723bc5392b73904c4eb5a7f"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "1a019592739817e485804d3efdf000c37045dbb807b279e1a09a4e85a2e74d20",
+      "bodyRows": 22,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 133,
+          "src": "/lesson-pages/1a019592739817e485804d3efdf000c37045dbb807b279e1a09a4e85a2e74d20.jpg",
+          "sha256": "1a019592739817e485804d3efdf000c37045dbb807b279e1a09a4e85a2e74d20"
+        },
+        {
+          "page": 134,
+          "src": "/lesson-pages/3831361cc10c987215dcbb3b29e874e236eced16b7c01089a696f59dee1271b1.jpg",
+          "sha256": "3831361cc10c987215dcbb3b29e874e236eced16b7c01089a696f59dee1271b1"
+        }
+      ]
+    },
+    {
+      "id": "nce1-67",
+      "languageSha256": "51f02f21ca5994883606571c82fe4d4d127a7e0a6d18e999be2193013f69f526",
+      "languageFileSha256": "0adb4808946348dff0880a3f1a9ea813e707734f19ebf5ddba1cf8dd337c1792",
+      "lrcSha256": "51f02f21ca5994883606571c82fe4d4d127a7e0a6d18e999be2193013f69f526",
+      "lrcSize": 970,
+      "audio": [
+        {
+          "sha256": "3ca9059f490d5f687a48ef152bac6094452187909cd5ff550c317619909c01f1",
+          "size": 1622700,
+          "pairId": "p_3965286a9141632e6576fb873dbf2ef9"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "86c885d61fa57313844c1a9b686d0e216621c5a750231fcff563c345b753b5e2",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 137,
+          "src": "/lesson-pages/86c885d61fa57313844c1a9b686d0e216621c5a750231fcff563c345b753b5e2.jpg",
+          "sha256": "86c885d61fa57313844c1a9b686d0e216621c5a750231fcff563c345b753b5e2"
+        },
+        {
+          "page": 138,
+          "src": "/lesson-pages/be06a734fba104e4e4d1fadc3d9fe0038375f41ffaadcead77e89604d64116a2.jpg",
+          "sha256": "be06a734fba104e4e4d1fadc3d9fe0038375f41ffaadcead77e89604d64116a2"
+        }
+      ]
+    },
+    {
+      "id": "nce1-69",
+      "languageSha256": "18b442ac2841e0474a777bda7c8f23699cf5d5a2b0f8c5109ff6e1d17347e325",
+      "languageFileSha256": "eb9778e5d523342e14b418d653ddaff5c5378633bceab341aa852ccd1c63368d",
+      "lrcSha256": "18b442ac2841e0474a777bda7c8f23699cf5d5a2b0f8c5109ff6e1d17347e325",
+      "lrcSize": 1063,
+      "audio": [
+        {
+          "sha256": "fdcd7ba3198cdbaafac9136990acad555dbc53ca54d9bf0dead531f6a1b90227",
+          "size": 1918354,
+          "pairId": "p_d1552409c5b5a400674b0fab1cac33f3"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "fc4ef751862f30c592a06d4baa911e4ec78794d7edf54caf51efd2b3ef480821",
+      "bodyRows": 15,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 141,
+          "src": "/lesson-pages/fc4ef751862f30c592a06d4baa911e4ec78794d7edf54caf51efd2b3ef480821.jpg",
+          "sha256": "fc4ef751862f30c592a06d4baa911e4ec78794d7edf54caf51efd2b3ef480821"
+        },
+        {
+          "page": 142,
+          "src": "/lesson-pages/7bacb0ad6959e6e72244d46044809efd6e08ffb2ccbb396bec73d85756fda7a7.jpg",
+          "sha256": "7bacb0ad6959e6e72244d46044809efd6e08ffb2ccbb396bec73d85756fda7a7"
+        }
+      ]
+    },
+    {
+      "id": "nce1-71",
+      "languageSha256": "4dd289c7a73a9d0627cb211e42134b707439494604450fae7d26a21c253664e9",
+      "languageFileSha256": "2b0957c19eced7ad575c84c46edf727483fdc051c59a82384b18e9228ce2e2d3",
+      "lrcSha256": "4dd289c7a73a9d0627cb211e42134b707439494604450fae7d26a21c253664e9",
+      "lrcSize": 1174,
+      "audio": [
+        {
+          "sha256": "f2d92adb9ce3324f03eacffce043b6464580a4f077cde7fb64c70fe64b176f3b",
+          "size": 2188152,
+          "pairId": "p_32653e4280cd009a0c57944277ac480f"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "6ee1b7c83f2427c93ca75f5c7d2e89c516fb5fc09aec81ac97a401ef87c7b380",
+      "bodyRows": 19,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 145,
+          "src": "/lesson-pages/6ee1b7c83f2427c93ca75f5c7d2e89c516fb5fc09aec81ac97a401ef87c7b380.jpg",
+          "sha256": "6ee1b7c83f2427c93ca75f5c7d2e89c516fb5fc09aec81ac97a401ef87c7b380"
+        },
+        {
+          "page": 146,
+          "src": "/lesson-pages/0f2001e00596ac6179926ef333f5b0c190e5a2cfe4ec30fce3f3a94cea86884f.jpg",
+          "sha256": "0f2001e00596ac6179926ef333f5b0c190e5a2cfe4ec30fce3f3a94cea86884f"
+        }
+      ]
+    },
+    {
+      "id": "nce1-73",
+      "languageSha256": "33eeb0811738e72e672cf961bc3cc8f88d02ecad4c22fe152096122b0c171254",
+      "languageFileSha256": "1b890f8d5f54418333b54bde11a9af1276f47edd0d4295fa75231a6c0e9fe9b6",
+      "lrcSha256": "33eeb0811738e72e672cf961bc3cc8f88d02ecad4c22fe152096122b0c171254",
+      "lrcSize": 1011,
+      "audio": [
+        {
+          "sha256": "7fbb21887c4a975c6d8b0a2598d98046ea6cdafb6fa7280e765cf76f439ca7f4",
+          "size": 1732382,
+          "pairId": "p_d71fda6705a4861ab9918031c96fecfc"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "c4f838b4ea8a434c718310d23cea877898c39a9e7e8e4708490dd86d8d8c5edb",
+      "bodyRows": 15,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 153,
+          "src": "/lesson-pages/c4f838b4ea8a434c718310d23cea877898c39a9e7e8e4708490dd86d8d8c5edb.jpg",
+          "sha256": "c4f838b4ea8a434c718310d23cea877898c39a9e7e8e4708490dd86d8d8c5edb"
+        },
+        {
+          "page": 154,
+          "src": "/lesson-pages/aa444860531f216f56ce4e6d6ece051234ce38abd8358936ad6c7d1acc0c2be2.jpg",
+          "sha256": "aa444860531f216f56ce4e6d6ece051234ce38abd8358936ad6c7d1acc0c2be2"
+        }
+      ]
+    },
+    {
+      "id": "nce1-75",
+      "languageSha256": "23782f20d41cfaeef29c7d1726e477917877cb3f3d3d3658c1d94903c7b4d0f3",
+      "languageFileSha256": "70451d92452617fa81f74a95a31dd97cb2da6d9687c5e5590e7fd410df7ec143",
+      "lrcSha256": "23782f20d41cfaeef29c7d1726e477917877cb3f3d3d3658c1d94903c7b4d0f3",
+      "lrcSize": 1090,
+      "audio": [
+        {
+          "sha256": "f7e180ab2832cd3b60ee78f820765c18ac90c16ca2160da67b7284460024de27",
+          "size": 1696517,
+          "pairId": "p_79cecf85e324b9c6e22513cb6c6d829b"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "3c904d3768624aae7c9b2aa4cb293b1b67ac333ab0675e69a33cb4127e6822a9",
+      "bodyRows": 19,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 157,
+          "src": "/lesson-pages/3c904d3768624aae7c9b2aa4cb293b1b67ac333ab0675e69a33cb4127e6822a9.jpg",
+          "sha256": "3c904d3768624aae7c9b2aa4cb293b1b67ac333ab0675e69a33cb4127e6822a9"
+        },
+        {
+          "page": 158,
+          "src": "/lesson-pages/50cac45db697911264c611017ff2da46d0e38d63a44cb2f1f4cd14a146d4e002.jpg",
+          "sha256": "50cac45db697911264c611017ff2da46d0e38d63a44cb2f1f4cd14a146d4e002"
+        }
+      ]
+    },
+    {
+      "id": "nce1-77",
+      "languageSha256": "4487d329f6122326a2c491d46a77e36bb8fbb8d06900ed739051a83dbdf108b9",
+      "languageFileSha256": "4bb0def78e4e832e11d27a6c0385a5534ba38e7234ecb830b92c203017118fd4",
+      "lrcSha256": "4487d329f6122326a2c491d46a77e36bb8fbb8d06900ed739051a83dbdf108b9",
+      "lrcSize": 1050,
+      "audio": [
+        {
+          "sha256": "4e4b2717ea702bc5fbc654733402af4e5a2a31dd1ed2d77501022fe336537805",
+          "size": 1777414,
+          "pairId": "p_ac961e20eeff53c78c38a246d3fff601"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "826f0be979f8c50d265efa9a0acdabbb8d3a05adefaab76e8c17e63fb8512f65",
+      "bodyRows": 19,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 161,
+          "src": "/lesson-pages/826f0be979f8c50d265efa9a0acdabbb8d3a05adefaab76e8c17e63fb8512f65.jpg",
+          "sha256": "826f0be979f8c50d265efa9a0acdabbb8d3a05adefaab76e8c17e63fb8512f65"
+        },
+        {
+          "page": 162,
+          "src": "/lesson-pages/ac908b76be1b7af6a36fd689c528393d8d511bd04ed068d99caff62c2016521c.jpg",
+          "sha256": "ac908b76be1b7af6a36fd689c528393d8d511bd04ed068d99caff62c2016521c"
+        }
+      ]
+    },
+    {
+      "id": "nce1-79",
+      "languageSha256": "72956d0ab22980aa159f331e24d26431c8aed9011cacd180c8a37732a2a69a39",
+      "languageFileSha256": "210987e0419c485d121916460dcec899c5e771ddb3c9ca64e08dc36089175edd",
+      "lrcSha256": "72956d0ab22980aa159f331e24d26431c8aed9011cacd180c8a37732a2a69a39",
+      "lrcSize": 1088,
+      "audio": [
+        {
+          "sha256": "2068598c4bdddc83a1c79b8330f7f3050574d9fce859caeb5d2c29b9437c4b96",
+          "size": 1822870,
+          "pairId": "p_ccffb1740a3c5f66ad8a54c015ec555a"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "9f634e10ebf9b658d2a6abcbceec33c2b22f051dcf1c1047eb0d6c6dbaae0b34",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 165,
+          "src": "/lesson-pages/9f634e10ebf9b658d2a6abcbceec33c2b22f051dcf1c1047eb0d6c6dbaae0b34.jpg",
+          "sha256": "9f634e10ebf9b658d2a6abcbceec33c2b22f051dcf1c1047eb0d6c6dbaae0b34"
+        },
+        {
+          "page": 166,
+          "src": "/lesson-pages/6796c4e0afc2cd2fdb4494d6ba385239dde1da380946d55cb0eacbbf9652505d.jpg",
+          "sha256": "6796c4e0afc2cd2fdb4494d6ba385239dde1da380946d55cb0eacbbf9652505d"
+        }
+      ]
+    },
+    {
+      "id": "nce1-81",
+      "languageSha256": "b82797b2d7868f294a997a229363cb8ce5a2fe860541a79d8dc5efcfb47b02bb",
+      "languageFileSha256": "482ed5e6dc355ee0856ee62f0dbcc58e805e81112121c86df9d4e1563da8142f",
+      "lrcSha256": "b82797b2d7868f294a997a229363cb8ce5a2fe860541a79d8dc5efcfb47b02bb",
+      "lrcSize": 1041,
+      "audio": [
+        {
+          "sha256": "c551505ca4562c8ea277d25902b31448bec2e4906e5b7244e8249cfb00b05259",
+          "size": 1577259,
+          "pairId": "p_46c11b9015fc23ea940ce91e603fa33e"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "b69f4352efafb449fa06a5b671ede5df40a983249cff27263f937a5084df4ca9",
+      "bodyRows": 23,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 169,
+          "src": "/lesson-pages/b69f4352efafb449fa06a5b671ede5df40a983249cff27263f937a5084df4ca9.jpg",
+          "sha256": "b69f4352efafb449fa06a5b671ede5df40a983249cff27263f937a5084df4ca9"
+        },
+        {
+          "page": 170,
+          "src": "/lesson-pages/9b1bfc31f8362da3d48099b93a713ee276cad4a3362bb332a27456ce89b3ed8e.jpg",
+          "sha256": "9b1bfc31f8362da3d48099b93a713ee276cad4a3362bb332a27456ce89b3ed8e"
+        }
+      ]
+    },
+    {
+      "id": "nce1-83",
+      "languageSha256": "fa135ee47799f0b347484be280cfffb8c721b639cc576e3c1e8c6af04d020169",
+      "languageFileSha256": "5e74751a2733ddde71228164b6bc6502d44e384b408f49d75cade430ede22fdd",
+      "lrcSha256": "fa135ee47799f0b347484be280cfffb8c721b639cc576e3c1e8c6af04d020169",
+      "lrcSize": 1190,
+      "audio": [
+        {
+          "sha256": "83bd4de1252676fefd6aa12a7db85fd2fafd4ddb11eb5b881c59f069e786e067",
+          "size": 1807853,
+          "pairId": "p_5f826e38b6eb5ead75318bbe1a73071f"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "890278d1c0d251747da5589a546392f5166c72e97763a64e85f176ae5704b141",
+      "bodyRows": 24,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 173,
+          "src": "/lesson-pages/890278d1c0d251747da5589a546392f5166c72e97763a64e85f176ae5704b141.jpg",
+          "sha256": "890278d1c0d251747da5589a546392f5166c72e97763a64e85f176ae5704b141"
+        },
+        {
+          "page": 174,
+          "src": "/lesson-pages/bb21c391203328413172e40f5ba4454029c80a75b90e5561d3a5581ed666a73d.jpg",
+          "sha256": "bb21c391203328413172e40f5ba4454029c80a75b90e5561d3a5581ed666a73d"
+        }
+      ]
+    },
+    {
+      "id": "nce1-85",
+      "languageSha256": "edabae1f55fa46acf295c911985d3e40cdb9d57394724be79cf49c02fa8ba8f2",
+      "languageFileSha256": "2e884b88c8f09b5500c53014207248f433dde94ccc4a6e805ff214a3b518c1a8",
+      "lrcSha256": "edabae1f55fa46acf295c911985d3e40cdb9d57394724be79cf49c02fa8ba8f2",
+      "lrcSize": 951,
+      "audio": [
+        {
+          "sha256": "d518a9e97ec404dface2164f0961822e8a4e8e5d3588ab81c7c9c52ad6afdf34",
+          "size": 1450907,
+          "pairId": "p_23ba737ab8f312ed9e87ca6e0d03bd6d"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "3c9177a55c5c2650c00bacec224ba3c9bddb96c461963b7eae0b415412fe485a",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 177,
+          "src": "/lesson-pages/3c9177a55c5c2650c00bacec224ba3c9bddb96c461963b7eae0b415412fe485a.jpg",
+          "sha256": "3c9177a55c5c2650c00bacec224ba3c9bddb96c461963b7eae0b415412fe485a"
+        },
+        {
+          "page": 178,
+          "src": "/lesson-pages/b9f09288c5c7f59f51eba16ed6757251a7d32b96185cab09e6b11bee0906be3c.jpg",
+          "sha256": "b9f09288c5c7f59f51eba16ed6757251a7d32b96185cab09e6b11bee0906be3c"
+        }
+      ]
+    },
+    {
+      "id": "nce1-87",
+      "languageSha256": "9d83db03032cfdeb43e97b4543e6a91c14ce056c72749b1e5d41a34713e8bed1",
+      "languageFileSha256": "014e88b4d922c100af184b327cd1aaeb24094f0e548c9d283d5a6cc53a4b5e9f",
+      "lrcSha256": "9d83db03032cfdeb43e97b4543e6a91c14ce056c72749b1e5d41a34713e8bed1",
+      "lrcSize": 1016,
+      "audio": [
+        {
+          "sha256": "965e3b72275272a6af9e65026f65085a7cb16a48d566c205851ec9f8cb8a9f57",
+          "size": 1630206,
+          "pairId": "p_e0ec57ddbe467332969aadefc0fa7ca1"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "6b9d43b3b48efb42309f85077a72be59b26108f8c64296557e970b4d2550b172",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 181,
+          "src": "/lesson-pages/6b9d43b3b48efb42309f85077a72be59b26108f8c64296557e970b4d2550b172.jpg",
+          "sha256": "6b9d43b3b48efb42309f85077a72be59b26108f8c64296557e970b4d2550b172"
+        },
+        {
+          "page": 182,
+          "src": "/lesson-pages/fbd06022e14dc40c5be6cb5d2671cb560819e3c71defcf2a0c59d2bb5cfbc96d.jpg",
+          "sha256": "fbd06022e14dc40c5be6cb5d2671cb560819e3c71defcf2a0c59d2bb5cfbc96d"
+        }
+      ]
+    },
+    {
+      "id": "nce1-89",
+      "languageSha256": "bf1fcde99a481086014859c09b4173eb6f7ea65eb3f279b744b5fc503d156f1a",
+      "languageFileSha256": "0a1eedc9d68102d09d9430ed756f5f6631ca2fa51f87ec962eac5b986377a737",
+      "lrcSha256": "bf1fcde99a481086014859c09b4173eb6f7ea65eb3f279b744b5fc503d156f1a",
+      "lrcSize": 1078,
+      "audio": [
+        {
+          "sha256": "fc9a624ad3c3b73b3fa3af4ddec30aa2e1b97e20314c020ec958eddb37a49112",
+          "size": 1711101,
+          "pairId": "p_05b99c4935cc9caa797b430c890c4594"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "fb2c4607ba171d2fa321004d11c4c3b383f59d069bde5378ad4d9d7bc3e531a9",
+      "bodyRows": 21,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 185,
+          "src": "/lesson-pages/fb2c4607ba171d2fa321004d11c4c3b383f59d069bde5378ad4d9d7bc3e531a9.jpg",
+          "sha256": "fb2c4607ba171d2fa321004d11c4c3b383f59d069bde5378ad4d9d7bc3e531a9"
+        },
+        {
+          "page": 186,
+          "src": "/lesson-pages/975f4b612fdfb5fe78005f032d3e43ed74d490543708b8836481af2dbaecb257.jpg",
+          "sha256": "975f4b612fdfb5fe78005f032d3e43ed74d490543708b8836481af2dbaecb257"
+        }
+      ]
+    },
+    {
+      "id": "nce1-91",
+      "languageSha256": "f688eacca781fecca359a7729389ffc2bea06fd709b6350f09c6ed7794aabecb",
+      "languageFileSha256": "83651b0eb2fee3095ea02806c78b017f6cdc56f144725ac70191ff35ec2e52ba",
+      "lrcSha256": "f688eacca781fecca359a7729389ffc2bea06fd709b6350f09c6ed7794aabecb",
+      "lrcSize": 1074,
+      "audio": [
+        {
+          "sha256": "38c994e831bbb058e59e06c917be393147230411645aee84f696b703dcacfb4b",
+          "size": 1926274,
+          "pairId": "p_96162db74a8db74c0b6bdf0fd48d89a1"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "ee50b60b8089ce13d31c050340c489dc2c98dcc239175684c6968ddb005d7659",
+      "bodyRows": 20,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 189,
+          "src": "/lesson-pages/ee50b60b8089ce13d31c050340c489dc2c98dcc239175684c6968ddb005d7659.jpg",
+          "sha256": "ee50b60b8089ce13d31c050340c489dc2c98dcc239175684c6968ddb005d7659"
+        },
+        {
+          "page": 190,
+          "src": "/lesson-pages/fb2f297bce9ec299e1068cadc44bf6f188b8fd001c68107fdacba709d0aac329.jpg",
+          "sha256": "fb2f297bce9ec299e1068cadc44bf6f188b8fd001c68107fdacba709d0aac329"
+        }
+      ]
+    },
+    {
+      "id": "nce1-93",
+      "languageSha256": "5ea7b0ef88ab0ab1b40914569b11fcd29e2c65dbf9f3989c2a0c99214c9ba9e6",
+      "languageFileSha256": "6d4e62afb9c67daf64d572a4980d411c3e39ecddee83547d64d9ef5d43e953e6",
+      "lrcSha256": "5ea7b0ef88ab0ab1b40914569b11fcd29e2c65dbf9f3989c2a0c99214c9ba9e6",
+      "lrcSize": 874,
+      "audio": [
+        {
+          "sha256": "eb1f5087451166f1c32b00881a09a0a9f20254c820d4c10fd74240a4cec5cf0b",
+          "size": 1497574,
+          "pairId": "p_2a25dd1fdcd0604a2f17f43dac65def4"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "32ea8ee58ab6ba059aeb9f4e09c2df01a65d49718904cc6f3501e32676f60849",
+      "bodyRows": 13,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 193,
+          "src": "/lesson-pages/32ea8ee58ab6ba059aeb9f4e09c2df01a65d49718904cc6f3501e32676f60849.jpg",
+          "sha256": "32ea8ee58ab6ba059aeb9f4e09c2df01a65d49718904cc6f3501e32676f60849"
+        },
+        {
+          "page": 194,
+          "src": "/lesson-pages/9c19871226302310532c25e85cb95f28ffb4c8a46235591f1017ed9ce95ac4d8.jpg",
+          "sha256": "9c19871226302310532c25e85cb95f28ffb4c8a46235591f1017ed9ce95ac4d8"
+        }
+      ]
+    },
+    {
+      "id": "nce1-95",
+      "languageSha256": "5146bba81d784bebc115cb2d5449bfba3ddc2afe29fe17e4a72f03f1238225a0",
+      "languageFileSha256": "8dbcbd88966701fdc81fa0d78d62d519891462ed573f4ebdec840b223a989f56",
+      "lrcSha256": "5146bba81d784bebc115cb2d5449bfba3ddc2afe29fe17e4a72f03f1238225a0",
+      "lrcSize": 1145,
+      "audio": [
+        {
+          "sha256": "789d4286b948df3da799af3372c0c26aa3a971f5dc57e6806d756f9939dcb7c3",
+          "size": 1781582,
+          "pairId": "p_0fa19f2012f81992458a4176ff7c5009"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "1a5757f60527b7843d431c68602687f92b7246e1746a55632fd5d5e01774dab7",
+      "bodyRows": 22,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 197,
+          "src": "/lesson-pages/1a5757f60527b7843d431c68602687f92b7246e1746a55632fd5d5e01774dab7.jpg",
+          "sha256": "1a5757f60527b7843d431c68602687f92b7246e1746a55632fd5d5e01774dab7"
+        },
+        {
+          "page": 198,
+          "src": "/lesson-pages/4a0098ad13ea2a03bed75d1e26a87f5568334a2667f6c8dc2c6acd9b3fa1c39a.jpg",
+          "sha256": "4a0098ad13ea2a03bed75d1e26a87f5568334a2667f6c8dc2c6acd9b3fa1c39a"
+        }
+      ]
+    },
+    {
+      "id": "nce1-97",
+      "languageSha256": "f9205b34f0122e25d849e2865af9e4f2934c7012f795f826853cbef3049fdeab",
+      "languageFileSha256": "bd6e8618dcb12dd29d2d1f0394537d8a0f6a97d73abb7f84011fb321b9bf670b",
+      "lrcSha256": "f9205b34f0122e25d849e2865af9e4f2934c7012f795f826853cbef3049fdeab",
+      "lrcSize": 1067,
+      "audio": [
+        {
+          "sha256": "f08f8d762a15a1c1b4e76ad20642aa4a9062c991d30aa874b06e1324a34758cd",
+          "size": 1724454,
+          "pairId": "p_086978f63105843b1cdf6564ae5c3283"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "f0c970151c08bf5375f65c0d88e1b0bff4d04da6ef8235b901f83d6f27056255",
+      "bodyRows": 20,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 201,
+          "src": "/lesson-pages/f0c970151c08bf5375f65c0d88e1b0bff4d04da6ef8235b901f83d6f27056255.jpg",
+          "sha256": "f0c970151c08bf5375f65c0d88e1b0bff4d04da6ef8235b901f83d6f27056255"
+        },
+        {
+          "page": 202,
+          "src": "/lesson-pages/2cfa0472e170bdca1736635b69209f4624b056c8c046c8e5f3fb1cdcfcee51f2.jpg",
+          "sha256": "2cfa0472e170bdca1736635b69209f4624b056c8c046c8e5f3fb1cdcfcee51f2"
+        }
+      ]
+    },
+    {
+      "id": "nce1-99",
+      "languageSha256": "41d7de8ed63c30f8067ee413a53a383b9817d04cc8150b7022f231b207e7154d",
+      "languageFileSha256": "f33f239bffde895408c76faa5c7181d19f20ab180aef66f2af41766b45b5f9a5",
+      "lrcSha256": "41d7de8ed63c30f8067ee413a53a383b9817d04cc8150b7022f231b207e7154d",
+      "lrcSize": 839,
+      "audio": [
+        {
+          "sha256": "e8e55c1bbc95ad07e245fc3e4b2c82c181596a49584cd554aaad6b32c9690fa1",
+          "size": 1387504,
+          "pairId": "p_54005d845b04e50b88539dd11277a034"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "c8c37448a318630d5f1c65725ee4b87dc68fe2eecfeb0998fd352e858372d57d",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 205,
+          "src": "/lesson-pages/c8c37448a318630d5f1c65725ee4b87dc68fe2eecfeb0998fd352e858372d57d.jpg",
+          "sha256": "c8c37448a318630d5f1c65725ee4b87dc68fe2eecfeb0998fd352e858372d57d"
+        },
+        {
+          "page": 206,
+          "src": "/lesson-pages/e80eab87cf8c528b8594bff5ea1bf7c1398297d5d83953745359fdc9c3d07f33.jpg",
+          "sha256": "e80eab87cf8c528b8594bff5ea1bf7c1398297d5d83953745359fdc9c3d07f33"
+        }
+      ]
+    },
+    {
+      "id": "nce1-101",
+      "languageSha256": "ffd4549443446e47b6c72ddf9f4e4e15276378c7e57398411e363150cf3b5c4b",
+      "languageFileSha256": "9aaf3592a731f4027476af0df16fee07bd56f287320c4f9b27c9295c71b7efc4",
+      "lrcSha256": "ffd4549443446e47b6c72ddf9f4e4e15276378c7e57398411e363150cf3b5c4b",
+      "lrcSize": 1142,
+      "audio": [
+        {
+          "sha256": "b81d1bb4b060fcd226cf39e7f1d3af0f731b374d398eb6f92e07af2715dc0ec3",
+          "size": 2041793,
+          "pairId": "p_055ce6af3cdad4d5e8ba9f191f964e1d"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "19fdb7a17bb5d43fb859b820d48d1becdd4c774ed79723bfcc3eef9c85cf0f42",
+      "bodyRows": 20,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 209,
+          "src": "/lesson-pages/19fdb7a17bb5d43fb859b820d48d1becdd4c774ed79723bfcc3eef9c85cf0f42.jpg",
+          "sha256": "19fdb7a17bb5d43fb859b820d48d1becdd4c774ed79723bfcc3eef9c85cf0f42"
+        },
+        {
+          "page": 210,
+          "src": "/lesson-pages/e8fb6155a3b21d82e47ca61c1a58888943a43c1eb364117a513a15720b91dc4b.jpg",
+          "sha256": "e8fb6155a3b21d82e47ca61c1a58888943a43c1eb364117a513a15720b91dc4b"
+        }
+      ]
+    },
+    {
+      "id": "nce1-103",
+      "languageSha256": "ef16222ed76c2f48f014d3e8964e29ada24ce363b569415df2fd629111d68e46",
+      "languageFileSha256": "8c333b190954e972feb8bfd55e90270039e8ca3b7dba1380b409f4cd6f72bf90",
+      "lrcSha256": "ef16222ed76c2f48f014d3e8964e29ada24ce363b569415df2fd629111d68e46",
+      "lrcSize": 1174,
+      "audio": [
+        {
+          "sha256": "8263f8c7afc199b961b53190d45a026ba11523af3ff4766545f71a3e87a91fbd",
+          "size": 1822866,
+          "pairId": "p_0f75f40a5725549ef629b86c1ffd34aa"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "841b537d81a88eabd1cad55c1db662e4970cf378301264148e68faeaec6dcf2f",
+      "bodyRows": 21,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 213,
+          "src": "/lesson-pages/841b537d81a88eabd1cad55c1db662e4970cf378301264148e68faeaec6dcf2f.jpg",
+          "sha256": "841b537d81a88eabd1cad55c1db662e4970cf378301264148e68faeaec6dcf2f"
+        },
+        {
+          "page": 214,
+          "src": "/lesson-pages/dc8204c6ac7bad60fb6724b69337d432f6c8d0c1342bd46e0ea39f901c16625b.jpg",
+          "sha256": "dc8204c6ac7bad60fb6724b69337d432f6c8d0c1342bd46e0ea39f901c16625b"
+        }
+      ]
+    },
+    {
+      "id": "nce1-105",
+      "languageSha256": "a07b1d2d11dd4203d6fcec77df50d3fea95cafffa2ab889f12b1f36dd8356205",
+      "languageFileSha256": "fe7e2ae6d59c6735c934cdb09856ae22ceb81c2858354a3e4178864be7ad74cf",
+      "lrcSha256": "a07b1d2d11dd4203d6fcec77df50d3fea95cafffa2ab889f12b1f36dd8356205",
+      "lrcSize": 1017,
+      "audio": [
+        {
+          "sha256": "f689a2524e7350db549107f4d0f66d490dbdc32263dbafaa9d29b1ad9108636f",
+          "size": 1759066,
+          "pairId": "p_f26f5e5473d662fd6082d21a7c8e74b5"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "cd24e54eea79cb4c0a2867d84163369e5e3d9c4dbf98925dda6d54ebce633307",
+      "bodyRows": 21,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 217,
+          "src": "/lesson-pages/cd24e54eea79cb4c0a2867d84163369e5e3d9c4dbf98925dda6d54ebce633307.jpg",
+          "sha256": "cd24e54eea79cb4c0a2867d84163369e5e3d9c4dbf98925dda6d54ebce633307"
+        },
+        {
+          "page": 218,
+          "src": "/lesson-pages/b2e472815d09471ea7b3ca8c148dde556242e1f87ff08c32356e4876132143c5.jpg",
+          "sha256": "b2e472815d09471ea7b3ca8c148dde556242e1f87ff08c32356e4876132143c5"
+        }
+      ]
+    },
+    {
+      "id": "nce1-107",
+      "languageSha256": "c85ad01114e44f142125f6c4f0bf2cd48964985e88a8b37c0db8d5bf3beed42b",
+      "languageFileSha256": "2028d38e56d019bff7c992ff65f9d9bd0beaa41d32396142e29efc792c700c74",
+      "lrcSha256": "c85ad01114e44f142125f6c4f0bf2cd48964985e88a8b37c0db8d5bf3beed42b",
+      "lrcSize": 1100,
+      "audio": [
+        {
+          "sha256": "f924666d6b1903ba63e28134e4ebd7e9be205a8dee91ec1463e65e7bf0f97a0c",
+          "size": 1874157,
+          "pairId": "p_4c87e834eeb6aae146be0d2e0eefd275"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "f99932d361f9e95c33a32d16c8e55a71b9177d743218c6fd1e4ac18abe7374da",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 221,
+          "src": "/lesson-pages/f99932d361f9e95c33a32d16c8e55a71b9177d743218c6fd1e4ac18abe7374da.jpg",
+          "sha256": "f99932d361f9e95c33a32d16c8e55a71b9177d743218c6fd1e4ac18abe7374da"
+        },
+        {
+          "page": 222,
+          "src": "/lesson-pages/bcdabf25c889dca583b130c93b9743af042ac8bff37150bde293c075e77dbfa9.jpg",
+          "sha256": "bcdabf25c889dca583b130c93b9743af042ac8bff37150bde293c075e77dbfa9"
+        }
+      ]
+    },
+    {
+      "id": "nce1-109",
+      "languageSha256": "469936066eba535b09e781b7dfb8d39f0a2106e89e2a2bfe6f2f7c75ef6c2f39",
+      "languageFileSha256": "dab7da6e46acf711c152be9e126d5a0187f8d0aa1e1cb372ea9124851a915a6e",
+      "lrcSha256": "469936066eba535b09e781b7dfb8d39f0a2106e89e2a2bfe6f2f7c75ef6c2f39",
+      "lrcSize": 1071,
+      "audio": [
+        {
+          "sha256": "dadaa8705d9bc7109b145035326ca091de2e2f40f4e4e8efc833a07c89bb598f",
+          "size": 1814939,
+          "pairId": "p_8be7653bcc17643513c5fa3470fe2d04"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "fe38edfba78636b4c71b06c6970615cc44e06284814fa9fd2302025738dba042",
+      "bodyRows": 23,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 225,
+          "src": "/lesson-pages/fe38edfba78636b4c71b06c6970615cc44e06284814fa9fd2302025738dba042.jpg",
+          "sha256": "fe38edfba78636b4c71b06c6970615cc44e06284814fa9fd2302025738dba042"
+        },
+        {
+          "page": 226,
+          "src": "/lesson-pages/aaad1339071faa154d6036953de8960647c73a324c9b0bfbdb20f609d0c681c9.jpg",
+          "sha256": "aaad1339071faa154d6036953de8960647c73a324c9b0bfbdb20f609d0c681c9"
+        }
+      ]
+    },
+    {
+      "id": "nce1-111",
+      "languageSha256": "9c4f31455bad8d4bb0b238bd21707f540d738213424e858db1c2eba131c3ab98",
+      "languageFileSha256": "69b3b3ca85775735ecb952a230577f62170a465c60ee670c2129be9ce6eb7f8e",
+      "lrcSha256": "9c4f31455bad8d4bb0b238bd21707f540d738213424e858db1c2eba131c3ab98",
+      "lrcSize": 1316,
+      "audio": [
+        {
+          "sha256": "4abae5a839658836b1dc286a3b1f05bba0c20bf4d1df8cbe9caca93b6d4145d9",
+          "size": 2064318,
+          "pairId": "p_3e04e8fc825489a044d48bb427a1b423"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "e52724eae0a4d9f32603bd41f20b16d89874fd5bf4b1d59631a56f147e9b36f1",
+      "bodyRows": 20,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 229,
+          "src": "/lesson-pages/e52724eae0a4d9f32603bd41f20b16d89874fd5bf4b1d59631a56f147e9b36f1.jpg",
+          "sha256": "e52724eae0a4d9f32603bd41f20b16d89874fd5bf4b1d59631a56f147e9b36f1"
+        },
+        {
+          "page": 230,
+          "src": "/lesson-pages/1e4ff2a721df56f4c9fd009898cf1b5bb92bc55aa8ed5d7a2099828ffabd9e18.jpg",
+          "sha256": "1e4ff2a721df56f4c9fd009898cf1b5bb92bc55aa8ed5d7a2099828ffabd9e18"
+        }
+      ]
+    },
+    {
+      "id": "nce1-113",
+      "languageSha256": "2e43727befbe573b90ff4f383ddd7ae50a6149e9bb028ac2ea001594411faf38",
+      "languageFileSha256": "25025ca475763c9fab383464bed67302be0281a3b3f0cc2d116199d6a27bae3b",
+      "lrcSha256": "2e43727befbe573b90ff4f383ddd7ae50a6149e9bb028ac2ea001594411faf38",
+      "lrcSize": 1063,
+      "audio": [
+        {
+          "sha256": "ea35859c6e7287c8063bbd62edf0a40fac6ff4ca6782924d4ffed2e60ade8eb2",
+          "size": 1672326,
+          "pairId": "p_92d34cabe7ebb29a4c96df4e52d10c2b"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "c39ed2492290f0475ec971390ee646746e6230a42b460417f288028b8de053f1",
+      "bodyRows": 22,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 233,
+          "src": "/lesson-pages/c39ed2492290f0475ec971390ee646746e6230a42b460417f288028b8de053f1.jpg",
+          "sha256": "c39ed2492290f0475ec971390ee646746e6230a42b460417f288028b8de053f1"
+        },
+        {
+          "page": 234,
+          "src": "/lesson-pages/7907904e34ef4995172090e046b9c7a10574ef8c4cf85f9bf9e75ecd8efb44bf.jpg",
+          "sha256": "7907904e34ef4995172090e046b9c7a10574ef8c4cf85f9bf9e75ecd8efb44bf"
+        }
+      ]
+    },
+    {
+      "id": "nce1-115",
+      "languageSha256": "47827536e71d3384ac4f53d949f441c1530cf9879902a5bc41780cf3d3f0f509",
+      "languageFileSha256": "203eb862f08f9db7fe23bc7559bd99cbaa90c6d97e919c48654a7ea7a92cbfd6",
+      "lrcSha256": "47827536e71d3384ac4f53d949f441c1530cf9879902a5bc41780cf3d3f0f509",
+      "lrcSize": 1154,
+      "audio": [
+        {
+          "sha256": "dd679816615eb125bf6671662580c379fbe29dc3ebad90bcc545fbd1aa47d747",
+          "size": 1726120,
+          "pairId": "p_c2d92e0654cd2e062d914e8b17f0956b"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "a2a110835cd903d605db1fb49f144f3e3f0faf17e2632bcceea537bf4efbc78e",
+      "bodyRows": 24,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 237,
+          "src": "/lesson-pages/a2a110835cd903d605db1fb49f144f3e3f0faf17e2632bcceea537bf4efbc78e.jpg",
+          "sha256": "a2a110835cd903d605db1fb49f144f3e3f0faf17e2632bcceea537bf4efbc78e"
+        },
+        {
+          "page": 238,
+          "src": "/lesson-pages/4ae5f450f0e6101b57c2ab64a58a0fb0825f6458ec188d04c307ae1bc1719442.jpg",
+          "sha256": "4ae5f450f0e6101b57c2ab64a58a0fb0825f6458ec188d04c307ae1bc1719442"
+        }
+      ]
+    },
+    {
+      "id": "nce1-117",
+      "languageSha256": "f09e8d4c8fec24828b67e39b158a1ea4a7679af3c60038a6bd7798e4b050990b",
+      "languageFileSha256": "112f6a493644c21621bbbbc4f93cdde3c790de69e66cbffea36ee178384a4957",
+      "lrcSha256": "f09e8d4c8fec24828b67e39b158a1ea4a7679af3c60038a6bd7798e4b050990b",
+      "lrcSize": 1101,
+      "audio": [
+        {
+          "sha256": "e946c228041a12fafd514aa8b9ebea76a241e2cf49b3395ee6d736c3c14dc1aa",
+          "size": 1859564,
+          "pairId": "p_dccc4c761ad1e54cc0664edac798bb07"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "8d5ba7b79d74556683ed9b6c3639e74385ab01310d87fd55c8efd5de88974af7",
+      "bodyRows": 14,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 241,
+          "src": "/lesson-pages/8d5ba7b79d74556683ed9b6c3639e74385ab01310d87fd55c8efd5de88974af7.jpg",
+          "sha256": "8d5ba7b79d74556683ed9b6c3639e74385ab01310d87fd55c8efd5de88974af7"
+        },
+        {
+          "page": 242,
+          "src": "/lesson-pages/38360e5a10bd43c59691e9d0c965a29c3121a3aa907a0cc7c2f46fdf7e52aa5b.jpg",
+          "sha256": "38360e5a10bd43c59691e9d0c965a29c3121a3aa907a0cc7c2f46fdf7e52aa5b"
+        }
+      ]
+    },
+    {
+      "id": "nce1-119",
+      "languageSha256": "497dfb8109fcf3f519912cf26ab7a7d8019e45be8cba384f950cbbb683964732",
+      "languageFileSha256": "0dd039d41a0fad815bcdc0f57f32d91b3c98ef3c88780ac1dedc03cb978c5dbf",
+      "lrcSha256": "497dfb8109fcf3f519912cf26ab7a7d8019e45be8cba384f950cbbb683964732",
+      "lrcSize": 1219,
+      "audio": [
+        {
+          "sha256": "170f6a9ed13d33d9d3ae65e76ad71c5ce64c9ac848c71ae5e624431c9e21eda2",
+          "size": 2030946,
+          "pairId": "p_ac72b81443a4c3ff68074a3fdc4317a0"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "3d42bd806949ec0c393cd10b073896e970a5f43cddfa1d3f202c006b2e5b4b7f",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 245,
+          "src": "/lesson-pages/3d42bd806949ec0c393cd10b073896e970a5f43cddfa1d3f202c006b2e5b4b7f.jpg",
+          "sha256": "3d42bd806949ec0c393cd10b073896e970a5f43cddfa1d3f202c006b2e5b4b7f"
+        },
+        {
+          "page": 246,
+          "src": "/lesson-pages/3f3789045a9ebf40b12d8752b25cdfe32b5531fef98b423190cc00da05877d46.jpg",
+          "sha256": "3f3789045a9ebf40b12d8752b25cdfe32b5531fef98b423190cc00da05877d46"
+        }
+      ]
+    },
+    {
+      "id": "nce1-121",
+      "languageSha256": "9a3874ac0e4f6911d0197bd546cfab2b17a0fdf9f7be5c291564fbe207100dc2",
+      "languageFileSha256": "a9af27cef4c6e0d04d3daa35ac14c63ba3ef06a648845930ca7fc74898b1549d",
+      "lrcSha256": "9a3874ac0e4f6911d0197bd546cfab2b17a0fdf9f7be5c291564fbe207100dc2",
+      "lrcSize": 1034,
+      "audio": [
+        {
+          "sha256": "9971daecb5828510b5f4f6285bc5a9442ea609129a6a6de735d79b0469fee740",
+          "size": 1617703,
+          "pairId": "p_4703e2fc46df294843d8f2568a881561"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "5a0dbac27b13045625acfffb51d445cef758e7b9fe6b1463acead1917458f1cc",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 249,
+          "src": "/lesson-pages/5a0dbac27b13045625acfffb51d445cef758e7b9fe6b1463acead1917458f1cc.jpg",
+          "sha256": "5a0dbac27b13045625acfffb51d445cef758e7b9fe6b1463acead1917458f1cc"
+        },
+        {
+          "page": 250,
+          "src": "/lesson-pages/e773ba824158f7e4dfd369d6eaf14f3c495daa0383cff468451ad3fec5de94c0.jpg",
+          "sha256": "e773ba824158f7e4dfd369d6eaf14f3c495daa0383cff468451ad3fec5de94c0"
+        }
+      ]
+    },
+    {
+      "id": "nce1-123",
+      "languageSha256": "7d6eda686ef36c254947dca74b6661496ecfeeb7350ea9a3f9ab2b9c485e8979",
+      "languageFileSha256": "37d765f9e7b205ced5da4089208aee74e55c513af056bba885bb15a5c47799a3",
+      "lrcSha256": "7d6eda686ef36c254947dca74b6661496ecfeeb7350ea9a3f9ab2b9c485e8979",
+      "lrcSize": 1069,
+      "audio": [
+        {
+          "sha256": "a461bc2851eb9c135c4bd21ec39518b451cf4635d107945a6ad2392db4d9989e",
+          "size": 1583512,
+          "pairId": "p_1d536f8bab0a6aa5c0fb248807cf0e3d"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "0e12fc4792c8edf1c67e7ad378dca00c143315ba913bb6cb84cdc9144e788a65",
+      "bodyRows": 21,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 253,
+          "src": "/lesson-pages/0e12fc4792c8edf1c67e7ad378dca00c143315ba913bb6cb84cdc9144e788a65.jpg",
+          "sha256": "0e12fc4792c8edf1c67e7ad378dca00c143315ba913bb6cb84cdc9144e788a65"
+        },
+        {
+          "page": 254,
+          "src": "/lesson-pages/47fd6d52a03cc2e9933608f5d41fe1f6b7b9b32903c931f91ba39e6966c96bd7.jpg",
+          "sha256": "47fd6d52a03cc2e9933608f5d41fe1f6b7b9b32903c931f91ba39e6966c96bd7"
+        }
+      ]
+    },
+    {
+      "id": "nce1-125",
+      "languageSha256": "aec2e709b73cb949cb519696e94340510a685714ecb2c1048639dea3509d6079",
+      "languageFileSha256": "6c42fbff37f76ec56faf4f1af858075cf6a6804c32062987ea631d6751105fbf",
+      "lrcSha256": "aec2e709b73cb949cb519696e94340510a685714ecb2c1048639dea3509d6079",
+      "lrcSize": 1004,
+      "audio": [
+        {
+          "sha256": "9ba3fb04f1d305b8a932445b3ed6348b2715f706e291e9995844119b90f87bd4",
+          "size": 1534715,
+          "pairId": "p_1e08018ff5a2befd74f672b803bfdbe4"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "4ddd289e326e440f9035c879d90d347529e650093d01467b5bb18e6b92975ff7",
+      "bodyRows": 20,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 257,
+          "src": "/lesson-pages/4ddd289e326e440f9035c879d90d347529e650093d01467b5bb18e6b92975ff7.jpg",
+          "sha256": "4ddd289e326e440f9035c879d90d347529e650093d01467b5bb18e6b92975ff7"
+        },
+        {
+          "page": 258,
+          "src": "/lesson-pages/01446f68c56de7b39dda935f4fe3412a90a56d67511d9b544ea7f6dac6665721.jpg",
+          "sha256": "01446f68c56de7b39dda935f4fe3412a90a56d67511d9b544ea7f6dac6665721"
+        }
+      ]
+    },
+    {
+      "id": "nce1-127",
+      "languageSha256": "1ba27adb6d9e6fa5bca327fe101f5661837834e7474647f1f810cf1e71b1aff0",
+      "languageFileSha256": "c95f28b7a52c50602730425ea4583fac535767dc8360d70bb475cbdcdd43cee2",
+      "lrcSha256": "1ba27adb6d9e6fa5bca327fe101f5661837834e7474647f1f810cf1e71b1aff0",
+      "lrcSize": 1138,
+      "audio": [
+        {
+          "sha256": "c8bb312feaed7b7cc58756e1052f97d9e861e3e05ff40f1e91d80f0ac5094933",
+          "size": 1925866,
+          "pairId": "p_cd16208901da09c710540d001d9810e6"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "4f4bfe0f367921a1c2c043e5e91ba492bb7cbf96d5be5916e2145283cb64c2c0",
+      "bodyRows": 21,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 261,
+          "src": "/lesson-pages/4f4bfe0f367921a1c2c043e5e91ba492bb7cbf96d5be5916e2145283cb64c2c0.jpg",
+          "sha256": "4f4bfe0f367921a1c2c043e5e91ba492bb7cbf96d5be5916e2145283cb64c2c0"
+        },
+        {
+          "page": 262,
+          "src": "/lesson-pages/f18f00c4392541f49cfa8ae2027c99d197c52d0b451c779b52a4d7d9bf39178e.jpg",
+          "sha256": "f18f00c4392541f49cfa8ae2027c99d197c52d0b451c779b52a4d7d9bf39178e"
+        }
+      ]
+    },
+    {
+      "id": "nce1-129",
+      "languageSha256": "99f00b0416941cc2f611700e749654e99a3e3dbb50e69352b373a28e456eea3f",
+      "languageFileSha256": "be612344bdcd2a18d9476038f68bc07496f4350960189942fabcb2d1e6d223e6",
+      "lrcSha256": "99f00b0416941cc2f611700e749654e99a3e3dbb50e69352b373a28e456eea3f",
+      "lrcSize": 1248,
+      "audio": [
+        {
+          "sha256": "3795430b009e4ae940e7c39668741c1815e2dd9e6048aef2ea1b8f03e35541b4",
+          "size": 1880418,
+          "pairId": "p_171cd0e0a99fa61b5da0ca5fbca51f12"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "855add0d381bccb235064f1480d6837c91a416f1e80d9d95d740d0d326f84970",
+      "bodyRows": 22,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 265,
+          "src": "/lesson-pages/855add0d381bccb235064f1480d6837c91a416f1e80d9d95d740d0d326f84970.jpg",
+          "sha256": "855add0d381bccb235064f1480d6837c91a416f1e80d9d95d740d0d326f84970"
+        },
+        {
+          "page": 266,
+          "src": "/lesson-pages/d0eba348078ffe25e0a29246e99873cad0bf07b2cae3eb329dbcbb0b2a7da6bb.jpg",
+          "sha256": "d0eba348078ffe25e0a29246e99873cad0bf07b2cae3eb329dbcbb0b2a7da6bb"
+        }
+      ]
+    },
+    {
+      "id": "nce1-131",
+      "languageSha256": "9d75ee3900aac150440f843aeaedd2e3692621567377c4c883f37a7edd3f8abe",
+      "languageFileSha256": "a2298b9b6a6588a78b19de2941973b38cde1ee94a3a9e473b5b8f2ba6facff14",
+      "lrcSha256": "9d75ee3900aac150440f843aeaedd2e3692621567377c4c883f37a7edd3f8abe",
+      "lrcSize": 1142,
+      "audio": [
+        {
+          "sha256": "39b383dec450dc28a2b4aa820e4d6b6de7d5cfab2892d6a7f415be642e54d99d",
+          "size": 1732796,
+          "pairId": "p_56ff00e392e9a43e5b369820785f510b"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "e5302f491110418818503dfb1382509d960a5eb47742984f7fab31bd81d2a70f",
+      "bodyRows": 19,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 269,
+          "src": "/lesson-pages/e5302f491110418818503dfb1382509d960a5eb47742984f7fab31bd81d2a70f.jpg",
+          "sha256": "e5302f491110418818503dfb1382509d960a5eb47742984f7fab31bd81d2a70f"
+        },
+        {
+          "page": 270,
+          "src": "/lesson-pages/eeff94ba64c6a254d97fcc4f366427aa23e0221a812019b85876e2d5a5854290.jpg",
+          "sha256": "eeff94ba64c6a254d97fcc4f366427aa23e0221a812019b85876e2d5a5854290"
+        }
+      ]
+    },
+    {
+      "id": "nce1-133",
+      "languageSha256": "55cbe2fa9dd0a3d53f0a67e034cc0a723d3edf407fe58edadc42f74033ad94db",
+      "languageFileSha256": "4b95e74f0f6814dcbf99ee0268abaabb6428bc80ff0b0dc53efdbd9323a99855",
+      "lrcSha256": "55cbe2fa9dd0a3d53f0a67e034cc0a723d3edf407fe58edadc42f74033ad94db",
+      "lrcSize": 1144,
+      "audio": [
+        {
+          "sha256": "91f72100303b06d642e0373672eb91c51c4dbe8fe78ebcc0b844178ebeb87c81",
+          "size": 1981328,
+          "pairId": "p_30cfa78124ae9cebeae2de65c3e6b2b3"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "9426b4f6b1c831559655a96e66be72fb95b45e475eb80949a7f8107f1f4f095b",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 273,
+          "src": "/lesson-pages/9426b4f6b1c831559655a96e66be72fb95b45e475eb80949a7f8107f1f4f095b.jpg",
+          "sha256": "9426b4f6b1c831559655a96e66be72fb95b45e475eb80949a7f8107f1f4f095b"
+        },
+        {
+          "page": 274,
+          "src": "/lesson-pages/290c87d8884bc4afec5d311870d67fec8a7fdfe1f46e8d365104cb95b3f793b4.jpg",
+          "sha256": "290c87d8884bc4afec5d311870d67fec8a7fdfe1f46e8d365104cb95b3f793b4"
+        }
+      ]
+    },
+    {
+      "id": "nce1-135",
+      "languageSha256": "a1d765ddb3215a199f47e287f985a7db1f46f6296a58bfcbfbdd6bdd3b4c3ad5",
+      "languageFileSha256": "97781f274f9db8c7fdaf71a2ba24583635ae7563970fec23fc8062eaab41cddc",
+      "lrcSha256": "a1d765ddb3215a199f47e287f985a7db1f46f6296a58bfcbfbdd6bdd3b4c3ad5",
+      "lrcSize": 1303,
+      "audio": [
+        {
+          "sha256": "b5a510d2e5d2359fd1c1338db9bf9c7b89d188275e84ab40d1f9294b9daaedb4",
+          "size": 2147294,
+          "pairId": "p_3b4727e775f77fef2f807284e37f67a5"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "53824394819eac93dabf41ccc3cfddb2f48d4b92f8dda0cc4384a2894b78423d",
+      "bodyRows": 21,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 277,
+          "src": "/lesson-pages/53824394819eac93dabf41ccc3cfddb2f48d4b92f8dda0cc4384a2894b78423d.jpg",
+          "sha256": "53824394819eac93dabf41ccc3cfddb2f48d4b92f8dda0cc4384a2894b78423d"
+        },
+        {
+          "page": 278,
+          "src": "/lesson-pages/ad8822b41623b8a50161a0fd75efe592e8d7dad26bf7e809c78d46f9317bb35b.jpg",
+          "sha256": "ad8822b41623b8a50161a0fd75efe592e8d7dad26bf7e809c78d46f9317bb35b"
+        }
+      ]
+    },
+    {
+      "id": "nce1-137",
+      "languageSha256": "c2a4fc1d38b79d391862b5366c16a0be2b9cb82c1f08b9b41c980501614ae47e",
+      "languageFileSha256": "11d09913ed3fecc68364ec92a7f00c00b12027217a8d86323a11232a7d5127fc",
+      "lrcSha256": "c2a4fc1d38b79d391862b5366c16a0be2b9cb82c1f08b9b41c980501614ae47e",
+      "lrcSize": 1200,
+      "audio": [
+        {
+          "sha256": "b57ce8c58a80d1360429a65117ba56afdb3c09a1816ce9ad094e771fd543393e",
+          "size": 1892089,
+          "pairId": "p_b73155eb59fba52f43a52261b364ecf1"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "216a89a10a32fd049ad43a765934402c495ffb55c9e62e0b9efe272a1e36b3c6",
+      "bodyRows": 16,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 281,
+          "src": "/lesson-pages/216a89a10a32fd049ad43a765934402c495ffb55c9e62e0b9efe272a1e36b3c6.jpg",
+          "sha256": "216a89a10a32fd049ad43a765934402c495ffb55c9e62e0b9efe272a1e36b3c6"
+        },
+        {
+          "page": 282,
+          "src": "/lesson-pages/b15681b328a49d92347d30cd29a61e7e94b8de03bd0620560c84a8396dc20823.jpg",
+          "sha256": "b15681b328a49d92347d30cd29a61e7e94b8de03bd0620560c84a8396dc20823"
+        }
+      ]
+    },
+    {
+      "id": "nce1-139",
+      "languageSha256": "e3a665e4890dc56ec728e91bb13dcf3d6860ca1ed1d37777ae86eaacd3a2701e",
+      "languageFileSha256": "f1e84ad2a461bc39dba710cb24c8f6c4b6e29947f757d8ca4aa6cef3f73fc785",
+      "lrcSha256": "e3a665e4890dc56ec728e91bb13dcf3d6860ca1ed1d37777ae86eaacd3a2701e",
+      "lrcSize": 1245,
+      "audio": [
+        {
+          "sha256": "296bf7def4266dc9352eab2f3bc5daa15a29bd563b0a5bfcd4cf4e84d0cf13a9",
+          "size": 1901682,
+          "pairId": "p_9544d1859cae7ce73026a9649c67a0bf"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "08a6dd13bad2af234006ffb2bf1c7c683bc783178411557193b599ed2990a53b",
+      "bodyRows": 18,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 285,
+          "src": "/lesson-pages/08a6dd13bad2af234006ffb2bf1c7c683bc783178411557193b599ed2990a53b.jpg",
+          "sha256": "08a6dd13bad2af234006ffb2bf1c7c683bc783178411557193b599ed2990a53b"
+        },
+        {
+          "page": 286,
+          "src": "/lesson-pages/b20704b70a6459ee93cfaf7d89d64e39084a1b7d40ebcbf70bda354c4d4dca34.jpg",
+          "sha256": "b20704b70a6459ee93cfaf7d89d64e39084a1b7d40ebcbf70bda354c4d4dca34"
+        }
+      ]
+    },
+    {
+      "id": "nce1-141",
+      "languageSha256": "cb6b93957730cd54c61dcc9f2304bb1b79dd408220586c7ce0e3e07673899f7a",
+      "languageFileSha256": "f38bee1084b82a4ad9bb08a16d719bc62e0dfcf9f5c69e64b52b8a98a41def30",
+      "lrcSha256": "cb6b93957730cd54c61dcc9f2304bb1b79dd408220586c7ce0e3e07673899f7a",
+      "lrcSize": 1302,
+      "audio": [
+        {
+          "sha256": "daacbdfc976df5d5fc7124a59df7a47e5df203d7cf7d7134efcb64514be73c25",
+          "size": 2254887,
+          "pairId": "p_4e0384d1c931cbbd857ef207aa65e924"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "4d7b76ea32a8c62fe4a0c84934c818c548490d92aec9a0e761ca3dc3b5409bc1",
+      "bodyRows": 15,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 289,
+          "src": "/lesson-pages/4d7b76ea32a8c62fe4a0c84934c818c548490d92aec9a0e761ca3dc3b5409bc1.jpg",
+          "sha256": "4d7b76ea32a8c62fe4a0c84934c818c548490d92aec9a0e761ca3dc3b5409bc1"
+        },
+        {
+          "page": 290,
+          "src": "/lesson-pages/feee97b9cebfda84cbb6e0329baf5a80b4c11ebfcc5b39c5c70ae30324f27b82.jpg",
+          "sha256": "feee97b9cebfda84cbb6e0329baf5a80b4c11ebfcc5b39c5c70ae30324f27b82"
+        }
+      ]
+    },
+    {
+      "id": "nce1-143",
+      "languageSha256": "24e4e92d0154d1c7f99825b55a560b631f6babbe073d29eb339273ae508f8f09",
+      "languageFileSha256": "dd5bc5b9fbf57c7d740b31aa87010f419669080f0c8bbe16e38626bc664817ac",
+      "lrcSha256": "24e4e92d0154d1c7f99825b55a560b631f6babbe073d29eb339273ae508f8f09",
+      "lrcSize": 1179,
+      "audio": [
+        {
+          "sha256": "453af9762e5f624c5e0321fb25b2c48b3c8f85326ec32675e1ea84959dfdf445",
+          "size": 2158977,
+          "pairId": "p_43e8feb38f26bdfc3104f9e6cfc29e7f"
+        }
+      ],
+      "comicStatus": "mapped-original-image",
+      "comicPageSha256": "11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886",
+      "bodyRows": 11,
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "exercisePages": [],
+      "printedPages": [
+        {
+          "page": 293,
+          "src": "/lesson-pages/11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886.jpg",
+          "sha256": "11ea5d3083ae402fe5bdd2dcdfc07f9fdfd13cff1a26ed180bc8fdad8af12886"
+        },
+        {
+          "page": 294,
+          "src": "/lesson-pages/6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85.jpg",
+          "sha256": "6fe9cc9aa3586da438d13c0873099a85e001fab8c02e1d83106bd9e353e13a85"
+        }
+      ]
+    },
+    {
+      "id": "nce2-1",
+      "languageSha256": "49cee60b2fc13bf58afeece005626a32c94a187cfba2cbceb90db3b3d5235a08",
+      "languageFileSha256": "d781ee1348bec6bc42dfefcd5fd9e6f4ae18b9b83286420a498fbdc273c8cd85",
+      "lrcSha256": "49cee60b2fc13bf58afeece005626a32c94a187cfba2cbceb90db3b3d5235a08",
+      "lrcSize": 923,
+      "audio": [
+        {
+          "sha256": "fb0902661214356e6f7cafc390333cff2afbd1e88cb72f9cb7e50cb2d8deacb8",
+          "size": 1485365,
+          "pairId": "p_6c77cb346334281b67ee9689cdd0a8e9"
+        }
+      ],
+      "comicStatus": "catalog-absent",
+      "comicPageSha256": null,
+      "bodyRows": 17,
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "exercisePages": [
+        {
+          "page": 53,
+          "sha256": "a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106"
+        },
+        {
+          "page": 54,
+          "sha256": "76da29a9ae4503dace8e016362d48be80202447c7a76ef46b26b70d1b56392ca"
+        },
+        {
+          "page": 55,
+          "sha256": "8e43d4c257027dcf5873955c1fefccf37082a97f344dea03ef8cb05c99cc98af"
+        }
+      ],
+      "printedPages": [
+        {
+          "page": 52,
+          "src": "/lesson-pages/2b85c293e3eea80575c316aa1d48ce0ed043e5e7c92224e175ce5e5dd287ce31.jpg",
+          "sha256": "2b85c293e3eea80575c316aa1d48ce0ed043e5e7c92224e175ce5e5dd287ce31"
+        },
+        {
+          "page": 53,
+          "src": "/lesson-pages/a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106.jpg",
+          "sha256": "a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106"
+        }
+      ]
+    },
+    {
+      "id": "nce2-2",
+      "languageSha256": "4a8888bf4cc68102e12072e9e4cd7e67ada68f4086c27e007216b779761f8b33",
+      "languageFileSha256": "d4edf4a0110bb9e49d2c0dac2b920c7f093ea9a3c4c9ec505428df1b3182429e",
+      "lrcSha256": "4a8888bf4cc68102e12072e9e4cd7e67ada68f4086c27e007216b779761f8b33",
+      "lrcSize": 919,
+      "audio": [
+        {
+          "sha256": "920522372c2c40906251c76b0d66df56b506156a98707fdfcbcaf677746be6ea",
+          "size": 1530083,
+          "pairId": "p_d233f11d17981bd5e38f80e16851243f"
+        }
+      ],
+      "comicStatus": "catalog-absent",
+      "comicPageSha256": null,
+      "bodyRows": 18,
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "exercisePages": [
+        {
+          "page": 57,
+          "sha256": "3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76"
+        },
+        {
+          "page": 58,
+          "sha256": "aefd1815b9cb498f5ad8e2e7e681f1a463a16c0545cdcf29de1737c95f5497cd"
+        },
+        {
+          "page": 59,
+          "sha256": "9c1bd7341defe7d253e60514ea124263811f3e8bd28f9c7d35c1fb9212638aff"
+        }
+      ],
+      "printedPages": [
+        {
+          "page": 56,
+          "src": "/lesson-pages/c50a1f133a0970a8147fee5fe2c1059ff3847bd79da157c887e89374ef4bb212.jpg",
+          "sha256": "c50a1f133a0970a8147fee5fe2c1059ff3847bd79da157c887e89374ef4bb212"
+        },
+        {
+          "page": 57,
+          "src": "/lesson-pages/3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76.jpg",
+          "sha256": "3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76"
+        }
+      ]
+    },
+    {
+      "id": "nce2-3",
+      "languageSha256": "1f1ead0cde31d51f2f982c7435450269f5994ce424a16bb5f99e5ae2f7018198",
+      "languageFileSha256": "ba31528c57f1da363ef6296a947b5e52537da26215f7b8766858e5414d0a6c55",
+      "lrcSha256": "1f1ead0cde31d51f2f982c7435450269f5994ce424a16bb5f99e5ae2f7018198",
+      "lrcSize": 847,
+      "audio": [
+        {
+          "sha256": "406799968279017f40017e0de7e4b3c8e3692954b80bd79180512630b2f54136",
+          "size": 1447330,
+          "pairId": "p_961c7953146146684c160f1b13938043"
+        }
+      ],
+      "comicStatus": "catalog-absent",
+      "comicPageSha256": null,
+      "bodyRows": 13,
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "exercisePages": [
+        {
+          "page": 61,
+          "sha256": "4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855"
+        },
+        {
+          "page": 62,
+          "sha256": "e58d3e077a2b62a2c1d6e0fe8150bbd68e9c9e918bd29b27b2b4bd42c5ffa42e"
+        },
+        {
+          "page": 63,
+          "sha256": "f714275a7b364ca4d86ef3c10dc85e9c258fe4411d3ae3900793903f452c53d3"
+        }
+      ],
+      "printedPages": [
+        {
+          "page": 60,
+          "src": "/lesson-pages/ab12885bc676a3967c433c933a2f7b66de878bae133bac194074bc837a33c4dd.jpg",
+          "sha256": "ab12885bc676a3967c433c933a2f7b66de878bae133bac194074bc837a33c4dd"
+        },
+        {
+          "page": 61,
+          "src": "/lesson-pages/4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855.jpg",
+          "sha256": "4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855"
+        }
+      ]
+    },
+    {
+      "id": "nce2-4",
+      "languageSha256": "561741b3b5cbd7dc4189f5778bdd685e999ef73783e5fcb74dfe042c11fd925e",
+      "languageFileSha256": "80ede7b620918d07a867cd192cb52a6de137f0e6e10096e750b33f86b30b2792",
+      "lrcSha256": "561741b3b5cbd7dc4189f5778bdd685e999ef73783e5fcb74dfe042c11fd925e",
+      "lrcSize": 820,
+      "audio": [
+        {
+          "sha256": "a44a9e032685c3f12eb24d23d17d675086c0768a98446f7da6ecb6d36b712aa5",
+          "size": 1288082,
+          "pairId": "p_70de003a290749bd249adba746fb12d4"
+        }
+      ],
+      "comicStatus": "catalog-absent",
+      "comicPageSha256": null,
+      "bodyRows": 12,
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "exercisePages": [
+        {
+          "page": 65,
+          "sha256": "dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f"
+        },
+        {
+          "page": 66,
+          "sha256": "be3b5acc4f4fe5dc6ef8397ae4103e28fdeba2e4188583ded20e13c32ab82165"
+        },
+        {
+          "page": 67,
+          "sha256": "fbc2728c28bad4d7882521ffb7800bdb6cba5a7f407f0ce096affc21dd98891c"
+        }
+      ],
+      "printedPages": [
+        {
+          "page": 64,
+          "src": "/lesson-pages/cb3d27e67e7a64d00309b3b9b3406a6ad144e2936b45fd60325da696e1a59d70.jpg",
+          "sha256": "cb3d27e67e7a64d00309b3b9b3406a6ad144e2936b45fd60325da696e1a59d70"
+        },
+        {
+          "page": 65,
+          "src": "/lesson-pages/dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f.jpg",
+          "sha256": "dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f"
+        }
+      ]
+    },
+    {
+      "id": "nce2-5",
+      "languageSha256": "26b0b571d7f6158888130d13f1e3023adde25bd51f7a67fd6b612dbb7a728794",
+      "languageFileSha256": "f6dd289408fc836355fae43c7cf74fb58986bf47e33b6ffe41ec3a3524129466",
+      "lrcSha256": "26b0b571d7f6158888130d13f1e3023adde25bd51f7a67fd6b612dbb7a728794",
+      "lrcSize": 858,
+      "audio": [
+        {
+          "sha256": "c3e1ebfa0249ad88b097302c79be04a7fa36c345cbc85a7a90e74a89ed5f907e",
+          "size": 1424337,
+          "pairId": "p_ed4ad30ae36cce64957801db223f105e"
+        }
+      ],
+      "comicStatus": "catalog-absent",
+      "comicPageSha256": null,
+      "bodyRows": 11,
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "exercisePages": [
+        {
+          "page": 69,
+          "sha256": "0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2"
+        },
+        {
+          "page": 70,
+          "sha256": "85394bf8f48781f91133ca098d78e3f22db1b14846f0332fbbdbd1ed86d8838d"
+        },
+        {
+          "page": 71,
+          "sha256": "52c0570d1d68c7e46f987a29a3cf90968d1ca7df53e8e2561a306ea32fcacf00"
+        }
+      ],
+      "printedPages": [
+        {
+          "page": 68,
+          "src": "/lesson-pages/b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36.jpg",
+          "sha256": "b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36"
+        },
+        {
+          "page": 69,
+          "src": "/lesson-pages/0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2.jpg",
+          "sha256": "0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2"
+        }
+      ]
+    },
+    {
+      "id": "nce2-6",
+      "languageSha256": "e042b7f0d7d624b6e5f3b350c95d3ec6addb24a0a8fbf07bbb64415910a5b662",
+      "languageFileSha256": "3f7d6951dc21426e8da11eb734daac5efa2d9aaca0e56f73c18a657d563eb2d9",
+      "lrcSha256": "e042b7f0d7d624b6e5f3b350c95d3ec6addb24a0a8fbf07bbb64415910a5b662",
+      "lrcSize": 820,
+      "audio": [
+        {
+          "sha256": "b228d3e9639ba66ab2fe0209852a55898ba65f73ef89728da6b37461e169c0ef",
+          "size": 1271361,
+          "pairId": "p_ae63a04acadba8916b3758f765099bc9"
+        }
+      ],
+      "comicStatus": "catalog-absent",
+      "comicPageSha256": null,
+      "bodyRows": 13,
+      "pdfSourceSha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "exercisePages": [
+        {
+          "page": 73,
+          "sha256": "6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018"
+        },
+        {
+          "page": 74,
+          "sha256": "c66b74c702c62fc12f32dce05e3f90504b550830fd6dd13433419015adf9b305"
+        },
+        {
+          "page": 75,
+          "sha256": "58071a097468106de8a245a8ee92fc68e307abdfcbe0e910f2f64a9755d068b8"
+        }
+      ],
+      "printedPages": [
+        {
+          "page": 72,
+          "src": "/lesson-pages/9df072b547efb5a9c1a43841b2c94e5cb36b710bdad25121f68007c9acbb5d45.jpg",
+          "sha256": "9df072b547efb5a9c1a43841b2c94e5cb36b710bdad25121f68007c9acbb5d45"
+        },
+        {
+          "page": 73,
+          "src": "/lesson-pages/6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018.jpg",
+          "sha256": "6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018"
+        }
+      ]
+    }
+  ],
+  "sourceMatrices": {
+    "sourcePanelPairs": 6084,
+    "comicGuardPairs": 6084
+  },
+  "pdfSources": [
+    {
+      "book": "NCE1",
+      "sha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "bytes": 9782353,
+      "pages": 299
+    },
+    {
+      "book": "NCE2",
+      "sha256": "8e19ce05144e35257f551bb8e2c8a26920bb7790affb7105441a0b011731e201",
+      "bytes": 19876069,
+      "pages": 480
+    }
+  ],
+  "comicCatalogGapIds": [
+    "nce2-1",
+    "nce2-2",
+    "nce2-3",
+    "nce2-4",
+    "nce2-5",
+    "nce2-6"
+  ],
+  "comicStatusPolicy": "NCE1:72 original catalog images; NCE2:6 missing catalog entries, actual guard returns null with host fallback; never counted as loaded images.",
+  "scope": "Actual production registration and exact source guards; original transcript/audio/page byte integrity. No changes to source content or production guards.",
+  "audioPlayback": "not-audited",
+  "audioDuration": "not-audited",
+  "acousticClipBoundaries": "not-audited"
+}

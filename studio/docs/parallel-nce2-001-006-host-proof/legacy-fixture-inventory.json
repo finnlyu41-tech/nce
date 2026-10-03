@@ -1,0 +1,1101 @@
+{
+  "scope": "TEST ONLY: actual registry binding and factory; synthetic first-answer submissions; no persistent learner state",
+  "publishedBase72": "46ad498c87414a0372969c845d32db27047de3e9",
+  "registeredGroups": 78,
+  "original42": 42,
+  "original54": 54,
+  "original66": 66,
+  "original72": 72,
+  "newNCE2": 6,
+  "questionCount": 1404,
+  "firstSubmissionsPassed": 78,
+  "rows": [
+    {
+      "courseId": "nce1-1",
+      "book": "NCE1",
+      "lessons": [
+        1,
+        2
+      ],
+      "sourceGroup": "NCE1-1",
+      "snapshotKey": "nce-course-loop-v1:NCE1-1",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-1",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-ask",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-3",
+      "book": "NCE1",
+      "lessons": [
+        3,
+        4
+      ],
+      "sourceGroup": "NCE1-3",
+      "snapshotKey": "nce-course-loop-v1:NCE1-3",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-3",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-owner",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-5",
+      "book": "NCE1",
+      "lessons": [
+        5,
+        6
+      ],
+      "sourceGroup": "NCE1-5",
+      "snapshotKey": "nce-course-loop-v1:NCE1-5",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-5",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-introduce",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-7",
+      "book": "NCE1",
+      "lessons": [
+        7,
+        8
+      ],
+      "sourceGroup": "NCE1-7",
+      "snapshotKey": "nce-course-loop-v1:NCE1-7",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-7",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n7-visitor-role-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-9",
+      "book": "NCE1",
+      "lessons": [
+        9,
+        10
+      ],
+      "sourceGroup": "NCE1-9",
+      "snapshotKey": "nce-course-loop-v1:NCE1-9",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-9",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n9-ask-state",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-11",
+      "book": "NCE1",
+      "lessons": [
+        11,
+        12
+      ],
+      "sourceGroup": "NCE1-11",
+      "snapshotKey": "nce-course-loop-v1:NCE1-11",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-11",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n11-owner-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-13",
+      "book": "NCE1",
+      "lessons": [
+        13,
+        14
+      ],
+      "sourceGroup": "NCE1-13",
+      "snapshotKey": "nce-course-loop-v1:NCE1-13",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-13",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n13-colour-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-15",
+      "book": "NCE1",
+      "lessons": [
+        15,
+        16
+      ],
+      "sourceGroup": "NCE1-15",
+      "snapshotKey": "nce-course-loop-v1:NCE1-15",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-15",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n15-singular-article",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-17",
+      "book": "NCE1",
+      "lessons": [
+        17,
+        18
+      ],
+      "sourceGroup": "NCE1-17",
+      "snapshotKey": "nce-course-loop-v1:NCE1-17",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-17",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n17-jobs-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-19",
+      "book": "NCE1",
+      "lessons": [
+        19,
+        20
+      ],
+      "sourceGroup": "NCE1-19",
+      "snapshotKey": "nce-course-loop-v1:NCE1-19",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-19",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n19-current-state",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-21",
+      "book": "NCE1",
+      "lessons": [
+        21,
+        22
+      ],
+      "sourceGroup": "NCE1-21",
+      "snapshotKey": "nce-course-loop-v1:NCE1-21",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-21",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n21-possessive-owner",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-23",
+      "book": "NCE1",
+      "lessons": [
+        23,
+        24
+      ],
+      "sourceGroup": "NCE1-23",
+      "snapshotKey": "nce-course-loop-v1:NCE1-23",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-23",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n23-plural-request",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-25",
+      "book": "NCE1",
+      "lessons": [
+        25,
+        26
+      ],
+      "sourceGroup": "NCE1-25",
+      "snapshotKey": "nce-course-loop-v1:NCE1-25",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-25",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n25-introduce-item",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-27",
+      "book": "NCE1",
+      "lessons": [
+        27,
+        28
+      ],
+      "sourceGroup": "NCE1-27",
+      "snapshotKey": "nce-course-loop-v1:NCE1-27",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-27",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n27-plural-existence",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-29",
+      "book": "NCE1",
+      "lessons": [
+        29,
+        30
+      ],
+      "sourceGroup": "NCE1-29",
+      "snapshotKey": "nce-course-loop-v1:NCE1-29",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-29",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n29-must-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-31",
+      "book": "NCE1",
+      "lessons": [
+        31,
+        32
+      ],
+      "sourceGroup": "NCE1-31",
+      "snapshotKey": "nce-course-loop-v1:NCE1-31",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-31",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n31-action-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-33",
+      "book": "NCE1",
+      "lessons": [
+        33,
+        34
+      ],
+      "sourceGroup": "NCE1-33",
+      "snapshotKey": "nce-course-loop-v1:NCE1-33",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-33",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n33-plural-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-35",
+      "book": "NCE1",
+      "lessons": [
+        35,
+        36
+      ],
+      "sourceGroup": "NCE1-35",
+      "snapshotKey": "nce-course-loop-v1:NCE1-35",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-35",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n35-location-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-37",
+      "book": "NCE1",
+      "lessons": [
+        37,
+        38
+      ],
+      "sourceGroup": "NCE1-37",
+      "snapshotKey": "nce-course-loop-v1:NCE1-37",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-37",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n37-current-action",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-39",
+      "book": "NCE1",
+      "lessons": [
+        39,
+        40
+      ],
+      "sourceGroup": "NCE1-39",
+      "snapshotKey": "nce-course-loop-v1:NCE1-39",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-39",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n39-ask-disposal",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-41",
+      "book": "NCE1",
+      "lessons": [
+        41,
+        42
+      ],
+      "sourceGroup": "NCE1-41",
+      "snapshotKey": "nce-course-loop-v1:NCE1-41",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-41",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n41-quantity-unit",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-43",
+      "book": "NCE1",
+      "lessons": [
+        43,
+        44
+      ],
+      "sourceGroup": "NCE1-43",
+      "snapshotKey": "nce-course-loop-v1:NCE1-43",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-43",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n43-stock-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-45",
+      "book": "NCE1",
+      "lessons": [
+        45,
+        46
+      ],
+      "sourceGroup": "NCE1-45",
+      "snapshotKey": "nce-course-loop-v1:NCE1-45",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-45",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n45-ability-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-47",
+      "book": "NCE1",
+      "lessons": [
+        47,
+        48
+      ],
+      "sourceGroup": "NCE1-47",
+      "snapshotKey": "nce-course-loop-v1:NCE1-47",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-47",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n47-ask-preference",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-49",
+      "book": "NCE1",
+      "lessons": [
+        49,
+        50
+      ],
+      "sourceGroup": "NCE1-49",
+      "snapshotKey": "nce-course-loop-v1:NCE1-49",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-49",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n49-preference-statement",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-51",
+      "book": "NCE1",
+      "lessons": [
+        51,
+        52
+      ],
+      "sourceGroup": "NCE1-51",
+      "snapshotKey": "nce-course-loop-v1:NCE1-51",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-51",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n51-origin-statement",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-53",
+      "book": "NCE1",
+      "lessons": [
+        53,
+        54
+      ],
+      "sourceGroup": "NCE1-53",
+      "snapshotKey": "nce-course-loop-v1:NCE1-53",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-53",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n53-third-person-positive",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-55",
+      "book": "NCE1",
+      "lessons": [
+        55,
+        56
+      ],
+      "sourceGroup": "NCE1-55",
+      "snapshotKey": "nce-course-loop-v1:NCE1-55",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-55",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n55-routine-agreement",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-57",
+      "book": "NCE1",
+      "lessons": [
+        57,
+        58
+      ],
+      "sourceGroup": "NCE1-57",
+      "snapshotKey": "nce-course-loop-v1:NCE1-57",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-57",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n57-habit-or-current",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-59",
+      "book": "NCE1",
+      "lessons": [
+        59,
+        60
+      ],
+      "sourceGroup": "NCE1-59",
+      "snapshotKey": "nce-course-loop-v1:NCE1-59",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-59",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n59-stock-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-61",
+      "book": "NCE1",
+      "lessons": [
+        61,
+        62
+      ],
+      "sourceGroup": "NCE1-61",
+      "snapshotKey": "nce-course-loop-v1:NCE1-61",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-61",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n61-ask-condition",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-63",
+      "book": "NCE1",
+      "lessons": [
+        63,
+        64
+      ],
+      "sourceGroup": "NCE1-63",
+      "snapshotKey": "nce-course-loop-v1:NCE1-63",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-63",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n63-negative-command",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-65",
+      "book": "NCE1",
+      "lessons": [
+        65,
+        66
+      ],
+      "sourceGroup": "NCE1-65",
+      "snapshotKey": "nce-course-loop-v1:NCE1-65",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-65",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n65-clock-obligation",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-67",
+      "book": "NCE1",
+      "lessons": [
+        67,
+        68
+      ],
+      "sourceGroup": "NCE1-67",
+      "snapshotKey": "nce-course-loop-v1:NCE1-67",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-67",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n67-past-be-statement",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-69",
+      "book": "NCE1",
+      "lessons": [
+        69,
+        70
+      ],
+      "sourceGroup": "NCE1-69",
+      "snapshotKey": "nce-course-loop-v1:NCE1-69",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-69",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n69-past-existence",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-71",
+      "book": "NCE1",
+      "lessons": [
+        71,
+        72
+      ],
+      "sourceGroup": "NCE1-71",
+      "snapshotKey": "nce-course-loop-v1:NCE1-71",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-71",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n71-regular-past",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-73",
+      "book": "NCE1",
+      "lessons": [
+        73,
+        74
+      ],
+      "sourceGroup": "NCE1-73",
+      "snapshotKey": "nce-course-loop-v1:NCE1-73",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-73",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n73-past-event",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-75",
+      "book": "NCE1",
+      "lessons": [
+        75,
+        76
+      ],
+      "sourceGroup": "NCE1-75",
+      "snapshotKey": "nce-course-loop-v1:NCE1-75",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-75",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n75-past-when",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-77",
+      "book": "NCE1",
+      "lessons": [
+        77,
+        78
+      ],
+      "sourceGroup": "NCE1-77",
+      "snapshotKey": "nce-course-loop-v1:NCE1-77",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-77",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n77-past-clock",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-79",
+      "book": "NCE1",
+      "lessons": [
+        79,
+        80
+      ],
+      "sourceGroup": "NCE1-79",
+      "snapshotKey": "nce-course-loop-v1:NCE1-79",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-79",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n79-must-go-purpose",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-81",
+      "book": "NCE1",
+      "lessons": [
+        81,
+        82
+      ],
+      "sourceGroup": "NCE1-81",
+      "snapshotKey": "nce-course-loop-v1:NCE1-81",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-81",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n81-past-have-event",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-83",
+      "book": "NCE1",
+      "lessons": [
+        83,
+        84
+      ],
+      "sourceGroup": "NCE1-83",
+      "snapshotKey": "nce-course-loop-v1:NCE1-83",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-83",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n83-perfect-completion",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-85",
+      "book": "NCE1",
+      "lessons": [
+        85,
+        86
+      ],
+      "sourceGroup": "NCE1-85",
+      "snapshotKey": "nce-course-loop-v1:NCE1-85",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-85",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n85-completed-now",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-87",
+      "book": "NCE1",
+      "lessons": [
+        87,
+        88
+      ],
+      "sourceGroup": "NCE1-87",
+      "snapshotKey": "nce-course-loop-v1:NCE1-87",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-87",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n87-completion-check",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-89",
+      "book": "NCE1",
+      "lessons": [
+        89,
+        90
+      ],
+      "sourceGroup": "NCE1-89",
+      "snapshotKey": "nce-course-loop-v1:NCE1-89",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-89",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n89-ongoing-duration-question",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-91",
+      "book": "NCE1",
+      "lessons": [
+        91,
+        92
+      ],
+      "sourceGroup": "NCE1-91",
+      "snapshotKey": "nce-course-loop-v1:NCE1-91",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-91",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n91-future-arrangement",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-93",
+      "book": "NCE1",
+      "lessons": [
+        93,
+        94
+      ],
+      "sourceGroup": "NCE1-93",
+      "snapshotKey": "nce-course-loop-v1:NCE1-93",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-93",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n93-journey-time",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-95",
+      "book": "NCE1",
+      "lessons": [
+        95,
+        96
+      ],
+      "sourceGroup": "NCE1-95",
+      "snapshotKey": "nce-course-loop-v1:NCE1-95",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-95",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n95-had-better-advice",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-97",
+      "book": "NCE1",
+      "lessons": [
+        97,
+        98
+      ],
+      "sourceGroup": "NCE1-97",
+      "snapshotKey": "nce-course-loop-v1:NCE1-97",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-97",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n97-possessive-pronoun",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-99",
+      "book": "NCE1",
+      "lessons": [
+        99,
+        100
+      ],
+      "sourceGroup": "NCE1-99",
+      "snapshotKey": "nce-course-loop-v1:NCE1-99",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-99",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n99-think-clause",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-101",
+      "book": "NCE1",
+      "lessons": [
+        101,
+        102
+      ],
+      "sourceGroup": "NCE1-101",
+      "snapshotKey": "nce-course-loop-v1:NCE1-101",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-101",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n101-report-present",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-103",
+      "book": "NCE1",
+      "lessons": [
+        103,
+        104
+      ],
+      "sourceGroup": "NCE1-103",
+      "snapshotKey": "nce-course-loop-v1:NCE1-103",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-103",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n103-degree-boundary",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-105",
+      "book": "NCE1",
+      "lessons": [
+        105,
+        106
+      ],
+      "sourceGroup": "NCE1-105",
+      "snapshotKey": "nce-course-loop-v1:NCE1-105",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-105",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n105-own-want",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-107",
+      "book": "NCE1",
+      "lessons": [
+        107,
+        108
+      ],
+      "sourceGroup": "NCE1-107",
+      "snapshotKey": "nce-course-loop-v1:NCE1-107",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-107",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n107-comparative-form",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-109",
+      "book": "NCE1",
+      "lessons": [
+        109,
+        110
+      ],
+      "sourceGroup": "NCE1-109",
+      "snapshotKey": "nce-course-loop-v1:NCE1-109",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-109",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n109-small-quantity",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-111",
+      "book": "NCE1",
+      "lessons": [
+        111,
+        112
+      ],
+      "sourceGroup": "NCE1-111",
+      "snapshotKey": "nce-course-loop-v1:NCE1-111",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-111",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n111-degree-comparison",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-113",
+      "book": "NCE1",
+      "lessons": [
+        113,
+        114
+      ],
+      "sourceGroup": "NCE1-113",
+      "snapshotKey": "nce-course-loop-v1:NCE1-113",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-113",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n113-zero-reference",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-115",
+      "book": "NCE1",
+      "lessons": [
+        115,
+        116
+      ],
+      "sourceGroup": "NCE1-115",
+      "snapshotKey": "nce-course-loop-v1:NCE1-115",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-115",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n115-person-thing",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-117",
+      "book": "NCE1",
+      "lessons": [
+        117,
+        118
+      ],
+      "sourceGroup": "NCE1-117",
+      "snapshotKey": "nce-course-loop-v1:NCE1-117",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-117",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n117-past-in-progress",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-119",
+      "book": "NCE1",
+      "lessons": [
+        119,
+        120
+      ],
+      "sourceGroup": "NCE1-119",
+      "snapshotKey": "nce-course-loop-v1:NCE1-119",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-119",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n119-earlier-completion",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-121",
+      "book": "NCE1",
+      "lessons": [
+        121,
+        122
+      ],
+      "sourceGroup": "NCE1-121",
+      "snapshotKey": "nce-course-loop-v1:NCE1-121",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-121",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n121-human-subject",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-123",
+      "book": "NCE1",
+      "lessons": [
+        123,
+        124
+      ],
+      "sourceGroup": "NCE1-123",
+      "snapshotKey": "nce-course-loop-v1:NCE1-123",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-123",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n123-omit-person-object",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-125",
+      "book": "NCE1",
+      "lessons": [
+        125,
+        126
+      ],
+      "sourceGroup": "NCE1-125",
+      "snapshotKey": "nce-course-loop-v1:NCE1-125",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-125",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n125-present-have-to",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-127",
+      "book": "NCE1",
+      "lessons": [
+        127,
+        128
+      ],
+      "sourceGroup": "NCE1-127",
+      "snapshotKey": "nce-course-loop-v1:NCE1-127",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-127",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n127-present-strong-state",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-129",
+      "book": "NCE1",
+      "lessons": [
+        129,
+        130
+      ],
+      "sourceGroup": "NCE1-129",
+      "snapshotKey": "nce-course-loop-v1:NCE1-129",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-129",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n129-past-strong-state",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-131",
+      "book": "NCE1",
+      "lessons": [
+        131,
+        132
+      ],
+      "sourceGroup": "NCE1-131",
+      "snapshotKey": "nce-course-loop-v1:NCE1-131",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-131",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n131-future-possibility",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-133",
+      "book": "NCE1",
+      "lessons": [
+        133,
+        134
+      ],
+      "sourceGroup": "NCE1-133",
+      "snapshotKey": "nce-course-loop-v1:NCE1-133",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-133",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n133-report-frame",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-135",
+      "book": "NCE1",
+      "lessons": [
+        135,
+        136
+      ],
+      "sourceGroup": "NCE1-135",
+      "snapshotKey": "nce-course-loop-v1:NCE1-135",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-135",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n135-reported-possibility",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-137",
+      "book": "NCE1",
+      "lessons": [
+        137,
+        138
+      ],
+      "sourceGroup": "NCE1-137",
+      "snapshotKey": "nce-course-loop-v1:NCE1-137",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-137",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n137-future-condition",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-139",
+      "book": "NCE1",
+      "lessons": [
+        139,
+        140
+      ],
+      "sourceGroup": "NCE1-139",
+      "snapshotKey": "nce-course-loop-v1:NCE1-139",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-139",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n139-indirect-whether",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-141",
+      "book": "NCE1",
+      "lessons": [
+        141,
+        142
+      ],
+      "sourceGroup": "NCE1-141",
+      "snapshotKey": "nce-course-loop-v1:NCE1-141",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-141",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n141-passive-present",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce1-143",
+      "book": "NCE1",
+      "lessons": [
+        143,
+        144
+      ],
+      "sourceGroup": "NCE1-143",
+      "snapshotKey": "nce-course-loop-v1:NCE1-143",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-143",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-n143-passive-perfect",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce2-1",
+      "book": "NCE2",
+      "lessons": [
+        1
+      ],
+      "sourceGroup": "NCE2-1",
+      "snapshotKey": "nce-course-loop-v1:NCE2-1",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE2-1",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-nce2-001-statement-order",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce2-2",
+      "book": "NCE2",
+      "lessons": [
+        2
+      ],
+      "sourceGroup": "NCE2-2",
+      "snapshotKey": "nce-course-loop-v1:NCE2-2",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE2-2",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-nce2-002-habit-now",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce2-3",
+      "book": "NCE2",
+      "lessons": [
+        3
+      ],
+      "sourceGroup": "NCE2-3",
+      "snapshotKey": "nce-course-loop-v1:NCE2-3",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE2-3",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-nce2-003-dated-sequence",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce2-4",
+      "book": "NCE2",
+      "lessons": [
+        4
+      ],
+      "sourceGroup": "NCE2-4",
+      "snapshotKey": "nce-course-loop-v1:NCE2-4",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE2-4",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-nce2-004-present-result",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce2-5",
+      "book": "NCE2",
+      "lessons": [
+        5
+      ],
+      "sourceGroup": "NCE2-5",
+      "snapshotKey": "nce-course-loop-v1:NCE2-5",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE2-5",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-nce2-005-closed-past",
+      "actualFactoryFirstSubmitCorrect": true
+    },
+    {
+      "courseId": "nce2-6",
+      "book": "NCE2",
+      "lessons": [
+        6
+      ],
+      "sourceGroup": "NCE2-6",
+      "snapshotKey": "nce-course-loop-v1:NCE2-6",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE2-6",
+      "questionCount": 18,
+      "firstQuestionId": "diagnostic-nce2-006-reference-chain",
+      "actualFactoryFirstSubmitCorrect": true
+    }
+  ],
+  "learnerAcceptance": "not-inferred"
+}
