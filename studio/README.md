@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## Current release v45 - Conservative grammar material exposure
+## Current release v47 — NCE1 72 finite groups and the main learning entry
+
+Runtime `d717bad909d889fd305d667bd1d8530883aaf23a`, [fixed deployment](https://4b0b3e3c.finn-english-studio.pages.dev), [production learning home](https://finn-english-studio.pages.dev/map/). NCE1 lessons1–144 have72 paired groups/1,296 finite closed tasks; mini content covers partial targets in lessons1–36. Warmup exits directly to formal1–2; alphabet is optional. Current drafts, failed-save retry, separate corrections and the selected continuation passed7 production Chrome groups with0 Runtime exceptions. Both origins passed60 audio hashes and60 HEAD checks each. This does not complete all61 requirements, four skills or real learner validation.
+
+[Scope, evidence and remaining work](docs/new-user-main-route-v47.md).
+
+## Previously published v45 - Conservative grammar material exposure
 
 Runtime `7b7c1283d12f0c6d784478cda8353080598f6980`, [fixed deployment](https://64ce5c8b.finn-english-studio.pages.dev). Complete displayed-material identity survives the bounded twelve-attempt tail; old missing histories remain unknown and repeated banks count only as familiar review.420 material boundaries,672 evidence checks and13 formal package UI checks pass; original168 canonical answers remain unchanged.
 
