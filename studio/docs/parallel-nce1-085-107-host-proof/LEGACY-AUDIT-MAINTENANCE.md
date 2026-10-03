@@ -1,6 +1,6 @@
 # Test-only legacy and inventory maintenance
 
-The immutable integration base is `9d34b1f35aaf9ecfca3e534c5ecb953e46551a22`. This change updates tests and derived inventory records for 54 actual registered groups; it does not modify model, video, placement, stage assessment, production registry, interfaces, selectors, or frozen author content.
+The final integration base is `7b7c1283d12f0c6d784478cda8353080598f6980`, retaining the latest grammar exposure and Today changes after a conflict-free rebase. The earlier test-maintenance checkpoint used `9d34b1f35aaf9ecfca3e534c5ecb953e46551a22`; its measured history is preserved below. This change updates tests and derived inventory records for 54 actual registered groups; it does not modify model, video, placement, stage assessment, production registry, interfaces, selectors, or frozen author content.
 
 ## Baseline diagnosis
 
@@ -19,7 +19,7 @@ Diagnostic records remain in `/tmp/nce51-pristine-audit-check.log`, `/tmp/nce51-
 The initial 51-binding candidate run of the eight legacy test files passed 76 of 78 assertions. Two assertions were obsolete under capabilities already present in the fresh base:
 
 - Today includes `placement:offer` with `kind: 'course'`, so counting every task of that kind produced two results. The test now selects textbook recommendations with both `kind === 'course'` and the `course:` ID prefix, then retains the exact count of one, destination URL, and state immutability checks. The placement offer remains independent.
-- The model byte comparison was pinned to `ff2cedbb7f315f00862e6f2151e8c18732571bac`, which predates the authorized `video` source kind. The test now pins the exact fresh base above and still compares the entire file byte for byte. Its default-export, state-sequence, source, hint, correction, review, and envelope assertions remain.
+- The model byte comparison was pinned to `ff2cedbb7f315f00862e6f2151e8c18732571bac`, which predates the authorized `video` source kind. The test now pins the exact earlier fresh base `9d34b1f35aaf9ecfca3e534c5ecb953e46551a22` and still compares the entire file byte for byte. Its default-export, state-sequence, source, hint, correction, review, and envelope assertions remain. The model is byte-identical in the final `7b7c1283` base, so this immutable byte guard remains valid.
 
 ## Changed files
 
@@ -31,7 +31,15 @@ The initial 51-binding candidate run of the eight legacy test files passed 76 of
 
 `course-loop/audit.mjs` is unchanged. Its normal generation records 276 teaching groups, 54 registered groups, 222 unregistered groups, 108 associated textbook course numbers, and 972 registered tasks. All 276 groups retain `approvedFiveStepLoop = not-established-per-lesson`; registration never implies learner acceptance, natural retention, mastery, or learning gain. IELTS inventory remains 29 sessions and 126 distinct materials.
 
-## Final validation
+## Prior validation on the 9d34b1f checkpoint
+
+The fully wired 54-group candidate passed all 78 legacy assertions and all 7 audit assertions before the final rebase. That earlier pass is historical evidence; the named TAP files below were subsequently overwritten with a new run against the final base.
+
+## Final validation on the 7b7c1283 base
+
+The same candidate tree was rechecked after rebasing onto `7b7c1283d12f0c6d784478cda8353080598f6980`. Before rerunning tests, `node course-loop/audit.mjs --check` passed. The canonical coverage files and source provenance already matched actual sources, so no derived-file regeneration or audit-tool edits were required at this checkpoint.
+
+The current production model SHA-256 is `4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57`. Independent byte comparisons confirmed equality with both the earlier `9d34b1f` base and final `7b7c1283` base; no production model change was made.
 
 The eight legacy files are `batch-01/test-content.mjs`, `test-correction-feedback.mjs`, `test-final-nationality.mjs`, `test-model-compat.mjs`, `test-production-host.mjs`, and `batch-02/test-content.mjs`, `test-production-model.mjs`, `test-production-boundary.mjs`.
 

@@ -1,0 +1,58 @@
+{
+  "base": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "remoteHeadsVerifiedAt": "2026-10-03 00:23:20 UTC",
+  "remoteHeadsBoth": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "registeredGroups": 54,
+  "registeredTasks": 972,
+  "node": {
+    "sourceBoundaryExhaustion": 81,
+    "frozenAuthorContentSource": 111,
+    "legacy": 78,
+    "audit": 7,
+    "total": 277,
+    "failures": 0
+  },
+  "native": {
+    "current": 34,
+    "syntheticDelayed": 2,
+    "total": 36,
+    "exceptions": 0
+  },
+  "protectedBaseFiles": 406,
+  "frozenAuthorFiles": 158,
+  "sourceKindVideoPreserved": true,
+  "productionChanges": [
+    "studio/course-loop/registry.mjs",
+    "studio/course-loop/host-contract.d.ts",
+    "studio/app/course-loop-next.ts"
+  ],
+  "sourceMediaSelectedCourses": [
+    85,
+    95,
+    99,
+    107
+  ],
+  "nativeRecordCourses": [
+    83,
+    85,
+    89,
+    91,
+    95,
+    97,
+    99,
+    101,
+    107
+  ],
+  "noPushMergeDeploy": true,
+  "remainingUnverified": [
+    "natural24h/7d retention",
+    "human expression",
+    "audibility",
+    "physical phone",
+    "deployed release"
+  ],
+  "priorFrozenTrees": {
+    "061-083": "20de7af85962381a2b4737b3d479db150d3acbb6",
+    "037-059": "3b94546947e29befbcbf0de74ecacab521f64b2d"
+  }
+}

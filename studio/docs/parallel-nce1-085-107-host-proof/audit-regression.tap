@@ -2,45 +2,45 @@ TAP version 13
 # Subtest: coverage ledger is reproducible against hashed source files
 ok 1 - coverage ledger is reproducible against hashed source files
   ---
-  duration_ms: 3117.98175
+  duration_ms: 3267.936542
   type: 'test'
   ...
 # Subtest: all 348 course numbers map exactly once to 276 real groups; 168 maps and 108 accessible supplements remain distinct
 ok 2 - all 348 course numbers map exactly once to 276 real groups; 168 maps and 108 accessible supplements remain distinct
   ---
-  duration_ms: 5.25175
+  duration_ms: 8.846917
   type: 'test'
   ...
 # Subtest: pilot media locators match existing first-lesson source binding without copying or changing media
 ok 3 - pilot media locators match existing first-lesson source binding without copying or changing media
   ---
-  duration_ms: 1.246417
+  duration_ms: 1.255625
   type: 'test'
   ...
 # Subtest: grammar association is shared content, never falsely counted as 276 bespoke loops
 ok 4 - grammar association is shared content, never falsely counted as 276 bespoke loops
   ---
-  duration_ms: 1.37625
+  duration_ms: 1.570666
   type: 'test'
   ...
 # Subtest: actual registry derives registered inventory while original 42 bindings and 276 unaccepted loops remain distinct
 ok 5 - actual registry derives registered inventory while original 42 bindings and 276 unaccepted loops remain distinct
   ---
-  duration_ms: 40.820125
+  duration_ms: 32.634291
   type: 'test'
   ...
-# (node:22196) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
+# (node:23746) ExperimentalWarning: stripTypeScriptTypes is an experimental feature and might change at any time
 # (Use `node --trace-warnings ...` to show where the warning was created)
 # Subtest: IELTS support ledger enumerates current sample inventory and distinct materials rather than stale 20-session totals
 ok 6 - IELTS support ledger enumerates current sample inventory and distinct materials rather than stale 20-session totals
   ---
-  duration_ms: 225.247791
+  duration_ms: 234.484375
   type: 'test'
   ...
 # Subtest: source provenance includes real registry, each frozen lesson import and transitive inventory content
 ok 7 - source provenance includes real registry, each frozen lesson import and transitive inventory content
   ---
-  duration_ms: 27.736875
+  duration_ms: 34.702958
   type: 'test'
   ...
 1..7
@@ -51,4 +51,4 @@ ok 7 - source provenance includes real registry, each frozen lesson import and t
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 6036.029042
+# duration_ms 6826.727416

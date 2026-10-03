@@ -1,0 +1,35 @@
+PASS nine native selected courses keep independent draft keys through refresh
+PASS native Today has nine distinct pending links and no duplicate recommended task
+PASS ordinary native note survives selected course writes
+PASS actual downloaded backup includes all nine snapshots and sidecars
+PASS two native tabs save different course drafts without overwriting either or the note
+PASS nce1-85 original text/comic/real audio bind this selected lesson
+PASS nce1-95 original text/comic/real audio bind this selected lesson
+PASS nce1-99 original text/comic/real audio bind this selected lesson
+PASS nce1-107 original text/comic/real audio bind this selected lesson
+PASS establish explicit synthetic pending order after source activity
+PASS nce1-83 native pipeline saves originals and follows pending priority to nce1-85
+PASS nce1-85 native pipeline saves originals and follows pending priority to nce1-89
+PASS nce1-89 native pipeline saves originals and follows pending priority to nce1-91
+PASS nce1-91 native pipeline saves originals and follows pending priority to nce1-95
+PASS nce1-95 native pipeline saves originals and follows pending priority to nce1-97
+PASS nce1-97 native pipeline saves originals and follows pending priority to nce1-99
+PASS nce1-99 native pipeline saves originals and follows pending priority to nce1-101
+PASS nce1-101 native pipeline saves originals and follows pending priority to nce1-107
+PASS nce1-107 native pipeline saves originals and follows pending priority to nce1-109
+PASS normal current-course bridge nce1-83 to nce1-85 without another pending course
+PASS normal current-course bridge nce1-85 to nce1-87 without another pending course
+PASS normal current-course bridge nce1-89 to nce1-91 without another pending course
+PASS normal current-course bridge nce1-95 to nce1-97 without another pending course
+PASS normal current-course bridge nce1-97 to nce1-99 without another pending course
+PASS normal current-course bridge nce1-101 to nce1-103 without another pending course
+PASS normal current-course bridge nce1-107 to nce1-109 without another pending course
+PASS native imported pending backup restores nine course positions without deleting the ordinary note
+PASS native finished backup restore keeps nine original attempt sets and separate corrections
+PASS native restore retains future-content-version raw and blocks selected85
+PASS native restore retains foreign-course-envelope raw and blocks selected85
+PASS native restore retains foreign-correction-ID raw and blocks selected85
+PASS limited 320 CSS viewport selected85/97/107 and records avoid horizontal page overflow
+PASS limited 390 CSS viewport selected85/97/107 and records avoid horizontal page overflow
+PASS nine completed course receipts preserve map and FSRS grading boundaries
+{"proof":"/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-085-107-host/studio/work/parallel-nce1-085-107-host/native-QTRuJ3","passed":34,"failed":0,"exceptions":0,"driverExitedWithError":false}

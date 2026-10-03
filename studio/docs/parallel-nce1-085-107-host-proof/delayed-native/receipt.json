@@ -1,0 +1,335 @@
+{
+  "scope": "Local actual built classic/map app; fresh synthetic QA records; no storage injection or clock/audio fabrication",
+  "base": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "registeredCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35",
+    "nce1-37",
+    "nce1-39",
+    "nce1-41",
+    "nce1-43",
+    "nce1-45",
+    "nce1-47",
+    "nce1-49",
+    "nce1-51",
+    "nce1-53",
+    "nce1-55",
+    "nce1-57",
+    "nce1-59",
+    "nce1-61",
+    "nce1-63",
+    "nce1-65",
+    "nce1-67",
+    "nce1-69",
+    "nce1-71",
+    "nce1-73",
+    "nce1-75",
+    "nce1-77",
+    "nce1-79",
+    "nce1-81",
+    "nce1-83",
+    "nce1-85",
+    "nce1-87",
+    "nce1-89",
+    "nce1-91",
+    "nce1-93",
+    "nce1-95",
+    "nce1-97",
+    "nce1-99",
+    "nce1-101",
+    "nce1-103",
+    "nce1-105",
+    "nce1-107"
+  ],
+  "selectedNativeCourses": [
+    "nce1-83",
+    "nce1-85",
+    "nce1-89",
+    "nce1-91",
+    "nce1-95",
+    "nce1-97",
+    "nce1-99",
+    "nce1-101",
+    "nce1-107"
+  ],
+  "origin": "http://127.0.0.1:51681",
+  "proof": "/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-085-107-host/studio/work/parallel-nce1-085-107-host/native-pH7ec7",
+  "checks": [
+    {
+      "name": "native backdated QA file restores three due review-a banks using unchanged wall clock",
+      "ok": true,
+      "elapsedMs": 13837,
+      "detail": {
+        "details": [
+          {
+            "course": "nce1-107",
+            "bank": "review-a",
+            "independent": true,
+            "scheduledMs": 604800000,
+            "attempts": 15
+          },
+          {
+            "course": "nce1-97",
+            "bank": "review-a",
+            "independent": true,
+            "scheduledMs": 604800000,
+            "attempts": 15
+          },
+          {
+            "course": "nce1-85",
+            "bank": "review-a",
+            "independent": true,
+            "scheduledMs": 604800000,
+            "attempts": 15
+          }
+        ],
+        "syntheticImportedTimes": true,
+        "browserClockUnchanged": true,
+        "naturalRetention": "unverified"
+      }
+    },
+    {
+      "name": "native backdated QA file restores three due review-b banks using unchanged wall clock",
+      "ok": true,
+      "elapsedMs": 16417,
+      "detail": {
+        "details": [
+          {
+            "course": "nce1-107",
+            "bank": "review-b",
+            "independent": false,
+            "scheduledMs": 86400000,
+            "attempts": 18
+          },
+          {
+            "course": "nce1-97",
+            "bank": "review-b",
+            "independent": false,
+            "scheduledMs": 86400000,
+            "attempts": 18
+          },
+          {
+            "course": "nce1-85",
+            "bank": "review-b",
+            "independent": false,
+            "scheduledMs": 86400000,
+            "attempts": 18
+          }
+        ],
+        "syntheticImportedTimes": true,
+        "browserClockUnchanged": true,
+        "naturalRetention": "unverified"
+      }
+    }
+  ],
+  "passed": 2,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "RuntimeExceptions": [],
+  "requests": [
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BK7F-gcp.js",
+      "size": 3818641
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CD8-wfJ-.js",
+      "size": 4633464
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-BK7F-gcp.js",
+      "size": 3818641
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CD8-wfJ-.js",
+      "size": 4633464
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-BK7F-gcp.js",
+      "size": 3818641
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CD8-wfJ-.js",
+      "size": 4633464
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-BK7F-gcp.js",
+      "size": 3818641
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CD8-wfJ-.js",
+      "size": 4633464
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-BK7F-gcp.js",
+      "size": 3818641
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CD8-wfJ-.js",
+      "size": 4633464
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-BK7F-gcp.js",
+      "size": 3818641
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CD8-wfJ-.js",
+      "size": 4633464
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-BK7F-gcp.js",
+      "size": 3818641
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CD8-wfJ-.js",
+      "size": 4633464
+    }
+  ],
+  "sourceSha256": {
+    "course-loop/registry.mjs": "3477a554f8a496ebc83084d067c73e6b1a220f0ee675a20c5d99d011a5b7272f",
+    "course-loop/host-contract.d.ts": "476f4269c2a2a97bafd1032c7a9fca57dd1dccc76f393d13314630c5718c9b24",
+    "app/course-loop-next.ts": "19bf4d319584218126019d1b66a01ff6adac41a29d7d54d0d969613f8dd20d79",
+    "app/course-loop-progress.ts": "3fb5edb5a9ffdb7396709fb29c7e9e883f0483e05c95bc1cbfc9ac27a0e9eb85",
+    "app/course-loop-ui.tsx": "338bc1d8acca8358251d30071acd674fe35f1f6e2e3cf21ea2d60941b9d1aea2",
+    "app/today-practice.ts": "41405c141777507e96ba2bf77907c31cca5af776153846fff3979e8bb842493d",
+    "app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028",
+    "app/progress-file.ts": "67ef85cd106c87faf762442304afcc91f5ec8fadab0ae968eb5a852455ce5d10",
+    "app/progress-save.tsx": "cf79885ed63b938f45e87bde981ac9f83a5b7ec82a200f4a6fe56e910b287ec5"
+  },
+  "unverified": [
+    "published origin",
+    "natural24h/7d",
+    "physical phone",
+    "audibility",
+    "human expression",
+    "learning gain"
+  ],
+  "retries": []
+}

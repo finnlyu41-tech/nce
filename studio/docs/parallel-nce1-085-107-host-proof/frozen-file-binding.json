@@ -1,5 +1,5 @@
 {
-  "base": "9d34b1f35aaf9ecfca3e534c5ecb953e46551a22",
+  "base": "7b7c1283d12f0c6d784478cda8353080598f6980",
   "protectedSourceFilesUnchanged": {
     "studio/app/bilingual-text.tsx": "16871c581fc4ec71a108c6475439bfe48666917d63058e73b5a3d8e90c7372bd",
     "studio/app/capability-review-backup.ts": "b77fdedcf5b31b87262a1ffe2a9961e38dfb44ff4e06125fe192d99762a643fc",
@@ -104,15 +104,15 @@
     "studio/app/globals.css": "bbdbc57aec94117112b97bf01bc1b353e0fa256042986ca44be1ba280225d07b",
     "studio/app/grammar-clause-answer.ts": "0d531324fc1db45a1eee211ceda1ee30fe8b07e1f06393cece2fc2c2b51dd017",
     "studio/app/grammar-curriculum-clauses.ts": "22dad3f7c40ff06a9e0b79ed30f480b038b9e782e98a4c502bba975cbb592484",
-    "studio/app/grammar-curriculum-progress.ts": "27ba83fee8fc086e74fe9cfc41df43c4a2bc181dd01c28cfa7a33866fd8889ab",
+    "studio/app/grammar-curriculum-progress.ts": "20d50ca69d37f1cc2d3667774cc1265f024054cdbde0d12f432fcbf6186504cf",
     "studio/app/grammar-curriculum-remaining.ts": "130fcd7346a477c0074664797227054c48287599d605b5fadbf17ebc8955f879",
     "studio/app/grammar-curriculum-types.ts": "d7f959b220a8d65e238b4054f449ff60125dd3ea3c0915683f09b2bc4ef057b8",
-    "studio/app/grammar-curriculum-ui.tsx": "3cba74ec505851e9a5960fa594b9a65f9f28e4f0d304f284a46897ad5f6bd1af",
+    "studio/app/grammar-curriculum-ui.tsx": "34206c8d1d95ac7fce6a70e324c310258bc63001ef1bc9f3d8ccf491cdb17126",
     "studio/app/grammar-curriculum.css": "b3a40f3540a7ff1a35cccee76bf148c9abc383cc28952a40447335b6fb83c5d1",
     "studio/app/grammar-curriculum.ts": "ff786f00703f17f0d8c617c94bcaa6c8a22a5fc273a5ec12c6e5a54cdf724507",
     "studio/app/grammar-explanation-ui.tsx": "ba89741ceb3873269c0f98f2bdafa5e760cfca9892de391f8bdc51d7daf426c4",
     "studio/app/grammar-remaining-answer.ts": "0534bee364563b994b54a332a3fe5c46a1b9408e6d77fb0b9e627dd6a4217c7a",
-    "studio/app/grammar-workspace.tsx": "8ca437da09d3964417865537c7cebad391f52e92b2ed0bd799f292703e89caf9",
+    "studio/app/grammar-workspace.tsx": "d84af1b48ccc37794fa97af938e43c4a7a84ceb2c2c40af70be2a8ae2bff2ce1",
     "studio/app/home-screen.css": "0c1423b57a077d0b816f904eda13f64b575ac221022f6d46e354c0374326d4d2",
     "studio/app/ielts-blueprint-ui.tsx": "b0b7487874c21da35e80ec92843005f1b341a9e7ca6e92d819864192a61173ff",
     "studio/app/ielts-blueprint.css": "1a374571f951d830f16f55feef0301de94039ad2705a52b1b63b7637b09bbb2b",
@@ -198,7 +198,7 @@
     "studio/app/timer.tsx": "0e7d531e87d5ae993114bd5ac336e79b96b7af126238d016c0ba614e9f591177",
     "studio/app/today-practice-ui.tsx": "0ee905ac780c538efc9bf2e2c7a5e1591adce18508f319653234a96fffbd15bc",
     "studio/app/today-practice.css": "5cac23f7d2030a2d2919dfc6c1718a8bf38206cafe54fe2e90d052bf81e6ea56",
-    "studio/app/today-practice.ts": "b84bd3233159ca358aef5fce849cc7dd2200164938d336f1a734bdf5d012a405",
+    "studio/app/today-practice.ts": "41405c141777507e96ba2bf77907c31cca5af776153846fff3979e8bb842493d",
     "studio/app/use-classic-progress.ts": "a3e7f462600d76ec3106710d71c8686cd80ef7a25d8ac3ef15507b3ced3e84f6",
     "studio/app/use-reading-position.ts": "ca5b71158cfe2ebbd1d623c6ffca0ec77bb143453846df9768c37d9a999331dd",
     "studio/app/use-route.ts": "c3720741340f06bc9893656bfae152d0c091829edce10132566b35601928c42c",
@@ -568,5 +568,6 @@
     "studio/docs/parallel-nce1-097-107/waiting-97.png": "78434453db0907aa3b828e4c9aa429f799b5b56f1d370b41e3ea5aa93d19b475",
     "studio/docs/parallel-nce1-097-107/waiting-99.png": "e42b2b98b540b8882189b1fad967db6917553b14bb714ecde06560fa9023723a"
   },
-  "SourceKindVideoPreserved": true
+  "SourceKindVideoPreserved": true,
+  "previousTestedBase": "9d34b1f35aaf9ecfca3e534c5ecb953e46551a22"
 }
