@@ -1,0 +1,99 @@
+{
+  "reviewWasKeyBlind": true,
+  "closedCompared": 10,
+  "openUngraded": 5,
+  "results": [
+    {
+      "id": "mini-n1-31:guided",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-31:independent",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-31:repair",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-31:delayed-a",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-31:delayed-b",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-33:guided",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-33:independent",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-33:repair",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-33:delayed-a",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-33:delayed-b",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-35:guided",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-35:independent",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-35:repair",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-35:delayed-a",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-35:delayed-b",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    }
+  ],
+  "humanAcousticAudit": false,
+  "difficultyCalibrated": false
+}

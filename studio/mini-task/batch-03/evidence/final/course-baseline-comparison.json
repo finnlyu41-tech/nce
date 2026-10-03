@@ -1,0 +1,12 @@
+{
+  "comparison": "current candidate versus previously verified published baseline retained in frozen dependency evidence",
+  "publishedBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "baselineEvidence": "mini-task/batch-02/evidence/final/course-baseline-comparison.json",
+  "samePreExistingFailures": true,
+  "candidatePassed": 32,
+  "candidateFailed": 1,
+  "failed": [
+    "question IDs isolated across all owned courses and unregistered courses reject binding"
+  ],
+  "ownerSourcesAndTestsUnchanged": true
+}

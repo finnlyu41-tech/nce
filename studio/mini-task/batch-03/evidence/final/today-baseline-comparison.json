@@ -1,0 +1,18 @@
+{
+  "comparison": "current candidate versus previously verified published baseline retained in frozen dependency evidence",
+  "publishedBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "baselineEvidence": "mini-task/batch-02/evidence/final/today-baseline-comparison.json",
+  "samePreExistingFailures": true,
+  "candidatePassed": 44,
+  "candidateFailed": 6,
+  "failed": [
+    "empty state recommends only the first course and never seeds optional queues",
+    "manual unlock is access only; it adds no completion, review or repair",
+    "future-only map proof cannot advance the current course using wall-clock time",
+    "a delayed different grammar bank waits seven days before the next check",
+    "course fallback is last when present and never required when it would repeat the only task",
+    "all skipped recommendations expose an honest paused state and can restore"
+  ],
+  "ownerSourcesAndTestsUnchanged": true,
+  "modelOnly": "43/49; extra PASS is recommendation TypeScript check"
+}

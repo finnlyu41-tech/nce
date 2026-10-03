@@ -1,0 +1,23 @@
+{
+  "publisherReadonlyHead": "5ffaaf1a224790234236242b9e540a57d9680c0c",
+  "composedPatchBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "composition": "frozen unpublished batch02 plus batch03",
+  "readonlyGitApplyCheck": "PASS",
+  "publisherMutated": false,
+  "publishedDependency": false,
+  "candidateDependency": "06be41a9e3faf24c398abdea95ee8a2aa36438bd",
+  "firstThreeFreeze": "969976ec766e550373f4c7957c87f1ce9c9ad7b6",
+  "firstFiveProvenanceRowsEqual": true,
+  "existingFilesChanged": [
+    "studio/mini-task/content.ts",
+    "studio/mini-task/manifest.ts",
+    "studio/mini-task/package-audio.py",
+    "studio/mini-task/verify-audio.py"
+  ],
+  "newOwnedPaths": [
+    "studio/mini-task/audio-inventory.py",
+    "studio/mini-task/batch-03/"
+  ],
+  "sharedInterfacePatchSha256": "d7b1479efbd77b1b6f0650c9494fc013039b5cf81e3e148f47df1ffc7dc2389f",
+  "noPushMergeDeploy": true
+}

@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "inputScope": "No hints, references, accepted keys or model supplied. Text only; no human acoustic audit.",
+  "items": [
+    {
+      "id": "mini-n1-25:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a lamp in the room. The lamp is under the table. There is a cup on the table.",
+      "prompt": "你要找lamp。听完选一条位置确认，只写A/B/C：A on the table；B under the table；C in the cup。"
+    },
+    {
+      "id": "mini-n1-25:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a box under the desk. There is a camera in the box. The lamp is on the desk.",
+      "prompt": "相机应从哪里找？按材料选直接位置，只写A/B/C：A on the desk；B in the box；C on the lamp。"
+    },
+    {
+      "id": "mini-n1-25:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a cupboard near the door. There is a knife in the cupboard. The clean cup is on the table.",
+      "prompt": "要取knife，应确认哪个直接位置？只写A/B/C：A on the table；B near the cup；C in the cupboard。"
+    },
+    {
+      "id": "mini-n1-25:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "Jo: Is the bottle on the table? Rae: No. It is in the cupboard. The cup is on the table.",
+      "prompt": "已明确it指bottle。核对留言中的瓶子位置，只写A/B/C：A in the cupboard；B on the table；C under the table。"
+    },
+    {
+      "id": "mini-n1-25:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a large box on the shelf. There is a clean cup in the box. The dirty cup is under the table.",
+      "prompt": "你需要clean cup。按材料选它的直接位置，不选容器所在位置，只写A/B/C：A under the table；B on the shelf；C in the box。"
+    },
+    {
+      "id": "mini-n1-27:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "餐具便签\nThere are some plates on the table. They are clean.\nThere are some cups in the cupboard. They are dirty.",
+      "prompt": "要取干净的餐具，应选哪条领物信息？只写A/B/C：A dirty cups in the cupboard；B clean plates on the table；C clean cups on the table。"
+    },
+    {
+      "id": "mini-n1-27:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "工具间便签\nThere are some maps on the wall.\nThere are some boxes near the door. The tools are in the boxes. They are clean.",
+      "prompt": "伙伴需要tools，不是外面的boxes或墙上的maps。哪条确认与便签一致？只写A/B/C：A tools on the wall；B tools near the window；C tools in the boxes。"
+    },
+    {
+      "id": "mini-n1-27:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "展览准备便签\nThere are some bottles on the shelf.\nThere are some boxes near the window. The maps are in the boxes. They are old.",
+      "prompt": "伙伴需要maps，不是bottles或外面的boxes。哪条确认与便签一致？只写A/B/C：A maps in the boxes；B maps on the shelf；C maps on the window。"
+    },
+    {
+      "id": "mini-n1-27:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "数量未点清的库存便签\nThere are some cups in the cupboard. They are clean.\nThere are some bottles on the table.",
+      "prompt": "不能猜未写的数量。哪条库存说明被便签直接支持？只写A/B/C：A exactly two clean cups in the cupboard（恰好两个）；B some clean cups in the cupboard（若干）；C some clean bottles in the cupboard。"
+    },
+    {
+      "id": "mini-n1-27:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "等候区便签\nThere are some chairs near the window.\nThe boxes are under the table. The tickets are in the boxes. They are green.",
+      "prompt": "为了领green tickets，哪条位置确认正确？只写A/B/C：A tickets near the window；B tickets on the table；C tickets in the boxes。"
+    },
+    {
+      "id": "mini-n1-29:guided",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你把一个装书任务交给面前的伙伴。明确规则是先打开空盒子，再把书放进这个盒子。没有其他规定。",
+      "prompt": "口头说2句，先说明伙伴必须做的第一步，再给出第二步指令。让对方听清对象和先后，可以礼貌表达。"
+    },
+    {
+      "id": "mini-n1-29:independent",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你在入口向接手整理工作的伙伴说明规则：他/她先脱下自己的外套，再把同一件外套放进橱柜。橱柜不是装地图的盒子；不用关窗。",
+      "prompt": "口头说2句交接：第一句说明必须先做的动作；第二句指明同一件物品的下一步与正确位置。不要增加无关任务。"
+    },
+    {
+      "id": "mini-n1-29:repair",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你在收件台向接手整理工作的伙伴说明规则：他/她先读这封信（letter），再把同一封信放进盒子。信不放进橱柜；不用清理桌子。",
+      "prompt": "换一个情境口头说2句交接：说明必须先做的动作，再指明同一件物品的下一步与正确容器，不增加无关任务。"
+    },
+    {
+      "id": "mini-n1-29:delayed-a",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你向清理房间的接手人交接已确认规则：先关窗，再扫地。盒子可以保持原样，任务没有要求打开它。",
+      "prompt": "口头说2句，让接手人听清必须先完成什么，再给下一步指令。不要把没规定的盒子任务加进去。"
+    },
+    {
+      "id": "mini-n1-29:delayed-b",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "任务表：Ava负责打开窗；Ben负责清理桌子。你向协调员报告分工，然后当面对Ben给出他自己的指令。题设没有规定两人的先后，也没有性别信息。",
+      "prompt": "口头说3句：先明确每人的必须任务，再向Ben给出直接指令。别交换分工或编造先后。"
+    },
+    {
+      "id": "mini-n1-31:guided",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        31,
+        32
+      ],
+      "material": "给不在场伙伴的当前观察便签：Ben明确用he，现在 cutting paper（剪纸）；cat明确用it，现在 sleeping（睡觉）。伙伴只需要知道这两者现在的活动，没有原因或过去信息。",
+      "prompt": "写2句英文短讯，把两条当前观察传给伙伴。让他分清谁在做什么；不编造原因。"
+    },
+    {
+      "id": "mini-n1-31:independent",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        31,
+        32
+      ],
+      "material": "当前观察／Current note\nJo (she): washing a cup.\nDog (it): jumping over a box.\n旧便签／Old note: Dog — sleeping.\n只需向不在场伙伴传达当前两条观察。",
+      "prompt": "写2句英文联络短讯，以当前观察更新旧便签。保留两位主体、动作物品和动物路线，不把sleeping当现在事实。"
+    },
+    {
+      "id": "mini-n1-31:repair",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        31,
+        32
+      ],
+      "material": "当前观察／Current note\nSam (he): opening a box.\nCat (it): running across the grass.\n旧便签／Old note: Cat — sleeping.\n只需向不在场伙伴传达当前两条观察。",
+      "prompt": "换新观察写2句英文短讯，以当前信息更新旧便签。保留动作物品和动物路线，不复述旧状态。"
+    },
+    {
+      "id": "mini-n1-31:delayed-a",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        31,
+        32
+      ],
+      "material": "伙伴刚问起Ben（明确he）。你没有看到Ben当前在做什么；你只看到一只cat（it）现在 drinking water。伙伴知道he指Ben，不需要你猜Ben的活动。",
+      "prompt": "写2句英文回复：先询问Ben现在做什么，再说明你确实看到的猫的动作。不要替未知动作编答案。"
+    },
+    {
+      "id": "mini-n1-31:delayed-b",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        31,
+        32
+      ],
+      "material": "当前观察便签：Nora（明确she）现在 swimming across the river；一只dog（it）现在 sleeping。旧便签写Nora在河边walking，但当前观察已不同。",
+      "prompt": "给伙伴写2句更新短讯，分别报告当前人物和动物活动。保留横穿河流的路线，不把旧的沿岸走路当当前事实。"
+    },
+    {
+      "id": "mini-n1-33:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        33,
+        34
+      ],
+      "material": "The students are carrying a box. They are near the door. The nurses are checking a map.",
+      "prompt": "联络表登记students正在搬的物品：____。只写一个英文单数物品词，不填别组在核对的物品。"
+    },
+    {
+      "id": "mini-n1-33:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        33,
+        34
+      ],
+      "material": "The nurses are checking a map. The students are carrying a box. Mia and Leo are drawing a picture.",
+      "prompt": "要联络正在checking a map的那一组。联络表的复数身份词是____。只写一个英文词；不要填另一组或姓名。"
+    },
+    {
+      "id": "mini-n1-33:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        33,
+        34
+      ],
+      "material": "The nurses are washing cups. The students are checking a map. Nora and Sam are carrying a box.",
+      "prompt": "新口播中要联络正在checking a map的那一组。复数身份词是____。只写一个英文词，不沿用上题组别。"
+    },
+    {
+      "id": "mini-n1-33:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        33,
+        34
+      ],
+      "material": "Mia and Leo are walking along a path. The students are running across the grass. The nurses are sitting near the door.",
+      "prompt": "路线记录：Mia和Leo正沿着哪个对象走？只写一个英文名词：____。不填其他组横穿的对象。"
+    },
+    {
+      "id": "mini-n1-33:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        33,
+        34
+      ],
+      "material": "The nurses are carrying a box. The students are checking maps. Jo and Rae are washing cups.",
+      "prompt": "记录students正在核对的物品。只写一个英文名词，保留口播中的复数；不猜精确数量：____。"
+    },
+    {
+      "id": "mini-n1-35:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        35,
+        36
+      ],
+      "material": "来访说明\nThe library is beside the museum.\nThe visitors are going into the library.\nThe guides are in the museum.",
+      "prompt": "哪条理解有材料支持？只写A/B/C：A 图书馆在博物馆内部；B visitors正在进入图书馆；C guides正在走出博物馆。"
+    },
+    {
+      "id": "mini-n1-35:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        35,
+        36
+      ],
+      "material": "碰面留言\nThe students are coming out of the hall.\nThe teachers are going into the hall.\nThe hall is beside the park.",
+      "prompt": "同伴要辨认students当前动向，哪条对应留言？只写A/B/C：A 正在进入hall；B 已在park内部；C 正在从hall内向外移动。不要把过程改为已到达。"
+    },
+    {
+      "id": "mini-n1-35:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        35,
+        36
+      ],
+      "material": "出口联络便签\nThe nurses are coming out of the gym.\nThe visitors are going into the gym.\nThe gym is beside the station.",
+      "prompt": "新便签里nurses当前动向是哪条？只写A/B/C：A 正在从gym内向外移动；B 正在进入gym；C 已到station内部。不要猜到达状态。"
+    },
+    {
+      "id": "mini-n1-35:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        35,
+        36
+      ],
+      "material": "沿河观察留言\nJo and Rae are walking along the river bank.\nThe dogs are swimming across the river.\nThe cafe is beside the station.",
+      "prompt": "哪条保留两组的路线事实？只写A/B/C：A 两人横穿河流，狗沿岸游；B 两人已在station内部；C 两人沿岸走，狗横游河流。"
+    },
+    {
+      "id": "mini-n1-35:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        35,
+        36
+      ],
+      "material": "访客信息卡\nThe museum is between the library and the cafe.\nThe students are in the cafe.\nThe guide is walking across the square.",
+      "prompt": "哪条解释与卡上的明确事实相符？只写A/B/C：A museum在cafe内部；B museum在library与cafe之间；C guide正在沿square边缘走。"
+    }
+  ]
+}

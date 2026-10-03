@@ -1,0 +1,354 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "blind-to-keys",
+  "reviewType": "independent-text-only-content-review",
+  "input": "studio/mini-task/batch-03/blind-packet-last3.json",
+  "inputSha256": "d13ad6c025da04562b8bbe0972b5563f429e3832baa6846ea8c4e83588fd571c",
+  "inputSha256Scope": "首次读取原版完整盲包字节的SHA256。",
+  "inputScope": "仅读指定 blind-packet-last3.json；未读取源码、accepted、hint、reference、模型、旧 review 或音频；首三组冻结不动，只新增本文件。",
+  "completedItemCount": 15,
+  "limitations": [
+    "仅文字审查，不是音频听感审查；未试听音频，不评价语速、音质、重音、词尾或真实听辨。",
+    "未进行真人难度校准、等难验证、CEFR 标定、修复效果或真实学习效果测试；不能映射 IELTS band。",
+    "五道开放写作给独立自然例答，无分数，待人工核对；没有学习者产出或语言表现的测量证据。",
+    "未与任何 key 比对，未读取评分实现，不能验证自然等义例答会被评分接受。",
+    "素材差异评估仅在盲包内部；未核查外部来源、版权或全局原创性。"
+  ],
+  "mechanismChecks": [
+    {
+      "taskId": "mini-n1-31",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 均从 Current 而非 Old 选证据，报告人物正在做的动作物品及动物路径，保留两个主体；over box 与 across grass 的词汇/路径差别不等于难度一致。"
+    },
+    {
+      "taskId": "mini-n1-33",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 都由 checking a map 反查身份群体，修补题将目标归属从 nurses 改 students，使题内需重新绑定而不能沿用前题组别。"
+    },
+    {
+      "taskId": "mini-n1-35",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 均选择指定群体正在 coming out 的方向过程，排除另一组 going into 及未给出的到达旁邻地标；同框架近迁移，不宣称等难。"
+    }
+  ],
+  "summary": {
+    "answerability": "15/15 可从给定文字材料独立作答，未发现无解、关键矛盾或必要修订。",
+    "necessaryRevisionCount": 0,
+    "mergeAssessment": "文字内容盲审范围内可合并；开放例答待人工核对，结论不替代音频试听或真人校准。",
+    "currentVsOld": "31 的时间标签明确；未知 Ben 的动作应问，已观察猫的动作可报告；31 delayed-b 的 dog sleeping 是当前事实，不能机械将所有 sleeping 排除。",
+    "subjectActionPath": "主体、动作物品及路线均有题内足够证据；33 同动作换执行组，35 区分动态方向、静态关系及未给出的完成状态。",
+    "templateAssessment": "31/35 的 independent/repair 保留同型信息结构、换动作物品/路径或场所；33 保留同一查询动作但改关键主体归属。延迟题加入未知询问、复数数量边界、双主体路线或 between 关系，不仅换人名；仍不足以证明广泛迁移或真实学习效果。",
+    "publicBoundary": "只支持文字自洽、可答和机制对齐，不支持听感、适级校准、等难或 band 宣称。"
+  },
+  "items": [
+    {
+      "taskId": "mini-n1-31",
+      "itemId": "mini-n1-31:guided",
+      "answer": "Ben is cutting paper. The cat is sleeping.",
+      "review": {
+        "ambiguityExplanation": "Ben/he 和 cat/it 已明确，当前活动为剪纸及睡觉，题面两句和不编原因清楚，材料自洽。",
+        "informationProcessingMechanism": "保持两个主体与各自当前动作的对应，不加入未给出的原因或过去活动。",
+        "semanticMaterialDifference": "当前活动直接报告的基线；independent/repair 增加旧记录排除和路径。",
+        "difficultyPrerequisites": "需 is + -ing、cutting 的拼写、paper 及 sleeping；中文语境提供词义，未真人校准。",
+        "answerPolicy": "He is cutting paper. It is sleeping. 在题设指代明确时也可；可加 now，但不得编原因；不给分。",
+        "openResponseReview": "独立自然例答，无分数；留待人工按题意和语言核对。",
+        "academicGtBoundary": "日常观察/联络短讯适合作为 general-training 基础微技能；两句不覆盖完整 IELTS GT 写作任务，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "姓名/明确代词与自然缩写可等义，不应强制唯一字符串。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-31",
+      "itemId": "mini-n1-31:independent",
+      "answer": "Jo is washing a cup. The dog is jumping over a box.",
+      "review": {
+        "ambiguityExplanation": "Current 的两条观察明确，Old 的 dog sleeping 被标为旧信息，不与当前跳跃矛盾；over a box 的路线明确。",
+        "informationProcessingMechanism": "用时间标签选择当前证据，报告人物动作及物品，同时保留动物的 over 路径，排除旧 sleeping。",
+        "semanticMaterialDifference": "相较 guided 有时效过滤、物品和路径；与 repair 同框架，但动物路线 over 与 across 语义不同。",
+        "difficultyPrerequisites": "需 washing a cup、jumping over a box 及现在进行时；旧/新标签双语提供，未难度校准。",
+        "answerPolicy": "She is washing a cup. The dog is jumping over a box. 等自然两句也可；不能写现在睡觉或漏掉 over；无分数，待人工。",
+        "openResponseReview": "独立自然例答，无分数；留待人工按题意和语言核对。",
+        "academicGtBoundary": "日常观察/联络短讯适合作为 general-training 基础微技能；两句不覆盖完整 IELTS GT 写作任务，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "repair 同为按当前记录报告人物动作物品和动物路线，并排除旧 sleeping；未验证等难或修复效果。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-31",
+      "itemId": "mini-n1-31:repair",
+      "answer": "Sam is opening a box. The cat is running across the grass.",
+      "review": {
+        "ambiguityExplanation": "Current/Old 明确区分，cat 现在 running across grass、以前 sleeping 不矛盾；主语及路线足够。",
+        "informationProcessingMechanism": "与 independent 相同，选当前而非旧状态，并绑定人物动作物品与动物路径。",
+        "semanticMaterialDifference": "人物/动物/动作与路径换新；跨草地与跨盒子上方的路线差别有语义，不是只换名字；处理框架仍为受限复练。",
+        "difficultyPrerequisites": "需 opening a box、running across the grass、进行时与 running 拼写；未证明与 jumping 等难。",
+        "answerPolicy": "He is opening a box. It is running across the grass. 也可；不得把旧睡觉或其他路线当当前观察；无分数，待人工。",
+        "openResponseReview": "独立自然例答，无分数；留待人工按题意和语言核对。",
+        "academicGtBoundary": "日常观察/联络短讯适合作为 general-training 基础微技能；两句不覆盖完整 IELTS GT 写作任务，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "保持独立题的时效过滤、主体—动作—物品和动物路线绑定机制。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-31",
+      "itemId": "mini-n1-31:delayed-a",
+      "answer": "What is Ben doing now? The cat is drinking water.",
+      "review": {
+        "ambiguityExplanation": "没有 Ben 当前动作证据且明确需问，不应编答案；cat drinking water 是唯一已观察动作，两句任务清楚。",
+        "informationProcessingMechanism": "对未知主体发问，对已知主体报告证据；区分缺证据和已有观察。",
+        "semanticMaterialDifference": "从两条已知陈述切换为一问一答式联络，新增证据边界，非仅词项替换。",
+        "difficultyPrerequisites": "需现在进行时特殊问句及 drinking water；伙伴知道 he 指 Ben，可用 What is he doing now?；未校准。",
+        "answerPolicy": "What is he doing now? The cat is drinking water. 也成立；必须第一句询问未知动作、第二句报告猫，不替 Ben 编活动；无分数。",
+        "openResponseReview": "独立自然例答，无分数；留待人工按题意和语言核对。",
+        "academicGtBoundary": "日常观察/联络短讯适合作为 general-training 基础微技能；两句不覆盖完整 IELTS GT 写作任务，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "evidence-boundary-clear",
+          "detail": "明确不观察 Ben、仅观察猫，足以支持询问而非猜测。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-31",
+      "itemId": "mini-n1-31:delayed-b",
+      "answer": "Nora is swimming across the river. The dog is sleeping.",
+      "review": {
+        "ambiguityExplanation": "当前 Nora 横穿河流游泳，dog 睡觉；旧 Nora walking 被明确替换，两句和保留 across 规则清楚。",
+        "informationProcessingMechanism": "以当前观察替换旧人物活动，保持人与动物分工，并保留横穿路线。",
+        "semanticMaterialDifference": "旧信息从动物睡觉变为人物 walking，路线改 across river；dog sleeping 为当前有效状态，不能机械排除所有 sleeping。",
+        "difficultyPrerequisites": "需 swimming across the river、sleeping 和 is + -ing；swimming 拼写有先备要求，未校准。",
+        "answerPolicy": "She is swimming across the river. It is sleeping. 题设指代明确时可；不得漏 across 或复述旧沿岸 walking；無分数，待人工。",
+        "openResponseReview": "独立自然例答，无分数；留待人工按题意和语言核对。",
+        "academicGtBoundary": "日常观察/联络短讯适合作为 general-training 基础微技能；两句不覆盖完整 IELTS GT 写作任务，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "nonmechanical-old-filter",
+          "detail": "旧/新资格来自每题标签；本题 dog sleeping 是当前事实，不能沿前题把 sleeping 一律剔除。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-33",
+      "itemId": "mini-n1-33:guided",
+      "answer": "box",
+      "review": {
+        "ambiguityExplanation": "students 搬 a box、nurses 核对 a map；题面指定 students 正在搬的单数物品，答案唯一。They 通常回指前句 students。",
+        "informationProcessingMechanism": "按指定主体与 carrying 动作定位物品，排除别组动作物品。",
+        "semanticMaterialDifference": "主体→动作→物品的正向提取基线。",
+        "difficultyPrerequisites": "需 students、carrying、box、map 及不同群体绑定；未验证音频听辨。",
+        "answerPolicy": "只写 box；不填 map，数量格式为单数。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "文字中主体与动作明确，未试听以判断真实音频词汇、语速或区分度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-33",
+      "itemId": "mini-n1-33:independent",
+      "answer": "nurses",
+      "review": {
+        "ambiguityExplanation": "checking a map 唯一绑定 nurses；其他群体 carrying/drawing 不冲突。复数身份词、不写姓名的输出限制清楚。",
+        "informationProcessingMechanism": "由指定动作及物品反查执行群体的身份，不由题中最近姓名或另一组猜测。",
+        "semanticMaterialDifference": "由 guided 的主体→物品切换为动作/物品→主体，与 repair 同机制。",
+        "difficultyPrerequisites": "需 nurses、checking a map、群体角色词与复数拼写；未听辨或难度校准。",
+        "answerPolicy": "只写 nurses，保留复数；不填学生或姓名。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "repair 对同一 checking a map 查询换执行群体，要求重新绑定动作与身份，机制对齐。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-33",
+      "itemId": "mini-n1-33:repair",
+      "answer": "students",
+      "review": {
+        "ambiguityExplanation": "新口播明确 students checking a map，nurses washing cups、Nora/Sam carrying box；按当前材料 students 唯一。",
+        "informationProcessingMechanism": "与 independent 同为动作/物品→群体身份的反向定位，且抵抗直接沿用前题 nurses。",
+        "semanticMaterialDifference": "保留查询动作但换执行组与其他分工；不是只换人名，改变了关键动作归属。",
+        "difficultyPrerequisites": "需 students 的复数形式及当前关系重绑定；未验证与 nurses 等听辨负担。",
+        "answerPolicy": "只写 students，不沿用 nurses。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "目标动作归属改组，能在文字任务层面复检同一绑定机制；不证明真人学习效果。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-33",
+      "itemId": "mini-n1-33:delayed-a",
+      "answer": "path",
+      "review": {
+        "ambiguityExplanation": "Mia/Leo walking along a path；students 横穿 grass，nurses 坐 near door；题面指定沿着的对象，答案唯一。",
+        "informationProcessingMechanism": "按姓名群体与 along 路线定位对象，区分另一组 across 对象。",
+        "semanticMaterialDifference": "从搬运/核对物品改为路线关系的对象提取；沿着与横穿有语义约束。",
+        "difficultyPrerequisites": "需 along/across、path/grass 以及主体区分；未验证发音/实际听辨。",
+        "answerPolicy": "只写 path。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "different-relation-target",
+          "detail": "此题路线对象目标与 independent/repair 的身份词输出不同，不能据 bank 顺序宣称等难。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-33",
+      "itemId": "mini-n1-33:delayed-b",
+      "answer": "maps",
+      "review": {
+        "ambiguityExplanation": "students checking maps 是复数；nurses 搬 box，Jo/Rae 洗 cups，角色目标清楚。材料未给精确数量。",
+        "informationProcessingMechanism": "选择指定群体的动作物品并保留原复数，不凭空给精确数量。",
+        "semanticMaterialDifference": "回到正向群体→物品提取，强调 maps 复数与数量证据边界；checking 在前题已有暴露。",
+        "difficultyPrerequisites": "需 maps 与 map 区别、checking 和群体绑定；未验证复数结尾听辨。",
+        "answerPolicy": "只写 maps；map 不满足保留口播复数的明确要求，不能填精确数字。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-plural-unverified",
+          "detail": "文字明确 maps，未试听以验证复数词尾实际可辨；不应把文字判断当音频质量证据。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-35",
+      "itemId": "mini-n1-35:guided",
+      "answer": "B",
+      "review": {
+        "ambiguityExplanation": "library beside museum 与 visitors going into library、guides 静态 in museum 自洽；B 直接支持。A 将 beside 改为 inside，C 将静态 in 改为出去，均不受支持。",
+        "informationProcessingMechanism": "区分场所相邻关系、进入过程和静态所在，并绑定正确主体。",
+        "semanticMaterialDifference": "静态位置与动向的基础对比。",
+        "difficultyPrerequisites": "需 beside、in、going into 与主体 groups；中文选项减轻英文输出需求，未校准。",
+        "answerPolicy": "仅输出 B。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-35",
+      "itemId": "mini-n1-35:independent",
+      "answer": "C",
+      "review": {
+        "ambiguityExplanation": "students coming out of hall；teachers going into hall；hall beside park，不支持 students 已在 park 内。C 保留目标主体及移动过程。",
+        "informationProcessingMechanism": "按目标群体选择出/入方向，排除另一组相反方向及无证据完成到达。",
+        "semanticMaterialDifference": "加入目标组出、另一组入及旁邻地标，与 repair 同型。",
+        "difficultyPrerequisites": "需 coming out of、going into、beside 及过程/到达区别；题面明确防到达猜测。",
+        "answerPolicy": "仅输出 C。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "repair 同为目标组正在出来、另一组正在进去、邻近地标无到达证据。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-35",
+      "itemId": "mini-n1-35:repair",
+      "answer": "A",
+      "review": {
+        "ambiguityExplanation": "nurses coming out of gym；visitors going into gym；gym beside station。A 唯一保留护士动向，B 把另一组方向混入，C 无到达证据。",
+        "informationProcessingMechanism": "与 independent 同为目标主体出/入方向定位与过程/到达证据边界。",
+        "semanticMaterialDifference": "人物群体、建筑和地标换新，信息结构同型；支持受限复练。",
+        "difficultyPrerequisites": "需 coming out of/going into、gym/station 和主体区分；未证明等难。",
+        "answerPolicy": "仅输出 A。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "核心主体—方向—过程机制保持，换群体与场所不能自动证明真人修复。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-35",
+      "itemId": "mini-n1-35:delayed-a",
+      "answer": "C",
+      "review": {
+        "ambiguityExplanation": "Jo/Rae walking along river bank，dogs swimming across river，cafe beside station；C 保留两组路线，A 交换，B 无到达证据。",
+        "informationProcessingMechanism": "同时维持两组主体与各自 along/across 路线，排除交换或虚构终点。",
+        "semanticMaterialDifference": "由单组出/入转为两组路线联合判断，不是只换地名。",
+        "difficultyPrerequisites": "需 river bank 与 river、along/across 和两个主体绑定；未验证双关系负担。",
+        "answerPolicy": "仅输出 C。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "different-information-load",
+          "detail": "同时检查两组路线而非一组出入方向，改变处理负担，未进行等难验证。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-35",
+      "itemId": "mini-n1-35:delayed-b",
+      "answer": "B",
+      "review": {
+        "ambiguityExplanation": "museum between library/cafe，students in cafe，guide walking across square；B 明确支持。A 用内部位置替代 between，C 把 across 改沿边缘。",
+        "informationProcessingMechanism": "保持明示的建筑关系，区分 between/in 及 across 与沿边路线。",
+        "semanticMaterialDifference": "由运动主体选择切换为三建筑间的位置关系，旁带另一主体移动信息。",
+        "difficultyPrerequisites": "需 between、in、across 与场所实体绑定；题内即可解，不需地图或外部地理事实。",
+        "answerPolicy": "仅输出 B。",
+        "openResponseReview": "闭题内容独立推导，未与key核对。",
+        "academicGtBoundary": "common 基础语言与信息处理；非 Academic 专属材料或完整 IELTS Academic/GT 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "evidence-sufficient",
+          "detail": "卡片明确提供 between 的两个参照物，没有比例、距离或真实地理知识的缺口。"
+        }
+      ]
+    }
+  ]
+}
