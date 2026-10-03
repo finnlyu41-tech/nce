@@ -1,6 +1,15 @@
 # 句句有进步 · English Studio
 
-## Current release v53 — mini tasks49-60 with finite media packaging
+## Current release v54 — bounded chart comparison application
+
+Runtime `db7fba7cfcb5c0def8c7f99024aafb6368eedcb1`, [fixed deployment](https://3f7fe46f.finn-english-studio.pages.dev).
+
+An original comparisons chart application adds three progressive tasks,26 finite references/12 explicit near errors and one different-table independent paragraph. Correct unknown writing stays pending human review. Actual production eight chart groups and ten main/F6 groups pass, including native radio keyboard/whole-label operation, failed-IDB new-draft retention and recovery/refresh.168 canonical/158 accepted ordinary questions remain unchanged. Full2057-file online/offline package and both origins100 WAV GET/hash+HEAD remain exact. No score, official full Task1, human transfer or all61 completion claim.
+
+
+[Scope and verification](docs/grammar-chart-transfer-production-integration.md).
+
+## Previously published v53 — mini tasks49-60 with finite media packaging
 
 Runtime `3082e885fcbc8c6d261a750a59ef512e6f51a7bc`, [fixed deployment](https://d0778cfc.finn-english-studio.pages.dev).
 
