@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## Current release v49 — finite mini tasks for lessons37–48
+## Current release v50 — saved help, independent speech review and84 original senses
+
+Runtime `cecc2ec996c7f4da2a27d45bee406e5c66d7694c`, [fixed deployment](https://4b9dbf46.finn-english-studio.pages.dev). Hint-save failure/retry preserves help and take identity; Today keeps one independent due-speech link beside a course draft.24 original senses bring the finite collection to84 without changing FSRS.51 Today cases,3 save-component cases,6 native production combination groups and10 new-user/main/F6 groups pass with0 Runtime exceptions. Full2037-file online/offline packages and both public origins verified. Synthetic recording and due fixtures establish reliability only; human speech, natural delay, calibration and all61 requirements remain open.
+
+[Scope and verification](docs/speaking-vocabulary-v50.md).
+
+## Previously published v49 — finite mini tasks for lessons37–48
 
 Runtime `46ad498c87414a0372969c845d32db27047de3e9`, [fixed deployment](https://65c29962.finn-english-studio.pages.dev). Six new paired groups add30 finite materials and10 synthetic WAVs. Mini partial targets now cover1–48; open speaking/writing remain ungraded and await human review.26 model/15 audio cases, actual saved drafts/failed-save guard/file backup/exhaustion/offline playback,10 production online mini groups and10 formal main/F6 groups pass with0 Runtime exceptions. Both origins match80 WAV hashes and80 HEAD each. Natural delay, real learners, human acoustics and all61 requirements remain open.
 
