@@ -1,0 +1,9 @@
+# Tail and combined freeze
+
+Apply first commit d7d149c56926ea5a3f4c3171ce036b71f20d8b88 then this tail, or use the combined patch/bundle from original exact7b7c1283d12f0c6d784478cda8353080598f6980. First freeze is preserved. Complete local candidate branch codex/parallel-nce1-133-143; only exclusive content/test/docs changes.
+
+Tail imports ./parallel-nce1-133-143/lesson-nce1-{139,141,143}.mjs as complete modules for existing factory+matches. Narrow unions/register wiring is unified owner's task. Final full chain131→133→135→137→139→141→143. No143 successor is specified; no NCE1-145 exists. Preserve latest terminal continuation route and real chapter6→chapter7 project/member assessment prerequisites; no forcedNCE2unlock.
+
+Tail54 tasks,47 construction/7 recognition,54 key-free final blind answers plus85 variants,216 reasoned near misses,22/22 combined checks,5/5 source evidence,3 final real UI flows at390/320 and0 runtime errors. Final No climbers zero-rescue stem was independently re-solved; original blind pack retained. Combined108 tasks,193 blind variants,432 near misses,57/57 factory/source/scope,8/8 source evidence,6 real UI courses and0 runtime errors. Delay clock arithmetic/finite banks passed; natural24h/7d not run. RealSourcePanel internal LRC guard/comic/paired images/manifest hashes pass,143 final future uses text144 support because no complete audio endpoint exists.
+
+Incremental and combined patches/bundles have exact-base apply checks, sequential/combined byte-identical file hashes and verified bundles in external delivery.json/apply-check.json. No production registration/publication, push/merge/deploy, personal records or additional costs/permissions. Actual audibility, natural retention, physical phone/keyboard, human open-expression review, pronunciation, four skills and learning gain remain unverified. Bounded forms/recognition and cue-rich tasks must not be presented as autonomous general transfer.

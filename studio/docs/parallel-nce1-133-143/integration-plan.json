@@ -36,7 +36,8 @@
       "sourceEvidenceTests": 5,
       "realUiCourses": 3,
       "runtimeErrors": 0
-    }
+    },
+    "commit": "d7d149c56926ea5a3f4c3171ce036b71f20d8b88"
   },
   "secondBatch": {
     "courseIds": [
@@ -53,7 +54,19 @@
       "nce1-139": "nce1-141",
       "nce1-141": "nce1-143"
     },
-    "status": "authoring"
+    "status": "ready-frozen-local-candidate",
+    "validation": {
+      "tasks": 54,
+      "blindTasks": 54,
+      "blindVariants": 85,
+      "inputConstructionTasks": 47,
+      "choiceRecognitionTasks": 7,
+      "reasonedNearMisses": 216,
+      "factorySourceScopeTests": 22,
+      "sourceEvidenceTests": 5,
+      "realUiCourses": 3,
+      "runtimeErrors": 0
+    }
   },
   "terminalBoundary": {
     "lastUnit": "nce1-143",
@@ -98,5 +111,16 @@
     "pronunciation",
     "all four skills",
     "learning gain"
-  ]
+  ],
+  "combinedValidation": {
+    "tasks": 108,
+    "blindTasks": 108,
+    "blindVariants": 193,
+    "reasonedNearMisses": 432,
+    "factorySourceScopeTests": 57,
+    "sourceEvidenceTests": 8,
+    "realUiCourses": 6,
+    "runtimeErrors": 0,
+    "productionRegistryChanged": false
+  }
 }

@@ -1,0 +1,332 @@
+[
+  {
+    "courseId": "nce1-139",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。 部分题为情境选择，按完整选项作答；构句与选择分别提供证据。if/whether、自然缩写列入有限答案；what 作主语是已有主语疑问结构与间接问句的组合扩展，不冒充139–140原文直授。",
+    "questions": [
+      {
+        "id": "diagnostic-n139-indirect-whether",
+        "context": "现在客服正在记录客户尚未得到答案的问题：Is the line working? 客户想知道是否正常，不是在问原因。",
+        "prompt": "以 The customer wants to know 开头转述，保留现在时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n139-indirect-content",
+        "context": "编辑现在问 What are the children drawing? 同时明确知道他们在画画；只缺作品的内容。",
+        "prompt": "以 The editor wants to know 开头转述，保留 the children。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n139-indirect-time",
+        "context": "调度员现在知道船今天将出发，但时间未定。他的问题是 When will the boat leave?",
+        "prompt": "以 The dispatcher wants to know 开头转述，保留 will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n139-indirect-whether",
+        "context": "接待员现在问 Does the visitor need a ticket? 没有确认答案。",
+        "prompt": "用 The receptionist wants to know 转述，不改时态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：if/whether + 主语 + 谓语；保留当前报道和原命题。"
+      },
+      {
+        "id": "guided-n139-indirect-content",
+        "context": "经理现在知道工人正在停工，问 Why are the workers waiting? 是原因问题。",
+        "prompt": "用 The manager wants to know 转述，保留 the workers。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留未知种类；从句用陈述语序，what 作主语时不再添主语。"
+      },
+      {
+        "id": "guided-n139-indirect-time",
+        "context": "现在问朋友是否知道开场时间：Does Leo know when the show will start? 你直接向另一人发问，而不是转述 Leo 的愿望。",
+        "prompt": "写这一个直接问句，使用题中全部词语。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：区分 wants to know 陈述与 Does…know 问句；内层不倒装。"
+      },
+      {
+        "id": "independent-n139-indirect-whether",
+        "context": "药房记录：顾客现在问 Is this medicine safe for children? 没有在问安全的原因。选择准确转述。",
+        "prompt": "只选一整句。 不改写选项。",
+        "options": [
+          "The customer wants to know whether this medicine is safe for children.",
+          "The customer wants to know why this medicine is safe for children.",
+          "The customer wants to know whether is this medicine safe for children.",
+          "The customer knows this medicine is safe for children."
+        ]
+      },
+      {
+        "id": "independent-n139-indirect-content",
+        "context": "你正在跟 Maya 交谈。你知道她在写东西，但看不清内容。用 I want to know 表达你的问题；you 只指 Maya。",
+        "prompt": "写一个含 what 的陈述句，使用 you / write 的现在进行时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n139-indirect-time",
+        "context": "报告者现在不知道救援队何时会到，但确定他们会到。",
+        "prompt": "以 The reporter does not know 开头，使用 when / the rescue team / will arrive。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n139-indirect-whether",
+        "context": "保留上一轮首答和订正。下面是另一情境：售票员现在问 Are the seats free? 是核实座位是否免费，不问为什么。",
+        "prompt": "以 The clerk wants to know 开头转述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n139-indirect-content",
+        "context": "保留上一轮首答和订正。下面是另一情境：维修员现在问 What has damaged the cable? what 本身是未知的施事；不是询问是否损坏。",
+        "prompt": "用 The engineer wants to know 转述，保留现在完成时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n139-indirect-time",
+        "context": "保留上一轮首答和订正。下面是另一情境：现在你直接问 Ella 是否知道提交时间，不是替 Ella 转述。时间是报告未来完成的时间。",
+        "prompt": "使用 Does Ella know / when / the report / will be ready 写一个直接问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n139-indirect-whether",
+        "context": "调查记录区分两种未知：我们确定灯坏了，但不确定车门是否锁上。现仅转述后一个问题：Is the door locked?",
+        "prompt": "以 We want to know 开头，不谈灯或原因。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n139-indirect-content",
+        "context": "库房记录：管理员知道箱子已经送达，现在问里面是什么，不问它在哪。选择记录未知内容的一句。",
+        "prompt": "只选一整句。 不改写选项。",
+        "options": [
+          "The manager wants to know what is in the box.",
+          "The manager wants to know where the box is.",
+          "The manager wants to know if the box has arrived.",
+          "The manager knows what is in the box."
+        ]
+      },
+      {
+        "id": "review-a-n139-indirect-time",
+        "context": "Rosa 已得到离开的确认，她知道客人已经离开，却不知道昨天离开的时间；她现在向你表达这点。",
+        "prompt": "以 I do not know 开头，使用 when / the guests / left yesterday。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n139-indirect-whether",
+        "context": "夜班护士并未收到化验是否完成的结果。她的问题是 Have the lab assistants completed the tests? 现在由第三人称记录。",
+        "prompt": "用 The nurse wants to know 转述，保留现在完成主动。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n139-indirect-content",
+        "context": "同事听到噪声，已知道机器在响，现在问原因 Why is the machine making that noise?",
+        "prompt": "用 My colleague wants to know 转述，不改 machine 或时态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n139-indirect-time",
+        "context": "延期通知里写着：Jules 知道会议今天不会开始，但还不知道改期后何时开始。现在问 Jules 知不知道新时间。",
+        "prompt": "使用 Does Jules know when the meeting will start 写一个直接问句，不添加 today。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-141",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。 部分题为情境选择，按完整选项作答；构句与选择分别提供证据。自然缩写、时间位置及题目许可的 by 施事形式列入有限答案；被动问句与否定是已有 be 问/否结构的组合扩展，不冒充142原文直授。",
+    "questions": [
+      {
+        "id": "diagnostic-n141-passive-present",
+        "context": "维修记录明确写着：工作人员每周检查这部电梯，是每周重复执行的动作，不是目前状况。",
+        "prompt": "改成被动句，主句使用 The lift 开头（时间状语可前置），使用 check / every week，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n141-passive-past",
+        "context": "邮局日志明确：昨天工作人员把这封信送到了医院；不是今天，也不是信件主动送东西。",
+        "prompt": "主句使用 The letter 开头（时间状语可前置），用 deliver / to the hospital / yesterday 写一般过去被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n141-passive-scope",
+        "context": "事故日志：昨天工作人员没有通知乘客。明确是通知动作未发生，不是乘客没有通知别人。",
+        "prompt": "主句使用 The passengers 开头（时间状语可前置），用 tell / yesterday 写一般过去被动否定，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n141-passive-present",
+        "context": "值班表写明：工作人员每天清洗这些工具。需要写流程，非描述工具状态。",
+        "prompt": "主句使用 The tools 开头（时间状语可前置），使用 wash / every day 的一般现在被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：重复流程：受事 + is/are + 过去分词；保持单复数与时间。"
+      },
+      {
+        "id": "guided-n141-passive-past",
+        "context": "活动签到表确认：上周工作人员邀请了 Nina 参加展览；不知道工作人员的姓名。",
+        "prompt": "主句使用 Nina 开头（时间状语可前置），用 invite / to the exhibition / last week 的一般过去被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：已完成过去事件：受事 + was/were + 过去分词；角色与地点不交换。"
+      },
+      {
+        "id": "guided-n141-passive-scope",
+        "context": "现在核查昨天是否有人清点这些票，还不知道结果。需直接向同事发问。",
+        "prompt": "主句使用 Were the tickets 开头（时间状语可前置），使用 count / yesterday，写一般过去被动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：be 的问句顺序、not 范围与过去分词同时保留；受事不变施事。"
+      },
+      {
+        "id": "independent-n141-passive-present",
+        "context": "档案室流程：研究员每月扫描纸质记录。选择忠实记录受事与当前重复动作的句子。",
+        "prompt": "只选一整句。 不改写选项。",
+        "options": [
+          "The records are scanned every month.",
+          "The records scan every month.",
+          "The records were scanned last month.",
+          "The researchers are scanned every month."
+        ]
+      },
+      {
+        "id": "independent-n141-passive-past",
+        "context": "展馆两条日志：昨天工作人员移动了雕像；今天只检查照明。需记录昨天移动雕像这一事件。",
+        "prompt": "主句使用 The statue 开头（时间状语可前置），使用 move / yesterday 的一般过去被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n141-passive-scope",
+        "context": "医院规则：护士每晚给患者这些药。今天要核实规则是否如此，并非核实今晚某次动作。",
+        "prompt": "写一个一般现在被动直接问句，主句使用 Are the patients 开头（时间状语可前置），用 give / these medicines / every night。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n141-passive-present",
+        "context": "保留上一轮首答和订正。下面是另一情境：维修规程明确：技师定期修理这个泵。需要描述重复动作，非目前是否坏了。",
+        "prompt": "主句使用 The pump 开头（时间状语可前置），使用 repair / regularly 的一般现在被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n141-passive-past",
+        "context": "保留上一轮首答和订正。下面是另一情境：遗失物日志：昨天有人在车站找到了两只箱子。不能把找到的地点写成施事。",
+        "prompt": "主句使用 The cases 开头（时间状语可前置），用 find / at the station / yesterday 的一般过去被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n141-passive-scope",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨天搬运员搬了柜子，但没有搬钢琴。现只记录未发生的钢琴搬运动作。",
+        "prompt": "主句使用 The piano 开头（时间状语可前置），使用 move / yesterday 的一般过去被动否定，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n141-passive-present",
+        "context": "学校流程：每学期老师更换借书证；本学期尚未说明具体更换时间。选择当前重复流程的被动表达。",
+        "prompt": "只选一整句。 不改写选项。",
+        "options": [
+          "The library cards are replaced every term.",
+          "The library cards were replaced yesterday.",
+          "The teachers are replaced every term.",
+          "The library cards replace the teachers every term."
+        ]
+      },
+      {
+        "id": "review-a-n141-passive-past",
+        "context": "维修日志写着：A technician repaired the scanner on Monday. 扫描仪是被修对象，日志指出确切施事。",
+        "prompt": "用 The scanner 开头转成一般过去被动，保留 on Monday；可保留或省略 by a technician。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n141-passive-scope",
+        "context": "快递日志：昨天门卫收了包裹，却没有把包裹交给住户。现在要核实未交付这一动作是否确实没发生。",
+        "prompt": "写一个被动否定问句，主句使用 Was the parcel not 开头（时间状语可前置），使用 give / to the resident / yesterday；也可用 Wasn't 开头。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n141-passive-present",
+        "context": "维修计划说工作人员每半年检测烟雾报警器，不是描述报警器自己检测别人。",
+        "prompt": "主句使用 The smoke alarms 开头（时间状语可前置），用 test / every six months 的一般现在被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n141-passive-past",
+        "context": "港口日志确认：风暴昨天损坏了这个码头，工作人员今天仅拍照。现仅写昨天的损坏事件。",
+        "prompt": "主句使用 The pier 开头（时间状语可前置），用 damage / by the storm / yesterday 的一般过去被动，必须保留施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n141-passive-scope",
+        "context": "维护报告区分：灯泡昨天更换了，电池昨天没有更换。选择保留电池未更换事件的被动句。",
+        "prompt": "只选一整句。 不改写选项。",
+        "options": [
+          "The batteries were not replaced yesterday.",
+          "The batteries were replaced yesterday.",
+          "The bulbs were not replaced yesterday.",
+          "The batteries did not replace the bulbs yesterday."
+        ]
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-143",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。 部分题为情境选择，按完整选项作答；构句与选择分别提供证据。自然缩写、already/yet位置及题目许可的 by 施事形式列入有限答案；never、问句与未来否定是已有否定、疑问结构的组合扩展，不冒充144原文直授。",
+    "questions": [
+      {
+        "id": "diagnostic-n143-passive-perfect",
+        "context": "清洁进度没有写具体过去日期，只确认到现在已经把这些窗户擦好了。",
+        "prompt": "主句使用 The windows 开头（时间状语可前置），使用 clean / already，写现在完成被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n143-passive-not-yet",
+        "context": "餐厅确认：客人到现在还没有得到服务。仅描述现状，不加入将来承诺。",
+        "prompt": "主句使用 The guest 开头（时间状语可前置），使用 serve / yet，写现在完成被动否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n143-passive-future",
+        "context": "维修安排明确承诺明天有人修这个门。目前尚未修，但本题只记录明天安排。",
+        "prompt": "主句使用 The door 开头（时间状语可前置），用 repair / tomorrow，写 will 的将来被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n143-passive-perfect",
+        "context": "档案进度现在确认：这些照片已经被扫描，未提供具体过去日期。",
+        "prompt": "主句使用 The photographs 开头（时间状语可前置），用 scan / already 的现在完成被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：has/have + been + 过去分词；already 表示完成，保留受事。"
+      },
+      {
+        "id": "guided-n143-passive-not-yet",
+        "context": "捕捉记录：小狗现在仍失踪，直到现在还没被找到。不提供将来预测。",
+        "prompt": "主句使用 The dog 开头（时间状语可前置），用 find / yet，写现在完成被动否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：not/never 的时间与数量范围；保持 been 与分词，不改未来否定。"
+      },
+      {
+        "id": "guided-n143-passive-future",
+        "context": "发送安排：工作人员明晚将把报告发给董事。只需说明报告将被发送，不谈已经做了什么。",
+        "prompt": "主句使用 The report 开头（时间状语可前置），用 send / to the directors / tomorrow evening，写 will 将来被动。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：未来安排：受事 + will (not) be + 过去分词；不把完成结果与承诺交换。"
+      },
+      {
+        "id": "independent-n143-passive-perfect",
+        "context": "仓库记录两种进度：箱子已经打包，但标签到现在尚未打印。选择忠实表达已完成打包的一句。",
+        "prompt": "只选一整句。 不改写选项。",
+        "options": [
+          "The boxes have already been packed.",
+          "The boxes will be packed tomorrow.",
+          "The labels have already been printed.",
+          "The boxes have already packed the labels."
+        ]
+      },
+      {
+        "id": "independent-n143-passive-not-yet",
+        "context": "展览准备表：画已经挂好；展览说明到现在还没翻译。现仅记录说明的未完成情况。",
+        "prompt": "主句使用 The exhibition notes 开头（时间状语可前置），用 translate / yet，写现在完成被动否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n143-passive-future",
+        "context": "回收计划明确：旧电脑下周会被收走；旧显示器已经收走。只记录电脑的未来动作。",
+        "prompt": "主句使用 The old computers 开头（时间状语可前置），用 collect / next week，写 will 将来被动。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n143-passive-perfect",
+        "context": "保留上一轮首答和订正。下面是另一情境：门店进度只确认：这台收银机到现在已修好，不写具体过去日期。",
+        "prompt": "主句使用 The till 开头（时间状语可前置），用 repair / already 的现在完成被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n143-passive-not-yet",
+        "context": "保留上一轮首答和订正。下面是另一情境：售票核对：票到现在还没送出。只描述截至现在的否定，不承诺将来。",
+        "prompt": "主句使用 The tickets 开头（时间状语可前置），使用 send / yet 的现在完成被动否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n143-passive-future",
+        "context": "保留上一轮首答和订正。下面是另一情境：旅行安排：导游承诺明早有人来接游客；本题不要表达截至现在是否接过。",
+        "prompt": "主句使用 The visitors 开头（时间状语可前置），使用 meet / tomorrow morning 的 will 将来被动，不写施事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n143-passive-perfect",
+        "context": "订单页面确认付款已经收到，但商品还未发货。现在核实截至目前付款是否已经被收到。",
+        "prompt": "主句使用 Has the payment 开头（时间状语可前置），用 receive / already，写现在完成被动问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n143-passive-not-yet",
+        "context": "救援更新：到现在没有任何登山者获救。确定尚无人获救，不是只有部分未救，也不添加未来计划。",
+        "prompt": "主句使用 No climbers 开头，用 rescue / yet 写现在完成被动；No 明确表示零人，不添加另一处否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n143-passive-future",
+        "context": "两份处理单：护照已经寄出，签证申请明天才检查。选择忠实记录签证申请未来检查的一句。",
+        "prompt": "只选一整句。 不改写选项。",
+        "options": [
+          "The visa applications will be checked tomorrow.",
+          "The visa applications have already been checked.",
+          "The passports will be sent tomorrow.",
+          "The visa applications will check tomorrow."
+        ]
+      },
+      {
+        "id": "review-b-n143-passive-perfect",
+        "context": "编辑记录写着：A translator has already translated the article. 截至现在完成，译者明确，但姓名没有提供。",
+        "prompt": "主句使用 The article 开头（时间状语可前置）写现在完成被动，保留 already；可省略或保留 by a translator。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n143-passive-not-yet",
+        "context": "监测记录：到现在这台传感器从未被校准。不是校准后故障，也不预测未来；never 否定从开始至今的动作。",
+        "prompt": "主句使用 The sensor 开头（时间状语可前置），用 never / calibrate 写现在完成被动。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n143-passive-future",
+        "context": "工作人员有明确承诺：明天不会销毁原件，只销毁复印件。现在仅记录原件的未来否定。",
+        "prompt": "主句使用 The originals 开头（时间状语可前置），用 destroy / tomorrow 写 will 将来被动否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

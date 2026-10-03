@@ -1,0 +1,326 @@
+[
+  {
+    "id": "diagnostic-n139-indirect-whether",
+    "answer": "The customer wants to know whether the line is working.",
+    "variants": ["The customer wants to know if the line is working."],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n139-indirect-content",
+    "answer": "The editor wants to know what the children are drawing.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n139-indirect-time",
+    "answer": "The dispatcher wants to know when the boat will leave.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n139-indirect-whether",
+    "answer": "The receptionist wants to know whether the visitor needs a ticket.",
+    "variants": ["The receptionist wants to know if the visitor needs a ticket."],
+    "issues": []
+  },
+  {
+    "id": "guided-n139-indirect-content",
+    "answer": "The manager wants to know why the workers are waiting.",
+    "variants": [],
+    "issues": ["中文情境说工人正在停工，英文原问题说waiting；严格保留给定英文问题，不把waiting改写为stopping work。"]
+  },
+  {
+    "id": "guided-n139-indirect-time",
+    "answer": "Does Leo know when the show will start?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n139-indirect-whether",
+    "answer": "The customer wants to know whether this medicine is safe for children.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n139-indirect-content",
+    "answer": "I want to know what you are writing.",
+    "variants": ["I want to know what you're writing."],
+    "issues": []
+  },
+  {
+    "id": "independent-n139-indirect-time",
+    "answer": "The reporter does not know when the rescue team will arrive.",
+    "variants": ["The reporter doesn't know when the rescue team will arrive."],
+    "issues": []
+  },
+  {
+    "id": "repair-n139-indirect-whether",
+    "answer": "The clerk wants to know whether the seats are free.",
+    "variants": ["The clerk wants to know if the seats are free."],
+    "issues": ["free单独可表示空闲或免费；此题中文明确免费，转述本身仍保留free的词汇多义性。"]
+  },
+  {
+    "id": "repair-n139-indirect-content",
+    "answer": "The engineer wants to know what has damaged the cable.",
+    "variants": ["The engineer wants to know what's damaged the cable."],
+    "issues": ["what是从句主语，不能增添it等主语；what's在此只能按what has理解。题面明确该题是组合扩展。"]
+  },
+  {
+    "id": "repair-n139-indirect-time",
+    "answer": "Does Ella know when the report will be ready?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n139-indirect-whether",
+    "answer": "We want to know whether the door is locked.",
+    "variants": ["We want to know if the door is locked."],
+    "issues": []
+  },
+  {
+    "id": "review-a-n139-indirect-content",
+    "answer": "The manager wants to know what is in the box.",
+    "variants": [],
+    "issues": ["what是is in the box的主语；保留what is不是间接问句错误倒装。"]
+  },
+  {
+    "id": "review-a-n139-indirect-time",
+    "answer": "I do not know when the guests left yesterday.",
+    "variants": ["I don't know when the guests left yesterday."],
+    "issues": ["昨天修饰离开事件，不能前置到全句造成昨天不知道、现在可能知道的读法。"]
+  },
+  {
+    "id": "review-b-n139-indirect-whether",
+    "answer": "The nurse wants to know whether the lab assistants have completed the tests.",
+    "variants": ["The nurse wants to know if the lab assistants have completed the tests."],
+    "issues": []
+  },
+  {
+    "id": "review-b-n139-indirect-content",
+    "answer": "My colleague wants to know why the machine is making that noise.",
+    "variants": ["My colleague wants to know why the machine's making that noise."],
+    "issues": []
+  },
+  {
+    "id": "review-b-n139-indirect-time",
+    "answer": "Does Jules know when the meeting will start?",
+    "variants": [],
+    "issues": ["背景已经说Jules不知道，问句可用于核实；不得把today带入嵌套时间问题，也不得改成今天不开会的否定命题。"]
+  },
+  {
+    "id": "diagnostic-n141-passive-present",
+    "answer": "The lift is checked every week.",
+    "variants": ["Every week, the lift is checked."],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n141-passive-past",
+    "answer": "The letter was delivered to the hospital yesterday.",
+    "variants": ["Yesterday, the letter was delivered to the hospital."],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n141-passive-scope",
+    "answer": "The passengers were not told yesterday.",
+    "variants": ["The passengers weren't told yesterday.", "Yesterday, the passengers were not told.", "Yesterday, the passengers weren't told."],
+    "issues": ["tell在此省略通知内容，情境使其可理解；负向命题是未发生通知，不能改为乘客没有通知别人。复数否定的量化范围见报告。"]
+  },
+  {
+    "id": "guided-n141-passive-present",
+    "answer": "The tools are washed every day.",
+    "variants": ["Every day, the tools are washed."],
+    "issues": []
+  },
+  {
+    "id": "guided-n141-passive-past",
+    "answer": "Nina was invited to the exhibition last week.",
+    "variants": ["Last week, Nina was invited to the exhibition."],
+    "issues": []
+  },
+  {
+    "id": "guided-n141-passive-scope",
+    "answer": "Were the tickets counted yesterday?",
+    "variants": ["Yesterday, were the tickets counted?"],
+    "issues": []
+  },
+  {
+    "id": "independent-n141-passive-present",
+    "answer": "The records are scanned every month.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n141-passive-past",
+    "answer": "The statue was moved yesterday.",
+    "variants": ["Yesterday, the statue was moved."],
+    "issues": []
+  },
+  {
+    "id": "independent-n141-passive-scope",
+    "answer": "Are the patients given these medicines every night?",
+    "variants": ["Every night, are the patients given these medicines?"],
+    "issues": ["患者是接受者；题目测试give的双宾语被动与重复规则核实，不能把medicines换成主语。"]
+  },
+  {
+    "id": "repair-n141-passive-present",
+    "answer": "The pump is repaired regularly.",
+    "variants": ["The pump is regularly repaired.", "Regularly, the pump is repaired."],
+    "issues": ["Regularly句首合法但强调频率，普通流程记录更自然地置于is之后或句末。"]
+  },
+  {
+    "id": "repair-n141-passive-past",
+    "answer": "The cases were found at the station yesterday.",
+    "variants": ["Yesterday, the cases were found at the station.", "The cases were found yesterday at the station."],
+    "issues": []
+  },
+  {
+    "id": "repair-n141-passive-scope",
+    "answer": "The piano was not moved yesterday.",
+    "variants": ["The piano wasn't moved yesterday.", "Yesterday, the piano was not moved.", "Yesterday, the piano wasn't moved."],
+    "issues": []
+  },
+  {
+    "id": "review-a-n141-passive-present",
+    "answer": "The library cards are replaced every term.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n141-passive-past",
+    "answer": "The scanner was repaired on Monday.",
+    "variants": ["The scanner was repaired by a technician on Monday.", "The scanner was repaired on Monday by a technician."],
+    "issues": ["此题指定用The scanner开头且未明确许可时间前置，因此不列On Monday开头变体；施事可省略是题目明示许可。"]
+  },
+  {
+    "id": "review-a-n141-passive-scope",
+    "answer": "Was the parcel not given to the resident yesterday?",
+    "variants": ["Wasn't the parcel given to the resident yesterday?", "Yesterday, was the parcel not given to the resident?", "Yesterday, wasn't the parcel given to the resident?"],
+    "issues": ["否定问句可核实交付事实，但Wasn't形式常带原以为已经交付的预期；题面不足以锁定这一预期。该题不能单靠问句形式证明会正确回应yes/no。"]
+  },
+  {
+    "id": "review-b-n141-passive-present",
+    "answer": "The smoke alarms are tested every six months.",
+    "variants": ["Every six months, the smoke alarms are tested."],
+    "issues": []
+  },
+  {
+    "id": "review-b-n141-passive-past",
+    "answer": "The pier was damaged by the storm yesterday.",
+    "variants": ["Yesterday, the pier was damaged by the storm.", "The pier was damaged yesterday by the storm."],
+    "issues": []
+  },
+  {
+    "id": "review-b-n141-passive-scope",
+    "answer": "The batteries were not replaced yesterday.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n143-passive-perfect",
+    "answer": "The windows have already been cleaned.",
+    "variants": ["The windows have been cleaned already.", "Already, the windows have been cleaned."],
+    "issues": ["already句首可表达完成早于预期的强调读法；无额外语境时中位或句末更自然。"]
+  },
+  {
+    "id": "diagnostic-n143-passive-not-yet",
+    "answer": "The guest has not been served yet.",
+    "variants": ["The guest hasn't been served yet.", "The guest has not yet been served.", "The guest hasn't yet been served.", "The guest's not been served yet.", "The guest's not yet been served."],
+    "issues": ["不列Yet, the guest has not been served：句首yet易被理解为但是，并非明确的截至现在时间状语。"]
+  },
+  {
+    "id": "diagnostic-n143-passive-future",
+    "answer": "The door will be repaired tomorrow.",
+    "variants": ["Tomorrow, the door will be repaired.", "The door'll be repaired tomorrow.", "Tomorrow, the door'll be repaired."],
+    "issues": []
+  },
+  {
+    "id": "guided-n143-passive-perfect",
+    "answer": "The photographs have already been scanned.",
+    "variants": ["The photographs have been scanned already.", "Already, the photographs have been scanned."],
+    "issues": []
+  },
+  {
+    "id": "guided-n143-passive-not-yet",
+    "answer": "The dog has not been found yet.",
+    "variants": ["The dog hasn't been found yet.", "The dog has not yet been found.", "The dog hasn't yet been found.", "The dog's not been found yet.", "The dog's not yet been found."],
+    "issues": []
+  },
+  {
+    "id": "guided-n143-passive-future",
+    "answer": "The report will be sent to the directors tomorrow evening.",
+    "variants": ["Tomorrow evening, the report will be sent to the directors.", "The report will be sent tomorrow evening to the directors.", "The report'll be sent to the directors tomorrow evening."],
+    "issues": []
+  },
+  {
+    "id": "independent-n143-passive-perfect",
+    "answer": "The boxes have already been packed.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n143-passive-not-yet",
+    "answer": "The exhibition notes have not been translated yet.",
+    "variants": ["The exhibition notes haven't been translated yet.", "The exhibition notes have not yet been translated.", "The exhibition notes haven't yet been translated."],
+    "issues": []
+  },
+  {
+    "id": "independent-n143-passive-future",
+    "answer": "The old computers will be collected next week.",
+    "variants": ["Next week, the old computers will be collected."],
+    "issues": []
+  },
+  {
+    "id": "repair-n143-passive-perfect",
+    "answer": "The till has already been repaired.",
+    "variants": ["The till's already been repaired.", "The till has been repaired already.", "The till's been repaired already.", "Already, the till has been repaired.", "Already, the till's been repaired."],
+    "issues": []
+  },
+  {
+    "id": "repair-n143-passive-not-yet",
+    "answer": "The tickets have not been sent yet.",
+    "variants": ["The tickets haven't been sent yet.", "The tickets have not yet been sent.", "The tickets haven't yet been sent."],
+    "issues": []
+  },
+  {
+    "id": "repair-n143-passive-future",
+    "answer": "The visitors will be met tomorrow morning.",
+    "variants": ["Tomorrow morning, the visitors will be met."],
+    "issues": []
+  },
+  {
+    "id": "review-a-n143-passive-perfect",
+    "answer": "Has the payment already been received?",
+    "variants": ["Has the payment been received already?", "Already, has the payment been received?"],
+    "issues": ["already疑问句通常可带比预期更早完成的意味；这里可作页面信息核实，但仅构句不能验证学习者掌握语用差别。"]
+  },
+  {
+    "id": "review-a-n143-passive-not-yet",
+    "answer": "The climbers have not been rescued yet.",
+    "variants": ["The climbers haven't been rescued yet.", "The climbers have not yet been rescued.", "The climbers haven't yet been rescued."],
+    "issues": ["重要边界：规定The climbers作主语的普通复数否定被动，可能表示整组尚未获救而允许部分已获救；句式本身不能严密锁定题面要求的零人获救。No climbers have been rescued yet更显式，但违反指定主语，故不列为答案或变体。"]
+  },
+  {
+    "id": "review-a-n143-passive-future",
+    "answer": "The visa applications will be checked tomorrow.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n143-passive-perfect",
+    "answer": "The article has already been translated.",
+    "variants": ["The article's already been translated.", "The article has been translated already.", "The article's been translated already.", "Already, the article has been translated.", "The article has already been translated by a translator.", "The article's already been translated by a translator.", "The article has been translated by a translator already.", "The article has been translated already by a translator.", "Already, the article has been translated by a translator."],
+    "issues": ["保留by a translator虽信息重复但符合明示许可；只列有限的自然施事与already位置组合。"]
+  },
+  {
+    "id": "review-b-n143-passive-not-yet",
+    "answer": "The sensor has never been calibrated.",
+    "variants": ["The sensor's never been calibrated.", "Never has the sensor been calibrated."],
+    "issues": ["Never句首须主谓倒装，且题目明示时间状语可前置，因此列入强调型变体。never否定从开始至今的校准经历，不能用not yet替代指定词。"]
+  },
+  {
+    "id": "review-b-n143-passive-future",
+    "answer": "The originals will not be destroyed tomorrow.",
+    "variants": ["The originals won't be destroyed tomorrow.", "Tomorrow, the originals will not be destroyed.", "Tomorrow, the originals won't be destroyed."],
+    "issues": ["只断言明天无销毁原件的动作；不蕴涵永远不会销毁，也不写复印件的动作。"]
+  }
+]

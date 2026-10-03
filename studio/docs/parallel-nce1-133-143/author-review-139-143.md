@@ -1,0 +1,23 @@
+# Root author review:139–144
+
+All three complete original JSONs and paired140/142/144 printed exercises were read; source-reading-tail.md records all twelve actual source comic/exercise page views with hashes. Root independently inspected representative paired pages140/142/144 and143 grammar note. Guarded SourcePanel internal LRC hashes, comic text/image, manifest transport bytes and actual clip endpoints are tested against original packaged resources. The unchanged7b production factory/binder/matcher drives all new modules.
+
+139 separates whether/content/time and outer statement/direct-question order. Subject-what and perfect active indirect questions combine known forms; their labels do not claim literal139 audio support. The nurse item uses familiar active present perfect, avoiding a premature143 passive prerequisite.141 combines source present/past passive with known negative/questions and recipient/agent roles, explicitly labelled extensions.143 uses text143/paired144 for perfect, not-yet and future passive. Its final future sentence has no next LRC endpoint: no fabricated complete clip; audio buttons are labelled positive-perfect comparison. Original transcript/print differences such as little/litter remain unmodified sources.
+
+## Final blind decisions
+
+The zero-rescue task originally prescribed The climbers have not been rescued yet, a plural negative that can describe an incompletely rescued group. Final prompt explicitly requires No climbers, so No climbers have been rescued yet / No climbers have yet been rescued express zero and retain have+been+participle. Double negation is a reasoned near miss. Original stem/answers/review are preserved, and independent final reviewer re-solved only that changed item without keys. The explicit No cue means this is not proof of choosing a zero quantifier unaided.
+
+Other valid finite variants include what's (=what has) damaged, machine's (=machine is) making, contracted future noun phrases, natural time/recipient ordering and allowed already positions. Never has the sensor been calibrated is an emphatic natural alternate; it is accepted without claiming its inversion is a literal paired-text target. Core-clause starts allow fronted time where stated. yet cannot be blindly fronted as equivalent because it may mean however. Choice prompts require exact given sentences, so options are exported to blind review and clicked in the actualUI; no rewritten-choice variants are accepted. Final scope/context/prompt/options equality is checked.
+
+## Evidence boundary
+
+The tail has47 controlled input construction tasks and7 option recognition tasks. These are different evidence types. Original contexts and banks include competing record sources, unknown content versus location/whether, direct outer questions, recipient versus actor, agent preservation, negative questions, completed versus future events, never/not-yet and mixed original/copy negation. Many simple scaffold or repair examples remain structurally isomorphic; the independent report preserves that limitation. Explicit tense/frame cues do not demonstrate autonomous structural choice, free writing, listening/speaking or overall transfer. Negative questions do not establish response pragmatics or yes/no interpretation. The final zero cue does not establish unaided quantitative reasoning.
+
+All54 final blind primary answers and85 finite variants match actual production modules.216 reasoned near misses fail; all18 tasks per module traverse actual factory banks and clock-controlled finite reviews. Own expression remains awaiting-human-review; listening remains not-tested, Band null. Natural24h/7d effects, actual hearing, pronunciation, physical phones/keyboards and human learning gains were not tested.
+
+## Real UI and book end
+
+Three final fresh-profile realWorkspace/AudioSpace runs clicked actual choice buttons, typed inputs, preserved wrong independent first answers, saved separate correct feedback notes, completed repair/own QA placeholders and reloaded guarded state.390/320 have no horizontal overflow and runtime exception count0. Representative source143/correction139/teaching141/correction143/waiting320139&143 screenshots were visually inspected; the real long source/teaching/feedback panels scroll vertically. Audio technically loaded/decoded/seeked/played; audible quality is unverified.
+
+No shared host/registry/next/map gates were altered. Real nce1-143 is final72nd book-one unit under chapter6; no145 exists. Chapter7/NCE2 requires chapter6 project and stable-member gates. Latest actual continuation/assessment remains unified host-owner work; no hardwired143→NCE2 successor or unlock is delivered.

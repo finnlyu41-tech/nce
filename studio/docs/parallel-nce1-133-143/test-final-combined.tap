@@ -1,0 +1,352 @@
+TAP version 13
+# Subtest: nce1-133 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce1-133 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 111.970417
+  type: 'test'
+  ...
+# Subtest: nce1-133 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce1-133 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 13.898084
+  type: 'test'
+  ...
+# Subtest: nce1-135 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce1-135 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 98.837209
+  type: 'test'
+  ...
+# Subtest: nce1-135 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce1-135 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 10.631333
+  type: 'test'
+  ...
+# Subtest: nce1-137 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce1-137 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 87.590833
+  type: 'test'
+  ...
+# Subtest: nce1-137 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce1-137 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 11.7105
+  type: 'test'
+  ...
+# Subtest: nce1-139 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 7 - nce1-139 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 40.257041
+  type: 'test'
+  ...
+# Subtest: nce1-139 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 8 - nce1-139 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 15.692333
+  type: 'test'
+  ...
+# Subtest: nce1-141 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 9 - nce1-141 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 45.747416
+  type: 'test'
+  ...
+# Subtest: nce1-141 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 10 - nce1-141 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 9.879584
+  type: 'test'
+  ...
+# Subtest: nce1-143 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 11 - nce1-143 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 56.081833
+  type: 'test'
+  ...
+# Subtest: nce1-143 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 12 - nce1-143 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 9.05975
+  type: 'test'
+  ...
+# Subtest: nce1-133 rejects nce1-135 raw without overwriting
+ok 13 - nce1-133 rejects nce1-135 raw without overwriting
+  ---
+  duration_ms: 0.156083
+  type: 'test'
+  ...
+# Subtest: nce1-133 rejects nce1-137 raw without overwriting
+ok 14 - nce1-133 rejects nce1-137 raw without overwriting
+  ---
+  duration_ms: 0.062375
+  type: 'test'
+  ...
+# Subtest: nce1-133 rejects nce1-139 raw without overwriting
+ok 15 - nce1-133 rejects nce1-139 raw without overwriting
+  ---
+  duration_ms: 0.041375
+  type: 'test'
+  ...
+# Subtest: nce1-133 rejects nce1-141 raw without overwriting
+ok 16 - nce1-133 rejects nce1-141 raw without overwriting
+  ---
+  duration_ms: 0.036417
+  type: 'test'
+  ...
+# Subtest: nce1-133 rejects nce1-143 raw without overwriting
+ok 17 - nce1-133 rejects nce1-143 raw without overwriting
+  ---
+  duration_ms: 0.034709
+  type: 'test'
+  ...
+# Subtest: nce1-135 rejects nce1-133 raw without overwriting
+ok 18 - nce1-135 rejects nce1-133 raw without overwriting
+  ---
+  duration_ms: 0.034375
+  type: 'test'
+  ...
+# Subtest: nce1-135 rejects nce1-137 raw without overwriting
+ok 19 - nce1-135 rejects nce1-137 raw without overwriting
+  ---
+  duration_ms: 0.057833
+  type: 'test'
+  ...
+# Subtest: nce1-135 rejects nce1-139 raw without overwriting
+ok 20 - nce1-135 rejects nce1-139 raw without overwriting
+  ---
+  duration_ms: 0.033875
+  type: 'test'
+  ...
+# Subtest: nce1-135 rejects nce1-141 raw without overwriting
+ok 21 - nce1-135 rejects nce1-141 raw without overwriting
+  ---
+  duration_ms: 0.039458
+  type: 'test'
+  ...
+# Subtest: nce1-135 rejects nce1-143 raw without overwriting
+ok 22 - nce1-135 rejects nce1-143 raw without overwriting
+  ---
+  duration_ms: 0.038084
+  type: 'test'
+  ...
+# Subtest: nce1-137 rejects nce1-133 raw without overwriting
+ok 23 - nce1-137 rejects nce1-133 raw without overwriting
+  ---
+  duration_ms: 0.03275
+  type: 'test'
+  ...
+# Subtest: nce1-137 rejects nce1-135 raw without overwriting
+ok 24 - nce1-137 rejects nce1-135 raw without overwriting
+  ---
+  duration_ms: 0.031
+  type: 'test'
+  ...
+# Subtest: nce1-137 rejects nce1-139 raw without overwriting
+ok 25 - nce1-137 rejects nce1-139 raw without overwriting
+  ---
+  duration_ms: 0.034917
+  type: 'test'
+  ...
+# Subtest: nce1-137 rejects nce1-141 raw without overwriting
+ok 26 - nce1-137 rejects nce1-141 raw without overwriting
+  ---
+  duration_ms: 0.030917
+  type: 'test'
+  ...
+# Subtest: nce1-137 rejects nce1-143 raw without overwriting
+ok 27 - nce1-137 rejects nce1-143 raw without overwriting
+  ---
+  duration_ms: 0.030708
+  type: 'test'
+  ...
+# Subtest: nce1-139 rejects nce1-133 raw without overwriting
+ok 28 - nce1-139 rejects nce1-133 raw without overwriting
+  ---
+  duration_ms: 0.030709
+  type: 'test'
+  ...
+# Subtest: nce1-139 rejects nce1-135 raw without overwriting
+ok 29 - nce1-139 rejects nce1-135 raw without overwriting
+  ---
+  duration_ms: 0.031041
+  type: 'test'
+  ...
+# Subtest: nce1-139 rejects nce1-137 raw without overwriting
+ok 30 - nce1-139 rejects nce1-137 raw without overwriting
+  ---
+  duration_ms: 0.0315
+  type: 'test'
+  ...
+# Subtest: nce1-139 rejects nce1-141 raw without overwriting
+ok 31 - nce1-139 rejects nce1-141 raw without overwriting
+  ---
+  duration_ms: 0.031167
+  type: 'test'
+  ...
+# Subtest: nce1-139 rejects nce1-143 raw without overwriting
+ok 32 - nce1-139 rejects nce1-143 raw without overwriting
+  ---
+  duration_ms: 0.031042
+  type: 'test'
+  ...
+# Subtest: nce1-141 rejects nce1-133 raw without overwriting
+ok 33 - nce1-141 rejects nce1-133 raw without overwriting
+  ---
+  duration_ms: 0.031625
+  type: 'test'
+  ...
+# Subtest: nce1-141 rejects nce1-135 raw without overwriting
+ok 34 - nce1-141 rejects nce1-135 raw without overwriting
+  ---
+  duration_ms: 0.030333
+  type: 'test'
+  ...
+# Subtest: nce1-141 rejects nce1-137 raw without overwriting
+ok 35 - nce1-141 rejects nce1-137 raw without overwriting
+  ---
+  duration_ms: 0.117791
+  type: 'test'
+  ...
+# Subtest: nce1-141 rejects nce1-139 raw without overwriting
+ok 36 - nce1-141 rejects nce1-139 raw without overwriting
+  ---
+  duration_ms: 0.03825
+  type: 'test'
+  ...
+# Subtest: nce1-141 rejects nce1-143 raw without overwriting
+ok 37 - nce1-141 rejects nce1-143 raw without overwriting
+  ---
+  duration_ms: 0.034875
+  type: 'test'
+  ...
+# Subtest: nce1-143 rejects nce1-133 raw without overwriting
+ok 38 - nce1-143 rejects nce1-133 raw without overwriting
+  ---
+  duration_ms: 0.031
+  type: 'test'
+  ...
+# Subtest: nce1-143 rejects nce1-135 raw without overwriting
+ok 39 - nce1-143 rejects nce1-135 raw without overwriting
+  ---
+  duration_ms: 0.036375
+  type: 'test'
+  ...
+# Subtest: nce1-143 rejects nce1-137 raw without overwriting
+ok 40 - nce1-143 rejects nce1-137 raw without overwriting
+  ---
+  duration_ms: 0.030458
+  type: 'test'
+  ...
+# Subtest: nce1-143 rejects nce1-139 raw without overwriting
+ok 41 - nce1-143 rejects nce1-139 raw without overwriting
+  ---
+  duration_ms: 0.029709
+  type: 'test'
+  ...
+# Subtest: nce1-143 rejects nce1-141 raw without overwriting
+ok 42 - nce1-143 rejects nce1-141 raw without overwriting
+  ---
+  duration_ms: 0.030166
+  type: 'test'
+  ...
+# Subtest: external independent blind 133-137 covers eighteen tasks per course and every reasonable variant
+ok 43 - external independent blind 133-137 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 1.559292
+  type: 'test'
+  ...
+# Subtest: external independent blind 139-143 covers eighteen tasks per course and every reasonable variant
+ok 44 - external independent blind 139-143 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 0.673291
+  type: 'test'
+  ...
+# Subtest: blind stems 133-137 remain identical to reviewed final tasks
+ok 45 - blind stems 133-137 remain identical to reviewed final tasks
+  ---
+  duration_ms: 1.851291
+  type: 'test'
+  ...
+# Subtest: blind stems 139-143 remain identical to reviewed final tasks
+ok 46 - blind stems 139-143 remain identical to reviewed final tasks
+  ---
+  duration_ms: 0.589625
+  type: 'test'
+  ...
+# Subtest: shared production implementations and source guard are byte identical to exact frozen baseline
+ok 47 - shared production implementations and source guard are byte identical to exact frozen baseline
+  ---
+  duration_ms: 207.060333
+  type: 'test'
+  ...
+# Subtest: all tracked diff and untracked delivery files stay in this content/test/docs ownership
+ok 48 - all tracked diff and untracked delivery files stay in this content/test/docs ownership
+  ---
+  duration_ms: 40.201875
+  type: 'test'
+  ...
+# Subtest: new task contexts are distinct, target banks include real first/repair/delayed material
+ok 49 - new task contexts are distinct, target banks include real first/repair/delayed material
+  ---
+  duration_ms: 22.662166
+  type: 'test'
+  ...
+# Subtest: unwired successors keep the real current route; QA registration is not production integration
+ok 50 - unwired successors keep the real current route; QA registration is not production integration
+  ---
+  duration_ms: 185.1905
+  type: 'test'
+  ...
+# Subtest: nce1-133 real transcript LRC, source panel, comic and paired exercise pages
+ok 51 - nce1-133 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 8.293292
+  type: 'test'
+  ...
+# Subtest: nce1-135 real transcript LRC, source panel, comic and paired exercise pages
+ok 52 - nce1-135 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.807292
+  type: 'test'
+  ...
+# Subtest: nce1-137 real transcript LRC, source panel, comic and paired exercise pages
+ok 53 - nce1-137 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.169875
+  type: 'test'
+  ...
+# Subtest: nce1-139 real transcript LRC, source panel, comic and paired exercise pages
+ok 54 - nce1-139 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 2.803833
+  type: 'test'
+  ...
+# Subtest: nce1-141 real transcript LRC, source panel, comic and paired exercise pages
+ok 55 - nce1-141 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 2.883458
+  type: 'test'
+  ...
+# Subtest: nce1-143 real transcript LRC, source panel, comic and paired exercise pages
+ok 56 - nce1-143 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 2.619584
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 57 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 1.6295
+  type: 'test'
+  ...
+1..57
+# tests 57
+# suites 0
+# pass 57
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 632.082875

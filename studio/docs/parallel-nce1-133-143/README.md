@@ -2,7 +2,7 @@
 
 Exact source/app baseline7b7c1283d12f0c6d784478cda8353080598f6980; both online/map publication refs freshly read at this SHA. This establishes source provenance, not deployment. New independent clone, old61–72/85–96/109–120 freezes preserved. Exclusive course-loop/parallel-nce1-133-143 and matching docs only.
 
-Six modules133/135/137/139/141/143 (first three ready for local freeze), eighteen original tasks each, three source-backed teaching targets/prerequisites, six distinct banks and human-pending open expression. Existing author/binder, production createCourseLoopModel and module.matches provide the only assessment logic. Strong sentence prompts and drills are bounded construction; later banks must select unfamiliar operative evidence. No Band/four-skills/real-human effectiveness is granted.
+Six modules133/135/137/139/141/143 (both batches locally frozen and ready for owner integration), eighteen original tasks each, three source-backed teaching targets/prerequisites, six distinct banks and human-pending open expression. Existing author/binder, production createCourseLoopModel and module.matches provide the only assessment logic. Strong sentence prompts and drills are bounded construction; later banks must select unfamiliar operative evidence. No Band/four-skills/real-human effectiveness is granted.
 
 ## Integration boundary
 
@@ -30,3 +30,5 @@ Factory tests exercise controlled due arithmetic, early blockers, first-answer p
 Audio loading/decoding/seek/play state is technical evidence only; actual audibility, physical phones/keyboards, natural retention, pronunciation, human open-expression review, four-skills coverage and learning gain remain unverified. All original resources are readonly; current fixed7b appcode only. No personal learner records/recordings/13 natural archives, credentials, costs, permissions, push/merge/deploy. KnownObsidianvault unavailable; no fallback state store.
 
 First batch133/135/137:54 tasks,54 final independent blind answers plus108 finite variants,216 reasoned near misses,22/22 combined factory/source/scope checks and5/5 source-evidence checks. Three unchanged-production UI cases at390/320 passed with zero runtime exceptions. Final blind revision resolved three necessary/sufficient permission ambiguities. No production wiring/publication is implied.
+
+Tail139/141/143:54 final tasks (47 input construction,7 real option recognition),54 independent blind answers plus85 variants,216 reasoned near misses,22/22 combined checks and5/5 source evidence. Combined108 tasks,193 blind variants,432 reasoned near misses,57/57 factory/source/scope checks,8/8 source-evidence checks,6 real UI courses,0 runtime errors. Original and final blind packages retain the zero-rescue plural-negation repair. Final scope/context/prompt/options are exactly equal to independently reviewed stems.
