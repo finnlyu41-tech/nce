@@ -1,0 +1,25 @@
+{
+  "groups": [
+    {
+      "id": "nce1-121",
+      "tasks": 18,
+      "accepted": 54,
+      "nearMisses": 72,
+      "sourceSha256": "9a3874ac0e4f6911d0197bd546cfab2b17a0fdf9f7be5c291564fbe207100dc2"
+    },
+    {
+      "id": "nce1-123",
+      "tasks": 18,
+      "accepted": 86,
+      "nearMisses": 72,
+      "sourceSha256": "7d6eda686ef36c254947dca74b6661496ecfeeb7350ea9a3f9ab2b9c485e8979"
+    },
+    {
+      "id": "nce1-125",
+      "tasks": 18,
+      "accepted": 31,
+      "nearMisses": 72,
+      "sourceSha256": "aec2e709b73cb949cb519696e94340510a685714ecb2c1048639dea3509d6079"
+    }
+  ]
+}

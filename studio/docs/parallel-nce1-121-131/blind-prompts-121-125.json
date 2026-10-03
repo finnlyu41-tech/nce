@@ -1,0 +1,326 @@
+[
+  {
+    "id": "diagnostic-n121-human-subject",
+    "context": "活动签到台有多位志愿者。昨天搬运箱子的那一位是我们的向导。",
+    "prompt": "以The volunteer开头，用限定关系从句说明此人，再以is our guide结束。从句用一般过去时；动作词根和内容为carry the boxes（搬箱子）；yesterday只放在从句末尾。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n121-thing-subject",
+    "context": "维修间有两台机器。此刻正在打印标签的那台坏了。",
+    "prompt": "以The machine开头，用限定关系从句描述物件目前正在发生的动作，再以is broken结束。从句用现在进行时；词根和内容为print labels（打印标签）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n121-object-relative",
+    "context": "展览入口有多位艺术家。我们上周邀请的那位女性画家现在在这里。",
+    "prompt": "以The painter开头，用限定关系从句保留题中关系；从句主语用we，动作词根和内容为invite（邀请），用一般过去时。last week只放在从句末尾。最后以is here结束。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n121-human-subject",
+    "context": "消防演练中，上周打开这扇门的那名工人是我们的邻居。",
+    "prompt": "以The worker开头，用限定关系从句说明此人，再以is our neighbour结束。从句用一般过去时；动作词根和内容为open the door（开门）；last week只放在从句末尾。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先找从句动作是谁做的；who/that作主语时要保留，不加重复he/she。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n121-thing-subject",
+    "context": "平台上有几面旗。此刻在风中飘动的那些旗是红色的。",
+    "prompt": "以The flags开头，用限定关系从句描述物件目前正在发生的动作，再以are red结束。从句用现在进行时；词根和内容为move in the wind（在风中飘动）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对物件单复数与正在发生的动作；which/that后不再加it/they。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n121-object-relative",
+    "context": "修鞋柜台有两位女顾客。昨天下午我帮助的那一位很耐心。",
+    "prompt": "以The customer开头，用限定关系从句保留题中关系；从句主语用I，动作词根和内容为help（帮助），用一般过去时。yesterday只放在从句末尾。最后以is patient结束。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先找谁做动作、动作指向谁；保留从句主语，不重复宾语。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n121-human-subject",
+    "context": "仓库有人问昨晚是谁带来了药品。根据记录，是那位司机；只辨认人，不补充亲属关系。",
+    "prompt": "只写一个以The driver开头的限定名词短语，包含关系从句；动作词根bring the medicine（带来药品），用一般过去时，last night放在短语末尾。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n121-thing-subject",
+    "context": "河边有新旧两座桥。你能看到一座正在晃动，但不知道它是否很旧；要向管理员核实这座桥的年代。",
+    "prompt": "写一个以Is the bridge开头的问句；限定关系从句用现在进行时描述正在晃动（shake），主句用old询问是否很旧。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "independent-n121-object-relative",
+    "context": "图书展上工作人员指错了地图：昨天我们选中的那张其实不清楚；另一张才清楚。请纠正说法。",
+    "prompt": "以The map开头，用限定关系从句说明我们昨天选中的那张；从句主语we，动作词根choose，一般过去时，yesterday放从句末尾。主句用clear写一般现在否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n121-human-subject",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到电台资料室：昨天写那份报告的那位学生是我们的客人。",
+    "prompt": "以The student开头，用限定关系从句说明此人，再以is our guest结束。从句用一般过去时；动作词根和内容为write the report（写报告）；yesterday只放在从句末尾。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n121-thing-subject",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到礼堂，很多灯还亮着；此刻正在闪烁的那盏灯很小。",
+    "prompt": "以The lamp开头，用限定关系从句描述物件目前正在发生的动作，再以is small结束。从句用现在进行时；词根和内容为flash（闪烁）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n121-object-relative",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到乐器室，几把小提琴中，去年她修理的那一把是我的。",
+    "prompt": "以The violin开头，用限定关系从句保留题中关系；从句主语用she，动作词根和内容为repair（修理），用一般过去时。last year只放在从句末尾。最后以is mine结束。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n121-human-subject",
+    "context": "新的运动会中你知道哪些女孩昨天赢得赛跑，但还不知道她们是否都很高，要向教练核实。",
+    "prompt": "写以Are the girls开头的问句；用限定关系从句说明昨天赢得赛跑的女孩，词根win the race，一般过去时，yesterday放从句末尾；主句询问tall。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-a-n121-thing-subject",
+    "context": "新的露营地有干湿毛毯。工作人员问哪几条需要先收起来，规则是收起此刻正在滴水的那些。",
+    "prompt": "只写以The blankets开头的限定名词短语，关系从句用现在进行时说明滴水；动词词根drip。不添加归属或其他判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n121-object-relative",
+    "context": "新的合唱团面试后，同伴昨天听见一位歌手但不知道其姓名；你认识那位歌手。说明你认识的是同伴听过的那一位。",
+    "prompt": "以I know the singer开头；限定关系从句主语用you，动作词根hear，一般过去时，yesterday放句末。只表达认识此人，不补姓名。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n121-human-subject",
+    "context": "新的食品集市里，同伴猜制作蛋糕的那位面包师是你的朋友；实际你与那人并不是朋友。",
+    "prompt": "以The baker开头，用限定关系从句说明昨天制作蛋糕的人；词根make the cakes，一般过去时，yesterday放从句末尾。主句用my friend写一般现在否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n121-thing-subject",
+    "context": "新的水族馆有多个水箱。管理员问哪个需要维修，记录明确是此刻漏水的那一个；不说明它是否空。",
+    "prompt": "只写一个以The tank开头的限定名词短语；用现在进行时描述漏水，词根leak，不加主句判断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n121-object-relative",
+    "context": "新的戏剧档案讨论中，你与同伴上周看过一部戏，但尚不知道同伴觉得它是否有趣。",
+    "prompt": "写以Is the play开头的问句；关系从句主语we，动作词根watch，一般过去时，last week放在从句末尾；主句询问interesting。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "diagnostic-n123-omit-person-object",
+    "context": "社区合唱团来访，墙上的照片指着我昨天打电话给的那位歌手。",
+    "prompt": "以That is the singer开头，用限定关系从句保留题中关系；从句主语用I，动作词根和内容为call（打电话给），用一般过去时。yesterday只放在从句末尾。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n123-omit-thing-object",
+    "context": "邮政柜台里有几个包裹；这个就是我上周寄出的包裹。",
+    "prompt": "以This is the parcel开头，用限定关系从句保留题中关系；从句主语用I，动作词根和内容为send（寄出），用一般过去时。last week只放在从句末尾。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n123-stranded-preposition",
+    "context": "公园撤去旧座位，你指着我们昨天坐过的长凳。",
+    "prompt": "以That is the bench开头，用限定关系从句保留题中关系；从句主语用we，动作词根和内容为sit（坐），用一般过去时。yesterday只放在从句末尾。把on放在动作之后、时间词之前，不前置介词。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n123-omit-person-object",
+    "context": "义卖活动中，我辨认出昨天我们感谢过的那位老师；她就在眼前。",
+    "prompt": "以She is the teacher开头，用限定关系从句保留题中关系；从句主语用we，动作词根和内容为thank（感谢），用一般过去时。yesterday只放在从句末尾。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：从句已有明确主语时再检查先行词是不是宾语；不重复her/him。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n123-omit-thing-object",
+    "context": "工具柜前，你向同伴说明这些是我昨天借走的工具。",
+    "prompt": "以These are the tools开头，用限定关系从句保留题中关系；从句主语用I，动作词根和内容为borrow（借），用一般过去时。yesterday只放在从句末尾。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：找到从句主语和动作宾语；省略关系词不等于省略主语或过去式。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n123-stranded-preposition",
+    "context": "电台主持人介绍那位昨天我向你提起的舞者。",
+    "prompt": "以That is the dancer开头，用限定关系从句保留题中关系；从句主语用I，动作词根和内容为tell you（告诉你），用一般过去时。yesterday只放在从句末尾。把about放在动作之后、时间词之前，不前置介词。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留所需on/to/about等介词；不要重复it/him，不把从句倒装。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n123-omit-person-object",
+    "context": "社区辩论结束，我们感谢了那些邻居。为区别来访者，说明感谢的是上周我们亲自邀请的邻居们。",
+    "prompt": "以We thanked the neighbours开头，补一个限定关系从句；从句主语we，动作词根invite，一般过去时，last week放句末。宾语关系词可省略或保留，不重复them。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n123-omit-thing-object",
+    "context": "戏院失物柜有几只手提包，管理员问她找的是哪一只。她指认昨晚丢失的那一只，不新增物件位置。",
+    "prompt": "只写以The bag开头的限定名词短语；从句主语she，动作词根lose，一般过去时，last night放句末。宾语关系词可省略或保留，不重复it。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n123-stranded-preposition",
+    "context": "体育中心来了几位教练。你昨天与一位教练交谈过，现在要向工作人员核实指着的这一位是否就是他。",
+    "prompt": "写以Is that the coach开头的身份问句；从句主语I，动作词根speak，一般过去时。把to放在动作后、yesterday之前，yesterday放句末；宾语关系词可省略或保留。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "repair-n123-omit-person-object",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到植物园名单，照片上这位是我上周帮助的园丁。",
+    "prompt": "以This is the gardener开头，用限定关系从句保留题中关系；从句主语用I，动作词根和内容为help（帮助），用一般过去时。last week只放在从句末尾。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n123-omit-thing-object",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到收藏品展览，那些就是我们昨天发现的硬币。",
+    "prompt": "以Those are the coins开头，用限定关系从句保留题中关系；从句主语用we，动作词根和内容为find（发现），用一般过去时。yesterday只放在从句末尾。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n123-stranded-preposition",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到学校搬迁说明，那栋就是我们去年居住的房子。",
+    "prompt": "以That is the house开头，用限定关系从句保留题中关系；从句主语用we，动作词根和内容为live（居住），用一般过去时。last year只放在从句末尾。把in放在动作之后、时间词之前，不前置介词。宾语关系词可省略或保留；不重复原来的宾语代词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n123-omit-person-object",
+    "context": "新的读书会上，她昨天见过一位作家，问你是否记得此人。你确实记得，说明所指的是她见过的那位。",
+    "prompt": "以I remember the writer开头；从句主语she，动作词根meet，一般过去时，yesterday放句末。宾语关系词可省略或保留，不补姓名。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n123-omit-thing-object",
+    "context": "新的手工作坊里放着几个篮子，你不知道眼前这个是否是他们上周制作的，要核实作品来源。",
+    "prompt": "写以Is this the basket开头的身份问句；从句主语they，动作词根make，一般过去时，last week放句末。宾语关系词可省略或保留，不重复it。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-a-n123-stranded-preposition",
+    "context": "新的剧团有几个计划，团员问哪个需今天签字，通知明确说是昨天我们谈论过的那个。",
+    "prompt": "只写以The plan开头的限定名词短语；从句主语we，动作词根talk，用一般过去时，about放动作后、yesterday之前，yesterday放句末。宾语关系词可省略或保留。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n123-omit-person-object",
+    "context": "新的志愿者培训中有新旧两批助手，负责人问哪些可直接参加下一班工作，记录说是昨天由我培训的那一批。",
+    "prompt": "只写以The assistants开头的限定名词短语；从句主语I，动作词根train，一般过去时，yesterday放句末。宾语关系词可省略或保留，不重复them。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n123-omit-thing-object",
+    "context": "新的影片讨论中，同伴误指一张封面，说那就是我们上周看过的纪录片；实际封面不是那一部。",
+    "prompt": "以That is not the documentary开头；关系从句主语we，动作词根watch，一般过去时，last week放句末。宾语关系词可省略或保留。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n123-stranded-preposition",
+    "context": "新的招聘项目中有两家公司。我们已经选择了其中一家合作，说明选的是她去年为之工作的那一家。",
+    "prompt": "以We chose the company开头；关系从句主语she，动作词根work，一般过去时，for放动作后、last year之前，last year放句末。宾语关系词可省略或保留。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n125-present-have-to",
+    "context": "图书馆今天的规则要求工作人员给这些箱子贴标签；我们属于工作人员。",
+    "prompt": "以We开头，用have to表达现在的义务，用一般现在时；动作用词根短语label the boxes，today放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n125-past-had-to",
+    "context": "上周停电，工厂规定她必须使用手电筒。现在只转述当时的必要安排。",
+    "prompt": "以She开头，用have to表达过去的义务，用一般过去时；动作用词根短语use a torch，last week放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n125-no-need",
+    "context": "场馆已提供所有椅子，所以你今天不必带椅子，愿意带也可以。",
+    "prompt": "以You开头，用need to写一般现在时否定，表达不必；动作用词根短语bring a chair，today放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n125-present-have-to",
+    "context": "博物馆目前的规则要求Mara保留她的票。",
+    "prompt": "以Mara开头，用have to表达现在的义务，用一般现在时；动作用词根短语keep her ticket。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对陈述、询问或不存在义务；Do/Does后have原形，肯定单数has，to后动作原形。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n125-past-had-to",
+    "context": "昨天总入口关闭，当时我们必须使用侧门。",
+    "prompt": "以We开头，用have to表达过去的义务，用一般过去时；动作用词根短语use the side door，yesterday放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：过去肯定用had to，询问用Did加have to；保留必要行动与时间。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n125-no-need",
+    "context": "客服已经找到订单，今天她不必再寄收据；不是禁止寄。",
+    "prompt": "以She开头，用need to写一般现在时否定，表达不必；动作用词根短语send the receipt，today放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：do/does后need用原形，后接to加动作；不把不必说成禁止。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n125-present-have-to",
+    "context": "乘船前是否必须检查绳子还没有确认。你替岸上的工作人员询问：他们现在是否必须检查这些绳子？",
+    "prompt": "用they和have to写一般现在时的一般疑问句；动作词根短语check the ropes，now放句末。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "independent-n125-past-had-to",
+    "context": "昨晚夜间班车是否停开，你不知道；你向同伴询问他当时是否不得不步行回家。",
+    "prompt": "以Did you开头，用have to写一般过去时的一般疑问句；动作词根短语walk home，last night放句末。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "independent-n125-no-need",
+    "context": "主办方问Do we have to buy a microphone? 设备已经租好，所以不需要购买，但仍允许自愿买。你代表团队回答。",
+    "prompt": "用No开头，再用we和need to写一般现在否定短答，保留完整动作buy a microphone。不用have to替代need to。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n125-present-have-to",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到酒店接待：当前规定要求这位司机在这里等待。",
+    "prompt": "以The driver开头，用have to表达现在的义务，用一般现在时；动作用词根短语wait here，now放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n125-past-had-to",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到戏院：去年取暖系统坏了，他当时必须穿外套。",
+    "prompt": "以He开头，用have to表达过去的义务，用一般过去时；动作用词根短语wear a coat，last year放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n125-no-need",
+    "context": "保留上一轮首答和订正。下面是另一情境：换到展厅：Mara有电子通行证，所以今天不必打印这张表格；仍可自愿打印。",
+    "prompt": "以Mara开头，用need to写一般现在时否定，表达不必；动作用词根短语print the form，today放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n125-present-have-to",
+    "context": "新的周末营地已经为每位参与者提供杯子；我不必自带，但可以自愿带。通知要用have to系统表达这项义务不存在。",
+    "prompt": "以I开头，用have to写一般现在时否定陈述；动作用bring my cup。不用need to或must not替代。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n125-past-had-to",
+    "context": "新的社区记录说明，昨天桥梁检修，他们当时必须乘渡船。",
+    "prompt": "以They开头，用have to表达过去的义务，用一般过去时；动作用词根短语take the ferry，yesterday放句末。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n125-no-need",
+    "context": "新的音乐课老师问Do they have to bring a guitar today? 乐器已经提供，允许自愿携带。你根据通知作完整否定短答。",
+    "prompt": "用No开头，再用they、need to写一般现在否定；保留bring a guitar，today放句末。不用have to替代need to。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n125-present-have-to",
+    "context": "新的旅游团尚未确认是否要求向导现在清点游客。你向团队负责人核实这项必要安排，不代替负责人制定规则。",
+    "prompt": "用the guide和have to写一般现在的一般疑问句；动作用count the visitors，now放句末。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-b-n125-past-had-to",
+    "context": "新的食堂在检查上周的搬运记录，但我们当时是否必须搬这些袋子还没确认。你向当时的管理员核实。",
+    "prompt": "用we和have to写一般过去时的一般疑问句；动作用carry the bags，last week放句末。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。",
+    "form": "question"
+  },
+  {
+    "id": "review-b-n125-no-need",
+    "context": "新的档案室管理员问Do you have to copy the letter today? 我知道已有复印件，今天无需再复制，仍可以自愿复制。",
+    "prompt": "用No开头，从自己的立场用I和need to写一般现在否定，保留copy the letter，today放句末。不用have to替代need to。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  }
+]

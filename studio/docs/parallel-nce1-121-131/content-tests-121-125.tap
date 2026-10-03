@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: nce1-121 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce1-121 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 58.275083
+  type: 'test'
+  ...
+# Subtest: nce1-121 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce1-121 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 15.315333
+  type: 'test'
+  ...
+# Subtest: nce1-123 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce1-123 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 80.50175
+  type: 'test'
+  ...
+# Subtest: nce1-123 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce1-123 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 14.423833
+  type: 'test'
+  ...
+# Subtest: nce1-125 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce1-125 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 44.847167
+  type: 'test'
+  ...
+# Subtest: nce1-125 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce1-125 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 9.823416
+  type: 'test'
+  ...
+# Subtest: nce1-121 rejects nce1-123 raw without overwriting
+ok 7 - nce1-121 rejects nce1-123 raw without overwriting
+  ---
+  duration_ms: 0.25225
+  type: 'test'
+  ...
+# Subtest: nce1-121 rejects nce1-125 raw without overwriting
+ok 8 - nce1-121 rejects nce1-125 raw without overwriting
+  ---
+  duration_ms: 0.081041
+  type: 'test'
+  ...
+# Subtest: nce1-123 rejects nce1-121 raw without overwriting
+ok 9 - nce1-123 rejects nce1-121 raw without overwriting
+  ---
+  duration_ms: 0.430667
+  type: 'test'
+  ...
+# Subtest: nce1-123 rejects nce1-125 raw without overwriting
+ok 10 - nce1-123 rejects nce1-125 raw without overwriting
+  ---
+  duration_ms: 0.416208
+  type: 'test'
+  ...
+# Subtest: nce1-125 rejects nce1-121 raw without overwriting
+ok 11 - nce1-125 rejects nce1-121 raw without overwriting
+  ---
+  duration_ms: 0.135083
+  type: 'test'
+  ...
+# Subtest: nce1-125 rejects nce1-123 raw without overwriting
+ok 12 - nce1-125 rejects nce1-123 raw without overwriting
+  ---
+  duration_ms: 0.048792
+  type: 'test'
+  ...
+# Subtest: external independent blind 121-125 answers and reasonable variants match current authored contracts
+ok 13 - external independent blind 121-125 answers and reasonable variants match current authored contracts
+  ---
+  duration_ms: 1.661
+  type: 'test'
+  ...
+# Subtest: independent and delayed tasks are distinct originals, not source recital or reordered banks
+ok 14 - independent and delayed tasks are distinct originals, not source recital or reordered banks
+  ---
+  duration_ms: 3.151375
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 326.75825

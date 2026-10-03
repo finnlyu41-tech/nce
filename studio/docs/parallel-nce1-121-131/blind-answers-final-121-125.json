@@ -1,0 +1,456 @@
+[
+  {
+    "id": "diagnostic-n121-human-subject",
+    "answer": "The volunteer who carried the boxes yesterday is our guide.",
+    "variants": [
+      "The volunteer that carried the boxes yesterday is our guide."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n121-thing-subject",
+    "answer": "The machine which is printing labels is broken.",
+    "variants": [
+      "The machine that is printing labels is broken.",
+      "The machine that's printing labels is broken."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n121-object-relative",
+    "answer": "The painter we invited last week is here.",
+    "variants": [
+      "The painter who we invited last week is here.",
+      "The painter whom we invited last week is here.",
+      "The painter that we invited last week is here."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n121-human-subject",
+    "answer": "The worker who opened the door last week is our neighbour.",
+    "variants": [
+      "The worker that opened the door last week is our neighbour."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n121-thing-subject",
+    "answer": "The flags which are moving in the wind are red.",
+    "variants": [
+      "The flags that are moving in the wind are red."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n121-object-relative",
+    "answer": "The customer I helped yesterday is patient.",
+    "variants": [
+      "The customer who I helped yesterday is patient.",
+      "The customer whom I helped yesterday is patient.",
+      "The customer that I helped yesterday is patient."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n121-human-subject",
+    "answer": "The driver who brought the medicine last night.",
+    "variants": [
+      "The driver that brought the medicine last night."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n121-thing-subject",
+    "answer": "Is the bridge which is shaking old?",
+    "variants": [
+      "Is the bridge that is shaking old?",
+      "Is the bridge that's shaking old?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n121-object-relative",
+    "answer": "The map we chose yesterday is not clear.",
+    "variants": [
+      "The map which we chose yesterday is not clear.",
+      "The map that we chose yesterday is not clear.",
+      "The map we chose yesterday isn't clear.",
+      "The map which we chose yesterday isn't clear.",
+      "The map that we chose yesterday isn't clear."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n121-human-subject",
+    "answer": "The student who wrote the report yesterday is our guest.",
+    "variants": [
+      "The student that wrote the report yesterday is our guest."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n121-thing-subject",
+    "answer": "The lamp which is flashing is small.",
+    "variants": [
+      "The lamp that is flashing is small.",
+      "The lamp that's flashing is small."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n121-object-relative",
+    "answer": "The violin she repaired last year is mine.",
+    "variants": [
+      "The violin which she repaired last year is mine.",
+      "The violin that she repaired last year is mine."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n121-human-subject",
+    "answer": "Are the girls who won the race yesterday tall?",
+    "variants": [
+      "Are the girls that won the race yesterday tall?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n121-thing-subject",
+    "answer": "The blankets which are dripping.",
+    "variants": [
+      "The blankets that are dripping."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n121-object-relative",
+    "answer": "I know the singer you heard yesterday.",
+    "variants": [
+      "I know the singer who you heard yesterday.",
+      "I know the singer whom you heard yesterday.",
+      "I know the singer that you heard yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n121-human-subject",
+    "answer": "The baker who made the cakes yesterday is not my friend.",
+    "variants": [
+      "The baker that made the cakes yesterday is not my friend.",
+      "The baker who made the cakes yesterday isn't my friend.",
+      "The baker that made the cakes yesterday isn't my friend."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n121-thing-subject",
+    "answer": "The tank which is leaking.",
+    "variants": [
+      "The tank that is leaking.",
+      "The tank that's leaking."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n121-object-relative",
+    "answer": "Is the play we watched last week interesting?",
+    "variants": [
+      "Is the play which we watched last week interesting?",
+      "Is the play that we watched last week interesting?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n123-omit-person-object",
+    "answer": "That is the singer I called yesterday.",
+    "variants": [
+      "That is the singer who I called yesterday.",
+      "That is the singer whom I called yesterday.",
+      "That is the singer that I called yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n123-omit-thing-object",
+    "answer": "This is the parcel I sent last week.",
+    "variants": [
+      "This is the parcel which I sent last week.",
+      "This is the parcel that I sent last week."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n123-stranded-preposition",
+    "answer": "That is the bench we sat on yesterday.",
+    "variants": [
+      "That is the bench which we sat on yesterday.",
+      "That is the bench that we sat on yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n123-omit-person-object",
+    "answer": "She is the teacher we thanked yesterday.",
+    "variants": [
+      "She is the teacher who we thanked yesterday.",
+      "She is the teacher whom we thanked yesterday.",
+      "She is the teacher that we thanked yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n123-omit-thing-object",
+    "answer": "These are the tools I borrowed yesterday.",
+    "variants": [
+      "These are the tools which I borrowed yesterday.",
+      "These are the tools that I borrowed yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n123-stranded-preposition",
+    "answer": "That is the dancer I told you about yesterday.",
+    "variants": [
+      "That is the dancer who I told you about yesterday.",
+      "That is the dancer whom I told you about yesterday.",
+      "That is the dancer that I told you about yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n123-omit-person-object",
+    "answer": "We thanked the neighbours we invited last week.",
+    "variants": [
+      "We thanked the neighbours who we invited last week.",
+      "We thanked the neighbours whom we invited last week.",
+      "We thanked the neighbours that we invited last week."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n123-omit-thing-object",
+    "answer": "The bag she lost last night.",
+    "variants": [
+      "The bag which she lost last night.",
+      "The bag that she lost last night."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n123-stranded-preposition",
+    "answer": "Is that the coach I spoke to yesterday?",
+    "variants": [
+      "Is that the coach who I spoke to yesterday?",
+      "Is that the coach whom I spoke to yesterday?",
+      "Is that the coach that I spoke to yesterday?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n123-omit-person-object",
+    "answer": "This is the gardener I helped last week.",
+    "variants": [
+      "This is the gardener who I helped last week.",
+      "This is the gardener whom I helped last week.",
+      "This is the gardener that I helped last week."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n123-omit-thing-object",
+    "answer": "Those are the coins we found yesterday.",
+    "variants": [
+      "Those are the coins which we found yesterday.",
+      "Those are the coins that we found yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n123-stranded-preposition",
+    "answer": "That is the house we lived in last year.",
+    "variants": [
+      "That is the house which we lived in last year.",
+      "That is the house that we lived in last year."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n123-omit-person-object",
+    "answer": "I remember the writer she met yesterday.",
+    "variants": [
+      "I remember the writer who she met yesterday.",
+      "I remember the writer whom she met yesterday.",
+      "I remember the writer that she met yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n123-omit-thing-object",
+    "answer": "Is this the basket they made last week?",
+    "variants": [
+      "Is this the basket which they made last week?",
+      "Is this the basket that they made last week?"
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n123-stranded-preposition",
+    "answer": "The plan we talked about yesterday.",
+    "variants": [
+      "The plan which we talked about yesterday.",
+      "The plan that we talked about yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n123-omit-person-object",
+    "answer": "The assistants I trained yesterday.",
+    "variants": [
+      "The assistants who I trained yesterday.",
+      "The assistants whom I trained yesterday.",
+      "The assistants that I trained yesterday."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n123-omit-thing-object",
+    "answer": "That is not the documentary we watched last week.",
+    "variants": [
+      "That is not the documentary which we watched last week.",
+      "That is not the documentary that we watched last week."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n123-stranded-preposition",
+    "answer": "We chose the company she worked for last year.",
+    "variants": [
+      "We chose the company which she worked for last year.",
+      "We chose the company that she worked for last year."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n125-present-have-to",
+    "answer": "We have to label the boxes today.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n125-past-had-to",
+    "answer": "She had to use a torch last week.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n125-no-need",
+    "answer": "You do not need to bring a chair today.",
+    "variants": [
+      "You don't need to bring a chair today."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n125-present-have-to",
+    "answer": "Mara has to keep her ticket.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n125-past-had-to",
+    "answer": "We had to use the side door yesterday.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n125-no-need",
+    "answer": "She does not need to send the receipt today.",
+    "variants": [
+      "She doesn't need to send the receipt today."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n125-present-have-to",
+    "answer": "Do they have to check the ropes now?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n125-past-had-to",
+    "answer": "Did you have to walk home last night?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n125-no-need",
+    "answer": "No, we do not need to buy a microphone.",
+    "variants": [
+      "No, we don't need to buy a microphone."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n125-present-have-to",
+    "answer": "The driver has to wait here now.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n125-past-had-to",
+    "answer": "He had to wear a coat last year.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n125-no-need",
+    "answer": "Mara does not need to print the form today.",
+    "variants": [
+      "Mara doesn't need to print the form today."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n125-present-have-to",
+    "answer": "I do not have to bring my cup.",
+    "variants": [
+      "I don't have to bring my cup."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n125-past-had-to",
+    "answer": "They had to take the ferry yesterday.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n125-no-need",
+    "answer": "No, they do not need to bring a guitar today.",
+    "variants": [
+      "No, they don't need to bring a guitar today."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n125-present-have-to",
+    "answer": "Does the guide have to count the visitors now?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n125-past-had-to",
+    "answer": "Did we have to carry the bags last week?",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n125-no-need",
+    "answer": "No, I do not need to copy the letter today.",
+    "variants": [
+      "No, I don't need to copy the letter today."
+    ],
+    "concern": ""
+  }
+]

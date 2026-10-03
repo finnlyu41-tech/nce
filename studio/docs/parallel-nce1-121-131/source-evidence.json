@@ -1,0 +1,167 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "remoteHeads": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "groups": [
+    {
+      "id": "nce1-121",
+      "sourceSha256": "9a3874ac0e4f6911d0197bd546cfab2b17a0fdf9f7be5c291564fbe207100dc2",
+      "languageFileSha256": "a9af27cef4c6e0d04d3daa35ac14c63ba3ef06a648845930ca7fc74898b1549d",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "5a0dbac27b13045625acfffb51d445cef758e7b9fe6b1463acead1917458f1cc",
+      "grammarEntry": {
+        "id": "NCE1-121",
+        "book": "NCE1",
+        "lesson": 121,
+        "lastLesson": 122,
+        "unit": null,
+        "title": "关系代词 who / whom / which / that",
+        "category": "clause",
+        "terms": "relative who whom which that",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 252
+          },
+          {
+            "section": "句型练习",
+            "page": 251
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 250
+          }
+        ],
+        "pages": [
+          250,
+          251,
+          252
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 250,
+          "sha256": "e773ba824158f7e4dfd369d6eaf14f3c495daa0383cff468451ad3fec5de94c0"
+        },
+        {
+          "page": 251,
+          "sha256": "7a373ed9a12c43174c0cb53c0e75f72739c8811aeca483c5baa2eb3f8c996818"
+        },
+        {
+          "page": 252,
+          "sha256": "122b90653308c3328e3fa3db07a8031afe8acf141f7018d9e3ee4db5022980bd"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-123",
+      "sourceSha256": "7d6eda686ef36c254947dca74b6661496ecfeeb7350ea9a3f9ab2b9c485e8979",
+      "languageFileSha256": "37d765f9e7b205ced5da4089208aee74e55c513af056bba885bb15a5c47799a3",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "0e12fc4792c8edf1c67e7ad378dca00c143315ba913bb6cb84cdc9144e788a65",
+      "grammarEntry": {
+        "id": "NCE1-123",
+        "book": "NCE1",
+        "lesson": 123,
+        "lastLesson": 124,
+        "unit": null,
+        "title": "关系代词的省略",
+        "category": "clause",
+        "terms": "relative omission",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 256
+          },
+          {
+            "section": "句型练习",
+            "page": 255
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 254
+          }
+        ],
+        "pages": [
+          254,
+          255,
+          256
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 254,
+          "sha256": "47fd6d52a03cc2e9933608f5d41fe1f6b7b9b32903c931f91ba39e6966c96bd7"
+        },
+        {
+          "page": 255,
+          "sha256": "2d2b5578e6ece6ba5493f516c3c779d4606d5944bc1cdacf72be0155dd234deb"
+        },
+        {
+          "page": 256,
+          "sha256": "b08a6a81dbec5e23ef3e328997408f451d631ae9929328e189c599ca2c7bf7b0"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-125",
+      "sourceSha256": "aec2e709b73cb949cb519696e94340510a685714ecb2c1048639dea3509d6079",
+      "languageFileSha256": "6c42fbff37f76ec56faf4f1af858075cf6a6804c32062987ea631d6751105fbf",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "4ddd289e326e440f9035c879d90d347529e650093d01467b5bb18e6b92975ff7",
+      "grammarEntry": {
+        "id": "NCE1-125",
+        "book": "NCE1",
+        "lesson": 125,
+        "lastLesson": 126,
+        "unit": null,
+        "title": "have to 与不必",
+        "category": "modal",
+        "terms": "have to do not need to",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 260
+          },
+          {
+            "section": "句型练习",
+            "page": 259
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 258
+          }
+        ],
+        "pages": [
+          258,
+          259,
+          260
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 258,
+          "sha256": "01446f68c56de7b39dda935f4fe3412a90a56d67511d9b544ea7f6dac6665721"
+        },
+        {
+          "page": 259,
+          "sha256": "312108084968ecc4a609d380965994f51e280afa4e0af6f4868ce5aabd290b07"
+        },
+        {
+          "page": 260,
+          "sha256": "a889a05510d07f9e9ef683b68a268842840fc8d66385c3b0430cb8cb47f2a27d"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}

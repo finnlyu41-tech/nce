@@ -1,0 +1,73 @@
+{
+  "base": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "remoteHeadsAtStart": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "baseRuntimeDocumented": "9d34b1f35aaf9ecfca3e534c5ecb953e46551a22",
+  "owner": "root unified host author; sole publisher final integration",
+  "productionChangesInThisLine": [],
+  "imports": [
+    {
+      "id": "nce1-121",
+      "module": "./parallel-nce1-121-131/lesson-nce1-121.mjs",
+      "key": "nce-course-loop-v1:NCE1-121",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-121",
+      "lessons": [
+        121,
+        122
+      ]
+    },
+    {
+      "id": "nce1-123",
+      "module": "./parallel-nce1-121-131/lesson-nce1-123.mjs",
+      "key": "nce-course-loop-v1:NCE1-123",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-123",
+      "lessons": [
+        123,
+        124
+      ]
+    },
+    {
+      "id": "nce1-125",
+      "module": "./parallel-nce1-121-131/lesson-nce1-125.mjs",
+      "key": "nce-course-loop-v1:NCE1-125",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-125",
+      "lessons": [
+        125,
+        126
+      ]
+    }
+  ],
+  "pendingSecondBatch": [
+    127,
+    129,
+    131
+  ],
+  "hostAuthorEdits": [
+    {
+      "path": "studio/course-loop/registry.mjs",
+      "action": "Import explicit modules and append them to existing content list; retain actual createCourseLoopModel(content) and exported matches."
+    },
+    {
+      "path": "studio/course-loop/host-contract.d.ts",
+      "action": "Append nce1-121,123,125 to CourseId and odd IDs to showSource.lesson plus NCE1 comicKey literals; preserve action schemas."
+    },
+    {
+      "path": "studio/app/course-loop-next.ts",
+      "action": "Coordinate119 predecessor with109–119 owner; add119->121,121->123,123->125,125->127.127 remains ordinary textbook/map until separately ready."
+    }
+  ],
+  "realHostQARequired": [
+    "Real119 predecessor entry, namespace parser/sidecar/backup and CAS writer protection",
+    "Actual shared successor/access/Today selector",
+    "Final packaged internal LRC/source/comic/paired-page binding",
+    "No map/FSRS completion award"
+  ],
+  "candidateBoundary": "Temporary bundler registration only; absent successors unchanged; native harness preserves existing advanced nce1-37 route.",
+  "limits": [
+    "natural24h/7d untested",
+    "human playback/hearing/speaking untested",
+    "no actual phone/Safari keyboard audit",
+    "own-expression awaiting-human-review",
+    "no Band/four-skill/learning-gain claim",
+    "no push/merge/deploy"
+  ]
+}

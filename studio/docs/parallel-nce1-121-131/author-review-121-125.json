@@ -1,0 +1,465 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "status": "authored-pending-independent-blind-review",
+  "ownerScope": "three lesson modules, this author review and the prompt-only file; no shared runtime changes",
+  "promptOnly": {
+    "path": "studio/docs/parallel-nce1-121-131/blind-prompts-121-125.json",
+    "sha256": "ad73dc5832088bd4156b32fcec1cd6b1a00d1aef86fb744d6b15945c8d76299c",
+    "tasks": 54,
+    "keys": [
+      "id",
+      "context",
+      "prompt",
+      "form"
+    ],
+    "exactEqualityToQuestions": "passed"
+  },
+  "authorship": "54 original constrained scenarios, six stages of three goals; 26 independent/review items revised to change actual task purpose and output. Repair and two distinct new-context review banks; no original sentence treated as transfer.",
+  "sourcePagination": "Existing PDF catalog page numbers differ from visibly printed page numbers by +4. Keep both named separately.",
+  "visualFindings": {
+    "121": "Catalog249/printed245 comic shows who-subject, which-subject and who/that object;250/246 notes explicitly mention whom;251/247 paired subject/object who(m)/which/that;252/248 written exercise contrasts subject and object combining.",
+    "123": "Catalog253/printed249 comic has object omission, on/about stranded;254/250 notes explicitly justify omission of object that/whom;255/251 first three pictures reduce who/that+be+-ing together, remaining examples omit object;256/252 written work confirms omission and retained on/to/about. Teaching distinguishes reduction, not assessed as a fourth goal.",
+    "125": "Catalog257/printed253 comic has current have to, past had to and no-need after rain;258/254 notes give past had to and external need;259/255 additionally includes will have to and have had to, marked outside independent scope;260/256 gives has to/do support and no-need forms."
+  },
+  "groups": [
+    {
+      "id": "nce1-121",
+      "modulePath": "studio/course-loop/parallel-nce1-121-131/lesson-nce1-121.mjs",
+      "moduleSha256": "4a73d0cbc628c8b72541ca589842c5029d660010b9b51630934ffa1f9a7d5544",
+      "languagePath": "/language/NCE1/121.json",
+      "internalSourceSha256": "9a3874ac0e4f6911d0197bd546cfab2b17a0fdf9f7be5c291564fbe207100dc2",
+      "languageFileSha256": "a9af27cef4c6e0d04d3daa35ac14c63ba3ef06a648845930ca7fc74898b1549d",
+      "grammarEntry": {
+        "id": "NCE1-121",
+        "book": "NCE1",
+        "lesson": 121,
+        "lastLesson": 122,
+        "unit": null,
+        "title": "关系代词 who / whom / which / that",
+        "category": "clause",
+        "terms": "relative who whom which that",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 252
+          },
+          {
+            "section": "句型练习",
+            "page": 251
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 250
+          }
+        ],
+        "pages": [
+          250,
+          251,
+          252
+        ],
+        "references": []
+      },
+      "sourcePages": [
+        {
+          "page": 249,
+          "src": "/lesson-pages/5a0dbac27b13045625acfffb51d445cef758e7b9fe6b1463acead1917458f1cc.jpg",
+          "sha256": "5a0dbac27b13045625acfffb51d445cef758e7b9fe6b1463acead1917458f1cc",
+          "printedPage": 245,
+          "visualInspection": "view_image: full comic/text and lesson heading visibly verified"
+        },
+        {
+          "page": 250,
+          "src": "/lesson-pages/e773ba824158f7e4dfd369d6eaf14f3c495daa0383cff468451ad3fec5de94c0.jpg",
+          "sha256": "e773ba824158f7e4dfd369d6eaf14f3c495daa0383cff468451ad3fec5de94c0",
+          "printedPage": 246,
+          "visualInspection": "view_image: full comic/text and lesson heading visibly verified"
+        },
+        {
+          "page": 251,
+          "src": "/lesson-pages/7a373ed9a12c43174c0cb53c0e75f72739c8811aeca483c5baa2eb3f8c996818.jpg",
+          "sha256": "7a373ed9a12c43174c0cb53c0e75f72739c8811aeca483c5baa2eb3f8c996818",
+          "printedPage": 247,
+          "visualInspection": "view_image: notes or paired exercise/written exercise visibly verified"
+        },
+        {
+          "page": 252,
+          "src": "/lesson-pages/122b90653308c3328e3fa3db07a8031afe8acf141f7018d9e3ee4db5022980bd.jpg",
+          "sha256": "122b90653308c3328e3fa3db07a8031afe8acf141f7018d9e3ee4db5022980bd",
+          "printedPage": 248,
+          "visualInspection": "view_image: notes or paired exercise/written exercise visibly verified"
+        }
+      ],
+      "clips": [
+        {
+          "target": "human-subject",
+          "label": "原声：who作人的从句主语",
+          "start": 33.51,
+          "end": 37.82,
+          "startRow": {
+            "en": "The lady who is standing behind the counter.",
+            "zh": "是那位站在柜台后面的女士。",
+            "time": 33.51
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        },
+        {
+          "target": "thing-subject",
+          "label": "原声：which作物件从句主语",
+          "start": 41.15,
+          "end": 44.96,
+          "startRow": {
+            "en": "The books which are on the counter.",
+            "zh": "是柜台上的那些书。",
+            "time": 41.15
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        },
+        {
+          "target": "object-relative",
+          "label": "原声：who作从句宾语；whom/that见配套页",
+          "start": 57.5,
+          "end": 62.54,
+          "startRow": {
+            "en": "The man who I served was wearing a hat.",
+            "zh": "我为之服务的那个人戴着一顶帽子。",
+            "time": 57.5
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        }
+      ],
+      "counts": {
+        "tasks": 18,
+        "targets": 3,
+        "counterexamples": 72,
+        "accepted": 54
+      },
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "own": "awaiting-human-review",
+      "coverage": "用限定关系从句辨认人和物，区别作主语与作宾语的关系词并保留施受关系。",
+      "untrained": [
+        "non-restrictive relative clauses",
+        "all relative/adverb systems"
+      ],
+      "outputForms": {
+        "questions": 3,
+        "nominalIdentityReplies": 3
+      }
+    },
+    {
+      "id": "nce1-123",
+      "modulePath": "studio/course-loop/parallel-nce1-121-131/lesson-nce1-123.mjs",
+      "moduleSha256": "2a4f4ad24a56bc1e59fb253fa3885fe58d2ddfd236377b920c654fbe068b3454",
+      "languagePath": "/language/NCE1/123.json",
+      "internalSourceSha256": "7d6eda686ef36c254947dca74b6661496ecfeeb7350ea9a3f9ab2b9c485e8979",
+      "languageFileSha256": "37d765f9e7b205ced5da4089208aee74e55c513af056bba885bb15a5c47799a3",
+      "grammarEntry": {
+        "id": "NCE1-123",
+        "book": "NCE1",
+        "lesson": 123,
+        "lastLesson": 124,
+        "unit": null,
+        "title": "关系代词的省略",
+        "category": "clause",
+        "terms": "relative omission",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 256
+          },
+          {
+            "section": "句型练习",
+            "page": 255
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 254
+          }
+        ],
+        "pages": [
+          254,
+          255,
+          256
+        ],
+        "references": []
+      },
+      "sourcePages": [
+        {
+          "page": 253,
+          "src": "/lesson-pages/0e12fc4792c8edf1c67e7ad378dca00c143315ba913bb6cb84cdc9144e788a65.jpg",
+          "sha256": "0e12fc4792c8edf1c67e7ad378dca00c143315ba913bb6cb84cdc9144e788a65",
+          "printedPage": 249,
+          "visualInspection": "view_image: full comic/text and lesson heading visibly verified"
+        },
+        {
+          "page": 254,
+          "src": "/lesson-pages/47fd6d52a03cc2e9933608f5d41fe1f6b7b9b32903c931f91ba39e6966c96bd7.jpg",
+          "sha256": "47fd6d52a03cc2e9933608f5d41fe1f6b7b9b32903c931f91ba39e6966c96bd7",
+          "printedPage": 250,
+          "visualInspection": "view_image: full comic/text and lesson heading visibly verified"
+        },
+        {
+          "page": 255,
+          "src": "/lesson-pages/2d2b5578e6ece6ba5493f516c3c779d4606d5944bc1cdacf72be0155dd234deb.jpg",
+          "sha256": "2d2b5578e6ece6ba5493f516c3c779d4606d5944bc1cdacf72be0155dd234deb",
+          "printedPage": 251,
+          "visualInspection": "view_image: notes or paired exercise/written exercise visibly verified"
+        },
+        {
+          "page": 256,
+          "src": "/lesson-pages/b08a6a81dbec5e23ef3e328997408f451d631ae9929328e189c599ca2c7bf7b0.jpg",
+          "sha256": "b08a6a81dbec5e23ef3e328997408f451d631ae9929328e189c599ca2c7bf7b0",
+          "printedPage": 252,
+          "visualInspection": "view_image: notes or paired exercise/written exercise visibly verified"
+        }
+      ],
+      "clips": [
+        {
+          "target": "omit-person-object",
+          "label": "原声：people I met省略宾语关系词",
+          "start": 35.04,
+          "end": 39.49,
+          "startRow": {
+            "en": "They're people I met during the trip.",
+            "zh": "他们是我旅行中遇到的人。",
+            "time": 35.04
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        },
+        {
+          "target": "omit-thing-object",
+          "label": "原声：photograph I took省略宾语关系词",
+          "start": 19.99,
+          "end": 26.64,
+          "startRow": {
+            "en": "This is a photograph I took during my trip to Australia.",
+            "zh": "这是我澳大利亚之行时拍的照片。",
+            "time": 19.99
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        },
+        {
+          "target": "stranded-preposition",
+          "label": "原声：ship we travelled on保留on",
+          "start": 39.49,
+          "end": 42.39,
+          "startRow": {
+            "en": "That's the ship we travelled on.",
+            "zh": "那是我们乘坐的船。",
+            "time": 39.49
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        }
+      ],
+      "counts": {
+        "tasks": 18,
+        "targets": 3,
+        "counterexamples": 72,
+        "accepted": 86
+      },
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "own": "awaiting-human-review",
+      "coverage": "在新人物、物件和介词搭配中省略或保留宾语关系词，保留主语、时态与动作方向。",
+      "untrained": [
+        "independent assessment of who+be reduction",
+        "fronted prepositions",
+        "non-restrictive clauses"
+      ],
+      "outputForms": {
+        "questions": 2,
+        "nominalIdentityReplies": 3
+      }
+    },
+    {
+      "id": "nce1-125",
+      "modulePath": "studio/course-loop/parallel-nce1-121-131/lesson-nce1-125.mjs",
+      "moduleSha256": "2fdb22d6591a5d748f2f0a7e0131b2101f5cc7cc8f8a2cdb55464bea0e3e3d55",
+      "languagePath": "/language/NCE1/125.json",
+      "internalSourceSha256": "aec2e709b73cb949cb519696e94340510a685714ecb2c1048639dea3509d6079",
+      "languageFileSha256": "6c42fbff37f76ec56faf4f1af858075cf6a6804c32062987ea631d6751105fbf",
+      "grammarEntry": {
+        "id": "NCE1-125",
+        "book": "NCE1",
+        "lesson": 125,
+        "lastLesson": 126,
+        "unit": null,
+        "title": "have to 与不必",
+        "category": "modal",
+        "terms": "have to do not need to",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 260
+          },
+          {
+            "section": "句型练习",
+            "page": 259
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 258
+          }
+        ],
+        "pages": [
+          258,
+          259,
+          260
+        ],
+        "references": []
+      },
+      "sourcePages": [
+        {
+          "page": 257,
+          "src": "/lesson-pages/4ddd289e326e440f9035c879d90d347529e650093d01467b5bb18e6b92975ff7.jpg",
+          "sha256": "4ddd289e326e440f9035c879d90d347529e650093d01467b5bb18e6b92975ff7",
+          "printedPage": 253,
+          "visualInspection": "view_image: full comic/text and lesson heading visibly verified"
+        },
+        {
+          "page": 258,
+          "src": "/lesson-pages/01446f68c56de7b39dda935f4fe3412a90a56d67511d9b544ea7f6dac6665721.jpg",
+          "sha256": "01446f68c56de7b39dda935f4fe3412a90a56d67511d9b544ea7f6dac6665721",
+          "printedPage": 254,
+          "visualInspection": "view_image: full comic/text and lesson heading visibly verified"
+        },
+        {
+          "page": 259,
+          "src": "/lesson-pages/312108084968ecc4a609d380965994f51e280afa4e0af6f4868ce5aabd290b07.jpg",
+          "sha256": "312108084968ecc4a609d380965994f51e280afa4e0af6f4868ce5aabd290b07",
+          "printedPage": 255,
+          "visualInspection": "view_image: notes or paired exercise/written exercise visibly verified"
+        },
+        {
+          "page": 260,
+          "src": "/lesson-pages/a889a05510d07f9e9ef683b68a268842840fc8d66385c3b0430cb8cb47f2a27d.jpg",
+          "sha256": "a889a05510d07f9e9ef683b68a268842840fc8d66385c3b0430cb8cb47f2a27d",
+          "printedPage": 256,
+          "visualInspection": "view_image: notes or paired exercise/written exercise visibly verified"
+        }
+      ],
+      "clips": [
+        {
+          "target": "present-have-to",
+          "label": "原声：have to问当前必要；has to见配套页",
+          "start": 25.78,
+          "end": 29.52,
+          "startRow": {
+            "en": "Do you have to water it now?",
+            "zh": "你现在非浇不可吗？",
+            "time": 25.78
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        },
+        {
+          "target": "past-had-to",
+          "label": "原声：had to说过去义务",
+          "start": 44.16,
+          "end": 47.52,
+          "startRow": {
+            "en": "I had to water it every day.",
+            "zh": "我不得不每天浇水。",
+            "time": 44.16
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        },
+        {
+          "target": "no-need",
+          "label": "原声：do not need to表示不必",
+          "start": 63.46,
+          "end": 68.8,
+          "startRow": {
+            "en": "That means you don't need to water the garden.",
+            "zh": "这意味着你不用浇花园了。",
+            "time": 63.46
+          },
+          "endEvidence": "next LRC row only; not heard acoustic end"
+        }
+      ],
+      "counts": {
+        "tasks": 18,
+        "targets": 3,
+        "counterexamples": 72,
+        "accepted": 31
+      },
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "own": "awaiting-human-review",
+      "coverage": "根据已给安排区分have/has to、had to和do/does not need to，不把不必改成禁止。",
+      "untrained": [
+        "future will have to",
+        "perfect have had to",
+        "all uses of need",
+        "full modal system"
+      ],
+      "outputForms": {
+        "questions": 4,
+        "nominalIdentityReplies": 0
+      }
+    }
+  ],
+  "authorSanity": {
+    "command": "NCE_IDS=121,123,125 node --test --test-name-pattern='nce1-|every cross-course|independent and delayed' studio/course-loop/parallel-nce1-121-131/test-content.mjs studio/course-loop/parallel-nce1-121-131/test-source.mjs",
+    "result": "20 selected author content/factory/source tests passed; 0 failed. Old external blind excluded by positive name filter while root refreshes it.",
+    "checks": "actual createCourseLoopModel factory: all accepted/near-miss submissions, first-answer and separate correction preservation, help and retry, disclosed synthetic due time, two finite review banks, exhausted pools, raw restore course isolation; actual source guard, manifest LRC/audio integrity and indexed page hashes",
+    "independence": "author sanity only; does not replace root independent blind/native QA",
+    "oldBlind": "Before positive filtering, the full run and an attempted negative pattern both executed obsolete blind evidence and failed its old concern check. Other 20 cases passed. Root owns replacement blind evidence."
+  },
+  "limits": {
+    "listening": "unverified",
+    "pronunciation": "unverified",
+    "clipAcousticEnds": "unverified; only next timestamp bounds",
+    "naturallyElapsed24Hours": "unverified",
+    "naturallyElapsed7Days": "unverified",
+    "learningGains": "unverified",
+    "ownExpression": "awaiting-human-review",
+    "nativeBrowser": "root-owned; not yet author verified",
+    "video": "existing source unchanged; text author did not audit video",
+    "publication": "none; no commit/push/merge/deploy"
+  },
+  "variants": "Finite accepted who/whom/which/that and optional object omission per prompt; supported contractions expanded across all relative variants. Questions retain question mark; bounded NP replies follow unchanged statement punctuation normalization. Explicit final-now placement filters unintended automatic fronted variants. The 121 relative-clause that is may also contract to that's.",
+  "revision": {
+    "reason": "Root review required transfer task diversity and a physically coherent tank scenario.",
+    "changedTasks": 26,
+    "perBank": {
+      "121": {
+        "independent": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "123": {
+        "independent": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "125": {
+        "independent": 3,
+        "review-a": 2,
+        "review-b": 3
+      }
+    },
+    "forms": "121: identity NP, unknown-attribute query, main negation and I know;123: identity NP, Is-this/that query, We thanked/I remember/We chose and identity negation;125: present/past obligation query, no-obligation have-to denial and No+need-to reply including you-to-I viewpoint.",
+    "tank": "Only identifies tank currently leaking; no assertion that an empty tank leaks.",
+    "newSourceCoverage": "126 catalog259/printed255 includes Do/Did have to; catalog260/printed256 includes have-to negative and has-to. Teaching explains Do/Does/Did have original form.",
+    "blindConstraintCorrection": "diagnostic/guided/repair121 human-subject prompts narrowed from past tense to simple past; no expansion to past progressive, which belongs outside the intended constrained target.",
+    "relativeContractionCorrection": "121 finite that is to that's variants accepted locally in relative clauses, across every applicable task; shared helper untouched."
+  }
+}

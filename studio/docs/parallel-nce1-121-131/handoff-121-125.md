@@ -1,0 +1,15 @@
+# NCE1 121–126 first freeze
+
+Candidate base: `7b7c1283d12f0c6d784478cda8353080598f6980`, freshly verified on both designated remote refs. Local isolated authoring only; no production registration or deployment.
+
+Three complete modules (121/123/125), each with 18 original questions: diagnostic, guided, unfamiliar independent transfer, repair, two different delayed banks, three teaching goals and prerequisites, plus open expression awaiting human review. Total 54 questions, 171 accepted answers and 216 meaningful near misses. After review, 26 independent/delayed tasks changed structure and scenario substantially. 123 explicitly distinguishes object-relative omission from who+be+ing reduction; reduction is not independently assessed. 125 future/perfect have-to forms are outside this module's assessed scope.
+
+Final independent blind solve used key-free context/prompt/form only: 54 answers and 87 reasonable variants, zero remaining concerns. The test checks exported prompt equality and all blind variants against each module's actual matches. No full answer embedded in prompts, duplicate contexts, exact original-text recitations, or reordered duplicate banks found.
+
+Actual unchanged production factory tests: 14/14. Actual source contract and SourcePanel guard: 8/8. Unregistered actual host boundary: 3/3. Source languageSha256 equals internal LRC sourceSha256, not transport JSON hash; original audio integrity, packaged comics and declared notes/exercises/written pages are bound to existing resources. Page catalog numbers differ from printed numbers by four; use actual catalog entries.
+
+Real current Workspace in fresh isolated Chrome QA passed all three groups: source and comic rendering, diagnostic/teaching/guided, wrong first independent answer, separate correction with reason, repair, open expression, waiting, saved IndexedDB record and reload. 18 screenshots include real 390px flows and 320px waiting representatives with no horizontal overflow. Native start-binding hashes still match final modules, prompts, blind answers and author review. Current host video-help UI is inherited and untouched; no video or audio playback was tested.
+
+Preview registration is test-only bundler override. Shared registry, model, UI, store, host contract, successor/Today/map/FSRS are unchanged. Harness preserves existing advanced route nce1-37 because actual shared selector has no new successors. Root must perform actual integration and parser/CAS/backup/Today/successor validation. Recipe: coordinate 119 predecessor with task14 owner, then 119→121→123→125→127; 127 remains ordinary map/textbook until separately ready. Extend CourseId and source lesson/comic literal unions as detailed in integration-plan.json.
+
+Inline authoring flags remain pending; acceptance is external and bound to this freeze, not a claim of live integration. Natural 24h/7d, human hearing/pronunciation, actual phone/Safari keyboard behavior and human open-expression review remain untested/pending. No learning-gain, four-skill or Band claim. No push, merge or deploy.
