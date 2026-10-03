@@ -23,10 +23,10 @@
     "sharedGuides": 97,
     "grammarUnits": 28,
     "grammarQuestions": 168,
-    "registeredLoopGroups": 66,
-    "unregisteredLoopGroups": 210,
-    "registeredLoopTextbookCourseNumbers": 132,
-    "registeredLoopQuestions": 1188,
+    "registeredLoopGroups": 72,
+    "unregisteredLoopGroups": 204,
+    "registeredLoopTextbookCourseNumbers": 144,
+    "registeredLoopQuestions": 1296,
     "support": {
       "ielts-mini": 29,
       "grammar-unit": 28,
@@ -109,7 +109,13 @@
       "nce1-125",
       "nce1-127",
       "nce1-129",
-      "nce1-131"
+      "nce1-131",
+      "nce1-133",
+      "nce1-135",
+      "nce1-137",
+      "nce1-139",
+      "nce1-141",
+      "nce1-143"
     ],
     "groupIds": [
       "NCE1-1",
@@ -177,12 +183,18 @@
       "NCE1-125",
       "NCE1-127",
       "NCE1-129",
-      "NCE1-131"
+      "NCE1-131",
+      "NCE1-133",
+      "NCE1-135",
+      "NCE1-137",
+      "NCE1-139",
+      "NCE1-141",
+      "NCE1-143"
     ],
     "learnerValidation": "not-inferred-from-registration"
   },
   "sourceFiles": {
-    "course-loop/registry.mjs": "6af1fb5abd84d17995ff6937ce83474486a949253fedaafd41c13e63ab47a450",
+    "course-loop/registry.mjs": "5a171fbfe0de536bbc9aa8a129d6559f1b8f6b7c84f742cfdfcbc64a861d9b44",
     "course-loop/lesson-nce1-001.mjs": "7b5ae9f4d607881c50a9e39839905895b794cbddf1cb9a09bdbf37592eb1a63f",
     "course-loop/batch-01/lesson-nce1-003.mjs": "70713041d37a6d7fb2ad8babd72ca7b8efd97bacd532ad658fd2e7fa947c4e73",
     "course-loop/batch-01/content-contract.mjs": "209556c7bd9d88f9d3482d2fda7e4440f5ad07736142951ded2a237ef09daed9",
@@ -255,6 +267,12 @@
     "course-loop/parallel-nce1-121-131/lesson-nce1-127.mjs": "26d72716f95a1fcee87f79d5ad2eada6b1e4f7464bfa0fc57f6d58a1613f8f8d",
     "course-loop/parallel-nce1-121-131/lesson-nce1-129.mjs": "b31c6dd6b74871c65e939b2e4a2f947aba775eac4716f7efa07c9e24d65bcaef",
     "course-loop/parallel-nce1-121-131/lesson-nce1-131.mjs": "4eb2f3ee479018d9a5e51805e83bb024b47a65c666d61d1c480eb451c5755ce2",
+    "course-loop/parallel-nce1-133-143/lesson-nce1-133.mjs": "d06a1d83e8e1e8406935b820d9bfa14fd0904e716e8b37e24cb2194607817aff",
+    "course-loop/parallel-nce1-133-143/lesson-nce1-135.mjs": "090dc03560dc4e38e07fd11af2a54d584d5479609eed00b7da17814c5294d456",
+    "course-loop/parallel-nce1-133-143/lesson-nce1-137.mjs": "d3cf1f738db4972e158e6d68d9dcbc29d632b20dc6ff6ce75aa6b08765c7caa8",
+    "course-loop/parallel-nce1-133-143/lesson-nce1-139.mjs": "14d572badcd539c702f905f7a7509597c2d3e6a4d3a8fef4c720c2f715637ee4",
+    "course-loop/parallel-nce1-133-143/lesson-nce1-141.mjs": "f5f5d2aec17f3582f199213ca622e3cbc69ccab2b057de0c61726cb3665e516a",
+    "course-loop/parallel-nce1-133-143/lesson-nce1-143.mjs": "fd9afd15ba54ebbc102ef0425cef1bf5d795add416ff06c8c3c7b78e5b7be923",
     "course-loop/model.mjs": "4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57",
     "app/grammar-curriculum.ts": "ff786f00703f17f0d8c617c94bcaa6c8a22a5fc273a5ec12c6e5a54cdf724507",
     "app/data/grammar-curriculum/core-units.json": "bc0776eaeb1495260443bfc393868984542f095ee0ecb571db49c19c3495d7ef",

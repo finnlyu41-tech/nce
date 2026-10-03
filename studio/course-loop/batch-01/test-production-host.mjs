@@ -35,7 +35,7 @@ test('one actual recommendation advances every registered course with access-onl
  let map=host.emptyProgress();const at=NOW+1000;
  for(const [i,last] of supportedCourseIds.entries()){
   assert.match(last,/^nce1-[1-9]\d*$/);const n=Number(last.slice(5));assert.equal(n%2,1,'this suite covers the NCE1 odd-course contract');
-  const ids=supportedCourseIds.slice(0,i+1),want=`nce1-${n+2}`;assert.ok(host.nodeById(want),`${last}: independently expected successor ${want} must exist`);
+  const ids=supportedCourseIds.slice(0,i+1),want=n===143?'chapter-6':`nce1-${n+2}`;assert.ok(host.nodeById(want),`${last}: independently expected successor ${want} must exist`);
   map=host.startNode(host.unlockNode(map,last),last,at);const state=stateWith(entries(ids)),before=JSON.stringify({state,map});
   const d=host.courseDestination(state,map,at);assert.equal(d.node.id,want);assert.equal(host.courseContinuation(state,map,last,at).href,d.href);const textbookTasks=host.todayPractice(state,map,at).filter(t=>t.kind==='course'&&t.id.startsWith('course:'));assert.equal(textbookTasks.length,1);assert.equal(textbookTasks[0].href,d.href);
   assert.equal(JSON.stringify({state,map}),before);assert.equal(host.achieved(host.nodeById(last),map,at),false);
