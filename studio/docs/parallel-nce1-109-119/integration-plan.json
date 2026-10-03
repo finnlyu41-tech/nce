@@ -29,7 +29,8 @@
     "status": "ready-frozen-content-awaiting-owner-wiring",
     "tasks": 54,
     "nodePassed": 22,
-    "browserPassed": 3
+    "browserPassed": 3,
+    "commit": "53820f53c1ab5da34d4b948c541710aa444df810"
   },
   "secondBatch": {
     "courseIds": [
@@ -47,7 +48,10 @@
       "nce1-117": "nce1-119",
       "nce1-119": "nce1-121"
     },
-    "status": "authored-separate-freeze-not-in-this-first-commit"
+    "status": "ready-frozen-content-awaiting-owner-wiring",
+    "tasks": 54,
+    "nodePassed": 22,
+    "browserPassed": 3
   },
   "unionExtensions": [
     "CourseId",
@@ -73,5 +77,7 @@
     "pronunciation",
     "all four skills",
     "learning gain"
-  ]
+  ],
+  "combinedNodePassed": 57,
+  "combinedTasks": 108
 }

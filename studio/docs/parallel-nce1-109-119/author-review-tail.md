@@ -1,0 +1,11 @@
+# Tail content review
+
+Root reviewed the authored modules and real paired-page evidence before independent blind export. Separate key-free review follows.
+
+- 115: unknown people versus objects, mixed locations and existing versus zero facts require selecting operative evidence. The final delayed group is partial: two people wait and one sings, so not everybody differs from nobody. This is an explicitly taught extension of source everyone plus existing negation. Some-questions, -one/-body synonyms and practising/practicing are accepted finite data. Blind review led to replacing the diagnostic staff claim with people existence and requiring sentence-initial not for the partial-negation task.
+- 117: later banks use bounded intervals, actor-specific records, alternative activities and overlapping versus sequential processes. A snapshot must reflect what spans the reference point; when/while clauses preserve the brief-event/background distinction. Simple past remains natural outside the requested in-progress perspective. The opened-door task accepts both natural active/intransitive and passive event expressions, including clause-order/comma alternatives.
+- 119: mixed completed/later/unfinished/first-experience records require selecting a past reference point, correct actor and task. Before/after already express chronology; those tasks explicitly request the had target and never claim simple past is universally wrong. Not-finished-at-check is a labelled semantic extension, not a claimed literal negative source recording. Third-target states vary instead of repeating only unfinished events. Natural same-person Nora/she clause-order variants are accepted finite data.
+
+Root's pre-blind review strengthened115's final all-group drill into the partial-group contrast and required meaningful evidence selection, scoped had instructions and one-sentence contract compatibility. The author inspected all12 original tail pages; root independently inspected120 and its reference-state exercises.
+
+Each module has18 bounded tasks across six banks and a human-reviewed open prompt. Semantic variation is stronger in later evidence tasks; ordinary scaffolded drills are still practice, not proof of unrestricted transfer, learning gain or four-skills mastery.

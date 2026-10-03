@@ -1,0 +1,456 @@
+[
+  {
+    "id": "diagnostic-n115-person-thing",
+    "answer": "Is there anyone in the reception room?",
+    "variants": [
+      "Is there anybody in the reception room?",
+      "Is there someone in the reception room?",
+      "Is there somebody in the reception room?"
+    ],
+    "issues": [
+      "情境想确认工作人员，题干却问有没有人；有人不能证明此人是工作人员。按题干回答person存在，建议将情境改为想知道是否有人。"
+    ]
+  },
+  {
+    "id": "diagnostic-n115-existence-scope",
+    "answer": "There is nothing in the drawer.",
+    "variants": [
+      "There is not anything in the drawer.",
+      "There isn't anything in the drawer."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n115-everyone-agreement",
+    "answer": "Everyone is practising.",
+    "variants": [
+      "Everybody is practising.",
+      "Everyone is practicing.",
+      "Everybody is practicing."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n115-person-thing",
+    "answer": "Is there anything in the bag?",
+    "variants": [
+      "Is there something in the bag?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n115-existence-scope",
+    "answer": "There is someone by the door.",
+    "variants": [
+      "There is somebody by the door."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n115-everyone-agreement",
+    "answer": "Everybody wants blue paper.",
+    "variants": [
+      "Everyone wants blue paper."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n115-person-thing",
+    "answer": "Is there anyone on the stage?",
+    "variants": [
+      "Is there anybody on the stage?",
+      "Is there someone on the stage?",
+      "Is there somebody on the stage?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n115-existence-scope",
+    "answer": "There is no one in room A.",
+    "variants": [
+      "There is nobody in room A.",
+      "There is not anyone in room A.",
+      "There is not anybody in room A.",
+      "There isn't anyone in room A.",
+      "There isn't anybody in room A."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n115-everyone-agreement",
+    "answer": "Everyone is drawing.",
+    "variants": [
+      "Everybody is drawing."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n115-person-thing",
+    "answer": "Is there anything in the equipment box?",
+    "variants": [
+      "Is there something in the equipment box?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n115-existence-scope",
+    "answer": "There is something in the box.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n115-everyone-agreement",
+    "answer": "Everybody is reading the script.",
+    "variants": [
+      "Everyone is reading the script."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n115-person-thing",
+    "answer": "Is there anyone in the telescope room?",
+    "variants": [
+      "Is there anybody in the telescope room?",
+      "Is there someone in the telescope room?",
+      "Is there somebody in the telescope room?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n115-existence-scope",
+    "answer": "There is nothing on the tray.",
+    "variants": [
+      "There is not anything on the tray.",
+      "There isn't anything on the tray."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n115-everyone-agreement",
+    "answer": "Everyone wants a break.",
+    "variants": [
+      "Everybody wants a break."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n115-person-thing",
+    "answer": "Is there anything in the cupboard?",
+    "variants": [
+      "Is there something in the cupboard?"
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n115-existence-scope",
+    "answer": "There is someone in hall A.",
+    "variants": [
+      "There is somebody in hall A."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n115-everyone-agreement",
+    "answer": "Not everybody is waiting for the bus.",
+    "variants": [
+      "Not everyone is waiting for the bus."
+    ],
+    "issues": [
+      "Everybody is not waiting for the bus / Everybody isn’t waiting for the bus 在自然语境下可能有部分否定读法，也可能被理解为全体不等车；本题事实是两人等车、一人不等，明确的Not everybody最稳妥。若收后置not，须人工判定范围，不应当作无人等车的无歧义同义式。"
+    ]
+  },
+  {
+    "id": "diagnostic-n117-past-in-progress",
+    "answer": "I was painting the sign.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n117-event-background",
+    "answer": "They were carrying the chairs when the light went out.",
+    "variants": [
+      "When the light went out, they were carrying the chairs.",
+      "The light went out when they were carrying the chairs.",
+      "When they were carrying the chairs, the light went out."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n117-parallel-processes",
+    "answer": "I was drawing a map while she was cutting paper.",
+    "variants": [
+      "While she was cutting paper, I was drawing a map.",
+      "She was cutting paper while I was drawing a map.",
+      "While I was drawing a map, she was cutting paper."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n117-past-in-progress",
+    "answer": "She was reading the script.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n117-event-background",
+    "answer": "I was watering the plants when the manager arrived.",
+    "variants": [
+      "When the manager arrived, I was watering the plants.",
+      "The manager arrived when I was watering the plants.",
+      "When I was watering the plants, the manager arrived."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n117-parallel-processes",
+    "answer": "We were making a boat model while he was painting a poster.",
+    "variants": [
+      "While he was painting a poster, we were making a boat model.",
+      "He was painting a poster while we were making a boat model.",
+      "While we were making a boat model, he was painting a poster."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n117-past-in-progress",
+    "answer": "We were checking the cables.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n117-event-background",
+    "answer": "Lena was folding paper when the phone rang.",
+    "variants": [
+      "When the phone rang, Lena was folding paper.",
+      "The phone rang when Lena was folding paper.",
+      "When Lena was folding paper, the phone rang."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n117-parallel-processes",
+    "answer": "I was making a kite while they were painting the models.",
+    "variants": [
+      "While they were painting the models, I was making a kite.",
+      "They were painting the models while I was making a kite.",
+      "While I was making a kite, they were painting the models."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n117-past-in-progress",
+    "answer": "He was cleaning the display case.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n117-event-background",
+    "answer": "The actors were trying on hats when the door was opened.",
+    "variants": [
+      "When the door was opened, the actors were trying on hats.",
+      "The door was opened when the actors were trying on hats.",
+      "When the actors were trying on hats, the door was opened.",
+      "The actors were trying on hats when the door opened.",
+      "When the door opened, the actors were trying on hats.",
+      "The door opened when the actors were trying on hats.",
+      "When the actors were trying on hats, the door opened."
+    ],
+    "issues": [
+      "中文明确说门被打开，the door was opened是自然且忠实的表达；open也可不及物写the door opened。题干只给open，没有限定语态，不能仅因被动句多了was就排除。持续背景必须是试帽子，不能写已结束的搬箱子。"
+    ]
+  },
+  {
+    "id": "repair-n117-parallel-processes",
+    "answer": "She was writing the lines while we were testing the microphones.",
+    "variants": [
+      "While we were testing the microphones, she was writing the lines.",
+      "We were testing the microphones while she was writing the lines.",
+      "While she was writing the lines, we were testing the microphones."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n117-past-in-progress",
+    "answer": "They were drawing the star map.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n117-event-background",
+    "answer": "I was sanding the box when the paper fell.",
+    "variants": [
+      "When the paper fell, I was sanding the box.",
+      "The paper fell when I was sanding the box.",
+      "When I was sanding the box, the paper fell."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n117-parallel-processes",
+    "answer": "You were labelling the boxes while I was arranging the chairs.",
+    "variants": [
+      "While I was arranging the chairs, you were labelling the boxes.",
+      "I was arranging the chairs while you were labelling the boxes.",
+      "While you were labelling the boxes, I was arranging the chairs.",
+      "You were labeling the boxes while I was arranging the chairs.",
+      "While I was arranging the chairs, you were labeling the boxes.",
+      "I was arranging the chairs while you were labeling the boxes.",
+      "While you were labeling the boxes, I was arranging the chairs."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n117-past-in-progress",
+    "answer": "We were making a paper bridge.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n117-event-background",
+    "answer": "Milo was sewing the flag when the timer rang.",
+    "variants": [
+      "When the timer rang, Milo was sewing the flag.",
+      "The timer rang when Milo was sewing the flag.",
+      "When Milo was sewing the flag, the timer rang."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n117-parallel-processes",
+    "answer": "He was painting the door sign while they were folding the envelopes.",
+    "variants": [
+      "While they were folding the envelopes, he was painting the door sign.",
+      "They were folding the envelopes while he was painting the door sign.",
+      "While he was painting the door sign, they were folding the envelopes."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n119-earlier-completion",
+    "answer": "We had already packed the models.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n119-ordered-actions",
+    "answer": "She turned on the display light after she had tested it.",
+    "variants": [
+      "After she had tested it, she turned on the display light."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n119-prior-state",
+    "answer": "He had not finished the bridge.",
+    "variants": [
+      "He hadn't finished the bridge."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n119-earlier-completion",
+    "answer": "The actors had already left the room.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n119-ordered-actions",
+    "answer": "They had printed the posters before they set up the stand.",
+    "variants": [
+      "Before they set up the stand, they had printed the posters."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n119-prior-state",
+    "answer": "I had never used this camera before.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n119-earlier-completion",
+    "answer": "They had already attached the labels.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n119-ordered-actions",
+    "answer": "I photographed the model after I had finished it.",
+    "variants": [
+      "After I had finished it, I photographed the model."
+    ],
+    "issues": []
+  },
+  {
+    "id": "independent-n119-prior-state",
+    "answer": "She had not printed the tickets.",
+    "variants": [
+      "She hadn't printed the tickets."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n119-earlier-completion",
+    "answer": "He had already locked the door.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n119-ordered-actions",
+    "answer": "We had checked the knots before we flew the kite.",
+    "variants": [
+      "Before we flew the kite, we had checked the knots."
+    ],
+    "issues": []
+  },
+  {
+    "id": "repair-n119-prior-state",
+    "answer": "They had painted the second sign.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n119-earlier-completion",
+    "answer": "We had already repaired the wheel.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-a-n119-ordered-actions",
+    "answer": "Nora gave the notice to the host after she had read it.",
+    "variants": [
+      "After Nora had read it, she gave the notice to the host.",
+      "Nora gave the notice to the host after Nora had read it.",
+      "After Nora had read it, Nora gave the notice to the host."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n119-prior-state",
+    "answer": "I had not finished the model.",
+    "variants": [
+      "I hadn't finished the model."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n119-earlier-completion",
+    "answer": "She had already sealed the box.",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "review-b-n119-ordered-actions",
+    "answer": "He had checked the pictures before he hung the poster.",
+    "variants": [
+      "Before he hung the poster, he had checked the pictures."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n119-prior-state",
+    "answer": "She had never developed a photo before.",
+    "variants": [],
+    "issues": []
+  }
+]

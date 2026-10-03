@@ -1,0 +1,446 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "remoteHeads": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "groups": [
+    {
+      "id": "nce1-109",
+      "sourceSha256": "469936066eba535b09e781b7dfb8d39f0a2106e89e2a2bfe6f2f7c75ef6c2f39",
+      "languageFileSha256": "dab7da6e46acf711c152be9e126d5a0187f8d0aa1e1cb372ea9124851a915a6e",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "fe38edfba78636b4c71b06c6970615cc44e06284814fa9fd2302025738dba042",
+      "grammarEntry": {
+        "id": "NCE1-109",
+        "book": "NCE1",
+        "lesson": 109,
+        "lastLesson": 110,
+        "unit": null,
+        "title": "数量比较：much / many / less / fewer",
+        "category": "modifier",
+        "terms": "compare much many less fewer",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 228
+          },
+          {
+            "section": "句型练习",
+            "page": 227
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 226
+          }
+        ],
+        "pages": [
+          226,
+          227,
+          228
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 226,
+          "sha256": "aaad1339071faa154d6036953de8960647c73a324c9b0bfbdb20f609d0c681c9"
+        },
+        {
+          "page": 227,
+          "sha256": "55138b6a4acb9b9030aa4f2c8e2810a63787722a84a8b3a0992c5c0a89d53c9c"
+        },
+        {
+          "page": 228,
+          "sha256": "38b90b4bd2ad14b78c6dd29e0606bd381851ee657ec9b73ba44c121bdf2529a2"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "small-quantity",
+          "label": "109录音：milk与a little；much/many为110课文本扩展",
+          "start": 27.97,
+          "end": 34.43
+        },
+        {
+          "target": "quantity-comparison",
+          "label": "109录音：两勺与less than that；fewer为110课文本扩展",
+          "start": 37.46,
+          "end": 48.29
+        },
+        {
+          "target": "quantity-extreme",
+          "label": "109录音仅引入a few；the most/least/fewest仅110课文本支持",
+          "start": 69.46000000000001,
+          "end": 74.67
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-111",
+      "sourceSha256": "9c4f31455bad8d4bb0b238bd21707f540d738213424e858db1c2eba131c3ab98",
+      "languageFileSha256": "69b3b3ca85775735ecb952a230577f62170a465c60ee670c2129be9ce6eb7f8e",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "e52724eae0a4d9f32603bd41f20b16d89874fd5bf4b1d59631a56f147e9b36f1",
+      "grammarEntry": {
+        "id": "NCE1-111",
+        "book": "NCE1",
+        "lesson": 111,
+        "lastLesson": 112,
+        "unit": null,
+        "title": "形容词比较形式",
+        "category": "modifier",
+        "terms": "compare",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 232
+          },
+          {
+            "section": "句型练习",
+            "page": 231
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 230
+          }
+        ],
+        "pages": [
+          230,
+          231,
+          232
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 230,
+          "sha256": "1e4ff2a721df56f4c9fd009898cf1b5bb92bc55aa8ed5d7a2099828ffabd9e18"
+        },
+        {
+          "page": 231,
+          "sha256": "b8d1c7459b4f2dfff5d8888466207939637fa0b0ece9b3311bcad3c663da2b48"
+        },
+        {
+          "page": 232,
+          "sha256": "c8e70a4af363a1a9d378fc5e8d02fe89bb340f5841583f8722540d7e11366113"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "degree-comparison",
+          "label": "111录音：less expensive价格比较；cheap/difficult为112课文本扩展",
+          "start": 45.99,
+          "end": 53.06
+        },
+        {
+          "target": "degree-equality",
+          "label": "111录音：not as good as；肯定同等由112课文本支持",
+          "start": 53.06,
+          "end": 59.95
+        },
+        {
+          "target": "degree-extreme",
+          "label": "111录音：the most expensive；the least由112课文本扩展",
+          "start": 30.53,
+          "end": 38.79
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-113",
+      "sourceSha256": "2e43727befbe573b90ff4f383ddd7ae50a6149e9bb028ac2ea001594411faf38",
+      "languageFileSha256": "25025ca475763c9fab383464bed67302be0281a3b3f0cc2d116199d6a27bae3b",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "c39ed2492290f0475ec971390ee646746e6230a42b460417f288028b8de053f1",
+      "grammarEntry": {
+        "id": "NCE1-113",
+        "book": "NCE1",
+        "lesson": 113,
+        "lastLesson": 114,
+        "unit": null,
+        "title": "不定代词：none",
+        "category": "noun",
+        "terms": "none got",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 236
+          },
+          {
+            "section": "句型练习",
+            "page": 235
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 234
+          }
+        ],
+        "pages": [
+          234,
+          235,
+          236
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 234,
+          "sha256": "7907904e34ef4995172090e046b9c7a10574ef8c4cf85f9bf9e75ecd8efb44bf"
+        },
+        {
+          "page": 235,
+          "sha256": "1b99d4cce5d59f49bf8e888eb7358c2a4b4b2ff67a5b41ba33af2b4fd682e8a6"
+        },
+        {
+          "page": 236,
+          "sha256": "43eeff4c73f55bddff286e3729366f945c0160f525a56eb8851a8f60eaf43dfd"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "zero-reference",
+          "label": "113录音：no small change；none及none of见文本和后续录音",
+          "start": 31.97,
+          "end": 36.51
+        },
+        {
+          "target": "possession-response",
+          "label": "113录音：none与not…any either；So have I末行仅文本支持",
+          "start": 44.96,
+          "end": 51.8
+        },
+        {
+          "target": "auxiliary-response",
+          "label": "113录音：cannot与Neither can I；其他助动词为114课文本扩展",
+          "start": 56.84,
+          "end": 62.94
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-115",
+      "sourceSha256": "47827536e71d3384ac4f53d949f441c1530cf9879902a5bc41780cf3d3f0f509",
+      "languageFileSha256": "203eb862f08f9db7fe23bc7559bd99cbaa90c6d97e919c48654a7ea7a92cbfd6",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "a2a110835cd903d605db1fb49f144f3e3f0faf17e2632bcceea537bf4efbc78e",
+      "grammarEntry": {
+        "id": "NCE1-115",
+        "book": "NCE1",
+        "lesson": 115,
+        "lastLesson": 116,
+        "unit": null,
+        "title": "every / no / any / some",
+        "category": "noun",
+        "terms": "every no any some",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 240
+          },
+          {
+            "section": "句型练习",
+            "page": 239
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 238
+          }
+        ],
+        "pages": [
+          238,
+          239,
+          240
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 238,
+          "sha256": "4ae5f450f0e6101b57c2ab64a58a0fb0825f6458ec188d04c307ae1bc1719442"
+        },
+        {
+          "page": 239,
+          "sha256": "e990a899d0fcc3cc6a5bf1142b7fc70380cfd09c19c22b3f3367689e1b9c1424"
+        },
+        {
+          "page": 240,
+          "sha256": "8f64d992e09c193f6f77c15a9d1a4c4e469a6851f1ff6c6f99b617ec802c77a3"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "person-thing",
+          "label": "课文：询问可见事物与零回答",
+          "start": 37.8,
+          "end": 45.78
+        },
+        {
+          "target": "existence-scope",
+          "label": "课文：something与none的数量区别；配合116课",
+          "start": 64.91,
+          "end": 77.87
+        },
+        {
+          "target": "everyone-agreement",
+          "label": "课文：everyone与everybody的单数形式",
+          "start": 49.22,
+          "end": 61.36
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-117",
+      "sourceSha256": "f09e8d4c8fec24828b67e39b158a1ea4a7679af3c60038a6bd7798e4b050990b",
+      "languageFileSha256": "112f6a493644c21621bbbbc4f93cdde3c790de69e66cbffea36ee178384a4957",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "8d5ba7b79d74556683ed9b6c3639e74385ab01310d87fd55c8efd5de88974af7",
+      "grammarEntry": {
+        "id": "NCE1-117",
+        "book": "NCE1",
+        "lesson": 117,
+        "lastLesson": 118,
+        "unit": null,
+        "title": "过去进行时",
+        "category": "tense",
+        "terms": "were doing past continuous",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 244
+          },
+          {
+            "section": "句型练习",
+            "page": 243
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 242
+          }
+        ],
+        "pages": [
+          242,
+          243,
+          244
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 242,
+          "sha256": "38360e5a10bd43c59691e9d0c965a29c3121a3aa907a0cc7c2f46fdf7e52aa5b"
+        },
+        {
+          "page": 243,
+          "sha256": "4d23a28011eee607eccf0a93131ddd9a5df8c9b75dc8af05e6f03df6ef85bdc3"
+        },
+        {
+          "page": 244,
+          "sha256": "f00d12cde67731adb6e0bd79a84aabe08d90ba06bef9fac5e058dc8c8ad472e5"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "past-in-progress",
+          "label": "课文：was going与dropped；配合118课B参考时刻",
+          "start": 21.27,
+          "end": 31.54
+        },
+        {
+          "target": "event-background",
+          "label": "课文：doing背景与phoned事件",
+          "start": 69.9,
+          "end": 80.36
+        },
+        {
+          "target": "parallel-processes",
+          "label": "课文：while背景；双过程需结合118课C",
+          "start": 41.1,
+          "end": 52.56
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-119",
+      "sourceSha256": "497dfb8109fcf3f519912cf26ab7a7d8019e45be8cba384f950cbbb683964732",
+      "languageFileSha256": "0dd039d41a0fad815bcdc0f57f32d91b3c98ef3c88780ac1dedc03cb978c5dbf",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "3d42bd806949ec0c393cd10b073896e970a5f43cddfa1d3f202c006b2e5b4b7f",
+      "grammarEntry": {
+        "id": "NCE1-119",
+        "book": "NCE1",
+        "lesson": 119,
+        "lastLesson": 120,
+        "unit": null,
+        "title": "过去完成时",
+        "category": "tense",
+        "terms": "had already happened",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 248
+          },
+          {
+            "section": "句型练习",
+            "page": 247
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 246
+          }
+        ],
+        "pages": [
+          246,
+          247,
+          248
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 246,
+          "sha256": "3f3789045a9ebf40b12d8752b25cdfe32b5531fef98b423190cc00da05877d46"
+        },
+        {
+          "page": 247,
+          "sha256": "16c207ed546daaa0ceaeb498efefdef1a859b49b5651f5d71c720c360187db1b"
+        },
+        {
+          "page": 248,
+          "sha256": "44b6debb307efe23a231ce37ea6ed0d11a3f45c73179d7f3168366cfbdd1413b"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "earlier-completion",
+          "label": "课文：George回到楼下时，thieves had already gone",
+          "start": 74.22,
+          "end": 90.03999999999999
+        },
+        {
+          "target": "ordered-actions",
+          "label": "课文：after先进入，再去饭厅",
+          "start": 41.06,
+          "end": 47.68
+        },
+        {
+          "target": "prior-state",
+          "label": "课文：先前离开与仍在的状态对照；否定扩展见120课B/C",
+          "start": 80.22,
+          "end": 95.75
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}

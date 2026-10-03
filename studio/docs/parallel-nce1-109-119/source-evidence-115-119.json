@@ -1,0 +1,227 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "remoteHeads": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "groups": [
+    {
+      "id": "nce1-115",
+      "sourceSha256": "47827536e71d3384ac4f53d949f441c1530cf9879902a5bc41780cf3d3f0f509",
+      "languageFileSha256": "203eb862f08f9db7fe23bc7559bd99cbaa90c6d97e919c48654a7ea7a92cbfd6",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "a2a110835cd903d605db1fb49f144f3e3f0faf17e2632bcceea537bf4efbc78e",
+      "grammarEntry": {
+        "id": "NCE1-115",
+        "book": "NCE1",
+        "lesson": 115,
+        "lastLesson": 116,
+        "unit": null,
+        "title": "every / no / any / some",
+        "category": "noun",
+        "terms": "every no any some",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 240
+          },
+          {
+            "section": "句型练习",
+            "page": 239
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 238
+          }
+        ],
+        "pages": [
+          238,
+          239,
+          240
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 238,
+          "sha256": "4ae5f450f0e6101b57c2ab64a58a0fb0825f6458ec188d04c307ae1bc1719442"
+        },
+        {
+          "page": 239,
+          "sha256": "e990a899d0fcc3cc6a5bf1142b7fc70380cfd09c19c22b3f3367689e1b9c1424"
+        },
+        {
+          "page": 240,
+          "sha256": "8f64d992e09c193f6f77c15a9d1a4c4e469a6851f1ff6c6f99b617ec802c77a3"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "person-thing",
+          "label": "课文：询问可见事物与零回答",
+          "start": 37.8,
+          "end": 45.78
+        },
+        {
+          "target": "existence-scope",
+          "label": "课文：something与none的数量区别；配合116课",
+          "start": 64.91,
+          "end": 77.87
+        },
+        {
+          "target": "everyone-agreement",
+          "label": "课文：everyone与everybody的单数形式",
+          "start": 49.22,
+          "end": 61.36
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-117",
+      "sourceSha256": "f09e8d4c8fec24828b67e39b158a1ea4a7679af3c60038a6bd7798e4b050990b",
+      "languageFileSha256": "112f6a493644c21621bbbbc4f93cdde3c790de69e66cbffea36ee178384a4957",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "8d5ba7b79d74556683ed9b6c3639e74385ab01310d87fd55c8efd5de88974af7",
+      "grammarEntry": {
+        "id": "NCE1-117",
+        "book": "NCE1",
+        "lesson": 117,
+        "lastLesson": 118,
+        "unit": null,
+        "title": "过去进行时",
+        "category": "tense",
+        "terms": "were doing past continuous",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 244
+          },
+          {
+            "section": "句型练习",
+            "page": 243
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 242
+          }
+        ],
+        "pages": [
+          242,
+          243,
+          244
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 242,
+          "sha256": "38360e5a10bd43c59691e9d0c965a29c3121a3aa907a0cc7c2f46fdf7e52aa5b"
+        },
+        {
+          "page": 243,
+          "sha256": "4d23a28011eee607eccf0a93131ddd9a5df8c9b75dc8af05e6f03df6ef85bdc3"
+        },
+        {
+          "page": 244,
+          "sha256": "f00d12cde67731adb6e0bd79a84aabe08d90ba06bef9fac5e058dc8c8ad472e5"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "past-in-progress",
+          "label": "课文：was going与dropped；配合118课B参考时刻",
+          "start": 21.27,
+          "end": 31.54
+        },
+        {
+          "target": "event-background",
+          "label": "课文：doing背景与phoned事件",
+          "start": 69.9,
+          "end": 80.36
+        },
+        {
+          "target": "parallel-processes",
+          "label": "课文：while背景；双过程需结合118课C",
+          "start": 41.1,
+          "end": 52.56
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-119",
+      "sourceSha256": "497dfb8109fcf3f519912cf26ab7a7d8019e45be8cba384f950cbbb683964732",
+      "languageFileSha256": "0dd039d41a0fad815bcdc0f57f32d91b3c98ef3c88780ac1dedc03cb978c5dbf",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "3d42bd806949ec0c393cd10b073896e970a5f43cddfa1d3f202c006b2e5b4b7f",
+      "grammarEntry": {
+        "id": "NCE1-119",
+        "book": "NCE1",
+        "lesson": 119,
+        "lastLesson": 120,
+        "unit": null,
+        "title": "过去完成时",
+        "category": "tense",
+        "terms": "had already happened",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 248
+          },
+          {
+            "section": "句型练习",
+            "page": 247
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 246
+          }
+        ],
+        "pages": [
+          246,
+          247,
+          248
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 246,
+          "sha256": "3f3789045a9ebf40b12d8752b25cdfe32b5531fef98b423190cc00da05877d46"
+        },
+        {
+          "page": 247,
+          "sha256": "16c207ed546daaa0ceaeb498efefdef1a859b49b5651f5d71c720c360187db1b"
+        },
+        {
+          "page": 248,
+          "sha256": "44b6debb307efe23a231ce37ea6ed0d11a3f45c73179d7f3168366cfbdd1413b"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "earlier-completion",
+          "label": "课文：George回到楼下时，thieves had already gone",
+          "start": 74.22,
+          "end": 90.03999999999999
+        },
+        {
+          "target": "ordered-actions",
+          "label": "课文：after先进入，再去饭厅",
+          "start": 41.06,
+          "end": 47.68
+        },
+        {
+          "target": "prior-state",
+          "label": "课文：先前离开与仍在的状态对照；否定扩展见120课B/C",
+          "start": 80.22,
+          "end": 95.75
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "courseId": "nce1-115",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。本组Everyone/Everybody与指人词-one/-body可按同义互换；询问未知存在时也接受自然的some复合词问法。BrE practising与AmE practicing同义。",
+    "questions": [
+      {
+        "id": "diagnostic-n115-person-thing",
+        "context": "虚构动画社：你看不到接待室内部，想知道是否有工作人员。桌椅是否在内不是你的问题。",
+        "prompt": "用Is there开头询问接待室（reception room）有没有人。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n115-existence-scope",
+        "context": "虚构纸偶工坊的抽屉已经逐格检查：没有纸、笔或任何别的物品；走廊里倒是有人。",
+        "prompt": "只报告抽屉（drawer）里的物品，用There is开头。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n115-everyone-agreement",
+        "context": "虚构演讲组共有四名成员，观察卡确认四人此刻全在练习；桌上的四张海报没有人移动。",
+        "prompt": "用Everyone开头，practise（练习）描述组员当前动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n115-person-thing",
+        "context": "虚构摄影棚：你想确认密封袋里是否有物品，人数已经清楚；袋子尚未打开。",
+        "prompt": "用Is there开头问袋子（bag）里有没有东西。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：看信息缺口是人还是物；there疑问用Is there，句末问号。"
+      },
+      {
+        "id": "guided-n115-existence-scope",
+        "context": "虚构舞台排练：门边有一位未辨认身份的人；储物箱为空。你只汇报门边的发现。",
+        "prompt": "用There is开头说明门边（by the door）的发现，不写姓名。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：证据是否为零？人用someone/no one，物用something/nothing；不要双重否定。"
+      },
+      {
+        "id": "guided-n115-everyone-agreement",
+        "context": "虚构纸艺班：名单上三名学生都说自己想要蓝纸；盒子里每张纸都是白色。",
+        "prompt": "用Everybody、want、blue paper写学生共同的愿望。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先核对是否所有人；not everybody是部分不满足，不是无人；everyone/everybody配单数。"
+      },
+      {
+        "id": "independent-n115-person-thing",
+        "context": "虚构机器人展示的联络单：舞台上是否有人尚未回报；道具是否在台上已确认。你负责补齐人员栏。",
+        "prompt": "向同伴用Is there问舞台（on the stage）的缺失信息，不问道具。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n115-existence-scope",
+        "context": "虚构棋社搬迁的两张记录：A房间只有棋盘和椅子，全部角落已检查无人员；B房间有一名管理员。你要给搬运员汇报A房间的人员情况。",
+        "prompt": "用There is开头，只写room A的人员记录。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n115-everyone-agreement",
+        "context": "虚构模型队：观察员分别记录Ari在画画、Bo在画画、Cy在画画；另有一台机器正在打印。你的句子概括三名队员，不概括机器。",
+        "prompt": "用Everyone、draw概括此刻队员活动。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n115-person-thing",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构露天影院的补查单：设备箱重量发生变化，但内容未知；所有演员已签到。你需要问箱中内容。",
+        "prompt": "用Is there开头问设备箱（equipment box）里有没有东西。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n115-existence-scope",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构书签制作站：透明盒内有一个尚看不清种类的小物件；操作台后无人。",
+        "prompt": "用There is开头，报告盒子（box）内发现，不猜物品名称。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n115-everyone-agreement",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构剧本组：三位成员都在读剧本，没有遗漏；道具已全部存放好。",
+        "prompt": "用Everybody、read the script概括正在进行的人员动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n115-person-thing",
+        "context": "虚构天文台参观表：望远镜房人员情况未知，望远镜数量已核对。带队人需要确定是否可以联系房内的人。",
+        "prompt": "用Is there询问望远镜房（telescope room）尚缺的事实。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n115-existence-scope",
+        "context": "虚构录音馆：检查员完整检查了托盘，盘上无物；隔壁有工程师，柜中有话筒。报告只涉及托盘内容。",
+        "prompt": "用There is开头汇报托盘（tray）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n115-everyone-agreement",
+        "context": "虚构售票志愿队：五位志愿者各自表示想要休息，来访观众想要地图。只概括志愿队。",
+        "prompt": "用Everyone、want a break写志愿者共同愿望。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n115-person-thing",
+        "context": "虚构布景仓库：全部工人已经离开并确认位置；带班人却不知道柜子里是否放有物品，需要补填物品栏。",
+        "prompt": "用Is there问柜子（cupboard）内的缺失事实。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n115-existence-scope",
+        "context": "虚构动画片场：监控确认甲大厅里有一位不知姓名的访客；乙大厅全程无人，甲大厅的桌子为空。你给接待员汇报甲大厅人员。",
+        "prompt": "用There is开头，地点写hall A，不猜访客身份。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n115-everyone-agreement",
+        "context": "虚构合唱小组只包括Dee、Eli、Fae：Dee与Eli正在等车，Fae正在唱歌；另一个小组的五人全部在等车。只概括这个三人合唱组是否全体都在等车。",
+        "prompt": "用everybody与wait for the bus写这个三人组的全体范围判断；不要逐人列名单。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-117",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n117-past-in-progress",
+        "context": "虚构模型工坊昨天的表：我14:00–14:40在涂标牌，14:45才开始装盒。有人问14:20那一刻我在做什么。",
+        "prompt": "用I开头，paint the sign（涂标牌）或pack the boxes（装盒）按记录写当时正在进行的活动，不加时间短语。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n117-event-background",
+        "context": "虚构舞台组：他们昨天15:00–15:30在搬椅子；15:12一盏灯突然熄灭，搬椅子当时未结束。",
+        "prompt": "用when连接the light、go out（熄灭）和they、carry the chairs（搬椅子），写一句当时的事件与背景。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n117-parallel-processes",
+        "context": "虚构画室昨天：我16:00–16:40在画地图；她16:10–16:30在剪纸，两项有重叠。",
+        "prompt": "用while连接I、draw a map和she、cut paper（剪纸），描述16:10–16:30两项同时进行的过程。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n117-past-in-progress",
+        "context": "虚构广播室昨天：她10:00–10:25在读稿，10:30–10:45录制音乐。10:15照片里她仍在读稿。",
+        "prompt": "用She开头，read the script（读稿）或record music（录音乐）按10:15证据写进行中的活动，不加时间短语。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：选覆盖参考时刻的过程，不选早已结束或尚未开始的活动；was/were与主语一致。"
+      },
+      {
+        "id": "guided-n117-event-background",
+        "context": "虚构园艺展昨天：我11:00–11:25在给植物浇水；11:08经理到达，当时我还在浇水。",
+        "prompt": "用when连接the manager、arrive和I、water the plants（浇水），保留事件与进行中的背景。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：确认哪个动作持续、哪个事件在其中发生；不把两者的时间角色颠倒。"
+      },
+      {
+        "id": "guided-n117-parallel-processes",
+        "context": "虚构布景队昨天：我们13:00–13:50在做船模型；他13:05–13:40在画海报。",
+        "prompt": "用while连接we、make a boat model与he、paint a poster，描述13:05–13:40共同区间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：选两个有重叠区间的过程，保持人物角色；while不是先做完再做下一项。"
+      },
+      {
+        "id": "independent-n117-past-in-progress",
+        "context": "虚构灯光测试的记录：我们17:00–17:20检查电缆，17:30–17:50画布景；另一队17:10开始画布景。审核员问我们17:12在做什么。",
+        "prompt": "用We开头；可用check the cables（检查电缆）或paint the scenery（画布景），只写我们的当时活动，不加时间短语。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n117-event-background",
+        "context": "虚构纸飞机赛：Lena14:00–14:18在折纸，14:07手机响了一声；她14:25才开始写名单。你需记录手机响时的背景。",
+        "prompt": "用when连接the phone、ring和Lena；活动词可用fold paper（折纸）或write the list（写名单）。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n117-parallel-processes",
+        "context": "虚构船模展，角色表：我在工作台做风筝12:00–12:30；两位助理给模型上漆12:10–12:40；我12:45才上漆。报告问12:15两个角色同时做什么。",
+        "prompt": "用while连接I和they；可用make a kite（做风筝）、paint the models（给模型上漆），按角色写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n117-past-in-progress",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构博物馆的昨日记录：他09:00–09:20擦展柜，09:30才摆卡片；09:08参观者进场。",
+        "prompt": "用He开头，clean the display case（擦展柜）或arrange the cards（摆卡片），回答进场那一刻正在做什么，不加时间短语。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n117-event-background",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构话剧后台：演员15:00–15:25在试帽子，15:09门被打开；搬箱子早在14:50结束。",
+        "prompt": "用when连接the door、open和the actors；可用try on hats（试帽子）或carry boxes。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n117-parallel-processes",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构排练室：她18:00–18:30写台词；我们18:10–18:25试音；18:40才开始收椅子。",
+        "prompt": "用while连接she和we；write the lines（写台词）、test the microphones（试音）或put away the chairs，说明18:15并行活动。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n117-past-in-progress",
+        "context": "虚构校园观测：他们昨天20:00–20:30记星图，19:50已经关好窗户；20:15另一组在调整镜头。值班表只问他们20:15持续做的事。",
+        "prompt": "用They开头；draw the star map（记星图）、close the windows或adjust the lens（调镜头），写当时活动，不加时间短语。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n117-event-background",
+        "context": "虚构乐器制作：我16:00–16:35给木盒打磨，16:21一张纸掉落；16:50才开始给木盒上漆。要解释纸落下时我还在做哪一步。",
+        "prompt": "用when连接the paper、fall与I；可用sand the box（给盒打磨）、paint the box。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n117-parallel-processes",
+        "context": "虚构观影社布展：你14:00–14:40贴标签，我14:10–14:35摆椅子；你14:50才摆椅子。问14:20你和我各在做什么。",
+        "prompt": "用while连接you和I；label the boxes（给箱子贴标签）、arrange the chairs（摆椅子），按角色写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n117-past-in-progress",
+        "context": "虚构展馆昨天：我与同伴10:00–10:40做纸桥，11:00才测试桥；隔壁团队10:15在测试自己的桥。回顾10:20我们的状态。",
+        "prompt": "用We开头；make a paper bridge（做纸桥）或test the bridge（测试桥），写当时正在进行的活动，不加时间短语。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n117-event-background",
+        "context": "虚构舞台服装日志：Milo13:00–13:45缝旗帜，13:17计时器响了一次；Milo12:30已把布剪好。记录想把提示音放进当时进行的工作里。",
+        "prompt": "用when连接the timer、ring与Milo；sew the flag（缝旗帜）、cut the cloth（剪布）可作词汇提示。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n117-parallel-processes",
+        "context": "虚构创作节两组轮班：他09:00–09:25画门牌，他们09:10–09:30折信封；他们09:40才画门牌。需要汇报09:15两组并行情况。",
+        "prompt": "用while连接he和they；paint the door sign（画门牌）、fold the envelopes（折信封），保持记录中的角色。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-119",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n119-earlier-completion",
+        "context": "虚构模型展：我们09:10把模型装箱完毕；导游09:30到达；我们09:45才寄出模型。回到导游到达的那一刻。",
+        "prompt": "练本课had + 过去分词结构，用We、already；从pack the models或send the models选择此前已完成的事，只写该事。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n119-ordered-actions",
+        "context": "虚构纸灯工作坊：她10:10完成测试；10:30才点亮展灯。",
+        "prompt": "练本课句型，用after连接She、turn on the display light（点亮展灯）和test it（测试它），用had呈现先完成的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n119-prior-state",
+        "context": "虚构纸桥活动：他11:00开始搭桥，11:20检查时仍少一段；11:40才完成。只回看11:20的完成状态。",
+        "prompt": "练本课had + 过去分词结构，用He、finish the bridge说明检查前完成状态，不写开始时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n119-earlier-completion",
+        "context": "虚构剧场：演员13:05离开后台；我13:20打开后台门；13:25灯才熄灭。回到开门那时。",
+        "prompt": "练本课回看结构，用The actors、already、leave the room（离开房间），只写开门前已经发生的演员动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先锁定过去参考点，再确认哪个动作此前已经完成；had后用过去分词。"
+      },
+      {
+        "id": "guided-n119-ordered-actions",
+        "context": "虚构插画社：他们14:10把海报印好，14:30布置展位。",
+        "prompt": "练本课句型，用before连接They、print the posters与set up the stand（布置展位），用had呈现先完成动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：较早完成动作放在had + 过去分词，后续事件用过去式；换从句顺序不能反转事实。"
+      },
+      {
+        "id": "guided-n119-prior-state",
+        "context": "虚构参观：我昨天15:00第一次使用这台相机，此前的所有参观都只用素描本，从未使用这台相机。回看首次使用以前的经验。",
+        "prompt": "练本课had + 过去分词结构，用I、never、use this camera、before，说明那次首次使用之前的经验。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：参考点前完成了吗？只依据记录选择肯定或否定；未完成不等于从未开始。"
+      },
+      {
+        "id": "independent-n119-earlier-completion",
+        "context": "虚构展台交接，乱序记录：16:25包裹发出；16:00老师到达；15:50两名助理完成标签；15:40老师出发。老师到达时无需再做哪一项？",
+        "prompt": "练本课回看结构，用They、already；从attach the labels（贴标签）或send the parcel（寄包裹）选择助理在到达前已完成的任务。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n119-ordered-actions",
+        "context": "虚构烘焙道具制作（不用真食物）：我17:05完成纸模，17:30拍照；同伴17:50才完成另一模型。记录问题是我这两项的顺序。",
+        "prompt": "练本课句型，用after连接I、photograph the model（给模型拍照）与finish it，用had呈现先完成的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n119-prior-state",
+        "context": "虚构票务排练：她18:00开始设计票面；18:20检查时设计已完成，票纸仍未印；18:35完成印票。问题是18:20能否把已印票送出。",
+        "prompt": "练本课had + 过去分词结构，用She、print the tickets说明检查之前的印票完成状态，不写设计。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n119-earlier-completion",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构书法展：他08:40已把门锁好；检查员09:00来到门口；他09:15才关闭窗户。回看检查员到门口的时刻。",
+        "prompt": "练本课回看结构，用He、already；lock the door或close the window按参考点选择已经完成的事项。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n119-ordered-actions",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构风筝站：我们10:00检查绳结，10:20放飞风筝。",
+        "prompt": "练本课句型，用before连接We、check the knots（检查绳结）与fly the kite（放飞风筝），had呈现先完成动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n119-prior-state",
+        "context": "保留上一轮首答和订正。下面是另一情境：虚构站牌制作：他们11:10开始涂第二块牌，11:25检查时这块已经涂完；第一块直到11:40才涂完。只报告第二块在检查前的状态。",
+        "prompt": "练本课had + 过去分词结构，用They、paint the second sign说明11:25之前的完成状态，不加already。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n119-earlier-completion",
+        "context": "虚构模型车队：邮递员12:00到达；我们11:35修好车轮，12:15才把车放入玻璃柜；昨天另有一组把车入柜。回看今天邮递员到达时我们的模型。",
+        "prompt": "练本课回看结构，用We、already；repair the wheel或put the car in the case按参考点选择此前完成的任务。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n119-ordered-actions",
+        "context": "虚构播音赛：Nora13:10读完通知，13:35把它交给主持人；另一位选手先交后读，不能借用其次序。",
+        "prompt": "练本课句型，用after连接Nora、give the notice to the host（把通知交主持人）与read it（读它），had标Nora先完成的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n119-prior-state",
+        "context": "虚构装置展：我14:00开始组装，14:20审核时只装好底座，模型未完成；14:50模型完工。另一组14:10已经完工。请回看我的审核状态。",
+        "prompt": "练本课had + 过去分词结构，用I、finish the model说明14:20之前的完成状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n119-earlier-completion",
+        "context": "虚构手工仓库：管理员15:00问包装是否可寄；她14:40完成封箱，15:20才打印地址；旁桌的地址早已印好。",
+        "prompt": "练本课回看结构，用She、already；seal the box（封箱）或print the address选择她在提问之前已完成的工作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n119-ordered-actions",
+        "context": "虚构壁报队：他16:05检查完图片，16:25把壁报挂上墙；助手16:40才检查另一套图。",
+        "prompt": "练本课句型，用before连接He、check the pictures与hang the poster（挂壁报），had标先完成的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n119-prior-state",
+        "context": "虚构摄影社首次体验的两条记录：她昨天17:00第一次冲洗照片；她过去已经多次拍照，却从未冲洗照片。现在正回忆昨天首次冲洗以前。",
+        "prompt": "练本课had + 过去分词结构，用She、never、develop a photo（冲洗照片）、before，说明当时此前的经验。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

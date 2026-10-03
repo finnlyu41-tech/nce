@@ -2,7 +2,7 @@
 
 Fixed source baseline: `7b7c1283d12f0c6d784478cda8353080598f6980`. Both publication refs were freshly read at this SHA before authoring. This is evidence of the source baseline only; no new deployment is inferred. Earlier 61–72 and85–96 frozen trees, commits and artifacts are preserved.
 
-The six-module plan is109/111/113/115/117/119. The first frozen commit contains only109/111/113;115/117/119 follow in a separate freeze. Each group has three stated targets, prerequisites and source-backed explanation, eighteen original tasks across diagnostic/guided/independent/repair/review-a/review-b, reasoned near misses and an open task awaiting human review. Existing author/metadata and bindContent are reused; the only scoring and event engine is production createCourseLoopModel with each module.matches.
+Six modules109/111/113/115/117/119 are frozen in two three-course batches. First commit53820f53c1ab5da34d4b948c541710aa444df810 contains109/111/113; the tail commit adds115/117/119 and combined evidence. Each group has three stated targets, prerequisites and source-backed explanation, eighteen original tasks across diagnostic/guided/independent/repair/review-a/review-b, reasoned near misses and an open task awaiting human review. Existing author/metadata and bindContent are reused; the only scoring and event engine is production createCourseLoopModel with each module.matches.
 
 Independent and delayed tasks use operative evidence and information gaps. New people, dates or quantities alone do not establish unfamiliar transfer. The key-free reviewers read only exported final scope/context/prompt files. Original and revised blind records are retained when material changes occur; final stem equality is checked.
 
@@ -32,3 +32,5 @@ Factory tests use controlled timestamps to exercise due arithmetic, early-review
 Browser QA uses unchanged real Workspace/AudioSpace in a fresh disposable profile with native input, first error, separate correction, repair, own placeholder, waiting, reload and390/320 viewports. Audio evidence covers decoding, seeking and play state only. Actual audibility, physical phone/keyboard, human open expression, pronunciation, all four skills and learning gains remain unverified. Bounded construction and semantic selection evidence is independent of host registration or mastery.
 
 Original source resources are read from the immutable prior source-only snapshot. All application and host code is current fixed7b. No old app build or personal learner profile is used. No costs, credentials,13 natural archives, push, merge or deployment.
+
+Final validation:22 checks per batch,57 combined,8 combined source-evidence checks,108 final blind tasks and six real UI flows with zero runtime exceptions. Original author source-reading notes preserve their historical pending status; final handoffs and evidence record completion.
