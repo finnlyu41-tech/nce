@@ -93,10 +93,10 @@ not ok 15 - shared production implementations and source guard are byte identica
   error: |-
     studio/course-loop/registry.mjs
     + actual - expected
-    
+
     + '3477a554f8a496ebc83084d067c73e6b1a220f0ee675a20c5d99d011a5b7272f'
     - 'c23a8d632dcb3c93cecfb1e690b40d237f55006a7b4b6d695521b5ea8680af8b'
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 'c23a8d632dcb3c93cecfb1e690b40d237f55006a7b4b6d695521b5ea8680af8b'
@@ -144,9 +144,9 @@ not ok 18 - unwired successors keep the real current route; QA registration is n
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
-    
+
     54 !== 42
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 42
