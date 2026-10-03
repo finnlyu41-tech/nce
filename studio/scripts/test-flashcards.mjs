@@ -176,15 +176,15 @@ test('same senses share scheduling while retaining sources and examples; other s
 test('original IELTS content retains themes, uses and bilingual examples without duplicate queues', () => {
   const sourceWords = ielts.ieltsFlashcardExamples;
   assert.equal(ielts.ieltsFlashcardSeeds.length, 12);
-  assert.equal(sourceWords.length, 60);
+  assert.equal(sourceWords.length, 84);
   assert.match(ielts.ieltsFlashcardDescription, /原创/);
   assert.match(ielts.ieltsFlashcardDescription, /非 IELTS 官方/);
   assert.equal(new Set(ielts.ieltsFlashcardSeeds.flatMap(item => item.sources.map(source => source.topic))).size, 6);
   assert.deepEqual(new Set(sourceWords.flatMap(item => item.sources.map(source => source.use))), new Set(['speaking', 'writing', 'reading', 'listening']));
   let state = base();
   for (const item of sourceWords) state = f.enrollFlashcard(state, item, [], NOW);
-  assert.equal(notes(state).length, 60);
-  assert.equal(cards(state).length, 60);
+  assert.equal(notes(state).length, 84);
+  assert.equal(cards(state).length, 84);
   for (const item of sourceWords) {
     const entry = cardFor(state, item.word, item.meaning);
     assert.deepEqual(entry.note.examples, [{en: item.example, zh: item.exampleTranslation}]);

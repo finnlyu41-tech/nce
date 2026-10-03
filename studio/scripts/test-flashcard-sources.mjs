@@ -232,7 +232,7 @@ for(const result of [false,true]){
 reset([],{});let clicked;h.open=value=>{clicked=value};
 const text=WordText({text:'network',...selection,sources:expectedSources});find(text,node=>node.type==='button').props.onClick();
 assert.deepEqual(clicked.sources,expectedSources);assert.equal(clicked.exampleTranslation,example.zh);
-assert.equal(ieltsFlashcardExamples.length,60);assert(ieltsFlashcardDescription.includes('本站原创')&&ieltsFlashcardDescription.includes('非 IELTS 官方题库'));
+assert.equal(ieltsFlashcardExamples.length,84);assert(ieltsFlashcardDescription.includes('本站原创')&&ieltsFlashcardDescription.includes('非 IELTS 官方题库'));
 
 // Use the real packaged dictionary and validated source index. In particular,
 // carpets has no dictionary entry; cases and dogs have coarse plural entries.

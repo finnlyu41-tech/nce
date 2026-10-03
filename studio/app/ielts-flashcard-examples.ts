@@ -1,7 +1,8 @@
 import type {Word} from './model';
 import {ieltsVocabularyR20Words} from './data/ielts-vocabulary-r20';
+import {ieltsVocabularyBatch02Words} from './data/ielts-vocabulary-batch02';
 
-export const ieltsFlashcardDescription='本站原创雅思辅助词卡：原有 12 项加首批 48 个情境词义，按听说读写用途与易混义项分组，整理词义、搭配及例句；多义词用短语题面提示语境。非 IELTS 官方题库，不用于推算雅思分数。';
+export const ieltsFlashcardDescription='本站原创雅思辅助词卡：原有 12 项、首批 48 项及第二批 24 个情境词义，按听说读写用途与易混义项分组，整理词义、搭配及例句；多义词用短语题面提示语境。非 IELTS 官方题库，不用于推算雅思分数。';
 
 // Written for this project; no shared deck, textbook passage or exam item is used.
 export const ieltsFlashcardSeeds:Word[]=[
@@ -19,4 +20,4 @@ export const ieltsFlashcardSeeds:Word[]=[
  {word:'fluctuate',meaning:'v. 波动；常用搭配：fluctuate between（在……之间波动）',example:'Monthly sales fluctuated between 200 and 300 units during the first half of the year.',exampleTranslation:'上半年，月销量在 200 件至 300 件之间波动。',sources:[{kind:'ielts',topic:'图表描述',use:'writing'}]},
 ];
 
-export const ieltsFlashcardExamples:Word[]=[...ieltsFlashcardSeeds,...ieltsVocabularyR20Words];
+export const ieltsFlashcardExamples:Word[]=[...ieltsFlashcardSeeds,...ieltsVocabularyR20Words,...ieltsVocabularyBatch02Words];

@@ -24,7 +24,7 @@ await build({stdin:{contents:`export * from './app/ielts-flashcard-examples';exp
  b.onLoad({filter:/.*/,namespace:'css'},()=>({contents:'',loader:'js'}));
 }}]});
 const m=await import(output.href),batch=m.ieltsVocabularyR20,words=m.ieltsVocabularyR20Words,seeds=m.ieltsFlashcardSeeds;
-assert.equal(batch.length,48);assert.equal(seeds.length,12);assert.equal(m.ieltsFlashcardExamples.length,60);
+assert.equal(batch.length,48);assert.equal(seeds.length,12);assert.equal(m.ieltsFlashcardExamples.length,84);
 assert.equal(new Set(batch.map(s=>s.id)).size,48);
 assert.equal(new Set(words.map(w=>JSON.stringify([w.word,w.meaning]))).size,48);
 for(const use of ['listening','speaking','reading','writing'])assert.equal(batch.filter(s=>s.use===use).length,12);
@@ -61,7 +61,7 @@ assert.deepEqual(withBatch.flashcards.reviews,prior.flashcards.reviews);
 assert.deepEqual(withBatch.flashcards.undo,prior.flashcards.undo);
 for(const key of Object.keys(prior).filter(k=>k!=='flashcards'))assert.deepEqual(withBatch[key],prior[key]);
 assert.deepEqual(seeded,prior,'Enrollment cannot mutate its input');
-assert.deepEqual(enrol(withBatch,m.ieltsFlashcardExamples),withBatch,'Repeat bulk add must be idempotent');
+assert.deepEqual(enrol(withBatch,[...seeds,...words]),withBatch,'Repeat enrollment of the fixed first batch must be idempotent');
 assert.deepEqual(JSON.parse(JSON.stringify(withBatch)),withBatch,'JSON refresh retains all notes and existing history');
 const queue=m.getFlashcardQueue(withBatch,now,'ielts');
 assert.equal(queue.length,59,'Already reviewed seed stays scheduled; the 48 additions are new');
@@ -103,7 +103,9 @@ for(const [query,count] of [['充电',2],['公众人物',1],['拒绝参与',1],[
 // The existing bulk-add callback reaches the combined collection and preserves genuine reviews.
 const history=clone(state.flashcards.reviews),cards=clone(state.flashcards.cards);
 find(render(),n=>n.type==='button'&&texts(n).includes('加入这组主题词卡')).props.onClick();
-assert.deepEqual(state.flashcards.reviews,history);assert.deepEqual(state.flashcards.cards,cards);
+assert.deepEqual(state.flashcards.reviews,history);
+for(const [id,card] of Object.entries(cards))assert.deepEqual(state.flashcards.cards[id],card,'Bulk add of a later batch cannot reset first-batch cards');
+assert.equal(Object.keys(state.flashcards.cards).length,84,'The current bulk-add callback includes batch02');
 
 // Review evidence is mandatory for this finite content batch, rather than a generated linguistic verdict.
 const review=JSON.parse(await readFile(new URL('docs/verification/ielts-vocabulary-r20-review.json',root),'utf8'));
