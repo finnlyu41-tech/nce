@@ -6,6 +6,7 @@ const root=new URL('../ielts-blueprint/',import.meta.url);
 const moduleURL=name=>resolveModule(new URL(name,root).pathname);
 const m = await import(await moduleURL('sample-sequence-model.ts'));
 const c = await import(await moduleURL('sample-sequence.ts'));
+const gt = await import(await moduleURL('curriculum/gt-table-options.ts'));
 let checks = 0, clock = Date.UTC(2026, 9, 1, 8);
 const check = (condition, message) => {assert.ok(condition, message); checks++;};
 const act = (state, action, at = (clock += 100)) => {const result = m.transitionSample(state, action, at); assert.equal(result.issue, undefined, result.issue); return result.state;};
@@ -60,12 +61,12 @@ function review(state, extra = {}) {
 // Content audit: all original sets are distinct; shared skills are truly shared, writing is scoped.
 for (const variant of ['academic', 'general-training']) {
   const lessons = c.sampleLessonsFor(variant);
-  check(lessons.length === (variant === 'academic' ? 15 : 14) && new Set(lessons.slice(0,4).map(l=>l.skill)).size === 4, 'Fifteen Academic and fourteen GT lessons preserve the original four skills');
+  check(lessons.length === 15 && new Set(lessons.slice(0,4).map(l=>l.skill)).size === 4, 'Fifteen lessons per category preserve the original four skills');
   const sets = lessons.flatMap(c.sampleMaterials);
   check(new Set(sets.map(x => x.id)).size === sets.length, 'Unique material IDs within selected variant');
   check(new Set(sets.map(x => `${x.script || x.context || ''}|${x.instruction}`)).size === sets.length, 'Distinct actual stimuli, not reordered old answers');
   check(sets.every(x => x.seconds > 0 && x.checklist.length >= 2 && x.hint), 'Each mini has a concrete training and feedback task');
-  check(lessons.every(l => l.model.model && l.model.modelNotes.length >= 2 && l.reviews.length === 2), 'Annotated models and two fresh followups');
+  check(lessons.every(l => (l.model.model || gt.gtTableOptionsLessonsFor(variant).includes(l) && gt.gtTableOptionsStimulusFor(l.model.id)) && l.model.modelNotes.length >= 2 && l.reviews.length === 2), 'Annotated models and two fresh followups');
 }
 check(c.sampleLessonsFor('academic').slice(0, 3).every((l, i) => l === c.sampleLessonsFor('general-training')[i]), 'Common listening/reading-method/speaking assets are shared');
 check(c.sampleLessonsFor('academic')[3].independent.id !== c.sampleLessonsFor('general-training')[3].independent.id, 'Academic and GT writing never cross');

@@ -6,19 +6,24 @@ import {sampleLessonsFor, sampleMaterials, sampleSequence, type SampleMaterial} 
 import {batch02NativeLessonsFor} from './curriculum/batch-02';
 import {SampleMultiSelectInput} from './sample-multi-select-ui';
 import {tableCompletionStimulusFor} from './curriculum/table-completion';
-import {TableStimulusView} from './structured-table/table-stimulus';
+import {TableStimulusView,type TableStimulusViewProps} from './structured-table/table-stimulus';
+import {GTTableOptionsView} from './gt-table-options-ui';
+import {gtTableOptionsStimulusFor,gtTableOptionFeedback} from './curriculum/gt-table-options';
+import type {GTTableContextMaterial} from '../app/ielts-gt-table-context';
 import {adaptTableAnswerAction} from './structured-table/projection';
 import type {TableContextMaterial} from '../app/ielts-table-context';
 import {activeSampleDraft, activeSampleMaterial, emptySampleState, sampleLessonReceipt, sampleSession, sampleWordCount, selectedSampleLesson, transitionSample, type SampleAction, type SampleState} from './sample-sequence-model';
 
-export type SampleSequenceProps = {value?: SampleState; initialValue?: SampleState; onChange?: (state: SampleState) => void; guidedFlow?: boolean; persistenceNote?: string; tableContexts?: Record<string,TableContextMaterial>};
+function TaskTable({options,...props}:TableStimulusViewProps & {options?:readonly {letter:string;text:string}[]}){return options?<GTTableOptionsView {...props} options={options}/>:<TableStimulusView {...props}/>;}
+
+export type SampleSequenceProps = {value?: SampleState; initialValue?: SampleState; onChange?: (state: SampleState) => void; guidedFlow?: boolean; persistenceNote?: string; tableContexts?: Record<string,TableContextMaterial>; gtTableContexts?:Record<string,GTTableContextMaterial>};
 const stageNames: Record<LearningStage, string> = {explain: '理解方法', model: '看一个示范', guided: '跟着试', independent: '撤提示 · 新题', timed: '训练用限时', feedback: '反馈与订正', review: '延迟 · 新题复验'};
 const stages = Object.keys(stageNames) as LearningStage[];
 const delayedNames = {'not-scheduled': '订正后安排复验', 'not-due': '尚未到 24 小时', 'awaiting-new-task': '可以用新题复验', 'needs-repair': '新题仍有错误，先修这一处', assisted: '这次有提示、重播或材料已见过，保留为练习', 'awaiting-human-review': '新题作品已保留，等待人工／音频核验', 'local-target-observed': '观察到本课局部目标的隔日独立表现'};
 const recordTime = (at: number) => <time dateTime={new Date(at).toISOString()}>{new Date(at).toLocaleString('zh-CN', {year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false})}</time>;
 
 /** Standalone teaching sample. Host owns persistence; no localStorage or app progress writes. */
-export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow = false, persistenceNote, tableContexts}: SampleSequenceProps) {
+export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow = false, persistenceNote, tableContexts, gtTableContexts}: SampleSequenceProps) {
   const [internal, setInternal] = useState<SampleState>(() => initialValue || emptySampleState());
   const state = value || internal, latest = useRef(state); latest.current = state;
   // Speech events can outlive the render that requested playback. Keep the
@@ -94,15 +99,16 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
       window.speechSynthesis.speak(utterance);
     } catch {fail('无法播放合成语音，请检查设备。');}
   }
-  const tableFor=(id:string)=>tableContexts?.[id]?.table||tableCompletionStimulusFor(id);
+  const gtFor=(id:string)=>gtTableContexts?.[id]||gtTableOptionsStimulusFor(id);
+  const tableFor=(id:string)=>gtFor(id)?.table||tableContexts?.[id]?.table||tableCompletionStimulusFor(id);
   const context = (m: SampleMaterial, showScript = false) => {
-    const native=nativeMaterial(m),text=tableContexts?.[m.id]?.context??(native?(m.script?undefined:native.stimulus):m.context);
+    const native=nativeMaterial(m),text=gtTableContexts?.[m.id]?.context??tableContexts?.[m.id]?.context??(native?(m.script?undefined:native.stimulus):m.context);
     return <>{text&&<blockquote className="sample-context" lang="en">{text}</blockquote>}{m.script&&showScript&&<blockquote className="sample-context" lang="en">{m.script}</blockquote>}</>;
   };
   function historyContext(m: SampleMaterial, originalAnswers:Record<string,string>={}, instance='') {
     const native = nativeMaterial(m);
     const table=tableFor(m.id);
-    return <><p>原题要求：{tableContexts?.[m.id]?.instruction||m.instruction}</p>{context(m, true)}{table&&<TableStimulusView stimulus={table} answers={originalAnswers} readOnly idPrefix={`${m.id}-history-${instance}`}/>} {native && <ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option => <li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>;
+    return <><p>原题要求：{gtTableContexts?.[m.id]?.instruction||tableContexts?.[m.id]?.instruction||m.instruction}</p>{context(m, true)}{table&&<TaskTable options={gtFor(table.id)?.options} stimulus={table} answers={originalAnswers} readOnly idPrefix={`${m.id}-history-${instance}`}/>} {native && <ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option => <li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>;
   }
   const audio = material?.script && <div className="sample-audio">
     <p>设备合成英语 · 声音质量未人工核验。播放完成后，请确认自己实际听到了声音。</p>
@@ -119,7 +125,7 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
       const scope={variant:state.variant,lessonId:state.lessonId};
       const answerKey=(questionId:string)=>JSON.stringify([scope.variant,scope.lessonId,m.id,type,questionId]);
       for(const q of m.questions||[]){const key=answerKey(q.id);if(Object.hasOwn(pendingTableAnswers,key))shown[q.id]=pendingTableAnswers[key];}
-      return <TableStimulusView stimulus={table} answers={shown} readOnly={!correction&&!!draft?.submittedAt} idPrefix={`${m.id}-${type}`} onAnswer={(questionId,raw)=>{
+      return <TaskTable options={gtFor(table.id)?.options} stimulus={table} answers={shown} readOnly={!correction&&!!draft?.submittedAt} idPrefix={`${m.id}-${type}`} onAnswer={(questionId,raw)=>{
         const key=answerKey(questionId),pending={...pendingTableRef.current,[key]:raw};pendingTableRef.current=pending;setPendingTableAnswers(pending);
         const current=latest.current,currentMaterial=correction?selectedSampleLesson(current)?.timed:activeSampleMaterial(current);
         if(current.variant!==scope.variant||current.lessonId!==scope.lessonId||currentMaterial?.id!==m.id||correction&&sampleSession(current).stage!=='feedback'){
@@ -135,9 +141,9 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
       {q.options ? <select value={(correction ? session.correctionAnswers : draft?.answers)?.[q.id] || ''} onChange={event => dispatch({type: correction ? 'correction-answer' : 'answer', questionId: q.id, value: event.target.value})}><option value="">请选择</option>{q.options.map(option => <option key={option}>{option}</option>)}</select> : <input value={(correction ? session.correctionAnswers : draft?.answers)?.[q.id] || ''} autoComplete="off" autoCapitalize="off" maxLength={500} onChange={event => dispatch({type: correction ? 'correction-answer' : 'answer', questionId: q.id, value: event.target.value})}/>}
     </label>);
   }
-  function questionPrompt(m:SampleMaterial,id:string){return nativeMaterial(m)?.task.prompt||tableContexts?.[m.id]?.questions.find(q=>q.id===id)?.prompt||m.questions?.find(q=>q.id===id)?.prompt}
-  function modelQuestions(m:SampleMaterial){const native=nativeMaterial(m),table=tableFor(m.id);return <>{table&&<TableStimulusView stimulus={table} answers={Object.fromEntries((m.questions||[]).map(q=>[q.id,q.accepted[0]]))} readOnly idPrefix={`${m.id}-model`}/>}<ol aria-label="示范题目">{m.questions?.map(q=><li key={q.id} id={`${m.id}-${q.id}`}>{questionPrompt(m,q.id)}</li>)}</ol>{native&&<ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option=><li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>}
-  function references(m:SampleMaterial){const native=nativeMaterial(m);return native?<><p>参考字母组：<strong lang="en">{m.questions?.[0].accepted[0]}</strong>。本站按完整字母组核对，不计算正式考试的部分得分，也不换算 IELTS Band。</p><ol className="sample-option-list">{native.task.options.map(option=><li key={option.id}><strong lang="en">{option.id}. {option.text}</strong><p>{option.reason}</p>{option.quotes.map(quote=><blockquote key={quote} lang="en">{quote}</blockquote>)}</li>)}</ol></>:<ol aria-label="示范答案与依据">{m.questions?.map(q=><li key={q.id} aria-describedby={`${m.id}-${q.id}`}><strong lang="en">{q.accepted[0]}</strong>：{q.why}</li>)}</ol>}
+  function questionPrompt(m:SampleMaterial,id:string){return nativeMaterial(m)?.task.prompt||gtTableContexts?.[m.id]?.questions.find(q=>q.id===id)?.prompt||tableContexts?.[m.id]?.questions.find(q=>q.id===id)?.prompt||m.questions?.find(q=>q.id===id)?.prompt}
+  function modelQuestions(m:SampleMaterial){const native=nativeMaterial(m),table=tableFor(m.id);return <>{table&&<TaskTable options={gtFor(table.id)?.options} stimulus={table} answers={Object.fromEntries((m.questions||[]).map(q=>[q.id,q.accepted[0]]))} readOnly idPrefix={`${m.id}-model`}/>}<ol aria-label="示范题目">{m.questions?.map(q=><li key={q.id} id={`${m.id}-${q.id}`}>{questionPrompt(m,q.id)}</li>)}</ol>{native&&<ol className="sample-option-list" aria-label="完整选项">{native.task.options.map(option=><li key={option.id} lang="en">{option.id}. {option.text}</li>)}</ol>}</>}
+  function references(m:SampleMaterial,originalAnswers?:Record<string,string>){if(gtFor(m.id))return <ol aria-label="答案与所选选项的反馈">{m.questions?.map(q=><li key={q.id}><p>{q.prompt}</p>{originalAnswers&&<p data-gt-option-feedback={q.id}>原答 {originalAnswers[q.id]||'空白'}：{gtTableOptionFeedback(m.id,q.id,originalAnswers[q.id]||'')}</p>}<p><strong lang="en">{q.accepted[0]}</strong>：{q.why}</p></li>)}</ol>;const native=nativeMaterial(m);return native?<><p>参考字母组：<strong lang="en">{m.questions?.[0].accepted[0]}</strong>。本站按完整字母组核对，不计算正式考试的部分得分，也不换算 IELTS Band。</p><ol className="sample-option-list">{native.task.options.map(option=><li key={option.id}><strong lang="en">{option.id}. {option.text}</strong><p>{option.reason}</p>{option.quotes.map(quote=><blockquote key={quote} lang="en">{quote}</blockquote>)}</li>)}</ol></>:<ol aria-label="示范答案与依据">{m.questions?.map(q=><li key={q.id} aria-describedby={`${m.id}-${q.id}`}><strong lang="en">{q.accepted[0]}</strong>：{q.why}</li>)}</ol>}
   const categoryChoice=<><div className="sample-row" aria-label="先选择考试类别">{(['academic','general-training'] as Variant[]).map(variant=><button type="button" key={variant} aria-pressed={state.variant===variant} onClick={()=>{setCategoryOpen(false);navigate({type:'select-variant',variant})}}>{variant==='academic'?'Academic':'General Training'}</button>)}</div><p className="sample-note">两类阅读与写作分别选材；切换类别会保留各自记录。</p></>;
   return <section className="ielts-sample-sequence" aria-label="雅思小任务练习">
     <style>{`.ielts-sample-sequence{max-width:900px;margin:auto;color:#203b4b;line-height:1.6;padding:20px;font-family:system-ui,sans-serif}.ielts-sample-sequence button,.ielts-sample-sequence input,.ielts-sample-sequence textarea,.ielts-sample-sequence select{font:inherit}.ielts-sample-sequence button{min-height:44px;border:1px solid #bdd4cc;background:#edf5f1;border-radius:9px;padding:9px 14px;cursor:pointer}.ielts-sample-sequence button:disabled{opacity:.5;cursor:default}.ielts-sample-sequence button:focus-visible{outline:3px solid #286954}.sample-row{display:flex;gap:10px;flex-wrap:wrap}.sample-lessons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:18px 0}.sample-lessons [aria-current=page]{border:2px solid #286954}.sample-stage{padding:20px;border:1px solid #d9e2e5;border-radius:14px;margin:16px 0;background:white}.sample-steps{display:flex;gap:8px;flex-wrap:wrap;list-style:none;padding:0;font-size:13px}.sample-steps [aria-current=step]{font-weight:700;color:#286954}.sample-field{display:block;margin:14px 0}.sample-field input,.sample-field select,.sample-field textarea{font-size:16px;display:block;width:100%;box-sizing:border-box;padding:10px;border:1px solid #adbfc3;border-radius:8px;margin-top:6px;background:white}.sample-context{white-space:pre-wrap;margin:16px 0;padding:14px;border-left:4px solid #86aa9f;background:#f3f7f5}.ielts-sample-sequence summary{min-height:44px;display:flex;align-items:center;cursor:pointer;gap:8px}.ielts-sample-sequence summary::before{content:"＋"}.ielts-sample-sequence details[open]>summary::before{content:"−"}.sample-note{font-size:14px;color:#586e79}.sample-feedback{padding:14px;background:#f3f7f5;border-radius:10px;margin:12px 0}.sample-error{color:#852f24;background:#fff0ed;padding:12px;border-radius:9px}.sample-multi-select{border:0;padding:0;margin:18px 0;min-width:0}.sample-selection{display:flex;align-items:start;gap:12px;padding:12px;min-height:44px;border:1px solid #d9e2e5;border-radius:9px;margin:8px 0;cursor:pointer}.sample-selection input{width:18px;height:18px;flex:0 0 18px;margin:3px 0}.sample-option-list{padding-left:25px}.sample-option-list>li{margin:14px 0}.sample-option-list blockquote{font-size:14px;margin:8px 0}.sample-category,.sample-catalog,.sample-help{margin:12px 0}.sample-stage{overflow-wrap:anywhere}.sample-multi-select legend{font-weight:600}@media(max-width:600px){.sample-lessons{grid-template-columns:1fr 1fr}.ielts-sample-sequence{padding:12px}.sample-stage{padding:14px}}`}</style>
@@ -162,8 +168,8 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
             {material.questions ? answers(material) : <><label className="sample-field">留下你实际表达的文本／短段落<textarea rows={5} maxLength={4000} value={draft?.response || ''} onChange={event => dispatch({type: 'response', value: event.target.value})}/></label><p className="sample-note">{sampleWordCount(draft?.response || '')} 个词或数字（常见缩写算 1 项），计数仅作参考。原稿待人工核对，不评定质量或 Band。{lesson.skill === 'speaking' && '若文本与录音不同，以真实录音交给评阅者核验。'}</p></>}
             <button disabled={!canSubmit} onClick={() => {stopAudio(); dispatch({type: 'submit'});}}>记录原始作答</button>
             {!!draft?.submittedAt && <div className="sample-feedback" role="status"><p>这次作答已记录。{material.questions ? '原始答案保留，用于与反馈比较。' : '文本作品尚未人工评阅。'}</p>
-              {session.stage==='guided'&&material.questions&&(nativeMaterial(material)?<><p>{session.attempts.at(-1)?.matched?'整组匹配':'整组未匹配'}</p>{references(material)}</>:material.questions.map(q=><p key={q.id}>{q.prompt} → {q.accepted[0]}。{q.why}</p>))}
-              {session.stage === 'review' && <><p>{delayedNames[receipt.delayed]}</p>{nativeMaterial(material)?references(material):material.questions?.map(q => <p key={q.id}>{q.prompt} → {q.accepted[0]}。{q.why}</p>)}</>}
+              {session.stage==='guided'&&material.questions&&(gtFor(material.id)?references(material,draft?.answers):nativeMaterial(material)?<><p>{session.attempts.at(-1)?.matched?'整组匹配':'整组未匹配'}</p>{references(material)}</>:material.questions.map(q=><p key={q.id}>{q.prompt} → {q.accepted[0]}。{q.why}</p>))}
+              {session.stage === 'review' && <><p>{delayedNames[receipt.delayed]}</p>{gtFor(material.id)?references(material,draft?.answers):nativeMaterial(material)?references(material):material.questions?.map(q => <p key={q.id}>{q.prompt} → {q.accepted[0]}。{q.why}</p>)}</>}
             </div>}
             {session.stage !== 'review' && <button disabled={!draft?.submittedAt} style={{marginTop: 12}} onClick={() => navigate({type: 'next'})}>{session.stage === 'guided' ? '撤掉提示，换新题' : session.stage === 'independent' ? '再换一份新材料，练计时' : '查看反馈，订正一处'}</button>}
           </>}
@@ -171,7 +177,7 @@ export function IELTSSampleSequence({value, initialValue, onChange, guidedFlow =
         {session.stage === 'feedback' && <><h4>对照原始作答，修一个问题</h4>{session.attempts.filter(a => a.stage === 'independent' || a.stage === 'timed').map((attempt, index) => {
           const source = attempt.stage === 'independent' ? lesson.independent : lesson.timed;
           return <section className="sample-feedback" key={`${attempt.at}-${index}`}><h5>{source.title}</h5><p>记录时间：{new Date(attempt.at).toLocaleString()} · {attempt.hinted ? '用过提示' : '未用提示'} · {attempt.fresh ? '本地首次材料，学习者确认未见过' : '没有新材料证据'}{lesson.skill === 'listening' && ` · ${attempt.playbackCount} 次播放请求`}{attempt.withinTrainingTime !== null && ` · ${attempt.withinTrainingTime ? '建议时间内提交' : '超出建议时间'}`}</p>
-            {context(source,true)}{tableFor(source.id)&&<TableStimulusView stimulus={tableFor(source.id)!} answers={attempt.answers} readOnly idPrefix={`${source.id}-original-${index}`}/>} {source.questions?<><ol>{source.questions.map(q=><li key={q.id}><p>{questionPrompt(source,q.id)}</p><p>原答：<span lang="en">{attempt.answers[q.id]||'空白'}</span></p></li>)}</ol>{nativeMaterial(source)&&<p>{attempt.matched?'整组匹配':'整组未匹配'}</p>}{references(source)}</>: <><blockquote lang="en">{attempt.response}</blockquote><p>只有文本和自查；四维评分及人工核验尚未完成。{lesson.skill === 'speaking' && '真实声音、发音及互动评价仍待音频核验。'}</p></>}
+            {context(source,true)}{tableFor(source.id)&&<TaskTable options={gtFor(source.id)?.options} stimulus={tableFor(source.id)!} answers={attempt.answers} readOnly idPrefix={`${source.id}-original-${index}`}/>} {source.questions?<><ol>{source.questions.map(q=><li key={q.id}><p>{questionPrompt(source,q.id)}</p><p>原答：<span lang="en">{attempt.answers[q.id]||'空白'}</span></p></li>)}</ol>{nativeMaterial(source)&&<p>{attempt.matched?'整组匹配':'整组未匹配'}</p>}{references(source,attempt.answers)}</>: <><blockquote lang="en">{attempt.response}</blockquote><p>只有文本和自查；四维评分及人工核验尚未完成。{lesson.skill === 'speaking' && '真实声音、发音及互动评价仍待音频核验。'}</p></>}
 
           </section>;
         })}<ul>{lesson.timed.checklist.map(check => <li key={check}>{check}</li>)}</ul>

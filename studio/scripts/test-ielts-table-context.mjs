@@ -33,11 +33,12 @@ try {
     "export * as m from './ielts-blueprint/sample-sequence-model';",
     "export * as c from './ielts-blueprint/sample-sequence';",
     "export * as b from './ielts-blueprint/curriculum/table-completion';",
+    "export * as gt from './ielts-blueprint/curriculum/gt-table-options';",
     "export * as f from './app/progress-file';",
     "export {initial} from './app/model';",
   ].join('\n'), resolveDir: root, loader: 'ts'}, bundle: true, platform: 'node',
     format: 'esm', target: 'node22', outfile: output, logLevel: 'silent'});
-  const {h, p, m, c, b, f, initial} = await import(pathToFileURL(output));
+  const {h, p, m, c, b, gt, f, initial} = await import(pathToFileURL(output));
   const lesson = b.tableCompletionLessonsFor('academic')[0], tableIds = c.sampleMaterials(lesson).map(item => item.id);
   let clock = Date.now() - 6 * 86_400_000, value = m.emptySampleState(), contextRaw;
   const act = action => {
@@ -68,7 +69,8 @@ try {
   await check('strict helper types and missing namespace keep all fourteen legacy lessons per category unchanged', () => {
     assert.equal(h.readTableContext(undefined).status, 'empty');
     for (const variant of ['academic', 'general-training']) {
-      const old = c.sampleLessonsFor(variant).filter(item => item.id !== lesson.id);
+      const newGTIds = new Set(gt.gtTableOptionsLessonsFor(variant).map(item => item.id));
+      const old = c.sampleLessonsFor(variant).filter(item => item.id !== lesson.id && !newGTIds.has(item.id));
       assert.equal(old.length, 14);
       for (const item of old) {
         let state = m.emptySampleState();

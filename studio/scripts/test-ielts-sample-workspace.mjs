@@ -73,7 +73,7 @@ try {
       setup(builder) {
         // The real Today adapter imports mini media. Preserve each module's URL
         // when this Node-only probe bundles that dependency into CommonJS.
-        builder.onLoad({filter: /mini-task\/content\.ts$/}, async args => {
+        builder.onLoad({filter: /mini-task\/(?:batch-0[23]\/)?content\.ts$/}, async args => {
           let contents = await readFile(args.path, 'utf8');
           const source = ts.createSourceFile(args.path, contents, ts.ScriptTarget.Latest, true), ranges=[];
           function visit(node) {
@@ -596,12 +596,12 @@ try {
   });
   console.log(`${checks - historyChecks} read-only history groups and ${roundTrips - historyRoundTrips} additional real-transition round trips passed`);
   const integrationChecks=checks,integrationRoundTrips=roundTrips;
-  await test('registered directory has fifteen Academic and fourteen GT lessons, twenty-nine legal sessions and one hundred twenty-six unique materials',()=>{
+  await test('registered directory has fifteen lessons per category, thirty legal sessions and one hundred thirty-two unique materials',()=>{
     const refs=['academic','general-training'].flatMap(variant=>c.sampleLessonsFor(variant).flatMap(c.sampleMaterials));
-    assert.equal(refs.length,174);assert.equal(new Set(refs.map(material=>material.id)).size,126);
+    assert.equal(refs.length,180);assert.equal(new Set(refs.map(material=>material.id)).size,132);
     let value=m.emptySampleState();
     for(const variant of ['academic','general-training'])for(const lesson of c.sampleLessonsFor(variant))value=continueIn(value,variant,lesson.id);
-    assert.equal(Object.keys(value.sessions).length,29);roundTrip(value);
+    assert.equal(Object.keys(value.sessions).length,30);roundTrip(value);
     for(const task of n.samplePracticeTasks(stored(value),clock,true)){
       const parsed=route.parseRoute(task.href.slice(1)),target=n.sampleTarget(parsed.task);
       assert.equal(task.id,`sample:${target.variant}:${target.lessonId}`);

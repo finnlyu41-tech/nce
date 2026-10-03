@@ -82,6 +82,7 @@ try {
       import * as p from './app/ielts-sample-progress';
       import * as classic from './app/model';
       import * as tables from './ielts-blueprint/curriculum/table-completion';
+      import * as gt from './ielts-blueprint/curriculum/gt-table-options';
       import * as registry from './ielts-blueprint/curriculum/registered';
       import * as multi from './ielts-blueprint/curriculum/batch-02';
       import {IELTSSampleWorkspace as Workspace} from './app/ielts-sample-workspace';
@@ -90,7 +91,7 @@ try {
       import * as hooks from 'table-host-source-hooks';
       import React from 'react';
       import {renderToStaticMarkup as render} from 'react-dom/server';
-      export {c,m,p,classic,tables,registry,multi,Workspace,Sequence,Table,hooks,React,render};
+      export {c,m,p,classic,tables,gt,registry,multi,Workspace,Sequence,Table,hooks,React,render};
     `, resolveDir:root,sourcefile:'table-host-source-entry.ts',loader:'ts'},
     plugins:[{
       name:'bounded-host-source-controller',
@@ -111,7 +112,7 @@ try {
     bundle:true,platform:'node',format:'cjs',target:'node22',jsx:'automatic',
     loader:{'.css':'empty'},outfile:output,logLevel:'silent'
   });
-  const {c,m,p,classic,tables,registry,multi,Workspace,Sequence,Table,hooks,React,render} =
+  const {c,m,p,classic,tables,gt,registry,multi,Workspace,Sequence,Table,hooks,React,render} =
     (await import(pathToFileURL(output))).default;
   const NOW=Date.now(),originalNow=Date.now;
   savedGlobals={now:originalNow,window:globalThis.window,setInterval:globalThis.setInterval,clearInterval:globalThis.clearInterval};
@@ -161,7 +162,11 @@ try {
   function feedback(variant,id){return act(submitRaw(act(timed(variant,id),{type:'start-timed'})),{type:'next'});}
   function allNodes(value,out=[]){
     if(Array.isArray(value)){for(const item of value)allNodes(item,out);}
-    else if(React.isValidElement(value)){out.push(value);allNodes(value.props.children,out);}
+    else if(React.isValidElement(value)){
+      out.push(value);allNodes(value.props.children,out);
+      // Expand only the new pure table selector; hook-owning components stay controlled separately.
+      if(typeof value.type==='function'&&value.type.name==='TaskTable')allNodes(value.type(value.props),out);
+    }
     return out;
   }
   function plain(value){
@@ -189,23 +194,27 @@ try {
   }
   async function test(name,run){await run();checks++;console.log('PASS '+name);}
   const tableIds=new Set(variants.flatMap(variant=>tables.tableCompletionLessonsFor(variant).map(lesson=>lesson.id)));
+  const gtTableIds=new Set(variants.flatMap(variant=>gt.gtTableOptionsLessonsFor(variant).map(lesson=>lesson.id)));
   const reading={academic:tables.tableCompletionLessonsFor('academic').find(lesson=>lesson.skill==='reading'),
     'general-training':c.sampleLessonsFor('general-training').find(lesson=>lesson.skill==='reading')};
   await test('production registers table lessons once and retains the prior 14 lessons per variant',()=>{
     assert.equal(registry.registeredCurriculumBatches.filter(batch=>batch.id==='table-completion').length,1);
+    assert.equal(registry.registeredCurriculumBatches.filter(batch=>batch.id==='gt-table-options').length,1);
     const refs=[];
     for(const variant of variants){
-      const lessons=c.sampleLessonsFor(variant),added=variant==='academic'?1:0;
-      assert.equal(lessons.length,14+added);assert.equal(new Set(lessons.map(lesson=>lesson.id)).size,14+added);
+      const lessons=c.sampleLessonsFor(variant),added=variant==='academic'?1:0,addedGT=variant==='general-training'?1:0;
+      assert.equal(lessons.length,14+added+addedGT);assert.equal(new Set(lessons.map(lesson=>lesson.id)).size,14+added+addedGT);
+      assert.equal(gt.gtTableOptionsLessonsFor(variant).length,addedGT);
+      assert.equal(lessons.filter(lesson=>gtTableIds.has(lesson.id)).length,addedGT);
       assert.equal(tables.tableCompletionLessonsFor(variant).length,added);
-      assert.equal(lessons.filter(lesson=>!tableIds.has(lesson.id)).length,14);
+      assert.equal(lessons.filter(lesson=>!tableIds.has(lesson.id)&&!gtTableIds.has(lesson.id)).length,14);
       assert.equal(lessons.filter(lesson=>tableIds.has(lesson.id)).length,added);
       for(const lesson of lessons){const materials=c.sampleMaterials(lesson);assert.equal(materials.length,6);refs.push(...materials.map(material=>material.id));}
     }
-    assert.equal(refs.length,174);assert.equal(new Set(refs).size,126);
+    assert.equal(refs.length,180);assert.equal(new Set(refs).size,132);
   });
   await test('all prior 28 lesson scopes still pass the real parser and actual React SSR',()=>{
-    for(const variant of variants)for(const lesson of c.sampleLessonsFor(variant).filter(lesson=>!tableIds.has(lesson.id))){
+    for(const variant of variants)for(const lesson of c.sampleLessonsFor(variant).filter(lesson=>!tableIds.has(lesson.id)&&!gtTableIds.has(lesson.id))){
       const value=roundTrip(guided(variant,lesson.id)).value;
       const html=render(React.createElement(Sequence,{value,guidedFlow:true}));
       assert.ok(html.includes(lesson.title.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#x27;")));assert.ok(!html.includes('data-table-id='));
