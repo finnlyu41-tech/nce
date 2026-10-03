@@ -1,6 +1,15 @@
 # 句句有进步 · English Studio
 
-## Current release v52 — NCE2 singleton lessons1–6
+## Current release v53 — mini tasks49-60 with finite media packaging
+
+Runtime `3082e885fcbc8c6d261a750a59ef512e6f51a7bc`, [fixed deployment](https://d0778cfc.finn-english-studio.pages.dev).
+
+Six paired mini groups for lessons49–60 add30 original materials and10 synthesized WAVs:30 groups across1–60 partial targets and50 distinct WAVs. Ten real production task flows plus two portable-file media flows and ten main/F6 flows pass. Both origins match the complete2057-file package,100 WAV hash/MIME GET and100 HEAD. Original40 WAVs and previous NCE2/GT/speaking/vocabulary remain unchanged. Open expression needs external review; natural delay, hearing and physical phones remain unverified.
+
+
+[Scope and verification](docs/mini-tasks49-60-production-integration.md).
+
+## Previously published v52 — NCE2 singleton lessons1–6
 
 Runtime `f9b76d48bbf3e3dbe0d0733744ec77f67aab9794`, [fixed deployment](https://bc8d1e57.finn-english-studio.pages.dev).
 
