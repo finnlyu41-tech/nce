@@ -9,11 +9,11 @@ import {productionHost,fixtureForId,supportedCourseIds} from './binding.mjs';
 
 const host=await productionHost();
 const OLD=Object.freeze(Array.from({length:42},(_,i)=>`nce1-${i*2+1}`));
-const NEW=Object.freeze(['nce1-85','nce1-87','nce1-89','nce1-97','nce1-99','nce1-101','nce1-103','nce1-105','nce1-107']);
-const IDS=Object.freeze([...OLD,...NEW]),UNREGISTERED=Object.freeze(['nce1-91','nce1-93','nce1-95']);
-const expectedSuccessor=id=>id==='nce1-89'?id:`nce1-${Number(id.slice(5))+2}`;
+const NEW=Object.freeze(['nce1-85','nce1-87','nce1-89','nce1-91','nce1-93','nce1-95','nce1-97','nce1-99','nce1-101','nce1-103','nce1-105','nce1-107']);
+const IDS=Object.freeze([...OLD,...NEW]),UNREGISTERED=Object.freeze(['nce1-109','nce1-111','__test_unknown_course__']);
+const expectedSuccessor=id=>`nce1-${Number(id.slice(5))+2}`;
 const NOW=1791028800000,DAY=86400000;
-assert.deepEqual(supportedCourseIds,IDS,'production registry must expose the fifty-one authored groups');
+assert.deepEqual(supportedCourseIds,IDS,'production registry must expose the fifty-four authored groups');
 const fixtures=Object.fromEntries(await Promise.all(IDS.map(async id=>[id,await fixtureForId(id)])));
 
 function complete(id,start=NOW,{wrong=true,video=false}={}){
@@ -41,9 +41,9 @@ const completedEntries=ids=>ids.map(id=>[id,completed[id].state]);
 const loopTasks=(state,map=host.emptyProgress(),at=NOW)=>host.todayPractice(state,map,at).filter(t=>t.id.startsWith('course-loop:'));
 function rejectRaw(value,id,at=NOW+10000){const raw=JSON.stringify(value),before=structuredClone(value),result=host.parseCourseLoop(raw,at,id);assert.equal(result.ok,false,`${id}: forged record accepted`);assert.equal(result.raw,raw);assert.deepEqual(value,before)}
 
-test('fifty-one real bindings preserve old defaults and distinct storage keys',()=>{
+test('fifty-four real bindings preserve old defaults and distinct storage keys',()=>{
  assert.deepEqual(host.courseLoopBindings.map(c=>c.id),IDS);
- assert.equal(new Set(host.courseLoopBindings.flatMap(c=>[c.key,c.inputsKey])).size,102);
+ assert.equal(new Set(host.courseLoopBindings.flatMap(c=>[c.key,c.inputsKey])).size,108);
  assert.equal(host.courseLoopFor().id,'nce1-1');
  assert.equal(host.courseLoopKey,'nce-course-loop-v1:NCE1-1');assert.equal(host.courseLoopInputsKey,'nce-course-loop-inputs-v1:NCE1-1');
  for(const id of IDS){const b=host.courseLoopFor(id),number=Number(id.slice(5));assert.equal(b.key,`nce-course-loop-v1:NCE1-${number}`);assert.equal(b.inputsKey,`nce-course-loop-inputs-v1:NCE1-${number}`);assert.deepEqual(b.lesson.lessons,[number,number+1]);assert.equal(b.lesson.id,id)}
@@ -53,7 +53,7 @@ test('fifty-one real bindings preserve old defaults and distinct storage keys',(
  assert.equal(host.nextCourse(host.initial,host.emptyProgress(),NOW).id,'first');
 });
 
-test('actual factory and registered model retain first answers and corrections for all fifty-one courses',()=>{
+test('actual factory and registered model retain first answers and corrections for all fifty-four courses',()=>{
  for(const id of IDS){const {state,view,correction}=completed[id],content=fixtures[id].content;
   const raw=JSON.stringify(state),parsed=host.parseCourseLoop(raw,NOW+10000,id),direct=createCourseLoopModel(content).restore(raw,NOW+10000);
   assert.ok(parsed.ok);assert.ok(direct.ok);assert.deepEqual(parsed,direct);
@@ -65,7 +65,7 @@ test('actual factory and registered model retain first answers and corrections f
  }
 });
 
-test('every envelope and correction sidecar is accepted only by its exact course across 51 by 51 pairs',()=>{
+test('every envelope and correction sidecar is accepted only by its exact course across 54 by 54 pairs',()=>{
  for(const sender of IDS){const raw=JSON.stringify(completed[sender].state),q=completed[sender].correction,inputs=JSON.stringify({version:1,corrections:{[q.id]:{answer:`Pending ${sender}`,note:'Keep this original note.'}}});
   for(const receiver of IDS){const result=host.parseCourseLoop(raw,NOW+10000,receiver);assert.equal(result.ok,sender===receiver,`${sender} envelope to ${receiver}`);
    if(sender===receiver)assert.deepEqual(host.parseLoopInputs(inputs,receiver),JSON.parse(inputs));
@@ -98,28 +98,27 @@ test('future envelopes, unknown course or question IDs, forged event keys and un
  const raw=JSON.stringify(completed['nce1-13'].state);for(const id of ['__test_unknown_course__','unknown','__proto__']){const parsed=host.parseCourseLoop(raw,NOW+10000,id);assert.equal(parsed.ok,false);assert.equal(parsed.raw,raw);assert.throws(()=>host.parseLoopInputs(null,id))}
 });
 
-test('fifty-one pending courses produce distinct Today tasks and oldest pending wins without mutation',()=>{
+test('fifty-four pending courses produce distinct Today tasks and oldest pending wins without mutation',()=>{
  const state=stateWith(IDS.map((id,i)=>[id,host.courseLoopFor(id).model.initialState(NOW-(i+1)*1000)])),map=host.emptyProgress(),before=JSON.stringify({state,map}),tasks=loopTasks(state,map);
- assert.equal(tasks.length,51);assert.equal(new Set(tasks.map(t=>t.id)).size,51);assert.equal(new Set(tasks.map(t=>t.href)).size,51);assert.ok(tasks.every(t=>t.kind==='resume'));assert.equal(tasks[0].id,'course-loop:nce1-107');assert.equal(host.nextCourse(state,map,NOW).id,'nce1-107');
+ assert.equal(tasks.length,54);assert.equal(new Set(tasks.map(t=>t.id)).size,54);assert.equal(new Set(tasks.map(t=>t.href)).size,54);assert.ok(tasks.every(t=>t.kind==='resume'));assert.equal(tasks[0].id,'course-loop:nce1-107');assert.equal(host.nextCourse(state,map,NOW).id,'nce1-107');
  assert.equal(host.todayPractice(state,map,NOW).some(t=>t.kind==='course'&&tasks.some(x=>x.href===t.href)),false);assert.equal(JSON.stringify({state,map}),before);
 });
 
-test('fifty-one due courses produce distinct tasks ordered by earliest due, while any pending course wins',()=>{
+test('fifty-four due courses produce distinct tasks ordered by earliest due, while any pending course wins',()=>{
  const dueEntries=IDS.map((id,i)=>[id,complete(id,NOW-(i+2)*DAY).state]),state=stateWith(dueEntries),map=host.emptyProgress(),before=JSON.stringify({state,map}),tasks=loopTasks(state,map);
- assert.equal(tasks.length,51);assert.equal(new Set(tasks.map(t=>t.href)).size,51);assert.ok(tasks.every(t=>t.kind==='review'));assert.equal(tasks[0].id,'course-loop:nce1-107');assert.equal(host.nextCourse(state,map,NOW).id,'nce1-107');
+ assert.equal(tasks.length,54);assert.equal(new Set(tasks.map(t=>t.href)).size,54);assert.ok(tasks.every(t=>t.kind==='review'));assert.equal(tasks[0].id,'course-loop:nce1-107');assert.equal(host.nextCourse(state,map,NOW).id,'nce1-107');
  assert.ok(tasks.every((t,i)=>!i||t.at>=tasks[i-1].at));assert.equal(JSON.stringify({state,map}),before);
  const pending=stateWith([...dueEntries.filter(([id])=>id!=='nce1-13'),['nce1-13',host.courseLoopFor('nce1-13').model.initialState(NOW-1000)]]),mixed=loopTasks(pending,map);
- assert.equal(mixed.length,51);assert.equal(mixed[0].id,'course-loop:nce1-13');assert.equal(mixed[0].kind,'resume');assert.equal(host.nextCourse(pending,map,NOW).id,'nce1-13');
+ assert.equal(mixed.length,54);assert.equal(mixed[0].id,'course-loop:nce1-13');assert.equal(mixed[0].kind,'resume');assert.equal(host.nextCourse(pending,map,NOW).id,'nce1-13');
 });
 
-test('registered subchains advance independently by n+2 and 89 safely holds its real current node',()=>{
+test('all registered courses advance independently by n+2 through the existing 109 textbook node',()=>{
  let map=host.emptyProgress();
  for(const [i,id] of IDS.entries()){
   map=host.startNode(host.unlockNode(map,id),id,NOW+1000);
   const state=stateWith(completedEntries(IDS.slice(0,i+1))),before=JSON.stringify({state,map}),want=expectedSuccessor(id),d=host.courseDestination(state,map,NOW+1000),c=host.courseContinuation(state,map,id,NOW+1000);
   assert.ok(host.nodeById(want),`${id}: independently expected destination must exist`);assert.equal(d.node.id,want);assert.equal(c.node.id,want);
-  if(id==='nce1-89'){assert.equal(c.currentRoute,true);assert.equal(c.href,'/map/#/map/nce1-89?conditions=1');assert.equal(d.needsAccess,false);}
-  else {assert.equal(c.currentRoute,false);assert.equal(c.href,d.href);assert.equal(d.needsAccess,true);assert.match(d.href,/\?access=1$/);}
+  assert.equal(c.currentRoute,false);assert.equal(c.href,d.href);assert.equal(d.needsAccess,true);assert.match(d.href,/\?access=1$/);
   const tasks=host.todayPractice(state,map,NOW+1000),courses=tasks.filter(t=>t.kind==='course'&&t.id.startsWith('course:nce1-'));assert.equal(courses.length,1);assert.equal(courses[0].href,d.href);
   // Placement is an existing independent entry in this protected baseline.
   assert.ok(tasks.some(t=>t.id==='placement:offer'&&t.href==='/#/placement'));
@@ -143,7 +142,7 @@ test('selected summaries stay isolated and malformed records remain blocked with
  for(const id of NEW){const raw=JSON.stringify({...completed[id].state,contentVersion:99}),blocked=structuredClone(state);blocked.drafts[fixtures[id].keys.snapshot]=raw;const blockedBefore=JSON.stringify(blocked);assert.equal(host.courseLoopSummary(blocked,map,NOW+1000,id).status,'blocked');assert.equal(host.nextCourse(blocked,map,NOW+1000).id,id);assert.equal(blocked.drafts[fixtures[id].keys.snapshot],raw);assert.equal(JSON.stringify(blocked),blockedBefore)}
 });
 
-test('actual progress backup and validator preserve all fifty-one records, sidecars and original classic history',async()=>{
+test('actual progress backup and validator preserve all fifty-four records, sidecars and original classic history',async()=>{
  assert.equal(typeof host.makeProgressFile,'function');assert.equal(typeof host.readProgressFile,'function');assert.equal(typeof host.validateState,'function');
  const state={...stateWith(completedEntries(IDS)),lastLesson:7,completed:[1,3,7],scores:{1:60,3:80},cards:{legacy:{box:2,due:NOW+DAY}},days:['2026-10-01'],attempts:7,correct:5};
  state.drafts['classic-unrelated-draft']='Keep my old unrelated draft.';
@@ -162,19 +161,19 @@ test('actual progress backup and validator preserve all fifty-one records, sidec
 });
 
 
-test('actual successor guards the two subchains, 89 hold and original 109 route without routing into pending groups',()=>{
+test('actual successor guards the continuous chain and existing 109 route with unknown safe fallback',()=>{
  assert.equal(typeof host.courseSuccessorNode,'function');const fallback=host.nodeById('nce1-49');assert.ok(fallback);const before=JSON.stringify(fallback);
- for(const id of IDS){const want=expectedSuccessor(id),node=host.courseSuccessorNode(id,fallback);assert.ok(node,`${id}: undefined destination`);assert.ok(host.nodeById(want));assert.strictEqual(node,host.nodeById(want));assert.equal(UNREGISTERED.includes(node.id),false);}
- for(const [id,want] of [['nce1-83','nce1-85'],['nce1-85','nce1-87'],['nce1-87','nce1-89'],['nce1-89','nce1-89'],['nce1-97','nce1-99'],['nce1-99','nce1-101'],['nce1-101','nce1-103'],['nce1-103','nce1-105'],['nce1-105','nce1-107'],['nce1-107','nce1-109']])assert.equal(host.courseSuccessorNode(id,fallback).id,want);
+ for(const id of IDS){const want=expectedSuccessor(id),node=host.courseSuccessorNode(id,fallback);assert.ok(node,`${id}: undefined destination`);assert.ok(host.nodeById(want));assert.strictEqual(node,host.nodeById(want));assert.equal(UNREGISTERED.includes(node.id),id==='nce1-107');}
+ for(const [id,want] of [['nce1-83','nce1-85'],['nce1-85','nce1-87'],['nce1-87','nce1-89'],['nce1-89','nce1-91'],['nce1-91','nce1-93'],['nce1-93','nce1-95'],['nce1-95','nce1-97'],['nce1-97','nce1-99'],['nce1-99','nce1-101'],['nce1-101','nce1-103'],['nce1-103','nce1-105'],['nce1-105','nce1-107'],['nce1-107','nce1-109']])assert.equal(host.courseSuccessorNode(id,fallback).id,want);
  const real109=host.nodeById('nce1-109');assert.ok(real109);assert.strictEqual(host.courseSuccessorNode('nce1-109',fallback),real109);
  for(const id of ['__test_unknown_course__','unknown','nce1-999','nce1-037','__proto__','constructor','toString',''])assert.strictEqual(host.courseSuccessorNode(id,fallback),fallback);
  assert.equal(JSON.stringify(fallback),before);
 });
 
-test('pending 91/93/95 have no registered model, keys, sidecars, envelopes or automatic predecessors',async()=>{
+test('109, 111 and stable unknown have no registered course-loop model, keys, sidecars or envelopes',async()=>{
  for(const id of UNREGISTERED){assert.equal(supportedCourseIds.includes(id),false);assert.equal(host.courseLoopBindings.some(b=>b.id===id),false);assert.throws(()=>host.courseLoopFor(id));await assert.rejects(()=>fixtureForId(id));assert.throws(()=>host.parseLoopInputs(null,id));
   const raw=JSON.stringify({...completed['nce1-85'].state,lessonId:id}),parsed=host.parseCourseLoop(raw,NOW+1000,id);assert.equal(parsed.ok,false);assert.equal(parsed.raw,raw);
-  for(const registered of IDS)assert.notEqual(host.courseSuccessorNode(registered,host.nodeById(registered)).id,id);
+  for(const registered of IDS){const next=host.courseSuccessorNode(registered,host.nodeById(registered));if(id==='nce1-109')assert.equal(next.id===id,registered==='nce1-107');else assert.notEqual(next.id,id);}
  }
 });
 
@@ -210,4 +209,40 @@ test('video-assisted independent correct originals still require correction and 
  const state=stateWith(records),before=JSON.stringify(state),restored=await host.readProgressFile(host.makeProgressFile(state,new Date(NOW+1000)));assert.deepEqual(restored.state,state);
  for(const [id] of records){const r=host.parseCourseLoop(restored.state.drafts[fixtures[id].keys.snapshot],NOW+1000,id);assert.ok(r.ok);assert.equal(r.view.attempts.find(a=>a.stage==='independent').hinted,true);assert.ok(r.view.learning.some(e=>e.id===`${id}:video`));assert.equal(host.courseLoopSummary(restored.state,host.emptyProgress(),NOW+1000,id).mapLabel,'地图检验：尚未达标');}
  assert.equal(JSON.stringify(state),before);assert.equal(state.flashcards,undefined);
+});
+
+// These are lexical-cued construction and contextual semantic-selection tasks.
+// Engine freshness/independence flags do not establish spontaneous transfer.
+test('all twelve new courses preserve constrained accepted forms and semantic negatives through actual factory replay',()=>{
+ let questions=0,accepted=0,negatives=0,punctuation=0,width=0;
+ for(const id of NEW){const content=fixtures[id].content,model=host.courseLoopFor(id).model,factory=createCourseLoopModel(content);
+  let state=model.initialState(NOW),at=NOW,view=model.inspect(state,at).view;
+  const send=action=>{const r=model.transition(state,action,++at);assert.ok(r.ok,`${id}: ${r.message}`);state=r.state;view=r.view;};
+  const checkBank=stage=>{
+   assert.equal(view.phase,stage);
+   for(const [index,q] of content.questionsFor(stage).entries()){
+    assert.equal(view.index,index);assert.ok(q.accepted.length);assert.ok(q.counterexamples.length>=3);questions++;
+    const before=JSON.stringify(state),cases=[...q.accepted.map(answer=>({answer,want:true})),...q.counterexamples.map(({answer})=>({answer,want:false}))];
+    const first=q.accepted[0];
+    if(q.form==='question')cases.push({answer:first+'?',want:false,punctuation:true});
+    else {assert.ok(['statement','imperative'].includes(q.form),`${q.id}: new form requires an explicit test boundary`);cases.push({answer:first.replace(/[.!。！]$/,'')+'?',want:false,punctuation:true});}
+    cases.push({answer:first.replace(/[A-Za-z]/,char=>String.fromCharCode(char.charCodeAt(0)+0xfee0)),want:false,width:true});
+    for(const {answer,want,punctuation:punct,width:wide} of cases){
+     const draft=model.transition(state,{type:'draft',value:answer},at+1);assert.ok(draft.ok,`${q.id}: draft rejected`);
+     const result=model.transition(draft.state,{type:'submit'},at+2);assert.ok(result.ok,`${q.id}: submit rejected`);
+     const original=result.view.attempts.at(-1);assert.equal(original.id,q.id);assert.equal(original.answer,answer);assert.equal(original.correct,want,`${q.id}: ${answer}`);assert.equal(original.hinted,stage==='guided');
+     const raw=JSON.stringify(result.state),parsed=host.parseCourseLoop(raw,at+2,id),direct=factory.restore(raw,at+2);assert.ok(parsed.ok);assert.deepEqual(parsed,direct);assert.deepEqual(parsed.view.attempts.at(-1),original);
+     const overwrite=model.transition(result.state,{type:'draft',value:q.accepted[0]},at+3);assert.equal(overwrite.ok,false);assert.deepEqual(overwrite.state,result.state);
+     if(wide)width++;else if(punct)punctuation++;else if(want)accepted++;else negatives++;
+    }
+    assert.equal(JSON.stringify(state),before);send({type:'draft',value:first});send({type:'submit'});send({type:'next'});
+   }
+  };
+  checkBank('diagnostic');send({type:'next'});checkBank('guided');checkBank('independent');send({type:'next'});checkBank('repair');
+  send({type:'own-draft',value:'Synthetic constrained-response QA; open expression awaits human review.'});send({type:'finish'});
+  for(const stage of ['review-a','review-b']){at=view.dueAt;send({type:'review'});checkBank(stage);send({type:'next'});}
+  assert.equal(view.ownFinal.status,'awaiting-human-review');assert.equal(model.receipt(view,at).mastery,'not-assessed');
+ }
+ assert.equal(questions,12*18);assert.ok(negatives>=12*18*3);assert.equal(punctuation,questions);assert.equal(width,questions);
+ console.log('New-course constrained matcher replay: '+JSON.stringify({courses:NEW.length,questions,accepted,semanticNegatives:negatives,punctuationNegatives:punctuation,widthNegatives:width,spontaneousTransfer:'not-assessed'}));
 });

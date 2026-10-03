@@ -20,8 +20,9 @@ assert.equal(predicates.length,1,'find one exact production SourcePanel acceptan
 // This is the actual source expression, extracted rather than restated in tests.
 const accepts=new Function('result','lesson','first',`return (${predicates[0][1]});`);
 const IDS=[...baseIds,...newIds];
-assert.deepEqual(newIds,['nce1-85','nce1-87','nce1-89','nce1-97','nce1-99','nce1-101','nce1-103','nce1-105','nce1-107'],'only the nine frozen new groups are connected');
-assert.deepEqual(host.courseLoopBindings.map(course=>course.id),IDS,'actual production registry must contain the fifty-one selected groups');
+assert.deepEqual(newIds,Array.from({length:12},(_,i)=>`nce1-${85+2*i}`),'the twelve frozen new groups are connected');
+assert.deepEqual(IDS,Array.from({length:54},(_,i)=>`nce1-${1+2*i}`),'selected course IDs are continuous odd lessons from 1 through 107');
+assert.deepEqual(host.courseLoopBindings.map(course=>course.id),IDS,'actual production registry must contain the fifty-four selected groups');
 const sources=Object.fromEntries(await Promise.all(IDS.map(async id=>{
  const {lesson}=host.courseLoopFor(id),first=lesson.lessons[0],path=`language/${lesson.book}/${first}.json`,bytes=await readFile(new URL(path,assets)),language=JSON.parse(bytes);
  const lrc=manifest.files.filter(f=>f.book===lesson.book&&f.lesson===first&&f.textFormat==='lrc'&&f.sha256===language.sourceSha256);
@@ -56,8 +57,8 @@ for(const id of IDS)test(`${id}: authored source agrees with JSON transcript, or
  const picture=await readFile(new URL(`lesson-pages/${comic.pageSha256}.jpg`,assets));assert.equal(sha(picture),comic.pageSha256);
 });
 
-test('exact SourcePanel guard accepts only the matching source in all 51 by 51 pairs',()=>{
- assert.equal(new Set(IDS.map(id=>sources[id].language.sourceSha256)).size,51);
+test('exact SourcePanel guard accepts only the matching source in all 54 by 54 pairs',()=>{
+ assert.equal(new Set(IDS.map(id=>sources[id].language.sourceSha256)).size,54);
  for(const receiver of IDS)for(const sender of IDS){const r=sources[receiver],s=sources[sender];assert.equal(accepts(s.language,r.lesson,r.first),receiver===sender,`${sender} textbook to ${receiver}`)}
 });
 
@@ -69,7 +70,7 @@ test('exact SourcePanel guard rejects hash tampering, JSON-byte-hash substitutio
  }
 });
 
-test('actual comic guard accepts only same-course source and body row count in all 51 by 51 pairs',()=>{
+test('actual comic guard accepts only same-course source and body row count in all 54 by 54 pairs',()=>{
  assert.equal(typeof host.lessonIllustration,'function');assert.equal(typeof host.splitLesson,'function');
  for(const receiver of IDS){const r=sources[receiver],rows=host.splitLesson(r.language.rows,r.language.book,true).body,before=JSON.stringify(r.language);
   assert.equal(rows.length,r.comic.linePanels.length);
@@ -87,7 +88,9 @@ test('audio clips have finite ordered windows, matching source starts and select
   assert.ok(Number.isFinite(firstTime));assert.equal(lrc.textFormat,'lrc');assert.ok(lesson.source.clips.length>0);
   for(const clip of lesson.source.clips){assert.ok(targets.has(clip.target),`${id}: clip target belongs to selected teaching`);assert.ok(Number.isFinite(clip.start)&&Number.isFinite(clip.end));assert.ok(clip.start>=firstTime&&clip.end>clip.start,`${id}: ordered clip interval`);assert.ok(clip.start<=lrc.lastTimestamp,`${id}: clip begins inside actual transcript`);
    if(newIds.includes(id))assert.ok(language.rows.some(row=>Math.abs(row.time-clip.start)<0.001),`${id}: new clip starts at an actual LRC row timestamp`);
-   // A final-line selection may extend past the last subtitle start (99:66.83).
+   // A selection endpoint need not be a subtitle start (95:88.77,99:66.83).
+   // In particular, 95's 86.16-88.77 selection is only the original question;
+   // these tests do not claim it contains an answer or establish listening quality.
    // Finite ordered windows are checked here; actual media duration is native UI evidence.
   }
  }
