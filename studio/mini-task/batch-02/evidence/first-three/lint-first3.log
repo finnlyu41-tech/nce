@@ -6,4 +6,3 @@
   21:160  warning  'now' is assigned a value but never used  @typescript-eslint/no-unused-vars
 
 ✖ 2 problems (0 errors, 2 warnings)
-

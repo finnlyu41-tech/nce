@@ -46,6 +46,46 @@
       "channels": 1,
       "rms": 4704.688123494141,
       "sha256": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e"
+    },
+    {
+      "file": "mini-n1-21-delayed-a.wav",
+      "seconds": 7.473061224489796,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4695.290371221932,
+      "sha256": "c6d1738259c644cd4a175df5e90e9e01e17b20baa3d672fb6c8fe8e56c4def95"
+    },
+    {
+      "file": "mini-n1-21-delayed-b.wav",
+      "seconds": 7.743854875283446,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4441.467478717506,
+      "sha256": "a8394e528c59e634c81b598424dec1748c4608a8db0ed8a504b12ba709c5af1f"
+    },
+    {
+      "file": "mini-n1-21-guided.wav",
+      "seconds": 8.284081632653061,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4554.55825284259,
+      "sha256": "6bb75f7e6ff8e246bc98a1c2dd077082a6795f147cc13ff1aee6258ca85cc926"
+    },
+    {
+      "file": "mini-n1-21-independent.wav",
+      "seconds": 7.4091156462585035,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4766.315777617822,
+      "sha256": "36484fa340140ebfce3ba5f47af74e6c4ab3cdc132de0e9735fb312a1da47719"
+    },
+    {
+      "file": "mini-n1-21-repair.wav",
+      "seconds": 7.37687074829932,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4766.717377308996,
+      "sha256": "a5c67d37a48aed7cae55674bf1af6536e95f06a4b0938812b244d3a4d1dc71a1"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "publishedBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "samePreExistingFailures": true,
+  "rows": [
+    {
+      "name": "candidate",
+      "exitCode": 1,
+      "failed": [
+        "question IDs isolated across all owned courses and unregistered courses reject binding"
+      ],
+      "passed": "32"
+    },
+    {
+      "name": "published-baseline",
+      "exitCode": 1,
+      "failed": [
+        "question IDs isolated across all owned courses and unregistered courses reject binding"
+      ],
+      "passed": "32"
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+TAP version 13
+# Subtest: nce1-13 complete six banks, own task and correct source identity
+ok 1 - nce1-13 complete six banks, own task and correct source identity
+  ---
+  duration_ms: 1.593209
+  type: 'test'
+  ...
+# Subtest: nce1-13 authored matches and meaning-changing boundaries through real factory
+ok 2 - nce1-13 authored matches and meaning-changing boundaries through real factory
+  ---
+  duration_ms: 13.40425
+  type: 'test'
+  ...
+# Subtest: nce1-13 help, first answers, deferred feedback, corrections and retry remain distinct
+ok 3 - nce1-13 help, first answers, deferred feedback, corrections and retry remain distinct
+  ---
+  duration_ms: 8.069125
+  type: 'test'
+  ...
+# Subtest: nce1-13 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+ok 4 - nce1-13 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+  ---
+  duration_ms: 10.047916
+  type: 'test'
+  ...
+# Subtest: nce1-13 replay preserves original raw for foreign course and future content
+ok 5 - nce1-13 replay preserves original raw for foreign course and future content
+  ---
+  duration_ms: 0.417917
+  type: 'test'
+  ...
+# Subtest: nce1-15 complete six banks, own task and correct source identity
+ok 6 - nce1-15 complete six banks, own task and correct source identity
+  ---
+  duration_ms: 0.198541
+  type: 'test'
+  ...
+# Subtest: nce1-15 authored matches and meaning-changing boundaries through real factory
+ok 7 - nce1-15 authored matches and meaning-changing boundaries through real factory
+  ---
+  duration_ms: 9.292459
+  type: 'test'
+  ...
+# Subtest: nce1-15 help, first answers, deferred feedback, corrections and retry remain distinct
+ok 8 - nce1-15 help, first answers, deferred feedback, corrections and retry remain distinct
+  ---
+  duration_ms: 5.160625
+  type: 'test'
+  ...
+# Subtest: nce1-15 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+ok 9 - nce1-15 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+  ---
+  duration_ms: 8.617834
+  type: 'test'
+  ...
+# Subtest: nce1-15 replay preserves original raw for foreign course and future content
+ok 10 - nce1-15 replay preserves original raw for foreign course and future content
+  ---
+  duration_ms: 0.579209
+  type: 'test'
+  ...
+# Subtest: nce1-17 complete six banks, own task and correct source identity
+ok 11 - nce1-17 complete six banks, own task and correct source identity
+  ---
+  duration_ms: 0.164458
+  type: 'test'
+  ...
+# Subtest: nce1-17 authored matches and meaning-changing boundaries through real factory
+ok 12 - nce1-17 authored matches and meaning-changing boundaries through real factory
+  ---
+  duration_ms: 6.693416
+  type: 'test'
+  ...
+# Subtest: nce1-17 help, first answers, deferred feedback, corrections and retry remain distinct
+ok 13 - nce1-17 help, first answers, deferred feedback, corrections and retry remain distinct
+  ---
+  duration_ms: 5.696
+  type: 'test'
+  ...
+# Subtest: nce1-17 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+ok 14 - nce1-17 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+  ---
+  duration_ms: 7.137708
+  type: 'test'
+  ...
+# Subtest: nce1-17 replay preserves original raw for foreign course and future content
+ok 15 - nce1-17 replay preserves original raw for foreign course and future content
+  ---
+  duration_ms: 0.127375
+  type: 'test'
+  ...
+# Subtest: nce1-19 complete six banks, own task and correct source identity
+ok 16 - nce1-19 complete six banks, own task and correct source identity
+  ---
+  duration_ms: 0.241625
+  type: 'test'
+  ...
+# Subtest: nce1-19 authored matches and meaning-changing boundaries through real factory
+ok 17 - nce1-19 authored matches and meaning-changing boundaries through real factory
+  ---
+  duration_ms: 8.5575
+  type: 'test'
+  ...
+# Subtest: nce1-19 help, first answers, deferred feedback, corrections and retry remain distinct
+ok 18 - nce1-19 help, first answers, deferred feedback, corrections and retry remain distinct
+  ---
+  duration_ms: 4.627958
+  type: 'test'
+  ...
+# Subtest: nce1-19 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+ok 19 - nce1-19 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+  ---
+  duration_ms: 7.473167
+  type: 'test'
+  ...
+# Subtest: nce1-19 replay preserves original raw for foreign course and future content
+ok 20 - nce1-19 replay preserves original raw for foreign course and future content
+  ---
+  duration_ms: 0.114375
+  type: 'test'
+  ...
+# Subtest: nce1-21 complete six banks, own task and correct source identity
+ok 21 - nce1-21 complete six banks, own task and correct source identity
+  ---
+  duration_ms: 0.078208
+  type: 'test'
+  ...
+# Subtest: nce1-21 authored matches and meaning-changing boundaries through real factory
+ok 22 - nce1-21 authored matches and meaning-changing boundaries through real factory
+  ---
+  duration_ms: 6.854833
+  type: 'test'
+  ...
+# Subtest: nce1-21 help, first answers, deferred feedback, corrections and retry remain distinct
+ok 23 - nce1-21 help, first answers, deferred feedback, corrections and retry remain distinct
+  ---
+  duration_ms: 4.095042
+  type: 'test'
+  ...
+# Subtest: nce1-21 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+ok 24 - nce1-21 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+  ---
+  duration_ms: 7.164291
+  type: 'test'
+  ...
+# Subtest: nce1-21 replay preserves original raw for foreign course and future content
+ok 25 - nce1-21 replay preserves original raw for foreign course and future content
+  ---
+  duration_ms: 0.105125
+  type: 'test'
+  ...
+# Subtest: nce1-23 complete six banks, own task and correct source identity
+ok 26 - nce1-23 complete six banks, own task and correct source identity
+  ---
+  duration_ms: 0.061167
+  type: 'test'
+  ...
+# Subtest: nce1-23 authored matches and meaning-changing boundaries through real factory
+ok 27 - nce1-23 authored matches and meaning-changing boundaries through real factory
+  ---
+  duration_ms: 6.646917
+  type: 'test'
+  ...
+# Subtest: nce1-23 help, first answers, deferred feedback, corrections and retry remain distinct
+ok 28 - nce1-23 help, first answers, deferred feedback, corrections and retry remain distinct
+  ---
+  duration_ms: 5.270791
+  type: 'test'
+  ...
+# Subtest: nce1-23 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+ok 29 - nce1-23 synthetic delayed A/B, seven-day/day schedule and bank exhaustion
+  ---
+  duration_ms: 8.244292
+  type: 'test'
+  ...
+# Subtest: nce1-23 replay preserves original raw for foreign course and future content
+ok 30 - nce1-23 replay preserves original raw for foreign course and future content
+  ---
+  duration_ms: 0.113958
+  type: 'test'
+  ...
+# Subtest: question IDs isolated across all owned courses and unregistered courses reject binding
+not ok 31 - question IDs isolated across all owned courses and unregistered courses reject binding
+  ---
+  duration_ms: 5.592333
+  type: 'test'
+  location: '/Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/course-loop/parallel-nce1-013-023/test-content.mjs:48:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+
+      assert.ok(!registeredCourseIds.includes(c.lesson.id))
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/course-loop/parallel-nce1-013-023/test-content.mjs:48:225)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: unchanged default CL00 factory behavior
+ok 32 - unchanged default CL00 factory behavior
+  ---
+  duration_ms: 1.459459
+  type: 'test'
+  ...
+# Subtest: formatting never erases sentence polarity or question punctuation
+ok 33 - formatting never erases sentence polarity or question punctuation
+  ---
+  duration_ms: 0.334625
+  type: 'test'
+  ...
+1..33
+# tests 33
+# suites 0
+# pass 32
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 173.698375

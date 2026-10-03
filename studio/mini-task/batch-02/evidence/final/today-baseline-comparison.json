@@ -1,0 +1,32 @@
+{
+  "publishedBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "samePreExistingFailures": true,
+  "rows": [
+    {
+      "name": "candidate",
+      "exitCode": 1,
+      "failed": [
+        "empty state recommends only the first course and never seeds optional queues",
+        "manual unlock is access only; it adds no completion, review or repair",
+        "future-only map proof cannot advance the current course using wall-clock time",
+        "a delayed different grammar bank waits seven days before the next check",
+        "course fallback is last when present and never required when it would repeat the only task",
+        "all skipped recommendations expose an honest paused state and can restore"
+      ],
+      "passed": 44
+    },
+    {
+      "name": "published-baseline",
+      "exitCode": 1,
+      "failed": [
+        "empty state recommends only the first course and never seeds optional queues",
+        "manual unlock is access only; it adds no completion, review or repair",
+        "future-only map proof cannot advance the current course using wall-clock time",
+        "a delayed different grammar bank waits seven days before the next check",
+        "course fallback is last when present and never required when it would repeat the only task",
+        "all skipped recommendations expose an honest paused state and can restore"
+      ],
+      "passed": 44
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+diff --git a/studio/mini-task/content.ts b/studio/mini-task/content.ts
+index fabfea2..fad0581 100644
+--- a/studio/mini-task/content.ts
++++ b/studio/mini-task/content.ts
+@@ -0,0 +1 @@
++import {batch02Tasks} from './batch-02/content';
+@@ -50,0 +52 @@ export const miniTasks:readonly MiniTask[]=[
++ ...batch02Tasks,
+diff --git a/studio/mini-task/manifest.ts b/studio/mini-task/manifest.ts
+index 9de5655..1701808 100644
+--- a/studio/mini-task/manifest.ts
++++ b/studio/mini-task/manifest.ts
+@@ -0,0 +1 @@
++import {batch02LessonBindings} from './batch-02/manifest';
+@@ -2 +3 @@ import {miniTasks} from './content';
+-export const miniTaskManifest = Object.freeze({version:1,contentVersion:1,batch:'R12-first-six',coverage:'12 explicit lesson bindings share 6 paired-group tasks; partial target coverage, no mastery claim',authoredGroups:miniTasks.map(t=>({taskId:t.id,courseId:t.courseId,groupId:t.groupId,lessons:t.lessons,skill:t.skill,track:t.track})),origin:'original standalone preparatory materials',calibration:'uncalibrated',examClaims:false,progressHost:'existing State.drafts',finiteBanks:['guided','independent','repair','delayed-a','delayed-b']});
++export const miniTaskManifest = Object.freeze({version:1,contentVersion:1,batch:'R12-authored-batches',coverage:`${miniTasks.length*2} explicit lesson bindings share ${miniTasks.length} paired-group tasks; partial target coverage, no mastery claim`,authoredGroups:miniTasks.map(t=>({taskId:t.id,courseId:t.courseId,groupId:t.groupId,lessons:t.lessons,skill:t.skill,track:t.track})),origin:'original standalone preparatory materials',calibration:'uncalibrated',examClaims:false,progressHost:'existing State.drafts',finiteBanks:['guided','independent','repair','delayed-a','delayed-b']});
+@@ -16,0 +18 @@ export const lessonBindings = [
++ ...batch02LessonBindings,
+diff --git a/studio/mini-task/package-audio.py b/studio/mini-task/package-audio.py
+index 0e3a770..e5bc264 100644
+--- a/studio/mini-task/package-audio.py
++++ b/studio/mini-task/package-audio.py
+@@ -12,0 +13 @@ import sys
++import runpy
+@@ -19 +20 @@ html = html_path.read_text()
+-provenance = json.loads(Path('mini-task/audio/provenance.json').read_text())
++authored = runpy.run_path('mini-task/batch-02/audio_inventory.py')['authored_audio'](Path('mini-task'))
+@@ -21,2 +22,2 @@ rows = []
+-for authored in provenance['files']:
+-    stem = Path(authored['file']).stem
++for item in authored:
++    stem = Path(item['file']).stem
+@@ -29 +30 @@ for authored in provenance['files']:
+-    if digest != authored['sha256']:
++    if digest != item['sha256']:
+@@ -35,2 +36,2 @@ for authored in provenance['files']:
+-if len(rows) != 10:
+-    raise RuntimeError('This batch must package exactly ten original WAVs')
++if len(rows) != len(authored):
++    raise RuntimeError('The finite authored mini audio batch is incomplete')
+@@ -63 +64 @@ evidence.mkdir(parents=True, exist_ok=True)
+-print('Packaged 10 verified mini-task WAVs (' + receipt['mode'] + ')')
++print('Packaged '+str(len(rows))+' verified mini-task WAVs (' + receipt['mode'] + ')')
+diff --git a/studio/mini-task/verify-audio.py b/studio/mini-task/verify-audio.py
+index f2389a9..9242b90 100644
+--- a/studio/mini-task/verify-audio.py
++++ b/studio/mini-task/verify-audio.py
+@@ -3 +3 @@ from pathlib import Path
+-import hashlib, io, json, mimetypes, re, wave
++import hashlib, io, json, mimetypes, re, wave, runpy
+@@ -7,2 +7 @@ def verify_audio(root, version, html, map_refs):
+-    authored=json.loads((source/'audio/provenance.json').read_text())['files']
+-    assert len(authored)==10 and len({row['file'] for row in authored})==10
++    authored=runpy.run_path(str(source/'batch-02/audio_inventory.py'))['authored_audio'](source)
+@@ -10 +9 @@ def verify_audio(root, version, html, map_refs):
+-    assert len(ledger)==10, 'Mini audio ledger incomplete'
++    assert len(ledger)==len(authored), 'Mini audio ledger incomplete'
+@@ -20 +19 @@ def verify_audio(root, version, html, map_refs):
+-        raw=(root/path).read_bytes();original=(source/'audio'/row['file']).read_bytes()
++        raw=(root/path).read_bytes();original=(source/row['file']).read_bytes()

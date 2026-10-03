@@ -1,0 +1,52 @@
+{
+  "version": "2026-10-03-grammar-exposure-v45",
+  "demo_assets": {
+    "demos/yesterday/app.mjs": "0afeff470ddc2113c247868a92c36bbd65f8802ac4e7640e36affab7de4eb49e",
+    "demos/yesterday/bootstrap.mjs": "f1627ffcc1592a30a453e5a026fedaac1d3802a0b5294386578559ac758f2c81",
+    "demos/yesterday/content.mjs": "0d258d706c7bbf90e3316c324fdb91bf20c80e5b278944f7510bfa5e87f0258e",
+    "demos/yesterday/demo-store.mjs": "3175d6c4bb1be2d9cce8cc930e791904ba820cca02c23376d780784fb5276b45",
+    "demos/yesterday/index.html": "7575b9722f678e247cd50abb4b18951135552e16d341b9b91814188aa1fc7647",
+    "demos/yesterday/model.mjs": "52a8d55a2a572d0e6eaa905d850c0c6f82bfc06ce8851879683d9789988ad665",
+    "demos/yesterday/review-adapter.mjs": "447abb1e9cb0dfe67831f6e8d67836daf3bdc27d613a4450f616c014ee668596",
+    "demos/yesterday/review-content.mjs": "38c163af087ceb70e9c6346a559a289f26f879ff8851977b0daec6578b4c7cd2",
+    "demos/yesterday/review-controller.mjs": "bbf91ef349a0c1328353cf46e5fb2f8e240fd937127718048151d34cee0298a0",
+    "demos/yesterday/review-model.mjs": "457b432f6c09c22c423505282f83d1bae01b7b518515c37285c36e89a211691e",
+    "demos/yesterday/styles.css": "916b2f49748d571ff405b6121d6375efc3d746b02e696e7baa541f30aef9012c"
+  },
+  "html_sha256": "b25d0c9f0876e6f3987f26279707be521a8e4e5a987e4e42048b240533d1c158",
+  "map_html_sha256": "024c203935c31a1e86f8bb8b26595c75ca70a0859a1f706991d264d228cbe832",
+  "map_assets": {
+    "map/assets/index-BShJ_BNn.css": "588bab074f42fbe330abf6f27789fd74f7f32fce1bd6e4196c386478347edced",
+    "map/assets/index-Bb26VIL-.js": "e6e0e373dc44c48aa33b97639c064f85c0a659d93bfeb8ac8792ed59efa47047",
+    "map/assets/mini-n1-01-delayed-a-DasbtE01.wav": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c",
+    "map/assets/mini-n1-01-delayed-b-9LV-hq9D.wav": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4",
+    "map/assets/mini-n1-01-guided-DbZx4d_F.wav": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06",
+    "map/assets/mini-n1-01-independent-DwalH_Cp.wav": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041",
+    "map/assets/mini-n1-01-repair-C_pmpUrE.wav": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c",
+    "map/assets/mini-n1-09-delayed-a-32d96Ls0.wav": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba",
+    "map/assets/mini-n1-09-delayed-b-BdSpo7nO.wav": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185",
+    "map/assets/mini-n1-09-guided-BLL7G-yC.wav": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c",
+    "map/assets/mini-n1-09-independent-B_v42D4U.wav": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7",
+    "map/assets/mini-n1-09-repair-1nc7dXyw.wav": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+  },
+  "manifest_sha256": "a9661a1a000654ffebb1eac3612ea6503b538d91332cde3c5cba159f43fa3730",
+  "materials_count": 556,
+  "access": "public",
+  "grammar_sha256": "743c6993a7c624604aa8b7a78982f84f4344754485e0b5e4bec08444419ec6c2",
+  "pages_sha256": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596",
+  "speaking_sha256": "6186e51b3078399e19cb064677d8a9638f65057497e0922da95e9a7d10d8ea55",
+  "language_sha256": "e7629188211afab2798ed393b93f604b23342434cc63648bff783943f23997d1",
+  "mini_audio_assets": {
+    "assets/mini-n1-01-delayed-a-DasbtE01.wav": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c",
+    "assets/mini-n1-01-delayed-b-9LV-hq9D.wav": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4",
+    "assets/mini-n1-01-guided-DbZx4d_F.wav": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06",
+    "assets/mini-n1-01-independent-DwalH_Cp.wav": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041",
+    "assets/mini-n1-01-repair-C_pmpUrE.wav": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c",
+    "assets/mini-n1-09-delayed-a-32d96Ls0.wav": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba",
+    "assets/mini-n1-09-delayed-b-BdSpo7nO.wav": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185",
+    "assets/mini-n1-09-guided-BLL7G-yC.wav": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c",
+    "assets/mini-n1-09-independent-B_v42D4U.wav": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7",
+    "assets/mini-n1-09-repair-1nc7dXyw.wav": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+  },
+  "runtime_sha": "7b7c1283d12f0c6d784478cda8353080598f6980"
+}

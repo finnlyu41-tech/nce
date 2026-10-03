@@ -1,0 +1,82 @@
+{
+  "firstSixDeepEqual": true,
+  "firstThreeFrozenDeepEqual": true,
+  "protectedSourcesUnchanged": true,
+  "media": [
+    {
+      "file": "mini-task/audio/mini-n1-01-delayed-a.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-01-delayed-b.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-01-guided.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-01-independent.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-01-repair.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-09-delayed-a.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-09-delayed-b.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-09-guided.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-09-independent.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    {
+      "file": "mini-task/audio/mini-n1-09-repair.wav",
+      "reference": "7b7c1283d12f0c6d784478cda8353080598f6980",
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    },
+    {
+      "file": "mini-task/batch-02/audio/mini-n1-13-delayed-a.wav",
+      "reference": "296ba28c54b1a1d9ae61f98c164d673bf72244aa",
+      "sha256": "5d7179b27609df356076d8ed5e2cb885b090e960f5f4973ee302b57b09df7abe"
+    },
+    {
+      "file": "mini-task/batch-02/audio/mini-n1-13-delayed-b.wav",
+      "reference": "296ba28c54b1a1d9ae61f98c164d673bf72244aa",
+      "sha256": "8008e4bfcacb7add5402289e1ac1024392fc4309fbeeb8fd8898b91e834cbc63"
+    },
+    {
+      "file": "mini-task/batch-02/audio/mini-n1-13-guided.wav",
+      "reference": "296ba28c54b1a1d9ae61f98c164d673bf72244aa",
+      "sha256": "8ea219e167bd741f921765dea6ffbfc6c8e1b30ac1e6844f4ded90a45e4e1ec7"
+    },
+    {
+      "file": "mini-task/batch-02/audio/mini-n1-13-independent.wav",
+      "reference": "296ba28c54b1a1d9ae61f98c164d673bf72244aa",
+      "sha256": "8a8d8e904164b954779593bfc8b8f7c7752157e99a7a031f14c368fc24e0152d"
+    },
+    {
+      "file": "mini-task/batch-02/audio/mini-n1-13-repair.wav",
+      "reference": "296ba28c54b1a1d9ae61f98c164d673bf72244aa",
+      "sha256": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e"
+    }
+  ]
+}

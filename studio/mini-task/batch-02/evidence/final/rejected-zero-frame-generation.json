@@ -1,0 +1,32 @@
+[
+  {
+    "file": "mini-task/batch-02/audio/mini-n1-21-delayed-a.wav",
+    "bytes": 4096,
+    "sha256": "f1b48c06312c32ba2012a26e32c85567cde6d401edb32205f875face04f0190d",
+    "reason": "say sandbox invocation exited0 but contained no PCM; rejected before packaging"
+  },
+  {
+    "file": "mini-task/batch-02/audio/mini-n1-21-delayed-b.wav",
+    "bytes": 4096,
+    "sha256": "f1b48c06312c32ba2012a26e32c85567cde6d401edb32205f875face04f0190d",
+    "reason": "say sandbox invocation exited0 but contained no PCM; rejected before packaging"
+  },
+  {
+    "file": "mini-task/batch-02/audio/mini-n1-21-guided.wav",
+    "bytes": 4096,
+    "sha256": "f1b48c06312c32ba2012a26e32c85567cde6d401edb32205f875face04f0190d",
+    "reason": "say sandbox invocation exited0 but contained no PCM; rejected before packaging"
+  },
+  {
+    "file": "mini-task/batch-02/audio/mini-n1-21-independent.wav",
+    "bytes": 4096,
+    "sha256": "f1b48c06312c32ba2012a26e32c85567cde6d401edb32205f875face04f0190d",
+    "reason": "say sandbox invocation exited0 but contained no PCM; rejected before packaging"
+  },
+  {
+    "file": "mini-task/batch-02/audio/mini-n1-21-repair.wav",
+    "bytes": 4096,
+    "sha256": "f1b48c06312c32ba2012a26e32c85567cde6d401edb32205f875face04f0190d",
+    "reason": "say sandbox invocation exited0 but contained no PCM; rejected before packaging"
+  }
+]

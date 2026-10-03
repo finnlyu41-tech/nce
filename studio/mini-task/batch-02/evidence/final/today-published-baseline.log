@@ -1,0 +1,106 @@
+PASS recommendation TypeScript check
+PASS map first failed check immediately recommends repair, once
+PASS a hinted correct map answer stays repair, never mastery
+PASS map failure takes priority over an older due review
+PASS map first pass is due only after exactly 24 hours
+PASS a future map attempt never turns an older pass into a due task
+PASS unfinished map check resumes without producing a second review or course entry
+PASS restored unfinished starter bank resumes even when its round matches a legacy pass
+PASS a never-submitted map check can resume from its saved question
+PASS map delayed different rounds follow actual seven-day and twenty-one-day intervals
+PASS early map repeats do not promote four raw passes into a twenty-one-day interval
+PASS speech correction waits 24h, fresh hints postpone it, and a recorded recall clears only that task
+PASS a changed speech source does not reuse an obsolete recording task
+PASS locked repair targets are not recommended as actionable
+PASS grammar first pass waits 24h and keeps a direct check route
+PASS early grammar repeat cannot postpone the first delayed check
+PASS same-bank grammar success does not create a seven-day interval
+PASS an early grammar repeat does not postpone an established weekly check
+PASS grammar repair followed by success starts a fresh 24h check, not another week
+PASS grammar failed and assisted attempts repair immediately, even before their next day
+PASS a grammar round in progress resumes without altering its answers
+PASS future grammar schema/content is preserved and never put into a writable task
+PASS future grammar times are not due, successful or resumable evidence
+PASS mere grammar reading or an empty malformed draft does not become a task
+PASS non-first textbook goal due route keeps exact book, lesson and guide
+PASS a failed textbook goal repairs before its future review date
+PASS unfinished textbook goal and transfer resume the actual saved phase
+PASS future textbook attempts and not-yet-due successful goals are not due tasks
+PASS legacy self-check is secondary and not described as mastery
+PASS legacy whole-lesson check is not duplicated beside its exact active goal
+PASS an unsupported legacy journey version stays untouched
+PASS legacy journey due and unfinished checks keep their original source
+PASS legacy journey failure repairs immediately and future history never masquerades as due
+PASS FSRS legacy migration is read-only and produces only one word task
+PASS future cards stay out, new cards stay new, and due reviews outrank new cards
+PASS a newly due learning card outranks reviews and new cards using real FSRS
+PASS a half-finished revealed word resumes honestly before another card
+PASS unknown FSRS version is rejected rather than silently downgraded
+PASS offline empty fallback opens an actual lesson instead of linking to itself
+PASS recommending, reordering or locally skipping does not change any saved evidence
+PASS every generated task has a unique id, a real local destination and a safe return target
+PASS due link opens one fresh round and preserves the finished evidence
+PASS stale due links never discard answers or reopen early and failed checks
+PASS unreadable records stay visible even when no recommendation is safe
+43/49 today-practice model checks passed.
+FAIL empty state recommends only the first course and never seeds optional queues
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+2 !== 1
+
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:84:9
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:369:42
+FAIL manual unlock is access only; it adds no completion, review or repair
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
+  [
+    'course',
++   'course'
+  ]
+
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:89:9
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:369:42
+FAIL future-only map proof cannot advance the current course using wall-clock time
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'placement:offer'
+- 'course:first'
+
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:115:9
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:369:42
+FAIL a delayed different grammar bank waits seven days before the next check
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ {
++   at: 1791979200000,
++   evidence: '无提示与使用帮助分别记录；复用材料只算复习，材料用尽可继续学习其他单元，自由表达仍待核对。',
++   href: '/#/grammar?tab=path&unit=sentence-core&check=1',
++   id: 'grammar:sentence-core',
++   kind: 'review',
++   method: '一次一题：识别、改错、限定情境造句。',
++   priority: 2,
++   reason: '已到复习时间，回想这个用法；是否未见材料按完整展示历史核对。',
++   returnHref: '/#/today',
++   title: '先搭句子骨架：谁、做什么、是什么'
++ }
+- undefined
+
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:193:9
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:369:42
+FAIL course fallback is last when present and never required when it would repeat the only task
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+2 !== 1
+
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:311:9
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:369:42
+FAIL all skipped recommendations expose an honest paused state and can restore
+AssertionError [ERR_ASSERTION]: The input did not match the regular expression /本次安排已暂缓/. Input:
+
+'一步一步，把学过的用起来今日练习先完成眼前这一项，下一步会按实际记录调整。你的下一步已有基础？做个短诊断最多6题，给一个保守试学起点；原路线和完成记录保留。从短句开始，遇到困难可跳过或暂停。听说与自由写作仍待独立核对，不提供 IELTS band。继续今日学习其他安排 · 1 项先听懂一句话本次暂缓 · 上轮还需要帮助或有题未通过，先补这一处。恢复推荐顺序'
+
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:357:33
+    at file:///Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/published-baseline/studio/scripts/test-today-practice.mjs:369:42

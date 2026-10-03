@@ -1,0 +1,30 @@
+vite v8.0.13 building client environment for online...
+[2K
+transforming...✓ 2223 modules transformed.
+rendering chunks...
+computing gzip size...
+static-export/standalone.html                                 1.12 kB │ gzip:     0.78 kB
+static-export/assets/mini-n1-09-guided-BLL7G-yC.wav          81.13 kB
+static-export/assets/mini-n1-09-delayed-a-32d96Ls0.wav       83.69 kB
+static-export/assets/mini-n1-09-repair-1nc7dXyw.wav          85.23 kB
+static-export/assets/mini-n1-01-guided-DbZx4d_F.wav          92.91 kB
+static-export/assets/mini-n1-01-independent-DwalH_Cp.wav     94.44 kB
+static-export/assets/mini-n1-01-repair-C_pmpUrE.wav          96.49 kB
+static-export/assets/mini-n1-09-independent-B_v42D4U.wav     97.32 kB
+static-export/assets/mini-n1-09-delayed-b-BdSpo7nO.wav      123.11 kB
+static-export/assets/mini-n1-01-delayed-a-DasbtE01.wav      159.78 kB
+static-export/assets/mini-n1-13-repair-CRIE55uo.wav         169.50 kB
+static-export/assets/mini-n1-13-independent-DI54ei6w.wav    169.55 kB
+static-export/assets/mini-n1-01-delayed-b-9LV-hq9D.wav      173.82 kB
+static-export/assets/mini-n1-13-guided-ByKHd3et.wav         177.93 kB
+static-export/assets/mini-n1-13-delayed-b-o0tqzcmx.wav      196.95 kB
+static-export/assets/mini-n1-13-delayed-a-DYHoDgGg.wav      228.55 kB
+static-export/assets/mini-n1-21-repair-h0bn-TLf.wav         329.41 kB
+static-export/assets/mini-n1-21-independent-D1o2sCin.wav    330.83 kB
+static-export/assets/mini-n1-21-delayed-a-D-y1YpzR.wav      333.65 kB
+static-export/assets/mini-n1-21-delayed-b-B4YRzI4o.wav      345.60 kB
+static-export/assets/mini-n1-21-guided-BtTeC1I9.wav         369.42 kB
+static-export/assets/style-Dkpt1AqD.css                     336.05 kB │ gzip:    58.77 kB
+static-export/assets/standalone-CXMPM9ao.js               4,453.85 kB │ gzip: 1,173.86 kB
+
+✓ built in 1.17s

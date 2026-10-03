@@ -1,0 +1,21 @@
+{
+  "checks": [
+    "batch02 authored identities, explicit paired lessons and exact existing host routes",
+    "real CL prerequisite + Today unique priority/read-only + no parallel course mastery",
+    "mini-n1-01 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-03 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-05 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-07 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-09 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-11 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-13 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-15 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-17 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-19 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-21 original/help/modality/repair/finiteA-B/refresh isolation",
+    "mini-n1-23 original/help/modality/repair/finiteA-B/refresh isolation"
+  ],
+  "count": 14,
+  "syntheticDates": true,
+  "naturalDelayVerified": false
+}

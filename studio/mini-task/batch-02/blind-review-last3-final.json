@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "blind-to-keys",
+  "reviewType": "independent-text-only-final-recheck",
+  "input": "studio/mini-task/batch-02/blind-packet-last3.json",
+  "inputSha256": "8f7448a4b3d8d23e9687b240f5e6f381a3ed5e21dd637cc7dfeb6cc0bfde36a9",
+  "inputScope": "本轮只读更新后的 blind-packet-last3.json。未读取 key、content.ts、source、hint、reference、模型、其他 review 或音频。",
+  "historicalReview": "studio/mini-task/batch-02/blind-review-last3.json",
+  "historicalReviewPreserved": "保留首轮审查文件，未读取或修改；本轮结果仅新增于本文件。",
+  "completedItemCount": 15,
+  "changeVerification": {
+    "baseline": "本代理首轮已读取的盲包内容，复核时作为内存中的文字/metadata 基线；未另读历史或作者文件。",
+    "method": "逐题断言材料、提示、ID、skill、track、lessons、字段集合及包级 schemaVersion/inputScope。",
+    "changedFields": [
+      {
+        "itemId": "mini-n1-21:guided",
+        "field": "prompt",
+        "before": "登记实际交给Ava的box尺寸：____。只写一个英文词large或small。",
+        "after": "登记Ava请求的box尺寸：____。只写一个英文词large或small。"
+      }
+    ],
+    "unchangedOtherItemCount": 14,
+    "allMaterialsUnchanged": true,
+    "allMetadataUnchanged": true
+  },
+  "limitations": [
+    "仅文字内容盲审，未播放或试听音频；不评价合成音频听感、音质、语速、重音或说话者区分。",
+    "未进行真人校准、等难验证、学习者修复效果验证、CEFR 标定或 IELTS band 映射。",
+    "自由写作参考沿用本代理先前独立推导结果，无分数；未验证评分实现的等义表达容错。",
+    "未核查外部来源、版权或全局原创性；素材差异只依包内内容。",
+    "未与任何 key 比对。"
+  ],
+  "mechanismChecks": [
+    {
+      "taskId": "mini-n1-19",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 均需保持两位第三人的共同状态与同组接收，排除说话者。"
+    },
+    {
+      "taskId": "mini-n1-21",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 均需拒绝先提议的属性，再选择最后明确请求的另一属性。"
+    },
+    {
+      "taskId": "mini-n1-23",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 均按第三人和本人区分复数同类物品群组位置。"
+    }
+  ],
+  "summary": {
+    "answerability": "15/15 题可从更新后的盲包作答。",
+    "requiredRevisionCount": 0,
+    "resolvedFinding": "mini-n1-21:guided 的实际交付事实缺口已消除；请求尺寸为 small。",
+    "independentAnswers": "沿用先前由该代理独立得到的15题答案；未读key或作者答案。",
+    "mergeAssessment": "文字内容盲审范围内可合并；未发现剩余实质可答性阻塞。此结论不替代音频听辨、真人表现或难度校准。",
+    "unchangedScope": "仅指定题的 prompt 改变；其余14题和所有材料/metadata 经逐项核对保持不变。",
+    "remainingNotes": "词项暴露和不同输出负担仍存在；三组修复机制对齐不证明等难。开放写作须接受自然等义表达。"
+  },
+  "items": [
+    {
+      "taskId": "mini-n1-19",
+      "itemId": "mini-n1-19:guided",
+      "answer": "We are cold. Please give us some coats.",
+      "review": {
+        "answerabilityAndClarity": "含说话者两人、cold、coats、us 及两句均明确。",
+        "informationProcessingMechanism": "包含说话者的复数组状态与接收者绑定。",
+        "difficultyPrerequisites": "需 we/are、us、some coats。 未经真人难度校准。",
+        "materialDifference": "与第三人群体题的人称不同；cold/coats 在 repair 重现。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "自然两句/三句例答，无分数；不能补编杯中内容或其他情况，须保持材料指定的人物及接收关系。",
+        "academicGtBoundary": "日常留言的 general-training 前置微技能，不覆盖完整 IELTS GT Writing Task 1，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "参考为自然例答而非唯一字符串；允许姓名、合法代词、缩写及礼貌词位置变化，保持状态、人数、接收者和句数，不给分。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-19",
+      "itemId": "mini-n1-19:independent",
+      "answer": "Ava and Ben are thirsty. Please give them some cups.",
+      "review": {
+        "answerabilityAndClarity": "Ava/Ben 两位第三人及排除说话者的要求明确。",
+        "informationProcessingMechanism": "两位第三人的共同状态与 them 接收组绑定。",
+        "difficultyPrerequisites": "需第三人复数 are、them、some cups。 未经真人难度校准。",
+        "materialDifference": "与 repair 同一信息处理机制，更换名字、状态及物品。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "自然两句/三句例答，无分数；不能补编杯中内容或其他情况，须保持材料指定的人物及接收关系。",
+        "academicGtBoundary": "日常留言的 general-training 前置微技能，不覆盖完整 IELTS GT Writing Task 1，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "参考为自然例答而非唯一字符串；允许姓名、合法代词、缩写及礼貌词位置变化，保持状态、人数、接收者和句数，不给分。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-19",
+      "itemId": "mini-n1-19:repair",
+      "answer": "Mia and Leo are cold. Please give them some coats.",
+      "review": {
+        "answerabilityAndClarity": "Mia/Leo 两人是第三人群体；cold/coats 和两句要求明确。",
+        "informationProcessingMechanism": "与 independent 同为两位第三人的状态及同组接收绑定。",
+        "difficultyPrerequisites": "需第三人复数、them、some coats；词项先前已见。 未经真人难度校准。",
+        "materialDifference": "保留独立题第三人称机制；复用 guided 的 cold/coats。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "自然两句/三句例答，无分数；不能补编杯中内容或其他情况，须保持材料指定的人物及接收关系。",
+        "academicGtBoundary": "日常留言的 general-training 前置微技能，不覆盖完整 IELTS GT Writing Task 1，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "参考为自然例答而非唯一字符串；允许姓名、合法代词、缩写及礼貌词位置变化，保持状态、人数、接收者和句数，不给分。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-19",
+      "itemId": "mini-n1-19:delayed-a",
+      "answer": "Nora is hungry. Please give her an apple.",
+      "review": {
+        "answerabilityAndClarity": "Nora 使用 she 已给定；饥饿、单个苹果、给她和两句清楚。",
+        "informationProcessingMechanism": "单个第三人的状态与 her 接收者绑定。",
+        "difficultyPrerequisites": "需第三人单数 is、her、an apple。 未经真人难度校准。",
+        "materialDifference": "引入单件、冠词 an 和单数人称，不只是换名字。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "自然两句/三句例答，无分数；不能补编杯中内容或其他情况，须保持材料指定的人物及接收关系。",
+        "academicGtBoundary": "日常留言的 general-training 前置微技能，不覆盖完整 IELTS GT Writing Task 1，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "参考为自然例答而非唯一字符串；允许姓名、合法代词、缩写及礼貌词位置变化，保持状态、人数、接收者和句数，不给分。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-19",
+      "itemId": "mini-n1-19:delayed-b",
+      "answer": "Sam is hot. I am cold. Please give him a cup.",
+      "review": {
+        "answerabilityAndClarity": "两个人不同状态、杯子给 Sam、三句及不合并 we 均清楚。",
+        "informationProcessingMechanism": "分开保存两个状态，最后把请求只绑定 Sam。",
+        "difficultyPrerequisites": "需 he/is/him 与 I/am 区分及 a cup。 未经真人难度校准。",
+        "materialDifference": "由两句变三句并追踪两个不同状态；cold 有前序暴露。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "自然两句/三句例答，无分数；不能补编杯中内容或其他情况，须保持材料指定的人物及接收关系。",
+        "academicGtBoundary": "日常留言的 general-training 前置微技能，不覆盖完整 IELTS GT Writing Task 1，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "参考为自然例答而非唯一字符串；允许姓名、合法代词、缩写及礼貌词位置变化，保持状态、人数、接收者和句数，不给分。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-21",
+      "itemId": "mini-n1-21:guided",
+      "answer": "small",
+      "review": {
+        "answerabilityAndClarity": "题面现在询问 Ava 请求的尺寸；她明确说 The small one，证据与问题一致，不再要求证明交付已经完成。",
+        "informationProcessingMechanism": "选择 Ava 明确请求的属性，排除给 Jo 的 large。",
+        "difficultyPrerequisites": "需理解 Which one、small 及 for Jo。 未经真人难度校准。",
+        "materialDifference": "材料未变，仅修订问题的事实范围。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "prompt-revision-verified; factual-gap-resolved",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "resolved",
+          "code": "unsupported-completed-action",
+          "detail": "由询问“实际交给”改为“请求”；small 被 Ava 的请求直接证实，原事实措辞缺口消除。"
+        },
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "只核对文字内容，未试听音频，不评价听感或真实听辨。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-21",
+      "itemId": "mini-n1-21:independent",
+      "answer": "clean",
+      "review": {
+        "answerabilityAndClarity": "Mia 否定 dirty 并最后请求 clean；输出一词且选项清楚。",
+        "informationProcessingMechanism": "否定对方提议，保留最后明确请求的属性。",
+        "difficultyPrerequisites": "需 No 与 clean/dirty 对照。 未经真人难度校准。",
+        "materialDifference": "与 repair 同机制，更换物品与属性词。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "只核对文字内容，未试听音频，不评价听感或真实听辨。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-21",
+      "itemId": "mini-n1-21:repair",
+      "answer": "new",
+      "review": {
+        "answerabilityAndClarity": "Nora 否定 old 并最后请求 new；答案唯一。",
+        "informationProcessingMechanism": "与 independent 同为否定提议后保留最终选择。",
+        "difficultyPrerequisites": "需 No 与 old/new 对照。 未经真人难度校准。",
+        "materialDifference": "保留独立题的信息结构，替换物品和属性。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "只核对文字内容，未试听音频，不评价听感或真实听辨。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-21",
+      "itemId": "mini-n1-21:delayed-a",
+      "answer": "blunt",
+      "review": {
+        "answerabilityAndClarity": "him 的刀为 blunt，Tia 自己的为 sharp；题面明确指定 him。",
+        "informationProcessingMechanism": "用第三人与说话者的接收关系选择属性。",
+        "difficultyPrerequisites": "需 him/me、blunt/sharp 及 knife。 未经真人难度校准。",
+        "materialDifference": "从否定选择改为接收者绑定，增加另一种信息关系。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "只核对文字内容，未试听音频，不评价听感或真实听辨。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-21",
+      "itemId": "mini-n1-21:delayed-b",
+      "answer": "large",
+      "review": {
+        "answerabilityAndClarity": "her 收 large，Ken 自己收 small；目标接收者明确。",
+        "informationProcessingMechanism": "按 her/me 接收关系绑定属性。",
+        "difficultyPrerequisites": "需 her/me 与 large/small 对照。 未经真人难度校准。",
+        "materialDifference": "复用 guided 的 box/large/small，但接收者关系改变。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "只核对文字内容，未试听音频，不评价听感或真实听辨。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-23",
+      "itemId": "mini-n1-23:guided",
+      "answer": "shelf",
+      "review": {
+        "answerabilityAndClarity": "Ava 指定 shelf 并排除 table；复数群组及一词位置清楚。",
+        "informationProcessingMechanism": "选取复数物品群组的位置并排除否定位置。",
+        "difficultyPrerequisites": "需 the ones 指 cups 及 on 的位置关系。 未经真人难度校准。",
+        "materialDifference": "建立复数群组位置选择框架。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-23",
+      "itemId": "mini-n1-23:independent",
+      "answer": "desk",
+      "review": {
+        "answerabilityAndClarity": "desk 的书给 him，chair 的给 Mia；him 为另一接收者已明确。",
+        "informationProcessingMechanism": "按第三人/本人接收者区分复数同类物品群组位置。",
+        "difficultyPrerequisites": "需 ones、him/me、desk/chair 绑定。 未经真人难度校准。",
+        "materialDifference": "与 repair 同机制，改变物品、代词和位置。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-23",
+      "itemId": "mini-n1-23:repair",
+      "answer": "table",
+      "review": {
+        "answerabilityAndClarity": "table 的盒子给 her，floor 的给 Nora；her 的另一接收者身份明确。",
+        "informationProcessingMechanism": "与 independent 同为第三人/本人群组位置绑定。",
+        "difficultyPrerequisites": "需 ones、her/me、table/floor 绑定。 未经真人难度校准。",
+        "materialDifference": "保留独立题信息结构，变换物品、代词与位置。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-23",
+      "itemId": "mini-n1-23:delayed-a",
+      "answer": "chair",
+      "review": {
+        "answerabilityAndClarity": "us 含 Tia 与同伴，排除 desk 后指定 chair；目标清楚。",
+        "informationProcessingMechanism": "舍弃否定位置，保留随后确认的位置。",
+        "difficultyPrerequisites": "需 us、ones 以及否定/肯定次序处理。 未经真人难度校准。",
+        "materialDifference": "地点词在 independent 已见；换 tickets、us 及呈现顺序。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-23",
+      "itemId": "mini-n1-23:delayed-b",
+      "answer": "floor",
+      "review": {
+        "answerabilityAndClarity": "floor 的包给 them，shelf 的给 Ken；them 为两位第三人已说明。",
+        "informationProcessingMechanism": "按第三人群体/本人接收关系绑定复数物品位置。",
+        "difficultyPrerequisites": "需 them/me、ones、floor/shelf。 未经真人难度校准。",
+        "materialDifference": "延伸同一接收关系机制到 them，地点词有前序暴露。 结构对齐或词项变化不构成等难证明。",
+        "revisionStatus": "unchanged-material-prompt-and-metadata-verified",
+        "answerPolicy": "按题面写一个目标英文词；大小写和首尾空白宜与核心信息理解分开评价。",
+        "academicGtBoundary": "common 基础信息处理微技能，非 Academic 专属内容或完整 IELTS 测量，不能推断 band。"
+      },
+      "finding": []
+    }
+  ]
+}

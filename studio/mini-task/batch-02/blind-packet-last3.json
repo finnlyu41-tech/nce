@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "inputScope": "No hints, references, accepted keys or model supplied. Text only; no human acoustic audit.",
+  "items": [
+    {
+      "id": "mini-n1-19:guided",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        19,
+        20
+      ],
+      "material": "你和同事在门口等候，两人现在都 cold（冷）。给拿着外套的伙伴留言，说明你们的状态，再请他给你们两人一些 coats（外套）；“我们”包含你自己。",
+      "prompt": "写2句英文留言：说明你们的当前状态；请求把指定物品给正确的接收组。可以加please，不编造其他情况。"
+    },
+    {
+      "id": "mini-n1-19:independent",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        19,
+        20
+      ],
+      "material": "你未参加步行。Ava和Ben在休息点，他们两人现在 thirsty（渴）。给负责递杯子的伙伴留言，说明这两位第三人的状态，请伙伴给他们一些 cups（杯子）；接收组不包含你。",
+      "prompt": "写2句英文留言，让伙伴知道谁处于什么状态、把什么给谁。不要把自己写进这两人的状态或接收组。"
+    },
+    {
+      "id": "mini-n1-19:repair",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        19,
+        20
+      ],
+      "material": "你留在柜台。Mia和Leo在门外，他们两人现在 cold（冷）。给负责物品的伙伴留言，说明这两位第三人的状态，请伙伴给他们一些 coats（外套）；你不在这两人中。",
+      "prompt": "换一个情境写2句英文留言：报告两位第三人的共同状态，再请求把指定多件物品给他们。"
+    },
+    {
+      "id": "mini-n1-19:delayed-a",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        19,
+        20
+      ],
+      "material": "Nora明确使用she。她现在 hungry（饿），你自己不饿。给拿着水果篮的伙伴留言，说明Nora的状态，请伙伴给她一个 apple（苹果）。",
+      "prompt": "写2句英文留言：说明这位第三人的状态，再请求把单件物品给她。人物代词按题设，不根据名字猜。"
+    },
+    {
+      "id": "mini-n1-19:delayed-b",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        19,
+        20
+      ],
+      "material": "Sam明确使用he。他现在 hot（热），你现在 cold（冷）。给递杯子的伙伴留言，分别说明Sam和你自己的状态，然后请伙伴给Sam一个 cup（杯子）。",
+      "prompt": "写3句英文留言：分别报告两个不同的当前状态；最后明确请求给谁一个杯子。不要把两种状态合并成we。"
+    },
+    {
+      "id": "mini-n1-21:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        21,
+        22
+      ],
+      "material": "Ava: Give me a box, please. Ben: Which one? Ava: The small one. Ben: The large one is for Jo.",
+      "prompt": "登记Ava请求的box尺寸：____。只写一个英文词large或small。"
+    },
+    {
+      "id": "mini-n1-21:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        21,
+        22
+      ],
+      "material": "Mia: Give me a cup, please. Leo: The dirty one? Mia: No. The clean one, please.",
+      "prompt": "登记Mia最后选择的cup状态：____。只写一个英文词clean或dirty。"
+    },
+    {
+      "id": "mini-n1-21:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        21,
+        22
+      ],
+      "material": "Nora: Give me a pen, please. Sam: The old one? Nora: No. The new one, please.",
+      "prompt": "登记Nora最后选择的pen是哪种：____。只写一个英文词new或old。"
+    },
+    {
+      "id": "mini-n1-21:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        21,
+        22
+      ],
+      "material": "Tia: Give him a knife, please. Jo: Which one? Tia: The blunt one. The sharp one is for me.",
+      "prompt": "登记Tia要求交给him的knife是哪种：____。只写一个英文词sharp或blunt；不填Tia自己那把。"
+    },
+    {
+      "id": "mini-n1-21:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        21,
+        22
+      ],
+      "material": "Ken: Give her a box, please. Kim: Which one? Ken: The large one. Give me the small one.",
+      "prompt": "登记Ken要求交给her的box尺寸：____。只写一个英文词large或small；区分两位接收者。"
+    },
+    {
+      "id": "mini-n1-23:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        23,
+        24
+      ],
+      "material": "Ava: Give me some cups, please.\nBen: Which cups?\nAva: The ones on the shelf. Not the ones on the table.\n记录说明：两处各有一组多只杯子。",
+      "prompt": "给Ava的cups应从哪个表面位置取？只写一个英文地点词：____。"
+    },
+    {
+      "id": "mini-n1-23:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        23,
+        24
+      ],
+      "material": "Mia: Give him some books, please.\nLeo: Which ones?\nMia: The ones on the desk. The books on the chair are for me.\n记录说明：him是明确的另一位接收人；两处各有一组多本书。",
+      "prompt": "给him的books应从哪个表面位置取？只写一个英文地点词；别取给Mia自己的那组：____。"
+    },
+    {
+      "id": "mini-n1-23:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        23,
+        24
+      ],
+      "material": "Nora: Give her some boxes, please.\nSam: Which ones?\nNora: The ones on the table. The boxes on the floor are for me.\n记录说明：her是明确的另一位接收人；两处各有一组多个盒子。",
+      "prompt": "给her的boxes应从哪个表面位置取？只写一个英文地点词；别取给Nora自己的那组：____。"
+    },
+    {
+      "id": "mini-n1-23:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        23,
+        24
+      ],
+      "material": "Tia: Give us some tickets, please.\nJo: Which tickets?\nTia: Not the ones on the desk. The ones on the chair.\n记录说明：us包含Tia和同伴；两处各有一组多张票。",
+      "prompt": "Tia和同伴实际要取的tickets放在哪里？只写一个英文地点词：____。"
+    },
+    {
+      "id": "mini-n1-23:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        23,
+        24
+      ],
+      "material": "Ken: Give them some bags, please.\nKim: Which ones?\nKen: The ones on the floor. Give me the ones on the shelf.\n记录说明：them是两位第三人；两处各有一组多个包。",
+      "prompt": "给them的bags应从哪个表面位置取？只写一个英文地点词；不填给Ken的那组：____。"
+    }
+  ]
+}

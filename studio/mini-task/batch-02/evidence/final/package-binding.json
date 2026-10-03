@@ -1,0 +1,86 @@
+{
+  "publishedBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "firstThreeFreeze": "296ba28c54b1a1d9ae61f98c164d673bf72244aa",
+  "authoredCourses": [
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23"
+  ],
+  "candidatePackageInheritsPublishedLabel": "2026-10-01-grammar-coverage-v21",
+  "finalPackageHashes": {
+    "dist-online/index.html": "c4b29ef26b3383c04da8e4b76a7839a762ff0949c808f646f4ec3559e33e2718",
+    "dist-online/map/index.html": "b72bcb61071383d0c296b0e362715f43c22cb9a0f65dcbd108d8ba448e6cf289",
+    "dist-online/version.json": "84e912c5f40848510e2488e8918566159ed5e88eb4e8e27b8115619a752e3074",
+    "dist/index.html": "f069a9adb33ee745b81dd429383519e60f9248e68584743932331d815661c76e"
+  },
+  "miniAudioAssets": {
+    "assets/mini-n1-01-delayed-a-DasbtE01.wav": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c",
+    "assets/mini-n1-01-delayed-b-9LV-hq9D.wav": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4",
+    "assets/mini-n1-01-guided-DbZx4d_F.wav": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06",
+    "assets/mini-n1-01-independent-DwalH_Cp.wav": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041",
+    "assets/mini-n1-01-repair-C_pmpUrE.wav": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c",
+    "assets/mini-n1-09-delayed-a-32d96Ls0.wav": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba",
+    "assets/mini-n1-09-delayed-b-BdSpo7nO.wav": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185",
+    "assets/mini-n1-09-guided-BLL7G-yC.wav": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c",
+    "assets/mini-n1-09-independent-B_v42D4U.wav": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7",
+    "assets/mini-n1-09-repair-1nc7dXyw.wav": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c",
+    "assets/mini-n1-13-delayed-a-DYHoDgGg.wav": "5d7179b27609df356076d8ed5e2cb885b090e960f5f4973ee302b57b09df7abe",
+    "assets/mini-n1-13-delayed-b-o0tqzcmx.wav": "8008e4bfcacb7add5402289e1ac1024392fc4309fbeeb8fd8898b91e834cbc63",
+    "assets/mini-n1-13-guided-ByKHd3et.wav": "8ea219e167bd741f921765dea6ffbfc6c8e1b30ac1e6844f4ded90a45e4e1ec7",
+    "assets/mini-n1-13-independent-DI54ei6w.wav": "8a8d8e904164b954779593bfc8b8f7c7752157e99a7a031f14c368fc24e0152d",
+    "assets/mini-n1-13-repair-CRIE55uo.wav": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e",
+    "assets/mini-n1-21-delayed-a-D-y1YpzR.wav": "c6d1738259c644cd4a175df5e90e9e01e17b20baa3d672fb6c8fe8e56c4def95",
+    "assets/mini-n1-21-delayed-b-B4YRzI4o.wav": "a8394e528c59e634c81b598424dec1748c4608a8db0ed8a504b12ba709c5af1f",
+    "assets/mini-n1-21-guided-BtTeC1I9.wav": "6bb75f7e6ff8e246bc98a1c2dd077082a6795f147cc13ff1aee6258ca85cc926",
+    "assets/mini-n1-21-independent-D1o2sCin.wav": "36484fa340140ebfce3ba5f47af74e6c4ab3cdc132de0e9735fb312a1da47719",
+    "assets/mini-n1-21-repair-h0bn-TLf.wav": "a5c67d37a48aed7cae55674bf1af6536e95f06a4b0938812b244d3a4d1dc71a1"
+  },
+  "strictVerifier": {
+    "verifiedFiles": 1997,
+    "materials": 556,
+    "bytes": 706959756,
+    "books": {
+      "NCE1": {
+        "application/pdf": 1,
+        "text/plain": 72,
+        "audio/mpeg": 72
+      },
+      "NCE2": {
+        "application/pdf": 1,
+        "text/plain": 96,
+        "audio/mpeg": 96
+      },
+      "NCE3": {
+        "application/pdf": 1,
+        "text/plain": 60,
+        "audio/mpeg": 60
+      },
+      "NCE4": {
+        "application/pdf": 1,
+        "text/plain": 48,
+        "audio/mpeg": 48
+      }
+    },
+    "translatedLines": 6042,
+    "dictionaryWords": 8502,
+    "lessonImages": 696,
+    "speakingPrompts": 238,
+    "textbookVocabularyEntries": 3615,
+    "grammarGroups": 276,
+    "grammarSourcePages": 693
+  },
+  "humanAcousticAudit": false,
+  "naturalDelayVerified": false,
+  "realLearnerSpeech": false,
+  "publicMapHtmlSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observedPublisherLocal": "5ffaaf1a224790234236242b9e540a57d9680c0c",
+  "sharedPatchAppliesReadOnly": true,
+  "actualNativeEvidenceRun": "/Users/finnlyu/Documents/Codex/2026-10-03/task-7/mini-task-batch02-worktree/studio/work/mini-batch02/browser-1790990932291",
+  "nativeChecks": 12,
+  "httpMediaResponses": 40,
+  "nativeBackupDownloadedSha256": "6b33494a8e1b52b094ddf6e668a9935b5cac7428d5791c266d90f7ad02c559f0",
+  "nativeBackupPayloadInEvidence": false
+}
