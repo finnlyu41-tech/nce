@@ -32,13 +32,17 @@ test('pilot media locators match existing first-lesson source binding without co
  const curriculum=await readFile(new URL('map/curriculum.ts',root),'utf8');for(const c of lesson.source.clips)assert.ok(curriculum.includes(`clip(1, ${c.start}, ${c.end})`));
 });
 test('grammar association is shared content, never falsely counted as 276 bespoke loops',async()=>{const a=await read('docs/course-loop-audit.json');assert.equal(a.counts.sharedGuides,97);assert.equal(a.counts.grammarUnits,28);assert.equal(a.counts.grammarQuestions,168);const csv=await readFile(new URL('docs/course-loop-groups-coverage.csv',root),'utf8');assert.equal(csv.split('not-established-per-lesson').length-1,276)});
-test('actual 42 odd-lesson bindings derive 42 registered groups and 84 source course numbers, not 276 completed loops',async()=>{
- const expected=Array.from({length:42},(_,i)=>`nce1-${2*i+1}`);
- assert.deepEqual(registeredCourseIds,expected);
+test('actual registry derives registered inventory while original 42 bindings and 276 unaccepted loops remain distinct',async()=>{
+ const original42=['nce1-1','nce1-3','nce1-5','nce1-7','nce1-9','nce1-11','nce1-13','nce1-15','nce1-17','nce1-19','nce1-21','nce1-23','nce1-25','nce1-27','nce1-29','nce1-31','nce1-33','nce1-35','nce1-37','nce1-39','nce1-41','nce1-43','nce1-45','nce1-47','nce1-49','nce1-51','nce1-53','nce1-55','nce1-57','nce1-59','nce1-61','nce1-63','nce1-65','nce1-67','nce1-69','nce1-71','nce1-73','nce1-75','nce1-77','nce1-79','nce1-81','nce1-83'];
+ const expected=[...registeredCourseIds],sourceCourseNumbers=registeredCourses.reduce((n,course)=>n+course.lesson.lessons.length,0);
+ assert.deepEqual(expected.slice(0,original42.length),original42);assert.equal(new Set(expected).size,expected.length);
+ for(const id of expected){assert.match(id,/^nce1-[1-9]\d*$/);assert.equal(Number(id.slice(5))%2,1)}
+ assert.equal(registeredCourses.slice(0,original42.length).reduce((n,course)=>n+course.byId.size,0),756);
+ assert.equal(registeredCourses.slice(0,original42.length).reduce((n,course)=>n+course.lesson.lessons.length,0),84);
  const audit=await read('docs/course-loop-audit.json'),groups=await readCSV('docs/course-loop-groups-coverage.csv'),courses=await readCSV('docs/course-loop-courses-coverage.csv');
  assert.equal(audit.schema,2);assert.deepEqual(audit.registration.courseIds,expected);
- assert.equal(audit.counts.registeredLoopGroups,42);assert.equal(audit.counts.unregisteredLoopGroups,234);assert.equal(audit.counts.registeredLoopTextbookCourseNumbers,84);
- assert.equal(groups.filter(row=>row.loopRegistration==='registered').length,42);assert.equal(courses.filter(row=>row.loopRegistration==='registered').length,84);
+ assert.equal(audit.counts.registeredLoopGroups,expected.length);assert.equal(audit.counts.unregisteredLoopGroups,276-expected.length);assert.equal(audit.counts.registeredLoopTextbookCourseNumbers,sourceCourseNumbers);
+ assert.equal(groups.filter(row=>row.loopRegistration==='registered').length,expected.length);assert.equal(courses.filter(row=>row.loopRegistration==='registered').length,sourceCourseNumbers);
  const byGroup=new Map(groups.map(row=>[row.group,row]));assert.equal(byGroup.size,276);
  for(const course of registeredCourses){
   const group=byGroup.get(course.lesson.source.groupId);assert.ok(group);assert.equal(group.loopCourseId,course.id);assert.equal(Number(group.loopQuestionCount),course.byId.size);
@@ -48,7 +52,7 @@ test('actual 42 odd-lesson bindings derive 42 registered groups and 84 source co
   for(const lesson of course.lesson.lessons){const row=courses.find(row=>row.course===`${course.lesson.book}-${lesson}`);assert.ok(row);assert.equal(row.loopCourseId,course.id)}
  }
  for(const group of groups){assert.equal(group.approvedFiveStepLoop,'not-established-per-lesson');assert.equal(group.loopLearnerValidation,'not-inferred-from-registration');if(group.loopRegistration==='not-registered'){assert.equal(group.loopCourseId,'');assert.equal(group.loopQuestionCount,'0');assert.ok(group.firstTry.startsWith('gap: '))}}
- assert.equal(audit.counts.registeredLoopQuestions,registeredCourses.reduce((n,course)=>n+course.byId.size,0));assert.equal(audit.counts.registeredLoopQuestions,756);
+ assert.equal(audit.counts.registeredLoopQuestions,registeredCourses.reduce((n,course)=>n+course.byId.size,0));
  assert.equal(audit.registration.learnerValidation,'not-inferred-from-registration');
 });
 test('IELTS support ledger enumerates current sample inventory and distinct materials rather than stale 20-session totals',async()=>{
