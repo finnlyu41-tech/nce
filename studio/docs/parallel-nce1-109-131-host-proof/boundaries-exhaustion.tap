@@ -1,0 +1,151 @@
+TAP version 13
+# Subtest: sixty-six real bindings preserve old defaults and distinct storage keys
+ok 1 - sixty-six real bindings preserve old defaults and distinct storage keys
+  ---
+  duration_ms: 6.05075
+  type: 'test'
+  ...
+# Subtest: actual factory and registered model retain first answers and corrections for all sixty-six courses
+ok 2 - actual factory and registered model retain first answers and corrections for all sixty-six courses
+  ---
+  duration_ms: 35.476708
+  type: 'test'
+  ...
+# Subtest: every envelope and correction sidecar is accepted only by its exact course across 66 by 66 pairs
+ok 3 - every envelope and correction sidecar is accepted only by its exact course across 66 by 66 pairs
+  ---
+  duration_ms: 256.302875
+  type: 'test'
+  ...
+# Subtest: foreign correction events reject in the valid feedback phase and retain the original answer
+ok 4 - foreign correction events reject in the valid feedback phase and retain the original answer
+  ---
+  duration_ms: 388.8855
+  type: 'test'
+  ...
+# Subtest: future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+ok 5 - future envelopes, unknown course or question IDs, forged event keys and unsafe sidecars reject without changing raw
+  ---
+  duration_ms: 177.32625
+  type: 'test'
+  ...
+# Subtest: sixty-six pending courses produce distinct Today tasks and oldest pending wins without mutation
+ok 6 - sixty-six pending courses produce distinct Today tasks and oldest pending wins without mutation
+  ---
+  duration_ms: 51.471583
+  type: 'test'
+  ...
+# Subtest: sixty-six due courses produce distinct tasks ordered by earliest due, while any pending course wins
+ok 7 - sixty-six due courses produce distinct tasks ordered by earliest due, while any pending course wins
+  ---
+  duration_ms: 270.064666
+  type: 'test'
+  ...
+# Subtest: all registered courses advance independently by n+2 through the existing 133 textbook node
+ok 8 - all registered courses advance independently by n+2 through the existing 133 textbook node
+  ---
+  duration_ms: 978.795833
+  type: 'test'
+  ...
+# Subtest: advanced, reset and explicitly unlocked map routes retain their existing intentions
+ok 9 - advanced, reset and explicitly unlocked map routes retain their existing intentions
+  ---
+  duration_ms: 8.657041
+  type: 'test'
+  ...
+# Subtest: selected summaries stay isolated and malformed records remain blocked with original text intact
+ok 10 - selected summaries stay isolated and malformed records remain blocked with original text intact
+  ---
+  duration_ms: 83.876792
+  type: 'test'
+  ...
+# Subtest: actual progress backup and validator preserve all sixty-six records, sidecars and original classic history
+ok 11 - actual progress backup and validator preserve all sixty-six records, sidecars and original classic history
+  ---
+  duration_ms: 10.247209
+  type: 'test'
+  ...
+# Subtest: actual successor guards the continuous chain and existing 133 route with unknown safe fallback
+ok 12 - actual successor guards the continuous chain and existing 133 route with unknown safe fallback
+  ---
+  duration_ms: 0.553417
+  type: 'test'
+  ...
+# Subtest: 133, 135 and stable unknown have no registered course-loop model, keys, sidecars or envelopes
+ok 13 - 133, 135 and stable unknown have no registered course-loop model, keys, sidecars or envelopes
+  ---
+  duration_ms: 1.180708
+  type: 'test'
+  ...
+# Current production factory SHA256: 4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57
+# New-course constrained matcher replay: {"courses":12,"questions":216,"accepted":713,"semanticNegatives":864,"punctuationNegatives":216,"widthNegatives":216,"spontaneousTransfer":"not-assessed"}
+# Subtest: factory is the current video-capable production file and SourceKind includes video
+ok 14 - factory is the current video-capable production file and SourceKind includes video
+  ---
+  duration_ms: 7.892792
+  type: 'test'
+  ...
+# Subtest: video source events before answers persist assistance and after answers preserve the unassisted original
+ok 15 - video source events before answers persist assistance and after answers preserve the unassisted original
+  ---
+  duration_ms: 14.324084
+  type: 'test'
+  ...
+# Subtest: video-assisted independent correct originals still require correction and retain scoped help through repair and backup
+ok 16 - video-assisted independent correct originals still require correction and retain scoped help through repair and backup
+  ---
+  duration_ms: 170.531917
+  type: 'test'
+  ...
+# Subtest: all twelve new courses preserve constrained accepted forms and semantic negatives through actual factory replay
+ok 17 - all twelve new courses preserve constrained accepted forms and semantic negatives through actual factory replay
+  ---
+  duration_ms: 676.227458
+  type: 'test'
+  ...
+# R15 actual host: {"courses":66,"finitePools":66,"repairTasks":66}
+# Subtest: all sixty-six actual factories retain distinct failed and helped answers in both finite banks
+ok 18 - all sixty-six actual factories retain distinct failed and helped answers in both finite banks
+  ---
+  duration_ms: 13.699584
+  type: 'test'
+  ...
+# Subtest: waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+ok 19 - waiting before due has no loop task; first due selects review with same-course href and unchanged raw
+  ---
+  duration_ms: 268.223666
+  type: 'test'
+  ...
+# Subtest: exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+ok 20 - exhausted failed/helped cases remain explicit repair tasks on their exact course, not silent Today drops
+  ---
+  duration_ms: 1440.701958
+  type: 'test'
+  ...
+# Subtest: exhausted independent banks retain their seven-day schedule and distinct completion evidence
+ok 21 - exhausted independent banks retain their seven-day schedule and distinct completion evidence
+  ---
+  duration_ms: 24.708625
+  type: 'test'
+  ...
+# Subtest: finite-pool familiar repair allows continuous n+2 continuation without repeated fresh review claims
+ok 22 - finite-pool familiar repair allows continuous n+2 continuation without repeated fresh review claims
+  ---
+  duration_ms: 133.739292
+  type: 'test'
+  ...
+# Subtest: native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+ok 23 - native backup round-trip preserves exhausted raw and evidence with no private-record dependency
+  ---
+  duration_ms: 1.502959
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10850.888875

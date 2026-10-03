@@ -1,0 +1,8 @@
+{
+  "beforeSha256": "19095dc09bb04768e24924301bd074c4f17522907fe5ee3c29cab396a4520c6c",
+  "afterSha256": "13853628583aa9dc0c6dc054cdde9af434de61734a5b944a705e8b691de6610b",
+  "change": "append 12 missing showSource.comicKey literals; other contract fields unchanged",
+  "priorNativeReceipt": "native-before-type-literals/receipt.json",
+  "priorNativePassed": 45,
+  "newValidation": "literal coverage test and typecheck; final native receipt is separately regenerated"
+}

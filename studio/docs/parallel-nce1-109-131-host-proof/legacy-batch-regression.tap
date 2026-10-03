@@ -1,0 +1,478 @@
+TAP version 13
+# Subtest: two explicitly authored groups have six complete three-target banks and objective criteria
+ok 1 - two explicitly authored groups have six complete three-target banks and objective criteria
+  ---
+  duration_ms: 2.074042
+  type: 'test'
+  ...
+# Subtest: new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+ok 2 - new stimuli and IDs are distinct across stages; no same-material choice permutation passed off as fresh
+  ---
+  duration_ms: 0.402666
+  type: 'test'
+  ...
+# Subtest: lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+ok 3 - lesson3 speaker ownership has one intended semantic answer; holding/location never inferred as ownership
+  ---
+  duration_ms: 0.267667
+  type: 'test'
+  ...
+# Subtest: lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+ok 4 - lesson3 negation: full and contracted forms accepted; missing be, wrong owner and wrong short-answer subject rejected
+  ---
+  duration_ms: 0.213583
+  type: 'test'
+  ...
+# Subtest: lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+ok 5 - lesson5 introduction is a bounded This-is task, and exact addressee facts are explicit
+  ---
+  duration_ms: 0.786542
+  type: 'test'
+  ...
+# Subtest: lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+ok 6 - lesson5 nationality is given as a fact and word gloss; does not require guessing names or outside geography
+  ---
+  duration_ms: 0.2985
+  type: 'test'
+  ...
+# Subtest: media references reuse exact existing comic/LRC source identities and source-bound time ranges
+ok 7 - media references reuse exact existing comic/LRC source identities and source-bound time ranges
+  ---
+  duration_ms: 4.764375
+  type: 'test'
+  ...
+# Subtest: new groups contain no copied textbook body, audio blobs, storage access or fake score
+ok 8 - new groups contain no copied textbook body, audio blobs, storage access or fake score
+  ---
+  duration_ms: 1.761458
+  type: 'test'
+  ...
+# Subtest: all independent blind answers and reported natural variants fit final finite matching
+ok 9 - all independent blind answers and reported natural variants fit final finite matching
+  ---
+  duration_ms: 1.797375
+  type: 'test'
+  ...
+# Subtest: short nationality structure is explicit before submission, not a hidden grading rule
+ok 10 - short nationality structure is explicit before submission, not a hidden grading rule
+  ---
+  duration_ms: 0.570833
+  type: 'test'
+  ...
+# Subtest: coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+ok 11 - coverage overlay counts only CL00 runtime plus two local groups; registry stays finite
+  ---
+  duration_ms: 0.945625
+  type: 'test'
+  ...
+# Subtest: nationality feedback identifies complete mismatches without changing matching or originals
+ok 12 - nationality feedback identifies complete mismatches without changing matching or originals
+  ---
+  duration_ms: 8.61475
+  type: 'test'
+  ...
+# Subtest: all three production bindings distinguish missing answer and missing reason
+ok 13 - all three production bindings distinguish missing answer and missing reason
+  ---
+  duration_ms: 7.307083
+  type: 'test'
+  ...
+# Subtest: diagnostic-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+ok 14 - diagnostic-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+  ---
+  duration_ms: 1.595125
+  type: 'test'
+  ...
+# Subtest: guided-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+ok 15 - guided-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+  ---
+  duration_ms: 0.224458
+  type: 'test'
+  ...
+# Subtest: independent-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+ok 16 - independent-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+  ---
+  duration_ms: 0.140041
+  type: 'test'
+  ...
+# Subtest: repair-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+ok 17 - repair-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+  ---
+  duration_ms: 0.321584
+  type: 'test'
+  ...
+# Subtest: review-a-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+ok 18 - review-a-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+  ---
+  duration_ms: 0.138417
+  type: 'test'
+  ...
+# Subtest: review-b-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+ok 19 - review-b-nationality: present affirmative frame; normal equivalents accepted, question/changed meaning rejected
+  ---
+  duration_ms: 0.113792
+  type: 'test'
+  ...
+# Subtest: unmodified tasks, answer keys and source references remain identical to frozen 754258c
+ok 20 - unmodified tasks, answer keys and source references remain identical to frozen 754258c
+  ---
+  duration_ms: 1.22625
+  type: 'test'
+  ...
+# Subtest: reported independent blind answers and common equivalents match the revised six tasks
+ok 21 - reported independent blind answers and common equivalents match the revised six tasks
+  ---
+  duration_ms: 8.371166
+  type: 'test'
+  ...
+# Subtest: selected-course reducer records a question as nonmatching original and routes to nationality teaching
+ok 22 - selected-course reducer records a question as nonmatching original and routes to nationality teaching
+  ---
+  duration_ms: 2.318542
+  type: 'test'
+  ...
+# Subtest: CL00 default initial snapshot, derived view, action output and keys remain byte-for-byte identical
+ok 23 - CL00 default initial snapshot, derived view, action output and keys remain byte-for-byte identical
+  ---
+  duration_ms: 27.964667
+  type: 'test'
+  ...
+# Subtest: nce1-3: actual first exposure and targeted teaching follow this group's target IDs
+ok 24 - nce1-3: actual first exposure and targeted teaching follow this group's target IDs
+  ---
+  duration_ms: 1.01625
+  type: 'test'
+  ...
+# Subtest: nce1-3: text/audio/comic help attribution never falls back to nce1-1 or grants hearing proof
+ok 25 - nce1-3: text/audio/comic help attribution never falls back to nce1-1 or grants hearing proof
+  ---
+  duration_ms: 0.569792
+  type: 'test'
+  ...
+# Subtest: nce1-3: independent wrong/helped originals survive correction and repair retries
+ok 26 - nce1-3: independent wrong/helped originals survive correction and repair retries
+  ---
+  duration_ms: 7.144666
+  type: 'test'
+  ...
+# Subtest: nce1-3: completed constrained practice creates real 24h gate; new banks follow 7d/1d and exhaust
+ok 27 - nce1-3: completed constrained practice creates real 24h gate; new banks follow 7d/1d and exhaust
+  ---
+  duration_ms: 12.477167
+  type: 'test'
+  ...
+# Subtest: nce1-3: pending new review draft, hint, originals and correction inputs replay without contamination
+ok 28 - nce1-3: pending new review draft, hint, originals and correction inputs replay without contamination
+  ---
+  duration_ms: 4108.725916
+  type: 'test'
+  ...
+# Subtest: nce1-5: actual first exposure and targeted teaching follow this group's target IDs
+ok 29 - nce1-5: actual first exposure and targeted teaching follow this group's target IDs
+  ---
+  duration_ms: 2.448042
+  type: 'test'
+  ...
+# Subtest: nce1-5: text/audio/comic help attribution never falls back to nce1-1 or grants hearing proof
+ok 30 - nce1-5: text/audio/comic help attribution never falls back to nce1-1 or grants hearing proof
+  ---
+  duration_ms: 0.519375
+  type: 'test'
+  ...
+# Subtest: nce1-5: independent wrong/helped originals survive correction and repair retries
+ok 31 - nce1-5: independent wrong/helped originals survive correction and repair retries
+  ---
+  duration_ms: 7.683708
+  type: 'test'
+  ...
+# Subtest: nce1-5: completed constrained practice creates real 24h gate; new banks follow 7d/1d and exhaust
+ok 32 - nce1-5: completed constrained practice creates real 24h gate; new banks follow 7d/1d and exhaust
+  ---
+  duration_ms: 21.044
+  type: 'test'
+  ...
+# Subtest: nce1-5: pending new review draft, hint, originals and correction inputs replay without contamination
+ok 33 - nce1-5: pending new review draft, hint, originals and correction inputs replay without contamination
+  ---
+  duration_ms: 23.836625
+  type: 'test'
+  ...
+# Subtest: earliest six keys remain explicit; all actual bindings isolate envelopes and retain unknown raw
+ok 34 - earliest six keys remain explicit; all actual bindings isolate envelopes and retain unknown raw
+  ---
+  duration_ms: 37.416958
+  type: 'test'
+  ...
+# Subtest: strict actual host envelope rejects unknown version/fields/actions/capacity without changing raw
+ok 35 - strict actual host envelope rejects unknown version/fields/actions/capacity without changing raw
+  ---
+  duration_ms: 4.314292
+  type: 'test'
+  ...
+# Subtest: correction sidecars reject every foreign course question ID; no implicit reassignment
+ok 36 - correction sidecars reject every foreign course question ID; no implicit reassignment
+  ---
+  duration_ms: 95.548292
+  type: 'test'
+  ...
+# Subtest: question IDs, source learning labels and review records stay bound to their course
+ok 37 - question IDs, source learning labels and review records stay bound to their course
+  ---
+  duration_ms: 15.919625
+  type: 'test'
+  ...
+# Subtest: actual registry retains earliest six keys/defaults and exposes every registered binding
+ok 38 - actual registry retains earliest six keys/defaults and exposes every registered binding
+  ---
+  duration_ms: 2.188583
+  type: 'test'
+  ...
+# Subtest: production matcher keeps the nationality question guard, original text and help state
+ok 39 - production matcher keeps the nationality question guard, original text and help state
+  ---
+  duration_ms: 1.7395
+  type: 'test'
+  ...
+# Subtest: one actual recommendation advances every registered course with access-only map starts
+ok 40 - one actual recommendation advances every registered course with access-only map starts
+  ---
+  duration_ms: 853.264083
+  type: 'test'
+  ...
+# Subtest: advanced map route survives six waiting courses
+ok 41 - advanced map route survives six waiting courses
+  ---
+  duration_ms: 2.138416
+  type: 'test'
+  ...
+# Subtest: access reset condition link preserves v31 behavior with the old CL00-only backup
+ok 42 - access reset condition link preserves v31 behavior with the old CL00-only backup
+  ---
+  duration_ms: 0.776791
+  type: 'test'
+  ...
+# Subtest: pending selected courses resume before due work and agree with Today oldest pending order
+ok 43 - pending selected courses resume before due work and agree with Today oldest pending order
+  ---
+  duration_ms: 5.910708
+  type: 'test'
+  ...
+# Subtest: multiple waiting due courses choose earliest due and expose one Today task per course
+ok 44 - multiple waiting due courses choose earliest due and expose one Today task per course
+  ---
+  duration_ms: 5.996541
+  type: 'test'
+  ...
+# Subtest: every selected record summary stays in its own course and unknown raw remains unchanged
+ok 45 - every selected record summary stays in its own course and unknown raw remains unchanged
+  ---
+  duration_ms: 12.828417
+  type: 'test'
+  ...
+# Subtest: wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+ok 46 - wrong target, unknown record and foreign correction sidecar never silently bind to CL00
+  ---
+  duration_ms: 219.67925
+  type: 'test'
+  ...
+# Subtest: course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+ok 47 - course completion does not create map passes, flashcard grades, listening scores or free-expression judgments
+  ---
+  duration_ms: 14.476875
+  type: 'test'
+  ...
+# Subtest: starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+ok 48 - starter, NCE unit, IELTS task and finish explain their own conditions, including honest fallback
+  ---
+  duration_ms: 0.620125
+  type: 'test'
+  ...
+# Subtest: production factory, registry and UI never import the historical preview or test adapter
+ok 49 - production factory, registry and UI never import the historical preview or test adapter
+  ---
+  duration_ms: 6.899875
+  type: 'test'
+  ...
+# Subtest: three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+ok 50 - three bounded groups contain 54 original tasks across six three-target banks; no coverage-driven registration
+  ---
+  duration_ms: 1.65475
+  type: 'test'
+  ...
+# Subtest: all accepted keys and documented semantic counterexamples obey the final content matcher
+ok 51 - all accepted keys and documented semantic counterexamples obey the final content matcher
+  ---
+  duration_ms: 0.943375
+  type: 'test'
+  ...
+# Subtest: written question and statement marks cannot be swallowed into the other response type
+ok 52 - written question and statement marks cannot be swallowed into the other response type
+  ---
+  duration_ms: 0.519166
+  type: 'test'
+  ...
+# Subtest: normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+ok 53 - normal format variation preserves lexical meaning, possession apostrophes and distinct pronouns
+  ---
+  duration_ms: 0.117625
+  type: 'test'
+  ...
+# Subtest: three source identities and time labels remain bound to existing matching textbook/comic groups
+ok 54 - three source identities and time labels remain bound to existing matching textbook/comic groups
+  ---
+  duration_ms: 5.538833
+  type: 'test'
+  ...
+# Subtest: independent blind solutions and final real-factory checker probes agree after any revision
+ok 55 - independent blind solutions and final real-factory checker probes agree after any revision
+  ---
+  duration_ms: 1.882041
+  type: 'test'
+  ...
+# Subtest: earliest six retain twelve unique keys while every actual registered binding remains explicit
+ok 56 - earliest six retain twelve unique keys while every actual registered binding remains explicit
+  ---
+  duration_ms: 1.943209
+  type: 'test'
+  ...
+# Subtest: real host accepts only the selected course envelope and correction sidecar across all actual registered courses
+ok 57 - real host accepts only the selected course envelope and correction sidecar across all actual registered courses
+  ---
+  duration_ms: 57.171
+  type: 'test'
+  ...
+# Subtest: old default parser and keys, initial recommendation and original state remain compatible
+ok 58 - old default parser and keys, initial recommendation and original state remain compatible
+  ---
+  duration_ms: 1.662584
+  type: 'test'
+  ...
+# Subtest: unknown correction IDs and current-course foreign events retain raw rather than silently resetting
+ok 59 - unknown correction IDs and current-course foreign events retain raw rather than silently resetting
+  ---
+  duration_ms: 94.492584
+  type: 'test'
+  ...
+# Subtest: all registered pending courses have one task each and the oldest pending beats any due course
+ok 60 - all registered pending courses have one task each and the oldest pending beats any due course
+  ---
+  duration_ms: 38.65325
+  type: 'test'
+  ...
+# Subtest: production factory source is the unchanged current integration base file, without source substitution or shadow reducer
+ok 61 - production factory source is the unchanged current integration base file, without source substitution or shadow reducer
+  ---
+  duration_ms: 25.635042
+  type: 'test'
+  ...
+# Subtest: nce1-7: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 62 - nce1-7: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 2.605792
+  type: 'test'
+  ...
+# Subtest: nce1-7: source/hint identities, originals and correction requirements survive repair retry
+ok 63 - nce1-7: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 5.389417
+  type: 'test'
+  ...
+# Subtest: nce1-7: text/audio/comic each count as help without inventing audio or map evidence
+ok 64 - nce1-7: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.363792
+  type: 'test'
+  ...
+# Subtest: nce1-7: partial input and corrections restore through the actual factory with original timestamps
+ok 65 - nce1-7: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 1.901875
+  type: 'test'
+  ...
+# Subtest: nce1-7: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 66 - nce1-7: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 9.435333
+  type: 'test'
+  ...
+# Subtest: nce1-9: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 67 - nce1-9: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 0.640875
+  type: 'test'
+  ...
+# Subtest: nce1-9: source/hint identities, originals and correction requirements survive repair retry
+ok 68 - nce1-9: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 2.858583
+  type: 'test'
+  ...
+# Subtest: nce1-9: text/audio/comic each count as help without inventing audio or map evidence
+ok 69 - nce1-9: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.646083
+  type: 'test'
+  ...
+# Subtest: nce1-9: partial input and corrections restore through the actual factory with original timestamps
+ok 70 - nce1-9: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 1.343583
+  type: 'test'
+  ...
+# Subtest: nce1-9: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 71 - nce1-9: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 9.316416
+  type: 'test'
+  ...
+# Subtest: nce1-11: production factory uses exact first task, local semantic guard, and targeted teaching
+ok 72 - nce1-11: production factory uses exact first task, local semantic guard, and targeted teaching
+  ---
+  duration_ms: 0.325084
+  type: 'test'
+  ...
+# Subtest: nce1-11: source/hint identities, originals and correction requirements survive repair retry
+ok 73 - nce1-11: source/hint identities, originals and correction requirements survive repair retry
+  ---
+  duration_ms: 3.260084
+  type: 'test'
+  ...
+# Subtest: nce1-11: text/audio/comic each count as help without inventing audio or map evidence
+ok 74 - nce1-11: text/audio/comic each count as help without inventing audio or map evidence
+  ---
+  duration_ms: 0.177125
+  type: 'test'
+  ...
+# Subtest: nce1-11: partial input and corrections restore through the actual factory with original timestamps
+ok 75 - nce1-11: partial input and corrections restore through the actual factory with original timestamps
+  ---
+  duration_ms: 1.117125
+  type: 'test'
+  ...
+# Subtest: nce1-11: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+ok 76 - nce1-11: simulated delayed new banks enforce 24h, 7d/1d and finite exhaustion without grading open expression
+  ---
+  duration_ms: 7.447959
+  type: 'test'
+  ...
+# Subtest: new course envelopes and question IDs remain isolated; unsupported course/content versions keep raw
+ok 77 - new course envelopes and question IDs remain isolated; unsupported course/content versions keep raw
+  ---
+  duration_ms: 0.247958
+  type: 'test'
+  ...
+# Subtest: CL00 default exports remain equivalent to production factory binding and original key semantics
+ok 78 - CL00 default exports remain equivalent to production factory binding and original key semantics
+  ---
+  duration_ms: 0.835334
+  type: 'test'
+  ...
+1..78
+# tests 78
+# suites 0
+# pass 78
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 24869.675208

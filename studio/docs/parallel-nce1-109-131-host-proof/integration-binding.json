@@ -1,0 +1,64 @@
+{
+  "base": "24e4fc7ff3500ded304df52a7734acc6cdc46079",
+  "baseIsUnpublished54Candidate": true,
+  "publicHeadsBoth": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "lastRemoteReadAt": "2026-10-03 01:01:11 UTC",
+  "registeredGroups": 66,
+  "registeredTasks": 1188,
+  "newGroups": 12,
+  "newTasks": 216,
+  "node": {
+    "productionSourceBoundaryExhaustion": 94,
+    "hostTypeLiterals": 1,
+    "frozenContentSourceBoundary": 117,
+    "legacy": 78,
+    "audit": 7,
+    "total": 297,
+    "failures": 0
+  },
+  "native": {
+    "finalAllNew12AndPrior107": 45,
+    "syntheticDelayed": 2,
+    "total": 47,
+    "exceptions": 0
+  },
+  "protectedBaseFiles": 418,
+  "frozenAuthorFiles": 162,
+  "publicRuntimeFilesUnchanged": 358,
+  "sourceKindVideoPreserved": true,
+  "sourceNativeCourses": [
+    109,
+    113,
+    119,
+    123,
+    131
+  ],
+  "nativeRecordCourses": [
+    107,
+    109,
+    111,
+    113,
+    115,
+    117,
+    119,
+    121,
+    123,
+    125,
+    127,
+    129,
+    131
+  ],
+  "afterTypeCorrectionRuntimeArtifactsByteIdentical": true,
+  "typeLiteralFixHadFinalNativeRevalidation": true,
+  "successor": "107→109→111→113→115→117→119→121→123→125→127→129→131→original133",
+  "scopeStopsAt": 132,
+  "noPushMergeDeploy": true,
+  "remainingUnverified": [
+    "natural24h/7d",
+    "human expression",
+    "audibility",
+    "physical phone/Safari",
+    "deployed origin",
+    "learning gain"
+  ]
+}

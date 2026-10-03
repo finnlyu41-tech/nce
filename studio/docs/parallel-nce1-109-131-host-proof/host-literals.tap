@@ -1,0 +1,16 @@
+TAP version 13
+# Subtest: CourseId, source lesson and comicKey literals cover the actual 66 bindings exactly
+ok 1 - CourseId, source lesson and comicKey literals cover the actual 66 bindings exactly
+  ---
+  duration_ms: 6.804333
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2382.609083

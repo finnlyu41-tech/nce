@@ -1,0 +1,353 @@
+{
+  "scope": "Local actual built classic/map app; fresh synthetic QA records; no storage injection or clock/audio fabrication",
+  "base": "24e4fc7ff3500ded304df52a7734acc6cdc46079",
+  "publishedBaseAtStart": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "baseIsUnpublishedCandidate": true,
+  "registeredCourses": [
+    "nce1-1",
+    "nce1-3",
+    "nce1-5",
+    "nce1-7",
+    "nce1-9",
+    "nce1-11",
+    "nce1-13",
+    "nce1-15",
+    "nce1-17",
+    "nce1-19",
+    "nce1-21",
+    "nce1-23",
+    "nce1-25",
+    "nce1-27",
+    "nce1-29",
+    "nce1-31",
+    "nce1-33",
+    "nce1-35",
+    "nce1-37",
+    "nce1-39",
+    "nce1-41",
+    "nce1-43",
+    "nce1-45",
+    "nce1-47",
+    "nce1-49",
+    "nce1-51",
+    "nce1-53",
+    "nce1-55",
+    "nce1-57",
+    "nce1-59",
+    "nce1-61",
+    "nce1-63",
+    "nce1-65",
+    "nce1-67",
+    "nce1-69",
+    "nce1-71",
+    "nce1-73",
+    "nce1-75",
+    "nce1-77",
+    "nce1-79",
+    "nce1-81",
+    "nce1-83",
+    "nce1-85",
+    "nce1-87",
+    "nce1-89",
+    "nce1-91",
+    "nce1-93",
+    "nce1-95",
+    "nce1-97",
+    "nce1-99",
+    "nce1-101",
+    "nce1-103",
+    "nce1-105",
+    "nce1-107",
+    "nce1-109",
+    "nce1-111",
+    "nce1-113",
+    "nce1-115",
+    "nce1-117",
+    "nce1-119",
+    "nce1-121",
+    "nce1-123",
+    "nce1-125",
+    "nce1-127",
+    "nce1-129",
+    "nce1-131"
+  ],
+  "selectedNativeCourses": [
+    "nce1-107",
+    "nce1-109",
+    "nce1-111",
+    "nce1-113",
+    "nce1-115",
+    "nce1-117",
+    "nce1-119",
+    "nce1-121",
+    "nce1-123",
+    "nce1-125",
+    "nce1-127",
+    "nce1-129",
+    "nce1-131"
+  ],
+  "origin": "http://127.0.0.1:58713",
+  "proof": "/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-109-131-host/studio/work/parallel-nce1-109-131-host/native-QESucH",
+  "checks": [
+    {
+      "name": "native backdated QA file restores three due review-a banks using unchanged wall clock",
+      "ok": true,
+      "elapsedMs": 13920,
+      "detail": {
+        "details": [
+          {
+            "course": "nce1-131",
+            "bank": "review-a",
+            "independent": true,
+            "scheduledMs": 604800000,
+            "attempts": 15
+          },
+          {
+            "course": "nce1-121",
+            "bank": "review-a",
+            "independent": true,
+            "scheduledMs": 604800000,
+            "attempts": 15
+          },
+          {
+            "course": "nce1-109",
+            "bank": "review-a",
+            "independent": true,
+            "scheduledMs": 604800000,
+            "attempts": 15
+          }
+        ],
+        "syntheticImportedTimes": true,
+        "browserClockUnchanged": true,
+        "naturalRetention": "unverified"
+      }
+    },
+    {
+      "name": "native backdated QA file restores three due review-b banks using unchanged wall clock",
+      "ok": true,
+      "elapsedMs": 16450,
+      "detail": {
+        "details": [
+          {
+            "course": "nce1-131",
+            "bank": "review-b",
+            "independent": false,
+            "scheduledMs": 86400000,
+            "attempts": 18
+          },
+          {
+            "course": "nce1-121",
+            "bank": "review-b",
+            "independent": false,
+            "scheduledMs": 86400000,
+            "attempts": 18
+          },
+          {
+            "course": "nce1-109",
+            "bank": "review-b",
+            "independent": false,
+            "scheduledMs": 86400000,
+            "attempts": 18
+          }
+        ],
+        "syntheticImportedTimes": true,
+        "browserClockUnchanged": true,
+        "naturalRetention": "unverified"
+      }
+    }
+  ],
+  "passed": 2,
+  "failed": 0,
+  "driverExitedWithError": false,
+  "RuntimeExceptions": [],
+  "requests": [
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-Bz8ZHGFT.js",
+      "size": 4014876
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CK6iAtDp.js",
+      "size": 4829738
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-Bz8ZHGFT.js",
+      "size": 4014876
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CK6iAtDp.js",
+      "size": 4829738
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-Bz8ZHGFT.js",
+      "size": 4014876
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CK6iAtDp.js",
+      "size": 4829738
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-Bz8ZHGFT.js",
+      "size": 4014876
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CK6iAtDp.js",
+      "size": 4829738
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-Bz8ZHGFT.js",
+      "size": 4014876
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CK6iAtDp.js",
+      "size": 4829738
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-Bz8ZHGFT.js",
+      "size": 4014876
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CK6iAtDp.js",
+      "size": 4829738
+    },
+    {
+      "path": "/map/",
+      "size": 542
+    },
+    {
+      "path": "/map/assets/index-BShJ_BNn.css",
+      "size": 89892
+    },
+    {
+      "path": "/map/assets/index-Bz8ZHGFT.js",
+      "size": 4014876
+    },
+    {
+      "path": "/",
+      "size": 1127
+    },
+    {
+      "path": "/assets/style-CIMCSttA.css",
+      "size": 336266
+    },
+    {
+      "path": "/assets/standalone-CK6iAtDp.js",
+      "size": 4829738
+    }
+  ],
+  "sourceSha256": {
+    "course-loop/registry.mjs": "6af1fb5abd84d17995ff6937ce83474486a949253fedaafd41c13e63ab47a450",
+    "course-loop/host-contract.d.ts": "13853628583aa9dc0c6dc054cdde9af434de61734a5b944a705e8b691de6610b",
+    "app/course-loop-next.ts": "4f195e272f7997557c8a7d9d9f81448b229c4a11a91b12635c2087554df77788",
+    "app/course-loop-progress.ts": "3fb5edb5a9ffdb7396709fb29c7e9e883f0483e05c95bc1cbfc9ac27a0e9eb85",
+    "app/course-loop-ui.tsx": "338bc1d8acca8358251d30071acd674fe35f1f6e2e3cf21ea2d60941b9d1aea2",
+    "app/today-practice.ts": "41405c141777507e96ba2bf77907c31cca5af776153846fff3979e8bb842493d",
+    "app/offline-store.ts": "838f26906df123891a6ee5080d4cba1a08c0804163fe4eb7948821b4e7dff028",
+    "app/progress-file.ts": "67ef85cd106c87faf762442304afcc91f5ec8fadab0ae968eb5a852455ce5d10",
+    "app/progress-save.tsx": "cf79885ed63b938f45e87bde981ac9f83a5b7ec82a200f4a6fe56e910b287ec5"
+  },
+  "unverified": [
+    "published origin",
+    "natural24h/7d",
+    "physical phone",
+    "audibility",
+    "human expression",
+    "learning gain"
+  ],
+  "retries": []
+}
