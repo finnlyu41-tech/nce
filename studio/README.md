@@ -1,6 +1,15 @@
 # 句句有进步 · English Studio
 
-## Current release v54 — bounded chart comparison application
+## Current release v55 — lessons7-12 stage and guarded current drafts
+
+Runtime `26beacd6c14403f8faa77ded1a1e43de5a34af1c`, [fixed deployment](https://b34615c5.finn-english-studio.pages.dev).
+
+R13 adds the scoped NCE1 lessons7–12 stage with six new finite packs, four learning/correction workspaces and seven synthesized WAVs through the existing State.drafts/full-State CAS writer.42 actual final-origin stage/backup/portable groups,ten main/F6 and eight chart groups pass with0 exceptions/external requests. Complete2071-file package and both origins114 root/map WAV GET hashes+HEAD pass; all50 existing mini WAVs and previous routes/gates are retained. No teacher/reviewer permission, human delivery, automatic unlock, score or four-skill mastery is granted.
+
+
+[Scope and verification](docs/stage-lessons7-12-production-integration.md).
+
+## Previously published v54 — bounded chart comparison application
 
 Runtime `db7fba7cfcb5c0def8c7f99024aafb6368eedcb1`, [fixed deployment](https://3f7fe46f.finn-english-studio.pages.dev).
 
