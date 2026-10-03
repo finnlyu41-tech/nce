@@ -1,0 +1,16 @@
+{
+  "base": "6de5d1d99bda7f42ab4b5c07bde9d0a74a2b7f5f",
+  "publisherBase": "03427c50a26499a3661ab5143dc50c5e94cf13b8",
+  "batch04Dependency": "fbe72ad207a9f848b9ce43a01aa822e78f17c3e8",
+  "changedSharedFiles": [
+    "studio/mini-task/audio-inventory.py",
+    "studio/mini-task/content.ts",
+    "studio/mini-task/manifest.ts"
+  ],
+  "newTasks": 6,
+  "explicitLessonBindings": 12,
+  "combinedTasks": 30,
+  "noSecondProgressStore": true,
+  "noHostTodayHomeRouteEdits": true,
+  "noLegacyByteCompatibilityGate": true
+}

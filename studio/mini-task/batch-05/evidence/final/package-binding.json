@@ -1,0 +1,51 @@
+{
+  "testedAuthoringBase": "6de5d1d99bda7f42ab4b5c07bde9d0a74a2b7f5f",
+  "testedHostBase": "03427c50a26499a3661ab5143dc50c5e94cf13b8",
+  "testedWorkerSourceBase": "46ad498c87414a0372969c845d32db27047de3e9",
+  "packageFiles": {
+    "dist/index.html": {
+      "sha256": "1294eafa4272fb61e39463754b5c86455342b1c93bc5f38ab8b6dbfbe5ea4bb3",
+      "bytes": 23450843
+    },
+    "dist-online/index.html": {
+      "sha256": "e94c02b13706c30cbe9a28ff534b482e3fa4db4af2822138c418354a00c88589",
+      "bytes": 5345136
+    },
+    "dist-online/map/index.html": {
+      "sha256": "91872702242f780fc955190a37fde515139d1e639481503e6eac989d81ffd69e",
+      "bytes": 542
+    },
+    "dist-online/version.json": {
+      "sha256": "f6e3785a3f2dd81c92e160a0df2fd3f275c2841c67469138b76cb9c4c18b21ff",
+      "bytes": 13876
+    },
+    "dist-online/_worker.js": {
+      "sha256": "47a978bfbc832a7d82be77ef70becc706d9b3fe235fa75a9f0f717d6348ead86",
+      "bytes": 22500
+    }
+  },
+  "knownWAVCount": 50,
+  "nativeChecks": 12,
+  "nativeRootMapMediaGETs": 100,
+  "workerKnownGETHEADChecks": 200,
+  "workerUnknownChecks": 8,
+  "workerPostRejected": true,
+  "onlineValidator": "unchanged production verify-online.py with owned composed worker source view",
+  "onlineFilesVerified": 2057,
+  "originalMaterialsVerified": 556,
+  "originalMaterialsBytesVerified": 706959756,
+  "screenshots": 8,
+  "visuallyReviewed": [
+    "mini-n1-49-320.png",
+    "mini-n1-53-320.png",
+    "mini-n1-55-320.png",
+    "mini-n1-59-320.png"
+  ],
+  "realCloudflareDeploymentVerified": false,
+  "realHumanAudioQualityVerified": false,
+  "difficultyCalibrated": false,
+  "naturalDelayedLearningVerified": false,
+  "sharedSourceWorkerWasEdited": false,
+  "productionWorkerPatchRequired": true,
+  "latestPublisherIntegrationNeedsReleaseGate": true
+}

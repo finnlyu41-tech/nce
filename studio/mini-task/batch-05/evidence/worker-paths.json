@@ -1,0 +1,111 @@
+{
+  "readOnlyPublisherBase": "46ad498c87414a0372969c845d32db27047de3e9",
+  "sourceSha256": "f902bed37bf604ac788d3a8609c485e7fa6230c3e91227b64adeea6130ad60f4",
+  "candidateWorkerSha256": "47a978bfbc832a7d82be77ef70becc706d9b3fe235fa75a9f0f717d6348ead86",
+  "entries": [
+    {
+      "path": "/assets/mini-n1-49-delayed-a-CO8v-uou.wav",
+      "mime": "audio/wav",
+      "sha256": "7663c87fc87dc448b40f8f4d87a32f05d785539de1efe8dc47d33ed39e46057e"
+    },
+    {
+      "path": "/map/assets/mini-n1-49-delayed-a-CO8v-uou.wav",
+      "mime": "audio/wav",
+      "sha256": "7663c87fc87dc448b40f8f4d87a32f05d785539de1efe8dc47d33ed39e46057e"
+    },
+    {
+      "path": "/assets/mini-n1-49-delayed-b-ClSHklVg.wav",
+      "mime": "audio/wav",
+      "sha256": "7fddc7e21eab074af9690a0fce2c3f654fff3f27265be08bc49939dbcd64beae"
+    },
+    {
+      "path": "/map/assets/mini-n1-49-delayed-b-ClSHklVg.wav",
+      "mime": "audio/wav",
+      "sha256": "7fddc7e21eab074af9690a0fce2c3f654fff3f27265be08bc49939dbcd64beae"
+    },
+    {
+      "path": "/assets/mini-n1-49-guided-BThMgUdb.wav",
+      "mime": "audio/wav",
+      "sha256": "816170a4fdd69edffb895fcf3f8863a2d9a20af959c966a9a6e47b50979aa8c2"
+    },
+    {
+      "path": "/map/assets/mini-n1-49-guided-BThMgUdb.wav",
+      "mime": "audio/wav",
+      "sha256": "816170a4fdd69edffb895fcf3f8863a2d9a20af959c966a9a6e47b50979aa8c2"
+    },
+    {
+      "path": "/assets/mini-n1-49-independent-Bv3EN94n.wav",
+      "mime": "audio/wav",
+      "sha256": "a6ac1a3959378b82bb9811d222a05dbbc60f7b6bdafa9586b211fb88b21e2d63"
+    },
+    {
+      "path": "/map/assets/mini-n1-49-independent-Bv3EN94n.wav",
+      "mime": "audio/wav",
+      "sha256": "a6ac1a3959378b82bb9811d222a05dbbc60f7b6bdafa9586b211fb88b21e2d63"
+    },
+    {
+      "path": "/assets/mini-n1-49-repair-BeFLmV9G.wav",
+      "mime": "audio/wav",
+      "sha256": "bd56cf29837130e3f8e61067e5d257090215965ac9ed14f187124f8e86c50491"
+    },
+    {
+      "path": "/map/assets/mini-n1-49-repair-BeFLmV9G.wav",
+      "mime": "audio/wav",
+      "sha256": "bd56cf29837130e3f8e61067e5d257090215965ac9ed14f187124f8e86c50491"
+    },
+    {
+      "path": "/assets/mini-n1-57-delayed-a-Bfh-QMtL.wav",
+      "mime": "audio/wav",
+      "sha256": "7e3fc4616bb51ec5218f32af6dbfec5a52783f6e8c7f806c4a3242bc6c3a21bd"
+    },
+    {
+      "path": "/map/assets/mini-n1-57-delayed-a-Bfh-QMtL.wav",
+      "mime": "audio/wav",
+      "sha256": "7e3fc4616bb51ec5218f32af6dbfec5a52783f6e8c7f806c4a3242bc6c3a21bd"
+    },
+    {
+      "path": "/assets/mini-n1-57-delayed-b-DR4vRcqf.wav",
+      "mime": "audio/wav",
+      "sha256": "7ddf28803bf30dd9be81c6f3ff047e61101d4c879a158ea3c7013ada19803ec0"
+    },
+    {
+      "path": "/map/assets/mini-n1-57-delayed-b-DR4vRcqf.wav",
+      "mime": "audio/wav",
+      "sha256": "7ddf28803bf30dd9be81c6f3ff047e61101d4c879a158ea3c7013ada19803ec0"
+    },
+    {
+      "path": "/assets/mini-n1-57-guided-BTbiRsFf.wav",
+      "mime": "audio/wav",
+      "sha256": "215de492385d79b9f51ebdb3eda67eaec5ada5c4dc0fcd33dd63ad68d4a44ae0"
+    },
+    {
+      "path": "/map/assets/mini-n1-57-guided-BTbiRsFf.wav",
+      "mime": "audio/wav",
+      "sha256": "215de492385d79b9f51ebdb3eda67eaec5ada5c4dc0fcd33dd63ad68d4a44ae0"
+    },
+    {
+      "path": "/assets/mini-n1-57-independent-DZKnQx6h.wav",
+      "mime": "audio/wav",
+      "sha256": "b89a6dfa4cd8b029626e31d2bb6ac06730e4ce56c90e88fbd4a6dcf07f6520a3"
+    },
+    {
+      "path": "/map/assets/mini-n1-57-independent-DZKnQx6h.wav",
+      "mime": "audio/wav",
+      "sha256": "b89a6dfa4cd8b029626e31d2bb6ac06730e4ce56c90e88fbd4a6dcf07f6520a3"
+    },
+    {
+      "path": "/assets/mini-n1-57-repair-CGvuXfqV.wav",
+      "mime": "audio/wav",
+      "sha256": "33b40f44ad4415b5e798e37d20a4daad8374602a92a22a7afa367b8b30c8243c"
+    },
+    {
+      "path": "/map/assets/mini-n1-57-repair-CGvuXfqV.wav",
+      "mime": "audio/wav",
+      "sha256": "33b40f44ad4415b5e798e37d20a4daad8374602a92a22a7afa367b8b30c8243c"
+    }
+  ],
+  "sourceFileModified": false,
+  "exactPathOnly": true,
+  "owner": "sole publisher",
+  "localPackageHasCandidateWorker": true
+}

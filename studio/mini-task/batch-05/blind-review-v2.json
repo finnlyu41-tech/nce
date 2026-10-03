@@ -1,0 +1,927 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "blind-to-keys",
+  "reviewType": "independent-text-only-all-content-review",
+  "input": "studio/mini-task/batch-05/blind-packet-all.json",
+  "inputSha256": "cecb9d85e25f2761b68327eddfb8920b1f1152b1d51be3268e05bbfe614a327f",
+  "firstObservedInput": "studio/mini-task/batch-05/blind-packet-v1.json",
+  "firstObservedInputSha256": "2ba044dbf170588713aa3803c3a8af422c4db2cc904b5dc1df210438c20d78a0",
+  "inputScope": "先阅读当时all包，其原版现保留为v1；本报告按更新后的all包独立重检57的两个问句并审完30项。仅读盲包，未读v1文件、作者content/manifest/keys/hints/models、旧审核或音频。只新增本文件。",
+  "completedItemCount": 30,
+  "limitations": [
+    "文字内容盲审，未播放音频、不宣称真人听感、语速、音质或实际否定/省略词听辨表现。",
+    "未进行真人适级/難度、等难、CEFR校准、学习效果或修补效果测试，不映射IELTS band。",
+    "十道开放项只有自然英语例答，未评分，需人工检查等义表达；没有学习者产出或评分容错验证。",
+    "未与任何key比对，未核查外部出处或全局原创性；虚构气候只按题内资料评估。",
+    "修补机制按bank名称和材料情境对照，结构一致不等于真实迁移或等难。"
+  ],
+  "mechanismChecks": [
+    {
+      "taskId": "mini-n1-49",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "independent/repair均找两位主体明确喜欢的集合交集，排除一人否定的项及只有不喜欢信息的项；相同信息结构、替换水果/人名。"
+    },
+    {
+      "taskId": "mini-n1-51",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均绑定指定访客来源与虚构地区的有限频率，排除另一人来源、把sometimes升级always和忽视often降水；warm/rain与windy/snow是不同词项，未验证等难。"
+    },
+    {
+      "taskId": "mini-n1-53",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均先报告指定主体在夜间的已确认否定习惯，再问早间另一项未知习惯；否定行为不等于不能做，也不推出替代行为。"
+    },
+    {
+      "taskId": "mini-n1-55",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均报告第三人单数often早間动作及物品，再用一般现在时询问夜间未知作息；相同频率、时间与句数，换主体/动作。"
+    },
+    {
+      "taskId": "mini-n1-57",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均按目标群体now选择on foot，排除目标群体通常交通与另一群体当前交通；更新后问题询问doing now，答旅行活动更连贯。"
+    },
+    {
+      "taskId": "mini-n1-59",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均判断(容器类型A或B)加上必需用品C的整组类别条件，缺A时选现有B+C；数量未点、未确认购买保持未知，替代类别在要求中明确许可。"
+    }
+  ],
+  "revisionChecks": [
+    {
+      "itemId": "mini-n1-57:independent",
+      "status": "resolved-in-updated-text",
+      "answer": "C",
+      "assessment": "改问当前doing活动后，on foot行进答复与话题相符，目标群体与时效判断仍明确。"
+    },
+    {
+      "itemId": "mini-n1-57:repair",
+      "status": "resolved-in-updated-text",
+      "answer": "A",
+      "assessment": "改问当前doing活动后，行进答复更自然；访客当前on foot不应与通常bus或导游car混同。"
+    }
+  ],
+  "summary": {
+    "answerability": "30/30可独立作答；20道闭题仅A/B/C，10道开放自然例答待人工。",
+    "necessaryRevisionCount": 0,
+    "mergeAssessment": "更新盲包的文字内容审查范围内可合并，无必要语义/事实修订阻塞。",
+    "keyBoundaries": "共同喜好须两人确认；省略否定按前句谓词恢复。虚构气候频率不升级保证，国籍不补未知来源；不早不推出晚，习惯否定不等于能力否定；habit/current/unknown分开；库存整组条件、单店、替代许可、数量与购买各自独立。",
+    "templateConcern": "六组独立/修补对比高度同框架，尤其49/51/53/55主要替换主体和词项，适合受限复练但题型多样性有限；57更新习惯/当前信息，59引入类别组合/许可/单店约束，延迟项新增未知边界。不能据此声称广泛迁移。",
+    "levelConcern": "核心语法含第三人-s、does/doesn't、省略回答、频率副词与进行时对比；59的OR/AND整组条件、单来源与许可/数量分层增加认知负担，中文任务规则提供支架但未校准初学者负担。题内无需真实气候或外部地理知识。",
+    "publicBoundary": "结论仅是题内证据足够、文字可答和独立/修补机制对齐，不包含真人难度、听感、学习效果或IELTS band验证。"
+  },
+  "items": [
+    {
+      "taskId": "mini-n1-49",
+      "itemId": "mini-n1-49:guided",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Sam明确likes pears，Rae does not省略谓词回接like pears，Rae另喜欢apples；B唯一。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "likes/does not的省略、主体及水果绑定。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair均找两位主体明确喜欢的集合交集，排除一人否定的项及只有不喜欢信息的项；相同信息结构、替换水果/人名。"
+      },
+      "review": {
+        "semanticMaterialDifference": "省略否定的直接喜好提取。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "ellipsis-reference-supported",
+          "detail": "省略的does not/do not按前句谓词回接，题内可恢复；真实音频负担尚未验证。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-49",
+      "itemId": "mini-n1-49:independent",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Jo/Rae都喜欢pears；Rae否定apples，Jo否定grapes，只有pears的双人共同条件已成立。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "两人喜好交集、likes/does not like及多项绑定。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair均找两位主体明确喜欢的集合交集，排除一人否定的项及只有不喜欢信息的项；相同信息结构、替换水果/人名。"
+      },
+      "review": {
+        "semanticMaterialDifference": "由单人喜好扩展为共同条件，非仅听一个肯定词。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-49",
+      "itemId": "mini-n1-49:repair",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ken/Mia都喜欢grapes；Mia不喜欢peaches，Ken不喜欢bananas，C共同条件明确。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "同一喜好集合交集；水果词听辨未验证。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair均找两位主体明确喜欢的集合交集，排除一人否定的项及只有不喜欢信息的项；相同信息结构、替换水果/人名。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同独立题关系框架，水果和人名替换，主要近迁移。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-49",
+      "itemId": "mini-n1-49:delayed-a",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Leo否定apples、喜欢pears；Nora是否喜欢pears明确I do not know，不能填双人都喜欢。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "Does/does not省略回答、第三人指代及未知。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair均找两位主体明确喜欢的集合交集，排除一人否定的项及只有不喜欢信息的项；相同信息结构、替换水果/人名。"
+      },
+      "review": {
+        "semanticMaterialDifference": "增加已确认/未知喜好边界。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-49",
+      "itemId": "mini-n1-49:delayed-b",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Nora喜欢grapes，不喜欢pears的I do not回接Sam likes pears；Sam喜欢grapes有Yes he does证据；Rae只提问未表达喜好。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "两次省略回答及两位主体共享条件。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair均找两位主体明确喜欢的集合交集，排除一人否定的项及只有不喜欢信息的项；相同信息结构、替换水果/人名。"
+      },
+      "review": {
+        "semanticMaterialDifference": "共有水果判断加省略否定，排除提问人被当作已表态。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "ellipsis-reference-supported",
+          "detail": "省略的does not/do not按前句谓词回接，题内可恢复；真实音频负担尚未验证。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-51",
+      "itemId": "mini-n1-51:guided",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Rina来自Italy，虚构故事冬天often cold；不支持每天保证，May为月份非来源。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "comes from、often/sometimes、国家/月份类别。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均绑定指定访客来源与虚构地区的有限频率，排除另一人来源、把sometimes升级always和忽视often降水；warm/rain与windy/snow是不同词项，未验证等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "来源与有限频率联合摘要，不引用真实气候事实。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "fictional-climate-boundary",
+          "detail": "气候均为虚构材料事实，不替代真实国家气候知识；频率不自动转换成数值、每日保证或来源国籍推断。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-51",
+      "itemId": "mini-n1-51:independent",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ava来源Norway，不是Leo的Spain；sometimes warm不等于always，often rains不提供晴天保证。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "指定访客绑定、sometimes/often与绝对保证的区别。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均绑定指定访客来源与虚构地区的有限频率，排除另一人来源、把sometimes升级always和忽视often降水；warm/rain与windy/snow是不同词项，未验证等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "来源和气候频率两类事实联合核对。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "fictional-climate-boundary",
+          "detail": "气候均为虚构材料事实，不替代真实国家气候知识；频率不自动转换成数值、每日保证或来源国籍推断。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-51",
+      "itemId": "mini-n1-51:repair",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ben来自Sweden，October sometimes windy、winter often snows；不能填France或承诺无雪。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "来源、月份/季节和有限频率；国家/weather词需要词汇先备。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均绑定指定访客来源与虚构地区的有限频率，排除另一人来源、把sometimes升级always和忽视often降水；warm/rain与windy/snow是不同词项，未验证等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同框架核对，更换来源、时间、天气词。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "fictional-climate-boundary",
+          "detail": "气候均为虚构材料事实，不替代真实国家气候知识；频率不自动转换成数值、每日保证或来源国籍推断。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-51",
+      "itemId": "mini-n1-51:delayed-a",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "French为国籍声明，但comes from栏未填且未问；题面明确来源未知，应提问，不由国籍补来源。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "nationality与comes from字段证据差别及Where does...come from。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均绑定指定访客来源与虚构地区的有限频率，排除另一人来源、把sometimes升级always和忽视often降水；warm/rain与windy/snow是不同词项，未验证等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "新增未填字段与外部常识不得补录的边界。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "fictional-climate-boundary",
+          "detail": "气候均为虚构材料事实，不替代真实国家气候知识；频率不自动转换成数值、每日保证或来源国籍推断。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-51",
+      "itemId": "mini-n1-51:delayed-b",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Jo来自Brazil，winter sometimes rains；Norway/cold属于Rae，always hot属于Jo的summer而非winter。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "主体、季节与频率三项绑定。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均绑定指定访客来源与虚构地区的有限频率，排除另一人来源、把sometimes升级always和忽视often降水；warm/rain与windy/snow是不同词项，未验证等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "排除他人气候与同人不同季节的交叉混入。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "fictional-climate-boundary",
+          "detail": "气候均为虚构材料事实，不替代真实国家气候知识；频率不自动转换成数值、每日保证或来源国籍推断。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-53",
+      "itemId": "mini-n1-53:guided",
+      "answer": "Jo doesn't open the gate early. Does she close the gate at night?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "已知不早开、未知夜间是否关；doesn't early并不推出late，例答保留否定范围。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "第三人一般现在时否定/疑问、early/at night和gate。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均先报告指定主体在夜间的已确认否定习惯，再问早间另一项未知习惯；否定行为不等于不能做，也不推出替代行为。"
+      },
+      "review": {
+        "semanticMaterialDifference": "已确认否定规律加未知规律询问。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "negative-scope-boundary",
+          "detail": "否定某时段行为不表示另一时段必做、改做相反行为或没有能力；自然例答只保留材料范围。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-53",
+      "itemId": "mini-n1-53:independent",
+      "answer": "Ben doesn't read letters at night. Does he open the box in the morning?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ben夜间不读letters，早上open box未知；问句不把未知变肯定，也不猜读其他物品。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "doesn't/does、letters复数、at night/in the morning。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均先报告指定主体在夜间的已确认否定习惯，再问早间另一项未知习惯；否定行为不等于不能做，也不推出替代行为。"
+      },
+      "review": {
+        "semanticMaterialDifference": "保留两时段、动作对象与已知/未知的两句交接。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "negative-scope-boundary",
+          "detail": "否定某时段行为不表示另一时段必做、改做相反行为或没有能力；自然例答只保留材料范围。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-53",
+      "itemId": "mini-n1-53:repair",
+      "answer": "Nora doesn't wash dishes at night. Does she close the window in the morning?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Nora夜间不洗dishes，早上close window未知；否定habit不是能力cannot。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "第三人doesn't/does、wash dishes/close window及两时段。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均先报告指定主体在夜间的已确认否定习惯，再问早间另一项未知习惯；否定行为不等于不能做，也不推出替代行为。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同独立题结构，动作和对象换新；不代表词汇负担等难。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "negative-scope-boundary",
+          "detail": "否定某时段行为不表示另一时段必做、改做相反行为或没有能力；自然例答只保留材料范围。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-53",
+      "itemId": "mini-n1-53:delayed-a",
+      "answer": "Sam doesn't watch television in the evening. Does he read books in the evening?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "不watch television已知，read book活动未知；不能由一个否定推出另一个肯定。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "第三人否定/疑问，evening；book作为日常读书类名词自然可用books/a book。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均先报告指定主体在夜间的已确认否定习惯，再问早间另一项未知习惯；否定行为不等于不能做，也不推出替代行为。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同一时段不同活动的证据边界，无二选一排他规则。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "negative-scope-boundary",
+          "detail": "否定某时段行为不表示另一时段必做、改做相反行为或没有能力；自然例答只保留材料范围。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-53",
+      "itemId": "mini-n1-53:delayed-b",
+      "answer": "Ava opens the door early. Leo doesn't open the door early. Does Leo close the door at night?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ava肯定早开、Leo否定早开、Leo夜间关门未知；不早不推出晚，三句完整。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "第三人肯否对照、问句、两个主体；未指定频率不添加usually/always。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均先报告指定主体在夜间的已确认否定习惯，再问早间另一项未知习惯；否定行为不等于不能做，也不推出替代行为。"
+      },
+      "review": {
+        "semanticMaterialDifference": "从两句扩至三句、两个不同主体规律及未知问项。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "negative-scope-boundary",
+          "detail": "否定某时段行为不表示另一时段必做、改做相反行为或没有能力；自然例答只保留材料范围。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-55",
+      "itemId": "mini-n1-55:guided",
+      "answer": "Jo usually has lunch at noon. What does she usually do in the afternoon?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "已知usually午餐时间noon，下午作息未知；第二句是询问不是编活动。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "usually位置、第三人has、What does...do及noon/afternoon。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告第三人单数often早間动作及物品，再用一般现在时询问夜间未知作息；相同频率、时间与句数，换主体/动作。"
+      },
+      "review": {
+        "semanticMaterialDifference": "已知频率作息加未知开放问句。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常联络短讯前置微技能，非完整IELTS GT写作或band测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-55",
+      "itemId": "mini-n1-55:independent",
+      "answer": "Ben often washes cups in the morning. What does he do at night?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "often早上洗cups是习惯、非此刻也非每日保证；夜间未知应问。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "often、washes、复数cups、一般现在时特殊疑问。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告第三人单数often早間动作及物品，再用一般现在时询问夜间未知作息；相同频率、时间与句数，换主体/动作。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同频率/物品/时段作息报告及未知问项。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常联络短讯前置微技能，非完整IELTS GT写作或band测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-55",
+      "itemId": "mini-n1-55:repair",
+      "answer": "Nora often reads letters in the morning. What does she do at night?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Nora often读letters为早间习惯，夜间未知；不得复制Ben washing cups。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "reads、often、letters及What does...do。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告第三人单数often早間动作及物品，再用一般现在时询问夜间未知作息；相同频率、时间与句数，换主体/动作。"
+      },
+      "review": {
+        "semanticMaterialDifference": "与独立题同框架，主体与动作物品替换。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常联络短讯前置微技能，非完整IELTS GT写作或band测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-55",
+      "itemId": "mini-n1-55:delayed-a",
+      "answer": "Ava and Rae usually clean the table in the afternoon. What do they do at noon?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "两人usually下午清理一张table，noon活动未问；they不把table变复数。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "复数主体clean/do vs单数does；usually与时间词。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告第三人单数often早間动作及物品，再用一般现在时询问夜间未知作息；相同频率、时间与句数，换主体/动作。"
+      },
+      "review": {
+        "semanticMaterialDifference": "更换主体人数和问句助动词，同时保留单个物品。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常联络短讯前置微技能，非完整IELTS GT写作或band测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-55",
+      "itemId": "mini-n1-55:delayed-b",
+      "answer": "Jo always washes the dishes in the evening. Sam sometimes watches television in the evening. What does Jo do in the afternoon?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Jo always、Sam sometimes各绑定不同动作，Jo下午未知；三句不升级Sam频率。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "always/sometimes、washes/watches、两主体及三句组织。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告第三人单数often早間动作及物品，再用一般现在时询问夜间未知作息；相同频率、时间与句数，换主体/动作。"
+      },
+      "review": {
+        "semanticMaterialDifference": "多主体不同频率报告，加单人未知问项。",
+        "answerPolicy": "自然例答非唯一，允许姓名/明确代词、缩写和不改变题设的等义表达；保持时态、频率、对象和未知问项，无分数，待人工。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常联络短讯前置微技能，非完整IELTS GT写作或band测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-57",
+      "itemId": "mini-n1-57:guided",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "habit位置living room，at the moment位置garden；B为唯一当前已证实位置。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "一般现在时/进行时、usually/at the moment与地点。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均按目标群体now选择on foot，排除目标群体通常交通与另一群体当前交通；更新后问题询问doing now，答旅行活动更连贯。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同人同活动不同时间位置对比。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-57",
+      "itemId": "mini-n1-57:independent",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "students通常by car，此刻on foot；teachers当前by bus属于另一组；更新doing now问句与行进答复相符。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "habit/now、交通方式及两群体归属。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均按目标群体now选择on foot，排除目标群体通常交通与另一群体当前交通；更新后问题询问doing now，答旅行活动更连贯。"
+      },
+      "review": {
+        "semanticMaterialDifference": "目标群体当前交通与惯常/他人方式的联合排除。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "resolved",
+          "code": "dialogue-question-pragmatics",
+          "detail": "原Where now与交通方式答复的自然性问题已在更新盲包改doing now；当前问活动与答行进方式相容，不影响独立推导答案。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-57",
+      "itemId": "mini-n1-57:repair",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "visitors通常by bus、此刻on foot；guides by car非目标；更新问句问doing now，行进答复连贯。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "同habit/current与两群体方式绑定，by/on词项。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均按目标群体now选择on foot，排除目标群体通常交通与另一群体当前交通；更新后问题询问doing now，答旅行活动更连贯。"
+      },
+      "review": {
+        "semanticMaterialDifference": "与独立题同机制，改群体和通常/他人方式。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "resolved",
+          "code": "dialogue-question-pragmatics",
+          "detail": "原Where now与交通方式答复的自然性问题已在更新盲包改doing now；当前问活动与答行进方式相容，不影响独立推导答案。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-57",
+      "itemId": "mini-n1-57:delayed-a",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ben通常读信，但No明确此刻不读、washing cups；无不能读信的能力证据。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "习惯/现在肯否与能力can的范围不同。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均按目标群体now选择on foot，排除目标群体通常交通与另一群体当前交通；更新后问题询问doing now，答旅行活动更连贯。"
+      },
+      "review": {
+        "semanticMaterialDifference": "增加当前否定纠正，不能把不在做改成不会做。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-57",
+      "itemId": "mini-n1-57:delayed-b",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Nora通常garden玩，当前动作明确I do not know；Leo在garden阅读不能转给Nora。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "习惯不能证当前、主体区分与未知。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均按目标群体now选择on foot，排除目标群体通常交通与另一群体当前交通；更新后问题询问doing now，答旅行活动更连贯。"
+      },
+      "review": {
+        "semanticMaterialDifference": "缺当前证据，不借习惯或他人动作补答案。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-59",
+      "itemId": "mini-n1-59:guided",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "grapes已明确无货，bananas有但顾客未同意替换；没有已买bananas的证据。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "any/some、零/有、库存与许可/购买区别。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均判断(容器类型A或B)加上必需用品C的整组类别条件，缺A时选现有B+C；数量未点、未确认购买保持未知，替代类别在要求中明确许可。"
+      },
+      "review": {
+        "semanticMaterialDifference": "可供替代不等于已获许可或成交。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-59",
+      "itemId": "mini-n1-59:independent",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "要求(cups或plates)+soap，cups无、plates与soap有；ink不能替soap，数量和采购均未确认。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "OR再AND的整组条件、some/any和可数/不可数库存。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均判断(容器类型A或B)加上必需用品C的整组类别条件，缺A时选现有B+C；数量未点、未确认购买保持未知，替代类别在要求中明确许可。"
+      },
+      "review": {
+        "semanticMaterialDifference": "中文多条件要求配简单英文库存，需要组合推理而非单物品提取。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "combined-condition-load",
+          "detail": "需联合类别存在与OR/AND或单店约束；中文规则提供支架，但较单句提取有更大推理负担，未真人适级校准。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-59",
+      "itemId": "mini-n1-59:repair",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "要求(boxes或bags)+glue，boxes无、bags/glue有；writing paper不替glue，数量/采购未确认。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "与独立题同OR+AND类别组合及库存存在判断。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均判断(容器类型A或B)加上必需用品C的整组类别条件，缺A时选现有B+C；数量未点、未确认购买保持未知，替代类别在要求中明确许可。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同条件框架换物品类别；没有擅自替代，因为要求已许可bags。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "combined-condition-load",
+          "detail": "需联合类别存在与OR/AND或单店约束；中文规则提供支架，但较单句提取有更大推理负担，未真人适级校准。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-59",
+      "itemId": "mini-n1-59:delayed-a",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "small无货、only large可供，但顾客No thank you已拒绝；不确认购买，更不能说接受large。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "small/large、ones、only、No及库存/选择/购买。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均判断(容器类型A或B)加上必需用品C的整组类别条件，缺A时选现有B+C；数量未点、未确认购买保持未知，替代类别在要求中明确许可。"
+      },
+      "review": {
+        "semanticMaterialDifference": "替代许可由未知升级为明确拒绝，仍不推出其他未提供购买事实。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-59",
+      "itemId": "mini-n1-59:delayed-b",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "单一店须同时有pencils/writing paper；A缺paper，B两类有，不能拼两店或猜数量。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "整组AND条件、单来源限制和some不等于足量。",
+        "note": "仅记录语言/推理先备；未真人难度、CEFR或等难校准，课号不证明等级。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均判断(容器类型A或B)加上必需用品C的整组类别条件，缺A时选现有B+C；数量未点、未确认购买保持未知，替代类别在要求中明确许可。"
+      },
+      "review": {
+        "semanticMaterialDifference": "加入单店约束而非跨店拼库存，未声称已购。",
+        "answerPolicy": "仅给题面要求的A/B/C；独立从盲包作答，未与作者key比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属内容或完整IELTS测量；不证明听感、等难或学习效果。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "combined-condition-load",
+          "detail": "需联合类别存在与OR/AND或单店约束；中文规则提供支架，但较单句提取有更大推理负担，未真人适级校准。"
+        }
+      ]
+    }
+  ]
+}

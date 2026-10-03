@@ -1,0 +1,9 @@
+{
+  "validator": "unchanged scripts/verify-online.py",
+  "sourceView": "current authored mini data + publisher worker candidate; other source symlinks read-only",
+  "authorWorkerSourceUnmodified": true,
+  "publisherTreeUnmodified": true,
+  "packagedWorkerSha256": "47a978bfbc832a7d82be77ef70becc706d9b3fe235fa75a9f0f717d6348ead86",
+  "finalPackagePass": true,
+  "workerPatchRequiredBeforePublisherPackaging": true
+}

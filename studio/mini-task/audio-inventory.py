@@ -1,4 +1,4 @@
-"""Exactly frozen batches01–03 plus explicit authored batch04. No globs."""
+"""Exactly frozen batches01–03 plus explicit authored batch04/05. No globs."""
 import json,re,runpy
 BANKS=['guided','independent','repair','delayed-a','delayed-b']
 def authored_audio(mini_root):
@@ -23,5 +23,15 @@ def authored_audio(mini_root):
     assert len(rows4)==10 and {r['file'] for r in rows4}==expected4, 'Missing/unknown batch04 WAV provenance'
     for r in rows4: assert re.fullmatch(r'[a-f0-9]{64}',r['sha256'])
     combined += [{**r,'file':'batch-04/audio/'+r['file']} for r in rows4]
+    assert len({r['file'] for r in combined})==len(combined)
+    assert len(combined)==40, 'First four authored batches required by batch05'
+    spec5=json.loads((mini_root/'batch-05/audio-batch.json').read_text())
+    assert spec5['version']==1 and spec5['provenance']=='audio/provenance.json'
+    assert spec5['courseNumbers']==[49,57] and spec5['count']==10
+    rows5=json.loads((mini_root/'batch-05/audio/provenance.json').read_text())['files']
+    expected5={f'mini-n1-{n:02d}-{b}.wav' for n in spec5['courseNumbers'] for b in BANKS}
+    assert len(rows5)==10 and {r['file'] for r in rows5}==expected5, 'Missing/unknown batch05 WAV provenance'
+    for r in rows5: assert re.fullmatch(r'[a-f0-9]{64}',r['sha256'])
+    combined += [{**r,'file':'batch-05/audio/'+r['file']} for r in rows5]
     assert len({r['file'] for r in combined})==len(combined)
     return combined

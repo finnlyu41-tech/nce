@@ -1,0 +1,32 @@
+{
+  "publisherIntakeHead": "cecc2ec996c7f4da2a27d45bee406e5c66d7694c",
+  "remoteMainHead": "ba6eeed71de8390e1ed4f76801cc0a7fe22bef1b",
+  "remoteMapHead": "ba6eeed71de8390e1ed4f76801cc0a7fe22bef1b",
+  "remoteHeadsReadOnly": true,
+  "publisherChangesSinceWorkerBase": [
+    "docs/TODAY-SPEAKING-REVIEW-DEDUP-20261003.md",
+    "studio/README.md",
+    "studio/app/data/ielts-vocabulary-batch02.ts",
+    "studio/app/ielts-flashcard-examples.ts",
+    "studio/app/today-practice.ts",
+    "studio/docs/ielts-vocabulary-batch02.md",
+    "studio/docs/mini37-48-v49.md",
+    "studio/docs/verification/ielts-vocabulary-batch02-coverage.json",
+    "studio/docs/verification/ielts-vocabulary-batch02-review.json",
+    "studio/map/speaking.tsx",
+    "studio/scripts/audit-ielts-vocabulary-batch02.mjs",
+    "studio/scripts/test-flashcard-sources.mjs",
+    "studio/scripts/test-flashcards.mjs",
+    "studio/scripts/test-ielts-vocabulary-batch02.mjs",
+    "studio/scripts/test-ielts-vocabulary-r20.mjs",
+    "studio/scripts/test-speaking-hint-save.mjs",
+    "studio/scripts/test-today-practice.mjs"
+  ],
+  "latestWorkerSourceSHA256": "f902bed37bf604ac788d3a8609c485e7fa6230c3e91227b64adeea6130ad60f4",
+  "candidatePatchReadOnlyApplyCheckPassed": true,
+  "workerPatchReadOnlyApplyCheckPassed": true,
+  "publisherWorkingTreeClean": true,
+  "publisherFilesMutated": false,
+  "latestCombinedRuntimeVerified": false,
+  "requiresPublisherCurrentCombinedReleaseGate": true
+}

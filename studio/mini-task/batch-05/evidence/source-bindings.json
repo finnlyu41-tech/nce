@@ -1,0 +1,140 @@
+{
+  "bothPublishedHeadsAtStart": "03427c50a26499a3661ab5143dc50c5e94cf13b8",
+  "candidateDependency": "6de5d1d99bda7f42ab4b5c07bde9d0a74a2b7f5f",
+  "dependencyPublished": false,
+  "evidence": [
+    {
+      "courseId": "nce1-49",
+      "lessons": [
+        49,
+        50
+      ],
+      "title": "第49–50课 · 表达喜好并保留对照",
+      "teachingTargets": [
+        "preference-statement",
+        "preference-question",
+        "contrast-ellipsis"
+      ],
+      "originalSourceSha256": "4fbdf5f0aecf7dabaf937dc08750c2951a551e0deb9003a0ea5d349674d8715f",
+      "languageFileSha256": "5352d100762a45a7fb4bf591b4da776bcf9f887b4d9a94aaef6a201b1b37428a",
+      "courseModuleSha256": "224b1c799cb866f0eac869d5b9520c4ea0cfe9a0e45da0e40b47d6d5a332a966",
+      "evenExerciseGrammarPage": 103,
+      "evenExerciseImageSha256": "58cdf92b8907522a499c8ee1216bd44134af5bfbd36d9ab5cbaea6fc5481be0f",
+      "readEvidence": "Actual odd lesson rows read; actual even illustrated and written exercise images inspected; no teacher media downloaded",
+      "evenWrittenExercisePage": 104,
+      "evenWrittenExerciseImageSha256": "3551fc3ecdf8cd8f9f106f18ff577f93a9b337a40ba7a3571f7a73acfe7f1a29",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-51",
+      "lessons": [
+        51,
+        52
+      ],
+      "title": "第51–52课 · 问来源，说明气候",
+      "teachingTargets": [
+        "origin-statement",
+        "origin-question",
+        "climate-description"
+      ],
+      "originalSourceSha256": "00290123d5a13c96460668aeaa202e4c200bba39762a5c26a9e2392230285cf1",
+      "languageFileSha256": "1b621305de4c07c834a0b18da3377a6d4c27e421af1e53e43b3d71c95ace934d",
+      "courseModuleSha256": "0fc6f009b3393c65ff70c8387657d7e3c5f399372df69f7f873888351c4eb454",
+      "evenExerciseGrammarPage": 107,
+      "evenExerciseImageSha256": "e1095ea74275f7ebac4893d3b7c252698b7c10376d45f32c6c3f5aaacde2e947",
+      "readEvidence": "Actual odd lesson rows read; actual even illustrated and written exercise images inspected; no teacher media downloaded",
+      "evenWrittenExercisePage": 108,
+      "evenWrittenExerciseImageSha256": "cb208e22c02cc5482aa8472891ecbd5110a82836c47028da0bcc62be5afd5a4e",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-53",
+      "lessons": [
+        53,
+        54
+      ],
+      "title": "第53–54课 · 把日常规律转换成疑问与否定",
+      "teachingTargets": [
+        "third-person-positive",
+        "third-person-question",
+        "third-person-negative"
+      ],
+      "originalSourceSha256": "85296eb09a3667e1c243843884b23db94f9673f7f7c096d5d7060016445daaaa",
+      "languageFileSha256": "9b72be7af8fcb6199367372273f3d85a15df563e275f324141d3d9cf1a955ce4",
+      "courseModuleSha256": "4c9a3ddaea3c07629f78617808dd6feddb66b3273321814dc2ba87d28add099a",
+      "evenExerciseGrammarPage": 111,
+      "evenExerciseImageSha256": "d72bb19d78ecc3a0a65cd6263c020d646246320e7be671287fd4b8d399abfa77",
+      "readEvidence": "Actual odd lesson rows read; actual even illustrated and written exercise images inspected; no teacher media downloaded",
+      "evenWrittenExercisePage": 112,
+      "evenWrittenExerciseImageSha256": "90da94a743612ec0a02d2bff2340eca292a4893c0ab78e04f94391c45afe5bd3",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-55",
+      "lessons": [
+        55,
+        56
+      ],
+      "title": "第55–56课 · 说明作息并问日常活动",
+      "teachingTargets": [
+        "routine-agreement",
+        "routine-frequency",
+        "routine-question"
+      ],
+      "originalSourceSha256": "cbc459a1cf8a40b30b6d030f6a9e526b9964745731140e3140d3edb987f9fbd5",
+      "languageFileSha256": "9e70a1d241bc2ce2d90198214afc693c555129c17b81203a99328ab2626b0914",
+      "courseModuleSha256": "d5e1110a298bda49bbfcd6fa4916ab8baa3c963b2783c8f284fe2c0da124db3d",
+      "evenExerciseGrammarPage": 115,
+      "evenExerciseImageSha256": "1eb9c1b07b2bdd612ef1319c0bd92428b025d0e795eb83eac79853784f0887f3",
+      "readEvidence": "Actual odd lesson rows read; actual even illustrated and written exercise images inspected; no teacher media downloaded",
+      "evenWrittenExercisePage": 116,
+      "evenWrittenExerciseImageSha256": "36dcb44a332102bee2f88fdb0eb3f3cf3774d3f619c3ccfe09d31ad31348e2fd",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-57",
+      "lessons": [
+        57,
+        58
+      ],
+      "title": "第57–58课 · 区分每天如此与此刻正在",
+      "teachingTargets": [
+        "habit-or-current",
+        "current-negative",
+        "activity-question"
+      ],
+      "originalSourceSha256": "f99358c152cbda88d1fe93fc1143c06e075c1eb7224246c25d820c99c8fa9bce",
+      "languageFileSha256": "cd5c62d965dcf4ac0c115f25340c8adc04dbbbed864e8c299f37c6bbc20d3655",
+      "courseModuleSha256": "7f8b7d91a36ba9dff7c078c17d4cc144480b3bba73189d8535432121f1f51dee",
+      "evenExerciseGrammarPage": 119,
+      "evenExerciseImageSha256": "2f9dc47b5262e892b675bef3f7251ca2e36f2a14aa028209ced8781e41bd8730",
+      "readEvidence": "Actual odd lesson rows read; actual even illustrated and written exercise images inspected; no teacher media downloaded",
+      "evenWrittenExercisePage": 120,
+      "evenWrittenExerciseImageSha256": "9bf22ed5969e8a4e268a29c7466dcfc40b61887b80fa9c75550977e31adb061b",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-59",
+      "lessons": [
+        59,
+        60
+      ],
+      "title": "第59–60课 · 询问库存并区分数量表达",
+      "teachingTargets": [
+        "stock-question",
+        "stock-countability",
+        "stock-alternative"
+      ],
+      "originalSourceSha256": "f09610214baa987ae52340d60dbe5b248aa23d5187c608bc1077ea9f1a2dcb8a",
+      "languageFileSha256": "5e2a049fa52c48b3eec460be75c778695ed398f5aa8f34ad021e1db416442f57",
+      "courseModuleSha256": "75a34046daafaa8b8334dcd4d26f367f16874643ff7e90604e243ef4dad33339",
+      "evenExerciseGrammarPage": 123,
+      "evenExerciseImageSha256": "3c457380b2197514a52efd80d397434beecca91da98526a39975bd090bfddcc7",
+      "readEvidence": "Actual odd lesson rows read; actual even illustrated and written exercise images inspected; no teacher media downloaded",
+      "evenWrittenExercisePage": 124,
+      "evenWrittenExerciseImageSha256": "d3e0dcdf857cb591b82d77d2757936e22a25bdf5bd9cf782a006578ede5c2fd1",
+      "sourcePageMetadataDeclared": false
+    }
+  ],
+  "calibrated": false
+}

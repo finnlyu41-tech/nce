@@ -1,3 +1,4 @@
+import {batch05LessonBindings} from './batch-05/manifest';
 import {batch04LessonBindings} from './batch-04/manifest';
 import {batch03LessonBindings} from './batch-03/manifest';
 import {batch02LessonBindings} from './batch-02/manifest';
@@ -20,4 +21,5 @@ export const lessonBindings = [
  ...batch02LessonBindings,
  ...batch03LessonBindings,
  ...batch04LessonBindings,
+ ...batch05LessonBindings,
 ].map(row=>({...row,book:'NCE1',coverage:'partial-target',calibration:'uncalibrated'}));

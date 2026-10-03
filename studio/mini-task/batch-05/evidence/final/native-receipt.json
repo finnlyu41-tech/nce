@@ -1,0 +1,627 @@
+{
+  "checks": [
+    "49 quota failure/route guard/retry/refresh/paired CL callback/Today resume",
+    "mini-n1-49 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "mini-n1-51 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "mini-n1-53 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "mini-n1-55 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "mini-n1-57 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "mini-n1-59 normal host real first attempt/feedback/new material/refresh originals isolated",
+    "actual existing JSON backup download/file preview/confirmed native restore preserves all mini and CL originals plus cards",
+    "59 actual finite pool warning/Today omission/original exhausted raw retained",
+    "root/map all finite WAV HTTP200/MIME/hash; actual404 earns no exposure; restored real playback; synthetic due route",
+    "mini-n1-49 actual file offline embedded real play/ended+save/refresh/submit",
+    "mini-n1-57 actual file offline embedded real play/ended+save/refresh/submit"
+  ],
+  "media": [
+    {
+      "path": "assets/mini-n1-01-delayed-a-DasbtE01.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    {
+      "path": "map/assets/mini-n1-01-delayed-a-DasbtE01.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c"
+    },
+    {
+      "path": "assets/mini-n1-01-delayed-b-9LV-hq9D.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    {
+      "path": "map/assets/mini-n1-01-delayed-b-9LV-hq9D.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4"
+    },
+    {
+      "path": "assets/mini-n1-01-guided-DbZx4d_F.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    {
+      "path": "map/assets/mini-n1-01-guided-DbZx4d_F.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06"
+    },
+    {
+      "path": "assets/mini-n1-01-independent-DwalH_Cp.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    {
+      "path": "map/assets/mini-n1-01-independent-DwalH_Cp.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041"
+    },
+    {
+      "path": "assets/mini-n1-01-repair-C_pmpUrE.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    {
+      "path": "map/assets/mini-n1-01-repair-C_pmpUrE.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c"
+    },
+    {
+      "path": "assets/mini-n1-09-delayed-a-32d96Ls0.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    {
+      "path": "map/assets/mini-n1-09-delayed-a-32d96Ls0.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba"
+    },
+    {
+      "path": "assets/mini-n1-09-delayed-b-BdSpo7nO.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    {
+      "path": "map/assets/mini-n1-09-delayed-b-BdSpo7nO.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185"
+    },
+    {
+      "path": "assets/mini-n1-09-guided-BLL7G-yC.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    {
+      "path": "map/assets/mini-n1-09-guided-BLL7G-yC.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c"
+    },
+    {
+      "path": "assets/mini-n1-09-independent-B_v42D4U.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    {
+      "path": "map/assets/mini-n1-09-independent-B_v42D4U.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7"
+    },
+    {
+      "path": "assets/mini-n1-09-repair-1nc7dXyw.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    },
+    {
+      "path": "map/assets/mini-n1-09-repair-1nc7dXyw.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c"
+    },
+    {
+      "path": "assets/mini-n1-13-delayed-a-DYHoDgGg.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "5d7179b27609df356076d8ed5e2cb885b090e960f5f4973ee302b57b09df7abe"
+    },
+    {
+      "path": "map/assets/mini-n1-13-delayed-a-DYHoDgGg.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "5d7179b27609df356076d8ed5e2cb885b090e960f5f4973ee302b57b09df7abe"
+    },
+    {
+      "path": "assets/mini-n1-13-delayed-b-o0tqzcmx.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8008e4bfcacb7add5402289e1ac1024392fc4309fbeeb8fd8898b91e834cbc63"
+    },
+    {
+      "path": "map/assets/mini-n1-13-delayed-b-o0tqzcmx.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8008e4bfcacb7add5402289e1ac1024392fc4309fbeeb8fd8898b91e834cbc63"
+    },
+    {
+      "path": "assets/mini-n1-13-guided-ByKHd3et.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8ea219e167bd741f921765dea6ffbfc6c8e1b30ac1e6844f4ded90a45e4e1ec7"
+    },
+    {
+      "path": "map/assets/mini-n1-13-guided-ByKHd3et.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8ea219e167bd741f921765dea6ffbfc6c8e1b30ac1e6844f4ded90a45e4e1ec7"
+    },
+    {
+      "path": "assets/mini-n1-13-independent-DI54ei6w.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8a8d8e904164b954779593bfc8b8f7c7752157e99a7a031f14c368fc24e0152d"
+    },
+    {
+      "path": "map/assets/mini-n1-13-independent-DI54ei6w.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8a8d8e904164b954779593bfc8b8f7c7752157e99a7a031f14c368fc24e0152d"
+    },
+    {
+      "path": "assets/mini-n1-13-repair-CRIE55uo.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e"
+    },
+    {
+      "path": "map/assets/mini-n1-13-repair-CRIE55uo.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e"
+    },
+    {
+      "path": "assets/mini-n1-21-delayed-a-D-y1YpzR.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "c6d1738259c644cd4a175df5e90e9e01e17b20baa3d672fb6c8fe8e56c4def95"
+    },
+    {
+      "path": "map/assets/mini-n1-21-delayed-a-D-y1YpzR.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "c6d1738259c644cd4a175df5e90e9e01e17b20baa3d672fb6c8fe8e56c4def95"
+    },
+    {
+      "path": "assets/mini-n1-21-delayed-b-B4YRzI4o.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a8394e528c59e634c81b598424dec1748c4608a8db0ed8a504b12ba709c5af1f"
+    },
+    {
+      "path": "map/assets/mini-n1-21-delayed-b-B4YRzI4o.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a8394e528c59e634c81b598424dec1748c4608a8db0ed8a504b12ba709c5af1f"
+    },
+    {
+      "path": "assets/mini-n1-21-guided-BtTeC1I9.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "6bb75f7e6ff8e246bc98a1c2dd077082a6795f147cc13ff1aee6258ca85cc926"
+    },
+    {
+      "path": "map/assets/mini-n1-21-guided-BtTeC1I9.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "6bb75f7e6ff8e246bc98a1c2dd077082a6795f147cc13ff1aee6258ca85cc926"
+    },
+    {
+      "path": "assets/mini-n1-21-independent-D1o2sCin.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "36484fa340140ebfce3ba5f47af74e6c4ab3cdc132de0e9735fb312a1da47719"
+    },
+    {
+      "path": "map/assets/mini-n1-21-independent-D1o2sCin.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "36484fa340140ebfce3ba5f47af74e6c4ab3cdc132de0e9735fb312a1da47719"
+    },
+    {
+      "path": "assets/mini-n1-21-repair-h0bn-TLf.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a5c67d37a48aed7cae55674bf1af6536e95f06a4b0938812b244d3a4d1dc71a1"
+    },
+    {
+      "path": "map/assets/mini-n1-21-repair-h0bn-TLf.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a5c67d37a48aed7cae55674bf1af6536e95f06a4b0938812b244d3a4d1dc71a1"
+    },
+    {
+      "path": "assets/mini-n1-25-delayed-a-DsGa5INJ.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "487f35b57ca2328eaa5cdb24f2204a4dadf713fce520eeca2912d574c070a7c2"
+    },
+    {
+      "path": "map/assets/mini-n1-25-delayed-a-DsGa5INJ.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "487f35b57ca2328eaa5cdb24f2204a4dadf713fce520eeca2912d574c070a7c2"
+    },
+    {
+      "path": "assets/mini-n1-25-delayed-b-BNfjcz3v.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "080d481860b54530085a14d4b68ff7084a0592d9ff0a93868baced5c657ba129"
+    },
+    {
+      "path": "map/assets/mini-n1-25-delayed-b-BNfjcz3v.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "080d481860b54530085a14d4b68ff7084a0592d9ff0a93868baced5c657ba129"
+    },
+    {
+      "path": "assets/mini-n1-25-guided-CYKn8BtP.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "744cce0cc2f2ce052f862d78122d8f1dfba24f0e5c23e6d04ac0abcb4dd2525b"
+    },
+    {
+      "path": "map/assets/mini-n1-25-guided-CYKn8BtP.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "744cce0cc2f2ce052f862d78122d8f1dfba24f0e5c23e6d04ac0abcb4dd2525b"
+    },
+    {
+      "path": "assets/mini-n1-25-independent-B6gdGZkv.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8a382f5348f9384a90c34dfec24158e44033d0ef87722091f60ee791be68ec09"
+    },
+    {
+      "path": "map/assets/mini-n1-25-independent-B6gdGZkv.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "8a382f5348f9384a90c34dfec24158e44033d0ef87722091f60ee791be68ec09"
+    },
+    {
+      "path": "assets/mini-n1-25-repair-BwVxMEch.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a0cf0f26319b3eaee57b7a2f6b8bf444a1f42d414429a561e1928811bed5378f"
+    },
+    {
+      "path": "map/assets/mini-n1-25-repair-BwVxMEch.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a0cf0f26319b3eaee57b7a2f6b8bf444a1f42d414429a561e1928811bed5378f"
+    },
+    {
+      "path": "assets/mini-n1-33-delayed-a-BiyeZ86F.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "5f94f63ff64133f563294242e8ae2166dd67cb3e427ed435e1640d0bc9c289b6"
+    },
+    {
+      "path": "map/assets/mini-n1-33-delayed-a-BiyeZ86F.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "5f94f63ff64133f563294242e8ae2166dd67cb3e427ed435e1640d0bc9c289b6"
+    },
+    {
+      "path": "assets/mini-n1-33-delayed-b-Pw-bVRyM.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "83ced9894f6db0e2cac5bd42307702ad9ee0501aedfc48ef3121c73dc8d97cbd"
+    },
+    {
+      "path": "map/assets/mini-n1-33-delayed-b-Pw-bVRyM.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "83ced9894f6db0e2cac5bd42307702ad9ee0501aedfc48ef3121c73dc8d97cbd"
+    },
+    {
+      "path": "assets/mini-n1-33-guided-Bg9ms6Lr.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "d64b4ec68d24181d7512be5a4659aee1825b426db03e3fd55399babf25a6dcd9"
+    },
+    {
+      "path": "map/assets/mini-n1-33-guided-Bg9ms6Lr.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "d64b4ec68d24181d7512be5a4659aee1825b426db03e3fd55399babf25a6dcd9"
+    },
+    {
+      "path": "assets/mini-n1-33-independent-wPo6_A1X.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "9a03aea2b4f90887500170f6c9443ebb33b1ae783ed1582cb0cee5db94b73198"
+    },
+    {
+      "path": "map/assets/mini-n1-33-independent-wPo6_A1X.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "9a03aea2b4f90887500170f6c9443ebb33b1ae783ed1582cb0cee5db94b73198"
+    },
+    {
+      "path": "assets/mini-n1-33-repair-CA0ZKnoR.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "19c161b60e7e091493853550cae9d4646cbdc3594fb19c12479066afa055eec1"
+    },
+    {
+      "path": "map/assets/mini-n1-33-repair-CA0ZKnoR.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "19c161b60e7e091493853550cae9d4646cbdc3594fb19c12479066afa055eec1"
+    },
+    {
+      "path": "assets/mini-n1-37-delayed-a-DzapLYCB.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "df441eb6e45371f9da434e2443df97ba9ca1c9321c9144f414d9af4620fbbb2b"
+    },
+    {
+      "path": "map/assets/mini-n1-37-delayed-a-DzapLYCB.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "df441eb6e45371f9da434e2443df97ba9ca1c9321c9144f414d9af4620fbbb2b"
+    },
+    {
+      "path": "assets/mini-n1-37-delayed-b-DnuYdddE.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "87c134b280a1606ff06dbd315aac1d31eea5da5932e602baf690f8312b83ed5b"
+    },
+    {
+      "path": "map/assets/mini-n1-37-delayed-b-DnuYdddE.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "87c134b280a1606ff06dbd315aac1d31eea5da5932e602baf690f8312b83ed5b"
+    },
+    {
+      "path": "assets/mini-n1-37-guided-DFP3oIeC.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "6d9b1e81e18baca7f6c053a59161cd7dc89b307ebf85d255a485378609d336e9"
+    },
+    {
+      "path": "map/assets/mini-n1-37-guided-DFP3oIeC.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "6d9b1e81e18baca7f6c053a59161cd7dc89b307ebf85d255a485378609d336e9"
+    },
+    {
+      "path": "assets/mini-n1-37-independent-B5PVQoAK.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "cf1a57b51dc3c28910c54496950296290b426d7280880eb526b9ed959ad2d20e"
+    },
+    {
+      "path": "map/assets/mini-n1-37-independent-B5PVQoAK.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "cf1a57b51dc3c28910c54496950296290b426d7280880eb526b9ed959ad2d20e"
+    },
+    {
+      "path": "assets/mini-n1-37-repair-CiuDh7nZ.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "06f24f0748022ad6884f7d94f3dfeade08099f71a132ab4c533142d23c68a084"
+    },
+    {
+      "path": "map/assets/mini-n1-37-repair-CiuDh7nZ.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "06f24f0748022ad6884f7d94f3dfeade08099f71a132ab4c533142d23c68a084"
+    },
+    {
+      "path": "assets/mini-n1-45-delayed-a-BFUCiHCy.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "0dd143a4bbc543516c484e9369b85ac26d70afeffbd32b57cd68eff291e7539e"
+    },
+    {
+      "path": "map/assets/mini-n1-45-delayed-a-BFUCiHCy.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "0dd143a4bbc543516c484e9369b85ac26d70afeffbd32b57cd68eff291e7539e"
+    },
+    {
+      "path": "assets/mini-n1-45-delayed-b-C3HTFBN2.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "21b6aff8db0386935afb76108cb8bba52d649d4834c3c72ebd3383caa5a67aa2"
+    },
+    {
+      "path": "map/assets/mini-n1-45-delayed-b-C3HTFBN2.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "21b6aff8db0386935afb76108cb8bba52d649d4834c3c72ebd3383caa5a67aa2"
+    },
+    {
+      "path": "assets/mini-n1-45-guided-CERPshUb.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "6c46e5c4292bf0c287bbaf043f85e9105499e967eea8157eaea358a46dd7518e"
+    },
+    {
+      "path": "map/assets/mini-n1-45-guided-CERPshUb.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "6c46e5c4292bf0c287bbaf043f85e9105499e967eea8157eaea358a46dd7518e"
+    },
+    {
+      "path": "assets/mini-n1-45-independent-BtCDPGzp.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "324015d90ca795d37d35366f4e7dc018121ed82611a36a272e96d5ce0190eefe"
+    },
+    {
+      "path": "map/assets/mini-n1-45-independent-BtCDPGzp.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "324015d90ca795d37d35366f4e7dc018121ed82611a36a272e96d5ce0190eefe"
+    },
+    {
+      "path": "assets/mini-n1-45-repair-BBAFm8C8.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "f32ba7aed8da6d0c701bd4830b4f0278366254105288ec23eb304e117654c4a6"
+    },
+    {
+      "path": "map/assets/mini-n1-45-repair-BBAFm8C8.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "f32ba7aed8da6d0c701bd4830b4f0278366254105288ec23eb304e117654c4a6"
+    },
+    {
+      "path": "assets/mini-n1-49-delayed-a-CO8v-uou.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7663c87fc87dc448b40f8f4d87a32f05d785539de1efe8dc47d33ed39e46057e"
+    },
+    {
+      "path": "map/assets/mini-n1-49-delayed-a-CO8v-uou.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7663c87fc87dc448b40f8f4d87a32f05d785539de1efe8dc47d33ed39e46057e"
+    },
+    {
+      "path": "assets/mini-n1-49-delayed-b-ClSHklVg.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7fddc7e21eab074af9690a0fce2c3f654fff3f27265be08bc49939dbcd64beae"
+    },
+    {
+      "path": "map/assets/mini-n1-49-delayed-b-ClSHklVg.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7fddc7e21eab074af9690a0fce2c3f654fff3f27265be08bc49939dbcd64beae"
+    },
+    {
+      "path": "assets/mini-n1-49-guided-BThMgUdb.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "816170a4fdd69edffb895fcf3f8863a2d9a20af959c966a9a6e47b50979aa8c2"
+    },
+    {
+      "path": "map/assets/mini-n1-49-guided-BThMgUdb.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "816170a4fdd69edffb895fcf3f8863a2d9a20af959c966a9a6e47b50979aa8c2"
+    },
+    {
+      "path": "assets/mini-n1-49-independent-Bv3EN94n.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a6ac1a3959378b82bb9811d222a05dbbc60f7b6bdafa9586b211fb88b21e2d63"
+    },
+    {
+      "path": "map/assets/mini-n1-49-independent-Bv3EN94n.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "a6ac1a3959378b82bb9811d222a05dbbc60f7b6bdafa9586b211fb88b21e2d63"
+    },
+    {
+      "path": "assets/mini-n1-49-repair-BeFLmV9G.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "bd56cf29837130e3f8e61067e5d257090215965ac9ed14f187124f8e86c50491"
+    },
+    {
+      "path": "map/assets/mini-n1-49-repair-BeFLmV9G.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "bd56cf29837130e3f8e61067e5d257090215965ac9ed14f187124f8e86c50491"
+    },
+    {
+      "path": "assets/mini-n1-57-delayed-a-Bfh-QMtL.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7e3fc4616bb51ec5218f32af6dbfec5a52783f6e8c7f806c4a3242bc6c3a21bd"
+    },
+    {
+      "path": "map/assets/mini-n1-57-delayed-a-Bfh-QMtL.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7e3fc4616bb51ec5218f32af6dbfec5a52783f6e8c7f806c4a3242bc6c3a21bd"
+    },
+    {
+      "path": "assets/mini-n1-57-delayed-b-DR4vRcqf.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7ddf28803bf30dd9be81c6f3ff047e61101d4c879a158ea3c7013ada19803ec0"
+    },
+    {
+      "path": "map/assets/mini-n1-57-delayed-b-DR4vRcqf.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "7ddf28803bf30dd9be81c6f3ff047e61101d4c879a158ea3c7013ada19803ec0"
+    },
+    {
+      "path": "assets/mini-n1-57-guided-BTbiRsFf.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "215de492385d79b9f51ebdb3eda67eaec5ada5c4dc0fcd33dd63ad68d4a44ae0"
+    },
+    {
+      "path": "map/assets/mini-n1-57-guided-BTbiRsFf.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "215de492385d79b9f51ebdb3eda67eaec5ada5c4dc0fcd33dd63ad68d4a44ae0"
+    },
+    {
+      "path": "assets/mini-n1-57-independent-DZKnQx6h.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "b89a6dfa4cd8b029626e31d2bb6ac06730e4ce56c90e88fbd4a6dcf07f6520a3"
+    },
+    {
+      "path": "map/assets/mini-n1-57-independent-DZKnQx6h.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "b89a6dfa4cd8b029626e31d2bb6ac06730e4ce56c90e88fbd4a6dcf07f6520a3"
+    },
+    {
+      "path": "assets/mini-n1-57-repair-CGvuXfqV.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "33b40f44ad4415b5e798e37d20a4daad8374602a92a22a7afa367b8b30c8243c"
+    },
+    {
+      "path": "map/assets/mini-n1-57-repair-CGvuXfqV.wav",
+      "status": 200,
+      "mime": "audio/wav",
+      "sha256": "33b40f44ad4415b5e798e37d20a4daad8374602a92a22a7afa367b8b30c8243c"
+    }
+  ],
+  "exceptions": 0,
+  "externalHTTP": [],
+  "profile": "fresh synthetic QA, no user records/profile or natural lesson13 archive read",
+  "actualPackages": true,
+  "realLearnerSpeech": false,
+  "humanAcousticAudit": false,
+  "naturalDelayVerified": false,
+  "offlineTested": "Chrome desktop file direct mini route",
+  "backup": "actual existing UI download and file restore; no audio bytes persisted"
+}

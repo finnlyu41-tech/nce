@@ -1,0 +1,18 @@
+{
+  "before": {
+    "href": "/map/#/learn/first",
+    "text": "继续今日学习",
+    "miniLinks": 0
+  },
+  "after": {
+    "href": "http://127.0.0.1:5202/map/#/learn/first",
+    "visibleTextLength": 298
+  },
+  "checks": [
+    "empty Today leads to actual main course/warmup",
+    "no premature mini-task links/snapshots",
+    "no forced placement start"
+  ],
+  "profile": "fresh synthetic task-owned",
+  "task19ProfileRead": false
+}

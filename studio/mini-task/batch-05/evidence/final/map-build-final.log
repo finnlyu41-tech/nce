@@ -1,0 +1,60 @@
+vite v8.0.13 building client environment for online...
+[2K
+transforming...✓ 2159 modules transformed.
+rendering chunks...
+computing gzip size...
+map/dist/index.html                                      0.54 kB │ gzip:     0.40 kB
+map/dist/assets/mini-n1-09-guided-BLL7G-yC.wav          81.13 kB
+map/dist/assets/mini-n1-09-delayed-a-32d96Ls0.wav       83.69 kB
+map/dist/assets/mini-n1-09-repair-1nc7dXyw.wav          85.23 kB
+map/dist/assets/mini-n1-01-guided-DbZx4d_F.wav          92.91 kB
+map/dist/assets/mini-n1-01-independent-DwalH_Cp.wav     94.44 kB
+map/dist/assets/mini-n1-01-repair-C_pmpUrE.wav          96.49 kB
+map/dist/assets/mini-n1-09-independent-B_v42D4U.wav     97.32 kB
+map/dist/assets/mini-n1-09-delayed-b-BdSpo7nO.wav      123.11 kB
+map/dist/assets/mini-n1-01-delayed-a-DasbtE01.wav      159.78 kB
+map/dist/assets/mini-n1-13-repair-CRIE55uo.wav         169.50 kB
+map/dist/assets/mini-n1-13-independent-DI54ei6w.wav    169.55 kB
+map/dist/assets/mini-n1-01-delayed-b-9LV-hq9D.wav      173.82 kB
+map/dist/assets/mini-n1-13-guided-ByKHd3et.wav         177.93 kB
+map/dist/assets/mini-n1-49-guided-BThMgUdb.wav         186.38 kB
+map/dist/assets/mini-n1-13-delayed-b-o0tqzcmx.wav      196.95 kB
+map/dist/assets/mini-n1-37-guided-DFP3oIeC.wav         203.71 kB
+map/dist/assets/mini-n1-25-guided-CYKn8BtP.wav         227.67 kB
+map/dist/assets/mini-n1-13-delayed-a-DYHoDgGg.wav      228.55 kB
+map/dist/assets/mini-n1-33-guided-Bg9ms6Lr.wav         237.94 kB
+map/dist/assets/mini-n1-25-independent-B6gdGZkv.wav    239.96 kB
+map/dist/assets/mini-n1-25-repair-BwVxMEch.wav         243.54 kB
+map/dist/assets/mini-n1-57-guided-BTbiRsFf.wav         251.92 kB
+map/dist/assets/mini-n1-33-delayed-b-Pw-bVRyM.wav      279.42 kB
+map/dist/assets/mini-n1-33-independent-wPo6_A1X.wav    279.42 kB
+map/dist/assets/mini-n1-33-repair-CA0ZKnoR.wav         281.98 kB
+map/dist/assets/mini-n1-45-guided-CERPshUb.wav         282.56 kB
+map/dist/assets/mini-n1-25-delayed-b-BNfjcz3v.wav      282.96 kB
+map/dist/assets/mini-n1-25-delayed-a-DsGa5INJ.wav      291.27 kB
+map/dist/assets/mini-n1-37-delayed-a-DzapLYCB.wav      309.00 kB
+map/dist/assets/mini-n1-37-repair-CiuDh7nZ.wav         312.84 kB
+map/dist/assets/mini-n1-49-independent-Bv3EN94n.wav    313.36 kB
+map/dist/assets/mini-n1-33-delayed-a-BiyeZ86F.wav      314.97 kB
+map/dist/assets/mini-n1-21-repair-h0bn-TLf.wav         329.41 kB
+map/dist/assets/mini-n1-37-independent-B5PVQoAK.wav    330.46 kB
+map/dist/assets/mini-n1-21-independent-D1o2sCin.wav    330.83 kB
+map/dist/assets/mini-n1-21-delayed-a-D-y1YpzR.wav      333.65 kB
+map/dist/assets/mini-n1-21-delayed-b-B4YRzI4o.wav      345.60 kB
+map/dist/assets/mini-n1-21-guided-BtTeC1I9.wav         369.42 kB
+map/dist/assets/mini-n1-57-delayed-a-Bfh-QMtL.wav      379.95 kB
+map/dist/assets/mini-n1-45-delayed-a-BFUCiHCy.wav      388.36 kB
+map/dist/assets/mini-n1-45-delayed-b-C3HTFBN2.wav      396.83 kB
+map/dist/assets/mini-n1-37-delayed-b-DnuYdddE.wav      397.51 kB
+map/dist/assets/mini-n1-45-repair-BBAFm8C8.wav         398.66 kB
+map/dist/assets/mini-n1-49-delayed-b-ClSHklVg.wav      400.58 kB
+map/dist/assets/mini-n1-57-delayed-b-DR4vRcqf.wav      403.21 kB
+map/dist/assets/mini-n1-57-repair-CGvuXfqV.wav         430.60 kB
+map/dist/assets/mini-n1-57-independent-DZKnQx6h.wav    431.84 kB
+map/dist/assets/mini-n1-45-independent-BtCDPGzp.wav    432.35 kB
+map/dist/assets/mini-n1-49-delayed-a-CO8v-uou.wav      440.08 kB
+map/dist/assets/mini-n1-49-repair-BeFLmV9G.wav         571.40 kB
+map/dist/assets/index-C4Eg31lo.css                      91.64 kB │ gzip:    18.86 kB
+map/dist/assets/index-BjDEcn_J.js                    4,195.91 kB │ gzip: 1,077.72 kB
+
+✓ built in 587ms

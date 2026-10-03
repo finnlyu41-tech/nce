@@ -1,0 +1,191 @@
+{
+  "inputSha256": "072ddd93a0ce4760880f7b92282efdeca377c357a534d8685749df7c418a537e",
+  "reviewWasKeyBlind": true,
+  "closedCompared": 20,
+  "openUngraded": 10,
+  "results": [
+    {
+      "id": "mini-n1-49:guided",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-49:independent",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-49:repair",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-49:delayed-a",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-49:delayed-b",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-51:guided",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-51:independent",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-51:repair",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-51:delayed-a",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-51:delayed-b",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-53:guided",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-53:independent",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-53:repair",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-53:delayed-a",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-53:delayed-b",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-55:guided",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-55:independent",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-55:repair",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-55:delayed-a",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-55:delayed-b",
+      "closed": false,
+      "keyMatchesIndependentAnswer": null,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-57:guided",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-57:independent",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-57:repair",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-57:delayed-a",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-57:delayed-b",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-59:guided",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-59:independent",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-59:repair",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-59:delayed-a",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    },
+    {
+      "id": "mini-n1-59:delayed-b",
+      "closed": true,
+      "keyMatchesIndependentAnswer": true,
+      "openQuality": "ungraded; natural alternatives await human review"
+    }
+  ],
+  "humanAcousticAudit": false,
+  "difficultyCalibrated": false,
+  "mechanismScope": "independent/repair text mechanisms aligned; no equal-difficulty evidence"
+}
