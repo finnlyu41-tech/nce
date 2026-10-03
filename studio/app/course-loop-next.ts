@@ -1,7 +1,8 @@
 import type {State} from './model';
 import {courseLoopFor,courseLoopBindings,parseCourseLoop} from './course-loop-progress';
-import {continueNode,statusMap,type Progress} from '../map/model';
+import {continueNode,statusMap,achieved,type Progress} from '../map/model';
 import {nodeById,type MapNode} from '../map/content';
+import {chosenMainEntry,isWarmupNode} from './warmup-main-course';
 
 /** A missing next-course mapping must retain a real destination. Unknown IDs
  * use the supplied current route; selecting it creates no completion evidence. */
@@ -23,7 +24,12 @@ export function nextCourse(state:State,map:Progress,now=Date.now()):MapNode {
  const due=saved.filter(item=>item.next?.kind==='review').sort((a,b)=>(a.next?.dueAt||now)-(b.next?.dueAt||now))[0];
  if(due)return nodeById(due.course.id)||continueNode(map,now);
  const finished=saved.filter(item=>item.next?.kind==='continue-route'||item.next?.kind==='needs-new-material');
- if(!finished.length)return continueNode(map,now);
+ if(!finished.length){
+  const chosen=chosenMainEntry(state,now);if(chosen?.node)return chosen.node;
+  const current=continueNode(map,now),first=nodeById('first')!;
+  if(isWarmupNode(current.id)&&achieved(first,map,now))return nodeById('nce1-1')!;
+  return current;
+ }
  const current=continueNode(map,now),last=map.lastNode?nodeById(map.lastNode):undefined;
  const successor=(id:string)=>courseSuccessorNode(id,current);
  // Preserve advanced or reset map routes. A completed selected course can

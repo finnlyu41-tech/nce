@@ -17,6 +17,7 @@ import {samplePracticeTasks} from './ielts-sample-next';
 import {courseLoopBindings} from './course-loop-progress';
 import {miniPracticeTasks} from '../mini-task/adapter';
 import {courseLoopTask,courseDestination,courseAccessHref} from './course-loop-next';
+import {chosenMainEntry,isWarmupNode} from './warmup-main-course';
 
 export type PracticeTask={id:string;title:string;reason:string;method:string;evidence:string;href:string;returnHref:string;priority:number;at:number;kind:'repair'|'review'|'resume'|'new'|'course'};
 const DAY=86_400_000;
@@ -49,11 +50,13 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  const add=(task:Omit<PracticeTask,'returnHref'>)=>{if(!tasks.some(t=>t.id===task.id))tasks.push({...task,returnHref:to({view:'today'})})};
  const status=online?statusMap(map,now):{};
  const loopOwns=new Set(courseLoopBindings.filter(course=>state.drafts[course.key]!==undefined).map(course=>course.id));
+ const mainSelected=!!chosenMainEntry(state,now)||loopOwns.size>0||!!map.lastNode&&!isWarmupNode(map.lastNode)&&!!unitById(map.lastNode);
  if(online)for(const course of courseLoopBindings){
   const loopTask=courseLoopTask(state,now,course.id);if(!loopTask)continue;
   add({id:'course-loop:'+course.id,title:course.id==='nce1-1'?'第 1–2 课 · 问清物品归属':course.lesson.title,reason:loopTask.reason,method:loopTask.kind==='review'?'收起教材，独立回答新情境。':'保留已保存的首答与订正，接着本题继续。',evidence:'记录原答、帮助和订正；听力、发音与自由表达另行核对。',href:courseAccessHref(course.id,map,now),priority:loopTask.kind==='review'?priority.review:priority.resume,at:loopTask.at,kind:loopTask.kind});
  }
  if(online)for(const node of [...nodes.filter(n=>n.kind!=='course'),...unitNodes]){
+  if(mainSelected&&isWarmupNode(node.id))continue;
   if(loopOwns.has(node.id as Parameters<typeof loopOwns.has>[0]))continue;
   const record=map.records[node.id],last=record?.attempts.at(-1);
   if(status[node.id]==='locked')continue;
@@ -134,7 +137,7 @@ export function todayPractice(state:State,map:Progress,now=Date.now(),online=tru
  tasks.sort((a,b)=>a.priority-b.priority||a.at-b.at||a.id.localeCompare(b.id));
  if(online){
   const destination=courseDestination(state,map,now),current=destination.node,unit=unitById(current.id);
-  if(!tasks.some(t=>t.id==='map:'+current.id||t.id==='course-loop:'+current.id))add({id:'course:'+current.id,title:unit?lessonPlan(unit).goal:current.title,
+  if(!tasks.some(t=>t.id==='placement:trial'||t.id==='map:'+current.id||t.id==='course-loop:'+current.id||t.href===destination.href))add({id:'course:'+current.id,title:unit?lessonPlan(unit).goal:current.title,
    reason:destination.needsAccess?'继续会开放本课访问并直接进入学习；开放访问不代表完成或达标。':'从已保存的位置继续，一次完成一个小目标。',method:'听懂、看懂、自己用，再独立检验。',evidence:'开放访问、跟练、独立通过和延迟巩固分别记录。',
    href:destination.href,priority:priority.course,at:now,kind:'course'});
  }else{

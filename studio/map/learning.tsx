@@ -8,6 +8,8 @@ import {lessonPlan, questionSkills} from './lesson-plan';
 import {isRegisteredCourse,getCourseBinding} from '../course-loop/registry.mjs';
 import {CourseLoopWorkspace} from '../app/course-loop-ui';
 import {CourseLoopHeadingSummary} from '../app/course-loop-summary-ui';
+import {nextCourse} from '../app/course-loop-next';
+import {mainEntryAfterWarmup,isWarmupNode} from '../app/warmup-main-course';
 import type {State} from '../app/model';
 import {SpeakingPractice} from './speaking';
 import {CourseVideoHelp} from '../course-video/ui';
@@ -35,6 +37,19 @@ export function LearningRoom({node,state,save,close,select,speaking,classicState
     const bindActiveGuard=useCallback((guard:(()=>Promise<boolean>)|null)=>{leaveGuard.current=guard;onCourseLeaveGuard(flushAll)},[onCourseLeaveGuard,flushAll]);
     const videoPort=useMemo(()=>classicNotesPort(),[]);
     const [videoNotice,setVideoNotice]=useState('');
+    const [entryError,setEntryError]=useState(''),[openingEntry,setOpeningEntry]=useState(false);
+    const mainEntry=mainEntryAfterWarmup(classicState,nextCourse(classicState,state));
+    const openEntry=async(entry=mainEntry)=>{
+      if(openingEntry||!classicReady)return;setOpeningEntry(true);setEntryError('');
+      try{
+        if(!await flushAll())throw Error('当前输入尚未保存，请先重试保存，再继续主课。');
+        if(entry.node){
+          if(!await save(s=>({...unlockNode(s,entry.node!.id),lastNode:entry.node!.id})))throw Error('尚未保存本课访问许可，仍留在这里。请重试继续主课。');
+          select(entry.node.id);
+        }else location.assign(entry.href);
+      }catch(error){setEntryError(error instanceof Error?error.message:'尚未进入主课，请重试。')}
+      finally{setOpeningEntry(false)}
+    };
     const assessment=['course','task','mock','finish'].includes(node.kind);
     const step=record.phase==='challenge'?3:record.studyStep||0;
     const questions=questionsFor(node,record.round,record.bank),index=Math.min(record.questionIndex||0,Math.max(0,questions.length-1));
@@ -47,7 +62,9 @@ export function LearningRoom({node,state,save,close,select,speaking,classicState
       <nav className="focus-steps" aria-label="本课学习步骤">{(unit?[[0,'听懂'],[1,'看懂'],[2,'自己用'],[3,'检验']]:[[0,'听与跟练'],[3,'自己试']]).map(([value,label],i)=><button key={value} aria-current={step===value?'step':undefined} onClick={()=>changeStep(Number(value))}><span>{i+1}</span>{label}</button>)}</nav><StopAudio key={`${step}-${index}`}/>
       {videoNotice&&<p role="alert">{videoNotice}</p>}
       {unit&&<CourseVideoHelp courseId={node.id} book={unitById(node.id)!.book} lessons={[unitById(node.id)!.lesson,unitById(node.id)!.lastLesson]} phase={step===3?'independent':'learn'} manifest={courseVideoManifest} port={videoPort} bindGuard={bindVideoGuard} recordHelp={async()=>{if(step===3)return false;return await Promise.resolve(save(s=>noteQuizHelp(s,node.id)))}}/>}
-      {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close} onLeaveGuard={bindActiveGuard}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)} onLeaveGuard={bindActiveGuard}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}
+      {step===3?<FocusedQuiz node={node} state={state} save={save} select={select} close={close} onLeaveGuard={bindActiveGuard} mainEntry={mainEntry} openEntry={openEntry} openingEntry={openingEntry||!classicReady}/>:unit?<UnitTeaching key={node.id} unit={unitById(node.id)!} state={state} save={save} step={step} next={()=>changeStep(step+1)} onLeaveGuard={bindActiveGuard}/>:<StarterTeaching node={node} state={state} save={save} ready={()=>changeStep(3)}/>}
+      {node.id==='letters'&&step!==3&&<aside className="repair-next"><p>这是按需补充的字母基础。可以在主课里继续练，需要时再回来。</p><button className="primary full" disabled={openingEntry||!classicReady} onClick={()=>void openEntry()}>{mainEntry.label}</button></aside>}
+      {isWarmupNode(node.id)&&entryError&&<p role="alert" className="form-errors">{entryError}</p>}
     </>:null}
     {assessment&&<div hidden={locked}>{node.kind==='course'?<CourseRoom node={node} state={state} save={save} select={select}/>:node.kind==='task'||node.kind==='mock'?<EvidenceForm key={node.id} node={node} state={state} save={save} close={close}/>:<FinishForm state={state} save={save}/>}</div>}
     {node.parent&&<div className="focus-chapter-link"><button className="text-button" onClick={()=>select(node.parent!)}>查看本章课次</button></div>}
@@ -56,7 +73,7 @@ export function LearningRoom({node,state,save,close,select,speaking,classicState
 }
 const answerSignature=(a:string[],h:number[])=>JSON.stringify([a,h]);
 
-function FocusedQuiz({node,state,save,select,close,onLeaveGuard}:{node:MapNode;state:Progress;save:Save;select:(id:string)=>void;close:()=>void;onLeaveGuard?:(guard:(()=>Promise<boolean>)|null)=>void}){
+function FocusedQuiz({node,state,save,select,close,onLeaveGuard,mainEntry,openEntry,openingEntry}:{node:MapNode;state:Progress;save:Save;select:(id:string)=>void;close:()=>void;onLeaveGuard?:(guard:(()=>Promise<boolean>)|null)=>void;mainEntry:ReturnType<typeof mainEntryAfterWarmup>;openEntry:(entry?:ReturnType<typeof mainEntryAfterWarmup>)=>Promise<void>;openingEntry:boolean}){
   const record=state.records[node.id]||emptyRecord(),questions=questionsFor(node,record.round,record.bank),last=record.attempts.at(-1),checked=!!last&&last.round===record.round&&last.bank===record.bank;
   const index=Math.min(record.questionIndex||0,questions.length-1),q=questions[index];
   const [answers,setAnswers]=useState(record.answers),[heard,setHeard]=useState(record.heard||[]),[saveError,setSaveError]=useState('');
@@ -84,7 +101,11 @@ function FocusedQuiz({node,state,save,select,close,onLeaveGuard}:{node:MapNode;s
       {pass&&node.kind==='unit'&&reviewAt&&<p className="review-schedule">下次回想：{new Date(reviewAt).toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})} 起，换一组题检验{reviewed?'记忆是否保持':'隔日是否还记得'}。</p>}
       {node.kind==='unit'&&<p className="footnote">自己的表达{record.draft?.note?'已保留，准确性待核对':'可以回到“自己用”补练'}；听读与组句结果不能判断口语是否达标。</p>}
       <details className="answer-review" onToggle={e=>{if(e.currentTarget.open)save(s=>noteQuizHelp(s,node.id))}}><summary>查看本轮答案与解释</summary>{questions.map((item,i)=><article key={i}><strong>{i+1}. {item.prompt}</strong><p>{last.answers[i]||'未作答'}</p><p>{result[i]?'✓ 已匹配':'与参考未匹配'} · {item.explanation}</p></article>)}</details>
-      {repair?<button className="primary full" onClick={goRepair}>先修补：{node.id==='letters'?'认字母':repair.label}<ArrowRight size={17}/></button>:pass&&next?<button className="primary full" onClick={()=>select(next.id)}>继续下一{next.kind==='unit'?'课':'站'}<ArrowRight size={17}/></button>:<button className="primary full" onClick={()=>save(s=>restartQuiz(s,node.id))}>{pass?'换题巩固':'收起提示，重新独立检验'}<ArrowRight size={17}/></button>}
+      {isWarmupNode(node.id)?<>
+        {repair&&<><p>先回听上面需要修补的内容，再试一次；这不要求先通关全部字母基础。补练后可以直接回主课。</p><button className="primary full" onClick={goRepair}>先修补：{node.id==='letters'?'认字母':repair.label}<ArrowRight size={17}/></button></>}
+        <button className={repair?'secondary full':'primary full'} disabled={openingEntry} onClick={()=>void openEntry()}>{mainEntry.label}<ArrowRight size={17}/></button>
+        {node.id==='first'&&pass&&<><p>热身核对了声音与意思，没有检验字母辨认。需要认字母时，可以先补一下，再回主课。</p><button className="text-button" disabled={openingEntry} onClick={()=>void openEntry({node:nodeById('letters')!,href:'/map/#/learn/letters',label:'补充字母基础'})}>需要认字母？补一下基础</button></>}
+      </>:repair?<button className="primary full" onClick={goRepair}>先修补：{node.id==='letters'?'认字母':repair.label}<ArrowRight size={17}/></button>:pass&&next?<button className="primary full" onClick={()=>select(next.id)}>继续下一{next.kind==='unit'?'课':'站'}<ArrowRight size={17}/></button>:<button className="primary full" onClick={()=>save(s=>restartQuiz(s,node.id))}>{pass?'换题巩固':'收起提示，重新独立检验'}<ArrowRight size={17}/></button>}
       {(repair||pass&&next)&&<button className="text-button" onClick={()=>save(s=>restartQuiz(s,node.id))}>{repair?'已修补，换题再试':'再练本课'}</button>}
       <button className="text-button" onClick={close}>回到学习</button>
     </section>;
