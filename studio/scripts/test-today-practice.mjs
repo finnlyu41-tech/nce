@@ -359,15 +359,24 @@ const ui=await import('data:text/javascript;base64,'+Buffer.from(uiCode).toStrin
 const children=node=>typeof node==='object'&&node?node.props?.children||[]:[];
 const text=node=>typeof node==='string'?node:children(node).map(text).join('');
 const elements=node=>typeof node==='object'&&node?[node,...children(node).flatMap(elements)]:[];
-test('all skippable recommendations expose paused state and restore; course offers have no skip control',()=>{
- const all=select(base(),mapState(first,[proof(first,NOW-1,0,false)])),offers=all.filter(t=>t.kind==='course'),tasks=all.filter(t=>t.kind!=='course');assert(tasks.length);assert.equal(offers.filter(t=>t.id==='placement:offer').length,1);
- ui.reset();assert(!elements(ui.render({tasks:offers})).some(n=>n.type==='button'&&text(n)==='这项稍后再做'));
- ui.reset();
- let tree=ui.render({tasks});for(let i=0;i<tasks.length;i++){const skip=elements(tree).find(n=>n.type==='button'&&text(n)==='这项稍后再做');assert(skip);skip.props.onClick();tree=ui.render({tasks});}
- tree=ui.render({tasks});assert.match(text(tree),/本次安排已暂缓/);assert.doesNotMatch(text(tree),/继续今日学习|全部完成/);
- assert.equal(elements(tree).filter(n=>n.type==='a').length,1);
+test('optional placement can defer after saved work, all-deferred returns to the course, restore retains priority',()=>{
+ const all=select(base(),mapState(first,[proof(first,NOW-1,0,false)]));
+ assert.equal(all.at(-1).id,'placement:offer');
+ ui.reset();let tree=ui.render({tasks:all,courseHref:'/map/#/learn/first'});
+ for(let i=0;i<all.length;i++){
+  const skip=elements(tree).find(n=>n.type==='button'&&text(n)==='这项稍后再做');assert(skip);
+  if(i===all.length-1){assert.match(text(tree),/可选诊断/);assert.match(text(tree),/做短诊断（可选）/)}
+  skip.props.onClick();tree=ui.render({tasks:all,courseHref:'/map/#/learn/first'});
+ }
+ assert.match(text(tree),/本次安排已暂缓/);assert.doesNotMatch(text(tree),/全部完成|已掌握/);
+ const back=elements(tree).find(n=>n.type==='a');assert.equal(text(back),'回到当前课程');assert.equal(back.props.href,'/map/#/learn/first');
  elements(tree).find(n=>n.type==='button'&&text(n)==='恢复推荐顺序').props.onClick();
- assert.match(text(ui.render({tasks})),/继续今日学习/);
+ assert.equal(text(elements(ui.render({tasks:all})).find(n=>n.type==='h2')),all[0].title);
+});
+test('course access remains an always-available fallback rather than a required diagnostic',()=>{
+ const course=select(base()).find(t=>t.id==='course:first');ui.reset();
+ const tree=ui.render({tasks:[course]});assert(!elements(tree).some(n=>n.type==='button'&&text(n)==='这项稍后再做'));
+ assert.equal(elements(tree).find(n=>n.type==='a').props.href,course.href);
 });
 test('unreadable records stay visible even when no recommendation is safe',()=>{
  ui.reset();const tree=ui.render({tasks:[],error:'原记录保留，请检查'});
