@@ -1,0 +1,582 @@
+[
+  {
+    "id": "diagnostic-n91-future-arrangement",
+    "answer": "She will paint this room tomorrow afternoon.",
+    "variants": [
+      "She'll paint this room tomorrow afternoon.",
+      "Tomorrow afternoon, she will paint this room.",
+      "Tomorrow afternoon, she'll paint this room."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n91-future-when",
+    "answer": "When will they arrive?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n91-future-whether",
+    "answer": "Will you see the mechanic today?",
+    "variants": [],
+    "issues": [
+      "The context supplies a confirmation reading, though will-you wording can also sound like a request. Today is naturally sentence-final in this question."
+    ]
+  },
+  {
+    "id": "guided-n91-future-arrangement",
+    "answer": "She will not come this evening.",
+    "variants": [
+      "She won't come this evening.",
+      "She'll not come this evening.",
+      "This evening, she will not come.",
+      "This evening, she won't come."
+    ],
+    "issues": [
+      "The cancellation is for this evening; not tonight or later changes the specified wording/time focus."
+    ]
+  },
+  {
+    "id": "guided-n91-future-when",
+    "answer": "When will he finish work?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n91-future-whether",
+    "answer": "Will they drive home tomorrow?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "independent-n91-future-arrangement",
+    "answer": "We will sweep the floor the day after tomorrow in the morning.",
+    "variants": [
+      "We'll sweep the floor the day after tomorrow in the morning.",
+      "The day after tomorrow in the morning, we will sweep the floor.",
+      "We will sweep the floor in the morning the day after tomorrow.",
+      "We'll sweep the floor in the morning the day after tomorrow."
+    ],
+    "issues": [
+      "The required time phrase is understandable but clumsy; the day after tomorrow in the morning and in the morning the day after tomorrow express the same time. A rewrite such as on the morning of the day after tomorrow is smoother but may exceed a strictly fixed phrase requirement."
+    ]
+  },
+  {
+    "id": "independent-n91-future-when",
+    "answer": "When will the new people move into this house?",
+    "variants": [],
+    "issues": [
+      "The new people is understandable but vague and a little unnatural for new staff; lexical constraint prevents replacing it with new staff or new residents. The unfamiliar warehouse setting does not change the grammatical task."
+    ]
+  },
+  {
+    "id": "independent-n91-future-whether",
+    "answer": "Will he pack his bags tonight?",
+    "variants": [],
+    "issues": [
+      "Keep his bags: changing to the bags weakens ownership; changing to my/your bags changes person. The stage-team context adds little beyond the familiar sentence pattern."
+    ]
+  },
+  {
+    "id": "repair-n91-future-arrangement",
+    "answer": "It will snow tonight.",
+    "variants": [
+      "It'll snow tonight.",
+      "Tonight, it will snow.",
+      "Tonight, it'll snow."
+    ],
+    "issues": [
+      "This is a weather prediction, although the other will statements are called arrangements. Will supports both uses, but the task does not itself test the distinction."
+    ]
+  },
+  {
+    "id": "repair-n91-future-when",
+    "answer": "When will you repair my car?",
+    "variants": [],
+    "issues": [
+      "My car fixes the speaker as owner; your car or the car would not preserve the specified relation."
+    ]
+  },
+  {
+    "id": "repair-n91-future-whether",
+    "answer": "Will she have a haircut tomorrow?",
+    "variants": [],
+    "issues": [
+      "The context usefully separates having a haircut from merely making an appointment. Book a haircut would change the action."
+    ]
+  },
+  {
+    "id": "review-a-n91-future-arrangement",
+    "answer": "He will arrive tomorrow morning.",
+    "variants": [
+      "He'll arrive tomorrow morning.",
+      "Tomorrow morning, he will arrive.",
+      "Tomorrow morning, he'll arrive."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n91-future-when",
+    "answer": "When will she telephone me?",
+    "variants": [],
+    "issues": [
+      "Telephone me is valid, especially in British English, but somewhat formal compared with call me. Call me is outside the specified lexical bank."
+    ]
+  },
+  {
+    "id": "review-a-n91-future-whether",
+    "answer": "Will we have a holiday tomorrow?",
+    "variants": [],
+    "issues": [
+      "Have a holiday can mean a holiday/vacation period as well as time off. The Chinese context intends taking time off tomorrow; have a day off would be more precise but changes the required phrase."
+    ]
+  },
+  {
+    "id": "review-b-n91-future-arrangement",
+    "answer": "They will not leave the day after tomorrow in the evening.",
+    "variants": [
+      "They won't leave the day after tomorrow in the evening.",
+      "They'll not leave the day after tomorrow in the evening.",
+      "The day after tomorrow in the evening, they will not leave.",
+      "They will not leave in the evening the day after tomorrow.",
+      "They won't leave in the evening the day after tomorrow."
+    ],
+    "issues": [
+      "The required long time phrase is clumsy. Keep the negation scoped to leaving on that specified evening; changing it to they will leave later invents a new arrangement."
+    ]
+  },
+  {
+    "id": "review-b-n91-future-when",
+    "answer": "When will you paint this room?",
+    "variants": [],
+    "issues": [
+      "The context mentions completion for scheduling, but the prompt asks when you will paint, not when you will finish painting. Adding finish changes the specified action."
+    ]
+  },
+  {
+    "id": "review-b-n91-future-whether",
+    "answer": "Will you telephone me tonight?",
+    "variants": [],
+    "issues": [
+      "Will you can sound like a request as well as confirmation; the context establishes confirmation. Telephone is formal but valid, and me must remain the call recipient."
+    ]
+  },
+  {
+    "id": "diagnostic-n93-journey-time",
+    "answer": "He flew to Paris a week ago.",
+    "variants": [
+      "A week ago, he flew to Paris."
+    ],
+    "issues": [
+      "Flew reports completed past travel. Will fly, has flown a week ago, or flew from Paris would not preserve tense or direction."
+    ]
+  },
+  {
+    "id": "diagnostic-n93-journey-when",
+    "answer": "When did she go to Berlin?",
+    "variants": [],
+    "issues": [
+      "Did requires go, not went. When has she gone is not the ordinary question about one completed past trip."
+    ]
+  },
+  {
+    "id": "diagnostic-n93-future-destination-correction",
+    "answer": "She will not fly to London tomorrow, but she will fly to Geneva tomorrow.",
+    "variants": [
+      "She won't fly to London tomorrow, but she'll fly to Geneva tomorrow.",
+      "She will not fly to London tomorrow, but will fly to Geneva.",
+      "She won't fly to London tomorrow, but will fly to Geneva.",
+      "Tomorrow, she will not fly to London but will fly to Geneva.",
+      "Tomorrow, she won't fly to London but will fly to Geneva.",
+      "She will not fly to London tomorrow; she will fly to Geneva tomorrow."
+    ],
+    "issues": [
+      "The shared tomorrow can be stated once with understood scope over both destinations. Subject ellipsis in but will fly preserves affirmative will; two separate full stops would violate the one-sentence format."
+    ]
+  },
+  {
+    "id": "guided-n93-journey-time",
+    "answer": "She will return to London the month after next.",
+    "variants": [
+      "She'll return to London the month after next.",
+      "The month after next, she will return to London.",
+      "The month after next, she'll return to London."
+    ],
+    "issues": [
+      "Next month would be one month too early; the month after next must remain complete."
+    ]
+  },
+  {
+    "id": "guided-n93-journey-when",
+    "answer": "When will they return to Rome?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "guided-n93-future-destination-correction",
+    "answer": "He will not arrive from Moscow next month, but he will arrive from Madrid next month.",
+    "variants": [
+      "He won't arrive from Moscow next month, but he'll arrive from Madrid next month.",
+      "He will not arrive from Moscow next month, but will arrive from Madrid.",
+      "He won't arrive from Moscow next month, but will arrive from Madrid.",
+      "Next month, he will not arrive from Moscow but will arrive from Madrid.",
+      "Next month, he won't arrive from Moscow but will arrive from Madrid.",
+      "He will not arrive from Moscow next month; he will arrive from Madrid next month."
+    ],
+    "issues": [
+      "From fixes the departure city. Arrive in Madrid would change Madrid into the destination. A single shared time is natural; affirmative will must survive ellipsis."
+    ]
+  },
+  {
+    "id": "independent-n93-journey-time",
+    "answer": "They went to Madrid last month.",
+    "variants": [
+      "Last month, they went to Madrid."
+    ],
+    "issues": [
+      "A new museum setting still leaves a familiar go + city + past-time template; it tests past-tense transfer, not a new communicative structure."
+    ]
+  },
+  {
+    "id": "independent-n93-journey-when",
+    "answer": "When did you fly to Seoul?",
+    "variants": [],
+    "issues": [
+      "The unknown past departure time requires did + fly. A new city alone supplies vocabulary novelty rather than structural novelty."
+    ]
+  },
+  {
+    "id": "independent-n93-future-destination-correction",
+    "answer": "They will not stay in New York next month, but they will stay in Moscow next month.",
+    "variants": [
+      "They won't stay in New York next month, but they'll stay in Moscow next month.",
+      "They will not stay in New York next month, but will stay in Moscow.",
+      "They won't stay in New York next month, but will stay in Moscow.",
+      "Next month, they will not stay in New York but will stay in Moscow.",
+      "Next month, they won't stay in New York but will stay in Moscow.",
+      "They will not stay in New York next month; they will stay in Moscow next month."
+    ],
+    "issues": [
+      "Both rejected and confirmed stays must appear in the same sentence. The accessibility setting has no operative effect on the answer."
+    ]
+  },
+  {
+    "id": "repair-n93-journey-time",
+    "answer": "We will go to Tokyo the year after next.",
+    "variants": [
+      "We'll go to Tokyo the year after next.",
+      "The year after next, we will go to Tokyo.",
+      "The year after next, we'll go to Tokyo."
+    ],
+    "issues": [
+      "The year after next differs from next year; reporting a negative next-year plan would not answer the requested positive plan."
+    ]
+  },
+  {
+    "id": "repair-n93-journey-when",
+    "answer": "When will she fly to Sydney?",
+    "variants": [],
+    "issues": []
+  },
+  {
+    "id": "repair-n93-future-destination-correction",
+    "answer": "We will not go to Athens next week, but we will go to Beijing next week.",
+    "variants": [
+      "We won't go to Athens next week, but we'll go to Beijing next week.",
+      "We will not go to Athens next week, but will go to Beijing.",
+      "We won't go to Athens next week, but will go to Beijing.",
+      "Next week, we will not go to Athens but will go to Beijing.",
+      "Next week, we won't go to Athens but will go to Beijing.",
+      "We will not go to Athens next week; we will go to Beijing next week."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n93-journey-time",
+    "answer": "I flew to Rome two weeks ago.",
+    "variants": [
+      "Two weeks ago, I flew to Rome."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-a-n93-journey-when",
+    "answer": "When did they return to Geneva?",
+    "variants": [],
+    "issues": [
+      "The Chinese context is awkward: the equipment has been sent back, while the prompt asks when they returned. The prompt resolves the person/action, but context could more clearly say that the people returned with the equipment."
+    ]
+  },
+  {
+    "id": "review-a-n93-future-destination-correction",
+    "answer": "She will not return to Geneva next year, but she will return to Bombay next year.",
+    "variants": [
+      "She won't return to Geneva next year, but she'll return to Bombay next year.",
+      "She will not return to Geneva next year, but will return to Bombay.",
+      "She won't return to Geneva next year, but will return to Bombay.",
+      "Next year, she will not return to Geneva but will return to Bombay.",
+      "Next year, she won't return to Geneva but will return to Bombay.",
+      "She will not return to Geneva next year; she will return to Bombay next year."
+    ],
+    "issues": [
+      "The Chinese says Mumbai while the specified English says Bombay. They refer to the same city; the bounded answer preserves Bombay. This is a name-choice issue, not a tense challenge."
+    ]
+  },
+  {
+    "id": "review-b-n93-journey-time",
+    "answer": "He will fly to New York next month.",
+    "variants": [
+      "He'll fly to New York next month.",
+      "Next month, he will fly to New York.",
+      "Next month, he'll fly to New York."
+    ],
+    "issues": [
+      "The framing explicitly cues future despite calling the source a record. Most review novelty here is a change of subject/city/time."
+    ]
+  },
+  {
+    "id": "review-b-n93-journey-when",
+    "answer": "When will we go to Stockholm?",
+    "variants": [],
+    "issues": [
+      "We must include the speaker in the group; they would change person. The new accommodation story and city do not alter the question structure."
+    ]
+  },
+  {
+    "id": "review-b-n93-future-destination-correction",
+    "answer": "I will not fly to Tokyo the day after tomorrow, but I will fly to Paris the day after tomorrow.",
+    "variants": [
+      "I won't fly to Tokyo the day after tomorrow, but I'll fly to Paris the day after tomorrow.",
+      "I will not fly to Tokyo the day after tomorrow, but will fly to Paris.",
+      "I won't fly to Tokyo the day after tomorrow, but will fly to Paris.",
+      "The day after tomorrow, I will not fly to Tokyo but will fly to Paris.",
+      "The day after tomorrow, I won't fly to Tokyo but will fly to Paris.",
+      "I will not fly to Tokyo the day after tomorrow; I will fly to Paris the day after tomorrow."
+    ],
+    "issues": [
+      "The shared time can occur once. Tomorrow would shift the trip by one day; two sentences would violate the format."
+    ]
+  },
+  {
+    "id": "diagnostic-n95-had-better-advice",
+    "answer": "We had better go back to the station now.",
+    "variants": [
+      "We'd better go back to the station now.",
+      "Now, we had better go back to the station.",
+      "Now, we'd better go back to the station."
+    ],
+    "issues": [
+      "Had better takes the bare infinitive: had better to go is invalid. Back preserves the return action."
+    ]
+  },
+  {
+    "id": "diagnostic-n95-exact-clock-time",
+    "answer": "What time will the next train leave?",
+    "variants": [],
+    "issues": [
+      "The context combines a boat timetable with a train connection. The requested event is still train departure, but the boat detail distracts without helping solve the clock-time question. When asks more broadly than the required What time."
+    ]
+  },
+  {
+    "id": "diagnostic-n95-relative-time",
+    "answer": "He will return in two days.",
+    "variants": [
+      "He'll return in two days.",
+      "He will return in two days' time.",
+      "He'll return in two days' time.",
+      "In two days, he will return.",
+      "In two days, he'll return."
+    ],
+    "issues": [
+      "In two days locates the return after two days. For two days describes duration; two days ago reverses the temporal direction."
+    ]
+  },
+  {
+    "id": "guided-n95-had-better-advice",
+    "answer": "I had better stay here now.",
+    "variants": [
+      "I'd better stay here now.",
+      "Now, I had better stay here.",
+      "Now, I'd better stay here."
+    ],
+    "issues": [
+      "This is advice about the speaker, not about the person fetching the form. You had better would change the required person."
+    ]
+  },
+  {
+    "id": "guided-n95-exact-clock-time",
+    "answer": "The train will leave at nine seventeen.",
+    "variants": [
+      "The train will leave at seventeen past nine.",
+      "The train will leave at seventeen minutes past nine.",
+      "The train will leave at nine seventeen in the morning.",
+      "At nine seventeen, the train will leave."
+    ],
+    "issues": [
+      "09:17 means nine seventeen/seventeen past nine. The hint about slow/fast clocks is irrelevant to this reliable departure timetable; it belongs to other items and may mislead. The in the morning variant only spells out the 09-hour fact."
+    ]
+  },
+  {
+    "id": "guided-n95-relative-time",
+    "answer": "I will go to Sydney in a month.",
+    "variants": [
+      "I'll go to Sydney in a month.",
+      "I will go to Sydney in one month.",
+      "I'll go to Sydney in one month.",
+      "I will go to Sydney in a month's time.",
+      "I'll go to Sydney in a month's time.",
+      "In a month, I will go to Sydney."
+    ],
+    "issues": [
+      "A month/one month and a month's time express the same delay. Next month need not mean a month from now, so it is a near-wrong boundary."
+    ]
+  },
+  {
+    "id": "independent-n95-had-better-advice",
+    "answer": "You had better call a doctor now.",
+    "variants": [
+      "You'd better call a doctor now.",
+      "Now, you had better call a doctor.",
+      "Now, you'd better call a doctor."
+    ],
+    "issues": [
+      "Call a doctor is the requested action; see a doctor changes who initiates contact and may imply travelling. The camping story changes context but retains the familiar advice template."
+    ]
+  },
+  {
+    "id": "independent-n95-exact-clock-time",
+    "answer": "It is eight twenty-five.",
+    "variants": [
+      "It's eight twenty-five.",
+      "It is twenty-five past eight.",
+      "It's twenty-five past eight.",
+      "It is twenty-five minutes past eight.",
+      "It's twenty-five minutes past eight.",
+      "It is eight twenty-five in the morning."
+    ],
+    "issues": [
+      "08:15 plus ten minutes gives 08:25 because the clock is slow. Eight fifteen repeats the known wrong display; eight oh five applies the correction in the wrong direction. This is substantive reasoning transfer rather than a name change."
+    ]
+  },
+  {
+    "id": "independent-n95-relative-time",
+    "answer": "The next bus will leave in twenty minutes.",
+    "variants": [
+      "The next bus will leave in twenty minutes' time.",
+      "In twenty minutes, the next bus will leave.",
+      "In twenty minutes' time, the next bus will leave."
+    ],
+    "issues": [
+      "Within twenty minutes is a deadline range, not the stated delay; for twenty minutes is duration."
+    ]
+  },
+  {
+    "id": "repair-n95-had-better-advice",
+    "answer": "She had better hurry now.",
+    "variants": [
+      "She'd better hurry now.",
+      "Now, she had better hurry.",
+      "Now, she'd better hurry."
+    ],
+    "issues": [
+      "Hurry up is natural but adds a particle to the required hurry phrase, so it is outside this conservative bounded variant set."
+    ]
+  },
+  {
+    "id": "repair-n95-exact-clock-time",
+    "answer": "It is eleven forty.",
+    "variants": [
+      "It's eleven forty.",
+      "It is twenty to twelve.",
+      "It's twenty to twelve.",
+      "It is twenty minutes to twelve.",
+      "It's twenty minutes to twelve."
+    ],
+    "issues": [
+      "Twenty past eleven would be 11:20, not 11:40. No morning/evening guess is needed."
+    ]
+  },
+  {
+    "id": "repair-n95-relative-time",
+    "answer": "They went to Berlin two hours ago.",
+    "variants": [
+      "Two hours ago, they went to Berlin."
+    ],
+    "issues": [
+      "Went + ago reports the completed trip; will go in two hours changes both tense and temporal direction."
+    ]
+  },
+  {
+    "id": "review-a-n95-had-better-advice",
+    "answer": "You had better be careful now.",
+    "variants": [
+      "You'd better be careful now.",
+      "Now, you had better be careful.",
+      "Now, you'd better be careful."
+    ],
+    "issues": [
+      "Careful is an adjective and requires be after had better. Carefully cannot replace it without a different action verb."
+    ]
+  },
+  {
+    "id": "review-a-n95-exact-clock-time",
+    "answer": "What time will the doctor arrive?",
+    "variants": [],
+    "issues": [
+      "Arrival differs from departure. What time targets a clock time; When can include a date and is outside the explicit question phrase."
+    ]
+  },
+  {
+    "id": "review-a-n95-relative-time",
+    "answer": "We will fly to Seoul in two weeks.",
+    "variants": [
+      "We'll fly to Seoul in two weeks.",
+      "We will fly to Seoul in two weeks' time.",
+      "We'll fly to Seoul in two weeks' time.",
+      "In two weeks, we will fly to Seoul.",
+      "In two weeks, we'll fly to Seoul."
+    ],
+    "issues": [
+      "Person, direction, and time are all fixed: their past trip cannot replace our future flight."
+    ]
+  },
+  {
+    "id": "review-b-n95-had-better-advice",
+    "answer": "We had better wait for him now.",
+    "variants": [
+      "We'd better wait for him now.",
+      "Now, we had better wait for him.",
+      "Now, we'd better wait for him."
+    ],
+    "issues": [
+      "Wait for him preserves the person being awaited. Wait him is ungrammatical; wait for us reverses the relation."
+    ]
+  },
+  {
+    "id": "review-b-n95-exact-clock-time",
+    "answer": "It is seven fifteen.",
+    "variants": [
+      "It's seven fifteen.",
+      "It is a quarter past seven.",
+      "It's a quarter past seven.",
+      "It is quarter past seven.",
+      "It's quarter past seven.",
+      "It is fifteen past seven.",
+      "It is fifteen minutes past seven.",
+      "It is seven fifteen in the morning."
+    ],
+    "issues": [
+      "07:20 minus five minutes gives 07:15 because the clock is fast. Seven twenty is the wrong display; seven twenty-five applies the correction in the wrong direction. This is substantive clock-correction transfer."
+    ]
+  },
+  {
+    "id": "review-b-n95-relative-time",
+    "answer": "She returned to Tokyo a week ago.",
+    "variants": [
+      "A week ago, she returned to Tokyo."
+    ],
+    "issues": [
+      "Returned to reports the completed return destination; returned from Tokyo reverses the direction."
+    ]
+  }
+]

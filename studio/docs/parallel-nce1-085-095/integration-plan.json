@@ -26,7 +26,8 @@
     "status": "validated-local-freeze",
     "tasks": 54,
     "nodeTestsPassed": 22,
-    "browserCoursesPassed": 3
+    "browserCoursesPassed": 3,
+    "frozenCommit": "c68630540e8197242839e1a96057bbae2d69fcca"
   },
   "secondBatch": {
     "courseIds": [
@@ -44,7 +45,10 @@
       "nce1-93": "nce1-95",
       "nce1-95": "nce1-97"
     },
-    "status": "authoring"
+    "status": "validated-local-freeze",
+    "tasks": 54,
+    "nodeTestsPassed": 22,
+    "browserCoursesPassed": 3
   },
   "existingBoundaryToPreserve": {
     "nce1-83": "nce1-85"
@@ -74,5 +78,14 @@
     "pronunciation",
     "all four skills",
     "learning gain"
-  ]
+  ],
+  "combinedValidation": {
+    "tasks": 108,
+    "nodeTestsPassed": 57,
+    "nodeTestsFailed": 0,
+    "browserCoursesPassed": 6,
+    "runtimeErrors": 0,
+    "sourceEvidenceTestsPassed": 8,
+    "productionRegistration": false
+  }
 }

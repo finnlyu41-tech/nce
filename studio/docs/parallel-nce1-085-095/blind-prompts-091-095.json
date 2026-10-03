@@ -1,0 +1,290 @@
+[
+  {
+    "courseId": "nce1-91",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n91-future-arrangement",
+        "context": "社区礼堂今晚停水，但粉刷安排在明天下午，仍会照常进行；你转述她的安排。",
+        "prompt": "用She、will、paint this room、tomorrow afternoon写一个肯定安排。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n91-future-when",
+        "context": "你为活动安排车位，知道他们将来会到达，但不知道具体何时。",
+        "prompt": "用When、they、will、arrive写一个询问到达时间的问题，不加猜测日期。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n91-future-whether",
+        "context": "送货窗口需要确认你是否今天会见到维修员，记录还空着；你直接向对方问。",
+        "prompt": "用Will、you、see the mechanic、today核实是否会见面。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "guided-n91-future-arrangement",
+        "context": "轮班表刚取消她今晚来值班的安排，不是推迟到更晚；你通知管理员。",
+        "prompt": "用She、will not、come、this evening写一句否定安排。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：读出行动、是否发生及时间；用will/will not加原形，保留原定时间。"
+      },
+      {
+        "id": "guided-n91-future-when",
+        "context": "一位临时讲师确定会完成工作，设备管理员还不知道何时能关机。",
+        "prompt": "用When、he、will、finish work问完成工作的时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：When置前，will在主语前，原形不变；未知时间不自行填日期。"
+      },
+      {
+        "id": "guided-n91-future-whether",
+        "context": "青年旅社还未确定他们明天是否会开车回家，你向领队核实交通安排。",
+        "prompt": "用Will、they、drive home、tomorrow问是否会这样安排。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：核实是否发生时用Will前置，保留对象及时间，以问号结束。"
+      },
+      {
+        "id": "independent-n91-future-arrangement",
+        "context": "档案库明天不开放，因此我们后天上午才会扫地。记录只要扫地的肯定安排。",
+        "prompt": "用We、will、sweep the floor报告后天上午的安排；时间短语可自然表达。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n91-future-when",
+        "context": "房屋管理员知道新租户（the new people）会搬进这所房子，钥匙发放日期尚未知。",
+        "prompt": "用When、the new people、will、move into this house问时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n91-future-whether",
+        "context": "陌生的舞台团队还未把行李时间写入记录，你向协调员问他今晚是否会收拾自己的包。",
+        "prompt": "用Will、he、pack his bags、tonight核实安排。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n91-future-arrangement",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一份气象通知：天气台预测今晚会下雪，场务需按此未来预测做准备。",
+        "prompt": "用It、will、snow、tonight报告肯定预测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n91-future-when",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一情境的修车联系人说肯定会修我的车，却没有告诉我时间。",
+        "prompt": "用When、you、will、repair my car直接向联系人问时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n91-future-whether",
+        "context": "保留上一轮首答和订正。下面是另一情境：小型演出当天有人只负责预约，不一定理发；你向前台核实她明天是否会理发。",
+        "prompt": "用Will、she、have a haircut、tomorrow问是否发生。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n91-future-arrangement",
+        "context": "隔日重新安排：他明天上午会到达，但我们暂时不知道具体钟点。只报告已知安排。",
+        "prompt": "用He、will、arrive、tomorrow morning写一句肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n91-future-when",
+        "context": "一项新的通信任务：她会给我打电话，但接线员不知道何时，应先询问时间。",
+        "prompt": "用When、she、will、telephone me问时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n91-future-whether",
+        "context": "实验室明天部分关闭，假期计划尚未核实。你向负责人问我们明天是否会休假。",
+        "prompt": "用Will、we、have a holiday、tomorrow写一个核实问题。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n91-future-arrangement",
+        "context": "一周后复访的全新安排：他们后天晚上不会离开，场地方可保留房间。",
+        "prompt": "用They、will not、leave报告后天晚上不会离开的安排；时间短语可自然表达。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n91-future-when",
+        "context": "异地画室会重新粉刷这间房，开课时间需等粉刷完成后再定，先向执行人问时间。",
+        "prompt": "用When、you、will、paint this room直接询问。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n91-future-whether",
+        "context": "新的远程登记任务需要确认联系方式：回拨时间还没有约定，你直接问对方今晚是否会给我打电话。",
+        "prompt": "用Will、you、telephone me、tonight核实回拨安排。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-93",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n93-journey-time",
+        "context": "行李追查员需要过去的出发记录：他一周前已经飞往巴黎，不是待办计划。",
+        "prompt": "用He、fly to Paris、a week ago报告已发生行程。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n93-journey-when",
+        "context": "你审核已完成访问的档案，知道她去过柏林，却不知道是哪天。",
+        "prompt": "用When、she、go to Berlin询问那次已发生行程的时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n93-future-destination-correction",
+        "context": "航班通告误写她明天飞往伦敦；确认单说她明天飞往日内瓦，需同句纠正。",
+        "prompt": "用She、will not、fly to London、tomorrow，并用will肯定fly to Geneva；合成一个句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n93-journey-time",
+        "context": "救援队归程还未发生：她会下下个月返回伦敦，接待单位要避免提前一个月排房。",
+        "prompt": "用She、return to London、the month after next报告未来计划。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先判断过去或未来，再用过去式或will加原形；保留城市、动作和完整时间。"
+      },
+      {
+        "id": "guided-n93-journey-when",
+        "context": "他们会返回罗马参加复核，会议主持还未收到日期；你直接问协调员。",
+        "prompt": "用When、they、return to Rome问未来归程的时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：确认行动已发生还是待发生，选did或will；动词原形，问时间而非是否发生。"
+      },
+      {
+        "id": "guided-n93-future-destination-correction",
+        "context": "接站邮件说他下个月从莫斯科来，实际出发地是马德里；到达时间安排不变。",
+        "prompt": "用He、will not、arrive from Moscow、next month，并用will肯定arrive from Madrid；写一个句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：在一个句子中用will not/won’t否定错项，并用will肯定正确城市；保留原定时间及to/from。"
+      },
+      {
+        "id": "independent-n93-journey-time",
+        "context": "借展交接表有两栏：他们上个月已去马德里验收，下个月另一支队伍才会去莫斯科。你只补本队已经实际完成的那次行程，不能把另一队的预约当成到访事实。",
+        "prompt": "用They、go to Madrid报告本队已经实际完成的行程，并从记录选取对应时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n93-journey-when",
+        "context": "你要核对一箱照片的日期：你知道对方过去飞往过首尔，却不知道那次出发时间。",
+        "prompt": "用When、you、fly to Seoul直接询问已发生行程的时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "independent-n93-future-destination-correction",
+        "context": "接待组核对无障碍房间：纽约酒店下个月无法提供所需房间，莫斯科已确认能提供。他们因此取消纽约住宿，确认下个月住莫斯科；需同时撤销错项并报告正项。",
+        "prompt": "用They、will not、stay in New York、next month，并用will肯定stay in Moscow；写一个句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n93-journey-time",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一份展会计划：我们下下年才会去东京，明年没有这趟行程。只写肯定计划。",
+        "prompt": "用We、go to Tokyo、the year after next报告未来行程。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n93-journey-when",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一项预约问题：她将飞往悉尼参加工作坊，负责迎接的你还不知道航程日期。",
+        "prompt": "用When、she、fly to Sydney询问未来出发时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-n93-future-destination-correction",
+        "context": "保留上一轮首答和订正。下面是另一情境：运输表误把我们下周的目的地写成雅典；实际要去北京，需在同句留下纠错关系。",
+        "prompt": "用We、will not、go to Athens、next week，并用will肯定go to Beijing；写一个句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n93-journey-time",
+        "context": "隔日补录飞行日志：我两周前已经飞往罗马；日志不需要我未来的旅行计划。",
+        "prompt": "用I、fly to Rome、two weeks ago写过去记录。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n93-journey-when",
+        "context": "消防队员已带着装备返回日内瓦，但记录员不知道他们那次返回的日期；你向协调员补问。",
+        "prompt": "用When、they、return to Geneva询问已发生归程的时间。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n93-future-destination-correction",
+        "context": "隔日新的回访安排误写她明年返回日内瓦；已核安排是明年返回孟买。",
+        "prompt": "用She、will not、return to Geneva、next year，并用will肯定return to Bombay；写一个句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n93-journey-time",
+        "context": "一周后检修交接有两份证据：他昨天已飞往东京；纽约文件则只是下个月的确认预订，尚未启程。纽约接待员需要那份预订的行程报告，不能用东京实际飞行的日期代替。",
+        "prompt": "用He、fly to New York报告接待员所需的安排，从证据选取时间和动作形式。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n93-journey-when",
+        "context": "住宿表混有两组记录：另一组已去过斯德哥尔摩；我们自己的预订仍待启程，入住日期未填写。你作为本组成员向负责人补问自己的出行时间，好决定房间何时锁定。",
+        "prompt": "用When、we、go to Stockholm询问本组记录缺失的时间；依据本组状态选择问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-b-n93-future-destination-correction",
+        "context": "一周后新的航空安排误写我后天飞东京，实际我后天飞巴黎；需要一条可转发的纠正句。",
+        "prompt": "用I、will not、fly to Tokyo、the day after tomorrow，并用will肯定fly to Paris；写一个句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-95",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。",
+    "questions": [
+      {
+        "id": "diagnostic-n95-had-better-advice",
+        "context": "我们还在饮品店，发车时间临近。你给同行者提出现在返回车站的建议。",
+        "prompt": "用We、had better、go back to the station、now写一句建议。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n95-exact-clock-time",
+        "context": "出行公告只确认下一班火车今天发车，没有公布钟点。你向柜台补问准确钟点，好安排去车站的接送。",
+        "prompt": "用What time、will、the next train、leave询问钟点。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "diagnostic-n95-relative-time",
+        "context": "轮班联络记录：他会从现在起两天以后返回，今天还未返回。",
+        "prompt": "用He、will、return、两天以后写一句未来安排。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n95-had-better-advice",
+        "context": "她要去取登记表，你须守住已经领到的钥匙。你向她解释自己现在最好待在这里。",
+        "prompt": "用I、had better、stay here、now写一句建议。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先判断该做的行动，再用主语+had better/’d better+原形，保留现在或将来条件。"
+      },
+      {
+        "id": "guided-n95-exact-clock-time",
+        "context": "校车负责人已确认这趟列车会在09:17离开，需把时间转述给不看数字时刻表的同伴。",
+        "prompt": "用The train、will leave、at和英文时间词，报告九点十七分发车。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：区分事件时刻与当前钟点；读取分钟；仅当题干说明快慢时才校正，slow加、fast减，可靠时刻表直接读取。"
+      },
+      {
+        "id": "guided-n95-relative-time",
+        "context": "材料运输过去由同事处理，但我自己的下一次出行是从现在起一个月以后去悉尼。",
+        "prompt": "用I、will、go to Sydney、一个月以后，只报告我的未来安排。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：以后用in+时段（可加所有格time），以前用时段+ago；动作和时态按事实匹配。"
+      },
+      {
+        "id": "independent-n95-had-better-advice",
+        "context": "陌生露营点有人身体不适，你根据需要帮助的当前情况向同伴建议呼叫医生。",
+        "prompt": "用You、had better、call a doctor、now写一句建议。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n95-exact-clock-time",
+        "context": "陌生接待厅的钟显示08:15，但工作人员确认它慢十分钟。你向赶时间的同伴报告实际当前钟点。",
+        "prompt": "用It is和英文时间词，写实际时间，不报告钟面错误读数。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n95-relative-time",
+        "context": "货物是否赶得上仍需比较等待时长：下一班公交车从现在起二十分钟以后离开。",
+        "prompt": "用The next bus、will leave、二十分钟以后报告未来安排。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n95-had-better-advice",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一场活动的最后一轮登记快结束了，她还没到登记桌。你向旁人提出她现在最好赶快的建议。",
+        "prompt": "用She、had better、hurry、now写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n95-exact-clock-time",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一间设备房的可靠钟显示11:40，需向没有看到钟的人报告当前时间。",
+        "prompt": "用It is和英文时间词，表达十一点四十分。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n95-relative-time",
+        "context": "保留上一轮首答和订正。下面是另一情境：另一份档案是已发生的访问：他们两小时前去了柏林；现在不要写将来计划。",
+        "prompt": "用They、go to Berlin、两小时以前报告过去记录。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n95-had-better-advice",
+        "context": "隔日新任务：地板刚打蜡，行走的人应当小心；你直接提醒对方现在最好小心。",
+        "prompt": "用You、had better、be careful、now写一句建议。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n95-exact-clock-time",
+        "context": "另一位医生今天会到来，接待人只知道日期，不知道准确钟点，需安排谁在门口等。",
+        "prompt": "用What time、will、the doctor、arrive询问到达钟点。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "review-a-n95-relative-time",
+        "context": "隔日新得到的出行安排：我们从现在起两周以后会飞往首尔，不能把别人两周前的经历算作我们的计划。",
+        "prompt": "用We、will、fly to Seoul、两周以后报告计划。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n95-had-better-advice",
+        "context": "一周后新任务：他还在领证窗口，大家需要等他一起出发；你说明我们现在最好等他。",
+        "prompt": "用We、had better、wait for him、now写一句建议。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n95-exact-clock-time",
+        "context": "一周后新的器材间时钟显示07:20，但它快五分钟；你只报告实际的当前钟点。",
+        "prompt": "用It is和英文时间词，写实际时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n95-relative-time",
+        "context": "一周后新查到的返程收据：她一周前已经返回东京。只补过去记录，不要改成未来。",
+        "prompt": "用She、return to Tokyo、一周以前报告已发生归程。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]

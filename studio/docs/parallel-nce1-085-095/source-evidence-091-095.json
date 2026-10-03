@@ -1,0 +1,167 @@
+{
+  "baseline": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "remoteHeads": "6b1faad2840bee06f9b824e72d5c551bb9acd273",
+  "groups": [
+    {
+      "id": "nce1-91",
+      "sourceSha256": "f688eacca781fecca359a7729389ffc2bea06fd709b6350f09c6ed7794aabecb",
+      "languageFileSha256": "83651b0eb2fee3095ea02806c78b017f6cdc56f144725ac70191ff35ec2e52ba",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "ee50b60b8089ce13d31c050340c489dc2c98dcc239175684c6968ddb005d7659",
+      "grammarEntry": {
+        "id": "NCE1-91",
+        "book": "NCE1",
+        "lesson": 91,
+        "lastLesson": 92,
+        "unit": null,
+        "title": "一般将来时：When will…?",
+        "category": "tense",
+        "terms": "when will future",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 192
+          },
+          {
+            "section": "句型练习",
+            "page": 191
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 190
+          }
+        ],
+        "pages": [
+          190,
+          191,
+          192
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 190,
+          "sha256": "fb2f297bce9ec299e1068cadc44bf6f188b8fd001c68107fdacba709d0aac329"
+        },
+        {
+          "page": 191,
+          "sha256": "b24c2de8562a7187a9d105310b4a86a87931d7d10264172cad05381e7f25e704"
+        },
+        {
+          "page": 192,
+          "sha256": "0c923e92294d44f4b3fb3cfca6e0a1b653d987d9fd7b0da0d054b0bd1cec2f55"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-93",
+      "sourceSha256": "5ea7b0ef88ab0ab1b40914569b11fcd29e2c65dbf9f3989c2a0c99214c9ba9e6",
+      "languageFileSha256": "6d4e62afb9c67daf64d572a4980d411c3e39ecddee83547d64d9ef5d43e953e6",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "32ea8ee58ab6ba059aeb9f4e09c2df01a65d49718904cc6f3501e32676f60849",
+      "grammarEntry": {
+        "id": "NCE1-93",
+        "book": "NCE1",
+        "lesson": 93,
+        "lastLesson": 94,
+        "unit": null,
+        "title": "过去与将来的时间问答",
+        "category": "tense",
+        "terms": "did will",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 196
+          },
+          {
+            "section": "句型练习",
+            "page": 195
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 194
+          }
+        ],
+        "pages": [
+          194,
+          195,
+          196
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 194,
+          "sha256": "9c19871226302310532c25e85cb95f28ffb4c8a46235591f1017ed9ce95ac4d8"
+        },
+        {
+          "page": 195,
+          "sha256": "83900456726150ece05dae0edd787633af771aa845fb479af6c8b0613edf4091"
+        },
+        {
+          "page": 196,
+          "sha256": "e657d238439cf9e48d378b2fa86c53895dec3129300e264e353fcb76489fed40"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-95",
+      "sourceSha256": "5146bba81d784bebc115cb2d5449bfba3ddc2afe29fe17e4a72f03f1238225a0",
+      "languageFileSha256": "8dbcbd88966701fdc81fa0d78d62d519891462ed573f4ebdec840b223a989f56",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "1a5757f60527b7843d431c68602687f92b7246e1746a55632fd5d5e01774dab7",
+      "grammarEntry": {
+        "id": "NCE1-95",
+        "book": "NCE1",
+        "lesson": 95,
+        "lastLesson": 96,
+        "unit": null,
+        "title": "had better 与将来时间表达",
+        "category": "modal",
+        "terms": "had better will exact time",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 200
+          },
+          {
+            "section": "句型练习",
+            "page": 199
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 198
+          }
+        ],
+        "pages": [
+          198,
+          199,
+          200
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 198,
+          "sha256": "4a0098ad13ea2a03bed75d1e26a87f5568334a2667f6c8dc2c6acd9b3fa1c39a"
+        },
+        {
+          "page": 199,
+          "sha256": "ef5aeb773c09d51db8847fbfa6a54149c38d227e63513adb506d948921a83230"
+        },
+        {
+          "page": 200,
+          "sha256": "7be689e67b4bc136662f36d73378ad2eacded32de2eb4dd05f67e79373316586"
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}
