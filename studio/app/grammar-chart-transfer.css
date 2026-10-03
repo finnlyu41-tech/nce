@@ -1,0 +1,14 @@
+.grammar-chart-transfer{margin-top:28px;padding-top:24px;border-top:1px solid var(--line,#ddd);min-width:0}
+.grammar-chart-transfer p,.grammar-chart-transfer li,.grammar-chart-transfer figcaption,.grammar-chart-transfer summary{overflow-wrap:anywhere}
+.grammar-chart-transfer details{margin:16px 0}.grammar-chart-transfer summary{cursor:pointer;font-weight:600}
+.grammar-chart-exercise{padding:16px;margin:20px 0;border:1px solid var(--line,#ddd);border-radius:14px;min-width:0}
+.grammar-chart-exercise fieldset{border:0;padding:0;margin:16px 0;min-width:0}
+.grammar-chart-exercise fieldset label{display:flex;align-items:flex-start;gap:10px;padding:10px 0}
+.grammar-chart-exercise fieldset input[type="radio"]{width:18px;height:18px;padding:0;flex:0 0 18px;margin-top:5px}.grammar-chart-exercise fieldset span{flex:1;min-width:0;overflow-wrap:anywhere}
+.grammar-chart-table{margin:16px 0}.grammar-chart-table figcaption{font-size:.9rem;margin-bottom:10px}
+.grammar-chart-table table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:.9rem}
+.grammar-chart-table th,.grammar-chart-table td{padding:8px 5px;border-bottom:1px solid var(--line,#ddd);text-align:left;overflow-wrap:anywhere}
+.grammar-chart-exercise textarea{display:block;box-sizing:border-box;width:100%;min-width:0;resize:vertical}
+.grammar-chart-exercise button{white-space:normal;max-width:100%;overflow-wrap:anywhere}
+.grammar-chart-feedback{padding:12px;margin:16px 0;background:var(--panel,#f6f7fa);border-radius:10px}
+@media(max-width:400px){.grammar-chart-exercise{padding:12px}.grammar-chart-table table{font-size:.82rem}}

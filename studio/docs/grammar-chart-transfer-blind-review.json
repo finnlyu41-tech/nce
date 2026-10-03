@@ -1,0 +1,29 @@
+{
+  "method": "Independent agent with no conversation fork; only the saved blind brief containing tables/prompts/options, no answer fields or hints. No personal records.",
+  "input": "Original blind brief had an imprecise blanket same-respondent description; corrected production data note after review.",
+  "answers": {
+    "scale": "The bus share rose by 10 percentage points, a 25% increase relative to 2016.",
+    "from-to": "The bus share rose from 40% to 50% between 2016 and 2024.",
+    "compareFirstDraft": "In Lakeford in 2024, trams accounted for 60% of the main commuting modes, compared with 30% for buses.",
+    "compareRecommended": "In Lakeford in 2024, 60% of respondents mainly commuted by tram, compared with 30% by bus.",
+    "independent": "Overall, the share commuting mainly by car declined, while the shares for bicycles and other modes increased. The car share fell from 60% in 2018 to 40% in 2024, a decrease of 20 percentage points. Over the same period, the bicycle share rose from 20% to 30%, an increase of 10 percentage points."
+  },
+  "reviewerFindings": [
+    "scale has one correct option; from-to has one repair under its explicit one-preposition constraint.",
+    "compare is intentionally open: levels, ratio/half, percentage-point difference and correctly based relative difference can all be valid.",
+    "The first compare draft describes a share of modes imprecisely; the recommended respondent-share version is clearer and is included in finite references. Do not treat the first draft as a proven model answer.",
+    "Clarify each city's and year's denominator; samples need not be the same individuals and no sample counts are provided.",
+    "Other is an aggregate; its overall increase does not prove every mode inside it increased.",
+    "Largest category does not mean majority: the car share is 40% in 2024.",
+    "Tram vocabulary may burden beginners; add the Chinese gloss.",
+    "This is bounded near transfer with data selection and an independently chosen overview, not a full IELTS assessment or evidence of distant mastery."
+  ],
+  "finiteNearBoundaries": [
+    "40% to 50%: by 10% is not by 10 percentage points; relative increase is 25%.",
+    "60% versus 30%: 30% higher would be 39%; 100% higher is 60%; 200% higher would be 90%.",
+    "A single-year cross-section cannot support a temporal doubling claim.",
+    "Percentages alone cannot establish absolute commuter counts, causes, individual switches or future trends."
+  ],
+  "productionCorrections": ["Added per-city/per-year denominator and sample-size note", "Added aggregate Other and largest/majority self-check", "Added tram gloss", "Kept six independently proposed natural comparison references", "Added 200%-higher explicit error feedback"],
+  "scoringBoundary": "Finite reference matches have no mastery, delayed evidence, transfer badge or IELTS score side effect; unmatched expression and open paragraph remain pending human review."
+}

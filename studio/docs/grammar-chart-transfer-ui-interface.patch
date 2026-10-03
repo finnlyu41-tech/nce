@@ -1,0 +1,18 @@
+--- a/studio/app/grammar-curriculum-ui.tsx
++++ b/studio/app/grammar-curriculum-ui.tsx
+@@ -5,6 +5,7 @@
+ import type {GrammarStageId,GrammarUnit} from './grammar-curriculum-types';
+ import {grammarUnits,grammarStages,grammarPurposes,grammarPrerequisites,lessonsForGrammarUnit,lessonsForGrammarGuide,searchGrammarUnits,searchGrammarConcepts,grammarPracticeLink,guideBelongsToEntry} from './grammar-curriculum';
+ import {grammarProgressFor,grammarProgressKey,grammarProgressNeedsNewerVersion,updateGrammarProgress,markGrammarSeen,beginGrammarRound,setGrammarAnswer,showGrammarHint,revisitGrammarTheory,checkGrammarResponse,finishGrammarRound,grammarRoundQuestions,grammarProgressStatus,grammarMaterialNotice,emptyGrammarResponse,type GrammarUnitProgress} from './grammar-curriculum-progress';
++import {GrammarChartTransfer} from './grammar-chart-transfer-ui';
+ import {GrammarExplanation} from './grammar-explanation-ui';
+ import {grammarGuides,grammarLessonLabel} from './textbook-grammar';
+ import './grammar-curriculum.css';
+@@ -66,6 +67,7 @@
+   {(mode==='learn'||submitted)&&<><section className="grammar-transfer-task"><h3>再用到自己的情况</h3><p>{unit.transfer.prompt}</p><ul>{unit.transfer.criteria.map(c=><li key={c}>{c}</li>)}</ul><p className="small muted">选择一个知识点，先跟着示范练，再换成自己的情境。开放表达需要自行核对或请老师反馈。</p>
+    {props.onPracticeGuide?<div className="grammar-transfer-links">{unit.guideIds.map(id=>{const link=grammarPracticeLink(unit,id,preferredBook);return link&&<button className="btn secondary" key={id} onClick={()=>{patch(revisitGrammarTheory);props.onPracticeGuide?.(link.book,link.lesson,id,{unitId:unit.id,...unit.transfer})}}>{grammarGuides[id].title}<ArrowRight size={15}/></button>})}</div>:<p className="small muted">可结合下方相关课文练习。</p>}
+   </section>
++  <GrammarChartTransfer unitId={unit.id} state={props.state} update={props.update}/>
+   <section className="grammar-linked-lessons"><button className="btn secondary" aria-expanded={lessonsOpen} aria-controls={`grammar-lessons-${unit.id}`} onClick={()=>setLessonsOpen(!lessonsOpen)}>{lessonsOpen?'收起相关课文':'查看相关课文'}</button><p>可结合以下课文复习。本页讲解与例句由本站编写。</p>{lessonsOpen&&<div id={`grammar-lessons-${unit.id}`}>{links.map(link=><button key={`${link.book}-${link.lesson}`} disabled={!props.onOpenLesson} className="text-btn" onClick={()=>{patch(revisitGrammarTheory);props.onOpenLesson?.(link.book,link.lesson)}}>{bookNames[link.book]} · 第 {link.lesson}{link.lastLesson!==link.lesson?`–${link.lastLesson}`:''} 课<span>{link.guideIds.map(id=>grammarGuides[id].title).join('；')}</span></button>)}</div>}</section>
+   <section className="grammar-ielts-use"><h3>这些表达能用在哪里</h3>{unit.purposeIds.map(id=>{const p=grammarPurposes.find(p=>p.id===id)!;return <p key={id}><strong>{p.title}：</strong>{p.ieltsUse}。</p>})}<p className="small muted">用途是本站练习建议；不是 IELTS 官方考纲、题目保证或成绩预测。</p></section></>}
+  </article>;

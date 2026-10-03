@@ -1,0 +1,228 @@
+{
+  "id": "comparisons-chart-v1",
+  "unitId": "comparisons",
+  "title": "把比较用到图表：水平、变化与分母",
+  "scope": "原创虚构数据的小练习，针对读图和比较措辞；不是官方 IELTS 题库、完整 Task 1 作文或分数预测。",
+  "lesson": [
+    {
+      "heading": "先读水平，再说变化",
+      "text": "40%和50%是两个年份的水平。rose from 40% to 50% 交代起点与终点；rose by … 交代变化量。to 后的终点不能替换成变化量，by 后也不能直接填起点。"
+    },
+    {
+      "heading": "百分点与相对增幅的分母不同",
+      "text": "40%到50%相差10个百分点（50−40）；相对于原来的40%，增幅是25%（10÷40）。因此 rose by 10 percentage points 与 rose by 25% 可描述同一变化，但 rose by 10% 会说成44%。先确认谈的是差额还是相对变化。"
+    },
+    {
+      "heading": "同一年比较不是一段增长",
+      "text": "2024年tram占60%、bus占30%，tram share 是 bus share 的两倍，也比bus share高30个百分点或100%。这里没有两个年份，不能据此写 rose from 30% to 60%。占比来自同一人群才可直接比较；没有样本人数时，不把跨年的占比变化写成绝对人数增加。"
+    },
+    {
+      "heading": "比较结构服务于读图结论",
+      "text": "可以用 twice as high as 比占比，twice as many commuters … as … 比同一人群中的人数关系，也可以用 compared with / whereas 并列两个水平。没有要求堆砌复杂句；表格不说明票价、原因或未来趋势，就不添加这些结论。"
+    }
+  ],
+  "contrasts": [
+    {
+      "a": "The bus share rose from 40% to 50%.",
+      "b": "The bus share rose by 10 percentage points.",
+      "why": "前句报起点与终点，后句报百分点差，含义一致；by 40% 会改变数值关系。"
+    },
+    {
+      "a": "The tram share was twice the bus share.",
+      "b": "The tram share was 30% higher than the bus share.",
+      "why": "60÷30=2，前句正确。后句会得到30%×1.3=39%，与60%不符；可改为30 percentage points higher或100% higher。"
+    }
+  ],
+  "tables": [
+    {
+      "id": "change",
+      "title": "Harbourton乘公交的通勤者占比",
+      "rows": [
+        [
+          "2016",
+          "40%"
+        ],
+        [
+          "2024",
+          "50%"
+        ]
+      ]
+    },
+    {
+      "id": "comparison",
+      "title": "Lakeford在2024年的主要通勤方式",
+      "rows": [
+        [
+          "Trams",
+          "60%"
+        ],
+        [
+          "Buses",
+          "30%"
+        ],
+        [
+          "Walking",
+          "10%"
+        ]
+      ]
+    },
+    {
+      "id": "independent",
+      "title": "另一座城市的主要通勤方式",
+      "rows": [
+        [
+          "2018",
+          "Cars 60%",
+          "Bicycles 20%",
+          "Other 20%"
+        ],
+        [
+          "2024",
+          "Cars 40%",
+          "Bicycles 30%",
+          "Other 30%"
+        ]
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "scale",
+      "kind": "recognise",
+      "tableId": "change",
+      "prompt": "选择同时准确交代百分点变化与相对于2016年的增幅的一句。",
+      "options": [
+        "The bus share rose by 10%, a 25-percentage-point increase.",
+        "The bus share rose by 10 percentage points, a 25% increase relative to 2016.",
+        "The bus share rose to 10 percentage points, a 25% increase relative to 2016.",
+        "The bus share rose by 25 percentage points, a 10% increase relative to 2016."
+      ],
+      "answer": "The bus share rose by 10 percentage points, a 25% increase relative to 2016.",
+      "accepted": [],
+      "explanation": "百分点差是50−40=10；相对增幅的基数是2016年的40，所以10÷40=25%。10%与10个百分点不是同一单位。",
+      "hints": [
+        "先做50−40，得到的是百分点差。",
+        "相对增幅还要除以起始水平40%，不是除以终点50%。"
+      ],
+      "nearErrors": [
+        {
+          "value": "The bus share rose by 10%, a 25-percentage-point increase.",
+          "feedback": "10%与25个百分点都不符合表格：两种变化量的分母和单位写反了。"
+        },
+        {
+          "value": "The bus share rose to 10 percentage points, a 25% increase relative to 2016.",
+          "feedback": "to要交代终点水平50%；10个百分点是变化量，应用by。"
+        },
+        {
+          "value": "The bus share rose by 25 percentage points, a 10% increase relative to 2016.",
+          "feedback": "差是10个百分点，相对2016年的增幅是25%，这两个数值和单位不能对调。"
+        }
+      ]
+    },
+    {
+      "id": "from-to",
+      "kind": "repair",
+      "tableId": "change",
+      "prompt": "The bus share rose by 40% to 50% between 2016 and 2024. 这句话要保留两个水平和两年时间，不计算相对增幅。只替换一个介词来准确表达表格。",
+      "answer": "The bus share rose from 40% to 50% between 2016 and 2024.",
+      "accepted": [],
+      "explanation": "from 40%是起点，to 50%是终点。原句by 40%表达相对增长40%，会得到56%，不是表格中的50%。本题只换介词，不改成另一种正确但不符合限定的重写。",
+      "hints": [
+        "保留40%和50%两个水平，想清楚哪一个是起点。",
+        "交代起点和终点用from … to …；by后面接变化量。"
+      ],
+      "nearErrors": [
+        {
+          "value": "The bus share rose by 40% to 50% between 2016 and 2024.",
+          "feedback": "by 40%是相对增加40%，与40%→50%的记录不符。只将by改为表示起点的from。"
+        },
+        {
+          "value": "The bus share rose to 40% from 50% between 2016 and 2024.",
+          "feedback": "起点和终点倒置了；2016年是40%，2024年是50%。"
+        },
+        {
+          "value": "The bus share rose from 50% to 40% between 2016 and 2024.",
+          "feedback": "数值方向被改成下降，与表格相反，而且rose与这条方向不一致。"
+        }
+      ]
+    },
+    {
+      "id": "compare",
+      "kind": "apply",
+      "tableId": "comparison",
+      "prompt": "写一至两句英文，比较2024年tram与bus的占比。任选自然比较结构；须交代60%与30%或明确两倍、半数或30个百分点差的关系。不虚构时间变化、原因或人数。",
+      "answer": "Trams accounted for 60% of commuters, twice the bus share of 30%.",
+      "accepted": [
+        "At 60%, the tram share was twice the bus share, which was 30%.",
+        "The tram share was 60%, compared with 30% for buses.",
+        "Trams accounted for 60% of commuters, whereas buses accounted for 30%.",
+        "Sixty percent of commuters used trams, compared with thirty percent who used buses.",
+        "Sixty per cent of commuters used trams, compared with thirty per cent who used buses.",
+        "Twice as many commuters used trams as used buses.",
+        "Twice as many commuters used trams as buses.",
+        "The proportion of commuters using trams was twice that of commuters using buses.",
+        "The tram share was twice as high as the bus share.",
+        "Trams were used by 60% of commuters and buses by 30%.",
+        "60% of commuters used trams, while 30% used buses.",
+        "The tram share exceeded the bus share by 30 percentage points.",
+        "The tram share was 30 percentage points higher than the bus share.",
+        "Compared with the bus share, the tram share was 100% higher.",
+        "The share using buses was half the share using trams.",
+        "The tram share was double the bus share.",
+        "Trams had a 60% share, while buses had a 30% share.",
+        "In Lakeford in 2024, 60% of respondents mainly commuted by tram, compared with 30% by bus.",
+        "In Lakeford in 2024, the share commuting mainly by tram was twice that commuting mainly by bus.",
+        "In Lakeford in 2024, the shares for trams and buses were 60% and 30%, respectively.",
+        "In Lakeford in 2024, trams accounted for 60%, whereas buses accounted for 30%.",
+        "In Lakeford in 2024, the tram share was 100% higher than the bus share, at 60% compared with 30%.",
+        "In Lakeford in 2024, the tram share was 30 percentage points higher than the bus share."
+      ],
+      "explanation": "这是同一年同一人群的比较：60÷30=2，60−30=30个百分点。多种比较结构都可以；这一小组自动核对仅覆盖本站有限参考，其他表达可保留并人工检查。不能用这个横截面虚构一段增长或原因。",
+      "hints": [
+        "先判断比较的是两个年份，还是同一年的两种方式。",
+        "从表格可以算60÷30或60−30；选择比值或百分点差，再选自己的比较结构。"
+      ],
+      "nearErrors": [
+        {
+          "value": "The tram share was 30% higher than the bus share.",
+          "feedback": "30% higher意味着30%×1.3=39%，不是60%；这里是30个百分点高或100%高。"
+        },
+        {
+          "value": "The bus share was twice the tram share.",
+          "feedback": "两倍关系反了：tram是60%，bus是30%；bus share是tram share的一半。"
+        },
+        {
+          "value": "Trams accounted for 60% of commuters, three times the bus share of 30%.",
+          "feedback": "60÷30=2，不是3；数字正确但比值结论错误。"
+        },
+        {
+          "value": "The tram share increased from 30% to 60%.",
+          "feedback": "表格是2024年的方式对比，没有过去tram占比30%的记录；不要虚构时间变化。"
+        },
+        {
+          "value": "Trams were more popular because tickets were cheaper.",
+          "feedback": "表格没给票价或原因；这句也没有交代题目所需的数值或比值关系。"
+        },
+        {
+          "value": "The tram share was 200% higher than the bus share.",
+          "feedback": "60%是30%的200%，但相对于30%高出100%；200% higher会表示90%，不是60%。"
+        }
+      ]
+    }
+  ],
+  "independent": {
+    "tableId": "independent",
+    "prompt": "阅读另一座城市的表格，写2—3句：先概括总体变化，再选一组数字说明。自行选择比较/变化结构，准确标注百分比或百分点。不从占比推断绝对人数或因果。",
+    "criteria": [
+      "先概括cars占比下降、bicycles和other占比上升；可以说cars仍是最大的单一类别。",
+      "再用一组数字支持比较，例如cars从60%降至40%，或bicycles上升10个百分点。",
+      "时间变化用from/to或by交代水平或差；横向比较说明比较对象与同一分母。",
+      "表格没有样本人数、原因或未来数据，保留这些未知。",
+      "Other是合计，不能推出其中每一种方式都增加；largest不等于超过50%的majority。",
+      "自行选择词句；这里只保存草稿和自查，准确性、连贯性、概览质量与自然度继续人工核对。"
+    ],
+    "reference": "Overall, the car share fell, while the bicycle and other-mode shares increased. Cars still had the largest share in 2024, although their proportion dropped from 60% to 40%. The bicycle share rose by 10 percentage points to 30%.",
+    "referenceNote": "这是对本站虚构表格的一种写法，不是唯一答案。先写自己的段落再对照；不自动给开放段落打分。"
+  },
+  "dataNote": "以下数据由本站虚构。各表比例的分母为该城市、该年份的受访通勤者，每人只选一种主要方式。各年样本人数未提供，也未声明为同一批人；Other 是其他方式的合计。"
+}
