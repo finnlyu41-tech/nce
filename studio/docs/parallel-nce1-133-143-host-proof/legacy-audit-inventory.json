@@ -1,0 +1,49 @@
+{
+  "base66FullSha": "9ae39452c8b0c529539bb685ffeb39add02ca0bf",
+  "modelSha256": "4b3a67cf22c23f2d263af523ac6e314c37714f4b03784efbd935d695571daa57",
+  "modelEquals9d": true,
+  "modelEquals7b": true,
+  "supportByteIdenticalBefore": true,
+  "supportByteIdentical66Base": true,
+  "supportSha256": "e37b6fdd649b1edddeff84a371bfdbfac31bd0278d6369874dbc56c0eacac9fe",
+  "counts": {
+    "textbookCourses": 348,
+    "textbookCoursesByBook": {
+      "NCE1": 144,
+      "NCE2": 96,
+      "NCE3": 60,
+      "NCE4": 48
+    },
+    "teachingGroups": 276,
+    "groupsByBook": {
+      "NCE1": 72,
+      "NCE2": 96,
+      "NCE3": 60,
+      "NCE4": 48
+    },
+    "mapGroups": 168,
+    "classicSupplementGroups": 108,
+    "comicGroups": 72,
+    "sharedGuides": 97,
+    "grammarUnits": 28,
+    "grammarQuestions": 168,
+    "registeredLoopGroups": 72,
+    "unregisteredLoopGroups": 204,
+    "registeredLoopTextbookCourseNumbers": 144,
+    "registeredLoopQuestions": 1296,
+    "support": {
+      "ielts-mini": 29,
+      "grammar-unit": 28,
+      "backup-original": 36,
+      "legacy-ielts-task": 11,
+      "starter": 3,
+      "chapter-checkpoint": 14,
+      "map-external-task": 12,
+      "legacy-route-node": 37,
+      "map-final-evidence": 3,
+      "accepted-demo": 1
+    },
+    "ieltsSessions": 29,
+    "ieltsUniqueMaterials": 126
+  }
+}

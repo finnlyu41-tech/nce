@@ -1,0 +1,34 @@
+PASS seven native selected courses keep independent draft keys through refresh
+PASS native Today has seven distinct pending links and no duplicate recommended task
+PASS ordinary native note survives selected course writes
+PASS actual downloaded backup includes all seven snapshots and sidecars
+PASS two native tabs save different course drafts without overwriting either or the note
+PASS nce1-133 original text/comic/real audio bind this selected lesson
+PASS nce1-137 original text/comic/real audio bind this selected lesson
+PASS nce1-139 original text/comic/real audio bind this selected lesson
+PASS nce1-143 original text/comic/real audio bind this selected lesson
+PASS establish explicit synthetic pending order after source activity
+PASS nce1-131 native pipeline saves originals and follows pending priority to nce1-133
+PASS nce1-133 native pipeline saves originals and follows pending priority to nce1-135
+PASS nce1-135 native pipeline saves originals and follows pending priority to nce1-137
+PASS nce1-137 native pipeline saves originals and follows pending priority to nce1-139
+PASS nce1-139 native pipeline saves originals and follows pending priority to nce1-141
+PASS nce1-141 native pipeline saves originals and follows pending priority to nce1-143
+PASS nce1-143 native pipeline saves originals and follows pending priority to chapter-6
+PASS normal current-course bridge nce1-131 to nce1-133 without another pending course
+PASS normal current-course bridge nce1-133 to nce1-135 without another pending course
+PASS normal current-course bridge nce1-135 to nce1-137 without another pending course
+PASS normal current-course bridge nce1-137 to nce1-139 without another pending course
+PASS normal current-course bridge nce1-139 to nce1-141 without another pending course
+PASS normal current-course bridge nce1-141 to nce1-143 without another pending course
+PASS normal current-course bridge nce1-143 to chapter-6 without another pending course
+PASS real chapter6 access keeps gates and allows a normal return to143
+PASS native imported pending backup restores seven course positions without deleting the ordinary note
+PASS native finished backup restore keeps seven original attempt sets and separate corrections
+PASS native restore retains future-content-version raw and blocks selected133
+PASS native restore retains foreign-course-envelope raw and blocks selected133
+PASS native restore retains foreign-correction-ID raw and blocks selected133
+PASS limited 320 CSS viewport selected133/139/143 and records avoid horizontal page overflow
+PASS limited 390 CSS viewport selected133/139/143 and records avoid horizontal page overflow
+PASS seven completed course receipts preserve map and FSRS grading boundaries
+{"proof":"/Users/finnlyu/Documents/Codex/2026-10-02/task-4/nce1-133-143-host/studio/work/parallel-nce1-133-143-host/native-Gix88F","passed":33,"failed":0,"exceptions":0,"driverExitedWithError":false}

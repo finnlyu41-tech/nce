@@ -1,0 +1,42 @@
+{
+  "base": "9ae39452c8b0c529539bb685ffeb39add02ca0bf",
+  "registeredGroups": 72,
+  "finiteTasks": 1296,
+  "node": {
+    "production-node.tap": {
+      "pass": 104,
+      "fail": 0
+    },
+    "frozen-content-source.tap": {
+      "pass": 53,
+      "fail": 0
+    },
+    "legacy-batch-regression.tap": {
+      "pass": 78,
+      "fail": 0
+    },
+    "audit-regression.tap": {
+      "pass": 7,
+      "fail": 0
+    }
+  },
+  "native": {
+    "native": {
+      "passed": 33,
+      "failed": 0,
+      "exceptions": 0
+    },
+    "delayed-native": {
+      "passed": 2,
+      "failed": 0,
+      "exceptions": 0
+    }
+  },
+  "sourceHashesMatchFinalFiles": true,
+  "terminal": "nce1-143\u2192chapter-6",
+  "no145": true,
+  "chapterProjectAnd12StableMemberGatesPreserved": true,
+  "natural24h7d": "unverified",
+  "humanExpression": "awaiting-human-review",
+  "noPushMergeDeploy": true
+}
