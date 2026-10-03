@@ -1,0 +1,654 @@
+{
+  "schemaVersion": 1,
+  "label": "GT场景原创专项练习",
+  "rights": "original-fictional",
+  "rightsZh": "六篇短文、题目与反馈均为本次创作的虚构材料，不引用真实题库。",
+  "provenance": "Original fictional everyday and workplace texts, authored for this practice set.",
+  "officialSubtypeVerified": false,
+  "positioningZh": "用于练习表格条件定位、同义改写与选项排除；不声称为已核验的官方 GT 选字母表格题示例。",
+  "scoring": {
+    "unit": "blank",
+    "pointPerCorrect": 1,
+    "maxPointsPerExercise": 3,
+    "totalPoints": 18,
+    "bandClaims": false
+  },
+  "timing": {
+    "seconds": 180,
+    "exerciseId": "timed",
+    "basis": "local-practice-setting",
+    "descriptionZh": "计时篇的本地练习限时为 180 秒，不代表官方分题用时。"
+  },
+  "sections": [
+    {
+      "id": "model",
+      "title": "示范：图书馆服务",
+      "sourceTitle": "Riverton Library: visitor information",
+      "sourceText": "If your membership card is cracked, hand it to the staff member at the welcome desk. A replacement is free. Members who need a computer for Saturday's digital workshop should choose a workstation on our website before Friday; places cannot be reserved at the door. Workshop handouts are available from the welcome desk on the day. If a printing job is held because money is owed, pay the balance at the self-service terminal beside the printer. To cancel a workshop place, email us the reference number in your confirmation. Questions about the lesson itself should be discussed with the instructor when the session has finished. Reception cannot answer teaching questions.",
+      "wordCount": 110,
+      "rights": "original-fictional",
+      "label": "GT场景原创专项练习",
+      "instruction": "Choose the correct letter, A–F, for each blank in the table. Use each letter no more than once in this exercise.",
+      "instructionZh": "从 A–F 中为表格各空选择正确字母。本篇每个字母最多使用一次；不同篇章重新计算。",
+      "tableHeaders": [
+        "Service",
+        "Condition",
+        "Action"
+      ],
+      "options": [
+        {
+          "letter": "A",
+          "text": "Reserve a computer online"
+        },
+        {
+          "letter": "B",
+          "text": "Hand the damaged card to reception"
+        },
+        {
+          "letter": "C",
+          "text": "Ask the tutor after the class"
+        },
+        {
+          "letter": "D",
+          "text": "Collect printed notes from reception"
+        },
+        {
+          "letter": "E",
+          "text": "Email the booking reference"
+        },
+        {
+          "letter": "F",
+          "text": "Clear the debt at the payment machine"
+        }
+      ],
+      "rows": [
+        {
+          "qid": "model-1",
+          "service": "Replacement card",
+          "condition": "Your card has split",
+          "answer": "B",
+          "explanation": "split 与 cracked 都描述卡片破裂；welcome desk 对应 reception，因此需要向前台出示损坏的卡。",
+          "hint": "先找卡片损坏这一条件，再比较两项与前台有关的操作。",
+          "action": "__",
+          "evidence": "If your membership card is cracked, hand it to the staff member at the welcome desk.",
+          "evidenceStart": 0,
+          "evidenceEnd": 84,
+          "feedback": {
+            "A": "不正确。Reserve a computer online 对应“参加周六数字课程且需要电脑”；本行处理的是“会员卡破裂，需要换卡”，条件不同。该选项的原文依据：“Members who need a computer for Saturday's digital workshop should choose a workstation on our website before Friday; places cannot be reserved at the door.”",
+            "B": "正确。split 与 cracked 都描述卡片破裂；welcome desk 对应 reception，因此需要向前台出示损坏的卡。 原文证据：“If your membership card is cracked, hand it to the staff member at the welcome desk.”",
+            "C": "不正确。Ask the tutor after the class 对应“询问课程内容”；本行处理的是“会员卡破裂，需要换卡”，条件不同。该选项的原文依据：“Questions about the lesson itself should be discussed with the instructor when the session has finished.”",
+            "D": "不正确。Collect printed notes from reception 对应“领取课程讲义”；本行处理的是“会员卡破裂，需要换卡”，条件不同。该选项的原文依据：“Workshop handouts are available from the welcome desk on the day.”",
+            "E": "不正确。Email the booking reference 对应“取消课程名额”；本行处理的是“会员卡破裂，需要换卡”，条件不同。该选项的原文依据：“To cancel a workshop place, email us the reference number in your confirmation.”",
+            "F": "不正确。Clear the debt at the payment machine 对应“打印任务因欠费暂停”；本行处理的是“会员卡破裂，需要换卡”，条件不同。该选项的原文依据：“If a printing job is held because money is owed, pay the balance at the self-service terminal beside the printer.”"
+          }
+        },
+        {
+          "qid": "model-2",
+          "service": "Printing",
+          "condition": "An unpaid amount has stopped your job",
+          "answer": "F",
+          "explanation": "unpaid amount 对应 money is owed；clear the debt 改写 pay the balance，payment machine 改写 self-service terminal。",
+          "hint": "定位打印任务为何暂停，留意金额与支付设备的表述。",
+          "action": "__",
+          "evidence": "If a printing job is held because money is owed, pay the balance at the self-service terminal beside the printer.",
+          "evidenceStart": 331,
+          "evidenceEnd": 444,
+          "feedback": {
+            "A": "不正确。Reserve a computer online 对应“参加周六数字课程且需要电脑”；本行处理的是“打印任务因欠费暂停”，条件不同。该选项的原文依据：“Members who need a computer for Saturday's digital workshop should choose a workstation on our website before Friday; places cannot be reserved at the door.”",
+            "B": "不正确。Hand the damaged card to reception 对应“会员卡破裂，需要换卡”；本行处理的是“打印任务因欠费暂停”，条件不同。该选项的原文依据：“If your membership card is cracked, hand it to the staff member at the welcome desk.”",
+            "C": "不正确。Ask the tutor after the class 对应“询问课程内容”；本行处理的是“打印任务因欠费暂停”，条件不同。该选项的原文依据：“Questions about the lesson itself should be discussed with the instructor when the session has finished.”",
+            "D": "不正确。Collect printed notes from reception 对应“领取课程讲义”；本行处理的是“打印任务因欠费暂停”，条件不同。该选项的原文依据：“Workshop handouts are available from the welcome desk on the day.”",
+            "E": "不正确。Email the booking reference 对应“取消课程名额”；本行处理的是“打印任务因欠费暂停”，条件不同。该选项的原文依据：“To cancel a workshop place, email us the reference number in your confirmation.”",
+            "F": "正确。unpaid amount 对应 money is owed；clear the debt 改写 pay the balance，payment machine 改写 self-service terminal。 原文证据：“If a printing job is held because money is owed, pay the balance at the self-service terminal beside the printer.”"
+          }
+        },
+        {
+          "qid": "model-3",
+          "service": "Digital workshop",
+          "condition": "You need to use a library computer",
+          "answer": "A",
+          "explanation": "choose a workstation on our website 改写为 reserve a computer online；需在课程前安排电脑。",
+          "hint": "区分课前预约、当日领取材料和课后提问三个时间点。",
+          "action": "__",
+          "evidence": "Members who need a computer for Saturday's digital workshop should choose a workstation on our website before Friday; places cannot be reserved at the door.",
+          "evidenceStart": 108,
+          "evidenceEnd": 264,
+          "feedback": {
+            "A": "正确。choose a workstation on our website 改写为 reserve a computer online；需在课程前安排电脑。 原文证据：“Members who need a computer for Saturday's digital workshop should choose a workstation on our website before Friday; places cannot be reserved at the door.”",
+            "B": "不正确。Hand the damaged card to reception 对应“会员卡破裂，需要换卡”；本行处理的是“参加周六数字课程且需要电脑”，条件不同。该选项的原文依据：“If your membership card is cracked, hand it to the staff member at the welcome desk.”",
+            "C": "不正确。Ask the tutor after the class 对应“询问课程内容”；本行处理的是“参加周六数字课程且需要电脑”，条件不同。该选项的原文依据：“Questions about the lesson itself should be discussed with the instructor when the session has finished.”",
+            "D": "不正确。Collect printed notes from reception 对应“领取课程讲义”；本行处理的是“参加周六数字课程且需要电脑”，条件不同。该选项的原文依据：“Workshop handouts are available from the welcome desk on the day.”",
+            "E": "不正确。Email the booking reference 对应“取消课程名额”；本行处理的是“参加周六数字课程且需要电脑”，条件不同。该选项的原文依据：“To cancel a workshop place, email us the reference number in your confirmation.”",
+            "F": "不正确。Clear the debt at the payment machine 对应“打印任务因欠费暂停”；本行处理的是“参加周六数字课程且需要电脑”，条件不同。该选项的原文依据：“If a printing job is held because money is owed, pay the balance at the self-service terminal beside the printer.”"
+          }
+        }
+      ],
+      "timeLimitSeconds": null
+    },
+    {
+      "id": "guided",
+      "title": "引导：办公室收货",
+      "sourceTitle": "Elm House: delivery desk procedure",
+      "sourceText": "Keep the entrance clear while receiving deliveries. If chilled food arrives without a purchase number, do not accept it: the driver must take it away. Office equipment longer than eighty centimetres must be entered, with its measurements, on the delivery form on the intranet before it is moved upstairs. A box with a crushed corner may be accepted if the seal is intact; send an image of the damage to your supervisor by text. Parcels for colleagues who are away should stay at reception until they return. Ask the caretaker to open the storage room if its door is locked. Empty delivery trolleys blocking the hallway belong in the loading area.",
+      "wordCount": 111,
+      "rights": "original-fictional",
+      "label": "GT场景原创专项练习",
+      "instruction": "Choose the correct letter, A–F, for each blank in the table. Use each letter no more than once in this exercise.",
+      "instructionZh": "从 A–F 中为表格各空选择正确字母。本篇每个字母最多使用一次；不同篇章重新计算。",
+      "tableHeaders": [
+        "Service",
+        "Condition",
+        "Action"
+      ],
+      "options": [
+        {
+          "letter": "A",
+          "text": "Request access from the caretaker"
+        },
+        {
+          "letter": "B",
+          "text": "Return the goods with the driver"
+        },
+        {
+          "letter": "C",
+          "text": "Record the size on the internal website"
+        },
+        {
+          "letter": "D",
+          "text": "Message a damage photo to your manager"
+        },
+        {
+          "letter": "E",
+          "text": "Keep the parcel at the front desk"
+        },
+        {
+          "letter": "F",
+          "text": "Move the trolley to the loading bay"
+        }
+      ],
+      "rows": [
+        {
+          "qid": "guided-1",
+          "service": "Chilled delivery",
+          "condition": "No order number is supplied",
+          "answer": "B",
+          "explanation": "order number 对应 purchase number。没有采购编号的冷藏食品不能接收，必须由司机带走。",
+          "hint": "同时核对货物类型和缺少的编号，勿只看到 delivery 就选。",
+          "action": "__",
+          "evidence": "If chilled food arrives without a purchase number, do not accept it: the driver must take it away.",
+          "evidenceStart": 52,
+          "evidenceEnd": 150,
+          "feedback": {
+            "A": "不正确。Request access from the caretaker 对应“储藏室的门锁着”；本行处理的是“冷藏食品没有采购编号”，条件不同。该选项的原文依据：“Ask the caretaker to open the storage room if its door is locked.”",
+            "B": "正确。order number 对应 purchase number。没有采购编号的冷藏食品不能接收，必须由司机带走。 原文证据：“If chilled food arrives without a purchase number, do not accept it: the driver must take it away.”",
+            "C": "不正确。Record the size on the internal website 对应“办公设备长度超过八十厘米”；本行处理的是“冷藏食品没有采购编号”，条件不同。该选项的原文依据：“Office equipment longer than eighty centimetres must be entered, with its measurements, on the delivery form on the intranet before it is moved upstairs.”",
+            "D": "不正确。Message a damage photo to your manager 对应“箱角压坏但封条完好”；本行处理的是“冷藏食品没有采购编号”，条件不同。该选项的原文依据：“A box with a crushed corner may be accepted if the seal is intact; send an image of the damage to your supervisor by text.”",
+            "E": "不正确。Keep the parcel at the front desk 对应“包裹收件同事不在”；本行处理的是“冷藏食品没有采购编号”，条件不同。该选项的原文依据：“Parcels for colleagues who are away should stay at reception until they return.”",
+            "F": "不正确。Move the trolley to the loading bay 对应“空送货推车挡住走廊”；本行处理的是“冷藏食品没有采购编号”，条件不同。该选项的原文依据：“Empty delivery trolleys blocking the hallway belong in the loading area.”"
+          }
+        },
+        {
+          "qid": "guided-2",
+          "service": "Damaged package",
+          "condition": "The corner is dented but the seal is unbroken",
+          "answer": "D",
+          "explanation": "dented corner 与 crushed corner、unbroken seal 与 intact seal 分别对应；supervisor 改写为 manager，text 对应 message。",
+          "hint": "先确定损伤的位置和封条状态，再找要求传送什么信息。",
+          "action": "__",
+          "evidence": "A box with a crushed corner may be accepted if the seal is intact; send an image of the damage to your supervisor by text.",
+          "evidenceStart": 305,
+          "evidenceEnd": 427,
+          "feedback": {
+            "A": "不正确。Request access from the caretaker 对应“储藏室的门锁着”；本行处理的是“箱角压坏但封条完好”，条件不同。该选项的原文依据：“Ask the caretaker to open the storage room if its door is locked.”",
+            "B": "不正确。Return the goods with the driver 对应“冷藏食品没有采购编号”；本行处理的是“箱角压坏但封条完好”，条件不同。该选项的原文依据：“If chilled food arrives without a purchase number, do not accept it: the driver must take it away.”",
+            "C": "不正确。Record the size on the internal website 对应“办公设备长度超过八十厘米”；本行处理的是“箱角压坏但封条完好”，条件不同。该选项的原文依据：“Office equipment longer than eighty centimetres must be entered, with its measurements, on the delivery form on the intranet before it is moved upstairs.”",
+            "D": "正确。dented corner 与 crushed corner、unbroken seal 与 intact seal 分别对应；supervisor 改写为 manager，text 对应 message。 原文证据：“A box with a crushed corner may be accepted if the seal is intact; send an image of the damage to your supervisor by text.”",
+            "E": "不正确。Keep the parcel at the front desk 对应“包裹收件同事不在”；本行处理的是“箱角压坏但封条完好”，条件不同。该选项的原文依据：“Parcels for colleagues who are away should stay at reception until they return.”",
+            "F": "不正确。Move the trolley to the loading bay 对应“空送货推车挡住走廊”；本行处理的是“箱角压坏但封条完好”，条件不同。该选项的原文依据：“Empty delivery trolleys blocking the hallway belong in the loading area.”"
+          }
+        },
+        {
+          "qid": "guided-3",
+          "service": "Delivery trolley",
+          "condition": "An empty trolley obstructs the corridor",
+          "answer": "F",
+          "explanation": "obstructs the corridor 改写 blocking the hallway；loading bay 对应 loading area，是推车应移往的位置。",
+          "hint": "关注造成通道阻塞的物品，以及原文为它指定的去处。",
+          "action": "__",
+          "evidence": "Empty delivery trolleys blocking the hallway belong in the loading area.",
+          "evidenceStart": 574,
+          "evidenceEnd": 646,
+          "feedback": {
+            "A": "不正确。Request access from the caretaker 对应“储藏室的门锁着”；本行处理的是“空送货推车挡住走廊”，条件不同。该选项的原文依据：“Ask the caretaker to open the storage room if its door is locked.”",
+            "B": "不正确。Return the goods with the driver 对应“冷藏食品没有采购编号”；本行处理的是“空送货推车挡住走廊”，条件不同。该选项的原文依据：“If chilled food arrives without a purchase number, do not accept it: the driver must take it away.”",
+            "C": "不正确。Record the size on the internal website 对应“办公设备长度超过八十厘米”；本行处理的是“空送货推车挡住走廊”，条件不同。该选项的原文依据：“Office equipment longer than eighty centimetres must be entered, with its measurements, on the delivery form on the intranet before it is moved upstairs.”",
+            "D": "不正确。Message a damage photo to your manager 对应“箱角压坏但封条完好”；本行处理的是“空送货推车挡住走廊”，条件不同。该选项的原文依据：“A box with a crushed corner may be accepted if the seal is intact; send an image of the damage to your supervisor by text.”",
+            "E": "不正确。Keep the parcel at the front desk 对应“包裹收件同事不在”；本行处理的是“空送货推车挡住走廊”，条件不同。该选项的原文依据：“Parcels for colleagues who are away should stay at reception until they return.”",
+            "F": "正确。obstructs the corridor 改写 blocking the hallway；loading bay 对应 loading area，是推车应移往的位置。 原文证据：“Empty delivery trolleys blocking the hallway belong in the loading area.”"
+          }
+        }
+      ],
+      "timeLimitSeconds": null
+    },
+    {
+      "id": "independent",
+      "title": "独立：社区泳池",
+      "sourceTitle": "Willow Pool: booking and visitor notes",
+      "sourceText": "New swimmers wanting an evening beginners' class should select an appropriate session through the pool website; the cashier handles payments, not class reservations. If you cannot use a single-entry ticket bought at the pool, give it to the duty manager before its printed date to receive a credit. For a payment that has appeared twice on your account, bring your original paper receipt to the cashier. To change the date of an existing class booking, telephone reception at least a day ahead. Bags must be stored in lockers rather than left beside the pool. Learners borrowing goggles should get them from the instructor at the start of the class.",
+      "wordCount": 109,
+      "rights": "original-fictional",
+      "label": "GT场景原创专项练习",
+      "instruction": "Choose the correct letter, A–F, for each blank in the table. Use each letter no more than once in this exercise.",
+      "instructionZh": "从 A–F 中为表格各空选择正确字母。本篇每个字母最多使用一次；不同篇章重新计算。",
+      "tableHeaders": [
+        "Service",
+        "Condition",
+        "Action"
+      ],
+      "options": [
+        {
+          "letter": "A",
+          "text": "Show the original receipt at the payment desk"
+        },
+        {
+          "letter": "B",
+          "text": "Call the front desk to reschedule"
+        },
+        {
+          "letter": "C",
+          "text": "Surrender the ticket to the manager"
+        },
+        {
+          "letter": "D",
+          "text": "Put your belongings in a locker"
+        },
+        {
+          "letter": "E",
+          "text": "Obtain equipment from the teacher"
+        },
+        {
+          "letter": "F",
+          "text": "Choose a suitable class online"
+        }
+      ],
+      "rows": [
+        {
+          "qid": "independent-1",
+          "service": "Beginner enrolment",
+          "condition": "A new swimmer wants an evening class",
+          "answer": "F",
+          "explanation": "select an appropriate session through the pool website 改写 choose a suitable class online；收银员只处理付款，不负责课程预约。",
+          "hint": "核对是否为首次报名，区别首次选课与更改已有预约。",
+          "action": "__",
+          "evidence": "New swimmers wanting an evening beginners' class should select an appropriate session through the pool website; the cashier handles payments, not class reservations.",
+          "evidenceStart": 0,
+          "evidenceEnd": 165,
+          "feedback": {
+            "A": "不正确。Show the original receipt at the payment desk 对应“同一笔付款在账户中出现两次”；本行处理的是“新学员报名晚间初级课”，条件不同。该选项的原文依据：“For a payment that has appeared twice on your account, bring your original paper receipt to the cashier.”",
+            "B": "不正确。Call the front desk to reschedule 对应“修改已预订课程的日期”；本行处理的是“新学员报名晚间初级课”，条件不同。该选项的原文依据：“To change the date of an existing class booking, telephone reception at least a day ahead.”",
+            "C": "不正确。Surrender the ticket to the manager 对应“无法使用在泳池购买的单次入场券”；本行处理的是“新学员报名晚间初级课”，条件不同。该选项的原文依据：“If you cannot use a single-entry ticket bought at the pool, give it to the duty manager before its printed date to receive a credit.”",
+            "D": "不正确。Put your belongings in a locker 对应“存放随身包”；本行处理的是“新学员报名晚间初级课”，条件不同。该选项的原文依据：“Bags must be stored in lockers rather than left beside the pool.”",
+            "E": "不正确。Obtain equipment from the teacher 对应“学员借泳镜”；本行处理的是“新学员报名晚间初级课”，条件不同。该选项的原文依据：“Learners borrowing goggles should get them from the instructor at the start of the class.”",
+            "F": "正确。select an appropriate session through the pool website 改写 choose a suitable class online；收银员只处理付款，不负责课程预约。 原文证据：“New swimmers wanting an evening beginners' class should select an appropriate session through the pool website; the cashier handles payments, not class reservations.”"
+          }
+        },
+        {
+          "qid": "independent-2",
+          "service": "Unused admission",
+          "condition": "A ticket bought here cannot be used",
+          "answer": "C",
+          "explanation": "surrender the ticket 改写 give it to the duty manager；unused admission 对应无法使用的单次入场券。",
+          "hint": "这行处理的是入场券而非课程预约；找到谁负责接收它。",
+          "action": "__",
+          "evidence": "If you cannot use a single-entry ticket bought at the pool, give it to the duty manager before its printed date to receive a credit.",
+          "evidenceStart": 166,
+          "evidenceEnd": 298,
+          "feedback": {
+            "A": "不正确。Show the original receipt at the payment desk 对应“同一笔付款在账户中出现两次”；本行处理的是“无法使用在泳池购买的单次入场券”，条件不同。该选项的原文依据：“For a payment that has appeared twice on your account, bring your original paper receipt to the cashier.”",
+            "B": "不正确。Call the front desk to reschedule 对应“修改已预订课程的日期”；本行处理的是“无法使用在泳池购买的单次入场券”，条件不同。该选项的原文依据：“To change the date of an existing class booking, telephone reception at least a day ahead.”",
+            "C": "正确。surrender the ticket 改写 give it to the duty manager；unused admission 对应无法使用的单次入场券。 原文证据：“If you cannot use a single-entry ticket bought at the pool, give it to the duty manager before its printed date to receive a credit.”",
+            "D": "不正确。Put your belongings in a locker 对应“存放随身包”；本行处理的是“无法使用在泳池购买的单次入场券”，条件不同。该选项的原文依据：“Bags must be stored in lockers rather than left beside the pool.”",
+            "E": "不正确。Obtain equipment from the teacher 对应“学员借泳镜”；本行处理的是“无法使用在泳池购买的单次入场券”，条件不同。该选项的原文依据：“Learners borrowing goggles should get them from the instructor at the start of the class.”",
+            "F": "不正确。Choose a suitable class online 对应“新学员报名晚间初级课”；本行处理的是“无法使用在泳池购买的单次入场券”，条件不同。该选项的原文依据：“New swimmers wanting an evening beginners' class should select an appropriate session through the pool website; the cashier handles payments, not class reservations.”"
+          }
+        },
+        {
+          "qid": "independent-3",
+          "service": "Duplicate payment",
+          "condition": "The same charge is listed twice",
+          "answer": "A",
+          "explanation": "same charge is listed twice 对应 payment has appeared twice；需向 cashier（payment desk）出示原始纸质收据。",
+          "hint": "找到重复付款的处理句，核对需要携带的凭证。",
+          "action": "__",
+          "evidence": "For a payment that has appeared twice on your account, bring your original paper receipt to the cashier.",
+          "evidenceStart": 299,
+          "evidenceEnd": 403,
+          "feedback": {
+            "A": "正确。same charge is listed twice 对应 payment has appeared twice；需向 cashier（payment desk）出示原始纸质收据。 原文证据：“For a payment that has appeared twice on your account, bring your original paper receipt to the cashier.”",
+            "B": "不正确。Call the front desk to reschedule 对应“修改已预订课程的日期”；本行处理的是“同一笔付款在账户中出现两次”，条件不同。该选项的原文依据：“To change the date of an existing class booking, telephone reception at least a day ahead.”",
+            "C": "不正确。Surrender the ticket to the manager 对应“无法使用在泳池购买的单次入场券”；本行处理的是“同一笔付款在账户中出现两次”，条件不同。该选项的原文依据：“If you cannot use a single-entry ticket bought at the pool, give it to the duty manager before its printed date to receive a credit.”",
+            "D": "不正确。Put your belongings in a locker 对应“存放随身包”；本行处理的是“同一笔付款在账户中出现两次”，条件不同。该选项的原文依据：“Bags must be stored in lockers rather than left beside the pool.”",
+            "E": "不正确。Obtain equipment from the teacher 对应“学员借泳镜”；本行处理的是“同一笔付款在账户中出现两次”，条件不同。该选项的原文依据：“Learners borrowing goggles should get them from the instructor at the start of the class.”",
+            "F": "不正确。Choose a suitable class online 对应“新学员报名晚间初级课”；本行处理的是“同一笔付款在账户中出现两次”，条件不同。该选项的原文依据：“New swimmers wanting an evening beginners' class should select an appropriate session through the pool website; the cashier handles payments, not class reservations.”"
+          }
+        }
+      ],
+      "timeLimitSeconds": null
+    },
+    {
+      "id": "timed",
+      "title": "计时：员工出差",
+      "sourceTitle": "Northfield Studio: staff travel arrangements",
+      "sourceText": "Before claiming train fares, upload a clear photograph of each ticket to the expenses portal; the accounts team cannot process claims from bank statements alone. Staff who need the company car should reserve a slot in the shared vehicle calendar. If a hotel room has the wrong bed type, speak directly to the hotel rather than the studio travel desk. Send requests for a travel advance to payroll at least five working days before departure. When your train is cancelled, buy the next available service and retain the new ticket. If you lose your office parking pass while away, collect a temporary pass from security on your return.",
+      "wordCount": 108,
+      "rights": "original-fictional",
+      "label": "GT场景原创专项练习",
+      "instruction": "Choose the correct letter, A–F, for each blank in the table. Use each letter no more than once in this exercise.",
+      "instructionZh": "从 A–F 中为表格各空选择正确字母。本篇每个字母最多使用一次；不同篇章重新计算。",
+      "tableHeaders": [
+        "Service",
+        "Condition",
+        "Action"
+      ],
+      "options": [
+        {
+          "letter": "A",
+          "text": "Submit ticket images online"
+        },
+        {
+          "letter": "B",
+          "text": "Contact the accommodation provider"
+        },
+        {
+          "letter": "C",
+          "text": "Make a booking in the vehicle calendar"
+        },
+        {
+          "letter": "D",
+          "text": "Ask payroll for funds in advance"
+        },
+        {
+          "letter": "E",
+          "text": "Purchase another ticket and keep it"
+        },
+        {
+          "letter": "F",
+          "text": "Get a short-term permit from security"
+        }
+      ],
+      "rows": [
+        {
+          "qid": "timed-1",
+          "service": "Rail expense claim",
+          "condition": "You want repayment for train tickets",
+          "answer": "A",
+          "explanation": "repayment 对应 claiming train fares；submit ticket images online 改写 upload a photograph to the expenses portal。",
+          "hint": "区分报销已支付的费用与出发前申请预支款。",
+          "action": "__",
+          "evidence": "Before claiming train fares, upload a clear photograph of each ticket to the expenses portal; the accounts team cannot process claims from bank statements alone.",
+          "evidenceStart": 0,
+          "evidenceEnd": 161,
+          "feedback": {
+            "A": "正确。repayment 对应 claiming train fares；submit ticket images online 改写 upload a photograph to the expenses portal。 原文证据：“Before claiming train fares, upload a clear photograph of each ticket to the expenses portal; the accounts team cannot process claims from bank statements alone.”",
+            "B": "不正确。Contact the accommodation provider 对应“酒店房间床型不对”；本行处理的是“申请报销火车票费用”，条件不同。该选项的原文依据：“If a hotel room has the wrong bed type, speak directly to the hotel rather than the studio travel desk.”",
+            "C": "不正确。Make a booking in the vehicle calendar 对应“需要使用公司汽车”；本行处理的是“申请报销火车票费用”，条件不同。该选项的原文依据：“Staff who need the company car should reserve a slot in the shared vehicle calendar.”",
+            "D": "不正确。Ask payroll for funds in advance 对应“申请差旅预支款”；本行处理的是“申请报销火车票费用”，条件不同。该选项的原文依据：“Send requests for a travel advance to payroll at least five working days before departure.”",
+            "E": "不正确。Purchase another ticket and keep it 对应“原定火车被取消”；本行处理的是“申请报销火车票费用”，条件不同。该选项的原文依据：“When your train is cancelled, buy the next available service and retain the new ticket.”",
+            "F": "不正确。Get a short-term permit from security 对应“出差期间遗失办公室停车证”；本行处理的是“申请报销火车票费用”，条件不同。该选项的原文依据：“If you lose your office parking pass while away, collect a temporary pass from security on your return.”"
+          }
+        },
+        {
+          "qid": "timed-2",
+          "service": "Hotel room problem",
+          "condition": "The room has the wrong type of bed",
+          "answer": "B",
+          "explanation": "beds do not match 对应 wrong bed type；accommodation provider 指酒店，原文要求直接联系酒店。",
+          "hint": "先定位床型问题，再核对由哪一方负责处理。",
+          "action": "__",
+          "evidence": "If a hotel room has the wrong bed type, speak directly to the hotel rather than the studio travel desk.",
+          "evidenceStart": 247,
+          "evidenceEnd": 350,
+          "feedback": {
+            "A": "不正确。Submit ticket images online 对应“申请报销火车票费用”；本行处理的是“酒店房间床型不对”，条件不同。该选项的原文依据：“Before claiming train fares, upload a clear photograph of each ticket to the expenses portal; the accounts team cannot process claims from bank statements alone.”",
+            "B": "正确。beds do not match 对应 wrong bed type；accommodation provider 指酒店，原文要求直接联系酒店。 原文证据：“If a hotel room has the wrong bed type, speak directly to the hotel rather than the studio travel desk.”",
+            "C": "不正确。Make a booking in the vehicle calendar 对应“需要使用公司汽车”；本行处理的是“酒店房间床型不对”，条件不同。该选项的原文依据：“Staff who need the company car should reserve a slot in the shared vehicle calendar.”",
+            "D": "不正确。Ask payroll for funds in advance 对应“申请差旅预支款”；本行处理的是“酒店房间床型不对”，条件不同。该选项的原文依据：“Send requests for a travel advance to payroll at least five working days before departure.”",
+            "E": "不正确。Purchase another ticket and keep it 对应“原定火车被取消”；本行处理的是“酒店房间床型不对”，条件不同。该选项的原文依据：“When your train is cancelled, buy the next available service and retain the new ticket.”",
+            "F": "不正确。Get a short-term permit from security 对应“出差期间遗失办公室停车证”；本行处理的是“酒店房间床型不对”，条件不同。该选项的原文依据：“If you lose your office parking pass while away, collect a temporary pass from security on your return.”"
+          }
+        },
+        {
+          "qid": "timed-3",
+          "service": "Travel advance",
+          "condition": "You need money before leaving",
+          "answer": "D",
+          "explanation": "money before leaving 对应 travel advance；申请须交给 payroll，而不是提交票据报销。",
+          "hint": "留意 before leaving 所表示的时间，与已发生费用的报销区别开。",
+          "action": "__",
+          "evidence": "Send requests for a travel advance to payroll at least five working days before departure.",
+          "evidenceStart": 351,
+          "evidenceEnd": 441,
+          "feedback": {
+            "A": "不正确。Submit ticket images online 对应“申请报销火车票费用”；本行处理的是“申请差旅预支款”，条件不同。该选项的原文依据：“Before claiming train fares, upload a clear photograph of each ticket to the expenses portal; the accounts team cannot process claims from bank statements alone.”",
+            "B": "不正确。Contact the accommodation provider 对应“酒店房间床型不对”；本行处理的是“申请差旅预支款”，条件不同。该选项的原文依据：“If a hotel room has the wrong bed type, speak directly to the hotel rather than the studio travel desk.”",
+            "C": "不正确。Make a booking in the vehicle calendar 对应“需要使用公司汽车”；本行处理的是“申请差旅预支款”，条件不同。该选项的原文依据：“Staff who need the company car should reserve a slot in the shared vehicle calendar.”",
+            "D": "正确。money before leaving 对应 travel advance；申请须交给 payroll，而不是提交票据报销。 原文证据：“Send requests for a travel advance to payroll at least five working days before departure.”",
+            "E": "不正确。Purchase another ticket and keep it 对应“原定火车被取消”；本行处理的是“申请差旅预支款”，条件不同。该选项的原文依据：“When your train is cancelled, buy the next available service and retain the new ticket.”",
+            "F": "不正确。Get a short-term permit from security 对应“出差期间遗失办公室停车证”；本行处理的是“申请差旅预支款”，条件不同。该选项的原文依据：“If you lose your office parking pass while away, collect a temporary pass from security on your return.”"
+          }
+        }
+      ],
+      "timeLimitSeconds": 180
+    },
+    {
+      "id": "review-a",
+      "title": "复习 A：维修咖啡馆",
+      "sourceTitle": "Marlow Repair Café: appointment guide",
+      "sourceText": "Our volunteers repair small household items on Saturdays. If an appliance no longer starts, photograph its model label and attach the image to your booking request so we can allocate a suitable volunteer. Owners of a torn fabric bag should bring a matching piece of cloth; our sewing team supplies thread. For a loose bicycle brake cable, choose a cycle slot rather than a general repair appointment. A missing lamp bulb must be purchased before you arrive because replacements are not stocked here. To change an appointment, reply to your confirmation message. Large items which cannot fit through our entrance should remain at home; request a video consultation instead.",
+      "wordCount": 109,
+      "rights": "original-fictional",
+      "label": "GT场景原创专项练习",
+      "instruction": "Choose the correct letter, A–F, for each blank in the table. Use each letter no more than once in this exercise.",
+      "instructionZh": "从 A–F 中为表格各空选择正确字母。本篇每个字母最多使用一次；不同篇章重新计算。",
+      "tableHeaders": [
+        "Service",
+        "Condition",
+        "Action"
+      ],
+      "options": [
+        {
+          "letter": "A",
+          "text": "Bring a matching piece of material"
+        },
+        {
+          "letter": "B",
+          "text": "Choose a bicycle-specific appointment"
+        },
+        {
+          "letter": "C",
+          "text": "Send an image identifying the model"
+        },
+        {
+          "letter": "D",
+          "text": "Buy the replacement part beforehand"
+        },
+        {
+          "letter": "E",
+          "text": "Respond to the booking message"
+        },
+        {
+          "letter": "F",
+          "text": "Arrange a remote consultation"
+        }
+      ],
+      "rows": [
+        {
+          "qid": "review-a-1",
+          "service": "Electrical repair",
+          "condition": "Your appliance will not switch on",
+          "answer": "C",
+          "explanation": "will not switch on 对应 no longer starts；拍摄 model label 是为了辨识型号，选项将其改写为 image identifying the model。",
+          "hint": "关注预约时要提供的信息，区分识别设备的资料与待购买的零件。",
+          "action": "__",
+          "evidence": "If an appliance no longer starts, photograph its model label and attach the image to your booking request so we can allocate a suitable volunteer.",
+          "evidenceStart": 58,
+          "evidenceEnd": 204,
+          "feedback": {
+            "A": "不正确。Bring a matching piece of material 对应“布包撕裂”；本行处理的是“电器无法启动”，条件不同。该选项的原文依据：“Owners of a torn fabric bag should bring a matching piece of cloth; our sewing team supplies thread.”",
+            "B": "不正确。Choose a bicycle-specific appointment 对应“自行车刹车线松动”；本行处理的是“电器无法启动”，条件不同。该选项的原文依据：“For a loose bicycle brake cable, choose a cycle slot rather than a general repair appointment.”",
+            "C": "正确。will not switch on 对应 no longer starts；拍摄 model label 是为了辨识型号，选项将其改写为 image identifying the model。 原文证据：“If an appliance no longer starts, photograph its model label and attach the image to your booking request so we can allocate a suitable volunteer.”",
+            "D": "不正确。Buy the replacement part beforehand 对应“灯缺少灯泡”；本行处理的是“电器无法启动”，条件不同。该选项的原文依据：“A missing lamp bulb must be purchased before you arrive because replacements are not stocked here.”",
+            "E": "不正确。Respond to the booking message 对应“更改预约”；本行处理的是“电器无法启动”，条件不同。该选项的原文依据：“To change an appointment, reply to your confirmation message.”",
+            "F": "不正确。Arrange a remote consultation 对应“物品太大，无法通过入口”；本行处理的是“电器无法启动”，条件不同。该选项的原文依据：“Large items which cannot fit through our entrance should remain at home; request a video consultation instead.”"
+          }
+        },
+        {
+          "qid": "review-a-2",
+          "service": "Fabric repair",
+          "condition": "A cloth bag has a rip",
+          "answer": "A",
+          "explanation": "cloth bag has a rip 对应 torn fabric bag；matching material sample 改写 matching piece of cloth。线由团队提供，需自带的是布料。",
+          "hint": "区分志愿者提供的用品与物主需要带来的材料。",
+          "action": "__",
+          "evidence": "Owners of a torn fabric bag should bring a matching piece of cloth; our sewing team supplies thread.",
+          "evidenceStart": 205,
+          "evidenceEnd": 305,
+          "feedback": {
+            "A": "正确。cloth bag has a rip 对应 torn fabric bag；matching material sample 改写 matching piece of cloth。线由团队提供，需自带的是布料。 原文证据：“Owners of a torn fabric bag should bring a matching piece of cloth; our sewing team supplies thread.”",
+            "B": "不正确。Choose a bicycle-specific appointment 对应“自行车刹车线松动”；本行处理的是“布包撕裂”，条件不同。该选项的原文依据：“For a loose bicycle brake cable, choose a cycle slot rather than a general repair appointment.”",
+            "C": "不正确。Send an image identifying the model 对应“电器无法启动”；本行处理的是“布包撕裂”，条件不同。该选项的原文依据：“If an appliance no longer starts, photograph its model label and attach the image to your booking request so we can allocate a suitable volunteer.”",
+            "D": "不正确。Buy the replacement part beforehand 对应“灯缺少灯泡”；本行处理的是“布包撕裂”，条件不同。该选项的原文依据：“A missing lamp bulb must be purchased before you arrive because replacements are not stocked here.”",
+            "E": "不正确。Respond to the booking message 对应“更改预约”；本行处理的是“布包撕裂”，条件不同。该选项的原文依据：“To change an appointment, reply to your confirmation message.”",
+            "F": "不正确。Arrange a remote consultation 对应“物品太大，无法通过入口”；本行处理的是“布包撕裂”，条件不同。该选项的原文依据：“Large items which cannot fit through our entrance should remain at home; request a video consultation instead.”"
+          }
+        },
+        {
+          "qid": "review-a-3",
+          "service": "Oversized item advice",
+          "condition": "The item is too wide for the doorway",
+          "answer": "F",
+          "explanation": "too wide for the doorway 对应 cannot fit through our entrance；remote consultation 改写 video consultation。",
+          "hint": "找到物品无法进入场地的条件，判断建议采用何种咨询方式。",
+          "action": "__",
+          "evidence": "Large items which cannot fit through our entrance should remain at home; request a video consultation instead.",
+          "evidenceStart": 562,
+          "evidenceEnd": 672,
+          "feedback": {
+            "A": "不正确。Bring a matching piece of material 对应“布包撕裂”；本行处理的是“物品太大，无法通过入口”，条件不同。该选项的原文依据：“Owners of a torn fabric bag should bring a matching piece of cloth; our sewing team supplies thread.”",
+            "B": "不正确。Choose a bicycle-specific appointment 对应“自行车刹车线松动”；本行处理的是“物品太大，无法通过入口”，条件不同。该选项的原文依据：“For a loose bicycle brake cable, choose a cycle slot rather than a general repair appointment.”",
+            "C": "不正确。Send an image identifying the model 对应“电器无法启动”；本行处理的是“物品太大，无法通过入口”，条件不同。该选项的原文依据：“If an appliance no longer starts, photograph its model label and attach the image to your booking request so we can allocate a suitable volunteer.”",
+            "D": "不正确。Buy the replacement part beforehand 对应“灯缺少灯泡”；本行处理的是“物品太大，无法通过入口”，条件不同。该选项的原文依据：“A missing lamp bulb must be purchased before you arrive because replacements are not stocked here.”",
+            "E": "不正确。Respond to the booking message 对应“更改预约”；本行处理的是“物品太大，无法通过入口”，条件不同。该选项的原文依据：“To change an appointment, reply to your confirmation message.”",
+            "F": "正确。too wide for the doorway 对应 cannot fit through our entrance；remote consultation 改写 video consultation。 原文证据：“Large items which cannot fit through our entrance should remain at home; request a video consultation instead.”"
+          }
+        }
+      ],
+      "timeLimitSeconds": null
+    },
+    {
+      "id": "review-b",
+      "title": "复习 B：共享办公空间",
+      "sourceTitle": "Beacon Workspace: member services",
+      "sourceText": "For visitors arriving before the main doors open at nine, ask the host to meet them at the side entrance. Members who require a quiet room for a call should select an empty booth on the booking screen beside reception. If a locker key is missing, show your membership details to the desk team, who will issue a spare. Report an unreliable desk lamp through the maintenance app, including the desk number. To receive parcels larger than a shoebox, use the downstairs goods desk; reception handles smaller packages only. Members leaving after eight in the evening must tap their access card at the exit reader so the system records their departure.",
+      "wordCount": 111,
+      "rights": "original-fictional",
+      "label": "GT场景原创专项练习",
+      "instruction": "Choose the correct letter, A–F, for each blank in the table. Use each letter no more than once in this exercise.",
+      "instructionZh": "从 A–F 中为表格各空选择正确字母。本篇每个字母最多使用一次；不同篇章重新计算。",
+      "tableHeaders": [
+        "Service",
+        "Condition",
+        "Action"
+      ],
+      "options": [
+        {
+          "letter": "A",
+          "text": "Register the fault in the repair app"
+        },
+        {
+          "letter": "B",
+          "text": "Arrange a host meeting at the side door"
+        },
+        {
+          "letter": "C",
+          "text": "Verify membership to obtain another key"
+        },
+        {
+          "letter": "D",
+          "text": "Use the delivery counter downstairs"
+        },
+        {
+          "letter": "E",
+          "text": "Book an available private booth"
+        },
+        {
+          "letter": "F",
+          "text": "Log your departure with your access card"
+        }
+      ],
+      "rows": [
+        {
+          "qid": "review-b-1",
+          "service": "Locker access",
+          "condition": "You have lost your locker key",
+          "answer": "C",
+          "explanation": "missing 对应 lost；show your membership details 改写 verify membership，issue a spare 改写 obtain another key。",
+          "hint": "核对需要证明什么身份，以及工作人员随后提供什么。",
+          "action": "__",
+          "evidence": "If a locker key is missing, show your membership details to the desk team, who will issue a spare.",
+          "evidenceStart": 219,
+          "evidenceEnd": 317,
+          "feedback": {
+            "A": "不正确。Register the fault in the repair app 对应“桌灯工作不稳定”；本行处理的是“储物柜钥匙遗失”，条件不同。该选项的原文依据：“Report an unreliable desk lamp through the maintenance app, including the desk number.”",
+            "B": "不正确。Arrange a host meeting at the side door 对应“访客上午九点前到达”；本行处理的是“储物柜钥匙遗失”，条件不同。该选项的原文依据：“For visitors arriving before the main doors open at nine, ask the host to meet them at the side entrance.”",
+            "C": "正确。missing 对应 lost；show your membership details 改写 verify membership，issue a spare 改写 obtain another key。 原文证据：“If a locker key is missing, show your membership details to the desk team, who will issue a spare.”",
+            "D": "不正确。Use the delivery counter downstairs 对应“接收比鞋盒大的包裹”；本行处理的是“储物柜钥匙遗失”，条件不同。该选项的原文依据：“To receive parcels larger than a shoebox, use the downstairs goods desk; reception handles smaller packages only.”",
+            "E": "不正确。Book an available private booth 对应“需要安静的通话空间”；本行处理的是“储物柜钥匙遗失”，条件不同。该选项的原文依据：“Members who require a quiet room for a call should select an empty booth on the booking screen beside reception.”",
+            "F": "不正确。Log your departure with your access card 对应“晚上八点后离开”；本行处理的是“储物柜钥匙遗失”，条件不同。该选项的原文依据：“Members leaving after eight in the evening must tap their access card at the exit reader so the system records their departure.”"
+          }
+        },
+        {
+          "qid": "review-b-2",
+          "service": "Private call space",
+          "condition": "You need somewhere quiet to telephone",
+          "answer": "E",
+          "explanation": "quiet to telephone 对应 quiet room for a call；book an available private booth 改写在预约屏幕上 select an empty booth。",
+          "hint": "定位通话场所的安排，注意 empty 与 available 的关系。",
+          "action": "__",
+          "evidence": "Members who require a quiet room for a call should select an empty booth on the booking screen beside reception.",
+          "evidenceStart": 106,
+          "evidenceEnd": 218,
+          "feedback": {
+            "A": "不正确。Register the fault in the repair app 对应“桌灯工作不稳定”；本行处理的是“需要安静的通话空间”，条件不同。该选项的原文依据：“Report an unreliable desk lamp through the maintenance app, including the desk number.”",
+            "B": "不正确。Arrange a host meeting at the side door 对应“访客上午九点前到达”；本行处理的是“需要安静的通话空间”，条件不同。该选项的原文依据：“For visitors arriving before the main doors open at nine, ask the host to meet them at the side entrance.”",
+            "C": "不正确。Verify membership to obtain another key 对应“储物柜钥匙遗失”；本行处理的是“需要安静的通话空间”，条件不同。该选项的原文依据：“If a locker key is missing, show your membership details to the desk team, who will issue a spare.”",
+            "D": "不正确。Use the delivery counter downstairs 对应“接收比鞋盒大的包裹”；本行处理的是“需要安静的通话空间”，条件不同。该选项的原文依据：“To receive parcels larger than a shoebox, use the downstairs goods desk; reception handles smaller packages only.”",
+            "E": "正确。quiet to telephone 对应 quiet room for a call；book an available private booth 改写在预约屏幕上 select an empty booth。 原文证据：“Members who require a quiet room for a call should select an empty booth on the booking screen beside reception.”",
+            "F": "不正确。Log your departure with your access card 对应“晚上八点后离开”；本行处理的是“需要安静的通话空间”，条件不同。该选项的原文依据：“Members leaving after eight in the evening must tap their access card at the exit reader so the system records their departure.”"
+          }
+        },
+        {
+          "qid": "review-b-3",
+          "service": "Late departure",
+          "condition": "You leave later than 8 p.m.",
+          "answer": "F",
+          "explanation": "later than 8 p.m. 对应 after eight in the evening；tap the card at the exit reader 是用于记录离开，改写为 log your departure。",
+          "hint": "先匹配离开的时间条件，再看刷卡动作在此处的用途。",
+          "action": "__",
+          "evidence": "Members leaving after eight in the evening must tap their access card at the exit reader so the system records their departure.",
+          "evidenceStart": 519,
+          "evidenceEnd": 646,
+          "feedback": {
+            "A": "不正确。Register the fault in the repair app 对应“桌灯工作不稳定”；本行处理的是“晚上八点后离开”，条件不同。该选项的原文依据：“Report an unreliable desk lamp through the maintenance app, including the desk number.”",
+            "B": "不正确。Arrange a host meeting at the side door 对应“访客上午九点前到达”；本行处理的是“晚上八点后离开”，条件不同。该选项的原文依据：“For visitors arriving before the main doors open at nine, ask the host to meet them at the side entrance.”",
+            "C": "不正确。Verify membership to obtain another key 对应“储物柜钥匙遗失”；本行处理的是“晚上八点后离开”，条件不同。该选项的原文依据：“If a locker key is missing, show your membership details to the desk team, who will issue a spare.”",
+            "D": "不正确。Use the delivery counter downstairs 对应“接收比鞋盒大的包裹”；本行处理的是“晚上八点后离开”，条件不同。该选项的原文依据：“To receive parcels larger than a shoebox, use the downstairs goods desk; reception handles smaller packages only.”",
+            "E": "不正确。Book an available private booth 对应“需要安静的通话空间”；本行处理的是“晚上八点后离开”，条件不同。该选项的原文依据：“Members who require a quiet room for a call should select an empty booth on the booking screen beside reception.”",
+            "F": "正确。later than 8 p.m. 对应 after eight in the evening；tap the card at the exit reader 是用于记录离开，改写为 log your departure。 原文证据：“Members leaving after eight in the evening must tap their access card at the exit reader so the system records their departure.”"
+          }
+        }
+      ],
+      "timeLimitSeconds": null
+    }
+  ]
+}
