@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent agent ielts_batch02_review",
+  "method": "First pass received only id/headword/prompt/English example; no Chinese answer. Original blind record retained. Second pass compared all 24 definitions, translations, collocations, prompts and contrasts against English; re-read five fixes before pass.",
+  "contentSha256": "6da8b01d359dafec6a1da8788798da96bafe26a9a6f7417532358c780977c75b",
+  "previousPayloadSha256": "2b42bd1a7e5077bb8d0e1e6c495e999ff94903a6172629c31dae228e4a8d74d0",
+  "blindReview": [
+    {
+      "id": "iv02-eligible",
+      "inferredMeaning": "符合资格的；有资格参加的",
+      "translation": "如果你已经完成了入门模块，就有资格参加这门课程。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "eligible for + 名词搭配自然，if 从句明确资格条件，完成模块这一条件也使词义容易推断。可用于课程报名说明；没有补造学校、课程名称或完成时间。"
+    },
+    {
+      "id": "iv02-entry-requirement",
+      "inferredMeaning": "准入要求；申请加入或入读所需满足的资格条件",
+      "translation": "为满足准入要求，申请人必须拥有至少一年的相关工作经验。",
+      "verdict": "pass_with_note",
+      "issues": [
+        "未说明申请对象，因此中文不应把准入要求限定为某所学校的入学条件或某个职位的招聘条件。"
+      ],
+      "assessment": "meet the entry requirement 是自然搭配；不定式说明目的，至少一年相关经验使 requirement 的条件义清楚。句子能消除 entry 的入口位置义，但不能确定具体机构或申请类型。"
+    },
+    {
+      "id": "iv02-application",
+      "inferredMeaning": "申请；提交的申请材料",
+      "translation": "请在线提交你的申请，并附上资格证书的复印件。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "submit an application 和 attach a copy 搭配自然；证书附件消除了 application 的应用程序、应用等词义。适用于报名或资格申请，但原文没有说明具体证书、机构或申请事项。"
+    },
+    {
+      "id": "iv02-deadline",
+      "inferredMeaning": "截止时间；最后期限",
+      "translation": "申请的截止时间是星期五五点，而不是当天结束时。",
+      "verdict": "pass_with_note",
+      "issues": [
+        "five o'clock 没有明确上午或下午；实际通知宜注明 a.m./p.m.，中文答案不能自行补为下午五点。",
+        "没有具体日期或时区，不能补造。"
+      ],
+      "assessment": "deadline for applications 自然，五点与当天结束的对比清楚揭示截止时间义。目标词能消歧，但作为真实报名通知，时间信息仍不完整。"
+    },
+    {
+      "id": "iv02-proof-identity",
+      "inferredMeaning": "身份证明；证明本人身份的材料",
+      "translation": "领取借书证时，请提供身份证明，例如护照。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "provide proof of identity 搭配自然，proof 在此为不可数名词；护照例子与领证场景明确说明材料用途。没有把身份证明窄化为中国居民身份证，也没有补造图书馆名称。"
+    },
+    {
+      "id": "iv02-valid",
+      "inferredMeaning": "有效的；可用于当前乘车的",
+      "translation": "乘坐这条线路需要有效车票；昨天的车票今天不能使用。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "a valid ticket 和 for this route 自然；后半句排除了 valid 的论证有理义，明确是车票使用效力。昨天与今天只适用于这张票，不宜扩写成所有车票均只限当天使用的通用规则。"
+    },
+    {
+      "id": "iv02-supportive",
+      "inferredMeaning": "给予支持和帮助的",
+      "translation": "一位乐于支持和帮助我的同事，帮我为工作中的第一次演示做准备。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "a supportive colleague 自然，helped me prepare 为抽象品质提供具体行为证据。presentation 可译演示或报告，原文未说明是否向客户汇报、演示产品或主持会议，不应添加这些内容。"
+    },
+    {
+      "id": "iv02-practical-experience",
+      "inferredMeaning": "实践经验；实际操作中获得的经验",
+      "translation": "实习期间，我通过帮忙组织一场小型活动获得了实践经验。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "gain practical experience 是自然搭配；by + 动名词明确经验来源。实习和组织活动使 practical 指亲自实践而非仅理论学习，场景现实且没有增加活动类型或实习机构。"
+    },
+    {
+      "id": "iv02-responsibility",
+      "inferredMeaning": "责任；负责某项任务的职责",
+      "translation": "我承担了在活动开始前核对来宾名单的责任。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "take responsibility for + 动名词自然，checking the guest list 给出具体职责。这里主要指承担任务责任，没有出错或追责情境，不能译成承认过错或承担事故责任。"
+    },
+    {
+      "id": "iv02-compromise",
+      "inferredMeaning": "妥协；折中协议",
+      "translation": "我们达成了一个折中方案：我将在星期六上班，我的同事将在星期日代班。",
+      "verdict": "pass_with_note",
+      "issues": [
+        "周末分工本身未交代双方原先的诉求或让步；词义主要由 reached a compromise 直接提供，若用于训练从情境推断妥协，可增加简短的分歧背景。",
+        "cover Sunday 表示承担星期日班次，但没有明确替谁上班，不能补成替我值班。"
+      ],
+      "assessment": "reach a compromise 和 cover + 日子在排班语境中自然；would 表示过去视角下商定的未来安排。目标词义清楚，现实用途合理，但让步证据较弱。"
+    },
+    {
+      "id": "iv02-rewarding",
+      "inferredMeaning": "令人有成就感的；使人感到值得的",
+      "translation": "我觉得辅导学生是一份很有成就感的工作，因为我能看到学习者变得更加自信。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "find + 宾语 + 宾补结构正确，a rewarding job 搭配自然；学习者自信增强明确支持精神上的满足，不是薪酬高或获得物质奖励。没有补造学科或学生年龄。"
+    },
+    {
+      "id": "iv02-belonging",
+      "inferredMeaning": "归属感；感到自己是群体一员的体验",
+      "translation": "当我搬到一个新的城镇时，加入当地合唱团让我有了归属感。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "a sense of belonging 是固定而自然的搭配；搬家和加入群体给出清晰现实情境，排除了 belongings 的财物义。时间关系保留原文，没有添加孤独经历或具体城镇。"
+    },
+    {
+      "id": "iv02-representative",
+      "inferredMeaning": "有代表性的；能反映总体特征的",
+      "translation": "研究人员从不同年龄组中选取参与者，以获得一个更能代表该镇居民的样本。",
+      "verdict": "pass_with_note",
+      "issues": [
+        "纳入不同年龄组有助于代表性，但单凭这一点不能保证样本整体具有代表性；原句写的是目的且使用 more，没有声称已经保证代表性，故无事实错误。"
+      ],
+      "assessment": "a representative sample of + 总体搭配自然；不同年龄组与镇居民总体使形容词义明确，排除了名词代表义。可用于研究方法介绍；不能补造随机抽样、年龄配额或其他人口特征。"
+    },
+    {
+      "id": "iv02-finding",
+      "inferredMeaning": "研究发现；研究所得的结果",
+      "translation": "一项研究发现是，住得离校园较近的学生乘汽车出行的次数较少。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "one research finding 和 that 表语从句自然；学生住所与汽车出行之间的观察结果明确消歧。made fewer car journeys 指出行次数较少，不等同于拥有更少汽车或汽车行程更短，也未说明学生都亲自驾车。原文没有观察时期、院校名称或因果证明。"
+    },
+    {
+      "id": "iv02-scope",
+      "inferredMeaning": "范围；研究涵盖的对象或领域",
+      "translation": "这项研究的范围仅限于公共图书馆，因此没有纳入学校图书馆。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "the scope of the study 和 be limited to 搭配自然；纳入公共图书馆、排除学校图书馆明确说明范围义，排除了机会或发挥空间义。没有补造地理范围或研究机构。"
+    },
+    {
+      "id": "iv02-limitation",
+      "inferredMeaning": "局限性；限制研究能力或结论的不足",
+      "translation": "这项研究的一项局限性是持续时间较短，这使研究人员无法观察长期变化。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "a limitation of the study 自然；which 回指持续时间短这一限制，具体说明其影响。与范围条目有清楚区别：这里是研究不足，不是纳入对象的边界。没有添加具体时长或断言整项研究无效。"
+    },
+    {
+      "id": "iv02-distinguish",
+      "inferredMeaning": "区分；辨别两类事物的差异",
+      "translation": "这份报告区分了临时迁移者与永久定居的人。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "distinguish between A and B 正确自然；临时与永久的对比使区分类别的词义清楚，排除了使出众义。migrants 未必是跨国移民，不能补造国家、国籍或签证类别。"
+    },
+    {
+      "id": "iv02-plausible",
+      "inferredMeaning": "看似合理的；有可能成立但尚未证实的",
+      "translation": "旅行费用降低，是访客人数增加的一种看似合理的解释，但还需要更多证据。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "a plausible explanation for + 现象搭配自然；but more evidence is needed 清楚体现合理但未证实的程度。不能译成已证实的原因；visitors 未说明访问哪里，也不能自行补成游客到某景区。"
+    },
+    {
+      "id": "iv02-percentage-point",
+      "inferredMeaning": "百分点；两个百分比数值的直接差值单位",
+      "translation": "骑自行车通勤者的占比从百分之十升至百分之十二，增加了两个百分点。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "rose from ten to twelve per cent 是清楚的共享单位表达；12% − 10% = 2 个百分点，算术与单位均正确。a percentage point 在题面中为单数概念，句中 two percentage points 正确用复数。不得把两个百分点译成增长百分之二；原文没有年份、城市或通勤总人数。"
+    },
+    {
+      "id": "iv02-percentage-increase",
+      "inferredMeaning": "百分比增幅；相对于原始数值的增长比例",
+      "translation": "占比从百分之十升至百分之十二，相对于原来的占比而言，增幅为百分之二十。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "relative to the original share 明确了基数；(12% − 10%) ÷ 10% × 100% = 20%，算术与相对增长语义正确。与上条的 2 个百分点相容，二者不混淆。原句没有说明占比的对象、时期或机构，中文不能从相邻条目补入骑车通勤者或年份。"
+    },
+    {
+      "id": "iv02-remain-stable",
+      "inferredMeaning": "保持稳定；没有明显变化",
+      "translation": "在整个五年期间，人口一直稳定在八千人左右。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "remain stable at + 数值以及 throughout + 时段自然；around 表明约数，因此稳定不必等于每一时点都严格为八千。原文没有五年起止年份或地区名称，不可补入。"
+    },
+    {
+      "id": "iv02-peak",
+      "inferredMeaning": "达到峰值；达到最高水平（动词）",
+      "translation": "年度接纳人数在2024年达到六千人的峰值，随后在2025年下降。",
+      "verdict": "needs_revision",
+      "issues": [
+        "annual admissions 缺少场景，可能指入学录取人数、医院收治人数、场馆入场人数等，无法独立确定最自然的中文统计名目。建议作者明确 admissions 所属对象；在补充英文以前，中文不能自行增加大学、医院、博物馆等机构。",
+        "2025年下降的幅度和数值未提供，不可补造；峰值也不能扩写成历史最高值。"
+      ],
+      "assessment": "peaked at + 数值正确且自然，before falling 使峰值动词义清楚，年份与六千的数值关系无误。目标词本身可消歧，但整句译文受 admissions 对象缺失影响；本译文使用较宽泛的接纳人数，仅作保守译法。"
+    },
+    {
+      "id": "iv02-marginal",
+      "inferredMeaning": "微小的；幅度很小的",
+      "translation": "每日访客人数略有增加，从二百人增至二百零一人。",
+      "verdict": "pass",
+      "issues": [],
+      "assessment": "a marginal increase 自然；增加 1 人、相对增幅 0.5% 为幅度微小提供直观证据，排除了边缘的等其他词义。句子未说明比较的是哪两个日期、访客去哪里，也没有统计显著性信息，均不可增加。"
+    },
+    {
+      "id": "iv02-substantial",
+      "inferredMeaning": "大幅的；数量或程度可观的",
+      "translation": "该图书馆报告称，年度会员人数大幅增加，从一千人增至一千六百人。",
+      "verdict": "pass_with_note",
+      "issues": [
+        "annual membership 可泛指年度会员数量，原句没有明确是新入会人数还是年度会员总人数，中文应保留这一口径，不能自行添加新会员。",
+        "没有比较年份，不可补入今年、去年或特定年度。"
+      ],
+      "assessment": "a substantial increase in + 指标搭配自然；增加 600 人、相对增幅 60% 支持可观增长的语义，与 marginal 条目形成清晰幅度对比。不能译成实质性的制度改变，也不能把 reported 扩写成研究证实。"
+    }
+  ],
+  "answerReview": [
+    {
+      "id": "iv02-eligible",
+      "verdict": "pass",
+      "definitionAssessment": "形容词释义准确，指满足课程参加资格；并未将资格等同于录取。",
+      "translationAssessment": "中文保留已完成入门模块这一条件，报名资格与英文所选课程义一致，没有增加完成日期或机构。",
+      "collocationAssessment": "eligible for a course 正确自然，中文符合课程报名资格准确；for 接资格所针对的对象。",
+      "promptAssessment": "题面明确课程义，例句提供资格条件，contrast 正确区分符合资格与已被录取。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-entry-requirement",
+      "verdict": "pass",
+      "definitionAssessment": "名词释义准确描述入学或参加课程的资格条件。",
+      "translationAssessment": "修订后的英文明确 for this course，中文这门课程的入学条件现有直接依据；一年相关工作经验、至少和必须均保留。",
+      "collocationAssessment": "meet an entry requirement 自然，满足一项入学条件适用于本条明确的课程情境。",
+      "promptAssessment": "题面与修订后例句共同锁定课程准入义；contrast 对入口位置和日记条目的排除合理。",
+      "issues": [],
+      "resolution": "第一轮申请对象不明确的问题已由 for this course 解决。"
+    },
+    {
+      "id": "iv02-application",
+      "verdict": "pass",
+      "definitionAssessment": "正式提出的申请符合名词目标义，未误用为应用程序或知识应用。",
+      "translationAssessment": "在线提交、证书副本与原句一致；your 在证书处译为您的，句意完整，没有增加申请结果。",
+      "collocationAssessment": "submit an application 是自然常用搭配，提交申请译法准确。",
+      "promptAssessment": "题面 submit 和证书附件情境充分消歧；contrast 正确说明提交不代表获准。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-deadline",
+      "verdict": "pass",
+      "definitionAssessment": "最后期限准确覆盖必须提交或完成事项的截止时间。",
+      "translationAssessment": "英文已明确 five p.m.，中文周五下午五点有直接依据；当天结束的对比忠实，没有补造日期或时区。",
+      "collocationAssessment": "the deadline for applications 自然；申请截止期限表达准确。题面不定冠词与搭配中的定冠词不构成矛盾。",
+      "promptAssessment": "申请题面与时间对比明确最后期限义，contrast 正确排除课程开始日期。作为词义教学例句不要求额外补造具体日期。",
+      "issues": [],
+      "resolution": "第一轮上午或下午未明的问题已由 five p.m. 解决。"
+    },
+    {
+      "id": "iv02-proof-identity",
+      "verdict": "pass",
+      "definitionAssessment": "身份证明材料的名词短语释义准确，没有限制为某一种身份证件。",
+      "translationAssessment": "领取借书证与护照例子均保留，护照等身份证明自然对应 such as a passport。",
+      "collocationAssessment": "provide proof of identity 正确自然；proof 在此不可数，搭配不缺冠词。",
+      "promptAssessment": "题面本身已锁定身份材料，contrast 正确区分身份与住址证明，没有声称护照必然能满足住址证明要求。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-valid",
+      "verdict": "pass",
+      "definitionAssessment": "有效、符合规定且可接受使用的释义符合车票情境。",
+      "translationAssessment": "这条线路和昨天的车票今天不能使用均对应英文；中文未扩写为所有票都只限当天使用。",
+      "collocationAssessment": "a valid ticket 与一张有效车票对应准确，for this route 的英语搭配自然。",
+      "promptAssessment": "题面和日期限制消除论证有效义；contrast 对日期或路线限制的提醒准确。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-supportive",
+      "verdict": "pass",
+      "definitionAssessment": "给予帮助、鼓励或支持的形容词义准确。",
+      "translationAssessment": "愿意支持他人的同事与帮助准备第一次展示符合原文；展示可涵盖 presentation，但在工作场景中演示或汇报也可作为更顺畅的可选表达，不构成必改错误。",
+      "collocationAssessment": "a supportive colleague 自然，中文表达该同事给予支持的品质，没有限定具体支持方式。",
+      "promptAssessment": "题面同事和帮助准备的行为明确目标义；contrast 正确说明支持一个人不等于赞成其每个决定。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-practical-experience",
+      "verdict": "pass",
+      "definitionAssessment": "通过实际做事获得经验的释义准确，区别于纯理论知识。",
+      "translationAssessment": "实习期间、协助组织小型活动和因此获得经验均忠实，没有增加活动类型或公司名称。",
+      "collocationAssessment": "gain practical experience 正确自然；experience 表示总体经验时通常不可数，contrast 提醒准确。",
+      "promptAssessment": "题面与亲身组织活动的例句明确实践经验义，contrast 不把理论知识贬为完全无用。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-responsibility",
+      "verdict": "pass",
+      "definitionAssessment": "对任务承担责任的名词义与例句一致。",
+      "translationAssessment": "核对来宾名单、活动开始前和承担责任均保留，没有添加出错、追责或处罚情节。",
+      "collocationAssessment": "take responsibility for a task 自然，例句 for 后接 checking 也正确。",
+      "promptAssessment": "任务题面充分选择职责义，contrast 正确区分负责完成任务与承认错误。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-compromise",
+      "verdict": "pass",
+      "definitionAssessment": "双方作出让步后达成折中方案的名词释义准确。",
+      "translationAssessment": "新增双方都想周末休息的背景在中文完整保留；周六工作与同事负责周日班次准确，未擅自指定同事替谁上班。",
+      "collocationAssessment": "reach a compromise 自然；cover Sunday 在排班语境中正确，中文负责周日的班次忠实。",
+      "promptAssessment": "两人都想整个周末休息、最后各工作一天，明确体现双方让步；contrast 对一方完全服从及动词安全受损义的区分正确。",
+      "issues": [],
+      "resolution": "第一轮缺少诉求及让步证据的问题已由新增背景解决。"
+    },
+    {
+      "id": "iv02-rewarding",
+      "verdict": "pass",
+      "definitionAssessment": "使人有收获或满足的形容词释义准确。",
+      "translationAssessment": "有成就感与学习者更有信心对应精神满足的原因，未增加收入、学科或年龄。辅导与 tutoring 一致。",
+      "collocationAssessment": "a rewarding job 自然；find tutoring a rewarding job 的宾语与宾补结构成立。",
+      "promptAssessment": "题面工作与帮助学习者的原因消除单纯物质报酬理解；contrast 正确说明不一定工资高。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-belonging",
+      "verdict": "pass",
+      "definitionAssessment": "属于群体、感到被接纳的感受符合 belonging 的目标名词义。",
+      "translationAssessment": "搬到新城镇和加入当地合唱团均保留；中文用后组织事件先后，未增加原文没有的人际经历。",
+      "collocationAssessment": "a sense of belonging 是自然固定搭配，归属感准确。",
+      "promptAssessment": "题面 sense of 与社区群体情境明确感受义；contrast 正确区分 belongings 所指个人物品。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-representative",
+      "verdict": "pass",
+      "definitionAssessment": "能适当反映较大群体主要特征的形容词释义准确。",
+      "translationAssessment": "年龄组、选取参与者和更能代表镇居民的目的均忠实；没有添加随机抽样或保证完全代表总体。",
+      "collocationAssessment": "a representative sample 自然，与有代表性的样本准确对应。",
+      "promptAssessment": "题面 sample 明确形容词义；contrast 正确指出大样本不自动有代表性。纳入多个年龄组支持改善代表性的目的，但原句没有将这一做法描述为充分保证。",
+      "issues": [],
+      "resolution": "无需修改；保留 more 及目的表达，不增加随机性或代表性保证。"
+    },
+    {
+      "id": "iv02-finding",
+      "verdict": "pass",
+      "definitionAssessment": "通过研究得到的结果或发现准确；contrast 区分结果与事先假说正确。",
+      "translationAssessment": "修订后的乘汽车出行准确对应 made fewer car journeys，不再限定学生本人驾驶。研究发现、离校园较近和次数更少均忠实，未补入观察年份或比较对象身份。",
+      "collocationAssessment": "a research finding 自然，与一项研究发现对应准确；英文 made fewer car journeys 语法搭配成立。",
+      "promptAssessment": "题面 research 明确研究结果义，例句呈现观察结果，contrast 正确；未声称因果关系或提供统计时期。",
+      "issues": [],
+      "resolution": "第二轮发现的驾车出行含义过窄问题已改为乘汽车出行，并重新读取该条确认；修订通过。"
+    },
+    {
+      "id": "iv02-scope",
+      "verdict": "pass",
+      "definitionAssessment": "研究或讨论涵盖范围的名词释义准确。",
+      "translationAssessment": "公共图书馆纳入、学校图书馆不纳入及因果连接均忠实，没有增加地理或时间范围。",
+      "collocationAssessment": "the scope of a study 自然，与研究范围准确对应。",
+      "promptAssessment": "题面和纳入对象对比明确范围义；contrast 正确说明不能将结论直接推广到研究范围之外。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-limitation",
+      "verdict": "pass",
+      "definitionAssessment": "限制研究能力或结论适用范围的不足或条件准确描述研究局限。",
+      "translationAssessment": "持续时间短及无法观察长期变化准确，未添加具体研究时长或否定全部研究价值。",
+      "collocationAssessment": "a limitation of a study 自然，中文一项研究的局限准确。",
+      "promptAssessment": "题面研究情境与具体后果清楚选择局限义；contrast 对局限不等于完全无效、应说明影响的提示正确。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-distinguish",
+      "verdict": "pass",
+      "definitionAssessment": "识别并区分差别的动词义准确。",
+      "translationAssessment": "暂时迁居的人与永久定居的人对应原文，未窄化为特定国籍、跨国移民或签证身份。",
+      "collocationAssessment": "distinguish between two categories 及 between A and B 结构正确自然。",
+      "promptAssessment": "题面 two categories 选择分类辨别义；contrast 正确说明区分本身不蕴含优劣评价。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-plausible",
+      "verdict": "pass",
+      "definitionAssessment": "看来合理或可信符合 plausible 的认识程度，没有将可能解释定义为事实。",
+      "translationAssessment": "出行成本降低、访客增加与仍需证据均保留，未补造访问场所或确定因果。",
+      "collocationAssessment": "a plausible explanation 以及 explanation for 自然，中文看来合理的解释准确。",
+      "promptAssessment": "题面 explanation 与后半句证据要求使词义明确；contrast 正确指出 plausible 不表示已经证实。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-percentage-point",
+      "verdict": "pass",
+      "definitionAssessment": "百分点作为两个百分比数值直接相减的差值单位准确。",
+      "translationAssessment": "骑车通勤占比从10%到12%，增加2个百分点，所有数值与统计对象忠实，无新增年份或地区。",
+      "collocationAssessment": "an increase of two percentage points 正确自然，two 后用复数 points 正确；中文增加两个百分点准确。",
+      "promptAssessment": "题面及例句明确单位；contrast 算术正确：12%−10%=2个百分点，相对增幅为(12%−10%)/10%=20%。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-percentage-increase",
+      "verdict": "pass",
+      "definitionAssessment": "增加量除以初始值、再以百分比表示的定义准确，本例初始值为10%。",
+      "translationAssessment": "中文明确相对于原比例；从10%到12%的增幅为20%正确，未从邻条补入骑车通勤或额外年份。",
+      "collocationAssessment": "a twenty per cent increase 自然，数值修饰 increase 的名词短语正确，百分之二十的增幅准确。",
+      "promptAssessment": "题面与 relative to the original share 明确相对增长；contrast 正确区分20%的相对增幅与2个百分点的绝对占比变化。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-remain-stable",
+      "verdict": "pass",
+      "definitionAssessment": "数值基本维持不变的短语释义准确，允许小幅波动。",
+      "translationAssessment": "五年全期间、约八千人口和稳定状态均保留，没有补造起止年份或地区。",
+      "collocationAssessment": "remain stable at around 是可直接接近似数值的自然搭配，中文在约某水平保持稳定正确。",
+      "promptAssessment": "题面与 around 使稳定程度明确；contrast 正确区分小幅波动与明显上升或下降。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-peak",
+      "verdict": "pass",
+      "definitionAssessment": "达到观察期间最高点符合图表中 peak 的动词义，没有擅自扩大为历史最高值。",
+      "translationAssessment": "英文新增 to the college 后，学院年度录取人数有直接依据；2024年六千和2025年下降均准确，没有添加下降后的数值。",
+      "collocationAssessment": "peak at six thousand 正确自然，at 接峰值水平；中文最高值准确。",
+      "promptAssessment": "题面 peak at a level 与下降的后续趋势明确动词义；contrast 正确区分峰值、增长量和平台期。",
+      "issues": [],
+      "resolution": "第一轮 admissions 统计对象不明确的问题已由 to the college 解决。"
+    },
+    {
+      "id": "iv02-marginal",
+      "verdict": "pass",
+      "definitionAssessment": "幅度微小的形容词释义准确，没有混入边缘位置义。",
+      "translationAssessment": "每日访客从200到201、小幅增加均准确；未增加比较日期、场馆或统计显著性。",
+      "collocationAssessment": "a marginal increase 自然，小幅增加准确；增加1人、相对增幅0.5%支持此程度词。",
+      "promptAssessment": "题面 increase 与数值差消除其他 marginal 词义；contrast 正确说明小幅增加仍不是没有变化。",
+      "issues": [],
+      "resolution": "无需修改。"
+    },
+    {
+      "id": "iv02-substantial",
+      "verdict": "pass",
+      "definitionAssessment": "数量或程度相当大准确对应 substantial 的本条程度义。",
+      "translationAssessment": "图书馆报告、年度会员人数与1000到1600均忠实，未增加新会员口径、比较年份或增长速度。",
+      "collocationAssessment": "a substantial increase 自然，大幅增加准确；增长600、相对增幅60%支持程度词。",
+      "promptAssessment": "题面 increase 和具体数值明确数量程度义；contrast 正确区分增长幅度与速度。",
+      "issues": [],
+      "resolution": "无需修改；年度会员人数保持原文口径，不扩写为新入会人数。"
+    }
+  ],
+  "resolvedChanges": [
+    "entry requirement: course target made explicit in both languages",
+    "deadline: five p.m./下午五点 removes am/pm uncertainty",
+    "compromise: both parties initially wanted weekend off; trade-off made explicit",
+    "peak: college admissions made explicit; Chinese no longer infers institution",
+    "finding: 乘汽车出行 avoids inferring that the students drove"
+  ],
+  "blindInputSha256": "0538601333d142f23858b1af97f71daf4001ed2fe183cfd24b62d7863b171df7",
+  "blindInput": [
+    {
+      "id": "iv02-eligible",
+      "headword": "eligible",
+      "prompt": "eligible for a course",
+      "en": "You are eligible for the course if you have completed the introductory module."
+    },
+    {
+      "id": "iv02-entry-requirement",
+      "headword": "entry requirement",
+      "prompt": "meet an entry requirement",
+      "en": "To meet the entry requirement, applicants must have at least one year of relevant work experience."
+    },
+    {
+      "id": "iv02-application",
+      "headword": "application",
+      "prompt": "submit an application",
+      "en": "Please submit your application online and attach a copy of your qualification certificate."
+    },
+    {
+      "id": "iv02-deadline",
+      "headword": "deadline",
+      "prompt": "a deadline for applications",
+      "en": "The deadline for applications is five o'clock on Friday, not the end of the day."
+    },
+    {
+      "id": "iv02-proof-identity",
+      "headword": "proof of identity",
+      "prompt": "proof of identity",
+      "en": "Please provide proof of identity, such as a passport, when you collect your library card."
+    },
+    {
+      "id": "iv02-valid",
+      "headword": "valid",
+      "prompt": "a valid ticket",
+      "en": "You need a valid ticket for this route; yesterday's ticket cannot be used today."
+    },
+    {
+      "id": "iv02-supportive",
+      "headword": "supportive",
+      "prompt": "a supportive colleague",
+      "en": "A supportive colleague helped me prepare for my first presentation at work."
+    },
+    {
+      "id": "iv02-practical-experience",
+      "headword": "practical experience",
+      "prompt": "gain practical experience",
+      "en": "I gained practical experience by helping to organise a small event during my internship."
+    },
+    {
+      "id": "iv02-responsibility",
+      "headword": "responsibility",
+      "prompt": "take responsibility for a task",
+      "en": "I took responsibility for checking the guest list before the event."
+    },
+    {
+      "id": "iv02-compromise",
+      "headword": "compromise",
+      "prompt": "reach a compromise",
+      "en": "We reached a compromise: I would work on Saturday and my colleague would cover Sunday."
+    },
+    {
+      "id": "iv02-rewarding",
+      "headword": "rewarding",
+      "prompt": "a rewarding job",
+      "en": "I find tutoring a rewarding job because I can see learners become more confident."
+    },
+    {
+      "id": "iv02-belonging",
+      "headword": "belonging",
+      "prompt": "a sense of belonging",
+      "en": "Joining the local choir gave me a sense of belonging when I moved to a new town."
+    },
+    {
+      "id": "iv02-representative",
+      "headword": "representative",
+      "prompt": "a representative sample",
+      "en": "The researchers selected participants from different age groups to obtain a more representative sample of the town's residents."
+    },
+    {
+      "id": "iv02-finding",
+      "headword": "finding",
+      "prompt": "a research finding",
+      "en": "One research finding was that students who lived nearer the campus made fewer car journeys."
+    },
+    {
+      "id": "iv02-scope",
+      "headword": "scope",
+      "prompt": "the scope of a study",
+      "en": "The scope of the study was limited to public libraries, so school libraries were not included."
+    },
+    {
+      "id": "iv02-limitation",
+      "headword": "limitation",
+      "prompt": "a limitation of a study",
+      "en": "A limitation of the study was its short duration, which prevented the researchers from observing long-term changes."
+    },
+    {
+      "id": "iv02-distinguish",
+      "headword": "distinguish",
+      "prompt": "distinguish between two categories",
+      "en": "The report distinguishes between temporary migrants and people who settle permanently."
+    },
+    {
+      "id": "iv02-plausible",
+      "headword": "plausible",
+      "prompt": "a plausible explanation",
+      "en": "Lower travel costs are a plausible explanation for the increase in visitors, but more evidence is needed."
+    },
+    {
+      "id": "iv02-percentage-point",
+      "headword": "percentage point",
+      "prompt": "a percentage point",
+      "en": "The share of commuters cycling rose from ten to twelve per cent, an increase of two percentage points."
+    },
+    {
+      "id": "iv02-percentage-increase",
+      "headword": "percentage increase",
+      "prompt": "a percentage increase",
+      "en": "A rise from ten to twelve per cent is a twenty per cent increase relative to the original share."
+    },
+    {
+      "id": "iv02-remain-stable",
+      "headword": "remain stable",
+      "prompt": "remain stable",
+      "en": "The population remained stable at around eight thousand throughout the five-year period."
+    },
+    {
+      "id": "iv02-peak",
+      "headword": "peak",
+      "prompt": "peak at a level",
+      "en": "Annual admissions peaked at six thousand in 2024 before falling in 2025."
+    },
+    {
+      "id": "iv02-marginal",
+      "headword": "marginal",
+      "prompt": "a marginal increase",
+      "en": "The daily number of visitors showed a marginal increase from two hundred to two hundred and one."
+    },
+    {
+      "id": "iv02-substantial",
+      "headword": "substantial",
+      "prompt": "a substantial increase",
+      "en": "The library reported a substantial increase in annual membership, from one thousand to sixteen hundred."
+    }
+  ]
+}

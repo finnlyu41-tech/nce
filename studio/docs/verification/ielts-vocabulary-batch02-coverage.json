@@ -1,0 +1,424 @@
+{
+  "schemaVersion": 1,
+  "baselineSource": "15505c43a1f35b8b7a60830b3bb7cc0e826f1d40",
+  "candidateChecked": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "method": "Recomputed full existing catalogue with audit-vocabulary-coverage; read already frozen source ledgers, no new PDF/source investigation, user records or network. Literal prompt matches do not establish source-sense completeness.",
+  "inputHashes": {
+    "app/vocabulary-examples.ts": "6f4287fbd4b81d66d2efc59e60105a45506b2df9f20722753a30ff8d4255b605",
+    "app/textbook-vocabulary.ts": "5f6e8412a7f6a22e1e86ad1e752c66436c3ef1044941089d4cf292ac3db2ea7c",
+    "app/nce-utils.ts": "305551097bb84a2a07e44ef545fc03e81bbd756e53daa0066086e9d61df0637b",
+    "app/ielts-flashcard-examples.ts": "4abaf4edb631ce85f306c1f4aa38f7be89d7634a1a3df264393c641d05d7d739",
+    "app/data/nce-pages.json": "a376eeb88cbf8a22b1810f5b95ff7b0f9c061c62b7426b73776a53637c3d7e96",
+    "dist-online/lesson-pages/index.json": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596",
+    "dist-online/language/dictionary.json": "41d983d5f8017035719842fad2275f949d39e348cdc6f50bf00ae0a9a9cee209",
+    "app/model.ts": "269c539ae3c34b15b218e1e200612b7b39d985e208f2067f195b89620c963e10",
+    "app/flashcards.ts": "b7327bae677085b3321bc54e9e7540deb64c60a0c79f780bd7800d9df8e44333",
+    "app/flashcard-types.ts": "f001cd06ca977a1188b176c8eff664a7d07ef851fbead642864626694222fd7f",
+    "app/progress-save.tsx": "cf79885ed63b938f45e87bde981ac9f83a5b7ec82a200f4a6fe56e910b287ec5",
+    "pnpm-lock.yaml": "22336ed8eb4954d3877fc49982f153f2cdc19f45c554106d378c7b136607eb3f",
+    "app/data/ielts-vocabulary-batch02.ts": "6da8b01d359dafec6a1da8788798da96bafe26a9a6f7417532358c780977c75b",
+    "app/data/ielts-vocabulary-r20.ts": "53a118e14b6b531541452c2e463e289266aa265e6197dbaccf819e09759026cc",
+    "app/data/source-review-r19.json": "2efb5b665ce9d5d69f964626b1134ac0cae375da2321265d9c0c947f925bf469",
+    "app/data/source-review-r19-tail.json": "00661dd5b3f14055b67850c74f0f4d68f16b77b775b273ae2993ac29a732196d"
+  },
+  "languageResourceCount": 276,
+  "languageResourcesSha256": "680e3a5928dce0d4c21f9e05da7ee57ac8e5455c58315a6dad7cb62f27313291",
+  "denominators": {
+    "textbookLessons": 348,
+    "canonicalTextbookHeadwords": 3356,
+    "sourceHeadwordOccurrences": 3626,
+    "fullPrintedTextbookSenseCount": null,
+    "fullIeltsVocabularyCount": null,
+    "selectedBatchTargets": 24
+  },
+  "textbook": {
+    "counts": {
+      "textbookLessons": 348,
+      "textbookTerms": 3356,
+      "textbookOccurrences": 3626,
+      "bilingualCandidateTerms": 3057,
+      "bilingualCandidateOccurrences": 3279,
+      "originalHeadwords": 315,
+      "originalSenseExamples": 420,
+      "recordedReviewedOriginalHeadwords": 315,
+      "recordedReviewedOriginalSenseExamples": 420,
+      "originalsNeedingReview": 0,
+      "textbookTermsWithoutOriginalTableEntry": 3041,
+      "textbookTermsWithAnyAuthoredEntryIncludingIELTS": 321,
+      "textbookTermsWithoutAnyAuthoredEntryIncludingIELTS": 3035,
+      "textbookTermsWithCandidateOrIndexedMeaningMatchedOriginal": 3335,
+      "textbookTermsWithoutCandidateOrIndexedMeaningMatchedOriginal": 21,
+      "candidateOnlyWithoutRecordedReviewedOriginal": 3041,
+      "ieltsSeedEntries": 84,
+      "ieltsSeedDistinctHeadwords": 84,
+      "ieltsTextbookHeadwordOverlap": 6,
+      "ieltsOriginalTableOverlap": 0,
+      "authoredHeadwordUnionIncludingIELTS": 399,
+      "unionOfTextbookAndIELTSHeadwords": 3434,
+      "sourceOccurrencesWithExactTeachingSourceMetadata": 275,
+      "recordedReviewedIdentifiedSourceTargetSenses": 275,
+      "confirmedSourceTargetSenseDenominator": null,
+      "fullyReviewedSourceOccurrenceDenominator": 3626,
+      "fullyReviewedSourceOccurrences": 38,
+      "textbookTermsWithCandidateOrSourceDisplayedOriginal": 3356,
+      "textbookTermsWithoutCandidateOrSourceDisplayedOriginal": 0,
+      "editoriallyNormalizedIdentifiedSourceTargetSenses": 2
+    },
+    "byBook": {
+      "NCE1": {
+        "occurrences": 908,
+        "terms": 867,
+        "bilingualCandidateOccurrences": 615,
+        "termsWithBilingualCandidate": 590,
+        "originalHeadwords": 268,
+        "termsWithoutCandidateOrIndexedOriginal": 15,
+        "termsWithoutCandidateOrDisplayedOriginal": 0,
+        "firstSourceAssignedGapTerms": 0,
+        "occurrencesWithExactTeachingSourceMetadata": 228,
+        "confirmedSourceTargetSenses": 226,
+        "confirmedSourceTargetSenseDenominator": null
+      },
+      "NCE2": {
+        "occurrences": 862,
+        "terms": 839,
+        "bilingualCandidateOccurrences": 828,
+        "termsWithBilingualCandidate": 807,
+        "originalHeadwords": 31,
+        "termsWithoutCandidateOrIndexedOriginal": 5,
+        "termsWithoutCandidateOrDisplayedOriginal": 0,
+        "firstSourceAssignedGapTerms": 0,
+        "occurrencesWithExactTeachingSourceMetadata": 26,
+        "confirmedSourceTargetSenses": 29,
+        "confirmedSourceTargetSenseDenominator": null
+      },
+      "NCE3": {
+        "occurrences": 1062,
+        "terms": 1050,
+        "bilingualCandidateOccurrences": 1050,
+        "termsWithBilingualCandidate": 1038,
+        "originalHeadwords": 13,
+        "termsWithoutCandidateOrIndexedOriginal": 0,
+        "termsWithoutCandidateOrDisplayedOriginal": 0,
+        "firstSourceAssignedGapTerms": 0,
+        "occurrencesWithExactTeachingSourceMetadata": 13,
+        "confirmedSourceTargetSenses": 12,
+        "confirmedSourceTargetSenseDenominator": null
+      },
+      "NCE4": {
+        "occurrences": 794,
+        "terms": 784,
+        "bilingualCandidateOccurrences": 786,
+        "termsWithBilingualCandidate": 776,
+        "originalHeadwords": 8,
+        "termsWithoutCandidateOrIndexedOriginal": 1,
+        "termsWithoutCandidateOrDisplayedOriginal": 0,
+        "firstSourceAssignedGapTerms": 0,
+        "occurrencesWithExactTeachingSourceMetadata": 8,
+        "confirmedSourceTargetSenses": 8,
+        "confirmedSourceTargetSenseDenominator": null
+      }
+    },
+    "interpretation": "315 authored headwords / 420 authored examples are a reviewed subset. 3041 headwords lacking that table do not mean textbook examples are absent. Bilingual word-form candidates are not a semantic/source audit. No source completion is earned by this IELTS-only batch."
+  },
+  "sourceClarifications": {
+    "registeredMainEntries": 56,
+    "mainKinds": {
+      "interpretation": 51,
+      "identity": 5
+    },
+    "registeredTailEntries": 6,
+    "tailFullInterpretationUnconfirmed": [
+      "NCE1-142:regularly",
+      "NCE1-143:throw",
+      "NCE1-42:any",
+      "NCE1-81:ready",
+      "NCE2-66:lancaster",
+      "NCE2-73:lorry"
+    ],
+    "tailLiteralCompleteUnknown": 5,
+    "closedByThisBatch": 0,
+    "rawSourceOwnerUnchanged": true
+  },
+  "ielts": {
+    "before": {
+      "entries": 60,
+      "bilingualExamples": 60,
+      "collocations": 60,
+      "explicitContrasts": 48,
+      "ieltsSourceLabels": 60
+    },
+    "added": {
+      "entries": 24,
+      "bilingualExamples": 24,
+      "collocations": 24,
+      "explicitContrasts": 24,
+      "ieltsSourceLabels": 24
+    },
+    "after": {
+      "entries": 84,
+      "bilingualExamples": 84,
+      "collocations": 84,
+      "explicitContrasts": 72,
+      "ieltsSourceLabels": 84
+    },
+    "previousPayloadSha256": "2b42bd1a7e5077bb8d0e1e6c495e999ff94903a6172629c31dae228e4a8d74d0",
+    "addedPayloadSha256": "1bf5d2864255ed00081888e50294c73087c5615379b8832f693fc9bc1299ab94",
+    "fullCollectionSha256": "9f0eb3bc0b89c5964700bc877ac93aedcda540b5584c2c9a4275caa8ff2df8c9",
+    "byUse": {
+      "listening": 6,
+      "speaking": 6,
+      "reading": 6,
+      "writing": 6
+    },
+    "uncovered": "The original 12 seeds still have no explicit contrast field. No full IELTS lexicon or all-meanings denominator is defined. This batch adds 24 finite targets; it does not complete R19/R20/R21/R22 or all 61 requirements."
+  },
+  "selectedTargets": [
+    {
+      "id": "iv02-eligible",
+      "headword": "eligible",
+      "prompt": "eligible for a course",
+      "use": "listening",
+      "group": "入学与服务手续",
+      "scenario": "听懂报名资格说明",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-entry-requirement",
+      "headword": "entry requirement",
+      "prompt": "meet an entry requirement",
+      "use": "listening",
+      "group": "入学与服务手续",
+      "scenario": "确认申请所需条件",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-application",
+      "headword": "application",
+      "prompt": "submit an application",
+      "use": "listening",
+      "group": "入学与服务手续",
+      "scenario": "听懂申请提交方式",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-deadline",
+      "headword": "deadline",
+      "prompt": "a deadline for applications",
+      "use": "listening",
+      "group": "入学与服务手续",
+      "scenario": "记录申请截止时间",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-proof-identity",
+      "headword": "proof of identity",
+      "prompt": "proof of identity",
+      "use": "listening",
+      "group": "入学与服务手续",
+      "scenario": "听懂办理所需证件",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-valid",
+      "headword": "valid",
+      "prompt": "a valid ticket",
+      "use": "listening",
+      "group": "入学与服务手续",
+      "scenario": "核对车票使用期限",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-supportive",
+      "headword": "supportive",
+      "prompt": "a supportive colleague",
+      "use": "speaking",
+      "group": "工作体验与合作",
+      "scenario": "介绍同事给予的帮助",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-practical-experience",
+      "headword": "practical experience",
+      "prompt": "gain practical experience",
+      "use": "speaking",
+      "group": "工作体验与合作",
+      "scenario": "描述实习收获",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-responsibility",
+      "headword": "responsibility",
+      "prompt": "take responsibility for a task",
+      "use": "speaking",
+      "group": "工作体验与合作",
+      "scenario": "解释自己承担的工作",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-compromise",
+      "headword": "compromise",
+      "prompt": "reach a compromise",
+      "use": "speaking",
+      "group": "工作体验与合作",
+      "scenario": "描述团队协调分歧",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-rewarding",
+      "headword": "rewarding",
+      "prompt": "a rewarding job",
+      "use": "speaking",
+      "group": "工作体验与合作",
+      "scenario": "评价工作带来的满足感",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-belonging",
+      "headword": "belonging",
+      "prompt": "a sense of belonging",
+      "use": "speaking",
+      "group": "工作体验与合作",
+      "scenario": "描述融入新社区的感受",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-representative",
+      "headword": "representative",
+      "prompt": "a representative sample",
+      "use": "reading",
+      "group": "研究结果与局限",
+      "scenario": "识别样本是否反映总体",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-finding",
+      "headword": "finding",
+      "prompt": "a research finding",
+      "use": "reading",
+      "group": "研究结果与局限",
+      "scenario": "区分研究发现与研究目的",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-scope",
+      "headword": "scope",
+      "prompt": "the scope of a study",
+      "use": "reading",
+      "group": "研究结果与局限",
+      "scenario": "理解研究纳入的范围",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-limitation",
+      "headword": "limitation",
+      "prompt": "a limitation of a study",
+      "use": "reading",
+      "group": "研究结果与局限",
+      "scenario": "理解研究结论的适用限制",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-distinguish",
+      "headword": "distinguish",
+      "prompt": "distinguish between two categories",
+      "use": "reading",
+      "group": "研究结果与局限",
+      "scenario": "理解文本中区分的类别",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-plausible",
+      "headword": "plausible",
+      "prompt": "a plausible explanation",
+      "use": "reading",
+      "group": "研究结果与局限",
+      "scenario": "识别有道理但未确证的解释",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-percentage-point",
+      "headword": "percentage point",
+      "prompt": "a percentage point",
+      "use": "writing",
+      "group": "百分比与变化幅度",
+      "scenario": "描述两个百分比之差",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-percentage-increase",
+      "headword": "percentage increase",
+      "prompt": "a percentage increase",
+      "use": "writing",
+      "group": "百分比与变化幅度",
+      "scenario": "描述相对于初始值的增长",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-remain-stable",
+      "headword": "remain stable",
+      "prompt": "remain stable",
+      "use": "writing",
+      "group": "图表趋势与程度",
+      "scenario": "描述数值基本不变",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-peak",
+      "headword": "peak",
+      "prompt": "peak at a level",
+      "use": "writing",
+      "group": "图表趋势与程度",
+      "scenario": "描述观察期间最高值",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-marginal",
+      "headword": "marginal",
+      "prompt": "a marginal increase",
+      "use": "writing",
+      "group": "图表趋势与程度",
+      "scenario": "描述幅度很小的增加",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    },
+    {
+      "id": "iv02-substantial",
+      "headword": "substantial",
+      "prompt": "a substantial increase",
+      "use": "writing",
+      "group": "图表趋势与程度",
+      "scenario": "描述幅度较大的增加",
+      "origin": "original",
+      "hadPriorIeltsPrompt": false
+    }
+  ],
+  "claims": {
+    "all61Complete": false,
+    "allTextbookSensesComplete": false,
+    "selectedTargetsHaveContent": true,
+    "thirdPartyDeckImported": false,
+    "legalSourceGapsInvented": false
+  }
+}
