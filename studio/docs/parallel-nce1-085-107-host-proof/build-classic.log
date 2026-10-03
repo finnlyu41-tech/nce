@@ -1,5 +1,6 @@
 vite v8.0.13 building client environment for online...
-[2Ktransforming...✓ 2234 modules transformed.
+[2K
+transforming...✓ 2234 modules transformed.
 rendering chunks...
 computing gzip size...
 static-export/standalone.html                                 1.12 kB │ gzip:     0.78 kB
@@ -16,7 +17,7 @@ static-export/assets/mini-n1-01-delayed-b-9LV-hq9D.wav      173.82 kB
 static-export/assets/style-CIMCSttA.css                     336.26 kB │ gzip:    58.80 kB
 static-export/assets/standalone-CD8-wfJ-.js               4,633.46 kB │ gzip: 1,223.28 kB
 
-[plugin builtin:vite-reporter] 
+[plugin builtin:vite-reporter]
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
