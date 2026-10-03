@@ -10,7 +10,7 @@ test('earliest six retain twelve unique keys while every actual registered bindi
  assert.deepEqual(host.courseLoopBindings.map(c=>c.id),supportedCourseIds);assert.deepEqual(supportedCourseIds.slice(0,earliestSix.length),earliestSix);
  assert.equal(new Set(earliestSix.flatMap(id=>Object.values(fixtures[id].keys))).size,12);
  assert.equal(new Set(host.courseLoopBindings.flatMap(c=>[c.key,c.inputsKey])).size,supportedCourseIds.length*2);
- for(const id of supportedCourseIds){const b=host.courseLoopFor(id);assert.equal(b.key,`nce-course-loop-v1:NCE1-${id.split('-')[1]}`);assert.equal(b.inputsKey,`nce-course-loop-inputs-v1:NCE1-${id.split('-')[1]}`);assert.equal(b.lesson.id,id)}
+ for(const id of supportedCourseIds){const b=host.courseLoopFor(id),[book,lesson]=id.split('-'),groupId=`${book.toUpperCase()}-${lesson}`;assert.equal(b.key,`nce-course-loop-v1:${groupId}`);assert.equal(b.inputsKey,`nce-course-loop-inputs-v1:${groupId}`);assert.equal(b.lesson.id,id)}
  for(const id of [unknownCourse,'NCE1-7','nce1-07','__proto__'])assert.throws(()=>host.courseLoopFor(id));
 });
 test('real host accepts only the selected course envelope and correction sidecar across all actual registered courses',()=>{

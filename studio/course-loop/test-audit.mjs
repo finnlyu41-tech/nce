@@ -32,13 +32,14 @@ test('pilot media locators match existing first-lesson source binding without co
  const curriculum=await readFile(new URL('map/curriculum.ts',root),'utf8');for(const c of lesson.source.clips)assert.ok(curriculum.includes(`clip(1, ${c.start}, ${c.end})`));
 });
 test('grammar association is shared content, never falsely counted as 276 bespoke loops',async()=>{const a=await read('docs/course-loop-audit.json');assert.equal(a.counts.sharedGuides,97);assert.equal(a.counts.grammarUnits,28);assert.equal(a.counts.grammarQuestions,168);const csv=await readFile(new URL('docs/course-loop-groups-coverage.csv',root),'utf8');assert.equal(csv.split('not-established-per-lesson').length-1,276)});
-test('actual registry derives registered inventory while original 42/54/66 bindings and 276 unaccepted loops remain distinct',async()=>{
+test('actual registry derives registered inventory while original 42/54/66/72 bindings and 276 unaccepted loops remain distinct',async()=>{
  const original42=['nce1-1','nce1-3','nce1-5','nce1-7','nce1-9','nce1-11','nce1-13','nce1-15','nce1-17','nce1-19','nce1-21','nce1-23','nce1-25','nce1-27','nce1-29','nce1-31','nce1-33','nce1-35','nce1-37','nce1-39','nce1-41','nce1-43','nce1-45','nce1-47','nce1-49','nce1-51','nce1-53','nce1-55','nce1-57','nce1-59','nce1-61','nce1-63','nce1-65','nce1-67','nce1-69','nce1-71','nce1-73','nce1-75','nce1-77','nce1-79','nce1-81','nce1-83'];
  const original54=[...original42,'nce1-85','nce1-87','nce1-89','nce1-91','nce1-93','nce1-95','nce1-97','nce1-99','nce1-101','nce1-103','nce1-105','nce1-107'];
  const original66=[...original54,'nce1-109','nce1-111','nce1-113','nce1-115','nce1-117','nce1-119','nce1-121','nce1-123','nce1-125','nce1-127','nce1-129','nce1-131'];
+ const original72=[...original66,'nce1-133','nce1-135','nce1-137','nce1-139','nce1-141','nce1-143'];
  const expected=[...registeredCourseIds],sourceCourseNumbers=registeredCourses.reduce((n,course)=>n+course.lesson.lessons.length,0);
  assert.deepEqual(expected.slice(0,original42.length),original42);assert.equal(new Set(expected).size,expected.length);
- for(const id of expected){assert.match(id,/^nce1-[1-9]\d*$/);assert.equal(Number(id.slice(5))%2,1)}
+ for(const id of expected){assert.match(id,/^nce[12]-[1-9]\d*$/);if(id.startsWith('nce1-'))assert.equal(Number(id.slice(5))%2,1)}
  assert.equal(registeredCourses.slice(0,original42.length).reduce((n,course)=>n+course.byId.size,0),756);
  assert.equal(registeredCourses.slice(0,original42.length).reduce((n,course)=>n+course.lesson.lessons.length,0),84);
  assert.deepEqual(expected.slice(0,original54.length),original54);
@@ -59,6 +60,20 @@ test('actual registry derives registered inventory while original 42/54/66 bindi
   assert.equal(binding.key,`nce-course-loop-v1:${groupId}`);assert.equal(binding.inputsKey,`nce-course-loop-inputs-v1:${groupId}`);
  }
  assert.equal(new Set(registeredCourses.slice(0,original66.length).flatMap(binding=>[binding.key,binding.inputsKey])).size,132);
+ assert.deepEqual(expected.slice(0,original72.length),original72);
+ assert.equal(registeredCourses.slice(0,original72.length).reduce((n,course)=>n+course.byId.size,0),1296);
+ assert.equal(registeredCourses.slice(0,original72.length).reduce((n,course)=>n+course.lesson.lessons.length,0),144);
+ for(const [index,id] of original72.entries()){
+  const binding=registeredCourses[index],groupId=`NCE1-${id.slice(5)}`;
+  assert.equal(binding.id,id);assert.equal(binding.lesson.source.groupId,groupId);
+  assert.equal(binding.key,`nce-course-loop-v1:${groupId}`);assert.equal(binding.inputsKey,`nce-course-loop-inputs-v1:${groupId}`);
+ }
+ assert.equal(new Set(registeredCourses.slice(0,original72.length).flatMap(binding=>[binding.key,binding.inputsKey])).size,144);
+ for(const binding of registeredCourses.filter(binding=>binding.lesson.book==='NCE2')){
+  const lesson=Number(binding.id.slice(5));assert.ok(lesson>=1&&lesson<=96);
+  assert.deepEqual(binding.lesson.lessons,[lesson]);assert.equal(binding.lesson.source.groupId,`NCE2-${lesson}`);
+  assert.equal(binding.key,`nce-course-loop-v1:NCE2-${lesson}`);assert.equal(binding.inputsKey,`nce-course-loop-inputs-v1:NCE2-${lesson}`);
+ }
  const audit=await read('docs/course-loop-audit.json'),groups=await readCSV('docs/course-loop-groups-coverage.csv'),courses=await readCSV('docs/course-loop-courses-coverage.csv');
  assert.equal(audit.schema,2);assert.deepEqual(audit.registration.courseIds,expected);
  assert.equal(audit.counts.registeredLoopGroups,expected.length);assert.equal(audit.counts.unregisteredLoopGroups,276-expected.length);assert.equal(audit.counts.registeredLoopTextbookCourseNumbers,sourceCourseNumbers);
