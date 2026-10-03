@@ -13,8 +13,8 @@ const prefix='studio/course-loop/parallel-nce1-085-095/',docs='studio/docs/paral
 const baseline='7b7c1283d12f0c6d784478cda8353080598f6980';
 // Use the byte-identical cherry-picked ancestors so a fresh release clone also
 // has every Git object required by these guards.
-const integrated='d69c568ae09093f72d523440caadd25187d0be8d';
-const integratedCount=66;
+const integrated='401208ac9943abf615d6d03fb8e13efa8239d92a';
+const integratedCount=72;
 const localRecords='9fbda71620e13d4fda80b39eda150d1fa79693b5';
 const wired=new Set(['studio/course-loop/registry.mjs','studio/course-loop/host-contract.d.ts','studio/app/course-loop-next.ts']);
 const recordFiles=new Set(['studio/README.md','studio/docs/grammar-material-exposure-v45.md']);
@@ -58,6 +58,8 @@ test('integrated successors advance while unregistered and unknown successors ke
  assert.deepEqual(registeredCourseIds.slice(0,42),Array.from({length:42},(_,i)=>'nce1-'+(2*i+1)),'The original registrations remain in their exact order.');
  assert.equal(host.courseSuccessorNode('nce1-83',fallback).id,'nce1-85');
  for(const n of [85,87,89,91,93,95]){const node=host.nodeById('nce1-'+n);assert.ok(node);assert.equal(host.courseSuccessorNode(node.id,node).id,'nce1-'+(n+2))}
- for(const n of [integratedCount*2+1,integratedCount*2+3]){const node=host.nodeById('nce1-'+n);assert.ok(node);assert.equal(registeredCourseIds.includes(node.id),false);assert.equal(host.courseSuccessorNode(node.id,node).id,node.id)}
+ const unregisteredIds=integratedCount===72?['nce2-1','nce2-2']:[integratedCount*2+1,integratedCount*2+3].map(n=>'nce1-'+n);
+ for(const id of unregisteredIds){const node=host.nodeById(id);assert.ok(node);assert.equal(registeredCourseIds.includes(node.id),false);assert.equal(host.courseSuccessorNode(node.id,node).id,node.id)}
+ if(integratedCount===72){assert.equal(host.nodeById('nce1-145'),undefined);assert.throws(()=>host.courseLoopFor('nce1-145'));}
  assert.equal(host.courseSuccessorNode('unknown-qa-course',fallback).id,'nce1-85');
 });
