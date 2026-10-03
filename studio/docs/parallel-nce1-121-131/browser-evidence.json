@@ -45,10 +45,61 @@
       },
       "retention": "natural 24h/7d not run",
       "audio": "not audited"
+    },
+    {
+      "id": "nce1-127",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 121→123→125→127→129→131→133 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-129",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 121→123→125→127→129→131→133 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
+    },
+    {
+      "id": "nce1-131",
+      "sourcePanel": "real JSON accepted by unchanged production guard",
+      "comic": "real packaged image rendered",
+      "factory": "unchanged production factory with exported matcher",
+      "registration": "test-only bundler override",
+      "mapProps": "existing advanced route nce1-37; unchanged nextCourse preserves it; 121→123→125→127→129→131→133 integration absent; harness preserves existing route intentionally",
+      "nativeQA": "diagnostic, learn, guided, independent wrong answer, original-preserving correction, repair, own, waiting, reload",
+      "viewport": {
+        "width": 390,
+        "scroll": 390
+      },
+      "retention": "natural 24h/7d not run",
+      "audio": "not audited"
     }
   ],
   "runtimeErrors": [],
   "profile": "fresh QA; no user profile/data; removed after test",
   "productionRegistration": "not modified",
-  "naturalRetention": "not run"
+  "naturalRetention": "not run",
+  "batches": [
+    "121-125",
+    "127-131"
+  ],
+  "firstFreeze": "1eb41bc684553a448d9631399a1e9a3f15be7383",
+  "candidateBeforeAfterNative": "module/prompt/blind-answer/author-review hashes identical in both start bindings"
 }

@@ -1,0 +1,326 @@
+[
+  {
+    "id": "diagnostic-n127-present-strong-state",
+    "context": "排练刚结束，Leo连续打哈欠，走得很慢。你把这些当作很强线索，推断他现在很累，但没有向他确认。",
+    "prompt": "以He开头，用must、be、tired表达强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n127-present-exclusion",
+    "context": "你找蓝色钥匙袋，却看见一个红色袋子；蓝色袋子没有红面。你有很强把握排除眼前这只，但还没查袋内。",
+    "prompt": "以It开头，用cannot或can’t、be、my blue bag表达现在的否定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n127-present-ongoing-inference",
+    "context": "练琴房门关着，里面传出连续的钢琴声。你把这当作很强线索，推断她此刻正在弹琴；没有看见本人。",
+    "prompt": "以She开头，用must、be、play the piano，表达现在正在进行的强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n127-present-strong-state",
+    "context": "烘焙摊刚出炉一盘面包，包装上还凝着水汽。你根据热气很有把握认为面包现在很热，还未触碰。",
+    "prompt": "以It开头，用must、be、hot表达强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：现在状态：must + be +状态/身份；保留推测而不改成事实。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n127-present-exclusion",
+    "context": "社团把门口的人认成新成员Ben，但你正与Ben视频通话，他在远处家中。你据此很有把握排除门口的人，未向那人查证姓名。",
+    "prompt": "以He开头，用cannot或can’t、be、Ben表达现在的否定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：当前排除用cannot/can’t + be；别换成must not、过去或能力判断。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n127-present-ongoing-inference",
+    "context": "手工教室里的人双手正在揉面，旁边没有书。你很有把握排除他此刻在读书，但没有走近确认。",
+    "prompt": "以He开头，用cannot或can’t、be、read，表达对现在正在进行动作的否定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：现在进行推测用must/cannot + be + -ing；cannot do能力与cannot be doing排除不同。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n127-present-strong-state",
+    "context": "陌生展厅中，工作人员已挂出关门牌并锁上入口。你从走廊推断展厅现在已经关闭，很有把握，尚未核对营业记录。",
+    "prompt": "以It开头，用must、be、closed表达强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n127-present-exclusion",
+    "context": "新快递盒上印着你未订购的咖啡机型号，你只订了书。你根据标签很有把握判断这不是自己的包裹，但还未询问送件人。",
+    "prompt": "以It开头，用cannot或can’t、be、my parcel表达现在的否定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n127-present-ongoing-inference",
+    "context": "陌生售票处还没开始服务。窗外可以看到他们手持号码牌，站在队尾很久没有离开，也没有在办其他事。你用这些作为强线索，推测他们现在是否正在等候；还未走近询问。",
+    "prompt": "以They开头，从must或cannot/can’t中选符合线索的一项，用be、wait推测现在正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n127-present-strong-state",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一张木桌上有独特的学校标签与磨痕。你据此很有把握认为它现在很旧，尚未查购买日期。",
+    "prompt": "以It开头，用must、be、old表达强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n127-present-exclusion",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一场寻物中，有人把黑色雨伞当作你的新伞；你的新伞是透明的。你据此外观很有把握排除它，尚未打开标签。",
+    "prompt": "以It开头，用cannot或can’t、be、my new umbrella表达现在的否定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n127-present-ongoing-inference",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一间录音室不断传出歌声。你很有把握认为她此刻正在唱歌，尚未打开门确认。",
+    "prompt": "以She开头，用must、be、sing，表达现在正在进行的强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n127-present-strong-state",
+    "context": "陌生校园的停车棚有大片水迹，窗外还能看见落雨。你据此很有把握认为外面现在很湿，尚未走出去。",
+    "prompt": "以It开头，用must、be、wet表达强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n127-present-exclusion",
+    "context": "新图书车有三角形不可拆卸钢架，生产说明确认该型号钢架不能替换或折叠；旧车型号全部是不可拆卸矩形钢架。有人说这就是旧车，你据固定构造很有把握排除，尚未查资产编号。",
+    "prompt": "以It开头，用cannot或can’t、be、the old cart表达现在的否定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n127-present-ongoing-inference",
+    "context": "陌生音乐厅的实时直播能辨认出他；整段画面中，他双手各握一根鼓槌持续击鼓，面前只有鼓，没有键盘、手机或其他输入设备。有人说他此刻正在打字，你根据这些现场线索作很有把握的推测。",
+    "prompt": "以He开头，从must或cannot/can’t中选符合线索的一项，用be、type推测现在正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n127-present-strong-state",
+    "context": "新的社区会场外全是脚印，里面传出很多交谈声。你很有把握认为会场现在很忙碌，但没看入场统计。",
+    "prompt": "以It开头，用must、be、busy表达强肯定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n127-present-exclusion",
+    "context": "另一个失物台的小柜内放着一只完整的小背包；柜门正常关着。你的大背包有不可折叠的硬框，尺寸比该柜的内宽和内高都大，不能装入。你据此很有把握排除柜内这只背包是自己的大背包，还未查名牌。",
+    "prompt": "以It开头，用cannot或can’t、be、my large backpack表达现在的否定推测。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n127-present-ongoing-inference",
+    "context": "陌生社区寄送室的窗户有雾，只能看见他们不断把礼品放进打开的纸盒、折盒盖，并贴封条。桌上有已封好的包裹。你根据这些强线索推测他们此刻是否正在打包，没向本人确认。",
+    "prompt": "以They开头，从must或cannot/can’t中选符合线索的一项，用be、pack推测现在正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n129-past-strong-state",
+    "context": "昨晚的工作坊留下满地纸屑和一箱成品。你根据痕迹很有把握认为昨晚那里很忙碌；你不在现场，还未问参与者。",
+    "prompt": "以It开头，用must、have、been、busy推测昨晚的状态，不另加时间词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n129-past-exclusion",
+    "context": "昨天送到社团的包裹标签显示D尺寸，Ben订的是A尺寸。你很有把握认为那不是Ben的包裹，还没问送件人。",
+    "prompt": "以It开头，用cannot或can’t、have、been、Ben’s parcel推测昨天的身份，不另加时间词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n129-past-ongoing-inference",
+    "context": "昨天午后录音里有连续的钢琴声，使用表显示她预约了那时段。你很有把握推断她当时正在弹琴，但未看见本人。",
+    "prompt": "以She开头，用must、have、been、play the piano，推测过去当时正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n129-past-strong-state",
+    "context": "昨天的屋外照片显示大片水迹，雨伞全开。你据此很有把握认为外面当时很湿，尚未向摄影者确认。",
+    "prompt": "以It开头，用must、have、been、wet推测过去状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：过去状态用must + have + been +状态，have保持原形。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n129-past-exclusion",
+    "context": "昨天装书的盒子照片有红色角标，新盒子的角标都是绿色。你很有把握排除照片里的是新盒子，尚未查编号。",
+    "prompt": "以It开头，用cannot或can’t、have、been、the new box推测过去身份。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：过去排除保留cannot/can’t + have + been；不替换成当前能力。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n129-past-ongoing-inference",
+    "context": "昨晚你在门外通过无录制或播放设备的现场对话，听到可辨认的他本人持续回答你的新问题，回答与即时问题对应。有人说他那时正在睡觉；你根据本人实时互动很有把握排除这一说法，没进屋观察。",
+    "prompt": "以He开头，用cannot或can’t、have、been、sleep，推测过去当时不可能正在做的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：过去当时进行需have been + -ing，区别现在be doing及只说完成过。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n129-past-strong-state",
+    "context": "陌生木工展昨天卖的一套工具，每件都有复杂手工雕刻，旁边同类简装套装标价远超你的预算。实际成交价遮住了；你据此很有把握推测那套工具当时很昂贵，还未看账单。",
+    "prompt": "以It开头，用must、have、been、expensive推测过去状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n129-past-exclusion",
+    "context": "陌生团队昨天的语音连线没有播放录音，主持人分别提问，能辨认出Leo与另两名同伴同时从同一房间现场回应。有人说Leo那时独自一人。你据互动很有把握排除，还未亲自看见房间。",
+    "prompt": "以He开头，用cannot或can’t、have、been、alone推测过去状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n129-past-ongoing-inference",
+    "context": "昨天搬物活动的一个连续片段能辨认出她：她始终在干燥的仓库地面上，双脚没有离地，双手抱着箱子缓慢走路；该片段中没有泳池或水。有人说她在这个片段中正在游泳，你据此作很有把握的推测。",
+    "prompt": "以She开头，从must或cannot/can’t中选符合线索的一项，用have、been、swim推测过去片段中正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n129-past-strong-state",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一趟活动结束后，照片中Leo频繁打哈欠并靠着椅背。你据此很有把握认为他当时很累，尚未问本人。",
+    "prompt": "以He开头，用must、have、been、tired推测过去状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n129-past-exclusion",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一张昨晚的送货照片显示厚纸袋，有人把它当成你薄布袋。你根据材料很有把握排除，尚未查标签。",
+    "prompt": "以It开头，用cannot或can’t、have、been、my cloth bag推测过去身份。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n129-past-ongoing-inference",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一份昨天的庭院声音记录始终有歌声，时段正好是她的练唱预约。你很有把握推断她当时正在唱歌，未看见本人。",
+    "prompt": "以She开头，用must、have、been、sing，推测过去当时正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n129-past-strong-state",
+    "context": "新徒步队昨天回到终点后的画面显示他们嘴唇干、反复寻找饮水处，很快喝光了各自水瓶。你当时没在现场，据这些痕迹很有把握推测他们那时很渴，还未问本人。",
+    "prompt": "以They开头，用must、have、been、thirsty推测过去状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n129-past-exclusion",
+    "context": "新读书会昨天按公告时间准时开场。开场前十五分钟，你与Nora进行无录制的现场视频通话，她已在会场入口完成签到。有人说她到场晚了。你据当时通话线索很有把握排除，但没有亲自查出席表。",
+    "prompt": "以She开头，用cannot或can’t、have、been、late推测过去状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n129-past-ongoing-inference",
+    "context": "新修理社昨晚只安排Leo使用该工作台。随后桌上留下拆开的收音机、刚换下的损坏零件与拧松的螺丝，录音里有持续测试声音。你没有见到工作过程，用这些强线索推测他当时是否正在修收音机。",
+    "prompt": "以He开头，从must或cannot/can’t中选符合线索的一项，用have、been、repair the radio推测过去当时正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n129-past-strong-state",
+    "context": "另一场昨日的纸艺活动录音虽然隔门，却不断传来很多人说话和裁切机器的响声，你只能听到声音而不在房内。你据此很有把握推测房间当时很吵，还未问参与者。",
+    "prompt": "以It开头，用must、have、been、noisy推测过去状态。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n129-past-exclusion",
+    "context": "另一场昨天的合影采用一台必须由人在相机旁按键的旧相机，没有定时或遥控。拍下这张照片的那一刻，Leo可辨认地坐在远处被拍的人群中。有人说他是拍这张照片的人，你据构造和位置线索很有把握排除，尚未向操作者确认。",
+    "prompt": "以He开头，用cannot或can’t、have、been、the photographer，推测拍下这张照片那一刻的身份。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n129-past-ongoing-inference",
+    "context": "另一间昨天的画室由他们单独预约。门外听见反复涮画笔的水声，结束后留下刚涂色的湿画、配好的颜料和他们各自沾满同色颜料的工作围裙。你没见过程，用这些强线索推测他们当时是否正在画画。",
+    "prompt": "以They开头，从must或cannot/can’t中选符合线索的一项，用have、been、paint推测过去当时正在进行的动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n131-future-possibility",
+    "context": "社团考虑明天去博物馆，尚未决定，去或不去都可能。只报告去博物馆这一种可能。",
+    "prompt": "以We开头，用may或might、visit the museum、tomorrow，表达未决定的将来可能性。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n131-present-possibility",
+    "context": "现在联系不到志愿者，她可能很忙，也可能只是没看手机；你没有把握。只报告很忙这一种可能。",
+    "prompt": "以She开头，用may或might、be、busy表达现在状态的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "diagnostic-n131-past-possibility",
+    "context": "昨天工作坊没收到他回复，他可能当时很忙，也可能手机没电；没有现场记录。只报告忙这一种可能。",
+    "prompt": "以He开头，用may或might、have、been、busy表达过去状态的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n131-future-possibility",
+    "context": "明天室外画展可能因天气取消，但还没有通知，举办和不举办都可能。只报告我们可能不参加这一种情况。",
+    "prompt": "以We开头，用may或might、not、attend the exhibition、tomorrow表达将来不发生的可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：未决定将来用may/might +原形，可能不发生把not放在情态后。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n131-present-possibility",
+    "context": "图书馆门关着，你听见翻页声，但声音也可能来自别人。她也许现在正在读书，你不确定。",
+    "prompt": "以She开头，用may或might、be、read，表达现在正在进行的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：状态接be +状态；正在进行接be + -ing，不把一种可能当作事实。",
+    "form": "statement"
+  },
+  {
+    "id": "guided-n131-past-possibility",
+    "context": "昨天的排练记录只留下很轻的旋律，不知是谁发出的。她可能当时正在唱歌，也可能在放录音。只报告唱歌这一种可能。",
+    "prompt": "以She开头，用may或might、have、been、sing，表达过去当时正在进行的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：过去可能保留may/might + have been，状态与-ing按题意选择。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n131-future-possibility",
+    "context": "陌生手工社团在讨论下周做一张海报，尚未选定活动。只报告做海报这一种可能。",
+    "prompt": "以They开头，用may或might、make a poster、next week表达将来可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n131-present-possibility",
+    "context": "陌生社区的访客现在只看到他们家的窗帘关着、门口无人，没人回复门铃；他们可能外出了，也可能在家里没听见。你没有把握，不知道他们现在的位置。只报告他们可能不在家这一种情况。",
+    "prompt": "以They开头，用may或might、not、be、at home，表达当前状态的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "independent-n131-past-possibility",
+    "context": "陌生社团昨天的报名网页迟迟没回复，组织者可能当时不在场，也可能在忙其他事。只报告不在场这一种可能。",
+    "prompt": "以She开头，用may或might、have、been、absent表达过去状态的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n131-future-possibility",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一场周末野餐尚未确认，预算可能不够，但还没算完。只报告我们明天可能不去公园这一种情况。",
+    "prompt": "以We开头，用may或might、not、go to the park、tomorrow表达将来不发生的可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n131-present-possibility",
+    "context": "保留上一轮首答和订正。下面是另一情境：另一间厨房传来锅盖声，但有时空锅也会响。他可能现在正在做饭，你没有确认。",
+    "prompt": "以He开头，用may或might、be、cook，表达现在正在进行的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "repair-n131-past-possibility",
+    "context": "保留上一轮首答和订正。下面是另一情境：昨天你打电话给女志愿者Nora，她没有接。她那时可能正在睡觉，也可能出门了；你没有位置记录，不知道她当时在哪里。只报告她当时正在睡觉这一种未证实可能。",
+    "prompt": "以She开头，用may或might、have、been、sleep，表达过去当时正在进行的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n131-future-possibility",
+    "context": "新社区正在选择周五集会的活动，唱歌只是候选，还未定。只报告他们可能唱歌这一种情况。",
+    "prompt": "以They开头，用may或might、sing、on Friday表达将来可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n131-present-possibility",
+    "context": "新仓库现在的门外能听见微弱交谈，但也可能来自隔壁。仓库也许很忙，也可能没人。只报告忙这一种可能。",
+    "prompt": "以It开头，用may或might、be、busy表达现在状态的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-a-n131-past-possibility",
+    "context": "新小组昨天约了咨询，桌边只有一张没写完的登记纸，没人看见他们什么时候来；他们可能当时正在等候，也可能纸是前一天留下的。你不确定。只报告当时正在等候这一种可能。",
+    "prompt": "以They开头，用may或might、have、been、wait，表达过去当时正在进行的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n131-future-possibility",
+    "context": "另一个读书小组考虑明天开会，几个人可能没空，尚无决定。只报告他们可能不开会这一种情况。",
+    "prompt": "以They开头，用may或might、not、meet、tomorrow表达将来不发生的可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n131-present-possibility",
+    "context": "另一个共享办公室里，他的屏幕关着，桌面也没有打开的文件；但他也可能在思考工作，或在别处用手机。你不知道他此刻的活动。只报告他现在可能没在工作这一种未证实情况。",
+    "prompt": "以He开头，用may或might、not、be、work，表达现在正在进行动作的否定可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  },
+  {
+    "id": "review-b-n131-past-possibility",
+    "context": "另一场昨天的活动只留下翻页声的模糊录音，也可能是别人。她可能那时正在读书，尚未向她核对。",
+    "prompt": "以She开头，用may或might、have、been、read，表达过去当时正在进行的一种可能。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。",
+    "form": "statement"
+  }
+]

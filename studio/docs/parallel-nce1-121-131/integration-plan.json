@@ -34,13 +34,39 @@
         125,
         126
       ]
+    },
+    {
+      "id": "nce1-127",
+      "module": "./parallel-nce1-121-131/lesson-nce1-127.mjs",
+      "key": "nce-course-loop-v1:NCE1-127",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-127",
+      "lessons": [
+        127,
+        128
+      ]
+    },
+    {
+      "id": "nce1-129",
+      "module": "./parallel-nce1-121-131/lesson-nce1-129.mjs",
+      "key": "nce-course-loop-v1:NCE1-129",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-129",
+      "lessons": [
+        129,
+        130
+      ]
+    },
+    {
+      "id": "nce1-131",
+      "module": "./parallel-nce1-121-131/lesson-nce1-131.mjs",
+      "key": "nce-course-loop-v1:NCE1-131",
+      "inputsKey": "nce-course-loop-inputs-v1:NCE1-131",
+      "lessons": [
+        131,
+        132
+      ]
     }
   ],
-  "pendingSecondBatch": [
-    127,
-    129,
-    131
-  ],
+  "pendingSecondBatch": [],
   "hostAuthorEdits": [
     {
       "path": "studio/course-loop/registry.mjs",
@@ -48,11 +74,11 @@
     },
     {
       "path": "studio/course-loop/host-contract.d.ts",
-      "action": "Append nce1-121,123,125 to CourseId and odd IDs to showSource.lesson plus NCE1 comicKey literals; preserve action schemas."
+      "action": "Append nce1-121,123,125,127,129,131 to CourseId and odd IDs to showSource.lesson plus NCE1 comicKey literals; preserve action schemas."
     },
     {
       "path": "studio/app/course-loop-next.ts",
-      "action": "Coordinate119 predecessor with109–119 owner; add119->121,121->123,123->125,125->127.127 remains ordinary textbook/map until separately ready."
+      "action": "Coordinate119 predecessor with109–119 owner; add119->121->123->125->127->129->131->133.133 remains ordinary textbook/map until separately ready."
     }
   ],
   "realHostQARequired": [

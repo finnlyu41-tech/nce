@@ -1,0 +1,452 @@
+{
+  "scope": "Author handoff only: NCE1-127/129/131. Independent blind solving, actual production factory/source/native acceptance belong to parent.",
+  "baseHead": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "groups": [
+    {
+      "id": "nce1-127",
+      "modulePath": "studio/course-loop/parallel-nce1-121-131/lesson-nce1-127.mjs",
+      "moduleSha256": "26d72716f95a1fcee87f79d5ad2eada6b1e4f7464bfa0fc57f6d58a1613f8f8d",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "targetCount": 3,
+      "counterexamples": 72,
+      "sourcePath": "studio/dist-online/language/NCE1/127.json",
+      "lrcInternalSourceSha256": "1ba27adb6d9e6fa5bca327fe101f5661837834e7474647f1f810cf1e71b1aff0",
+      "jsonFileSha256": "c95f28b7a52c50602730425ea4583fac535767dc8360d70bb475cbdcdd43cee2",
+      "selectedClips": [
+        {
+          "target": "present-strong-state",
+          "label": "127原文must be身份推测；状态迁移见128配套",
+          "start": 28.27,
+          "end": 33.29
+        },
+        {
+          "target": "present-exclusion",
+          "label": "127原文can’t be排除；能力对照见原注释",
+          "start": 45.91,
+          "end": 47.84
+        },
+        {
+          "target": "present-ongoing-inference",
+          "label": "127原文must be；现在进行推测另来自128配套，未在此clip展示",
+          "start": 58.91,
+          "end": 63.89
+        }
+      ],
+      "clipRowBoundaries": [
+        {
+          "start": 28.27,
+          "row": "It must be Karen Marsh, the actress.",
+          "end": 33.29,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        },
+        {
+          "start": 45.91,
+          "row": "It can't be.",
+          "end": 47.84,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        },
+        {
+          "start": 58.91,
+          "row": "He must be her fourth or fifth.",
+          "end": 63.89,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        }
+      ],
+      "comic": {
+        "path": "studio/dist-online/lesson-pages/4f4bfe0f367921a1c2c043e5e91ba492bb7cbf96d5be5916e2145283cb64c2c0.jpg",
+        "catalogPage": 261,
+        "printedPage": 257,
+        "pageSha256": "4f4bfe0f367921a1c2c043e5e91ba492bb7cbf96d5be5916e2145283cb64c2c0",
+        "visuallyInspected": true
+      },
+      "grammarPages": [
+        {
+          "pageKey": "NCE1-262",
+          "catalogPage": 262,
+          "printedPage": 258,
+          "path": "studio/dist-online/lesson-pages/f18f00c4392541f49cfa8ae2027c99d197c52d0b451c779b52a4d7d9bf39178e.jpg",
+          "sha256": "f18f00c4392541f49cfa8ae2027c99d197c52d0b451c779b52a4d7d9bf39178e",
+          "visuallyInspected": true,
+          "notes": "实际注释与书面页已逐页目视核验；未复制原题作迁移。"
+        },
+        {
+          "pageKey": "NCE1-263",
+          "catalogPage": 263,
+          "printedPage": 259,
+          "path": "studio/dist-online/lesson-pages/50d4005280dbf5a347d3bcaf0b1018cede5ab7a528929fff27439488d5c920b5.jpg",
+          "sha256": "50d4005280dbf5a347d3bcaf0b1018cede5ab7a528929fff27439488d5c920b5",
+          "visuallyInspected": true,
+          "notes": "128原页含must/can’t be状态及must be sleeping/can’t be reading。"
+        },
+        {
+          "pageKey": "NCE1-264",
+          "catalogPage": 264,
+          "printedPage": 260,
+          "path": "studio/dist-online/lesson-pages/1ce40cc69533f461b0fd615c955eabf7fcb7a5fead2a6d3c3de8a4631353862f.jpg",
+          "sha256": "1ce40cc69533f461b0fd615c955eabf7fcb7a5fead2a6d3c3de8a4631353862f",
+          "visuallyInspected": true,
+          "notes": "实际注释与书面页已逐页目视核验；未复制原题作迁移。"
+        }
+      ],
+      "pairedExercise": {
+        "entryId": "NCE1-127",
+        "pageKey": "NCE1-263",
+        "lessons": [
+          127,
+          128
+        ],
+        "catalogPages": [
+          262,
+          263,
+          264
+        ],
+        "printedPages": [
+          258,
+          259,
+          260
+        ],
+        "note": "来源目录页号与印刷页号相差4；注释、句型和书面页已逐页目视核验，未复制原题作新迁移。"
+      },
+      "ownStatus": "awaiting-human-review",
+      "bankNovelty": "Independent ongoing: ticket queue/waiting positive. Review-a ongoing: live concert/drumming and no input devices excludes typing negative. Review-b ongoing: parcel-room/packing positive. All three require choosingmust orcannot from factual clues; all18 primary answers unique."
+    },
+    {
+      "id": "nce1-129",
+      "modulePath": "studio/course-loop/parallel-nce1-121-131/lesson-nce1-129.mjs",
+      "moduleSha256": "b31c6dd6b74871c65e939b2e4a2f947aba775eac4716f7efa07c9e24d65bcaef",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "targetCount": 3,
+      "counterexamples": 72,
+      "sourcePath": "studio/dist-online/language/NCE1/129.json",
+      "lrcInternalSourceSha256": "99f00b0416941cc2f611700e749654e99a3e3dbb50e69352b373a28e456eea3f",
+      "jsonFileSha256": "be612344bdcd2a18d9476038f68bc07496f4350960189942fabcb2d1e6d223e6",
+      "selectedClips": [
+        {
+          "target": "past-strong-state",
+          "label": "129原文must have been dreaming；过去状态另见130配套",
+          "start": 52.83,
+          "end": 56.01
+        },
+        {
+          "target": "past-exclusion",
+          "label": "129原文can’t have been省略；完整状态排除来自130配套",
+          "start": 38.88,
+          "end": 41.85
+        },
+        {
+          "target": "past-ongoing-inference",
+          "label": "129原文must have been driving；过去进行结构",
+          "start": 33.56,
+          "end": 38.88
+        }
+      ],
+      "clipRowBoundaries": [
+        {
+          "start": 52.83,
+          "row": "I must have been dreaming.",
+          "end": 56.01,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        },
+        {
+          "start": 38.88,
+          "row": "I can't have been.",
+          "end": 41.85,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        },
+        {
+          "start": 33.56,
+          "row": "You must have been driving at seventy miles an hour.",
+          "end": 38.88,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        }
+      ],
+      "comic": {
+        "path": "studio/dist-online/lesson-pages/855add0d381bccb235064f1480d6837c91a416f1e80d9d95d740d0d326f84970.jpg",
+        "catalogPage": 265,
+        "printedPage": 261,
+        "pageSha256": "855add0d381bccb235064f1480d6837c91a416f1e80d9d95d740d0d326f84970",
+        "visuallyInspected": true
+      },
+      "grammarPages": [
+        {
+          "pageKey": "NCE1-266",
+          "catalogPage": 266,
+          "printedPage": 262,
+          "path": "studio/dist-online/lesson-pages/d0eba348078ffe25e0a29246e99873cad0bf07b2cae3eb329dbcbb0b2a7da6bb.jpg",
+          "sha256": "d0eba348078ffe25e0a29246e99873cad0bf07b2cae3eb329dbcbb0b2a7da6bb",
+          "visuallyInspected": true,
+          "notes": "实际注释与书面页已逐页目视核验；未复制原题作迁移。"
+        },
+        {
+          "pageKey": "NCE1-267",
+          "catalogPage": 267,
+          "printedPage": 263,
+          "path": "studio/dist-online/lesson-pages/33e940b5154ba96e21e2c34ab2d18202e5ecc94e2b7bf79a8c656e721548934a.jpg",
+          "sha256": "33e940b5154ba96e21e2c34ab2d18202e5ecc94e2b7bf79a8c656e721548934a",
+          "visuallyInspected": true,
+          "notes": "130原页含must/can’t have been状态及sleeping/reading过去进行。"
+        },
+        {
+          "pageKey": "NCE1-268",
+          "catalogPage": 268,
+          "printedPage": 264,
+          "path": "studio/dist-online/lesson-pages/c90deaf4aef87de5f0a97bc7efd02e22cf7c5ff17b9f955368d8c63c203fa76d.jpg",
+          "sha256": "c90deaf4aef87de5f0a97bc7efd02e22cf7c5ff17b9f955368d8c63c203fa76d",
+          "visuallyInspected": true,
+          "notes": "实际注释与书面页已逐页目视核验；未复制原题作迁移。"
+        }
+      ],
+      "pairedExercise": {
+        "entryId": "NCE1-129",
+        "pageKey": "NCE1-267",
+        "lessons": [
+          129,
+          130
+        ],
+        "catalogPages": [
+          266,
+          267,
+          268
+        ],
+        "printedPages": [
+          262,
+          263,
+          264
+        ],
+        "note": "来源目录页号与印刷页号相差4；注释、句型和书面页已逐页目视核验，未复制原题作新迁移。"
+      },
+      "ownStatus": "awaiting-human-review",
+      "bankNovelty": "Independent: tool-price inference, same-room live voices excluding alone, warehouse footage excluding swimming. Review-a: post-hike thirst, arrival-before-start excluding late, radio-repair traces. Review-b: paper-workshop noise, manually operated single photograph identity, paint-room traces. These nine rows were reauthored beyond tense/name changes from127."
+    },
+    {
+      "id": "nce1-131",
+      "modulePath": "studio/course-loop/parallel-nce1-121-131/lesson-nce1-131.mjs",
+      "moduleSha256": "4eb2f3ee479018d9a5e51805e83bb024b47a65c666d61d1c480eb451c5755ce2",
+      "contentStatus": "authored-pending-independent-blind-review",
+      "taskCount": 18,
+      "stages": {
+        "diagnostic": 3,
+        "guided": 3,
+        "independent": 3,
+        "repair": 3,
+        "review-a": 3,
+        "review-b": 3
+      },
+      "targetCount": 3,
+      "counterexamples": 72,
+      "sourcePath": "studio/dist-online/language/NCE1/131.json",
+      "lrcInternalSourceSha256": "9d75ee3900aac150440f843aeaedd2e3692621567377c4c883f37a7edd3f8abe",
+      "jsonFileSha256": "a2298b9b6a6588a78b19de2941973b38cde1ee94a3a9e473b5b8f2ba6facff14",
+      "selectedClips": [
+        {
+          "target": "future-possibility",
+          "label": "131原文may go；否定might not另见62.35秒",
+          "start": 25.84,
+          "end": 28.6
+        },
+        {
+          "target": "present-possibility",
+          "label": "131原文may be cheaper；当前进行另见132配套",
+          "start": 51.76,
+          "end": 57.18
+        },
+        {
+          "target": "past-possibility",
+          "label": "131原文might not；本目标过去可能仅来自132配套，不声称clip含have been",
+          "start": 62.35,
+          "end": 65.11
+        }
+      ],
+      "clipRowBoundaries": [
+        {
+          "start": 25.84,
+          "row": "We may go abroad.",
+          "end": 28.6,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        },
+        {
+          "start": 51.76,
+          "row": "It may be cheaper, but it takes a long time.",
+          "end": 57.18,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        },
+        {
+          "start": 62.35,
+          "row": "We might not go anywhere.",
+          "end": 65.11,
+          "endMeaning": "next original row start; audibility/phonetic tail unverified"
+        }
+      ],
+      "comic": {
+        "path": "studio/dist-online/lesson-pages/e5302f491110418818503dfb1382509d960a5eb47742984f7fab31bd81d2a70f.jpg",
+        "catalogPage": 269,
+        "printedPage": 265,
+        "pageSha256": "e5302f491110418818503dfb1382509d960a5eb47742984f7fab31bd81d2a70f",
+        "visuallyInspected": true
+      },
+      "grammarPages": [
+        {
+          "pageKey": "NCE1-270",
+          "catalogPage": 270,
+          "printedPage": 266,
+          "path": "studio/dist-online/lesson-pages/eeff94ba64c6a254d97fcc4f366427aa23e0221a812019b85876e2d5a5854290.jpg",
+          "sha256": "eeff94ba64c6a254d97fcc4f366427aa23e0221a812019b85876e2d5a5854290",
+          "visuallyInspected": true,
+          "notes": "实际注释与书面页已逐页目视核验；未复制原题作迁移。"
+        },
+        {
+          "pageKey": "NCE1-271",
+          "catalogPage": 271,
+          "printedPage": 267,
+          "path": "studio/dist-online/lesson-pages/ad9780347c327ae593b6e663f962ad779ece9dc8a11781665b63fea672d79b21.jpg",
+          "sha256": "ad9780347c327ae593b6e663f962ad779ece9dc8a11781665b63fea672d79b21",
+          "visuallyInspected": true,
+          "notes": "132原页含may be当前状态/进行、may go将来、may have been busy/reading过去状态/进行。"
+        },
+        {
+          "pageKey": "NCE1-272",
+          "catalogPage": 272,
+          "printedPage": 268,
+          "path": "studio/dist-online/lesson-pages/5a5fc111a96a3440b2d7c143cf03d3d3b1785be37dbdb0d7d51d82046c244b89.jpg",
+          "sha256": "5a5fc111a96a3440b2d7c143cf03d3d3b1785be37dbdb0d7d51d82046c244b89",
+          "visuallyInspected": true,
+          "notes": "实际注释与书面页已逐页目视核验；未复制原题作迁移。"
+        }
+      ],
+      "pairedExercise": {
+        "entryId": "NCE1-131",
+        "pageKey": "NCE1-271",
+        "lessons": [
+          131,
+          132
+        ],
+        "catalogPages": [
+          270,
+          271,
+          272
+        ],
+        "printedPages": [
+          266,
+          267,
+          268
+        ],
+        "note": "来源目录页号与印刷页号相差4；注释、句型和书面页已逐页目视核验，未复制原题作新迁移。"
+      },
+      "ownStatus": "awaiting-human-review",
+      "bankNovelty": "Independent and review banks use distinct tentative contexts; current negative location and ongoing work possibility were added, plus plural past waiting with weak ambiguous evidence."
+    }
+  ],
+  "promptOnly": {
+    "path": "studio/docs/parallel-nce1-121-131/blind-prompts-127-131.json",
+    "sha256": "a3b64e82922303144d82fa437ce7d46303e46b9cef6a97904255b2fd447447d8",
+    "tasks": 54,
+    "fields": [
+      "id",
+      "context",
+      "prompt",
+      "form"
+    ],
+    "equalToActualQuestions": true,
+    "noAcceptedWhyOrKey": true
+  },
+  "sourceCatalogs": {
+    "grammarData": {
+      "path": "studio/app/data/textbook-grammar.json",
+      "fileSha256": "7522d9c78e29e9becc17c4bbf786b442a65fbb0fa9875b985d117d90a41c54ad"
+    },
+    "grammarIndex": {
+      "path": "studio/dist-online/grammar/index.json",
+      "fileSha256": "743c6993a7c624604aa8b7a78982f84f4344754485e0b5e4bec08444419ec6c2",
+      "catalogSha256": "7522d9c78e29e9becc17c4bbf786b442a65fbb0fa9875b985d117d90a41c54ad"
+    },
+    "comicIndex": {
+      "path": "studio/dist-online/lesson-pages/index.json",
+      "fileSha256": "cdc8c2bfe160866267b5b6f1ee032d6e8d9f746895d4b3fed05baab0649e4596"
+    }
+  },
+  "verifiedHere": [
+    "bindContent: 54 unique tasks; each group has 18 tasks, 3 targets, 6 banks of 3, 4 reasoned near misses per task.",
+    "528 author acceptance/case-curly-apostrophe/whitespace checks and 216 near-miss exclusions pass;54 primary accepted answers unique across allthree modules.",
+    "All 9 clip starts equal actual original rows; clip end is the next original row boundary, not claimed as heard/phonetic end.",
+    "3 comic and 9 grammar page image bytes hash-match actual index SHA256 and were visually inspected with view_image.",
+    "Internal language sourceSha256 is preserved separately from actual JSON file-byte SHA256; grammar catalog pages262–272 are distinct from printed258–268.",
+    "131 past possibility is based on132 companion pages271/272, not a claim about131 audio.",
+    "Natural contractions and finite alternative time placement accepted under prompt constraints; 131 accepts bothmay andmight for unspecified possibility strength."
+  ],
+  "selfReview": {
+    "answerLeak": "Prompts give required lexical roots and structure without complete inflected answer clauses.",
+    "semantics": "Strong inference contexts disclose unconfirmed judgments; possibility contexts preserve alternative explanations. Abilitycannot do and inferredcannot be doing are separated.",
+    "retention": "Repair prefix explicitly retains first answer and correction; existing model is reused.",
+    "rootRevision": {
+      "status": "revised-pending-independent-blind-recheck",
+      "issuesAddressed": [
+        {
+          "id": "review-b-n127-present-exclusion",
+          "change": "Small bag explicitly enclosed in the cabinet; large backpack has an inflexible frame wider/taller than the cabinet."
+        },
+        {
+          "id": "review-a-n127-present-exclusion",
+          "change": "Fixed non-replaceable frame/model construction replaces swappable wheel clue."
+        },
+        {
+          "id": "guided-n129-past-ongoing-inference",
+          "change": "Identifiable person answering new live questions, without playback/recording equipment; no ambiguous unrelated room voice."
+        },
+        {
+          "id": "review-a-n129-past-strong-state",
+          "change": "Prior full-seat package inference replaced with distinct post-hike thirst context; no full-attendance claim."
+        },
+        {
+          "id": "repair-n131-past-possibility",
+          "change": "Named female subject remains unknown in location and activity; sleeping and having gone out both unconfirmed."
+        }
+      ],
+      "ongoingPolarityDecision": {
+        "groups": [
+          127,
+          129
+        ],
+        "stages": [
+          "independent",
+          "review-a",
+          "review-b"
+        ],
+        "prompt": "Candidate must orcannot/can’t; no declarative positive/negative key in task instruction.",
+        "positiveNegativeMix": "127 waiting+/typing−/packing+;129 swimming−/repairing+/painting+."
+      },
+      "crossLessonNovelty": "All nine129 independent/review rows substantially reauthored beyond127 tense/name swaps, with distinct states, actions, roles and evidence.",
+      "possibilityVariants": "131 present possibility now includes plural not-at-home and male not-working with expressly insufficient evidence to usecannot; plural past waiting uses ambiguous source evidence. Canonical, front and grammatically medial time placement supported, including negative/contraction combinations.",
+      "finalNoveltyRepair": {
+        "id": "review-a-n127-present-ongoing-inference",
+        "priorDuplicateOf": "guided-n127-present-ongoing-inference",
+        "change": "Replaced badminton/reading with live concert/drumming excludingtyping; the primaryanswer is nowHe cannot be typing.",
+        "verification": "All54 primaryaccepted answers unique across127/129/131; allfour reasoned near misses and naturalcannot/can’t/can not variants pass.",
+        "status": "pending-independent-prompt-only-recheck"
+      }
+    }
+  },
+  "pending": [
+    "Independent prompt-only blind recheck against this revised54-task prompt SHA; previous blind answers refer to superseded text.",
+    "Actual production factory/harness, source guard and representative native UI checks.",
+    "Human review of own/open output, real audio listening/pronunciation, natural24h/7d retention and learning gains remain unverified."
+  ],
+  "integrationBoundary": "Only the five assigned files changed; no registry/host-contract/next/UI/model/writer/map/FSRS/video/shared-helper/resource modification; no commit/push/merge/deploy."
+}

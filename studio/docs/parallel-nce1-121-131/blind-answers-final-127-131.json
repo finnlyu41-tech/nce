@@ -1,0 +1,453 @@
+[
+  {
+    "id": "diagnostic-n127-present-strong-state",
+    "answer": "He must be tired.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n127-present-exclusion",
+    "answer": "It cannot be my blue bag.",
+    "variants": [
+      "It can't be my blue bag.",
+      "It can not be my blue bag."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n127-present-ongoing-inference",
+    "answer": "She must be playing the piano.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n127-present-strong-state",
+    "answer": "It must be hot.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "guided-n127-present-exclusion",
+    "answer": "He cannot be Ben.",
+    "variants": [
+      "He can't be Ben.",
+      "He can not be Ben."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n127-present-ongoing-inference",
+    "answer": "He cannot be reading.",
+    "variants": [
+      "He can't be reading.",
+      "He can not be reading."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n127-present-strong-state",
+    "answer": "It must be closed.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "independent-n127-present-exclusion",
+    "answer": "It cannot be my parcel.",
+    "variants": [
+      "It can't be my parcel.",
+      "It can not be my parcel."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n127-present-ongoing-inference",
+    "answer": "They must be waiting.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n127-present-strong-state",
+    "answer": "It must be old.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "repair-n127-present-exclusion",
+    "answer": "It cannot be my new umbrella.",
+    "variants": [
+      "It can't be my new umbrella.",
+      "It can not be my new umbrella."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n127-present-ongoing-inference",
+    "answer": "She must be singing.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n127-present-strong-state",
+    "answer": "It must be wet.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n127-present-exclusion",
+    "answer": "It cannot be the old cart.",
+    "variants": [
+      "It can't be the old cart.",
+      "It can not be the old cart."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n127-present-ongoing-inference",
+    "answer": "He cannot be typing.",
+    "variants": [
+      "He can't be typing.",
+      "He can not be typing."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n127-present-strong-state",
+    "answer": "It must be busy.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n127-present-exclusion",
+    "answer": "It cannot be my large backpack.",
+    "variants": [
+      "It can't be my large backpack.",
+      "It can not be my large backpack."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n127-present-ongoing-inference",
+    "answer": "They must be packing.",
+    "variants": [],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n129-past-strong-state",
+    "answer": "It must have been busy.",
+    "variants": [
+      "It must've been busy."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n129-past-exclusion",
+    "answer": "It cannot have been Ben's parcel.",
+    "variants": [
+      "It can't have been Ben's parcel.",
+      "It can not have been Ben's parcel."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n129-past-ongoing-inference",
+    "answer": "She must have been playing the piano.",
+    "variants": [
+      "She must've been playing the piano."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n129-past-strong-state",
+    "answer": "It must have been wet.",
+    "variants": [
+      "It must've been wet."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n129-past-exclusion",
+    "answer": "It cannot have been the new box.",
+    "variants": [
+      "It can't have been the new box.",
+      "It can not have been the new box."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n129-past-ongoing-inference",
+    "answer": "He cannot have been sleeping.",
+    "variants": [
+      "He can't have been sleeping.",
+      "He can not have been sleeping."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n129-past-strong-state",
+    "answer": "It must have been expensive.",
+    "variants": [
+      "It must've been expensive."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n129-past-exclusion",
+    "answer": "He cannot have been alone.",
+    "variants": [
+      "He can't have been alone.",
+      "He can not have been alone."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n129-past-ongoing-inference",
+    "answer": "She cannot have been swimming.",
+    "variants": [
+      "She can't have been swimming.",
+      "She can not have been swimming."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n129-past-strong-state",
+    "answer": "He must have been tired.",
+    "variants": [
+      "He must've been tired."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n129-past-exclusion",
+    "answer": "It cannot have been my cloth bag.",
+    "variants": [
+      "It can't have been my cloth bag.",
+      "It can not have been my cloth bag."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n129-past-ongoing-inference",
+    "answer": "She must have been singing.",
+    "variants": [
+      "She must've been singing."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n129-past-strong-state",
+    "answer": "They must have been thirsty.",
+    "variants": [
+      "They must've been thirsty."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n129-past-exclusion",
+    "answer": "She cannot have been late.",
+    "variants": [
+      "She can't have been late.",
+      "She can not have been late."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n129-past-ongoing-inference",
+    "answer": "He must have been repairing the radio.",
+    "variants": [
+      "He must've been repairing the radio."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n129-past-strong-state",
+    "answer": "It must have been noisy.",
+    "variants": [
+      "It must've been noisy."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n129-past-exclusion",
+    "answer": "He cannot have been the photographer.",
+    "variants": [
+      "He can't have been the photographer.",
+      "He can not have been the photographer."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n129-past-ongoing-inference",
+    "answer": "They must have been painting.",
+    "variants": [
+      "They must've been painting."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n131-future-possibility",
+    "answer": "We may visit the museum tomorrow.",
+    "variants": [
+      "We might visit the museum tomorrow.",
+      "We may tomorrow visit the museum.",
+      "We might tomorrow visit the museum."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n131-present-possibility",
+    "answer": "She may be busy.",
+    "variants": [
+      "She might be busy."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "diagnostic-n131-past-possibility",
+    "answer": "He may have been busy.",
+    "variants": [
+      "He might have been busy.",
+      "He might've been busy."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n131-future-possibility",
+    "answer": "We may not attend the exhibition tomorrow.",
+    "variants": [
+      "We might not attend the exhibition tomorrow.",
+      "We mightn't attend the exhibition tomorrow.",
+      "We may tomorrow not attend the exhibition.",
+      "We might tomorrow not attend the exhibition."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n131-present-possibility",
+    "answer": "She may be reading.",
+    "variants": [
+      "She might be reading."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "guided-n131-past-possibility",
+    "answer": "She may have been singing.",
+    "variants": [
+      "She might have been singing.",
+      "She might've been singing."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n131-future-possibility",
+    "answer": "They may make a poster next week.",
+    "variants": [
+      "They might make a poster next week.",
+      "They may next week make a poster.",
+      "They might next week make a poster."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n131-present-possibility",
+    "answer": "They may not be at home.",
+    "variants": [
+      "They might not be at home.",
+      "They mightn't be at home."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "independent-n131-past-possibility",
+    "answer": "She may have been absent.",
+    "variants": [
+      "She might have been absent.",
+      "She might've been absent."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n131-future-possibility",
+    "answer": "We may not go to the park tomorrow.",
+    "variants": [
+      "We might not go to the park tomorrow.",
+      "We mightn't go to the park tomorrow.",
+      "We may tomorrow not go to the park.",
+      "We might tomorrow not go to the park."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n131-present-possibility",
+    "answer": "He may be cooking.",
+    "variants": [
+      "He might be cooking."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "repair-n131-past-possibility",
+    "answer": "She may have been sleeping.",
+    "variants": [
+      "She might have been sleeping.",
+      "She might've been sleeping."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n131-future-possibility",
+    "answer": "They may sing on Friday.",
+    "variants": [
+      "They might sing on Friday.",
+      "They may on Friday sing.",
+      "They might on Friday sing."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n131-present-possibility",
+    "answer": "It may be busy.",
+    "variants": [
+      "It might be busy."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-a-n131-past-possibility",
+    "answer": "They may have been waiting.",
+    "variants": [
+      "They might have been waiting.",
+      "They might've been waiting."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n131-future-possibility",
+    "answer": "They may not meet tomorrow.",
+    "variants": [
+      "They might not meet tomorrow.",
+      "They mightn't meet tomorrow.",
+      "They may tomorrow not meet.",
+      "They might tomorrow not meet."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n131-present-possibility",
+    "answer": "He may not be working.",
+    "variants": [
+      "He might not be working.",
+      "He mightn't be working."
+    ],
+    "concern": ""
+  },
+  {
+    "id": "review-b-n131-past-possibility",
+    "answer": "She may have been reading.",
+    "variants": [
+      "She might have been reading.",
+      "She might've been reading."
+    ],
+    "concern": ""
+  }
+]

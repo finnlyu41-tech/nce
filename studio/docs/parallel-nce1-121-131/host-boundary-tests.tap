@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: nce1-121 declares actual registry and successor boundary honestly
+ok 1 - nce1-121 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 1.423458
+  type: 'test'
+  ...
+# Subtest: nce1-123 declares actual registry and successor boundary honestly
+ok 2 - nce1-123 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 0.184042
+  type: 'test'
+  ...
+# Subtest: nce1-125 declares actual registry and successor boundary honestly
+ok 3 - nce1-125 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 0.130916
+  type: 'test'
+  ...
+# Subtest: nce1-127 declares actual registry and successor boundary honestly
+ok 4 - nce1-127 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 0.199625
+  type: 'test'
+  ...
+# Subtest: nce1-129 declares actual registry and successor boundary honestly
+ok 5 - nce1-129 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 0.123833
+  type: 'test'
+  ...
+# Subtest: nce1-131 declares actual registry and successor boundary honestly
+ok 6 - nce1-131 declares actual registry and successor boundary honestly
+  ---
+  duration_ms: 0.097584
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 351.075375
