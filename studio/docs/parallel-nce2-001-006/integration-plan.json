@@ -1,0 +1,81 @@
+{
+  "base": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "productionRegistryCount": 72,
+  "registeredNce2": false,
+  "contentDirectory": "studio/course-loop/parallel-nce2-001-006",
+  "docsDirectory": "studio/docs/parallel-nce2-001-006",
+  "firstBatch": {
+    "ids": [
+      "nce2-1",
+      "nce2-2",
+      "nce2-3"
+    ],
+    "imports": [
+      "./parallel-nce2-001-006/lesson-nce2-001.mjs",
+      "./parallel-nce2-001-006/lesson-nce2-002.mjs",
+      "./parallel-nce2-001-006/lesson-nce2-003.mjs"
+    ],
+    "status": "verified content-only batch; local freeze ready"
+  },
+  "secondBatch": {
+    "ids": [
+      "nce2-4",
+      "nce2-5",
+      "nce2-6"
+    ],
+    "imports": [
+      "./parallel-nce2-001-006/lesson-nce2-004.mjs",
+      "./parallel-nce2-001-006/lesson-nce2-005.mjs",
+      "./parallel-nce2-001-006/lesson-nce2-006.mjs"
+    ],
+    "status": "independently reviewed; excluded from first freeze"
+  },
+  "ownerInterface": {
+    "courseIdAdditions": [
+      "nce2-1",
+      "nce2-2",
+      "nce2-3",
+      "nce2-4",
+      "nce2-5",
+      "nce2-6"
+    ],
+    "bookUnion": "CourseBinding.lesson.book NCE1|NCE2; preserve all existing books",
+    "sourceLessonArray": "One lesson only:lessons:[n]; never duplicate n to manufacture a pair",
+    "comicKey": "NCE2-n is a source reference; current real catalog has no entries, not evidence of ready illustrations",
+    "registry": "Import complete content module objects into one existing registry; existing factory creates binding models, keys NCE2-n, matches stays existing binder",
+    "next": "Owner may wire nce2-1→2→3→4→5→6;6→7 only once7 actually integrated. Existing unwired function preserves current node. Do not map nce1-143 directly into NCE2: preserve chapter-6 continuation and chapter-7 access/project/member gates.",
+    "sourceContract": "host-contract.d.ts showSource must use a book-discriminated source union: existing NCE1 book/odd lesson/comicKey union preserved, plus NCE2 book with exact lessons1..6 and comicKey NCE2-1..6; widening CourseId alone is insufficient."
+  },
+  "observedSharedGaps": [
+    {
+      "file": "app/course-loop-progress.ts",
+      "issue": "CourseBinding.lesson.book is NCE1-only type; NCE2 has runtime source support but union needs owner widening."
+    },
+    {
+      "file": "course-loop/host-contract.d.ts",
+      "issue": "CourseId and showSource book/lesson/comicKey types are NCE1-only. Add exact six IDs and book-discriminated NCE2 source union; preserve existing NCE1 contracts."
+    },
+    {
+      "file": "app/course-loop-ui.tsx",
+      "issue": "aria-label and successor text read lessons[1]; single NCE2 lesson gives undefined. Owner needs single-lesson formatting."
+    },
+    {
+      "file": "app/course-loop-next.ts",
+      "issue": "courseLoopTask due reason directly reads lessons[1]; owner needs single-lesson wording and exact successor edges."
+    },
+    {
+      "file": "app/data/nce-illustrations.json and app/course-loop-ui.tsx",
+      "issue": "No book-two catalog entries. Actual comic SourcePanel returns SentenceIllustration null plus cursor controls, without an explanatory no-image message; preserve honest proof, owner separately handles source coverage/UI."
+    }
+  ],
+  "unverified": [
+    "production registration and deployed new modules",
+    "actual hearing",
+    "natural24h/7d",
+    "human open response",
+    "physical devices",
+    "pronunciation",
+    "autonomous transfer",
+    "learning gain"
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "base": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "remoteHeads": {
+    "codex/english-studio-online-20260926": "9fbda71620e13d4fda80b39eda150d1fa79693b5",
+    "codex/ielts-map-20260930": "9fbda71620e13d4fda80b39eda150d1fa79693b5"
+  },
+  "assetRoot": "/Users/finnlyu/Documents/Codex/2026-10-03/task-14/nce1-133-143/studio/dist-online",
+  "readOnlySourceUse": true,
+  "singleLessonsNotOddEvenPairs": true,
+  "groups": [
+    {
+      "id": "nce2-1",
+      "lessons": [
+        1
+      ],
+      "sourceSha256": "49cee60b2fc13bf58afeece005626a32c94a187cfba2cbceb90db3b3d5235a08",
+      "jsonSha256": "d781ee1348bec6bc42dfefcd5fd9e6f4ae18b9b83286420a498fbdc273c8cd85",
+      "sourcePages": [
+        {
+          "page": 52,
+          "src": "/lesson-pages/2b85c293e3eea80575c316aa1d48ce0ed043e5e7c92224e175ce5e5dd287ce31.jpg",
+          "sha256": "2b85c293e3eea80575c316aa1d48ce0ed043e5e7c92224e175ce5e5dd287ce31"
+        },
+        {
+          "page": 53,
+          "src": "/lesson-pages/a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106.jpg",
+          "sha256": "a8a15a87e383911bd062519a641717255c7e2429ac8af297de671d735bbd8106"
+        }
+      ],
+      "grammar": {
+        "id": "NCE2-1",
+        "book": "NCE2",
+        "lesson": 1,
+        "lastLesson": 1,
+        "unit": 1,
+        "title": "简单陈述句的语序",
+        "category": "sentence",
+        "terms": "word order simple statements",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 53
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 55
+          }
+        ],
+        "pages": [
+          53,
+          54,
+          55
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "nce2-2",
+      "lessons": [
+        2
+      ],
+      "sourceSha256": "4a8888bf4cc68102e12072e9e4cd7e67ada68f4086c27e007216b779761f8b33",
+      "jsonSha256": "d4edf4a0110bb9e49d2c0dac2b920c7f093ea9a3c4c9ec505428df1b3182429e",
+      "sourcePages": [
+        {
+          "page": 56,
+          "src": "/lesson-pages/c50a1f133a0970a8147fee5fe2c1059ff3847bd79da157c887e89374ef4bb212.jpg",
+          "sha256": "c50a1f133a0970a8147fee5fe2c1059ff3847bd79da157c887e89374ef4bb212"
+        },
+        {
+          "page": 57,
+          "src": "/lesson-pages/3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76.jpg",
+          "sha256": "3884603cc2a3d965e315e87d7259f2e90f3f390f6f018b16527dc090f0f98d76"
+        }
+      ],
+      "grammar": {
+        "id": "NCE2-2",
+        "book": "NCE2",
+        "lesson": 2,
+        "lastLesson": 2,
+        "unit": 1,
+        "title": "一般现在时与现在进行时",
+        "category": "tense",
+        "terms": "now often always",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 57
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 58
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 59
+          }
+        ],
+        "pages": [
+          57,
+          58,
+          59
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "nce2-3",
+      "lessons": [
+        3
+      ],
+      "sourceSha256": "1f1ead0cde31d51f2f982c7435450269f5994ce424a16bb5f99e5ae2f7018198",
+      "jsonSha256": "ba31528c57f1da363ef6296a947b5e52537da26215f7b8766858e5414d0a6c55",
+      "sourcePages": [
+        {
+          "page": 60,
+          "src": "/lesson-pages/ab12885bc676a3967c433c933a2f7b66de878bae133bac194074bc837a33c4dd.jpg",
+          "sha256": "ab12885bc676a3967c433c933a2f7b66de878bae133bac194074bc837a33c4dd"
+        },
+        {
+          "page": 61,
+          "src": "/lesson-pages/4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855.jpg",
+          "sha256": "4694690fe9a7139b0273345121ab62a1d840ad58af0c7d72a19d06b158223855"
+        }
+      ],
+      "grammar": {
+        "id": "NCE2-3",
+        "book": "NCE2",
+        "lesson": 3,
+        "lastLesson": 3,
+        "unit": 1,
+        "title": "一般过去时",
+        "category": "tense",
+        "terms": "what happened simple past",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 61
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 62
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 63
+          }
+        ],
+        "pages": [
+          61,
+          62,
+          63
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "nce2-4",
+      "lessons": [
+        4
+      ],
+      "sourceSha256": "561741b3b5cbd7dc4189f5778bdd685e999ef73783e5fcb74dfe042c11fd925e",
+      "jsonSha256": "80ede7b620918d07a867cd192cb52a6de137f0e6e10096e750b33f86b30b2792",
+      "sourcePages": [
+        {
+          "page": 64,
+          "src": "/lesson-pages/cb3d27e67e7a64d00309b3b9b3406a6ad144e2936b45fd60325da696e1a59d70.jpg",
+          "sha256": "cb3d27e67e7a64d00309b3b9b3406a6ad144e2936b45fd60325da696e1a59d70"
+        },
+        {
+          "page": 65,
+          "src": "/lesson-pages/dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f.jpg",
+          "sha256": "dbb59fe4a5a8e83fe04d1238bfcdf66d51fa9638d69edb595be7b351b751107f"
+        }
+      ],
+      "grammar": {
+        "id": "NCE2-4",
+        "book": "NCE2",
+        "lesson": 4,
+        "lastLesson": 4,
+        "unit": 1,
+        "title": "现在完成时",
+        "category": "tense",
+        "terms": "what has happened present perfect",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 65
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 66
+          }
+        ],
+        "pages": [
+          65,
+          66,
+          67
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "nce2-5",
+      "lessons": [
+        5
+      ],
+      "sourceSha256": "26b0b571d7f6158888130d13f1e3023adde25bd51f7a67fd6b612dbb7a728794",
+      "jsonSha256": "f6dd289408fc836355fae43c7cf74fb58986bf47e33b6ffe41ec3a3524129466",
+      "sourcePages": [
+        {
+          "page": 68,
+          "src": "/lesson-pages/b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36.jpg",
+          "sha256": "b1086977e650967bb5087a17aafb308f08fdcfc469a5b015bd94561d709bce36"
+        },
+        {
+          "page": 69,
+          "src": "/lesson-pages/0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2.jpg",
+          "sha256": "0ba38c4ba79b99f74dcbcc4d73e095b4d75c85896bd99047b88f9e82d21ea4c2"
+        }
+      ],
+      "grammar": {
+        "id": "NCE2-5",
+        "book": "NCE2",
+        "lesson": 5,
+        "lastLesson": 5,
+        "unit": 1,
+        "title": "一般过去时与现在完成时",
+        "category": "tense",
+        "terms": "happened has happened",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 69
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 70
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 71
+          }
+        ],
+        "pages": [
+          69,
+          70,
+          71
+        ],
+        "references": []
+      }
+    },
+    {
+      "id": "nce2-6",
+      "lessons": [
+        6
+      ],
+      "sourceSha256": "e042b7f0d7d624b6e5f3b350c95d3ec6addb24a0a8fbf07bbb64415910a5b662",
+      "jsonSha256": "3f7d6951dc21426e8da11eb734daac5efa2d9aaca0e56f73c18a657d563eb2d9",
+      "sourcePages": [
+        {
+          "page": 72,
+          "src": "/lesson-pages/9df072b547efb5a9c1a43841b2c94e5cb36b710bdad25121f68007c9acbb5d45.jpg",
+          "sha256": "9df072b547efb5a9c1a43841b2c94e5cb36b710bdad25121f68007c9acbb5d45"
+        },
+        {
+          "page": 73,
+          "src": "/lesson-pages/6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018.jpg",
+          "sha256": "6659125ab503253efbc98a48b9219b8317ecad3ceaaa5c2cb66bc45d4678e018"
+        }
+      ],
+      "grammar": {
+        "id": "NCE2-6",
+        "book": "NCE2",
+        "lesson": 6,
+        "lastLesson": 6,
+        "unit": 1,
+        "title": "冠词与 some",
+        "category": "noun",
+        "terms": "a the some",
+        "sections": [
+          {
+            "section": "Key structures · 关键句型",
+            "page": 73
+          },
+          {
+            "section": "Special difficulties · 难点",
+            "page": 74
+          },
+          {
+            "section": "Sentence structure · 句子结构",
+            "page": 75
+          }
+        ],
+        "pages": [
+          73,
+          74,
+          75
+        ],
+        "references": []
+      }
+    }
+  ]
+}

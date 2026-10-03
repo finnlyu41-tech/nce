@@ -1,0 +1,662 @@
+[
+  {
+    "id": "diagnostic-nce2-001-statement-order",
+    "answer": "The visitor opened the gate.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "context给出唯一正确词块组，不需在大门/窗户两个英文对象中择取。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-001-actor-object",
+    "answer": "The nurse thanked the driver.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "context明示道谢方向；prompt的两个人物和动作按正确角色顺序排列，提示较强。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-001-manner-place-time",
+    "answer": "Ben read the note quietly in the hall last night.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "near-right：quietly可在read前、last night可置首等，是自然英语；本题明确尾部方式→地点→时间，不列这些受控范围外排列。"
+    ]
+  },
+  {
+    "id": "guided-nce2-001-statement-order",
+    "answer": "The keeper closed the side door.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "词块中没有正门候选；不能将closed改为opened或否定。"
+    ]
+  },
+  {
+    "id": "guided-nce2-001-actor-object",
+    "answer": "The director looked at them.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "them指两位演员；they作宾语或交换角色不符合目标事实。"
+    ]
+  },
+  {
+    "id": "guided-nce2-001-manner-place-time",
+    "answer": "Eva checked the map carefully in the lab yesterday.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "prompt已给实际lab和yesterday，图书室诱项只在context中；不是独立地点/时间字段选择题。"
+    ]
+  },
+  {
+    "id": "independent-nce2-001-statement-order",
+    "answer": "Luca cleaned the chair.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "已完成清洁，不是计划修理；自然添加only的句子超出指定有限词库。"
+    ]
+  },
+  {
+    "id": "independent-nce2-001-actor-object",
+    "answer": "Mia congratulated Owen.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "单次祝贺由Mia发出；不能交换人物或写相互祝贺。"
+    ]
+  },
+  {
+    "id": "independent-nce2-001-manner-place-time",
+    "answer": "Nina read the letter silently in the office this morning.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "silently是默读；quietly不保证无声，也不在候选内。尾部顺序明确，其他自然排列不列受控变体。"
+    ]
+  },
+  {
+    "id": "repair-nce2-001-statement-order",
+    "answer": "The cook baked the bread.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "执行者cook、对象bread由context决定，不是assistant或fruit。"
+    ]
+  },
+  {
+    "id": "repair-nce2-001-actor-object",
+    "answer": "The guard called them.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "两位访客用them；called them只报告呼叫，不断言他们已进来。自然called them in增加词库外in，未列变体。"
+    ]
+  },
+  {
+    "id": "repair-nce2-001-manner-place-time",
+    "answer": "Tao washed the cups slowly in the kitchen yesterday.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "手机位置不是动作地点；证人记录确定kitchen。尾部方式→地点→时间。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-001-statement-order",
+    "answer": "Eli opened the box.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "context明确记载打开；没有完成送走，不能由计划选sent。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-001-actor-object",
+    "answer": "Jon apologised to Ada.",
+    "variants": [
+      "Jon apologized to Ada."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "apologised/apologized是英美拼写自然变体；Ada回应并不等于反向道歉。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-001-manner-place-time",
+    "answer": "Sara checked the ticket carefully in the office yesterday.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "取签字版本，不取草稿；尾部方式→地点→时间。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-001-statement-order",
+    "answer": "Lee turned off the light.",
+    "variants": [
+      "Lee turned the light off."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "名词宾语允许置于可分离短语动词中间；off保留实际关闭结果。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-001-actor-object",
+    "answer": "The judges praised her.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "最终context明示两位评委和一位女学生，人数及her均有情境依据；不能反向表扬或用them指女学生。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-001-manner-place-time",
+    "answer": "Sam read the notice quietly in the office last night.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "车站经过不是读通知的地点证据；office、quietly、last night来自动作记录。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-002-habit-now",
+    "answer": "Rita walks to work but she is taking a bus now.",
+    "variants": [
+      "Rita walks to work, but she is taking a bus now.",
+      "Rita walks to work but she is now taking a bus.",
+      "Rita walks to work, but she is now taking a bus.",
+      "Rita walks to work but she's taking a bus now.",
+      "Rita walks to work, but she's taking a bus now.",
+      "Rita walks to work but she's now taking a bus.",
+      "Rita walks to work, but she's now taking a bus."
+    ],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "最终prompt明确now可在is后或句末；but she为指定词块，自然同主语省略不列受控变体。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-002-frequency",
+    "answer": "Noah always eats bread.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "范围边界：有限次完整记录只支持题设观察期内的频率；无观察期限定的always/never不能推广为永久习惯。",
+      "context是十次周一早餐；输出缺少on Mondays/for breakfast，只能按题设记录域理解，不能据此推出其他餐次。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-002-question-negative",
+    "answer": "Are you reading now?",
+    "variants": [
+      "Are you now reading?",
+      "Now, are you reading?",
+      "Now are you reading?"
+    ],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "context给此刻、直接向朋友询问you；使用进行时中性一般疑问句。句首now在此按实际时刻理解，也可能在脱离context时作话语标记。"
+    ]
+  },
+  {
+    "id": "guided-nce2-002-habit-now",
+    "answer": "Pia cooks at home but she is eating at a restaurant now.",
+    "variants": [
+      "Pia cooks at home, but she is eating at a restaurant now.",
+      "Pia cooks at home but she is now eating at a restaurant.",
+      "Pia cooks at home, but she is now eating at a restaurant.",
+      "Pia cooks at home but she's eating at a restaurant now.",
+      "Pia cooks at home, but she's eating at a restaurant now.",
+      "Pia cooks at home but she's now eating at a restaurant.",
+      "Pia cooks at home, but she's now eating at a restaurant."
+    ],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "最终prompt明确now两种位置；but she为指定词块。"
+    ]
+  },
+  {
+    "id": "guided-nce2-002-frequency",
+    "answer": "We never work at weekends.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "范围边界：有限次完整记录只支持题设观察期内的频率；无观察期限定的always/never不能推广为永久习惯。",
+      "最终context已明确五次周末零工作，而不仅是零加班；work的事实依据已补足。on weekends是自然美式表达，但明确词块at weekends未允许替换。"
+    ]
+  },
+  {
+    "id": "guided-nce2-002-question-negative",
+    "answer": "Does Omar cook at home?",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "习惯问句内容由prompt明确；未知答案应采用中性一般疑问句，不猜肯否定事实。"
+    ]
+  },
+  {
+    "id": "independent-nce2-002-habit-now",
+    "answer": "Tessa takes a bus to work but she is riding a bike now.",
+    "variants": [
+      "Tessa takes a bus to work, but she is riding a bike now.",
+      "Tessa takes a bus to work but she's riding a bike now.",
+      "Tessa takes a bus to work, but she's riding a bike now."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "最终context为本月完整20次通勤均乘公交，支持该观察期内惯常方式；此刻骑车由实时视频明确。旧步行照片不决定当前动作。不能把观察期习惯推广为永久不变。"
+    ]
+  },
+  {
+    "id": "independent-nce2-002-frequency",
+    "answer": "The children sometimes read at lunchtime.",
+    "variants": [
+      "The children read at lunchtime sometimes.",
+      "The children read sometimes at lunchtime."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "完整十次记录的2/10在always/sometimes/never中对应sometimes；今天带书不等于今天阅读。prompt未限定sometimes位置，列出三种自然位置。"
+    ]
+  },
+  {
+    "id": "independent-nce2-002-question-negative",
+    "answer": "Do you watch TV in the evening?",
+    "variants": [
+      "In the evening, do you watch TV?",
+      "In the evening do you watch TV?"
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "最终context指定缺项为本月晚间电视习惯，未知项需向Lena询问；此刻听广播不是该栏答案。prompt的问号已经提示询问类型，不能宣称询问/报告完全无提示。",
+      "中性问句边界：Do you...是无偏向受控解；Don't you...在有预期的自然对话中也可能询问同一未知事实，但带语用偏向，不列作中性等价变体。题面若要求绝对唯一的问句极性，应明确“中性询问”。"
+    ]
+  },
+  {
+    "id": "repair-nce2-002-habit-now",
+    "answer": "Sana reads books but she is listening to an audiobook now.",
+    "variants": [
+      "Sana reads books, but she is listening to an audiobook now.",
+      "Sana reads books but she's listening to an audiobook now.",
+      "Sana reads books, but she's listening to an audiobook now."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "通常books、当前an audiobook由context选；昨天纸书不能推当前阅读。指定she/but/now收尾。"
+    ]
+  },
+  {
+    "id": "repair-nce2-002-frequency",
+    "answer": "Eli never arrives late.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "范围边界：有限次完整记录只支持题设观察期内的频率；无观察期限定的always/never不能推广为永久习惯。",
+      "完整全月十次点名均准时，观察期零迟到；不能以一人的传言代替全量记录。"
+    ]
+  },
+  {
+    "id": "repair-nce2-002-question-negative",
+    "answer": "Max is not swimming now.",
+    "variants": [
+      "Max isn't swimming now.",
+      "Max's not swimming now.",
+      "Max is not now swimming.",
+      "Max isn't now swimming.",
+      "Max's not now swimming.",
+      "Now, Max is not swimming.",
+      "Now, Max isn't swimming.",
+      "Now, Max's not swimming.",
+      "Now Max is not swimming.",
+      "Now Max isn't swimming.",
+      "Now Max's not swimming."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "最终context要求已确证的此刻游泳项目报告；坐岸边且未入水支持进行时否定。Max is sitting on the bank now.虽是事实，却不是目标项目。",
+      "提示边界：prompt句号说明偏向报告形式；此刻/游泳/否定仍需读context决定。缩写和now位置为有限自然变体，is not now swimming语体较正式。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-002-habit-now",
+    "answer": "Ari works in the office but he is working at home now.",
+    "variants": [
+      "Ari works in the office, but he is working at home now.",
+      "Ari works in the office but he's working at home now.",
+      "Ari works in the office, but he's working at home now."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "通常office与此刻home须按时段选择；昨日cafe不能取作当前地点。指定he/but/now收尾。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-002-frequency",
+    "answer": "We always read after lunch.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "范围边界：有限次完整记录只支持题设观察期内的频率；无观察期限定的always/never不能推广为永久习惯。",
+      "六次已完成活动均午饭后读书；今天尚未到午饭时间不是新增不读样本。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-002-question-negative",
+    "answer": "I am not having lunch at home now.",
+    "variants": [
+      "I'm not having lunch at home now.",
+      "I am not now having lunch at home.",
+      "I'm not now having lunch at home.",
+      "Now, I am not having lunch at home.",
+      "Now, I'm not having lunch at home.",
+      "Now I am not having lunch at home.",
+      "Now I'm not having lunch at home."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "最终context要求已确认的此刻“在家吃午饭”一栏：实际在车站吃午饭，故否定该项目；早餐和every day诱项均不对应目标栏。",
+      "提示边界：prompt句号已偏向报告形式；目标餐次、此刻时段、否定状态由context决定。I do not have lunch at home now.通常可表示如今习惯变化，不能等同此处仍成立的日常惯例。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-002-habit-now",
+    "answer": "Zoe calls her grandfather but she is writing to her grandmother now.",
+    "variants": [
+      "Zoe calls her grandfather, but she is writing to her grandmother now.",
+      "Zoe calls her grandfather but she's writing to her grandmother now.",
+      "Zoe calls her grandfather, but she's writing to her grandmother now."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "昨日通话不能推当前动作；通常grandfather、当前grandmother各有时段证据。指定she/but/now收尾。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-002-frequency",
+    "answer": "Milo sometimes eats outside.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "严格复制完整给定option，无变体；2/8对应sometimes。只支持选择识别，不是自主生成频率句，也不能由今天一次推出always。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-002-question-negative",
+    "answer": "Do they always go to work by car?",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "最终context的待核实项是每次是否开车，故问always/by car习惯；一次今天开车不证明全量规律。prompt问号已提示询问类型，内容/频率选择仍依context。",
+      "中性问句边界：采用无偏向Do they...；Don't they always...在自然对话中可带预期询问同一命题，未列为中性等价变体。题面若要求问句极性绝对唯一，应明确“中性询问”。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-003-dated-sequence",
+    "answer": "Yesterday, Lina bought a stamp and then sent the letter.",
+    "variants": [
+      "Lina bought a stamp and then sent the letter yesterday.",
+      "Lina bought a stamp, and then sent the letter yesterday.",
+      "Lina bought a stamp yesterday and then sent the letter.",
+      "Lina bought a stamp yesterday, and then sent the letter.",
+      "Yesterday, Lina bought a stamp, and then sent the letter.",
+      "Yesterday Lina bought a stamp and then sent the letter.",
+      "Yesterday Lina bought a stamp, and then sent the letter.",
+      "Lina bought a stamp and then she sent the letter yesterday.",
+      "Lina bought a stamp, and then she sent the letter yesterday.",
+      "Lina bought a stamp yesterday and then she sent the letter.",
+      "Lina bought a stamp yesterday, and then she sent the letter.",
+      "Yesterday, Lina bought a stamp and then she sent the letter.",
+      "Yesterday, Lina bought a stamp, and then she sent the letter.",
+      "Yesterday Lina bought a stamp and then she sent the letter.",
+      "Yesterday Lina bought a stamp, and then she sent the letter."
+    ],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "最终prompt明确日期可首/第一动作后/尾；第二主语可省略或用she，均列有限变体。and then为指定连接，不改成单独then或其他连接。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-003-actual-intended",
+    "answer": "Dara bought some envelopes but she did not send a single letter.",
+    "variants": [
+      "Dara bought some envelopes, but she did not send a single letter.",
+      "Dara bought some envelopes but she didn't send a single letter.",
+      "Dara bought some envelopes, but she didn't send a single letter."
+    ],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "prompt直接给buy与not send；a single letter在否定中保留零封事实。明确but she，不省略she。"
+    ]
+  },
+  {
+    "id": "diagnostic-nce2-003-recipient-links",
+    "answer": "Nora lent Eli a map.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "以Nora开头及lend/Eli/a map均已给出；自然物+to Eli形式被人放物前限制排除。"
+    ]
+  },
+  {
+    "id": "guided-nce2-003-dated-sequence",
+    "answer": "Last Friday, Omar left the hotel and then arrived at the station.",
+    "variants": [
+      "Omar left the hotel and then arrived at the station last Friday.",
+      "Omar left the hotel, and then arrived at the station last Friday.",
+      "Omar left the hotel last Friday and then arrived at the station.",
+      "Omar left the hotel last Friday, and then arrived at the station.",
+      "Last Friday, Omar left the hotel, and then arrived at the station.",
+      "Last Friday Omar left the hotel and then arrived at the station.",
+      "Last Friday Omar left the hotel, and then arrived at the station.",
+      "Omar left the hotel and then he arrived at the station last Friday.",
+      "Omar left the hotel, and then he arrived at the station last Friday.",
+      "Omar left the hotel last Friday and then he arrived at the station.",
+      "Omar left the hotel last Friday, and then he arrived at the station.",
+      "Last Friday, Omar left the hotel and then he arrived at the station.",
+      "Last Friday, Omar left the hotel, and then he arrived at the station.",
+      "Last Friday Omar left the hotel and then he arrived at the station.",
+      "Last Friday Omar left the hotel, and then he arrived at the station."
+    ],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "最终prompt明确日期三位置与第二主语he可省略；所给正确事件次序提示强。"
+    ]
+  },
+  {
+    "id": "guided-nce2-003-actual-intended",
+    "answer": "Rae wrote two letters but she did not send them.",
+    "variants": [
+      "Rae wrote two letters, but she did not send them.",
+      "Rae wrote two letters but she didn't send them.",
+      "Rae wrote two letters, but she didn't send them."
+    ],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "context明确零封；孤立自然语言did not send them有时可宽松表示未全部寄出，不如否定a single letter精确。按context解释为两封均未寄。"
+    ]
+  },
+  {
+    "id": "guided-nce2-003-recipient-links",
+    "answer": "Tara bought a kite for her brother.",
+    "variants": [],
+    "issues": [
+      "提示边界：这是一组给足正确词块的基线/跟练构句题；主要检验语序或词形，不能单凭正确答案证明独立选择了新事实字段。",
+      "主要检验bought和for；为弟弟买不必等于已经交付弟弟。物在前限制排除自然双宾语结构。"
+    ]
+  },
+  {
+    "id": "independent-nce2-003-dated-sequence",
+    "answer": "Mae left the hotel and then arrived at the museum yesterday.",
+    "variants": [
+      "Mae left the hotel, and then arrived at the museum yesterday.",
+      "Mae left the hotel yesterday and then arrived at the museum.",
+      "Mae left the hotel yesterday, and then arrived at the museum.",
+      "Mae left the hotel and then she arrived at the museum yesterday.",
+      "Mae left the hotel, and then she arrived at the museum yesterday.",
+      "Mae left the hotel yesterday and then she arrived at the museum.",
+      "Mae left the hotel yesterday, and then she arrived at the museum."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "14点离馆→15点到博物馆、yesterday须由context选。日期两位置及第二主语she可省略由最终prompt明确；以Mae开头排除日期置首。"
+    ]
+  },
+  {
+    "id": "independent-nce2-003-actual-intended",
+    "answer": "Ivo bought three cards but he did not send a single card.",
+    "variants": [
+      "Ivo bought three cards, but he did not send a single card.",
+      "Ivo bought three cards but he didn't send a single card.",
+      "Ivo bought three cards, but he didn't send a single card."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "最终context明确收据实际记载买三张、寄件零；三张实际数量证据完整。buy而非write、完成购买与零寄件均可据context核查。"
+    ]
+  },
+  {
+    "id": "independent-nce2-003-recipient-links",
+    "answer": "Owen lent Pia a key.",
+    "variants": [
+      "Owen lent a key to Pia."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "两种宾语结构明确允许；Pia borrowed a key from Owen是自然同事实表达，但from不在指定词库且目标是记录借出方向，不列受控变体。"
+    ]
+  },
+  {
+    "id": "repair-nce2-003-dated-sequence",
+    "answer": "Luca opened the box and then closed the box last Saturday.",
+    "variants": [
+      "Luca opened the box, and then closed the box last Saturday.",
+      "Luca opened the box last Saturday and then closed the box.",
+      "Luca opened the box last Saturday, and then closed the box.",
+      "Luca opened the box and then he closed the box last Saturday.",
+      "Luca opened the box, and then he closed the box last Saturday.",
+      "Luca opened the box last Saturday and then he closed the box.",
+      "Luca opened the box last Saturday, and then he closed the box.",
+      "Luca opened the box and then closed it last Saturday.",
+      "Luca opened the box, and then closed it last Saturday.",
+      "Luca opened the box last Saturday and then closed it.",
+      "Luca opened the box last Saturday, and then closed it.",
+      "Luca opened the box and then he closed it last Saturday.",
+      "Luca opened the box, and then he closed it last Saturday.",
+      "Luca opened the box last Saturday and then he closed it.",
+      "Luca opened the box last Saturday, and then he closed it."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "context决定先打开后关闭及last Saturday；最终prompt明确第二次the box可用it、第二主语可省略或he、日期两位置，均列变体。"
+    ]
+  },
+  {
+    "id": "repair-nce2-003-actual-intended",
+    "answer": "Nia wrote two cards but she did not send a single card.",
+    "variants": [
+      "Nia wrote two cards, but she did not send a single card.",
+      "Nia wrote two cards but she didn't send a single card.",
+      "Nia wrote two cards, but she didn't send a single card."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "两张实际写好与五张计划明确对立；零寄件不得改为部分已寄。"
+    ]
+  },
+  {
+    "id": "repair-nce2-003-recipient-links",
+    "answer": "Ben made a cake for Ada.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "实际Ben制作、Ada受益由context决定；for不保证物品已交付，物放动词后限制排除自然双宾语。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-003-dated-sequence",
+    "answer": "Suri bought a map and then entered the park yesterday.",
+    "variants": [
+      "Suri bought a map, and then entered the park yesterday.",
+      "Suri bought a map yesterday and then entered the park.",
+      "Suri bought a map yesterday, and then entered the park.",
+      "Suri bought a map and then she entered the park yesterday.",
+      "Suri bought a map, and then she entered the park yesterday.",
+      "Suri bought a map yesterday and then she entered the park.",
+      "Suri bought a map yesterday, and then she entered the park."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "10点买→11点进园，昨日实际与今日计划须取舍；以Suri开头，日期两位置和第二主语可省略或she。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-003-actual-intended",
+    "answer": "Leo read three pages but he did not understand a single word.",
+    "variants": [
+      "Leo read three pages, but he did not understand a single word.",
+      "Leo read three pages but he didn't understand a single word.",
+      "Leo read three pages, but he didn't understand a single word."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "context明确实际三页、零词理解；不能将计划读完当已读全书，也不能把阅读当理解证据。read过去形式拼写不变；本文件未验证发音。"
+    ]
+  },
+  {
+    "id": "review-a-nce2-003-recipient-links",
+    "answer": "Mira sent Theo a map.",
+    "variants": [
+      "Mira sent a map to Theo."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "双宾语与物+to+人明确允许；寄件Mira、收件Theo不能互换。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-003-dated-sequence",
+    "answer": "Finn read the book and then returned it last Tuesday.",
+    "variants": [
+      "Finn read the book, and then returned it last Tuesday.",
+      "Finn read the book last Tuesday and then returned it.",
+      "Finn read the book last Tuesday, and then returned it.",
+      "Finn read the book and then he returned it last Tuesday.",
+      "Finn read the book, and then he returned it last Tuesday.",
+      "Finn read the book last Tuesday and then he returned it.",
+      "Finn read the book last Tuesday, and then he returned it."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "15点读→16点还、last Tuesday由context确定；第二书名必须it，日期两位置和第二主语可省略或he均明确允许。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-003-actual-intended",
+    "answer": "June made some soup but she did not make a single cake.",
+    "variants": [
+      "June made some soup, but she did not make a single cake.",
+      "June made some soup but she didn't make a single cake.",
+      "June made some soup, but she didn't make a single cake."
+    ],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "汤完成、蛋糕零完成；采购原料不是制作完成证据。but/she按指定词汇保留。"
+    ]
+  },
+  {
+    "id": "review-b-nce2-003-recipient-links",
+    "answer": "Eli bought a hat for Nora.",
+    "variants": [],
+    "issues": [
+      "context决定受控事实选择：候选存在竞争动作、角色、时段或字段，必须结合情境取舍。",
+      "context确定Eli买、Nora受益及hat；buy选for。物置动词后限制排除自然双宾语。"
+    ]
+  }
+]

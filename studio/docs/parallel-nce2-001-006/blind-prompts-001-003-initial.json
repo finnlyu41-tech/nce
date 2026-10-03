@@ -1,0 +1,296 @@
+[
+  {
+    "courseId": "nce2-1",
+    "scope": "按题目情境、指代和词汇作答；这些是有限受控表达或明确标出的选择识别任务。大小写、空白、直弯撇号可变；陈述句可有一个英文句号或省略，直接问句保留一个问号；选择题只选所给完整选项。不匹配不代表其他自然英语错误。开放表达待人工核对。",
+    "questions": [
+      {
+        "id": "diagnostic-nce2-001-statement-order",
+        "context": "门禁日志：游客推开的是大门，不是窗户。词块opened / the gate / the visitor。",
+        "prompt": "用全部词块写肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-001-actor-object",
+        "context": "值班记录：护士给司机道谢，司机没有道谢。",
+        "prompt": "用the nurse / thanked / the driver写一句事实。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-001-manner-place-time",
+        "context": "录音记录：Ben轻声读纸条；地点是大厅；时间昨晚。",
+        "prompt": "以Ben开头，用read / the note / quietly / in the hall / last night，尾部按方式、地点、时间写。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-nce2-001-statement-order",
+        "context": "跟练记录：管理员关了侧门，正门仍开着。词块the side door / closed / the keeper。",
+        "prompt": "排成简单肯定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先确定事实的主语，再放动作和实际对象；不要凭词序改变肯否定。"
+      },
+      {
+        "id": "guided-nce2-001-actor-object",
+        "context": "舞台排练：导演看着两位演员；演员在看剧本。以them指两位演员。",
+        "prompt": "用The director / looked at / them写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对动作发出者和接受者；作宾语用me/him/her/us/them，不能因两人都在场就交换角色。"
+      },
+      {
+        "id": "guided-nce2-001-manner-place-time",
+        "context": "跟练检查表：Eva昨天在实验室仔细检查了地图；图书室只是原计划地点。",
+        "prompt": "以Eva开头，用checked / the map / carefully / in the lab / yesterday，尾部按方式、地点、时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先保留谁做了什么，再核对实际方式、实际地点和实际时间；按题目要求排方式→地点→时间。"
+      },
+      {
+        "id": "independent-nce2-001-statement-order",
+        "context": "两份记录冲突：计划表写Luca修椅子；完成表写他只清洁了椅子，修理栏空白。",
+        "prompt": "报告已完成的动作；候选词库Luca / the chair / cleaned（清洁了）/ repaired（修理了）。自己选择事实并组织一句简单陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-001-actor-object",
+        "context": "比赛记录：红队队长Mia向蓝队队长Owen祝贺。记者误写Owen祝贺Mia。",
+        "prompt": "纠正记者，只报告有证据的一次动作；姓名Mia/Owen，动作congratulated（祝贺）。自己选择谁作主语、谁作对象，不写相互动作。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-001-manner-place-time",
+        "context": "失物核查：草稿说昨晚在大厅大声读；最终记录说Nina今天早晨在办公室默读那封信，方式是silently。",
+        "prompt": "报告最终记录；以Nina开头，read/the letter为动作与对象。候选方式silently/loudly，地点in the office/in the hall，时间this morning/last night；选择正确字段，主干后按方式、地点、时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-001-statement-order",
+        "context": "保留上一轮首答和订正。下面是另一情境：新情境：厨房记录说厨师烤了面包，助手只切了水果；误报把烤面包者写成助手。",
+        "prompt": "订正烤面包事实；候选执行者the cook/the assistant，动作baked（烤了），对象the bread/the fruit。选择有证据的字段，再写陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-001-actor-object",
+        "context": "保留上一轮首答和订正。下面是另一情境：两位访客等在门外；里面的保安叫他们进来，访客没有叫保安。",
+        "prompt": "报告呼叫方向；候选主语The guard/They，动作called；对象the guard/them/him。保留人数和动作角色，写一句陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-001-manner-place-time",
+        "context": "保留上一轮首答和订正。下面是另一情境：调查修补：手机位置是花园，但证人记录才是动作证据：Tao昨天在厨房慢慢洗了杯子。",
+        "prompt": "以Tao开头，动作对象washed/the cups。方式候选slowly/quickly，地点in the kitchen/in the garden，时间yesterday/today；选择实际字段，尾部方式、地点、时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-001-statement-order",
+        "context": "仓库延后核查：上午计划把箱子送走；下午签收记录显示Eli打开了箱子检查，运送状态仍未完成。",
+        "prompt": "报告唯一已完成动作；人物Eli，对象the box，动作候选opened（打开了）/ sent（送走了）。自己选动作再构句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-001-actor-object",
+        "context": "演出后两人都在后台；录音只记录Jon向Ada道歉。Ada回应了，但没有向Jon道歉。",
+        "prompt": "报告单次道歉方向；姓名Jon/Ada，动作apologised to（向…道歉）；自己选动作发出者与接受者。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-001-manner-place-time",
+        "context": "档案回看：草稿写上周在车站草率核对；签字版本写Sara昨天在办公室仔细核对车票。",
+        "prompt": "写签字版本；以Sara开头，动作对象checked/the ticket。方式候选carefully/carelessly，地点in the office/at the station，时间yesterday/last week；主干后方式、地点、时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-001-statement-order",
+        "context": "安全复盘：Lee把灯关掉后离开；离开不是开灯的证据，监控明确显示他关闭了灯。",
+        "prompt": "报告监控动作；姓名Lee，对象the light；动作候选turned on（打开）/ turned off（关闭）。自己选实际结果并构句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-001-actor-object",
+        "context": "奖项记录：两位评委表扬了学生，学生随后鞠躬；没有表扬评委。",
+        "prompt": "报告表扬方向；候选主语The judges/She，动作praised（表扬），对象the judges/her/them。自己选角色并保留女学生的单数指代。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-001-manner-place-time",
+        "context": "取证末轮：车站摄像头只见Sam经过；办公室录音记录他昨晚轻声读了通知。",
+        "prompt": "写动作记录；以Sam开头，动作对象read/the notice。方式候选quietly/loudly，地点in the office/at the station，时间last night/tonight；选择被实际证据支持的字段，尾部方式、地点、时间。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce2-2",
+    "scope": "按题目情境、指代和词汇作答；这些是有限受控表达或明确标出的选择识别任务。大小写、空白、直弯撇号可变；陈述句可有一个英文句号或省略，直接问句保留一个问号；选择题只选所给完整选项。不匹配不代表其他自然英语错误。开放表达待人工核对。",
+    "questions": [
+      {
+        "id": "diagnostic-nce2-002-habit-now",
+        "context": "Rita平时走路上班，此刻正在乘公交。",
+        "prompt": "以Rita开头，用walk to work / but she / take a bus / now写对照。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-002-frequency",
+        "context": "完整的十次周一早餐记录：Noah每次都吃面包，没有例外。",
+        "prompt": "用Noah / always / eat bread写频率陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-002-question-negative",
+        "context": "电话里，你看不到朋友，想知道他此刻是否正在读书；直接问朋友，用you。",
+        "prompt": "用read / now写一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "guided-nce2-002-habit-now",
+        "context": "跟练：Pia通常在家做饭，但此刻正在餐馆吃饭。",
+        "prompt": "以Pia开头，用cook at home / but she / eat at a restaurant / now。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先分通常和此刻，再匹配人称和动词形式；不把照片中的一次动作写成一贯习惯。"
+      },
+      {
+        "id": "guided-nce2-002-frequency",
+        "context": "登记表覆盖五次周末：我们一次也没在周末加班。",
+        "prompt": "用We / never / work / at weekends写句子。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对记录范围和次数，选择指定频率词并放在普通动作动词前；never不与not叠加。"
+      },
+      {
+        "id": "guided-nce2-002-question-negative",
+        "context": "跟练：你不知道Omar平时是否在家做饭，不能猜。",
+        "prompt": "用Omar / cook / at home问习惯。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。 提示：先判断问的是长期规律还是此刻，再选do/does或be；否定中保留实际人物、时间和not。"
+      },
+      {
+        "id": "independent-nce2-002-habit-now",
+        "context": "公交月票证明Tessa通常乘公交上班；此刻视频显示她正在骑车，而旧照片拍过她步行。",
+        "prompt": "写通常与此刻的对照，以Tessa开头，当前分句用she，以but连接、now收尾；动作词库take a bus to work / ride a bike / walk。自己选两个动作及各自动词形式。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-002-frequency",
+        "context": "孩子今天带了一本书，但完整十次午休记录中只有两次阅读，其余没有。",
+        "prompt": "概括这十次规律，以The children开头，用read/at lunchtime；频率候选always/sometimes/never。依据完整记录择词，不把今天一次当每次。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-002-question-negative",
+        "context": "Lena以前晚间看电视，但当前已改为听广播；你要核实她如今通常是否晚间看电视。",
+        "prompt": "直接问Lena，用you、watch TV、in the evening写习惯问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      },
+      {
+        "id": "repair-nce2-002-habit-now",
+        "context": "保留上一轮首答和订正。下面是另一情境：修补新情境：Sana通常读纸质书，此刻正听音频书；桌上的纸书是昨天留下的。",
+        "prompt": "写通常与此刻对照，以Sana开头，当前分句用she，以but连接、now收尾；动作词库read books / listen to an audiobook / read a book。根据证据选择，不照桌上物品推断。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-002-frequency",
+        "context": "保留上一轮首答和订正。下面是另一情境：修补：一个人说Eli总迟到；全月十次点名Eli全部准时，没有一次迟到。",
+        "prompt": "按完整记录，以Eli开头，用arrive late；频率候选always/sometimes/never，自己择词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-002-question-negative",
+        "context": "保留上一轮首答和订正。下面是另一情境：修补：Max通常游泳，但此刻监控只见他坐在岸边；确认他现在没有游泳。",
+        "prompt": "用Max / not swim / now写否定陈述。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-002-habit-now",
+        "context": "延后新证据：Ari平时在办公室工作；今天办公室关门，视频显示他此刻在家工作，昨天在咖啡馆。",
+        "prompt": "写通常与此刻对照，以Ari开头，当前分句用he，以but连接、now收尾；候选动作work in the office / work at home / work at a cafe。依据对应时段选择。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-002-frequency",
+        "context": "读书活动共六次：我们六次都在午饭后读书，今天还没到午饭时间，不能据此说never。",
+        "prompt": "概括已完成六次的规律；用We/read/after lunch，频率候选always/sometimes/never，自己择词。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-002-question-negative",
+        "context": "延后核查：I指我。我的惯例是在家吃午饭；此刻因外出，我确实没有在家吃午饭。",
+        "prompt": "只报告此刻否定，用I / have lunch at home / now。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-002-habit-now",
+        "context": "第二组回看：Zoe通常给祖父打电话；今天视频显示她此刻正在给祖母写信，旧通话截图来自昨天。",
+        "prompt": "写通常与此刻对照，以Zoe开头，当前分句用she，以but连接、now收尾；候选动作call her grandfather / write to her grandmother。根据时间证据选择两项及各自动词形式。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-002-frequency",
+        "context": "频率识别任务：Milo本月八次午餐中仅两次在外面吃；今天恰好在外面。要概括本月，不能直接用今天的地点推长期。",
+        "prompt": "选概括本月记录的完整频率陈述。always/sometimes/never要按八次全量记录判断；此题只提供选择识别证据。 只选所给完整选项，不改写。",
+        "options": [
+          "Milo is eating outside now.",
+          "Milo never eats outside.",
+          "Milo sometimes eats outside.",
+          "Milo always eats outside."
+        ]
+      },
+      {
+        "id": "review-b-nce2-002-question-negative",
+        "context": "终轮：你只见了两位同事一次开车上班，经理要你核实他们是否一贯如此；用they，不猜答案。",
+        "prompt": "用always / go to work by car写习惯一般疑问句。 只写题目指定的句子或补入部分，不添加其他信息。句末用一个英文问号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce2-3",
+    "scope": "按题目情境、指代和词汇作答；这些是有限受控表达或明确标出的选择识别任务。大小写、空白、直弯撇号可变；陈述句可有一个英文句号或省略，直接问句保留一个问号；选择题只选所给完整选项。不匹配不代表其他自然英语错误。开放表达待人工核对。",
+    "questions": [
+      {
+        "id": "diagnostic-nce2-003-dated-sequence",
+        "context": "昨天Lina先买了邮票，随后寄了信；今天没有新动作。",
+        "prompt": "以Yesterday, Lina开头，用buy a stamp / and then / send the letter写过去事件。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-003-actual-intended",
+        "context": "Dara买了信封，原计划寄三封信；实际一封也没有寄。",
+        "prompt": "用Dara / buy some envelopes / but she / not send a single letter写完成与未完成对照。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-nce2-003-recipient-links",
+        "context": "Nora借出地图给Eli；Eli收到了，地图不是Eli借给Nora的。",
+        "prompt": "以Nora开头，用lend / Eli / a map写过去给予事件，人放物前。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-nce2-003-dated-sequence",
+        "context": "跟练：上周五8点Omar离开旅馆，9点到车站。",
+        "prompt": "以Last Friday, Omar开头，用leave the hotel / and then / arrive at the station写先后。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先按实际日期和先后排事件，再用过去形式；did后的动词要用原形。"
+      },
+      {
+        "id": "guided-nce2-003-actual-intended",
+        "context": "跟练：Rae写好了两封信，但收件箱和寄件记录证明她没有寄出任何一封。",
+        "prompt": "用Rae / write two letters / but she / not send them写过去对照。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：逐项核对计划/完成/未完成与数量；did not接原形，零件不能写成一件或全部。"
+      },
+      {
+        "id": "guided-nce2-003-recipient-links",
+        "context": "跟练：Tara为弟弟买了风筝，购物是昨天已完成事实，不是把风筝卖给弟弟。",
+        "prompt": "以Tara开头，用buy / a kite / her brother，物在前，选to或for。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：确定谁给予、谁接收、什么物品；lend/send用to，buy/make为某人做用for；过去形式也要正确。"
+      },
+      {
+        "id": "independent-nce2-003-dated-sequence",
+        "context": "旅行记录乱序列出：昨天15点Mae到博物馆，昨天14点她从旅馆出发；今天的票只是下次计划。",
+        "prompt": "报告昨天两事件顺序，以Mae开头；词库leave the hotel / arrive at the museum / yesterday / tomorrow / and then。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-003-actual-intended",
+        "context": "Ivo计划买三张卡并寄出；商店收据证明他买了卡，最终寄件记录为零。",
+        "prompt": "报告实际已做与未做，用Ivo、he、but；词库buy three cards / send a single card / write three cards；过去形式自行决定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-nce2-003-recipient-links",
+        "context": "物品登记：Owen持有钥匙，昨晚把它暂借给Pia；Pia不是钥匙的借出者。你记录借出方向。",
+        "prompt": "用两个姓名和a key，词库lend/borrow、to/for；写过去事实。可用人+物或物+介词+人。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-003-dated-sequence",
+        "context": "保留上一轮首答和订正。下面是另一情境：修补时间线：午饭前Luca把箱子打开，午饭后把箱子关上；这一切发生在上周六，不是下周六。",
+        "prompt": "以Luca开头报告先后；词库close the box / open the box / last Saturday / next Saturday / and then。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-003-actual-intended",
+        "context": "保留上一轮首答和订正。下面是另一情境：修补数量：Nia原定写五张卡；实际只写了两张，没有寄任何卡。要报告写好的数量和寄出的零数量。",
+        "prompt": "用Nia、she、but；词库write two cards / write five cards / send a single card。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-nce2-003-recipient-links",
+        "context": "保留上一轮首答和订正。下面是另一情境：修补方向：Ben想收到蛋糕，但厨房登记说明他实际为Ada做了蛋糕；Ada并未为Ben做。",
+        "prompt": "报告厨房登记，用Ben/Ada/a cake；词库make、to/for，物放在动词后。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-003-dated-sequence",
+        "context": "延后重排：昨天10点Suri买了地图；昨天11点她进入公园；今天只是计划再次进入。日志先写11点再写10点。",
+        "prompt": "用Suri开头，词库enter the park / buy a map / yesterday / today / and then，报告过去两事件先后。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-003-actual-intended",
+        "context": "延后核查：Leo打算读完一本书；阅读记录表证明读了三页，但理解测验为零——一个词也没理解。",
+        "prompt": "用Leo、he、but；词库read three pages / read the whole book / understand a single word，报告实际结果。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-nce2-003-recipient-links",
+        "context": "延后收件关系：邮寄记录：Mira寄出地图，收件人是Theo；Theo随后确认收件，但没有寄给Mira。",
+        "prompt": "用Mira/Theo/a map；词库send、to/for，写过去已寄行为，可用双宾语或物在前形式。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-003-dated-sequence",
+        "context": "末轮时间线：上周二16点Finn归还书；上周二15点他读了书；本周二拟借新书。",
+        "prompt": "以Finn开头；词库return the book / read the book / last Tuesday / this Tuesday / and then，用it指第二次出现的书。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-003-actual-intended",
+        "context": "末轮计划差异：June准备为六人做饭；厨房完成表显示她只做了汤，没做任何蛋糕，采购蛋糕原料不能证明做好。",
+        "prompt": "以June开头，用she/but；词库make some soup / make a single cake / buy some flour。只报告制作结果。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-nce2-003-recipient-links",
+        "context": "末轮受益者：购物单上Nora为自己看过围巾，但收据及礼物标签证明最终是Eli为Nora买了一顶帽子。",
+        "prompt": "用Eli/Nora/a hat，词库buy、to/for；写过去事实，物置动词后。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]
