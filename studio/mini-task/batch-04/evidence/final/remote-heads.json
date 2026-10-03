@@ -1,0 +1,17 @@
+{
+  "started": {
+    "online": "9fbda71620e13d4fda80b39eda150d1fa79693b5",
+    "map": "9fbda71620e13d4fda80b39eda150d1fa79693b5"
+  },
+  "finalRead": {
+    "online": "15505c43a1f35b8b7a60830b3bb7cc0e826f1d40",
+    "map": "15505c43a1f35b8b7a60830b3bb7cc0e826f1d40"
+  },
+  "publisherFreeze": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "freezeToFinalDifference": [
+    "studio/README.md",
+    "studio/docs/new-user-main-route-v47.md"
+  ],
+  "productionSourceSame": true,
+  "readOnly": true
+}

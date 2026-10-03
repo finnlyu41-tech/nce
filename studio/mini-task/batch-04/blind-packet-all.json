@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "inputScope": "No hints, references, accepted keys or model supplied. Text only; no human acoustic audit.",
+  "items": [
+    {
+      "id": "mini-n1-37:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        37,
+        38
+      ],
+      "material": "Jo: I am washing the cup. I am going to paint the box blue.",
+      "prompt": "登记Jo现在的动作，只写A/B/C：A 洗杯子；B 给盒子涂蓝色；C 等公共汽车。"
+    },
+    {
+      "id": "mini-n1-37:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        37,
+        38
+      ],
+      "material": "Rae: I am washing the dishes. I am going to paint the bookcase white. Ben: I am painting the box green.",
+      "prompt": "你要登记Rae的下一步计划，不是当前工作。只写A/B/C：A 洗碗；B 给盒子涂绿色；C 给书架涂白色。"
+    },
+    {
+      "id": "mini-n1-37:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        37,
+        38
+      ],
+      "material": "Sam: I am painting the door blue. I am going to wash the cups. Jo: I am washing the dishes.",
+      "prompt": "新交接中登记Sam的下一步计划。只写A/B/C：A 给门涂蓝色；B 洗杯子；C 洗碗。"
+    },
+    {
+      "id": "mini-n1-37:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        37,
+        38
+      ],
+      "material": "Ava: I am waiting for the bus. I am going to do my homework. Leo: I am doing my homework.",
+      "prompt": "同伴问Ava现在在做什么。只写A/B/C：A 正在做作业；B 已完成作业；C 正在等公共汽车。"
+    },
+    {
+      "id": "mini-n1-37:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        37,
+        38
+      ],
+      "material": "Nora: I am painting the box white. Ben: Are you going to paint the bookcase blue? Nora: No. I am going to paint it green.",
+      "prompt": "已明确it指bookcase。登记Nora确认的书架颜色计划，只写A/B/C：A white；B green；C blue。"
+    },
+    {
+      "id": "mini-n1-39:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        39,
+        40
+      ],
+      "material": "整理便签\nI am going to put the vase on the shelf. Don’t put it near the window.",
+      "prompt": "给接手人的处置确认哪条正确？只写A/B/C：A 花瓶放窗边；B 花瓶计划放架子上；C 花瓶已在架子上。"
+    },
+    {
+      "id": "mini-n1-39:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        39,
+        40
+      ],
+      "material": "交接卡\nThese books are for my daughter. I am going to give them to her. Don’t send them to my father.\nThe map is for my mother.",
+      "prompt": "伙伴准备寄books给father。按卡片应怎样纠正？只写A/B/C：A books计划给daughter，不能寄father；B books已交给daughter；C books计划给mother。"
+    },
+    {
+      "id": "mini-n1-39:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        39,
+        40
+      ],
+      "material": "新交接卡\nThese pictures are for my mother. I am going to show them to her. Don’t take them to my daughter.\nThe book is for my father.",
+      "prompt": "伙伴准备带pictures给daughter。按卡片应怎样纠正？只写A/B/C：A pictures已给mother；B pictures计划给father；C pictures计划给mother看，不能带给daughter。"
+    },
+    {
+      "id": "mini-n1-39:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        39,
+        40
+      ],
+      "material": "换位留言\nBen: Are you going to put the box on the table?\nJo: No. I am going to put it in the cupboard. Don’t put the cups in it.",
+      "prompt": "已明确it指box。哪条接手信息符合最新留言？只写A/B/C：A box计划放橱柜；cups不能放进box；B box计划放桌子；C cups已放进橱柜。"
+    },
+    {
+      "id": "mini-n1-39:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        39,
+        40
+      ],
+      "material": "物品分流卡\nI am going to send the letter to my father. I am going to show the map to my sister. Don’t send the map.",
+      "prompt": "只负责map的伙伴应该收到哪条计划？只写A/B/C：A 寄map给father；B 给sister看map，不能寄它；C map已给sister。"
+    },
+    {
+      "id": "mini-n1-41:guided",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        41,
+        42
+      ],
+      "material": "你与伙伴核对购物袋。已核实：袋里有一瓶milk。tea是否在袋里尚未检查，伙伴能检查。",
+      "prompt": "口头说2句：告诉伙伴袋中已核实的物品及单位，再问袋里有没有tea。不要把未知说成没有。"
+    },
+    {
+      "id": "mini-n1-41:independent",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        41,
+        42
+      ],
+      "material": "野餐分工：你已经检查盒子，里面有一条bread。另一个bag由伙伴负责；其中是否有cheese未检查。",
+      "prompt": "向伙伴口头交接2句：报告box里已核实的物品与单位，再询问bag里有没有cheese。让对方分清两个容器，不猜未知存量。"
+    },
+    {
+      "id": "mini-n1-41:repair",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        41,
+        42
+      ],
+      "material": "洗手用品交接：你已检查cupboard，里面有一块soap。另一个box由伙伴负责；其中是否有milk未检查。",
+      "prompt": "换新情境口头说2句：报告cupboard里已核实的物品与单位，再询问box里有没有milk。不把不同容器混为一处。"
+    },
+    {
+      "id": "mini-n1-41:delayed-a",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        41,
+        42
+      ],
+      "material": "伙伴要清点餐具。你确认table上有一块cheese。cupboard里是否有一个cup还没检查。",
+      "prompt": "口头说2句：报告table上的已知物品与单位，再向伙伴询问cupboard里有没有单只cup。别把cup当不可数物。"
+    },
+    {
+      "id": "mini-n1-41:delayed-b",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        41,
+        42
+      ],
+      "material": "购物袋已由你核实，里面有一瓶milk。table是否有一条bread尚未检查，伙伴在桌边。",
+      "prompt": "向伙伴口头说2句，保留milk单位和已知位置，再问table上有没有一条bread。不把提问当现有事实。"
+    },
+    {
+      "id": "mini-n1-43:guided",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "当前库存：cupboard里有一些cups；cupboard里的tea已经检查，没有。伙伴问这两项现状。",
+      "prompt": "写2句英文库存短讯，报告有cups和没有tea。some的数量未点清，不编数字。"
+    },
+    {
+      "id": "mini-n1-43:independent",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "当前核对：table上有一些bread；table上的plates已检查，没有。\n旧便签：table上有plates。",
+      "prompt": "写2句英文更新短讯，以当前核对纠正旧便签。保留bread/plates单复与table位置，不猜bread的块数。"
+    },
+    {
+      "id": "mini-n1-43:repair",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "当前核对：box里有一些cups；box里的milk已检查，没有。\n旧便签：box里有milk。",
+      "prompt": "换新库存写2句英文更新短讯。保留物品与box位置，用当前信息纠正旧便签，不把不可数milk当复数。"
+    },
+    {
+      "id": "mini-n1-43:delayed-a",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "你已核实：cupboard里有一些tea，数量没量。table上的plates未检查，伙伴可以查看。",
+      "prompt": "给伙伴写2句短讯：报告已知tea，再问table上有没有plates。不要把未检查说成没有。"
+    },
+    {
+      "id": "mini-n1-43:delayed-b",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "伙伴在box旁。你已核实table上没有bread；box里的cups尚未检查。伙伴需要知道已知缺项与要查哪处。",
+      "prompt": "写2句英文联络短讯：先报告已核实的缺项，再询问box中是否有cups。不要猜有或精确杯数。"
+    },
+    {
+      "id": "mini-n1-45:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Jo: Can you lift this chair? Ben: Yes, I can. But I cannot lift this table.",
+      "prompt": "伙伴要安排搬table。材料确认Ben能否举起这张table？只写A/B/C：A 能；B 不能；C 没有提到。"
+    },
+    {
+      "id": "mini-n1-45:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Rae: Can you type? Jo: Yes, I can. Rae: Can you type this letter? Jo: No, I cannot. I cannot read it.",
+      "prompt": "要处理this letter，哪条交接有依据？只写A/B/C：A Jo能打这封信；B Jo一般能打字，但不能打这封信；C Jo不能打任何字。"
+    },
+    {
+      "id": "mini-n1-45:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Ben: Can you read? Sam: Yes, I can. Ben: Can you read this book? Sam: No, I cannot read this book.",
+      "prompt": "新任务是this book，哪条有依据？只写A/B/C：A Sam一般能读，但不能读这本书；B Sam能读这本书；C Sam不能读任何东西。"
+    },
+    {
+      "id": "mini-n1-45:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Ava: Can you make a hat? Nora: Yes, I can. Ava: Can you make a coat? Nora: I am going to ask Ben.",
+      "prompt": "登记Nora能否make a coat。只写A/B/C：A 已确认能；B 已确认不能；C 本段没有确认能否。"
+    },
+    {
+      "id": "mini-n1-45:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Leo: Can you lift this box? Mia: No, I cannot. Leo: Can you lift this chair? Mia: Yes, I can.",
+      "prompt": "把可以交给Mia的已确认动作写进任务表，选A/B/C：A lift this box；B lift this chair；C lift this table。"
+    },
+    {
+      "id": "mini-n1-47:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "点单回复\nDo you like coffee? Yes, I do.\nDo you want coffee now? No, thank you.",
+      "prompt": "这次应记录哪条？只写A/B/C：A 喜欢coffee，这次不要；B 不喜欢coffee；C 这次要coffee。"
+    },
+    {
+      "id": "mini-n1-47:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "早餐回复卡\nJo: I like eggs. I don’t want eggs now. I want bread.\nRae: I want eggs.",
+      "prompt": "只替Jo传递本次需求，应选A/B/C：A eggs；B bread；C eggs和bread。"
+    },
+    {
+      "id": "mini-n1-47:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "茶歇回复卡\nSam: I like biscuits. I don’t want biscuits now. I want apples.\nBen: I want biscuits.",
+      "prompt": "只替Sam传递本次需求，应选A/B/C：A biscuits和apples；B biscuits；C apples。"
+    },
+    {
+      "id": "mini-n1-47:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "当前答复\nDo you want milk in your coffee? No, thank you.\nDo you want sugar? Yes, please.\n旧订单：coffee with milk.",
+      "prompt": "这次咖啡应怎样记录？只写A/B/C：A 加milk、不加sugar；B 不加milk、加sugar；C 加milk和sugar。"
+    },
+    {
+      "id": "mini-n1-47:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "伙伴当前回复\nI like apples. I don’t like milk. I want bread now.\n尚未问伙伴这次是否要apples。",
+      "prompt": "哪条只用已知事实，不替伙伴补答案？只写A/B/C：A 这次要bread；本次apples需求未确认；B 这次要apples；C 这次不需要任何食物。"
+    }
+  ]
+}

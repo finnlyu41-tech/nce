@@ -1,0 +1,11 @@
+{
+  "base": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "frozenFilesCompared": 415,
+  "originalTasks": 18,
+  "newTasks": 6,
+  "newExplicitLessons": 12,
+  "protectedBytesIdentical": true,
+  "existingContentChange": "only import/spread new batch04",
+  "existingManifestChange": "only import/spread new batch04",
+  "separateProgressAuthority": false
+}

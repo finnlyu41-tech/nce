@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "inputScope": "No hints, references, accepted keys or model supplied. Text only; no human acoustic audit.",
+  "items": [
+    {
+      "id": "mini-n1-43:guided",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "当前库存：cupboard里有一些cups；cupboard里的tea已经检查，没有。伙伴问这两项现状。",
+      "prompt": "写2句英文库存短讯，报告有cups和没有tea。some的数量未点清，不编数字。"
+    },
+    {
+      "id": "mini-n1-43:independent",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "当前核对：table上有一些bread；table上的plates已检查，没有。\n旧便签：table上有plates。",
+      "prompt": "写2句英文更新短讯，以当前核对纠正旧便签。保留bread/plates单复与table位置，不猜bread的块数。"
+    },
+    {
+      "id": "mini-n1-43:repair",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "当前核对：box里有一些cups；box里的milk已检查，没有。\n旧便签：box里有milk。",
+      "prompt": "换新库存写2句英文更新短讯。保留物品与box位置，用当前信息纠正旧便签，不把不可数milk当复数。"
+    },
+    {
+      "id": "mini-n1-43:delayed-a",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "你已核实：cupboard里有一些tea，数量没量。table上的plates未检查，伙伴可以查看。",
+      "prompt": "给伙伴写2句短讯：报告已知tea，再问table上有没有plates。不要把未检查说成没有。"
+    },
+    {
+      "id": "mini-n1-43:delayed-b",
+      "skill": "writing",
+      "track": "general-training",
+      "lessons": [
+        43,
+        44
+      ],
+      "material": "伙伴在box旁。你已核实table上没有bread；box里的cups尚未检查。伙伴需要知道已知缺项与要查哪处。",
+      "prompt": "写2句英文联络短讯：先报告已核实的缺项，再询问box中是否有cups。不要猜有或精确杯数。"
+    },
+    {
+      "id": "mini-n1-45:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Jo: Can you lift this chair? Ben: Yes, I can. But I cannot lift this table.",
+      "prompt": "伙伴要安排搬table。材料确认Ben能否举起这张table？只写A/B/C：A 能；B 不能；C 没有提到。"
+    },
+    {
+      "id": "mini-n1-45:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Rae: Can you type? Jo: Yes, I can. Rae: Can you type this letter? Jo: No, I cannot. I cannot read it.",
+      "prompt": "要处理this letter，哪条交接有依据？只写A/B/C：A Jo能打这封信；B Jo一般能打字，但不能打这封信；C Jo不能打任何字。"
+    },
+    {
+      "id": "mini-n1-45:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Ben: Can you read? Sam: Yes, I can. Ben: Can you read this book? Sam: No, I cannot read this book.",
+      "prompt": "新任务是this book，哪条有依据？只写A/B/C：A Sam一般能读，但不能读这本书；B Sam能读这本书；C Sam不能读任何东西。"
+    },
+    {
+      "id": "mini-n1-45:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Ava: Can you make a hat? Nora: Yes, I can. Ava: Can you make a coat? Nora: I am going to ask Ben.",
+      "prompt": "登记Nora能否make a coat。只写A/B/C：A 已确认能；B 已确认不能；C 本段没有确认能否。"
+    },
+    {
+      "id": "mini-n1-45:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        45,
+        46
+      ],
+      "material": "Leo: Can you lift this box? Mia: No, I cannot. Leo: Can you lift this chair? Mia: Yes, I can.",
+      "prompt": "把可以交给Mia的已确认动作写进任务表，选A/B/C：A lift this box；B lift this chair；C lift this table。"
+    },
+    {
+      "id": "mini-n1-47:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "点单回复\nDo you like coffee? Yes, I do.\nDo you want coffee now? No, thank you.",
+      "prompt": "这次应记录哪条？只写A/B/C：A 喜欢coffee，这次不要；B 不喜欢coffee；C 这次要coffee。"
+    },
+    {
+      "id": "mini-n1-47:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "早餐回复卡\nJo: I like eggs. I don’t want eggs now. I want bread.\nRae: I want eggs.",
+      "prompt": "只替Jo传递本次需求，应选A/B/C：A eggs；B bread；C eggs和bread。"
+    },
+    {
+      "id": "mini-n1-47:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "茶歇回复卡\nSam: I like biscuits. I don’t want biscuits now. I want apples.\nBen: I want biscuits.",
+      "prompt": "只替Sam传递本次需求，应选A/B/C：A biscuits和apples；B biscuits；C apples。"
+    },
+    {
+      "id": "mini-n1-47:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "当前答复\nDo you want milk in your coffee? No, thank you.\nDo you want sugar? Yes, please.\n旧订单：coffee with milk.",
+      "prompt": "这次咖啡应怎样记录？只写A/B/C：A 加milk、不加sugar；B 不加milk、加sugar；C 加milk和sugar。"
+    },
+    {
+      "id": "mini-n1-47:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        47,
+        48
+      ],
+      "material": "伙伴当前回复\nI like apples. I don’t like milk. I want bread now.\n尚未问伙伴这次是否要apples。",
+      "prompt": "哪条只用已知事实，不替伙伴补答案？只写A/B/C：A 这次要bread；本次apples需求未确认；B 这次要apples；C 这次不需要任何食物。"
+    }
+  ]
+}

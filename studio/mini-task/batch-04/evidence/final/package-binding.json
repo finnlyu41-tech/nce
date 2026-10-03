@@ -1,0 +1,26 @@
+{
+  "onlineHTML": {
+    "sha256": "2aa5f371b2377a6a04536514f671ad50448f2c37fc653110fe366d8565bdd716",
+    "bytes": 5325502
+  },
+  "mapHTML": {
+    "sha256": "522e6607bdfb14265c005629bc6e76c8cbe664b81a8a3c93af698a864b2f8212",
+    "bytes": 542
+  },
+  "offlineHTML": {
+    "sha256": "37e8b52456085243e31e55763cccbac68862d9130555d0b5c48c37f01d0126d1",
+    "bytes": 18352227
+  },
+  "onlineVersion": {
+    "sha256": "f11568cd6de88e4fa748e1dcaf8392dabe704ee788b5bd3e236c92b8b2b9de9e",
+    "bytes": 11532
+  },
+  "resources": {
+    "finiteMiniWAVs": 40,
+    "rootAndMapRequests": 80,
+    "totalVerifiedFiles": 2037,
+    "originalMaterials": 556,
+    "originalMaterialBytes": 706959756
+  },
+  "offlineScope": "Chrome desktop file direct mini route, embedded WAV play/save/refresh; map online is not an offline service worker"
+}

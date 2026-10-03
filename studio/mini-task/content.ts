@@ -1,3 +1,4 @@
+import {batch04Tasks} from './batch-04/content';
 import {batch03Tasks} from './batch-03/content';
 import {batch02Tasks} from './batch-02/content';
 export type Bank = 'guided'|'independent'|'repair'|'delayed-a'|'delayed-b';
@@ -52,6 +53,7 @@ export const miniTasks:readonly MiniTask[]=[
  ]),
  ...batch02Tasks,
  ...batch03Tasks,
+ ...batch04Tasks,
 ];
 export const miniTaskForCourse=(courseId:string)=>miniTasks.find(task=>task.courseId===courseId);
 export function getMiniTask(id:string){const task=miniTasks.find(task=>task.id===id);if(!task)throw Error('小任务尚未编写，原记录保留。');return task}

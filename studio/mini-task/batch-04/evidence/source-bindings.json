@@ -1,0 +1,128 @@
+{
+  "bothPublishedHeadsAtStart": "9fbda71620e13d4fda80b39eda150d1fa79693b5",
+  "candidateDependency": "d717bad909d889fd305d667bd1d8530883aaf23a",
+  "dependencyPublished": false,
+  "evidence": [
+    {
+      "courseId": "nce1-37",
+      "lessons": [
+        37,
+        38
+      ],
+      "title": "第37–38课 · 区分正在做与准备做",
+      "teachingTargets": [
+        "current-action",
+        "future-intent",
+        "ask-plan"
+      ],
+      "originalSourceSha256": "9c809290e12e66d091ea22cb8886817bdfd56899cefb90376ebb0814913ff281",
+      "languageFileSha256": "45f7c30cd96bb9f9498a606abfbdf4af57fb105ba3d3174be4de18cd75f883a4",
+      "courseModuleSha256": "329193ad7eaab42a0ca1eb01c938c1211eb75b1c79f7c8fe5b64135a96172c82",
+      "evenExerciseGrammarPage": 79,
+      "evenExerciseImageSha256": "2a8683b2dc93ebb5a2826d740e525878b61092cd3c571159b88774de34f17079",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-39",
+      "lessons": [
+        39,
+        40
+      ],
+      "title": "第39–40课 · 说明物品处置计划并制止错误动作",
+      "teachingTargets": [
+        "ask-disposal",
+        "planned-transfer",
+        "negative-command"
+      ],
+      "originalSourceSha256": "7663f4778d846c82e1094926e259d0d589bce091f834a39b488fa5994d8c342b",
+      "languageFileSha256": "0136714f1026cc6813086244717b9431cd8df68a0409ebf30bed9acef817ab08",
+      "courseModuleSha256": "9a158bb2fd16609d1b532335838bc91303db0f905d8b793ddfd71b4fab8e143c",
+      "evenExerciseGrammarPage": 83,
+      "evenExerciseImageSha256": "1c74ddd431ccab3d5b116e4057c56eb3445727be5b8066e5d7681c63f2cb438e",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-41",
+      "lessons": [
+        41,
+        42
+      ],
+      "title": "第41–42课 · 用量词说明物品并询问有没有",
+      "teachingTargets": [
+        "quantity-unit",
+        "singular-existence",
+        "mass-existence"
+      ],
+      "originalSourceSha256": "c33622a6e91ee105a92be30deaa1c16cf7f5f646c2ae9612237c2dc3b29f24d2",
+      "languageFileSha256": "373186e71fcae7bfd30f52a4cfcc8157d7b1af8809a811dd3fb4606332e74b0a",
+      "courseModuleSha256": "d7ce22e062d535f8384791c25230c0bf886afd2b34b410992092260efad6c27f",
+      "evenExerciseGrammarPage": 87,
+      "evenExerciseImageSha256": "66bcc03083d846cc0f63a8b2d507c79c9afb1f4ad698e66cc675b5774c5352c0",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-43",
+      "lessons": [
+        43,
+        44
+      ],
+      "title": "第43–44课 · 核对复数及不可数物的存量",
+      "teachingTargets": [
+        "stock-question",
+        "positive-stock",
+        "zero-stock"
+      ],
+      "originalSourceSha256": "cee661fac2f21ef8c9ae9e19b81be3c3b207e48fdc2e082801eaeffe2da6c27a",
+      "languageFileSha256": "67d61e64765ef6600f9fe147e5f24f8c2769623f22e9ef23ce623adaa4c78a79",
+      "courseModuleSha256": "c60264002f5af730af8a52a446fb6391c3143eefdbc0083d42fe47a74098a861",
+      "evenExerciseGrammarPage": 91,
+      "evenExerciseImageSha256": "55baa44fb6c7b5a52ad95d7fea98715fe5b8642dff5983ac8dfa8499a8113646",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-45",
+      "lessons": [
+        45,
+        46
+      ],
+      "title": "第45–46课 · 询问并说明具体能力边界",
+      "teachingTargets": [
+        "ability-question",
+        "can-do",
+        "cannot-do"
+      ],
+      "originalSourceSha256": "64d424a548d931919ed83acb12cc346aba778056f026036727eae4276e17aabd",
+      "languageFileSha256": "479a622a97a71d5f0f4f7b92d340ad5dd4d77182a3047593d34f9c67a00d65bd",
+      "courseModuleSha256": "19985f90540eb017d300872fa75baf0cbcd5efa957aa2b16d633c867b15bb7a2",
+      "evenExerciseGrammarPage": 95,
+      "evenExerciseImageSha256": "95c1fc3c07b831e4819e1bd410b0fa1fea822616a59e6824c97c4abd8bc1fc7a",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-47",
+      "lessons": [
+        47,
+        48
+      ],
+      "title": "第47–48课 · 区分喜好与这次想要",
+      "teachingTargets": [
+        "ask-preference",
+        "ask-want",
+        "state-preference"
+      ],
+      "originalSourceSha256": "46817aa3ce7a008fe5960750ab061a6f56ffff2245c961fc259873df3f47d3da",
+      "languageFileSha256": "e6f02e8d24f9f76c49e67788c86d867a98accce379a353b8d368e5c1b56fcad5",
+      "courseModuleSha256": "fdf4c7a57174cb6523b4a35cce34c169a335cb113b94aa80a2b5061deb4d221a",
+      "evenExerciseGrammarPage": 99,
+      "evenExerciseImageSha256": "95c2a3a87ac7b01a69180fa1387a7aaa3c502191db9ad513c850b855c6ccaeb1",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    }
+  ],
+  "calibrated": false
+}

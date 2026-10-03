@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "source": "original authored materials; offline installed macOS Samantha at 125 wpm",
+  "humanAcousticAudit": false,
+  "difficultyCalibrated": false,
+  "realLearnerRecording": false,
+  "files": [
+    {
+      "file": "mini-n1-37-delayed-a.wav",
+      "sha256": "df441eb6e45371f9da434e2443df97ba9ca1c9321c9144f414d9af4620fbbb2b",
+      "frames": 152456,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 5486.405744353012,
+      "seconds": 6.914104308390023
+    },
+    {
+      "file": "mini-n1-37-delayed-b.wav",
+      "sha256": "87c134b280a1606ff06dbd315aac1d31eea5da5932e602baf690f8312b83ed5b",
+      "frames": 196708,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 5089.485329994858,
+      "seconds": 8.920997732426304
+    },
+    {
+      "file": "mini-n1-37-guided.wav",
+      "sha256": "6d9b1e81e18baca7f6c053a59161cd7dc89b307ebf85d255a485378609d336e9",
+      "frames": 99811,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 5100.9773257780325,
+      "seconds": 4.5265759637188205
+    },
+    {
+      "file": "mini-n1-37-independent.wav",
+      "sha256": "cf1a57b51dc3c28910c54496950296290b426d7280880eb526b9ed959ad2d20e",
+      "frames": 163185,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 5065.0680322826665,
+      "seconds": 7.400680272108843
+    },
+    {
+      "file": "mini-n1-37-repair.wav",
+      "sha256": "06f24f0748022ad6884f7d94f3dfeade08099f71a132ab4c533142d23c68a084",
+      "frames": 154376,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 5002.282276301749,
+      "seconds": 7.001179138321995
+    },
+    {
+      "file": "mini-n1-45-delayed-a.wav",
+      "sha256": "0dd143a4bbc543516c484e9369b85ac26d70afeffbd32b57cd68eff291e7539e",
+      "frames": 192136,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 4973.335486413176,
+      "seconds": 8.713650793650794
+    },
+    {
+      "file": "mini-n1-45-delayed-b.wav",
+      "sha256": "21b6aff8db0386935afb76108cb8bba52d649d4834c3c72ebd3383caa5a67aa2",
+      "frames": 196367,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 4693.354051001899,
+      "seconds": 8.905532879818594
+    },
+    {
+      "file": "mini-n1-45-guided.wav",
+      "sha256": "6c46e5c4292bf0c287bbaf043f85e9105499e967eea8157eaea358a46dd7518e",
+      "frames": 139235,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 4562.366103553918,
+      "seconds": 6.314512471655329
+    },
+    {
+      "file": "mini-n1-45-independent.wav",
+      "sha256": "324015d90ca795d37d35366f4e7dc018121ed82611a36a272e96d5ce0190eefe",
+      "frames": 214129,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 4502.550603729938,
+      "seconds": 9.711065759637188
+    },
+    {
+      "file": "mini-n1-45-repair.wav",
+      "sha256": "f32ba7aed8da6d0c701bd4830b4f0278366254105288ec23eb304e117654c4a6",
+      "frames": 197286,
+      "sampleRate": 22050,
+      "channels": 1,
+      "sampleWidth": 2,
+      "rms": 4491.6235050147025,
+      "seconds": 8.947210884353742
+    }
+  ]
+}

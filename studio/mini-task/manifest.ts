@@ -1,3 +1,4 @@
+import {batch04LessonBindings} from './batch-04/manifest';
 import {batch03LessonBindings} from './batch-03/manifest';
 import {batch02LessonBindings} from './batch-02/manifest';
 import {miniTasks} from './content';
@@ -18,4 +19,5 @@ export const lessonBindings = [
  {lesson:12,courseId:'nce1-11',taskId:'mini-n1-11',target:'把强化所属和颜色用于阅读筛选',prerequisite:'同第11课；给出明确物主与颜色',sharedReason:'配对课强化相同结构，共用一份任务快照',uncovered:['教材练习全量','口语表达']},
  ...batch02LessonBindings,
  ...batch03LessonBindings,
+ ...batch04LessonBindings,
 ].map(row=>({...row,book:'NCE1',coverage:'partial-target',calibration:'uncalibrated'}));

@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "blind-to-keys",
+  "reviewType": "independent-text-only-all-content-review",
+  "input": "studio/mini-task/batch-04/blind-packet-all.json",
+  "inputSha256": "850aba122980698bc1c6f1daf38893ee614b4f8bcb22d989ff13ff5c815c8010",
+  "inputSha256Scope": "首次读取完整原版盲包字节的SHA256。",
+  "inputScope": "仅阅读指定blind-packet-all.json；未读content、manifest、模型、作者答案、accepted、hint/reference、旧审核或音频；只新增本文件。",
+  "completedItemCount": 30,
+  "limitations": [
+    "纯文字内容审查，未播放音频或做真人听辨/听感审查，不评价语速、音质或肯否听辨。",
+    "未做真人难度校准、等难验证、CEFR标定、修补效果或学习效果测试；不能映射IELTS band。",
+    "10道开放题仅给独立自然英语示例，无分数、等义表达待人工；未验证评分容错。",
+    "未与作者key比对，未核查外部来源、版权或全局原创。",
+    "素材差异与独立/修补机制判断只依据本盲包bank名称及情境。"
+  ],
+  "mechanismChecks": [
+    {
+      "taskId": "mini-n1-37",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "independent/repair 均选择指定说话者 going to 的计划，排除该人现在活动及另一人的活动。"
+    },
+    {
+      "taskId": "mini-n1-39",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均以指定物品、计划接收者和禁止错误接收者纠正交接，排除另物品分配及将计划当完成；give/show 动作语义有差异。"
+    },
+    {
+      "taskId": "mini-n1-41",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均报告容器一内已核实的单位物品，再询问不同容器二内未知库存；保持已知/未知和两位置。"
+    },
+    {
+      "taskId": "mini-n1-43",
+      "status": "aligned-with-countability-polarity-switch",
+      "explanation": "均按当前核对替换旧记录，报告一项存在与另一项已核实为零并保留位置/可数性；独立题为正不可数/负可数，repair为正可数/负不可数，不能称每句严格同型或等难。"
+    },
+    {
+      "taskId": "mini-n1-45",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均保持一般can与this指定任务cannot的并存，不把具体不能泛化为完全无能力；独立题额外给出不能读该信的原因，repair没有原因。"
+    },
+    {
+      "taskId": "mini-n1-47",
+      "status": "aligned-in-text-mechanism",
+      "explanation": "均选择指定人物本次明确want的物品，排除其虽like但当前不要的项与另一人的需求。"
+    }
+  ],
+  "summary": {
+    "answerability": "30/30可从给定文字材料作答；20道闭题仅A/B/C，10道开放题自然例答待人工。",
+    "necessaryRevisionCount": 0,
+    "mergeAssessment": "文字内容盲审范围内可合并，无必要语义或事实修订阻塞。",
+    "semanticBoundaries": "计划未当完成，库存未知未当零，一般能力未因具体不能被全盘否定，一般偏好未代替本次需求。题内证据足够。",
+    "levelConcerns": "单位表达需已有词汇先备；some/any、is/are、可数性、进行时/going to/can范围有语言前提。未校准真人难度。",
+    "alignmentConcern": "六组宏观机制均对齐；43的正负句可数性分配互换，非逐句语法严格同型，不能宣称平行等难。",
+    "materialAssessment": "独立/修补多为同框架受限替换，延迟项加入否定修正、未知能力、订单更新及分流等变化；非全包只换人名，但不证明广泛迁移。"
+  },
+  "items": [
+    {
+      "taskId": "mini-n1-37",
+      "itemId": "mini-n1-37:guided",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "现在 washing cup，paint box blue 为 going to 计划，A 唯一；两种时态并存自洽。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "现在进行时/going to；wash/paint和cup/box。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair 均选择指定说话者 going to 的计划，排除该人现在活动及另一人的活动。"
+      },
+      "review": {
+        "semanticMaterialDifference": "现在活动与将来计划基线。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-37",
+      "itemId": "mini-n1-37:independent",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Rae 计划 bookcase white；washing dishes 是当前，box green 是 Ben 的当前活动。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "时态、说话者、物品及颜色联合绑定。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair 均选择指定说话者 going to 的计划，排除该人现在活动及另一人的活动。"
+      },
+      "review": {
+        "semanticMaterialDifference": "增加他人当前动作干扰，仍查计划。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-37",
+      "itemId": "mini-n1-37:repair",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Sam 计划 wash cups；paint door blue 是当前，wash dishes 属 Jo。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "going to/current；cups/dishes及说话者。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair 均选择指定说话者 going to 的计划，排除该人现在活动及另一人的活动。"
+      },
+      "review": {
+        "semanticMaterialDifference": "计划与独立题同机制，动作方向和物品改变。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-37",
+      "itemId": "mini-n1-37:delayed-a",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ava 正等 bus，homework 是她的计划或 Leo 的当前活动；没有完成证据。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "当前/计划/完成范围和主体区分。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair 均选择指定说话者 going to 的计划，排除该人现在活动及另一人的活动。"
+      },
+      "review": {
+        "semanticMaterialDifference": "增加已完成干扰，不能混入他人活动。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-37",
+      "itemId": "mini-n1-37:delayed-b",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "it 已明确为 bookcase；Nora 否定 blue 并确认计划 green；box white 是另物品当前活动。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "it、否定修正及颜色计划绑定。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "independent/repair 均选择指定说话者 going to 的计划，排除该人现在活动及另一人的活动。"
+      },
+      "review": {
+        "semanticMaterialDifference": "新增计划颜色修正。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-39",
+      "itemId": "mini-n1-39:guided",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "vase 计划放 shelf，window被禁止；未说已完成，B 唯一。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "going to、Don’t、it、on/near。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均以指定物品、计划接收者和禁止错误接收者纠正交接，排除另物品分配及将计划当完成；give/show 动作语义有差异。"
+      },
+      "review": {
+        "semanticMaterialDifference": "计划位置/禁止位置/完成状态对照。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-39",
+      "itemId": "mini-n1-39:independent",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "books计划give daughter且禁止send father；map给mother属另物品，A 保留正确分配。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "them/her、接收者、计划/完成及禁止。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均以指定物品、计划接收者和禁止错误接收者纠正交接，排除另物品分配及将计划当完成；give/show 动作语义有差异。"
+      },
+      "review": {
+        "semanticMaterialDifference": "指定物品计划接收者纠错。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-39",
+      "itemId": "mini-n1-39:repair",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "pictures计划show mother且禁止take daughter；book给father是另一物品，不支持pictures已交付。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "show/take、them/her、接收者和计划。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均以指定物品、计划接收者和禁止错误接收者纠正交接，排除另物品分配及将计划当完成；give/show 动作语义有差异。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同纠错结构但动作改为给人看，不能漏去show语义。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-39",
+      "itemId": "mini-n1-39:delayed-a",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "题面明确it指box；box计划cupboard、非table，cups不能进box。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "No后的更新和指定回指；容器/移动物品关系。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均以指定物品、计划接收者和禁止错误接收者纠正交接，排除另物品分配及将计划当完成；give/show 动作语义有差异。"
+      },
+      "review": {
+        "semanticMaterialDifference": "box同时为被放置物品和禁放cups的容器；题设消除回指争议。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "explicit-pronoun-resolution",
+          "detail": "脱离题设时末句it可能回指最近容器cupboard，但题面明确it指box，当前两条回指均按此解释，不构成题内歧义。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-39",
+      "itemId": "mini-n1-39:delayed-b",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "letter计划寄father，map计划show sister且禁止send；B 只传map的计划而非已完成。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "两个物品、两类动作及接收者分流。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均以指定物品、计划接收者和禁止错误接收者纠正交接，排除另物品分配及将计划当完成；give/show 动作语义有差异。"
+      },
+      "review": {
+        "semanticMaterialDifference": "由单物品纠错到分流关系。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-41",
+      "itemId": "mini-n1-41:guided",
+      "answer": "There is a bottle of milk in the bag. Is there any tea in the bag?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "milk一瓶在bag已核实，tea同袋未知；陈述加询问不把未知当零。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "bottle of milk、there is、any tea疑问和不可数性。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告容器一内已核实的单位物品，再询问不同容器二内未知库存；保持已知/未知和两位置。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同位置已知/未知基线。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "unit-vocabulary-prerequisite",
+          "detail": "中文单位不全部提供英语表达，bottle/loaf/bar/piece of 需已有词汇先备；自然等义单位表达待人工核对。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-41",
+      "itemId": "mini-n1-41:independent",
+      "answer": "There is a loaf of bread in the box. Is there any cheese in the bag?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "box中一条bread已知，bag的cheese未查；两个容器明确。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "loaf of bread、any cheese、box/bag位置绑定。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告容器一内已核实的单位物品，再询问不同容器二内未知库存；保持已知/未知和两位置。"
+      },
+      "review": {
+        "semanticMaterialDifference": "从同容器变成两个容器，不只是换食物词。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "unit-vocabulary-prerequisite",
+          "detail": "中文单位不全部提供英语表达，bottle/loaf/bar/piece of 需已有词汇先备；自然等义单位表达待人工核对。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-41",
+      "itemId": "mini-n1-41:repair",
+      "answer": "There is a bar of soap in the cupboard. Is there any milk in the box?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "cupboard中一块soap已知，box的milk未查；例答保留两个位置。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "bar of soap、any milk、cupboard/box及there is疑问。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告容器一内已核实的单位物品，再询问不同容器二内未知库存；保持已知/未知和两位置。"
+      },
+      "review": {
+        "semanticMaterialDifference": "保留独立题跨容器交接，换单位与物品。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "unit-vocabulary-prerequisite",
+          "detail": "中文单位不全部提供英语表达，bottle/loaf/bar/piece of 需已有词汇先备；自然等义单位表达待人工核对。"
+        },
+        {
+          "severity": "note",
+          "code": "unit-expression-flexibility",
+          "detail": "bar of soap 为自然参考；材料只指“一块”，未规定形状，piece of soap 等自然表达也可人工核对。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-41",
+      "itemId": "mini-n1-41:delayed-a",
+      "answer": "There is a piece of cheese on the table. Is there a cup in the cupboard?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "cheese在table已知，cupboard是否有单只cup未查；问句没有断言其存在。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "piece of cheese、单个可数a cup与on/in。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告容器一内已核实的单位物品，再询问不同容器二内未知库存；保持已知/未知和两位置。"
+      },
+      "review": {
+        "semanticMaterialDifference": "询问目标改为可数单件cup。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "unit-vocabulary-prerequisite",
+          "detail": "中文单位不全部提供英语表达，bottle/loaf/bar/piece of 需已有词汇先备；自然等义单位表达待人工核对。"
+        },
+        {
+          "severity": "note",
+          "code": "scenario-wording-nonblocking",
+          "detail": "背景称“清点餐具”但已知项cheese属食品，场景用词略宽泛；题面清楚指定报告该食品，不影响可答性。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-41",
+      "itemId": "mini-n1-41:delayed-b",
+      "answer": "There is a bottle of milk in the bag. Is there a loaf of bread on the table?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "bag的milk一瓶已知，table一条bread是否存在未知；位置和证据类型分明。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "bottle/loaf of、单单位短语与there is问句。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均报告容器一内已核实的单位物品，再询问不同容器二内未知库存；保持已知/未知和两位置。"
+      },
+      "review": {
+        "semanticMaterialDifference": "两项单位短语，已知与未知分属两位置。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "unit-vocabulary-prerequisite",
+          "detail": "中文单位不全部提供英语表达，bottle/loaf/bar/piece of 需已有词汇先备；自然等义单位表达待人工核对。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-43",
+      "itemId": "mini-n1-43:guided",
+      "answer": "There are some cups in the cupboard. There isn't any tea in the cupboard.",
+      "ambiguous": {
+        "present": false,
+        "explanation": "cups存在且未点清，tea已确认零；不需也不能编精确杯数。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "there are plural cups；isn't any不可数tea。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-with-countability-polarity-switch",
+        "explanation": "均按当前核对替换旧记录，报告一项存在与另一项已核实为零并保留位置/可数性；独立题为正不可数/负可数，repair为正可数/负不可数，不能称每句严格同型或等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "已核实有/零的基线。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常库存短讯前置微技能，非完整IELTS GT写作测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-43",
+      "itemId": "mini-n1-43:independent",
+      "answer": "There is some bread on the table. There aren't any plates on the table.",
+      "ambiguous": {
+        "present": false,
+        "explanation": "当前bread有、plates已确认零；旧plates有被新核对替代，非未知。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "正不可数bread/负复数plates，is/are、any及on。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-with-countability-polarity-switch",
+        "explanation": "均按当前核对替换旧记录，报告一项存在与另一项已核实为零并保留位置/可数性；独立题为正不可数/负可数，repair为正可数/负不可数，不能称每句严格同型或等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "增加旧/新时效过滤及可数性。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常库存短讯前置微技能，非完整IELTS GT写作测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-43",
+      "itemId": "mini-n1-43:repair",
+      "answer": "There are some cups in the box. There isn't any milk in the box.",
+      "ambiguous": {
+        "present": false,
+        "explanation": "当前cups有、milk已确认零；旧milk存在不代表当前。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "正复数cups/负不可数milk，are/is和any。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-with-countability-polarity-switch",
+        "explanation": "均按当前核对替换旧记录，报告一项存在与另一项已核实为零并保留位置/可数性；独立题为正不可数/负可数，repair为正可数/负不可数，不能称每句严格同型或等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同更新机制，可数性的正负分配与独立题相反。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常库存短讯前置微技能，非完整IELTS GT写作测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "countability-polarity-switch",
+          "detail": "正/负句的可数性角色互换，宏观机制对齐但非每句严格平行或等难。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-43",
+      "itemId": "mini-n1-43:delayed-a",
+      "answer": "There is some tea in the cupboard. Are there any plates on the table?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "tea已核实有但未量，plates未检查；问plates，不把未知声明成零。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "不可数tea、复数plates疑问及两位置。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-with-countability-polarity-switch",
+        "explanation": "均按当前核对替换旧记录，报告一项存在与另一项已核实为零并保留位置/可数性；独立题为正不可数/负可数，repair为正可数/负不可数，不能称每句严格同型或等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "改为已知陈述加未知询问。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常库存短讯前置微技能，非完整IELTS GT写作测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-43",
+      "itemId": "mini-n1-43:delayed-b",
+      "answer": "There isn't any bread on the table. Are there any cups in the box?",
+      "ambiguous": {
+        "present": false,
+        "explanation": "bread已核实为零，cups未知；例答顺序为缺项后询问，不猜杯数。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "不可数bread否定与cups复数疑问，on/in。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-with-countability-polarity-switch",
+        "explanation": "均按当前核对替换旧记录，报告一项存在与另一项已核实为零并保留位置/可数性；独立题为正不可数/负可数，repair为正可数/负不可数，不能称每句严格同型或等难。"
+      },
+      "review": {
+        "semanticMaterialDifference": "对照已知零与未知。",
+        "answerPolicy": "自然例答非唯一、不给分；保持人物/状态/位置/单位及已知或未知信息，允许等义缩写和表达，待人工核对。",
+        "openResponseStatus": "pending-human-review",
+        "publicBoundary": "general-training日常库存短讯前置微技能，非完整IELTS GT写作测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-45",
+      "itemId": "mini-n1-45:guided",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Ben能lift this chair，但明确不能lift this table；指定table范围清楚。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "can/cannot及this对象范围。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均保持一般can与this指定任务cannot的并存，不把具体不能泛化为完全无能力；独立题额外给出不能读该信的原因，repair没有原因。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同动作不同具体物品的能力对照。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-45",
+      "itemId": "mini-n1-45:independent",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Jo一般能type，却明确不能type this letter且不能read it；局部不能不等于完全不能打字。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "一般能力/this具体任务、肯否、it=letter。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均保持一般can与this指定任务cannot的并存，不把具体不能泛化为完全无能力；独立题额外给出不能读该信的原因，repair没有原因。"
+      },
+      "review": {
+        "semanticMaterialDifference": "能力范围层级及局部阻碍。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-45",
+      "itemId": "mini-n1-45:repair",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Sam一般能read，却明确不能read this book；不能泛化为不能读任何东西。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "一般read与this book的范围绑定。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均保持一般can与this指定任务cannot的并存，不把具体不能泛化为完全无能力；独立题额外给出不能读该信的原因，repair没有原因。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同一般can/具体cannot结构，换动作对象。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-45",
+      "itemId": "mini-n1-45:delayed-a",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "make hat能力已确认；coat只说计划问Ben，没有确认Nora能或不能做coat。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "能力问答与求助计划的证据区别。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均保持一般can与this指定任务cannot的并存，不把具体不能泛化为完全无能力；独立题额外给出不能读该信的原因，repair没有原因。"
+      },
+      "review": {
+        "semanticMaterialDifference": "新增未确认，不能将求助计划等同无能力。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-45",
+      "itemId": "mini-n1-45:delayed-b",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Mia不能lift box，能lift chair，table未提；chair是唯一已确认可分配动作。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "不同具体对象的肯否与未提信息。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均保持一般can与this指定任务cannot的并存，不把具体不能泛化为完全无能力；独立题额外给出不能读该信的原因，repair没有原因。"
+      },
+      "review": {
+        "semanticMaterialDifference": "从能力查询转为可指派动作选择。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "仅读转写，未试听以确认时态或can/cannot的实际可辨度。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-47",
+      "itemId": "mini-n1-47:guided",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "like coffee与now不要coffee并存；本次拒绝不等于不喜欢。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "like/want now及No thank you。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均选择指定人物本次明确want的物品，排除其虽like但当前不要的项与另一人的需求。"
+      },
+      "review": {
+        "semanticMaterialDifference": "一般偏好/本次需求基线。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-47",
+      "itemId": "mini-n1-47:independent",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Jo喜欢eggs但现在不要、明确want bread；Rae要eggs不属Jo。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "主体、like/now want、拒绝与当前替代项。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均选择指定人物本次明确want的物品，排除其虽like但当前不要的项与另一人的需求。"
+      },
+      "review": {
+        "semanticMaterialDifference": "偏好/当前目标/他人需求联合区分。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-47",
+      "itemId": "mini-n1-47:repair",
+      "answer": "C",
+      "ambiguous": {
+        "present": false,
+        "explanation": "Sam喜欢biscuits但现在不要、want apples；Ben要biscuits属于别人。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "指定人本次want与偏好、另一人需求。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均选择指定人物本次明确want的物品，排除其虽like但当前不要的项与另一人的需求。"
+      },
+      "review": {
+        "semanticMaterialDifference": "同独立题结构，主要同框架受限复练。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-47",
+      "itemId": "mini-n1-47:delayed-a",
+      "answer": "B",
+      "ambiguous": {
+        "present": false,
+        "explanation": "当前拒绝coffee中的milk、接受sugar；Old with milk不能代替当前答复。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "相邻点单上下文、No/Yes及旧/新配料信息。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均选择指定人物本次明确want的物品，排除其虽like但当前不要的项与另一人的需求。"
+      },
+      "review": {
+        "semanticMaterialDifference": "配料组合与旧订单更新。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-47",
+      "itemId": "mini-n1-47:delayed-b",
+      "answer": "A",
+      "ambiguous": {
+        "present": false,
+        "explanation": "本次bread需求明确，apples需求未问；喜欢apples不确认现在要。"
+      },
+      "levelConcern": {
+        "calibrated": false,
+        "prerequisites": "like/dislike、want now与未确认需求。",
+        "note": "只说明语言/推理前提，未真人难度校准；课号不构成CEFR或band证据。"
+      },
+      "independentRepairAlignment": {
+        "status": "aligned-in-text-mechanism",
+        "explanation": "均选择指定人物本次明确want的物品，排除其虽like但当前不要的项与另一人的需求。"
+      },
+      "review": {
+        "semanticMaterialDifference": "新增需求未知，不能从偏好补答案或说所有食物均不要。",
+        "answerPolicy": "仅输出题面要求的A/B/C；独立从盲包作答，未与作者答案比对。",
+        "openResponseStatus": "not-applicable",
+        "publicBoundary": "common基础微技能，非Academic专属材料或完整IELTS测量；无听感/等难/学习效果证据。"
+      },
+      "finding": []
+    }
+  ]
+}
