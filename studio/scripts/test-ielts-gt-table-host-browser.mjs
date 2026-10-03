@@ -16,7 +16,6 @@ const receipt = {
 };
 let client;
 let targetId;
-let activeQuestion;
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 async function connectPage() {
@@ -38,12 +37,11 @@ async function connectPage() {
       if (!handler) return;
       pending.delete(message.id);
       clearTimeout(handler.timer);
-      message.error ? handler.reject(new Error(JSON.stringify(message.error))) : handler.resolve(message.result);
+      if(message.error)handler.reject(new Error(JSON.stringify(message.error)));else handler.resolve(message.result);
       return;
     }
     const value = message.params;
     if (message.method === 'Page.loadEventFired') loads += 1;
-    if (message.method === 'Page.fileChooserOpened') chooser = value;
     if (message.method === 'Runtime.exceptionThrown') receipt.runtimeErrors.push(value.exceptionDetails);
     if (message.method === 'Runtime.consoleAPICalled' && value.type === 'error') {
       receipt.consoleErrors.push(value.args.map(arg => arg.value ?? arg.description ?? '').join(' '));
@@ -157,7 +155,6 @@ async function screenshot(name) {
 }
 
 let loads = 0;
-let chooser;
 const sampleKey = 'ielts-sample-sequence-v1';
 const contextKey = 'ielts-gt-table-context-v1';
 const lessonId = 'reading-gt-table-options';

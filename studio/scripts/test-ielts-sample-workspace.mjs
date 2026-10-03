@@ -73,7 +73,7 @@ try {
       setup(builder) {
         // The real Today adapter imports mini media. Preserve each module's URL
         // when this Node-only probe bundles that dependency into CommonJS.
-        builder.onLoad({filter: /mini-task\/(?:batch-0[23]\/)?content\.ts$/}, async args => {
+        builder.onLoad({filter: /mini-task\/(?:batch-\d+\/)?content\.ts$/}, async args => {
           let contents = await readFile(args.path, 'utf8');
           const source = ts.createSourceFile(args.path, contents, ts.ScriptTarget.Latest, true), ranges=[];
           function visit(node) {

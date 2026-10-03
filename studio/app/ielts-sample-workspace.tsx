@@ -5,7 +5,7 @@ import {IELTSSampleSequence} from '../ielts-blueprint/sample-sequence-ui';
 import type {SampleState} from '../ielts-blueprint/sample-sequence-model';
 import {tableCompletionStimulusFor} from '../ielts-blueprint/curriculum/table-completion';
 import {readSampleProgress,recoverSamplePlayback,sampleProgressKey,serializeSampleProgress} from './ielts-sample-progress';
-import {tableContextKey,readTableContext,extendTableContext,replaceSampleProgressWithTableContext} from './ielts-table-context';
+import {tableContextKey,readTableContext,extendTableContext} from './ielts-table-context';
 import {sampleTarget} from './ielts-sample-target';
 import {gtTableContextKey,readGTTableContext,extendGTTableContext,replaceSampleProgressWithGTTableContext} from './ielts-gt-table-context';
 
