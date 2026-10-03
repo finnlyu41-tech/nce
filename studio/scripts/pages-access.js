@@ -360,7 +360,27 @@ const supplementalAssetTypes = new Map([
   [
     "/map/assets/mini-n1-45-repair-BBAFm8C8.wav",
     "audio/wav"
-  ]
+  ],
+  ["/assets/mini-n1-49-delayed-a-CO8v-uou.wav","audio/wav"],
+  ["/map/assets/mini-n1-49-delayed-a-CO8v-uou.wav","audio/wav"],
+  ["/assets/mini-n1-49-delayed-b-ClSHklVg.wav","audio/wav"],
+  ["/map/assets/mini-n1-49-delayed-b-ClSHklVg.wav","audio/wav"],
+  ["/assets/mini-n1-49-guided-BThMgUdb.wav","audio/wav"],
+  ["/map/assets/mini-n1-49-guided-BThMgUdb.wav","audio/wav"],
+  ["/assets/mini-n1-49-independent-Bv3EN94n.wav","audio/wav"],
+  ["/map/assets/mini-n1-49-independent-Bv3EN94n.wav","audio/wav"],
+  ["/assets/mini-n1-49-repair-BeFLmV9G.wav","audio/wav"],
+  ["/map/assets/mini-n1-49-repair-BeFLmV9G.wav","audio/wav"],
+  ["/assets/mini-n1-57-delayed-a-Bfh-QMtL.wav","audio/wav"],
+  ["/map/assets/mini-n1-57-delayed-a-Bfh-QMtL.wav","audio/wav"],
+  ["/assets/mini-n1-57-delayed-b-DR4vRcqf.wav","audio/wav"],
+  ["/map/assets/mini-n1-57-delayed-b-DR4vRcqf.wav","audio/wav"],
+  ["/assets/mini-n1-57-guided-BTbiRsFf.wav","audio/wav"],
+  ["/map/assets/mini-n1-57-guided-BTbiRsFf.wav","audio/wav"],
+  ["/assets/mini-n1-57-independent-DZKnQx6h.wav","audio/wav"],
+  ["/map/assets/mini-n1-57-independent-DZKnQx6h.wav","audio/wav"],
+  ["/assets/mini-n1-57-repair-CGvuXfqV.wav","audio/wav"],
+  ["/map/assets/mini-n1-57-repair-CGvuXfqV.wav","audio/wav"]
 ]);
 export default {
   async fetch(request, env) {
