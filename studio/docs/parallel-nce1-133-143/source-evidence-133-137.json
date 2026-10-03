@@ -1,0 +1,227 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "remoteHeads": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "groups": [
+    {
+      "id": "nce1-133",
+      "sourceSha256": "55cbe2fa9dd0a3d53f0a67e034cc0a723d3edf407fe58edadc42f74033ad94db",
+      "languageFileSha256": "4b95e74f0f6814dcbf99ee0268abaabb6428bc80ff0b0dc53efdbd9323a99855",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "9426b4f6b1c831559655a96e66be72fb95b45e475eb80949a7f8107f1f4f095b",
+      "grammarEntry": {
+        "id": "NCE1-133",
+        "book": "NCE1",
+        "lesson": 133,
+        "lastLesson": 134,
+        "unit": null,
+        "title": "间接引语：said / told",
+        "category": "clause",
+        "terms": "said told that reported speech",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 276
+          },
+          {
+            "section": "句型练习",
+            "page": 275
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 274
+          }
+        ],
+        "pages": [
+          274,
+          275,
+          276
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 274,
+          "sha256": "290c87d8884bc4afec5d311870d67fec8a7fdfe1f46e8d365104cb95b3f793b4"
+        },
+        {
+          "page": 275,
+          "sha256": "daab4fe8db0bc96b7a179af40ea491fd1ff392634c53c20e8af9583a9884eccf"
+        },
+        {
+          "page": 276,
+          "sha256": "514ed55af6aacabb94b4c24a6d3ebae0ee4dfe81ad5690773b7caed6776adb9f"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "report-frame",
+          "label": "原文told me；配套134文字对照said/told与that",
+          "start": 73.86,
+          "end": 79.7
+        },
+        {
+          "target": "report-time",
+          "label": "原文完成时与going to的过去报道；134文字扩展进行时",
+          "start": 73.86,
+          "end": 90.5
+        },
+        {
+          "target": "report-perspective",
+          "label": "原文同一说话者的两项情况与否定",
+          "start": 90.5,
+          "end": 102.05
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-135",
+      "sourceSha256": "a1d765ddb3215a199f47e287f985a7db1f46f6296a58bfcbfbdd6bdd3b4c3ad5",
+      "languageFileSha256": "97781f274f9db8c7fdaf71a2ba24583635ae7563970fec23fc8062eaab41cddc",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "53824394819eac93dabf41ccc3cfddb2f48d4b92f8dda0cc4384a2894b78423d",
+      "grammarEntry": {
+        "id": "NCE1-135",
+        "book": "NCE1",
+        "lesson": 135,
+        "lastLesson": 136,
+        "unit": null,
+        "title": "间接引语中的时态变化",
+        "category": "clause",
+        "terms": "said told reported speech",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 280
+          },
+          {
+            "section": "句型练习",
+            "page": 279
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 278
+          }
+        ],
+        "pages": [
+          278,
+          279,
+          280
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 278,
+          "sha256": "ad8822b41623b8a50161a0fd75efe592e8d7dad26bf7e809c78d46f9317bb35b"
+        },
+        {
+          "page": 279,
+          "sha256": "2baeb246a1419d540674fbb37096fec94378a7e9fd21229cc459d95136ec7c75"
+        },
+        {
+          "page": 280,
+          "sha256": "e98604013903af57589b6c77cc1b0c41a91feb325714cffa119c0ed3c0fd03dd"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "reported-possibility",
+          "label": "原文may→might报道",
+          "start": 64.66,
+          "end": 73.75
+        },
+        {
+          "target": "reported-ability",
+          "label": "原文can’t→couldn’t；136文字扩展肯定能力",
+          "start": 73.75,
+          "end": 78.11
+        },
+        {
+          "target": "reported-future",
+          "label": "原文will have to与won’t let的报道",
+          "start": 78.11,
+          "end": 92.03
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    },
+    {
+      "id": "nce1-137",
+      "sourceSha256": "c2a4fc1d38b79d391862b5366c16a0be2b9cb82c1f08b9b41c980501614ae47e",
+      "languageFileSha256": "11d09913ed3fecc68364ec92a7f00c00b12027217a8d86323a11232a7d5127fc",
+      "pdfSourceSha256": "df385269f6502f201fc5689683f9163205202e8b0b735fd9a388b2c7982ba2b3",
+      "comicPageSha256": "216a89a10a32fd049ad43a765934402c495ffb55c9e62e0b9efe272a1e36b3c6",
+      "grammarEntry": {
+        "id": "NCE1-137",
+        "book": "NCE1",
+        "lesson": 137,
+        "lastLesson": 138,
+        "unit": null,
+        "title": "if 条件句",
+        "category": "clause",
+        "terms": "if conditional",
+        "sections": [
+          {
+            "section": "Written exercises · 书面练习",
+            "page": 284
+          },
+          {
+            "section": "句型练习",
+            "page": 283
+          },
+          {
+            "section": "Notes on the text · 课文注释",
+            "page": 282
+          }
+        ],
+        "pages": [
+          282,
+          283,
+          284
+        ],
+        "references": []
+      },
+      "exercisePages": [
+        {
+          "page": 282,
+          "sha256": "b15681b328a49d92347d30cd29a61e7e94b8de03bd0620560c84a8396dc20823"
+        },
+        {
+          "page": 283,
+          "sha256": "53031fe372fd9da1fcf5c211e3d2cf5f134064054b59870079b8294d1e0ce1b3"
+        },
+        {
+          "page": 284,
+          "sha256": "59bdfcf05991cbeb1c130a13a5aa8799108399a6d1c26cd81cc1b4662faa1d47"
+        }
+      ],
+      "clipWindows": [
+        {
+          "target": "future-condition",
+          "label": "137正文if win与will结果",
+          "start": 36.85,
+          "end": 48.11
+        },
+        {
+          "target": "condition-negative",
+          "label": "137正文条件与后果；138文字扩展否定",
+          "start": 75.85,
+          "end": 92.33
+        },
+        {
+          "target": "conditional-can",
+          "label": "137音频条件逻辑示例；can目标来自138配套文字，非音频中的can",
+          "start": 56.54,
+          "end": 65.43
+        }
+      ],
+      "sourcePanel": "actual unchanged guard accepts real source",
+      "playback": "not-audited"
+    }
+  ],
+  "naturalRetention": "unverified",
+  "audioPlayback": "not-audited"
+}

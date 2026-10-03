@@ -1,0 +1,46 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "bookOneUnitCount": 72,
+  "lastUnit": {
+    "id": "nce1-143",
+    "title": "A Walk Through the Woods",
+    "subtitle": "新概念一册 · 第 143–144 课",
+    "kind": "unit",
+    "stage": "foundation",
+    "requires": [
+      "nce1-141"
+    ],
+    "parent": "chapter-6",
+    "unitId": "nce1-143",
+    "minutes": 25
+  },
+  "bookOneFinalMember": "nce1-143",
+  "nonexistent145": null,
+  "nextChapter": {
+    "id": "chapter-7",
+    "requires": [
+      "chapter-6"
+    ],
+    "firstMember": "nce2-1"
+  },
+  "bridgeUnit": {
+    "id": "nce2-1",
+    "title": "A Private Conversation",
+    "subtitle": "新概念二册 · 第 1 课",
+    "kind": "unit",
+    "stage": "bridge",
+    "requires": [],
+    "parent": "chapter-7",
+    "unitId": "nce2-1",
+    "minutes": 40
+  },
+  "chapter6EmptyEvidenceAchieved": false,
+  "currentUnwiredCourseSuccessor": "nce1-143",
+  "codeSha256": {
+    "map/content.ts": "43189e8c7cf08e100948cfe88396a535acc3ef926bb2feb77becd6aaa7de33a4",
+    "map/model.ts": "0fbf5f3d5bd114927d04f34245256d002f5e7408dc520a45b28c3af2fd977cb5",
+    "app/course-loop-next.ts": "30da1450e4374f92e3f205a50a4cef37f1285a837beb658c9b6963509441d703"
+  },
+  "routeDecision": "Owner uses latest existing map continuation and chapter gates; no invented successor, crossbook mapping, or unlock created by this candidate.",
+  "fixture": "Read-only production metadata and empty state; no user state accessed."
+}

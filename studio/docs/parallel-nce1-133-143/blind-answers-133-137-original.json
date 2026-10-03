@@ -1,0 +1,590 @@
+[
+  {
+    "id": "diagnostic-n133-report-frame",
+    "answer": "Nora told me the ward was quiet.",
+    "variants": [
+      "Nora told me that the ward was quiet."
+    ],
+    "issues": []
+  },
+  {
+    "id": "diagnostic-n133-report-time",
+    "answer": "Ada said she had checked the alarm.",
+    "variants": [
+      "Ada said that she had checked the alarm."
+    ],
+    "issues": [
+      "发言前已完成且题面限定本课倒移；一般过去时或现在完成时不满足该输出范围。"
+    ]
+  },
+  {
+    "id": "diagnostic-n133-report-perspective",
+    "answer": "Owen told me I was using his seat.",
+    "variants": [
+      "Owen told me that I was using his seat."
+    ],
+    "issues": [
+      "I指转述者；his指Owen。将I改成she虽可能描述同一女性，但违反明示I。"
+    ]
+  },
+  {
+    "id": "guided-n133-report-frame",
+    "answer": "Leo said the road was dry.",
+    "variants": [
+      "Leo said that the road was dry."
+    ],
+    "issues": [
+      "与诊断frame主要仅替换说话者、对象和表语，不能据此单独证明新结构迁移。"
+    ]
+  },
+  {
+    "id": "guided-n133-report-time",
+    "answer": "Iris said she was testing the radio.",
+    "variants": [
+      "Iris said that she was testing the radio."
+    ],
+    "issues": []
+  },
+  {
+    "id": "guided-n133-report-perspective",
+    "answer": "They told me they did not want my photos.",
+    "variants": [
+      "They told me that they did not want my photos.",
+      "They told me they didn’t want my photos.",
+      "They told me that they didn’t want my photos."
+    ],
+    "issues": [
+      "they仅指编辑；my仅指转述者，不能改成their photos。"
+    ]
+  },
+  {
+    "id": "independent-n133-report-frame",
+    "answer": "Tara told me the gallery was closed.",
+    "variants": [
+      "Tara told me that the gallery was closed."
+    ],
+    "issues": [
+      "咖啡馆是干扰记录；删除干扰后语法结构仍与frame诊断相同。"
+    ]
+  },
+  {
+    "id": "independent-n133-report-time",
+    "answer": "Mira said she had not signed the form.",
+    "variants": [
+      "Mira said that she had not signed the form.",
+      "Mira said she hadn’t signed the form.",
+      "Mira said that she hadn’t signed the form."
+    ],
+    "issues": [
+      "不得混入助手copying的记录；否定只作用于Mira签名。"
+    ]
+  },
+  {
+    "id": "independent-n133-report-perspective",
+    "answer": "Ravi told me his sister was waiting for me.",
+    "variants": [
+      "Ravi told me that his sister was waiting for me."
+    ],
+    "issues": [
+      "his和me分别保留Ravi所有权与原听话者；不得将sister改成主语Ravi。"
+    ]
+  },
+  {
+    "id": "repair-n133-report-frame",
+    "answer": "Ben told us the hall was empty.",
+    "variants": [
+      "Ben told us that the hall was empty."
+    ],
+    "issues": [
+      "与诊断frame只改变人物、听话者和场所/状态；told结构本身未变。"
+    ]
+  },
+  {
+    "id": "repair-n133-report-time",
+    "answer": "Eve said she felt sick.",
+    "variants": [
+      "Eve said that she felt sick."
+    ],
+    "issues": [
+      "本题从进行/完成时切换到一般过去时，不能机械照用上一题时态。"
+    ]
+  },
+  {
+    "id": "repair-n133-report-perspective",
+    "answer": "Lia told me she was tired and she did not want my help.",
+    "variants": [
+      "Lia told me that she was tired and she did not want my help.",
+      "Lia told me she was tired and that she did not want my help.",
+      "Lia told me that she was tired and that she did not want my help.",
+      "Lia told me she was tired and she didn’t want my help.",
+      "Lia told me that she was tired and she didn’t want my help.",
+      "Lia told me she was tired and that she didn’t want my help.",
+      "Lia told me that she was tired and that she didn’t want my help."
+    ],
+    "issues": [
+      "两个she都明确指Lia；第二项否定不能扩展到tired。自然的同主语省略she was tired and did not want my help符合情境，但题面明列两次she，故不列入限定variants。"
+    ]
+  },
+  {
+    "id": "review-a-n133-report-frame",
+    "answer": "Zoe told us the bridge was unsafe.",
+    "variants": [
+      "Zoe told us that the bridge was unsafe."
+    ],
+    "issues": [
+      "隧道安全不属于Zoe话语；句型仍是told + 听话者 + 状态从句。"
+    ]
+  },
+  {
+    "id": "review-a-n133-report-time",
+    "answer": "Nia said she had lost the key.",
+    "variants": [
+      "Nia said that she had lost the key."
+    ],
+    "issues": [
+      "后来找回钥匙不改变她发言前的完成事件；不得添加找到钥匙的信息。"
+    ]
+  },
+  {
+    "id": "review-a-n133-report-perspective",
+    "answer": "They told me they had finished their work but I had not finished mine.",
+    "variants": [
+      "They told me that they had finished their work but I had not finished mine.",
+      "They told me they had finished their work but that I had not finished mine.",
+      "They told me that they had finished their work but that I had not finished mine.",
+      "They told me they had finished their work but I hadn’t finished mine.",
+      "They told me that they had finished their work but I hadn’t finished mine.",
+      "They told me they had finished their work but that I hadn’t finished mine.",
+      "They told me that they had finished their work but that I hadn’t finished mine."
+    ],
+    "issues": [
+      "两个分句的主体不同，不能省略第二个I；mine指转述者的work，不能替成yours或their work。"
+    ]
+  },
+  {
+    "id": "review-b-n133-report-frame",
+    "answer": "Uma said the lift was broken.",
+    "variants": [
+      "Uma said that the lift was broken."
+    ],
+    "issues": [
+      "与guided-frame只换姓名、名词和表语；今早修复仅排除现况误读。"
+    ]
+  },
+  {
+    "id": "review-b-n133-report-time",
+    "answer": "Eli said he was carrying the box.",
+    "variants": [
+      "Eli said that he was carrying the box."
+    ],
+    "issues": []
+  },
+  {
+    "id": "review-b-n133-report-perspective",
+    "answer": "Max told us we were improving and he was proud of us.",
+    "variants": [
+      "Max told us that we were improving and he was proud of us.",
+      "Max told us we were improving and that he was proud of us.",
+      "Max told us that we were improving and that he was proud of us."
+    ],
+    "issues": [
+      "we指全队，he指Max；主体不同，第二主语不能省略；proud是状态，写was proud而非was being proud。"
+    ]
+  },
+  {
+    "id": "diagnostic-n135-reported-possibility",
+    "answer": "Nora said she might cancel the trip.",
+    "variants": [
+      "Nora said that she might cancel the trip."
+    ],
+    "issues": [
+      "might保留未决定的可能性；would不能表达同样的不确定性。"
+    ]
+  },
+  {
+    "id": "diagnostic-n135-reported-ability",
+    "answer": "Leo told me he could not fix the lock.",
+    "variants": [
+      "Leo told me that he could not fix the lock.",
+      "Leo told me he couldn’t fix the lock.",
+      "Leo told me that he couldn’t fix the lock."
+    ],
+    "issues": [
+      "could not为过去记录的能力否定；would not误写成拒绝/将来安排。"
+    ]
+  },
+  {
+    "id": "diagnostic-n135-reported-future",
+    "answer": "Ada said she would have to close the shop.",
+    "variants": [
+      "Ada said that she would have to close the shop."
+    ],
+    "issues": [
+      "必须同时保留would与have to；would like to或could消除法规必要性。"
+    ]
+  },
+  {
+    "id": "guided-n135-reported-possibility",
+    "answer": "Ben said he might not publish the story.",
+    "variants": [
+      "Ben said that he might not publish the story."
+    ],
+    "issues": [
+      "否定在可能性之内：可能不发表，不是禁止发表，也不是确定不会发表。"
+    ]
+  },
+  {
+    "id": "guided-n135-reported-ability",
+    "answer": "Mia told me she could read the map.",
+    "variants": [
+      "Mia told me that she could read the map."
+    ],
+    "issues": [
+      "与诊断ability同一倒移结构；肯否定改变需要核对，但词汇/人物改变不足以证明结构迁移。"
+    ]
+  },
+  {
+    "id": "guided-n135-reported-future",
+    "answer": "Owen said his assistant would not let him use the camera.",
+    "variants": [
+      "Owen said that his assistant would not let him use the camera.",
+      "Owen said his assistant wouldn’t let him use the camera.",
+      "Owen said that his assistant wouldn’t let him use the camera."
+    ],
+    "issues": [
+      "assistant是限制许可的人，him指Owen；不能写he would not use或let him to use。"
+    ]
+  },
+  {
+    "id": "independent-n135-reported-possibility",
+    "answer": "Ria said she might return.",
+    "variants": [
+      "Ria said that she might return."
+    ],
+    "issues": [
+      "司机的will return是干扰；只替换人物/动作后的might从句仍复用诊断句型。"
+    ]
+  },
+  {
+    "id": "independent-n135-reported-ability",
+    "answer": "Eli told me he could explain the warning.",
+    "variants": [
+      "Eli told me that he could explain the warning."
+    ],
+    "issues": [
+      "能力声明不能被旁人的将来计划改写为would explain。"
+    ]
+  },
+  {
+    "id": "independent-n135-reported-future",
+    "answer": "Zoe told us she would test our machine the next day.",
+    "variants": [
+      "Zoe told us that she would test our machine the next day."
+    ],
+    "issues": [
+      "the next day相对星期一指星期二，不是转述当天星期三的明天；our保留机器归属。"
+    ]
+  },
+  {
+    "id": "repair-n135-reported-possibility",
+    "answer": "Nia said she might join the race.",
+    "variants": [
+      "Nia said that she might join the race."
+    ],
+    "issues": [
+      "与诊断possibility只替换姓名及动作宾语，尚未引入新结构或新的可能性判断。"
+    ]
+  },
+  {
+    "id": "repair-n135-reported-ability",
+    "answer": "They told me they could not understand the instructions.",
+    "variants": [
+      "They told me that they could not understand the instructions.",
+      "They told me they couldn’t understand the instructions.",
+      "They told me that they couldn’t understand the instructions."
+    ],
+    "issues": [
+      "指不能理解，不是拒绝；与诊断ability主要仅更换主体数及动作对象。"
+    ]
+  },
+  {
+    "id": "repair-n135-reported-future",
+    "answer": "Ravi said he would not sell his camera.",
+    "variants": [
+      "Ravi said that he would not sell his camera.",
+      "Ravi said he wouldn’t sell his camera.",
+      "Ravi said that he wouldn’t sell his camera."
+    ],
+    "issues": [
+      "his指Ravi；否定为明确未来安排，不能替成might not。"
+    ]
+  },
+  {
+    "id": "review-a-n135-reported-possibility",
+    "answer": "Uma said the result might be wrong.",
+    "variants": [
+      "Uma said that the result might be wrong."
+    ],
+    "issues": [
+      "wrong的可能性不能被另一人肯定正确的记录覆盖。"
+    ]
+  },
+  {
+    "id": "review-a-n135-reported-ability",
+    "answer": "Max told me he could not recognize the island.",
+    "variants": [
+      "Max told me that he could not recognize the island.",
+      "Max told me he couldn’t recognize the island.",
+      "Max told me that he couldn’t recognize the island."
+    ],
+    "issues": [
+      "与诊断ability只改变人物和能力内容；不得以arrive/reach替换明示recognize。"
+    ]
+  },
+  {
+    "id": "review-a-n135-reported-future",
+    "answer": "Tara said her team would have to wait but she would not wait.",
+    "variants": [
+      "Tara said that her team would have to wait but she would not wait.",
+      "Tara said her team would have to wait but that she would not wait.",
+      "Tara said that her team would have to wait but that she would not wait.",
+      "Tara said her team would have to wait but she wouldn’t wait.",
+      "Tara said that her team would have to wait but she wouldn’t wait.",
+      "Tara said her team would have to wait but that she wouldn’t wait.",
+      "Tara said that her team would have to wait but that she wouldn’t wait."
+    ],
+    "issues": [
+      "team不包括Tara；her team与she不同主语，不能省略she。have to的必要性仅属于team。"
+    ]
+  },
+  {
+    "id": "review-b-n135-reported-possibility",
+    "answer": "Ash said he might lend the map but he might not lend the painting.",
+    "variants": [
+      "Ash said that he might lend the map but he might not lend the painting.",
+      "Ash said he might lend the map but that he might not lend the painting.",
+      "Ash said that he might lend the map but that he might not lend the painting."
+    ],
+    "issues": [
+      "第二项是可能不借画，并非禁止。两个he均指Ash；同主语省略第二个he为自然表达，但题面明列but he，不列入限定variants。"
+    ]
+  },
+  {
+    "id": "review-b-n135-reported-ability",
+    "answer": "Eve told me she could play the tune but she could not read the music.",
+    "variants": [
+      "Eve told me that she could play the tune but she could not read the music.",
+      "Eve told me she could play the tune but that she could not read the music.",
+      "Eve told me that she could play the tune but that she could not read the music.",
+      "Eve told me she could play the tune but she couldn’t read the music.",
+      "Eve told me that she could play the tune but she couldn’t read the music.",
+      "Eve told me she could play the tune but that she couldn’t read the music.",
+      "Eve told me that she could play the tune but that she couldn’t read the music."
+    ],
+    "issues": [
+      "两项技能的肯否定必须分开保留。省略第二个she在自然英文中成立，但题面明列but she，不列入限定variants。"
+    ]
+  },
+  {
+    "id": "review-b-n135-reported-future",
+    "answer": "Noel told me he would bring my notes the next day.",
+    "variants": [
+      "Noel told me that he would bring my notes the next day."
+    ],
+    "issues": [
+      "与independent-future共享would + 动作 + 所有权 + the next day，只改变人名/对象/参考日期。"
+    ]
+  },
+  {
+    "id": "diagnostic-n137-future-condition",
+    "answer": "If it rains tomorrow, we will eat lunch indoors.",
+    "variants": [
+      "We will eat lunch indoors if it rains tomorrow."
+    ],
+    "issues": [
+      "条件未实现，用rains；不使用表示意愿等其他if用法的will rain。"
+    ]
+  },
+  {
+    "id": "diagnostic-n137-condition-negative",
+    "answer": "If it rains tomorrow, we will not go to the lake.",
+    "variants": [
+      "We will not go to the lake if it rains tomorrow.",
+      "If it rains tomorrow, we won’t go to the lake.",
+      "We won’t go to the lake if it rains tomorrow."
+    ],
+    "issues": [
+      "否定仅在结果；cannot将明确不去改成能力否定。"
+    ]
+  },
+  {
+    "id": "diagnostic-n137-conditional-can",
+    "answer": "She can enter the lab only if she gets a pass.",
+    "variants": [
+      "Only if she gets a pass can she enter the lab."
+    ],
+    "issues": [
+      "唯一普通if答案不充分：只有拿到通行证才有许可严格给必要条件，而If she gets a pass, she can enter the lab表达充分条件。主答案保留情境逻辑；only if前置变体有倒装。二者均保留明示if、人物、词汇、现在时和can，并不承诺进入。若课程只收普通if…can，应补明拿到通行证即可获准；必要/充分两方向不可互作同义变体。"
+    ]
+  },
+  {
+    "id": "guided-n137-future-condition",
+    "answer": "If the bus is late, the driver will call.",
+    "variants": [
+      "The driver will call if the bus is late."
+    ],
+    "issues": [
+      "与诊断future主要替换主体/状态及结果；be晚到与rain的形式不同，但条件逻辑不变。"
+    ]
+  },
+  {
+    "id": "guided-n137-condition-negative",
+    "answer": "If we do not finish early, we will not join the party.",
+    "variants": [
+      "We will not join the party if we do not finish early.",
+      "If we don’t finish early, we won’t join the party.",
+      "We won’t join the party if we don’t finish early."
+    ],
+    "issues": [
+      "两个否定均须保留；不能据此推出提前结束就一定参加。"
+    ]
+  },
+  {
+    "id": "guided-n137-conditional-can",
+    "answer": "They can take photos only if the weather is clear.",
+    "variants": [
+      "Only if the weather is clear can they take photos."
+    ],
+    "issues": [
+      "唯一普通if答案不充分：“只有…才”严格只是必要条件，If the weather is clear, they can take photos所需的充分条件可行性未明示。主答案保留必要条件，前置only if变体须倒装；若目标为普通if…can，建议说明转晴即可拍照。be clear表示天气已晴，可能弱化中文“转晴”的变化义，但符合明示词汇。"
+    ]
+  },
+  {
+    "id": "independent-n137-future-condition",
+    "answer": "If we receive the email, we will book a room.",
+    "variants": [
+      "We will book a room if we receive the email."
+    ],
+    "issues": [
+      "仅报告收到邮件分支；不添加继续等待；条件未发生。"
+    ]
+  },
+  {
+    "id": "independent-n137-condition-negative",
+    "answer": "If the power does not return, the exhibition will not open.",
+    "variants": [
+      "The exhibition will not open if the power does not return.",
+      "If the power doesn’t return, the exhibition won’t open.",
+      "The exhibition won’t open if the power doesn’t return."
+    ],
+    "issues": [
+      "不能反推供电恢复则一定开放；only if/unless改写涉及必要/充分方向，不作为本题明示if词汇的变体。"
+    ]
+  },
+  {
+    "id": "independent-n137-conditional-can",
+    "answer": "If he saves enough money, he can buy a computer.",
+    "variants": [
+      "He can buy a computer if he saves enough money."
+    ],
+    "issues": [
+      "can表示可行性；姐姐买手机不属于本句，will buy擅自作购买承诺。"
+    ]
+  },
+  {
+    "id": "repair-n137-future-condition",
+    "answer": "If ten people join, the teacher will start the class.",
+    "variants": [
+      "The teacher will start the class if ten people join."
+    ],
+    "issues": [
+      "ten people为复数，join不加s；与诊断future条件规则相同，人数/人物变化不能单独证明逻辑迁移。"
+    ]
+  },
+  {
+    "id": "repair-n137-condition-negative",
+    "answer": "If Nia does not bring the key, she will not open the door.",
+    "variants": [
+      "She will not open the door if Nia does not bring the key.",
+      "If Nia doesn’t bring the key, she won’t open the door.",
+      "She won’t open the door if Nia doesn’t bring the key."
+    ],
+    "issues": [
+      "中文“不能”原可表达能力不足，但题面明确限定未来不做；will not符合指定范围，cannot虽自然但不列入variants。"
+    ]
+  },
+  {
+    "id": "repair-n137-conditional-can",
+    "answer": "If they finish the task early, they can rest.",
+    "variants": [
+      "They can rest if they finish the task early."
+    ],
+    "issues": [
+      "资格不等于确定休息；与既有条件can句只改变主体与条件内容。"
+    ]
+  },
+  {
+    "id": "review-a-n137-future-condition",
+    "answer": "If the rain stops, she will continue the match.",
+    "variants": [
+      "She will continue the match if the rain stops."
+    ],
+    "issues": [
+      "只写雨停分支，不添加下雨等待，不把雨尚未停写成has stopped。"
+    ]
+  },
+  {
+    "id": "review-a-n137-condition-negative",
+    "answer": "If the new battery does not work, we will not use the old radio.",
+    "variants": [
+      "We will not use the old radio if the new battery does not work.",
+      "If the new battery doesn’t work, we won’t use the old radio.",
+      "We won’t use the old radio if the new battery doesn’t work."
+    ],
+    "issues": [
+      "规则有些不常见但语言逻辑明确；不能凭常识把结果改成will use。"
+    ]
+  },
+  {
+    "id": "review-a-n137-conditional-can",
+    "answer": "She can use the instrument only if she completes the training.",
+    "variants": [
+      "Only if she completes the training can she use the instrument."
+    ],
+    "issues": [
+      "唯一普通if答案不充分：“完成后才有许可”不严格保证完成即获许可，普通If she completes the training, she can use the instrument会额外给充分性。主答案及only if倒装变体保留必要条件；建议补明培训完成即可获准。she由题面指定，不另猜students的性别。"
+    ]
+  },
+  {
+    "id": "review-b-n137-future-condition",
+    "answer": "If the alarm rings, the guard will check the room.",
+    "variants": [
+      "The guard will check the room if the alarm rings."
+    ],
+    "issues": [
+      "应选alarm/ring；lamp/flash对应呼叫管理员。相较纯人名/对象替换，需真正选择触发条件。"
+    ]
+  },
+  {
+    "id": "review-b-n137-condition-negative",
+    "answer": "If he does not save the file, he will not send the report.",
+    "variants": [
+      "He will not send the report if he does not save the file.",
+      "If he doesn’t save the file, he won’t send the report.",
+      "He won’t send the report if he doesn’t save the file."
+    ],
+    "issues": [
+      "没有保存⇒不会发送；不能推出保存⇒一定发送。与guided-negative同为否定条件和否定结果，词汇替换未改变逻辑结构。"
+    ]
+  },
+  {
+    "id": "review-b-n137-conditional-can",
+    "answer": "If the bridge reopens, we can reach the village.",
+    "variants": [
+      "We can reach the village if the bridge reopens."
+    ],
+    "issues": [
+      "可达村庄不能改成will reach；港口的确定行程为干扰，不能混入。"
+    ]
+  }
+]

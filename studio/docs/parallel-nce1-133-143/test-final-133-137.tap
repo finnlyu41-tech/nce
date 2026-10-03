@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: nce1-133 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 1 - nce1-133 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 109.054375
+  type: 'test'
+  ...
+# Subtest: nce1-133 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 2 - nce1-133 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 18.255791
+  type: 'test'
+  ...
+# Subtest: nce1-135 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 3 - nce1-135 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 110.067417
+  type: 'test'
+  ...
+# Subtest: nce1-135 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 4 - nce1-135 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 12.168875
+  type: 'test'
+  ...
+# Subtest: nce1-137 complete banks, meaningful variants and near-miss boundaries through production factory
+ok 5 - nce1-137 complete banks, meaningful variants and near-miss boundaries through production factory
+  ---
+  duration_ms: 89.932666
+  type: 'test'
+  ...
+# Subtest: nce1-137 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+ok 6 - nce1-137 assistance, preserved first answer, real correction guard, replay and finite delayed pools
+  ---
+  duration_ms: 10.832792
+  type: 'test'
+  ...
+# Subtest: nce1-133 rejects nce1-135 raw without overwriting
+ok 7 - nce1-133 rejects nce1-135 raw without overwriting
+  ---
+  duration_ms: 0.400375
+  type: 'test'
+  ...
+# Subtest: nce1-133 rejects nce1-137 raw without overwriting
+ok 8 - nce1-133 rejects nce1-137 raw without overwriting
+  ---
+  duration_ms: 0.116375
+  type: 'test'
+  ...
+# Subtest: nce1-135 rejects nce1-133 raw without overwriting
+ok 9 - nce1-135 rejects nce1-133 raw without overwriting
+  ---
+  duration_ms: 0.694625
+  type: 'test'
+  ...
+# Subtest: nce1-135 rejects nce1-137 raw without overwriting
+ok 10 - nce1-135 rejects nce1-137 raw without overwriting
+  ---
+  duration_ms: 0.726709
+  type: 'test'
+  ...
+# Subtest: nce1-137 rejects nce1-133 raw without overwriting
+ok 11 - nce1-137 rejects nce1-133 raw without overwriting
+  ---
+  duration_ms: 0.175042
+  type: 'test'
+  ...
+# Subtest: nce1-137 rejects nce1-135 raw without overwriting
+ok 12 - nce1-137 rejects nce1-135 raw without overwriting
+  ---
+  duration_ms: 0.06525
+  type: 'test'
+  ...
+# Subtest: external independent blind 133-137 covers eighteen tasks per course and every reasonable variant
+ok 13 - external independent blind 133-137 covers eighteen tasks per course and every reasonable variant
+  ---
+  duration_ms: 1.850167
+  type: 'test'
+  ...
+# Subtest: blind stems 133-137 remain identical to reviewed final tasks
+ok 14 - blind stems 133-137 remain identical to reviewed final tasks
+  ---
+  duration_ms: 2.696084
+  type: 'test'
+  ...
+# Subtest: shared production implementations and source guard are byte identical to exact frozen baseline
+ok 15 - shared production implementations and source guard are byte identical to exact frozen baseline
+  ---
+  duration_ms: 225.51375
+  type: 'test'
+  ...
+# Subtest: all tracked diff and untracked delivery files stay in this content/test/docs ownership
+ok 16 - all tracked diff and untracked delivery files stay in this content/test/docs ownership
+  ---
+  duration_ms: 43.584833
+  type: 'test'
+  ...
+# Subtest: new task contexts are distinct, target banks include real first/repair/delayed material
+ok 17 - new task contexts are distinct, target banks include real first/repair/delayed material
+  ---
+  duration_ms: 18.019709
+  type: 'test'
+  ...
+# Subtest: unwired successors keep the real current route; QA registration is not production integration
+ok 18 - unwired successors keep the real current route; QA registration is not production integration
+  ---
+  duration_ms: 180.173667
+  type: 'test'
+  ...
+# Subtest: nce1-133 real transcript LRC, source panel, comic and paired exercise pages
+ok 19 - nce1-133 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 8.854
+  type: 'test'
+  ...
+# Subtest: nce1-135 real transcript LRC, source panel, comic and paired exercise pages
+ok 20 - nce1-135 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 4.002666
+  type: 'test'
+  ...
+# Subtest: nce1-137 real transcript LRC, source panel, comic and paired exercise pages
+ok 21 - nce1-137 real transcript LRC, source panel, comic and paired exercise pages
+  ---
+  duration_ms: 3.595458
+  type: 'test'
+  ...
+# Subtest: every cross-course SourcePanel pair rejects
+ok 22 - every cross-course SourcePanel pair rejects
+  ---
+  duration_ms: 0.9395
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 597.92325

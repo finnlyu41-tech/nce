@@ -1,0 +1,102 @@
+{
+  "baseline": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "productionRegistrationChanged": false,
+  "ownerWiringRequired": true,
+  "baselineRegisteredCourseCount": 42,
+  "existingBoundaryProved": {
+    "nce1-83": "nce1-85"
+  },
+  "currentMissingBoundary": {
+    "nce1-131": "retains nce1-131"
+  },
+  "firstBatch": {
+    "courseIds": [
+      "nce1-133",
+      "nce1-135",
+      "nce1-137"
+    ],
+    "imports": [
+      "./parallel-nce1-133-143/lesson-nce1-133.mjs",
+      "./parallel-nce1-133-143/lesson-nce1-135.mjs",
+      "./parallel-nce1-133-143/lesson-nce1-137.mjs"
+    ],
+    "successors": {
+      "nce1-131": "nce1-133",
+      "nce1-133": "nce1-135",
+      "nce1-135": "nce1-137",
+      "nce1-137": "nce1-139"
+    },
+    "status": "ready-frozen-local-candidate",
+    "validation": {
+      "tasks": 54,
+      "blindTasks": 54,
+      "blindVariants": 108,
+      "reasonedNearMisses": 216,
+      "factorySourceScopeTests": 22,
+      "sourceEvidenceTests": 5,
+      "realUiCourses": 3,
+      "runtimeErrors": 0
+    }
+  },
+  "secondBatch": {
+    "courseIds": [
+      "nce1-139",
+      "nce1-141",
+      "nce1-143"
+    ],
+    "imports": [
+      "./parallel-nce1-133-143/lesson-nce1-139.mjs",
+      "./parallel-nce1-133-143/lesson-nce1-141.mjs",
+      "./parallel-nce1-133-143/lesson-nce1-143.mjs"
+    ],
+    "successors": {
+      "nce1-139": "nce1-141",
+      "nce1-141": "nce1-143"
+    },
+    "status": "authoring"
+  },
+  "terminalBoundary": {
+    "lastUnit": "nce1-143",
+    "lastLessons": [
+      143,
+      144
+    ],
+    "noNce1Lesson145": true,
+    "currentCourseSelector": "Unwired143 retains real143 node; no crossbook mapping added.",
+    "existingMapRoute": {
+      "parent": "chapter-6",
+      "nextChapter": "chapter-7",
+      "nextChapterRequires": [
+        "chapter-6"
+      ],
+      "firstBridgeUnit": "nce2-1"
+    },
+    "completionGate": "Existing chapter-6 project and stable member checks in map/model; author content/own placeholder provides no gate completion.",
+    "ownerAction": "After143 use latest existing product continuation/conditions route. Do not map directly toNCE2 or invent145; map unlocks and chapter evidence remain existing host decisions."
+  },
+  "unionExtensions": [
+    "CourseId",
+    "showSource.lesson",
+    "showSource.comicKey"
+  ],
+  "preserve": [
+    "latest predecessor registry integrations",
+    "single production factory andmodule.matches",
+    "SourcePanel internalLRC guard",
+    "video/reader source kinds",
+    "serialized guarded writer",
+    "Today/map/storage/FSRS",
+    "chapter and assessment gates"
+  ],
+  "unverified": [
+    "production registry/successor wiring",
+    "new deployed content",
+    "actual audibility",
+    "natural24h/7d",
+    "physical phone/keyboard",
+    "human own review",
+    "pronunciation",
+    "all four skills",
+    "learning gain"
+  ]
+}

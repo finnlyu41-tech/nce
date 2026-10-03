@@ -1,0 +1,20 @@
+{
+  "applicationBase": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "refChecks": {
+    "codex/english-studio-online-20260926": "7b7c1283d12f0c6d784478cda8353080598f6980",
+    "codex/ielts-map-20260930": "7b7c1283d12f0c6d784478cda8353080598f6980"
+  },
+  "sourceSnapshot": "/Users/finnlyu/Documents/Codex/2026-10-03/task-14/nce1-109-119/studio/dist-online",
+  "note": "Read-only immutable original resource subdirectory symlinks. Current7b application/factory/UI, no old app build, no deployment inferred. Prior frozen artifacts preserved.",
+  "sha256": {
+    "materials/manifest.json": "a9661a1a000654ffebb1eac3612ea6503b538d91332cde3c5cba159f43fa3730",
+    "language/index.json": "e7629188211afab2798ed393b93f604b23342434cc63648bff783943f23997d1",
+    "grammar/index.json": "743c6993a7c624604aa8b7a78982f84f4344754485e0b5e4bec08444419ec6c2",
+    "language/NCE1/133.json": "4b95e74f0f6814dcbf99ee0268abaabb6428bc80ff0b0dc53efdbd9323a99855",
+    "language/NCE1/135.json": "97781f274f9db8c7fdaf71a2ba24583635ae7563970fec23fc8062eaab41cddc",
+    "language/NCE1/137.json": "11d09913ed3fecc68364ec92a7f00c00b12027217a8d86323a11232a7d5127fc",
+    "language/NCE1/139.json": "f1e84ad2a461bc39dba710cb24c8f6c4b6e29947f757d8ca4aa6cef3f73fc785",
+    "language/NCE1/141.json": "f38bee1084b82a4ad9bb08a16d719bc62e0dfcf9f5c69e64b52b8a98a41def30",
+    "language/NCE1/143.json": "dd5bc5b9fbf57c7d740b31aa87010f419669080f0c8bbe16e38626bc664817ac"
+  }
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "courseId": "nce1-133",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。 间接引语题指定过去记录视角时采用本课倒移，不把仍然成立的现时表达判为普遍错误。",
+    "questions": [
+      {
+        "id": "diagnostic-n133-report-frame",
+        "context": "昨日护士Nora只对我说“病房很安静”；我现在回顾昨日，不断言此刻仍安静。",
+        "prompt": "用Nora、tell（过去式）、me、the ward、be quiet组成一条过去记录，宾语从句用过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n133-report-time",
+        "context": "昨日午饭前，女技师Ada说“I have checked the alarm”；检查在发言前已完成。你现在只回顾昨日。",
+        "prompt": "以Ada said开头，用she、check the alarm，按过去记录视角转述已经完成的检查。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n133-report-perspective",
+        "context": "昨晚Owen（男）对我（女）说“You are using my seat”；我当时在用Owen的座位，现在回顾此事。",
+        "prompt": "以Owen told me开头，用I、use、his seat，宾语从句用过去进行时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n133-report-frame",
+        "context": "昨日雨停后，司机Leo说“The road is dry”；现在只回顾他当时的判断。",
+        "prompt": "用Leo said开头、the road、be dry，从句按本课过去记录视角写。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先看要求say还是tell；tell转述此处需接me/us等听话者。"
+      },
+      {
+        "id": "guided-n133-report-time",
+        "context": "昨日下午Iris（女）说“I am testing the radio”；现在测试已结束，只回顾当时正在发生的动作。",
+        "prompt": "以Iris said开头，用she、test the radio，按本课倒移写过去进行时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对当时状态、当时进行还是发言前已完成；按题目过去记录视角选时态。"
+      },
+      {
+        "id": "guided-n133-report-perspective",
+        "context": "昨日两位女编辑对我说“We do not want your photos”；we仅指编辑，your指我的照片。我现在回顾昨日。",
+        "prompt": "以They told me开头，用they、not want、my photos，从句用一般过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：画清说话者、原听话者与所有者，再检查每个分句的肯否定。"
+      },
+      {
+        "id": "independent-n133-report-frame",
+        "context": "档案有两条：昨日馆长Tara对我说“The gallery is closed”；今日另一人说咖啡馆关闭。你只报告Tara昨日的话，不推断现况。",
+        "prompt": "以Tara开头，用tell的过去式、me、the gallery、be closed；从句用过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n133-report-time",
+        "context": "午间记录有两条：女队长Mira说“I have not signed the form”；男助手说“I am copying it”。现在从过去视角只报告Mira发言前尚未完成签名。",
+        "prompt": "以Mira said开头，用she、not sign the form，并用过去完成时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n133-report-perspective",
+        "context": "昨日Ravi（男）对我说“My sister is waiting for you”；sister指Ravi的妹妹，you只指我；等待已结束。",
+        "prompt": "以Ravi told me开头，用his sister、wait for me，按过去视角转述当时正在等待。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n133-report-frame",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨日乐手Ben对我们说“The hall is empty”；现在只回顾当时的情况。",
+        "prompt": "以Ben开头，用tell的过去式、us、the hall、be empty，从句用过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n133-report-time",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨日女厨师Eve说“I feel sick”；今天已康复。回顾昨日原话，不描述今天。",
+        "prompt": "以Eve said开头，用she、feel sick，从句按本课倒移用一般过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n133-report-perspective",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨日女演员Lia对我说“I am tired and I do not want your help”；两项都指Lia，your只指我的帮助。现在只回顾当时。",
+        "prompt": "以Lia told me开头，用she、be tired、and、she、not want、my help，从句都用过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n133-report-frame",
+        "context": "复盘两份记录：昨日女向导Zoe对我们说“The bridge is unsafe”；另一人称隧道安全。只报告Zoe的原话，不描述现况。",
+        "prompt": "以Zoe开头，用tell过去式、us、the bridge、be unsafe，从句用过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n133-report-time",
+        "context": "昨日女保管员Nia说“I have lost the key”；之后才找到钥匙。今日你只回顾她昨日发言前已经发生的丢失。",
+        "prompt": "以Nia said开头，用she、lose the key，采用过去完成时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n133-report-perspective",
+        "context": "昨日两位女画家对我说“We have finished our work, but you have not finished yours”；we只指两位画家，you只指我。现在回顾昨日。",
+        "prompt": "以They told me开头，用they、finish their work、but I、not finish mine，两项都用过去完成时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n133-report-frame",
+        "context": "昨日女主管Uma说“The lift is broken”；修复记录是今早。你只写她当时的话。",
+        "prompt": "以Uma said开头，用the lift、be broken，从句用过去时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n133-report-time",
+        "context": "昨日男志愿者Eli说“I am carrying the box”；他后来放下箱子。今日仅回顾说话当时的动作。",
+        "prompt": "以Eli said开头，用he、carry the box，采用过去进行时。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n133-report-perspective",
+        "context": "昨日男教练Max对我们说“You are improving and I am proud of you”；you指我们整个队，I只指Max。现在回顾昨日，不报告现况。",
+        "prompt": "以Max told us开头，用we、be improving、and he、be proud of us，两项按过去视角写。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-135",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。 间接引语题指定过去记录视角时采用本课倒移，不把仍然成立的现时表达判为普遍错误。",
+    "questions": [
+      {
+        "id": "diagnostic-n135-reported-possibility",
+        "context": "昨日女船长Nora说“I may cancel the trip”；她只是提出可能性，还没有决定。现在回顾昨日的发言。",
+        "prompt": "以Nora said开头，用she、cancel the trip，按本课过去记录把may倒移。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n135-reported-ability",
+        "context": "昨日男技师Leo对我说“I cannot fix the lock”；指当时缺少修理技能。今日仅记录昨日的话。",
+        "prompt": "以Leo told me开头，用he、fix the lock，按本课倒移cannot。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n135-reported-future",
+        "context": "昨日女经理Ada说“I will have to close the shop”；法规使她必须关店，不是个人爱好。今日只回顾昨日发言。",
+        "prompt": "以Ada said开头，用she、have to close the shop，按本课过去记录倒移will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n135-reported-possibility",
+        "context": "昨日男作家Ben说“I may not publish the story”；意思是也许不发表，不是禁止发表。回顾昨日，不声明他的最终决定。",
+        "prompt": "以Ben said开头，用he、not publish the story，按本课倒移may并保留否定范围。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留可能性及其肯否定，不改成确定计划或能力。"
+      },
+      {
+        "id": "guided-n135-reported-ability",
+        "context": "昨日女向导Mia对我说“I can read the map”；指她当时具备能力。现在只回顾昨日。",
+        "prompt": "以Mia told me开头，用she、read the map，按本课过去记录倒移can。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：先确认是能力；could/could not后用动词原形，逐项核对能力主体。"
+      },
+      {
+        "id": "guided-n135-reported-future",
+        "context": "昨日男导演Owen说“My assistant will not let me use the camera”；仅助手不允许Owen用。现在回顾该发言。",
+        "prompt": "以Owen said开头，用his assistant、not let him use the camera，按本课倒移will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：保留will原话的行动、必要性或否定；按具体日期和原人物调整参考词。"
+      },
+      {
+        "id": "independent-n135-reported-possibility",
+        "context": "昨日记录：女医生Ria说“I may return”;男司机说“I will return”。两人都说自己的返回。今日只报道Ria不确定的说法。",
+        "prompt": "以Ria said开头，用she、return，按本课过去记录倒移may。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n135-reported-ability",
+        "context": "昨日两项证据：男翻译Eli对我说“I can explain the warning”；旁人说Eli明日会解释。今日只报告他的能力声明。",
+        "prompt": "以Eli told me开头，用he、explain the warning，按本课倒移can。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n135-reported-future",
+        "context": "星期一女工程师Zoe对我们说“I will test your machine tomorrow”；your只指我们的机器。星期三回顾星期一的发言；明日是星期二。",
+        "prompt": "以Zoe told us开头，用she、test our machine、the next day，按本课过去记录倒移will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n135-reported-possibility",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨日女队员Nia说“I may join the race”；只是可能参赛，尚未承诺。现在回顾昨日。",
+        "prompt": "以Nia said开头，用she、join the race，按本课倒移may。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n135-reported-ability",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨日两位女学生对我说“We cannot understand the instructions”；只是当时不理解，不表示拒绝听。现在回顾昨日。",
+        "prompt": "以They told me开头，用they、not understand the instructions，按本课倒移cannot。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n135-reported-future",
+        "context": "保留上一轮首答和订正。下面是另一情境：昨日男导演Ravi说“I will not sell my camera”；是他明确的未来安排，my只指Ravi。现在回顾昨日。",
+        "prompt": "以Ravi said开头，用he、not sell his camera，按本课倒移will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n135-reported-possibility",
+        "context": "旧档案两条：女研究员Uma说“The result may be wrong”；另一人说结果肯定正确。现在只报道Uma当时提出的风险，不断言现况。",
+        "prompt": "以Uma said开头，用the result、be wrong，按本课倒移may。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n135-reported-ability",
+        "context": "昨日男船长Max对我说“I cannot recognize the island”；指当时辨认能力不足，不是不会到岛上。现在回顾昨日。",
+        "prompt": "以Max told me开头，用he、not recognize the island，按本课倒移cannot。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n135-reported-future",
+        "context": "昨日女主任Tara说“My team will have to wait, but I will not wait”；team仅指同事，不包括Tara。回顾昨日两项各自的将来安排。",
+        "prompt": "以Tara said开头，用her team、have to wait、but she、not wait，两项will均按本课倒移。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n135-reported-possibility",
+        "context": "昨日男保管员Ash说“I may lend the map, but I may not lend the painting”；他对地图可能借出，对画作可能不借出，两项都未决定，均不是禁止。现在回顾昨日两项原话。",
+        "prompt": "以Ash said开头，用he、lend the map、but he、not lend the painting，两项may均按本课过去记录倒移。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n135-reported-ability",
+        "context": "昨日女乐手Eve对我说“I can play the tune, but I cannot read the music”；指两项技能，当前回顾昨日。",
+        "prompt": "以Eve told me开头，用she、play the tune、but she、not read the music，两项can均按本课倒移。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n135-reported-future",
+        "context": "周二男助理Noel对我说“I will bring your notes tomorrow”；your指我的笔记。周五只回顾周二的安排，tomorrow当时指周三。",
+        "prompt": "以Noel told me开头，用he、bring my notes、the next day，按本课倒移will。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  },
+  {
+    "courseId": "nce1-137",
+    "scope": "题目规定了情境、主语和词汇；本组匹配这些限定输出。大小写、空白、直弯缩写撇号可变化，陈述句末句号可省略，问句须保留一个问号。限定题未匹配不代表其他自然英文错误。自由表达由伙伴核对。 条件题指定可实现的未来；范围不覆盖所有if用法。",
+    "questions": [
+      {
+        "id": "diagnostic-n137-future-condition",
+        "context": "明天可能下雨，还未确定；若下雨，我们计划在室内吃午饭。",
+        "prompt": "用if、it、rain tomorrow、we、will eat lunch indoors写一句可实现的未来条件句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n137-condition-negative",
+        "context": "明天是否下雨未知。下雨时我们明确不会去湖边，不是无能力去。",
+        "prompt": "用if、it、rain tomorrow、we、will not go to the lake写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "diagnostic-n137-conditional-can",
+        "context": "她只有拿到正式通行证才具备进入实验室的许可；尚不确定会不会去。",
+        "prompt": "用if、she、get a pass、she、can enter the lab写一句有条件许可；不要作会去的承诺。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "guided-n137-future-condition",
+        "context": "车还可能准时到；若它迟到，司机会打电话。我们把迟到作为条件，而非已经发生。",
+        "prompt": "用if、the bus、be late、the driver、will call写一句未来条件句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：核对未知未来条件与对应结果；条件按本题现在时，will后用原形。"
+      },
+      {
+        "id": "guided-n137-condition-negative",
+        "context": "晚班可能结束得早，也可能不早；若我们没有提前结束，我们将不参加聚会。",
+        "prompt": "用if、we、not finish early、we、will not join the party写一句，保留条件和结果两个否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：条件do/does not与结果will not分别核对；不从一个分支推断另一分支。"
+      },
+      {
+        "id": "guided-n137-conditional-can",
+        "context": "游客只有天气转晴才有条件拍山顶照片，但并未承诺一定拍。",
+        "prompt": "用if、the weather、be clear、they、can take photos写一句条件成立后的可行性。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。 提示：读情境是可行/许可还是将会做；can后原形，并保留具体条件。"
+      },
+      {
+        "id": "independent-n137-future-condition",
+        "context": "计划表两条：收到确认邮件→我们会订房；未收到→继续等待。目前邮件未知。只表达第一条。",
+        "prompt": "用if、we、receive the email、we、will book a room写一句；不要把邮件当成已收到。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n137-condition-negative",
+        "context": "新展览的规则：如果供电不恢复，展览不会开放；恢复后是否开还要另议。当前供电状态未知。只表达第一条。",
+        "prompt": "用if、the power、not return、the exhibition、will not open写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "independent-n137-conditional-can",
+        "context": "两条证据：他攒够钱后就有能力买电脑，但还没决定购买；姐姐明确会买手机。只说他的可行性。",
+        "prompt": "用if、he、save enough money、he、can buy a computer写一句；不作购买承诺。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n137-future-condition",
+        "context": "保留上一轮首答和订正。下面是另一情境：明天报名人数可能达到十人；如果达到十人，老师会开始课程。现在未确定人数。",
+        "prompt": "用if、ten people、join、the teacher、will start the class写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n137-condition-negative",
+        "context": "保留上一轮首答和订正。下面是另一情境：若女队长Nia没有带钥匙，她将不能按计划开门；本题把结果写作未来不做，不测试能力。",
+        "prompt": "用if、Nia、not bring the key、she、will not open the door写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "repair-n137-conditional-can",
+        "context": "保留上一轮首答和订正。下面是另一情境：两位队员如果提前完成任务，就有资格休息；他们可能选择继续训练。",
+        "prompt": "用if、they、finish the task early、they、can rest写一句条件资格，不写确定计划。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n137-future-condition",
+        "context": "排程记录：雨停→她会继续比赛；下雨→她会等。雨尚未停，只表达停止下雨这个未来条件对应的安排。",
+        "prompt": "用if、the rain、stop、she、will continue the match写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n137-condition-negative",
+        "context": "明天的备用方案：如果新电池不能正常工作，我们不会使用旧收音机。当前还未测试。",
+        "prompt": "用if、the new battery、not work、we、will not use the old radio写一句；保留两个否定。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-a-n137-conditional-can",
+        "context": "规则说明：学生完成安全培训后才有操作仪器的许可；是否实际操作仍未决定。",
+        "prompt": "用if、she、complete the training、she、can use the instrument写一句有条件许可。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n137-future-condition",
+        "context": "安保表有两项不同规则：警报响→保安检查房间；指示灯闪→保安呼叫管理员。目前两个信号均未发生，也未知是否会发生。只报告会触发检查房间的规则。",
+        "prompt": "从the alarm/ring与the lamp/flash这两个条件中选对一项，用if、the guard、will、check the room写一条普通未来事件条件规则。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n137-condition-negative",
+        "context": "备份计划仅说明：如果他没有保存文件，他就不会发送报告；文件目前是否保存未知。",
+        "prompt": "用if、he、not save the file、he、will not send the report写一句。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      },
+      {
+        "id": "review-b-n137-conditional-can",
+        "context": "地图和日程不同：桥重新开放会使我们有条件到达村庄，但我们尚未决定去。另一日程已确定会去港口。只写村庄的可行性。",
+        "prompt": "用if、the bridge、reopen、we、can reach the village写一句；不作必去承诺。 只写题目指定的句子或补入部分，不添加其他信息。可省略句末标点或用一个英文句号。"
+      }
+    ]
+  }
+]
