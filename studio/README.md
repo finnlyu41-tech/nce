@@ -1,6 +1,12 @@
 # 句句有进步 · English Studio
 
-## Current release v47 — NCE1 72 finite groups and the main learning entry
+## Current release v48 — Today can defer the optional diagnosis
+
+Runtime `03427c50a26499a3661ab5143dc50c5e94cf13b8`, [fixed deployment](https://f1cc4cfd.finn-english-studio.pages.dev). Optional diagnosis is clearly optional and deferrable. Deferring the complete queue returns directly to the current course; saved drafts and paused diagnosis choices persist, while reentry restores real recommendation priority.50 related checks and10 local/10 production Chrome groups pass with0 Runtime exceptions; due-review priority selectors are unchanged. NCE1/mini coverage remains the finite V47 scope.
+
+[Scope and verification](docs/today-defer-v48.md).
+
+## Previously published v47 — NCE1 72 finite groups and the main learning entry
 
 Runtime `d717bad909d889fd305d667bd1d8530883aaf23a`, [fixed deployment](https://4b0b3e3c.finn-english-studio.pages.dev), [production learning home](https://finn-english-studio.pages.dev/map/). NCE1 lessons1–144 have72 paired groups/1,296 finite closed tasks; mini content covers partial targets in lessons1–36. Warmup exits directly to formal1–2; alphabet is optional. Current drafts, failed-save retry, separate corrections and the selected continuation passed7 production Chrome groups with0 Runtime exceptions. Both origins passed60 audio hashes and60 HEAD checks each. This does not complete all61 requirements, four skills or real learner validation.
 
