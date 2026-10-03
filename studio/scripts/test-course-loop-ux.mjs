@@ -5,7 +5,7 @@ const root=new URL('../',import.meta.url),pnpm=new URL('node_modules/.pnpm/',roo
 const versions=(await readdir(pnpm)).filter(n=>/^esbuild@\d+\.\d+\.\d+$/.test(n)).sort((a,b)=>b.localeCompare(a,undefined,{numeric:true}));
 const {build}=await import(new URL(versions[0]+'/node_modules/esbuild/lib/main.js',pnpm));
 const output=new URL('work/course-loop-ux/model.mjs',root);await mkdir(new URL('.',output),{recursive:true});
-await build({stdin:{contents:`export * from './app/course-loop-summary';export * from './app/course-loop-summary-ui';export * from './app/course-loop-next';export * from './app/course-loop-progress';export {initial} from './app/model';export {emptyProgress,unlockNode,startNode,achieved} from './map/model';export {todayPractice} from './app/today-practice';export {parseLearningRoute} from './map/navigation';export {questionsFor} from './course-loop/lesson-nce1-001.mjs';export {nodeById} from './map/content';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';`,resolveDir:fileURLToPath(root),loader:'tsx'},bundle:true,platform:'node',format:'esm',target:'node22',loader:{'.css':'empty'},external:['react','react-dom/server','react/jsx-runtime'],outfile:fileURLToPath(output),logLevel:'silent'});
+await build({stdin:{contents:`export * from './app/course-loop-summary';export * from './app/course-loop-summary-ui';export * from './app/course-loop-learning-ui';export * from './app/course-loop-next';export * from './app/course-loop-progress';export {initial} from './app/model';export {emptyProgress,unlockNode,startNode,achieved} from './map/model';export {todayPractice} from './app/today-practice';export {parseLearningRoute} from './map/navigation';export {questionsFor} from './course-loop/lesson-nce1-001.mjs';export {nodeById} from './map/content';export {createElement} from 'react';export {renderToStaticMarkup} from 'react-dom/server';`,resolveDir:fileURLToPath(root),loader:'tsx'},bundle:true,platform:'node',format:'esm',target:'node22',loader:{'.css':'empty'},external:['react','react-dom/server','react/jsx-runtime'],outfile:fileURLToPath(output),logLevel:'silent'});
 const m=await import(output),now=Date.now();let tick=now-10000,s=m.loopModel.initialState(tick);
 const state=()=>({...structuredClone(m.initial),drafts:{[m.courseLoopKey]:JSON.stringify(s)}}),map=m.emptyProgress();
 const send=action=>{const result=m.loopModel.transition(s,action,++tick);assert(result.ok,result.message);s=result.state;return result.view};
@@ -32,7 +32,17 @@ const started=m.startNode(entered,destination.node.id,now);assert(!started.recor
 assert.equal(m.parseLearningRoute('#/learn/nce1-3?access=1').manualAccess,true);
 for(const route of ['#/learn/unknown?access=1','#/map/nce1-3?access=1','#/courses?access=1','#/learn/nce1-3?access=1&review=1','#/learn/nce1-3?access=1&speaking=practice'])assert.equal(m.parseLearningRoute(route).manualAccess,undefined,route);
 const heading=m.renderToStaticMarkup(m.createElement(m.CourseLoopHeadingSummary,{state:full,map})),records=m.renderToStaticMarkup(m.createElement(m.CourseLoopRecords,{state:full,map}));
-assert(heading.includes('本轮训练已完成 · 待复验'));assert(heading.includes('地图检验：尚未达标'));assert(records.includes('原始作答 12 次'));assert(records.includes('复验已记录 0 轮'));assert(records.includes('待人工核对'));
+assert.equal(heading,'','Normal course heading leaves progress and next action to the active lesson');
+assert(m.renderToStaticMarkup(m.createElement(m.CourseLoopHeadingSummary,{state:full,map,ready:false})).includes('正在读取课程进度'));
+assert(m.renderToStaticMarkup(m.createElement(m.CourseLoopHeadingSummary,{state:unknown,map})).includes('本课记录需要核对'));
+const attempt={id:m.questionsFor('independent')[0].id,stage:'independent',answer:'This your book?',correct:false,hinted:false,fresh:true,exposure:1,at:now};
+const wrong=m.renderToStaticMarkup(m.createElement(m.CourseAnswerFeedback,{attempt,view:{corrections:{}},courseId:'nce1-1'}));
+assert(wrong.includes('参考说法'));assert(wrong.includes('Is this your coat?'));assert(wrong.includes('问是不是'));
+const right=m.renderToStaticMarkup(m.createElement(m.CourseAnswerFeedback,{attempt:{...attempt,answer:'Is this your coat?',correct:true},view:{corrections:{}},courseId:'nce1-1'}));
+assert(right.includes('这题答对了'));assert(!right.includes('参考说法'));
+const helped=m.renderToStaticMarkup(m.createElement(m.CourseAnswerFeedback,{attempt:{...attempt,correct:true,hinted:true},view:{corrections:{}},courseId:'nce1-1'}));
+assert(helped.includes('借助提示完成'));assert(!helped.includes('这题答对了'));assert(helped.includes('参考说法'));
+assert(records.includes('原始作答 12 次'));assert(records.includes('复验已记录 0 轮'));assert(records.includes('待人工核对'));
 assert.equal(JSON.stringify({full,map}),frozen);
 const normalContinuation=m.courseContinuation(full,map,'nce1-1',now);
 assert.equal(normalContinuation.label,'继续后续课次');assert.equal(normalContinuation.href,destination.href);assert.equal(normalContinuation.currentRoute,false);

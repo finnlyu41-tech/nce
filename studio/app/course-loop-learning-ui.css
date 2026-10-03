@@ -1,0 +1,18 @@
+.course-loop .course-answer-feedback{padding:14px 0;border-bottom:1px solid #e1e6e2}
+.course-loop .course-answer-result{font-weight:650;color:#355f57;margin-top:0}
+.course-loop .course-answer-feedback .course-loop-original,.course-loop .course-answer-reference{display:grid;gap:4px;margin:10px 0}
+.course-loop .course-answer-feedback .course-loop-original>span:first-child,.course-loop .course-answer-reference>span:first-child{font-size:.82rem;font-weight:500;color:#5c6d66}
+.course-loop .course-answer-reference>span[lang=en]{font-weight:600}
+.course-loop .course-answer-feedback.matched{padding:12px 0}
+.course-loop .course-answer-feedback.matched .course-loop-original{display:flex;flex-wrap:wrap;gap:8px}
+.course-loop .course-answer-correction{padding:8px 12px;background:#eef4ec;border-radius:9px;margin:12px 0}
+.course-loop[data-phase=feedback] .course-loop-card article{margin-bottom:18px}
+.course-loop[data-phase=feedback] .course-loop-card label{margin-top:12px}
+.course-loop[data-phase=feedback] .course-loop-card textarea{min-height:80px}
+.course-loop button.course-loop-correction-save{background:#254e44;color:#fff;border-color:#254e44}
+.course-loop .course-answer-history{margin:14px 0}
+.course-loop .course-answer-history>div{background:white;border:1px solid #e1e6e2;border-radius:12px;padding:16px;margin-top:12px}
+.course-loop[data-phase=waiting] .course-loop-card>button.primary{display:block;width:100%;margin:18px 0}
+.course-loop .course-loop-submission-feedback{padding:10px 12px;background:#eef4ec;border-radius:9px}
+.course-loop[data-phase=feedback] .course-loop-card>button.primary{margin-top:8px}
+@media(max-width:480px){.course-loop .course-loop-card h2:first-child{margin-top:0}.course-loop[data-phase=feedback] .course-loop-card{padding:16px}}

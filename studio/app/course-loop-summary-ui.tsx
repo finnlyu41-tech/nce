@@ -8,10 +8,9 @@ import './course-loop.css';
 type Props={state:State;map?:Progress;ready?:boolean;error?:string;mapError?:string;courseId?:string};
 export function CourseLoopHeadingSummary({state,map,ready=true,error,mapError,courseId='nce1-1'}:Props){
  const summary=courseLoopSummary(state,mapError?undefined:map,Date.now(),courseId);
+ if(ready&&!error&&!mapError&&summary.status!=='blocked')return null;
  return <div className="course-loop-heading-summary" role="status">
-  <strong>{!ready?'正在读取本轮训练记录…':error?'本轮训练记录暂时未能读取':summary.status==='ready'?summary.label:summary.status==='blocked'?'本课记录需要核对':'本轮训练尚未开始'}</strong>
-  {ready&&!error&&summary.status==='ready'&&<span>{summary.currentHelp?'当前使用帮助':summary.helped?`${summary.helped} 次作答使用帮助，原答已保留`:'原答与帮助记录分别保留'}</span>}
-  <span>{summary.mapLabel}</span>
+  <strong>{!ready?'正在读取课程进度…':error?'课程进度暂时未能读取':summary.status==='blocked'?'本课记录需要核对':'路线进度暂时未能读取'}</strong>
  </div>;
 }
 export function CourseLoopRecords(props:Props){
