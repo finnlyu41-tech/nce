@@ -1,6 +1,15 @@
 # 句句有进步 · English Studio
 
-## Current release v51 — original GT option tables
+## Current release v52 — NCE2 singleton lessons1–6
+
+Runtime `f9b76d48bbf3e3dbe0d0733744ec77f67aab9794`, [fixed deployment](https://bc8d1e57.finn-english-studio.pages.dev).
+
+Six NCE2 singleton lessons add108 bounded tasks, yielding78 registered groups/1404 tasks. Actual production33 course groups,2 synthetic fresh-bank review groups and10 first-book/main/F6 groups pass. Six courses retain separate saved drafts, wrong originals/corrections and1→…→6→existing7. Original chapter gates remain; six missing comics are honestly shown.253 Node cases and full2037-file packages pass. Hearing, natural delay and human expression remain unverified.
+
+
+[Scope and verification](docs/nce2-first-six-v52.md).
+
+## Previously published v51 — original GT option tables
 
 Runtime `ff020e6b331b1b2f99823e301db70e9ae1c375ab`, [fixed deployment](https://c31241de.finn-english-studio.pages.dev).
 
