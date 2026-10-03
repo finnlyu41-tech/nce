@@ -1,4 +1,4 @@
-import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
+import {useEffect,useMemo,useState} from 'react';
 import type {LearnerPort} from '../adapter';
 import type {Attempt,ReadStage,Skill} from '../types';
 import {practiceListeningAudio} from './audio-assets';
@@ -15,13 +15,11 @@ const tasks:{skill:Skill;title:string;prompt:string;material?:string}[]=[
 ];
 function download(raw:string){const url=URL.createObjectURL(new Blob([raw],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download='stage-007-012-unconfirmed-workspace.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 function DraftEditor({port,bind,onConfirmed,initial,label,practiceSkill}:{initial:WorkspaceNote;label:string;practiceSkill?:Skill}&Common){
- const confirmedRef=useRef(onConfirmed);
- useEffect(()=>{confirmedRef.current=onConfirmed},[onConfirmed]);
- const publishConfirmed=useCallback((read:ReadStage)=>confirmedRef.current(read),[]);
  const initialJSON=JSON.stringify(initial),seed=useMemo(()=>JSON.parse(initialJSON) as WorkspaceNote,[initialJSON]);
  const [status,setStatus]=useState<WorkspaceStatus>({ready:false,busy:false,dirty:false,error:'',value:initial});
  const key=initial.slot+':'+(initial.attemptId||'');
- const controller=useMemo(()=>new WorkspaceController(port,seed,setStatus,publishConfirmed,practiceSkill),[port,seed,publishConfirmed,practiceSkill]);
+ const controller=useMemo(()=>new WorkspaceController(port,seed,setStatus,()=>{},practiceSkill),[port,seed,practiceSkill]);
+ useEffect(()=>{controller.setConfirmed(onConfirmed)},[controller,onConfirmed]);
  useEffect(()=>{void controller.load();bind(key,()=>controller.flush());const refresh=()=>void controller.refresh();for(const name of ['focus','pageshow','english-studio-progress-restored','english-studio-progress-saved'])window.addEventListener(name,refresh);return()=>{bind(key,null);controller.dispose();for(const name of ['focus','pageshow','english-studio-progress-restored','english-studio-progress-saved'])window.removeEventListener(name,refresh);};},[controller,key,bind]);
  useEffect(()=>{if(!status.dirty||status.busy||status.error)return;const timer=setTimeout(()=>void controller.flush(),450);return()=>clearTimeout(timer);},[controller,status.value,status.dirty,status.busy,status.error]);
  useEffect(()=>{const leave=(e:BeforeUnloadEvent)=>{if(status.dirty||status.busy||status.error){e.preventDefault();e.returnValue='';}};window.addEventListener('beforeunload',leave);return()=>window.removeEventListener('beforeunload',leave);},[status.dirty,status.busy,status.error]);

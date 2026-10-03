@@ -7,6 +7,7 @@ export type WorkspaceStatus={ready:boolean;busy:boolean;dirty:boolean;error:stri
 export class WorkspaceController{
  private value:WorkspaceNote;private baseline:WorkspaceNote|undefined;private revision=0;private saved=0;private pending:Promise<boolean>|undefined;private ready=false;private error='';private alive=true;private confirmedRaw:string|undefined;
  constructor(private port:LearnerPort,initial:WorkspaceNote,private listener:(s:WorkspaceStatus)=>void,private confirmed:(read:ReadStage)=>void,private practiceSkill:Skill=initial.slot==='correction'?'writing':initial.slot){this.value=structuredClone(initial);}
+ setConfirmed(callback:(read:ReadStage)=>void){this.confirmed=callback;}
  snapshot():WorkspaceStatus{return {ready:this.ready,busy:!!this.pending,dirty:this.revision!==this.saved,error:this.error,value:structuredClone(this.value)};}
  private publish(){if(this.alive)this.listener(this.snapshot());}
  async load(){const revision=this.revision;try{const read=await this.port.load();if(read.status==='blocked')throw Error(read.reason);const prior=workspaceDraft(read,this.value.slot,this.value.attemptId);if(!this.alive||revision!==this.revision||this.revision!==this.saved)return;if(prior)this.value=structuredClone(prior);this.baseline=prior&&structuredClone(prior);this.confirmedRaw=read.status==='ready'?JSON.stringify(read.record):undefined;this.ready=true;this.error='';}catch(e){this.error=e instanceof Error?e.message:String(e);}this.publish();}

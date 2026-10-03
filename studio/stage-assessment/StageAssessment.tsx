@@ -6,7 +6,7 @@ import {StageLearningWorkspace,StageCorrectionWorkspace} from './next-nce1-007-0
 import {StageListeningAudio} from './next-nce1-007-012/ListeningAudio';
 import {firstStageDefinition,type StageDefinition} from './protocol';
 import {createStageModel} from './model';
-import {skills,phases,labels,phaseLabels,targets,type Skill,type Phase,type Command,type Pack} from './types';
+import {skills,phases,labels,phaseLabels,type Skill,type Phase,type Command,type Pack} from './types';
 import type {readRecord} from './model';
 import './stage-assessment.css';
 type Read=ReturnType<typeof readRecord>;

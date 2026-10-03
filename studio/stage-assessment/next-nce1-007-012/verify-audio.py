@@ -11,7 +11,7 @@ def verify_audio(root,version,html,map_refs):
     for row in inventory:
         stem=Path(row['file']).stem;paths=[p for p in ledger if re.fullmatch(r'assets/'+re.escape(stem)+r'-[a-zA-Z0-9_-]{8,}\.wav',p)]
         assert len(paths)==1,'Unknown or ambiguous stage audio filename'
-        path=paths[0];raw=(root/path).read_bytes();original=(source/row['file']).read_bytes();digest=row['sha256'];map_path='map/'+path
+        path=paths[0];raw=(root/path).read_bytes();original=(source/'audio'/row['file']).read_bytes();digest=row['sha256'];map_path='map/'+path
         assert raw==original and hashlib.sha256(raw).hexdigest()==ledger[path]==digest,'Stage audio hash mismatch'
         assert '/'+path in html and Path(path).name in map_js,'Stage audio absent from learner bundle'
         assert version['map_assets'].get(map_path)==digest and (root/map_path).read_bytes()==raw,'Map stage audio mismatch'
