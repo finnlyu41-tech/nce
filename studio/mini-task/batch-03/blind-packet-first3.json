@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "inputScope": "No hints, references, accepted keys or model supplied. Text only; no human acoustic audit.",
+  "items": [
+    {
+      "id": "mini-n1-25:guided",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a lamp in the room. The lamp is under the table. There is a cup on the table.",
+      "prompt": "你要找lamp。听完选一条位置确认，只写A/B/C：A on the table；B under the table；C in the cup。"
+    },
+    {
+      "id": "mini-n1-25:independent",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a box under the desk. There is a camera in the box. The lamp is on the desk.",
+      "prompt": "相机应从哪里找？按材料选直接位置，只写A/B/C：A on the desk；B in the box；C on the lamp。"
+    },
+    {
+      "id": "mini-n1-25:repair",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a cupboard near the door. There is a knife in the cupboard. The clean cup is on the table.",
+      "prompt": "要取knife，应确认哪个直接位置？只写A/B/C：A on the table；B near the cup；C in the cupboard。"
+    },
+    {
+      "id": "mini-n1-25:delayed-a",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "Jo: Is the bottle on the table? Rae: No. It is in the cupboard. The cup is on the table.",
+      "prompt": "已明确it指bottle。核对留言中的瓶子位置，只写A/B/C：A in the cupboard；B on the table；C under the table。"
+    },
+    {
+      "id": "mini-n1-25:delayed-b",
+      "skill": "listening",
+      "track": "common",
+      "lessons": [
+        25,
+        26
+      ],
+      "material": "There is a large box on the shelf. There is a clean cup in the box. The dirty cup is under the table.",
+      "prompt": "你需要clean cup。按材料选它的直接位置，不选容器所在位置，只写A/B/C：A under the table；B on the shelf；C in the box。"
+    },
+    {
+      "id": "mini-n1-27:guided",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "餐具便签\nThere are some plates on the table. They are clean.\nThere are some cups in the cupboard. They are dirty.",
+      "prompt": "要取干净的餐具，应选哪条领物信息？只写A/B/C：A dirty cups in the cupboard；B clean plates on the table；C clean cups on the table。"
+    },
+    {
+      "id": "mini-n1-27:independent",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "工具间便签\nThere are some maps on the wall.\nThere are some boxes near the door. The tools are in the boxes. They are clean.",
+      "prompt": "伙伴需要tools，不是外面的boxes或墙上的maps。哪条确认与便签一致？只写A/B/C：A tools on the wall；B tools near the window；C tools in the boxes。"
+    },
+    {
+      "id": "mini-n1-27:repair",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "展览准备便签\nThere are some bottles on the shelf.\nThere are some boxes near the window. The maps are in the boxes. They are old.",
+      "prompt": "伙伴需要maps，不是bottles或外面的boxes。哪条确认与便签一致？只写A/B/C：A maps in the boxes；B maps on the shelf；C maps on the window。"
+    },
+    {
+      "id": "mini-n1-27:delayed-a",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "数量未点清的库存便签\nThere are some cups in the cupboard. They are clean.\nThere are some bottles on the table.",
+      "prompt": "不能猜未写的数量。哪条库存说明被便签直接支持？只写A/B/C：A exactly two clean cups in the cupboard（恰好两个）；B some clean cups in the cupboard（若干）；C some clean bottles in the cupboard。"
+    },
+    {
+      "id": "mini-n1-27:delayed-b",
+      "skill": "reading",
+      "track": "common",
+      "lessons": [
+        27,
+        28
+      ],
+      "material": "等候区便签\nThere are some chairs near the window.\nThe boxes are under the table. The tickets are in the boxes. They are green.",
+      "prompt": "为了领green tickets，哪条位置确认正确？只写A/B/C：A tickets near the window；B tickets on the table；C tickets in the boxes。"
+    },
+    {
+      "id": "mini-n1-29:guided",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你把一个装书任务交给面前的伙伴。明确规则是先打开空盒子，再把书放进这个盒子。没有其他规定。",
+      "prompt": "口头说2句，先说明伙伴必须做的第一步，再给出第二步指令。让对方听清对象和先后，可以礼貌表达。"
+    },
+    {
+      "id": "mini-n1-29:independent",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你在入口向接手整理工作的伙伴说明规则：他/她先脱下自己的外套，再把同一件外套放进橱柜。橱柜不是装地图的盒子；不用关窗。",
+      "prompt": "口头说2句交接：第一句说明必须先做的动作；第二句指明同一件物品的下一步与正确位置。不要增加无关任务。"
+    },
+    {
+      "id": "mini-n1-29:repair",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你在收件台向接手整理工作的伙伴说明规则：他/她先读这封信（letter），再把同一封信放进盒子。信不放进橱柜；不用清理桌子。",
+      "prompt": "换一个情境口头说2句交接：说明必须先做的动作，再指明同一件物品的下一步与正确容器，不增加无关任务。"
+    },
+    {
+      "id": "mini-n1-29:delayed-a",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "你向清理房间的接手人交接已确认规则：先关窗，再扫地。盒子可以保持原样，任务没有要求打开它。",
+      "prompt": "口头说2句，让接手人听清必须先完成什么，再给下一步指令。不要把没规定的盒子任务加进去。"
+    },
+    {
+      "id": "mini-n1-29:delayed-b",
+      "skill": "speaking",
+      "track": "common",
+      "lessons": [
+        29,
+        30
+      ],
+      "material": "任务表：Ava负责打开窗；Ben负责清理桌子。你向协调员报告分工，然后当面对Ben给出他自己的指令。题设没有规定两人的先后，也没有性别信息。",
+      "prompt": "口头说3句：先明确每人的必须任务，再向Ben给出直接指令。别交换分工或编造先后。"
+    }
+  ]
+}

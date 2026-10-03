@@ -17,7 +17,9 @@ source = Path('static-export/assets')
 output = Path('dist-online' if online else 'dist')
 html_path = output / 'index.html'
 html = html_path.read_text()
-authored = runpy.run_path('mini-task/batch-02/audio_inventory.py')['authored_audio'](Path('mini-task'))
+inventory=Path('mini-task/audio-inventory.py')
+if not inventory.exists(): inventory=Path('mini-task/batch-02/audio_inventory.py')
+authored = runpy.run_path(str(inventory))['authored_audio'](Path('mini-task'))
 rows = []
 for item in authored:
     stem = Path(item['file']).stem

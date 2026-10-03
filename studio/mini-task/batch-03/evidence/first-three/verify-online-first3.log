@@ -1,0 +1,34 @@
+{
+  "verifiedFiles": 2007,
+  "materials": 556,
+  "bytes": 706959756,
+  "books": {
+    "NCE1": {
+      "application/pdf": 1,
+      "text/plain": 72,
+      "audio/mpeg": 72
+    },
+    "NCE2": {
+      "application/pdf": 1,
+      "text/plain": 96,
+      "audio/mpeg": 96
+    },
+    "NCE3": {
+      "application/pdf": 1,
+      "text/plain": 60,
+      "audio/mpeg": 60
+    },
+    "NCE4": {
+      "application/pdf": 1,
+      "text/plain": 48,
+      "audio/mpeg": 48
+    }
+  },
+  "translatedLines": 6042,
+  "dictionaryWords": 8502,
+  "lessonImages": 696,
+  "speakingPrompts": 238,
+  "textbookVocabularyEntries": 3615,
+  "grammarGroups": 276,
+  "grammarSourcePages": 693
+}

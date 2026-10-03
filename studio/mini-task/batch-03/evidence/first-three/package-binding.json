@@ -1,0 +1,47 @@
+{
+  "bothPublishedHeads": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "unpublishedCandidateDependency": "06be41a9e3faf24c398abdea95ee8a2aa36438bd",
+  "authoredCourses": [
+    "nce1-25",
+    "nce1-27",
+    "nce1-29"
+  ],
+  "packageHashes": {
+    "dist-online/index.html": "01ec8a98808ed21f56c809489e5945a47c3c6b577c9a8b26f57a6ee22cfc9f67",
+    "dist-online/map/index.html": "f4a5ceb8da104cab7f96a7f9602f0a73022c631ac353b1c7fb50834f6aa84eca",
+    "dist-online/version.json": "91fac11c99b28be2d1366558bfb51a1984491cc85c9fa55b9967ab4b73165fcd",
+    "dist/index.html": "689a1158fcdd03f35188f955519bfe171bce85524db3b66fea6d9e76e34284de"
+  },
+  "miniAudioAssets": {
+    "assets/mini-n1-01-delayed-a-DasbtE01.wav": "cf8247cd6cd3c26fb144c81c8feb3dfc271f8948a4125b448169fa60d2125d3c",
+    "assets/mini-n1-01-delayed-b-9LV-hq9D.wav": "01c77979b18b4d849bbce1dc64277584d8069f410be7bc4629b72902fd5f25f4",
+    "assets/mini-n1-01-guided-DbZx4d_F.wav": "cb3bb24b2f64103afa6cef97e320d159c34187cdc24f046a2acd289640e0ee06",
+    "assets/mini-n1-01-independent-DwalH_Cp.wav": "866c9e398194248dcf04b2ac7cda347158cff0304695fb55cb74754e282c5041",
+    "assets/mini-n1-01-repair-C_pmpUrE.wav": "5414c82194dc2cbb8f39a52c93bd8da303bf643b4e773813f08b4f719b08783c",
+    "assets/mini-n1-09-delayed-a-32d96Ls0.wav": "101230ca445565bc0592ace76d842cbe410aadc4196f912ab31f1354bbd520ba",
+    "assets/mini-n1-09-delayed-b-BdSpo7nO.wav": "3fe5d86a043879af219e6f47f69668668193eef4a57d5d9fc6525f8a7ecd9185",
+    "assets/mini-n1-09-guided-BLL7G-yC.wav": "e9054badb237b1f1134ff05eb679971b6aea75385aeb0c669da95a8a25c5d94c",
+    "assets/mini-n1-09-independent-B_v42D4U.wav": "a87abba492ce56bfdb0de1481b21344f14439d8433bd160b4ba27abc4f75a0c7",
+    "assets/mini-n1-09-repair-1nc7dXyw.wav": "48da59f2f4ee75725d9f13055f4008b2626c22fe55b60b600289e03a2698427c",
+    "assets/mini-n1-13-delayed-a-DYHoDgGg.wav": "5d7179b27609df356076d8ed5e2cb885b090e960f5f4973ee302b57b09df7abe",
+    "assets/mini-n1-13-delayed-b-o0tqzcmx.wav": "8008e4bfcacb7add5402289e1ac1024392fc4309fbeeb8fd8898b91e834cbc63",
+    "assets/mini-n1-13-guided-ByKHd3et.wav": "8ea219e167bd741f921765dea6ffbfc6c8e1b30ac1e6844f4ded90a45e4e1ec7",
+    "assets/mini-n1-13-independent-DI54ei6w.wav": "8a8d8e904164b954779593bfc8b8f7c7752157e99a7a031f14c368fc24e0152d",
+    "assets/mini-n1-13-repair-CRIE55uo.wav": "c858ce0fc32db85d25acb2d530d7acc560b0953c91da8048ab5a20d30f27aa9e",
+    "assets/mini-n1-21-delayed-a-D-y1YpzR.wav": "c6d1738259c644cd4a175df5e90e9e01e17b20baa3d672fb6c8fe8e56c4def95",
+    "assets/mini-n1-21-delayed-b-B4YRzI4o.wav": "a8394e528c59e634c81b598424dec1748c4608a8db0ed8a504b12ba709c5af1f",
+    "assets/mini-n1-21-guided-BtTeC1I9.wav": "6bb75f7e6ff8e246bc98a1c2dd077082a6795f147cc13ff1aee6258ca85cc926",
+    "assets/mini-n1-21-independent-D1o2sCin.wav": "36484fa340140ebfce3ba5f47af74e6c4ab3cdc132de0e9735fb312a1da47719",
+    "assets/mini-n1-21-repair-h0bn-TLf.wav": "a5c67d37a48aed7cae55674bf1af6536e95f06a4b0938812b244d3a4d1dc71a1",
+    "assets/mini-n1-25-delayed-a-DsGa5INJ.wav": "487f35b57ca2328eaa5cdb24f2204a4dadf713fce520eeca2912d574c070a7c2",
+    "assets/mini-n1-25-delayed-b-BNfjcz3v.wav": "080d481860b54530085a14d4b68ff7084a0592d9ff0a93868baced5c657ba129",
+    "assets/mini-n1-25-guided-CYKn8BtP.wav": "744cce0cc2f2ce052f862d78122d8f1dfba24f0e5c23e6d04ac0abcb4dd2525b",
+    "assets/mini-n1-25-independent-B6gdGZkv.wav": "8a382f5348f9384a90c34dfec24158e44033d0ef87722091f60ee791be68ec09",
+    "assets/mini-n1-25-repair-BwVxMEch.wav": "a0cf0f26319b3eaee57b7a2f6b8bf444a1f42d414429a561e1928811bed5378f"
+  },
+  "nativeChecks": 8,
+  "actualHTTPWavResponses": 50,
+  "humanAcousticAudit": false,
+  "naturalDelayVerified": false,
+  "realLearnerSpeech": false
+}

@@ -1,0 +1,51 @@
+{
+  "engine": "macOS say",
+  "voice": "Samantha (installed offline)",
+  "rateWordsPerMinute": 125,
+  "source": "Original batch03 content.ts material",
+  "synthetic": true,
+  "humanAudition": false,
+  "difficultyCalibrated": false,
+  "files": [
+    {
+      "file": "mini-n1-25-delayed-a.wav",
+      "seconds": 6.511882086167801,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4630.38636031679,
+      "sha256": "487f35b57ca2328eaa5cdb24f2204a4dadf713fce520eeca2912d574c070a7c2"
+    },
+    {
+      "file": "mini-n1-25-delayed-b.wav",
+      "seconds": 6.323628117913832,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4943.040525003201,
+      "sha256": "080d481860b54530085a14d4b68ff7084a0592d9ff0a93868baced5c657ba129"
+    },
+    {
+      "file": "mini-n1-25-guided.wav",
+      "seconds": 5.069750566893424,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 5085.110613648935,
+      "sha256": "744cce0cc2f2ce052f862d78122d8f1dfba24f0e5c23e6d04ac0abcb4dd2525b"
+    },
+    {
+      "file": "mini-n1-25-independent.wav",
+      "seconds": 5.348390022675737,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 4937.393010019548,
+      "sha256": "8a382f5348f9384a90c34dfec24158e44033d0ef87722091f60ee791be68ec09"
+    },
+    {
+      "file": "mini-n1-25-repair.wav",
+      "seconds": 5.429659863945578,
+      "sampleRate": 22050,
+      "channels": 1,
+      "rms": 5112.54338218463,
+      "sha256": "a0cf0f26319b3eaee57b7a2f6b8bf444a1f42d414429a561e1928811bed5378f"
+    }
+  ]
+}

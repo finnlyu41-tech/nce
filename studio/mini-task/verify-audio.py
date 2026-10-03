@@ -4,7 +4,9 @@ import hashlib, io, json, mimetypes, re, wave, runpy
 
 def verify_audio(root, version, html, map_refs):
     source=Path(__file__).resolve().parent
-    authored=runpy.run_path(str(source/'batch-02/audio_inventory.py'))['authored_audio'](source)
+    inventory=source/'audio-inventory.py'
+    if not inventory.exists(): inventory=source/'batch-02/audio_inventory.py'
+    authored=runpy.run_path(str(inventory))['authored_audio'](source)
     ledger=version.get('mini_audio_assets',{})
     assert len(ledger)==len(authored), 'Mini audio ledger incomplete'
     root_paths=set();map_paths=set()

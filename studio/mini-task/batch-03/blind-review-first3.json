@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "blind-to-keys",
+  "reviewType": "independent-text-only-content-review",
+  "input": "studio/mini-task/batch-03/blind-packet-first3-v1.json",
+  "inputSha256": "6274bdc4e7ebffcd89880236b10266c98757cd88d5d311399508ff623d703298",
+  "inputSha256Scope": "首次读取原版盲包的完整文件字节 SHA256，修订前记录。",
+  "inputScope": "首轮仅阅读当时的 blind-packet-first3.json，其首次原版现保留为 blind-packet-first3-v1.json，inputSha256 为首轮读取字节的哈希；未读取作者 content、keys、hints、references、model、任何旧 review 或音频；仅新增本审查文件。",
+  "completedItemCount": 15,
+  "limitations": [
+    "内容审查仅基于文字；未试听音频，不评价听感、音质、语速、重音或实际听辨。",
+    "未做真人适级校准、等难验证、学习效果测试、修复效果验证、CEFR 标定或 IELTS band 映射。",
+    "开放口语是独立自然例答，不给分；没有学习者录音，不评价发音或流利度。",
+    "未与 key 比较，未读取评分实现，不能验证自然等义表达是否被现有评分接受。",
+    "素材结构差异只在盲包内比较；未核查外部来源、版权或全局原创性。"
+  ],
+  "mechanismChecks": [
+    {
+      "taskId": "mini-n1-25",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 均以物品—容器—外部位置链选择直接容器，排除另一物品位置；有同型近迁移，但不证明等难。"
+    },
+    {
+      "taskId": "mini-n1-27",
+      "status": "aligned-in-text-mechanism",
+      "assessment": "independent/repair 均定位在 boxes 内的目标物品，排除另一物品及 boxes 的外围位置；两题主要同框架物品/场景替换。"
+    },
+    {
+      "taskId": "mini-n1-29",
+      "status": "broadly-aligned-with-specific-role-difference",
+      "assessment": "两题均执行第一步必须动作、第二步指令及正确位置；independent 跟踪同一移动物品 coat，repair 跟踪同一容器 bag 并新增 books。广义机制对齐，若宣称专门修复同物品连续性，则覆盖不足；不能宣称严格同一细分机制或等难。"
+    }
+  ],
+  "summary": {
+    "answerability": "14/15 题有充分题内证据且答案要求清楚；25:delayed-b 的 C 是直接位置，但现题面未限制位置粒度，无法充分排除 B 的容器所在层位置解释。",
+    "necessaryRevisionCount": 1,
+    "necessaryRevision": "25:delayed-b 明确只选 clean cup 的直接位置，不选容器所在的位置，或移除上层位置选项 B。",
+    "mergeAssessment": "建议解决25:delayed-b的位置粒度后合并；其余未见实质无解或内部事实矛盾。29 repair 的细分对象角色差异应限制修补目标宣称，或据具体目标再复检。",
+    "templateAssessment": "25/27 independent 与 repair 主要为同关系结构的物品/容器/位置替换，支持受限复练；延迟题加入否定纠正、属性筛选或未精确数量的证据边界。29 加入规则先后、对象连续性、排除无关任务及最后的角色分工切换，非仅换人名。",
+    "publicBoundary": "文字可答与机制对齐是本轮可支持的结论；材料没有真人适级、听感、等难或真实学习效果证据。"
+  },
+  "items": [
+    {
+      "taskId": "mini-n1-25",
+      "itemId": "mini-n1-25:guided",
+      "answer": "B",
+      "review": {
+        "answerabilityAndInternalFacts": "lamp 在房间且在桌下，与 cup 在桌上不冲突；B 直接对应 lamp，其他选项不受材料支持。",
+        "informationProcessingMechanism": "定位目标物品与 under the table 的关系，排除另一物品 cup 的位置。",
+        "semanticTaskDifference": "直接位置提取基线；没有容器嵌套或否定纠正。",
+        "difficultyPrerequisites": "lamp、under/on/in、table/cup；转写可解，不代表已验证听辨负担。",
+        "answerPolicy": "仅输出 B。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "未试听音频，不能判断属性、物品词和位置词是否清晰或适合真人初学者。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-25",
+      "itemId": "mini-n1-25:independent",
+      "answer": "B",
+      "review": {
+        "answerabilityAndInternalFacts": "camera 在 box 中，box 在 desk 下，lamp 在 desk 上；题面明确问直接位置，B 唯一支持。",
+        "informationProcessingMechanism": "在物品→容器→外部位置链中选择物品的直接容器，排除其他物品的位置。",
+        "semanticTaskDifference": "新增容器层级，不只是换名；直接位置要求明确，不将箱子外部位置混入答案。",
+        "difficultyPrerequisites": "camera/box/desk、in、under/on 及两层位置关系；未校准难度。",
+        "answerPolicy": "仅输出 B。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "repair 同样定位物品的直接容器，并排除容器的外部位置和别的物品。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-25",
+      "itemId": "mini-n1-25:repair",
+      "answer": "C",
+      "review": {
+        "answerabilityAndInternalFacts": "knife 在 cupboard 中，cupboard 近 door，cup 在 table 上；直接位置限制使 C 清楚唯一。",
+        "informationProcessingMechanism": "与 independent 同为沿物品—容器—外围位置链保留直接容器。",
+        "semanticTaskDifference": "物品和容器替换，容器位置由 under desk 换 near door；核心层级仍相同。",
+        "difficultyPrerequisites": "knife/cupboard、in/near/on 的关系；与独立题机制同型但词汇/听辨未证等难。",
+        "answerPolicy": "仅输出 C。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "复练同一直接容器信息选择机制；不能据此宣称真人修复或等难。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-25",
+      "itemId": "mini-n1-25:delayed-a",
+      "answer": "A",
+      "review": {
+        "answerabilityAndInternalFacts": "it 指 bottle 已明示；Rae 否定 on table 并确认 in cupboard，cup 在 table 不矛盾。",
+        "informationProcessingMechanism": "处理否定后位置纠正，同时排除相邻另一物品的位置。",
+        "semanticTaskDifference": "新增问答、No、it 的明确回指与纠正，超过纯物品词替换。",
+        "difficultyPrerequisites": "否定问答、it 回指及 in/on 区别；未验证听辨。",
+        "answerPolicy": "仅输出 A。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "audio-unverified",
+          "detail": "文字话轮与 it 指向清楚，实际音频中的话轮和 No 未验证。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-25",
+      "itemId": "mini-n1-25:delayed-b",
+      "answer": "C",
+      "review": {
+        "answerabilityAndInternalFacts": "clean cup 在 box 中，box 在 shelf 上，dirty cup 在 table 下，事实自洽；C 是直接位置，但题面未规定直接位置，B 可读为容器连同其内容的广义寻找位置，唯一选择标准不够明确。",
+        "informationProcessingMechanism": "先以 clean 定目标，再沿容器层级选位置；目前需额外假定只认可直接位置。",
+        "semanticTaskDifference": "结合干净/脏的两杯对照与容器嵌套；不是只有换名，但位置粒度缺少指示。",
+        "difficultyPrerequisites": "clean/dirty、in/on/under 与容器嵌套，可能增加筛选负担；未校准。",
+        "answerPolicy": "按直接位置理解仅输出 C；如果允许广义取物位置，B 的容器层位置难以仅据现题面排除。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "revision-required",
+          "code": "location-granularity-not-explicit",
+          "detail": "建议 prompt 明写“按材料选 clean cup 的直接位置，不选容器所在的位置”，使 C 对 B 的区别由题面支撑；或移除 B 这一上层位置选项。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-27",
+      "itemId": "mini-n1-27:guided",
+      "answer": "B",
+      "review": {
+        "answerabilityAndInternalFacts": "plates clean/on table，cups dirty/in cupboard；两处 They 按各自最近句子的主体分组解读，自洽且 B 唯一。",
+        "informationProcessingMechanism": "联合物品、清洁状态及位置，选择全部信息匹配的领物描述。",
+        "semanticTaskDifference": "需三项信息组合，而非仅提取一个地点词。",
+        "difficultyPrerequisites": "some、复数 they、plates/cups、clean/dirty 和 on/in；未真人适级校准。",
+        "answerPolicy": "仅输出 B。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": []
+    },
+    {
+      "taskId": "mini-n1-27",
+      "itemId": "mini-n1-27:independent",
+      "answer": "C",
+      "review": {
+        "answerabilityAndInternalFacts": "maps on wall，boxes near door，tools in boxes；问题明确要 tools，C 唯一。They 的通常主体回指是 tools，即使对 clean 的指向有疑问，也不改变位置答案。",
+        "informationProcessingMechanism": "区分目标物品与外层 boxes、maps，再保留工具的直接容器位置。",
+        "semanticTaskDifference": "从联合属性变为容器内部物品定位；与 repair 信息结构同型。",
+        "difficultyPrerequisites": "tools/maps/boxes、in/near/on、plural ones/they 的阅读先备；未校准。",
+        "answerPolicy": "仅输出 C。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "repair 同为目标物在 boxes 内，排除别种物品及 boxes 的外部位置。"
+        },
+        {
+          "severity": "note",
+          "code": "pronoun-scope-nonblocking",
+          "detail": "末句 They are clean 有多个复数名词在语境，但通常回指当前主体 tools；本题不询问 clean，位置作答不依赖该句。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-27",
+      "itemId": "mini-n1-27:repair",
+      "answer": "A",
+      "review": {
+        "answerabilityAndInternalFacts": "bottles on shelf，boxes near window，maps in boxes；目标 maps 明确，A 唯一。They are old 的通常主体回指 maps，且 old 不决定位置答案。",
+        "informationProcessingMechanism": "与 independent 同为区分目标内部物品、外层 boxes 和另一物品的位置。",
+        "semanticTaskDifference": "改工具间为展览准备、tools 为 maps、外围位置和属性也变；核心解题结构仍是同模板近迁移。",
+        "difficultyPrerequisites": "maps/bottles/boxes、in/on/near；词汇负担不能自动视作等难。",
+        "answerPolicy": "仅输出 A。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "repair-mechanism-aligned",
+          "detail": "复练与 independent 相同的直接容器关系选择。"
+        },
+        {
+          "severity": "note",
+          "code": "template-limited-transfer",
+          "detail": "情境和物品改变，但判断路径同型；不能将正确表现描述为已证明广泛迁移。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-27",
+      "itemId": "mini-n1-27:delayed-a",
+      "answer": "B",
+      "review": {
+        "answerabilityAndInternalFacts": "cups 在 cupboard 且 clean；瓶子只被说在 table。材料只称 some，未提供恰好两个，B 唯一直接支持。",
+        "informationProcessingMechanism": "保持材料的数量不确定性，同时绑定物品、状态与位置，拒绝凭空精确化。",
+        "semanticTaskDifference": "新增 some 对 exactly two 的证据边界判断，超过纯物品或人名替换。",
+        "difficultyPrerequisites": "some 与 exactly two 的区分及复数 they；数量规则有中文说明，降低题干理解负担。",
+        "answerPolicy": "仅输出 B；A 不是被证明不可能，而是没有得到便签直接支持。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "evidence-boundary-clear",
+          "detail": "题面明确禁止猜数量，数量推断边界充分；不需外部事实。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-27",
+      "itemId": "mini-n1-27:delayed-b",
+      "answer": "C",
+      "review": {
+        "answerabilityAndInternalFacts": "chairs near window，boxes under table，tickets in boxes；They 通常回指紧接句主体 tickets，题面也明确找 green tickets；C 唯一。",
+        "informationProcessingMechanism": "按目标物品和属性锁定 tickets，区分 tickets 的直接容器及 boxes 外部位置。",
+        "semanticTaskDifference": "延伸容器定位机制并加入绿色目标；选项未将 under table 作为可混淆的上层选项。",
+        "difficultyPrerequisites": "tickets/boxes、green、in/under/near 的多关系定位；未校准。",
+        "answerPolicy": "仅输出 C。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "pronoun-reference-supported",
+          "detail": "They 的当前主体回指与问题中的 green tickets 一致，没有必须依赖名字或性别的猜测。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-29",
+      "itemId": "mini-n1-29:guided",
+      "answer": "First, you must open the box. Then put the books in the box.",
+      "review": {
+        "answerabilityAndInternalFacts": "明确规则为先开空盒再放书；两句、第一步必须和第二步指令有足够依据，无须添加其他任务。",
+        "informationProcessingMechanism": "把明确先后规则转为必须动作和下一步指令，并保持同一容器。",
+        "semanticTaskDifference": "顺序规则与容器一致性的基线；不是仅说两句无语义约束的命令。",
+        "difficultyPrerequisites": "must、open、put、in、书的复数及顺序标记；中文材料给规则，未验证真实口头适级性。",
+        "answerPolicy": "自然参考非唯一；First, you need to open the empty box. Then put the books in it, please. 也符合规则；不评分。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "open-response-flexibility",
+          "detail": "允许 must/need to、礼貌词及清楚的 it 回指；必须保持两句和明确先后。"
+        },
+        {
+          "severity": "note",
+          "code": "speaking-unverified",
+          "detail": "只有内容参考，无学习者录音，不评价发音、流利度、听感或学习效果。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-29",
+      "itemId": "mini-n1-29:independent",
+      "answer": "First, you must take off your coat. Then put it in the cupboard.",
+      "review": {
+        "answerabilityAndInternalFacts": "伙伴先脱自己的外套，再把同一外套放 cupboard；禁止 maps 的 box 和关窗任务，目标和顺序清楚。",
+        "informationProcessingMechanism": "跨两步保持同一移动物品 coat→it，执行先后并绑定 cupboard 为正确目的位置，抑制无关动作。",
+        "semanticTaskDifference": "脱外套→放同一外套，物品连续性不同于 guided 的开容器→放书；有真实对象角色变化。",
+        "difficultyPrerequisites": "take off、your、must、put、it 指外套和 cupboard；不需要猜伙伴性别。",
+        "answerPolicy": "自然两句参考；也可重复 your coat 替代 it，明确 first/then；不得增加关窗或换容器；无分数。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "repair-specific-coverage-differs",
+          "detail": "repair 同有先后、位置与回指，但复练的是同一容器 bag，而非本题同一移动物品 coat；细分对象连续性覆盖不完全相同。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-29",
+      "itemId": "mini-n1-29:repair",
+      "answer": "First, you must open your bag. Then put these books in it.",
+      "review": {
+        "answerabilityAndInternalFacts": "先开伙伴自己的包，再把这些书放同一包；books 为复数、it 为单数 bag 的回指，指代及容器清楚。",
+        "informationProcessingMechanism": "先后指令加同一容器 bag→it 的跨句绑定，同时引入被放入的另一对象 books，抑制 shelf 与扫地。",
+        "semanticTaskDifference": "与 independent 同有先后和正确位置，但重复实体的角色从移动物品变为容器；不是仅人物词替换，也不构成严格同一细分机制。",
+        "difficultyPrerequisites": "open/your bag、these books、put/in 与 it 单数回指；真实口语和难度未验证。",
+        "answerPolicy": "自然两句参考；可说 Then put these books in the same bag, please.；不用 it 也能满足同容器约束，不评分。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "minor",
+          "code": "repair-partial-mechanism-alignment",
+          "detail": "广义“有序指令+对象/位置一致性”对齐；若声称专门修复 independent 的同一移动物品跨步跟踪，需要另加同物品机制的复检。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-29",
+      "itemId": "mini-n1-29:delayed-a",
+      "answer": "First, you must close the window. Then sweep the floor.",
+      "review": {
+        "answerabilityAndInternalFacts": "先关窗再扫地为已确认规则；盒子可原样，明确不要求打开，材料足以支持两句。",
+        "informationProcessingMechanism": "报告必要的第一步，接续下一指令，拒绝加入未规定任务。",
+        "semanticTaskDifference": "改为两个不同动作和目标，没有容器放入关系；保留顺序且强调证据限界。",
+        "difficultyPrerequisites": "close/window、sweep/floor、must 与顺序；未口语校准。",
+        "answerPolicy": "自然两句参考；Please close the window first. Then sweep the floor. 也说明先完成规则；不添加开盒，不评分。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "no-extra-task-inference",
+          "detail": "明确排除未规定盒子任务；不需外部常识猜额外要求。"
+        }
+      ]
+    },
+    {
+      "taskId": "mini-n1-29",
+      "itemId": "mini-n1-29:delayed-b",
+      "answer": "Ava must open the window. Ben must clean the table. Ben, please clean the table.",
+      "review": {
+        "answerabilityAndInternalFacts": "Ava/Ben 各自任务、三句及最后当面指令明确；不存在两人任务先后或性别信息，无需编造。",
+        "informationProcessingMechanism": "保存两个人的分工，再从第三人报告切换为对 Ben 的直接指令，避免任务交换或虚构先后。",
+        "semanticTaskDifference": "新增角色分工与对话指向切换；与前四题的顺序两步指令不同，超出单纯名字替换。",
+        "difficultyPrerequisites": "must、两个名字与动作目标绑定、直接祈使句；无须用性别代词或先后连接词。",
+        "answerPolicy": "自然三句参考；Ava needs to open the window. Ben needs to clean the table. Please clean the table, Ben. 也可；不得加 first/then 排两人任务，不评分。",
+        "academicGtBoundary": "common 基础语言与信息处理微技能；无 Academic 专属内容，未构成完整 IELTS Academic/GT 任务或 band 测量。"
+      },
+      "finding": [
+        {
+          "severity": "note",
+          "code": "role-and-order-boundary-clear",
+          "detail": "说话的报告顺序由 prompt 规定，但两人执行顺序未规定，参考明确区分二者。"
+        }
+      ]
+    }
+  ]
+}

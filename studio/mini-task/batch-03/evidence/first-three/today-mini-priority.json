@@ -1,0 +1,26 @@
+{
+  "unchangedPublishedScheduler": true,
+  "cases": [
+    {
+      "kind": "repair",
+      "originalPriority": 0,
+      "miniPriority": 3.5,
+      "uniqueMini": true,
+      "readOnly": true
+    },
+    {
+      "kind": "resume",
+      "originalPriority": 1,
+      "miniPriority": 3.5,
+      "uniqueMini": true,
+      "readOnly": true
+    },
+    {
+      "kind": "review",
+      "originalPriority": 2,
+      "miniPriority": 3.5,
+      "uniqueMini": true,
+      "readOnly": true
+    }
+  ]
+}

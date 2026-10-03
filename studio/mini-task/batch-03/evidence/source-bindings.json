@@ -1,0 +1,128 @@
+{
+  "bothPublishedHeads": "7b7c1283d12f0c6d784478cda8353080598f6980",
+  "candidateDependency": "06be41a9e3faf24c398abdea95ee8a2aa36438bd",
+  "dependencyPublished": false,
+  "evidence": [
+    {
+      "courseId": "nce1-25",
+      "lessons": [
+        25,
+        26
+      ],
+      "title": "第25–26课 · 介绍单件物品与询问位置",
+      "teachingTargets": [
+        "introduce-item",
+        "ask-location",
+        "singular-location"
+      ],
+      "originalSourceSha256": "3976b9a46adf6923ea7ab87ff6ab22506180e5f285f1ea63294783a608515091",
+      "languageFileSha256": "15ddf5e1a8f598a178b264bd9932d319705b287779f08e20ebdbed2e2151fff5",
+      "courseModuleSha256": "6688a900b5b8ec0fea783f1d9a1cfe6ee3029dadf890b475a6650246d5dbbf9d",
+      "evenExerciseGrammarPage": 55,
+      "evenExerciseImageSha256": "fb8c6eb54df48732a44649e5f502290d0f12208318fe156bdad2f53b98a68146",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-27",
+      "lessons": [
+        27,
+        28
+      ],
+      "title": "第27–28课 · 几件物品在哪里",
+      "teachingTargets": [
+        "plural-existence",
+        "plural-question",
+        "plural-location"
+      ],
+      "originalSourceSha256": "f791f6b79672876cb8f5c7992c13b47c6e6f042a16894478eeadcfc61c5774fd",
+      "languageFileSha256": "2410876d2bc4142c898548e9252f7faa0f66e2d8b86e966838e4e3f372f41e15",
+      "courseModuleSha256": "8bb9a5c3fe2d2d63f317abebba7d2949bbff04da6a11cdf3b3af36ba75e36041",
+      "evenExerciseGrammarPage": 59,
+      "evenExerciseImageSha256": "62d8458b21578e53c28020bb49aba22c002669fd3f2432449a14c3c7ed58c5aa",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-29",
+      "lessons": [
+        29,
+        30
+      ],
+      "title": "第29–30课 · 问清任务并给出动作指令",
+      "teachingTargets": [
+        "must-question",
+        "must-action",
+        "imperative-action"
+      ],
+      "originalSourceSha256": "05a9e64329557d12651888eb57a8b64f513e34137bb0f9444ce85abbe231f1d7",
+      "languageFileSha256": "15ea221a9497a68761363bd5b1966ab043eac4065c838f62437c8a629f55fe1a",
+      "courseModuleSha256": "0310d2c572df388817a33fc5ac5156d67e7a3dbebe9b043989c9f09b95e34c5e",
+      "evenExerciseGrammarPage": 63,
+      "evenExerciseImageSha256": "9d4a947098c09a0b062d90124e73e371596a38231a3bc7a385ff45c587236bf2",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-31",
+      "lessons": [
+        31,
+        32
+      ],
+      "title": "第31–32课 · 问清并说明一个人或动物正在做什么",
+      "teachingTargets": [
+        "action-question",
+        "person-action",
+        "animal-action"
+      ],
+      "originalSourceSha256": "1a44ac02f60db4f351853f247b96c5262634fa0fdda1c2d51ff50496d27eb4f8",
+      "languageFileSha256": "20a3698cf6ac0c69eca79eef9de62be8d46c1ee29f1f2cb7321686f42c3bc634",
+      "courseModuleSha256": "df4244cb7823f5276e4159b042a92e4809f84122a013a39803f73954f0266617",
+      "evenExerciseGrammarPage": 67,
+      "evenExerciseImageSha256": "e295d6976b6b29f1ba29b81217f25c82252c1ab26ec6780987006a02a84dfb2f",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-33",
+      "lessons": [
+        33,
+        34
+      ],
+      "title": "第33–34课 · 问清并说明多人正在做什么",
+      "teachingTargets": [
+        "plural-question",
+        "they-action",
+        "named-plural-action"
+      ],
+      "originalSourceSha256": "4764d3bb0438a7000f453ac07e23e9eb4ff4a2cc37c1cced984cf738cb6d17c3",
+      "languageFileSha256": "f2456985f96085333cbbca3c112500c5f08e9b77a4d938839514043f5ae2a82b",
+      "courseModuleSha256": "eed29b43244efbfd62528ef7d049779af641cb9671104589e56e08e15b4362c5",
+      "evenExerciseGrammarPage": 71,
+      "evenExerciseImageSha256": "b61dc39688c1c62b75816d515d2d7f1d0e621b692c5e9db50be25cea01898db8",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    },
+    {
+      "courseId": "nce1-35",
+      "lessons": [
+        35,
+        36
+      ],
+      "title": "第35–36课 · 分清在哪里与往哪里移动",
+      "teachingTargets": [
+        "location-question",
+        "static-location",
+        "movement-direction"
+      ],
+      "originalSourceSha256": "aa3692496b220bbdbd909da7b34f2ce687893e949f4426c4c6f4c05ff98588c7",
+      "languageFileSha256": "6e73bd450b43f04513a33eaab88b16857e1dba49f27342e56846f024a0f0a66a",
+      "courseModuleSha256": "f05869ac63601d80b598352bce4e7a7cf06c992036c39867513575240c9f89f0",
+      "evenExerciseGrammarPage": 75,
+      "evenExerciseImageSha256": "27a7967fe0ced13d63b22296404728c3a8cf20c19ff303f09ed41ea3e69afa56",
+      "readEvidence": "Actual odd lesson rows read; actual even lesson exercise image inspected; no teacher media downloaded",
+      "sourcePageMetadataDeclared": false
+    }
+  ],
+  "calibrated": false
+}

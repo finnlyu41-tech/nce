@@ -1,3 +1,4 @@
+import {batch03LessonBindings} from './batch-03/manifest';
 import {batch02LessonBindings} from './batch-02/manifest';
 import {miniTasks} from './content';
 export const miniTaskManifest = Object.freeze({version:1,contentVersion:1,batch:'R12-authored-batches',coverage:`${miniTasks.length*2} explicit lesson bindings share ${miniTasks.length} paired-group tasks; partial target coverage, no mastery claim`,authoredGroups:miniTasks.map(t=>({taskId:t.id,courseId:t.courseId,groupId:t.groupId,lessons:t.lessons,skill:t.skill,track:t.track})),origin:'original standalone preparatory materials',calibration:'uncalibrated',examClaims:false,progressHost:'existing State.drafts',finiteBanks:['guided','independent','repair','delayed-a','delayed-b']});
@@ -16,4 +17,5 @@ export const lessonBindings = [
  {lesson:11,courseId:'nce1-11',taskId:'mini-n1-11',target:'读姓名所属与颜色，提取一条登记信息',prerequisite:"姓名's + 单数物品 + is + 颜色；本组CL own/waiting",sharedReason:'第12课强化第11课所属/颜色，共用登记阅读',uncovered:['Whose问句产出','主动说明物主']},
  {lesson:12,courseId:'nce1-11',taskId:'mini-n1-11',target:'把强化所属和颜色用于阅读筛选',prerequisite:'同第11课；给出明确物主与颜色',sharedReason:'配对课强化相同结构，共用一份任务快照',uncovered:['教材练习全量','口语表达']},
  ...batch02LessonBindings,
+ ...batch03LessonBindings,
 ].map(row=>({...row,book:'NCE1',coverage:'partial-target',calibration:'uncalibrated'}));
